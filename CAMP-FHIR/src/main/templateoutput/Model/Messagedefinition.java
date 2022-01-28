@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,641 +10,1048 @@ package main.templateoutput.Model;
 public class Messagedefinition  implements java.io.Serializable {
 
 
-     private String messageDefinitionUrl;
-     private String mssgDfntnDntfrDntfrSCde;
-     private String mssgDfntnDntfrDntfrTpCdblCncptCdngSstm;
-     private String mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn;
-     private String mssgDfntnDntfrDntfrTpCdblCncptCdngCde;
-     private String mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay;
-     private String mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String mssgDfntnDntfrDntfrCdblCncptTxt;
-     private String mssgDfntnDntfrDntfrPrdStrt;
-     private String mssgDfntnDntfrDntfrPrdNd;
-     private String mssgDfntnDntfrDntfrRfrncRfrnce;
-     private String mssgDfntnDntfrDntfrRfrncTpe;
-     private String mssgDfntnDntfrDntfrRfrncDntfr;
-     private String mssgDfntnDntfrDntfrRfrncDsplay;
-     private String mssgDfntnDntfrDntfrVlStrng;
-     private String mssgDfntnDntfrDntfrSstmRi;
-     private String messageDefinitionVersion;
-     private String messageDefinitionName;
-     private String messageDefinitionTitle;
-     private String messageDefinitionReplaces;
-     private String messageDefinitionStatus;
-     private String messageDefinitionExperimental;
-     private String messageDefinitionDate;
-     private String messageDefinitionPublisher;
-     private String messageDefinitionContact;
-     private String messageDefinitionDescription;
-     private String messageDefinitionUseContext;
-     private String mssgDfntnJrsdctnCdblCncptCdngSstm;
-     private String mssgDfntnJrsdctnCdblCncptCdngVrsn;
-     private String mssgDfntnJrsdctnCdblCncptCdngCde;
-     private String mssgDfntnJrsdctnCdblCncptCdngDsplay;
-     private String mssgDfntnJrsdctnCdblCncptCdngSrSlctd;
-     private String mssgDfntnJrsdctnCdblCncptTxtStrng;
-     private String messageDefinitionPurpose;
-     private String messageDefinitionCopyright;
-     private String messageDefinitionBase;
-     private String messageDefinitionParent;
-     private String mssgDfntnVntCdngCdngSrSlctdBln;
-     private String mssgDfntnVntCdngCdngCdCde;
-     private String mssgDfntnVntCdngCdngVrsnStrng;
-     private String mssgDfntnVntCdngCdngDsplStrng;
-     private String mssgDfntnVntCdngCdngSstmRi;
-     private String messageDefinitionEventUri;
-     private String messageDefinitionCategory;
-     private String messageDefinitionFocusCode;
-     private String messageDefinitionFocusProfile;
-     private String messageDefinitionFocusMin;
-     private String messageDefinitionFocusMax;
-     private String messageDefinitionResponseRequired;
-     private String mssgDfntnLlwdRspnsMssge;
-     private String mssgDfntnLlwdRspnsSttn;
-     private String messageDefinitionGraph;
+     private Integer id;
+     private String messageDefinitionUrlUri;
+     private String mssgDfntnDntfrDntfrSe;
+     private String mssgDfntnDntfrDntfrTpCcCSstm;
+     private String mssgDfntnDntfrDntfrTpCcCVrsn;
+     private String mssgDfntnDntfrDntfrTpCcCCde;
+     private String mssgDfntnDntfrDntfrTpCcCDsplay;
+     private String mssgDfntnDntfrDntfrTpCcCSrSlctd;
+     private String mssgDfntnDntfrDntfrTpCcTxt;
+     private String mssgDfntnDntfrDntfrPrdPrdStrt;
+     private String mssgDfntnDntfrDntfrPrdPrdNd;
+     private String mssgDfntnDntfrDntfrSsgnr;
+     private String mssgDfntnDntfrDntfrVlue;
+     private String mssgDfntnDntfrDntfrSstm;
+     private String messageDefinitionVersionString;
+     private String messageDefinitionNameString;
+     private String messageDefinitionTitleString;
+     private String mssgDfntnRplcsCnncl;
+     private String messageDefinitionStatusCode;
+     private String mssgDfntnXprmntlBln;
+     private String messageDefinitionDateDateTime;
+     private String messageDefinitionPublisherString;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntSstm;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntVlue;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntSe;
+     private String mssgDfntnCntctCntctDtlTlcmCntctPntRnk;
+     private String mssgDfntnCntctCntctDtlNme;
+     private String mssgDfntnDscrptnMrkdwn;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcCSstm;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcCVrsn;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcCCde;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcCDsplay;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String mssgDfntnSCntxtSgCntxtVlCcCcTxt;
+     private String mssgDfntnSCntxtSgCntxtCdCSstm;
+     private String mssgDfntnSCntxtSgCntxtCdCVrsn;
+     private String mssgDfntnSCntxtSgCntxtCdCCde;
+     private String mssgDfntnSCntxtSgCntxtCdCDsplay;
+     private String mssgDfntnSCntxtSgCntxtCdCSrSlctd;
+     private String mssgDfntnSCntxtSgCntxtVlQnttQnttVlue;
+     private String mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String mssgDfntnSCntxtSgCntxtVlQnttQnttNt;
+     private String mssgDfntnSCntxtSgCntxtVlQnttQnttSstm;
+     private String mssgDfntnSCntxtSgCntxtVlQnttQnttCde;
+     private String mssgDfntnSCntxtSgCntxtVlRngRngLw;
+     private String mssgDfntnSCntxtSgCntxtVlRngRngHgh;
+     private String mssgDfntnSCntxtSgCntxtVlRfrnce;
+     private String mssgDfntnJrsdctnCcCdngCSstm;
+     private String mssgDfntnJrsdctnCcCdngCVrsn;
+     private String mssgDfntnJrsdctnCcCdngCCde;
+     private String mssgDfntnJrsdctnCcCdngCDsplay;
+     private String mssgDfntnJrsdctnCcCdngCSrSlctd;
+     private String mssgDfntnJrsdctnCcTxt;
+     private String messageDefinitionPurposeMarkdown;
+     private String mssgDfntnCprghtMrkdwn;
+     private String messageDefinitionBaseCanonical;
+     private String messageDefinitionParentCanonical;
+     private String mssgDfntnVntCdngCSrSlctd;
+     private String mssgDfntnVntCdngCCde;
+     private String mssgDfntnVntCdngCVrsn;
+     private String mssgDfntnVntCdngCDsplay;
+     private String mssgDfntnVntCdngCSstm;
+     private String messageDefinitionEventUriUri;
+     private String messageDefinitionCategoryCode;
+     private String messageDefinitionFocusCodeCode;
+     private String mssgDfntnFcsPrflCnncl;
+     private String mssgDfntnFcsMnNsgndnt;
+     private String messageDefinitionFocusMaxString;
+     private String mssgDfntnRspnsRqrdCde;
+     private String mssgDfntnLlwdRspnsMssgCnncl;
+     private String mssgDfntnLlwdRspnsSttnMrkdwn;
+     private String messageDefinitionGraphCanonical;
 
     public Messagedefinition() {
     }
 
-	
-    public Messagedefinition(String messageDefinitionUrl) {
-        this.messageDefinitionUrl = messageDefinitionUrl;
-    }
-    public Messagedefinition(String messageDefinitionUrl, String mssgDfntnDntfrDntfrSCde, String mssgDfntnDntfrDntfrTpCdblCncptCdngSstm, String mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn, String mssgDfntnDntfrDntfrTpCdblCncptCdngCde, String mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay, String mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd, String mssgDfntnDntfrDntfrCdblCncptTxt, String mssgDfntnDntfrDntfrPrdStrt, String mssgDfntnDntfrDntfrPrdNd, String mssgDfntnDntfrDntfrRfrncRfrnce, String mssgDfntnDntfrDntfrRfrncTpe, String mssgDfntnDntfrDntfrRfrncDntfr, String mssgDfntnDntfrDntfrRfrncDsplay, String mssgDfntnDntfrDntfrVlStrng, String mssgDfntnDntfrDntfrSstmRi, String messageDefinitionVersion, String messageDefinitionName, String messageDefinitionTitle, String messageDefinitionReplaces, String messageDefinitionStatus, String messageDefinitionExperimental, String messageDefinitionDate, String messageDefinitionPublisher, String messageDefinitionContact, String messageDefinitionDescription, String messageDefinitionUseContext, String mssgDfntnJrsdctnCdblCncptCdngSstm, String mssgDfntnJrsdctnCdblCncptCdngVrsn, String mssgDfntnJrsdctnCdblCncptCdngCde, String mssgDfntnJrsdctnCdblCncptCdngDsplay, String mssgDfntnJrsdctnCdblCncptCdngSrSlctd, String mssgDfntnJrsdctnCdblCncptTxtStrng, String messageDefinitionPurpose, String messageDefinitionCopyright, String messageDefinitionBase, String messageDefinitionParent, String mssgDfntnVntCdngCdngSrSlctdBln, String mssgDfntnVntCdngCdngCdCde, String mssgDfntnVntCdngCdngVrsnStrng, String mssgDfntnVntCdngCdngDsplStrng, String mssgDfntnVntCdngCdngSstmRi, String messageDefinitionEventUri, String messageDefinitionCategory, String messageDefinitionFocusCode, String messageDefinitionFocusProfile, String messageDefinitionFocusMin, String messageDefinitionFocusMax, String messageDefinitionResponseRequired, String mssgDfntnLlwdRspnsMssge, String mssgDfntnLlwdRspnsSttn, String messageDefinitionGraph) {
-       this.messageDefinitionUrl = messageDefinitionUrl;
-       this.mssgDfntnDntfrDntfrSCde = mssgDfntnDntfrDntfrSCde;
-       this.mssgDfntnDntfrDntfrTpCdblCncptCdngSstm = mssgDfntnDntfrDntfrTpCdblCncptCdngSstm;
-       this.mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn = mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn;
-       this.mssgDfntnDntfrDntfrTpCdblCncptCdngCde = mssgDfntnDntfrDntfrTpCdblCncptCdngCde;
-       this.mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay = mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay;
-       this.mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd = mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.mssgDfntnDntfrDntfrCdblCncptTxt = mssgDfntnDntfrDntfrCdblCncptTxt;
-       this.mssgDfntnDntfrDntfrPrdStrt = mssgDfntnDntfrDntfrPrdStrt;
-       this.mssgDfntnDntfrDntfrPrdNd = mssgDfntnDntfrDntfrPrdNd;
-       this.mssgDfntnDntfrDntfrRfrncRfrnce = mssgDfntnDntfrDntfrRfrncRfrnce;
-       this.mssgDfntnDntfrDntfrRfrncTpe = mssgDfntnDntfrDntfrRfrncTpe;
-       this.mssgDfntnDntfrDntfrRfrncDntfr = mssgDfntnDntfrDntfrRfrncDntfr;
-       this.mssgDfntnDntfrDntfrRfrncDsplay = mssgDfntnDntfrDntfrRfrncDsplay;
-       this.mssgDfntnDntfrDntfrVlStrng = mssgDfntnDntfrDntfrVlStrng;
-       this.mssgDfntnDntfrDntfrSstmRi = mssgDfntnDntfrDntfrSstmRi;
-       this.messageDefinitionVersion = messageDefinitionVersion;
-       this.messageDefinitionName = messageDefinitionName;
-       this.messageDefinitionTitle = messageDefinitionTitle;
-       this.messageDefinitionReplaces = messageDefinitionReplaces;
-       this.messageDefinitionStatus = messageDefinitionStatus;
-       this.messageDefinitionExperimental = messageDefinitionExperimental;
-       this.messageDefinitionDate = messageDefinitionDate;
-       this.messageDefinitionPublisher = messageDefinitionPublisher;
-       this.messageDefinitionContact = messageDefinitionContact;
-       this.messageDefinitionDescription = messageDefinitionDescription;
-       this.messageDefinitionUseContext = messageDefinitionUseContext;
-       this.mssgDfntnJrsdctnCdblCncptCdngSstm = mssgDfntnJrsdctnCdblCncptCdngSstm;
-       this.mssgDfntnJrsdctnCdblCncptCdngVrsn = mssgDfntnJrsdctnCdblCncptCdngVrsn;
-       this.mssgDfntnJrsdctnCdblCncptCdngCde = mssgDfntnJrsdctnCdblCncptCdngCde;
-       this.mssgDfntnJrsdctnCdblCncptCdngDsplay = mssgDfntnJrsdctnCdblCncptCdngDsplay;
-       this.mssgDfntnJrsdctnCdblCncptCdngSrSlctd = mssgDfntnJrsdctnCdblCncptCdngSrSlctd;
-       this.mssgDfntnJrsdctnCdblCncptTxtStrng = mssgDfntnJrsdctnCdblCncptTxtStrng;
-       this.messageDefinitionPurpose = messageDefinitionPurpose;
-       this.messageDefinitionCopyright = messageDefinitionCopyright;
-       this.messageDefinitionBase = messageDefinitionBase;
-       this.messageDefinitionParent = messageDefinitionParent;
-       this.mssgDfntnVntCdngCdngSrSlctdBln = mssgDfntnVntCdngCdngSrSlctdBln;
-       this.mssgDfntnVntCdngCdngCdCde = mssgDfntnVntCdngCdngCdCde;
-       this.mssgDfntnVntCdngCdngVrsnStrng = mssgDfntnVntCdngCdngVrsnStrng;
-       this.mssgDfntnVntCdngCdngDsplStrng = mssgDfntnVntCdngCdngDsplStrng;
-       this.mssgDfntnVntCdngCdngSstmRi = mssgDfntnVntCdngCdngSstmRi;
-       this.messageDefinitionEventUri = messageDefinitionEventUri;
-       this.messageDefinitionCategory = messageDefinitionCategory;
-       this.messageDefinitionFocusCode = messageDefinitionFocusCode;
-       this.messageDefinitionFocusProfile = messageDefinitionFocusProfile;
-       this.messageDefinitionFocusMin = messageDefinitionFocusMin;
-       this.messageDefinitionFocusMax = messageDefinitionFocusMax;
-       this.messageDefinitionResponseRequired = messageDefinitionResponseRequired;
-       this.mssgDfntnLlwdRspnsMssge = mssgDfntnLlwdRspnsMssge;
-       this.mssgDfntnLlwdRspnsSttn = mssgDfntnLlwdRspnsSttn;
-       this.messageDefinitionGraph = messageDefinitionGraph;
+    public Messagedefinition(String messageDefinitionUrlUri, String mssgDfntnDntfrDntfrSe, String mssgDfntnDntfrDntfrTpCcCSstm, String mssgDfntnDntfrDntfrTpCcCVrsn, String mssgDfntnDntfrDntfrTpCcCCde, String mssgDfntnDntfrDntfrTpCcCDsplay, String mssgDfntnDntfrDntfrTpCcCSrSlctd, String mssgDfntnDntfrDntfrTpCcTxt, String mssgDfntnDntfrDntfrPrdPrdStrt, String mssgDfntnDntfrDntfrPrdPrdNd, String mssgDfntnDntfrDntfrSsgnr, String mssgDfntnDntfrDntfrVlue, String mssgDfntnDntfrDntfrSstm, String messageDefinitionVersionString, String messageDefinitionNameString, String messageDefinitionTitleString, String mssgDfntnRplcsCnncl, String messageDefinitionStatusCode, String mssgDfntnXprmntlBln, String messageDefinitionDateDateTime, String messageDefinitionPublisherString, String mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt, String mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd, String mssgDfntnCntctCntctDtlTlcmCntctPntSstm, String mssgDfntnCntctCntctDtlTlcmCntctPntVlue, String mssgDfntnCntctCntctDtlTlcmCntctPntSe, String mssgDfntnCntctCntctDtlTlcmCntctPntRnk, String mssgDfntnCntctCntctDtlNme, String mssgDfntnDscrptnMrkdwn, String mssgDfntnSCntxtSgCntxtVlCcCcCSstm, String mssgDfntnSCntxtSgCntxtVlCcCcCVrsn, String mssgDfntnSCntxtSgCntxtVlCcCcCCde, String mssgDfntnSCntxtSgCntxtVlCcCcCDsplay, String mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd, String mssgDfntnSCntxtSgCntxtVlCcCcTxt, String mssgDfntnSCntxtSgCntxtCdCSstm, String mssgDfntnSCntxtSgCntxtCdCVrsn, String mssgDfntnSCntxtSgCntxtCdCCde, String mssgDfntnSCntxtSgCntxtCdCDsplay, String mssgDfntnSCntxtSgCntxtCdCSrSlctd, String mssgDfntnSCntxtSgCntxtVlQnttQnttVlue, String mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr, String mssgDfntnSCntxtSgCntxtVlQnttQnttNt, String mssgDfntnSCntxtSgCntxtVlQnttQnttSstm, String mssgDfntnSCntxtSgCntxtVlQnttQnttCde, String mssgDfntnSCntxtSgCntxtVlRngRngLw, String mssgDfntnSCntxtSgCntxtVlRngRngHgh, String mssgDfntnSCntxtSgCntxtVlRfrnce, String mssgDfntnJrsdctnCcCdngCSstm, String mssgDfntnJrsdctnCcCdngCVrsn, String mssgDfntnJrsdctnCcCdngCCde, String mssgDfntnJrsdctnCcCdngCDsplay, String mssgDfntnJrsdctnCcCdngCSrSlctd, String mssgDfntnJrsdctnCcTxt, String messageDefinitionPurposeMarkdown, String mssgDfntnCprghtMrkdwn, String messageDefinitionBaseCanonical, String messageDefinitionParentCanonical, String mssgDfntnVntCdngCSrSlctd, String mssgDfntnVntCdngCCde, String mssgDfntnVntCdngCVrsn, String mssgDfntnVntCdngCDsplay, String mssgDfntnVntCdngCSstm, String messageDefinitionEventUriUri, String messageDefinitionCategoryCode, String messageDefinitionFocusCodeCode, String mssgDfntnFcsPrflCnncl, String mssgDfntnFcsMnNsgndnt, String messageDefinitionFocusMaxString, String mssgDfntnRspnsRqrdCde, String mssgDfntnLlwdRspnsMssgCnncl, String mssgDfntnLlwdRspnsSttnMrkdwn, String messageDefinitionGraphCanonical) {
+       this.messageDefinitionUrlUri = messageDefinitionUrlUri;
+       this.mssgDfntnDntfrDntfrSe = mssgDfntnDntfrDntfrSe;
+       this.mssgDfntnDntfrDntfrTpCcCSstm = mssgDfntnDntfrDntfrTpCcCSstm;
+       this.mssgDfntnDntfrDntfrTpCcCVrsn = mssgDfntnDntfrDntfrTpCcCVrsn;
+       this.mssgDfntnDntfrDntfrTpCcCCde = mssgDfntnDntfrDntfrTpCcCCde;
+       this.mssgDfntnDntfrDntfrTpCcCDsplay = mssgDfntnDntfrDntfrTpCcCDsplay;
+       this.mssgDfntnDntfrDntfrTpCcCSrSlctd = mssgDfntnDntfrDntfrTpCcCSrSlctd;
+       this.mssgDfntnDntfrDntfrTpCcTxt = mssgDfntnDntfrDntfrTpCcTxt;
+       this.mssgDfntnDntfrDntfrPrdPrdStrt = mssgDfntnDntfrDntfrPrdPrdStrt;
+       this.mssgDfntnDntfrDntfrPrdPrdNd = mssgDfntnDntfrDntfrPrdPrdNd;
+       this.mssgDfntnDntfrDntfrSsgnr = mssgDfntnDntfrDntfrSsgnr;
+       this.mssgDfntnDntfrDntfrVlue = mssgDfntnDntfrDntfrVlue;
+       this.mssgDfntnDntfrDntfrSstm = mssgDfntnDntfrDntfrSstm;
+       this.messageDefinitionVersionString = messageDefinitionVersionString;
+       this.messageDefinitionNameString = messageDefinitionNameString;
+       this.messageDefinitionTitleString = messageDefinitionTitleString;
+       this.mssgDfntnRplcsCnncl = mssgDfntnRplcsCnncl;
+       this.messageDefinitionStatusCode = messageDefinitionStatusCode;
+       this.mssgDfntnXprmntlBln = mssgDfntnXprmntlBln;
+       this.messageDefinitionDateDateTime = messageDefinitionDateDateTime;
+       this.messageDefinitionPublisherString = messageDefinitionPublisherString;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt = mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd = mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntSstm = mssgDfntnCntctCntctDtlTlcmCntctPntSstm;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntVlue = mssgDfntnCntctCntctDtlTlcmCntctPntVlue;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntSe = mssgDfntnCntctCntctDtlTlcmCntctPntSe;
+       this.mssgDfntnCntctCntctDtlTlcmCntctPntRnk = mssgDfntnCntctCntctDtlTlcmCntctPntRnk;
+       this.mssgDfntnCntctCntctDtlNme = mssgDfntnCntctCntctDtlNme;
+       this.mssgDfntnDscrptnMrkdwn = mssgDfntnDscrptnMrkdwn;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcCSstm = mssgDfntnSCntxtSgCntxtVlCcCcCSstm;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcCVrsn = mssgDfntnSCntxtSgCntxtVlCcCcCVrsn;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcCCde = mssgDfntnSCntxtSgCntxtVlCcCcCCde;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcCDsplay = mssgDfntnSCntxtSgCntxtVlCcCcCDsplay;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd = mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.mssgDfntnSCntxtSgCntxtVlCcCcTxt = mssgDfntnSCntxtSgCntxtVlCcCcTxt;
+       this.mssgDfntnSCntxtSgCntxtCdCSstm = mssgDfntnSCntxtSgCntxtCdCSstm;
+       this.mssgDfntnSCntxtSgCntxtCdCVrsn = mssgDfntnSCntxtSgCntxtCdCVrsn;
+       this.mssgDfntnSCntxtSgCntxtCdCCde = mssgDfntnSCntxtSgCntxtCdCCde;
+       this.mssgDfntnSCntxtSgCntxtCdCDsplay = mssgDfntnSCntxtSgCntxtCdCDsplay;
+       this.mssgDfntnSCntxtSgCntxtCdCSrSlctd = mssgDfntnSCntxtSgCntxtCdCSrSlctd;
+       this.mssgDfntnSCntxtSgCntxtVlQnttQnttVlue = mssgDfntnSCntxtSgCntxtVlQnttQnttVlue;
+       this.mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr = mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.mssgDfntnSCntxtSgCntxtVlQnttQnttNt = mssgDfntnSCntxtSgCntxtVlQnttQnttNt;
+       this.mssgDfntnSCntxtSgCntxtVlQnttQnttSstm = mssgDfntnSCntxtSgCntxtVlQnttQnttSstm;
+       this.mssgDfntnSCntxtSgCntxtVlQnttQnttCde = mssgDfntnSCntxtSgCntxtVlQnttQnttCde;
+       this.mssgDfntnSCntxtSgCntxtVlRngRngLw = mssgDfntnSCntxtSgCntxtVlRngRngLw;
+       this.mssgDfntnSCntxtSgCntxtVlRngRngHgh = mssgDfntnSCntxtSgCntxtVlRngRngHgh;
+       this.mssgDfntnSCntxtSgCntxtVlRfrnce = mssgDfntnSCntxtSgCntxtVlRfrnce;
+       this.mssgDfntnJrsdctnCcCdngCSstm = mssgDfntnJrsdctnCcCdngCSstm;
+       this.mssgDfntnJrsdctnCcCdngCVrsn = mssgDfntnJrsdctnCcCdngCVrsn;
+       this.mssgDfntnJrsdctnCcCdngCCde = mssgDfntnJrsdctnCcCdngCCde;
+       this.mssgDfntnJrsdctnCcCdngCDsplay = mssgDfntnJrsdctnCcCdngCDsplay;
+       this.mssgDfntnJrsdctnCcCdngCSrSlctd = mssgDfntnJrsdctnCcCdngCSrSlctd;
+       this.mssgDfntnJrsdctnCcTxt = mssgDfntnJrsdctnCcTxt;
+       this.messageDefinitionPurposeMarkdown = messageDefinitionPurposeMarkdown;
+       this.mssgDfntnCprghtMrkdwn = mssgDfntnCprghtMrkdwn;
+       this.messageDefinitionBaseCanonical = messageDefinitionBaseCanonical;
+       this.messageDefinitionParentCanonical = messageDefinitionParentCanonical;
+       this.mssgDfntnVntCdngCSrSlctd = mssgDfntnVntCdngCSrSlctd;
+       this.mssgDfntnVntCdngCCde = mssgDfntnVntCdngCCde;
+       this.mssgDfntnVntCdngCVrsn = mssgDfntnVntCdngCVrsn;
+       this.mssgDfntnVntCdngCDsplay = mssgDfntnVntCdngCDsplay;
+       this.mssgDfntnVntCdngCSstm = mssgDfntnVntCdngCSstm;
+       this.messageDefinitionEventUriUri = messageDefinitionEventUriUri;
+       this.messageDefinitionCategoryCode = messageDefinitionCategoryCode;
+       this.messageDefinitionFocusCodeCode = messageDefinitionFocusCodeCode;
+       this.mssgDfntnFcsPrflCnncl = mssgDfntnFcsPrflCnncl;
+       this.mssgDfntnFcsMnNsgndnt = mssgDfntnFcsMnNsgndnt;
+       this.messageDefinitionFocusMaxString = messageDefinitionFocusMaxString;
+       this.mssgDfntnRspnsRqrdCde = mssgDfntnRspnsRqrdCde;
+       this.mssgDfntnLlwdRspnsMssgCnncl = mssgDfntnLlwdRspnsMssgCnncl;
+       this.mssgDfntnLlwdRspnsSttnMrkdwn = mssgDfntnLlwdRspnsSttnMrkdwn;
+       this.messageDefinitionGraphCanonical = messageDefinitionGraphCanonical;
     }
    
-    public String getMessageDefinitionUrl() {
-        return this.messageDefinitionUrl;
-    }
-    
-    public void setMessageDefinitionUrl(String messageDefinitionUrl) {
-        this.messageDefinitionUrl = messageDefinitionUrl;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrSCde() {
-        return this.mssgDfntnDntfrDntfrSCde;
-    }
-    
-    public void setMssgDfntnDntfrDntfrSCde(String mssgDfntnDntfrDntfrSCde) {
-        this.mssgDfntnDntfrDntfrSCde = mssgDfntnDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.mssgDfntnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setMssgDfntnDntfrDntfrTpCdblCncptCdngSstm(String mssgDfntnDntfrDntfrTpCdblCncptCdngSstm) {
-        this.mssgDfntnDntfrDntfrTpCdblCncptCdngSstm = mssgDfntnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setMssgDfntnDntfrDntfrTpCdblCncptCdngVrsn(String mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn = mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrTpCdblCncptCdngCde() {
-        return this.mssgDfntnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setMssgDfntnDntfrDntfrTpCdblCncptCdngCde(String mssgDfntnDntfrDntfrTpCdblCncptCdngCde) {
-        this.mssgDfntnDntfrDntfrTpCdblCncptCdngCde = mssgDfntnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setMssgDfntnDntfrDntfrTpCdblCncptCdngDsplay(String mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay = mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setMssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd(String mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd = mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrCdblCncptTxt() {
-        return this.mssgDfntnDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setMssgDfntnDntfrDntfrCdblCncptTxt(String mssgDfntnDntfrDntfrCdblCncptTxt) {
-        this.mssgDfntnDntfrDntfrCdblCncptTxt = mssgDfntnDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrPrdStrt() {
-        return this.mssgDfntnDntfrDntfrPrdStrt;
-    }
-    
-    public void setMssgDfntnDntfrDntfrPrdStrt(String mssgDfntnDntfrDntfrPrdStrt) {
-        this.mssgDfntnDntfrDntfrPrdStrt = mssgDfntnDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrPrdNd() {
-        return this.mssgDfntnDntfrDntfrPrdNd;
-    }
-    
-    public void setMssgDfntnDntfrDntfrPrdNd(String mssgDfntnDntfrDntfrPrdNd) {
-        this.mssgDfntnDntfrDntfrPrdNd = mssgDfntnDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrRfrncRfrnce() {
-        return this.mssgDfntnDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setMssgDfntnDntfrDntfrRfrncRfrnce(String mssgDfntnDntfrDntfrRfrncRfrnce) {
-        this.mssgDfntnDntfrDntfrRfrncRfrnce = mssgDfntnDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrRfrncTpe() {
-        return this.mssgDfntnDntfrDntfrRfrncTpe;
-    }
-    
-    public void setMssgDfntnDntfrDntfrRfrncTpe(String mssgDfntnDntfrDntfrRfrncTpe) {
-        this.mssgDfntnDntfrDntfrRfrncTpe = mssgDfntnDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrRfrncDntfr() {
-        return this.mssgDfntnDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setMssgDfntnDntfrDntfrRfrncDntfr(String mssgDfntnDntfrDntfrRfrncDntfr) {
-        this.mssgDfntnDntfrDntfrRfrncDntfr = mssgDfntnDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrRfrncDsplay() {
-        return this.mssgDfntnDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setMssgDfntnDntfrDntfrRfrncDsplay(String mssgDfntnDntfrDntfrRfrncDsplay) {
-        this.mssgDfntnDntfrDntfrRfrncDsplay = mssgDfntnDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrVlStrng() {
-        return this.mssgDfntnDntfrDntfrVlStrng;
-    }
-    
-    public void setMssgDfntnDntfrDntfrVlStrng(String mssgDfntnDntfrDntfrVlStrng) {
-        this.mssgDfntnDntfrDntfrVlStrng = mssgDfntnDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getMssgDfntnDntfrDntfrSstmRi() {
-        return this.mssgDfntnDntfrDntfrSstmRi;
-    }
-    
-    public void setMssgDfntnDntfrDntfrSstmRi(String mssgDfntnDntfrDntfrSstmRi) {
-        this.mssgDfntnDntfrDntfrSstmRi = mssgDfntnDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getMessageDefinitionVersion() {
-        return this.messageDefinitionVersion;
-    }
-    
-    public void setMessageDefinitionVersion(String messageDefinitionVersion) {
-        this.messageDefinitionVersion = messageDefinitionVersion;
-    }
-    
-    
-    
-    public String getMessageDefinitionName() {
-        return this.messageDefinitionName;
-    }
-    
-    public void setMessageDefinitionName(String messageDefinitionName) {
-        this.messageDefinitionName = messageDefinitionName;
-    }
-    
-    
-    
-    public String getMessageDefinitionTitle() {
-        return this.messageDefinitionTitle;
-    }
-    
-    public void setMessageDefinitionTitle(String messageDefinitionTitle) {
-        this.messageDefinitionTitle = messageDefinitionTitle;
-    }
-    
-    
-    
-    public String getMessageDefinitionReplaces() {
-        return this.messageDefinitionReplaces;
-    }
-    
-    public void setMessageDefinitionReplaces(String messageDefinitionReplaces) {
-        this.messageDefinitionReplaces = messageDefinitionReplaces;
-    }
-    
-    
-    
-    public String getMessageDefinitionStatus() {
-        return this.messageDefinitionStatus;
-    }
-    
-    public void setMessageDefinitionStatus(String messageDefinitionStatus) {
-        this.messageDefinitionStatus = messageDefinitionStatus;
-    }
-    
-    
-    
-    public String getMessageDefinitionExperimental() {
-        return this.messageDefinitionExperimental;
-    }
-    
-    public void setMessageDefinitionExperimental(String messageDefinitionExperimental) {
-        this.messageDefinitionExperimental = messageDefinitionExperimental;
-    }
-    
-    
-    
-    public String getMessageDefinitionDate() {
-        return this.messageDefinitionDate;
-    }
-    
-    public void setMessageDefinitionDate(String messageDefinitionDate) {
-        this.messageDefinitionDate = messageDefinitionDate;
-    }
-    
-    
-    
-    public String getMessageDefinitionPublisher() {
-        return this.messageDefinitionPublisher;
-    }
-    
-    public void setMessageDefinitionPublisher(String messageDefinitionPublisher) {
-        this.messageDefinitionPublisher = messageDefinitionPublisher;
-    }
-    
-    
-    
-    public String getMessageDefinitionContact() {
-        return this.messageDefinitionContact;
-    }
-    
-    public void setMessageDefinitionContact(String messageDefinitionContact) {
-        this.messageDefinitionContact = messageDefinitionContact;
-    }
-    
-    
-    
-    public String getMessageDefinitionDescription() {
-        return this.messageDefinitionDescription;
-    }
-    
-    public void setMessageDefinitionDescription(String messageDefinitionDescription) {
-        this.messageDefinitionDescription = messageDefinitionDescription;
-    }
-    
-    
-    
-    public String getMessageDefinitionUseContext() {
-        return this.messageDefinitionUseContext;
-    }
-    
-    public void setMessageDefinitionUseContext(String messageDefinitionUseContext) {
-        this.messageDefinitionUseContext = messageDefinitionUseContext;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptCdngSstm() {
-        return this.mssgDfntnJrsdctnCdblCncptCdngSstm;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptCdngSstm(String mssgDfntnJrsdctnCdblCncptCdngSstm) {
-        this.mssgDfntnJrsdctnCdblCncptCdngSstm = mssgDfntnJrsdctnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptCdngVrsn() {
-        return this.mssgDfntnJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptCdngVrsn(String mssgDfntnJrsdctnCdblCncptCdngVrsn) {
-        this.mssgDfntnJrsdctnCdblCncptCdngVrsn = mssgDfntnJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptCdngCde() {
-        return this.mssgDfntnJrsdctnCdblCncptCdngCde;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptCdngCde(String mssgDfntnJrsdctnCdblCncptCdngCde) {
-        this.mssgDfntnJrsdctnCdblCncptCdngCde = mssgDfntnJrsdctnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptCdngDsplay() {
-        return this.mssgDfntnJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptCdngDsplay(String mssgDfntnJrsdctnCdblCncptCdngDsplay) {
-        this.mssgDfntnJrsdctnCdblCncptCdngDsplay = mssgDfntnJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptCdngSrSlctd() {
-        return this.mssgDfntnJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptCdngSrSlctd(String mssgDfntnJrsdctnCdblCncptCdngSrSlctd) {
-        this.mssgDfntnJrsdctnCdblCncptCdngSrSlctd = mssgDfntnJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getMssgDfntnJrsdctnCdblCncptTxtStrng() {
-        return this.mssgDfntnJrsdctnCdblCncptTxtStrng;
-    }
-    
-    public void setMssgDfntnJrsdctnCdblCncptTxtStrng(String mssgDfntnJrsdctnCdblCncptTxtStrng) {
-        this.mssgDfntnJrsdctnCdblCncptTxtStrng = mssgDfntnJrsdctnCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getMessageDefinitionPurpose() {
-        return this.messageDefinitionPurpose;
-    }
-    
-    public void setMessageDefinitionPurpose(String messageDefinitionPurpose) {
-        this.messageDefinitionPurpose = messageDefinitionPurpose;
-    }
-    
-    
-    
-    public String getMessageDefinitionCopyright() {
-        return this.messageDefinitionCopyright;
-    }
-    
-    public void setMessageDefinitionCopyright(String messageDefinitionCopyright) {
-        this.messageDefinitionCopyright = messageDefinitionCopyright;
-    }
-    
-    
-    
-    public String getMessageDefinitionBase() {
-        return this.messageDefinitionBase;
-    }
-    
-    public void setMessageDefinitionBase(String messageDefinitionBase) {
-        this.messageDefinitionBase = messageDefinitionBase;
-    }
-    
-    
-    
-    public String getMessageDefinitionParent() {
-        return this.messageDefinitionParent;
-    }
-    
-    public void setMessageDefinitionParent(String messageDefinitionParent) {
-        this.messageDefinitionParent = messageDefinitionParent;
-    }
-    
-    
-    
-    public String getMssgDfntnVntCdngCdngSrSlctdBln() {
-        return this.mssgDfntnVntCdngCdngSrSlctdBln;
-    }
-    
-    public void setMssgDfntnVntCdngCdngSrSlctdBln(String mssgDfntnVntCdngCdngSrSlctdBln) {
-        this.mssgDfntnVntCdngCdngSrSlctdBln = mssgDfntnVntCdngCdngSrSlctdBln;
-    }
-    
-    
-    
-    public String getMssgDfntnVntCdngCdngCdCde() {
-        return this.mssgDfntnVntCdngCdngCdCde;
-    }
-    
-    public void setMssgDfntnVntCdngCdngCdCde(String mssgDfntnVntCdngCdngCdCde) {
-        this.mssgDfntnVntCdngCdngCdCde = mssgDfntnVntCdngCdngCdCde;
-    }
-    
-    
-    
-    public String getMssgDfntnVntCdngCdngVrsnStrng() {
-        return this.mssgDfntnVntCdngCdngVrsnStrng;
-    }
-    
-    public void setMssgDfntnVntCdngCdngVrsnStrng(String mssgDfntnVntCdngCdngVrsnStrng) {
-        this.mssgDfntnVntCdngCdngVrsnStrng = mssgDfntnVntCdngCdngVrsnStrng;
-    }
-    
-    
-    
-    public String getMssgDfntnVntCdngCdngDsplStrng() {
-        return this.mssgDfntnVntCdngCdngDsplStrng;
-    }
-    
-    public void setMssgDfntnVntCdngCdngDsplStrng(String mssgDfntnVntCdngCdngDsplStrng) {
-        this.mssgDfntnVntCdngCdngDsplStrng = mssgDfntnVntCdngCdngDsplStrng;
-    }
-    
-    
-    
-    public String getMssgDfntnVntCdngCdngSstmRi() {
-        return this.mssgDfntnVntCdngCdngSstmRi;
-    }
-    
-    public void setMssgDfntnVntCdngCdngSstmRi(String mssgDfntnVntCdngCdngSstmRi) {
-        this.mssgDfntnVntCdngCdngSstmRi = mssgDfntnVntCdngCdngSstmRi;
-    }
-    
-    
-    
-    public String getMessageDefinitionEventUri() {
-        return this.messageDefinitionEventUri;
-    }
-    
-    public void setMessageDefinitionEventUri(String messageDefinitionEventUri) {
-        this.messageDefinitionEventUri = messageDefinitionEventUri;
-    }
-    
-    
-    
-    public String getMessageDefinitionCategory() {
-        return this.messageDefinitionCategory;
-    }
-    
-    public void setMessageDefinitionCategory(String messageDefinitionCategory) {
-        this.messageDefinitionCategory = messageDefinitionCategory;
-    }
-    
-    
-    
-    public String getMessageDefinitionFocusCode() {
-        return this.messageDefinitionFocusCode;
-    }
-    
-    public void setMessageDefinitionFocusCode(String messageDefinitionFocusCode) {
-        this.messageDefinitionFocusCode = messageDefinitionFocusCode;
-    }
-    
-    
-    
-    public String getMessageDefinitionFocusProfile() {
-        return this.messageDefinitionFocusProfile;
-    }
-    
-    public void setMessageDefinitionFocusProfile(String messageDefinitionFocusProfile) {
-        this.messageDefinitionFocusProfile = messageDefinitionFocusProfile;
-    }
-    
-    
-    
-    public String getMessageDefinitionFocusMin() {
-        return this.messageDefinitionFocusMin;
-    }
-    
-    public void setMessageDefinitionFocusMin(String messageDefinitionFocusMin) {
-        this.messageDefinitionFocusMin = messageDefinitionFocusMin;
-    }
-    
-    
-    
-    public String getMessageDefinitionFocusMax() {
-        return this.messageDefinitionFocusMax;
-    }
-    
-    public void setMessageDefinitionFocusMax(String messageDefinitionFocusMax) {
-        this.messageDefinitionFocusMax = messageDefinitionFocusMax;
-    }
-    
-    
-    
-    public String getMessageDefinitionResponseRequired() {
-        return this.messageDefinitionResponseRequired;
-    }
-    
-    public void setMessageDefinitionResponseRequired(String messageDefinitionResponseRequired) {
-        this.messageDefinitionResponseRequired = messageDefinitionResponseRequired;
-    }
-    
-    
-    
-    public String getMssgDfntnLlwdRspnsMssge() {
-        return this.mssgDfntnLlwdRspnsMssge;
-    }
-    
-    public void setMssgDfntnLlwdRspnsMssge(String mssgDfntnLlwdRspnsMssge) {
-        this.mssgDfntnLlwdRspnsMssge = mssgDfntnLlwdRspnsMssge;
-    }
-    
-    
-    
-    public String getMssgDfntnLlwdRspnsSttn() {
-        return this.mssgDfntnLlwdRspnsSttn;
-    }
-    
-    public void setMssgDfntnLlwdRspnsSttn(String mssgDfntnLlwdRspnsSttn) {
-        this.mssgDfntnLlwdRspnsSttn = mssgDfntnLlwdRspnsSttn;
-    }
-    
-    
-    
-    public String getMessageDefinitionGraph() {
-        return this.messageDefinitionGraph;
-    }
-    
-    public void setMessageDefinitionGraph(String messageDefinitionGraph) {
-        this.messageDefinitionGraph = messageDefinitionGraph;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getMessageDefinitionUrlUri()
+    {
+        return this.messageDefinitionUrlUri;
+    }
+    
+    public void setMessageDefinitionUrlUri
+        (String messageDefinitionUrlUri) 
+        {
+      this.messageDefinitionUrlUri = messageDefinitionUrlUri;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrSe()
+    {
+        return this.mssgDfntnDntfrDntfrSe;
+    }
+    
+    public void setMssgDfntnDntfrDntfrSe
+        (String mssgDfntnDntfrDntfrSe) 
+        {
+      this.mssgDfntnDntfrDntfrSe = mssgDfntnDntfrDntfrSe;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcCSstm()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcCSstm
+        (String mssgDfntnDntfrDntfrTpCcCSstm) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcCSstm = mssgDfntnDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcCVrsn()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcCVrsn
+        (String mssgDfntnDntfrDntfrTpCcCVrsn) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcCVrsn = mssgDfntnDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcCCde()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcCCde;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcCCde
+        (String mssgDfntnDntfrDntfrTpCcCCde) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcCCde = mssgDfntnDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcCDsplay()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcCDsplay
+        (String mssgDfntnDntfrDntfrTpCcCDsplay) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcCDsplay = mssgDfntnDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcCSrSlctd
+        (String mssgDfntnDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcCSrSlctd = mssgDfntnDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrTpCcTxt()
+    {
+        return this.mssgDfntnDntfrDntfrTpCcTxt;
+    }
+    
+    public void setMssgDfntnDntfrDntfrTpCcTxt
+        (String mssgDfntnDntfrDntfrTpCcTxt) 
+        {
+      this.mssgDfntnDntfrDntfrTpCcTxt = mssgDfntnDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrPrdPrdStrt()
+    {
+        return this.mssgDfntnDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setMssgDfntnDntfrDntfrPrdPrdStrt
+        (String mssgDfntnDntfrDntfrPrdPrdStrt) 
+        {
+      this.mssgDfntnDntfrDntfrPrdPrdStrt = mssgDfntnDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrPrdPrdNd()
+    {
+        return this.mssgDfntnDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setMssgDfntnDntfrDntfrPrdPrdNd
+        (String mssgDfntnDntfrDntfrPrdPrdNd) 
+        {
+      this.mssgDfntnDntfrDntfrPrdPrdNd = mssgDfntnDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrSsgnr()
+    {
+        return this.mssgDfntnDntfrDntfrSsgnr;
+    }
+    
+    public void setMssgDfntnDntfrDntfrSsgnr
+        (String mssgDfntnDntfrDntfrSsgnr) 
+        {
+      this.mssgDfntnDntfrDntfrSsgnr = mssgDfntnDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrVlue()
+    {
+        return this.mssgDfntnDntfrDntfrVlue;
+    }
+    
+    public void setMssgDfntnDntfrDntfrVlue
+        (String mssgDfntnDntfrDntfrVlue) 
+        {
+      this.mssgDfntnDntfrDntfrVlue = mssgDfntnDntfrDntfrVlue;
+}
+    public 
+    String 
+    getMssgDfntnDntfrDntfrSstm()
+    {
+        return this.mssgDfntnDntfrDntfrSstm;
+    }
+    
+    public void setMssgDfntnDntfrDntfrSstm
+        (String mssgDfntnDntfrDntfrSstm) 
+        {
+      this.mssgDfntnDntfrDntfrSstm = mssgDfntnDntfrDntfrSstm;
+}
+    public 
+    String 
+    getMessageDefinitionVersionString()
+    {
+        return this.messageDefinitionVersionString;
+    }
+    
+    public void setMessageDefinitionVersionString
+        (String messageDefinitionVersionString) 
+        {
+      this.messageDefinitionVersionString = messageDefinitionVersionString;
+}
+    public 
+    String 
+    getMessageDefinitionNameString()
+    {
+        return this.messageDefinitionNameString;
+    }
+    
+    public void setMessageDefinitionNameString
+        (String messageDefinitionNameString) 
+        {
+      this.messageDefinitionNameString = messageDefinitionNameString;
+}
+    public 
+    String 
+    getMessageDefinitionTitleString()
+    {
+        return this.messageDefinitionTitleString;
+    }
+    
+    public void setMessageDefinitionTitleString
+        (String messageDefinitionTitleString) 
+        {
+      this.messageDefinitionTitleString = messageDefinitionTitleString;
+}
+    public 
+    String 
+    getMssgDfntnRplcsCnncl()
+    {
+        return this.mssgDfntnRplcsCnncl;
+    }
+    
+    public void setMssgDfntnRplcsCnncl
+        (String mssgDfntnRplcsCnncl) 
+        {
+      this.mssgDfntnRplcsCnncl = mssgDfntnRplcsCnncl;
+}
+    public 
+    String 
+    getMessageDefinitionStatusCode()
+    {
+        return this.messageDefinitionStatusCode;
+    }
+    
+    public void setMessageDefinitionStatusCode
+        (String messageDefinitionStatusCode) 
+        {
+      this.messageDefinitionStatusCode = messageDefinitionStatusCode;
+}
+    public 
+    String 
+    getMssgDfntnXprmntlBln()
+    {
+        return this.mssgDfntnXprmntlBln;
+    }
+    
+    public void setMssgDfntnXprmntlBln
+        (String mssgDfntnXprmntlBln) 
+        {
+      this.mssgDfntnXprmntlBln = mssgDfntnXprmntlBln;
+}
+    public 
+    String 
+    getMessageDefinitionDateDateTime()
+    {
+        return this.messageDefinitionDateDateTime;
+    }
+    
+    public void setMessageDefinitionDateDateTime
+        (String messageDefinitionDateDateTime) 
+        {
+      this.messageDefinitionDateDateTime = messageDefinitionDateDateTime;
+}
+    public 
+    String 
+    getMessageDefinitionPublisherString()
+    {
+        return this.messageDefinitionPublisherString;
+    }
+    
+    public void setMessageDefinitionPublisherString
+        (String messageDefinitionPublisherString) 
+        {
+      this.messageDefinitionPublisherString = messageDefinitionPublisherString;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt = mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntPrdNd
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd = mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntSstm
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntSstm = mssgDfntnCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntVlue
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntVlue = mssgDfntnCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntSe
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntSe = mssgDfntnCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.mssgDfntnCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlTlcmCntctPntRnk
+        (String mssgDfntnCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.mssgDfntnCntctCntctDtlTlcmCntctPntRnk = mssgDfntnCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getMssgDfntnCntctCntctDtlNme()
+    {
+        return this.mssgDfntnCntctCntctDtlNme;
+    }
+    
+    public void setMssgDfntnCntctCntctDtlNme
+        (String mssgDfntnCntctCntctDtlNme) 
+        {
+      this.mssgDfntnCntctCntctDtlNme = mssgDfntnCntctCntctDtlNme;
+}
+    public 
+    String 
+    getMssgDfntnDscrptnMrkdwn()
+    {
+        return this.mssgDfntnDscrptnMrkdwn;
+    }
+    
+    public void setMssgDfntnDscrptnMrkdwn
+        (String mssgDfntnDscrptnMrkdwn) 
+        {
+      this.mssgDfntnDscrptnMrkdwn = mssgDfntnDscrptnMrkdwn;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcCSstm
+        (String mssgDfntnSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcCSstm = mssgDfntnSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcCVrsn
+        (String mssgDfntnSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcCVrsn = mssgDfntnSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcCCde
+        (String mssgDfntnSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcCCde = mssgDfntnSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcCDsplay
+        (String mssgDfntnSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcCDsplay = mssgDfntnSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd
+        (String mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd = mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlCcCcTxt
+        (String mssgDfntnSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlCcCcTxt = mssgDfntnSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtCdCSstm()
+    {
+        return this.mssgDfntnSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtCdCSstm
+        (String mssgDfntnSCntxtSgCntxtCdCSstm) 
+        {
+      this.mssgDfntnSCntxtSgCntxtCdCSstm = mssgDfntnSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtCdCVrsn()
+    {
+        return this.mssgDfntnSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtCdCVrsn
+        (String mssgDfntnSCntxtSgCntxtCdCVrsn) 
+        {
+      this.mssgDfntnSCntxtSgCntxtCdCVrsn = mssgDfntnSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtCdCCde()
+    {
+        return this.mssgDfntnSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtCdCCde
+        (String mssgDfntnSCntxtSgCntxtCdCCde) 
+        {
+      this.mssgDfntnSCntxtSgCntxtCdCCde = mssgDfntnSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtCdCDsplay()
+    {
+        return this.mssgDfntnSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtCdCDsplay
+        (String mssgDfntnSCntxtSgCntxtCdCDsplay) 
+        {
+      this.mssgDfntnSCntxtSgCntxtCdCDsplay = mssgDfntnSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.mssgDfntnSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtCdCSrSlctd
+        (String mssgDfntnSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.mssgDfntnSCntxtSgCntxtCdCSrSlctd = mssgDfntnSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlQnttQnttVlue
+        (String mssgDfntnSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlQnttQnttVlue = mssgDfntnSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr
+        (String mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr = mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlQnttQnttNt
+        (String mssgDfntnSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlQnttQnttNt = mssgDfntnSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlQnttQnttSstm
+        (String mssgDfntnSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlQnttQnttSstm = mssgDfntnSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlQnttQnttCde
+        (String mssgDfntnSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlQnttQnttCde = mssgDfntnSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlRngRngLw
+        (String mssgDfntnSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlRngRngLw = mssgDfntnSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlRngRngHgh
+        (String mssgDfntnSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlRngRngHgh = mssgDfntnSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getMssgDfntnSCntxtSgCntxtVlRfrnce()
+    {
+        return this.mssgDfntnSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setMssgDfntnSCntxtSgCntxtVlRfrnce
+        (String mssgDfntnSCntxtSgCntxtVlRfrnce) 
+        {
+      this.mssgDfntnSCntxtSgCntxtVlRfrnce = mssgDfntnSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcCdngCSstm()
+    {
+        return this.mssgDfntnJrsdctnCcCdngCSstm;
+    }
+    
+    public void setMssgDfntnJrsdctnCcCdngCSstm
+        (String mssgDfntnJrsdctnCcCdngCSstm) 
+        {
+      this.mssgDfntnJrsdctnCcCdngCSstm = mssgDfntnJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcCdngCVrsn()
+    {
+        return this.mssgDfntnJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setMssgDfntnJrsdctnCcCdngCVrsn
+        (String mssgDfntnJrsdctnCcCdngCVrsn) 
+        {
+      this.mssgDfntnJrsdctnCcCdngCVrsn = mssgDfntnJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcCdngCCde()
+    {
+        return this.mssgDfntnJrsdctnCcCdngCCde;
+    }
+    
+    public void setMssgDfntnJrsdctnCcCdngCCde
+        (String mssgDfntnJrsdctnCcCdngCCde) 
+        {
+      this.mssgDfntnJrsdctnCcCdngCCde = mssgDfntnJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcCdngCDsplay()
+    {
+        return this.mssgDfntnJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setMssgDfntnJrsdctnCcCdngCDsplay
+        (String mssgDfntnJrsdctnCcCdngCDsplay) 
+        {
+      this.mssgDfntnJrsdctnCcCdngCDsplay = mssgDfntnJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcCdngCSrSlctd()
+    {
+        return this.mssgDfntnJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setMssgDfntnJrsdctnCcCdngCSrSlctd
+        (String mssgDfntnJrsdctnCcCdngCSrSlctd) 
+        {
+      this.mssgDfntnJrsdctnCcCdngCSrSlctd = mssgDfntnJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMssgDfntnJrsdctnCcTxt()
+    {
+        return this.mssgDfntnJrsdctnCcTxt;
+    }
+    
+    public void setMssgDfntnJrsdctnCcTxt
+        (String mssgDfntnJrsdctnCcTxt) 
+        {
+      this.mssgDfntnJrsdctnCcTxt = mssgDfntnJrsdctnCcTxt;
+}
+    public 
+    String 
+    getMessageDefinitionPurposeMarkdown()
+    {
+        return this.messageDefinitionPurposeMarkdown;
+    }
+    
+    public void setMessageDefinitionPurposeMarkdown
+        (String messageDefinitionPurposeMarkdown) 
+        {
+      this.messageDefinitionPurposeMarkdown = messageDefinitionPurposeMarkdown;
+}
+    public 
+    String 
+    getMssgDfntnCprghtMrkdwn()
+    {
+        return this.mssgDfntnCprghtMrkdwn;
+    }
+    
+    public void setMssgDfntnCprghtMrkdwn
+        (String mssgDfntnCprghtMrkdwn) 
+        {
+      this.mssgDfntnCprghtMrkdwn = mssgDfntnCprghtMrkdwn;
+}
+    public 
+    String 
+    getMessageDefinitionBaseCanonical()
+    {
+        return this.messageDefinitionBaseCanonical;
+    }
+    
+    public void setMessageDefinitionBaseCanonical
+        (String messageDefinitionBaseCanonical) 
+        {
+      this.messageDefinitionBaseCanonical = messageDefinitionBaseCanonical;
+}
+    public 
+    String 
+    getMessageDefinitionParentCanonical()
+    {
+        return this.messageDefinitionParentCanonical;
+    }
+    
+    public void setMessageDefinitionParentCanonical
+        (String messageDefinitionParentCanonical) 
+        {
+      this.messageDefinitionParentCanonical = messageDefinitionParentCanonical;
+}
+    public 
+    String 
+    getMssgDfntnVntCdngCSrSlctd()
+    {
+        return this.mssgDfntnVntCdngCSrSlctd;
+    }
+    
+    public void setMssgDfntnVntCdngCSrSlctd
+        (String mssgDfntnVntCdngCSrSlctd) 
+        {
+      this.mssgDfntnVntCdngCSrSlctd = mssgDfntnVntCdngCSrSlctd;
+}
+    public 
+    String 
+    getMssgDfntnVntCdngCCde()
+    {
+        return this.mssgDfntnVntCdngCCde;
+    }
+    
+    public void setMssgDfntnVntCdngCCde
+        (String mssgDfntnVntCdngCCde) 
+        {
+      this.mssgDfntnVntCdngCCde = mssgDfntnVntCdngCCde;
+}
+    public 
+    String 
+    getMssgDfntnVntCdngCVrsn()
+    {
+        return this.mssgDfntnVntCdngCVrsn;
+    }
+    
+    public void setMssgDfntnVntCdngCVrsn
+        (String mssgDfntnVntCdngCVrsn) 
+        {
+      this.mssgDfntnVntCdngCVrsn = mssgDfntnVntCdngCVrsn;
+}
+    public 
+    String 
+    getMssgDfntnVntCdngCDsplay()
+    {
+        return this.mssgDfntnVntCdngCDsplay;
+    }
+    
+    public void setMssgDfntnVntCdngCDsplay
+        (String mssgDfntnVntCdngCDsplay) 
+        {
+      this.mssgDfntnVntCdngCDsplay = mssgDfntnVntCdngCDsplay;
+}
+    public 
+    String 
+    getMssgDfntnVntCdngCSstm()
+    {
+        return this.mssgDfntnVntCdngCSstm;
+    }
+    
+    public void setMssgDfntnVntCdngCSstm
+        (String mssgDfntnVntCdngCSstm) 
+        {
+      this.mssgDfntnVntCdngCSstm = mssgDfntnVntCdngCSstm;
+}
+    public 
+    String 
+    getMessageDefinitionEventUriUri()
+    {
+        return this.messageDefinitionEventUriUri;
+    }
+    
+    public void setMessageDefinitionEventUriUri
+        (String messageDefinitionEventUriUri) 
+        {
+      this.messageDefinitionEventUriUri = messageDefinitionEventUriUri;
+}
+    public 
+    String 
+    getMessageDefinitionCategoryCode()
+    {
+        return this.messageDefinitionCategoryCode;
+    }
+    
+    public void setMessageDefinitionCategoryCode
+        (String messageDefinitionCategoryCode) 
+        {
+      this.messageDefinitionCategoryCode = messageDefinitionCategoryCode;
+}
+    public 
+    String 
+    getMessageDefinitionFocusCodeCode()
+    {
+        return this.messageDefinitionFocusCodeCode;
+    }
+    
+    public void setMessageDefinitionFocusCodeCode
+        (String messageDefinitionFocusCodeCode) 
+        {
+      this.messageDefinitionFocusCodeCode = messageDefinitionFocusCodeCode;
+}
+    public 
+    String 
+    getMssgDfntnFcsPrflCnncl()
+    {
+        return this.mssgDfntnFcsPrflCnncl;
+    }
+    
+    public void setMssgDfntnFcsPrflCnncl
+        (String mssgDfntnFcsPrflCnncl) 
+        {
+      this.mssgDfntnFcsPrflCnncl = mssgDfntnFcsPrflCnncl;
+}
+    public 
+    String 
+    getMssgDfntnFcsMnNsgndnt()
+    {
+        return this.mssgDfntnFcsMnNsgndnt;
+    }
+    
+    public void setMssgDfntnFcsMnNsgndnt
+        (String mssgDfntnFcsMnNsgndnt) 
+        {
+      this.mssgDfntnFcsMnNsgndnt = mssgDfntnFcsMnNsgndnt;
+}
+    public 
+    String 
+    getMessageDefinitionFocusMaxString()
+    {
+        return this.messageDefinitionFocusMaxString;
+    }
+    
+    public void setMessageDefinitionFocusMaxString
+        (String messageDefinitionFocusMaxString) 
+        {
+      this.messageDefinitionFocusMaxString = messageDefinitionFocusMaxString;
+}
+    public 
+    String 
+    getMssgDfntnRspnsRqrdCde()
+    {
+        return this.mssgDfntnRspnsRqrdCde;
+    }
+    
+    public void setMssgDfntnRspnsRqrdCde
+        (String mssgDfntnRspnsRqrdCde) 
+        {
+      this.mssgDfntnRspnsRqrdCde = mssgDfntnRspnsRqrdCde;
+}
+    public 
+    String 
+    getMssgDfntnLlwdRspnsMssgCnncl()
+    {
+        return this.mssgDfntnLlwdRspnsMssgCnncl;
+    }
+    
+    public void setMssgDfntnLlwdRspnsMssgCnncl
+        (String mssgDfntnLlwdRspnsMssgCnncl) 
+        {
+      this.mssgDfntnLlwdRspnsMssgCnncl = mssgDfntnLlwdRspnsMssgCnncl;
+}
+    public 
+    String 
+    getMssgDfntnLlwdRspnsSttnMrkdwn()
+    {
+        return this.mssgDfntnLlwdRspnsSttnMrkdwn;
+    }
+    
+    public void setMssgDfntnLlwdRspnsSttnMrkdwn
+        (String mssgDfntnLlwdRspnsSttnMrkdwn) 
+        {
+      this.mssgDfntnLlwdRspnsSttnMrkdwn = mssgDfntnLlwdRspnsSttnMrkdwn;
+}
+    public 
+    String 
+    getMessageDefinitionGraphCanonical()
+    {
+        return this.messageDefinitionGraphCanonical;
+    }
+    
+    public void setMessageDefinitionGraphCanonical
+        (String messageDefinitionGraphCanonical) 
+        {
+      this.messageDefinitionGraphCanonical = messageDefinitionGraphCanonical;
+}
 
 
 

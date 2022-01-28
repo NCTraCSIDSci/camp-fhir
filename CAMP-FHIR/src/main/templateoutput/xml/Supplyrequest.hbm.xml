@@ -1,405 +1,555 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Supplyrequest" optimistic-lock="none" table="supplyrequest">
-        <id name="spplRqstDntfrCdngCde" type="string">
-            <column length="512" name="SpplRqst_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="spplRqstDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SpplRqst_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_se">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="spplRqstDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SpplRqst_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SpplRqst_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spplRqstDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SpplRqst_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="supplyRequestStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SupplyRequest_status">
-                <comment>code</comment>
+        <property name="spplRqstDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="supplyRequestCategoryCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SupplyRequest_category_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="spplRqstDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="spplRqstCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spplRqstCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spplRqstCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="supplyRequestPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SupplyRequest_priority">
-                <comment>code</comment>
+        <property name="spplRqstDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="spplRqstTmcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_tmcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="SpplRqst_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"SupplyRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstTmcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_tmcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="supplyRequestStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="SupplyRequest_status_code">
+                <comment>{ "tree" :"SupplyRequest.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="spplRqstTmcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_tmcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstTmcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_tmcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spplRqstTmcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_tmcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="supplyRequestItemReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_itemReference">
-                <comment>Reference</comment>
+        <property name="spplRqstCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_qntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="supplyRequestQuantityCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SupplyRequest_quantity_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="supplyRequestCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, setText"}</meta>
+            <column length="65535" name="SupplyRequest_category_CC_text">
+                <comment>{ "tree" :"SupplyRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory, setText"}</comment>
             </column>
         </property>
-        <property name="spplRqstQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_qntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="supplyRequestPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="SupplyRequest_priority_code">
+                <comment>{ "tree" :"SupplyRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="spplRqstQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_qntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstTmCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_qntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstTmCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="supplyRequestParameter" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SupplyRequest_parameter">
-                <comment>BackboneElement</comment>
+        <property name="spplRqstTmCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_prmtr_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstTmCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_prmtr_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstTmCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_prmtr_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstTmCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, setText"}</meta>
+            <column length="65535" name="SpplRqst_tmCdblcncpt_CC_txt">
+                <comment>{ "tree" :"SupplyRequest.itemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_prmtr_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstTmRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.itemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemReference(medication | substance | device)"}</meta>
+            <column length="65535" name="SpplRqst_tmRfrnc_Rfrnce">
+                <comment>{ "tree" :"SupplyRequest.itemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setItemReference(medication | substance | device)"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_prmtr_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</meta>
+            <column length="65535" name="SpplRqst_qntt_Qntt_cmprtr">
+                <comment>{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</meta>
+            <column length="65535" name="SpplRqst_qntt_Qntt_cde">
+                <comment>{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</meta>
+            <column length="65535" name="SpplRqst_qntt_Qntt_vlue">
+                <comment>{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</meta>
+            <column length="65535" name="SpplRqst_qntt_Qntt_nt">
+                <comment>{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_qntt_Qntt_sstm">
+                <comment>{ "tree" :"SupplyRequest.quantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstPrmtrCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstPrmtrCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstPrmtrCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstPrmtrCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstPrmtrCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstPrmtrCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_cd_CC_txt">
+                <comment>{ "tree" :"SupplyRequest.parameter.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlRng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlRng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlRng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlRng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlRng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spplRqstPrmtrVlBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="SpplRqst_prmtr_vlBln">
-                <comment>boolean</comment>
+        <property name="spplRqstPrmtrVlCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, setText"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlCdblcncpt_CC_txt">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="supplyRequestOccurrenceDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="SupplyRequest_occurrenceDatetime">
-                <comment>dateTime</comment>
+        <property name="spplRqstPrmtrVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setComparator"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_ccrrncPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstPrmtrVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setCode"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_ccrrncPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstPrmtrVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setValue"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_ccrrncPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstPrmtrVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setUnit"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_ccrrncPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstPrmtrVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_ccrrncPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstPrmtrVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueRange, setLow"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlRng_Rng_lw">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncTmngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_ccrrncTmng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstPrmtrVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueRange, setHigh"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlRng_Rng_hgh">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncTmngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_ccrrncTmng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstPrmtrVlBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueBoolean"}</meta>
+            <column length="65535" name="SpplRqst_prmtr_vlBln_bln">
+                <comment>{ "tree" :"SupplyRequest.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setValueBoolean"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncTmngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_ccrrncTmng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstCcrrncDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncDttm_dtTme">
+                <comment>{ "tree" :"SupplyRequest.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncTmngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_ccrrncTmng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstCcrrncPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setStart"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncPrd_Prd_strt">
+                <comment>{ "tree" :"SupplyRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spplRqstCcrrncTmngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_ccrrncTmng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstCcrrncPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setEnd"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncPrd_Prd_nd">
+                <comment>{ "tree" :"SupplyRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="supplyRequestAuthoredOn" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="SupplyRequest_authoredOn">
-                <comment>dateTime</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="supplyRequestRequester" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_requester">
-                <comment>Reference</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="supplyRequestSupplier" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_supplier">
-                <comment>Reference</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spplRqstRsnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SpplRqst_rsnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spplRqstRsnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SpplRqst_rsnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spplRqstRsnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SpplRqst_rsnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="spplRqstCcrrncTmngTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, setText"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="spplRqstRsnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SpplRqst_rsnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="spplRqstCcrrncTmngTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, addEvent"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_vnt">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, addEvent"}</comment>
             </column>
         </property>
-        <property name="spplRqstRsnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SpplRqst_rsnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="spplRqstCcrrncTmngTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="supplyRequestReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_reasonReference">
-                <comment>Reference</comment>
+        <property name="spplRqstCcrrncTmngTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="supplyRequestDeliverFrom" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_deliverFrom">
-                <comment>Reference</comment>
+        <property name="spplRqstCcrrncTmngTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="supplyRequestDeliverTo" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="SupplyRequest_deliverTo">
-                <comment>Reference</comment>
+        <property name="spplRqstCcrrncTmngTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addWhen"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_whn">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addWhen"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDuration"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_drtn">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDuration"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationMax"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_prd">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriod"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodMax"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsDuration"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsPeriod"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCount"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_cnt">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCount"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCountMax"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequency"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequencyMax"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsRange"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addTimeOfDay"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstCcrrncTmngTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setOffset"}</meta>
+            <column length="65535" name="SpplRqst_ccrrncTmng_Tmng_rpt_ffst">
+                <comment>{ "tree" :"SupplyRequest.occurrenceTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setOffset"}</comment>
+            </column>
+        </property>
+        <property name="supplyRequestAuthoredOnDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</meta>
+            <column length="65535" name="SupplyRequest_authoredOn_dateTime">
+                <comment>{ "tree" :"SupplyRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</comment>
+            </column>
+        </property>
+        <property name="supplyRequestRequesterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</meta>
+            <column length="65535" name="SupplyRequest_requester_Reference">
+                <comment>{ "tree" :"SupplyRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</comment>
+            </column>
+        </property>
+        <property name="supplyRequestSupplierReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.supplier", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupplier"}</meta>
+            <column length="65535" name="SupplyRequest_supplier_Reference">
+                <comment>{ "tree" :"SupplyRequest.supplier", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupplier"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SpplRqst_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SpplRqst_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SpplRqst_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SpplRqst_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SpplRqst_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="supplyRequestReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="SupplyRequest_reasonCode_CC_text">
+                <comment>{ "tree" :"SupplyRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="SpplRqst_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"SupplyRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
+            </column>
+        </property>
+        <property name="spplRqstDlvrFrmRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.deliverFrom", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeliverFrom"}</meta>
+            <column length="65535" name="SpplRqst_dlvrFrm_Rfrnce">
+                <comment>{ "tree" :"SupplyRequest.deliverFrom", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeliverFrom"}</comment>
+            </column>
+        </property>
+        <property name="supplyRequestDeliverToReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"SupplyRequest.deliverTo", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeliverTo"}</meta>
+            <column length="65535" name="SupplyRequest_deliverTo_Reference">
+                <comment>{ "tree" :"SupplyRequest.deliverTo", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeliverTo"}</comment>
             </column>
         </property>
     </class>

@@ -1,1191 +1,633 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Molecularsequence" optimistic-lock="none" table="molecularsequence">
-        <id name="mlclrSqncDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mlclrSqncDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_use_code</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_s_cde">
-                <comment>MolecularSequence_identifierIdentifier_use_code</comment>
+        <property name="mlclrSqncDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_se">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>MolecularSequence_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>MolecularSequence_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Period_start</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Prd_strt">
-                <comment>MolecularSequence_identifierIdentifier_Period_start</comment>
+        <property name="mlclrSqncDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Period_end</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Prd_nd">
-                <comment>MolecularSequence_identifierIdentifier_Period_end</comment>
+        <property name="mlclrSqncDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>MolecularSequence_identifierIdentifier_Reference_reference</comment>
+        <property name="mlclrSqncDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>MolecularSequence_identifierIdentifier_Reference_type</comment>
+        <property name="mlclrSqncDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>MolecularSequence_identifierIdentifier_Reference_identifier</comment>
+        <property name="mlclrSqncDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>MolecularSequence_identifierIdentifier_Reference_display</comment>
+        <property name="mlclrSqncDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="MlclrSqnc_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MolecularSequence.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_value_string</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_vl_strng">
-                <comment>MolecularSequence_identifierIdentifier_value_string</comment>
+        <property name="molecularSequenceTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType"}</meta>
+            <column length="65535" name="MolecularSequence_type_code">
+                <comment>{ "tree" :"MolecularSequence.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">MolecularSequence_identifierIdentifier_system_uri</meta>
-            <column length="512" name="MlclrSqnc_dntfr_dntfr_sstm_ri">
-                <comment>MolecularSequence_identifierIdentifier_system_uri</comment>
+        <property name="mlclrSqncCrdntSstmNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.coordinateSystem", "datatype" : "integer", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCoordinateSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_crdntSstm_ntgr">
+                <comment>{ "tree" :"MolecularSequence.coordinateSystem", "datatype" : "integer", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCoordinateSystem"}</comment>
             </column>
         </property>
-        <property name="molecularSequenceType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MolecularSequence_type">
-                <comment>code</comment>
+        <property name="molecularSequencePntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.patient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="MolecularSequence_pnt_Reference">
+                <comment>{ "tree" :"MolecularSequence.patient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="molecularSequenceCoordinateSystem" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_coordinateSystem">
-                <comment>integer</comment>
+        <property name="mlclrSqncSpcmnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.specimen", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSpecimen"}</meta>
+            <column length="65535" name="MlclrSqnc_spcmn_Rfrnce">
+                <comment>{ "tree" :"MolecularSequence.specimen", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSpecimen"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="molecularSequenceDeviceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.device", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevice"}</meta>
+            <column length="65535" name="MolecularSequence_device_Reference">
+                <comment>{ "tree" :"MolecularSequence.device", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevice"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncPrfrmrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformer"}</meta>
+            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnce">
+                <comment>{ "tree" :"MolecularSequence.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformer"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mlclrSqncQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_cmprtr">
+                <comment>{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mlclrSqncQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_cde">
+                <comment>{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mlclrSqncQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_vlue">
+                <comment>{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mlclrSqncQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_nt">
+                <comment>{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mlclrSqncQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_qntt_Qntt_sstm">
+                <comment>{ "tree" :"MolecularSequence.quantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setVersion"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_cdng_C_cde">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mlclrSqncRfrncSqChrmsmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, setText"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.chromosome", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setChromosome, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_pnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mlclrSqncRfrncSqGnmBldStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.genomeBuild", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setGenomeBuild"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_gnmBld_strng">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.genomeBuild", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setGenomeBuild"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mlclrSqncRfrncSqRnttnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.orientation", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setOrientation"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rnttn_cde">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.orientation", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setOrientation"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setVersion"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, setText"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqId", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqId, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqPointer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqPointer"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnce">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqPointer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqPointer"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mlclrSqncRfrncSqRfrncSqStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.referenceSeqString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqString"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqStrng_strng">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.referenceSeqString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setReferenceSeqString"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mlclrSqncRfrncSqStrndCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.strand", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setStrand"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_strnd_cde">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.strand", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setStrand"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mlclrSqncRfrncSqWndwStrtNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.windowStart", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setWindowStart"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_wndwStrt_ntgr">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.windowStart", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setWindowStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mlclrSqncRfrncSqWndwndNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.referenceSeq.windowEnd", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setWindowEnd"}</meta>
+            <column length="65535" name="MlclrSqnc_rfrncSq_wndwnd_ntgr">
+                <comment>{ "tree" :"MolecularSequence.referenceSeq.windowEnd", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setReferenceSeq"] , "methodName" : "setWindowEnd"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mlclrSqncVrntStrtNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_strt_ntgr">
+                <comment>{ "tree" :"MolecularSequence.variant.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncSpcmnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_spcmn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mlclrSqncVrntNdNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_nd_ntgr">
+                <comment>{ "tree" :"MolecularSequence.variant.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mlclrSqncVrntBsrvdlllStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.observedAllele", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setObservedAllele"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_bsrvdlll_strng">
+                <comment>{ "tree" :"MolecularSequence.variant.observedAllele", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setObservedAllele"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncVrntRfrnclllStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.referenceAllele", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setReferenceAllele"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_rfrnclll_strng">
+                <comment>{ "tree" :"MolecularSequence.variant.referenceAllele", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setReferenceAllele"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mlclrSqncVrntCgrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.cigar", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setCigar"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_cgr_strng">
+                <comment>{ "tree" :"MolecularSequence.variant.cigar", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setCigar"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mlclrSqncVrntVrntPntrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.variant.variantPointer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setVariantPointer"}</meta>
+            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnce">
+                <comment>{ "tree" :"MolecularSequence.variant.variantPointer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addVariant"] , "methodName" : "setVariantPointer"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mlclrSqncBsrvdSqStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.observedSeq", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setObservedSeq"}</meta>
+            <column length="65535" name="MlclrSqnc_bsrvdSq_strng">
+                <comment>{ "tree" :"MolecularSequence.observedSeq", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setObservedSeq"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mlclrSqncQltTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addQuality"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_tp_cde">
+                <comment>{ "tree" :"MolecularSequence.quality.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addQuality"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mlclrSqncQltStndrdSqncCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mlclrSqncQltStndrdSqncCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setVersion"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mlclrSqncQltStndrdSqncCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_cdng_C_cde">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mlclrSqncQltStndrdSqncCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mlclrSqncQltStndrdSqncCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mlclrSqncQltStndrdSqncCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, setText"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.quality.standardSequence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStandardSequence, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mlclrSqncQltStrtNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_strt_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncDvcRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_dvc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mlclrSqncQltNdNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_nd_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mlclrSqncQltScrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setComparator"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cmprtr">
+                <comment>{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setComparator"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncQltScrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cde">
+                <comment>{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mlclrSqncQltScrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setValue"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_vlue">
+                <comment>{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setValue"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mlclrSqncQltScrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setUnit"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_nt">
+                <comment>{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setUnit"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mlclrSqncQltScrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_sstm">
+                <comment>{ "tree" :"MolecularSequence.quality.score", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setScore, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mlclrSqncQltMthdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mlclrSqncQltMthdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setVersion"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mlclrSqncQltMthdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mlclrSqncQltMthdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mlclrSqncQltMthdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mlclrSqncQltMthdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, setText"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_mthd_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.quality.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setMethod, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mlclrSqncQltTrthTpDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.truthTP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setTruthTP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_trthTP_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.truthTP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setTruthTP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mlclrSqncQltQrTpDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.queryTP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setQueryTP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_qrTP_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.queryTP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setQueryTP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncPrfrmrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_prfrmr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mlclrSqncQltTrthFnDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.truthFN", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setTruthFN"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_trthFN_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.truthFN", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setTruthFN"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncQnttQnttCmprtrCde" type="string">
-            <meta attribute="resource-type">Quantity_comparator_code</meta>
-            <column length="65535" name="MlclrSqnc_qntt_Qntt_cmprtr_cde">
-                <comment>Quantity_comparator_code</comment>
+        <property name="mlclrSqncQltQrFpDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.queryFP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setQueryFP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_qrFP_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.queryFP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setQueryFP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncQnttQnttCdCde" type="string">
-            <meta attribute="resource-type">Quantity_code_code</meta>
-            <column length="65535" name="MlclrSqnc_qntt_Qntt_cd_cde">
-                <comment>Quantity_code_code</comment>
+        <property name="mlclrSqncQltGtFpDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.gtFP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setGtFP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_gtFP_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.gtFP", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setGtFP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncQnttQnttVlDcml" type="string">
-            <meta attribute="resource-type">Quantity_value_decimal</meta>
-            <column length="65535" name="MlclrSqnc_qntt_Qntt_vl_dcml">
-                <comment>Quantity_value_decimal</comment>
+        <property name="mlclrSqncQltPrcsnDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.precision", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setPrecision"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_prcsn_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.precision", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setPrecision"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncQnttQnttNtStrng" type="string">
-            <meta attribute="resource-type">Quantity_unit_string</meta>
-            <column length="65535" name="MlclrSqnc_qntt_Qntt_nt_strng">
-                <comment>Quantity_unit_string</comment>
+        <property name="mlclrSqncQltRcllDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.recall", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setRecall"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rcll_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.recall", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setRecall"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncQnttQnttSstmRi" type="string">
-            <meta attribute="resource-type">Quantity_system_uri</meta>
-            <column length="65535" name="MlclrSqnc_qntt_Qntt_sstm_ri">
-                <comment>Quantity_system_uri</comment>
+        <property name="mlclrSqncQltFScrDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.fScore", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setFScore"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_fScr_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.fScore", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addQuality"] , "methodName" : "setFScore"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mlclrSqncQltRcScrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.score", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addScore"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_scr_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.score", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addScore"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mlclrSqncQltRcNmTpNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.numTP", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumTP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmTP_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.numTP", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumTP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mlclrSqncQltRcNmFpNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.numFP", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumFP"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmFP_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.numFP", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumFP"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mlclrSqncQltRcNmFnNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.numFN", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumFN"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_nmFN_ntgr">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.numFN", "datatype" : "integer", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addNumFN"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mlclrSqncQltRcPrcsnDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.precision", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addPrecision"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_prcsn_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.precision", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addPrecision"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqChrmsmCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_chrmsm_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mlclrSqncQltRcSnstvtDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.sensitivity", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addSensitivity"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_snstvt_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.sensitivity", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addSensitivity"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqGnmBld" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_gnmBld">
-                <comment>string</comment>
+        <property name="mlclrSqncQltRcFMsrDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.quality.roc.fMeasure", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addFMeasure"}</meta>
+            <column length="65535" name="MlclrSqnc_qlt_rc_fMsr_dcml">
+                <comment>{ "tree" :"MolecularSequence.quality.roc.fMeasure", "datatype" : "decimal", "cardinality" : "Many", "elementtree" : ["addQuality", "setRoc"] , "methodName" : "addFMeasure"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRnttn" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rnttn">
-                <comment>code</comment>
+        <property name="mlclrSqncRdCvrgNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.readCoverage", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReadCoverage"}</meta>
+            <column length="65535" name="MlclrSqnc_rdCvrg_ntgr">
+                <comment>{ "tree" :"MolecularSequence.readCoverage", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReadCoverage"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mlclrSqncRpstrTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRepository"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_tp_cde">
+                <comment>{ "tree" :"MolecularSequence.repository.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRepository"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mlclrSqncRpstrRlRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_rl_ri">
+                <comment>{ "tree" :"MolecularSequence.repository.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mlclrSqncRpstrNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_nm_strng">
+                <comment>{ "tree" :"MolecularSequence.repository.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mlclrSqncRpstrDtstdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.datasetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setDatasetId"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_dtstd_strng">
+                <comment>{ "tree" :"MolecularSequence.repository.datasetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setDatasetId"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mlclrSqncRpstrVrntstdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.variantsetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setVariantsetId"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_vrntstd_strng">
+                <comment>{ "tree" :"MolecularSequence.repository.variantsetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setVariantsetId"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mlclrSqncRpstrRdstdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.repository.readsetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setReadsetId"}</meta>
+            <column length="65535" name="MlclrSqnc_rpstr_rdstd_strng">
+                <comment>{ "tree" :"MolecularSequence.repository.readsetId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepository"] , "methodName" : "setReadsetId"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mlclrSqncPntrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.pointer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPointer"}</meta>
+            <column length="65535" name="MlclrSqnc_pntr_Rfrnce">
+                <comment>{ "tree" :"MolecularSequence.pointer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPointer"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setCode"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mlclrSqncStrctrVrntVrntTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, setText"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CC_txt">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.variantType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setVariantType, setText"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mlclrSqncStrctrVrntXctBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.exact", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setExact"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_xct_bln">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.exact", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setExact"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mlclrSqncStrctrVrntLngthNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setLength"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_lngth_ntgr">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant"] , "methodName" : "setLength"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mlclrSqncStrctrVrntTrStrtNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.outer.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter"] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_strt_ntgr">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.outer.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter"] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mlclrSqncStrctrVrntTrNdNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.outer.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter"] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_nd_ntgr">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.outer.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter"] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mlclrSqncStrctrVrntNnrStrtNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.inner.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter", "setInner"] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_strt_ntgr">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.inner.start", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter", "setInner"] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRfrncSqRfrncSqPntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqPntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRfrncSqRfrncSqStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_rfrncSqStrng">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRfrncSqStrnd" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_strnd">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRfrncSqWndwStrt" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_wndwStrt">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRfrncSqWndwnd" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_rfrncSq_wndwnd">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceVariantStart" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_variant_start">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceVariantEnd" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_variant_end">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntBsrvdllle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_bsrvdllle">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntRfrncllle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_rfrncllle">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceVariantCigar" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MolecularSequence_variant_cigar">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncVrntVrntPntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_vrnt_vrntPntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceObservedSeq" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MolecularSequence_observedSeq">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MolecularSequence_quality_type">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltStndrdSqncCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MlclrSqnc_qlt_stndrdSqnc_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityStart" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_quality_start">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityEnd" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_quality_end">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltScrQnttCmprtrCde" type="string">
-            <meta attribute="resource-type">Quantity_comparator_code</meta>
-            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cmprtr_cde">
-                <comment>Quantity_comparator_code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltScrQnttCdCde" type="string">
-            <meta attribute="resource-type">Quantity_code_code</meta>
-            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_cd_cde">
-                <comment>Quantity_code_code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltScrQnttVlDcml" type="string">
-            <meta attribute="resource-type">Quantity_value_decimal</meta>
-            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_vl_dcml">
-                <comment>Quantity_value_decimal</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltScrQnttNtStrng" type="string">
-            <meta attribute="resource-type">Quantity_unit_string</meta>
-            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_nt_strng">
-                <comment>Quantity_unit_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltScrQnttSstmRi" type="string">
-            <meta attribute="resource-type">Quantity_system_uri</meta>
-            <column length="65535" name="MlclrSqnc_qlt_scr_Qntt_sstm_ri">
-                <comment>Quantity_system_uri</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltMthdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MlclrSqnc_qlt_mthd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityTruthTp" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_truthTP">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityQueryTp" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_queryTP">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityTruthFn" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_truthFN">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityQueryFp" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_queryFP">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityGtFp" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_gtFP">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltPrcsn" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MlclrSqnc_qlt_prcsn">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityRecall" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_recall">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceQualityFScore" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MolecularSequence_quality_fScore">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcScre" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_scre">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcNmTp" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_nmTP">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcNmFp" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_nmFP">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcNmFn" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_nmFN">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcPrcsn" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_prcsn">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcSnstvty" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_snstvty">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncQltRcFMsre" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="MlclrSqnc_qlt_rc_fMsre">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceReadCoverage" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MolecularSequence_readCoverage">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceRepositoryType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MolecularSequence_repository_type">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceRepositoryUrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="MolecularSequence_repository_url">
-                <comment>uri</comment>
-            </column>
-        </property>
-        <property name="molecularSequenceRepositoryName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MolecularSequence_repository_name">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRpstrDtstd" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_rpstr_dtstd">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRpstrVrntstd" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_rpstr_vrntstd">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncRpstrRdstd" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MlclrSqnc_rpstr_rdstd">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncPntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MlclrSqnc_pntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntVrntTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_vrntTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntXct" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_xct">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntLngth" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_lngth">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntTrStrt" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_strt">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntTrNd" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_tr_nd">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntNnrStrt" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_strt">
-                <comment>integer</comment>
-            </column>
-        </property>
-        <property name="mlclrSqncStrctrVrntNnrNd" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_nd">
-                <comment>integer</comment>
+        <property name="mlclrSqncStrctrVrntNnrNdNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MolecularSequence.structureVariant.inner.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter", "setInner"] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="MlclrSqnc_strctrVrnt_nnr_nd_ntgr">
+                <comment>{ "tree" :"MolecularSequence.structureVariant.inner.end", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addStructureVariant", "setOuter", "setInner"] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
     </class>

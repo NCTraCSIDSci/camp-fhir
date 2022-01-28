@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,605 +10,642 @@ package main.templateoutput.Model;
 public class Bundle  implements java.io.Serializable {
 
 
-     private String bndlDntfrDntfrTpCdblCncptCdngCde;
-     private String bndlDntfrDntfrSCde;
-     private String bndlDntfrDntfrTpCdblCncptCdngSstm;
-     private String bndlDntfrDntfrTpCdblCncptCdngVrsn;
-     private String bndlDntfrDntfrTpCdblCncptCdngDsplay;
-     private String bndlDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String bndlDntfrDntfrCdblCncptTxt;
-     private String bndlDntfrDntfrPrdStrt;
-     private String bndlDntfrDntfrPrdNd;
-     private String bndlDntfrDntfrRfrncRfrnce;
-     private String bndlDntfrDntfrRfrncTpe;
-     private String bndlDntfrDntfrRfrncDntfr;
-     private String bndlDntfrDntfrRfrncDsplay;
-     private String bndlDntfrDntfrVlStrng;
-     private String bndlDntfrDntfrSstmRi;
-     private String bundleType;
-     private String bundleTimestamp;
-     private String bundleTotal;
-     private String bundleLinkRelation;
-     private String bundleLinkUrl;
-     private String bundleEntryLink;
-     private String bundleEntryFullUrl;
-     private String bundleEntryResource;
-     private String bundleEntrySearchMode;
-     private String bundleEntrySearchScore;
-     private String bundleEntryRequestMethod;
-     private String bundleEntryRequestUrl;
-     private String bundleEntryRequestIfNoneMatch;
-     private String bndlNtrRqstFMdfdSnce;
-     private String bundleEntryRequestIfMatch;
-     private String bundleEntryRequestIfNoneExist;
-     private String bundleEntryResponseStatus;
-     private String bundleEntryResponseLocation;
-     private String bundleEntryResponseEtag;
-     private String bundleEntryResponseLastModified;
-     private String bundleEntryResponseOutcome;
-     private String bndlSgntrSgntrDtBs64bnry;
-     private String bndlSgntrSgntrTrgtFrmtCde;
-     private String bndlSgntrSgntrSgFrmtCde;
-     private String bndlSgntrSgntrCdngSstm;
-     private String bndlSgntrSgntrCdngVrsn;
-     private String bndlSgntrSgntrCdngCde;
-     private String bndlSgntrSgntrCdngDsplay;
-     private String bndlSgntrSgntrCdngSrSlctd;
-     private String bndlSgntrSgntrWhnNstnt;
-     private String bndlSgntrSgntrRfrncRfrnce;
-     private String bndlSgntrSgntrRfrncTpe;
-     private String bndlSgntrSgntrRfrncDntfr;
-     private String bndlSgntrSgntrRfrncDsplay;
+     private Integer id;
+     private String bundleIdentifierIdentifierUse;
+     private String bndlDntfrDntfrTpCcCSstm;
+     private String bndlDntfrDntfrTpCcCVrsn;
+     private String bndlDntfrDntfrTpCcCCde;
+     private String bndlDntfrDntfrTpCcCDsplay;
+     private String bndlDntfrDntfrTpCcCSrSlctd;
+     private String bndlDntfrDntfrTpCcTxt;
+     private String bndlDntfrDntfrPrdPrdStrt;
+     private String bndlDntfrDntfrPrdPrdNd;
+     private String bndlDntfrDntfrSsgnr;
+     private String bundleIdentifierIdentifierValue;
+     private String bndlDntfrDntfrSstm;
+     private String bundleTypeCode;
+     private String bundleTimestampInstant;
+     private String bundleTotalUnsignedInt;
+     private String bundleLinkRelationString;
+     private String bundleLinkUrlUri;
+     private String bundleEntryLinkLink;
+     private String bundleEntryFullUrlUri;
+     private String bundleEntryResourceResource;
+     private String bundleEntrySearchModeCode;
+     private String bundleEntrySearchScoreDecimal;
+     private String bundleEntryRequestMethodCode;
+     private String bundleEntryRequestUrlUri;
+     private String bndlNtrRqstFNnMtchStrng;
+     private String bndlNtrRqstFMdfdSncNstnt;
+     private String bndlNtrRqstFMtchStrng;
+     private String bndlNtrRqstFNnxstStrng;
+     private String bndlNtrRspnsSttsStrng;
+     private String bundleEntryResponseLocationUri;
+     private String bundleEntryResponseEtagString;
+     private String bndlNtrRspnsLstMdfdNstnt;
+     private String bndlNtrRspnsTcmRsrce;
+     private String bundleSignatureSignatureData;
+     private String bndlSgntrSgntrTrgtFrmt;
+     private String bndlSgntrSgntrSgFrmt;
+     private String bndlSgntrSgntrTpCSstm;
+     private String bndlSgntrSgntrTpCVrsn;
+     private String bndlSgntrSgntrTpCCde;
+     private String bndlSgntrSgntrTpCDsplay;
+     private String bndlSgntrSgntrTpCSrSlctd;
+     private String bundleSignatureSignatureWhen;
+     private String bundleSignatureSignatureWho;
+     private String bndlSgntrSgntrNBhlff;
 
     public Bundle() {
     }
 
-	
-    public Bundle(String bndlDntfrDntfrTpCdblCncptCdngCde) {
-        this.bndlDntfrDntfrTpCdblCncptCdngCde = bndlDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Bundle(String bndlDntfrDntfrTpCdblCncptCdngCde, String bndlDntfrDntfrSCde, String bndlDntfrDntfrTpCdblCncptCdngSstm, String bndlDntfrDntfrTpCdblCncptCdngVrsn, String bndlDntfrDntfrTpCdblCncptCdngDsplay, String bndlDntfrDntfrTpCdblCncptCdngSrSlctd, String bndlDntfrDntfrCdblCncptTxt, String bndlDntfrDntfrPrdStrt, String bndlDntfrDntfrPrdNd, String bndlDntfrDntfrRfrncRfrnce, String bndlDntfrDntfrRfrncTpe, String bndlDntfrDntfrRfrncDntfr, String bndlDntfrDntfrRfrncDsplay, String bndlDntfrDntfrVlStrng, String bndlDntfrDntfrSstmRi, String bundleType, String bundleTimestamp, String bundleTotal, String bundleLinkRelation, String bundleLinkUrl, String bundleEntryLink, String bundleEntryFullUrl, String bundleEntryResource, String bundleEntrySearchMode, String bundleEntrySearchScore, String bundleEntryRequestMethod, String bundleEntryRequestUrl, String bundleEntryRequestIfNoneMatch, String bndlNtrRqstFMdfdSnce, String bundleEntryRequestIfMatch, String bundleEntryRequestIfNoneExist, String bundleEntryResponseStatus, String bundleEntryResponseLocation, String bundleEntryResponseEtag, String bundleEntryResponseLastModified, String bundleEntryResponseOutcome, String bndlSgntrSgntrDtBs64bnry, String bndlSgntrSgntrTrgtFrmtCde, String bndlSgntrSgntrSgFrmtCde, String bndlSgntrSgntrCdngSstm, String bndlSgntrSgntrCdngVrsn, String bndlSgntrSgntrCdngCde, String bndlSgntrSgntrCdngDsplay, String bndlSgntrSgntrCdngSrSlctd, String bndlSgntrSgntrWhnNstnt, String bndlSgntrSgntrRfrncRfrnce, String bndlSgntrSgntrRfrncTpe, String bndlSgntrSgntrRfrncDntfr, String bndlSgntrSgntrRfrncDsplay) {
-       this.bndlDntfrDntfrTpCdblCncptCdngCde = bndlDntfrDntfrTpCdblCncptCdngCde;
-       this.bndlDntfrDntfrSCde = bndlDntfrDntfrSCde;
-       this.bndlDntfrDntfrTpCdblCncptCdngSstm = bndlDntfrDntfrTpCdblCncptCdngSstm;
-       this.bndlDntfrDntfrTpCdblCncptCdngVrsn = bndlDntfrDntfrTpCdblCncptCdngVrsn;
-       this.bndlDntfrDntfrTpCdblCncptCdngDsplay = bndlDntfrDntfrTpCdblCncptCdngDsplay;
-       this.bndlDntfrDntfrTpCdblCncptCdngSrSlctd = bndlDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.bndlDntfrDntfrCdblCncptTxt = bndlDntfrDntfrCdblCncptTxt;
-       this.bndlDntfrDntfrPrdStrt = bndlDntfrDntfrPrdStrt;
-       this.bndlDntfrDntfrPrdNd = bndlDntfrDntfrPrdNd;
-       this.bndlDntfrDntfrRfrncRfrnce = bndlDntfrDntfrRfrncRfrnce;
-       this.bndlDntfrDntfrRfrncTpe = bndlDntfrDntfrRfrncTpe;
-       this.bndlDntfrDntfrRfrncDntfr = bndlDntfrDntfrRfrncDntfr;
-       this.bndlDntfrDntfrRfrncDsplay = bndlDntfrDntfrRfrncDsplay;
-       this.bndlDntfrDntfrVlStrng = bndlDntfrDntfrVlStrng;
-       this.bndlDntfrDntfrSstmRi = bndlDntfrDntfrSstmRi;
-       this.bundleType = bundleType;
-       this.bundleTimestamp = bundleTimestamp;
-       this.bundleTotal = bundleTotal;
-       this.bundleLinkRelation = bundleLinkRelation;
-       this.bundleLinkUrl = bundleLinkUrl;
-       this.bundleEntryLink = bundleEntryLink;
-       this.bundleEntryFullUrl = bundleEntryFullUrl;
-       this.bundleEntryResource = bundleEntryResource;
-       this.bundleEntrySearchMode = bundleEntrySearchMode;
-       this.bundleEntrySearchScore = bundleEntrySearchScore;
-       this.bundleEntryRequestMethod = bundleEntryRequestMethod;
-       this.bundleEntryRequestUrl = bundleEntryRequestUrl;
-       this.bundleEntryRequestIfNoneMatch = bundleEntryRequestIfNoneMatch;
-       this.bndlNtrRqstFMdfdSnce = bndlNtrRqstFMdfdSnce;
-       this.bundleEntryRequestIfMatch = bundleEntryRequestIfMatch;
-       this.bundleEntryRequestIfNoneExist = bundleEntryRequestIfNoneExist;
-       this.bundleEntryResponseStatus = bundleEntryResponseStatus;
-       this.bundleEntryResponseLocation = bundleEntryResponseLocation;
-       this.bundleEntryResponseEtag = bundleEntryResponseEtag;
-       this.bundleEntryResponseLastModified = bundleEntryResponseLastModified;
-       this.bundleEntryResponseOutcome = bundleEntryResponseOutcome;
-       this.bndlSgntrSgntrDtBs64bnry = bndlSgntrSgntrDtBs64bnry;
-       this.bndlSgntrSgntrTrgtFrmtCde = bndlSgntrSgntrTrgtFrmtCde;
-       this.bndlSgntrSgntrSgFrmtCde = bndlSgntrSgntrSgFrmtCde;
-       this.bndlSgntrSgntrCdngSstm = bndlSgntrSgntrCdngSstm;
-       this.bndlSgntrSgntrCdngVrsn = bndlSgntrSgntrCdngVrsn;
-       this.bndlSgntrSgntrCdngCde = bndlSgntrSgntrCdngCde;
-       this.bndlSgntrSgntrCdngDsplay = bndlSgntrSgntrCdngDsplay;
-       this.bndlSgntrSgntrCdngSrSlctd = bndlSgntrSgntrCdngSrSlctd;
-       this.bndlSgntrSgntrWhnNstnt = bndlSgntrSgntrWhnNstnt;
-       this.bndlSgntrSgntrRfrncRfrnce = bndlSgntrSgntrRfrncRfrnce;
-       this.bndlSgntrSgntrRfrncTpe = bndlSgntrSgntrRfrncTpe;
-       this.bndlSgntrSgntrRfrncDntfr = bndlSgntrSgntrRfrncDntfr;
-       this.bndlSgntrSgntrRfrncDsplay = bndlSgntrSgntrRfrncDsplay;
+    public Bundle(String bundleIdentifierIdentifierUse, String bndlDntfrDntfrTpCcCSstm, String bndlDntfrDntfrTpCcCVrsn, String bndlDntfrDntfrTpCcCCde, String bndlDntfrDntfrTpCcCDsplay, String bndlDntfrDntfrTpCcCSrSlctd, String bndlDntfrDntfrTpCcTxt, String bndlDntfrDntfrPrdPrdStrt, String bndlDntfrDntfrPrdPrdNd, String bndlDntfrDntfrSsgnr, String bundleIdentifierIdentifierValue, String bndlDntfrDntfrSstm, String bundleTypeCode, String bundleTimestampInstant, String bundleTotalUnsignedInt, String bundleLinkRelationString, String bundleLinkUrlUri, String bundleEntryLinkLink, String bundleEntryFullUrlUri, String bundleEntryResourceResource, String bundleEntrySearchModeCode, String bundleEntrySearchScoreDecimal, String bundleEntryRequestMethodCode, String bundleEntryRequestUrlUri, String bndlNtrRqstFNnMtchStrng, String bndlNtrRqstFMdfdSncNstnt, String bndlNtrRqstFMtchStrng, String bndlNtrRqstFNnxstStrng, String bndlNtrRspnsSttsStrng, String bundleEntryResponseLocationUri, String bundleEntryResponseEtagString, String bndlNtrRspnsLstMdfdNstnt, String bndlNtrRspnsTcmRsrce, String bundleSignatureSignatureData, String bndlSgntrSgntrTrgtFrmt, String bndlSgntrSgntrSgFrmt, String bndlSgntrSgntrTpCSstm, String bndlSgntrSgntrTpCVrsn, String bndlSgntrSgntrTpCCde, String bndlSgntrSgntrTpCDsplay, String bndlSgntrSgntrTpCSrSlctd, String bundleSignatureSignatureWhen, String bundleSignatureSignatureWho, String bndlSgntrSgntrNBhlff) {
+       this.bundleIdentifierIdentifierUse = bundleIdentifierIdentifierUse;
+       this.bndlDntfrDntfrTpCcCSstm = bndlDntfrDntfrTpCcCSstm;
+       this.bndlDntfrDntfrTpCcCVrsn = bndlDntfrDntfrTpCcCVrsn;
+       this.bndlDntfrDntfrTpCcCCde = bndlDntfrDntfrTpCcCCde;
+       this.bndlDntfrDntfrTpCcCDsplay = bndlDntfrDntfrTpCcCDsplay;
+       this.bndlDntfrDntfrTpCcCSrSlctd = bndlDntfrDntfrTpCcCSrSlctd;
+       this.bndlDntfrDntfrTpCcTxt = bndlDntfrDntfrTpCcTxt;
+       this.bndlDntfrDntfrPrdPrdStrt = bndlDntfrDntfrPrdPrdStrt;
+       this.bndlDntfrDntfrPrdPrdNd = bndlDntfrDntfrPrdPrdNd;
+       this.bndlDntfrDntfrSsgnr = bndlDntfrDntfrSsgnr;
+       this.bundleIdentifierIdentifierValue = bundleIdentifierIdentifierValue;
+       this.bndlDntfrDntfrSstm = bndlDntfrDntfrSstm;
+       this.bundleTypeCode = bundleTypeCode;
+       this.bundleTimestampInstant = bundleTimestampInstant;
+       this.bundleTotalUnsignedInt = bundleTotalUnsignedInt;
+       this.bundleLinkRelationString = bundleLinkRelationString;
+       this.bundleLinkUrlUri = bundleLinkUrlUri;
+       this.bundleEntryLinkLink = bundleEntryLinkLink;
+       this.bundleEntryFullUrlUri = bundleEntryFullUrlUri;
+       this.bundleEntryResourceResource = bundleEntryResourceResource;
+       this.bundleEntrySearchModeCode = bundleEntrySearchModeCode;
+       this.bundleEntrySearchScoreDecimal = bundleEntrySearchScoreDecimal;
+       this.bundleEntryRequestMethodCode = bundleEntryRequestMethodCode;
+       this.bundleEntryRequestUrlUri = bundleEntryRequestUrlUri;
+       this.bndlNtrRqstFNnMtchStrng = bndlNtrRqstFNnMtchStrng;
+       this.bndlNtrRqstFMdfdSncNstnt = bndlNtrRqstFMdfdSncNstnt;
+       this.bndlNtrRqstFMtchStrng = bndlNtrRqstFMtchStrng;
+       this.bndlNtrRqstFNnxstStrng = bndlNtrRqstFNnxstStrng;
+       this.bndlNtrRspnsSttsStrng = bndlNtrRspnsSttsStrng;
+       this.bundleEntryResponseLocationUri = bundleEntryResponseLocationUri;
+       this.bundleEntryResponseEtagString = bundleEntryResponseEtagString;
+       this.bndlNtrRspnsLstMdfdNstnt = bndlNtrRspnsLstMdfdNstnt;
+       this.bndlNtrRspnsTcmRsrce = bndlNtrRspnsTcmRsrce;
+       this.bundleSignatureSignatureData = bundleSignatureSignatureData;
+       this.bndlSgntrSgntrTrgtFrmt = bndlSgntrSgntrTrgtFrmt;
+       this.bndlSgntrSgntrSgFrmt = bndlSgntrSgntrSgFrmt;
+       this.bndlSgntrSgntrTpCSstm = bndlSgntrSgntrTpCSstm;
+       this.bndlSgntrSgntrTpCVrsn = bndlSgntrSgntrTpCVrsn;
+       this.bndlSgntrSgntrTpCCde = bndlSgntrSgntrTpCCde;
+       this.bndlSgntrSgntrTpCDsplay = bndlSgntrSgntrTpCDsplay;
+       this.bndlSgntrSgntrTpCSrSlctd = bndlSgntrSgntrTpCSrSlctd;
+       this.bundleSignatureSignatureWhen = bundleSignatureSignatureWhen;
+       this.bundleSignatureSignatureWho = bundleSignatureSignatureWho;
+       this.bndlSgntrSgntrNBhlff = bndlSgntrSgntrNBhlff;
     }
    
-    public String getBndlDntfrDntfrTpCdblCncptCdngCde() {
-        return this.bndlDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setBndlDntfrDntfrTpCdblCncptCdngCde(String bndlDntfrDntfrTpCdblCncptCdngCde) {
-        this.bndlDntfrDntfrTpCdblCncptCdngCde = bndlDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrSCde() {
-        return this.bndlDntfrDntfrSCde;
-    }
-    
-    public void setBndlDntfrDntfrSCde(String bndlDntfrDntfrSCde) {
-        this.bndlDntfrDntfrSCde = bndlDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.bndlDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setBndlDntfrDntfrTpCdblCncptCdngSstm(String bndlDntfrDntfrTpCdblCncptCdngSstm) {
-        this.bndlDntfrDntfrTpCdblCncptCdngSstm = bndlDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.bndlDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setBndlDntfrDntfrTpCdblCncptCdngVrsn(String bndlDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.bndlDntfrDntfrTpCdblCncptCdngVrsn = bndlDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.bndlDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setBndlDntfrDntfrTpCdblCncptCdngDsplay(String bndlDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.bndlDntfrDntfrTpCdblCncptCdngDsplay = bndlDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.bndlDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setBndlDntfrDntfrTpCdblCncptCdngSrSlctd(String bndlDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.bndlDntfrDntfrTpCdblCncptCdngSrSlctd = bndlDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrCdblCncptTxt() {
-        return this.bndlDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setBndlDntfrDntfrCdblCncptTxt(String bndlDntfrDntfrCdblCncptTxt) {
-        this.bndlDntfrDntfrCdblCncptTxt = bndlDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrPrdStrt() {
-        return this.bndlDntfrDntfrPrdStrt;
-    }
-    
-    public void setBndlDntfrDntfrPrdStrt(String bndlDntfrDntfrPrdStrt) {
-        this.bndlDntfrDntfrPrdStrt = bndlDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrPrdNd() {
-        return this.bndlDntfrDntfrPrdNd;
-    }
-    
-    public void setBndlDntfrDntfrPrdNd(String bndlDntfrDntfrPrdNd) {
-        this.bndlDntfrDntfrPrdNd = bndlDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrRfrncRfrnce() {
-        return this.bndlDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setBndlDntfrDntfrRfrncRfrnce(String bndlDntfrDntfrRfrncRfrnce) {
-        this.bndlDntfrDntfrRfrncRfrnce = bndlDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrRfrncTpe() {
-        return this.bndlDntfrDntfrRfrncTpe;
-    }
-    
-    public void setBndlDntfrDntfrRfrncTpe(String bndlDntfrDntfrRfrncTpe) {
-        this.bndlDntfrDntfrRfrncTpe = bndlDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrRfrncDntfr() {
-        return this.bndlDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setBndlDntfrDntfrRfrncDntfr(String bndlDntfrDntfrRfrncDntfr) {
-        this.bndlDntfrDntfrRfrncDntfr = bndlDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrRfrncDsplay() {
-        return this.bndlDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setBndlDntfrDntfrRfrncDsplay(String bndlDntfrDntfrRfrncDsplay) {
-        this.bndlDntfrDntfrRfrncDsplay = bndlDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrVlStrng() {
-        return this.bndlDntfrDntfrVlStrng;
-    }
-    
-    public void setBndlDntfrDntfrVlStrng(String bndlDntfrDntfrVlStrng) {
-        this.bndlDntfrDntfrVlStrng = bndlDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getBndlDntfrDntfrSstmRi() {
-        return this.bndlDntfrDntfrSstmRi;
-    }
-    
-    public void setBndlDntfrDntfrSstmRi(String bndlDntfrDntfrSstmRi) {
-        this.bndlDntfrDntfrSstmRi = bndlDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getBundleType() {
-        return this.bundleType;
-    }
-    
-    public void setBundleType(String bundleType) {
-        this.bundleType = bundleType;
-    }
-    
-    
-    
-    public String getBundleTimestamp() {
-        return this.bundleTimestamp;
-    }
-    
-    public void setBundleTimestamp(String bundleTimestamp) {
-        this.bundleTimestamp = bundleTimestamp;
-    }
-    
-    
-    
-    public String getBundleTotal() {
-        return this.bundleTotal;
-    }
-    
-    public void setBundleTotal(String bundleTotal) {
-        this.bundleTotal = bundleTotal;
-    }
-    
-    
-    
-    public String getBundleLinkRelation() {
-        return this.bundleLinkRelation;
-    }
-    
-    public void setBundleLinkRelation(String bundleLinkRelation) {
-        this.bundleLinkRelation = bundleLinkRelation;
-    }
-    
-    
-    
-    public String getBundleLinkUrl() {
-        return this.bundleLinkUrl;
-    }
-    
-    public void setBundleLinkUrl(String bundleLinkUrl) {
-        this.bundleLinkUrl = bundleLinkUrl;
-    }
-    
-    
-    
-    public String getBundleEntryLink() {
-        return this.bundleEntryLink;
-    }
-    
-    public void setBundleEntryLink(String bundleEntryLink) {
-        this.bundleEntryLink = bundleEntryLink;
-    }
-    
-    
-    
-    public String getBundleEntryFullUrl() {
-        return this.bundleEntryFullUrl;
-    }
-    
-    public void setBundleEntryFullUrl(String bundleEntryFullUrl) {
-        this.bundleEntryFullUrl = bundleEntryFullUrl;
-    }
-    
-    
-    
-    public String getBundleEntryResource() {
-        return this.bundleEntryResource;
-    }
-    
-    public void setBundleEntryResource(String bundleEntryResource) {
-        this.bundleEntryResource = bundleEntryResource;
-    }
-    
-    
-    
-    public String getBundleEntrySearchMode() {
-        return this.bundleEntrySearchMode;
-    }
-    
-    public void setBundleEntrySearchMode(String bundleEntrySearchMode) {
-        this.bundleEntrySearchMode = bundleEntrySearchMode;
-    }
-    
-    
-    
-    public String getBundleEntrySearchScore() {
-        return this.bundleEntrySearchScore;
-    }
-    
-    public void setBundleEntrySearchScore(String bundleEntrySearchScore) {
-        this.bundleEntrySearchScore = bundleEntrySearchScore;
-    }
-    
-    
-    
-    public String getBundleEntryRequestMethod() {
-        return this.bundleEntryRequestMethod;
-    }
-    
-    public void setBundleEntryRequestMethod(String bundleEntryRequestMethod) {
-        this.bundleEntryRequestMethod = bundleEntryRequestMethod;
-    }
-    
-    
-    
-    public String getBundleEntryRequestUrl() {
-        return this.bundleEntryRequestUrl;
-    }
-    
-    public void setBundleEntryRequestUrl(String bundleEntryRequestUrl) {
-        this.bundleEntryRequestUrl = bundleEntryRequestUrl;
-    }
-    
-    
-    
-    public String getBundleEntryRequestIfNoneMatch() {
-        return this.bundleEntryRequestIfNoneMatch;
-    }
-    
-    public void setBundleEntryRequestIfNoneMatch(String bundleEntryRequestIfNoneMatch) {
-        this.bundleEntryRequestIfNoneMatch = bundleEntryRequestIfNoneMatch;
-    }
-    
-    
-    
-    public String getBndlNtrRqstFMdfdSnce() {
-        return this.bndlNtrRqstFMdfdSnce;
-    }
-    
-    public void setBndlNtrRqstFMdfdSnce(String bndlNtrRqstFMdfdSnce) {
-        this.bndlNtrRqstFMdfdSnce = bndlNtrRqstFMdfdSnce;
-    }
-    
-    
-    
-    public String getBundleEntryRequestIfMatch() {
-        return this.bundleEntryRequestIfMatch;
-    }
-    
-    public void setBundleEntryRequestIfMatch(String bundleEntryRequestIfMatch) {
-        this.bundleEntryRequestIfMatch = bundleEntryRequestIfMatch;
-    }
-    
-    
-    
-    public String getBundleEntryRequestIfNoneExist() {
-        return this.bundleEntryRequestIfNoneExist;
-    }
-    
-    public void setBundleEntryRequestIfNoneExist(String bundleEntryRequestIfNoneExist) {
-        this.bundleEntryRequestIfNoneExist = bundleEntryRequestIfNoneExist;
-    }
-    
-    
-    
-    public String getBundleEntryResponseStatus() {
-        return this.bundleEntryResponseStatus;
-    }
-    
-    public void setBundleEntryResponseStatus(String bundleEntryResponseStatus) {
-        this.bundleEntryResponseStatus = bundleEntryResponseStatus;
-    }
-    
-    
-    
-    public String getBundleEntryResponseLocation() {
-        return this.bundleEntryResponseLocation;
-    }
-    
-    public void setBundleEntryResponseLocation(String bundleEntryResponseLocation) {
-        this.bundleEntryResponseLocation = bundleEntryResponseLocation;
-    }
-    
-    
-    
-    public String getBundleEntryResponseEtag() {
-        return this.bundleEntryResponseEtag;
-    }
-    
-    public void setBundleEntryResponseEtag(String bundleEntryResponseEtag) {
-        this.bundleEntryResponseEtag = bundleEntryResponseEtag;
-    }
-    
-    
-    
-    public String getBundleEntryResponseLastModified() {
-        return this.bundleEntryResponseLastModified;
-    }
-    
-    public void setBundleEntryResponseLastModified(String bundleEntryResponseLastModified) {
-        this.bundleEntryResponseLastModified = bundleEntryResponseLastModified;
-    }
-    
-    
-    
-    public String getBundleEntryResponseOutcome() {
-        return this.bundleEntryResponseOutcome;
-    }
-    
-    public void setBundleEntryResponseOutcome(String bundleEntryResponseOutcome) {
-        this.bundleEntryResponseOutcome = bundleEntryResponseOutcome;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrDtBs64bnry() {
-        return this.bndlSgntrSgntrDtBs64bnry;
-    }
-    
-    public void setBndlSgntrSgntrDtBs64bnry(String bndlSgntrSgntrDtBs64bnry) {
-        this.bndlSgntrSgntrDtBs64bnry = bndlSgntrSgntrDtBs64bnry;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrTrgtFrmtCde() {
-        return this.bndlSgntrSgntrTrgtFrmtCde;
-    }
-    
-    public void setBndlSgntrSgntrTrgtFrmtCde(String bndlSgntrSgntrTrgtFrmtCde) {
-        this.bndlSgntrSgntrTrgtFrmtCde = bndlSgntrSgntrTrgtFrmtCde;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrSgFrmtCde() {
-        return this.bndlSgntrSgntrSgFrmtCde;
-    }
-    
-    public void setBndlSgntrSgntrSgFrmtCde(String bndlSgntrSgntrSgFrmtCde) {
-        this.bndlSgntrSgntrSgFrmtCde = bndlSgntrSgntrSgFrmtCde;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrCdngSstm() {
-        return this.bndlSgntrSgntrCdngSstm;
-    }
-    
-    public void setBndlSgntrSgntrCdngSstm(String bndlSgntrSgntrCdngSstm) {
-        this.bndlSgntrSgntrCdngSstm = bndlSgntrSgntrCdngSstm;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrCdngVrsn() {
-        return this.bndlSgntrSgntrCdngVrsn;
-    }
-    
-    public void setBndlSgntrSgntrCdngVrsn(String bndlSgntrSgntrCdngVrsn) {
-        this.bndlSgntrSgntrCdngVrsn = bndlSgntrSgntrCdngVrsn;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrCdngCde() {
-        return this.bndlSgntrSgntrCdngCde;
-    }
-    
-    public void setBndlSgntrSgntrCdngCde(String bndlSgntrSgntrCdngCde) {
-        this.bndlSgntrSgntrCdngCde = bndlSgntrSgntrCdngCde;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrCdngDsplay() {
-        return this.bndlSgntrSgntrCdngDsplay;
-    }
-    
-    public void setBndlSgntrSgntrCdngDsplay(String bndlSgntrSgntrCdngDsplay) {
-        this.bndlSgntrSgntrCdngDsplay = bndlSgntrSgntrCdngDsplay;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrCdngSrSlctd() {
-        return this.bndlSgntrSgntrCdngSrSlctd;
-    }
-    
-    public void setBndlSgntrSgntrCdngSrSlctd(String bndlSgntrSgntrCdngSrSlctd) {
-        this.bndlSgntrSgntrCdngSrSlctd = bndlSgntrSgntrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrWhnNstnt() {
-        return this.bndlSgntrSgntrWhnNstnt;
-    }
-    
-    public void setBndlSgntrSgntrWhnNstnt(String bndlSgntrSgntrWhnNstnt) {
-        this.bndlSgntrSgntrWhnNstnt = bndlSgntrSgntrWhnNstnt;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrRfrncRfrnce() {
-        return this.bndlSgntrSgntrRfrncRfrnce;
-    }
-    
-    public void setBndlSgntrSgntrRfrncRfrnce(String bndlSgntrSgntrRfrncRfrnce) {
-        this.bndlSgntrSgntrRfrncRfrnce = bndlSgntrSgntrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrRfrncTpe() {
-        return this.bndlSgntrSgntrRfrncTpe;
-    }
-    
-    public void setBndlSgntrSgntrRfrncTpe(String bndlSgntrSgntrRfrncTpe) {
-        this.bndlSgntrSgntrRfrncTpe = bndlSgntrSgntrRfrncTpe;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrRfrncDntfr() {
-        return this.bndlSgntrSgntrRfrncDntfr;
-    }
-    
-    public void setBndlSgntrSgntrRfrncDntfr(String bndlSgntrSgntrRfrncDntfr) {
-        this.bndlSgntrSgntrRfrncDntfr = bndlSgntrSgntrRfrncDntfr;
-    }
-    
-    
-    
-    public String getBndlSgntrSgntrRfrncDsplay() {
-        return this.bndlSgntrSgntrRfrncDsplay;
-    }
-    
-    public void setBndlSgntrSgntrRfrncDsplay(String bndlSgntrSgntrRfrncDsplay) {
-        this.bndlSgntrSgntrRfrncDsplay = bndlSgntrSgntrRfrncDsplay;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getBundleIdentifierIdentifierUse()
+    {
+        return this.bundleIdentifierIdentifierUse;
+    }
+    
+    public void setBundleIdentifierIdentifierUse
+        (String bundleIdentifierIdentifierUse) 
+        {
+      this.bundleIdentifierIdentifierUse = bundleIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcCSstm()
+    {
+        return this.bndlDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setBndlDntfrDntfrTpCcCSstm
+        (String bndlDntfrDntfrTpCcCSstm) 
+        {
+      this.bndlDntfrDntfrTpCcCSstm = bndlDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcCVrsn()
+    {
+        return this.bndlDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setBndlDntfrDntfrTpCcCVrsn
+        (String bndlDntfrDntfrTpCcCVrsn) 
+        {
+      this.bndlDntfrDntfrTpCcCVrsn = bndlDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcCCde()
+    {
+        return this.bndlDntfrDntfrTpCcCCde;
+    }
+    
+    public void setBndlDntfrDntfrTpCcCCde
+        (String bndlDntfrDntfrTpCcCCde) 
+        {
+      this.bndlDntfrDntfrTpCcCCde = bndlDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcCDsplay()
+    {
+        return this.bndlDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setBndlDntfrDntfrTpCcCDsplay
+        (String bndlDntfrDntfrTpCcCDsplay) 
+        {
+      this.bndlDntfrDntfrTpCcCDsplay = bndlDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.bndlDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setBndlDntfrDntfrTpCcCSrSlctd
+        (String bndlDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.bndlDntfrDntfrTpCcCSrSlctd = bndlDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getBndlDntfrDntfrTpCcTxt()
+    {
+        return this.bndlDntfrDntfrTpCcTxt;
+    }
+    
+    public void setBndlDntfrDntfrTpCcTxt
+        (String bndlDntfrDntfrTpCcTxt) 
+        {
+      this.bndlDntfrDntfrTpCcTxt = bndlDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getBndlDntfrDntfrPrdPrdStrt()
+    {
+        return this.bndlDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setBndlDntfrDntfrPrdPrdStrt
+        (String bndlDntfrDntfrPrdPrdStrt) 
+        {
+      this.bndlDntfrDntfrPrdPrdStrt = bndlDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getBndlDntfrDntfrPrdPrdNd()
+    {
+        return this.bndlDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setBndlDntfrDntfrPrdPrdNd
+        (String bndlDntfrDntfrPrdPrdNd) 
+        {
+      this.bndlDntfrDntfrPrdPrdNd = bndlDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getBndlDntfrDntfrSsgnr()
+    {
+        return this.bndlDntfrDntfrSsgnr;
+    }
+    
+    public void setBndlDntfrDntfrSsgnr
+        (String bndlDntfrDntfrSsgnr) 
+        {
+      this.bndlDntfrDntfrSsgnr = bndlDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getBundleIdentifierIdentifierValue()
+    {
+        return this.bundleIdentifierIdentifierValue;
+    }
+    
+    public void setBundleIdentifierIdentifierValue
+        (String bundleIdentifierIdentifierValue) 
+        {
+      this.bundleIdentifierIdentifierValue = bundleIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getBndlDntfrDntfrSstm()
+    {
+        return this.bndlDntfrDntfrSstm;
+    }
+    
+    public void setBndlDntfrDntfrSstm
+        (String bndlDntfrDntfrSstm) 
+        {
+      this.bndlDntfrDntfrSstm = bndlDntfrDntfrSstm;
+}
+    public 
+    String 
+    getBundleTypeCode()
+    {
+        return this.bundleTypeCode;
+    }
+    
+    public void setBundleTypeCode
+        (String bundleTypeCode) 
+        {
+      this.bundleTypeCode = bundleTypeCode;
+}
+    public 
+    String 
+    getBundleTimestampInstant()
+    {
+        return this.bundleTimestampInstant;
+    }
+    
+    public void setBundleTimestampInstant
+        (String bundleTimestampInstant) 
+        {
+      this.bundleTimestampInstant = bundleTimestampInstant;
+}
+    public 
+    String 
+    getBundleTotalUnsignedInt()
+    {
+        return this.bundleTotalUnsignedInt;
+    }
+    
+    public void setBundleTotalUnsignedInt
+        (String bundleTotalUnsignedInt) 
+        {
+      this.bundleTotalUnsignedInt = bundleTotalUnsignedInt;
+}
+    public 
+    String 
+    getBundleLinkRelationString()
+    {
+        return this.bundleLinkRelationString;
+    }
+    
+    public void setBundleLinkRelationString
+        (String bundleLinkRelationString) 
+        {
+      this.bundleLinkRelationString = bundleLinkRelationString;
+}
+    public 
+    String 
+    getBundleLinkUrlUri()
+    {
+        return this.bundleLinkUrlUri;
+    }
+    
+    public void setBundleLinkUrlUri
+        (String bundleLinkUrlUri) 
+        {
+      this.bundleLinkUrlUri = bundleLinkUrlUri;
+}
+    public 
+    String 
+    getBundleEntryLinkLink()
+    {
+        return this.bundleEntryLinkLink;
+    }
+    
+    public void setBundleEntryLinkLink
+        (String bundleEntryLinkLink) 
+        {
+      this.bundleEntryLinkLink = bundleEntryLinkLink;
+}
+    public 
+    String 
+    getBundleEntryFullUrlUri()
+    {
+        return this.bundleEntryFullUrlUri;
+    }
+    
+    public void setBundleEntryFullUrlUri
+        (String bundleEntryFullUrlUri) 
+        {
+      this.bundleEntryFullUrlUri = bundleEntryFullUrlUri;
+}
+    public 
+    String 
+    getBundleEntryResourceResource()
+    {
+        return this.bundleEntryResourceResource;
+    }
+    
+    public void setBundleEntryResourceResource
+        (String bundleEntryResourceResource) 
+        {
+      this.bundleEntryResourceResource = bundleEntryResourceResource;
+}
+    public 
+    String 
+    getBundleEntrySearchModeCode()
+    {
+        return this.bundleEntrySearchModeCode;
+    }
+    
+    public void setBundleEntrySearchModeCode
+        (String bundleEntrySearchModeCode) 
+        {
+      this.bundleEntrySearchModeCode = bundleEntrySearchModeCode;
+}
+    public 
+    String 
+    getBundleEntrySearchScoreDecimal()
+    {
+        return this.bundleEntrySearchScoreDecimal;
+    }
+    
+    public void setBundleEntrySearchScoreDecimal
+        (String bundleEntrySearchScoreDecimal) 
+        {
+      this.bundleEntrySearchScoreDecimal = bundleEntrySearchScoreDecimal;
+}
+    public 
+    String 
+    getBundleEntryRequestMethodCode()
+    {
+        return this.bundleEntryRequestMethodCode;
+    }
+    
+    public void setBundleEntryRequestMethodCode
+        (String bundleEntryRequestMethodCode) 
+        {
+      this.bundleEntryRequestMethodCode = bundleEntryRequestMethodCode;
+}
+    public 
+    String 
+    getBundleEntryRequestUrlUri()
+    {
+        return this.bundleEntryRequestUrlUri;
+    }
+    
+    public void setBundleEntryRequestUrlUri
+        (String bundleEntryRequestUrlUri) 
+        {
+      this.bundleEntryRequestUrlUri = bundleEntryRequestUrlUri;
+}
+    public 
+    String 
+    getBndlNtrRqstFNnMtchStrng()
+    {
+        return this.bndlNtrRqstFNnMtchStrng;
+    }
+    
+    public void setBndlNtrRqstFNnMtchStrng
+        (String bndlNtrRqstFNnMtchStrng) 
+        {
+      this.bndlNtrRqstFNnMtchStrng = bndlNtrRqstFNnMtchStrng;
+}
+    public 
+    String 
+    getBndlNtrRqstFMdfdSncNstnt()
+    {
+        return this.bndlNtrRqstFMdfdSncNstnt;
+    }
+    
+    public void setBndlNtrRqstFMdfdSncNstnt
+        (String bndlNtrRqstFMdfdSncNstnt) 
+        {
+      this.bndlNtrRqstFMdfdSncNstnt = bndlNtrRqstFMdfdSncNstnt;
+}
+    public 
+    String 
+    getBndlNtrRqstFMtchStrng()
+    {
+        return this.bndlNtrRqstFMtchStrng;
+    }
+    
+    public void setBndlNtrRqstFMtchStrng
+        (String bndlNtrRqstFMtchStrng) 
+        {
+      this.bndlNtrRqstFMtchStrng = bndlNtrRqstFMtchStrng;
+}
+    public 
+    String 
+    getBndlNtrRqstFNnxstStrng()
+    {
+        return this.bndlNtrRqstFNnxstStrng;
+    }
+    
+    public void setBndlNtrRqstFNnxstStrng
+        (String bndlNtrRqstFNnxstStrng) 
+        {
+      this.bndlNtrRqstFNnxstStrng = bndlNtrRqstFNnxstStrng;
+}
+    public 
+    String 
+    getBndlNtrRspnsSttsStrng()
+    {
+        return this.bndlNtrRspnsSttsStrng;
+    }
+    
+    public void setBndlNtrRspnsSttsStrng
+        (String bndlNtrRspnsSttsStrng) 
+        {
+      this.bndlNtrRspnsSttsStrng = bndlNtrRspnsSttsStrng;
+}
+    public 
+    String 
+    getBundleEntryResponseLocationUri()
+    {
+        return this.bundleEntryResponseLocationUri;
+    }
+    
+    public void setBundleEntryResponseLocationUri
+        (String bundleEntryResponseLocationUri) 
+        {
+      this.bundleEntryResponseLocationUri = bundleEntryResponseLocationUri;
+}
+    public 
+    String 
+    getBundleEntryResponseEtagString()
+    {
+        return this.bundleEntryResponseEtagString;
+    }
+    
+    public void setBundleEntryResponseEtagString
+        (String bundleEntryResponseEtagString) 
+        {
+      this.bundleEntryResponseEtagString = bundleEntryResponseEtagString;
+}
+    public 
+    String 
+    getBndlNtrRspnsLstMdfdNstnt()
+    {
+        return this.bndlNtrRspnsLstMdfdNstnt;
+    }
+    
+    public void setBndlNtrRspnsLstMdfdNstnt
+        (String bndlNtrRspnsLstMdfdNstnt) 
+        {
+      this.bndlNtrRspnsLstMdfdNstnt = bndlNtrRspnsLstMdfdNstnt;
+}
+    public 
+    String 
+    getBndlNtrRspnsTcmRsrce()
+    {
+        return this.bndlNtrRspnsTcmRsrce;
+    }
+    
+    public void setBndlNtrRspnsTcmRsrce
+        (String bndlNtrRspnsTcmRsrce) 
+        {
+      this.bndlNtrRspnsTcmRsrce = bndlNtrRspnsTcmRsrce;
+}
+    public 
+    String 
+    getBundleSignatureSignatureData()
+    {
+        return this.bundleSignatureSignatureData;
+    }
+    
+    public void setBundleSignatureSignatureData
+        (String bundleSignatureSignatureData) 
+        {
+      this.bundleSignatureSignatureData = bundleSignatureSignatureData;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTrgtFrmt()
+    {
+        return this.bndlSgntrSgntrTrgtFrmt;
+    }
+    
+    public void setBndlSgntrSgntrTrgtFrmt
+        (String bndlSgntrSgntrTrgtFrmt) 
+        {
+      this.bndlSgntrSgntrTrgtFrmt = bndlSgntrSgntrTrgtFrmt;
+}
+    public 
+    String 
+    getBndlSgntrSgntrSgFrmt()
+    {
+        return this.bndlSgntrSgntrSgFrmt;
+    }
+    
+    public void setBndlSgntrSgntrSgFrmt
+        (String bndlSgntrSgntrSgFrmt) 
+        {
+      this.bndlSgntrSgntrSgFrmt = bndlSgntrSgntrSgFrmt;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTpCSstm()
+    {
+        return this.bndlSgntrSgntrTpCSstm;
+    }
+    
+    public void setBndlSgntrSgntrTpCSstm
+        (String bndlSgntrSgntrTpCSstm) 
+        {
+      this.bndlSgntrSgntrTpCSstm = bndlSgntrSgntrTpCSstm;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTpCVrsn()
+    {
+        return this.bndlSgntrSgntrTpCVrsn;
+    }
+    
+    public void setBndlSgntrSgntrTpCVrsn
+        (String bndlSgntrSgntrTpCVrsn) 
+        {
+      this.bndlSgntrSgntrTpCVrsn = bndlSgntrSgntrTpCVrsn;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTpCCde()
+    {
+        return this.bndlSgntrSgntrTpCCde;
+    }
+    
+    public void setBndlSgntrSgntrTpCCde
+        (String bndlSgntrSgntrTpCCde) 
+        {
+      this.bndlSgntrSgntrTpCCde = bndlSgntrSgntrTpCCde;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTpCDsplay()
+    {
+        return this.bndlSgntrSgntrTpCDsplay;
+    }
+    
+    public void setBndlSgntrSgntrTpCDsplay
+        (String bndlSgntrSgntrTpCDsplay) 
+        {
+      this.bndlSgntrSgntrTpCDsplay = bndlSgntrSgntrTpCDsplay;
+}
+    public 
+    String 
+    getBndlSgntrSgntrTpCSrSlctd()
+    {
+        return this.bndlSgntrSgntrTpCSrSlctd;
+    }
+    
+    public void setBndlSgntrSgntrTpCSrSlctd
+        (String bndlSgntrSgntrTpCSrSlctd) 
+        {
+      this.bndlSgntrSgntrTpCSrSlctd = bndlSgntrSgntrTpCSrSlctd;
+}
+    public 
+    String 
+    getBundleSignatureSignatureWhen()
+    {
+        return this.bundleSignatureSignatureWhen;
+    }
+    
+    public void setBundleSignatureSignatureWhen
+        (String bundleSignatureSignatureWhen) 
+        {
+      this.bundleSignatureSignatureWhen = bundleSignatureSignatureWhen;
+}
+    public 
+    String 
+    getBundleSignatureSignatureWho()
+    {
+        return this.bundleSignatureSignatureWho;
+    }
+    
+    public void setBundleSignatureSignatureWho
+        (String bundleSignatureSignatureWho) 
+        {
+      this.bundleSignatureSignatureWho = bundleSignatureSignatureWho;
+}
+    public 
+    String 
+    getBndlSgntrSgntrNBhlff()
+    {
+        return this.bndlSgntrSgntrNBhlff;
+    }
+    
+    public void setBndlSgntrSgntrNBhlff
+        (String bndlSgntrSgntrNBhlff) 
+        {
+      this.bndlSgntrSgntrNBhlff = bndlSgntrSgntrNBhlff;
+}
 
 
 

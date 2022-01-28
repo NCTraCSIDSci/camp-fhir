@@ -1,1479 +1,513 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Imagingstudy" optimistic-lock="none" table="imagingstudy">
-        <id name="imgngStdDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="imgngStdDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_use_code</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_s_cde">
-                <comment>ImagingStudy_identifierIdentifier_use_code</comment>
+        <property name="imgngStdDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_se">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="imgngStdDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="imgngStdDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="imgngStdDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>ImagingStudy_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="imgngStdDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_CdblCncpt_txt">
-                <comment>ImagingStudy_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="imgngStdDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Period_start</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Prd_strt">
-                <comment>ImagingStudy_identifierIdentifier_Period_start</comment>
+        <property name="imgngStdDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Period_end</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Prd_nd">
-                <comment>ImagingStudy_identifierIdentifier_Period_end</comment>
+        <property name="imgngStdDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>ImagingStudy_identifierIdentifier_Reference_reference</comment>
+        <property name="imgngStdDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Rfrnc_tpe">
-                <comment>ImagingStudy_identifierIdentifier_Reference_type</comment>
+        <property name="imgngStdDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>ImagingStudy_identifierIdentifier_Reference_identifier</comment>
+        <property name="imgngStdDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>ImagingStudy_identifierIdentifier_Reference_display</comment>
+        <property name="imgngStdDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="ImgngStd_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ImagingStudy.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_value_string</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_vl_strng">
-                <comment>ImagingStudy_identifierIdentifier_value_string</comment>
+        <property name="imagingStudyStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ImagingStudy_status_code">
+                <comment>{ "tree" :"ImagingStudy.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="imgngStdDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">ImagingStudy_identifierIdentifier_system_uri</meta>
-            <column length="512" name="ImgngStd_dntfr_dntfr_sstm_ri">
-                <comment>ImagingStudy_identifierIdentifier_system_uri</comment>
+        <property name="imgngStdMdltCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_mdlt_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imagingStudyStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImagingStudy_status">
-                <comment>code</comment>
+        <property name="imagingStudyModalityCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setCode"}</meta>
+            <column length="65535" name="ImagingStudy_modality_C_code">
+                <comment>{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdMdltCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="ImgngStd_mdlt_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="imagingStudyModalityCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setVersion"}</meta>
+            <column length="65535" name="ImagingStudy_modality_C_version">
+                <comment>{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdMdltCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="ImgngStd_mdlt_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="imagingStudyModalityCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setDisplay"}</meta>
+            <column length="65535" name="ImagingStudy_modality_C_display">
+                <comment>{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdMdltCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="ImgngStd_mdlt_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="imagingStudyModalityCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setSystem"}</meta>
+            <column length="65535" name="ImagingStudy_modality_C_system">
+                <comment>{ "tree" :"ImagingStudy.modality", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModality, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdMdltCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="ImgngStd_mdlt_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="imagingStudySubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="ImagingStudy_subject_Reference">
+                <comment>{ "tree" :"ImagingStudy.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="imgngStdMdltCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="ImgngStd_mdlt_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="imagingStudyEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="ImagingStudy_encounter_Reference">
+                <comment>{ "tree" :"ImagingStudy.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="imagingStudyStartedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.started", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStarted"}</meta>
+            <column length="65535" name="ImagingStudy_started_dateTime">
+                <comment>{ "tree" :"ImagingStudy.started", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStarted"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="imagingStudyBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="ImagingStudy_basedOn_Reference">
+                <comment>{ "tree" :"ImagingStudy.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="imagingStudyReferrerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.referrer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReferrer"}</meta>
+            <column length="65535" name="ImagingStudy_referrer_Reference">
+                <comment>{ "tree" :"ImagingStudy.referrer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReferrer"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="imagingStudyInterpreterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.interpreter", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInterpreter"}</meta>
+            <column length="65535" name="ImagingStudy_interpreter_Reference">
+                <comment>{ "tree" :"ImagingStudy.interpreter", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInterpreter"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="imagingStudyEndpointReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="ImagingStudy_endpoint_Reference">
+                <comment>{ "tree" :"ImagingStudy.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="imgngStdNmbrfSrsNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.numberOfSeries", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSeries"}</meta>
+            <column length="65535" name="ImgngStd_nmbrfSrs_nsgndnt">
+                <comment>{ "tree" :"ImagingStudy.numberOfSeries", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSeries"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="imgngStdNmbrfnstncsNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.numberOfInstances", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfInstances"}</meta>
+            <column length="65535" name="ImgngStd_nmbrfnstncs_nsgndnt">
+                <comment>{ "tree" :"ImagingStudy.numberOfInstances", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfInstances"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="imgngStdPrcdrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setProcedureReference"}</meta>
+            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnce">
+                <comment>{ "tree" :"ImagingStudy.procedureReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setProcedureReference"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="imgngStdPrcdrCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_prcdrCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="imgngStdPrcdrCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_prcdrCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="imgngStdPrcdrCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setCode"}</meta>
+            <column length="65535" name="ImgngStd_prcdrCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="imgngStdPrcdrCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_prcdrCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="imgngStdPrcdrCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_prcdrCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdSbjctRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_sbjct_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="imagingStudyProcedureCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, setText"}</meta>
+            <column length="65535" name="ImagingStudy_procedureCode_CC_text">
+                <comment>{ "tree" :"ImagingStudy.procedureCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProcedureCode, setText"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="imagingStudyLocationReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</meta>
+            <column length="65535" name="ImagingStudy_location_Reference">
+                <comment>{ "tree" :"ImagingStudy.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="imgngStdRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="imgngStdRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="imgngStdRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="ImgngStd_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="imgngStdRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="imgngStdRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="imagingStudyReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="ImagingStudy_reasonCode_CC_text">
+                <comment>{ "tree" :"ImagingStudy.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="imgngStdRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"ImagingStudy.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="imagingStudyNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="ImagingStudy_note_Annotation_time">
+                <comment>{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="imagingStudyNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="ImagingStudy_note_Annotation_text">
+                <comment>{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="imgngStdNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="ImgngStd_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="imgngStdNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="ImgngStd_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"ImagingStudy.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="imagingStudyDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ImagingStudy_description_string">
+                <comment>{ "tree" :"ImagingStudy.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="imgngStdNcntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_ncntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="imagingStudySeriesUidId" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.uid", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setUid"}</meta>
+            <column length="65535" name="ImagingStudy_series_uid_id">
+                <comment>{ "tree" :"ImagingStudy.series.uid", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setUid"}</comment>
             </column>
         </property>
-        <property name="imagingStudyStarted" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ImagingStudy_started">
-                <comment>dateTime</comment>
+        <property name="imgngStdSrsNmbrNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.number", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setNumber"}</meta>
+            <column length="65535" name="ImgngStd_srs_nmbr_nsgndnt">
+                <comment>{ "tree" :"ImagingStudy.series.number", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setNumber"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="imgngStdSrsMdltCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_srs_mdlt_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="imgngStdSrsMdltCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setCode"}</meta>
+            <column length="65535" name="ImgngStd_srs_mdlt_C_cde">
+                <comment>{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="imgngStdSrsMdltCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_srs_mdlt_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="imgngStdSrsMdltCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_srs_mdlt_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="imgngStdSrsMdltCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_srs_mdlt_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.series.modality", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addSeries"] , "methodName" : "setModality, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="imgngStdSrsDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ImgngStd_srs_dscrptn_strng">
+                <comment>{ "tree" :"ImagingStudy.series.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="imgngStdSrsNmbrfnstncsNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.numberOfInstances", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setNumberOfInstances"}</meta>
+            <column length="65535" name="ImgngStd_srs_nmbrfnstncs_nsgndnt">
+                <comment>{ "tree" :"ImagingStudy.series.numberOfInstances", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setNumberOfInstances"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="imgngStdSrsNdpntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addSeries"] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnce">
+                <comment>{ "tree" :"ImagingStudy.series.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addSeries"] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="imgngStdSrsBdStCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_srs_bdSt_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="imgngStdSrsBdStCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setCode"}</meta>
+            <column length="65535" name="ImgngStd_srs_bdSt_C_cde">
+                <comment>{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="imgngStdSrsBdStCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_srs_bdSt_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="imgngStdSrsBdStCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_srs_bdSt_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="imgngStdSrsBdStCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_srs_bdSt_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.series.bodySite", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setBodySite, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdBsdnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_bsdn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="imgngStdSrsLtrltCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_srs_ltrlt_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="imgngStdSrsLtrltCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setCode"}</meta>
+            <column length="65535" name="ImgngStd_srs_ltrlt_C_cde">
+                <comment>{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="imgngStdSrsLtrltCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_srs_ltrlt_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="imgngStdSrsLtrltCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_srs_ltrlt_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="imgngStdSrsLtrltCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_srs_ltrlt_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.series.laterality", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setLaterality, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="imgngStdSrsSpcmnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.specimen", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addSeries"] , "methodName" : "addSpecimen"}</meta>
+            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnce">
+                <comment>{ "tree" :"ImagingStudy.series.specimen", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addSeries"] , "methodName" : "addSpecimen"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="imgngStdSrsStrtdDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.started", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setStarted"}</meta>
+            <column length="65535" name="ImgngStd_srs_strtd_dtTme">
+                <comment>{ "tree" :"ImagingStudy.series.started", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSeries"] , "methodName" : "setStarted"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setCode"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="imgngStdSrsPrfrmrFnctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, setText"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CC_txt">
+                <comment>{ "tree" :"ImagingStudy.series.performer.function", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setFunction, setText"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="imgngStdSrsPrfrmrCtrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.performer.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setActor"}</meta>
+            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnce">
+                <comment>{ "tree" :"ImagingStudy.series.performer.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer"] , "methodName" : "setActor"}</comment>
             </column>
         </property>
-        <property name="imgngStdRfrrrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_rfrrr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="imgngStdSrsNstncDD" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.uid", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setUid"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_d_d">
+                <comment>{ "tree" :"ImagingStudy.series.instance.uid", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setUid"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="imgngStdSrsNstncSpClssCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setUserSelected"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_spClss_C_srSlctd">
+                <comment>{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="imgngStdSrsNstncSpClssCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setCode"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_spClss_C_cde">
+                <comment>{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setCode"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="imgngStdSrsNstncSpClssCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setVersion"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_spClss_C_vrsn">
+                <comment>{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setVersion"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="imgngStdSrsNstncSpClssCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setDisplay"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_spClss_C_dsplay">
+                <comment>{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setDisplay"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="imgngStdSrsNstncSpClssCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setSystem"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_spClss_C_sstm">
+                <comment>{ "tree" :"ImagingStudy.series.instance.sopClass", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setSopClass, setSystem"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="imgngStdSrsNstncNmbrNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.number", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setNumber"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_nmbr_nsgndnt">
+                <comment>{ "tree" :"ImagingStudy.series.instance.number", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setNumber"}</comment>
             </column>
         </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtrprtrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_ntrprtr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imagingStudyNumberOfSeries" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="ImagingStudy_numberOfSeries">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="imagingStudyNumberOfInstances" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="ImagingStudy_numberOfInstances">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_prcdrRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="imgngStdPrcdrCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="ImgngStd_prcdrCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdLctnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_lctn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="ImgngStd_rsnCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdRsnRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_rsnRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnTmDtTme" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_tm_dtTme">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnTxtMrkdwn" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_txt_mrkdwn">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="ImgngStd_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
-            </column>
-        </property>
-        <property name="imagingStudyDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImagingStudy_description">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesUid" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="ImagingStudy_series_uid">
-                <comment>id</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesNumber" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="ImagingStudy_series_number">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsMdltCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="ImgngStd_srs_mdlt_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsMdltCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="ImgngStd_srs_mdlt_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsMdltCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="ImgngStd_srs_mdlt_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsMdltCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_mdlt_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsMdltCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="ImgngStd_srs_mdlt_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImagingStudy_series_description">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNmbrfnstncs" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="ImgngStd_srs_nmbrfnstncs">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_srs_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsBdStCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="ImgngStd_srs_bdSt_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsBdStCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="ImgngStd_srs_bdSt_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsBdStCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="ImgngStd_srs_bdSt_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsBdStCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_bdSt_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsBdStCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="ImgngStd_srs_bdSt_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsLtrltCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="ImgngStd_srs_ltrlt_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsLtrltCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="ImgngStd_srs_ltrlt_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsLtrltCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="ImgngStd_srs_ltrlt_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsLtrltCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_ltrlt_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsLtrltCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="ImgngStd_srs_ltrlt_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsSpcmnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_srs_spcmn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesStarted" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ImagingStudy_series_started">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrFnctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_fnctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsPrfrmrCtrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImgngStd_srs_prfrmr_ctr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesInstanceUid" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="ImagingStudy_series_instance_uid">
-                <comment>id</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncSpClssCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_spClss_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncSpClssCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_spClss_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncSpClssCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_spClss_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncSpClssCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_spClss_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncSpClssCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_spClss_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="imgngStdSrsNstncNmbr" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="ImgngStd_srs_nstnc_nmbr">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="imagingStudySeriesInstanceTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImagingStudy_series_instance_title">
-                <comment>string</comment>
+        <property name="imgngStdSrsNstncTtlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImagingStudy.series.instance.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ImgngStd_srs_nstnc_ttl_strng">
+                <comment>{ "tree" :"ImagingStudy.series.instance.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSeries", "addPerformer", "addInstance"] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
     </class>

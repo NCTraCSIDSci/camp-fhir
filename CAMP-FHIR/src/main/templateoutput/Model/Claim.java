@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,3977 +10,4717 @@ package main.templateoutput.Model;
 public class Claim  implements java.io.Serializable {
 
 
-     private String claimIdentifierCodingCode;
-     private String clmDntfrCdngSrSlctd;
-     private String claimIdentifierCodingVersion;
-     private String claimIdentifierCodingDisplay;
-     private String claimIdentifierCodingSystem;
-     private String claimStatus;
-     private String claimTypeCodingUserSelected;
-     private String claimTypeCodingCode;
-     private String claimTypeCodingVersion;
-     private String claimTypeCodingDisplay;
-     private String claimTypeCodingSystem;
-     private String claimSubTypeCodingUserSelected;
-     private String claimSubTypeCodingCode;
-     private String claimSubTypeCodingVersion;
-     private String claimSubTypeCodingDisplay;
-     private String claimSubTypeCodingSystem;
-     private String claimUse;
-     private String claimPnt;
-     private String clmBllblPrdCdngSrSlctd;
-     private String claimBillablePeriodCodingCode;
-     private String clmBllblPrdCdngVrsn;
-     private String clmBllblPrdCdngDsplay;
-     private String claimBillablePeriodCodingSystem;
-     private String claimCreated;
-     private String claimEnterer;
-     private String claimInsurer;
-     private String claimProvider;
-     private String claimPriorityCodingUserSelected;
-     private String claimPriorityCodingCode;
-     private String claimPriorityCodingVersion;
-     private String claimPriorityCodingDisplay;
-     private String claimPriorityCodingSystem;
-     private String clmFndsRsrvCdngSrSlctd;
-     private String claimFundsReserveCodingCode;
-     private String claimFundsReserveCodingVersion;
-     private String claimFundsReserveCodingDisplay;
-     private String claimFundsReserveCodingSystem;
-     private String claimRelated;
-     private String claimRelatedClaim;
-     private String clmRltdRltnshpCdngSrSlctd;
-     private String clmRltdRltnshpCdngCde;
-     private String clmRltdRltnshpCdngVrsn;
-     private String clmRltdRltnshpCdngDsplay;
-     private String clmRltdRltnshpCdngSstm;
-     private String clmRltdRfrncCdngSrSlctd;
-     private String clmRltdRfrncCdngCde;
-     private String clmRltdRfrncCdngVrsn;
-     private String clmRltdRfrncCdngDsplay;
-     private String clmRltdRfrncCdngSstm;
-     private String claimPrescription;
-     private String claimOriginalPrescription;
-     private String claimPayee;
-     private String clmPTpCdngSrSlctd;
-     private String claimPayeeTypeCodingCode;
-     private String claimPayeeTypeCodingVersion;
-     private String claimPayeeTypeCodingDisplay;
-     private String claimPayeeTypeCodingSystem;
-     private String claimPayeeParty;
-     private String claimReferral;
-     private String claimFacility;
-     private String claimCareTeam;
-     private String claimCareTeamSequence;
-     private String claimCareTeamProvider;
-     private String claimCareTeamResponsible;
-     private String clmCrTmRlCdngSrSlctd;
-     private String claimCareTeamRoleCodingCode;
-     private String claimCareTeamRoleCodingVersion;
-     private String claimCareTeamRoleCodingDisplay;
-     private String claimCareTeamRoleCodingSystem;
-     private String clmCrTmQlfctnCdngSrSlctd;
-     private String clmCrTmQlfctnCdngCde;
-     private String clmCrTmQlfctnCdngVrsn;
-     private String clmCrTmQlfctnCdngDsplay;
-     private String clmCrTmQlfctnCdngSstm;
-     private String claimSupportingInfo;
-     private String claimSupportingInfoSequence;
-     private String clmSpprtngnfCtgrCdngSrSlctd;
-     private String clmSpprtngnfCtgrCdngCde;
-     private String clmSpprtngnfCtgrCdngVrsn;
-     private String clmSpprtngnfCtgrCdngDsplay;
-     private String clmSpprtngnfCtgrCdngSstm;
-     private String clmSpprtngnfCdCdngSrSlctd;
-     private String clmSpprtngnfCdCdngCde;
-     private String clmSpprtngnfCdCdngVrsn;
-     private String clmSpprtngnfCdCdngDsplay;
-     private String clmSpprtngnfCdCdngSstm;
-     private String claimSupportingInfoTimingDate;
-     private String clmSpprtngnfTmngPrdCdngSrSlctd;
-     private String clmSpprtngnfTmngPrdCdngCde;
-     private String clmSpprtngnfTmngPrdCdngVrsn;
-     private String clmSpprtngnfTmngPrdCdngDsplay;
-     private String clmSpprtngnfTmngPrdCdngSstm;
-     private String claimSupportingInfoValueBoolean;
-     private String claimSupportingInfoValueString;
-     private String clmSpprtngnfVlQnttCdngSrSlctd;
-     private String clmSpprtngnfVlQnttCdngCde;
-     private String clmSpprtngnfVlQnttCdngVrsn;
-     private String clmSpprtngnfVlQnttCdngDsplay;
-     private String clmSpprtngnfVlQnttCdngSstm;
-     private String clmSpprtngnfVlttchmntCdngSrSlctd;
-     private String clmSpprtngnfVlttchmntCdngCde;
-     private String clmSpprtngnfVlttchmntCdngVrsn;
-     private String clmSpprtngnfVlttchmntCdngDsplay;
-     private String clmSpprtngnfVlttchmntCdngSstm;
-     private String clmSpprtngnfVlRfrnce;
-     private String clmSpprtngnfRsnCdngSrSlctd;
-     private String clmSpprtngnfRsnCdngCde;
-     private String clmSpprtngnfRsnCdngVrsn;
-     private String clmSpprtngnfRsnCdngDsplay;
-     private String clmSpprtngnfRsnCdngSstm;
-     private String claimDiagnosis;
-     private String claimDiagnosisSequence;
-     private String clmDgnssDgnsscdblcptCdngSrSlctd;
-     private String clmDgnssDgnsscdblcptCdngCde;
-     private String clmDgnssDgnsscdblcptCdngVrsn;
-     private String clmDgnssDgnsscdblcptCdngDsplay;
-     private String clmDgnssDgnsscdblcptCdngSstm;
-     private String claimDiagnosisDiagnosisReference;
-     private String clmDgnssTpCdngSrSlctd;
-     private String claimDiagnosisTypeCodingCode;
-     private String clmDgnssTpCdngVrsn;
-     private String clmDgnssTpCdngDsplay;
-     private String claimDiagnosisTypeCodingSystem;
-     private String clmDgnssNdmssnCdngSrSlctd;
-     private String clmDgnssNdmssnCdngCde;
-     private String clmDgnssNdmssnCdngVrsn;
-     private String clmDgnssNdmssnCdngDsplay;
-     private String clmDgnssNdmssnCdngSstm;
-     private String clmDgnssPckgCdCdngSrSlctd;
-     private String clmDgnssPckgCdCdngCde;
-     private String clmDgnssPckgCdCdngVrsn;
-     private String clmDgnssPckgCdCdngDsplay;
-     private String clmDgnssPckgCdCdngSstm;
-     private String claimProcedure;
-     private String claimProcedureSequence;
-     private String clmPrcdrTpCdngSrSlctd;
-     private String claimProcedureTypeCodingCode;
-     private String clmPrcdrTpCdngVrsn;
-     private String clmPrcdrTpCdngDsplay;
-     private String claimProcedureTypeCodingSystem;
-     private String claimProcedureDate;
-     private String clmPrcdrPrcdrcdblcptCdngSrSlctd;
-     private String clmPrcdrPrcdrcdblcptCdngCde;
-     private String clmPrcdrPrcdrcdblcptCdngVrsn;
-     private String clmPrcdrPrcdrcdblcptCdngDsplay;
-     private String clmPrcdrPrcdrcdblcptCdngSstm;
-     private String claimProcedureProcedureReference;
-     private String claimProcedureUdi;
-     private String claimInsurance;
-     private String claimInsuranceSequence;
-     private String claimInsuranceFocal;
-     private String clmNsrncDntfrCdngSrSlctd;
-     private String clmNsrncDntfrCdngCde;
-     private String clmNsrncDntfrCdngVrsn;
-     private String clmNsrncDntfrCdngDsplay;
-     private String clmNsrncDntfrCdngSstm;
-     private String claimInsuranceCoverage;
-     private String clmNsrncBsnssrrngmnt;
-     private String claimInsurancePreAuthRef;
-     private String claimInsuranceClaimResponse;
-     private String claimAccident;
-     private String claimAccidentDate;
-     private String clmCcdntTpCdngSrSlctd;
-     private String claimAccidentTypeCodingCode;
-     private String claimAccidentTypeCodingVersion;
-     private String claimAccidentTypeCodingDisplay;
-     private String claimAccidentTypeCodingSystem;
-     private String clmCcdntLctnddrssCdngSrSlctd;
-     private String clmCcdntLctnddrssCdngCde;
-     private String clmCcdntLctnddrssCdngVrsn;
-     private String clmCcdntLctnddrssCdngDsplay;
-     private String clmCcdntLctnddrssCdngSstm;
-     private String claimAccidentLocationReference;
-     private String claimItem;
-     private String claimItemSequence;
-     private String claimItemCareTeamSequence;
-     private String claimItemDiagnosisSequence;
-     private String claimItemProcedureSequence;
-     private String claimItemInformationSequence;
-     private String clmTmRvnCdngSrSlctd;
-     private String claimItemRevenueCodingCode;
-     private String claimItemRevenueCodingVersion;
-     private String claimItemRevenueCodingDisplay;
-     private String claimItemRevenueCodingSystem;
-     private String clmTmCtgrCdngSrSlctd;
-     private String claimItemCategoryCodingCode;
-     private String claimItemCategoryCodingVersion;
-     private String claimItemCategoryCodingDisplay;
-     private String claimItemCategoryCodingSystem;
-     private String clmTmPrdctrSrvcCdngSrSlctd;
-     private String clmTmPrdctrSrvcCdngCde;
-     private String clmTmPrdctrSrvcCdngVrsn;
-     private String clmTmPrdctrSrvcCdngDsplay;
-     private String clmTmPrdctrSrvcCdngSstm;
-     private String clmTmMdfrCdngSrSlctd;
-     private String claimItemModifierCodingCode;
-     private String claimItemModifierCodingVersion;
-     private String claimItemModifierCodingDisplay;
-     private String claimItemModifierCodingSystem;
-     private String clmTmPrgrmCdCdngSrSlctd;
-     private String claimItemProgramCodeCodingCode;
-     private String clmTmPrgrmCdCdngVrsn;
-     private String clmTmPrgrmCdCdngDsplay;
-     private String clmTmPrgrmCdCdngSstm;
-     private String claimItemServicedDate;
-     private String clmTmSrvcdPrdCdngSrSlctd;
-     private String clmTmSrvcdPrdCdngCde;
-     private String clmTmSrvcdPrdCdngVrsn;
-     private String clmTmSrvcdPrdCdngDsplay;
-     private String clmTmSrvcdPrdCdngSstm;
-     private String clmTmLctncdblcptCdngSrSlctd;
-     private String clmTmLctncdblcptCdngCde;
-     private String clmTmLctncdblcptCdngVrsn;
-     private String clmTmLctncdblcptCdngDsplay;
-     private String clmTmLctncdblcptCdngSstm;
-     private String clmTmLctnddrssCdngSrSlctd;
-     private String clmTmLctnddrssCdngCde;
-     private String clmTmLctnddrssCdngVrsn;
-     private String clmTmLctnddrssCdngDsplay;
-     private String clmTmLctnddrssCdngSstm;
-     private String claimItemLocationReference;
-     private String claimItemQuantity;
-     private String clmTmNtPrcCdngSrSlctd;
-     private String claimItemUnitPriceCodingCode;
-     private String clmTmNtPrcCdngVrsn;
-     private String clmTmNtPrcCdngDsplay;
-     private String claimItemUnitPriceCodingSystem;
-     private String claimItemFactor;
-     private String claimItemNetCodingUserSelected;
-     private String claimItemNetCodingCode;
-     private String claimItemNetCodingVersion;
-     private String claimItemNetCodingDisplay;
-     private String claimItemNetCodingSystem;
-     private String claimItemUdi;
-     private String clmTmBdStCdngSrSlctd;
-     private String claimItemBodySiteCodingCode;
-     private String claimItemBodySiteCodingVersion;
-     private String claimItemBodySiteCodingDisplay;
-     private String claimItemBodySiteCodingSystem;
-     private String clmTmSbStCdngSrSlctd;
-     private String claimItemSubSiteCodingCode;
-     private String claimItemSubSiteCodingVersion;
-     private String claimItemSubSiteCodingDisplay;
-     private String claimItemSubSiteCodingSystem;
-     private String claimItemEncounter;
-     private String claimItemDetail;
-     private String claimItemDetailSequence;
-     private String clmTmDtlRvnCdngSrSlctd;
-     private String clmTmDtlRvnCdngCde;
-     private String clmTmDtlRvnCdngVrsn;
-     private String clmTmDtlRvnCdngDsplay;
-     private String clmTmDtlRvnCdngSstm;
-     private String clmTmDtlCtgrCdngSrSlctd;
-     private String clmTmDtlCtgrCdngCde;
-     private String clmTmDtlCtgrCdngVrsn;
-     private String clmTmDtlCtgrCdngDsplay;
-     private String clmTmDtlCtgrCdngSstm;
-     private String clmTmDtlPrdctrSrvcCdngSrSlctd;
-     private String clmTmDtlPrdctrSrvcCdngCde;
-     private String clmTmDtlPrdctrSrvcCdngVrsn;
-     private String clmTmDtlPrdctrSrvcCdngDsplay;
-     private String clmTmDtlPrdctrSrvcCdngSstm;
-     private String clmTmDtlMdfrCdngSrSlctd;
-     private String clmTmDtlMdfrCdngCde;
-     private String clmTmDtlMdfrCdngVrsn;
-     private String clmTmDtlMdfrCdngDsplay;
-     private String clmTmDtlMdfrCdngSstm;
-     private String clmTmDtlPrgrmCdCdngSrSlctd;
-     private String clmTmDtlPrgrmCdCdngCde;
-     private String clmTmDtlPrgrmCdCdngVrsn;
-     private String clmTmDtlPrgrmCdCdngDsplay;
-     private String clmTmDtlPrgrmCdCdngSstm;
-     private String claimItemDetailQuantity;
-     private String clmTmDtlNtPrcCdngSrSlctd;
-     private String clmTmDtlNtPrcCdngCde;
-     private String clmTmDtlNtPrcCdngVrsn;
-     private String clmTmDtlNtPrcCdngDsplay;
-     private String clmTmDtlNtPrcCdngSstm;
-     private String claimItemDetailFactor;
-     private String clmTmDtlNtCdngSrSlctd;
-     private String claimItemDetailNetCodingCode;
-     private String clmTmDtlNtCdngVrsn;
-     private String clmTmDtlNtCdngDsplay;
-     private String clmTmDtlNtCdngSstm;
-     private String claimItemDetailUdi;
-     private String claimItemDetailSubDetail;
-     private String clmTmDtlSbDtlSqnce;
-     private String clmTmDtlSbDtlRvnCdngSrSlctd;
-     private String clmTmDtlSbDtlRvnCdngCde;
-     private String clmTmDtlSbDtlRvnCdngVrsn;
-     private String clmTmDtlSbDtlRvnCdngDsplay;
-     private String clmTmDtlSbDtlRvnCdngSstm;
-     private String clmTmDtlSbDtlCtgrCdngSrSlctd;
-     private String clmTmDtlSbDtlCtgrCdngCde;
-     private String clmTmDtlSbDtlCtgrCdngVrsn;
-     private String clmTmDtlSbDtlCtgrCdngDsplay;
-     private String clmTmDtlSbDtlCtgrCdngSstm;
-     private String clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd;
-     private String clmTmDtlSbDtlPrdctrSrvcCdngCde;
-     private String clmTmDtlSbDtlPrdctrSrvcCdngVrsn;
-     private String clmTmDtlSbDtlPrdctrSrvcCdngDsplay;
-     private String clmTmDtlSbDtlPrdctrSrvcCdngSstm;
-     private String clmTmDtlSbDtlMdfrCdngSrSlctd;
-     private String clmTmDtlSbDtlMdfrCdngCde;
-     private String clmTmDtlSbDtlMdfrCdngVrsn;
-     private String clmTmDtlSbDtlMdfrCdngDsplay;
-     private String clmTmDtlSbDtlMdfrCdngSstm;
-     private String clmTmDtlSbDtlPrgrmCdCdngSrSlctd;
-     private String clmTmDtlSbDtlPrgrmCdCdngCde;
-     private String clmTmDtlSbDtlPrgrmCdCdngVrsn;
-     private String clmTmDtlSbDtlPrgrmCdCdngDsplay;
-     private String clmTmDtlSbDtlPrgrmCdCdngSstm;
-     private String clmTmDtlSbDtlQntty;
-     private String clmTmDtlSbDtlNtPrcCdngSrSlctd;
-     private String clmTmDtlSbDtlNtPrcCdngCde;
-     private String clmTmDtlSbDtlNtPrcCdngVrsn;
-     private String clmTmDtlSbDtlNtPrcCdngDsplay;
-     private String clmTmDtlSbDtlNtPrcCdngSstm;
-     private String claimItemDetailSubDetailFactor;
-     private String clmTmDtlSbDtlNtCdngSrSlctd;
-     private String clmTmDtlSbDtlNtCdngCde;
-     private String clmTmDtlSbDtlNtCdngVrsn;
-     private String clmTmDtlSbDtlNtCdngDsplay;
-     private String clmTmDtlSbDtlNtCdngSstm;
-     private String claimItemDetailSubDetailUdi;
-     private String claimTotalCodingUserSelected;
-     private String claimTotalCodingCode;
-     private String claimTotalCodingVersion;
-     private String claimTotalCodingDisplay;
-     private String claimTotalCodingSystem;
+     private Integer id;
+     private String claimIdentifierIdentifierUse;
+     private String clmDntfrDntfrTpCcCSstm;
+     private String clmDntfrDntfrTpCcCVrsn;
+     private String clmDntfrDntfrTpCcCCde;
+     private String clmDntfrDntfrTpCcCDsplay;
+     private String clmDntfrDntfrTpCcCSrSlctd;
+     private String clmDntfrDntfrTpCcTxt;
+     private String clmDntfrDntfrPrdPrdStrt;
+     private String clmDntfrDntfrPrdPrdNd;
+     private String clmDntfrDntfrSsgnr;
+     private String claimIdentifierIdentifierValue;
+     private String claimIdentifierIdentifierSystem;
+     private String claimStatusCode;
+     private String claimTypeCcCodingCSystem;
+     private String claimTypeCcCodingCVersion;
+     private String claimTypeCcCodingCCode;
+     private String claimTypeCcCodingCDisplay;
+     private String clmTpCcCdngCSrSlctd;
+     private String claimTypeCcText;
+     private String claimSubTypeCcCodingCSystem;
+     private String claimSubTypeCcCodingCVersion;
+     private String claimSubTypeCcCodingCCode;
+     private String claimSubTypeCcCodingCDisplay;
+     private String clmSbTpCcCdngCSrSlctd;
+     private String claimSubTypeCcText;
+     private String claimUseCode;
+     private String claimPntReference;
+     private String claimBillablePeriodPeriodStart;
+     private String claimBillablePeriodPeriodEnd;
+     private String claimCreatedDateTime;
+     private String claimEntererReference;
+     private String claimInsurerReference;
+     private String claimProviderReference;
+     private String claimPriorityCcCodingCSystem;
+     private String claimPriorityCcCodingCVersion;
+     private String claimPriorityCcCodingCCode;
+     private String claimPriorityCcCodingCDisplay;
+     private String clmPrrtCcCdngCSrSlctd;
+     private String claimPriorityCcText;
+     private String clmFndsRsrvCcCdngCSstm;
+     private String clmFndsRsrvCcCdngCVrsn;
+     private String clmFndsRsrvCcCdngCCde;
+     private String clmFndsRsrvCcCdngCDsplay;
+     private String clmFndsRsrvCcCdngCSrSlctd;
+     private String claimFundsReserveCcText;
+     private String claimRelatedClaimReference;
+     private String clmRltdRltnshpCcCdngCSstm;
+     private String clmRltdRltnshpCcCdngCVrsn;
+     private String clmRltdRltnshpCcCdngCCde;
+     private String clmRltdRltnshpCcCdngCDsplay;
+     private String clmRltdRltnshpCcCdngCSrSlctd;
+     private String claimRelatedRelationshipCcText;
+     private String clmRltdRfrncDntfrSe;
+     private String clmRltdRfrncDntfrTpCcCSstm;
+     private String clmRltdRfrncDntfrTpCcCVrsn;
+     private String clmRltdRfrncDntfrTpCcCCde;
+     private String clmRltdRfrncDntfrTpCcCDsplay;
+     private String clmRltdRfrncDntfrTpCcCSrSlctd;
+     private String clmRltdRfrncDntfrTpCcTxt;
+     private String clmRltdRfrncDntfrPrdPrdStrt;
+     private String clmRltdRfrncDntfrPrdPrdNd;
+     private String clmRltdRfrncDntfrSsgnr;
+     private String clmRltdRfrncDntfrVlue;
+     private String clmRltdRfrncDntfrSstm;
+     private String claimPrescriptionReference;
+     private String clmRgnlPrscrptnRfrnce;
+     private String clmPTpCcCdngCSstm;
+     private String clmPTpCcCdngCVrsn;
+     private String claimPayeeTypeCcCodingCCode;
+     private String clmPTpCcCdngCDsplay;
+     private String clmPTpCcCdngCSrSlctd;
+     private String claimPayeeTypeCcText;
+     private String claimPayeePartyReference;
+     private String claimReferralReference;
+     private String claimFacilityReference;
+     private String clmCrTmSqncPstvnt;
+     private String claimCareTeamProviderReference;
+     private String claimCareTeamResponsibleBoolean;
+     private String clmCrTmRlCcCdngCSstm;
+     private String clmCrTmRlCcCdngCVrsn;
+     private String clmCrTmRlCcCdngCCde;
+     private String clmCrTmRlCcCdngCDsplay;
+     private String clmCrTmRlCcCdngCSrSlctd;
+     private String claimCareTeamRoleCcText;
+     private String clmCrTmQlfctnCcCdngCSstm;
+     private String clmCrTmQlfctnCcCdngCVrsn;
+     private String clmCrTmQlfctnCcCdngCCde;
+     private String clmCrTmQlfctnCcCdngCDsplay;
+     private String clmCrTmQlfctnCcCdngCSrSlctd;
+     private String clmCrTmQlfctnCcTxt;
+     private String clmSpprtngnfSqncPstvnt;
+     private String clmSpprtngnfCtgrCcCdngCSstm;
+     private String clmSpprtngnfCtgrCcCdngCVrsn;
+     private String clmSpprtngnfCtgrCcCdngCCde;
+     private String clmSpprtngnfCtgrCcCdngCDsplay;
+     private String clmSpprtngnfCtgrCcCdngCSrSlctd;
+     private String clmSpprtngnfCtgrCcTxt;
+     private String clmSpprtngnfCdCcCdngCSstm;
+     private String clmSpprtngnfCdCcCdngCVrsn;
+     private String clmSpprtngnfCdCcCdngCCde;
+     private String clmSpprtngnfCdCcCdngCDsplay;
+     private String clmSpprtngnfCdCcCdngCSrSlctd;
+     private String claimSupportingInfoCodeCcText;
+     private String clmSpprtngnfTmngDtDte;
+     private String clmSpprtngnfTmngPrdPrdStrt;
+     private String clmSpprtngnfTmngPrdPrdNd;
+     private String clmSpprtngnfVlBlnBln;
+     private String clmSpprtngnfVlStrngStrng;
+     private String clmSpprtngnfVlQnttQnttCmprtr;
+     private String clmSpprtngnfVlQnttQnttCde;
+     private String clmSpprtngnfVlQnttQnttVlue;
+     private String clmSpprtngnfVlQnttQnttNt;
+     private String clmSpprtngnfVlQnttQnttSstm;
+     private String clmSpprtngnfVlttchmntTtchmntDta;
+     private String clmSpprtngnfVlttchmntTtchmntHsh;
+     private String clmSpprtngnfVlttchmntTtchmntCntntTpe;
+     private String clmSpprtngnfVlttchmntTtchmntLngge;
+     private String clmSpprtngnfVlttchmntTtchmntCrtn;
+     private String clmSpprtngnfVlttchmntTtchmntTtle;
+     private String clmSpprtngnfVlttchmntTtchmntSze;
+     private String clmSpprtngnfVlttchmntTtchmntRl;
+     private String clmSpprtngnfVlRfrncRfrnce;
+     private String clmSpprtngnfRsnCcCdngCSstm;
+     private String clmSpprtngnfRsnCcCdngCVrsn;
+     private String clmSpprtngnfRsnCcCdngCCde;
+     private String clmSpprtngnfRsnCcCdngCDsplay;
+     private String clmSpprtngnfRsnCcCdngCSrSlctd;
+     private String clmSpprtngnfRsnCcTxt;
+     private String clmDgnssSqncPstvnt;
+     private String clmDgnssDgnssCdblcncptCcCdngCSstm;
+     private String clmDgnssDgnssCdblcncptCcCdngCVrsn;
+     private String clmDgnssDgnssCdblcncptCcCdngCCde;
+     private String clmDgnssDgnssCdblcncptCcCdngCDsplay;
+     private String clmDgnssDgnssCdblcncptCcCdngCSrSlctd;
+     private String clmDgnssDgnssCdblcncptCcTxt;
+     private String clmDgnssDgnssRfrncRfrnce;
+     private String clmDgnssTpCcCdngCSstm;
+     private String clmDgnssTpCcCdngCVrsn;
+     private String clmDgnssTpCcCdngCCde;
+     private String clmDgnssTpCcCdngCDsplay;
+     private String clmDgnssTpCcCdngCSrSlctd;
+     private String claimDiagnosisTypeCcText;
+     private String clmDgnssNdmssnCcCdngCSstm;
+     private String clmDgnssNdmssnCcCdngCVrsn;
+     private String clmDgnssNdmssnCcCdngCCde;
+     private String clmDgnssNdmssnCcCdngCDsplay;
+     private String clmDgnssNdmssnCcCdngCSrSlctd;
+     private String clmDgnssNdmssnCcTxt;
+     private String clmDgnssPckgCdCcCdngCSstm;
+     private String clmDgnssPckgCdCcCdngCVrsn;
+     private String clmDgnssPckgCdCcCdngCCde;
+     private String clmDgnssPckgCdCcCdngCDsplay;
+     private String clmDgnssPckgCdCcCdngCSrSlctd;
+     private String clmDgnssPckgCdCcTxt;
+     private String clmPrcdrSqncPstvnt;
+     private String clmPrcdrTpCcCdngCSstm;
+     private String clmPrcdrTpCcCdngCVrsn;
+     private String clmPrcdrTpCcCdngCCde;
+     private String clmPrcdrTpCcCdngCDsplay;
+     private String clmPrcdrTpCcCdngCSrSlctd;
+     private String claimProcedureTypeCcText;
+     private String claimProcedureDateDateTime;
+     private String clmPrcdrPrcdrCdblcncptCcCdngCSstm;
+     private String clmPrcdrPrcdrCdblcncptCcCdngCVrsn;
+     private String clmPrcdrPrcdrCdblcncptCcCdngCCde;
+     private String clmPrcdrPrcdrCdblcncptCcCdngCDsplay;
+     private String clmPrcdrPrcdrCdblcncptCcCdngCSrSlctd;
+     private String clmPrcdrPrcdrCdblcncptCcTxt;
+     private String clmPrcdrPrcdrRfrncRfrnce;
+     private String claimProcedureUdiReference;
+     private String clmNsrncSqncPstvnt;
+     private String claimInsuranceFocalBoolean;
+     private String clmNsrncDntfrDntfrSe;
+     private String clmNsrncDntfrDntfrTpCcCSstm;
+     private String clmNsrncDntfrDntfrTpCcCVrsn;
+     private String clmNsrncDntfrDntfrTpCcCCde;
+     private String clmNsrncDntfrDntfrTpCcCDsplay;
+     private String clmNsrncDntfrDntfrTpCcCSrSlctd;
+     private String clmNsrncDntfrDntfrTpCcTxt;
+     private String clmNsrncDntfrDntfrPrdPrdStrt;
+     private String clmNsrncDntfrDntfrPrdPrdNd;
+     private String clmNsrncDntfrDntfrSsgnr;
+     private String clmNsrncDntfrDntfrVlue;
+     private String clmNsrncDntfrDntfrSstm;
+     private String claimInsuranceCoverageReference;
+     private String clmNsrncBsnssrrngmntStrng;
+     private String claimInsurancePreAuthRefString;
+     private String clmNsrncClmRspnsRfrnce;
+     private String claimAccidentDateDate;
+     private String clmCcdntTpCcCdngCSstm;
+     private String clmCcdntTpCcCdngCVrsn;
+     private String clmCcdntTpCcCdngCCde;
+     private String clmCcdntTpCcCdngCDsplay;
+     private String clmCcdntTpCcCdngCSrSlctd;
+     private String claimAccidentTypeCcText;
+     private String clmCcdntLctnddrssDdrssSe;
+     private String clmCcdntLctnddrssDdrssTpe;
+     private String clmCcdntLctnddrssDdrssPrdPrdStrt;
+     private String clmCcdntLctnddrssDdrssPrdPrdNd;
+     private String clmCcdntLctnddrssDdrssTxt;
+     private String clmCcdntLctnddrssDdrssLne;
+     private String clmCcdntLctnddrssDdrssCty;
+     private String clmCcdntLctnddrssDdrssDstrct;
+     private String clmCcdntLctnddrssDdrssStte;
+     private String clmCcdntLctnddrssDdrssPstlCde;
+     private String clmCcdntLctnddrssDdrssCntry;
+     private String clmCcdntLctnRfrncRfrnce;
+     private String claimItemSequencePositiveInt;
+     private String clmTmCrTmSqncPstvnt;
+     private String clmTmDgnssSqncPstvnt;
+     private String clmTmPrcdrSqncPstvnt;
+     private String clmTmNfrmtnSqncPstvnt;
+     private String clmTmRvnCcCdngCSstm;
+     private String clmTmRvnCcCdngCVrsn;
+     private String clmTmRvnCcCdngCCde;
+     private String clmTmRvnCcCdngCDsplay;
+     private String clmTmRvnCcCdngCSrSlctd;
+     private String claimItemRevenueCcText;
+     private String clmTmCtgrCcCdngCSstm;
+     private String clmTmCtgrCcCdngCVrsn;
+     private String clmTmCtgrCcCdngCCde;
+     private String clmTmCtgrCcCdngCDsplay;
+     private String clmTmCtgrCcCdngCSrSlctd;
+     private String claimItemCategoryCcText;
+     private String clmTmPrdctrSrvcCcCdngCSstm;
+     private String clmTmPrdctrSrvcCcCdngCVrsn;
+     private String clmTmPrdctrSrvcCcCdngCCde;
+     private String clmTmPrdctrSrvcCcCdngCDsplay;
+     private String clmTmPrdctrSrvcCcCdngCSrSlctd;
+     private String clmTmPrdctrSrvcCcTxt;
+     private String clmTmMdfrCcCdngCSstm;
+     private String clmTmMdfrCcCdngCVrsn;
+     private String clmTmMdfrCcCdngCCde;
+     private String clmTmMdfrCcCdngCDsplay;
+     private String clmTmMdfrCcCdngCSrSlctd;
+     private String claimItemModifierCcText;
+     private String clmTmPrgrmCdCcCdngCSstm;
+     private String clmTmPrgrmCdCcCdngCVrsn;
+     private String clmTmPrgrmCdCcCdngCCde;
+     private String clmTmPrgrmCdCcCdngCDsplay;
+     private String clmTmPrgrmCdCcCdngCSrSlctd;
+     private String claimItemProgramCodeCcText;
+     private String claimItemServicedDateDate;
+     private String clmTmSrvcdPrdPrdStrt;
+     private String clmTmSrvcdPrdPrdNd;
+     private String clmTmLctnCdblcncptCcCdngCSstm;
+     private String clmTmLctnCdblcncptCcCdngCVrsn;
+     private String clmTmLctnCdblcncptCcCdngCCde;
+     private String clmTmLctnCdblcncptCcCdngCDsplay;
+     private String clmTmLctnCdblcncptCcCdngCSrSlctd;
+     private String clmTmLctnCdblcncptCcTxt;
+     private String clmTmLctnddrssDdrssSe;
+     private String clmTmLctnddrssDdrssTpe;
+     private String clmTmLctnddrssDdrssPrdPrdStrt;
+     private String clmTmLctnddrssDdrssPrdPrdNd;
+     private String clmTmLctnddrssDdrssTxt;
+     private String clmTmLctnddrssDdrssLne;
+     private String clmTmLctnddrssDdrssCty;
+     private String clmTmLctnddrssDdrssDstrct;
+     private String clmTmLctnddrssDdrssStte;
+     private String clmTmLctnddrssDdrssPstlCde;
+     private String clmTmLctnddrssDdrssCntry;
+     private String clmTmLctnRfrncRfrnce;
+     private String claimItemQuantitySimpleQuantity;
+     private String clmTmNtPrcMnCrrncy;
+     private String claimItemUnitPriceMoneyValue;
+     private String claimItemFactorDecimal;
+     private String claimItemNetMoneyCurrency;
+     private String claimItemNetMoneyValue;
+     private String claimItemUdiReference;
+     private String clmTmBdStCcCdngCSstm;
+     private String clmTmBdStCcCdngCVrsn;
+     private String clmTmBdStCcCdngCCde;
+     private String clmTmBdStCcCdngCDsplay;
+     private String clmTmBdStCcCdngCSrSlctd;
+     private String claimItemBodySiteCcText;
+     private String clmTmSbStCcCdngCSstm;
+     private String clmTmSbStCcCdngCVrsn;
+     private String clmTmSbStCcCdngCCde;
+     private String clmTmSbStCcCdngCDsplay;
+     private String clmTmSbStCcCdngCSrSlctd;
+     private String claimItemSubSiteCcText;
+     private String claimItemEncounterReference;
+     private String clmTmDtlSqncPstvnt;
+     private String clmTmDtlRvnCcCdngCSstm;
+     private String clmTmDtlRvnCcCdngCVrsn;
+     private String clmTmDtlRvnCcCdngCCde;
+     private String clmTmDtlRvnCcCdngCDsplay;
+     private String clmTmDtlRvnCcCdngCSrSlctd;
+     private String claimItemDetailRevenueCcText;
+     private String clmTmDtlCtgrCcCdngCSstm;
+     private String clmTmDtlCtgrCcCdngCVrsn;
+     private String clmTmDtlCtgrCcCdngCCde;
+     private String clmTmDtlCtgrCcCdngCDsplay;
+     private String clmTmDtlCtgrCcCdngCSrSlctd;
+     private String claimItemDetailCategoryCcText;
+     private String clmTmDtlPrdctrSrvcCcCdngCSstm;
+     private String clmTmDtlPrdctrSrvcCcCdngCVrsn;
+     private String clmTmDtlPrdctrSrvcCcCdngCCde;
+     private String clmTmDtlPrdctrSrvcCcCdngCDsplay;
+     private String clmTmDtlPrdctrSrvcCcCdngCSrSlctd;
+     private String clmTmDtlPrdctrSrvcCcTxt;
+     private String clmTmDtlMdfrCcCdngCSstm;
+     private String clmTmDtlMdfrCcCdngCVrsn;
+     private String clmTmDtlMdfrCcCdngCCde;
+     private String clmTmDtlMdfrCcCdngCDsplay;
+     private String clmTmDtlMdfrCcCdngCSrSlctd;
+     private String claimItemDetailModifierCcText;
+     private String clmTmDtlPrgrmCdCcCdngCSstm;
+     private String clmTmDtlPrgrmCdCcCdngCVrsn;
+     private String clmTmDtlPrgrmCdCcCdngCCde;
+     private String clmTmDtlPrgrmCdCcCdngCDsplay;
+     private String clmTmDtlPrgrmCdCcCdngCSrSlctd;
+     private String clmTmDtlPrgrmCdCcTxt;
+     private String clmTmDtlQnttSmplQntty;
+     private String clmTmDtlNtPrcMnCrrncy;
+     private String clmTmDtlNtPrcMnVlue;
+     private String claimItemDetailFactorDecimal;
+     private String clmTmDtlNtMnCrrncy;
+     private String claimItemDetailNetMoneyValue;
+     private String claimItemDetailUdiReference;
+     private String clmTmDtlSbDtlSqncPstvnt;
+     private String clmTmDtlSbDtlRvnCcCdngCSstm;
+     private String clmTmDtlSbDtlRvnCcCdngCVrsn;
+     private String clmTmDtlSbDtlRvnCcCdngCCde;
+     private String clmTmDtlSbDtlRvnCcCdngCDsplay;
+     private String clmTmDtlSbDtlRvnCcCdngCSrSlctd;
+     private String clmTmDtlSbDtlRvnCcTxt;
+     private String clmTmDtlSbDtlCtgrCcCdngCSstm;
+     private String clmTmDtlSbDtlCtgrCcCdngCVrsn;
+     private String clmTmDtlSbDtlCtgrCcCdngCCde;
+     private String clmTmDtlSbDtlCtgrCcCdngCDsplay;
+     private String clmTmDtlSbDtlCtgrCcCdngCSrSlctd;
+     private String clmTmDtlSbDtlCtgrCcTxt;
+     private String clmTmDtlSbDtlPrdctrSrvcCcCdngCSstm;
+     private String clmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn;
+     private String clmTmDtlSbDtlPrdctrSrvcCcCdngCCde;
+     private String clmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay;
+     private String clmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd;
+     private String clmTmDtlSbDtlPrdctrSrvcCcTxt;
+     private String clmTmDtlSbDtlMdfrCcCdngCSstm;
+     private String clmTmDtlSbDtlMdfrCcCdngCVrsn;
+     private String clmTmDtlSbDtlMdfrCcCdngCCde;
+     private String clmTmDtlSbDtlMdfrCcCdngCDsplay;
+     private String clmTmDtlSbDtlMdfrCcCdngCSrSlctd;
+     private String clmTmDtlSbDtlMdfrCcTxt;
+     private String clmTmDtlSbDtlPrgrmCdCcCdngCSstm;
+     private String clmTmDtlSbDtlPrgrmCdCcCdngCVrsn;
+     private String clmTmDtlSbDtlPrgrmCdCcCdngCCde;
+     private String clmTmDtlSbDtlPrgrmCdCcCdngCDsplay;
+     private String clmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd;
+     private String clmTmDtlSbDtlPrgrmCdCcTxt;
+     private String clmTmDtlSbDtlQnttSmplQntty;
+     private String clmTmDtlSbDtlNtPrcMnCrrncy;
+     private String clmTmDtlSbDtlNtPrcMnVlue;
+     private String clmTmDtlSbDtlFctrDcml;
+     private String clmTmDtlSbDtlNtMnCrrncy;
+     private String clmTmDtlSbDtlNtMnVlue;
+     private String clmTmDtlSbDtlDRfrnce;
+     private String claimTotalMoneyCurrency;
+     private String claimTotalMoneyValue;
 
     public Claim() {
     }
 
-	
-    public Claim(String claimIdentifierCodingCode) {
-        this.claimIdentifierCodingCode = claimIdentifierCodingCode;
-    }
-    public Claim(String claimIdentifierCodingCode, String clmDntfrCdngSrSlctd, String claimIdentifierCodingVersion, String claimIdentifierCodingDisplay, String claimIdentifierCodingSystem, String claimStatus, String claimTypeCodingUserSelected, String claimTypeCodingCode, String claimTypeCodingVersion, String claimTypeCodingDisplay, String claimTypeCodingSystem, String claimSubTypeCodingUserSelected, String claimSubTypeCodingCode, String claimSubTypeCodingVersion, String claimSubTypeCodingDisplay, String claimSubTypeCodingSystem, String claimUse, String claimPnt, String clmBllblPrdCdngSrSlctd, String claimBillablePeriodCodingCode, String clmBllblPrdCdngVrsn, String clmBllblPrdCdngDsplay, String claimBillablePeriodCodingSystem, String claimCreated, String claimEnterer, String claimInsurer, String claimProvider, String claimPriorityCodingUserSelected, String claimPriorityCodingCode, String claimPriorityCodingVersion, String claimPriorityCodingDisplay, String claimPriorityCodingSystem, String clmFndsRsrvCdngSrSlctd, String claimFundsReserveCodingCode, String claimFundsReserveCodingVersion, String claimFundsReserveCodingDisplay, String claimFundsReserveCodingSystem, String claimRelated, String claimRelatedClaim, String clmRltdRltnshpCdngSrSlctd, String clmRltdRltnshpCdngCde, String clmRltdRltnshpCdngVrsn, String clmRltdRltnshpCdngDsplay, String clmRltdRltnshpCdngSstm, String clmRltdRfrncCdngSrSlctd, String clmRltdRfrncCdngCde, String clmRltdRfrncCdngVrsn, String clmRltdRfrncCdngDsplay, String clmRltdRfrncCdngSstm, String claimPrescription, String claimOriginalPrescription, String claimPayee, String clmPTpCdngSrSlctd, String claimPayeeTypeCodingCode, String claimPayeeTypeCodingVersion, String claimPayeeTypeCodingDisplay, String claimPayeeTypeCodingSystem, String claimPayeeParty, String claimReferral, String claimFacility, String claimCareTeam, String claimCareTeamSequence, String claimCareTeamProvider, String claimCareTeamResponsible, String clmCrTmRlCdngSrSlctd, String claimCareTeamRoleCodingCode, String claimCareTeamRoleCodingVersion, String claimCareTeamRoleCodingDisplay, String claimCareTeamRoleCodingSystem, String clmCrTmQlfctnCdngSrSlctd, String clmCrTmQlfctnCdngCde, String clmCrTmQlfctnCdngVrsn, String clmCrTmQlfctnCdngDsplay, String clmCrTmQlfctnCdngSstm, String claimSupportingInfo, String claimSupportingInfoSequence, String clmSpprtngnfCtgrCdngSrSlctd, String clmSpprtngnfCtgrCdngCde, String clmSpprtngnfCtgrCdngVrsn, String clmSpprtngnfCtgrCdngDsplay, String clmSpprtngnfCtgrCdngSstm, String clmSpprtngnfCdCdngSrSlctd, String clmSpprtngnfCdCdngCde, String clmSpprtngnfCdCdngVrsn, String clmSpprtngnfCdCdngDsplay, String clmSpprtngnfCdCdngSstm, String claimSupportingInfoTimingDate, String clmSpprtngnfTmngPrdCdngSrSlctd, String clmSpprtngnfTmngPrdCdngCde, String clmSpprtngnfTmngPrdCdngVrsn, String clmSpprtngnfTmngPrdCdngDsplay, String clmSpprtngnfTmngPrdCdngSstm, String claimSupportingInfoValueBoolean, String claimSupportingInfoValueString, String clmSpprtngnfVlQnttCdngSrSlctd, String clmSpprtngnfVlQnttCdngCde, String clmSpprtngnfVlQnttCdngVrsn, String clmSpprtngnfVlQnttCdngDsplay, String clmSpprtngnfVlQnttCdngSstm, String clmSpprtngnfVlttchmntCdngSrSlctd, String clmSpprtngnfVlttchmntCdngCde, String clmSpprtngnfVlttchmntCdngVrsn, String clmSpprtngnfVlttchmntCdngDsplay, String clmSpprtngnfVlttchmntCdngSstm, String clmSpprtngnfVlRfrnce, String clmSpprtngnfRsnCdngSrSlctd, String clmSpprtngnfRsnCdngCde, String clmSpprtngnfRsnCdngVrsn, String clmSpprtngnfRsnCdngDsplay, String clmSpprtngnfRsnCdngSstm, String claimDiagnosis, String claimDiagnosisSequence, String clmDgnssDgnsscdblcptCdngSrSlctd, String clmDgnssDgnsscdblcptCdngCde, String clmDgnssDgnsscdblcptCdngVrsn, String clmDgnssDgnsscdblcptCdngDsplay, String clmDgnssDgnsscdblcptCdngSstm, String claimDiagnosisDiagnosisReference, String clmDgnssTpCdngSrSlctd, String claimDiagnosisTypeCodingCode, String clmDgnssTpCdngVrsn, String clmDgnssTpCdngDsplay, String claimDiagnosisTypeCodingSystem, String clmDgnssNdmssnCdngSrSlctd, String clmDgnssNdmssnCdngCde, String clmDgnssNdmssnCdngVrsn, String clmDgnssNdmssnCdngDsplay, String clmDgnssNdmssnCdngSstm, String clmDgnssPckgCdCdngSrSlctd, String clmDgnssPckgCdCdngCde, String clmDgnssPckgCdCdngVrsn, String clmDgnssPckgCdCdngDsplay, String clmDgnssPckgCdCdngSstm, String claimProcedure, String claimProcedureSequence, String clmPrcdrTpCdngSrSlctd, String claimProcedureTypeCodingCode, String clmPrcdrTpCdngVrsn, String clmPrcdrTpCdngDsplay, String claimProcedureTypeCodingSystem, String claimProcedureDate, String clmPrcdrPrcdrcdblcptCdngSrSlctd, String clmPrcdrPrcdrcdblcptCdngCde, String clmPrcdrPrcdrcdblcptCdngVrsn, String clmPrcdrPrcdrcdblcptCdngDsplay, String clmPrcdrPrcdrcdblcptCdngSstm, String claimProcedureProcedureReference, String claimProcedureUdi, String claimInsurance, String claimInsuranceSequence, String claimInsuranceFocal, String clmNsrncDntfrCdngSrSlctd, String clmNsrncDntfrCdngCde, String clmNsrncDntfrCdngVrsn, String clmNsrncDntfrCdngDsplay, String clmNsrncDntfrCdngSstm, String claimInsuranceCoverage, String clmNsrncBsnssrrngmnt, String claimInsurancePreAuthRef, String claimInsuranceClaimResponse, String claimAccident, String claimAccidentDate, String clmCcdntTpCdngSrSlctd, String claimAccidentTypeCodingCode, String claimAccidentTypeCodingVersion, String claimAccidentTypeCodingDisplay, String claimAccidentTypeCodingSystem, String clmCcdntLctnddrssCdngSrSlctd, String clmCcdntLctnddrssCdngCde, String clmCcdntLctnddrssCdngVrsn, String clmCcdntLctnddrssCdngDsplay, String clmCcdntLctnddrssCdngSstm, String claimAccidentLocationReference, String claimItem, String claimItemSequence, String claimItemCareTeamSequence, String claimItemDiagnosisSequence, String claimItemProcedureSequence, String claimItemInformationSequence, String clmTmRvnCdngSrSlctd, String claimItemRevenueCodingCode, String claimItemRevenueCodingVersion, String claimItemRevenueCodingDisplay, String claimItemRevenueCodingSystem, String clmTmCtgrCdngSrSlctd, String claimItemCategoryCodingCode, String claimItemCategoryCodingVersion, String claimItemCategoryCodingDisplay, String claimItemCategoryCodingSystem, String clmTmPrdctrSrvcCdngSrSlctd, String clmTmPrdctrSrvcCdngCde, String clmTmPrdctrSrvcCdngVrsn, String clmTmPrdctrSrvcCdngDsplay, String clmTmPrdctrSrvcCdngSstm, String clmTmMdfrCdngSrSlctd, String claimItemModifierCodingCode, String claimItemModifierCodingVersion, String claimItemModifierCodingDisplay, String claimItemModifierCodingSystem, String clmTmPrgrmCdCdngSrSlctd, String claimItemProgramCodeCodingCode, String clmTmPrgrmCdCdngVrsn, String clmTmPrgrmCdCdngDsplay, String clmTmPrgrmCdCdngSstm, String claimItemServicedDate, String clmTmSrvcdPrdCdngSrSlctd, String clmTmSrvcdPrdCdngCde, String clmTmSrvcdPrdCdngVrsn, String clmTmSrvcdPrdCdngDsplay, String clmTmSrvcdPrdCdngSstm, String clmTmLctncdblcptCdngSrSlctd, String clmTmLctncdblcptCdngCde, String clmTmLctncdblcptCdngVrsn, String clmTmLctncdblcptCdngDsplay, String clmTmLctncdblcptCdngSstm, String clmTmLctnddrssCdngSrSlctd, String clmTmLctnddrssCdngCde, String clmTmLctnddrssCdngVrsn, String clmTmLctnddrssCdngDsplay, String clmTmLctnddrssCdngSstm, String claimItemLocationReference, String claimItemQuantity, String clmTmNtPrcCdngSrSlctd, String claimItemUnitPriceCodingCode, String clmTmNtPrcCdngVrsn, String clmTmNtPrcCdngDsplay, String claimItemUnitPriceCodingSystem, String claimItemFactor, String claimItemNetCodingUserSelected, String claimItemNetCodingCode, String claimItemNetCodingVersion, String claimItemNetCodingDisplay, String claimItemNetCodingSystem, String claimItemUdi, String clmTmBdStCdngSrSlctd, String claimItemBodySiteCodingCode, String claimItemBodySiteCodingVersion, String claimItemBodySiteCodingDisplay, String claimItemBodySiteCodingSystem, String clmTmSbStCdngSrSlctd, String claimItemSubSiteCodingCode, String claimItemSubSiteCodingVersion, String claimItemSubSiteCodingDisplay, String claimItemSubSiteCodingSystem, String claimItemEncounter, String claimItemDetail, String claimItemDetailSequence, String clmTmDtlRvnCdngSrSlctd, String clmTmDtlRvnCdngCde, String clmTmDtlRvnCdngVrsn, String clmTmDtlRvnCdngDsplay, String clmTmDtlRvnCdngSstm, String clmTmDtlCtgrCdngSrSlctd, String clmTmDtlCtgrCdngCde, String clmTmDtlCtgrCdngVrsn, String clmTmDtlCtgrCdngDsplay, String clmTmDtlCtgrCdngSstm, String clmTmDtlPrdctrSrvcCdngSrSlctd, String clmTmDtlPrdctrSrvcCdngCde, String clmTmDtlPrdctrSrvcCdngVrsn, String clmTmDtlPrdctrSrvcCdngDsplay, String clmTmDtlPrdctrSrvcCdngSstm, String clmTmDtlMdfrCdngSrSlctd, String clmTmDtlMdfrCdngCde, String clmTmDtlMdfrCdngVrsn, String clmTmDtlMdfrCdngDsplay, String clmTmDtlMdfrCdngSstm, String clmTmDtlPrgrmCdCdngSrSlctd, String clmTmDtlPrgrmCdCdngCde, String clmTmDtlPrgrmCdCdngVrsn, String clmTmDtlPrgrmCdCdngDsplay, String clmTmDtlPrgrmCdCdngSstm, String claimItemDetailQuantity, String clmTmDtlNtPrcCdngSrSlctd, String clmTmDtlNtPrcCdngCde, String clmTmDtlNtPrcCdngVrsn, String clmTmDtlNtPrcCdngDsplay, String clmTmDtlNtPrcCdngSstm, String claimItemDetailFactor, String clmTmDtlNtCdngSrSlctd, String claimItemDetailNetCodingCode, String clmTmDtlNtCdngVrsn, String clmTmDtlNtCdngDsplay, String clmTmDtlNtCdngSstm, String claimItemDetailUdi, String claimItemDetailSubDetail, String clmTmDtlSbDtlSqnce, String clmTmDtlSbDtlRvnCdngSrSlctd, String clmTmDtlSbDtlRvnCdngCde, String clmTmDtlSbDtlRvnCdngVrsn, String clmTmDtlSbDtlRvnCdngDsplay, String clmTmDtlSbDtlRvnCdngSstm, String clmTmDtlSbDtlCtgrCdngSrSlctd, String clmTmDtlSbDtlCtgrCdngCde, String clmTmDtlSbDtlCtgrCdngVrsn, String clmTmDtlSbDtlCtgrCdngDsplay, String clmTmDtlSbDtlCtgrCdngSstm, String clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd, String clmTmDtlSbDtlPrdctrSrvcCdngCde, String clmTmDtlSbDtlPrdctrSrvcCdngVrsn, String clmTmDtlSbDtlPrdctrSrvcCdngDsplay, String clmTmDtlSbDtlPrdctrSrvcCdngSstm, String clmTmDtlSbDtlMdfrCdngSrSlctd, String clmTmDtlSbDtlMdfrCdngCde, String clmTmDtlSbDtlMdfrCdngVrsn, String clmTmDtlSbDtlMdfrCdngDsplay, String clmTmDtlSbDtlMdfrCdngSstm, String clmTmDtlSbDtlPrgrmCdCdngSrSlctd, String clmTmDtlSbDtlPrgrmCdCdngCde, String clmTmDtlSbDtlPrgrmCdCdngVrsn, String clmTmDtlSbDtlPrgrmCdCdngDsplay, String clmTmDtlSbDtlPrgrmCdCdngSstm, String clmTmDtlSbDtlQntty, String clmTmDtlSbDtlNtPrcCdngSrSlctd, String clmTmDtlSbDtlNtPrcCdngCde, String clmTmDtlSbDtlNtPrcCdngVrsn, String clmTmDtlSbDtlNtPrcCdngDsplay, String clmTmDtlSbDtlNtPrcCdngSstm, String claimItemDetailSubDetailFactor, String clmTmDtlSbDtlNtCdngSrSlctd, String clmTmDtlSbDtlNtCdngCde, String clmTmDtlSbDtlNtCdngVrsn, String clmTmDtlSbDtlNtCdngDsplay, String clmTmDtlSbDtlNtCdngSstm, String claimItemDetailSubDetailUdi, String claimTotalCodingUserSelected, String claimTotalCodingCode, String claimTotalCodingVersion, String claimTotalCodingDisplay, String claimTotalCodingSystem) {
-       this.claimIdentifierCodingCode = claimIdentifierCodingCode;
-       this.clmDntfrCdngSrSlctd = clmDntfrCdngSrSlctd;
-       this.claimIdentifierCodingVersion = claimIdentifierCodingVersion;
-       this.claimIdentifierCodingDisplay = claimIdentifierCodingDisplay;
-       this.claimIdentifierCodingSystem = claimIdentifierCodingSystem;
-       this.claimStatus = claimStatus;
-       this.claimTypeCodingUserSelected = claimTypeCodingUserSelected;
-       this.claimTypeCodingCode = claimTypeCodingCode;
-       this.claimTypeCodingVersion = claimTypeCodingVersion;
-       this.claimTypeCodingDisplay = claimTypeCodingDisplay;
-       this.claimTypeCodingSystem = claimTypeCodingSystem;
-       this.claimSubTypeCodingUserSelected = claimSubTypeCodingUserSelected;
-       this.claimSubTypeCodingCode = claimSubTypeCodingCode;
-       this.claimSubTypeCodingVersion = claimSubTypeCodingVersion;
-       this.claimSubTypeCodingDisplay = claimSubTypeCodingDisplay;
-       this.claimSubTypeCodingSystem = claimSubTypeCodingSystem;
-       this.claimUse = claimUse;
-       this.claimPnt = claimPnt;
-       this.clmBllblPrdCdngSrSlctd = clmBllblPrdCdngSrSlctd;
-       this.claimBillablePeriodCodingCode = claimBillablePeriodCodingCode;
-       this.clmBllblPrdCdngVrsn = clmBllblPrdCdngVrsn;
-       this.clmBllblPrdCdngDsplay = clmBllblPrdCdngDsplay;
-       this.claimBillablePeriodCodingSystem = claimBillablePeriodCodingSystem;
-       this.claimCreated = claimCreated;
-       this.claimEnterer = claimEnterer;
-       this.claimInsurer = claimInsurer;
-       this.claimProvider = claimProvider;
-       this.claimPriorityCodingUserSelected = claimPriorityCodingUserSelected;
-       this.claimPriorityCodingCode = claimPriorityCodingCode;
-       this.claimPriorityCodingVersion = claimPriorityCodingVersion;
-       this.claimPriorityCodingDisplay = claimPriorityCodingDisplay;
-       this.claimPriorityCodingSystem = claimPriorityCodingSystem;
-       this.clmFndsRsrvCdngSrSlctd = clmFndsRsrvCdngSrSlctd;
-       this.claimFundsReserveCodingCode = claimFundsReserveCodingCode;
-       this.claimFundsReserveCodingVersion = claimFundsReserveCodingVersion;
-       this.claimFundsReserveCodingDisplay = claimFundsReserveCodingDisplay;
-       this.claimFundsReserveCodingSystem = claimFundsReserveCodingSystem;
-       this.claimRelated = claimRelated;
-       this.claimRelatedClaim = claimRelatedClaim;
-       this.clmRltdRltnshpCdngSrSlctd = clmRltdRltnshpCdngSrSlctd;
-       this.clmRltdRltnshpCdngCde = clmRltdRltnshpCdngCde;
-       this.clmRltdRltnshpCdngVrsn = clmRltdRltnshpCdngVrsn;
-       this.clmRltdRltnshpCdngDsplay = clmRltdRltnshpCdngDsplay;
-       this.clmRltdRltnshpCdngSstm = clmRltdRltnshpCdngSstm;
-       this.clmRltdRfrncCdngSrSlctd = clmRltdRfrncCdngSrSlctd;
-       this.clmRltdRfrncCdngCde = clmRltdRfrncCdngCde;
-       this.clmRltdRfrncCdngVrsn = clmRltdRfrncCdngVrsn;
-       this.clmRltdRfrncCdngDsplay = clmRltdRfrncCdngDsplay;
-       this.clmRltdRfrncCdngSstm = clmRltdRfrncCdngSstm;
-       this.claimPrescription = claimPrescription;
-       this.claimOriginalPrescription = claimOriginalPrescription;
-       this.claimPayee = claimPayee;
-       this.clmPTpCdngSrSlctd = clmPTpCdngSrSlctd;
-       this.claimPayeeTypeCodingCode = claimPayeeTypeCodingCode;
-       this.claimPayeeTypeCodingVersion = claimPayeeTypeCodingVersion;
-       this.claimPayeeTypeCodingDisplay = claimPayeeTypeCodingDisplay;
-       this.claimPayeeTypeCodingSystem = claimPayeeTypeCodingSystem;
-       this.claimPayeeParty = claimPayeeParty;
-       this.claimReferral = claimReferral;
-       this.claimFacility = claimFacility;
-       this.claimCareTeam = claimCareTeam;
-       this.claimCareTeamSequence = claimCareTeamSequence;
-       this.claimCareTeamProvider = claimCareTeamProvider;
-       this.claimCareTeamResponsible = claimCareTeamResponsible;
-       this.clmCrTmRlCdngSrSlctd = clmCrTmRlCdngSrSlctd;
-       this.claimCareTeamRoleCodingCode = claimCareTeamRoleCodingCode;
-       this.claimCareTeamRoleCodingVersion = claimCareTeamRoleCodingVersion;
-       this.claimCareTeamRoleCodingDisplay = claimCareTeamRoleCodingDisplay;
-       this.claimCareTeamRoleCodingSystem = claimCareTeamRoleCodingSystem;
-       this.clmCrTmQlfctnCdngSrSlctd = clmCrTmQlfctnCdngSrSlctd;
-       this.clmCrTmQlfctnCdngCde = clmCrTmQlfctnCdngCde;
-       this.clmCrTmQlfctnCdngVrsn = clmCrTmQlfctnCdngVrsn;
-       this.clmCrTmQlfctnCdngDsplay = clmCrTmQlfctnCdngDsplay;
-       this.clmCrTmQlfctnCdngSstm = clmCrTmQlfctnCdngSstm;
-       this.claimSupportingInfo = claimSupportingInfo;
-       this.claimSupportingInfoSequence = claimSupportingInfoSequence;
-       this.clmSpprtngnfCtgrCdngSrSlctd = clmSpprtngnfCtgrCdngSrSlctd;
-       this.clmSpprtngnfCtgrCdngCde = clmSpprtngnfCtgrCdngCde;
-       this.clmSpprtngnfCtgrCdngVrsn = clmSpprtngnfCtgrCdngVrsn;
-       this.clmSpprtngnfCtgrCdngDsplay = clmSpprtngnfCtgrCdngDsplay;
-       this.clmSpprtngnfCtgrCdngSstm = clmSpprtngnfCtgrCdngSstm;
-       this.clmSpprtngnfCdCdngSrSlctd = clmSpprtngnfCdCdngSrSlctd;
-       this.clmSpprtngnfCdCdngCde = clmSpprtngnfCdCdngCde;
-       this.clmSpprtngnfCdCdngVrsn = clmSpprtngnfCdCdngVrsn;
-       this.clmSpprtngnfCdCdngDsplay = clmSpprtngnfCdCdngDsplay;
-       this.clmSpprtngnfCdCdngSstm = clmSpprtngnfCdCdngSstm;
-       this.claimSupportingInfoTimingDate = claimSupportingInfoTimingDate;
-       this.clmSpprtngnfTmngPrdCdngSrSlctd = clmSpprtngnfTmngPrdCdngSrSlctd;
-       this.clmSpprtngnfTmngPrdCdngCde = clmSpprtngnfTmngPrdCdngCde;
-       this.clmSpprtngnfTmngPrdCdngVrsn = clmSpprtngnfTmngPrdCdngVrsn;
-       this.clmSpprtngnfTmngPrdCdngDsplay = clmSpprtngnfTmngPrdCdngDsplay;
-       this.clmSpprtngnfTmngPrdCdngSstm = clmSpprtngnfTmngPrdCdngSstm;
-       this.claimSupportingInfoValueBoolean = claimSupportingInfoValueBoolean;
-       this.claimSupportingInfoValueString = claimSupportingInfoValueString;
-       this.clmSpprtngnfVlQnttCdngSrSlctd = clmSpprtngnfVlQnttCdngSrSlctd;
-       this.clmSpprtngnfVlQnttCdngCde = clmSpprtngnfVlQnttCdngCde;
-       this.clmSpprtngnfVlQnttCdngVrsn = clmSpprtngnfVlQnttCdngVrsn;
-       this.clmSpprtngnfVlQnttCdngDsplay = clmSpprtngnfVlQnttCdngDsplay;
-       this.clmSpprtngnfVlQnttCdngSstm = clmSpprtngnfVlQnttCdngSstm;
-       this.clmSpprtngnfVlttchmntCdngSrSlctd = clmSpprtngnfVlttchmntCdngSrSlctd;
-       this.clmSpprtngnfVlttchmntCdngCde = clmSpprtngnfVlttchmntCdngCde;
-       this.clmSpprtngnfVlttchmntCdngVrsn = clmSpprtngnfVlttchmntCdngVrsn;
-       this.clmSpprtngnfVlttchmntCdngDsplay = clmSpprtngnfVlttchmntCdngDsplay;
-       this.clmSpprtngnfVlttchmntCdngSstm = clmSpprtngnfVlttchmntCdngSstm;
-       this.clmSpprtngnfVlRfrnce = clmSpprtngnfVlRfrnce;
-       this.clmSpprtngnfRsnCdngSrSlctd = clmSpprtngnfRsnCdngSrSlctd;
-       this.clmSpprtngnfRsnCdngCde = clmSpprtngnfRsnCdngCde;
-       this.clmSpprtngnfRsnCdngVrsn = clmSpprtngnfRsnCdngVrsn;
-       this.clmSpprtngnfRsnCdngDsplay = clmSpprtngnfRsnCdngDsplay;
-       this.clmSpprtngnfRsnCdngSstm = clmSpprtngnfRsnCdngSstm;
-       this.claimDiagnosis = claimDiagnosis;
-       this.claimDiagnosisSequence = claimDiagnosisSequence;
-       this.clmDgnssDgnsscdblcptCdngSrSlctd = clmDgnssDgnsscdblcptCdngSrSlctd;
-       this.clmDgnssDgnsscdblcptCdngCde = clmDgnssDgnsscdblcptCdngCde;
-       this.clmDgnssDgnsscdblcptCdngVrsn = clmDgnssDgnsscdblcptCdngVrsn;
-       this.clmDgnssDgnsscdblcptCdngDsplay = clmDgnssDgnsscdblcptCdngDsplay;
-       this.clmDgnssDgnsscdblcptCdngSstm = clmDgnssDgnsscdblcptCdngSstm;
-       this.claimDiagnosisDiagnosisReference = claimDiagnosisDiagnosisReference;
-       this.clmDgnssTpCdngSrSlctd = clmDgnssTpCdngSrSlctd;
-       this.claimDiagnosisTypeCodingCode = claimDiagnosisTypeCodingCode;
-       this.clmDgnssTpCdngVrsn = clmDgnssTpCdngVrsn;
-       this.clmDgnssTpCdngDsplay = clmDgnssTpCdngDsplay;
-       this.claimDiagnosisTypeCodingSystem = claimDiagnosisTypeCodingSystem;
-       this.clmDgnssNdmssnCdngSrSlctd = clmDgnssNdmssnCdngSrSlctd;
-       this.clmDgnssNdmssnCdngCde = clmDgnssNdmssnCdngCde;
-       this.clmDgnssNdmssnCdngVrsn = clmDgnssNdmssnCdngVrsn;
-       this.clmDgnssNdmssnCdngDsplay = clmDgnssNdmssnCdngDsplay;
-       this.clmDgnssNdmssnCdngSstm = clmDgnssNdmssnCdngSstm;
-       this.clmDgnssPckgCdCdngSrSlctd = clmDgnssPckgCdCdngSrSlctd;
-       this.clmDgnssPckgCdCdngCde = clmDgnssPckgCdCdngCde;
-       this.clmDgnssPckgCdCdngVrsn = clmDgnssPckgCdCdngVrsn;
-       this.clmDgnssPckgCdCdngDsplay = clmDgnssPckgCdCdngDsplay;
-       this.clmDgnssPckgCdCdngSstm = clmDgnssPckgCdCdngSstm;
-       this.claimProcedure = claimProcedure;
-       this.claimProcedureSequence = claimProcedureSequence;
-       this.clmPrcdrTpCdngSrSlctd = clmPrcdrTpCdngSrSlctd;
-       this.claimProcedureTypeCodingCode = claimProcedureTypeCodingCode;
-       this.clmPrcdrTpCdngVrsn = clmPrcdrTpCdngVrsn;
-       this.clmPrcdrTpCdngDsplay = clmPrcdrTpCdngDsplay;
-       this.claimProcedureTypeCodingSystem = claimProcedureTypeCodingSystem;
-       this.claimProcedureDate = claimProcedureDate;
-       this.clmPrcdrPrcdrcdblcptCdngSrSlctd = clmPrcdrPrcdrcdblcptCdngSrSlctd;
-       this.clmPrcdrPrcdrcdblcptCdngCde = clmPrcdrPrcdrcdblcptCdngCde;
-       this.clmPrcdrPrcdrcdblcptCdngVrsn = clmPrcdrPrcdrcdblcptCdngVrsn;
-       this.clmPrcdrPrcdrcdblcptCdngDsplay = clmPrcdrPrcdrcdblcptCdngDsplay;
-       this.clmPrcdrPrcdrcdblcptCdngSstm = clmPrcdrPrcdrcdblcptCdngSstm;
-       this.claimProcedureProcedureReference = claimProcedureProcedureReference;
-       this.claimProcedureUdi = claimProcedureUdi;
-       this.claimInsurance = claimInsurance;
-       this.claimInsuranceSequence = claimInsuranceSequence;
-       this.claimInsuranceFocal = claimInsuranceFocal;
-       this.clmNsrncDntfrCdngSrSlctd = clmNsrncDntfrCdngSrSlctd;
-       this.clmNsrncDntfrCdngCde = clmNsrncDntfrCdngCde;
-       this.clmNsrncDntfrCdngVrsn = clmNsrncDntfrCdngVrsn;
-       this.clmNsrncDntfrCdngDsplay = clmNsrncDntfrCdngDsplay;
-       this.clmNsrncDntfrCdngSstm = clmNsrncDntfrCdngSstm;
-       this.claimInsuranceCoverage = claimInsuranceCoverage;
-       this.clmNsrncBsnssrrngmnt = clmNsrncBsnssrrngmnt;
-       this.claimInsurancePreAuthRef = claimInsurancePreAuthRef;
-       this.claimInsuranceClaimResponse = claimInsuranceClaimResponse;
-       this.claimAccident = claimAccident;
-       this.claimAccidentDate = claimAccidentDate;
-       this.clmCcdntTpCdngSrSlctd = clmCcdntTpCdngSrSlctd;
-       this.claimAccidentTypeCodingCode = claimAccidentTypeCodingCode;
-       this.claimAccidentTypeCodingVersion = claimAccidentTypeCodingVersion;
-       this.claimAccidentTypeCodingDisplay = claimAccidentTypeCodingDisplay;
-       this.claimAccidentTypeCodingSystem = claimAccidentTypeCodingSystem;
-       this.clmCcdntLctnddrssCdngSrSlctd = clmCcdntLctnddrssCdngSrSlctd;
-       this.clmCcdntLctnddrssCdngCde = clmCcdntLctnddrssCdngCde;
-       this.clmCcdntLctnddrssCdngVrsn = clmCcdntLctnddrssCdngVrsn;
-       this.clmCcdntLctnddrssCdngDsplay = clmCcdntLctnddrssCdngDsplay;
-       this.clmCcdntLctnddrssCdngSstm = clmCcdntLctnddrssCdngSstm;
-       this.claimAccidentLocationReference = claimAccidentLocationReference;
-       this.claimItem = claimItem;
-       this.claimItemSequence = claimItemSequence;
-       this.claimItemCareTeamSequence = claimItemCareTeamSequence;
-       this.claimItemDiagnosisSequence = claimItemDiagnosisSequence;
-       this.claimItemProcedureSequence = claimItemProcedureSequence;
-       this.claimItemInformationSequence = claimItemInformationSequence;
-       this.clmTmRvnCdngSrSlctd = clmTmRvnCdngSrSlctd;
-       this.claimItemRevenueCodingCode = claimItemRevenueCodingCode;
-       this.claimItemRevenueCodingVersion = claimItemRevenueCodingVersion;
-       this.claimItemRevenueCodingDisplay = claimItemRevenueCodingDisplay;
-       this.claimItemRevenueCodingSystem = claimItemRevenueCodingSystem;
-       this.clmTmCtgrCdngSrSlctd = clmTmCtgrCdngSrSlctd;
-       this.claimItemCategoryCodingCode = claimItemCategoryCodingCode;
-       this.claimItemCategoryCodingVersion = claimItemCategoryCodingVersion;
-       this.claimItemCategoryCodingDisplay = claimItemCategoryCodingDisplay;
-       this.claimItemCategoryCodingSystem = claimItemCategoryCodingSystem;
-       this.clmTmPrdctrSrvcCdngSrSlctd = clmTmPrdctrSrvcCdngSrSlctd;
-       this.clmTmPrdctrSrvcCdngCde = clmTmPrdctrSrvcCdngCde;
-       this.clmTmPrdctrSrvcCdngVrsn = clmTmPrdctrSrvcCdngVrsn;
-       this.clmTmPrdctrSrvcCdngDsplay = clmTmPrdctrSrvcCdngDsplay;
-       this.clmTmPrdctrSrvcCdngSstm = clmTmPrdctrSrvcCdngSstm;
-       this.clmTmMdfrCdngSrSlctd = clmTmMdfrCdngSrSlctd;
-       this.claimItemModifierCodingCode = claimItemModifierCodingCode;
-       this.claimItemModifierCodingVersion = claimItemModifierCodingVersion;
-       this.claimItemModifierCodingDisplay = claimItemModifierCodingDisplay;
-       this.claimItemModifierCodingSystem = claimItemModifierCodingSystem;
-       this.clmTmPrgrmCdCdngSrSlctd = clmTmPrgrmCdCdngSrSlctd;
-       this.claimItemProgramCodeCodingCode = claimItemProgramCodeCodingCode;
-       this.clmTmPrgrmCdCdngVrsn = clmTmPrgrmCdCdngVrsn;
-       this.clmTmPrgrmCdCdngDsplay = clmTmPrgrmCdCdngDsplay;
-       this.clmTmPrgrmCdCdngSstm = clmTmPrgrmCdCdngSstm;
-       this.claimItemServicedDate = claimItemServicedDate;
-       this.clmTmSrvcdPrdCdngSrSlctd = clmTmSrvcdPrdCdngSrSlctd;
-       this.clmTmSrvcdPrdCdngCde = clmTmSrvcdPrdCdngCde;
-       this.clmTmSrvcdPrdCdngVrsn = clmTmSrvcdPrdCdngVrsn;
-       this.clmTmSrvcdPrdCdngDsplay = clmTmSrvcdPrdCdngDsplay;
-       this.clmTmSrvcdPrdCdngSstm = clmTmSrvcdPrdCdngSstm;
-       this.clmTmLctncdblcptCdngSrSlctd = clmTmLctncdblcptCdngSrSlctd;
-       this.clmTmLctncdblcptCdngCde = clmTmLctncdblcptCdngCde;
-       this.clmTmLctncdblcptCdngVrsn = clmTmLctncdblcptCdngVrsn;
-       this.clmTmLctncdblcptCdngDsplay = clmTmLctncdblcptCdngDsplay;
-       this.clmTmLctncdblcptCdngSstm = clmTmLctncdblcptCdngSstm;
-       this.clmTmLctnddrssCdngSrSlctd = clmTmLctnddrssCdngSrSlctd;
-       this.clmTmLctnddrssCdngCde = clmTmLctnddrssCdngCde;
-       this.clmTmLctnddrssCdngVrsn = clmTmLctnddrssCdngVrsn;
-       this.clmTmLctnddrssCdngDsplay = clmTmLctnddrssCdngDsplay;
-       this.clmTmLctnddrssCdngSstm = clmTmLctnddrssCdngSstm;
-       this.claimItemLocationReference = claimItemLocationReference;
-       this.claimItemQuantity = claimItemQuantity;
-       this.clmTmNtPrcCdngSrSlctd = clmTmNtPrcCdngSrSlctd;
-       this.claimItemUnitPriceCodingCode = claimItemUnitPriceCodingCode;
-       this.clmTmNtPrcCdngVrsn = clmTmNtPrcCdngVrsn;
-       this.clmTmNtPrcCdngDsplay = clmTmNtPrcCdngDsplay;
-       this.claimItemUnitPriceCodingSystem = claimItemUnitPriceCodingSystem;
-       this.claimItemFactor = claimItemFactor;
-       this.claimItemNetCodingUserSelected = claimItemNetCodingUserSelected;
-       this.claimItemNetCodingCode = claimItemNetCodingCode;
-       this.claimItemNetCodingVersion = claimItemNetCodingVersion;
-       this.claimItemNetCodingDisplay = claimItemNetCodingDisplay;
-       this.claimItemNetCodingSystem = claimItemNetCodingSystem;
-       this.claimItemUdi = claimItemUdi;
-       this.clmTmBdStCdngSrSlctd = clmTmBdStCdngSrSlctd;
-       this.claimItemBodySiteCodingCode = claimItemBodySiteCodingCode;
-       this.claimItemBodySiteCodingVersion = claimItemBodySiteCodingVersion;
-       this.claimItemBodySiteCodingDisplay = claimItemBodySiteCodingDisplay;
-       this.claimItemBodySiteCodingSystem = claimItemBodySiteCodingSystem;
-       this.clmTmSbStCdngSrSlctd = clmTmSbStCdngSrSlctd;
-       this.claimItemSubSiteCodingCode = claimItemSubSiteCodingCode;
-       this.claimItemSubSiteCodingVersion = claimItemSubSiteCodingVersion;
-       this.claimItemSubSiteCodingDisplay = claimItemSubSiteCodingDisplay;
-       this.claimItemSubSiteCodingSystem = claimItemSubSiteCodingSystem;
-       this.claimItemEncounter = claimItemEncounter;
-       this.claimItemDetail = claimItemDetail;
-       this.claimItemDetailSequence = claimItemDetailSequence;
-       this.clmTmDtlRvnCdngSrSlctd = clmTmDtlRvnCdngSrSlctd;
-       this.clmTmDtlRvnCdngCde = clmTmDtlRvnCdngCde;
-       this.clmTmDtlRvnCdngVrsn = clmTmDtlRvnCdngVrsn;
-       this.clmTmDtlRvnCdngDsplay = clmTmDtlRvnCdngDsplay;
-       this.clmTmDtlRvnCdngSstm = clmTmDtlRvnCdngSstm;
-       this.clmTmDtlCtgrCdngSrSlctd = clmTmDtlCtgrCdngSrSlctd;
-       this.clmTmDtlCtgrCdngCde = clmTmDtlCtgrCdngCde;
-       this.clmTmDtlCtgrCdngVrsn = clmTmDtlCtgrCdngVrsn;
-       this.clmTmDtlCtgrCdngDsplay = clmTmDtlCtgrCdngDsplay;
-       this.clmTmDtlCtgrCdngSstm = clmTmDtlCtgrCdngSstm;
-       this.clmTmDtlPrdctrSrvcCdngSrSlctd = clmTmDtlPrdctrSrvcCdngSrSlctd;
-       this.clmTmDtlPrdctrSrvcCdngCde = clmTmDtlPrdctrSrvcCdngCde;
-       this.clmTmDtlPrdctrSrvcCdngVrsn = clmTmDtlPrdctrSrvcCdngVrsn;
-       this.clmTmDtlPrdctrSrvcCdngDsplay = clmTmDtlPrdctrSrvcCdngDsplay;
-       this.clmTmDtlPrdctrSrvcCdngSstm = clmTmDtlPrdctrSrvcCdngSstm;
-       this.clmTmDtlMdfrCdngSrSlctd = clmTmDtlMdfrCdngSrSlctd;
-       this.clmTmDtlMdfrCdngCde = clmTmDtlMdfrCdngCde;
-       this.clmTmDtlMdfrCdngVrsn = clmTmDtlMdfrCdngVrsn;
-       this.clmTmDtlMdfrCdngDsplay = clmTmDtlMdfrCdngDsplay;
-       this.clmTmDtlMdfrCdngSstm = clmTmDtlMdfrCdngSstm;
-       this.clmTmDtlPrgrmCdCdngSrSlctd = clmTmDtlPrgrmCdCdngSrSlctd;
-       this.clmTmDtlPrgrmCdCdngCde = clmTmDtlPrgrmCdCdngCde;
-       this.clmTmDtlPrgrmCdCdngVrsn = clmTmDtlPrgrmCdCdngVrsn;
-       this.clmTmDtlPrgrmCdCdngDsplay = clmTmDtlPrgrmCdCdngDsplay;
-       this.clmTmDtlPrgrmCdCdngSstm = clmTmDtlPrgrmCdCdngSstm;
-       this.claimItemDetailQuantity = claimItemDetailQuantity;
-       this.clmTmDtlNtPrcCdngSrSlctd = clmTmDtlNtPrcCdngSrSlctd;
-       this.clmTmDtlNtPrcCdngCde = clmTmDtlNtPrcCdngCde;
-       this.clmTmDtlNtPrcCdngVrsn = clmTmDtlNtPrcCdngVrsn;
-       this.clmTmDtlNtPrcCdngDsplay = clmTmDtlNtPrcCdngDsplay;
-       this.clmTmDtlNtPrcCdngSstm = clmTmDtlNtPrcCdngSstm;
-       this.claimItemDetailFactor = claimItemDetailFactor;
-       this.clmTmDtlNtCdngSrSlctd = clmTmDtlNtCdngSrSlctd;
-       this.claimItemDetailNetCodingCode = claimItemDetailNetCodingCode;
-       this.clmTmDtlNtCdngVrsn = clmTmDtlNtCdngVrsn;
-       this.clmTmDtlNtCdngDsplay = clmTmDtlNtCdngDsplay;
-       this.clmTmDtlNtCdngSstm = clmTmDtlNtCdngSstm;
-       this.claimItemDetailUdi = claimItemDetailUdi;
-       this.claimItemDetailSubDetail = claimItemDetailSubDetail;
-       this.clmTmDtlSbDtlSqnce = clmTmDtlSbDtlSqnce;
-       this.clmTmDtlSbDtlRvnCdngSrSlctd = clmTmDtlSbDtlRvnCdngSrSlctd;
-       this.clmTmDtlSbDtlRvnCdngCde = clmTmDtlSbDtlRvnCdngCde;
-       this.clmTmDtlSbDtlRvnCdngVrsn = clmTmDtlSbDtlRvnCdngVrsn;
-       this.clmTmDtlSbDtlRvnCdngDsplay = clmTmDtlSbDtlRvnCdngDsplay;
-       this.clmTmDtlSbDtlRvnCdngSstm = clmTmDtlSbDtlRvnCdngSstm;
-       this.clmTmDtlSbDtlCtgrCdngSrSlctd = clmTmDtlSbDtlCtgrCdngSrSlctd;
-       this.clmTmDtlSbDtlCtgrCdngCde = clmTmDtlSbDtlCtgrCdngCde;
-       this.clmTmDtlSbDtlCtgrCdngVrsn = clmTmDtlSbDtlCtgrCdngVrsn;
-       this.clmTmDtlSbDtlCtgrCdngDsplay = clmTmDtlSbDtlCtgrCdngDsplay;
-       this.clmTmDtlSbDtlCtgrCdngSstm = clmTmDtlSbDtlCtgrCdngSstm;
-       this.clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd = clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd;
-       this.clmTmDtlSbDtlPrdctrSrvcCdngCde = clmTmDtlSbDtlPrdctrSrvcCdngCde;
-       this.clmTmDtlSbDtlPrdctrSrvcCdngVrsn = clmTmDtlSbDtlPrdctrSrvcCdngVrsn;
-       this.clmTmDtlSbDtlPrdctrSrvcCdngDsplay = clmTmDtlSbDtlPrdctrSrvcCdngDsplay;
-       this.clmTmDtlSbDtlPrdctrSrvcCdngSstm = clmTmDtlSbDtlPrdctrSrvcCdngSstm;
-       this.clmTmDtlSbDtlMdfrCdngSrSlctd = clmTmDtlSbDtlMdfrCdngSrSlctd;
-       this.clmTmDtlSbDtlMdfrCdngCde = clmTmDtlSbDtlMdfrCdngCde;
-       this.clmTmDtlSbDtlMdfrCdngVrsn = clmTmDtlSbDtlMdfrCdngVrsn;
-       this.clmTmDtlSbDtlMdfrCdngDsplay = clmTmDtlSbDtlMdfrCdngDsplay;
-       this.clmTmDtlSbDtlMdfrCdngSstm = clmTmDtlSbDtlMdfrCdngSstm;
-       this.clmTmDtlSbDtlPrgrmCdCdngSrSlctd = clmTmDtlSbDtlPrgrmCdCdngSrSlctd;
-       this.clmTmDtlSbDtlPrgrmCdCdngCde = clmTmDtlSbDtlPrgrmCdCdngCde;
-       this.clmTmDtlSbDtlPrgrmCdCdngVrsn = clmTmDtlSbDtlPrgrmCdCdngVrsn;
-       this.clmTmDtlSbDtlPrgrmCdCdngDsplay = clmTmDtlSbDtlPrgrmCdCdngDsplay;
-       this.clmTmDtlSbDtlPrgrmCdCdngSstm = clmTmDtlSbDtlPrgrmCdCdngSstm;
-       this.clmTmDtlSbDtlQntty = clmTmDtlSbDtlQntty;
-       this.clmTmDtlSbDtlNtPrcCdngSrSlctd = clmTmDtlSbDtlNtPrcCdngSrSlctd;
-       this.clmTmDtlSbDtlNtPrcCdngCde = clmTmDtlSbDtlNtPrcCdngCde;
-       this.clmTmDtlSbDtlNtPrcCdngVrsn = clmTmDtlSbDtlNtPrcCdngVrsn;
-       this.clmTmDtlSbDtlNtPrcCdngDsplay = clmTmDtlSbDtlNtPrcCdngDsplay;
-       this.clmTmDtlSbDtlNtPrcCdngSstm = clmTmDtlSbDtlNtPrcCdngSstm;
-       this.claimItemDetailSubDetailFactor = claimItemDetailSubDetailFactor;
-       this.clmTmDtlSbDtlNtCdngSrSlctd = clmTmDtlSbDtlNtCdngSrSlctd;
-       this.clmTmDtlSbDtlNtCdngCde = clmTmDtlSbDtlNtCdngCde;
-       this.clmTmDtlSbDtlNtCdngVrsn = clmTmDtlSbDtlNtCdngVrsn;
-       this.clmTmDtlSbDtlNtCdngDsplay = clmTmDtlSbDtlNtCdngDsplay;
-       this.clmTmDtlSbDtlNtCdngSstm = clmTmDtlSbDtlNtCdngSstm;
-       this.claimItemDetailSubDetailUdi = claimItemDetailSubDetailUdi;
-       this.claimTotalCodingUserSelected = claimTotalCodingUserSelected;
-       this.claimTotalCodingCode = claimTotalCodingCode;
-       this.claimTotalCodingVersion = claimTotalCodingVersion;
-       this.claimTotalCodingDisplay = claimTotalCodingDisplay;
-       this.claimTotalCodingSystem = claimTotalCodingSystem;
-    }
    
-    public String getClaimIdentifierCodingCode() {
-        return this.claimIdentifierCodingCode;
-    }
-    
-    public void setClaimIdentifierCodingCode(String claimIdentifierCodingCode) {
-        this.claimIdentifierCodingCode = claimIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getClmDntfrCdngSrSlctd() {
-        return this.clmDntfrCdngSrSlctd;
-    }
-    
-    public void setClmDntfrCdngSrSlctd(String clmDntfrCdngSrSlctd) {
-        this.clmDntfrCdngSrSlctd = clmDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimIdentifierCodingVersion() {
-        return this.claimIdentifierCodingVersion;
-    }
-    
-    public void setClaimIdentifierCodingVersion(String claimIdentifierCodingVersion) {
-        this.claimIdentifierCodingVersion = claimIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getClaimIdentifierCodingDisplay() {
-        return this.claimIdentifierCodingDisplay;
-    }
-    
-    public void setClaimIdentifierCodingDisplay(String claimIdentifierCodingDisplay) {
-        this.claimIdentifierCodingDisplay = claimIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimIdentifierCodingSystem() {
-        return this.claimIdentifierCodingSystem;
-    }
-    
-    public void setClaimIdentifierCodingSystem(String claimIdentifierCodingSystem) {
-        this.claimIdentifierCodingSystem = claimIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getClaimStatus() {
-        return this.claimStatus;
-    }
-    
-    public void setClaimStatus(String claimStatus) {
-        this.claimStatus = claimStatus;
-    }
-    
-    
-    
-    public String getClaimTypeCodingUserSelected() {
-        return this.claimTypeCodingUserSelected;
-    }
-    
-    public void setClaimTypeCodingUserSelected(String claimTypeCodingUserSelected) {
-        this.claimTypeCodingUserSelected = claimTypeCodingUserSelected;
-    }
-    
-    
-    
-    public String getClaimTypeCodingCode() {
-        return this.claimTypeCodingCode;
-    }
-    
-    public void setClaimTypeCodingCode(String claimTypeCodingCode) {
-        this.claimTypeCodingCode = claimTypeCodingCode;
-    }
-    
-    
-    
-    public String getClaimTypeCodingVersion() {
-        return this.claimTypeCodingVersion;
-    }
-    
-    public void setClaimTypeCodingVersion(String claimTypeCodingVersion) {
-        this.claimTypeCodingVersion = claimTypeCodingVersion;
-    }
-    
-    
-    
-    public String getClaimTypeCodingDisplay() {
-        return this.claimTypeCodingDisplay;
-    }
-    
-    public void setClaimTypeCodingDisplay(String claimTypeCodingDisplay) {
-        this.claimTypeCodingDisplay = claimTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimTypeCodingSystem() {
-        return this.claimTypeCodingSystem;
-    }
-    
-    public void setClaimTypeCodingSystem(String claimTypeCodingSystem) {
-        this.claimTypeCodingSystem = claimTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClaimSubTypeCodingUserSelected() {
-        return this.claimSubTypeCodingUserSelected;
-    }
-    
-    public void setClaimSubTypeCodingUserSelected(String claimSubTypeCodingUserSelected) {
-        this.claimSubTypeCodingUserSelected = claimSubTypeCodingUserSelected;
-    }
-    
-    
-    
-    public String getClaimSubTypeCodingCode() {
-        return this.claimSubTypeCodingCode;
-    }
-    
-    public void setClaimSubTypeCodingCode(String claimSubTypeCodingCode) {
-        this.claimSubTypeCodingCode = claimSubTypeCodingCode;
-    }
-    
-    
-    
-    public String getClaimSubTypeCodingVersion() {
-        return this.claimSubTypeCodingVersion;
-    }
-    
-    public void setClaimSubTypeCodingVersion(String claimSubTypeCodingVersion) {
-        this.claimSubTypeCodingVersion = claimSubTypeCodingVersion;
-    }
-    
-    
-    
-    public String getClaimSubTypeCodingDisplay() {
-        return this.claimSubTypeCodingDisplay;
-    }
-    
-    public void setClaimSubTypeCodingDisplay(String claimSubTypeCodingDisplay) {
-        this.claimSubTypeCodingDisplay = claimSubTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimSubTypeCodingSystem() {
-        return this.claimSubTypeCodingSystem;
-    }
-    
-    public void setClaimSubTypeCodingSystem(String claimSubTypeCodingSystem) {
-        this.claimSubTypeCodingSystem = claimSubTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClaimUse() {
-        return this.claimUse;
-    }
-    
-    public void setClaimUse(String claimUse) {
-        this.claimUse = claimUse;
-    }
-    
-    
-    
-    public String getClaimPnt() {
-        return this.claimPnt;
-    }
-    
-    public void setClaimPnt(String claimPnt) {
-        this.claimPnt = claimPnt;
-    }
-    
-    
-    
-    public String getClmBllblPrdCdngSrSlctd() {
-        return this.clmBllblPrdCdngSrSlctd;
-    }
-    
-    public void setClmBllblPrdCdngSrSlctd(String clmBllblPrdCdngSrSlctd) {
-        this.clmBllblPrdCdngSrSlctd = clmBllblPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimBillablePeriodCodingCode() {
-        return this.claimBillablePeriodCodingCode;
-    }
-    
-    public void setClaimBillablePeriodCodingCode(String claimBillablePeriodCodingCode) {
-        this.claimBillablePeriodCodingCode = claimBillablePeriodCodingCode;
-    }
-    
-    
-    
-    public String getClmBllblPrdCdngVrsn() {
-        return this.clmBllblPrdCdngVrsn;
-    }
-    
-    public void setClmBllblPrdCdngVrsn(String clmBllblPrdCdngVrsn) {
-        this.clmBllblPrdCdngVrsn = clmBllblPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmBllblPrdCdngDsplay() {
-        return this.clmBllblPrdCdngDsplay;
-    }
-    
-    public void setClmBllblPrdCdngDsplay(String clmBllblPrdCdngDsplay) {
-        this.clmBllblPrdCdngDsplay = clmBllblPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getClaimBillablePeriodCodingSystem() {
-        return this.claimBillablePeriodCodingSystem;
-    }
-    
-    public void setClaimBillablePeriodCodingSystem(String claimBillablePeriodCodingSystem) {
-        this.claimBillablePeriodCodingSystem = claimBillablePeriodCodingSystem;
-    }
-    
-    
-    
-    public String getClaimCreated() {
-        return this.claimCreated;
-    }
-    
-    public void setClaimCreated(String claimCreated) {
-        this.claimCreated = claimCreated;
-    }
-    
-    
-    
-    public String getClaimEnterer() {
-        return this.claimEnterer;
-    }
-    
-    public void setClaimEnterer(String claimEnterer) {
-        this.claimEnterer = claimEnterer;
-    }
-    
-    
-    
-    public String getClaimInsurer() {
-        return this.claimInsurer;
-    }
-    
-    public void setClaimInsurer(String claimInsurer) {
-        this.claimInsurer = claimInsurer;
-    }
-    
-    
-    
-    public String getClaimProvider() {
-        return this.claimProvider;
-    }
-    
-    public void setClaimProvider(String claimProvider) {
-        this.claimProvider = claimProvider;
-    }
-    
-    
-    
-    public String getClaimPriorityCodingUserSelected() {
-        return this.claimPriorityCodingUserSelected;
-    }
-    
-    public void setClaimPriorityCodingUserSelected(String claimPriorityCodingUserSelected) {
-        this.claimPriorityCodingUserSelected = claimPriorityCodingUserSelected;
-    }
-    
-    
-    
-    public String getClaimPriorityCodingCode() {
-        return this.claimPriorityCodingCode;
-    }
-    
-    public void setClaimPriorityCodingCode(String claimPriorityCodingCode) {
-        this.claimPriorityCodingCode = claimPriorityCodingCode;
-    }
-    
-    
-    
-    public String getClaimPriorityCodingVersion() {
-        return this.claimPriorityCodingVersion;
-    }
-    
-    public void setClaimPriorityCodingVersion(String claimPriorityCodingVersion) {
-        this.claimPriorityCodingVersion = claimPriorityCodingVersion;
-    }
-    
-    
-    
-    public String getClaimPriorityCodingDisplay() {
-        return this.claimPriorityCodingDisplay;
-    }
-    
-    public void setClaimPriorityCodingDisplay(String claimPriorityCodingDisplay) {
-        this.claimPriorityCodingDisplay = claimPriorityCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimPriorityCodingSystem() {
-        return this.claimPriorityCodingSystem;
-    }
-    
-    public void setClaimPriorityCodingSystem(String claimPriorityCodingSystem) {
-        this.claimPriorityCodingSystem = claimPriorityCodingSystem;
-    }
-    
-    
-    
-    public String getClmFndsRsrvCdngSrSlctd() {
-        return this.clmFndsRsrvCdngSrSlctd;
-    }
-    
-    public void setClmFndsRsrvCdngSrSlctd(String clmFndsRsrvCdngSrSlctd) {
-        this.clmFndsRsrvCdngSrSlctd = clmFndsRsrvCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimFundsReserveCodingCode() {
-        return this.claimFundsReserveCodingCode;
-    }
-    
-    public void setClaimFundsReserveCodingCode(String claimFundsReserveCodingCode) {
-        this.claimFundsReserveCodingCode = claimFundsReserveCodingCode;
-    }
-    
-    
-    
-    public String getClaimFundsReserveCodingVersion() {
-        return this.claimFundsReserveCodingVersion;
-    }
-    
-    public void setClaimFundsReserveCodingVersion(String claimFundsReserveCodingVersion) {
-        this.claimFundsReserveCodingVersion = claimFundsReserveCodingVersion;
-    }
-    
-    
-    
-    public String getClaimFundsReserveCodingDisplay() {
-        return this.claimFundsReserveCodingDisplay;
-    }
-    
-    public void setClaimFundsReserveCodingDisplay(String claimFundsReserveCodingDisplay) {
-        this.claimFundsReserveCodingDisplay = claimFundsReserveCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimFundsReserveCodingSystem() {
-        return this.claimFundsReserveCodingSystem;
-    }
-    
-    public void setClaimFundsReserveCodingSystem(String claimFundsReserveCodingSystem) {
-        this.claimFundsReserveCodingSystem = claimFundsReserveCodingSystem;
-    }
-    
-    
-    
-    public String getClaimRelated() {
-        return this.claimRelated;
-    }
-    
-    public void setClaimRelated(String claimRelated) {
-        this.claimRelated = claimRelated;
-    }
-    
-    
-    
-    public String getClaimRelatedClaim() {
-        return this.claimRelatedClaim;
-    }
-    
-    public void setClaimRelatedClaim(String claimRelatedClaim) {
-        this.claimRelatedClaim = claimRelatedClaim;
-    }
-    
-    
-    
-    public String getClmRltdRltnshpCdngSrSlctd() {
-        return this.clmRltdRltnshpCdngSrSlctd;
-    }
-    
-    public void setClmRltdRltnshpCdngSrSlctd(String clmRltdRltnshpCdngSrSlctd) {
-        this.clmRltdRltnshpCdngSrSlctd = clmRltdRltnshpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmRltdRltnshpCdngCde() {
-        return this.clmRltdRltnshpCdngCde;
-    }
-    
-    public void setClmRltdRltnshpCdngCde(String clmRltdRltnshpCdngCde) {
-        this.clmRltdRltnshpCdngCde = clmRltdRltnshpCdngCde;
-    }
-    
-    
-    
-    public String getClmRltdRltnshpCdngVrsn() {
-        return this.clmRltdRltnshpCdngVrsn;
-    }
-    
-    public void setClmRltdRltnshpCdngVrsn(String clmRltdRltnshpCdngVrsn) {
-        this.clmRltdRltnshpCdngVrsn = clmRltdRltnshpCdngVrsn;
-    }
-    
-    
-    
-    public String getClmRltdRltnshpCdngDsplay() {
-        return this.clmRltdRltnshpCdngDsplay;
-    }
-    
-    public void setClmRltdRltnshpCdngDsplay(String clmRltdRltnshpCdngDsplay) {
-        this.clmRltdRltnshpCdngDsplay = clmRltdRltnshpCdngDsplay;
-    }
-    
-    
-    
-    public String getClmRltdRltnshpCdngSstm() {
-        return this.clmRltdRltnshpCdngSstm;
-    }
-    
-    public void setClmRltdRltnshpCdngSstm(String clmRltdRltnshpCdngSstm) {
-        this.clmRltdRltnshpCdngSstm = clmRltdRltnshpCdngSstm;
-    }
-    
-    
-    
-    public String getClmRltdRfrncCdngSrSlctd() {
-        return this.clmRltdRfrncCdngSrSlctd;
-    }
-    
-    public void setClmRltdRfrncCdngSrSlctd(String clmRltdRfrncCdngSrSlctd) {
-        this.clmRltdRfrncCdngSrSlctd = clmRltdRfrncCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmRltdRfrncCdngCde() {
-        return this.clmRltdRfrncCdngCde;
-    }
-    
-    public void setClmRltdRfrncCdngCde(String clmRltdRfrncCdngCde) {
-        this.clmRltdRfrncCdngCde = clmRltdRfrncCdngCde;
-    }
-    
-    
-    
-    public String getClmRltdRfrncCdngVrsn() {
-        return this.clmRltdRfrncCdngVrsn;
-    }
-    
-    public void setClmRltdRfrncCdngVrsn(String clmRltdRfrncCdngVrsn) {
-        this.clmRltdRfrncCdngVrsn = clmRltdRfrncCdngVrsn;
-    }
-    
-    
-    
-    public String getClmRltdRfrncCdngDsplay() {
-        return this.clmRltdRfrncCdngDsplay;
-    }
-    
-    public void setClmRltdRfrncCdngDsplay(String clmRltdRfrncCdngDsplay) {
-        this.clmRltdRfrncCdngDsplay = clmRltdRfrncCdngDsplay;
-    }
-    
-    
-    
-    public String getClmRltdRfrncCdngSstm() {
-        return this.clmRltdRfrncCdngSstm;
-    }
-    
-    public void setClmRltdRfrncCdngSstm(String clmRltdRfrncCdngSstm) {
-        this.clmRltdRfrncCdngSstm = clmRltdRfrncCdngSstm;
-    }
-    
-    
-    
-    public String getClaimPrescription() {
-        return this.claimPrescription;
-    }
-    
-    public void setClaimPrescription(String claimPrescription) {
-        this.claimPrescription = claimPrescription;
-    }
-    
-    
-    
-    public String getClaimOriginalPrescription() {
-        return this.claimOriginalPrescription;
-    }
-    
-    public void setClaimOriginalPrescription(String claimOriginalPrescription) {
-        this.claimOriginalPrescription = claimOriginalPrescription;
-    }
-    
-    
-    
-    public String getClaimPayee() {
-        return this.claimPayee;
-    }
-    
-    public void setClaimPayee(String claimPayee) {
-        this.claimPayee = claimPayee;
-    }
-    
-    
-    
-    public String getClmPTpCdngSrSlctd() {
-        return this.clmPTpCdngSrSlctd;
-    }
-    
-    public void setClmPTpCdngSrSlctd(String clmPTpCdngSrSlctd) {
-        this.clmPTpCdngSrSlctd = clmPTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimPayeeTypeCodingCode() {
-        return this.claimPayeeTypeCodingCode;
-    }
-    
-    public void setClaimPayeeTypeCodingCode(String claimPayeeTypeCodingCode) {
-        this.claimPayeeTypeCodingCode = claimPayeeTypeCodingCode;
-    }
-    
-    
-    
-    public String getClaimPayeeTypeCodingVersion() {
-        return this.claimPayeeTypeCodingVersion;
-    }
-    
-    public void setClaimPayeeTypeCodingVersion(String claimPayeeTypeCodingVersion) {
-        this.claimPayeeTypeCodingVersion = claimPayeeTypeCodingVersion;
-    }
-    
-    
-    
-    public String getClaimPayeeTypeCodingDisplay() {
-        return this.claimPayeeTypeCodingDisplay;
-    }
-    
-    public void setClaimPayeeTypeCodingDisplay(String claimPayeeTypeCodingDisplay) {
-        this.claimPayeeTypeCodingDisplay = claimPayeeTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimPayeeTypeCodingSystem() {
-        return this.claimPayeeTypeCodingSystem;
-    }
-    
-    public void setClaimPayeeTypeCodingSystem(String claimPayeeTypeCodingSystem) {
-        this.claimPayeeTypeCodingSystem = claimPayeeTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClaimPayeeParty() {
-        return this.claimPayeeParty;
-    }
-    
-    public void setClaimPayeeParty(String claimPayeeParty) {
-        this.claimPayeeParty = claimPayeeParty;
-    }
-    
-    
-    
-    public String getClaimReferral() {
-        return this.claimReferral;
-    }
-    
-    public void setClaimReferral(String claimReferral) {
-        this.claimReferral = claimReferral;
-    }
-    
-    
-    
-    public String getClaimFacility() {
-        return this.claimFacility;
-    }
-    
-    public void setClaimFacility(String claimFacility) {
-        this.claimFacility = claimFacility;
-    }
-    
-    
-    
-    public String getClaimCareTeam() {
-        return this.claimCareTeam;
-    }
-    
-    public void setClaimCareTeam(String claimCareTeam) {
-        this.claimCareTeam = claimCareTeam;
-    }
-    
-    
-    
-    public String getClaimCareTeamSequence() {
-        return this.claimCareTeamSequence;
-    }
-    
-    public void setClaimCareTeamSequence(String claimCareTeamSequence) {
-        this.claimCareTeamSequence = claimCareTeamSequence;
-    }
-    
-    
-    
-    public String getClaimCareTeamProvider() {
-        return this.claimCareTeamProvider;
-    }
-    
-    public void setClaimCareTeamProvider(String claimCareTeamProvider) {
-        this.claimCareTeamProvider = claimCareTeamProvider;
-    }
-    
-    
-    
-    public String getClaimCareTeamResponsible() {
-        return this.claimCareTeamResponsible;
-    }
-    
-    public void setClaimCareTeamResponsible(String claimCareTeamResponsible) {
-        this.claimCareTeamResponsible = claimCareTeamResponsible;
-    }
-    
-    
-    
-    public String getClmCrTmRlCdngSrSlctd() {
-        return this.clmCrTmRlCdngSrSlctd;
-    }
-    
-    public void setClmCrTmRlCdngSrSlctd(String clmCrTmRlCdngSrSlctd) {
-        this.clmCrTmRlCdngSrSlctd = clmCrTmRlCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimCareTeamRoleCodingCode() {
-        return this.claimCareTeamRoleCodingCode;
-    }
-    
-    public void setClaimCareTeamRoleCodingCode(String claimCareTeamRoleCodingCode) {
-        this.claimCareTeamRoleCodingCode = claimCareTeamRoleCodingCode;
-    }
-    
-    
-    
-    public String getClaimCareTeamRoleCodingVersion() {
-        return this.claimCareTeamRoleCodingVersion;
-    }
-    
-    public void setClaimCareTeamRoleCodingVersion(String claimCareTeamRoleCodingVersion) {
-        this.claimCareTeamRoleCodingVersion = claimCareTeamRoleCodingVersion;
-    }
-    
-    
-    
-    public String getClaimCareTeamRoleCodingDisplay() {
-        return this.claimCareTeamRoleCodingDisplay;
-    }
-    
-    public void setClaimCareTeamRoleCodingDisplay(String claimCareTeamRoleCodingDisplay) {
-        this.claimCareTeamRoleCodingDisplay = claimCareTeamRoleCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimCareTeamRoleCodingSystem() {
-        return this.claimCareTeamRoleCodingSystem;
-    }
-    
-    public void setClaimCareTeamRoleCodingSystem(String claimCareTeamRoleCodingSystem) {
-        this.claimCareTeamRoleCodingSystem = claimCareTeamRoleCodingSystem;
-    }
-    
-    
-    
-    public String getClmCrTmQlfctnCdngSrSlctd() {
-        return this.clmCrTmQlfctnCdngSrSlctd;
-    }
-    
-    public void setClmCrTmQlfctnCdngSrSlctd(String clmCrTmQlfctnCdngSrSlctd) {
-        this.clmCrTmQlfctnCdngSrSlctd = clmCrTmQlfctnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmCrTmQlfctnCdngCde() {
-        return this.clmCrTmQlfctnCdngCde;
-    }
-    
-    public void setClmCrTmQlfctnCdngCde(String clmCrTmQlfctnCdngCde) {
-        this.clmCrTmQlfctnCdngCde = clmCrTmQlfctnCdngCde;
-    }
-    
-    
-    
-    public String getClmCrTmQlfctnCdngVrsn() {
-        return this.clmCrTmQlfctnCdngVrsn;
-    }
-    
-    public void setClmCrTmQlfctnCdngVrsn(String clmCrTmQlfctnCdngVrsn) {
-        this.clmCrTmQlfctnCdngVrsn = clmCrTmQlfctnCdngVrsn;
-    }
-    
-    
-    
-    public String getClmCrTmQlfctnCdngDsplay() {
-        return this.clmCrTmQlfctnCdngDsplay;
-    }
-    
-    public void setClmCrTmQlfctnCdngDsplay(String clmCrTmQlfctnCdngDsplay) {
-        this.clmCrTmQlfctnCdngDsplay = clmCrTmQlfctnCdngDsplay;
-    }
-    
-    
-    
-    public String getClmCrTmQlfctnCdngSstm() {
-        return this.clmCrTmQlfctnCdngSstm;
-    }
-    
-    public void setClmCrTmQlfctnCdngSstm(String clmCrTmQlfctnCdngSstm) {
-        this.clmCrTmQlfctnCdngSstm = clmCrTmQlfctnCdngSstm;
-    }
-    
-    
-    
-    public String getClaimSupportingInfo() {
-        return this.claimSupportingInfo;
-    }
-    
-    public void setClaimSupportingInfo(String claimSupportingInfo) {
-        this.claimSupportingInfo = claimSupportingInfo;
-    }
-    
-    
-    
-    public String getClaimSupportingInfoSequence() {
-        return this.claimSupportingInfoSequence;
-    }
-    
-    public void setClaimSupportingInfoSequence(String claimSupportingInfoSequence) {
-        this.claimSupportingInfoSequence = claimSupportingInfoSequence;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCtgrCdngSrSlctd() {
-        return this.clmSpprtngnfCtgrCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfCtgrCdngSrSlctd(String clmSpprtngnfCtgrCdngSrSlctd) {
-        this.clmSpprtngnfCtgrCdngSrSlctd = clmSpprtngnfCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCtgrCdngCde() {
-        return this.clmSpprtngnfCtgrCdngCde;
-    }
-    
-    public void setClmSpprtngnfCtgrCdngCde(String clmSpprtngnfCtgrCdngCde) {
-        this.clmSpprtngnfCtgrCdngCde = clmSpprtngnfCtgrCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCtgrCdngVrsn() {
-        return this.clmSpprtngnfCtgrCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfCtgrCdngVrsn(String clmSpprtngnfCtgrCdngVrsn) {
-        this.clmSpprtngnfCtgrCdngVrsn = clmSpprtngnfCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCtgrCdngDsplay() {
-        return this.clmSpprtngnfCtgrCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfCtgrCdngDsplay(String clmSpprtngnfCtgrCdngDsplay) {
-        this.clmSpprtngnfCtgrCdngDsplay = clmSpprtngnfCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCtgrCdngSstm() {
-        return this.clmSpprtngnfCtgrCdngSstm;
-    }
-    
-    public void setClmSpprtngnfCtgrCdngSstm(String clmSpprtngnfCtgrCdngSstm) {
-        this.clmSpprtngnfCtgrCdngSstm = clmSpprtngnfCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCdCdngSrSlctd() {
-        return this.clmSpprtngnfCdCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfCdCdngSrSlctd(String clmSpprtngnfCdCdngSrSlctd) {
-        this.clmSpprtngnfCdCdngSrSlctd = clmSpprtngnfCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCdCdngCde() {
-        return this.clmSpprtngnfCdCdngCde;
-    }
-    
-    public void setClmSpprtngnfCdCdngCde(String clmSpprtngnfCdCdngCde) {
-        this.clmSpprtngnfCdCdngCde = clmSpprtngnfCdCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCdCdngVrsn() {
-        return this.clmSpprtngnfCdCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfCdCdngVrsn(String clmSpprtngnfCdCdngVrsn) {
-        this.clmSpprtngnfCdCdngVrsn = clmSpprtngnfCdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCdCdngDsplay() {
-        return this.clmSpprtngnfCdCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfCdCdngDsplay(String clmSpprtngnfCdCdngDsplay) {
-        this.clmSpprtngnfCdCdngDsplay = clmSpprtngnfCdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfCdCdngSstm() {
-        return this.clmSpprtngnfCdCdngSstm;
-    }
-    
-    public void setClmSpprtngnfCdCdngSstm(String clmSpprtngnfCdCdngSstm) {
-        this.clmSpprtngnfCdCdngSstm = clmSpprtngnfCdCdngSstm;
-    }
-    
-    
-    
-    public String getClaimSupportingInfoTimingDate() {
-        return this.claimSupportingInfoTimingDate;
-    }
-    
-    public void setClaimSupportingInfoTimingDate(String claimSupportingInfoTimingDate) {
-        this.claimSupportingInfoTimingDate = claimSupportingInfoTimingDate;
-    }
-    
-    
-    
-    public String getClmSpprtngnfTmngPrdCdngSrSlctd() {
-        return this.clmSpprtngnfTmngPrdCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfTmngPrdCdngSrSlctd(String clmSpprtngnfTmngPrdCdngSrSlctd) {
-        this.clmSpprtngnfTmngPrdCdngSrSlctd = clmSpprtngnfTmngPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfTmngPrdCdngCde() {
-        return this.clmSpprtngnfTmngPrdCdngCde;
-    }
-    
-    public void setClmSpprtngnfTmngPrdCdngCde(String clmSpprtngnfTmngPrdCdngCde) {
-        this.clmSpprtngnfTmngPrdCdngCde = clmSpprtngnfTmngPrdCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfTmngPrdCdngVrsn() {
-        return this.clmSpprtngnfTmngPrdCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfTmngPrdCdngVrsn(String clmSpprtngnfTmngPrdCdngVrsn) {
-        this.clmSpprtngnfTmngPrdCdngVrsn = clmSpprtngnfTmngPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfTmngPrdCdngDsplay() {
-        return this.clmSpprtngnfTmngPrdCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfTmngPrdCdngDsplay(String clmSpprtngnfTmngPrdCdngDsplay) {
-        this.clmSpprtngnfTmngPrdCdngDsplay = clmSpprtngnfTmngPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfTmngPrdCdngSstm() {
-        return this.clmSpprtngnfTmngPrdCdngSstm;
-    }
-    
-    public void setClmSpprtngnfTmngPrdCdngSstm(String clmSpprtngnfTmngPrdCdngSstm) {
-        this.clmSpprtngnfTmngPrdCdngSstm = clmSpprtngnfTmngPrdCdngSstm;
-    }
-    
-    
-    
-    public String getClaimSupportingInfoValueBoolean() {
-        return this.claimSupportingInfoValueBoolean;
-    }
-    
-    public void setClaimSupportingInfoValueBoolean(String claimSupportingInfoValueBoolean) {
-        this.claimSupportingInfoValueBoolean = claimSupportingInfoValueBoolean;
-    }
-    
-    
-    
-    public String getClaimSupportingInfoValueString() {
-        return this.claimSupportingInfoValueString;
-    }
-    
-    public void setClaimSupportingInfoValueString(String claimSupportingInfoValueString) {
-        this.claimSupportingInfoValueString = claimSupportingInfoValueString;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlQnttCdngSrSlctd() {
-        return this.clmSpprtngnfVlQnttCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfVlQnttCdngSrSlctd(String clmSpprtngnfVlQnttCdngSrSlctd) {
-        this.clmSpprtngnfVlQnttCdngSrSlctd = clmSpprtngnfVlQnttCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlQnttCdngCde() {
-        return this.clmSpprtngnfVlQnttCdngCde;
-    }
-    
-    public void setClmSpprtngnfVlQnttCdngCde(String clmSpprtngnfVlQnttCdngCde) {
-        this.clmSpprtngnfVlQnttCdngCde = clmSpprtngnfVlQnttCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlQnttCdngVrsn() {
-        return this.clmSpprtngnfVlQnttCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfVlQnttCdngVrsn(String clmSpprtngnfVlQnttCdngVrsn) {
-        this.clmSpprtngnfVlQnttCdngVrsn = clmSpprtngnfVlQnttCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlQnttCdngDsplay() {
-        return this.clmSpprtngnfVlQnttCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfVlQnttCdngDsplay(String clmSpprtngnfVlQnttCdngDsplay) {
-        this.clmSpprtngnfVlQnttCdngDsplay = clmSpprtngnfVlQnttCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlQnttCdngSstm() {
-        return this.clmSpprtngnfVlQnttCdngSstm;
-    }
-    
-    public void setClmSpprtngnfVlQnttCdngSstm(String clmSpprtngnfVlQnttCdngSstm) {
-        this.clmSpprtngnfVlQnttCdngSstm = clmSpprtngnfVlQnttCdngSstm;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlttchmntCdngSrSlctd() {
-        return this.clmSpprtngnfVlttchmntCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfVlttchmntCdngSrSlctd(String clmSpprtngnfVlttchmntCdngSrSlctd) {
-        this.clmSpprtngnfVlttchmntCdngSrSlctd = clmSpprtngnfVlttchmntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlttchmntCdngCde() {
-        return this.clmSpprtngnfVlttchmntCdngCde;
-    }
-    
-    public void setClmSpprtngnfVlttchmntCdngCde(String clmSpprtngnfVlttchmntCdngCde) {
-        this.clmSpprtngnfVlttchmntCdngCde = clmSpprtngnfVlttchmntCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlttchmntCdngVrsn() {
-        return this.clmSpprtngnfVlttchmntCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfVlttchmntCdngVrsn(String clmSpprtngnfVlttchmntCdngVrsn) {
-        this.clmSpprtngnfVlttchmntCdngVrsn = clmSpprtngnfVlttchmntCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlttchmntCdngDsplay() {
-        return this.clmSpprtngnfVlttchmntCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfVlttchmntCdngDsplay(String clmSpprtngnfVlttchmntCdngDsplay) {
-        this.clmSpprtngnfVlttchmntCdngDsplay = clmSpprtngnfVlttchmntCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlttchmntCdngSstm() {
-        return this.clmSpprtngnfVlttchmntCdngSstm;
-    }
-    
-    public void setClmSpprtngnfVlttchmntCdngSstm(String clmSpprtngnfVlttchmntCdngSstm) {
-        this.clmSpprtngnfVlttchmntCdngSstm = clmSpprtngnfVlttchmntCdngSstm;
-    }
-    
-    
-    
-    public String getClmSpprtngnfVlRfrnce() {
-        return this.clmSpprtngnfVlRfrnce;
-    }
-    
-    public void setClmSpprtngnfVlRfrnce(String clmSpprtngnfVlRfrnce) {
-        this.clmSpprtngnfVlRfrnce = clmSpprtngnfVlRfrnce;
-    }
-    
-    
-    
-    public String getClmSpprtngnfRsnCdngSrSlctd() {
-        return this.clmSpprtngnfRsnCdngSrSlctd;
-    }
-    
-    public void setClmSpprtngnfRsnCdngSrSlctd(String clmSpprtngnfRsnCdngSrSlctd) {
-        this.clmSpprtngnfRsnCdngSrSlctd = clmSpprtngnfRsnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmSpprtngnfRsnCdngCde() {
-        return this.clmSpprtngnfRsnCdngCde;
-    }
-    
-    public void setClmSpprtngnfRsnCdngCde(String clmSpprtngnfRsnCdngCde) {
-        this.clmSpprtngnfRsnCdngCde = clmSpprtngnfRsnCdngCde;
-    }
-    
-    
-    
-    public String getClmSpprtngnfRsnCdngVrsn() {
-        return this.clmSpprtngnfRsnCdngVrsn;
-    }
-    
-    public void setClmSpprtngnfRsnCdngVrsn(String clmSpprtngnfRsnCdngVrsn) {
-        this.clmSpprtngnfRsnCdngVrsn = clmSpprtngnfRsnCdngVrsn;
-    }
-    
-    
-    
-    public String getClmSpprtngnfRsnCdngDsplay() {
-        return this.clmSpprtngnfRsnCdngDsplay;
-    }
-    
-    public void setClmSpprtngnfRsnCdngDsplay(String clmSpprtngnfRsnCdngDsplay) {
-        this.clmSpprtngnfRsnCdngDsplay = clmSpprtngnfRsnCdngDsplay;
-    }
-    
-    
-    
-    public String getClmSpprtngnfRsnCdngSstm() {
-        return this.clmSpprtngnfRsnCdngSstm;
-    }
-    
-    public void setClmSpprtngnfRsnCdngSstm(String clmSpprtngnfRsnCdngSstm) {
-        this.clmSpprtngnfRsnCdngSstm = clmSpprtngnfRsnCdngSstm;
-    }
-    
-    
-    
-    public String getClaimDiagnosis() {
-        return this.claimDiagnosis;
-    }
-    
-    public void setClaimDiagnosis(String claimDiagnosis) {
-        this.claimDiagnosis = claimDiagnosis;
-    }
-    
-    
-    
-    public String getClaimDiagnosisSequence() {
-        return this.claimDiagnosisSequence;
-    }
-    
-    public void setClaimDiagnosisSequence(String claimDiagnosisSequence) {
-        this.claimDiagnosisSequence = claimDiagnosisSequence;
-    }
-    
-    
-    
-    public String getClmDgnssDgnsscdblcptCdngSrSlctd() {
-        return this.clmDgnssDgnsscdblcptCdngSrSlctd;
-    }
-    
-    public void setClmDgnssDgnsscdblcptCdngSrSlctd(String clmDgnssDgnsscdblcptCdngSrSlctd) {
-        this.clmDgnssDgnsscdblcptCdngSrSlctd = clmDgnssDgnsscdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmDgnssDgnsscdblcptCdngCde() {
-        return this.clmDgnssDgnsscdblcptCdngCde;
-    }
-    
-    public void setClmDgnssDgnsscdblcptCdngCde(String clmDgnssDgnsscdblcptCdngCde) {
-        this.clmDgnssDgnsscdblcptCdngCde = clmDgnssDgnsscdblcptCdngCde;
-    }
-    
-    
-    
-    public String getClmDgnssDgnsscdblcptCdngVrsn() {
-        return this.clmDgnssDgnsscdblcptCdngVrsn;
-    }
-    
-    public void setClmDgnssDgnsscdblcptCdngVrsn(String clmDgnssDgnsscdblcptCdngVrsn) {
-        this.clmDgnssDgnsscdblcptCdngVrsn = clmDgnssDgnsscdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getClmDgnssDgnsscdblcptCdngDsplay() {
-        return this.clmDgnssDgnsscdblcptCdngDsplay;
-    }
-    
-    public void setClmDgnssDgnsscdblcptCdngDsplay(String clmDgnssDgnsscdblcptCdngDsplay) {
-        this.clmDgnssDgnsscdblcptCdngDsplay = clmDgnssDgnsscdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getClmDgnssDgnsscdblcptCdngSstm() {
-        return this.clmDgnssDgnsscdblcptCdngSstm;
-    }
-    
-    public void setClmDgnssDgnsscdblcptCdngSstm(String clmDgnssDgnsscdblcptCdngSstm) {
-        this.clmDgnssDgnsscdblcptCdngSstm = clmDgnssDgnsscdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getClaimDiagnosisDiagnosisReference() {
-        return this.claimDiagnosisDiagnosisReference;
-    }
-    
-    public void setClaimDiagnosisDiagnosisReference(String claimDiagnosisDiagnosisReference) {
-        this.claimDiagnosisDiagnosisReference = claimDiagnosisDiagnosisReference;
-    }
-    
-    
-    
-    public String getClmDgnssTpCdngSrSlctd() {
-        return this.clmDgnssTpCdngSrSlctd;
-    }
-    
-    public void setClmDgnssTpCdngSrSlctd(String clmDgnssTpCdngSrSlctd) {
-        this.clmDgnssTpCdngSrSlctd = clmDgnssTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimDiagnosisTypeCodingCode() {
-        return this.claimDiagnosisTypeCodingCode;
-    }
-    
-    public void setClaimDiagnosisTypeCodingCode(String claimDiagnosisTypeCodingCode) {
-        this.claimDiagnosisTypeCodingCode = claimDiagnosisTypeCodingCode;
-    }
-    
-    
-    
-    public String getClmDgnssTpCdngVrsn() {
-        return this.clmDgnssTpCdngVrsn;
-    }
-    
-    public void setClmDgnssTpCdngVrsn(String clmDgnssTpCdngVrsn) {
-        this.clmDgnssTpCdngVrsn = clmDgnssTpCdngVrsn;
-    }
-    
-    
-    
-    public String getClmDgnssTpCdngDsplay() {
-        return this.clmDgnssTpCdngDsplay;
-    }
-    
-    public void setClmDgnssTpCdngDsplay(String clmDgnssTpCdngDsplay) {
-        this.clmDgnssTpCdngDsplay = clmDgnssTpCdngDsplay;
-    }
-    
-    
-    
-    public String getClaimDiagnosisTypeCodingSystem() {
-        return this.claimDiagnosisTypeCodingSystem;
-    }
-    
-    public void setClaimDiagnosisTypeCodingSystem(String claimDiagnosisTypeCodingSystem) {
-        this.claimDiagnosisTypeCodingSystem = claimDiagnosisTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClmDgnssNdmssnCdngSrSlctd() {
-        return this.clmDgnssNdmssnCdngSrSlctd;
-    }
-    
-    public void setClmDgnssNdmssnCdngSrSlctd(String clmDgnssNdmssnCdngSrSlctd) {
-        this.clmDgnssNdmssnCdngSrSlctd = clmDgnssNdmssnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmDgnssNdmssnCdngCde() {
-        return this.clmDgnssNdmssnCdngCde;
-    }
-    
-    public void setClmDgnssNdmssnCdngCde(String clmDgnssNdmssnCdngCde) {
-        this.clmDgnssNdmssnCdngCde = clmDgnssNdmssnCdngCde;
-    }
-    
-    
-    
-    public String getClmDgnssNdmssnCdngVrsn() {
-        return this.clmDgnssNdmssnCdngVrsn;
-    }
-    
-    public void setClmDgnssNdmssnCdngVrsn(String clmDgnssNdmssnCdngVrsn) {
-        this.clmDgnssNdmssnCdngVrsn = clmDgnssNdmssnCdngVrsn;
-    }
-    
-    
-    
-    public String getClmDgnssNdmssnCdngDsplay() {
-        return this.clmDgnssNdmssnCdngDsplay;
-    }
-    
-    public void setClmDgnssNdmssnCdngDsplay(String clmDgnssNdmssnCdngDsplay) {
-        this.clmDgnssNdmssnCdngDsplay = clmDgnssNdmssnCdngDsplay;
-    }
-    
-    
-    
-    public String getClmDgnssNdmssnCdngSstm() {
-        return this.clmDgnssNdmssnCdngSstm;
-    }
-    
-    public void setClmDgnssNdmssnCdngSstm(String clmDgnssNdmssnCdngSstm) {
-        this.clmDgnssNdmssnCdngSstm = clmDgnssNdmssnCdngSstm;
-    }
-    
-    
-    
-    public String getClmDgnssPckgCdCdngSrSlctd() {
-        return this.clmDgnssPckgCdCdngSrSlctd;
-    }
-    
-    public void setClmDgnssPckgCdCdngSrSlctd(String clmDgnssPckgCdCdngSrSlctd) {
-        this.clmDgnssPckgCdCdngSrSlctd = clmDgnssPckgCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmDgnssPckgCdCdngCde() {
-        return this.clmDgnssPckgCdCdngCde;
-    }
-    
-    public void setClmDgnssPckgCdCdngCde(String clmDgnssPckgCdCdngCde) {
-        this.clmDgnssPckgCdCdngCde = clmDgnssPckgCdCdngCde;
-    }
-    
-    
-    
-    public String getClmDgnssPckgCdCdngVrsn() {
-        return this.clmDgnssPckgCdCdngVrsn;
-    }
-    
-    public void setClmDgnssPckgCdCdngVrsn(String clmDgnssPckgCdCdngVrsn) {
-        this.clmDgnssPckgCdCdngVrsn = clmDgnssPckgCdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmDgnssPckgCdCdngDsplay() {
-        return this.clmDgnssPckgCdCdngDsplay;
-    }
-    
-    public void setClmDgnssPckgCdCdngDsplay(String clmDgnssPckgCdCdngDsplay) {
-        this.clmDgnssPckgCdCdngDsplay = clmDgnssPckgCdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmDgnssPckgCdCdngSstm() {
-        return this.clmDgnssPckgCdCdngSstm;
-    }
-    
-    public void setClmDgnssPckgCdCdngSstm(String clmDgnssPckgCdCdngSstm) {
-        this.clmDgnssPckgCdCdngSstm = clmDgnssPckgCdCdngSstm;
-    }
-    
-    
-    
-    public String getClaimProcedure() {
-        return this.claimProcedure;
-    }
-    
-    public void setClaimProcedure(String claimProcedure) {
-        this.claimProcedure = claimProcedure;
-    }
-    
-    
-    
-    public String getClaimProcedureSequence() {
-        return this.claimProcedureSequence;
-    }
-    
-    public void setClaimProcedureSequence(String claimProcedureSequence) {
-        this.claimProcedureSequence = claimProcedureSequence;
-    }
-    
-    
-    
-    public String getClmPrcdrTpCdngSrSlctd() {
-        return this.clmPrcdrTpCdngSrSlctd;
-    }
-    
-    public void setClmPrcdrTpCdngSrSlctd(String clmPrcdrTpCdngSrSlctd) {
-        this.clmPrcdrTpCdngSrSlctd = clmPrcdrTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimProcedureTypeCodingCode() {
-        return this.claimProcedureTypeCodingCode;
-    }
-    
-    public void setClaimProcedureTypeCodingCode(String claimProcedureTypeCodingCode) {
-        this.claimProcedureTypeCodingCode = claimProcedureTypeCodingCode;
-    }
-    
-    
-    
-    public String getClmPrcdrTpCdngVrsn() {
-        return this.clmPrcdrTpCdngVrsn;
-    }
-    
-    public void setClmPrcdrTpCdngVrsn(String clmPrcdrTpCdngVrsn) {
-        this.clmPrcdrTpCdngVrsn = clmPrcdrTpCdngVrsn;
-    }
-    
-    
-    
-    public String getClmPrcdrTpCdngDsplay() {
-        return this.clmPrcdrTpCdngDsplay;
-    }
-    
-    public void setClmPrcdrTpCdngDsplay(String clmPrcdrTpCdngDsplay) {
-        this.clmPrcdrTpCdngDsplay = clmPrcdrTpCdngDsplay;
-    }
-    
-    
-    
-    public String getClaimProcedureTypeCodingSystem() {
-        return this.claimProcedureTypeCodingSystem;
-    }
-    
-    public void setClaimProcedureTypeCodingSystem(String claimProcedureTypeCodingSystem) {
-        this.claimProcedureTypeCodingSystem = claimProcedureTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClaimProcedureDate() {
-        return this.claimProcedureDate;
-    }
-    
-    public void setClaimProcedureDate(String claimProcedureDate) {
-        this.claimProcedureDate = claimProcedureDate;
-    }
-    
-    
-    
-    public String getClmPrcdrPrcdrcdblcptCdngSrSlctd() {
-        return this.clmPrcdrPrcdrcdblcptCdngSrSlctd;
-    }
-    
-    public void setClmPrcdrPrcdrcdblcptCdngSrSlctd(String clmPrcdrPrcdrcdblcptCdngSrSlctd) {
-        this.clmPrcdrPrcdrcdblcptCdngSrSlctd = clmPrcdrPrcdrcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmPrcdrPrcdrcdblcptCdngCde() {
-        return this.clmPrcdrPrcdrcdblcptCdngCde;
-    }
-    
-    public void setClmPrcdrPrcdrcdblcptCdngCde(String clmPrcdrPrcdrcdblcptCdngCde) {
-        this.clmPrcdrPrcdrcdblcptCdngCde = clmPrcdrPrcdrcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getClmPrcdrPrcdrcdblcptCdngVrsn() {
-        return this.clmPrcdrPrcdrcdblcptCdngVrsn;
-    }
-    
-    public void setClmPrcdrPrcdrcdblcptCdngVrsn(String clmPrcdrPrcdrcdblcptCdngVrsn) {
-        this.clmPrcdrPrcdrcdblcptCdngVrsn = clmPrcdrPrcdrcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getClmPrcdrPrcdrcdblcptCdngDsplay() {
-        return this.clmPrcdrPrcdrcdblcptCdngDsplay;
-    }
-    
-    public void setClmPrcdrPrcdrcdblcptCdngDsplay(String clmPrcdrPrcdrcdblcptCdngDsplay) {
-        this.clmPrcdrPrcdrcdblcptCdngDsplay = clmPrcdrPrcdrcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getClmPrcdrPrcdrcdblcptCdngSstm() {
-        return this.clmPrcdrPrcdrcdblcptCdngSstm;
-    }
-    
-    public void setClmPrcdrPrcdrcdblcptCdngSstm(String clmPrcdrPrcdrcdblcptCdngSstm) {
-        this.clmPrcdrPrcdrcdblcptCdngSstm = clmPrcdrPrcdrcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getClaimProcedureProcedureReference() {
-        return this.claimProcedureProcedureReference;
-    }
-    
-    public void setClaimProcedureProcedureReference(String claimProcedureProcedureReference) {
-        this.claimProcedureProcedureReference = claimProcedureProcedureReference;
-    }
-    
-    
-    
-    public String getClaimProcedureUdi() {
-        return this.claimProcedureUdi;
-    }
-    
-    public void setClaimProcedureUdi(String claimProcedureUdi) {
-        this.claimProcedureUdi = claimProcedureUdi;
-    }
-    
-    
-    
-    public String getClaimInsurance() {
-        return this.claimInsurance;
-    }
-    
-    public void setClaimInsurance(String claimInsurance) {
-        this.claimInsurance = claimInsurance;
-    }
-    
-    
-    
-    public String getClaimInsuranceSequence() {
-        return this.claimInsuranceSequence;
-    }
-    
-    public void setClaimInsuranceSequence(String claimInsuranceSequence) {
-        this.claimInsuranceSequence = claimInsuranceSequence;
-    }
-    
-    
-    
-    public String getClaimInsuranceFocal() {
-        return this.claimInsuranceFocal;
-    }
-    
-    public void setClaimInsuranceFocal(String claimInsuranceFocal) {
-        this.claimInsuranceFocal = claimInsuranceFocal;
-    }
-    
-    
-    
-    public String getClmNsrncDntfrCdngSrSlctd() {
-        return this.clmNsrncDntfrCdngSrSlctd;
-    }
-    
-    public void setClmNsrncDntfrCdngSrSlctd(String clmNsrncDntfrCdngSrSlctd) {
-        this.clmNsrncDntfrCdngSrSlctd = clmNsrncDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmNsrncDntfrCdngCde() {
-        return this.clmNsrncDntfrCdngCde;
-    }
-    
-    public void setClmNsrncDntfrCdngCde(String clmNsrncDntfrCdngCde) {
-        this.clmNsrncDntfrCdngCde = clmNsrncDntfrCdngCde;
-    }
-    
-    
-    
-    public String getClmNsrncDntfrCdngVrsn() {
-        return this.clmNsrncDntfrCdngVrsn;
-    }
-    
-    public void setClmNsrncDntfrCdngVrsn(String clmNsrncDntfrCdngVrsn) {
-        this.clmNsrncDntfrCdngVrsn = clmNsrncDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmNsrncDntfrCdngDsplay() {
-        return this.clmNsrncDntfrCdngDsplay;
-    }
-    
-    public void setClmNsrncDntfrCdngDsplay(String clmNsrncDntfrCdngDsplay) {
-        this.clmNsrncDntfrCdngDsplay = clmNsrncDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmNsrncDntfrCdngSstm() {
-        return this.clmNsrncDntfrCdngSstm;
-    }
-    
-    public void setClmNsrncDntfrCdngSstm(String clmNsrncDntfrCdngSstm) {
-        this.clmNsrncDntfrCdngSstm = clmNsrncDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getClaimInsuranceCoverage() {
-        return this.claimInsuranceCoverage;
-    }
-    
-    public void setClaimInsuranceCoverage(String claimInsuranceCoverage) {
-        this.claimInsuranceCoverage = claimInsuranceCoverage;
-    }
-    
-    
-    
-    public String getClmNsrncBsnssrrngmnt() {
-        return this.clmNsrncBsnssrrngmnt;
-    }
-    
-    public void setClmNsrncBsnssrrngmnt(String clmNsrncBsnssrrngmnt) {
-        this.clmNsrncBsnssrrngmnt = clmNsrncBsnssrrngmnt;
-    }
-    
-    
-    
-    public String getClaimInsurancePreAuthRef() {
-        return this.claimInsurancePreAuthRef;
-    }
-    
-    public void setClaimInsurancePreAuthRef(String claimInsurancePreAuthRef) {
-        this.claimInsurancePreAuthRef = claimInsurancePreAuthRef;
-    }
-    
-    
-    
-    public String getClaimInsuranceClaimResponse() {
-        return this.claimInsuranceClaimResponse;
-    }
-    
-    public void setClaimInsuranceClaimResponse(String claimInsuranceClaimResponse) {
-        this.claimInsuranceClaimResponse = claimInsuranceClaimResponse;
-    }
-    
-    
-    
-    public String getClaimAccident() {
-        return this.claimAccident;
-    }
-    
-    public void setClaimAccident(String claimAccident) {
-        this.claimAccident = claimAccident;
-    }
-    
-    
-    
-    public String getClaimAccidentDate() {
-        return this.claimAccidentDate;
-    }
-    
-    public void setClaimAccidentDate(String claimAccidentDate) {
-        this.claimAccidentDate = claimAccidentDate;
-    }
-    
-    
-    
-    public String getClmCcdntTpCdngSrSlctd() {
-        return this.clmCcdntTpCdngSrSlctd;
-    }
-    
-    public void setClmCcdntTpCdngSrSlctd(String clmCcdntTpCdngSrSlctd) {
-        this.clmCcdntTpCdngSrSlctd = clmCcdntTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimAccidentTypeCodingCode() {
-        return this.claimAccidentTypeCodingCode;
-    }
-    
-    public void setClaimAccidentTypeCodingCode(String claimAccidentTypeCodingCode) {
-        this.claimAccidentTypeCodingCode = claimAccidentTypeCodingCode;
-    }
-    
-    
-    
-    public String getClaimAccidentTypeCodingVersion() {
-        return this.claimAccidentTypeCodingVersion;
-    }
-    
-    public void setClaimAccidentTypeCodingVersion(String claimAccidentTypeCodingVersion) {
-        this.claimAccidentTypeCodingVersion = claimAccidentTypeCodingVersion;
-    }
-    
-    
-    
-    public String getClaimAccidentTypeCodingDisplay() {
-        return this.claimAccidentTypeCodingDisplay;
-    }
-    
-    public void setClaimAccidentTypeCodingDisplay(String claimAccidentTypeCodingDisplay) {
-        this.claimAccidentTypeCodingDisplay = claimAccidentTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimAccidentTypeCodingSystem() {
-        return this.claimAccidentTypeCodingSystem;
-    }
-    
-    public void setClaimAccidentTypeCodingSystem(String claimAccidentTypeCodingSystem) {
-        this.claimAccidentTypeCodingSystem = claimAccidentTypeCodingSystem;
-    }
-    
-    
-    
-    public String getClmCcdntLctnddrssCdngSrSlctd() {
-        return this.clmCcdntLctnddrssCdngSrSlctd;
-    }
-    
-    public void setClmCcdntLctnddrssCdngSrSlctd(String clmCcdntLctnddrssCdngSrSlctd) {
-        this.clmCcdntLctnddrssCdngSrSlctd = clmCcdntLctnddrssCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmCcdntLctnddrssCdngCde() {
-        return this.clmCcdntLctnddrssCdngCde;
-    }
-    
-    public void setClmCcdntLctnddrssCdngCde(String clmCcdntLctnddrssCdngCde) {
-        this.clmCcdntLctnddrssCdngCde = clmCcdntLctnddrssCdngCde;
-    }
-    
-    
-    
-    public String getClmCcdntLctnddrssCdngVrsn() {
-        return this.clmCcdntLctnddrssCdngVrsn;
-    }
-    
-    public void setClmCcdntLctnddrssCdngVrsn(String clmCcdntLctnddrssCdngVrsn) {
-        this.clmCcdntLctnddrssCdngVrsn = clmCcdntLctnddrssCdngVrsn;
-    }
-    
-    
-    
-    public String getClmCcdntLctnddrssCdngDsplay() {
-        return this.clmCcdntLctnddrssCdngDsplay;
-    }
-    
-    public void setClmCcdntLctnddrssCdngDsplay(String clmCcdntLctnddrssCdngDsplay) {
-        this.clmCcdntLctnddrssCdngDsplay = clmCcdntLctnddrssCdngDsplay;
-    }
-    
-    
-    
-    public String getClmCcdntLctnddrssCdngSstm() {
-        return this.clmCcdntLctnddrssCdngSstm;
-    }
-    
-    public void setClmCcdntLctnddrssCdngSstm(String clmCcdntLctnddrssCdngSstm) {
-        this.clmCcdntLctnddrssCdngSstm = clmCcdntLctnddrssCdngSstm;
-    }
-    
-    
-    
-    public String getClaimAccidentLocationReference() {
-        return this.claimAccidentLocationReference;
-    }
-    
-    public void setClaimAccidentLocationReference(String claimAccidentLocationReference) {
-        this.claimAccidentLocationReference = claimAccidentLocationReference;
-    }
-    
-    
-    
-    public String getClaimItem() {
-        return this.claimItem;
-    }
-    
-    public void setClaimItem(String claimItem) {
-        this.claimItem = claimItem;
-    }
-    
-    
-    
-    public String getClaimItemSequence() {
-        return this.claimItemSequence;
-    }
-    
-    public void setClaimItemSequence(String claimItemSequence) {
-        this.claimItemSequence = claimItemSequence;
-    }
-    
-    
-    
-    public String getClaimItemCareTeamSequence() {
-        return this.claimItemCareTeamSequence;
-    }
-    
-    public void setClaimItemCareTeamSequence(String claimItemCareTeamSequence) {
-        this.claimItemCareTeamSequence = claimItemCareTeamSequence;
-    }
-    
-    
-    
-    public String getClaimItemDiagnosisSequence() {
-        return this.claimItemDiagnosisSequence;
-    }
-    
-    public void setClaimItemDiagnosisSequence(String claimItemDiagnosisSequence) {
-        this.claimItemDiagnosisSequence = claimItemDiagnosisSequence;
-    }
-    
-    
-    
-    public String getClaimItemProcedureSequence() {
-        return this.claimItemProcedureSequence;
-    }
-    
-    public void setClaimItemProcedureSequence(String claimItemProcedureSequence) {
-        this.claimItemProcedureSequence = claimItemProcedureSequence;
-    }
-    
-    
-    
-    public String getClaimItemInformationSequence() {
-        return this.claimItemInformationSequence;
-    }
-    
-    public void setClaimItemInformationSequence(String claimItemInformationSequence) {
-        this.claimItemInformationSequence = claimItemInformationSequence;
-    }
-    
-    
-    
-    public String getClmTmRvnCdngSrSlctd() {
-        return this.clmTmRvnCdngSrSlctd;
-    }
-    
-    public void setClmTmRvnCdngSrSlctd(String clmTmRvnCdngSrSlctd) {
-        this.clmTmRvnCdngSrSlctd = clmTmRvnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemRevenueCodingCode() {
-        return this.claimItemRevenueCodingCode;
-    }
-    
-    public void setClaimItemRevenueCodingCode(String claimItemRevenueCodingCode) {
-        this.claimItemRevenueCodingCode = claimItemRevenueCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemRevenueCodingVersion() {
-        return this.claimItemRevenueCodingVersion;
-    }
-    
-    public void setClaimItemRevenueCodingVersion(String claimItemRevenueCodingVersion) {
-        this.claimItemRevenueCodingVersion = claimItemRevenueCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemRevenueCodingDisplay() {
-        return this.claimItemRevenueCodingDisplay;
-    }
-    
-    public void setClaimItemRevenueCodingDisplay(String claimItemRevenueCodingDisplay) {
-        this.claimItemRevenueCodingDisplay = claimItemRevenueCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemRevenueCodingSystem() {
-        return this.claimItemRevenueCodingSystem;
-    }
-    
-    public void setClaimItemRevenueCodingSystem(String claimItemRevenueCodingSystem) {
-        this.claimItemRevenueCodingSystem = claimItemRevenueCodingSystem;
-    }
-    
-    
-    
-    public String getClmTmCtgrCdngSrSlctd() {
-        return this.clmTmCtgrCdngSrSlctd;
-    }
-    
-    public void setClmTmCtgrCdngSrSlctd(String clmTmCtgrCdngSrSlctd) {
-        this.clmTmCtgrCdngSrSlctd = clmTmCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemCategoryCodingCode() {
-        return this.claimItemCategoryCodingCode;
-    }
-    
-    public void setClaimItemCategoryCodingCode(String claimItemCategoryCodingCode) {
-        this.claimItemCategoryCodingCode = claimItemCategoryCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemCategoryCodingVersion() {
-        return this.claimItemCategoryCodingVersion;
-    }
-    
-    public void setClaimItemCategoryCodingVersion(String claimItemCategoryCodingVersion) {
-        this.claimItemCategoryCodingVersion = claimItemCategoryCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemCategoryCodingDisplay() {
-        return this.claimItemCategoryCodingDisplay;
-    }
-    
-    public void setClaimItemCategoryCodingDisplay(String claimItemCategoryCodingDisplay) {
-        this.claimItemCategoryCodingDisplay = claimItemCategoryCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemCategoryCodingSystem() {
-        return this.claimItemCategoryCodingSystem;
-    }
-    
-    public void setClaimItemCategoryCodingSystem(String claimItemCategoryCodingSystem) {
-        this.claimItemCategoryCodingSystem = claimItemCategoryCodingSystem;
-    }
-    
-    
-    
-    public String getClmTmPrdctrSrvcCdngSrSlctd() {
-        return this.clmTmPrdctrSrvcCdngSrSlctd;
-    }
-    
-    public void setClmTmPrdctrSrvcCdngSrSlctd(String clmTmPrdctrSrvcCdngSrSlctd) {
-        this.clmTmPrdctrSrvcCdngSrSlctd = clmTmPrdctrSrvcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmPrdctrSrvcCdngCde() {
-        return this.clmTmPrdctrSrvcCdngCde;
-    }
-    
-    public void setClmTmPrdctrSrvcCdngCde(String clmTmPrdctrSrvcCdngCde) {
-        this.clmTmPrdctrSrvcCdngCde = clmTmPrdctrSrvcCdngCde;
-    }
-    
-    
-    
-    public String getClmTmPrdctrSrvcCdngVrsn() {
-        return this.clmTmPrdctrSrvcCdngVrsn;
-    }
-    
-    public void setClmTmPrdctrSrvcCdngVrsn(String clmTmPrdctrSrvcCdngVrsn) {
-        this.clmTmPrdctrSrvcCdngVrsn = clmTmPrdctrSrvcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmPrdctrSrvcCdngDsplay() {
-        return this.clmTmPrdctrSrvcCdngDsplay;
-    }
-    
-    public void setClmTmPrdctrSrvcCdngDsplay(String clmTmPrdctrSrvcCdngDsplay) {
-        this.clmTmPrdctrSrvcCdngDsplay = clmTmPrdctrSrvcCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmPrdctrSrvcCdngSstm() {
-        return this.clmTmPrdctrSrvcCdngSstm;
-    }
-    
-    public void setClmTmPrdctrSrvcCdngSstm(String clmTmPrdctrSrvcCdngSstm) {
-        this.clmTmPrdctrSrvcCdngSstm = clmTmPrdctrSrvcCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmMdfrCdngSrSlctd() {
-        return this.clmTmMdfrCdngSrSlctd;
-    }
-    
-    public void setClmTmMdfrCdngSrSlctd(String clmTmMdfrCdngSrSlctd) {
-        this.clmTmMdfrCdngSrSlctd = clmTmMdfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemModifierCodingCode() {
-        return this.claimItemModifierCodingCode;
-    }
-    
-    public void setClaimItemModifierCodingCode(String claimItemModifierCodingCode) {
-        this.claimItemModifierCodingCode = claimItemModifierCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemModifierCodingVersion() {
-        return this.claimItemModifierCodingVersion;
-    }
-    
-    public void setClaimItemModifierCodingVersion(String claimItemModifierCodingVersion) {
-        this.claimItemModifierCodingVersion = claimItemModifierCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemModifierCodingDisplay() {
-        return this.claimItemModifierCodingDisplay;
-    }
-    
-    public void setClaimItemModifierCodingDisplay(String claimItemModifierCodingDisplay) {
-        this.claimItemModifierCodingDisplay = claimItemModifierCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemModifierCodingSystem() {
-        return this.claimItemModifierCodingSystem;
-    }
-    
-    public void setClaimItemModifierCodingSystem(String claimItemModifierCodingSystem) {
-        this.claimItemModifierCodingSystem = claimItemModifierCodingSystem;
-    }
-    
-    
-    
-    public String getClmTmPrgrmCdCdngSrSlctd() {
-        return this.clmTmPrgrmCdCdngSrSlctd;
-    }
-    
-    public void setClmTmPrgrmCdCdngSrSlctd(String clmTmPrgrmCdCdngSrSlctd) {
-        this.clmTmPrgrmCdCdngSrSlctd = clmTmPrgrmCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemProgramCodeCodingCode() {
-        return this.claimItemProgramCodeCodingCode;
-    }
-    
-    public void setClaimItemProgramCodeCodingCode(String claimItemProgramCodeCodingCode) {
-        this.claimItemProgramCodeCodingCode = claimItemProgramCodeCodingCode;
-    }
-    
-    
-    
-    public String getClmTmPrgrmCdCdngVrsn() {
-        return this.clmTmPrgrmCdCdngVrsn;
-    }
-    
-    public void setClmTmPrgrmCdCdngVrsn(String clmTmPrgrmCdCdngVrsn) {
-        this.clmTmPrgrmCdCdngVrsn = clmTmPrgrmCdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmPrgrmCdCdngDsplay() {
-        return this.clmTmPrgrmCdCdngDsplay;
-    }
-    
-    public void setClmTmPrgrmCdCdngDsplay(String clmTmPrgrmCdCdngDsplay) {
-        this.clmTmPrgrmCdCdngDsplay = clmTmPrgrmCdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmPrgrmCdCdngSstm() {
-        return this.clmTmPrgrmCdCdngSstm;
-    }
-    
-    public void setClmTmPrgrmCdCdngSstm(String clmTmPrgrmCdCdngSstm) {
-        this.clmTmPrgrmCdCdngSstm = clmTmPrgrmCdCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemServicedDate() {
-        return this.claimItemServicedDate;
-    }
-    
-    public void setClaimItemServicedDate(String claimItemServicedDate) {
-        this.claimItemServicedDate = claimItemServicedDate;
-    }
-    
-    
-    
-    public String getClmTmSrvcdPrdCdngSrSlctd() {
-        return this.clmTmSrvcdPrdCdngSrSlctd;
-    }
-    
-    public void setClmTmSrvcdPrdCdngSrSlctd(String clmTmSrvcdPrdCdngSrSlctd) {
-        this.clmTmSrvcdPrdCdngSrSlctd = clmTmSrvcdPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmSrvcdPrdCdngCde() {
-        return this.clmTmSrvcdPrdCdngCde;
-    }
-    
-    public void setClmTmSrvcdPrdCdngCde(String clmTmSrvcdPrdCdngCde) {
-        this.clmTmSrvcdPrdCdngCde = clmTmSrvcdPrdCdngCde;
-    }
-    
-    
-    
-    public String getClmTmSrvcdPrdCdngVrsn() {
-        return this.clmTmSrvcdPrdCdngVrsn;
-    }
-    
-    public void setClmTmSrvcdPrdCdngVrsn(String clmTmSrvcdPrdCdngVrsn) {
-        this.clmTmSrvcdPrdCdngVrsn = clmTmSrvcdPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmSrvcdPrdCdngDsplay() {
-        return this.clmTmSrvcdPrdCdngDsplay;
-    }
-    
-    public void setClmTmSrvcdPrdCdngDsplay(String clmTmSrvcdPrdCdngDsplay) {
-        this.clmTmSrvcdPrdCdngDsplay = clmTmSrvcdPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmSrvcdPrdCdngSstm() {
-        return this.clmTmSrvcdPrdCdngSstm;
-    }
-    
-    public void setClmTmSrvcdPrdCdngSstm(String clmTmSrvcdPrdCdngSstm) {
-        this.clmTmSrvcdPrdCdngSstm = clmTmSrvcdPrdCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmLctncdblcptCdngSrSlctd() {
-        return this.clmTmLctncdblcptCdngSrSlctd;
-    }
-    
-    public void setClmTmLctncdblcptCdngSrSlctd(String clmTmLctncdblcptCdngSrSlctd) {
-        this.clmTmLctncdblcptCdngSrSlctd = clmTmLctncdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmLctncdblcptCdngCde() {
-        return this.clmTmLctncdblcptCdngCde;
-    }
-    
-    public void setClmTmLctncdblcptCdngCde(String clmTmLctncdblcptCdngCde) {
-        this.clmTmLctncdblcptCdngCde = clmTmLctncdblcptCdngCde;
-    }
-    
-    
-    
-    public String getClmTmLctncdblcptCdngVrsn() {
-        return this.clmTmLctncdblcptCdngVrsn;
-    }
-    
-    public void setClmTmLctncdblcptCdngVrsn(String clmTmLctncdblcptCdngVrsn) {
-        this.clmTmLctncdblcptCdngVrsn = clmTmLctncdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmLctncdblcptCdngDsplay() {
-        return this.clmTmLctncdblcptCdngDsplay;
-    }
-    
-    public void setClmTmLctncdblcptCdngDsplay(String clmTmLctncdblcptCdngDsplay) {
-        this.clmTmLctncdblcptCdngDsplay = clmTmLctncdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmLctncdblcptCdngSstm() {
-        return this.clmTmLctncdblcptCdngSstm;
-    }
-    
-    public void setClmTmLctncdblcptCdngSstm(String clmTmLctncdblcptCdngSstm) {
-        this.clmTmLctncdblcptCdngSstm = clmTmLctncdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmLctnddrssCdngSrSlctd() {
-        return this.clmTmLctnddrssCdngSrSlctd;
-    }
-    
-    public void setClmTmLctnddrssCdngSrSlctd(String clmTmLctnddrssCdngSrSlctd) {
-        this.clmTmLctnddrssCdngSrSlctd = clmTmLctnddrssCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmLctnddrssCdngCde() {
-        return this.clmTmLctnddrssCdngCde;
-    }
-    
-    public void setClmTmLctnddrssCdngCde(String clmTmLctnddrssCdngCde) {
-        this.clmTmLctnddrssCdngCde = clmTmLctnddrssCdngCde;
-    }
-    
-    
-    
-    public String getClmTmLctnddrssCdngVrsn() {
-        return this.clmTmLctnddrssCdngVrsn;
-    }
-    
-    public void setClmTmLctnddrssCdngVrsn(String clmTmLctnddrssCdngVrsn) {
-        this.clmTmLctnddrssCdngVrsn = clmTmLctnddrssCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmLctnddrssCdngDsplay() {
-        return this.clmTmLctnddrssCdngDsplay;
-    }
-    
-    public void setClmTmLctnddrssCdngDsplay(String clmTmLctnddrssCdngDsplay) {
-        this.clmTmLctnddrssCdngDsplay = clmTmLctnddrssCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmLctnddrssCdngSstm() {
-        return this.clmTmLctnddrssCdngSstm;
-    }
-    
-    public void setClmTmLctnddrssCdngSstm(String clmTmLctnddrssCdngSstm) {
-        this.clmTmLctnddrssCdngSstm = clmTmLctnddrssCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemLocationReference() {
-        return this.claimItemLocationReference;
-    }
-    
-    public void setClaimItemLocationReference(String claimItemLocationReference) {
-        this.claimItemLocationReference = claimItemLocationReference;
-    }
-    
-    
-    
-    public String getClaimItemQuantity() {
-        return this.claimItemQuantity;
-    }
-    
-    public void setClaimItemQuantity(String claimItemQuantity) {
-        this.claimItemQuantity = claimItemQuantity;
-    }
-    
-    
-    
-    public String getClmTmNtPrcCdngSrSlctd() {
-        return this.clmTmNtPrcCdngSrSlctd;
-    }
-    
-    public void setClmTmNtPrcCdngSrSlctd(String clmTmNtPrcCdngSrSlctd) {
-        this.clmTmNtPrcCdngSrSlctd = clmTmNtPrcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemUnitPriceCodingCode() {
-        return this.claimItemUnitPriceCodingCode;
-    }
-    
-    public void setClaimItemUnitPriceCodingCode(String claimItemUnitPriceCodingCode) {
-        this.claimItemUnitPriceCodingCode = claimItemUnitPriceCodingCode;
-    }
-    
-    
-    
-    public String getClmTmNtPrcCdngVrsn() {
-        return this.clmTmNtPrcCdngVrsn;
-    }
-    
-    public void setClmTmNtPrcCdngVrsn(String clmTmNtPrcCdngVrsn) {
-        this.clmTmNtPrcCdngVrsn = clmTmNtPrcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmNtPrcCdngDsplay() {
-        return this.clmTmNtPrcCdngDsplay;
-    }
-    
-    public void setClmTmNtPrcCdngDsplay(String clmTmNtPrcCdngDsplay) {
-        this.clmTmNtPrcCdngDsplay = clmTmNtPrcCdngDsplay;
-    }
-    
-    
-    
-    public String getClaimItemUnitPriceCodingSystem() {
-        return this.claimItemUnitPriceCodingSystem;
-    }
-    
-    public void setClaimItemUnitPriceCodingSystem(String claimItemUnitPriceCodingSystem) {
-        this.claimItemUnitPriceCodingSystem = claimItemUnitPriceCodingSystem;
-    }
-    
-    
-    
-    public String getClaimItemFactor() {
-        return this.claimItemFactor;
-    }
-    
-    public void setClaimItemFactor(String claimItemFactor) {
-        this.claimItemFactor = claimItemFactor;
-    }
-    
-    
-    
-    public String getClaimItemNetCodingUserSelected() {
-        return this.claimItemNetCodingUserSelected;
-    }
-    
-    public void setClaimItemNetCodingUserSelected(String claimItemNetCodingUserSelected) {
-        this.claimItemNetCodingUserSelected = claimItemNetCodingUserSelected;
-    }
-    
-    
-    
-    public String getClaimItemNetCodingCode() {
-        return this.claimItemNetCodingCode;
-    }
-    
-    public void setClaimItemNetCodingCode(String claimItemNetCodingCode) {
-        this.claimItemNetCodingCode = claimItemNetCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemNetCodingVersion() {
-        return this.claimItemNetCodingVersion;
-    }
-    
-    public void setClaimItemNetCodingVersion(String claimItemNetCodingVersion) {
-        this.claimItemNetCodingVersion = claimItemNetCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemNetCodingDisplay() {
-        return this.claimItemNetCodingDisplay;
-    }
-    
-    public void setClaimItemNetCodingDisplay(String claimItemNetCodingDisplay) {
-        this.claimItemNetCodingDisplay = claimItemNetCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemNetCodingSystem() {
-        return this.claimItemNetCodingSystem;
-    }
-    
-    public void setClaimItemNetCodingSystem(String claimItemNetCodingSystem) {
-        this.claimItemNetCodingSystem = claimItemNetCodingSystem;
-    }
-    
-    
-    
-    public String getClaimItemUdi() {
-        return this.claimItemUdi;
-    }
-    
-    public void setClaimItemUdi(String claimItemUdi) {
-        this.claimItemUdi = claimItemUdi;
-    }
-    
-    
-    
-    public String getClmTmBdStCdngSrSlctd() {
-        return this.clmTmBdStCdngSrSlctd;
-    }
-    
-    public void setClmTmBdStCdngSrSlctd(String clmTmBdStCdngSrSlctd) {
-        this.clmTmBdStCdngSrSlctd = clmTmBdStCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemBodySiteCodingCode() {
-        return this.claimItemBodySiteCodingCode;
-    }
-    
-    public void setClaimItemBodySiteCodingCode(String claimItemBodySiteCodingCode) {
-        this.claimItemBodySiteCodingCode = claimItemBodySiteCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemBodySiteCodingVersion() {
-        return this.claimItemBodySiteCodingVersion;
-    }
-    
-    public void setClaimItemBodySiteCodingVersion(String claimItemBodySiteCodingVersion) {
-        this.claimItemBodySiteCodingVersion = claimItemBodySiteCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemBodySiteCodingDisplay() {
-        return this.claimItemBodySiteCodingDisplay;
-    }
-    
-    public void setClaimItemBodySiteCodingDisplay(String claimItemBodySiteCodingDisplay) {
-        this.claimItemBodySiteCodingDisplay = claimItemBodySiteCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemBodySiteCodingSystem() {
-        return this.claimItemBodySiteCodingSystem;
-    }
-    
-    public void setClaimItemBodySiteCodingSystem(String claimItemBodySiteCodingSystem) {
-        this.claimItemBodySiteCodingSystem = claimItemBodySiteCodingSystem;
-    }
-    
-    
-    
-    public String getClmTmSbStCdngSrSlctd() {
-        return this.clmTmSbStCdngSrSlctd;
-    }
-    
-    public void setClmTmSbStCdngSrSlctd(String clmTmSbStCdngSrSlctd) {
-        this.clmTmSbStCdngSrSlctd = clmTmSbStCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemSubSiteCodingCode() {
-        return this.claimItemSubSiteCodingCode;
-    }
-    
-    public void setClaimItemSubSiteCodingCode(String claimItemSubSiteCodingCode) {
-        this.claimItemSubSiteCodingCode = claimItemSubSiteCodingCode;
-    }
-    
-    
-    
-    public String getClaimItemSubSiteCodingVersion() {
-        return this.claimItemSubSiteCodingVersion;
-    }
-    
-    public void setClaimItemSubSiteCodingVersion(String claimItemSubSiteCodingVersion) {
-        this.claimItemSubSiteCodingVersion = claimItemSubSiteCodingVersion;
-    }
-    
-    
-    
-    public String getClaimItemSubSiteCodingDisplay() {
-        return this.claimItemSubSiteCodingDisplay;
-    }
-    
-    public void setClaimItemSubSiteCodingDisplay(String claimItemSubSiteCodingDisplay) {
-        this.claimItemSubSiteCodingDisplay = claimItemSubSiteCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimItemSubSiteCodingSystem() {
-        return this.claimItemSubSiteCodingSystem;
-    }
-    
-    public void setClaimItemSubSiteCodingSystem(String claimItemSubSiteCodingSystem) {
-        this.claimItemSubSiteCodingSystem = claimItemSubSiteCodingSystem;
-    }
-    
-    
-    
-    public String getClaimItemEncounter() {
-        return this.claimItemEncounter;
-    }
-    
-    public void setClaimItemEncounter(String claimItemEncounter) {
-        this.claimItemEncounter = claimItemEncounter;
-    }
-    
-    
-    
-    public String getClaimItemDetail() {
-        return this.claimItemDetail;
-    }
-    
-    public void setClaimItemDetail(String claimItemDetail) {
-        this.claimItemDetail = claimItemDetail;
-    }
-    
-    
-    
-    public String getClaimItemDetailSequence() {
-        return this.claimItemDetailSequence;
-    }
-    
-    public void setClaimItemDetailSequence(String claimItemDetailSequence) {
-        this.claimItemDetailSequence = claimItemDetailSequence;
-    }
-    
-    
-    
-    public String getClmTmDtlRvnCdngSrSlctd() {
-        return this.clmTmDtlRvnCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlRvnCdngSrSlctd(String clmTmDtlRvnCdngSrSlctd) {
-        this.clmTmDtlRvnCdngSrSlctd = clmTmDtlRvnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlRvnCdngCde() {
-        return this.clmTmDtlRvnCdngCde;
-    }
-    
-    public void setClmTmDtlRvnCdngCde(String clmTmDtlRvnCdngCde) {
-        this.clmTmDtlRvnCdngCde = clmTmDtlRvnCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlRvnCdngVrsn() {
-        return this.clmTmDtlRvnCdngVrsn;
-    }
-    
-    public void setClmTmDtlRvnCdngVrsn(String clmTmDtlRvnCdngVrsn) {
-        this.clmTmDtlRvnCdngVrsn = clmTmDtlRvnCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlRvnCdngDsplay() {
-        return this.clmTmDtlRvnCdngDsplay;
-    }
-    
-    public void setClmTmDtlRvnCdngDsplay(String clmTmDtlRvnCdngDsplay) {
-        this.clmTmDtlRvnCdngDsplay = clmTmDtlRvnCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlRvnCdngSstm() {
-        return this.clmTmDtlRvnCdngSstm;
-    }
-    
-    public void setClmTmDtlRvnCdngSstm(String clmTmDtlRvnCdngSstm) {
-        this.clmTmDtlRvnCdngSstm = clmTmDtlRvnCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlCtgrCdngSrSlctd() {
-        return this.clmTmDtlCtgrCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlCtgrCdngSrSlctd(String clmTmDtlCtgrCdngSrSlctd) {
-        this.clmTmDtlCtgrCdngSrSlctd = clmTmDtlCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlCtgrCdngCde() {
-        return this.clmTmDtlCtgrCdngCde;
-    }
-    
-    public void setClmTmDtlCtgrCdngCde(String clmTmDtlCtgrCdngCde) {
-        this.clmTmDtlCtgrCdngCde = clmTmDtlCtgrCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlCtgrCdngVrsn() {
-        return this.clmTmDtlCtgrCdngVrsn;
-    }
-    
-    public void setClmTmDtlCtgrCdngVrsn(String clmTmDtlCtgrCdngVrsn) {
-        this.clmTmDtlCtgrCdngVrsn = clmTmDtlCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlCtgrCdngDsplay() {
-        return this.clmTmDtlCtgrCdngDsplay;
-    }
-    
-    public void setClmTmDtlCtgrCdngDsplay(String clmTmDtlCtgrCdngDsplay) {
-        this.clmTmDtlCtgrCdngDsplay = clmTmDtlCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlCtgrCdngSstm() {
-        return this.clmTmDtlCtgrCdngSstm;
-    }
-    
-    public void setClmTmDtlCtgrCdngSstm(String clmTmDtlCtgrCdngSstm) {
-        this.clmTmDtlCtgrCdngSstm = clmTmDtlCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlPrdctrSrvcCdngSrSlctd() {
-        return this.clmTmDtlPrdctrSrvcCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlPrdctrSrvcCdngSrSlctd(String clmTmDtlPrdctrSrvcCdngSrSlctd) {
-        this.clmTmDtlPrdctrSrvcCdngSrSlctd = clmTmDtlPrdctrSrvcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlPrdctrSrvcCdngCde() {
-        return this.clmTmDtlPrdctrSrvcCdngCde;
-    }
-    
-    public void setClmTmDtlPrdctrSrvcCdngCde(String clmTmDtlPrdctrSrvcCdngCde) {
-        this.clmTmDtlPrdctrSrvcCdngCde = clmTmDtlPrdctrSrvcCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlPrdctrSrvcCdngVrsn() {
-        return this.clmTmDtlPrdctrSrvcCdngVrsn;
-    }
-    
-    public void setClmTmDtlPrdctrSrvcCdngVrsn(String clmTmDtlPrdctrSrvcCdngVrsn) {
-        this.clmTmDtlPrdctrSrvcCdngVrsn = clmTmDtlPrdctrSrvcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlPrdctrSrvcCdngDsplay() {
-        return this.clmTmDtlPrdctrSrvcCdngDsplay;
-    }
-    
-    public void setClmTmDtlPrdctrSrvcCdngDsplay(String clmTmDtlPrdctrSrvcCdngDsplay) {
-        this.clmTmDtlPrdctrSrvcCdngDsplay = clmTmDtlPrdctrSrvcCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlPrdctrSrvcCdngSstm() {
-        return this.clmTmDtlPrdctrSrvcCdngSstm;
-    }
-    
-    public void setClmTmDtlPrdctrSrvcCdngSstm(String clmTmDtlPrdctrSrvcCdngSstm) {
-        this.clmTmDtlPrdctrSrvcCdngSstm = clmTmDtlPrdctrSrvcCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlMdfrCdngSrSlctd() {
-        return this.clmTmDtlMdfrCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlMdfrCdngSrSlctd(String clmTmDtlMdfrCdngSrSlctd) {
-        this.clmTmDtlMdfrCdngSrSlctd = clmTmDtlMdfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlMdfrCdngCde() {
-        return this.clmTmDtlMdfrCdngCde;
-    }
-    
-    public void setClmTmDtlMdfrCdngCde(String clmTmDtlMdfrCdngCde) {
-        this.clmTmDtlMdfrCdngCde = clmTmDtlMdfrCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlMdfrCdngVrsn() {
-        return this.clmTmDtlMdfrCdngVrsn;
-    }
-    
-    public void setClmTmDtlMdfrCdngVrsn(String clmTmDtlMdfrCdngVrsn) {
-        this.clmTmDtlMdfrCdngVrsn = clmTmDtlMdfrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlMdfrCdngDsplay() {
-        return this.clmTmDtlMdfrCdngDsplay;
-    }
-    
-    public void setClmTmDtlMdfrCdngDsplay(String clmTmDtlMdfrCdngDsplay) {
-        this.clmTmDtlMdfrCdngDsplay = clmTmDtlMdfrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlMdfrCdngSstm() {
-        return this.clmTmDtlMdfrCdngSstm;
-    }
-    
-    public void setClmTmDtlMdfrCdngSstm(String clmTmDtlMdfrCdngSstm) {
-        this.clmTmDtlMdfrCdngSstm = clmTmDtlMdfrCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlPrgrmCdCdngSrSlctd() {
-        return this.clmTmDtlPrgrmCdCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlPrgrmCdCdngSrSlctd(String clmTmDtlPrgrmCdCdngSrSlctd) {
-        this.clmTmDtlPrgrmCdCdngSrSlctd = clmTmDtlPrgrmCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlPrgrmCdCdngCde() {
-        return this.clmTmDtlPrgrmCdCdngCde;
-    }
-    
-    public void setClmTmDtlPrgrmCdCdngCde(String clmTmDtlPrgrmCdCdngCde) {
-        this.clmTmDtlPrgrmCdCdngCde = clmTmDtlPrgrmCdCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlPrgrmCdCdngVrsn() {
-        return this.clmTmDtlPrgrmCdCdngVrsn;
-    }
-    
-    public void setClmTmDtlPrgrmCdCdngVrsn(String clmTmDtlPrgrmCdCdngVrsn) {
-        this.clmTmDtlPrgrmCdCdngVrsn = clmTmDtlPrgrmCdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlPrgrmCdCdngDsplay() {
-        return this.clmTmDtlPrgrmCdCdngDsplay;
-    }
-    
-    public void setClmTmDtlPrgrmCdCdngDsplay(String clmTmDtlPrgrmCdCdngDsplay) {
-        this.clmTmDtlPrgrmCdCdngDsplay = clmTmDtlPrgrmCdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlPrgrmCdCdngSstm() {
-        return this.clmTmDtlPrgrmCdCdngSstm;
-    }
-    
-    public void setClmTmDtlPrgrmCdCdngSstm(String clmTmDtlPrgrmCdCdngSstm) {
-        this.clmTmDtlPrgrmCdCdngSstm = clmTmDtlPrgrmCdCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemDetailQuantity() {
-        return this.claimItemDetailQuantity;
-    }
-    
-    public void setClaimItemDetailQuantity(String claimItemDetailQuantity) {
-        this.claimItemDetailQuantity = claimItemDetailQuantity;
-    }
-    
-    
-    
-    public String getClmTmDtlNtPrcCdngSrSlctd() {
-        return this.clmTmDtlNtPrcCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlNtPrcCdngSrSlctd(String clmTmDtlNtPrcCdngSrSlctd) {
-        this.clmTmDtlNtPrcCdngSrSlctd = clmTmDtlNtPrcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlNtPrcCdngCde() {
-        return this.clmTmDtlNtPrcCdngCde;
-    }
-    
-    public void setClmTmDtlNtPrcCdngCde(String clmTmDtlNtPrcCdngCde) {
-        this.clmTmDtlNtPrcCdngCde = clmTmDtlNtPrcCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlNtPrcCdngVrsn() {
-        return this.clmTmDtlNtPrcCdngVrsn;
-    }
-    
-    public void setClmTmDtlNtPrcCdngVrsn(String clmTmDtlNtPrcCdngVrsn) {
-        this.clmTmDtlNtPrcCdngVrsn = clmTmDtlNtPrcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlNtPrcCdngDsplay() {
-        return this.clmTmDtlNtPrcCdngDsplay;
-    }
-    
-    public void setClmTmDtlNtPrcCdngDsplay(String clmTmDtlNtPrcCdngDsplay) {
-        this.clmTmDtlNtPrcCdngDsplay = clmTmDtlNtPrcCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlNtPrcCdngSstm() {
-        return this.clmTmDtlNtPrcCdngSstm;
-    }
-    
-    public void setClmTmDtlNtPrcCdngSstm(String clmTmDtlNtPrcCdngSstm) {
-        this.clmTmDtlNtPrcCdngSstm = clmTmDtlNtPrcCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemDetailFactor() {
-        return this.claimItemDetailFactor;
-    }
-    
-    public void setClaimItemDetailFactor(String claimItemDetailFactor) {
-        this.claimItemDetailFactor = claimItemDetailFactor;
-    }
-    
-    
-    
-    public String getClmTmDtlNtCdngSrSlctd() {
-        return this.clmTmDtlNtCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlNtCdngSrSlctd(String clmTmDtlNtCdngSrSlctd) {
-        this.clmTmDtlNtCdngSrSlctd = clmTmDtlNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClaimItemDetailNetCodingCode() {
-        return this.claimItemDetailNetCodingCode;
-    }
-    
-    public void setClaimItemDetailNetCodingCode(String claimItemDetailNetCodingCode) {
-        this.claimItemDetailNetCodingCode = claimItemDetailNetCodingCode;
-    }
-    
-    
-    
-    public String getClmTmDtlNtCdngVrsn() {
-        return this.clmTmDtlNtCdngVrsn;
-    }
-    
-    public void setClmTmDtlNtCdngVrsn(String clmTmDtlNtCdngVrsn) {
-        this.clmTmDtlNtCdngVrsn = clmTmDtlNtCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlNtCdngDsplay() {
-        return this.clmTmDtlNtCdngDsplay;
-    }
-    
-    public void setClmTmDtlNtCdngDsplay(String clmTmDtlNtCdngDsplay) {
-        this.clmTmDtlNtCdngDsplay = clmTmDtlNtCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlNtCdngSstm() {
-        return this.clmTmDtlNtCdngSstm;
-    }
-    
-    public void setClmTmDtlNtCdngSstm(String clmTmDtlNtCdngSstm) {
-        this.clmTmDtlNtCdngSstm = clmTmDtlNtCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemDetailUdi() {
-        return this.claimItemDetailUdi;
-    }
-    
-    public void setClaimItemDetailUdi(String claimItemDetailUdi) {
-        this.claimItemDetailUdi = claimItemDetailUdi;
-    }
-    
-    
-    
-    public String getClaimItemDetailSubDetail() {
-        return this.claimItemDetailSubDetail;
-    }
-    
-    public void setClaimItemDetailSubDetail(String claimItemDetailSubDetail) {
-        this.claimItemDetailSubDetail = claimItemDetailSubDetail;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlSqnce() {
-        return this.clmTmDtlSbDtlSqnce;
-    }
-    
-    public void setClmTmDtlSbDtlSqnce(String clmTmDtlSbDtlSqnce) {
-        this.clmTmDtlSbDtlSqnce = clmTmDtlSbDtlSqnce;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlRvnCdngSrSlctd() {
-        return this.clmTmDtlSbDtlRvnCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlRvnCdngSrSlctd(String clmTmDtlSbDtlRvnCdngSrSlctd) {
-        this.clmTmDtlSbDtlRvnCdngSrSlctd = clmTmDtlSbDtlRvnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlRvnCdngCde() {
-        return this.clmTmDtlSbDtlRvnCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlRvnCdngCde(String clmTmDtlSbDtlRvnCdngCde) {
-        this.clmTmDtlSbDtlRvnCdngCde = clmTmDtlSbDtlRvnCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlRvnCdngVrsn() {
-        return this.clmTmDtlSbDtlRvnCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlRvnCdngVrsn(String clmTmDtlSbDtlRvnCdngVrsn) {
-        this.clmTmDtlSbDtlRvnCdngVrsn = clmTmDtlSbDtlRvnCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlRvnCdngDsplay() {
-        return this.clmTmDtlSbDtlRvnCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlRvnCdngDsplay(String clmTmDtlSbDtlRvnCdngDsplay) {
-        this.clmTmDtlSbDtlRvnCdngDsplay = clmTmDtlSbDtlRvnCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlRvnCdngSstm() {
-        return this.clmTmDtlSbDtlRvnCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlRvnCdngSstm(String clmTmDtlSbDtlRvnCdngSstm) {
-        this.clmTmDtlSbDtlRvnCdngSstm = clmTmDtlSbDtlRvnCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlCtgrCdngSrSlctd() {
-        return this.clmTmDtlSbDtlCtgrCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlCtgrCdngSrSlctd(String clmTmDtlSbDtlCtgrCdngSrSlctd) {
-        this.clmTmDtlSbDtlCtgrCdngSrSlctd = clmTmDtlSbDtlCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlCtgrCdngCde() {
-        return this.clmTmDtlSbDtlCtgrCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlCtgrCdngCde(String clmTmDtlSbDtlCtgrCdngCde) {
-        this.clmTmDtlSbDtlCtgrCdngCde = clmTmDtlSbDtlCtgrCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlCtgrCdngVrsn() {
-        return this.clmTmDtlSbDtlCtgrCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlCtgrCdngVrsn(String clmTmDtlSbDtlCtgrCdngVrsn) {
-        this.clmTmDtlSbDtlCtgrCdngVrsn = clmTmDtlSbDtlCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlCtgrCdngDsplay() {
-        return this.clmTmDtlSbDtlCtgrCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlCtgrCdngDsplay(String clmTmDtlSbDtlCtgrCdngDsplay) {
-        this.clmTmDtlSbDtlCtgrCdngDsplay = clmTmDtlSbDtlCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlCtgrCdngSstm() {
-        return this.clmTmDtlSbDtlCtgrCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlCtgrCdngSstm(String clmTmDtlSbDtlCtgrCdngSstm) {
-        this.clmTmDtlSbDtlCtgrCdngSstm = clmTmDtlSbDtlCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrdctrSrvcCdngSrSlctd() {
-        return this.clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlPrdctrSrvcCdngSrSlctd(String clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd) {
-        this.clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd = clmTmDtlSbDtlPrdctrSrvcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrdctrSrvcCdngCde() {
-        return this.clmTmDtlSbDtlPrdctrSrvcCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlPrdctrSrvcCdngCde(String clmTmDtlSbDtlPrdctrSrvcCdngCde) {
-        this.clmTmDtlSbDtlPrdctrSrvcCdngCde = clmTmDtlSbDtlPrdctrSrvcCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrdctrSrvcCdngVrsn() {
-        return this.clmTmDtlSbDtlPrdctrSrvcCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlPrdctrSrvcCdngVrsn(String clmTmDtlSbDtlPrdctrSrvcCdngVrsn) {
-        this.clmTmDtlSbDtlPrdctrSrvcCdngVrsn = clmTmDtlSbDtlPrdctrSrvcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrdctrSrvcCdngDsplay() {
-        return this.clmTmDtlSbDtlPrdctrSrvcCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlPrdctrSrvcCdngDsplay(String clmTmDtlSbDtlPrdctrSrvcCdngDsplay) {
-        this.clmTmDtlSbDtlPrdctrSrvcCdngDsplay = clmTmDtlSbDtlPrdctrSrvcCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrdctrSrvcCdngSstm() {
-        return this.clmTmDtlSbDtlPrdctrSrvcCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlPrdctrSrvcCdngSstm(String clmTmDtlSbDtlPrdctrSrvcCdngSstm) {
-        this.clmTmDtlSbDtlPrdctrSrvcCdngSstm = clmTmDtlSbDtlPrdctrSrvcCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlMdfrCdngSrSlctd() {
-        return this.clmTmDtlSbDtlMdfrCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlMdfrCdngSrSlctd(String clmTmDtlSbDtlMdfrCdngSrSlctd) {
-        this.clmTmDtlSbDtlMdfrCdngSrSlctd = clmTmDtlSbDtlMdfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlMdfrCdngCde() {
-        return this.clmTmDtlSbDtlMdfrCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlMdfrCdngCde(String clmTmDtlSbDtlMdfrCdngCde) {
-        this.clmTmDtlSbDtlMdfrCdngCde = clmTmDtlSbDtlMdfrCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlMdfrCdngVrsn() {
-        return this.clmTmDtlSbDtlMdfrCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlMdfrCdngVrsn(String clmTmDtlSbDtlMdfrCdngVrsn) {
-        this.clmTmDtlSbDtlMdfrCdngVrsn = clmTmDtlSbDtlMdfrCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlMdfrCdngDsplay() {
-        return this.clmTmDtlSbDtlMdfrCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlMdfrCdngDsplay(String clmTmDtlSbDtlMdfrCdngDsplay) {
-        this.clmTmDtlSbDtlMdfrCdngDsplay = clmTmDtlSbDtlMdfrCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlMdfrCdngSstm() {
-        return this.clmTmDtlSbDtlMdfrCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlMdfrCdngSstm(String clmTmDtlSbDtlMdfrCdngSstm) {
-        this.clmTmDtlSbDtlMdfrCdngSstm = clmTmDtlSbDtlMdfrCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrgrmCdCdngSrSlctd() {
-        return this.clmTmDtlSbDtlPrgrmCdCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlPrgrmCdCdngSrSlctd(String clmTmDtlSbDtlPrgrmCdCdngSrSlctd) {
-        this.clmTmDtlSbDtlPrgrmCdCdngSrSlctd = clmTmDtlSbDtlPrgrmCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrgrmCdCdngCde() {
-        return this.clmTmDtlSbDtlPrgrmCdCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlPrgrmCdCdngCde(String clmTmDtlSbDtlPrgrmCdCdngCde) {
-        this.clmTmDtlSbDtlPrgrmCdCdngCde = clmTmDtlSbDtlPrgrmCdCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrgrmCdCdngVrsn() {
-        return this.clmTmDtlSbDtlPrgrmCdCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlPrgrmCdCdngVrsn(String clmTmDtlSbDtlPrgrmCdCdngVrsn) {
-        this.clmTmDtlSbDtlPrgrmCdCdngVrsn = clmTmDtlSbDtlPrgrmCdCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrgrmCdCdngDsplay() {
-        return this.clmTmDtlSbDtlPrgrmCdCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlPrgrmCdCdngDsplay(String clmTmDtlSbDtlPrgrmCdCdngDsplay) {
-        this.clmTmDtlSbDtlPrgrmCdCdngDsplay = clmTmDtlSbDtlPrgrmCdCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlPrgrmCdCdngSstm() {
-        return this.clmTmDtlSbDtlPrgrmCdCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlPrgrmCdCdngSstm(String clmTmDtlSbDtlPrgrmCdCdngSstm) {
-        this.clmTmDtlSbDtlPrgrmCdCdngSstm = clmTmDtlSbDtlPrgrmCdCdngSstm;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlQntty() {
-        return this.clmTmDtlSbDtlQntty;
-    }
-    
-    public void setClmTmDtlSbDtlQntty(String clmTmDtlSbDtlQntty) {
-        this.clmTmDtlSbDtlQntty = clmTmDtlSbDtlQntty;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtPrcCdngSrSlctd() {
-        return this.clmTmDtlSbDtlNtPrcCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlNtPrcCdngSrSlctd(String clmTmDtlSbDtlNtPrcCdngSrSlctd) {
-        this.clmTmDtlSbDtlNtPrcCdngSrSlctd = clmTmDtlSbDtlNtPrcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtPrcCdngCde() {
-        return this.clmTmDtlSbDtlNtPrcCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlNtPrcCdngCde(String clmTmDtlSbDtlNtPrcCdngCde) {
-        this.clmTmDtlSbDtlNtPrcCdngCde = clmTmDtlSbDtlNtPrcCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtPrcCdngVrsn() {
-        return this.clmTmDtlSbDtlNtPrcCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlNtPrcCdngVrsn(String clmTmDtlSbDtlNtPrcCdngVrsn) {
-        this.clmTmDtlSbDtlNtPrcCdngVrsn = clmTmDtlSbDtlNtPrcCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtPrcCdngDsplay() {
-        return this.clmTmDtlSbDtlNtPrcCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlNtPrcCdngDsplay(String clmTmDtlSbDtlNtPrcCdngDsplay) {
-        this.clmTmDtlSbDtlNtPrcCdngDsplay = clmTmDtlSbDtlNtPrcCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtPrcCdngSstm() {
-        return this.clmTmDtlSbDtlNtPrcCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlNtPrcCdngSstm(String clmTmDtlSbDtlNtPrcCdngSstm) {
-        this.clmTmDtlSbDtlNtPrcCdngSstm = clmTmDtlSbDtlNtPrcCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemDetailSubDetailFactor() {
-        return this.claimItemDetailSubDetailFactor;
-    }
-    
-    public void setClaimItemDetailSubDetailFactor(String claimItemDetailSubDetailFactor) {
-        this.claimItemDetailSubDetailFactor = claimItemDetailSubDetailFactor;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtCdngSrSlctd() {
-        return this.clmTmDtlSbDtlNtCdngSrSlctd;
-    }
-    
-    public void setClmTmDtlSbDtlNtCdngSrSlctd(String clmTmDtlSbDtlNtCdngSrSlctd) {
-        this.clmTmDtlSbDtlNtCdngSrSlctd = clmTmDtlSbDtlNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtCdngCde() {
-        return this.clmTmDtlSbDtlNtCdngCde;
-    }
-    
-    public void setClmTmDtlSbDtlNtCdngCde(String clmTmDtlSbDtlNtCdngCde) {
-        this.clmTmDtlSbDtlNtCdngCde = clmTmDtlSbDtlNtCdngCde;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtCdngVrsn() {
-        return this.clmTmDtlSbDtlNtCdngVrsn;
-    }
-    
-    public void setClmTmDtlSbDtlNtCdngVrsn(String clmTmDtlSbDtlNtCdngVrsn) {
-        this.clmTmDtlSbDtlNtCdngVrsn = clmTmDtlSbDtlNtCdngVrsn;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtCdngDsplay() {
-        return this.clmTmDtlSbDtlNtCdngDsplay;
-    }
-    
-    public void setClmTmDtlSbDtlNtCdngDsplay(String clmTmDtlSbDtlNtCdngDsplay) {
-        this.clmTmDtlSbDtlNtCdngDsplay = clmTmDtlSbDtlNtCdngDsplay;
-    }
-    
-    
-    
-    public String getClmTmDtlSbDtlNtCdngSstm() {
-        return this.clmTmDtlSbDtlNtCdngSstm;
-    }
-    
-    public void setClmTmDtlSbDtlNtCdngSstm(String clmTmDtlSbDtlNtCdngSstm) {
-        this.clmTmDtlSbDtlNtCdngSstm = clmTmDtlSbDtlNtCdngSstm;
-    }
-    
-    
-    
-    public String getClaimItemDetailSubDetailUdi() {
-        return this.claimItemDetailSubDetailUdi;
-    }
-    
-    public void setClaimItemDetailSubDetailUdi(String claimItemDetailSubDetailUdi) {
-        this.claimItemDetailSubDetailUdi = claimItemDetailSubDetailUdi;
-    }
-    
-    
-    
-    public String getClaimTotalCodingUserSelected() {
-        return this.claimTotalCodingUserSelected;
-    }
-    
-    public void setClaimTotalCodingUserSelected(String claimTotalCodingUserSelected) {
-        this.claimTotalCodingUserSelected = claimTotalCodingUserSelected;
-    }
-    
-    
-    
-    public String getClaimTotalCodingCode() {
-        return this.claimTotalCodingCode;
-    }
-    
-    public void setClaimTotalCodingCode(String claimTotalCodingCode) {
-        this.claimTotalCodingCode = claimTotalCodingCode;
-    }
-    
-    
-    
-    public String getClaimTotalCodingVersion() {
-        return this.claimTotalCodingVersion;
-    }
-    
-    public void setClaimTotalCodingVersion(String claimTotalCodingVersion) {
-        this.claimTotalCodingVersion = claimTotalCodingVersion;
-    }
-    
-    
-    
-    public String getClaimTotalCodingDisplay() {
-        return this.claimTotalCodingDisplay;
-    }
-    
-    public void setClaimTotalCodingDisplay(String claimTotalCodingDisplay) {
-        this.claimTotalCodingDisplay = claimTotalCodingDisplay;
-    }
-    
-    
-    
-    public String getClaimTotalCodingSystem() {
-        return this.claimTotalCodingSystem;
-    }
-    
-    public void setClaimTotalCodingSystem(String claimTotalCodingSystem) {
-        this.claimTotalCodingSystem = claimTotalCodingSystem;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getClaimIdentifierIdentifierUse()
+    {
+        return this.claimIdentifierIdentifierUse;
+    }
+    
+    public void setClaimIdentifierIdentifierUse
+        (String claimIdentifierIdentifierUse) 
+        {
+      this.claimIdentifierIdentifierUse = claimIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcCSstm()
+    {
+        return this.clmDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setClmDntfrDntfrTpCcCSstm
+        (String clmDntfrDntfrTpCcCSstm) 
+        {
+      this.clmDntfrDntfrTpCcCSstm = clmDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcCVrsn()
+    {
+        return this.clmDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setClmDntfrDntfrTpCcCVrsn
+        (String clmDntfrDntfrTpCcCVrsn) 
+        {
+      this.clmDntfrDntfrTpCcCVrsn = clmDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcCCde()
+    {
+        return this.clmDntfrDntfrTpCcCCde;
+    }
+    
+    public void setClmDntfrDntfrTpCcCCde
+        (String clmDntfrDntfrTpCcCCde) 
+        {
+      this.clmDntfrDntfrTpCcCCde = clmDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcCDsplay()
+    {
+        return this.clmDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setClmDntfrDntfrTpCcCDsplay
+        (String clmDntfrDntfrTpCcCDsplay) 
+        {
+      this.clmDntfrDntfrTpCcCDsplay = clmDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.clmDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setClmDntfrDntfrTpCcCSrSlctd
+        (String clmDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.clmDntfrDntfrTpCcCSrSlctd = clmDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getClmDntfrDntfrTpCcTxt()
+    {
+        return this.clmDntfrDntfrTpCcTxt;
+    }
+    
+    public void setClmDntfrDntfrTpCcTxt
+        (String clmDntfrDntfrTpCcTxt) 
+        {
+      this.clmDntfrDntfrTpCcTxt = clmDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getClmDntfrDntfrPrdPrdStrt()
+    {
+        return this.clmDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setClmDntfrDntfrPrdPrdStrt
+        (String clmDntfrDntfrPrdPrdStrt) 
+        {
+      this.clmDntfrDntfrPrdPrdStrt = clmDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getClmDntfrDntfrPrdPrdNd()
+    {
+        return this.clmDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setClmDntfrDntfrPrdPrdNd
+        (String clmDntfrDntfrPrdPrdNd) 
+        {
+      this.clmDntfrDntfrPrdPrdNd = clmDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getClmDntfrDntfrSsgnr()
+    {
+        return this.clmDntfrDntfrSsgnr;
+    }
+    
+    public void setClmDntfrDntfrSsgnr
+        (String clmDntfrDntfrSsgnr) 
+        {
+      this.clmDntfrDntfrSsgnr = clmDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getClaimIdentifierIdentifierValue()
+    {
+        return this.claimIdentifierIdentifierValue;
+    }
+    
+    public void setClaimIdentifierIdentifierValue
+        (String claimIdentifierIdentifierValue) 
+        {
+      this.claimIdentifierIdentifierValue = claimIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getClaimIdentifierIdentifierSystem()
+    {
+        return this.claimIdentifierIdentifierSystem;
+    }
+    
+    public void setClaimIdentifierIdentifierSystem
+        (String claimIdentifierIdentifierSystem) 
+        {
+      this.claimIdentifierIdentifierSystem = claimIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getClaimStatusCode()
+    {
+        return this.claimStatusCode;
+    }
+    
+    public void setClaimStatusCode
+        (String claimStatusCode) 
+        {
+      this.claimStatusCode = claimStatusCode;
+}
+    public 
+    String 
+    getClaimTypeCcCodingCSystem()
+    {
+        return this.claimTypeCcCodingCSystem;
+    }
+    
+    public void setClaimTypeCcCodingCSystem
+        (String claimTypeCcCodingCSystem) 
+        {
+      this.claimTypeCcCodingCSystem = claimTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getClaimTypeCcCodingCVersion()
+    {
+        return this.claimTypeCcCodingCVersion;
+    }
+    
+    public void setClaimTypeCcCodingCVersion
+        (String claimTypeCcCodingCVersion) 
+        {
+      this.claimTypeCcCodingCVersion = claimTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getClaimTypeCcCodingCCode()
+    {
+        return this.claimTypeCcCodingCCode;
+    }
+    
+    public void setClaimTypeCcCodingCCode
+        (String claimTypeCcCodingCCode) 
+        {
+      this.claimTypeCcCodingCCode = claimTypeCcCodingCCode;
+}
+    public 
+    String 
+    getClaimTypeCcCodingCDisplay()
+    {
+        return this.claimTypeCcCodingCDisplay;
+    }
+    
+    public void setClaimTypeCcCodingCDisplay
+        (String claimTypeCcCodingCDisplay) 
+        {
+      this.claimTypeCcCodingCDisplay = claimTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getClmTpCcCdngCSrSlctd()
+    {
+        return this.clmTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmTpCcCdngCSrSlctd
+        (String clmTpCcCdngCSrSlctd) 
+        {
+      this.clmTpCcCdngCSrSlctd = clmTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimTypeCcText()
+    {
+        return this.claimTypeCcText;
+    }
+    
+    public void setClaimTypeCcText
+        (String claimTypeCcText) 
+        {
+      this.claimTypeCcText = claimTypeCcText;
+}
+    public 
+    String 
+    getClaimSubTypeCcCodingCSystem()
+    {
+        return this.claimSubTypeCcCodingCSystem;
+    }
+    
+    public void setClaimSubTypeCcCodingCSystem
+        (String claimSubTypeCcCodingCSystem) 
+        {
+      this.claimSubTypeCcCodingCSystem = claimSubTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getClaimSubTypeCcCodingCVersion()
+    {
+        return this.claimSubTypeCcCodingCVersion;
+    }
+    
+    public void setClaimSubTypeCcCodingCVersion
+        (String claimSubTypeCcCodingCVersion) 
+        {
+      this.claimSubTypeCcCodingCVersion = claimSubTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getClaimSubTypeCcCodingCCode()
+    {
+        return this.claimSubTypeCcCodingCCode;
+    }
+    
+    public void setClaimSubTypeCcCodingCCode
+        (String claimSubTypeCcCodingCCode) 
+        {
+      this.claimSubTypeCcCodingCCode = claimSubTypeCcCodingCCode;
+}
+    public 
+    String 
+    getClaimSubTypeCcCodingCDisplay()
+    {
+        return this.claimSubTypeCcCodingCDisplay;
+    }
+    
+    public void setClaimSubTypeCcCodingCDisplay
+        (String claimSubTypeCcCodingCDisplay) 
+        {
+      this.claimSubTypeCcCodingCDisplay = claimSubTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getClmSbTpCcCdngCSrSlctd()
+    {
+        return this.clmSbTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmSbTpCcCdngCSrSlctd
+        (String clmSbTpCcCdngCSrSlctd) 
+        {
+      this.clmSbTpCcCdngCSrSlctd = clmSbTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimSubTypeCcText()
+    {
+        return this.claimSubTypeCcText;
+    }
+    
+    public void setClaimSubTypeCcText
+        (String claimSubTypeCcText) 
+        {
+      this.claimSubTypeCcText = claimSubTypeCcText;
+}
+    public 
+    String 
+    getClaimUseCode()
+    {
+        return this.claimUseCode;
+    }
+    
+    public void setClaimUseCode
+        (String claimUseCode) 
+        {
+      this.claimUseCode = claimUseCode;
+}
+    public 
+    String 
+    getClaimPntReference()
+    {
+        return this.claimPntReference;
+    }
+    
+    public void setClaimPntReference
+        (String claimPntReference) 
+        {
+      this.claimPntReference = claimPntReference;
+}
+    public 
+    String 
+    getClaimBillablePeriodPeriodStart()
+    {
+        return this.claimBillablePeriodPeriodStart;
+    }
+    
+    public void setClaimBillablePeriodPeriodStart
+        (String claimBillablePeriodPeriodStart) 
+        {
+      this.claimBillablePeriodPeriodStart = claimBillablePeriodPeriodStart;
+}
+    public 
+    String 
+    getClaimBillablePeriodPeriodEnd()
+    {
+        return this.claimBillablePeriodPeriodEnd;
+    }
+    
+    public void setClaimBillablePeriodPeriodEnd
+        (String claimBillablePeriodPeriodEnd) 
+        {
+      this.claimBillablePeriodPeriodEnd = claimBillablePeriodPeriodEnd;
+}
+    public 
+    String 
+    getClaimCreatedDateTime()
+    {
+        return this.claimCreatedDateTime;
+    }
+    
+    public void setClaimCreatedDateTime
+        (String claimCreatedDateTime) 
+        {
+      this.claimCreatedDateTime = claimCreatedDateTime;
+}
+    public 
+    String 
+    getClaimEntererReference()
+    {
+        return this.claimEntererReference;
+    }
+    
+    public void setClaimEntererReference
+        (String claimEntererReference) 
+        {
+      this.claimEntererReference = claimEntererReference;
+}
+    public 
+    String 
+    getClaimInsurerReference()
+    {
+        return this.claimInsurerReference;
+    }
+    
+    public void setClaimInsurerReference
+        (String claimInsurerReference) 
+        {
+      this.claimInsurerReference = claimInsurerReference;
+}
+    public 
+    String 
+    getClaimProviderReference()
+    {
+        return this.claimProviderReference;
+    }
+    
+    public void setClaimProviderReference
+        (String claimProviderReference) 
+        {
+      this.claimProviderReference = claimProviderReference;
+}
+    public 
+    String 
+    getClaimPriorityCcCodingCSystem()
+    {
+        return this.claimPriorityCcCodingCSystem;
+    }
+    
+    public void setClaimPriorityCcCodingCSystem
+        (String claimPriorityCcCodingCSystem) 
+        {
+      this.claimPriorityCcCodingCSystem = claimPriorityCcCodingCSystem;
+}
+    public 
+    String 
+    getClaimPriorityCcCodingCVersion()
+    {
+        return this.claimPriorityCcCodingCVersion;
+    }
+    
+    public void setClaimPriorityCcCodingCVersion
+        (String claimPriorityCcCodingCVersion) 
+        {
+      this.claimPriorityCcCodingCVersion = claimPriorityCcCodingCVersion;
+}
+    public 
+    String 
+    getClaimPriorityCcCodingCCode()
+    {
+        return this.claimPriorityCcCodingCCode;
+    }
+    
+    public void setClaimPriorityCcCodingCCode
+        (String claimPriorityCcCodingCCode) 
+        {
+      this.claimPriorityCcCodingCCode = claimPriorityCcCodingCCode;
+}
+    public 
+    String 
+    getClaimPriorityCcCodingCDisplay()
+    {
+        return this.claimPriorityCcCodingCDisplay;
+    }
+    
+    public void setClaimPriorityCcCodingCDisplay
+        (String claimPriorityCcCodingCDisplay) 
+        {
+      this.claimPriorityCcCodingCDisplay = claimPriorityCcCodingCDisplay;
+}
+    public 
+    String 
+    getClmPrrtCcCdngCSrSlctd()
+    {
+        return this.clmPrrtCcCdngCSrSlctd;
+    }
+    
+    public void setClmPrrtCcCdngCSrSlctd
+        (String clmPrrtCcCdngCSrSlctd) 
+        {
+      this.clmPrrtCcCdngCSrSlctd = clmPrrtCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimPriorityCcText()
+    {
+        return this.claimPriorityCcText;
+    }
+    
+    public void setClaimPriorityCcText
+        (String claimPriorityCcText) 
+        {
+      this.claimPriorityCcText = claimPriorityCcText;
+}
+    public 
+    String 
+    getClmFndsRsrvCcCdngCSstm()
+    {
+        return this.clmFndsRsrvCcCdngCSstm;
+    }
+    
+    public void setClmFndsRsrvCcCdngCSstm
+        (String clmFndsRsrvCcCdngCSstm) 
+        {
+      this.clmFndsRsrvCcCdngCSstm = clmFndsRsrvCcCdngCSstm;
+}
+    public 
+    String 
+    getClmFndsRsrvCcCdngCVrsn()
+    {
+        return this.clmFndsRsrvCcCdngCVrsn;
+    }
+    
+    public void setClmFndsRsrvCcCdngCVrsn
+        (String clmFndsRsrvCcCdngCVrsn) 
+        {
+      this.clmFndsRsrvCcCdngCVrsn = clmFndsRsrvCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmFndsRsrvCcCdngCCde()
+    {
+        return this.clmFndsRsrvCcCdngCCde;
+    }
+    
+    public void setClmFndsRsrvCcCdngCCde
+        (String clmFndsRsrvCcCdngCCde) 
+        {
+      this.clmFndsRsrvCcCdngCCde = clmFndsRsrvCcCdngCCde;
+}
+    public 
+    String 
+    getClmFndsRsrvCcCdngCDsplay()
+    {
+        return this.clmFndsRsrvCcCdngCDsplay;
+    }
+    
+    public void setClmFndsRsrvCcCdngCDsplay
+        (String clmFndsRsrvCcCdngCDsplay) 
+        {
+      this.clmFndsRsrvCcCdngCDsplay = clmFndsRsrvCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmFndsRsrvCcCdngCSrSlctd()
+    {
+        return this.clmFndsRsrvCcCdngCSrSlctd;
+    }
+    
+    public void setClmFndsRsrvCcCdngCSrSlctd
+        (String clmFndsRsrvCcCdngCSrSlctd) 
+        {
+      this.clmFndsRsrvCcCdngCSrSlctd = clmFndsRsrvCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimFundsReserveCcText()
+    {
+        return this.claimFundsReserveCcText;
+    }
+    
+    public void setClaimFundsReserveCcText
+        (String claimFundsReserveCcText) 
+        {
+      this.claimFundsReserveCcText = claimFundsReserveCcText;
+}
+    public 
+    String 
+    getClaimRelatedClaimReference()
+    {
+        return this.claimRelatedClaimReference;
+    }
+    
+    public void setClaimRelatedClaimReference
+        (String claimRelatedClaimReference) 
+        {
+      this.claimRelatedClaimReference = claimRelatedClaimReference;
+}
+    public 
+    String 
+    getClmRltdRltnshpCcCdngCSstm()
+    {
+        return this.clmRltdRltnshpCcCdngCSstm;
+    }
+    
+    public void setClmRltdRltnshpCcCdngCSstm
+        (String clmRltdRltnshpCcCdngCSstm) 
+        {
+      this.clmRltdRltnshpCcCdngCSstm = clmRltdRltnshpCcCdngCSstm;
+}
+    public 
+    String 
+    getClmRltdRltnshpCcCdngCVrsn()
+    {
+        return this.clmRltdRltnshpCcCdngCVrsn;
+    }
+    
+    public void setClmRltdRltnshpCcCdngCVrsn
+        (String clmRltdRltnshpCcCdngCVrsn) 
+        {
+      this.clmRltdRltnshpCcCdngCVrsn = clmRltdRltnshpCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmRltdRltnshpCcCdngCCde()
+    {
+        return this.clmRltdRltnshpCcCdngCCde;
+    }
+    
+    public void setClmRltdRltnshpCcCdngCCde
+        (String clmRltdRltnshpCcCdngCCde) 
+        {
+      this.clmRltdRltnshpCcCdngCCde = clmRltdRltnshpCcCdngCCde;
+}
+    public 
+    String 
+    getClmRltdRltnshpCcCdngCDsplay()
+    {
+        return this.clmRltdRltnshpCcCdngCDsplay;
+    }
+    
+    public void setClmRltdRltnshpCcCdngCDsplay
+        (String clmRltdRltnshpCcCdngCDsplay) 
+        {
+      this.clmRltdRltnshpCcCdngCDsplay = clmRltdRltnshpCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmRltdRltnshpCcCdngCSrSlctd()
+    {
+        return this.clmRltdRltnshpCcCdngCSrSlctd;
+    }
+    
+    public void setClmRltdRltnshpCcCdngCSrSlctd
+        (String clmRltdRltnshpCcCdngCSrSlctd) 
+        {
+      this.clmRltdRltnshpCcCdngCSrSlctd = clmRltdRltnshpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimRelatedRelationshipCcText()
+    {
+        return this.claimRelatedRelationshipCcText;
+    }
+    
+    public void setClaimRelatedRelationshipCcText
+        (String claimRelatedRelationshipCcText) 
+        {
+      this.claimRelatedRelationshipCcText = claimRelatedRelationshipCcText;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrSe()
+    {
+        return this.clmRltdRfrncDntfrSe;
+    }
+    
+    public void setClmRltdRfrncDntfrSe
+        (String clmRltdRfrncDntfrSe) 
+        {
+      this.clmRltdRfrncDntfrSe = clmRltdRfrncDntfrSe;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcCSstm()
+    {
+        return this.clmRltdRfrncDntfrTpCcCSstm;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcCSstm
+        (String clmRltdRfrncDntfrTpCcCSstm) 
+        {
+      this.clmRltdRfrncDntfrTpCcCSstm = clmRltdRfrncDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcCVrsn()
+    {
+        return this.clmRltdRfrncDntfrTpCcCVrsn;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcCVrsn
+        (String clmRltdRfrncDntfrTpCcCVrsn) 
+        {
+      this.clmRltdRfrncDntfrTpCcCVrsn = clmRltdRfrncDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcCCde()
+    {
+        return this.clmRltdRfrncDntfrTpCcCCde;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcCCde
+        (String clmRltdRfrncDntfrTpCcCCde) 
+        {
+      this.clmRltdRfrncDntfrTpCcCCde = clmRltdRfrncDntfrTpCcCCde;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcCDsplay()
+    {
+        return this.clmRltdRfrncDntfrTpCcCDsplay;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcCDsplay
+        (String clmRltdRfrncDntfrTpCcCDsplay) 
+        {
+      this.clmRltdRfrncDntfrTpCcCDsplay = clmRltdRfrncDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcCSrSlctd()
+    {
+        return this.clmRltdRfrncDntfrTpCcCSrSlctd;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcCSrSlctd
+        (String clmRltdRfrncDntfrTpCcCSrSlctd) 
+        {
+      this.clmRltdRfrncDntfrTpCcCSrSlctd = clmRltdRfrncDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrTpCcTxt()
+    {
+        return this.clmRltdRfrncDntfrTpCcTxt;
+    }
+    
+    public void setClmRltdRfrncDntfrTpCcTxt
+        (String clmRltdRfrncDntfrTpCcTxt) 
+        {
+      this.clmRltdRfrncDntfrTpCcTxt = clmRltdRfrncDntfrTpCcTxt;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrPrdPrdStrt()
+    {
+        return this.clmRltdRfrncDntfrPrdPrdStrt;
+    }
+    
+    public void setClmRltdRfrncDntfrPrdPrdStrt
+        (String clmRltdRfrncDntfrPrdPrdStrt) 
+        {
+      this.clmRltdRfrncDntfrPrdPrdStrt = clmRltdRfrncDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrPrdPrdNd()
+    {
+        return this.clmRltdRfrncDntfrPrdPrdNd;
+    }
+    
+    public void setClmRltdRfrncDntfrPrdPrdNd
+        (String clmRltdRfrncDntfrPrdPrdNd) 
+        {
+      this.clmRltdRfrncDntfrPrdPrdNd = clmRltdRfrncDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrSsgnr()
+    {
+        return this.clmRltdRfrncDntfrSsgnr;
+    }
+    
+    public void setClmRltdRfrncDntfrSsgnr
+        (String clmRltdRfrncDntfrSsgnr) 
+        {
+      this.clmRltdRfrncDntfrSsgnr = clmRltdRfrncDntfrSsgnr;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrVlue()
+    {
+        return this.clmRltdRfrncDntfrVlue;
+    }
+    
+    public void setClmRltdRfrncDntfrVlue
+        (String clmRltdRfrncDntfrVlue) 
+        {
+      this.clmRltdRfrncDntfrVlue = clmRltdRfrncDntfrVlue;
+}
+    public 
+    String 
+    getClmRltdRfrncDntfrSstm()
+    {
+        return this.clmRltdRfrncDntfrSstm;
+    }
+    
+    public void setClmRltdRfrncDntfrSstm
+        (String clmRltdRfrncDntfrSstm) 
+        {
+      this.clmRltdRfrncDntfrSstm = clmRltdRfrncDntfrSstm;
+}
+    public 
+    String 
+    getClaimPrescriptionReference()
+    {
+        return this.claimPrescriptionReference;
+    }
+    
+    public void setClaimPrescriptionReference
+        (String claimPrescriptionReference) 
+        {
+      this.claimPrescriptionReference = claimPrescriptionReference;
+}
+    public 
+    String 
+    getClmRgnlPrscrptnRfrnce()
+    {
+        return this.clmRgnlPrscrptnRfrnce;
+    }
+    
+    public void setClmRgnlPrscrptnRfrnce
+        (String clmRgnlPrscrptnRfrnce) 
+        {
+      this.clmRgnlPrscrptnRfrnce = clmRgnlPrscrptnRfrnce;
+}
+    public 
+    String 
+    getClmPTpCcCdngCSstm()
+    {
+        return this.clmPTpCcCdngCSstm;
+    }
+    
+    public void setClmPTpCcCdngCSstm
+        (String clmPTpCcCdngCSstm) 
+        {
+      this.clmPTpCcCdngCSstm = clmPTpCcCdngCSstm;
+}
+    public 
+    String 
+    getClmPTpCcCdngCVrsn()
+    {
+        return this.clmPTpCcCdngCVrsn;
+    }
+    
+    public void setClmPTpCcCdngCVrsn
+        (String clmPTpCcCdngCVrsn) 
+        {
+      this.clmPTpCcCdngCVrsn = clmPTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getClaimPayeeTypeCcCodingCCode()
+    {
+        return this.claimPayeeTypeCcCodingCCode;
+    }
+    
+    public void setClaimPayeeTypeCcCodingCCode
+        (String claimPayeeTypeCcCodingCCode) 
+        {
+      this.claimPayeeTypeCcCodingCCode = claimPayeeTypeCcCodingCCode;
+}
+    public 
+    String 
+    getClmPTpCcCdngCDsplay()
+    {
+        return this.clmPTpCcCdngCDsplay;
+    }
+    
+    public void setClmPTpCcCdngCDsplay
+        (String clmPTpCcCdngCDsplay) 
+        {
+      this.clmPTpCcCdngCDsplay = clmPTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmPTpCcCdngCSrSlctd()
+    {
+        return this.clmPTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmPTpCcCdngCSrSlctd
+        (String clmPTpCcCdngCSrSlctd) 
+        {
+      this.clmPTpCcCdngCSrSlctd = clmPTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimPayeeTypeCcText()
+    {
+        return this.claimPayeeTypeCcText;
+    }
+    
+    public void setClaimPayeeTypeCcText
+        (String claimPayeeTypeCcText) 
+        {
+      this.claimPayeeTypeCcText = claimPayeeTypeCcText;
+}
+    public 
+    String 
+    getClaimPayeePartyReference()
+    {
+        return this.claimPayeePartyReference;
+    }
+    
+    public void setClaimPayeePartyReference
+        (String claimPayeePartyReference) 
+        {
+      this.claimPayeePartyReference = claimPayeePartyReference;
+}
+    public 
+    String 
+    getClaimReferralReference()
+    {
+        return this.claimReferralReference;
+    }
+    
+    public void setClaimReferralReference
+        (String claimReferralReference) 
+        {
+      this.claimReferralReference = claimReferralReference;
+}
+    public 
+    String 
+    getClaimFacilityReference()
+    {
+        return this.claimFacilityReference;
+    }
+    
+    public void setClaimFacilityReference
+        (String claimFacilityReference) 
+        {
+      this.claimFacilityReference = claimFacilityReference;
+}
+    public 
+    String 
+    getClmCrTmSqncPstvnt()
+    {
+        return this.clmCrTmSqncPstvnt;
+    }
+    
+    public void setClmCrTmSqncPstvnt
+        (String clmCrTmSqncPstvnt) 
+        {
+      this.clmCrTmSqncPstvnt = clmCrTmSqncPstvnt;
+}
+    public 
+    String 
+    getClaimCareTeamProviderReference()
+    {
+        return this.claimCareTeamProviderReference;
+    }
+    
+    public void setClaimCareTeamProviderReference
+        (String claimCareTeamProviderReference) 
+        {
+      this.claimCareTeamProviderReference = claimCareTeamProviderReference;
+}
+    public 
+    String 
+    getClaimCareTeamResponsibleBoolean()
+    {
+        return this.claimCareTeamResponsibleBoolean;
+    }
+    
+    public void setClaimCareTeamResponsibleBoolean
+        (String claimCareTeamResponsibleBoolean) 
+        {
+      this.claimCareTeamResponsibleBoolean = claimCareTeamResponsibleBoolean;
+}
+    public 
+    String 
+    getClmCrTmRlCcCdngCSstm()
+    {
+        return this.clmCrTmRlCcCdngCSstm;
+    }
+    
+    public void setClmCrTmRlCcCdngCSstm
+        (String clmCrTmRlCcCdngCSstm) 
+        {
+      this.clmCrTmRlCcCdngCSstm = clmCrTmRlCcCdngCSstm;
+}
+    public 
+    String 
+    getClmCrTmRlCcCdngCVrsn()
+    {
+        return this.clmCrTmRlCcCdngCVrsn;
+    }
+    
+    public void setClmCrTmRlCcCdngCVrsn
+        (String clmCrTmRlCcCdngCVrsn) 
+        {
+      this.clmCrTmRlCcCdngCVrsn = clmCrTmRlCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmCrTmRlCcCdngCCde()
+    {
+        return this.clmCrTmRlCcCdngCCde;
+    }
+    
+    public void setClmCrTmRlCcCdngCCde
+        (String clmCrTmRlCcCdngCCde) 
+        {
+      this.clmCrTmRlCcCdngCCde = clmCrTmRlCcCdngCCde;
+}
+    public 
+    String 
+    getClmCrTmRlCcCdngCDsplay()
+    {
+        return this.clmCrTmRlCcCdngCDsplay;
+    }
+    
+    public void setClmCrTmRlCcCdngCDsplay
+        (String clmCrTmRlCcCdngCDsplay) 
+        {
+      this.clmCrTmRlCcCdngCDsplay = clmCrTmRlCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmCrTmRlCcCdngCSrSlctd()
+    {
+        return this.clmCrTmRlCcCdngCSrSlctd;
+    }
+    
+    public void setClmCrTmRlCcCdngCSrSlctd
+        (String clmCrTmRlCcCdngCSrSlctd) 
+        {
+      this.clmCrTmRlCcCdngCSrSlctd = clmCrTmRlCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimCareTeamRoleCcText()
+    {
+        return this.claimCareTeamRoleCcText;
+    }
+    
+    public void setClaimCareTeamRoleCcText
+        (String claimCareTeamRoleCcText) 
+        {
+      this.claimCareTeamRoleCcText = claimCareTeamRoleCcText;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcCdngCSstm()
+    {
+        return this.clmCrTmQlfctnCcCdngCSstm;
+    }
+    
+    public void setClmCrTmQlfctnCcCdngCSstm
+        (String clmCrTmQlfctnCcCdngCSstm) 
+        {
+      this.clmCrTmQlfctnCcCdngCSstm = clmCrTmQlfctnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcCdngCVrsn()
+    {
+        return this.clmCrTmQlfctnCcCdngCVrsn;
+    }
+    
+    public void setClmCrTmQlfctnCcCdngCVrsn
+        (String clmCrTmQlfctnCcCdngCVrsn) 
+        {
+      this.clmCrTmQlfctnCcCdngCVrsn = clmCrTmQlfctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcCdngCCde()
+    {
+        return this.clmCrTmQlfctnCcCdngCCde;
+    }
+    
+    public void setClmCrTmQlfctnCcCdngCCde
+        (String clmCrTmQlfctnCcCdngCCde) 
+        {
+      this.clmCrTmQlfctnCcCdngCCde = clmCrTmQlfctnCcCdngCCde;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcCdngCDsplay()
+    {
+        return this.clmCrTmQlfctnCcCdngCDsplay;
+    }
+    
+    public void setClmCrTmQlfctnCcCdngCDsplay
+        (String clmCrTmQlfctnCcCdngCDsplay) 
+        {
+      this.clmCrTmQlfctnCcCdngCDsplay = clmCrTmQlfctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcCdngCSrSlctd()
+    {
+        return this.clmCrTmQlfctnCcCdngCSrSlctd;
+    }
+    
+    public void setClmCrTmQlfctnCcCdngCSrSlctd
+        (String clmCrTmQlfctnCcCdngCSrSlctd) 
+        {
+      this.clmCrTmQlfctnCcCdngCSrSlctd = clmCrTmQlfctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmCrTmQlfctnCcTxt()
+    {
+        return this.clmCrTmQlfctnCcTxt;
+    }
+    
+    public void setClmCrTmQlfctnCcTxt
+        (String clmCrTmQlfctnCcTxt) 
+        {
+      this.clmCrTmQlfctnCcTxt = clmCrTmQlfctnCcTxt;
+}
+    public 
+    String 
+    getClmSpprtngnfSqncPstvnt()
+    {
+        return this.clmSpprtngnfSqncPstvnt;
+    }
+    
+    public void setClmSpprtngnfSqncPstvnt
+        (String clmSpprtngnfSqncPstvnt) 
+        {
+      this.clmSpprtngnfSqncPstvnt = clmSpprtngnfSqncPstvnt;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcCdngCSstm()
+    {
+        return this.clmSpprtngnfCtgrCcCdngCSstm;
+    }
+    
+    public void setClmSpprtngnfCtgrCcCdngCSstm
+        (String clmSpprtngnfCtgrCcCdngCSstm) 
+        {
+      this.clmSpprtngnfCtgrCcCdngCSstm = clmSpprtngnfCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcCdngCVrsn()
+    {
+        return this.clmSpprtngnfCtgrCcCdngCVrsn;
+    }
+    
+    public void setClmSpprtngnfCtgrCcCdngCVrsn
+        (String clmSpprtngnfCtgrCcCdngCVrsn) 
+        {
+      this.clmSpprtngnfCtgrCcCdngCVrsn = clmSpprtngnfCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcCdngCCde()
+    {
+        return this.clmSpprtngnfCtgrCcCdngCCde;
+    }
+    
+    public void setClmSpprtngnfCtgrCcCdngCCde
+        (String clmSpprtngnfCtgrCcCdngCCde) 
+        {
+      this.clmSpprtngnfCtgrCcCdngCCde = clmSpprtngnfCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcCdngCDsplay()
+    {
+        return this.clmSpprtngnfCtgrCcCdngCDsplay;
+    }
+    
+    public void setClmSpprtngnfCtgrCcCdngCDsplay
+        (String clmSpprtngnfCtgrCcCdngCDsplay) 
+        {
+      this.clmSpprtngnfCtgrCcCdngCDsplay = clmSpprtngnfCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcCdngCSrSlctd()
+    {
+        return this.clmSpprtngnfCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setClmSpprtngnfCtgrCcCdngCSrSlctd
+        (String clmSpprtngnfCtgrCcCdngCSrSlctd) 
+        {
+      this.clmSpprtngnfCtgrCcCdngCSrSlctd = clmSpprtngnfCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmSpprtngnfCtgrCcTxt()
+    {
+        return this.clmSpprtngnfCtgrCcTxt;
+    }
+    
+    public void setClmSpprtngnfCtgrCcTxt
+        (String clmSpprtngnfCtgrCcTxt) 
+        {
+      this.clmSpprtngnfCtgrCcTxt = clmSpprtngnfCtgrCcTxt;
+}
+    public 
+    String 
+    getClmSpprtngnfCdCcCdngCSstm()
+    {
+        return this.clmSpprtngnfCdCcCdngCSstm;
+    }
+    
+    public void setClmSpprtngnfCdCcCdngCSstm
+        (String clmSpprtngnfCdCcCdngCSstm) 
+        {
+      this.clmSpprtngnfCdCcCdngCSstm = clmSpprtngnfCdCcCdngCSstm;
+}
+    public 
+    String 
+    getClmSpprtngnfCdCcCdngCVrsn()
+    {
+        return this.clmSpprtngnfCdCcCdngCVrsn;
+    }
+    
+    public void setClmSpprtngnfCdCcCdngCVrsn
+        (String clmSpprtngnfCdCcCdngCVrsn) 
+        {
+      this.clmSpprtngnfCdCcCdngCVrsn = clmSpprtngnfCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmSpprtngnfCdCcCdngCCde()
+    {
+        return this.clmSpprtngnfCdCcCdngCCde;
+    }
+    
+    public void setClmSpprtngnfCdCcCdngCCde
+        (String clmSpprtngnfCdCcCdngCCde) 
+        {
+      this.clmSpprtngnfCdCcCdngCCde = clmSpprtngnfCdCcCdngCCde;
+}
+    public 
+    String 
+    getClmSpprtngnfCdCcCdngCDsplay()
+    {
+        return this.clmSpprtngnfCdCcCdngCDsplay;
+    }
+    
+    public void setClmSpprtngnfCdCcCdngCDsplay
+        (String clmSpprtngnfCdCcCdngCDsplay) 
+        {
+      this.clmSpprtngnfCdCcCdngCDsplay = clmSpprtngnfCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmSpprtngnfCdCcCdngCSrSlctd()
+    {
+        return this.clmSpprtngnfCdCcCdngCSrSlctd;
+    }
+    
+    public void setClmSpprtngnfCdCcCdngCSrSlctd
+        (String clmSpprtngnfCdCcCdngCSrSlctd) 
+        {
+      this.clmSpprtngnfCdCcCdngCSrSlctd = clmSpprtngnfCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimSupportingInfoCodeCcText()
+    {
+        return this.claimSupportingInfoCodeCcText;
+    }
+    
+    public void setClaimSupportingInfoCodeCcText
+        (String claimSupportingInfoCodeCcText) 
+        {
+      this.claimSupportingInfoCodeCcText = claimSupportingInfoCodeCcText;
+}
+    public 
+    String 
+    getClmSpprtngnfTmngDtDte()
+    {
+        return this.clmSpprtngnfTmngDtDte;
+    }
+    
+    public void setClmSpprtngnfTmngDtDte
+        (String clmSpprtngnfTmngDtDte) 
+        {
+      this.clmSpprtngnfTmngDtDte = clmSpprtngnfTmngDtDte;
+}
+    public 
+    String 
+    getClmSpprtngnfTmngPrdPrdStrt()
+    {
+        return this.clmSpprtngnfTmngPrdPrdStrt;
+    }
+    
+    public void setClmSpprtngnfTmngPrdPrdStrt
+        (String clmSpprtngnfTmngPrdPrdStrt) 
+        {
+      this.clmSpprtngnfTmngPrdPrdStrt = clmSpprtngnfTmngPrdPrdStrt;
+}
+    public 
+    String 
+    getClmSpprtngnfTmngPrdPrdNd()
+    {
+        return this.clmSpprtngnfTmngPrdPrdNd;
+    }
+    
+    public void setClmSpprtngnfTmngPrdPrdNd
+        (String clmSpprtngnfTmngPrdPrdNd) 
+        {
+      this.clmSpprtngnfTmngPrdPrdNd = clmSpprtngnfTmngPrdPrdNd;
+}
+    public 
+    String 
+    getClmSpprtngnfVlBlnBln()
+    {
+        return this.clmSpprtngnfVlBlnBln;
+    }
+    
+    public void setClmSpprtngnfVlBlnBln
+        (String clmSpprtngnfVlBlnBln) 
+        {
+      this.clmSpprtngnfVlBlnBln = clmSpprtngnfVlBlnBln;
+}
+    public 
+    String 
+    getClmSpprtngnfVlStrngStrng()
+    {
+        return this.clmSpprtngnfVlStrngStrng;
+    }
+    
+    public void setClmSpprtngnfVlStrngStrng
+        (String clmSpprtngnfVlStrngStrng) 
+        {
+      this.clmSpprtngnfVlStrngStrng = clmSpprtngnfVlStrngStrng;
+}
+    public 
+    String 
+    getClmSpprtngnfVlQnttQnttCmprtr()
+    {
+        return this.clmSpprtngnfVlQnttQnttCmprtr;
+    }
+    
+    public void setClmSpprtngnfVlQnttQnttCmprtr
+        (String clmSpprtngnfVlQnttQnttCmprtr) 
+        {
+      this.clmSpprtngnfVlQnttQnttCmprtr = clmSpprtngnfVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getClmSpprtngnfVlQnttQnttCde()
+    {
+        return this.clmSpprtngnfVlQnttQnttCde;
+    }
+    
+    public void setClmSpprtngnfVlQnttQnttCde
+        (String clmSpprtngnfVlQnttQnttCde) 
+        {
+      this.clmSpprtngnfVlQnttQnttCde = clmSpprtngnfVlQnttQnttCde;
+}
+    public 
+    String 
+    getClmSpprtngnfVlQnttQnttVlue()
+    {
+        return this.clmSpprtngnfVlQnttQnttVlue;
+    }
+    
+    public void setClmSpprtngnfVlQnttQnttVlue
+        (String clmSpprtngnfVlQnttQnttVlue) 
+        {
+      this.clmSpprtngnfVlQnttQnttVlue = clmSpprtngnfVlQnttQnttVlue;
+}
+    public 
+    String 
+    getClmSpprtngnfVlQnttQnttNt()
+    {
+        return this.clmSpprtngnfVlQnttQnttNt;
+    }
+    
+    public void setClmSpprtngnfVlQnttQnttNt
+        (String clmSpprtngnfVlQnttQnttNt) 
+        {
+      this.clmSpprtngnfVlQnttQnttNt = clmSpprtngnfVlQnttQnttNt;
+}
+    public 
+    String 
+    getClmSpprtngnfVlQnttQnttSstm()
+    {
+        return this.clmSpprtngnfVlQnttQnttSstm;
+    }
+    
+    public void setClmSpprtngnfVlQnttQnttSstm
+        (String clmSpprtngnfVlQnttQnttSstm) 
+        {
+      this.clmSpprtngnfVlQnttQnttSstm = clmSpprtngnfVlQnttQnttSstm;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntDta()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntDta;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntDta
+        (String clmSpprtngnfVlttchmntTtchmntDta) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntDta = clmSpprtngnfVlttchmntTtchmntDta;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntHsh()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntHsh;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntHsh
+        (String clmSpprtngnfVlttchmntTtchmntHsh) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntHsh = clmSpprtngnfVlttchmntTtchmntHsh;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntCntntTpe()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntCntntTpe;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntCntntTpe
+        (String clmSpprtngnfVlttchmntTtchmntCntntTpe) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntCntntTpe = clmSpprtngnfVlttchmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntLngge()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntLngge;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntLngge
+        (String clmSpprtngnfVlttchmntTtchmntLngge) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntLngge = clmSpprtngnfVlttchmntTtchmntLngge;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntCrtn()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntCrtn;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntCrtn
+        (String clmSpprtngnfVlttchmntTtchmntCrtn) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntCrtn = clmSpprtngnfVlttchmntTtchmntCrtn;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntTtle()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntTtle;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntTtle
+        (String clmSpprtngnfVlttchmntTtchmntTtle) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntTtle = clmSpprtngnfVlttchmntTtchmntTtle;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntSze()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntSze;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntSze
+        (String clmSpprtngnfVlttchmntTtchmntSze) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntSze = clmSpprtngnfVlttchmntTtchmntSze;
+}
+    public 
+    String 
+    getClmSpprtngnfVlttchmntTtchmntRl()
+    {
+        return this.clmSpprtngnfVlttchmntTtchmntRl;
+    }
+    
+    public void setClmSpprtngnfVlttchmntTtchmntRl
+        (String clmSpprtngnfVlttchmntTtchmntRl) 
+        {
+      this.clmSpprtngnfVlttchmntTtchmntRl = clmSpprtngnfVlttchmntTtchmntRl;
+}
+    public 
+    String 
+    getClmSpprtngnfVlRfrncRfrnce()
+    {
+        return this.clmSpprtngnfVlRfrncRfrnce;
+    }
+    
+    public void setClmSpprtngnfVlRfrncRfrnce
+        (String clmSpprtngnfVlRfrncRfrnce) 
+        {
+      this.clmSpprtngnfVlRfrncRfrnce = clmSpprtngnfVlRfrncRfrnce;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcCdngCSstm()
+    {
+        return this.clmSpprtngnfRsnCcCdngCSstm;
+    }
+    
+    public void setClmSpprtngnfRsnCcCdngCSstm
+        (String clmSpprtngnfRsnCcCdngCSstm) 
+        {
+      this.clmSpprtngnfRsnCcCdngCSstm = clmSpprtngnfRsnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcCdngCVrsn()
+    {
+        return this.clmSpprtngnfRsnCcCdngCVrsn;
+    }
+    
+    public void setClmSpprtngnfRsnCcCdngCVrsn
+        (String clmSpprtngnfRsnCcCdngCVrsn) 
+        {
+      this.clmSpprtngnfRsnCcCdngCVrsn = clmSpprtngnfRsnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcCdngCCde()
+    {
+        return this.clmSpprtngnfRsnCcCdngCCde;
+    }
+    
+    public void setClmSpprtngnfRsnCcCdngCCde
+        (String clmSpprtngnfRsnCcCdngCCde) 
+        {
+      this.clmSpprtngnfRsnCcCdngCCde = clmSpprtngnfRsnCcCdngCCde;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcCdngCDsplay()
+    {
+        return this.clmSpprtngnfRsnCcCdngCDsplay;
+    }
+    
+    public void setClmSpprtngnfRsnCcCdngCDsplay
+        (String clmSpprtngnfRsnCcCdngCDsplay) 
+        {
+      this.clmSpprtngnfRsnCcCdngCDsplay = clmSpprtngnfRsnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcCdngCSrSlctd()
+    {
+        return this.clmSpprtngnfRsnCcCdngCSrSlctd;
+    }
+    
+    public void setClmSpprtngnfRsnCcCdngCSrSlctd
+        (String clmSpprtngnfRsnCcCdngCSrSlctd) 
+        {
+      this.clmSpprtngnfRsnCcCdngCSrSlctd = clmSpprtngnfRsnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmSpprtngnfRsnCcTxt()
+    {
+        return this.clmSpprtngnfRsnCcTxt;
+    }
+    
+    public void setClmSpprtngnfRsnCcTxt
+        (String clmSpprtngnfRsnCcTxt) 
+        {
+      this.clmSpprtngnfRsnCcTxt = clmSpprtngnfRsnCcTxt;
+}
+    public 
+    String 
+    getClmDgnssSqncPstvnt()
+    {
+        return this.clmDgnssSqncPstvnt;
+    }
+    
+    public void setClmDgnssSqncPstvnt
+        (String clmDgnssSqncPstvnt) 
+        {
+      this.clmDgnssSqncPstvnt = clmDgnssSqncPstvnt;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcCdngCSstm()
+    {
+        return this.clmDgnssDgnssCdblcncptCcCdngCSstm;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcCdngCSstm
+        (String clmDgnssDgnssCdblcncptCcCdngCSstm) 
+        {
+      this.clmDgnssDgnssCdblcncptCcCdngCSstm = clmDgnssDgnssCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcCdngCVrsn()
+    {
+        return this.clmDgnssDgnssCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcCdngCVrsn
+        (String clmDgnssDgnssCdblcncptCcCdngCVrsn) 
+        {
+      this.clmDgnssDgnssCdblcncptCcCdngCVrsn = clmDgnssDgnssCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcCdngCCde()
+    {
+        return this.clmDgnssDgnssCdblcncptCcCdngCCde;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcCdngCCde
+        (String clmDgnssDgnssCdblcncptCcCdngCCde) 
+        {
+      this.clmDgnssDgnssCdblcncptCcCdngCCde = clmDgnssDgnssCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcCdngCDsplay()
+    {
+        return this.clmDgnssDgnssCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcCdngCDsplay
+        (String clmDgnssDgnssCdblcncptCcCdngCDsplay) 
+        {
+      this.clmDgnssDgnssCdblcncptCcCdngCDsplay = clmDgnssDgnssCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcCdngCSrSlctd()
+    {
+        return this.clmDgnssDgnssCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcCdngCSrSlctd
+        (String clmDgnssDgnssCdblcncptCcCdngCSrSlctd) 
+        {
+      this.clmDgnssDgnssCdblcncptCcCdngCSrSlctd = clmDgnssDgnssCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmDgnssDgnssCdblcncptCcTxt()
+    {
+        return this.clmDgnssDgnssCdblcncptCcTxt;
+    }
+    
+    public void setClmDgnssDgnssCdblcncptCcTxt
+        (String clmDgnssDgnssCdblcncptCcTxt) 
+        {
+      this.clmDgnssDgnssCdblcncptCcTxt = clmDgnssDgnssCdblcncptCcTxt;
+}
+    public 
+    String 
+    getClmDgnssDgnssRfrncRfrnce()
+    {
+        return this.clmDgnssDgnssRfrncRfrnce;
+    }
+    
+    public void setClmDgnssDgnssRfrncRfrnce
+        (String clmDgnssDgnssRfrncRfrnce) 
+        {
+      this.clmDgnssDgnssRfrncRfrnce = clmDgnssDgnssRfrncRfrnce;
+}
+    public 
+    String 
+    getClmDgnssTpCcCdngCSstm()
+    {
+        return this.clmDgnssTpCcCdngCSstm;
+    }
+    
+    public void setClmDgnssTpCcCdngCSstm
+        (String clmDgnssTpCcCdngCSstm) 
+        {
+      this.clmDgnssTpCcCdngCSstm = clmDgnssTpCcCdngCSstm;
+}
+    public 
+    String 
+    getClmDgnssTpCcCdngCVrsn()
+    {
+        return this.clmDgnssTpCcCdngCVrsn;
+    }
+    
+    public void setClmDgnssTpCcCdngCVrsn
+        (String clmDgnssTpCcCdngCVrsn) 
+        {
+      this.clmDgnssTpCcCdngCVrsn = clmDgnssTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmDgnssTpCcCdngCCde()
+    {
+        return this.clmDgnssTpCcCdngCCde;
+    }
+    
+    public void setClmDgnssTpCcCdngCCde
+        (String clmDgnssTpCcCdngCCde) 
+        {
+      this.clmDgnssTpCcCdngCCde = clmDgnssTpCcCdngCCde;
+}
+    public 
+    String 
+    getClmDgnssTpCcCdngCDsplay()
+    {
+        return this.clmDgnssTpCcCdngCDsplay;
+    }
+    
+    public void setClmDgnssTpCcCdngCDsplay
+        (String clmDgnssTpCcCdngCDsplay) 
+        {
+      this.clmDgnssTpCcCdngCDsplay = clmDgnssTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmDgnssTpCcCdngCSrSlctd()
+    {
+        return this.clmDgnssTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmDgnssTpCcCdngCSrSlctd
+        (String clmDgnssTpCcCdngCSrSlctd) 
+        {
+      this.clmDgnssTpCcCdngCSrSlctd = clmDgnssTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimDiagnosisTypeCcText()
+    {
+        return this.claimDiagnosisTypeCcText;
+    }
+    
+    public void setClaimDiagnosisTypeCcText
+        (String claimDiagnosisTypeCcText) 
+        {
+      this.claimDiagnosisTypeCcText = claimDiagnosisTypeCcText;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcCdngCSstm()
+    {
+        return this.clmDgnssNdmssnCcCdngCSstm;
+    }
+    
+    public void setClmDgnssNdmssnCcCdngCSstm
+        (String clmDgnssNdmssnCcCdngCSstm) 
+        {
+      this.clmDgnssNdmssnCcCdngCSstm = clmDgnssNdmssnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcCdngCVrsn()
+    {
+        return this.clmDgnssNdmssnCcCdngCVrsn;
+    }
+    
+    public void setClmDgnssNdmssnCcCdngCVrsn
+        (String clmDgnssNdmssnCcCdngCVrsn) 
+        {
+      this.clmDgnssNdmssnCcCdngCVrsn = clmDgnssNdmssnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcCdngCCde()
+    {
+        return this.clmDgnssNdmssnCcCdngCCde;
+    }
+    
+    public void setClmDgnssNdmssnCcCdngCCde
+        (String clmDgnssNdmssnCcCdngCCde) 
+        {
+      this.clmDgnssNdmssnCcCdngCCde = clmDgnssNdmssnCcCdngCCde;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcCdngCDsplay()
+    {
+        return this.clmDgnssNdmssnCcCdngCDsplay;
+    }
+    
+    public void setClmDgnssNdmssnCcCdngCDsplay
+        (String clmDgnssNdmssnCcCdngCDsplay) 
+        {
+      this.clmDgnssNdmssnCcCdngCDsplay = clmDgnssNdmssnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcCdngCSrSlctd()
+    {
+        return this.clmDgnssNdmssnCcCdngCSrSlctd;
+    }
+    
+    public void setClmDgnssNdmssnCcCdngCSrSlctd
+        (String clmDgnssNdmssnCcCdngCSrSlctd) 
+        {
+      this.clmDgnssNdmssnCcCdngCSrSlctd = clmDgnssNdmssnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmDgnssNdmssnCcTxt()
+    {
+        return this.clmDgnssNdmssnCcTxt;
+    }
+    
+    public void setClmDgnssNdmssnCcTxt
+        (String clmDgnssNdmssnCcTxt) 
+        {
+      this.clmDgnssNdmssnCcTxt = clmDgnssNdmssnCcTxt;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcCdngCSstm()
+    {
+        return this.clmDgnssPckgCdCcCdngCSstm;
+    }
+    
+    public void setClmDgnssPckgCdCcCdngCSstm
+        (String clmDgnssPckgCdCcCdngCSstm) 
+        {
+      this.clmDgnssPckgCdCcCdngCSstm = clmDgnssPckgCdCcCdngCSstm;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcCdngCVrsn()
+    {
+        return this.clmDgnssPckgCdCcCdngCVrsn;
+    }
+    
+    public void setClmDgnssPckgCdCcCdngCVrsn
+        (String clmDgnssPckgCdCcCdngCVrsn) 
+        {
+      this.clmDgnssPckgCdCcCdngCVrsn = clmDgnssPckgCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcCdngCCde()
+    {
+        return this.clmDgnssPckgCdCcCdngCCde;
+    }
+    
+    public void setClmDgnssPckgCdCcCdngCCde
+        (String clmDgnssPckgCdCcCdngCCde) 
+        {
+      this.clmDgnssPckgCdCcCdngCCde = clmDgnssPckgCdCcCdngCCde;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcCdngCDsplay()
+    {
+        return this.clmDgnssPckgCdCcCdngCDsplay;
+    }
+    
+    public void setClmDgnssPckgCdCcCdngCDsplay
+        (String clmDgnssPckgCdCcCdngCDsplay) 
+        {
+      this.clmDgnssPckgCdCcCdngCDsplay = clmDgnssPckgCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcCdngCSrSlctd()
+    {
+        return this.clmDgnssPckgCdCcCdngCSrSlctd;
+    }
+    
+    public void setClmDgnssPckgCdCcCdngCSrSlctd
+        (String clmDgnssPckgCdCcCdngCSrSlctd) 
+        {
+      this.clmDgnssPckgCdCcCdngCSrSlctd = clmDgnssPckgCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmDgnssPckgCdCcTxt()
+    {
+        return this.clmDgnssPckgCdCcTxt;
+    }
+    
+    public void setClmDgnssPckgCdCcTxt
+        (String clmDgnssPckgCdCcTxt) 
+        {
+      this.clmDgnssPckgCdCcTxt = clmDgnssPckgCdCcTxt;
+}
+    public 
+    String 
+    getClmPrcdrSqncPstvnt()
+    {
+        return this.clmPrcdrSqncPstvnt;
+    }
+    
+    public void setClmPrcdrSqncPstvnt
+        (String clmPrcdrSqncPstvnt) 
+        {
+      this.clmPrcdrSqncPstvnt = clmPrcdrSqncPstvnt;
+}
+    public 
+    String 
+    getClmPrcdrTpCcCdngCSstm()
+    {
+        return this.clmPrcdrTpCcCdngCSstm;
+    }
+    
+    public void setClmPrcdrTpCcCdngCSstm
+        (String clmPrcdrTpCcCdngCSstm) 
+        {
+      this.clmPrcdrTpCcCdngCSstm = clmPrcdrTpCcCdngCSstm;
+}
+    public 
+    String 
+    getClmPrcdrTpCcCdngCVrsn()
+    {
+        return this.clmPrcdrTpCcCdngCVrsn;
+    }
+    
+    public void setClmPrcdrTpCcCdngCVrsn
+        (String clmPrcdrTpCcCdngCVrsn) 
+        {
+      this.clmPrcdrTpCcCdngCVrsn = clmPrcdrTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmPrcdrTpCcCdngCCde()
+    {
+        return this.clmPrcdrTpCcCdngCCde;
+    }
+    
+    public void setClmPrcdrTpCcCdngCCde
+        (String clmPrcdrTpCcCdngCCde) 
+        {
+      this.clmPrcdrTpCcCdngCCde = clmPrcdrTpCcCdngCCde;
+}
+    public 
+    String 
+    getClmPrcdrTpCcCdngCDsplay()
+    {
+        return this.clmPrcdrTpCcCdngCDsplay;
+    }
+    
+    public void setClmPrcdrTpCcCdngCDsplay
+        (String clmPrcdrTpCcCdngCDsplay) 
+        {
+      this.clmPrcdrTpCcCdngCDsplay = clmPrcdrTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmPrcdrTpCcCdngCSrSlctd()
+    {
+        return this.clmPrcdrTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmPrcdrTpCcCdngCSrSlctd
+        (String clmPrcdrTpCcCdngCSrSlctd) 
+        {
+      this.clmPrcdrTpCcCdngCSrSlctd = clmPrcdrTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimProcedureTypeCcText()
+    {
+        return this.claimProcedureTypeCcText;
+    }
+    
+    public void setClaimProcedureTypeCcText
+        (String claimProcedureTypeCcText) 
+        {
+      this.claimProcedureTypeCcText = claimProcedureTypeCcText;
+}
+    public 
+    String 
+    getClaimProcedureDateDateTime()
+    {
+        return this.claimProcedureDateDateTime;
+    }
+    
+    public void setClaimProcedureDateDateTime
+        (String claimProcedureDateDateTime) 
+        {
+      this.claimProcedureDateDateTime = claimProcedureDateDateTime;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcCdngCSstm()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcCdngCSstm;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcCdngCSstm
+        (String clmPrcdrPrcdrCdblcncptCcCdngCSstm) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcCdngCSstm = clmPrcdrPrcdrCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcCdngCVrsn()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcCdngCVrsn
+        (String clmPrcdrPrcdrCdblcncptCcCdngCVrsn) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcCdngCVrsn = clmPrcdrPrcdrCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcCdngCCde()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcCdngCCde;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcCdngCCde
+        (String clmPrcdrPrcdrCdblcncptCcCdngCCde) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcCdngCCde = clmPrcdrPrcdrCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcCdngCDsplay()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcCdngCDsplay
+        (String clmPrcdrPrcdrCdblcncptCcCdngCDsplay) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcCdngCDsplay = clmPrcdrPrcdrCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcCdngCSrSlctd()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcCdngCSrSlctd
+        (String clmPrcdrPrcdrCdblcncptCcCdngCSrSlctd) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcCdngCSrSlctd = clmPrcdrPrcdrCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrCdblcncptCcTxt()
+    {
+        return this.clmPrcdrPrcdrCdblcncptCcTxt;
+    }
+    
+    public void setClmPrcdrPrcdrCdblcncptCcTxt
+        (String clmPrcdrPrcdrCdblcncptCcTxt) 
+        {
+      this.clmPrcdrPrcdrCdblcncptCcTxt = clmPrcdrPrcdrCdblcncptCcTxt;
+}
+    public 
+    String 
+    getClmPrcdrPrcdrRfrncRfrnce()
+    {
+        return this.clmPrcdrPrcdrRfrncRfrnce;
+    }
+    
+    public void setClmPrcdrPrcdrRfrncRfrnce
+        (String clmPrcdrPrcdrRfrncRfrnce) 
+        {
+      this.clmPrcdrPrcdrRfrncRfrnce = clmPrcdrPrcdrRfrncRfrnce;
+}
+    public 
+    String 
+    getClaimProcedureUdiReference()
+    {
+        return this.claimProcedureUdiReference;
+    }
+    
+    public void setClaimProcedureUdiReference
+        (String claimProcedureUdiReference) 
+        {
+      this.claimProcedureUdiReference = claimProcedureUdiReference;
+}
+    public 
+    String 
+    getClmNsrncSqncPstvnt()
+    {
+        return this.clmNsrncSqncPstvnt;
+    }
+    
+    public void setClmNsrncSqncPstvnt
+        (String clmNsrncSqncPstvnt) 
+        {
+      this.clmNsrncSqncPstvnt = clmNsrncSqncPstvnt;
+}
+    public 
+    String 
+    getClaimInsuranceFocalBoolean()
+    {
+        return this.claimInsuranceFocalBoolean;
+    }
+    
+    public void setClaimInsuranceFocalBoolean
+        (String claimInsuranceFocalBoolean) 
+        {
+      this.claimInsuranceFocalBoolean = claimInsuranceFocalBoolean;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrSe()
+    {
+        return this.clmNsrncDntfrDntfrSe;
+    }
+    
+    public void setClmNsrncDntfrDntfrSe
+        (String clmNsrncDntfrDntfrSe) 
+        {
+      this.clmNsrncDntfrDntfrSe = clmNsrncDntfrDntfrSe;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcCSstm()
+    {
+        return this.clmNsrncDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcCSstm
+        (String clmNsrncDntfrDntfrTpCcCSstm) 
+        {
+      this.clmNsrncDntfrDntfrTpCcCSstm = clmNsrncDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcCVrsn()
+    {
+        return this.clmNsrncDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcCVrsn
+        (String clmNsrncDntfrDntfrTpCcCVrsn) 
+        {
+      this.clmNsrncDntfrDntfrTpCcCVrsn = clmNsrncDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcCCde()
+    {
+        return this.clmNsrncDntfrDntfrTpCcCCde;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcCCde
+        (String clmNsrncDntfrDntfrTpCcCCde) 
+        {
+      this.clmNsrncDntfrDntfrTpCcCCde = clmNsrncDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcCDsplay()
+    {
+        return this.clmNsrncDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcCDsplay
+        (String clmNsrncDntfrDntfrTpCcCDsplay) 
+        {
+      this.clmNsrncDntfrDntfrTpCcCDsplay = clmNsrncDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.clmNsrncDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcCSrSlctd
+        (String clmNsrncDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.clmNsrncDntfrDntfrTpCcCSrSlctd = clmNsrncDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrTpCcTxt()
+    {
+        return this.clmNsrncDntfrDntfrTpCcTxt;
+    }
+    
+    public void setClmNsrncDntfrDntfrTpCcTxt
+        (String clmNsrncDntfrDntfrTpCcTxt) 
+        {
+      this.clmNsrncDntfrDntfrTpCcTxt = clmNsrncDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrPrdPrdStrt()
+    {
+        return this.clmNsrncDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setClmNsrncDntfrDntfrPrdPrdStrt
+        (String clmNsrncDntfrDntfrPrdPrdStrt) 
+        {
+      this.clmNsrncDntfrDntfrPrdPrdStrt = clmNsrncDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrPrdPrdNd()
+    {
+        return this.clmNsrncDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setClmNsrncDntfrDntfrPrdPrdNd
+        (String clmNsrncDntfrDntfrPrdPrdNd) 
+        {
+      this.clmNsrncDntfrDntfrPrdPrdNd = clmNsrncDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrSsgnr()
+    {
+        return this.clmNsrncDntfrDntfrSsgnr;
+    }
+    
+    public void setClmNsrncDntfrDntfrSsgnr
+        (String clmNsrncDntfrDntfrSsgnr) 
+        {
+      this.clmNsrncDntfrDntfrSsgnr = clmNsrncDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrVlue()
+    {
+        return this.clmNsrncDntfrDntfrVlue;
+    }
+    
+    public void setClmNsrncDntfrDntfrVlue
+        (String clmNsrncDntfrDntfrVlue) 
+        {
+      this.clmNsrncDntfrDntfrVlue = clmNsrncDntfrDntfrVlue;
+}
+    public 
+    String 
+    getClmNsrncDntfrDntfrSstm()
+    {
+        return this.clmNsrncDntfrDntfrSstm;
+    }
+    
+    public void setClmNsrncDntfrDntfrSstm
+        (String clmNsrncDntfrDntfrSstm) 
+        {
+      this.clmNsrncDntfrDntfrSstm = clmNsrncDntfrDntfrSstm;
+}
+    public 
+    String 
+    getClaimInsuranceCoverageReference()
+    {
+        return this.claimInsuranceCoverageReference;
+    }
+    
+    public void setClaimInsuranceCoverageReference
+        (String claimInsuranceCoverageReference) 
+        {
+      this.claimInsuranceCoverageReference = claimInsuranceCoverageReference;
+}
+    public 
+    String 
+    getClmNsrncBsnssrrngmntStrng()
+    {
+        return this.clmNsrncBsnssrrngmntStrng;
+    }
+    
+    public void setClmNsrncBsnssrrngmntStrng
+        (String clmNsrncBsnssrrngmntStrng) 
+        {
+      this.clmNsrncBsnssrrngmntStrng = clmNsrncBsnssrrngmntStrng;
+}
+    public 
+    String 
+    getClaimInsurancePreAuthRefString()
+    {
+        return this.claimInsurancePreAuthRefString;
+    }
+    
+    public void setClaimInsurancePreAuthRefString
+        (String claimInsurancePreAuthRefString) 
+        {
+      this.claimInsurancePreAuthRefString = claimInsurancePreAuthRefString;
+}
+    public 
+    String 
+    getClmNsrncClmRspnsRfrnce()
+    {
+        return this.clmNsrncClmRspnsRfrnce;
+    }
+    
+    public void setClmNsrncClmRspnsRfrnce
+        (String clmNsrncClmRspnsRfrnce) 
+        {
+      this.clmNsrncClmRspnsRfrnce = clmNsrncClmRspnsRfrnce;
+}
+    public 
+    String 
+    getClaimAccidentDateDate()
+    {
+        return this.claimAccidentDateDate;
+    }
+    
+    public void setClaimAccidentDateDate
+        (String claimAccidentDateDate) 
+        {
+      this.claimAccidentDateDate = claimAccidentDateDate;
+}
+    public 
+    String 
+    getClmCcdntTpCcCdngCSstm()
+    {
+        return this.clmCcdntTpCcCdngCSstm;
+    }
+    
+    public void setClmCcdntTpCcCdngCSstm
+        (String clmCcdntTpCcCdngCSstm) 
+        {
+      this.clmCcdntTpCcCdngCSstm = clmCcdntTpCcCdngCSstm;
+}
+    public 
+    String 
+    getClmCcdntTpCcCdngCVrsn()
+    {
+        return this.clmCcdntTpCcCdngCVrsn;
+    }
+    
+    public void setClmCcdntTpCcCdngCVrsn
+        (String clmCcdntTpCcCdngCVrsn) 
+        {
+      this.clmCcdntTpCcCdngCVrsn = clmCcdntTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmCcdntTpCcCdngCCde()
+    {
+        return this.clmCcdntTpCcCdngCCde;
+    }
+    
+    public void setClmCcdntTpCcCdngCCde
+        (String clmCcdntTpCcCdngCCde) 
+        {
+      this.clmCcdntTpCcCdngCCde = clmCcdntTpCcCdngCCde;
+}
+    public 
+    String 
+    getClmCcdntTpCcCdngCDsplay()
+    {
+        return this.clmCcdntTpCcCdngCDsplay;
+    }
+    
+    public void setClmCcdntTpCcCdngCDsplay
+        (String clmCcdntTpCcCdngCDsplay) 
+        {
+      this.clmCcdntTpCcCdngCDsplay = clmCcdntTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmCcdntTpCcCdngCSrSlctd()
+    {
+        return this.clmCcdntTpCcCdngCSrSlctd;
+    }
+    
+    public void setClmCcdntTpCcCdngCSrSlctd
+        (String clmCcdntTpCcCdngCSrSlctd) 
+        {
+      this.clmCcdntTpCcCdngCSrSlctd = clmCcdntTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimAccidentTypeCcText()
+    {
+        return this.claimAccidentTypeCcText;
+    }
+    
+    public void setClaimAccidentTypeCcText
+        (String claimAccidentTypeCcText) 
+        {
+      this.claimAccidentTypeCcText = claimAccidentTypeCcText;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssSe()
+    {
+        return this.clmCcdntLctnddrssDdrssSe;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssSe
+        (String clmCcdntLctnddrssDdrssSe) 
+        {
+      this.clmCcdntLctnddrssDdrssSe = clmCcdntLctnddrssDdrssSe;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssTpe()
+    {
+        return this.clmCcdntLctnddrssDdrssTpe;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssTpe
+        (String clmCcdntLctnddrssDdrssTpe) 
+        {
+      this.clmCcdntLctnddrssDdrssTpe = clmCcdntLctnddrssDdrssTpe;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssPrdPrdStrt()
+    {
+        return this.clmCcdntLctnddrssDdrssPrdPrdStrt;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssPrdPrdStrt
+        (String clmCcdntLctnddrssDdrssPrdPrdStrt) 
+        {
+      this.clmCcdntLctnddrssDdrssPrdPrdStrt = clmCcdntLctnddrssDdrssPrdPrdStrt;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssPrdPrdNd()
+    {
+        return this.clmCcdntLctnddrssDdrssPrdPrdNd;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssPrdPrdNd
+        (String clmCcdntLctnddrssDdrssPrdPrdNd) 
+        {
+      this.clmCcdntLctnddrssDdrssPrdPrdNd = clmCcdntLctnddrssDdrssPrdPrdNd;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssTxt()
+    {
+        return this.clmCcdntLctnddrssDdrssTxt;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssTxt
+        (String clmCcdntLctnddrssDdrssTxt) 
+        {
+      this.clmCcdntLctnddrssDdrssTxt = clmCcdntLctnddrssDdrssTxt;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssLne()
+    {
+        return this.clmCcdntLctnddrssDdrssLne;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssLne
+        (String clmCcdntLctnddrssDdrssLne) 
+        {
+      this.clmCcdntLctnddrssDdrssLne = clmCcdntLctnddrssDdrssLne;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssCty()
+    {
+        return this.clmCcdntLctnddrssDdrssCty;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssCty
+        (String clmCcdntLctnddrssDdrssCty) 
+        {
+      this.clmCcdntLctnddrssDdrssCty = clmCcdntLctnddrssDdrssCty;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssDstrct()
+    {
+        return this.clmCcdntLctnddrssDdrssDstrct;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssDstrct
+        (String clmCcdntLctnddrssDdrssDstrct) 
+        {
+      this.clmCcdntLctnddrssDdrssDstrct = clmCcdntLctnddrssDdrssDstrct;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssStte()
+    {
+        return this.clmCcdntLctnddrssDdrssStte;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssStte
+        (String clmCcdntLctnddrssDdrssStte) 
+        {
+      this.clmCcdntLctnddrssDdrssStte = clmCcdntLctnddrssDdrssStte;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssPstlCde()
+    {
+        return this.clmCcdntLctnddrssDdrssPstlCde;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssPstlCde
+        (String clmCcdntLctnddrssDdrssPstlCde) 
+        {
+      this.clmCcdntLctnddrssDdrssPstlCde = clmCcdntLctnddrssDdrssPstlCde;
+}
+    public 
+    String 
+    getClmCcdntLctnddrssDdrssCntry()
+    {
+        return this.clmCcdntLctnddrssDdrssCntry;
+    }
+    
+    public void setClmCcdntLctnddrssDdrssCntry
+        (String clmCcdntLctnddrssDdrssCntry) 
+        {
+      this.clmCcdntLctnddrssDdrssCntry = clmCcdntLctnddrssDdrssCntry;
+}
+    public 
+    String 
+    getClmCcdntLctnRfrncRfrnce()
+    {
+        return this.clmCcdntLctnRfrncRfrnce;
+    }
+    
+    public void setClmCcdntLctnRfrncRfrnce
+        (String clmCcdntLctnRfrncRfrnce) 
+        {
+      this.clmCcdntLctnRfrncRfrnce = clmCcdntLctnRfrncRfrnce;
+}
+    public 
+    String 
+    getClaimItemSequencePositiveInt()
+    {
+        return this.claimItemSequencePositiveInt;
+    }
+    
+    public void setClaimItemSequencePositiveInt
+        (String claimItemSequencePositiveInt) 
+        {
+      this.claimItemSequencePositiveInt = claimItemSequencePositiveInt;
+}
+    public 
+    String 
+    getClmTmCrTmSqncPstvnt()
+    {
+        return this.clmTmCrTmSqncPstvnt;
+    }
+    
+    public void setClmTmCrTmSqncPstvnt
+        (String clmTmCrTmSqncPstvnt) 
+        {
+      this.clmTmCrTmSqncPstvnt = clmTmCrTmSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmDgnssSqncPstvnt()
+    {
+        return this.clmTmDgnssSqncPstvnt;
+    }
+    
+    public void setClmTmDgnssSqncPstvnt
+        (String clmTmDgnssSqncPstvnt) 
+        {
+      this.clmTmDgnssSqncPstvnt = clmTmDgnssSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmPrcdrSqncPstvnt()
+    {
+        return this.clmTmPrcdrSqncPstvnt;
+    }
+    
+    public void setClmTmPrcdrSqncPstvnt
+        (String clmTmPrcdrSqncPstvnt) 
+        {
+      this.clmTmPrcdrSqncPstvnt = clmTmPrcdrSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmNfrmtnSqncPstvnt()
+    {
+        return this.clmTmNfrmtnSqncPstvnt;
+    }
+    
+    public void setClmTmNfrmtnSqncPstvnt
+        (String clmTmNfrmtnSqncPstvnt) 
+        {
+      this.clmTmNfrmtnSqncPstvnt = clmTmNfrmtnSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmRvnCcCdngCSstm()
+    {
+        return this.clmTmRvnCcCdngCSstm;
+    }
+    
+    public void setClmTmRvnCcCdngCSstm
+        (String clmTmRvnCcCdngCSstm) 
+        {
+      this.clmTmRvnCcCdngCSstm = clmTmRvnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmRvnCcCdngCVrsn()
+    {
+        return this.clmTmRvnCcCdngCVrsn;
+    }
+    
+    public void setClmTmRvnCcCdngCVrsn
+        (String clmTmRvnCcCdngCVrsn) 
+        {
+      this.clmTmRvnCcCdngCVrsn = clmTmRvnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmRvnCcCdngCCde()
+    {
+        return this.clmTmRvnCcCdngCCde;
+    }
+    
+    public void setClmTmRvnCcCdngCCde
+        (String clmTmRvnCcCdngCCde) 
+        {
+      this.clmTmRvnCcCdngCCde = clmTmRvnCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmRvnCcCdngCDsplay()
+    {
+        return this.clmTmRvnCcCdngCDsplay;
+    }
+    
+    public void setClmTmRvnCcCdngCDsplay
+        (String clmTmRvnCcCdngCDsplay) 
+        {
+      this.clmTmRvnCcCdngCDsplay = clmTmRvnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmRvnCcCdngCSrSlctd()
+    {
+        return this.clmTmRvnCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmRvnCcCdngCSrSlctd
+        (String clmTmRvnCcCdngCSrSlctd) 
+        {
+      this.clmTmRvnCcCdngCSrSlctd = clmTmRvnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemRevenueCcText()
+    {
+        return this.claimItemRevenueCcText;
+    }
+    
+    public void setClaimItemRevenueCcText
+        (String claimItemRevenueCcText) 
+        {
+      this.claimItemRevenueCcText = claimItemRevenueCcText;
+}
+    public 
+    String 
+    getClmTmCtgrCcCdngCSstm()
+    {
+        return this.clmTmCtgrCcCdngCSstm;
+    }
+    
+    public void setClmTmCtgrCcCdngCSstm
+        (String clmTmCtgrCcCdngCSstm) 
+        {
+      this.clmTmCtgrCcCdngCSstm = clmTmCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmCtgrCcCdngCVrsn()
+    {
+        return this.clmTmCtgrCcCdngCVrsn;
+    }
+    
+    public void setClmTmCtgrCcCdngCVrsn
+        (String clmTmCtgrCcCdngCVrsn) 
+        {
+      this.clmTmCtgrCcCdngCVrsn = clmTmCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmCtgrCcCdngCCde()
+    {
+        return this.clmTmCtgrCcCdngCCde;
+    }
+    
+    public void setClmTmCtgrCcCdngCCde
+        (String clmTmCtgrCcCdngCCde) 
+        {
+      this.clmTmCtgrCcCdngCCde = clmTmCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmCtgrCcCdngCDsplay()
+    {
+        return this.clmTmCtgrCcCdngCDsplay;
+    }
+    
+    public void setClmTmCtgrCcCdngCDsplay
+        (String clmTmCtgrCcCdngCDsplay) 
+        {
+      this.clmTmCtgrCcCdngCDsplay = clmTmCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmCtgrCcCdngCSrSlctd()
+    {
+        return this.clmTmCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmCtgrCcCdngCSrSlctd
+        (String clmTmCtgrCcCdngCSrSlctd) 
+        {
+      this.clmTmCtgrCcCdngCSrSlctd = clmTmCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemCategoryCcText()
+    {
+        return this.claimItemCategoryCcText;
+    }
+    
+    public void setClaimItemCategoryCcText
+        (String claimItemCategoryCcText) 
+        {
+      this.claimItemCategoryCcText = claimItemCategoryCcText;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcCdngCSstm()
+    {
+        return this.clmTmPrdctrSrvcCcCdngCSstm;
+    }
+    
+    public void setClmTmPrdctrSrvcCcCdngCSstm
+        (String clmTmPrdctrSrvcCcCdngCSstm) 
+        {
+      this.clmTmPrdctrSrvcCcCdngCSstm = clmTmPrdctrSrvcCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcCdngCVrsn()
+    {
+        return this.clmTmPrdctrSrvcCcCdngCVrsn;
+    }
+    
+    public void setClmTmPrdctrSrvcCcCdngCVrsn
+        (String clmTmPrdctrSrvcCcCdngCVrsn) 
+        {
+      this.clmTmPrdctrSrvcCcCdngCVrsn = clmTmPrdctrSrvcCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcCdngCCde()
+    {
+        return this.clmTmPrdctrSrvcCcCdngCCde;
+    }
+    
+    public void setClmTmPrdctrSrvcCcCdngCCde
+        (String clmTmPrdctrSrvcCcCdngCCde) 
+        {
+      this.clmTmPrdctrSrvcCcCdngCCde = clmTmPrdctrSrvcCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcCdngCDsplay()
+    {
+        return this.clmTmPrdctrSrvcCcCdngCDsplay;
+    }
+    
+    public void setClmTmPrdctrSrvcCcCdngCDsplay
+        (String clmTmPrdctrSrvcCcCdngCDsplay) 
+        {
+      this.clmTmPrdctrSrvcCcCdngCDsplay = clmTmPrdctrSrvcCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcCdngCSrSlctd()
+    {
+        return this.clmTmPrdctrSrvcCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmPrdctrSrvcCcCdngCSrSlctd
+        (String clmTmPrdctrSrvcCcCdngCSrSlctd) 
+        {
+      this.clmTmPrdctrSrvcCcCdngCSrSlctd = clmTmPrdctrSrvcCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmPrdctrSrvcCcTxt()
+    {
+        return this.clmTmPrdctrSrvcCcTxt;
+    }
+    
+    public void setClmTmPrdctrSrvcCcTxt
+        (String clmTmPrdctrSrvcCcTxt) 
+        {
+      this.clmTmPrdctrSrvcCcTxt = clmTmPrdctrSrvcCcTxt;
+}
+    public 
+    String 
+    getClmTmMdfrCcCdngCSstm()
+    {
+        return this.clmTmMdfrCcCdngCSstm;
+    }
+    
+    public void setClmTmMdfrCcCdngCSstm
+        (String clmTmMdfrCcCdngCSstm) 
+        {
+      this.clmTmMdfrCcCdngCSstm = clmTmMdfrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmMdfrCcCdngCVrsn()
+    {
+        return this.clmTmMdfrCcCdngCVrsn;
+    }
+    
+    public void setClmTmMdfrCcCdngCVrsn
+        (String clmTmMdfrCcCdngCVrsn) 
+        {
+      this.clmTmMdfrCcCdngCVrsn = clmTmMdfrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmMdfrCcCdngCCde()
+    {
+        return this.clmTmMdfrCcCdngCCde;
+    }
+    
+    public void setClmTmMdfrCcCdngCCde
+        (String clmTmMdfrCcCdngCCde) 
+        {
+      this.clmTmMdfrCcCdngCCde = clmTmMdfrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmMdfrCcCdngCDsplay()
+    {
+        return this.clmTmMdfrCcCdngCDsplay;
+    }
+    
+    public void setClmTmMdfrCcCdngCDsplay
+        (String clmTmMdfrCcCdngCDsplay) 
+        {
+      this.clmTmMdfrCcCdngCDsplay = clmTmMdfrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmMdfrCcCdngCSrSlctd()
+    {
+        return this.clmTmMdfrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmMdfrCcCdngCSrSlctd
+        (String clmTmMdfrCcCdngCSrSlctd) 
+        {
+      this.clmTmMdfrCcCdngCSrSlctd = clmTmMdfrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemModifierCcText()
+    {
+        return this.claimItemModifierCcText;
+    }
+    
+    public void setClaimItemModifierCcText
+        (String claimItemModifierCcText) 
+        {
+      this.claimItemModifierCcText = claimItemModifierCcText;
+}
+    public 
+    String 
+    getClmTmPrgrmCdCcCdngCSstm()
+    {
+        return this.clmTmPrgrmCdCcCdngCSstm;
+    }
+    
+    public void setClmTmPrgrmCdCcCdngCSstm
+        (String clmTmPrgrmCdCcCdngCSstm) 
+        {
+      this.clmTmPrgrmCdCcCdngCSstm = clmTmPrgrmCdCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmPrgrmCdCcCdngCVrsn()
+    {
+        return this.clmTmPrgrmCdCcCdngCVrsn;
+    }
+    
+    public void setClmTmPrgrmCdCcCdngCVrsn
+        (String clmTmPrgrmCdCcCdngCVrsn) 
+        {
+      this.clmTmPrgrmCdCcCdngCVrsn = clmTmPrgrmCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmPrgrmCdCcCdngCCde()
+    {
+        return this.clmTmPrgrmCdCcCdngCCde;
+    }
+    
+    public void setClmTmPrgrmCdCcCdngCCde
+        (String clmTmPrgrmCdCcCdngCCde) 
+        {
+      this.clmTmPrgrmCdCcCdngCCde = clmTmPrgrmCdCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmPrgrmCdCcCdngCDsplay()
+    {
+        return this.clmTmPrgrmCdCcCdngCDsplay;
+    }
+    
+    public void setClmTmPrgrmCdCcCdngCDsplay
+        (String clmTmPrgrmCdCcCdngCDsplay) 
+        {
+      this.clmTmPrgrmCdCcCdngCDsplay = clmTmPrgrmCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmPrgrmCdCcCdngCSrSlctd()
+    {
+        return this.clmTmPrgrmCdCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmPrgrmCdCcCdngCSrSlctd
+        (String clmTmPrgrmCdCcCdngCSrSlctd) 
+        {
+      this.clmTmPrgrmCdCcCdngCSrSlctd = clmTmPrgrmCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemProgramCodeCcText()
+    {
+        return this.claimItemProgramCodeCcText;
+    }
+    
+    public void setClaimItemProgramCodeCcText
+        (String claimItemProgramCodeCcText) 
+        {
+      this.claimItemProgramCodeCcText = claimItemProgramCodeCcText;
+}
+    public 
+    String 
+    getClaimItemServicedDateDate()
+    {
+        return this.claimItemServicedDateDate;
+    }
+    
+    public void setClaimItemServicedDateDate
+        (String claimItemServicedDateDate) 
+        {
+      this.claimItemServicedDateDate = claimItemServicedDateDate;
+}
+    public 
+    String 
+    getClmTmSrvcdPrdPrdStrt()
+    {
+        return this.clmTmSrvcdPrdPrdStrt;
+    }
+    
+    public void setClmTmSrvcdPrdPrdStrt
+        (String clmTmSrvcdPrdPrdStrt) 
+        {
+      this.clmTmSrvcdPrdPrdStrt = clmTmSrvcdPrdPrdStrt;
+}
+    public 
+    String 
+    getClmTmSrvcdPrdPrdNd()
+    {
+        return this.clmTmSrvcdPrdPrdNd;
+    }
+    
+    public void setClmTmSrvcdPrdPrdNd
+        (String clmTmSrvcdPrdPrdNd) 
+        {
+      this.clmTmSrvcdPrdPrdNd = clmTmSrvcdPrdPrdNd;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcCdngCSstm()
+    {
+        return this.clmTmLctnCdblcncptCcCdngCSstm;
+    }
+    
+    public void setClmTmLctnCdblcncptCcCdngCSstm
+        (String clmTmLctnCdblcncptCcCdngCSstm) 
+        {
+      this.clmTmLctnCdblcncptCcCdngCSstm = clmTmLctnCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcCdngCVrsn()
+    {
+        return this.clmTmLctnCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setClmTmLctnCdblcncptCcCdngCVrsn
+        (String clmTmLctnCdblcncptCcCdngCVrsn) 
+        {
+      this.clmTmLctnCdblcncptCcCdngCVrsn = clmTmLctnCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcCdngCCde()
+    {
+        return this.clmTmLctnCdblcncptCcCdngCCde;
+    }
+    
+    public void setClmTmLctnCdblcncptCcCdngCCde
+        (String clmTmLctnCdblcncptCcCdngCCde) 
+        {
+      this.clmTmLctnCdblcncptCcCdngCCde = clmTmLctnCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcCdngCDsplay()
+    {
+        return this.clmTmLctnCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setClmTmLctnCdblcncptCcCdngCDsplay
+        (String clmTmLctnCdblcncptCcCdngCDsplay) 
+        {
+      this.clmTmLctnCdblcncptCcCdngCDsplay = clmTmLctnCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcCdngCSrSlctd()
+    {
+        return this.clmTmLctnCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmLctnCdblcncptCcCdngCSrSlctd
+        (String clmTmLctnCdblcncptCcCdngCSrSlctd) 
+        {
+      this.clmTmLctnCdblcncptCcCdngCSrSlctd = clmTmLctnCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmLctnCdblcncptCcTxt()
+    {
+        return this.clmTmLctnCdblcncptCcTxt;
+    }
+    
+    public void setClmTmLctnCdblcncptCcTxt
+        (String clmTmLctnCdblcncptCcTxt) 
+        {
+      this.clmTmLctnCdblcncptCcTxt = clmTmLctnCdblcncptCcTxt;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssSe()
+    {
+        return this.clmTmLctnddrssDdrssSe;
+    }
+    
+    public void setClmTmLctnddrssDdrssSe
+        (String clmTmLctnddrssDdrssSe) 
+        {
+      this.clmTmLctnddrssDdrssSe = clmTmLctnddrssDdrssSe;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssTpe()
+    {
+        return this.clmTmLctnddrssDdrssTpe;
+    }
+    
+    public void setClmTmLctnddrssDdrssTpe
+        (String clmTmLctnddrssDdrssTpe) 
+        {
+      this.clmTmLctnddrssDdrssTpe = clmTmLctnddrssDdrssTpe;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssPrdPrdStrt()
+    {
+        return this.clmTmLctnddrssDdrssPrdPrdStrt;
+    }
+    
+    public void setClmTmLctnddrssDdrssPrdPrdStrt
+        (String clmTmLctnddrssDdrssPrdPrdStrt) 
+        {
+      this.clmTmLctnddrssDdrssPrdPrdStrt = clmTmLctnddrssDdrssPrdPrdStrt;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssPrdPrdNd()
+    {
+        return this.clmTmLctnddrssDdrssPrdPrdNd;
+    }
+    
+    public void setClmTmLctnddrssDdrssPrdPrdNd
+        (String clmTmLctnddrssDdrssPrdPrdNd) 
+        {
+      this.clmTmLctnddrssDdrssPrdPrdNd = clmTmLctnddrssDdrssPrdPrdNd;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssTxt()
+    {
+        return this.clmTmLctnddrssDdrssTxt;
+    }
+    
+    public void setClmTmLctnddrssDdrssTxt
+        (String clmTmLctnddrssDdrssTxt) 
+        {
+      this.clmTmLctnddrssDdrssTxt = clmTmLctnddrssDdrssTxt;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssLne()
+    {
+        return this.clmTmLctnddrssDdrssLne;
+    }
+    
+    public void setClmTmLctnddrssDdrssLne
+        (String clmTmLctnddrssDdrssLne) 
+        {
+      this.clmTmLctnddrssDdrssLne = clmTmLctnddrssDdrssLne;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssCty()
+    {
+        return this.clmTmLctnddrssDdrssCty;
+    }
+    
+    public void setClmTmLctnddrssDdrssCty
+        (String clmTmLctnddrssDdrssCty) 
+        {
+      this.clmTmLctnddrssDdrssCty = clmTmLctnddrssDdrssCty;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssDstrct()
+    {
+        return this.clmTmLctnddrssDdrssDstrct;
+    }
+    
+    public void setClmTmLctnddrssDdrssDstrct
+        (String clmTmLctnddrssDdrssDstrct) 
+        {
+      this.clmTmLctnddrssDdrssDstrct = clmTmLctnddrssDdrssDstrct;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssStte()
+    {
+        return this.clmTmLctnddrssDdrssStte;
+    }
+    
+    public void setClmTmLctnddrssDdrssStte
+        (String clmTmLctnddrssDdrssStte) 
+        {
+      this.clmTmLctnddrssDdrssStte = clmTmLctnddrssDdrssStte;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssPstlCde()
+    {
+        return this.clmTmLctnddrssDdrssPstlCde;
+    }
+    
+    public void setClmTmLctnddrssDdrssPstlCde
+        (String clmTmLctnddrssDdrssPstlCde) 
+        {
+      this.clmTmLctnddrssDdrssPstlCde = clmTmLctnddrssDdrssPstlCde;
+}
+    public 
+    String 
+    getClmTmLctnddrssDdrssCntry()
+    {
+        return this.clmTmLctnddrssDdrssCntry;
+    }
+    
+    public void setClmTmLctnddrssDdrssCntry
+        (String clmTmLctnddrssDdrssCntry) 
+        {
+      this.clmTmLctnddrssDdrssCntry = clmTmLctnddrssDdrssCntry;
+}
+    public 
+    String 
+    getClmTmLctnRfrncRfrnce()
+    {
+        return this.clmTmLctnRfrncRfrnce;
+    }
+    
+    public void setClmTmLctnRfrncRfrnce
+        (String clmTmLctnRfrncRfrnce) 
+        {
+      this.clmTmLctnRfrncRfrnce = clmTmLctnRfrncRfrnce;
+}
+    public 
+    String 
+    getClaimItemQuantitySimpleQuantity()
+    {
+        return this.claimItemQuantitySimpleQuantity;
+    }
+    
+    public void setClaimItemQuantitySimpleQuantity
+        (String claimItemQuantitySimpleQuantity) 
+        {
+      this.claimItemQuantitySimpleQuantity = claimItemQuantitySimpleQuantity;
+}
+    public 
+    String 
+    getClmTmNtPrcMnCrrncy()
+    {
+        return this.clmTmNtPrcMnCrrncy;
+    }
+    
+    public void setClmTmNtPrcMnCrrncy
+        (String clmTmNtPrcMnCrrncy) 
+        {
+      this.clmTmNtPrcMnCrrncy = clmTmNtPrcMnCrrncy;
+}
+    public 
+    String 
+    getClaimItemUnitPriceMoneyValue()
+    {
+        return this.claimItemUnitPriceMoneyValue;
+    }
+    
+    public void setClaimItemUnitPriceMoneyValue
+        (String claimItemUnitPriceMoneyValue) 
+        {
+      this.claimItemUnitPriceMoneyValue = claimItemUnitPriceMoneyValue;
+}
+    public 
+    String 
+    getClaimItemFactorDecimal()
+    {
+        return this.claimItemFactorDecimal;
+    }
+    
+    public void setClaimItemFactorDecimal
+        (String claimItemFactorDecimal) 
+        {
+      this.claimItemFactorDecimal = claimItemFactorDecimal;
+}
+    public 
+    String 
+    getClaimItemNetMoneyCurrency()
+    {
+        return this.claimItemNetMoneyCurrency;
+    }
+    
+    public void setClaimItemNetMoneyCurrency
+        (String claimItemNetMoneyCurrency) 
+        {
+      this.claimItemNetMoneyCurrency = claimItemNetMoneyCurrency;
+}
+    public 
+    String 
+    getClaimItemNetMoneyValue()
+    {
+        return this.claimItemNetMoneyValue;
+    }
+    
+    public void setClaimItemNetMoneyValue
+        (String claimItemNetMoneyValue) 
+        {
+      this.claimItemNetMoneyValue = claimItemNetMoneyValue;
+}
+    public 
+    String 
+    getClaimItemUdiReference()
+    {
+        return this.claimItemUdiReference;
+    }
+    
+    public void setClaimItemUdiReference
+        (String claimItemUdiReference) 
+        {
+      this.claimItemUdiReference = claimItemUdiReference;
+}
+    public 
+    String 
+    getClmTmBdStCcCdngCSstm()
+    {
+        return this.clmTmBdStCcCdngCSstm;
+    }
+    
+    public void setClmTmBdStCcCdngCSstm
+        (String clmTmBdStCcCdngCSstm) 
+        {
+      this.clmTmBdStCcCdngCSstm = clmTmBdStCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmBdStCcCdngCVrsn()
+    {
+        return this.clmTmBdStCcCdngCVrsn;
+    }
+    
+    public void setClmTmBdStCcCdngCVrsn
+        (String clmTmBdStCcCdngCVrsn) 
+        {
+      this.clmTmBdStCcCdngCVrsn = clmTmBdStCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmBdStCcCdngCCde()
+    {
+        return this.clmTmBdStCcCdngCCde;
+    }
+    
+    public void setClmTmBdStCcCdngCCde
+        (String clmTmBdStCcCdngCCde) 
+        {
+      this.clmTmBdStCcCdngCCde = clmTmBdStCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmBdStCcCdngCDsplay()
+    {
+        return this.clmTmBdStCcCdngCDsplay;
+    }
+    
+    public void setClmTmBdStCcCdngCDsplay
+        (String clmTmBdStCcCdngCDsplay) 
+        {
+      this.clmTmBdStCcCdngCDsplay = clmTmBdStCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmBdStCcCdngCSrSlctd()
+    {
+        return this.clmTmBdStCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmBdStCcCdngCSrSlctd
+        (String clmTmBdStCcCdngCSrSlctd) 
+        {
+      this.clmTmBdStCcCdngCSrSlctd = clmTmBdStCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemBodySiteCcText()
+    {
+        return this.claimItemBodySiteCcText;
+    }
+    
+    public void setClaimItemBodySiteCcText
+        (String claimItemBodySiteCcText) 
+        {
+      this.claimItemBodySiteCcText = claimItemBodySiteCcText;
+}
+    public 
+    String 
+    getClmTmSbStCcCdngCSstm()
+    {
+        return this.clmTmSbStCcCdngCSstm;
+    }
+    
+    public void setClmTmSbStCcCdngCSstm
+        (String clmTmSbStCcCdngCSstm) 
+        {
+      this.clmTmSbStCcCdngCSstm = clmTmSbStCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmSbStCcCdngCVrsn()
+    {
+        return this.clmTmSbStCcCdngCVrsn;
+    }
+    
+    public void setClmTmSbStCcCdngCVrsn
+        (String clmTmSbStCcCdngCVrsn) 
+        {
+      this.clmTmSbStCcCdngCVrsn = clmTmSbStCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmSbStCcCdngCCde()
+    {
+        return this.clmTmSbStCcCdngCCde;
+    }
+    
+    public void setClmTmSbStCcCdngCCde
+        (String clmTmSbStCcCdngCCde) 
+        {
+      this.clmTmSbStCcCdngCCde = clmTmSbStCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmSbStCcCdngCDsplay()
+    {
+        return this.clmTmSbStCcCdngCDsplay;
+    }
+    
+    public void setClmTmSbStCcCdngCDsplay
+        (String clmTmSbStCcCdngCDsplay) 
+        {
+      this.clmTmSbStCcCdngCDsplay = clmTmSbStCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmSbStCcCdngCSrSlctd()
+    {
+        return this.clmTmSbStCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmSbStCcCdngCSrSlctd
+        (String clmTmSbStCcCdngCSrSlctd) 
+        {
+      this.clmTmSbStCcCdngCSrSlctd = clmTmSbStCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemSubSiteCcText()
+    {
+        return this.claimItemSubSiteCcText;
+    }
+    
+    public void setClaimItemSubSiteCcText
+        (String claimItemSubSiteCcText) 
+        {
+      this.claimItemSubSiteCcText = claimItemSubSiteCcText;
+}
+    public 
+    String 
+    getClaimItemEncounterReference()
+    {
+        return this.claimItemEncounterReference;
+    }
+    
+    public void setClaimItemEncounterReference
+        (String claimItemEncounterReference) 
+        {
+      this.claimItemEncounterReference = claimItemEncounterReference;
+}
+    public 
+    String 
+    getClmTmDtlSqncPstvnt()
+    {
+        return this.clmTmDtlSqncPstvnt;
+    }
+    
+    public void setClmTmDtlSqncPstvnt
+        (String clmTmDtlSqncPstvnt) 
+        {
+      this.clmTmDtlSqncPstvnt = clmTmDtlSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmDtlRvnCcCdngCSstm()
+    {
+        return this.clmTmDtlRvnCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlRvnCcCdngCSstm
+        (String clmTmDtlRvnCcCdngCSstm) 
+        {
+      this.clmTmDtlRvnCcCdngCSstm = clmTmDtlRvnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlRvnCcCdngCVrsn()
+    {
+        return this.clmTmDtlRvnCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlRvnCcCdngCVrsn
+        (String clmTmDtlRvnCcCdngCVrsn) 
+        {
+      this.clmTmDtlRvnCcCdngCVrsn = clmTmDtlRvnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlRvnCcCdngCCde()
+    {
+        return this.clmTmDtlRvnCcCdngCCde;
+    }
+    
+    public void setClmTmDtlRvnCcCdngCCde
+        (String clmTmDtlRvnCcCdngCCde) 
+        {
+      this.clmTmDtlRvnCcCdngCCde = clmTmDtlRvnCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlRvnCcCdngCDsplay()
+    {
+        return this.clmTmDtlRvnCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlRvnCcCdngCDsplay
+        (String clmTmDtlRvnCcCdngCDsplay) 
+        {
+      this.clmTmDtlRvnCcCdngCDsplay = clmTmDtlRvnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlRvnCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlRvnCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlRvnCcCdngCSrSlctd
+        (String clmTmDtlRvnCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlRvnCcCdngCSrSlctd = clmTmDtlRvnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemDetailRevenueCcText()
+    {
+        return this.claimItemDetailRevenueCcText;
+    }
+    
+    public void setClaimItemDetailRevenueCcText
+        (String claimItemDetailRevenueCcText) 
+        {
+      this.claimItemDetailRevenueCcText = claimItemDetailRevenueCcText;
+}
+    public 
+    String 
+    getClmTmDtlCtgrCcCdngCSstm()
+    {
+        return this.clmTmDtlCtgrCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlCtgrCcCdngCSstm
+        (String clmTmDtlCtgrCcCdngCSstm) 
+        {
+      this.clmTmDtlCtgrCcCdngCSstm = clmTmDtlCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlCtgrCcCdngCVrsn()
+    {
+        return this.clmTmDtlCtgrCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlCtgrCcCdngCVrsn
+        (String clmTmDtlCtgrCcCdngCVrsn) 
+        {
+      this.clmTmDtlCtgrCcCdngCVrsn = clmTmDtlCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlCtgrCcCdngCCde()
+    {
+        return this.clmTmDtlCtgrCcCdngCCde;
+    }
+    
+    public void setClmTmDtlCtgrCcCdngCCde
+        (String clmTmDtlCtgrCcCdngCCde) 
+        {
+      this.clmTmDtlCtgrCcCdngCCde = clmTmDtlCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlCtgrCcCdngCDsplay()
+    {
+        return this.clmTmDtlCtgrCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlCtgrCcCdngCDsplay
+        (String clmTmDtlCtgrCcCdngCDsplay) 
+        {
+      this.clmTmDtlCtgrCcCdngCDsplay = clmTmDtlCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlCtgrCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlCtgrCcCdngCSrSlctd
+        (String clmTmDtlCtgrCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlCtgrCcCdngCSrSlctd = clmTmDtlCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemDetailCategoryCcText()
+    {
+        return this.claimItemDetailCategoryCcText;
+    }
+    
+    public void setClaimItemDetailCategoryCcText
+        (String claimItemDetailCategoryCcText) 
+        {
+      this.claimItemDetailCategoryCcText = claimItemDetailCategoryCcText;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcCdngCSstm()
+    {
+        return this.clmTmDtlPrdctrSrvcCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcCdngCSstm
+        (String clmTmDtlPrdctrSrvcCcCdngCSstm) 
+        {
+      this.clmTmDtlPrdctrSrvcCcCdngCSstm = clmTmDtlPrdctrSrvcCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcCdngCVrsn()
+    {
+        return this.clmTmDtlPrdctrSrvcCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcCdngCVrsn
+        (String clmTmDtlPrdctrSrvcCcCdngCVrsn) 
+        {
+      this.clmTmDtlPrdctrSrvcCcCdngCVrsn = clmTmDtlPrdctrSrvcCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcCdngCCde()
+    {
+        return this.clmTmDtlPrdctrSrvcCcCdngCCde;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcCdngCCde
+        (String clmTmDtlPrdctrSrvcCcCdngCCde) 
+        {
+      this.clmTmDtlPrdctrSrvcCcCdngCCde = clmTmDtlPrdctrSrvcCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcCdngCDsplay()
+    {
+        return this.clmTmDtlPrdctrSrvcCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcCdngCDsplay
+        (String clmTmDtlPrdctrSrvcCcCdngCDsplay) 
+        {
+      this.clmTmDtlPrdctrSrvcCcCdngCDsplay = clmTmDtlPrdctrSrvcCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlPrdctrSrvcCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcCdngCSrSlctd
+        (String clmTmDtlPrdctrSrvcCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlPrdctrSrvcCcCdngCSrSlctd = clmTmDtlPrdctrSrvcCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlPrdctrSrvcCcTxt()
+    {
+        return this.clmTmDtlPrdctrSrvcCcTxt;
+    }
+    
+    public void setClmTmDtlPrdctrSrvcCcTxt
+        (String clmTmDtlPrdctrSrvcCcTxt) 
+        {
+      this.clmTmDtlPrdctrSrvcCcTxt = clmTmDtlPrdctrSrvcCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlMdfrCcCdngCSstm()
+    {
+        return this.clmTmDtlMdfrCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlMdfrCcCdngCSstm
+        (String clmTmDtlMdfrCcCdngCSstm) 
+        {
+      this.clmTmDtlMdfrCcCdngCSstm = clmTmDtlMdfrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlMdfrCcCdngCVrsn()
+    {
+        return this.clmTmDtlMdfrCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlMdfrCcCdngCVrsn
+        (String clmTmDtlMdfrCcCdngCVrsn) 
+        {
+      this.clmTmDtlMdfrCcCdngCVrsn = clmTmDtlMdfrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlMdfrCcCdngCCde()
+    {
+        return this.clmTmDtlMdfrCcCdngCCde;
+    }
+    
+    public void setClmTmDtlMdfrCcCdngCCde
+        (String clmTmDtlMdfrCcCdngCCde) 
+        {
+      this.clmTmDtlMdfrCcCdngCCde = clmTmDtlMdfrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlMdfrCcCdngCDsplay()
+    {
+        return this.clmTmDtlMdfrCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlMdfrCcCdngCDsplay
+        (String clmTmDtlMdfrCcCdngCDsplay) 
+        {
+      this.clmTmDtlMdfrCcCdngCDsplay = clmTmDtlMdfrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlMdfrCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlMdfrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlMdfrCcCdngCSrSlctd
+        (String clmTmDtlMdfrCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlMdfrCcCdngCSrSlctd = clmTmDtlMdfrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClaimItemDetailModifierCcText()
+    {
+        return this.claimItemDetailModifierCcText;
+    }
+    
+    public void setClaimItemDetailModifierCcText
+        (String claimItemDetailModifierCcText) 
+        {
+      this.claimItemDetailModifierCcText = claimItemDetailModifierCcText;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcCdngCSstm()
+    {
+        return this.clmTmDtlPrgrmCdCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcCdngCSstm
+        (String clmTmDtlPrgrmCdCcCdngCSstm) 
+        {
+      this.clmTmDtlPrgrmCdCcCdngCSstm = clmTmDtlPrgrmCdCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcCdngCVrsn()
+    {
+        return this.clmTmDtlPrgrmCdCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcCdngCVrsn
+        (String clmTmDtlPrgrmCdCcCdngCVrsn) 
+        {
+      this.clmTmDtlPrgrmCdCcCdngCVrsn = clmTmDtlPrgrmCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcCdngCCde()
+    {
+        return this.clmTmDtlPrgrmCdCcCdngCCde;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcCdngCCde
+        (String clmTmDtlPrgrmCdCcCdngCCde) 
+        {
+      this.clmTmDtlPrgrmCdCcCdngCCde = clmTmDtlPrgrmCdCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcCdngCDsplay()
+    {
+        return this.clmTmDtlPrgrmCdCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcCdngCDsplay
+        (String clmTmDtlPrgrmCdCcCdngCDsplay) 
+        {
+      this.clmTmDtlPrgrmCdCcCdngCDsplay = clmTmDtlPrgrmCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlPrgrmCdCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcCdngCSrSlctd
+        (String clmTmDtlPrgrmCdCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlPrgrmCdCcCdngCSrSlctd = clmTmDtlPrgrmCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlPrgrmCdCcTxt()
+    {
+        return this.clmTmDtlPrgrmCdCcTxt;
+    }
+    
+    public void setClmTmDtlPrgrmCdCcTxt
+        (String clmTmDtlPrgrmCdCcTxt) 
+        {
+      this.clmTmDtlPrgrmCdCcTxt = clmTmDtlPrgrmCdCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlQnttSmplQntty()
+    {
+        return this.clmTmDtlQnttSmplQntty;
+    }
+    
+    public void setClmTmDtlQnttSmplQntty
+        (String clmTmDtlQnttSmplQntty) 
+        {
+      this.clmTmDtlQnttSmplQntty = clmTmDtlQnttSmplQntty;
+}
+    public 
+    String 
+    getClmTmDtlNtPrcMnCrrncy()
+    {
+        return this.clmTmDtlNtPrcMnCrrncy;
+    }
+    
+    public void setClmTmDtlNtPrcMnCrrncy
+        (String clmTmDtlNtPrcMnCrrncy) 
+        {
+      this.clmTmDtlNtPrcMnCrrncy = clmTmDtlNtPrcMnCrrncy;
+}
+    public 
+    String 
+    getClmTmDtlNtPrcMnVlue()
+    {
+        return this.clmTmDtlNtPrcMnVlue;
+    }
+    
+    public void setClmTmDtlNtPrcMnVlue
+        (String clmTmDtlNtPrcMnVlue) 
+        {
+      this.clmTmDtlNtPrcMnVlue = clmTmDtlNtPrcMnVlue;
+}
+    public 
+    String 
+    getClaimItemDetailFactorDecimal()
+    {
+        return this.claimItemDetailFactorDecimal;
+    }
+    
+    public void setClaimItemDetailFactorDecimal
+        (String claimItemDetailFactorDecimal) 
+        {
+      this.claimItemDetailFactorDecimal = claimItemDetailFactorDecimal;
+}
+    public 
+    String 
+    getClmTmDtlNtMnCrrncy()
+    {
+        return this.clmTmDtlNtMnCrrncy;
+    }
+    
+    public void setClmTmDtlNtMnCrrncy
+        (String clmTmDtlNtMnCrrncy) 
+        {
+      this.clmTmDtlNtMnCrrncy = clmTmDtlNtMnCrrncy;
+}
+    public 
+    String 
+    getClaimItemDetailNetMoneyValue()
+    {
+        return this.claimItemDetailNetMoneyValue;
+    }
+    
+    public void setClaimItemDetailNetMoneyValue
+        (String claimItemDetailNetMoneyValue) 
+        {
+      this.claimItemDetailNetMoneyValue = claimItemDetailNetMoneyValue;
+}
+    public 
+    String 
+    getClaimItemDetailUdiReference()
+    {
+        return this.claimItemDetailUdiReference;
+    }
+    
+    public void setClaimItemDetailUdiReference
+        (String claimItemDetailUdiReference) 
+        {
+      this.claimItemDetailUdiReference = claimItemDetailUdiReference;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlSqncPstvnt()
+    {
+        return this.clmTmDtlSbDtlSqncPstvnt;
+    }
+    
+    public void setClmTmDtlSbDtlSqncPstvnt
+        (String clmTmDtlSbDtlSqncPstvnt) 
+        {
+      this.clmTmDtlSbDtlSqncPstvnt = clmTmDtlSbDtlSqncPstvnt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcCdngCSstm()
+    {
+        return this.clmTmDtlSbDtlRvnCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcCdngCSstm
+        (String clmTmDtlSbDtlRvnCcCdngCSstm) 
+        {
+      this.clmTmDtlSbDtlRvnCcCdngCSstm = clmTmDtlSbDtlRvnCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcCdngCVrsn()
+    {
+        return this.clmTmDtlSbDtlRvnCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcCdngCVrsn
+        (String clmTmDtlSbDtlRvnCcCdngCVrsn) 
+        {
+      this.clmTmDtlSbDtlRvnCcCdngCVrsn = clmTmDtlSbDtlRvnCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcCdngCCde()
+    {
+        return this.clmTmDtlSbDtlRvnCcCdngCCde;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcCdngCCde
+        (String clmTmDtlSbDtlRvnCcCdngCCde) 
+        {
+      this.clmTmDtlSbDtlRvnCcCdngCCde = clmTmDtlSbDtlRvnCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcCdngCDsplay()
+    {
+        return this.clmTmDtlSbDtlRvnCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcCdngCDsplay
+        (String clmTmDtlSbDtlRvnCcCdngCDsplay) 
+        {
+      this.clmTmDtlSbDtlRvnCcCdngCDsplay = clmTmDtlSbDtlRvnCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlSbDtlRvnCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcCdngCSrSlctd
+        (String clmTmDtlSbDtlRvnCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlSbDtlRvnCcCdngCSrSlctd = clmTmDtlSbDtlRvnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlRvnCcTxt()
+    {
+        return this.clmTmDtlSbDtlRvnCcTxt;
+    }
+    
+    public void setClmTmDtlSbDtlRvnCcTxt
+        (String clmTmDtlSbDtlRvnCcTxt) 
+        {
+      this.clmTmDtlSbDtlRvnCcTxt = clmTmDtlSbDtlRvnCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcCdngCSstm()
+    {
+        return this.clmTmDtlSbDtlCtgrCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcCdngCSstm
+        (String clmTmDtlSbDtlCtgrCcCdngCSstm) 
+        {
+      this.clmTmDtlSbDtlCtgrCcCdngCSstm = clmTmDtlSbDtlCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcCdngCVrsn()
+    {
+        return this.clmTmDtlSbDtlCtgrCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcCdngCVrsn
+        (String clmTmDtlSbDtlCtgrCcCdngCVrsn) 
+        {
+      this.clmTmDtlSbDtlCtgrCcCdngCVrsn = clmTmDtlSbDtlCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcCdngCCde()
+    {
+        return this.clmTmDtlSbDtlCtgrCcCdngCCde;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcCdngCCde
+        (String clmTmDtlSbDtlCtgrCcCdngCCde) 
+        {
+      this.clmTmDtlSbDtlCtgrCcCdngCCde = clmTmDtlSbDtlCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcCdngCDsplay()
+    {
+        return this.clmTmDtlSbDtlCtgrCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcCdngCDsplay
+        (String clmTmDtlSbDtlCtgrCcCdngCDsplay) 
+        {
+      this.clmTmDtlSbDtlCtgrCcCdngCDsplay = clmTmDtlSbDtlCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlSbDtlCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcCdngCSrSlctd
+        (String clmTmDtlSbDtlCtgrCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlSbDtlCtgrCcCdngCSrSlctd = clmTmDtlSbDtlCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlCtgrCcTxt()
+    {
+        return this.clmTmDtlSbDtlCtgrCcTxt;
+    }
+    
+    public void setClmTmDtlSbDtlCtgrCcTxt
+        (String clmTmDtlSbDtlCtgrCcTxt) 
+        {
+      this.clmTmDtlSbDtlCtgrCcTxt = clmTmDtlSbDtlCtgrCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcCdngCSstm()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcCdngCSstm
+        (String clmTmDtlSbDtlPrdctrSrvcCcCdngCSstm) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcCdngCSstm = clmTmDtlSbDtlPrdctrSrvcCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn
+        (String clmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn = clmTmDtlSbDtlPrdctrSrvcCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcCdngCCde()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcCdngCCde;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcCdngCCde
+        (String clmTmDtlSbDtlPrdctrSrvcCcCdngCCde) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcCdngCCde = clmTmDtlSbDtlPrdctrSrvcCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay
+        (String clmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay = clmTmDtlSbDtlPrdctrSrvcCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd
+        (String clmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd = clmTmDtlSbDtlPrdctrSrvcCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrdctrSrvcCcTxt()
+    {
+        return this.clmTmDtlSbDtlPrdctrSrvcCcTxt;
+    }
+    
+    public void setClmTmDtlSbDtlPrdctrSrvcCcTxt
+        (String clmTmDtlSbDtlPrdctrSrvcCcTxt) 
+        {
+      this.clmTmDtlSbDtlPrdctrSrvcCcTxt = clmTmDtlSbDtlPrdctrSrvcCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcCdngCSstm()
+    {
+        return this.clmTmDtlSbDtlMdfrCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcCdngCSstm
+        (String clmTmDtlSbDtlMdfrCcCdngCSstm) 
+        {
+      this.clmTmDtlSbDtlMdfrCcCdngCSstm = clmTmDtlSbDtlMdfrCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcCdngCVrsn()
+    {
+        return this.clmTmDtlSbDtlMdfrCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcCdngCVrsn
+        (String clmTmDtlSbDtlMdfrCcCdngCVrsn) 
+        {
+      this.clmTmDtlSbDtlMdfrCcCdngCVrsn = clmTmDtlSbDtlMdfrCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcCdngCCde()
+    {
+        return this.clmTmDtlSbDtlMdfrCcCdngCCde;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcCdngCCde
+        (String clmTmDtlSbDtlMdfrCcCdngCCde) 
+        {
+      this.clmTmDtlSbDtlMdfrCcCdngCCde = clmTmDtlSbDtlMdfrCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcCdngCDsplay()
+    {
+        return this.clmTmDtlSbDtlMdfrCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcCdngCDsplay
+        (String clmTmDtlSbDtlMdfrCcCdngCDsplay) 
+        {
+      this.clmTmDtlSbDtlMdfrCcCdngCDsplay = clmTmDtlSbDtlMdfrCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlSbDtlMdfrCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcCdngCSrSlctd
+        (String clmTmDtlSbDtlMdfrCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlSbDtlMdfrCcCdngCSrSlctd = clmTmDtlSbDtlMdfrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlMdfrCcTxt()
+    {
+        return this.clmTmDtlSbDtlMdfrCcTxt;
+    }
+    
+    public void setClmTmDtlSbDtlMdfrCcTxt
+        (String clmTmDtlSbDtlMdfrCcTxt) 
+        {
+      this.clmTmDtlSbDtlMdfrCcTxt = clmTmDtlSbDtlMdfrCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcCdngCSstm()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcCdngCSstm;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcCdngCSstm
+        (String clmTmDtlSbDtlPrgrmCdCcCdngCSstm) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcCdngCSstm = clmTmDtlSbDtlPrgrmCdCcCdngCSstm;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcCdngCVrsn()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcCdngCVrsn;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcCdngCVrsn
+        (String clmTmDtlSbDtlPrgrmCdCcCdngCVrsn) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcCdngCVrsn = clmTmDtlSbDtlPrgrmCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcCdngCCde()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcCdngCCde;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcCdngCCde
+        (String clmTmDtlSbDtlPrgrmCdCcCdngCCde) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcCdngCCde = clmTmDtlSbDtlPrgrmCdCcCdngCCde;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcCdngCDsplay()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcCdngCDsplay;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcCdngCDsplay
+        (String clmTmDtlSbDtlPrgrmCdCcCdngCDsplay) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcCdngCDsplay = clmTmDtlSbDtlPrgrmCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd
+        (String clmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd = clmTmDtlSbDtlPrgrmCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlPrgrmCdCcTxt()
+    {
+        return this.clmTmDtlSbDtlPrgrmCdCcTxt;
+    }
+    
+    public void setClmTmDtlSbDtlPrgrmCdCcTxt
+        (String clmTmDtlSbDtlPrgrmCdCcTxt) 
+        {
+      this.clmTmDtlSbDtlPrgrmCdCcTxt = clmTmDtlSbDtlPrgrmCdCcTxt;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlQnttSmplQntty()
+    {
+        return this.clmTmDtlSbDtlQnttSmplQntty;
+    }
+    
+    public void setClmTmDtlSbDtlQnttSmplQntty
+        (String clmTmDtlSbDtlQnttSmplQntty) 
+        {
+      this.clmTmDtlSbDtlQnttSmplQntty = clmTmDtlSbDtlQnttSmplQntty;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlNtPrcMnCrrncy()
+    {
+        return this.clmTmDtlSbDtlNtPrcMnCrrncy;
+    }
+    
+    public void setClmTmDtlSbDtlNtPrcMnCrrncy
+        (String clmTmDtlSbDtlNtPrcMnCrrncy) 
+        {
+      this.clmTmDtlSbDtlNtPrcMnCrrncy = clmTmDtlSbDtlNtPrcMnCrrncy;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlNtPrcMnVlue()
+    {
+        return this.clmTmDtlSbDtlNtPrcMnVlue;
+    }
+    
+    public void setClmTmDtlSbDtlNtPrcMnVlue
+        (String clmTmDtlSbDtlNtPrcMnVlue) 
+        {
+      this.clmTmDtlSbDtlNtPrcMnVlue = clmTmDtlSbDtlNtPrcMnVlue;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlFctrDcml()
+    {
+        return this.clmTmDtlSbDtlFctrDcml;
+    }
+    
+    public void setClmTmDtlSbDtlFctrDcml
+        (String clmTmDtlSbDtlFctrDcml) 
+        {
+      this.clmTmDtlSbDtlFctrDcml = clmTmDtlSbDtlFctrDcml;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlNtMnCrrncy()
+    {
+        return this.clmTmDtlSbDtlNtMnCrrncy;
+    }
+    
+    public void setClmTmDtlSbDtlNtMnCrrncy
+        (String clmTmDtlSbDtlNtMnCrrncy) 
+        {
+      this.clmTmDtlSbDtlNtMnCrrncy = clmTmDtlSbDtlNtMnCrrncy;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlNtMnVlue()
+    {
+        return this.clmTmDtlSbDtlNtMnVlue;
+    }
+    
+    public void setClmTmDtlSbDtlNtMnVlue
+        (String clmTmDtlSbDtlNtMnVlue) 
+        {
+      this.clmTmDtlSbDtlNtMnVlue = clmTmDtlSbDtlNtMnVlue;
+}
+    public 
+    String 
+    getClmTmDtlSbDtlDRfrnce()
+    {
+        return this.clmTmDtlSbDtlDRfrnce;
+    }
+    
+    public void setClmTmDtlSbDtlDRfrnce
+        (String clmTmDtlSbDtlDRfrnce) 
+        {
+      this.clmTmDtlSbDtlDRfrnce = clmTmDtlSbDtlDRfrnce;
+}
+    public 
+    String 
+    getClaimTotalMoneyCurrency()
+    {
+        return this.claimTotalMoneyCurrency;
+    }
+    
+    public void setClaimTotalMoneyCurrency
+        (String claimTotalMoneyCurrency) 
+        {
+      this.claimTotalMoneyCurrency = claimTotalMoneyCurrency;
+}
+    public 
+    String 
+    getClaimTotalMoneyValue()
+    {
+        return this.claimTotalMoneyValue;
+    }
+    
+    public void setClaimTotalMoneyValue
+        (String claimTotalMoneyValue) 
+        {
+      this.claimTotalMoneyValue = claimTotalMoneyValue;
+}
 
 
 

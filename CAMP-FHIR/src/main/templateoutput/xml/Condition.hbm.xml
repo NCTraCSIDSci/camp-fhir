@@ -1,1053 +1,555 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Condition" optimistic-lock="none" table="condition">
-        <id name="cndtnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Cndtn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="cndtnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_use_code</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_s_cde">
-                <comment>Condition_identifierIdentifier_use_code</comment>
+        <property name="cndtnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_se">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Condition_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="cndtnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Condition_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="cndtnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Condition_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="cndtnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Condition_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="cndtnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Condition_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="cndtnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Prd_strt">
-                <comment>Condition_identifierIdentifier_Period_start</comment>
+        <property name="cndtnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Prd_nd">
-                <comment>Condition_identifierIdentifier_Period_end</comment>
+        <property name="cndtnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Condition_identifierIdentifier_Reference_reference</comment>
+        <property name="cndtnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Condition_identifierIdentifier_Reference_type</comment>
+        <property name="cndtnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Condition_identifierIdentifier_Reference_identifier</comment>
+        <property name="cndtnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Condition_identifierIdentifier_Reference_display</comment>
+        <property name="cndtnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Cndtn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Condition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_value_string</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_vl_strng">
-                <comment>Condition_identifierIdentifier_value_string</comment>
+        <property name="cndtnClnclSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_clnclStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Condition_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Cndtn_dntfr_dntfr_sstm_ri">
-                <comment>Condition_identifierIdentifier_system_uri</comment>
+        <property name="cndtnClnclSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_clnclStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cndtnClnclSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_clnclStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cndtnClnclSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_clnclStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnClnclSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_clnclStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="conditionClinicalStatusCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, setText"}</meta>
+            <column length="65535" name="Condition_clinicalStatus_CC_text">
+                <comment>{ "tree" :"Condition.clinicalStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalStatus, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cndtnVrfctnSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnClnclSttsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_clnclStts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cndtnVrfctnSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cndtnVrfctnSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cndtnVrfctnSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnVrfctnSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="cndtnVrfctnSttsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, setText"}</meta>
+            <column length="65535" name="Cndtn_vrfctnStts_CC_txt">
+                <comment>{ "tree" :"Condition.verificationStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVerificationStatus, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cndtnCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnVrfctnSttsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_vrfctnStts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cndtnCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cndtnCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cndtnCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="conditionCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="Condition_category_CC_text">
+                <comment>{ "tree" :"Condition.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cndtnSvrtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_svrt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_ctgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cndtnSvrtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_svrt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cndtnSvrtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_svrt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cndtnSvrtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_svrt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnSvrtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_svrt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="conditionSeverityCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, setText"}</meta>
+            <column length="65535" name="Condition_severity_CC_text">
+                <comment>{ "tree" :"Condition.severity", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSeverity, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="conditionCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Condition_code_CC_coding_C_system">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnSvrtCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_svrt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="conditionCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Condition_code_CC_coding_C_version">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="conditionCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Condition_code_CC_coding_C_code">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="conditionCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Condition_code_CC_coding_C_display">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="conditionCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Condition_code_CC_text">
+                <comment>{ "tree" :"Condition.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cndtnBdStCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_bdSt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cndtnBdStCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_bdSt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cndtnBdStCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_bdSt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cndtnBdStCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_bdSt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cndtnBdStCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_bdSt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="conditionBodySiteCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, setText"}</meta>
+            <column length="65535" name="Condition_bodySite_CC_text">
+                <comment>{ "tree" :"Condition.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="conditionSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Condition_subject_Reference">
+                <comment>{ "tree" :"Condition.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="cndtnBdStCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_bdSt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="conditionEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="Condition_encounter_Reference">
+                <comment>{ "tree" :"Condition.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="conditionOnsetDatetimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetDatetime"}</meta>
+            <column length="65535" name="Condition_onsetDatetime_dateTime">
+                <comment>{ "tree" :"Condition.onsetDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetDatetime"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="conditionOnsetAgeAge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetAge"}</meta>
+            <column length="65535" name="Condition_onsetAge_Age">
+                <comment>{ "tree" :"Condition.onsetAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetAge"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="conditionOnsetPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetPeriod, setStart"}</meta>
+            <column length="65535" name="Condition_onsetPeriod_Period_start">
+                <comment>{ "tree" :"Condition.onsetPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="conditionOnsetPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetPeriod, setEnd"}</meta>
+            <column length="65535" name="Condition_onsetPeriod_Period_end">
+                <comment>{ "tree" :"Condition.onsetPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="conditionOnsetRangeRangeLow" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetRange, setLow"}</meta>
+            <column length="65535" name="Condition_onsetRange_Range_low">
+                <comment>{ "tree" :"Condition.onsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetRange, setLow"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="conditionOnsetRangeRangeHigh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetRange, setHigh"}</meta>
+            <column length="65535" name="Condition_onsetRange_Range_high">
+                <comment>{ "tree" :"Condition.onsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="conditionOnsetStringString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.onsetString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetString"}</meta>
+            <column length="65535" name="Condition_onsetString_string">
+                <comment>{ "tree" :"Condition.onsetString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnsetString"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="cndtnBtmntDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementDatetime"}</meta>
+            <column length="65535" name="Cndtn_btmntDttm_dtTme">
+                <comment>{ "tree" :"Condition.abatementDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementDatetime"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="conditionAbatementAgeAge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementAge"}</meta>
+            <column length="65535" name="Condition_abatementAge_Age">
+                <comment>{ "tree" :"Condition.abatementAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementAge"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cndtnBtmntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementPeriod, setStart"}</meta>
+            <column length="65535" name="Cndtn_btmntPrd_Prd_strt">
+                <comment>{ "tree" :"Condition.abatementPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cndtnBtmntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementPeriod, setEnd"}</meta>
+            <column length="65535" name="Cndtn_btmntPrd_Prd_nd">
+                <comment>{ "tree" :"Condition.abatementPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="conditionAbatementRangeRangeLow" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementRange, setLow"}</meta>
+            <column length="65535" name="Condition_abatementRange_Range_low">
+                <comment>{ "tree" :"Condition.abatementRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementRange, setLow"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="cndtnBtmntRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementRange, setHigh"}</meta>
+            <column length="65535" name="Cndtn_btmntRng_Rng_hgh">
+                <comment>{ "tree" :"Condition.abatementRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="cndtnSbjctRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_sbjct_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="conditionAbatementStringString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.abatementString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementString"}</meta>
+            <column length="65535" name="Condition_abatementString_string">
+                <comment>{ "tree" :"Condition.abatementString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbatementString"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="conditionRecordedDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.recordedDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecordedDate"}</meta>
+            <column length="65535" name="Condition_recordedDate_dateTime">
+                <comment>{ "tree" :"Condition.recordedDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecordedDate"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="conditionRecorderReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.recorder", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorder"}</meta>
+            <column length="65535" name="Condition_recorder_Reference">
+                <comment>{ "tree" :"Condition.recorder", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorder"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="conditionAsserterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.asserter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsserter"}</meta>
+            <column length="65535" name="Condition_asserter_Reference">
+                <comment>{ "tree" :"Condition.asserter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsserter"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="cndtnStgSmmrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_stg_smmr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cndtnStgSmmrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_stg_smmr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cndtnStgSmmrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_stg_smmr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cndtnStgSmmrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_stg_smmr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="cndtnStgSmmrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_stg_smmr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="conditionStageSummaryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, setText"}</meta>
+            <column length="65535" name="Condition_stage_summary_CC_text">
+                <comment>{ "tree" :"Condition.stage.summary", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setSummary, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cndtnStgSsssmntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.assessment", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addStage"] , "methodName" : "addAssessment"}</meta>
+            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnce">
+                <comment>{ "tree" :"Condition.stage.assessment", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addStage"] , "methodName" : "addAssessment"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cndtnStgTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_stg_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="cndtnStgTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_stg_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="cndtnStgTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_stg_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnNcntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_ncntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="cndtnStgTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_stg_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="conditionOnsetDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Condition_onsetDatetime">
-                <comment>dateTime</comment>
+        <property name="cndtnStgTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_stg_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="conditionOnsetAge" type="string">
-            <meta attribute="resource-type">Age</meta>
-            <column length="65535" name="Condition_onsetAge">
-                <comment>Age</comment>
+        <property name="conditionStageTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Condition_stage_type_CC_text">
+                <comment>{ "tree" :"Condition.stage.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addStage"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnNstPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Cndtn_nstPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="cndtnVdncCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cndtn_vdnc_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cndtnNstPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Cndtn_nstPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="cndtnVdncCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cndtn_vdnc_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cndtnNstRngRngLwSmplQntty" type="string">
-            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
-            <column length="65535" name="Cndtn_nstRng_Rng_lw_SmplQntty">
-                <comment>Range_low_SimpleQuantity</comment>
+        <property name="cndtnVdncCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Cndtn_vdnc_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cndtnNstRngRngHghSmplQntty" type="string">
-            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
-            <column length="65535" name="Cndtn_nstRng_Rng_hgh_SmplQntty">
-                <comment>Range_high_SimpleQuantity</comment>
+        <property name="cndtnVdncCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cndtn_vdnc_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="conditionOnsetString" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Condition_onsetString">
-                <comment>string</comment>
+        <property name="cndtnVdncCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cndtn_vdnc_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="conditionAbatementDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Condition_abatementDatetime">
-                <comment>dateTime</comment>
+        <property name="conditionEvidenceCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, setText"}</meta>
+            <column length="65535" name="Condition_evidence_code_CC_text">
+                <comment>{ "tree" :"Condition.evidence.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addCode, setText"}</comment>
             </column>
         </property>
-        <property name="conditionAbatementAge" type="string">
-            <meta attribute="resource-type">Age</meta>
-            <column length="65535" name="Condition_abatementAge">
-                <comment>Age</comment>
+        <property name="cndtnVdncDtlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.evidence.detail", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addDetail"}</meta>
+            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnce">
+                <comment>{ "tree" :"Condition.evidence.detail", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addEvidence"] , "methodName" : "addDetail"}</comment>
             </column>
         </property>
-        <property name="cndtnBtmntPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Cndtn_btmntPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="conditionNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Condition_note_Annotation_time">
+                <comment>{ "tree" :"Condition.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="cndtnBtmntPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Cndtn_btmntPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="conditionNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Condition_note_Annotation_text">
+                <comment>{ "tree" :"Condition.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="cndtnBtmntRngRngLwSmplQntty" type="string">
-            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
-            <column length="65535" name="Cndtn_btmntRng_Rng_lw_SmplQntty">
-                <comment>Range_low_SimpleQuantity</comment>
+        <property name="cndtnNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Cndtn_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Condition.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="cndtnBtmntRngRngHghSmplQntty" type="string">
-            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
-            <column length="65535" name="Cndtn_btmntRng_Rng_hgh_SmplQntty">
-                <comment>Range_high_SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="conditionAbatementString" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Condition_abatementString">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="conditionRecordedDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Condition_recordedDate">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cndtnRcrdrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_rcrdr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cndtnSsrtrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_ssrtr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSmmrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_stg_smmr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cndtnStgSsssmntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_stg_ssssmnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cndtnStgTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_stg_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cndtn_vdnc_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cndtnVdncDtlRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cndtn_vdnc_dtl_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnTmDtTme" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_tm_dtTme">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnTxtMrkdwn" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_txt_mrkdwn">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cndtnNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="Cndtn_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
+        <property name="cndtnNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Condition.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Cndtn_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"Condition.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

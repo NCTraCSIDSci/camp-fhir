@@ -1,105 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproductundesirableeffect" optimistic-lock="none" table="medicinalproductundesirableeffect">
-        <id name="mpundesirableEffectSubject" type="string">
-            <column length="512" name="MPUndesirableEffect_subject"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mpndsrblffctSmptmCndtnffctCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPndsrblffct_smptmCndtnffct_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpndsrblffctSbjctRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</meta>
+            <column length="512" name="MPndsrblffct_sbjct_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctSmptmCndtnffctCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPndsrblffct_smptmCndtnffct_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctSmptmCndtnffctCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPndsrblffct_smptmCndtnffct_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctSmptmCndtnffctCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPndsrblffct_smptmCndtnffct_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setCode"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctSmptmCndtnffctCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPndsrblffct_smptmCndtnffct_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctClssfctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPndsrblffct_clssfctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctClssfctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPndsrblffct_clssfctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpndsrblffctSmptmCndtnffctCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, setText"}</meta>
+            <column length="65535" name="MPndsrblffct_smptmCndtnffct_CC_txt">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.symptomConditionEffect", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSymptomConditionEffect, setText"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctClssfctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPndsrblffct_clssfctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpndsrblffctClssfctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctClssfctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPndsrblffct_clssfctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpndsrblffctClssfctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctClssfctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPndsrblffct_clssfctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpndsrblffctClssfctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setCode"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctFrqncfccrrncCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPndsrblffct_frqncfccrrnc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpndsrblffctClssfctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctFrqncfccrrncCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPndsrblffct_frqncfccrrnc_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpndsrblffctClssfctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctFrqncfccrrncCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPndsrblffct_frqncfccrrnc_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpndsrblffctClssfctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, setText"}</meta>
+            <column length="65535" name="MPndsrblffct_clssfctn_CC_txt">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.classification", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClassification, setText"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctFrqncfccrrncCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPndsrblffct_frqncfccrrnc_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpndsrblffctFrqncfccrrncCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpndsrblffctFrqncfccrrncCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPndsrblffct_frqncfccrrnc_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpndsrblffctFrqncfccrrncCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpundesirableEffectPopulation" type="string">
-            <meta attribute="resource-type">Population</meta>
-            <column length="65535" name="MPUndesirableEffect_population">
-                <comment>Population</comment>
+        <property name="mpndsrblffctFrqncfccrrncCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setCode"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpndsrblffctFrqncfccrrncCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpndsrblffctFrqncfccrrncCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpndsrblffctFrqncfccrrncCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, setText"}</meta>
+            <column length="65535" name="MPndsrblffct_frqncfccrrnc_CC_txt">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.frequencyOfOccurrence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequencyOfOccurrence, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpndsrblffctPpltnPpltn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductUndesirableEffect.population", "datatype" : "Population", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPopulation"}</meta>
+            <column length="65535" name="MPndsrblffct_ppltn_Ppltn">
+                <comment>{ "tree" :"MedicinalProductUndesirableEffect.population", "datatype" : "Population", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPopulation"}</comment>
             </column>
         </property>
     </class>

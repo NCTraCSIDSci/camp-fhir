@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,893 +10,1342 @@ package main.templateoutput.Model;
 public class Codesystem  implements java.io.Serializable {
 
 
-     private String codeSystemUrl;
-     private String cdSstmDntfrDntfrSCde;
-     private String cdSstmDntfrDntfrTpCdblCncptCdngSstm;
-     private String cdSstmDntfrDntfrTpCdblCncptCdngVrsn;
-     private String cdSstmDntfrDntfrTpCdblCncptCdngCde;
-     private String cdSstmDntfrDntfrTpCdblCncptCdngDsplay;
-     private String cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String cdSstmDntfrDntfrCdblCncptTxt;
-     private String cdSstmDntfrDntfrPrdStrt;
-     private String cdSstmDntfrDntfrPrdNd;
-     private String cdSstmDntfrDntfrRfrncRfrnce;
-     private String cdSstmDntfrDntfrRfrncTpe;
-     private String cdSstmDntfrDntfrRfrncDntfr;
-     private String cdSstmDntfrDntfrRfrncDsplay;
-     private String cdSstmDntfrDntfrVlStrng;
-     private String cdSstmDntfrDntfrSstmRi;
-     private String codeSystemVersion;
-     private String codeSystemName;
-     private String codeSystemTitle;
-     private String codeSystemStatus;
-     private String codeSystemExperimental;
-     private String codeSystemDate;
-     private String codeSystemPublisher;
-     private String codeSystemContact;
-     private String codeSystemDescription;
-     private String codeSystemUseContext;
-     private String cdSstmJrsdctnCdblCncptCdngSstm;
-     private String cdSstmJrsdctnCdblCncptCdngVrsn;
-     private String cdSstmJrsdctnCdblCncptCdngCde;
-     private String cdSstmJrsdctnCdblCncptCdngDsplay;
-     private String cdSstmJrsdctnCdblCncptCdngSrSlctd;
-     private String cdSstmJrsdctnCdblCncptTxtStrng;
-     private String codeSystemPurpose;
-     private String codeSystemCopyright;
-     private String codeSystemCaseSensitive;
-     private String codeSystemValueSet;
-     private String codeSystemHierarchyMeaning;
-     private String codeSystemCompositional;
-     private String codeSystemVersionNeeded;
-     private String codeSystemContent;
-     private String codeSystemSupplements;
-     private String codeSystemCount;
-     private String codeSystemFilterCode;
-     private String codeSystemFilterDescription;
-     private String codeSystemFilterOperator;
-     private String codeSystemFilterValue;
-     private String codeSystemPropertyCode;
-     private String codeSystemPropertyUri;
-     private String codeSystemPropertyDescription;
-     private String codeSystemPropertyType;
-     private String codeSystemConceptCode;
-     private String codeSystemConceptDisplay;
-     private String codeSystemConceptDefinition;
-     private String cdSstmCncptDsgntnLngge;
-     private String cdSstmCncptDsgntnSCdngSrSlctdBln;
-     private String cdSstmCncptDsgntnSCdngCdCde;
-     private String cdSstmCncptDsgntnSCdngVrsnStrng;
-     private String cdSstmCncptDsgntnSCdngDsplStrng;
-     private String cdSstmCncptDsgntnSCdngSstmRi;
-     private String cdSstmCncptDsgntnVlue;
-     private String codeSystemConceptPropertyCode;
-     private String cdSstmCncptPrprtVlCde;
-     private String cdSstmCncptPrprtVlCdngCdngSrSlctdBln;
-     private String cdSstmCncptPrprtVlCdngCdngCdCde;
-     private String cdSstmCncptPrprtVlCdngCdngVrsnStrng;
-     private String cdSstmCncptPrprtVlCdngCdngDsplStrng;
-     private String cdSstmCncptPrprtVlCdngCdngSstmRi;
-     private String cdSstmCncptPrprtVlStrng;
-     private String cdSstmCncptPrprtVlntgr;
-     private String cdSstmCncptPrprtVlBln;
-     private String cdSstmCncptPrprtVlDttme;
-     private String cdSstmCncptPrprtVlDcml;
-     private String codeSystemConceptConcept;
+     private Integer id;
+     private String codeSystemUrlUri;
+     private String cdSstmDntfrDntfrSe;
+     private String cdSstmDntfrDntfrTpCcCSstm;
+     private String cdSstmDntfrDntfrTpCcCVrsn;
+     private String cdSstmDntfrDntfrTpCcCCde;
+     private String cdSstmDntfrDntfrTpCcCDsplay;
+     private String cdSstmDntfrDntfrTpCcCSrSlctd;
+     private String cdSstmDntfrDntfrTpCcTxt;
+     private String cdSstmDntfrDntfrPrdPrdStrt;
+     private String cdSstmDntfrDntfrPrdPrdNd;
+     private String cdSstmDntfrDntfrSsgnr;
+     private String cdSstmDntfrDntfrVlue;
+     private String cdSstmDntfrDntfrSstm;
+     private String codeSystemVersionString;
+     private String codeSystemNameString;
+     private String codeSystemTitleString;
+     private String codeSystemStatusCode;
+     private String codeSystemExperimentalBoolean;
+     private String codeSystemDateDateTime;
+     private String codeSystemPublisherString;
+     private String cdSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String cdSstmCntctCntctDtlTlcmCntctPntPrdNd;
+     private String cdSstmCntctCntctDtlTlcmCntctPntSstm;
+     private String cdSstmCntctCntctDtlTlcmCntctPntVlue;
+     private String cdSstmCntctCntctDtlTlcmCntctPntSe;
+     private String cdSstmCntctCntctDtlTlcmCntctPntRnk;
+     private String cdSstmCntctCntctDtlNme;
+     private String codeSystemDescriptionMarkdown;
+     private String cdSstmSCntxtSgCntxtVlCcCcCSstm;
+     private String cdSstmSCntxtSgCntxtVlCcCcCVrsn;
+     private String cdSstmSCntxtSgCntxtVlCcCcCCde;
+     private String cdSstmSCntxtSgCntxtVlCcCcCDsplay;
+     private String cdSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String cdSstmSCntxtSgCntxtVlCcCcTxt;
+     private String cdSstmSCntxtSgCntxtCdCSstm;
+     private String cdSstmSCntxtSgCntxtCdCVrsn;
+     private String cdSstmSCntxtSgCntxtCdCCde;
+     private String cdSstmSCntxtSgCntxtCdCDsplay;
+     private String cdSstmSCntxtSgCntxtCdCSrSlctd;
+     private String cdSstmSCntxtSgCntxtVlQnttQnttVlue;
+     private String cdSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String cdSstmSCntxtSgCntxtVlQnttQnttNt;
+     private String cdSstmSCntxtSgCntxtVlQnttQnttSstm;
+     private String cdSstmSCntxtSgCntxtVlQnttQnttCde;
+     private String cdSstmSCntxtSgCntxtVlRngRngLw;
+     private String cdSstmSCntxtSgCntxtVlRngRngHgh;
+     private String cdSstmSCntxtSgCntxtVlRfrnce;
+     private String cdSstmJrsdctnCcCdngCSstm;
+     private String cdSstmJrsdctnCcCdngCVrsn;
+     private String cdSstmJrsdctnCcCdngCCde;
+     private String cdSstmJrsdctnCcCdngCDsplay;
+     private String cdSstmJrsdctnCcCdngCSrSlctd;
+     private String codeSystemJurisdictionCcText;
+     private String codeSystemPurposeMarkdown;
+     private String codeSystemCopyrightMarkdown;
+     private String codeSystemCaseSensitiveBoolean;
+     private String codeSystemValueSetCanonical;
+     private String codeSystemHierarchyMeaningCode;
+     private String codeSystemCompositionalBoolean;
+     private String codeSystemVersionNeededBoolean;
+     private String codeSystemContentCode;
+     private String codeSystemSupplementsCanonical;
+     private String codeSystemCountUnsignedInt;
+     private String codeSystemFilterCodeCode;
+     private String cdSstmFltrDscrptnStrng;
+     private String codeSystemFilterOperatorCode;
+     private String codeSystemFilterValueString;
+     private String codeSystemPropertyCodeCode;
+     private String codeSystemPropertyUriUri;
+     private String cdSstmPrprtDscrptnStrng;
+     private String codeSystemPropertyTypeCode;
+     private String codeSystemConceptCodeCode;
+     private String codeSystemConceptDisplayString;
+     private String cdSstmCncptDfntnStrng;
+     private String cdSstmCncptDsgntnLnggCde;
+     private String cdSstmCncptDsgntnSCSrSlctd;
+     private String cdSstmCncptDsgntnSCCde;
+     private String cdSstmCncptDsgntnSCVrsn;
+     private String cdSstmCncptDsgntnSCDsplay;
+     private String cdSstmCncptDsgntnSCSstm;
+     private String cdSstmCncptDsgntnVlStrng;
+     private String cdSstmCncptPrprtCdCde;
+     private String cdSstmCncptPrprtVlCdCde;
+     private String cdSstmCncptPrprtVlCdngCSrSlctd;
+     private String cdSstmCncptPrprtVlCdngCCde;
+     private String cdSstmCncptPrprtVlCdngCVrsn;
+     private String cdSstmCncptPrprtVlCdngCDsplay;
+     private String cdSstmCncptPrprtVlCdngCSstm;
+     private String cdSstmCncptPrprtVlStrngStrng;
+     private String cdSstmCncptPrprtVlntgrNtgr;
+     private String cdSstmCncptPrprtVlBlnBln;
+     private String cdSstmCncptPrprtVlDttmDtTme;
+     private String cdSstmCncptPrprtVlDcmlDcml;
+     private String codeSystemConceptConceptConcept;
 
     public Codesystem() {
     }
 
-	
-    public Codesystem(String codeSystemUrl) {
-        this.codeSystemUrl = codeSystemUrl;
-    }
-    public Codesystem(String codeSystemUrl, String cdSstmDntfrDntfrSCde, String cdSstmDntfrDntfrTpCdblCncptCdngSstm, String cdSstmDntfrDntfrTpCdblCncptCdngVrsn, String cdSstmDntfrDntfrTpCdblCncptCdngCde, String cdSstmDntfrDntfrTpCdblCncptCdngDsplay, String cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd, String cdSstmDntfrDntfrCdblCncptTxt, String cdSstmDntfrDntfrPrdStrt, String cdSstmDntfrDntfrPrdNd, String cdSstmDntfrDntfrRfrncRfrnce, String cdSstmDntfrDntfrRfrncTpe, String cdSstmDntfrDntfrRfrncDntfr, String cdSstmDntfrDntfrRfrncDsplay, String cdSstmDntfrDntfrVlStrng, String cdSstmDntfrDntfrSstmRi, String codeSystemVersion, String codeSystemName, String codeSystemTitle, String codeSystemStatus, String codeSystemExperimental, String codeSystemDate, String codeSystemPublisher, String codeSystemContact, String codeSystemDescription, String codeSystemUseContext, String cdSstmJrsdctnCdblCncptCdngSstm, String cdSstmJrsdctnCdblCncptCdngVrsn, String cdSstmJrsdctnCdblCncptCdngCde, String cdSstmJrsdctnCdblCncptCdngDsplay, String cdSstmJrsdctnCdblCncptCdngSrSlctd, String cdSstmJrsdctnCdblCncptTxtStrng, String codeSystemPurpose, String codeSystemCopyright, String codeSystemCaseSensitive, String codeSystemValueSet, String codeSystemHierarchyMeaning, String codeSystemCompositional, String codeSystemVersionNeeded, String codeSystemContent, String codeSystemSupplements, String codeSystemCount, String codeSystemFilterCode, String codeSystemFilterDescription, String codeSystemFilterOperator, String codeSystemFilterValue, String codeSystemPropertyCode, String codeSystemPropertyUri, String codeSystemPropertyDescription, String codeSystemPropertyType, String codeSystemConceptCode, String codeSystemConceptDisplay, String codeSystemConceptDefinition, String cdSstmCncptDsgntnLngge, String cdSstmCncptDsgntnSCdngSrSlctdBln, String cdSstmCncptDsgntnSCdngCdCde, String cdSstmCncptDsgntnSCdngVrsnStrng, String cdSstmCncptDsgntnSCdngDsplStrng, String cdSstmCncptDsgntnSCdngSstmRi, String cdSstmCncptDsgntnVlue, String codeSystemConceptPropertyCode, String cdSstmCncptPrprtVlCde, String cdSstmCncptPrprtVlCdngCdngSrSlctdBln, String cdSstmCncptPrprtVlCdngCdngCdCde, String cdSstmCncptPrprtVlCdngCdngVrsnStrng, String cdSstmCncptPrprtVlCdngCdngDsplStrng, String cdSstmCncptPrprtVlCdngCdngSstmRi, String cdSstmCncptPrprtVlStrng, String cdSstmCncptPrprtVlntgr, String cdSstmCncptPrprtVlBln, String cdSstmCncptPrprtVlDttme, String cdSstmCncptPrprtVlDcml, String codeSystemConceptConcept) {
-       this.codeSystemUrl = codeSystemUrl;
-       this.cdSstmDntfrDntfrSCde = cdSstmDntfrDntfrSCde;
-       this.cdSstmDntfrDntfrTpCdblCncptCdngSstm = cdSstmDntfrDntfrTpCdblCncptCdngSstm;
-       this.cdSstmDntfrDntfrTpCdblCncptCdngVrsn = cdSstmDntfrDntfrTpCdblCncptCdngVrsn;
-       this.cdSstmDntfrDntfrTpCdblCncptCdngCde = cdSstmDntfrDntfrTpCdblCncptCdngCde;
-       this.cdSstmDntfrDntfrTpCdblCncptCdngDsplay = cdSstmDntfrDntfrTpCdblCncptCdngDsplay;
-       this.cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd = cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.cdSstmDntfrDntfrCdblCncptTxt = cdSstmDntfrDntfrCdblCncptTxt;
-       this.cdSstmDntfrDntfrPrdStrt = cdSstmDntfrDntfrPrdStrt;
-       this.cdSstmDntfrDntfrPrdNd = cdSstmDntfrDntfrPrdNd;
-       this.cdSstmDntfrDntfrRfrncRfrnce = cdSstmDntfrDntfrRfrncRfrnce;
-       this.cdSstmDntfrDntfrRfrncTpe = cdSstmDntfrDntfrRfrncTpe;
-       this.cdSstmDntfrDntfrRfrncDntfr = cdSstmDntfrDntfrRfrncDntfr;
-       this.cdSstmDntfrDntfrRfrncDsplay = cdSstmDntfrDntfrRfrncDsplay;
-       this.cdSstmDntfrDntfrVlStrng = cdSstmDntfrDntfrVlStrng;
-       this.cdSstmDntfrDntfrSstmRi = cdSstmDntfrDntfrSstmRi;
-       this.codeSystemVersion = codeSystemVersion;
-       this.codeSystemName = codeSystemName;
-       this.codeSystemTitle = codeSystemTitle;
-       this.codeSystemStatus = codeSystemStatus;
-       this.codeSystemExperimental = codeSystemExperimental;
-       this.codeSystemDate = codeSystemDate;
-       this.codeSystemPublisher = codeSystemPublisher;
-       this.codeSystemContact = codeSystemContact;
-       this.codeSystemDescription = codeSystemDescription;
-       this.codeSystemUseContext = codeSystemUseContext;
-       this.cdSstmJrsdctnCdblCncptCdngSstm = cdSstmJrsdctnCdblCncptCdngSstm;
-       this.cdSstmJrsdctnCdblCncptCdngVrsn = cdSstmJrsdctnCdblCncptCdngVrsn;
-       this.cdSstmJrsdctnCdblCncptCdngCde = cdSstmJrsdctnCdblCncptCdngCde;
-       this.cdSstmJrsdctnCdblCncptCdngDsplay = cdSstmJrsdctnCdblCncptCdngDsplay;
-       this.cdSstmJrsdctnCdblCncptCdngSrSlctd = cdSstmJrsdctnCdblCncptCdngSrSlctd;
-       this.cdSstmJrsdctnCdblCncptTxtStrng = cdSstmJrsdctnCdblCncptTxtStrng;
-       this.codeSystemPurpose = codeSystemPurpose;
-       this.codeSystemCopyright = codeSystemCopyright;
-       this.codeSystemCaseSensitive = codeSystemCaseSensitive;
-       this.codeSystemValueSet = codeSystemValueSet;
-       this.codeSystemHierarchyMeaning = codeSystemHierarchyMeaning;
-       this.codeSystemCompositional = codeSystemCompositional;
-       this.codeSystemVersionNeeded = codeSystemVersionNeeded;
-       this.codeSystemContent = codeSystemContent;
-       this.codeSystemSupplements = codeSystemSupplements;
-       this.codeSystemCount = codeSystemCount;
-       this.codeSystemFilterCode = codeSystemFilterCode;
-       this.codeSystemFilterDescription = codeSystemFilterDescription;
-       this.codeSystemFilterOperator = codeSystemFilterOperator;
-       this.codeSystemFilterValue = codeSystemFilterValue;
-       this.codeSystemPropertyCode = codeSystemPropertyCode;
-       this.codeSystemPropertyUri = codeSystemPropertyUri;
-       this.codeSystemPropertyDescription = codeSystemPropertyDescription;
-       this.codeSystemPropertyType = codeSystemPropertyType;
-       this.codeSystemConceptCode = codeSystemConceptCode;
-       this.codeSystemConceptDisplay = codeSystemConceptDisplay;
-       this.codeSystemConceptDefinition = codeSystemConceptDefinition;
-       this.cdSstmCncptDsgntnLngge = cdSstmCncptDsgntnLngge;
-       this.cdSstmCncptDsgntnSCdngSrSlctdBln = cdSstmCncptDsgntnSCdngSrSlctdBln;
-       this.cdSstmCncptDsgntnSCdngCdCde = cdSstmCncptDsgntnSCdngCdCde;
-       this.cdSstmCncptDsgntnSCdngVrsnStrng = cdSstmCncptDsgntnSCdngVrsnStrng;
-       this.cdSstmCncptDsgntnSCdngDsplStrng = cdSstmCncptDsgntnSCdngDsplStrng;
-       this.cdSstmCncptDsgntnSCdngSstmRi = cdSstmCncptDsgntnSCdngSstmRi;
-       this.cdSstmCncptDsgntnVlue = cdSstmCncptDsgntnVlue;
-       this.codeSystemConceptPropertyCode = codeSystemConceptPropertyCode;
-       this.cdSstmCncptPrprtVlCde = cdSstmCncptPrprtVlCde;
-       this.cdSstmCncptPrprtVlCdngCdngSrSlctdBln = cdSstmCncptPrprtVlCdngCdngSrSlctdBln;
-       this.cdSstmCncptPrprtVlCdngCdngCdCde = cdSstmCncptPrprtVlCdngCdngCdCde;
-       this.cdSstmCncptPrprtVlCdngCdngVrsnStrng = cdSstmCncptPrprtVlCdngCdngVrsnStrng;
-       this.cdSstmCncptPrprtVlCdngCdngDsplStrng = cdSstmCncptPrprtVlCdngCdngDsplStrng;
-       this.cdSstmCncptPrprtVlCdngCdngSstmRi = cdSstmCncptPrprtVlCdngCdngSstmRi;
-       this.cdSstmCncptPrprtVlStrng = cdSstmCncptPrprtVlStrng;
-       this.cdSstmCncptPrprtVlntgr = cdSstmCncptPrprtVlntgr;
-       this.cdSstmCncptPrprtVlBln = cdSstmCncptPrprtVlBln;
-       this.cdSstmCncptPrprtVlDttme = cdSstmCncptPrprtVlDttme;
-       this.cdSstmCncptPrprtVlDcml = cdSstmCncptPrprtVlDcml;
-       this.codeSystemConceptConcept = codeSystemConceptConcept;
+    public Codesystem(String codeSystemUrlUri, String cdSstmDntfrDntfrSe, String cdSstmDntfrDntfrTpCcCSstm, String cdSstmDntfrDntfrTpCcCVrsn, String cdSstmDntfrDntfrTpCcCCde, String cdSstmDntfrDntfrTpCcCDsplay, String cdSstmDntfrDntfrTpCcCSrSlctd, String cdSstmDntfrDntfrTpCcTxt, String cdSstmDntfrDntfrPrdPrdStrt, String cdSstmDntfrDntfrPrdPrdNd, String cdSstmDntfrDntfrSsgnr, String cdSstmDntfrDntfrVlue, String cdSstmDntfrDntfrSstm, String codeSystemVersionString, String codeSystemNameString, String codeSystemTitleString, String codeSystemStatusCode, String codeSystemExperimentalBoolean, String codeSystemDateDateTime, String codeSystemPublisherString, String cdSstmCntctCntctDtlTlcmCntctPntPrdStrt, String cdSstmCntctCntctDtlTlcmCntctPntPrdNd, String cdSstmCntctCntctDtlTlcmCntctPntSstm, String cdSstmCntctCntctDtlTlcmCntctPntVlue, String cdSstmCntctCntctDtlTlcmCntctPntSe, String cdSstmCntctCntctDtlTlcmCntctPntRnk, String cdSstmCntctCntctDtlNme, String codeSystemDescriptionMarkdown, String cdSstmSCntxtSgCntxtVlCcCcCSstm, String cdSstmSCntxtSgCntxtVlCcCcCVrsn, String cdSstmSCntxtSgCntxtVlCcCcCCde, String cdSstmSCntxtSgCntxtVlCcCcCDsplay, String cdSstmSCntxtSgCntxtVlCcCcCSrSlctd, String cdSstmSCntxtSgCntxtVlCcCcTxt, String cdSstmSCntxtSgCntxtCdCSstm, String cdSstmSCntxtSgCntxtCdCVrsn, String cdSstmSCntxtSgCntxtCdCCde, String cdSstmSCntxtSgCntxtCdCDsplay, String cdSstmSCntxtSgCntxtCdCSrSlctd, String cdSstmSCntxtSgCntxtVlQnttQnttVlue, String cdSstmSCntxtSgCntxtVlQnttQnttCmprtr, String cdSstmSCntxtSgCntxtVlQnttQnttNt, String cdSstmSCntxtSgCntxtVlQnttQnttSstm, String cdSstmSCntxtSgCntxtVlQnttQnttCde, String cdSstmSCntxtSgCntxtVlRngRngLw, String cdSstmSCntxtSgCntxtVlRngRngHgh, String cdSstmSCntxtSgCntxtVlRfrnce, String cdSstmJrsdctnCcCdngCSstm, String cdSstmJrsdctnCcCdngCVrsn, String cdSstmJrsdctnCcCdngCCde, String cdSstmJrsdctnCcCdngCDsplay, String cdSstmJrsdctnCcCdngCSrSlctd, String codeSystemJurisdictionCcText, String codeSystemPurposeMarkdown, String codeSystemCopyrightMarkdown, String codeSystemCaseSensitiveBoolean, String codeSystemValueSetCanonical, String codeSystemHierarchyMeaningCode, String codeSystemCompositionalBoolean, String codeSystemVersionNeededBoolean, String codeSystemContentCode, String codeSystemSupplementsCanonical, String codeSystemCountUnsignedInt, String codeSystemFilterCodeCode, String cdSstmFltrDscrptnStrng, String codeSystemFilterOperatorCode, String codeSystemFilterValueString, String codeSystemPropertyCodeCode, String codeSystemPropertyUriUri, String cdSstmPrprtDscrptnStrng, String codeSystemPropertyTypeCode, String codeSystemConceptCodeCode, String codeSystemConceptDisplayString, String cdSstmCncptDfntnStrng, String cdSstmCncptDsgntnLnggCde, String cdSstmCncptDsgntnSCSrSlctd, String cdSstmCncptDsgntnSCCde, String cdSstmCncptDsgntnSCVrsn, String cdSstmCncptDsgntnSCDsplay, String cdSstmCncptDsgntnSCSstm, String cdSstmCncptDsgntnVlStrng, String cdSstmCncptPrprtCdCde, String cdSstmCncptPrprtVlCdCde, String cdSstmCncptPrprtVlCdngCSrSlctd, String cdSstmCncptPrprtVlCdngCCde, String cdSstmCncptPrprtVlCdngCVrsn, String cdSstmCncptPrprtVlCdngCDsplay, String cdSstmCncptPrprtVlCdngCSstm, String cdSstmCncptPrprtVlStrngStrng, String cdSstmCncptPrprtVlntgrNtgr, String cdSstmCncptPrprtVlBlnBln, String cdSstmCncptPrprtVlDttmDtTme, String cdSstmCncptPrprtVlDcmlDcml, String codeSystemConceptConceptConcept) {
+       this.codeSystemUrlUri = codeSystemUrlUri;
+       this.cdSstmDntfrDntfrSe = cdSstmDntfrDntfrSe;
+       this.cdSstmDntfrDntfrTpCcCSstm = cdSstmDntfrDntfrTpCcCSstm;
+       this.cdSstmDntfrDntfrTpCcCVrsn = cdSstmDntfrDntfrTpCcCVrsn;
+       this.cdSstmDntfrDntfrTpCcCCde = cdSstmDntfrDntfrTpCcCCde;
+       this.cdSstmDntfrDntfrTpCcCDsplay = cdSstmDntfrDntfrTpCcCDsplay;
+       this.cdSstmDntfrDntfrTpCcCSrSlctd = cdSstmDntfrDntfrTpCcCSrSlctd;
+       this.cdSstmDntfrDntfrTpCcTxt = cdSstmDntfrDntfrTpCcTxt;
+       this.cdSstmDntfrDntfrPrdPrdStrt = cdSstmDntfrDntfrPrdPrdStrt;
+       this.cdSstmDntfrDntfrPrdPrdNd = cdSstmDntfrDntfrPrdPrdNd;
+       this.cdSstmDntfrDntfrSsgnr = cdSstmDntfrDntfrSsgnr;
+       this.cdSstmDntfrDntfrVlue = cdSstmDntfrDntfrVlue;
+       this.cdSstmDntfrDntfrSstm = cdSstmDntfrDntfrSstm;
+       this.codeSystemVersionString = codeSystemVersionString;
+       this.codeSystemNameString = codeSystemNameString;
+       this.codeSystemTitleString = codeSystemTitleString;
+       this.codeSystemStatusCode = codeSystemStatusCode;
+       this.codeSystemExperimentalBoolean = codeSystemExperimentalBoolean;
+       this.codeSystemDateDateTime = codeSystemDateDateTime;
+       this.codeSystemPublisherString = codeSystemPublisherString;
+       this.cdSstmCntctCntctDtlTlcmCntctPntPrdStrt = cdSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.cdSstmCntctCntctDtlTlcmCntctPntPrdNd = cdSstmCntctCntctDtlTlcmCntctPntPrdNd;
+       this.cdSstmCntctCntctDtlTlcmCntctPntSstm = cdSstmCntctCntctDtlTlcmCntctPntSstm;
+       this.cdSstmCntctCntctDtlTlcmCntctPntVlue = cdSstmCntctCntctDtlTlcmCntctPntVlue;
+       this.cdSstmCntctCntctDtlTlcmCntctPntSe = cdSstmCntctCntctDtlTlcmCntctPntSe;
+       this.cdSstmCntctCntctDtlTlcmCntctPntRnk = cdSstmCntctCntctDtlTlcmCntctPntRnk;
+       this.cdSstmCntctCntctDtlNme = cdSstmCntctCntctDtlNme;
+       this.codeSystemDescriptionMarkdown = codeSystemDescriptionMarkdown;
+       this.cdSstmSCntxtSgCntxtVlCcCcCSstm = cdSstmSCntxtSgCntxtVlCcCcCSstm;
+       this.cdSstmSCntxtSgCntxtVlCcCcCVrsn = cdSstmSCntxtSgCntxtVlCcCcCVrsn;
+       this.cdSstmSCntxtSgCntxtVlCcCcCCde = cdSstmSCntxtSgCntxtVlCcCcCCde;
+       this.cdSstmSCntxtSgCntxtVlCcCcCDsplay = cdSstmSCntxtSgCntxtVlCcCcCDsplay;
+       this.cdSstmSCntxtSgCntxtVlCcCcCSrSlctd = cdSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.cdSstmSCntxtSgCntxtVlCcCcTxt = cdSstmSCntxtSgCntxtVlCcCcTxt;
+       this.cdSstmSCntxtSgCntxtCdCSstm = cdSstmSCntxtSgCntxtCdCSstm;
+       this.cdSstmSCntxtSgCntxtCdCVrsn = cdSstmSCntxtSgCntxtCdCVrsn;
+       this.cdSstmSCntxtSgCntxtCdCCde = cdSstmSCntxtSgCntxtCdCCde;
+       this.cdSstmSCntxtSgCntxtCdCDsplay = cdSstmSCntxtSgCntxtCdCDsplay;
+       this.cdSstmSCntxtSgCntxtCdCSrSlctd = cdSstmSCntxtSgCntxtCdCSrSlctd;
+       this.cdSstmSCntxtSgCntxtVlQnttQnttVlue = cdSstmSCntxtSgCntxtVlQnttQnttVlue;
+       this.cdSstmSCntxtSgCntxtVlQnttQnttCmprtr = cdSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.cdSstmSCntxtSgCntxtVlQnttQnttNt = cdSstmSCntxtSgCntxtVlQnttQnttNt;
+       this.cdSstmSCntxtSgCntxtVlQnttQnttSstm = cdSstmSCntxtSgCntxtVlQnttQnttSstm;
+       this.cdSstmSCntxtSgCntxtVlQnttQnttCde = cdSstmSCntxtSgCntxtVlQnttQnttCde;
+       this.cdSstmSCntxtSgCntxtVlRngRngLw = cdSstmSCntxtSgCntxtVlRngRngLw;
+       this.cdSstmSCntxtSgCntxtVlRngRngHgh = cdSstmSCntxtSgCntxtVlRngRngHgh;
+       this.cdSstmSCntxtSgCntxtVlRfrnce = cdSstmSCntxtSgCntxtVlRfrnce;
+       this.cdSstmJrsdctnCcCdngCSstm = cdSstmJrsdctnCcCdngCSstm;
+       this.cdSstmJrsdctnCcCdngCVrsn = cdSstmJrsdctnCcCdngCVrsn;
+       this.cdSstmJrsdctnCcCdngCCde = cdSstmJrsdctnCcCdngCCde;
+       this.cdSstmJrsdctnCcCdngCDsplay = cdSstmJrsdctnCcCdngCDsplay;
+       this.cdSstmJrsdctnCcCdngCSrSlctd = cdSstmJrsdctnCcCdngCSrSlctd;
+       this.codeSystemJurisdictionCcText = codeSystemJurisdictionCcText;
+       this.codeSystemPurposeMarkdown = codeSystemPurposeMarkdown;
+       this.codeSystemCopyrightMarkdown = codeSystemCopyrightMarkdown;
+       this.codeSystemCaseSensitiveBoolean = codeSystemCaseSensitiveBoolean;
+       this.codeSystemValueSetCanonical = codeSystemValueSetCanonical;
+       this.codeSystemHierarchyMeaningCode = codeSystemHierarchyMeaningCode;
+       this.codeSystemCompositionalBoolean = codeSystemCompositionalBoolean;
+       this.codeSystemVersionNeededBoolean = codeSystemVersionNeededBoolean;
+       this.codeSystemContentCode = codeSystemContentCode;
+       this.codeSystemSupplementsCanonical = codeSystemSupplementsCanonical;
+       this.codeSystemCountUnsignedInt = codeSystemCountUnsignedInt;
+       this.codeSystemFilterCodeCode = codeSystemFilterCodeCode;
+       this.cdSstmFltrDscrptnStrng = cdSstmFltrDscrptnStrng;
+       this.codeSystemFilterOperatorCode = codeSystemFilterOperatorCode;
+       this.codeSystemFilterValueString = codeSystemFilterValueString;
+       this.codeSystemPropertyCodeCode = codeSystemPropertyCodeCode;
+       this.codeSystemPropertyUriUri = codeSystemPropertyUriUri;
+       this.cdSstmPrprtDscrptnStrng = cdSstmPrprtDscrptnStrng;
+       this.codeSystemPropertyTypeCode = codeSystemPropertyTypeCode;
+       this.codeSystemConceptCodeCode = codeSystemConceptCodeCode;
+       this.codeSystemConceptDisplayString = codeSystemConceptDisplayString;
+       this.cdSstmCncptDfntnStrng = cdSstmCncptDfntnStrng;
+       this.cdSstmCncptDsgntnLnggCde = cdSstmCncptDsgntnLnggCde;
+       this.cdSstmCncptDsgntnSCSrSlctd = cdSstmCncptDsgntnSCSrSlctd;
+       this.cdSstmCncptDsgntnSCCde = cdSstmCncptDsgntnSCCde;
+       this.cdSstmCncptDsgntnSCVrsn = cdSstmCncptDsgntnSCVrsn;
+       this.cdSstmCncptDsgntnSCDsplay = cdSstmCncptDsgntnSCDsplay;
+       this.cdSstmCncptDsgntnSCSstm = cdSstmCncptDsgntnSCSstm;
+       this.cdSstmCncptDsgntnVlStrng = cdSstmCncptDsgntnVlStrng;
+       this.cdSstmCncptPrprtCdCde = cdSstmCncptPrprtCdCde;
+       this.cdSstmCncptPrprtVlCdCde = cdSstmCncptPrprtVlCdCde;
+       this.cdSstmCncptPrprtVlCdngCSrSlctd = cdSstmCncptPrprtVlCdngCSrSlctd;
+       this.cdSstmCncptPrprtVlCdngCCde = cdSstmCncptPrprtVlCdngCCde;
+       this.cdSstmCncptPrprtVlCdngCVrsn = cdSstmCncptPrprtVlCdngCVrsn;
+       this.cdSstmCncptPrprtVlCdngCDsplay = cdSstmCncptPrprtVlCdngCDsplay;
+       this.cdSstmCncptPrprtVlCdngCSstm = cdSstmCncptPrprtVlCdngCSstm;
+       this.cdSstmCncptPrprtVlStrngStrng = cdSstmCncptPrprtVlStrngStrng;
+       this.cdSstmCncptPrprtVlntgrNtgr = cdSstmCncptPrprtVlntgrNtgr;
+       this.cdSstmCncptPrprtVlBlnBln = cdSstmCncptPrprtVlBlnBln;
+       this.cdSstmCncptPrprtVlDttmDtTme = cdSstmCncptPrprtVlDttmDtTme;
+       this.cdSstmCncptPrprtVlDcmlDcml = cdSstmCncptPrprtVlDcmlDcml;
+       this.codeSystemConceptConceptConcept = codeSystemConceptConceptConcept;
     }
    
-    public String getCodeSystemUrl() {
-        return this.codeSystemUrl;
-    }
-    
-    public void setCodeSystemUrl(String codeSystemUrl) {
-        this.codeSystemUrl = codeSystemUrl;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrSCde() {
-        return this.cdSstmDntfrDntfrSCde;
-    }
-    
-    public void setCdSstmDntfrDntfrSCde(String cdSstmDntfrDntfrSCde) {
-        this.cdSstmDntfrDntfrSCde = cdSstmDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.cdSstmDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setCdSstmDntfrDntfrTpCdblCncptCdngSstm(String cdSstmDntfrDntfrTpCdblCncptCdngSstm) {
-        this.cdSstmDntfrDntfrTpCdblCncptCdngSstm = cdSstmDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.cdSstmDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setCdSstmDntfrDntfrTpCdblCncptCdngVrsn(String cdSstmDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.cdSstmDntfrDntfrTpCdblCncptCdngVrsn = cdSstmDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrTpCdblCncptCdngCde() {
-        return this.cdSstmDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setCdSstmDntfrDntfrTpCdblCncptCdngCde(String cdSstmDntfrDntfrTpCdblCncptCdngCde) {
-        this.cdSstmDntfrDntfrTpCdblCncptCdngCde = cdSstmDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.cdSstmDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setCdSstmDntfrDntfrTpCdblCncptCdngDsplay(String cdSstmDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.cdSstmDntfrDntfrTpCdblCncptCdngDsplay = cdSstmDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setCdSstmDntfrDntfrTpCdblCncptCdngSrSlctd(String cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd = cdSstmDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrCdblCncptTxt() {
-        return this.cdSstmDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setCdSstmDntfrDntfrCdblCncptTxt(String cdSstmDntfrDntfrCdblCncptTxt) {
-        this.cdSstmDntfrDntfrCdblCncptTxt = cdSstmDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrPrdStrt() {
-        return this.cdSstmDntfrDntfrPrdStrt;
-    }
-    
-    public void setCdSstmDntfrDntfrPrdStrt(String cdSstmDntfrDntfrPrdStrt) {
-        this.cdSstmDntfrDntfrPrdStrt = cdSstmDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrPrdNd() {
-        return this.cdSstmDntfrDntfrPrdNd;
-    }
-    
-    public void setCdSstmDntfrDntfrPrdNd(String cdSstmDntfrDntfrPrdNd) {
-        this.cdSstmDntfrDntfrPrdNd = cdSstmDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrRfrncRfrnce() {
-        return this.cdSstmDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setCdSstmDntfrDntfrRfrncRfrnce(String cdSstmDntfrDntfrRfrncRfrnce) {
-        this.cdSstmDntfrDntfrRfrncRfrnce = cdSstmDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrRfrncTpe() {
-        return this.cdSstmDntfrDntfrRfrncTpe;
-    }
-    
-    public void setCdSstmDntfrDntfrRfrncTpe(String cdSstmDntfrDntfrRfrncTpe) {
-        this.cdSstmDntfrDntfrRfrncTpe = cdSstmDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrRfrncDntfr() {
-        return this.cdSstmDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setCdSstmDntfrDntfrRfrncDntfr(String cdSstmDntfrDntfrRfrncDntfr) {
-        this.cdSstmDntfrDntfrRfrncDntfr = cdSstmDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrRfrncDsplay() {
-        return this.cdSstmDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setCdSstmDntfrDntfrRfrncDsplay(String cdSstmDntfrDntfrRfrncDsplay) {
-        this.cdSstmDntfrDntfrRfrncDsplay = cdSstmDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrVlStrng() {
-        return this.cdSstmDntfrDntfrVlStrng;
-    }
-    
-    public void setCdSstmDntfrDntfrVlStrng(String cdSstmDntfrDntfrVlStrng) {
-        this.cdSstmDntfrDntfrVlStrng = cdSstmDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getCdSstmDntfrDntfrSstmRi() {
-        return this.cdSstmDntfrDntfrSstmRi;
-    }
-    
-    public void setCdSstmDntfrDntfrSstmRi(String cdSstmDntfrDntfrSstmRi) {
-        this.cdSstmDntfrDntfrSstmRi = cdSstmDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getCodeSystemVersion() {
-        return this.codeSystemVersion;
-    }
-    
-    public void setCodeSystemVersion(String codeSystemVersion) {
-        this.codeSystemVersion = codeSystemVersion;
-    }
-    
-    
-    
-    public String getCodeSystemName() {
-        return this.codeSystemName;
-    }
-    
-    public void setCodeSystemName(String codeSystemName) {
-        this.codeSystemName = codeSystemName;
-    }
-    
-    
-    
-    public String getCodeSystemTitle() {
-        return this.codeSystemTitle;
-    }
-    
-    public void setCodeSystemTitle(String codeSystemTitle) {
-        this.codeSystemTitle = codeSystemTitle;
-    }
-    
-    
-    
-    public String getCodeSystemStatus() {
-        return this.codeSystemStatus;
-    }
-    
-    public void setCodeSystemStatus(String codeSystemStatus) {
-        this.codeSystemStatus = codeSystemStatus;
-    }
-    
-    
-    
-    public String getCodeSystemExperimental() {
-        return this.codeSystemExperimental;
-    }
-    
-    public void setCodeSystemExperimental(String codeSystemExperimental) {
-        this.codeSystemExperimental = codeSystemExperimental;
-    }
-    
-    
-    
-    public String getCodeSystemDate() {
-        return this.codeSystemDate;
-    }
-    
-    public void setCodeSystemDate(String codeSystemDate) {
-        this.codeSystemDate = codeSystemDate;
-    }
-    
-    
-    
-    public String getCodeSystemPublisher() {
-        return this.codeSystemPublisher;
-    }
-    
-    public void setCodeSystemPublisher(String codeSystemPublisher) {
-        this.codeSystemPublisher = codeSystemPublisher;
-    }
-    
-    
-    
-    public String getCodeSystemContact() {
-        return this.codeSystemContact;
-    }
-    
-    public void setCodeSystemContact(String codeSystemContact) {
-        this.codeSystemContact = codeSystemContact;
-    }
-    
-    
-    
-    public String getCodeSystemDescription() {
-        return this.codeSystemDescription;
-    }
-    
-    public void setCodeSystemDescription(String codeSystemDescription) {
-        this.codeSystemDescription = codeSystemDescription;
-    }
-    
-    
-    
-    public String getCodeSystemUseContext() {
-        return this.codeSystemUseContext;
-    }
-    
-    public void setCodeSystemUseContext(String codeSystemUseContext) {
-        this.codeSystemUseContext = codeSystemUseContext;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptCdngSstm() {
-        return this.cdSstmJrsdctnCdblCncptCdngSstm;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptCdngSstm(String cdSstmJrsdctnCdblCncptCdngSstm) {
-        this.cdSstmJrsdctnCdblCncptCdngSstm = cdSstmJrsdctnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptCdngVrsn() {
-        return this.cdSstmJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptCdngVrsn(String cdSstmJrsdctnCdblCncptCdngVrsn) {
-        this.cdSstmJrsdctnCdblCncptCdngVrsn = cdSstmJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptCdngCde() {
-        return this.cdSstmJrsdctnCdblCncptCdngCde;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptCdngCde(String cdSstmJrsdctnCdblCncptCdngCde) {
-        this.cdSstmJrsdctnCdblCncptCdngCde = cdSstmJrsdctnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptCdngDsplay() {
-        return this.cdSstmJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptCdngDsplay(String cdSstmJrsdctnCdblCncptCdngDsplay) {
-        this.cdSstmJrsdctnCdblCncptCdngDsplay = cdSstmJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptCdngSrSlctd() {
-        return this.cdSstmJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptCdngSrSlctd(String cdSstmJrsdctnCdblCncptCdngSrSlctd) {
-        this.cdSstmJrsdctnCdblCncptCdngSrSlctd = cdSstmJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCdSstmJrsdctnCdblCncptTxtStrng() {
-        return this.cdSstmJrsdctnCdblCncptTxtStrng;
-    }
-    
-    public void setCdSstmJrsdctnCdblCncptTxtStrng(String cdSstmJrsdctnCdblCncptTxtStrng) {
-        this.cdSstmJrsdctnCdblCncptTxtStrng = cdSstmJrsdctnCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getCodeSystemPurpose() {
-        return this.codeSystemPurpose;
-    }
-    
-    public void setCodeSystemPurpose(String codeSystemPurpose) {
-        this.codeSystemPurpose = codeSystemPurpose;
-    }
-    
-    
-    
-    public String getCodeSystemCopyright() {
-        return this.codeSystemCopyright;
-    }
-    
-    public void setCodeSystemCopyright(String codeSystemCopyright) {
-        this.codeSystemCopyright = codeSystemCopyright;
-    }
-    
-    
-    
-    public String getCodeSystemCaseSensitive() {
-        return this.codeSystemCaseSensitive;
-    }
-    
-    public void setCodeSystemCaseSensitive(String codeSystemCaseSensitive) {
-        this.codeSystemCaseSensitive = codeSystemCaseSensitive;
-    }
-    
-    
-    
-    public String getCodeSystemValueSet() {
-        return this.codeSystemValueSet;
-    }
-    
-    public void setCodeSystemValueSet(String codeSystemValueSet) {
-        this.codeSystemValueSet = codeSystemValueSet;
-    }
-    
-    
-    
-    public String getCodeSystemHierarchyMeaning() {
-        return this.codeSystemHierarchyMeaning;
-    }
-    
-    public void setCodeSystemHierarchyMeaning(String codeSystemHierarchyMeaning) {
-        this.codeSystemHierarchyMeaning = codeSystemHierarchyMeaning;
-    }
-    
-    
-    
-    public String getCodeSystemCompositional() {
-        return this.codeSystemCompositional;
-    }
-    
-    public void setCodeSystemCompositional(String codeSystemCompositional) {
-        this.codeSystemCompositional = codeSystemCompositional;
-    }
-    
-    
-    
-    public String getCodeSystemVersionNeeded() {
-        return this.codeSystemVersionNeeded;
-    }
-    
-    public void setCodeSystemVersionNeeded(String codeSystemVersionNeeded) {
-        this.codeSystemVersionNeeded = codeSystemVersionNeeded;
-    }
-    
-    
-    
-    public String getCodeSystemContent() {
-        return this.codeSystemContent;
-    }
-    
-    public void setCodeSystemContent(String codeSystemContent) {
-        this.codeSystemContent = codeSystemContent;
-    }
-    
-    
-    
-    public String getCodeSystemSupplements() {
-        return this.codeSystemSupplements;
-    }
-    
-    public void setCodeSystemSupplements(String codeSystemSupplements) {
-        this.codeSystemSupplements = codeSystemSupplements;
-    }
-    
-    
-    
-    public String getCodeSystemCount() {
-        return this.codeSystemCount;
-    }
-    
-    public void setCodeSystemCount(String codeSystemCount) {
-        this.codeSystemCount = codeSystemCount;
-    }
-    
-    
-    
-    public String getCodeSystemFilterCode() {
-        return this.codeSystemFilterCode;
-    }
-    
-    public void setCodeSystemFilterCode(String codeSystemFilterCode) {
-        this.codeSystemFilterCode = codeSystemFilterCode;
-    }
-    
-    
-    
-    public String getCodeSystemFilterDescription() {
-        return this.codeSystemFilterDescription;
-    }
-    
-    public void setCodeSystemFilterDescription(String codeSystemFilterDescription) {
-        this.codeSystemFilterDescription = codeSystemFilterDescription;
-    }
-    
-    
-    
-    public String getCodeSystemFilterOperator() {
-        return this.codeSystemFilterOperator;
-    }
-    
-    public void setCodeSystemFilterOperator(String codeSystemFilterOperator) {
-        this.codeSystemFilterOperator = codeSystemFilterOperator;
-    }
-    
-    
-    
-    public String getCodeSystemFilterValue() {
-        return this.codeSystemFilterValue;
-    }
-    
-    public void setCodeSystemFilterValue(String codeSystemFilterValue) {
-        this.codeSystemFilterValue = codeSystemFilterValue;
-    }
-    
-    
-    
-    public String getCodeSystemPropertyCode() {
-        return this.codeSystemPropertyCode;
-    }
-    
-    public void setCodeSystemPropertyCode(String codeSystemPropertyCode) {
-        this.codeSystemPropertyCode = codeSystemPropertyCode;
-    }
-    
-    
-    
-    public String getCodeSystemPropertyUri() {
-        return this.codeSystemPropertyUri;
-    }
-    
-    public void setCodeSystemPropertyUri(String codeSystemPropertyUri) {
-        this.codeSystemPropertyUri = codeSystemPropertyUri;
-    }
-    
-    
-    
-    public String getCodeSystemPropertyDescription() {
-        return this.codeSystemPropertyDescription;
-    }
-    
-    public void setCodeSystemPropertyDescription(String codeSystemPropertyDescription) {
-        this.codeSystemPropertyDescription = codeSystemPropertyDescription;
-    }
-    
-    
-    
-    public String getCodeSystemPropertyType() {
-        return this.codeSystemPropertyType;
-    }
-    
-    public void setCodeSystemPropertyType(String codeSystemPropertyType) {
-        this.codeSystemPropertyType = codeSystemPropertyType;
-    }
-    
-    
-    
-    public String getCodeSystemConceptCode() {
-        return this.codeSystemConceptCode;
-    }
-    
-    public void setCodeSystemConceptCode(String codeSystemConceptCode) {
-        this.codeSystemConceptCode = codeSystemConceptCode;
-    }
-    
-    
-    
-    public String getCodeSystemConceptDisplay() {
-        return this.codeSystemConceptDisplay;
-    }
-    
-    public void setCodeSystemConceptDisplay(String codeSystemConceptDisplay) {
-        this.codeSystemConceptDisplay = codeSystemConceptDisplay;
-    }
-    
-    
-    
-    public String getCodeSystemConceptDefinition() {
-        return this.codeSystemConceptDefinition;
-    }
-    
-    public void setCodeSystemConceptDefinition(String codeSystemConceptDefinition) {
-        this.codeSystemConceptDefinition = codeSystemConceptDefinition;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnLngge() {
-        return this.cdSstmCncptDsgntnLngge;
-    }
-    
-    public void setCdSstmCncptDsgntnLngge(String cdSstmCncptDsgntnLngge) {
-        this.cdSstmCncptDsgntnLngge = cdSstmCncptDsgntnLngge;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnSCdngSrSlctdBln() {
-        return this.cdSstmCncptDsgntnSCdngSrSlctdBln;
-    }
-    
-    public void setCdSstmCncptDsgntnSCdngSrSlctdBln(String cdSstmCncptDsgntnSCdngSrSlctdBln) {
-        this.cdSstmCncptDsgntnSCdngSrSlctdBln = cdSstmCncptDsgntnSCdngSrSlctdBln;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnSCdngCdCde() {
-        return this.cdSstmCncptDsgntnSCdngCdCde;
-    }
-    
-    public void setCdSstmCncptDsgntnSCdngCdCde(String cdSstmCncptDsgntnSCdngCdCde) {
-        this.cdSstmCncptDsgntnSCdngCdCde = cdSstmCncptDsgntnSCdngCdCde;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnSCdngVrsnStrng() {
-        return this.cdSstmCncptDsgntnSCdngVrsnStrng;
-    }
-    
-    public void setCdSstmCncptDsgntnSCdngVrsnStrng(String cdSstmCncptDsgntnSCdngVrsnStrng) {
-        this.cdSstmCncptDsgntnSCdngVrsnStrng = cdSstmCncptDsgntnSCdngVrsnStrng;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnSCdngDsplStrng() {
-        return this.cdSstmCncptDsgntnSCdngDsplStrng;
-    }
-    
-    public void setCdSstmCncptDsgntnSCdngDsplStrng(String cdSstmCncptDsgntnSCdngDsplStrng) {
-        this.cdSstmCncptDsgntnSCdngDsplStrng = cdSstmCncptDsgntnSCdngDsplStrng;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnSCdngSstmRi() {
-        return this.cdSstmCncptDsgntnSCdngSstmRi;
-    }
-    
-    public void setCdSstmCncptDsgntnSCdngSstmRi(String cdSstmCncptDsgntnSCdngSstmRi) {
-        this.cdSstmCncptDsgntnSCdngSstmRi = cdSstmCncptDsgntnSCdngSstmRi;
-    }
-    
-    
-    
-    public String getCdSstmCncptDsgntnVlue() {
-        return this.cdSstmCncptDsgntnVlue;
-    }
-    
-    public void setCdSstmCncptDsgntnVlue(String cdSstmCncptDsgntnVlue) {
-        this.cdSstmCncptDsgntnVlue = cdSstmCncptDsgntnVlue;
-    }
-    
-    
-    
-    public String getCodeSystemConceptPropertyCode() {
-        return this.codeSystemConceptPropertyCode;
-    }
-    
-    public void setCodeSystemConceptPropertyCode(String codeSystemConceptPropertyCode) {
-        this.codeSystemConceptPropertyCode = codeSystemConceptPropertyCode;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCde() {
-        return this.cdSstmCncptPrprtVlCde;
-    }
-    
-    public void setCdSstmCncptPrprtVlCde(String cdSstmCncptPrprtVlCde) {
-        this.cdSstmCncptPrprtVlCde = cdSstmCncptPrprtVlCde;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCdngCdngSrSlctdBln() {
-        return this.cdSstmCncptPrprtVlCdngCdngSrSlctdBln;
-    }
-    
-    public void setCdSstmCncptPrprtVlCdngCdngSrSlctdBln(String cdSstmCncptPrprtVlCdngCdngSrSlctdBln) {
-        this.cdSstmCncptPrprtVlCdngCdngSrSlctdBln = cdSstmCncptPrprtVlCdngCdngSrSlctdBln;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCdngCdngCdCde() {
-        return this.cdSstmCncptPrprtVlCdngCdngCdCde;
-    }
-    
-    public void setCdSstmCncptPrprtVlCdngCdngCdCde(String cdSstmCncptPrprtVlCdngCdngCdCde) {
-        this.cdSstmCncptPrprtVlCdngCdngCdCde = cdSstmCncptPrprtVlCdngCdngCdCde;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCdngCdngVrsnStrng() {
-        return this.cdSstmCncptPrprtVlCdngCdngVrsnStrng;
-    }
-    
-    public void setCdSstmCncptPrprtVlCdngCdngVrsnStrng(String cdSstmCncptPrprtVlCdngCdngVrsnStrng) {
-        this.cdSstmCncptPrprtVlCdngCdngVrsnStrng = cdSstmCncptPrprtVlCdngCdngVrsnStrng;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCdngCdngDsplStrng() {
-        return this.cdSstmCncptPrprtVlCdngCdngDsplStrng;
-    }
-    
-    public void setCdSstmCncptPrprtVlCdngCdngDsplStrng(String cdSstmCncptPrprtVlCdngCdngDsplStrng) {
-        this.cdSstmCncptPrprtVlCdngCdngDsplStrng = cdSstmCncptPrprtVlCdngCdngDsplStrng;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlCdngCdngSstmRi() {
-        return this.cdSstmCncptPrprtVlCdngCdngSstmRi;
-    }
-    
-    public void setCdSstmCncptPrprtVlCdngCdngSstmRi(String cdSstmCncptPrprtVlCdngCdngSstmRi) {
-        this.cdSstmCncptPrprtVlCdngCdngSstmRi = cdSstmCncptPrprtVlCdngCdngSstmRi;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlStrng() {
-        return this.cdSstmCncptPrprtVlStrng;
-    }
-    
-    public void setCdSstmCncptPrprtVlStrng(String cdSstmCncptPrprtVlStrng) {
-        this.cdSstmCncptPrprtVlStrng = cdSstmCncptPrprtVlStrng;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlntgr() {
-        return this.cdSstmCncptPrprtVlntgr;
-    }
-    
-    public void setCdSstmCncptPrprtVlntgr(String cdSstmCncptPrprtVlntgr) {
-        this.cdSstmCncptPrprtVlntgr = cdSstmCncptPrprtVlntgr;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlBln() {
-        return this.cdSstmCncptPrprtVlBln;
-    }
-    
-    public void setCdSstmCncptPrprtVlBln(String cdSstmCncptPrprtVlBln) {
-        this.cdSstmCncptPrprtVlBln = cdSstmCncptPrprtVlBln;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlDttme() {
-        return this.cdSstmCncptPrprtVlDttme;
-    }
-    
-    public void setCdSstmCncptPrprtVlDttme(String cdSstmCncptPrprtVlDttme) {
-        this.cdSstmCncptPrprtVlDttme = cdSstmCncptPrprtVlDttme;
-    }
-    
-    
-    
-    public String getCdSstmCncptPrprtVlDcml() {
-        return this.cdSstmCncptPrprtVlDcml;
-    }
-    
-    public void setCdSstmCncptPrprtVlDcml(String cdSstmCncptPrprtVlDcml) {
-        this.cdSstmCncptPrprtVlDcml = cdSstmCncptPrprtVlDcml;
-    }
-    
-    
-    
-    public String getCodeSystemConceptConcept() {
-        return this.codeSystemConceptConcept;
-    }
-    
-    public void setCodeSystemConceptConcept(String codeSystemConceptConcept) {
-        this.codeSystemConceptConcept = codeSystemConceptConcept;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCodeSystemUrlUri()
+    {
+        return this.codeSystemUrlUri;
+    }
+    
+    public void setCodeSystemUrlUri
+        (String codeSystemUrlUri) 
+        {
+      this.codeSystemUrlUri = codeSystemUrlUri;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrSe()
+    {
+        return this.cdSstmDntfrDntfrSe;
+    }
+    
+    public void setCdSstmDntfrDntfrSe
+        (String cdSstmDntfrDntfrSe) 
+        {
+      this.cdSstmDntfrDntfrSe = cdSstmDntfrDntfrSe;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcCSstm()
+    {
+        return this.cdSstmDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcCSstm
+        (String cdSstmDntfrDntfrTpCcCSstm) 
+        {
+      this.cdSstmDntfrDntfrTpCcCSstm = cdSstmDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcCVrsn()
+    {
+        return this.cdSstmDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcCVrsn
+        (String cdSstmDntfrDntfrTpCcCVrsn) 
+        {
+      this.cdSstmDntfrDntfrTpCcCVrsn = cdSstmDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcCCde()
+    {
+        return this.cdSstmDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcCCde
+        (String cdSstmDntfrDntfrTpCcCCde) 
+        {
+      this.cdSstmDntfrDntfrTpCcCCde = cdSstmDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcCDsplay()
+    {
+        return this.cdSstmDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcCDsplay
+        (String cdSstmDntfrDntfrTpCcCDsplay) 
+        {
+      this.cdSstmDntfrDntfrTpCcCDsplay = cdSstmDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cdSstmDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcCSrSlctd
+        (String cdSstmDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cdSstmDntfrDntfrTpCcCSrSlctd = cdSstmDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrTpCcTxt()
+    {
+        return this.cdSstmDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCdSstmDntfrDntfrTpCcTxt
+        (String cdSstmDntfrDntfrTpCcTxt) 
+        {
+      this.cdSstmDntfrDntfrTpCcTxt = cdSstmDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrPrdPrdStrt()
+    {
+        return this.cdSstmDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCdSstmDntfrDntfrPrdPrdStrt
+        (String cdSstmDntfrDntfrPrdPrdStrt) 
+        {
+      this.cdSstmDntfrDntfrPrdPrdStrt = cdSstmDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrPrdPrdNd()
+    {
+        return this.cdSstmDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCdSstmDntfrDntfrPrdPrdNd
+        (String cdSstmDntfrDntfrPrdPrdNd) 
+        {
+      this.cdSstmDntfrDntfrPrdPrdNd = cdSstmDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrSsgnr()
+    {
+        return this.cdSstmDntfrDntfrSsgnr;
+    }
+    
+    public void setCdSstmDntfrDntfrSsgnr
+        (String cdSstmDntfrDntfrSsgnr) 
+        {
+      this.cdSstmDntfrDntfrSsgnr = cdSstmDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrVlue()
+    {
+        return this.cdSstmDntfrDntfrVlue;
+    }
+    
+    public void setCdSstmDntfrDntfrVlue
+        (String cdSstmDntfrDntfrVlue) 
+        {
+      this.cdSstmDntfrDntfrVlue = cdSstmDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCdSstmDntfrDntfrSstm()
+    {
+        return this.cdSstmDntfrDntfrSstm;
+    }
+    
+    public void setCdSstmDntfrDntfrSstm
+        (String cdSstmDntfrDntfrSstm) 
+        {
+      this.cdSstmDntfrDntfrSstm = cdSstmDntfrDntfrSstm;
+}
+    public 
+    String 
+    getCodeSystemVersionString()
+    {
+        return this.codeSystemVersionString;
+    }
+    
+    public void setCodeSystemVersionString
+        (String codeSystemVersionString) 
+        {
+      this.codeSystemVersionString = codeSystemVersionString;
+}
+    public 
+    String 
+    getCodeSystemNameString()
+    {
+        return this.codeSystemNameString;
+    }
+    
+    public void setCodeSystemNameString
+        (String codeSystemNameString) 
+        {
+      this.codeSystemNameString = codeSystemNameString;
+}
+    public 
+    String 
+    getCodeSystemTitleString()
+    {
+        return this.codeSystemTitleString;
+    }
+    
+    public void setCodeSystemTitleString
+        (String codeSystemTitleString) 
+        {
+      this.codeSystemTitleString = codeSystemTitleString;
+}
+    public 
+    String 
+    getCodeSystemStatusCode()
+    {
+        return this.codeSystemStatusCode;
+    }
+    
+    public void setCodeSystemStatusCode
+        (String codeSystemStatusCode) 
+        {
+      this.codeSystemStatusCode = codeSystemStatusCode;
+}
+    public 
+    String 
+    getCodeSystemExperimentalBoolean()
+    {
+        return this.codeSystemExperimentalBoolean;
+    }
+    
+    public void setCodeSystemExperimentalBoolean
+        (String codeSystemExperimentalBoolean) 
+        {
+      this.codeSystemExperimentalBoolean = codeSystemExperimentalBoolean;
+}
+    public 
+    String 
+    getCodeSystemDateDateTime()
+    {
+        return this.codeSystemDateDateTime;
+    }
+    
+    public void setCodeSystemDateDateTime
+        (String codeSystemDateDateTime) 
+        {
+      this.codeSystemDateDateTime = codeSystemDateDateTime;
+}
+    public 
+    String 
+    getCodeSystemPublisherString()
+    {
+        return this.codeSystemPublisherString;
+    }
+    
+    public void setCodeSystemPublisherString
+        (String codeSystemPublisherString) 
+        {
+      this.codeSystemPublisherString = codeSystemPublisherString;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntPrdStrt
+        (String cdSstmCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntPrdStrt = cdSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntPrdNd
+        (String cdSstmCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntPrdNd = cdSstmCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntSstm
+        (String cdSstmCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntSstm = cdSstmCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntVlue
+        (String cdSstmCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntVlue = cdSstmCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntSe
+        (String cdSstmCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntSe = cdSstmCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.cdSstmCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setCdSstmCntctCntctDtlTlcmCntctPntRnk
+        (String cdSstmCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.cdSstmCntctCntctDtlTlcmCntctPntRnk = cdSstmCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getCdSstmCntctCntctDtlNme()
+    {
+        return this.cdSstmCntctCntctDtlNme;
+    }
+    
+    public void setCdSstmCntctCntctDtlNme
+        (String cdSstmCntctCntctDtlNme) 
+        {
+      this.cdSstmCntctCntctDtlNme = cdSstmCntctCntctDtlNme;
+}
+    public 
+    String 
+    getCodeSystemDescriptionMarkdown()
+    {
+        return this.codeSystemDescriptionMarkdown;
+    }
+    
+    public void setCodeSystemDescriptionMarkdown
+        (String codeSystemDescriptionMarkdown) 
+        {
+      this.codeSystemDescriptionMarkdown = codeSystemDescriptionMarkdown;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcCSstm
+        (String cdSstmSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcCSstm = cdSstmSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcCVrsn
+        (String cdSstmSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcCVrsn = cdSstmSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcCCde
+        (String cdSstmSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcCCde = cdSstmSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcCDsplay
+        (String cdSstmSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcCDsplay = cdSstmSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcCSrSlctd
+        (String cdSstmSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcCSrSlctd = cdSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.cdSstmSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlCcCcTxt
+        (String cdSstmSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.cdSstmSCntxtSgCntxtVlCcCcTxt = cdSstmSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtCdCSstm()
+    {
+        return this.cdSstmSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtCdCSstm
+        (String cdSstmSCntxtSgCntxtCdCSstm) 
+        {
+      this.cdSstmSCntxtSgCntxtCdCSstm = cdSstmSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtCdCVrsn()
+    {
+        return this.cdSstmSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtCdCVrsn
+        (String cdSstmSCntxtSgCntxtCdCVrsn) 
+        {
+      this.cdSstmSCntxtSgCntxtCdCVrsn = cdSstmSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtCdCCde()
+    {
+        return this.cdSstmSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtCdCCde
+        (String cdSstmSCntxtSgCntxtCdCCde) 
+        {
+      this.cdSstmSCntxtSgCntxtCdCCde = cdSstmSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtCdCDsplay()
+    {
+        return this.cdSstmSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtCdCDsplay
+        (String cdSstmSCntxtSgCntxtCdCDsplay) 
+        {
+      this.cdSstmSCntxtSgCntxtCdCDsplay = cdSstmSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.cdSstmSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtCdCSrSlctd
+        (String cdSstmSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.cdSstmSCntxtSgCntxtCdCSrSlctd = cdSstmSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.cdSstmSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlQnttQnttVlue
+        (String cdSstmSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.cdSstmSCntxtSgCntxtVlQnttQnttVlue = cdSstmSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.cdSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlQnttQnttCmprtr
+        (String cdSstmSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.cdSstmSCntxtSgCntxtVlQnttQnttCmprtr = cdSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.cdSstmSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlQnttQnttNt
+        (String cdSstmSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.cdSstmSCntxtSgCntxtVlQnttQnttNt = cdSstmSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.cdSstmSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlQnttQnttSstm
+        (String cdSstmSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.cdSstmSCntxtSgCntxtVlQnttQnttSstm = cdSstmSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.cdSstmSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlQnttQnttCde
+        (String cdSstmSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.cdSstmSCntxtSgCntxtVlQnttQnttCde = cdSstmSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.cdSstmSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlRngRngLw
+        (String cdSstmSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.cdSstmSCntxtSgCntxtVlRngRngLw = cdSstmSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.cdSstmSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlRngRngHgh
+        (String cdSstmSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.cdSstmSCntxtSgCntxtVlRngRngHgh = cdSstmSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getCdSstmSCntxtSgCntxtVlRfrnce()
+    {
+        return this.cdSstmSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setCdSstmSCntxtSgCntxtVlRfrnce
+        (String cdSstmSCntxtSgCntxtVlRfrnce) 
+        {
+      this.cdSstmSCntxtSgCntxtVlRfrnce = cdSstmSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getCdSstmJrsdctnCcCdngCSstm()
+    {
+        return this.cdSstmJrsdctnCcCdngCSstm;
+    }
+    
+    public void setCdSstmJrsdctnCcCdngCSstm
+        (String cdSstmJrsdctnCcCdngCSstm) 
+        {
+      this.cdSstmJrsdctnCcCdngCSstm = cdSstmJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getCdSstmJrsdctnCcCdngCVrsn()
+    {
+        return this.cdSstmJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setCdSstmJrsdctnCcCdngCVrsn
+        (String cdSstmJrsdctnCcCdngCVrsn) 
+        {
+      this.cdSstmJrsdctnCcCdngCVrsn = cdSstmJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getCdSstmJrsdctnCcCdngCCde()
+    {
+        return this.cdSstmJrsdctnCcCdngCCde;
+    }
+    
+    public void setCdSstmJrsdctnCcCdngCCde
+        (String cdSstmJrsdctnCcCdngCCde) 
+        {
+      this.cdSstmJrsdctnCcCdngCCde = cdSstmJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getCdSstmJrsdctnCcCdngCDsplay()
+    {
+        return this.cdSstmJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setCdSstmJrsdctnCcCdngCDsplay
+        (String cdSstmJrsdctnCcCdngCDsplay) 
+        {
+      this.cdSstmJrsdctnCcCdngCDsplay = cdSstmJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getCdSstmJrsdctnCcCdngCSrSlctd()
+    {
+        return this.cdSstmJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setCdSstmJrsdctnCcCdngCSrSlctd
+        (String cdSstmJrsdctnCcCdngCSrSlctd) 
+        {
+      this.cdSstmJrsdctnCcCdngCSrSlctd = cdSstmJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCodeSystemJurisdictionCcText()
+    {
+        return this.codeSystemJurisdictionCcText;
+    }
+    
+    public void setCodeSystemJurisdictionCcText
+        (String codeSystemJurisdictionCcText) 
+        {
+      this.codeSystemJurisdictionCcText = codeSystemJurisdictionCcText;
+}
+    public 
+    String 
+    getCodeSystemPurposeMarkdown()
+    {
+        return this.codeSystemPurposeMarkdown;
+    }
+    
+    public void setCodeSystemPurposeMarkdown
+        (String codeSystemPurposeMarkdown) 
+        {
+      this.codeSystemPurposeMarkdown = codeSystemPurposeMarkdown;
+}
+    public 
+    String 
+    getCodeSystemCopyrightMarkdown()
+    {
+        return this.codeSystemCopyrightMarkdown;
+    }
+    
+    public void setCodeSystemCopyrightMarkdown
+        (String codeSystemCopyrightMarkdown) 
+        {
+      this.codeSystemCopyrightMarkdown = codeSystemCopyrightMarkdown;
+}
+    public 
+    String 
+    getCodeSystemCaseSensitiveBoolean()
+    {
+        return this.codeSystemCaseSensitiveBoolean;
+    }
+    
+    public void setCodeSystemCaseSensitiveBoolean
+        (String codeSystemCaseSensitiveBoolean) 
+        {
+      this.codeSystemCaseSensitiveBoolean = codeSystemCaseSensitiveBoolean;
+}
+    public 
+    String 
+    getCodeSystemValueSetCanonical()
+    {
+        return this.codeSystemValueSetCanonical;
+    }
+    
+    public void setCodeSystemValueSetCanonical
+        (String codeSystemValueSetCanonical) 
+        {
+      this.codeSystemValueSetCanonical = codeSystemValueSetCanonical;
+}
+    public 
+    String 
+    getCodeSystemHierarchyMeaningCode()
+    {
+        return this.codeSystemHierarchyMeaningCode;
+    }
+    
+    public void setCodeSystemHierarchyMeaningCode
+        (String codeSystemHierarchyMeaningCode) 
+        {
+      this.codeSystemHierarchyMeaningCode = codeSystemHierarchyMeaningCode;
+}
+    public 
+    String 
+    getCodeSystemCompositionalBoolean()
+    {
+        return this.codeSystemCompositionalBoolean;
+    }
+    
+    public void setCodeSystemCompositionalBoolean
+        (String codeSystemCompositionalBoolean) 
+        {
+      this.codeSystemCompositionalBoolean = codeSystemCompositionalBoolean;
+}
+    public 
+    String 
+    getCodeSystemVersionNeededBoolean()
+    {
+        return this.codeSystemVersionNeededBoolean;
+    }
+    
+    public void setCodeSystemVersionNeededBoolean
+        (String codeSystemVersionNeededBoolean) 
+        {
+      this.codeSystemVersionNeededBoolean = codeSystemVersionNeededBoolean;
+}
+    public 
+    String 
+    getCodeSystemContentCode()
+    {
+        return this.codeSystemContentCode;
+    }
+    
+    public void setCodeSystemContentCode
+        (String codeSystemContentCode) 
+        {
+      this.codeSystemContentCode = codeSystemContentCode;
+}
+    public 
+    String 
+    getCodeSystemSupplementsCanonical()
+    {
+        return this.codeSystemSupplementsCanonical;
+    }
+    
+    public void setCodeSystemSupplementsCanonical
+        (String codeSystemSupplementsCanonical) 
+        {
+      this.codeSystemSupplementsCanonical = codeSystemSupplementsCanonical;
+}
+    public 
+    String 
+    getCodeSystemCountUnsignedInt()
+    {
+        return this.codeSystemCountUnsignedInt;
+    }
+    
+    public void setCodeSystemCountUnsignedInt
+        (String codeSystemCountUnsignedInt) 
+        {
+      this.codeSystemCountUnsignedInt = codeSystemCountUnsignedInt;
+}
+    public 
+    String 
+    getCodeSystemFilterCodeCode()
+    {
+        return this.codeSystemFilterCodeCode;
+    }
+    
+    public void setCodeSystemFilterCodeCode
+        (String codeSystemFilterCodeCode) 
+        {
+      this.codeSystemFilterCodeCode = codeSystemFilterCodeCode;
+}
+    public 
+    String 
+    getCdSstmFltrDscrptnStrng()
+    {
+        return this.cdSstmFltrDscrptnStrng;
+    }
+    
+    public void setCdSstmFltrDscrptnStrng
+        (String cdSstmFltrDscrptnStrng) 
+        {
+      this.cdSstmFltrDscrptnStrng = cdSstmFltrDscrptnStrng;
+}
+    public 
+    String 
+    getCodeSystemFilterOperatorCode()
+    {
+        return this.codeSystemFilterOperatorCode;
+    }
+    
+    public void setCodeSystemFilterOperatorCode
+        (String codeSystemFilterOperatorCode) 
+        {
+      this.codeSystemFilterOperatorCode = codeSystemFilterOperatorCode;
+}
+    public 
+    String 
+    getCodeSystemFilterValueString()
+    {
+        return this.codeSystemFilterValueString;
+    }
+    
+    public void setCodeSystemFilterValueString
+        (String codeSystemFilterValueString) 
+        {
+      this.codeSystemFilterValueString = codeSystemFilterValueString;
+}
+    public 
+    String 
+    getCodeSystemPropertyCodeCode()
+    {
+        return this.codeSystemPropertyCodeCode;
+    }
+    
+    public void setCodeSystemPropertyCodeCode
+        (String codeSystemPropertyCodeCode) 
+        {
+      this.codeSystemPropertyCodeCode = codeSystemPropertyCodeCode;
+}
+    public 
+    String 
+    getCodeSystemPropertyUriUri()
+    {
+        return this.codeSystemPropertyUriUri;
+    }
+    
+    public void setCodeSystemPropertyUriUri
+        (String codeSystemPropertyUriUri) 
+        {
+      this.codeSystemPropertyUriUri = codeSystemPropertyUriUri;
+}
+    public 
+    String 
+    getCdSstmPrprtDscrptnStrng()
+    {
+        return this.cdSstmPrprtDscrptnStrng;
+    }
+    
+    public void setCdSstmPrprtDscrptnStrng
+        (String cdSstmPrprtDscrptnStrng) 
+        {
+      this.cdSstmPrprtDscrptnStrng = cdSstmPrprtDscrptnStrng;
+}
+    public 
+    String 
+    getCodeSystemPropertyTypeCode()
+    {
+        return this.codeSystemPropertyTypeCode;
+    }
+    
+    public void setCodeSystemPropertyTypeCode
+        (String codeSystemPropertyTypeCode) 
+        {
+      this.codeSystemPropertyTypeCode = codeSystemPropertyTypeCode;
+}
+    public 
+    String 
+    getCodeSystemConceptCodeCode()
+    {
+        return this.codeSystemConceptCodeCode;
+    }
+    
+    public void setCodeSystemConceptCodeCode
+        (String codeSystemConceptCodeCode) 
+        {
+      this.codeSystemConceptCodeCode = codeSystemConceptCodeCode;
+}
+    public 
+    String 
+    getCodeSystemConceptDisplayString()
+    {
+        return this.codeSystemConceptDisplayString;
+    }
+    
+    public void setCodeSystemConceptDisplayString
+        (String codeSystemConceptDisplayString) 
+        {
+      this.codeSystemConceptDisplayString = codeSystemConceptDisplayString;
+}
+    public 
+    String 
+    getCdSstmCncptDfntnStrng()
+    {
+        return this.cdSstmCncptDfntnStrng;
+    }
+    
+    public void setCdSstmCncptDfntnStrng
+        (String cdSstmCncptDfntnStrng) 
+        {
+      this.cdSstmCncptDfntnStrng = cdSstmCncptDfntnStrng;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnLnggCde()
+    {
+        return this.cdSstmCncptDsgntnLnggCde;
+    }
+    
+    public void setCdSstmCncptDsgntnLnggCde
+        (String cdSstmCncptDsgntnLnggCde) 
+        {
+      this.cdSstmCncptDsgntnLnggCde = cdSstmCncptDsgntnLnggCde;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnSCSrSlctd()
+    {
+        return this.cdSstmCncptDsgntnSCSrSlctd;
+    }
+    
+    public void setCdSstmCncptDsgntnSCSrSlctd
+        (String cdSstmCncptDsgntnSCSrSlctd) 
+        {
+      this.cdSstmCncptDsgntnSCSrSlctd = cdSstmCncptDsgntnSCSrSlctd;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnSCCde()
+    {
+        return this.cdSstmCncptDsgntnSCCde;
+    }
+    
+    public void setCdSstmCncptDsgntnSCCde
+        (String cdSstmCncptDsgntnSCCde) 
+        {
+      this.cdSstmCncptDsgntnSCCde = cdSstmCncptDsgntnSCCde;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnSCVrsn()
+    {
+        return this.cdSstmCncptDsgntnSCVrsn;
+    }
+    
+    public void setCdSstmCncptDsgntnSCVrsn
+        (String cdSstmCncptDsgntnSCVrsn) 
+        {
+      this.cdSstmCncptDsgntnSCVrsn = cdSstmCncptDsgntnSCVrsn;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnSCDsplay()
+    {
+        return this.cdSstmCncptDsgntnSCDsplay;
+    }
+    
+    public void setCdSstmCncptDsgntnSCDsplay
+        (String cdSstmCncptDsgntnSCDsplay) 
+        {
+      this.cdSstmCncptDsgntnSCDsplay = cdSstmCncptDsgntnSCDsplay;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnSCSstm()
+    {
+        return this.cdSstmCncptDsgntnSCSstm;
+    }
+    
+    public void setCdSstmCncptDsgntnSCSstm
+        (String cdSstmCncptDsgntnSCSstm) 
+        {
+      this.cdSstmCncptDsgntnSCSstm = cdSstmCncptDsgntnSCSstm;
+}
+    public 
+    String 
+    getCdSstmCncptDsgntnVlStrng()
+    {
+        return this.cdSstmCncptDsgntnVlStrng;
+    }
+    
+    public void setCdSstmCncptDsgntnVlStrng
+        (String cdSstmCncptDsgntnVlStrng) 
+        {
+      this.cdSstmCncptDsgntnVlStrng = cdSstmCncptDsgntnVlStrng;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtCdCde()
+    {
+        return this.cdSstmCncptPrprtCdCde;
+    }
+    
+    public void setCdSstmCncptPrprtCdCde
+        (String cdSstmCncptPrprtCdCde) 
+        {
+      this.cdSstmCncptPrprtCdCde = cdSstmCncptPrprtCdCde;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdCde()
+    {
+        return this.cdSstmCncptPrprtVlCdCde;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdCde
+        (String cdSstmCncptPrprtVlCdCde) 
+        {
+      this.cdSstmCncptPrprtVlCdCde = cdSstmCncptPrprtVlCdCde;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdngCSrSlctd()
+    {
+        return this.cdSstmCncptPrprtVlCdngCSrSlctd;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdngCSrSlctd
+        (String cdSstmCncptPrprtVlCdngCSrSlctd) 
+        {
+      this.cdSstmCncptPrprtVlCdngCSrSlctd = cdSstmCncptPrprtVlCdngCSrSlctd;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdngCCde()
+    {
+        return this.cdSstmCncptPrprtVlCdngCCde;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdngCCde
+        (String cdSstmCncptPrprtVlCdngCCde) 
+        {
+      this.cdSstmCncptPrprtVlCdngCCde = cdSstmCncptPrprtVlCdngCCde;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdngCVrsn()
+    {
+        return this.cdSstmCncptPrprtVlCdngCVrsn;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdngCVrsn
+        (String cdSstmCncptPrprtVlCdngCVrsn) 
+        {
+      this.cdSstmCncptPrprtVlCdngCVrsn = cdSstmCncptPrprtVlCdngCVrsn;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdngCDsplay()
+    {
+        return this.cdSstmCncptPrprtVlCdngCDsplay;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdngCDsplay
+        (String cdSstmCncptPrprtVlCdngCDsplay) 
+        {
+      this.cdSstmCncptPrprtVlCdngCDsplay = cdSstmCncptPrprtVlCdngCDsplay;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlCdngCSstm()
+    {
+        return this.cdSstmCncptPrprtVlCdngCSstm;
+    }
+    
+    public void setCdSstmCncptPrprtVlCdngCSstm
+        (String cdSstmCncptPrprtVlCdngCSstm) 
+        {
+      this.cdSstmCncptPrprtVlCdngCSstm = cdSstmCncptPrprtVlCdngCSstm;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlStrngStrng()
+    {
+        return this.cdSstmCncptPrprtVlStrngStrng;
+    }
+    
+    public void setCdSstmCncptPrprtVlStrngStrng
+        (String cdSstmCncptPrprtVlStrngStrng) 
+        {
+      this.cdSstmCncptPrprtVlStrngStrng = cdSstmCncptPrprtVlStrngStrng;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlntgrNtgr()
+    {
+        return this.cdSstmCncptPrprtVlntgrNtgr;
+    }
+    
+    public void setCdSstmCncptPrprtVlntgrNtgr
+        (String cdSstmCncptPrprtVlntgrNtgr) 
+        {
+      this.cdSstmCncptPrprtVlntgrNtgr = cdSstmCncptPrprtVlntgrNtgr;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlBlnBln()
+    {
+        return this.cdSstmCncptPrprtVlBlnBln;
+    }
+    
+    public void setCdSstmCncptPrprtVlBlnBln
+        (String cdSstmCncptPrprtVlBlnBln) 
+        {
+      this.cdSstmCncptPrprtVlBlnBln = cdSstmCncptPrprtVlBlnBln;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlDttmDtTme()
+    {
+        return this.cdSstmCncptPrprtVlDttmDtTme;
+    }
+    
+    public void setCdSstmCncptPrprtVlDttmDtTme
+        (String cdSstmCncptPrprtVlDttmDtTme) 
+        {
+      this.cdSstmCncptPrprtVlDttmDtTme = cdSstmCncptPrprtVlDttmDtTme;
+}
+    public 
+    String 
+    getCdSstmCncptPrprtVlDcmlDcml()
+    {
+        return this.cdSstmCncptPrprtVlDcmlDcml;
+    }
+    
+    public void setCdSstmCncptPrprtVlDcmlDcml
+        (String cdSstmCncptPrprtVlDcmlDcml) 
+        {
+      this.cdSstmCncptPrprtVlDcmlDcml = cdSstmCncptPrprtVlDcmlDcml;
+}
+    public 
+    String 
+    getCodeSystemConceptConceptConcept()
+    {
+        return this.codeSystemConceptConceptConcept;
+    }
+    
+    public void setCodeSystemConceptConceptConcept
+        (String codeSystemConceptConceptConcept) 
+        {
+      this.codeSystemConceptConceptConcept = codeSystemConceptConceptConcept;
+}
 
 
 

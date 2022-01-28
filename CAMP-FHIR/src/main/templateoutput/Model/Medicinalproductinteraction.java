@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,365 +10,488 @@ package main.templateoutput.Model;
 public class Medicinalproductinteraction  implements java.io.Serializable {
 
 
-     private String mpinteractionSubject;
-     private String mpinteractionDescription;
-     private String mpinteractionInteractant;
-     private String mpntrctnNtrctntTmRfrnce;
-     private String mpntrctnNtrctntTmcdblcptCdngSrSlctd;
-     private String mpntrctnNtrctntTmcdblcptCdngCde;
-     private String mpntrctnNtrctntTmcdblcptCdngDsplay;
-     private String mpntrctnNtrctntTmcdblcptCdngVrsn;
-     private String mpntrctnNtrctntTmcdblcptCdngSstm;
-     private String mpntrctnTpCdngSrSlctd;
-     private String mpinteractionTypeCodingCode;
-     private String mpinteractionTypeCodingDisplay;
-     private String mpinteractionTypeCodingVersion;
-     private String mpinteractionTypeCodingSystem;
-     private String mpntrctnFfctCdngSrSlctd;
-     private String mpinteractionEffectCodingCode;
-     private String mpntrctnFfctCdngDsplay;
-     private String mpntrctnFfctCdngVrsn;
-     private String mpinteractionEffectCodingSystem;
-     private String mpntrctnNcdncCdngSrSlctd;
-     private String mpntrctnNcdncCdngCde;
-     private String mpntrctnNcdncCdngDsplay;
-     private String mpntrctnNcdncCdngVrsn;
-     private String mpntrctnNcdncCdngSstm;
-     private String mpntrctnMngmntCdngSrSlctd;
-     private String mpntrctnMngmntCdngCde;
-     private String mpntrctnMngmntCdngDsplay;
-     private String mpntrctnMngmntCdngVrsn;
-     private String mpntrctnMngmntCdngSstm;
+     private Integer id;
+     private String mpinteractionSubjectReference;
+     private String mpinteractionDescriptionString;
+     private String mpntrctnNtrctntTmRfrncRfrnce;
+     private String mpntrctnNtrctntTmCdblcncptCcCdngCSstm;
+     private String mpntrctnNtrctntTmCdblcncptCcCdngCVrsn;
+     private String mpntrctnNtrctntTmCdblcncptCcCdngCCde;
+     private String mpntrctnNtrctntTmCdblcncptCcCdngCDsplay;
+     private String mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd;
+     private String mpntrctnNtrctntTmCdblcncptCcTxt;
+     private String mpntrctnTpCcCdngCSstm;
+     private String mpntrctnTpCcCdngCVrsn;
+     private String mpntrctnTpCcCdngCCde;
+     private String mpntrctnTpCcCdngCDsplay;
+     private String mpntrctnTpCcCdngCSrSlctd;
+     private String mpinteractionTypeCcText;
+     private String mpntrctnFfctCcCdngCSstm;
+     private String mpntrctnFfctCcCdngCVrsn;
+     private String mpntrctnFfctCcCdngCCde;
+     private String mpntrctnFfctCcCdngCDsplay;
+     private String mpntrctnFfctCcCdngCSrSlctd;
+     private String mpinteractionEffectCcText;
+     private String mpntrctnNcdncCcCdngCSstm;
+     private String mpntrctnNcdncCcCdngCVrsn;
+     private String mpntrctnNcdncCcCdngCCde;
+     private String mpntrctnNcdncCcCdngCDsplay;
+     private String mpntrctnNcdncCcCdngCSrSlctd;
+     private String mpinteractionIncidenceCcText;
+     private String mpntrctnMngmntCcCdngCSstm;
+     private String mpntrctnMngmntCcCdngCVrsn;
+     private String mpntrctnMngmntCcCdngCCde;
+     private String mpntrctnMngmntCcCdngCDsplay;
+     private String mpntrctnMngmntCcCdngCSrSlctd;
+     private String mpinteractionManagementCcText;
 
     public Medicinalproductinteraction() {
     }
 
-	
-    public Medicinalproductinteraction(String mpinteractionSubject) {
-        this.mpinteractionSubject = mpinteractionSubject;
-    }
-    public Medicinalproductinteraction(String mpinteractionSubject, String mpinteractionDescription, String mpinteractionInteractant, String mpntrctnNtrctntTmRfrnce, String mpntrctnNtrctntTmcdblcptCdngSrSlctd, String mpntrctnNtrctntTmcdblcptCdngCde, String mpntrctnNtrctntTmcdblcptCdngDsplay, String mpntrctnNtrctntTmcdblcptCdngVrsn, String mpntrctnNtrctntTmcdblcptCdngSstm, String mpntrctnTpCdngSrSlctd, String mpinteractionTypeCodingCode, String mpinteractionTypeCodingDisplay, String mpinteractionTypeCodingVersion, String mpinteractionTypeCodingSystem, String mpntrctnFfctCdngSrSlctd, String mpinteractionEffectCodingCode, String mpntrctnFfctCdngDsplay, String mpntrctnFfctCdngVrsn, String mpinteractionEffectCodingSystem, String mpntrctnNcdncCdngSrSlctd, String mpntrctnNcdncCdngCde, String mpntrctnNcdncCdngDsplay, String mpntrctnNcdncCdngVrsn, String mpntrctnNcdncCdngSstm, String mpntrctnMngmntCdngSrSlctd, String mpntrctnMngmntCdngCde, String mpntrctnMngmntCdngDsplay, String mpntrctnMngmntCdngVrsn, String mpntrctnMngmntCdngSstm) {
-       this.mpinteractionSubject = mpinteractionSubject;
-       this.mpinteractionDescription = mpinteractionDescription;
-       this.mpinteractionInteractant = mpinteractionInteractant;
-       this.mpntrctnNtrctntTmRfrnce = mpntrctnNtrctntTmRfrnce;
-       this.mpntrctnNtrctntTmcdblcptCdngSrSlctd = mpntrctnNtrctntTmcdblcptCdngSrSlctd;
-       this.mpntrctnNtrctntTmcdblcptCdngCde = mpntrctnNtrctntTmcdblcptCdngCde;
-       this.mpntrctnNtrctntTmcdblcptCdngDsplay = mpntrctnNtrctntTmcdblcptCdngDsplay;
-       this.mpntrctnNtrctntTmcdblcptCdngVrsn = mpntrctnNtrctntTmcdblcptCdngVrsn;
-       this.mpntrctnNtrctntTmcdblcptCdngSstm = mpntrctnNtrctntTmcdblcptCdngSstm;
-       this.mpntrctnTpCdngSrSlctd = mpntrctnTpCdngSrSlctd;
-       this.mpinteractionTypeCodingCode = mpinteractionTypeCodingCode;
-       this.mpinteractionTypeCodingDisplay = mpinteractionTypeCodingDisplay;
-       this.mpinteractionTypeCodingVersion = mpinteractionTypeCodingVersion;
-       this.mpinteractionTypeCodingSystem = mpinteractionTypeCodingSystem;
-       this.mpntrctnFfctCdngSrSlctd = mpntrctnFfctCdngSrSlctd;
-       this.mpinteractionEffectCodingCode = mpinteractionEffectCodingCode;
-       this.mpntrctnFfctCdngDsplay = mpntrctnFfctCdngDsplay;
-       this.mpntrctnFfctCdngVrsn = mpntrctnFfctCdngVrsn;
-       this.mpinteractionEffectCodingSystem = mpinteractionEffectCodingSystem;
-       this.mpntrctnNcdncCdngSrSlctd = mpntrctnNcdncCdngSrSlctd;
-       this.mpntrctnNcdncCdngCde = mpntrctnNcdncCdngCde;
-       this.mpntrctnNcdncCdngDsplay = mpntrctnNcdncCdngDsplay;
-       this.mpntrctnNcdncCdngVrsn = mpntrctnNcdncCdngVrsn;
-       this.mpntrctnNcdncCdngSstm = mpntrctnNcdncCdngSstm;
-       this.mpntrctnMngmntCdngSrSlctd = mpntrctnMngmntCdngSrSlctd;
-       this.mpntrctnMngmntCdngCde = mpntrctnMngmntCdngCde;
-       this.mpntrctnMngmntCdngDsplay = mpntrctnMngmntCdngDsplay;
-       this.mpntrctnMngmntCdngVrsn = mpntrctnMngmntCdngVrsn;
-       this.mpntrctnMngmntCdngSstm = mpntrctnMngmntCdngSstm;
+    public Medicinalproductinteraction(String mpinteractionSubjectReference, String mpinteractionDescriptionString, String mpntrctnNtrctntTmRfrncRfrnce, String mpntrctnNtrctntTmCdblcncptCcCdngCSstm, String mpntrctnNtrctntTmCdblcncptCcCdngCVrsn, String mpntrctnNtrctntTmCdblcncptCcCdngCCde, String mpntrctnNtrctntTmCdblcncptCcCdngCDsplay, String mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd, String mpntrctnNtrctntTmCdblcncptCcTxt, String mpntrctnTpCcCdngCSstm, String mpntrctnTpCcCdngCVrsn, String mpntrctnTpCcCdngCCde, String mpntrctnTpCcCdngCDsplay, String mpntrctnTpCcCdngCSrSlctd, String mpinteractionTypeCcText, String mpntrctnFfctCcCdngCSstm, String mpntrctnFfctCcCdngCVrsn, String mpntrctnFfctCcCdngCCde, String mpntrctnFfctCcCdngCDsplay, String mpntrctnFfctCcCdngCSrSlctd, String mpinteractionEffectCcText, String mpntrctnNcdncCcCdngCSstm, String mpntrctnNcdncCcCdngCVrsn, String mpntrctnNcdncCcCdngCCde, String mpntrctnNcdncCcCdngCDsplay, String mpntrctnNcdncCcCdngCSrSlctd, String mpinteractionIncidenceCcText, String mpntrctnMngmntCcCdngCSstm, String mpntrctnMngmntCcCdngCVrsn, String mpntrctnMngmntCcCdngCCde, String mpntrctnMngmntCcCdngCDsplay, String mpntrctnMngmntCcCdngCSrSlctd, String mpinteractionManagementCcText) {
+       this.mpinteractionSubjectReference = mpinteractionSubjectReference;
+       this.mpinteractionDescriptionString = mpinteractionDescriptionString;
+       this.mpntrctnNtrctntTmRfrncRfrnce = mpntrctnNtrctntTmRfrncRfrnce;
+       this.mpntrctnNtrctntTmCdblcncptCcCdngCSstm = mpntrctnNtrctntTmCdblcncptCcCdngCSstm;
+       this.mpntrctnNtrctntTmCdblcncptCcCdngCVrsn = mpntrctnNtrctntTmCdblcncptCcCdngCVrsn;
+       this.mpntrctnNtrctntTmCdblcncptCcCdngCCde = mpntrctnNtrctntTmCdblcncptCcCdngCCde;
+       this.mpntrctnNtrctntTmCdblcncptCcCdngCDsplay = mpntrctnNtrctntTmCdblcncptCcCdngCDsplay;
+       this.mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd = mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd;
+       this.mpntrctnNtrctntTmCdblcncptCcTxt = mpntrctnNtrctntTmCdblcncptCcTxt;
+       this.mpntrctnTpCcCdngCSstm = mpntrctnTpCcCdngCSstm;
+       this.mpntrctnTpCcCdngCVrsn = mpntrctnTpCcCdngCVrsn;
+       this.mpntrctnTpCcCdngCCde = mpntrctnTpCcCdngCCde;
+       this.mpntrctnTpCcCdngCDsplay = mpntrctnTpCcCdngCDsplay;
+       this.mpntrctnTpCcCdngCSrSlctd = mpntrctnTpCcCdngCSrSlctd;
+       this.mpinteractionTypeCcText = mpinteractionTypeCcText;
+       this.mpntrctnFfctCcCdngCSstm = mpntrctnFfctCcCdngCSstm;
+       this.mpntrctnFfctCcCdngCVrsn = mpntrctnFfctCcCdngCVrsn;
+       this.mpntrctnFfctCcCdngCCde = mpntrctnFfctCcCdngCCde;
+       this.mpntrctnFfctCcCdngCDsplay = mpntrctnFfctCcCdngCDsplay;
+       this.mpntrctnFfctCcCdngCSrSlctd = mpntrctnFfctCcCdngCSrSlctd;
+       this.mpinteractionEffectCcText = mpinteractionEffectCcText;
+       this.mpntrctnNcdncCcCdngCSstm = mpntrctnNcdncCcCdngCSstm;
+       this.mpntrctnNcdncCcCdngCVrsn = mpntrctnNcdncCcCdngCVrsn;
+       this.mpntrctnNcdncCcCdngCCde = mpntrctnNcdncCcCdngCCde;
+       this.mpntrctnNcdncCcCdngCDsplay = mpntrctnNcdncCcCdngCDsplay;
+       this.mpntrctnNcdncCcCdngCSrSlctd = mpntrctnNcdncCcCdngCSrSlctd;
+       this.mpinteractionIncidenceCcText = mpinteractionIncidenceCcText;
+       this.mpntrctnMngmntCcCdngCSstm = mpntrctnMngmntCcCdngCSstm;
+       this.mpntrctnMngmntCcCdngCVrsn = mpntrctnMngmntCcCdngCVrsn;
+       this.mpntrctnMngmntCcCdngCCde = mpntrctnMngmntCcCdngCCde;
+       this.mpntrctnMngmntCcCdngCDsplay = mpntrctnMngmntCcCdngCDsplay;
+       this.mpntrctnMngmntCcCdngCSrSlctd = mpntrctnMngmntCcCdngCSrSlctd;
+       this.mpinteractionManagementCcText = mpinteractionManagementCcText;
     }
    
-    public String getMpinteractionSubject() {
-        return this.mpinteractionSubject;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setMpinteractionSubject(String mpinteractionSubject) {
-        this.mpinteractionSubject = mpinteractionSubject;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getMpinteractionSubjectReference()
+    {
+        return this.mpinteractionSubjectReference;
     }
     
-    
-    
-    public String getMpinteractionDescription() {
-        return this.mpinteractionDescription;
+    public void setMpinteractionSubjectReference
+        (String mpinteractionSubjectReference) 
+        {
+      this.mpinteractionSubjectReference = mpinteractionSubjectReference;
+}
+    public 
+    String 
+    getMpinteractionDescriptionString()
+    {
+        return this.mpinteractionDescriptionString;
     }
     
-    public void setMpinteractionDescription(String mpinteractionDescription) {
-        this.mpinteractionDescription = mpinteractionDescription;
+    public void setMpinteractionDescriptionString
+        (String mpinteractionDescriptionString) 
+        {
+      this.mpinteractionDescriptionString = mpinteractionDescriptionString;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmRfrncRfrnce()
+    {
+        return this.mpntrctnNtrctntTmRfrncRfrnce;
     }
     
-    
-    
-    public String getMpinteractionInteractant() {
-        return this.mpinteractionInteractant;
+    public void setMpntrctnNtrctntTmRfrncRfrnce
+        (String mpntrctnNtrctntTmRfrncRfrnce) 
+        {
+      this.mpntrctnNtrctntTmRfrncRfrnce = mpntrctnNtrctntTmRfrncRfrnce;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcCdngCSstm()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcCdngCSstm;
     }
     
-    public void setMpinteractionInteractant(String mpinteractionInteractant) {
-        this.mpinteractionInteractant = mpinteractionInteractant;
+    public void setMpntrctnNtrctntTmCdblcncptCcCdngCSstm
+        (String mpntrctnNtrctntTmCdblcncptCcCdngCSstm) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcCdngCSstm = mpntrctnNtrctntTmCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcCdngCVrsn()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcCdngCVrsn;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmRfrnce() {
-        return this.mpntrctnNtrctntTmRfrnce;
+    public void setMpntrctnNtrctntTmCdblcncptCcCdngCVrsn
+        (String mpntrctnNtrctntTmCdblcncptCcCdngCVrsn) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcCdngCVrsn = mpntrctnNtrctntTmCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcCdngCCde()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcCdngCCde;
     }
     
-    public void setMpntrctnNtrctntTmRfrnce(String mpntrctnNtrctntTmRfrnce) {
-        this.mpntrctnNtrctntTmRfrnce = mpntrctnNtrctntTmRfrnce;
+    public void setMpntrctnNtrctntTmCdblcncptCcCdngCCde
+        (String mpntrctnNtrctntTmCdblcncptCcCdngCCde) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcCdngCCde = mpntrctnNtrctntTmCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcCdngCDsplay()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcCdngCDsplay;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmcdblcptCdngSrSlctd() {
-        return this.mpntrctnNtrctntTmcdblcptCdngSrSlctd;
+    public void setMpntrctnNtrctntTmCdblcncptCcCdngCDsplay
+        (String mpntrctnNtrctntTmCdblcncptCcCdngCDsplay) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcCdngCDsplay = mpntrctnNtrctntTmCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd;
     }
     
-    public void setMpntrctnNtrctntTmcdblcptCdngSrSlctd(String mpntrctnNtrctntTmcdblcptCdngSrSlctd) {
-        this.mpntrctnNtrctntTmcdblcptCdngSrSlctd = mpntrctnNtrctntTmcdblcptCdngSrSlctd;
+    public void setMpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd
+        (String mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd = mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMpntrctnNtrctntTmCdblcncptCcTxt()
+    {
+        return this.mpntrctnNtrctntTmCdblcncptCcTxt;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmcdblcptCdngCde() {
-        return this.mpntrctnNtrctntTmcdblcptCdngCde;
+    public void setMpntrctnNtrctntTmCdblcncptCcTxt
+        (String mpntrctnNtrctntTmCdblcncptCcTxt) 
+        {
+      this.mpntrctnNtrctntTmCdblcncptCcTxt = mpntrctnNtrctntTmCdblcncptCcTxt;
+}
+    public 
+    String 
+    getMpntrctnTpCcCdngCSstm()
+    {
+        return this.mpntrctnTpCcCdngCSstm;
     }
     
-    public void setMpntrctnNtrctntTmcdblcptCdngCde(String mpntrctnNtrctntTmcdblcptCdngCde) {
-        this.mpntrctnNtrctntTmcdblcptCdngCde = mpntrctnNtrctntTmcdblcptCdngCde;
+    public void setMpntrctnTpCcCdngCSstm
+        (String mpntrctnTpCcCdngCSstm) 
+        {
+      this.mpntrctnTpCcCdngCSstm = mpntrctnTpCcCdngCSstm;
+}
+    public 
+    String 
+    getMpntrctnTpCcCdngCVrsn()
+    {
+        return this.mpntrctnTpCcCdngCVrsn;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmcdblcptCdngDsplay() {
-        return this.mpntrctnNtrctntTmcdblcptCdngDsplay;
+    public void setMpntrctnTpCcCdngCVrsn
+        (String mpntrctnTpCcCdngCVrsn) 
+        {
+      this.mpntrctnTpCcCdngCVrsn = mpntrctnTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getMpntrctnTpCcCdngCCde()
+    {
+        return this.mpntrctnTpCcCdngCCde;
     }
     
-    public void setMpntrctnNtrctntTmcdblcptCdngDsplay(String mpntrctnNtrctntTmcdblcptCdngDsplay) {
-        this.mpntrctnNtrctntTmcdblcptCdngDsplay = mpntrctnNtrctntTmcdblcptCdngDsplay;
+    public void setMpntrctnTpCcCdngCCde
+        (String mpntrctnTpCcCdngCCde) 
+        {
+      this.mpntrctnTpCcCdngCCde = mpntrctnTpCcCdngCCde;
+}
+    public 
+    String 
+    getMpntrctnTpCcCdngCDsplay()
+    {
+        return this.mpntrctnTpCcCdngCDsplay;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmcdblcptCdngVrsn() {
-        return this.mpntrctnNtrctntTmcdblcptCdngVrsn;
+    public void setMpntrctnTpCcCdngCDsplay
+        (String mpntrctnTpCcCdngCDsplay) 
+        {
+      this.mpntrctnTpCcCdngCDsplay = mpntrctnTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getMpntrctnTpCcCdngCSrSlctd()
+    {
+        return this.mpntrctnTpCcCdngCSrSlctd;
     }
     
-    public void setMpntrctnNtrctntTmcdblcptCdngVrsn(String mpntrctnNtrctntTmcdblcptCdngVrsn) {
-        this.mpntrctnNtrctntTmcdblcptCdngVrsn = mpntrctnNtrctntTmcdblcptCdngVrsn;
+    public void setMpntrctnTpCcCdngCSrSlctd
+        (String mpntrctnTpCcCdngCSrSlctd) 
+        {
+      this.mpntrctnTpCcCdngCSrSlctd = mpntrctnTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMpinteractionTypeCcText()
+    {
+        return this.mpinteractionTypeCcText;
     }
     
-    
-    
-    public String getMpntrctnNtrctntTmcdblcptCdngSstm() {
-        return this.mpntrctnNtrctntTmcdblcptCdngSstm;
+    public void setMpinteractionTypeCcText
+        (String mpinteractionTypeCcText) 
+        {
+      this.mpinteractionTypeCcText = mpinteractionTypeCcText;
+}
+    public 
+    String 
+    getMpntrctnFfctCcCdngCSstm()
+    {
+        return this.mpntrctnFfctCcCdngCSstm;
     }
     
-    public void setMpntrctnNtrctntTmcdblcptCdngSstm(String mpntrctnNtrctntTmcdblcptCdngSstm) {
-        this.mpntrctnNtrctntTmcdblcptCdngSstm = mpntrctnNtrctntTmcdblcptCdngSstm;
+    public void setMpntrctnFfctCcCdngCSstm
+        (String mpntrctnFfctCcCdngCSstm) 
+        {
+      this.mpntrctnFfctCcCdngCSstm = mpntrctnFfctCcCdngCSstm;
+}
+    public 
+    String 
+    getMpntrctnFfctCcCdngCVrsn()
+    {
+        return this.mpntrctnFfctCcCdngCVrsn;
     }
     
-    
-    
-    public String getMpntrctnTpCdngSrSlctd() {
-        return this.mpntrctnTpCdngSrSlctd;
+    public void setMpntrctnFfctCcCdngCVrsn
+        (String mpntrctnFfctCcCdngCVrsn) 
+        {
+      this.mpntrctnFfctCcCdngCVrsn = mpntrctnFfctCcCdngCVrsn;
+}
+    public 
+    String 
+    getMpntrctnFfctCcCdngCCde()
+    {
+        return this.mpntrctnFfctCcCdngCCde;
     }
     
-    public void setMpntrctnTpCdngSrSlctd(String mpntrctnTpCdngSrSlctd) {
-        this.mpntrctnTpCdngSrSlctd = mpntrctnTpCdngSrSlctd;
+    public void setMpntrctnFfctCcCdngCCde
+        (String mpntrctnFfctCcCdngCCde) 
+        {
+      this.mpntrctnFfctCcCdngCCde = mpntrctnFfctCcCdngCCde;
+}
+    public 
+    String 
+    getMpntrctnFfctCcCdngCDsplay()
+    {
+        return this.mpntrctnFfctCcCdngCDsplay;
     }
     
-    
-    
-    public String getMpinteractionTypeCodingCode() {
-        return this.mpinteractionTypeCodingCode;
+    public void setMpntrctnFfctCcCdngCDsplay
+        (String mpntrctnFfctCcCdngCDsplay) 
+        {
+      this.mpntrctnFfctCcCdngCDsplay = mpntrctnFfctCcCdngCDsplay;
+}
+    public 
+    String 
+    getMpntrctnFfctCcCdngCSrSlctd()
+    {
+        return this.mpntrctnFfctCcCdngCSrSlctd;
     }
     
-    public void setMpinteractionTypeCodingCode(String mpinteractionTypeCodingCode) {
-        this.mpinteractionTypeCodingCode = mpinteractionTypeCodingCode;
+    public void setMpntrctnFfctCcCdngCSrSlctd
+        (String mpntrctnFfctCcCdngCSrSlctd) 
+        {
+      this.mpntrctnFfctCcCdngCSrSlctd = mpntrctnFfctCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMpinteractionEffectCcText()
+    {
+        return this.mpinteractionEffectCcText;
     }
     
-    
-    
-    public String getMpinteractionTypeCodingDisplay() {
-        return this.mpinteractionTypeCodingDisplay;
+    public void setMpinteractionEffectCcText
+        (String mpinteractionEffectCcText) 
+        {
+      this.mpinteractionEffectCcText = mpinteractionEffectCcText;
+}
+    public 
+    String 
+    getMpntrctnNcdncCcCdngCSstm()
+    {
+        return this.mpntrctnNcdncCcCdngCSstm;
     }
     
-    public void setMpinteractionTypeCodingDisplay(String mpinteractionTypeCodingDisplay) {
-        this.mpinteractionTypeCodingDisplay = mpinteractionTypeCodingDisplay;
+    public void setMpntrctnNcdncCcCdngCSstm
+        (String mpntrctnNcdncCcCdngCSstm) 
+        {
+      this.mpntrctnNcdncCcCdngCSstm = mpntrctnNcdncCcCdngCSstm;
+}
+    public 
+    String 
+    getMpntrctnNcdncCcCdngCVrsn()
+    {
+        return this.mpntrctnNcdncCcCdngCVrsn;
     }
     
-    
-    
-    public String getMpinteractionTypeCodingVersion() {
-        return this.mpinteractionTypeCodingVersion;
+    public void setMpntrctnNcdncCcCdngCVrsn
+        (String mpntrctnNcdncCcCdngCVrsn) 
+        {
+      this.mpntrctnNcdncCcCdngCVrsn = mpntrctnNcdncCcCdngCVrsn;
+}
+    public 
+    String 
+    getMpntrctnNcdncCcCdngCCde()
+    {
+        return this.mpntrctnNcdncCcCdngCCde;
     }
     
-    public void setMpinteractionTypeCodingVersion(String mpinteractionTypeCodingVersion) {
-        this.mpinteractionTypeCodingVersion = mpinteractionTypeCodingVersion;
+    public void setMpntrctnNcdncCcCdngCCde
+        (String mpntrctnNcdncCcCdngCCde) 
+        {
+      this.mpntrctnNcdncCcCdngCCde = mpntrctnNcdncCcCdngCCde;
+}
+    public 
+    String 
+    getMpntrctnNcdncCcCdngCDsplay()
+    {
+        return this.mpntrctnNcdncCcCdngCDsplay;
     }
     
-    
-    
-    public String getMpinteractionTypeCodingSystem() {
-        return this.mpinteractionTypeCodingSystem;
+    public void setMpntrctnNcdncCcCdngCDsplay
+        (String mpntrctnNcdncCcCdngCDsplay) 
+        {
+      this.mpntrctnNcdncCcCdngCDsplay = mpntrctnNcdncCcCdngCDsplay;
+}
+    public 
+    String 
+    getMpntrctnNcdncCcCdngCSrSlctd()
+    {
+        return this.mpntrctnNcdncCcCdngCSrSlctd;
     }
     
-    public void setMpinteractionTypeCodingSystem(String mpinteractionTypeCodingSystem) {
-        this.mpinteractionTypeCodingSystem = mpinteractionTypeCodingSystem;
+    public void setMpntrctnNcdncCcCdngCSrSlctd
+        (String mpntrctnNcdncCcCdngCSrSlctd) 
+        {
+      this.mpntrctnNcdncCcCdngCSrSlctd = mpntrctnNcdncCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMpinteractionIncidenceCcText()
+    {
+        return this.mpinteractionIncidenceCcText;
     }
     
-    
-    
-    public String getMpntrctnFfctCdngSrSlctd() {
-        return this.mpntrctnFfctCdngSrSlctd;
+    public void setMpinteractionIncidenceCcText
+        (String mpinteractionIncidenceCcText) 
+        {
+      this.mpinteractionIncidenceCcText = mpinteractionIncidenceCcText;
+}
+    public 
+    String 
+    getMpntrctnMngmntCcCdngCSstm()
+    {
+        return this.mpntrctnMngmntCcCdngCSstm;
     }
     
-    public void setMpntrctnFfctCdngSrSlctd(String mpntrctnFfctCdngSrSlctd) {
-        this.mpntrctnFfctCdngSrSlctd = mpntrctnFfctCdngSrSlctd;
+    public void setMpntrctnMngmntCcCdngCSstm
+        (String mpntrctnMngmntCcCdngCSstm) 
+        {
+      this.mpntrctnMngmntCcCdngCSstm = mpntrctnMngmntCcCdngCSstm;
+}
+    public 
+    String 
+    getMpntrctnMngmntCcCdngCVrsn()
+    {
+        return this.mpntrctnMngmntCcCdngCVrsn;
     }
     
-    
-    
-    public String getMpinteractionEffectCodingCode() {
-        return this.mpinteractionEffectCodingCode;
+    public void setMpntrctnMngmntCcCdngCVrsn
+        (String mpntrctnMngmntCcCdngCVrsn) 
+        {
+      this.mpntrctnMngmntCcCdngCVrsn = mpntrctnMngmntCcCdngCVrsn;
+}
+    public 
+    String 
+    getMpntrctnMngmntCcCdngCCde()
+    {
+        return this.mpntrctnMngmntCcCdngCCde;
     }
     
-    public void setMpinteractionEffectCodingCode(String mpinteractionEffectCodingCode) {
-        this.mpinteractionEffectCodingCode = mpinteractionEffectCodingCode;
+    public void setMpntrctnMngmntCcCdngCCde
+        (String mpntrctnMngmntCcCdngCCde) 
+        {
+      this.mpntrctnMngmntCcCdngCCde = mpntrctnMngmntCcCdngCCde;
+}
+    public 
+    String 
+    getMpntrctnMngmntCcCdngCDsplay()
+    {
+        return this.mpntrctnMngmntCcCdngCDsplay;
     }
     
-    
-    
-    public String getMpntrctnFfctCdngDsplay() {
-        return this.mpntrctnFfctCdngDsplay;
+    public void setMpntrctnMngmntCcCdngCDsplay
+        (String mpntrctnMngmntCcCdngCDsplay) 
+        {
+      this.mpntrctnMngmntCcCdngCDsplay = mpntrctnMngmntCcCdngCDsplay;
+}
+    public 
+    String 
+    getMpntrctnMngmntCcCdngCSrSlctd()
+    {
+        return this.mpntrctnMngmntCcCdngCSrSlctd;
     }
     
-    public void setMpntrctnFfctCdngDsplay(String mpntrctnFfctCdngDsplay) {
-        this.mpntrctnFfctCdngDsplay = mpntrctnFfctCdngDsplay;
+    public void setMpntrctnMngmntCcCdngCSrSlctd
+        (String mpntrctnMngmntCcCdngCSrSlctd) 
+        {
+      this.mpntrctnMngmntCcCdngCSrSlctd = mpntrctnMngmntCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getMpinteractionManagementCcText()
+    {
+        return this.mpinteractionManagementCcText;
     }
     
-    
-    
-    public String getMpntrctnFfctCdngVrsn() {
-        return this.mpntrctnFfctCdngVrsn;
-    }
-    
-    public void setMpntrctnFfctCdngVrsn(String mpntrctnFfctCdngVrsn) {
-        this.mpntrctnFfctCdngVrsn = mpntrctnFfctCdngVrsn;
-    }
-    
-    
-    
-    public String getMpinteractionEffectCodingSystem() {
-        return this.mpinteractionEffectCodingSystem;
-    }
-    
-    public void setMpinteractionEffectCodingSystem(String mpinteractionEffectCodingSystem) {
-        this.mpinteractionEffectCodingSystem = mpinteractionEffectCodingSystem;
-    }
-    
-    
-    
-    public String getMpntrctnNcdncCdngSrSlctd() {
-        return this.mpntrctnNcdncCdngSrSlctd;
-    }
-    
-    public void setMpntrctnNcdncCdngSrSlctd(String mpntrctnNcdncCdngSrSlctd) {
-        this.mpntrctnNcdncCdngSrSlctd = mpntrctnNcdncCdngSrSlctd;
-    }
-    
-    
-    
-    public String getMpntrctnNcdncCdngCde() {
-        return this.mpntrctnNcdncCdngCde;
-    }
-    
-    public void setMpntrctnNcdncCdngCde(String mpntrctnNcdncCdngCde) {
-        this.mpntrctnNcdncCdngCde = mpntrctnNcdncCdngCde;
-    }
-    
-    
-    
-    public String getMpntrctnNcdncCdngDsplay() {
-        return this.mpntrctnNcdncCdngDsplay;
-    }
-    
-    public void setMpntrctnNcdncCdngDsplay(String mpntrctnNcdncCdngDsplay) {
-        this.mpntrctnNcdncCdngDsplay = mpntrctnNcdncCdngDsplay;
-    }
-    
-    
-    
-    public String getMpntrctnNcdncCdngVrsn() {
-        return this.mpntrctnNcdncCdngVrsn;
-    }
-    
-    public void setMpntrctnNcdncCdngVrsn(String mpntrctnNcdncCdngVrsn) {
-        this.mpntrctnNcdncCdngVrsn = mpntrctnNcdncCdngVrsn;
-    }
-    
-    
-    
-    public String getMpntrctnNcdncCdngSstm() {
-        return this.mpntrctnNcdncCdngSstm;
-    }
-    
-    public void setMpntrctnNcdncCdngSstm(String mpntrctnNcdncCdngSstm) {
-        this.mpntrctnNcdncCdngSstm = mpntrctnNcdncCdngSstm;
-    }
-    
-    
-    
-    public String getMpntrctnMngmntCdngSrSlctd() {
-        return this.mpntrctnMngmntCdngSrSlctd;
-    }
-    
-    public void setMpntrctnMngmntCdngSrSlctd(String mpntrctnMngmntCdngSrSlctd) {
-        this.mpntrctnMngmntCdngSrSlctd = mpntrctnMngmntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getMpntrctnMngmntCdngCde() {
-        return this.mpntrctnMngmntCdngCde;
-    }
-    
-    public void setMpntrctnMngmntCdngCde(String mpntrctnMngmntCdngCde) {
-        this.mpntrctnMngmntCdngCde = mpntrctnMngmntCdngCde;
-    }
-    
-    
-    
-    public String getMpntrctnMngmntCdngDsplay() {
-        return this.mpntrctnMngmntCdngDsplay;
-    }
-    
-    public void setMpntrctnMngmntCdngDsplay(String mpntrctnMngmntCdngDsplay) {
-        this.mpntrctnMngmntCdngDsplay = mpntrctnMngmntCdngDsplay;
-    }
-    
-    
-    
-    public String getMpntrctnMngmntCdngVrsn() {
-        return this.mpntrctnMngmntCdngVrsn;
-    }
-    
-    public void setMpntrctnMngmntCdngVrsn(String mpntrctnMngmntCdngVrsn) {
-        this.mpntrctnMngmntCdngVrsn = mpntrctnMngmntCdngVrsn;
-    }
-    
-    
-    
-    public String getMpntrctnMngmntCdngSstm() {
-        return this.mpntrctnMngmntCdngSstm;
-    }
-    
-    public void setMpntrctnMngmntCdngSstm(String mpntrctnMngmntCdngSstm) {
-        this.mpntrctnMngmntCdngSstm = mpntrctnMngmntCdngSstm;
-    }
-    
-    
-    
+    public void setMpinteractionManagementCcText
+        (String mpinteractionManagementCcText) 
+        {
+      this.mpinteractionManagementCcText = mpinteractionManagementCcText;
+}
 
 
 

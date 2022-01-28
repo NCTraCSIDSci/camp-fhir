@@ -1,1563 +1,579 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Task" optimistic-lock="none" table="task">
-        <id name="tskDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Tsk_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="tskDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_use_code</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_s_cde">
-                <comment>Task_identifierIdentifier_use_code</comment>
+        <property name="taskIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Task_identifier_Identifier_use">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Task_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="tskDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Task_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="tskDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Task_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="tskDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Task_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="tskDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Task_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="tskDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Prd_strt">
-                <comment>Task_identifierIdentifier_Period_start</comment>
+        <property name="tskDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Prd_nd">
-                <comment>Task_identifierIdentifier_Period_end</comment>
+        <property name="tskDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Task_identifierIdentifier_Reference_reference</comment>
+        <property name="tskDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Task_identifierIdentifier_Reference_type</comment>
+        <property name="tskDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Tsk_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Task_identifierIdentifier_Reference_identifier</comment>
+        <property name="taskIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Task_identifier_Identifier_value">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Task_identifierIdentifier_Reference_display</comment>
+        <property name="taskIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Task_identifier_Identifier_system">
+                <comment>{ "tree" :"Task.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_value_string</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_vl_strng">
-                <comment>Task_identifierIdentifier_value_string</comment>
+        <property name="tskNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInstantiatesCanonical"}</meta>
+            <column length="65535" name="Tsk_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"Task.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInstantiatesCanonical"}</comment>
             </column>
         </property>
-        <property name="tskDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Task_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Tsk_dntfr_dntfr_sstm_ri">
-                <comment>Task_identifierIdentifier_system_uri</comment>
+        <property name="taskInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.instantiatesUri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInstantiatesUri"}</meta>
+            <column length="65535" name="Task_instantiatesUri_uri">
+                <comment>{ "tree" :"Task.instantiatesUri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInstantiatesUri"}</comment>
             </column>
         </property>
-        <property name="taskInstantiatesCanonical" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Task_instantiatesCanonical">
-                <comment>canonical</comment>
+        <property name="taskBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="Task_basedOn_Reference">
+                <comment>{ "tree" :"Task.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="taskInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Task_instantiatesUri">
-                <comment>uri</comment>
+        <property name="tskGrpdntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_se">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="tskGrpdntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="tskGrpdntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="tskGrpdntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="tskGrpdntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="tskGrpdntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="tskGrpdntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="tskGrpdntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="tskGrpdntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="tskGrpdntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="tskGrpdntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_vlue">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="tskGrpdntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</meta>
+            <column length="65535" name="Tsk_grpdntfr_dntfr_sstm">
+                <comment>{ "tree" :"Task.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="taskPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</meta>
+            <column length="65535" name="Task_partOf_Reference">
+                <comment>{ "tree" :"Task.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</comment>
             </column>
         </property>
-        <property name="tskBsdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_bsdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="taskStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Task_status_code">
+                <comment>{ "tree" :"Task.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="taskBasedOnReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_basedOn_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="tskSttsRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Tsk_sttsRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="tskSttsRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_sttsRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="taskStatusReasonCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Task_statusReason_CC_coding_C_code">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="tskSttsRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_sttsRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="tskSttsRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_sttsRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="taskStatusReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</meta>
+            <column length="65535" name="Task_statusReason_CC_text">
+                <comment>{ "tree" :"Task.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="tskBsnssSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="Tsk_bsnssStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="tskBsnssSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_bsnssStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="tskBsnssSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="Tsk_bsnssStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="tskBsnssSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_bsnssStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="tskBsnssSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_bsnssStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="taskBusinessStatusCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, setText"}</meta>
+            <column length="65535" name="Task_businessStatus_CC_text">
+                <comment>{ "tree" :"Task.businessStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBusinessStatus, setText"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="taskIntentCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</meta>
+            <column length="65535" name="Task_intent_code">
+                <comment>{ "tree" :"Task.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="taskPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="Task_priority_code">
+                <comment>{ "tree" :"Task.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="taskCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Task_code_CC_coding_C_system">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskGrpdntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="Tsk_grpdntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="taskCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Task_code_CC_coding_C_version">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="taskCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Task_code_CC_coding_C_code">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="taskCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Task_code_CC_coding_C_display">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="taskCodeCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Task_code_CC_coding_C_userSelected">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="taskCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Task_code_CC_text">
+                <comment>{ "tree" :"Task.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="taskDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Task_description_string">
+                <comment>{ "tree" :"Task.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="taskFocusReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.focus", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFocus"}</meta>
+            <column length="65535" name="Task_focus_Reference">
+                <comment>{ "tree" :"Task.focus", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFocus"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="taskForReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.for", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFor"}</meta>
+            <column length="65535" name="Task_for_Reference">
+                <comment>{ "tree" :"Task.for", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFor"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="taskEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="Task_encounter_Reference">
+                <comment>{ "tree" :"Task.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="taskExecutionPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.executionPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExecutionPeriod, setStart"}</meta>
+            <column length="65535" name="Task_executionPeriod_Period_start">
+                <comment>{ "tree" :"Task.executionPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExecutionPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="taskExecutionPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.executionPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExecutionPeriod, setEnd"}</meta>
+            <column length="65535" name="Task_executionPeriod_Period_end">
+                <comment>{ "tree" :"Task.executionPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExecutionPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="taskAuthoredOnDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</meta>
+            <column length="65535" name="Task_authoredOn_dateTime">
+                <comment>{ "tree" :"Task.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="taskLastModifiedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.lastModified", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastModified"}</meta>
+            <column length="65535" name="Task_lastModified_dateTime">
+                <comment>{ "tree" :"Task.lastModified", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastModified"}</comment>
             </column>
         </property>
-        <property name="tskPrtfRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_prtf_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="taskRequesterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</meta>
+            <column length="65535" name="Task_requester_Reference">
+                <comment>{ "tree" :"Task.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</comment>
             </column>
         </property>
-        <property name="taskPartOfReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_partOf_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="tskPrfrmrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Tsk_prfrmrTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="taskStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Task_status">
-                <comment>code</comment>
+        <property name="tskPrfrmrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_prfrmrTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="tskPrfrmrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setCode"}</meta>
+            <column length="65535" name="Tsk_prfrmrTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="tskPrfrmrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_prfrmrTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="tskPrfrmrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_prfrmrTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="taskPerformerTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, setText"}</meta>
+            <column length="65535" name="Task_performerType_CC_text">
+                <comment>{ "tree" :"Task.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformerType, setText"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="taskOwnerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</meta>
+            <column length="65535" name="Task_owner_Reference">
+                <comment>{ "tree" :"Task.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</comment>
             </column>
         </property>
-        <property name="tskSttsRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_sttsRsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="taskLocationReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</meta>
+            <column length="65535" name="Task_location_Reference">
+                <comment>{ "tree" :"Task.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="taskReasonCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Task_reasonCode_CC_coding_C_system">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="tskRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="taskReasonCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Task_reasonCode_CC_coding_C_code">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="tskRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="tskRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskBsnssSttsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_bsnssStts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="taskReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, setText"}</meta>
+            <column length="65535" name="Task_reasonCode_CC_text">
+                <comment>{ "tree" :"Task.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="taskIntent" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Task_intent">
-                <comment>code</comment>
+        <property name="taskReasonReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.reasonReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonReference"}</meta>
+            <column length="65535" name="Task_reasonReference_Reference">
+                <comment>{ "tree" :"Task.reasonReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReasonReference"}</comment>
             </column>
         </property>
-        <property name="taskPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Task_priority">
-                <comment>code</comment>
+        <property name="taskInsuranceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</meta>
+            <column length="65535" name="Task_insurance_Reference">
+                <comment>{ "tree" :"Task.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="taskNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Task_note_Annotation_time">
+                <comment>{ "tree" :"Task.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="taskNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Task_note_Annotation_text">
+                <comment>{ "tree" :"Task.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="tskNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Tsk_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Task.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="taskNoteAnnotationAuthorString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Task_note_Annotation_authorString">
+                <comment>{ "tree" :"Task.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="taskRelevantHistoryReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.relevantHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelevantHistory"}</meta>
+            <column length="65535" name="Task_relevantHistory_Reference">
+                <comment>{ "tree" :"Task.relevantHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelevantHistory"}</comment>
             </column>
         </property>
-        <property name="tskCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="tskRstrctnRpttnsPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.restriction.repetitions", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setRepetitions"}</meta>
+            <column length="65535" name="Tsk_rstrctn_rpttns_pstvnt">
+                <comment>{ "tree" :"Task.restriction.repetitions", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setRepetitions"}</comment>
             </column>
         </property>
-        <property name="taskDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Task_description">
-                <comment>string</comment>
+        <property name="tskRstrctnPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.restriction.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Tsk_rstrctn_prd_Prd_strt">
+                <comment>{ "tree" :"Task.restriction.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="taskRestrictionPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.restriction.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Task_restriction_period_Period_end">
+                <comment>{ "tree" :"Task.restriction.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setRestriction"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="tskRstrctnRcpntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.restriction.recipient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRestriction"] , "methodName" : "addRecipient"}</meta>
+            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnce">
+                <comment>{ "tree" :"Task.restriction.recipient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRestriction"] , "methodName" : "addRecipient"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="taskInputTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Task_input_type_CC_coding_C_system">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="tskNptTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_npt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="taskInputTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Task_input_type_CC_coding_C_code">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="tskNptTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_npt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="tskNptTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_npt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="taskInputTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Task_input_type_CC_text">
+                <comment>{ "tree" :"Task.input.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInput"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="tskTptTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Tsk_tpt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="tskTptTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Tsk_tpt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="taskOutputTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Task_output_type_CC_coding_C_code">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="tskTptTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Tsk_tpt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="tskFcsRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_fcs_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="tskTptTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Tsk_tpt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="taskFocusReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_focus_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="taskForReferenceIdentifierUse" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Task_for_Reference_Identifier_use">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskFrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_fr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="taskForReferenceDisplayString" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Task_for_Reference_display_string">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskForReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_for_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskEncounterReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_encounter_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskXctnPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Tsk_xctnPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="tskXctnPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Tsk_xctnPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="taskAuthoredOn" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Task_authoredOn">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="taskLastModified" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Task_lastModified">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskRqstrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_rqstr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskRequesterReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_requester_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="tskPrfrmrTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_prfrmrTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskWnrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_wnr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskOwnerReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_owner_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskLctnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_lctn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskLocationReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_location_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="tskRsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_rsnCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="tskRsnRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Tsk_rsnRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskNsrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_nsrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="taskInsuranceReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Task_insurance_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="taskNoteAnnotationTimeDateTime" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="Task_note_Annotation_time_dateTime">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="taskNoteAnnotationTextMarkdown" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="Task_note_Annotation_text_markdown">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="tskNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="Tsk_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="Tsk_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="Tsk_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="Tsk_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="Tsk_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="tskRlvntHstrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Tsk_rlvntHstr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="taskRestrictionRepetitions" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Task_restriction_repetitions">
-                <comment>positiveInt</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Tsk_rstrctn_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Tsk_rstrctn_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="tskRstrctnRcpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Tsk_rstrctn_rcpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="tskNptTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_npt_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="tskTptTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Tsk_tpt_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="taskOutputTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Task_output_type_CC_text">
+                <comment>{ "tree" :"Task.output.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addOutput"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
     </class>

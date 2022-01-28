@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,713 +10,1020 @@ package main.templateoutput.Model;
 public class Communication  implements java.io.Serializable {
 
 
-     private String cmmnctnDntfrCdngCde;
-     private String cmmnctnDntfrCdngSrSlctd;
-     private String cmmnctnDntfrCdngVrsn;
-     private String cmmnctnDntfrCdngDsplay;
-     private String cmmnctnDntfrCdngSstm;
-     private String cmmnctnNstnttsCnncl;
-     private String communicationInstantiatesUri;
-     private String communicationBasedOn;
-     private String communicationPartOf;
-     private String communicationInResponseTo;
-     private String communicationStatus;
-     private String cmmnctnSttsRsnCdngSrSlctd;
-     private String cmmnctnSttsRsnCdngCde;
-     private String cmmnctnSttsRsnCdngVrsn;
-     private String cmmnctnSttsRsnCdngDsplay;
-     private String cmmnctnSttsRsnCdngSstm;
-     private String cmmnctnCtgrCdngSrSlctd;
-     private String communicationCategoryCodingCode;
-     private String cmmnctnCtgrCdngVrsn;
-     private String cmmnctnCtgrCdngDsplay;
-     private String cmmnctnCtgrCdngSstm;
-     private String communicationPriority;
-     private String cmmnctnMdmCdngSrSlctd;
-     private String communicationMediumCodingCode;
-     private String cmmnctnMdmCdngVrsn;
-     private String cmmnctnMdmCdngDsplay;
-     private String communicationMediumCodingSystem;
-     private String communicationSubject;
-     private String cmmnctnTpcCdngSrSlctd;
-     private String communicationTopicCodingCode;
-     private String communicationTopicCodingVersion;
-     private String communicationTopicCodingDisplay;
-     private String communicationTopicCodingSystem;
-     private String communicationAbout;
-     private String communicationEncounter;
-     private String communicationSent;
-     private String communicationReceived;
-     private String communicationRecipient;
-     private String communicationSender;
-     private String cmmnctnRsnCdCdngSrSlctd;
-     private String cmmnctnRsnCdCdngCde;
-     private String cmmnctnRsnCdCdngVrsn;
-     private String cmmnctnRsnCdCdngDsplay;
-     private String cmmnctnRsnCdCdngSstm;
-     private String communicationReasonReference;
-     private String communicationPayload;
-     private String cmmnctnPldCntntStrng;
-     private String cmmnctnPldCntntttchmntCdngSrSlctd;
-     private String cmmnctnPldCntntttchmntCdngCde;
-     private String cmmnctnPldCntntttchmntCdngVrsn;
-     private String cmmnctnPldCntntttchmntCdngDsplay;
-     private String cmmnctnPldCntntttchmntCdngSstm;
-     private String cmmnctnPldCntntRfrnce;
-     private String cmmnctnNtCdngSrSlctd;
-     private String communicationNoteCodingCode;
-     private String communicationNoteCodingVersion;
-     private String communicationNoteCodingDisplay;
-     private String communicationNoteCodingSystem;
+     private Integer id;
+     private String cmmnctnDntfrDntfrSe;
+     private String cmmnctnDntfrDntfrTpCcCSstm;
+     private String cmmnctnDntfrDntfrTpCcCVrsn;
+     private String cmmnctnDntfrDntfrTpCcCCde;
+     private String cmmnctnDntfrDntfrTpCcCDsplay;
+     private String cmmnctnDntfrDntfrTpCcCSrSlctd;
+     private String cmmnctnDntfrDntfrTpCcTxt;
+     private String cmmnctnDntfrDntfrPrdPrdStrt;
+     private String cmmnctnDntfrDntfrPrdPrdNd;
+     private String cmmnctnDntfrDntfrSsgnr;
+     private String cmmnctnDntfrDntfrVlue;
+     private String cmmnctnDntfrDntfrSstm;
+     private String cmmnctnNstnttsCnnclCnncl;
+     private String communicationInstantiatesUriUri;
+     private String communicationBasedOnReference;
+     private String communicationPartOfReference;
+     private String cmmnctnNRspnsTRfrnce;
+     private String communicationStatusCode;
+     private String cmmnctnSttsRsnCcCdngCSstm;
+     private String cmmnctnSttsRsnCcCdngCVrsn;
+     private String cmmnctnSttsRsnCcCdngCCde;
+     private String cmmnctnSttsRsnCcCdngCDsplay;
+     private String cmmnctnSttsRsnCcCdngCSrSlctd;
+     private String communicationStatusReasonCcText;
+     private String cmmnctnCtgrCcCdngCSstm;
+     private String cmmnctnCtgrCcCdngCVrsn;
+     private String cmmnctnCtgrCcCdngCCde;
+     private String cmmnctnCtgrCcCdngCDsplay;
+     private String cmmnctnCtgrCcCdngCSrSlctd;
+     private String communicationCategoryCcText;
+     private String communicationPriorityCode;
+     private String cmmnctnMdmCcCdngCSstm;
+     private String cmmnctnMdmCcCdngCVrsn;
+     private String cmmnctnMdmCcCdngCCde;
+     private String cmmnctnMdmCcCdngCDsplay;
+     private String cmmnctnMdmCcCdngCSrSlctd;
+     private String communicationMediumCcText;
+     private String communicationSubjectReference;
+     private String cmmnctnTpcCcCdngCSstm;
+     private String cmmnctnTpcCcCdngCVrsn;
+     private String cmmnctnTpcCcCdngCCde;
+     private String cmmnctnTpcCcCdngCDsplay;
+     private String cmmnctnTpcCcCdngCSrSlctd;
+     private String communicationTopicCcText;
+     private String communicationAboutReference;
+     private String communicationEncounterReference;
+     private String communicationSentDateTime;
+     private String communicationReceivedDateTime;
+     private String communicationRecipientReference;
+     private String communicationSenderReference;
+     private String cmmnctnRsnCdCcCdngCSstm;
+     private String cmmnctnRsnCdCcCdngCVrsn;
+     private String cmmnctnRsnCdCcCdngCCde;
+     private String cmmnctnRsnCdCcCdngCDsplay;
+     private String cmmnctnRsnCdCcCdngCSrSlctd;
+     private String communicationReasonCodeCcText;
+     private String cmmnctnRsnRfrncRfrnce;
+     private String cmmnctnPldCntntStrngStrng;
+     private String cmmnctnPldCntntttchmntTtchmntDta;
+     private String cmmnctnPldCntntttchmntTtchmntHsh;
+     private String cmmnctnPldCntntttchmntTtchmntCntntTpe;
+     private String cmmnctnPldCntntttchmntTtchmntLngge;
+     private String cmmnctnPldCntntttchmntTtchmntCrtn;
+     private String cmmnctnPldCntntttchmntTtchmntTtle;
+     private String cmmnctnPldCntntttchmntTtchmntSze;
+     private String cmmnctnPldCntntttchmntTtchmntRl;
+     private String cmmnctnPldCntntRfrncRfrnce;
+     private String communicationNoteAnnotationTime;
+     private String communicationNoteAnnotationText;
+     private String cmmnctnNtNnttnThrRfrnce;
+     private String cmmnctnNtNnttnThrStrng;
 
     public Communication() {
     }
 
-	
-    public Communication(String cmmnctnDntfrCdngCde) {
-        this.cmmnctnDntfrCdngCde = cmmnctnDntfrCdngCde;
-    }
-    public Communication(String cmmnctnDntfrCdngCde, String cmmnctnDntfrCdngSrSlctd, String cmmnctnDntfrCdngVrsn, String cmmnctnDntfrCdngDsplay, String cmmnctnDntfrCdngSstm, String cmmnctnNstnttsCnncl, String communicationInstantiatesUri, String communicationBasedOn, String communicationPartOf, String communicationInResponseTo, String communicationStatus, String cmmnctnSttsRsnCdngSrSlctd, String cmmnctnSttsRsnCdngCde, String cmmnctnSttsRsnCdngVrsn, String cmmnctnSttsRsnCdngDsplay, String cmmnctnSttsRsnCdngSstm, String cmmnctnCtgrCdngSrSlctd, String communicationCategoryCodingCode, String cmmnctnCtgrCdngVrsn, String cmmnctnCtgrCdngDsplay, String cmmnctnCtgrCdngSstm, String communicationPriority, String cmmnctnMdmCdngSrSlctd, String communicationMediumCodingCode, String cmmnctnMdmCdngVrsn, String cmmnctnMdmCdngDsplay, String communicationMediumCodingSystem, String communicationSubject, String cmmnctnTpcCdngSrSlctd, String communicationTopicCodingCode, String communicationTopicCodingVersion, String communicationTopicCodingDisplay, String communicationTopicCodingSystem, String communicationAbout, String communicationEncounter, String communicationSent, String communicationReceived, String communicationRecipient, String communicationSender, String cmmnctnRsnCdCdngSrSlctd, String cmmnctnRsnCdCdngCde, String cmmnctnRsnCdCdngVrsn, String cmmnctnRsnCdCdngDsplay, String cmmnctnRsnCdCdngSstm, String communicationReasonReference, String communicationPayload, String cmmnctnPldCntntStrng, String cmmnctnPldCntntttchmntCdngSrSlctd, String cmmnctnPldCntntttchmntCdngCde, String cmmnctnPldCntntttchmntCdngVrsn, String cmmnctnPldCntntttchmntCdngDsplay, String cmmnctnPldCntntttchmntCdngSstm, String cmmnctnPldCntntRfrnce, String cmmnctnNtCdngSrSlctd, String communicationNoteCodingCode, String communicationNoteCodingVersion, String communicationNoteCodingDisplay, String communicationNoteCodingSystem) {
-       this.cmmnctnDntfrCdngCde = cmmnctnDntfrCdngCde;
-       this.cmmnctnDntfrCdngSrSlctd = cmmnctnDntfrCdngSrSlctd;
-       this.cmmnctnDntfrCdngVrsn = cmmnctnDntfrCdngVrsn;
-       this.cmmnctnDntfrCdngDsplay = cmmnctnDntfrCdngDsplay;
-       this.cmmnctnDntfrCdngSstm = cmmnctnDntfrCdngSstm;
-       this.cmmnctnNstnttsCnncl = cmmnctnNstnttsCnncl;
-       this.communicationInstantiatesUri = communicationInstantiatesUri;
-       this.communicationBasedOn = communicationBasedOn;
-       this.communicationPartOf = communicationPartOf;
-       this.communicationInResponseTo = communicationInResponseTo;
-       this.communicationStatus = communicationStatus;
-       this.cmmnctnSttsRsnCdngSrSlctd = cmmnctnSttsRsnCdngSrSlctd;
-       this.cmmnctnSttsRsnCdngCde = cmmnctnSttsRsnCdngCde;
-       this.cmmnctnSttsRsnCdngVrsn = cmmnctnSttsRsnCdngVrsn;
-       this.cmmnctnSttsRsnCdngDsplay = cmmnctnSttsRsnCdngDsplay;
-       this.cmmnctnSttsRsnCdngSstm = cmmnctnSttsRsnCdngSstm;
-       this.cmmnctnCtgrCdngSrSlctd = cmmnctnCtgrCdngSrSlctd;
-       this.communicationCategoryCodingCode = communicationCategoryCodingCode;
-       this.cmmnctnCtgrCdngVrsn = cmmnctnCtgrCdngVrsn;
-       this.cmmnctnCtgrCdngDsplay = cmmnctnCtgrCdngDsplay;
-       this.cmmnctnCtgrCdngSstm = cmmnctnCtgrCdngSstm;
-       this.communicationPriority = communicationPriority;
-       this.cmmnctnMdmCdngSrSlctd = cmmnctnMdmCdngSrSlctd;
-       this.communicationMediumCodingCode = communicationMediumCodingCode;
-       this.cmmnctnMdmCdngVrsn = cmmnctnMdmCdngVrsn;
-       this.cmmnctnMdmCdngDsplay = cmmnctnMdmCdngDsplay;
-       this.communicationMediumCodingSystem = communicationMediumCodingSystem;
-       this.communicationSubject = communicationSubject;
-       this.cmmnctnTpcCdngSrSlctd = cmmnctnTpcCdngSrSlctd;
-       this.communicationTopicCodingCode = communicationTopicCodingCode;
-       this.communicationTopicCodingVersion = communicationTopicCodingVersion;
-       this.communicationTopicCodingDisplay = communicationTopicCodingDisplay;
-       this.communicationTopicCodingSystem = communicationTopicCodingSystem;
-       this.communicationAbout = communicationAbout;
-       this.communicationEncounter = communicationEncounter;
-       this.communicationSent = communicationSent;
-       this.communicationReceived = communicationReceived;
-       this.communicationRecipient = communicationRecipient;
-       this.communicationSender = communicationSender;
-       this.cmmnctnRsnCdCdngSrSlctd = cmmnctnRsnCdCdngSrSlctd;
-       this.cmmnctnRsnCdCdngCde = cmmnctnRsnCdCdngCde;
-       this.cmmnctnRsnCdCdngVrsn = cmmnctnRsnCdCdngVrsn;
-       this.cmmnctnRsnCdCdngDsplay = cmmnctnRsnCdCdngDsplay;
-       this.cmmnctnRsnCdCdngSstm = cmmnctnRsnCdCdngSstm;
-       this.communicationReasonReference = communicationReasonReference;
-       this.communicationPayload = communicationPayload;
-       this.cmmnctnPldCntntStrng = cmmnctnPldCntntStrng;
-       this.cmmnctnPldCntntttchmntCdngSrSlctd = cmmnctnPldCntntttchmntCdngSrSlctd;
-       this.cmmnctnPldCntntttchmntCdngCde = cmmnctnPldCntntttchmntCdngCde;
-       this.cmmnctnPldCntntttchmntCdngVrsn = cmmnctnPldCntntttchmntCdngVrsn;
-       this.cmmnctnPldCntntttchmntCdngDsplay = cmmnctnPldCntntttchmntCdngDsplay;
-       this.cmmnctnPldCntntttchmntCdngSstm = cmmnctnPldCntntttchmntCdngSstm;
-       this.cmmnctnPldCntntRfrnce = cmmnctnPldCntntRfrnce;
-       this.cmmnctnNtCdngSrSlctd = cmmnctnNtCdngSrSlctd;
-       this.communicationNoteCodingCode = communicationNoteCodingCode;
-       this.communicationNoteCodingVersion = communicationNoteCodingVersion;
-       this.communicationNoteCodingDisplay = communicationNoteCodingDisplay;
-       this.communicationNoteCodingSystem = communicationNoteCodingSystem;
+    public Communication(String cmmnctnDntfrDntfrSe, String cmmnctnDntfrDntfrTpCcCSstm, String cmmnctnDntfrDntfrTpCcCVrsn, String cmmnctnDntfrDntfrTpCcCCde, String cmmnctnDntfrDntfrTpCcCDsplay, String cmmnctnDntfrDntfrTpCcCSrSlctd, String cmmnctnDntfrDntfrTpCcTxt, String cmmnctnDntfrDntfrPrdPrdStrt, String cmmnctnDntfrDntfrPrdPrdNd, String cmmnctnDntfrDntfrSsgnr, String cmmnctnDntfrDntfrVlue, String cmmnctnDntfrDntfrSstm, String cmmnctnNstnttsCnnclCnncl, String communicationInstantiatesUriUri, String communicationBasedOnReference, String communicationPartOfReference, String cmmnctnNRspnsTRfrnce, String communicationStatusCode, String cmmnctnSttsRsnCcCdngCSstm, String cmmnctnSttsRsnCcCdngCVrsn, String cmmnctnSttsRsnCcCdngCCde, String cmmnctnSttsRsnCcCdngCDsplay, String cmmnctnSttsRsnCcCdngCSrSlctd, String communicationStatusReasonCcText, String cmmnctnCtgrCcCdngCSstm, String cmmnctnCtgrCcCdngCVrsn, String cmmnctnCtgrCcCdngCCde, String cmmnctnCtgrCcCdngCDsplay, String cmmnctnCtgrCcCdngCSrSlctd, String communicationCategoryCcText, String communicationPriorityCode, String cmmnctnMdmCcCdngCSstm, String cmmnctnMdmCcCdngCVrsn, String cmmnctnMdmCcCdngCCde, String cmmnctnMdmCcCdngCDsplay, String cmmnctnMdmCcCdngCSrSlctd, String communicationMediumCcText, String communicationSubjectReference, String cmmnctnTpcCcCdngCSstm, String cmmnctnTpcCcCdngCVrsn, String cmmnctnTpcCcCdngCCde, String cmmnctnTpcCcCdngCDsplay, String cmmnctnTpcCcCdngCSrSlctd, String communicationTopicCcText, String communicationAboutReference, String communicationEncounterReference, String communicationSentDateTime, String communicationReceivedDateTime, String communicationRecipientReference, String communicationSenderReference, String cmmnctnRsnCdCcCdngCSstm, String cmmnctnRsnCdCcCdngCVrsn, String cmmnctnRsnCdCcCdngCCde, String cmmnctnRsnCdCcCdngCDsplay, String cmmnctnRsnCdCcCdngCSrSlctd, String communicationReasonCodeCcText, String cmmnctnRsnRfrncRfrnce, String cmmnctnPldCntntStrngStrng, String cmmnctnPldCntntttchmntTtchmntDta, String cmmnctnPldCntntttchmntTtchmntHsh, String cmmnctnPldCntntttchmntTtchmntCntntTpe, String cmmnctnPldCntntttchmntTtchmntLngge, String cmmnctnPldCntntttchmntTtchmntCrtn, String cmmnctnPldCntntttchmntTtchmntTtle, String cmmnctnPldCntntttchmntTtchmntSze, String cmmnctnPldCntntttchmntTtchmntRl, String cmmnctnPldCntntRfrncRfrnce, String communicationNoteAnnotationTime, String communicationNoteAnnotationText, String cmmnctnNtNnttnThrRfrnce, String cmmnctnNtNnttnThrStrng) {
+       this.cmmnctnDntfrDntfrSe = cmmnctnDntfrDntfrSe;
+       this.cmmnctnDntfrDntfrTpCcCSstm = cmmnctnDntfrDntfrTpCcCSstm;
+       this.cmmnctnDntfrDntfrTpCcCVrsn = cmmnctnDntfrDntfrTpCcCVrsn;
+       this.cmmnctnDntfrDntfrTpCcCCde = cmmnctnDntfrDntfrTpCcCCde;
+       this.cmmnctnDntfrDntfrTpCcCDsplay = cmmnctnDntfrDntfrTpCcCDsplay;
+       this.cmmnctnDntfrDntfrTpCcCSrSlctd = cmmnctnDntfrDntfrTpCcCSrSlctd;
+       this.cmmnctnDntfrDntfrTpCcTxt = cmmnctnDntfrDntfrTpCcTxt;
+       this.cmmnctnDntfrDntfrPrdPrdStrt = cmmnctnDntfrDntfrPrdPrdStrt;
+       this.cmmnctnDntfrDntfrPrdPrdNd = cmmnctnDntfrDntfrPrdPrdNd;
+       this.cmmnctnDntfrDntfrSsgnr = cmmnctnDntfrDntfrSsgnr;
+       this.cmmnctnDntfrDntfrVlue = cmmnctnDntfrDntfrVlue;
+       this.cmmnctnDntfrDntfrSstm = cmmnctnDntfrDntfrSstm;
+       this.cmmnctnNstnttsCnnclCnncl = cmmnctnNstnttsCnnclCnncl;
+       this.communicationInstantiatesUriUri = communicationInstantiatesUriUri;
+       this.communicationBasedOnReference = communicationBasedOnReference;
+       this.communicationPartOfReference = communicationPartOfReference;
+       this.cmmnctnNRspnsTRfrnce = cmmnctnNRspnsTRfrnce;
+       this.communicationStatusCode = communicationStatusCode;
+       this.cmmnctnSttsRsnCcCdngCSstm = cmmnctnSttsRsnCcCdngCSstm;
+       this.cmmnctnSttsRsnCcCdngCVrsn = cmmnctnSttsRsnCcCdngCVrsn;
+       this.cmmnctnSttsRsnCcCdngCCde = cmmnctnSttsRsnCcCdngCCde;
+       this.cmmnctnSttsRsnCcCdngCDsplay = cmmnctnSttsRsnCcCdngCDsplay;
+       this.cmmnctnSttsRsnCcCdngCSrSlctd = cmmnctnSttsRsnCcCdngCSrSlctd;
+       this.communicationStatusReasonCcText = communicationStatusReasonCcText;
+       this.cmmnctnCtgrCcCdngCSstm = cmmnctnCtgrCcCdngCSstm;
+       this.cmmnctnCtgrCcCdngCVrsn = cmmnctnCtgrCcCdngCVrsn;
+       this.cmmnctnCtgrCcCdngCCde = cmmnctnCtgrCcCdngCCde;
+       this.cmmnctnCtgrCcCdngCDsplay = cmmnctnCtgrCcCdngCDsplay;
+       this.cmmnctnCtgrCcCdngCSrSlctd = cmmnctnCtgrCcCdngCSrSlctd;
+       this.communicationCategoryCcText = communicationCategoryCcText;
+       this.communicationPriorityCode = communicationPriorityCode;
+       this.cmmnctnMdmCcCdngCSstm = cmmnctnMdmCcCdngCSstm;
+       this.cmmnctnMdmCcCdngCVrsn = cmmnctnMdmCcCdngCVrsn;
+       this.cmmnctnMdmCcCdngCCde = cmmnctnMdmCcCdngCCde;
+       this.cmmnctnMdmCcCdngCDsplay = cmmnctnMdmCcCdngCDsplay;
+       this.cmmnctnMdmCcCdngCSrSlctd = cmmnctnMdmCcCdngCSrSlctd;
+       this.communicationMediumCcText = communicationMediumCcText;
+       this.communicationSubjectReference = communicationSubjectReference;
+       this.cmmnctnTpcCcCdngCSstm = cmmnctnTpcCcCdngCSstm;
+       this.cmmnctnTpcCcCdngCVrsn = cmmnctnTpcCcCdngCVrsn;
+       this.cmmnctnTpcCcCdngCCde = cmmnctnTpcCcCdngCCde;
+       this.cmmnctnTpcCcCdngCDsplay = cmmnctnTpcCcCdngCDsplay;
+       this.cmmnctnTpcCcCdngCSrSlctd = cmmnctnTpcCcCdngCSrSlctd;
+       this.communicationTopicCcText = communicationTopicCcText;
+       this.communicationAboutReference = communicationAboutReference;
+       this.communicationEncounterReference = communicationEncounterReference;
+       this.communicationSentDateTime = communicationSentDateTime;
+       this.communicationReceivedDateTime = communicationReceivedDateTime;
+       this.communicationRecipientReference = communicationRecipientReference;
+       this.communicationSenderReference = communicationSenderReference;
+       this.cmmnctnRsnCdCcCdngCSstm = cmmnctnRsnCdCcCdngCSstm;
+       this.cmmnctnRsnCdCcCdngCVrsn = cmmnctnRsnCdCcCdngCVrsn;
+       this.cmmnctnRsnCdCcCdngCCde = cmmnctnRsnCdCcCdngCCde;
+       this.cmmnctnRsnCdCcCdngCDsplay = cmmnctnRsnCdCcCdngCDsplay;
+       this.cmmnctnRsnCdCcCdngCSrSlctd = cmmnctnRsnCdCcCdngCSrSlctd;
+       this.communicationReasonCodeCcText = communicationReasonCodeCcText;
+       this.cmmnctnRsnRfrncRfrnce = cmmnctnRsnRfrncRfrnce;
+       this.cmmnctnPldCntntStrngStrng = cmmnctnPldCntntStrngStrng;
+       this.cmmnctnPldCntntttchmntTtchmntDta = cmmnctnPldCntntttchmntTtchmntDta;
+       this.cmmnctnPldCntntttchmntTtchmntHsh = cmmnctnPldCntntttchmntTtchmntHsh;
+       this.cmmnctnPldCntntttchmntTtchmntCntntTpe = cmmnctnPldCntntttchmntTtchmntCntntTpe;
+       this.cmmnctnPldCntntttchmntTtchmntLngge = cmmnctnPldCntntttchmntTtchmntLngge;
+       this.cmmnctnPldCntntttchmntTtchmntCrtn = cmmnctnPldCntntttchmntTtchmntCrtn;
+       this.cmmnctnPldCntntttchmntTtchmntTtle = cmmnctnPldCntntttchmntTtchmntTtle;
+       this.cmmnctnPldCntntttchmntTtchmntSze = cmmnctnPldCntntttchmntTtchmntSze;
+       this.cmmnctnPldCntntttchmntTtchmntRl = cmmnctnPldCntntttchmntTtchmntRl;
+       this.cmmnctnPldCntntRfrncRfrnce = cmmnctnPldCntntRfrncRfrnce;
+       this.communicationNoteAnnotationTime = communicationNoteAnnotationTime;
+       this.communicationNoteAnnotationText = communicationNoteAnnotationText;
+       this.cmmnctnNtNnttnThrRfrnce = cmmnctnNtNnttnThrRfrnce;
+       this.cmmnctnNtNnttnThrStrng = cmmnctnNtNnttnThrStrng;
     }
    
-    public String getCmmnctnDntfrCdngCde() {
-        return this.cmmnctnDntfrCdngCde;
-    }
-    
-    public void setCmmnctnDntfrCdngCde(String cmmnctnDntfrCdngCde) {
-        this.cmmnctnDntfrCdngCde = cmmnctnDntfrCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnDntfrCdngSrSlctd() {
-        return this.cmmnctnDntfrCdngSrSlctd;
-    }
-    
-    public void setCmmnctnDntfrCdngSrSlctd(String cmmnctnDntfrCdngSrSlctd) {
-        this.cmmnctnDntfrCdngSrSlctd = cmmnctnDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnDntfrCdngVrsn() {
-        return this.cmmnctnDntfrCdngVrsn;
-    }
-    
-    public void setCmmnctnDntfrCdngVrsn(String cmmnctnDntfrCdngVrsn) {
-        this.cmmnctnDntfrCdngVrsn = cmmnctnDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnDntfrCdngDsplay() {
-        return this.cmmnctnDntfrCdngDsplay;
-    }
-    
-    public void setCmmnctnDntfrCdngDsplay(String cmmnctnDntfrCdngDsplay) {
-        this.cmmnctnDntfrCdngDsplay = cmmnctnDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnDntfrCdngSstm() {
-        return this.cmmnctnDntfrCdngSstm;
-    }
-    
-    public void setCmmnctnDntfrCdngSstm(String cmmnctnDntfrCdngSstm) {
-        this.cmmnctnDntfrCdngSstm = cmmnctnDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnNstnttsCnncl() {
-        return this.cmmnctnNstnttsCnncl;
-    }
-    
-    public void setCmmnctnNstnttsCnncl(String cmmnctnNstnttsCnncl) {
-        this.cmmnctnNstnttsCnncl = cmmnctnNstnttsCnncl;
-    }
-    
-    
-    
-    public String getCommunicationInstantiatesUri() {
-        return this.communicationInstantiatesUri;
-    }
-    
-    public void setCommunicationInstantiatesUri(String communicationInstantiatesUri) {
-        this.communicationInstantiatesUri = communicationInstantiatesUri;
-    }
-    
-    
-    
-    public String getCommunicationBasedOn() {
-        return this.communicationBasedOn;
-    }
-    
-    public void setCommunicationBasedOn(String communicationBasedOn) {
-        this.communicationBasedOn = communicationBasedOn;
-    }
-    
-    
-    
-    public String getCommunicationPartOf() {
-        return this.communicationPartOf;
-    }
-    
-    public void setCommunicationPartOf(String communicationPartOf) {
-        this.communicationPartOf = communicationPartOf;
-    }
-    
-    
-    
-    public String getCommunicationInResponseTo() {
-        return this.communicationInResponseTo;
-    }
-    
-    public void setCommunicationInResponseTo(String communicationInResponseTo) {
-        this.communicationInResponseTo = communicationInResponseTo;
-    }
-    
-    
-    
-    public String getCommunicationStatus() {
-        return this.communicationStatus;
-    }
-    
-    public void setCommunicationStatus(String communicationStatus) {
-        this.communicationStatus = communicationStatus;
-    }
-    
-    
-    
-    public String getCmmnctnSttsRsnCdngSrSlctd() {
-        return this.cmmnctnSttsRsnCdngSrSlctd;
-    }
-    
-    public void setCmmnctnSttsRsnCdngSrSlctd(String cmmnctnSttsRsnCdngSrSlctd) {
-        this.cmmnctnSttsRsnCdngSrSlctd = cmmnctnSttsRsnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnSttsRsnCdngCde() {
-        return this.cmmnctnSttsRsnCdngCde;
-    }
-    
-    public void setCmmnctnSttsRsnCdngCde(String cmmnctnSttsRsnCdngCde) {
-        this.cmmnctnSttsRsnCdngCde = cmmnctnSttsRsnCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnSttsRsnCdngVrsn() {
-        return this.cmmnctnSttsRsnCdngVrsn;
-    }
-    
-    public void setCmmnctnSttsRsnCdngVrsn(String cmmnctnSttsRsnCdngVrsn) {
-        this.cmmnctnSttsRsnCdngVrsn = cmmnctnSttsRsnCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnSttsRsnCdngDsplay() {
-        return this.cmmnctnSttsRsnCdngDsplay;
-    }
-    
-    public void setCmmnctnSttsRsnCdngDsplay(String cmmnctnSttsRsnCdngDsplay) {
-        this.cmmnctnSttsRsnCdngDsplay = cmmnctnSttsRsnCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnSttsRsnCdngSstm() {
-        return this.cmmnctnSttsRsnCdngSstm;
-    }
-    
-    public void setCmmnctnSttsRsnCdngSstm(String cmmnctnSttsRsnCdngSstm) {
-        this.cmmnctnSttsRsnCdngSstm = cmmnctnSttsRsnCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnCtgrCdngSrSlctd() {
-        return this.cmmnctnCtgrCdngSrSlctd;
-    }
-    
-    public void setCmmnctnCtgrCdngSrSlctd(String cmmnctnCtgrCdngSrSlctd) {
-        this.cmmnctnCtgrCdngSrSlctd = cmmnctnCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCommunicationCategoryCodingCode() {
-        return this.communicationCategoryCodingCode;
-    }
-    
-    public void setCommunicationCategoryCodingCode(String communicationCategoryCodingCode) {
-        this.communicationCategoryCodingCode = communicationCategoryCodingCode;
-    }
-    
-    
-    
-    public String getCmmnctnCtgrCdngVrsn() {
-        return this.cmmnctnCtgrCdngVrsn;
-    }
-    
-    public void setCmmnctnCtgrCdngVrsn(String cmmnctnCtgrCdngVrsn) {
-        this.cmmnctnCtgrCdngVrsn = cmmnctnCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnCtgrCdngDsplay() {
-        return this.cmmnctnCtgrCdngDsplay;
-    }
-    
-    public void setCmmnctnCtgrCdngDsplay(String cmmnctnCtgrCdngDsplay) {
-        this.cmmnctnCtgrCdngDsplay = cmmnctnCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnCtgrCdngSstm() {
-        return this.cmmnctnCtgrCdngSstm;
-    }
-    
-    public void setCmmnctnCtgrCdngSstm(String cmmnctnCtgrCdngSstm) {
-        this.cmmnctnCtgrCdngSstm = cmmnctnCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationPriority() {
-        return this.communicationPriority;
-    }
-    
-    public void setCommunicationPriority(String communicationPriority) {
-        this.communicationPriority = communicationPriority;
-    }
-    
-    
-    
-    public String getCmmnctnMdmCdngSrSlctd() {
-        return this.cmmnctnMdmCdngSrSlctd;
-    }
-    
-    public void setCmmnctnMdmCdngSrSlctd(String cmmnctnMdmCdngSrSlctd) {
-        this.cmmnctnMdmCdngSrSlctd = cmmnctnMdmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCommunicationMediumCodingCode() {
-        return this.communicationMediumCodingCode;
-    }
-    
-    public void setCommunicationMediumCodingCode(String communicationMediumCodingCode) {
-        this.communicationMediumCodingCode = communicationMediumCodingCode;
-    }
-    
-    
-    
-    public String getCmmnctnMdmCdngVrsn() {
-        return this.cmmnctnMdmCdngVrsn;
-    }
-    
-    public void setCmmnctnMdmCdngVrsn(String cmmnctnMdmCdngVrsn) {
-        this.cmmnctnMdmCdngVrsn = cmmnctnMdmCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnMdmCdngDsplay() {
-        return this.cmmnctnMdmCdngDsplay;
-    }
-    
-    public void setCmmnctnMdmCdngDsplay(String cmmnctnMdmCdngDsplay) {
-        this.cmmnctnMdmCdngDsplay = cmmnctnMdmCdngDsplay;
-    }
-    
-    
-    
-    public String getCommunicationMediumCodingSystem() {
-        return this.communicationMediumCodingSystem;
-    }
-    
-    public void setCommunicationMediumCodingSystem(String communicationMediumCodingSystem) {
-        this.communicationMediumCodingSystem = communicationMediumCodingSystem;
-    }
-    
-    
-    
-    public String getCommunicationSubject() {
-        return this.communicationSubject;
-    }
-    
-    public void setCommunicationSubject(String communicationSubject) {
-        this.communicationSubject = communicationSubject;
-    }
-    
-    
-    
-    public String getCmmnctnTpcCdngSrSlctd() {
-        return this.cmmnctnTpcCdngSrSlctd;
-    }
-    
-    public void setCmmnctnTpcCdngSrSlctd(String cmmnctnTpcCdngSrSlctd) {
-        this.cmmnctnTpcCdngSrSlctd = cmmnctnTpcCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCommunicationTopicCodingCode() {
-        return this.communicationTopicCodingCode;
-    }
-    
-    public void setCommunicationTopicCodingCode(String communicationTopicCodingCode) {
-        this.communicationTopicCodingCode = communicationTopicCodingCode;
-    }
-    
-    
-    
-    public String getCommunicationTopicCodingVersion() {
-        return this.communicationTopicCodingVersion;
-    }
-    
-    public void setCommunicationTopicCodingVersion(String communicationTopicCodingVersion) {
-        this.communicationTopicCodingVersion = communicationTopicCodingVersion;
-    }
-    
-    
-    
-    public String getCommunicationTopicCodingDisplay() {
-        return this.communicationTopicCodingDisplay;
-    }
-    
-    public void setCommunicationTopicCodingDisplay(String communicationTopicCodingDisplay) {
-        this.communicationTopicCodingDisplay = communicationTopicCodingDisplay;
-    }
-    
-    
-    
-    public String getCommunicationTopicCodingSystem() {
-        return this.communicationTopicCodingSystem;
-    }
-    
-    public void setCommunicationTopicCodingSystem(String communicationTopicCodingSystem) {
-        this.communicationTopicCodingSystem = communicationTopicCodingSystem;
-    }
-    
-    
-    
-    public String getCommunicationAbout() {
-        return this.communicationAbout;
-    }
-    
-    public void setCommunicationAbout(String communicationAbout) {
-        this.communicationAbout = communicationAbout;
-    }
-    
-    
-    
-    public String getCommunicationEncounter() {
-        return this.communicationEncounter;
-    }
-    
-    public void setCommunicationEncounter(String communicationEncounter) {
-        this.communicationEncounter = communicationEncounter;
-    }
-    
-    
-    
-    public String getCommunicationSent() {
-        return this.communicationSent;
-    }
-    
-    public void setCommunicationSent(String communicationSent) {
-        this.communicationSent = communicationSent;
-    }
-    
-    
-    
-    public String getCommunicationReceived() {
-        return this.communicationReceived;
-    }
-    
-    public void setCommunicationReceived(String communicationReceived) {
-        this.communicationReceived = communicationReceived;
-    }
-    
-    
-    
-    public String getCommunicationRecipient() {
-        return this.communicationRecipient;
-    }
-    
-    public void setCommunicationRecipient(String communicationRecipient) {
-        this.communicationRecipient = communicationRecipient;
-    }
-    
-    
-    
-    public String getCommunicationSender() {
-        return this.communicationSender;
-    }
-    
-    public void setCommunicationSender(String communicationSender) {
-        this.communicationSender = communicationSender;
-    }
-    
-    
-    
-    public String getCmmnctnRsnCdCdngSrSlctd() {
-        return this.cmmnctnRsnCdCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRsnCdCdngSrSlctd(String cmmnctnRsnCdCdngSrSlctd) {
-        this.cmmnctnRsnCdCdngSrSlctd = cmmnctnRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRsnCdCdngCde() {
-        return this.cmmnctnRsnCdCdngCde;
-    }
-    
-    public void setCmmnctnRsnCdCdngCde(String cmmnctnRsnCdCdngCde) {
-        this.cmmnctnRsnCdCdngCde = cmmnctnRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRsnCdCdngVrsn() {
-        return this.cmmnctnRsnCdCdngVrsn;
-    }
-    
-    public void setCmmnctnRsnCdCdngVrsn(String cmmnctnRsnCdCdngVrsn) {
-        this.cmmnctnRsnCdCdngVrsn = cmmnctnRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRsnCdCdngDsplay() {
-        return this.cmmnctnRsnCdCdngDsplay;
-    }
-    
-    public void setCmmnctnRsnCdCdngDsplay(String cmmnctnRsnCdCdngDsplay) {
-        this.cmmnctnRsnCdCdngDsplay = cmmnctnRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRsnCdCdngSstm() {
-        return this.cmmnctnRsnCdCdngSstm;
-    }
-    
-    public void setCmmnctnRsnCdCdngSstm(String cmmnctnRsnCdCdngSstm) {
-        this.cmmnctnRsnCdCdngSstm = cmmnctnRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationReasonReference() {
-        return this.communicationReasonReference;
-    }
-    
-    public void setCommunicationReasonReference(String communicationReasonReference) {
-        this.communicationReasonReference = communicationReasonReference;
-    }
-    
-    
-    
-    public String getCommunicationPayload() {
-        return this.communicationPayload;
-    }
-    
-    public void setCommunicationPayload(String communicationPayload) {
-        this.communicationPayload = communicationPayload;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntStrng() {
-        return this.cmmnctnPldCntntStrng;
-    }
-    
-    public void setCmmnctnPldCntntStrng(String cmmnctnPldCntntStrng) {
-        this.cmmnctnPldCntntStrng = cmmnctnPldCntntStrng;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntttchmntCdngSrSlctd() {
-        return this.cmmnctnPldCntntttchmntCdngSrSlctd;
-    }
-    
-    public void setCmmnctnPldCntntttchmntCdngSrSlctd(String cmmnctnPldCntntttchmntCdngSrSlctd) {
-        this.cmmnctnPldCntntttchmntCdngSrSlctd = cmmnctnPldCntntttchmntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntttchmntCdngCde() {
-        return this.cmmnctnPldCntntttchmntCdngCde;
-    }
-    
-    public void setCmmnctnPldCntntttchmntCdngCde(String cmmnctnPldCntntttchmntCdngCde) {
-        this.cmmnctnPldCntntttchmntCdngCde = cmmnctnPldCntntttchmntCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntttchmntCdngVrsn() {
-        return this.cmmnctnPldCntntttchmntCdngVrsn;
-    }
-    
-    public void setCmmnctnPldCntntttchmntCdngVrsn(String cmmnctnPldCntntttchmntCdngVrsn) {
-        this.cmmnctnPldCntntttchmntCdngVrsn = cmmnctnPldCntntttchmntCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntttchmntCdngDsplay() {
-        return this.cmmnctnPldCntntttchmntCdngDsplay;
-    }
-    
-    public void setCmmnctnPldCntntttchmntCdngDsplay(String cmmnctnPldCntntttchmntCdngDsplay) {
-        this.cmmnctnPldCntntttchmntCdngDsplay = cmmnctnPldCntntttchmntCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntttchmntCdngSstm() {
-        return this.cmmnctnPldCntntttchmntCdngSstm;
-    }
-    
-    public void setCmmnctnPldCntntttchmntCdngSstm(String cmmnctnPldCntntttchmntCdngSstm) {
-        this.cmmnctnPldCntntttchmntCdngSstm = cmmnctnPldCntntttchmntCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnPldCntntRfrnce() {
-        return this.cmmnctnPldCntntRfrnce;
-    }
-    
-    public void setCmmnctnPldCntntRfrnce(String cmmnctnPldCntntRfrnce) {
-        this.cmmnctnPldCntntRfrnce = cmmnctnPldCntntRfrnce;
-    }
-    
-    
-    
-    public String getCmmnctnNtCdngSrSlctd() {
-        return this.cmmnctnNtCdngSrSlctd;
-    }
-    
-    public void setCmmnctnNtCdngSrSlctd(String cmmnctnNtCdngSrSlctd) {
-        this.cmmnctnNtCdngSrSlctd = cmmnctnNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCommunicationNoteCodingCode() {
-        return this.communicationNoteCodingCode;
-    }
-    
-    public void setCommunicationNoteCodingCode(String communicationNoteCodingCode) {
-        this.communicationNoteCodingCode = communicationNoteCodingCode;
-    }
-    
-    
-    
-    public String getCommunicationNoteCodingVersion() {
-        return this.communicationNoteCodingVersion;
-    }
-    
-    public void setCommunicationNoteCodingVersion(String communicationNoteCodingVersion) {
-        this.communicationNoteCodingVersion = communicationNoteCodingVersion;
-    }
-    
-    
-    
-    public String getCommunicationNoteCodingDisplay() {
-        return this.communicationNoteCodingDisplay;
-    }
-    
-    public void setCommunicationNoteCodingDisplay(String communicationNoteCodingDisplay) {
-        this.communicationNoteCodingDisplay = communicationNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getCommunicationNoteCodingSystem() {
-        return this.communicationNoteCodingSystem;
-    }
-    
-    public void setCommunicationNoteCodingSystem(String communicationNoteCodingSystem) {
-        this.communicationNoteCodingSystem = communicationNoteCodingSystem;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrSe()
+    {
+        return this.cmmnctnDntfrDntfrSe;
+    }
+    
+    public void setCmmnctnDntfrDntfrSe
+        (String cmmnctnDntfrDntfrSe) 
+        {
+      this.cmmnctnDntfrDntfrSe = cmmnctnDntfrDntfrSe;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcCSstm()
+    {
+        return this.cmmnctnDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcCSstm
+        (String cmmnctnDntfrDntfrTpCcCSstm) 
+        {
+      this.cmmnctnDntfrDntfrTpCcCSstm = cmmnctnDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcCVrsn()
+    {
+        return this.cmmnctnDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcCVrsn
+        (String cmmnctnDntfrDntfrTpCcCVrsn) 
+        {
+      this.cmmnctnDntfrDntfrTpCcCVrsn = cmmnctnDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcCCde()
+    {
+        return this.cmmnctnDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcCCde
+        (String cmmnctnDntfrDntfrTpCcCCde) 
+        {
+      this.cmmnctnDntfrDntfrTpCcCCde = cmmnctnDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcCDsplay()
+    {
+        return this.cmmnctnDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcCDsplay
+        (String cmmnctnDntfrDntfrTpCcCDsplay) 
+        {
+      this.cmmnctnDntfrDntfrTpCcCDsplay = cmmnctnDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cmmnctnDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcCSrSlctd
+        (String cmmnctnDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cmmnctnDntfrDntfrTpCcCSrSlctd = cmmnctnDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrTpCcTxt()
+    {
+        return this.cmmnctnDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCmmnctnDntfrDntfrTpCcTxt
+        (String cmmnctnDntfrDntfrTpCcTxt) 
+        {
+      this.cmmnctnDntfrDntfrTpCcTxt = cmmnctnDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrPrdPrdStrt()
+    {
+        return this.cmmnctnDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCmmnctnDntfrDntfrPrdPrdStrt
+        (String cmmnctnDntfrDntfrPrdPrdStrt) 
+        {
+      this.cmmnctnDntfrDntfrPrdPrdStrt = cmmnctnDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrPrdPrdNd()
+    {
+        return this.cmmnctnDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCmmnctnDntfrDntfrPrdPrdNd
+        (String cmmnctnDntfrDntfrPrdPrdNd) 
+        {
+      this.cmmnctnDntfrDntfrPrdPrdNd = cmmnctnDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrSsgnr()
+    {
+        return this.cmmnctnDntfrDntfrSsgnr;
+    }
+    
+    public void setCmmnctnDntfrDntfrSsgnr
+        (String cmmnctnDntfrDntfrSsgnr) 
+        {
+      this.cmmnctnDntfrDntfrSsgnr = cmmnctnDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrVlue()
+    {
+        return this.cmmnctnDntfrDntfrVlue;
+    }
+    
+    public void setCmmnctnDntfrDntfrVlue
+        (String cmmnctnDntfrDntfrVlue) 
+        {
+      this.cmmnctnDntfrDntfrVlue = cmmnctnDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCmmnctnDntfrDntfrSstm()
+    {
+        return this.cmmnctnDntfrDntfrSstm;
+    }
+    
+    public void setCmmnctnDntfrDntfrSstm
+        (String cmmnctnDntfrDntfrSstm) 
+        {
+      this.cmmnctnDntfrDntfrSstm = cmmnctnDntfrDntfrSstm;
+}
+    public 
+    String 
+    getCmmnctnNstnttsCnnclCnncl()
+    {
+        return this.cmmnctnNstnttsCnnclCnncl;
+    }
+    
+    public void setCmmnctnNstnttsCnnclCnncl
+        (String cmmnctnNstnttsCnnclCnncl) 
+        {
+      this.cmmnctnNstnttsCnnclCnncl = cmmnctnNstnttsCnnclCnncl;
+}
+    public 
+    String 
+    getCommunicationInstantiatesUriUri()
+    {
+        return this.communicationInstantiatesUriUri;
+    }
+    
+    public void setCommunicationInstantiatesUriUri
+        (String communicationInstantiatesUriUri) 
+        {
+      this.communicationInstantiatesUriUri = communicationInstantiatesUriUri;
+}
+    public 
+    String 
+    getCommunicationBasedOnReference()
+    {
+        return this.communicationBasedOnReference;
+    }
+    
+    public void setCommunicationBasedOnReference
+        (String communicationBasedOnReference) 
+        {
+      this.communicationBasedOnReference = communicationBasedOnReference;
+}
+    public 
+    String 
+    getCommunicationPartOfReference()
+    {
+        return this.communicationPartOfReference;
+    }
+    
+    public void setCommunicationPartOfReference
+        (String communicationPartOfReference) 
+        {
+      this.communicationPartOfReference = communicationPartOfReference;
+}
+    public 
+    String 
+    getCmmnctnNRspnsTRfrnce()
+    {
+        return this.cmmnctnNRspnsTRfrnce;
+    }
+    
+    public void setCmmnctnNRspnsTRfrnce
+        (String cmmnctnNRspnsTRfrnce) 
+        {
+      this.cmmnctnNRspnsTRfrnce = cmmnctnNRspnsTRfrnce;
+}
+    public 
+    String 
+    getCommunicationStatusCode()
+    {
+        return this.communicationStatusCode;
+    }
+    
+    public void setCommunicationStatusCode
+        (String communicationStatusCode) 
+        {
+      this.communicationStatusCode = communicationStatusCode;
+}
+    public 
+    String 
+    getCmmnctnSttsRsnCcCdngCSstm()
+    {
+        return this.cmmnctnSttsRsnCcCdngCSstm;
+    }
+    
+    public void setCmmnctnSttsRsnCcCdngCSstm
+        (String cmmnctnSttsRsnCcCdngCSstm) 
+        {
+      this.cmmnctnSttsRsnCcCdngCSstm = cmmnctnSttsRsnCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnSttsRsnCcCdngCVrsn()
+    {
+        return this.cmmnctnSttsRsnCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnSttsRsnCcCdngCVrsn
+        (String cmmnctnSttsRsnCcCdngCVrsn) 
+        {
+      this.cmmnctnSttsRsnCcCdngCVrsn = cmmnctnSttsRsnCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnSttsRsnCcCdngCCde()
+    {
+        return this.cmmnctnSttsRsnCcCdngCCde;
+    }
+    
+    public void setCmmnctnSttsRsnCcCdngCCde
+        (String cmmnctnSttsRsnCcCdngCCde) 
+        {
+      this.cmmnctnSttsRsnCcCdngCCde = cmmnctnSttsRsnCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnSttsRsnCcCdngCDsplay()
+    {
+        return this.cmmnctnSttsRsnCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnSttsRsnCcCdngCDsplay
+        (String cmmnctnSttsRsnCcCdngCDsplay) 
+        {
+      this.cmmnctnSttsRsnCcCdngCDsplay = cmmnctnSttsRsnCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnSttsRsnCcCdngCSrSlctd()
+    {
+        return this.cmmnctnSttsRsnCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnSttsRsnCcCdngCSrSlctd
+        (String cmmnctnSttsRsnCcCdngCSrSlctd) 
+        {
+      this.cmmnctnSttsRsnCcCdngCSrSlctd = cmmnctnSttsRsnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCommunicationStatusReasonCcText()
+    {
+        return this.communicationStatusReasonCcText;
+    }
+    
+    public void setCommunicationStatusReasonCcText
+        (String communicationStatusReasonCcText) 
+        {
+      this.communicationStatusReasonCcText = communicationStatusReasonCcText;
+}
+    public 
+    String 
+    getCmmnctnCtgrCcCdngCSstm()
+    {
+        return this.cmmnctnCtgrCcCdngCSstm;
+    }
+    
+    public void setCmmnctnCtgrCcCdngCSstm
+        (String cmmnctnCtgrCcCdngCSstm) 
+        {
+      this.cmmnctnCtgrCcCdngCSstm = cmmnctnCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnCtgrCcCdngCVrsn()
+    {
+        return this.cmmnctnCtgrCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnCtgrCcCdngCVrsn
+        (String cmmnctnCtgrCcCdngCVrsn) 
+        {
+      this.cmmnctnCtgrCcCdngCVrsn = cmmnctnCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnCtgrCcCdngCCde()
+    {
+        return this.cmmnctnCtgrCcCdngCCde;
+    }
+    
+    public void setCmmnctnCtgrCcCdngCCde
+        (String cmmnctnCtgrCcCdngCCde) 
+        {
+      this.cmmnctnCtgrCcCdngCCde = cmmnctnCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnCtgrCcCdngCDsplay()
+    {
+        return this.cmmnctnCtgrCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnCtgrCcCdngCDsplay
+        (String cmmnctnCtgrCcCdngCDsplay) 
+        {
+      this.cmmnctnCtgrCcCdngCDsplay = cmmnctnCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnCtgrCcCdngCSrSlctd()
+    {
+        return this.cmmnctnCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnCtgrCcCdngCSrSlctd
+        (String cmmnctnCtgrCcCdngCSrSlctd) 
+        {
+      this.cmmnctnCtgrCcCdngCSrSlctd = cmmnctnCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCommunicationCategoryCcText()
+    {
+        return this.communicationCategoryCcText;
+    }
+    
+    public void setCommunicationCategoryCcText
+        (String communicationCategoryCcText) 
+        {
+      this.communicationCategoryCcText = communicationCategoryCcText;
+}
+    public 
+    String 
+    getCommunicationPriorityCode()
+    {
+        return this.communicationPriorityCode;
+    }
+    
+    public void setCommunicationPriorityCode
+        (String communicationPriorityCode) 
+        {
+      this.communicationPriorityCode = communicationPriorityCode;
+}
+    public 
+    String 
+    getCmmnctnMdmCcCdngCSstm()
+    {
+        return this.cmmnctnMdmCcCdngCSstm;
+    }
+    
+    public void setCmmnctnMdmCcCdngCSstm
+        (String cmmnctnMdmCcCdngCSstm) 
+        {
+      this.cmmnctnMdmCcCdngCSstm = cmmnctnMdmCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnMdmCcCdngCVrsn()
+    {
+        return this.cmmnctnMdmCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnMdmCcCdngCVrsn
+        (String cmmnctnMdmCcCdngCVrsn) 
+        {
+      this.cmmnctnMdmCcCdngCVrsn = cmmnctnMdmCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnMdmCcCdngCCde()
+    {
+        return this.cmmnctnMdmCcCdngCCde;
+    }
+    
+    public void setCmmnctnMdmCcCdngCCde
+        (String cmmnctnMdmCcCdngCCde) 
+        {
+      this.cmmnctnMdmCcCdngCCde = cmmnctnMdmCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnMdmCcCdngCDsplay()
+    {
+        return this.cmmnctnMdmCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnMdmCcCdngCDsplay
+        (String cmmnctnMdmCcCdngCDsplay) 
+        {
+      this.cmmnctnMdmCcCdngCDsplay = cmmnctnMdmCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnMdmCcCdngCSrSlctd()
+    {
+        return this.cmmnctnMdmCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnMdmCcCdngCSrSlctd
+        (String cmmnctnMdmCcCdngCSrSlctd) 
+        {
+      this.cmmnctnMdmCcCdngCSrSlctd = cmmnctnMdmCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCommunicationMediumCcText()
+    {
+        return this.communicationMediumCcText;
+    }
+    
+    public void setCommunicationMediumCcText
+        (String communicationMediumCcText) 
+        {
+      this.communicationMediumCcText = communicationMediumCcText;
+}
+    public 
+    String 
+    getCommunicationSubjectReference()
+    {
+        return this.communicationSubjectReference;
+    }
+    
+    public void setCommunicationSubjectReference
+        (String communicationSubjectReference) 
+        {
+      this.communicationSubjectReference = communicationSubjectReference;
+}
+    public 
+    String 
+    getCmmnctnTpcCcCdngCSstm()
+    {
+        return this.cmmnctnTpcCcCdngCSstm;
+    }
+    
+    public void setCmmnctnTpcCcCdngCSstm
+        (String cmmnctnTpcCcCdngCSstm) 
+        {
+      this.cmmnctnTpcCcCdngCSstm = cmmnctnTpcCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnTpcCcCdngCVrsn()
+    {
+        return this.cmmnctnTpcCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnTpcCcCdngCVrsn
+        (String cmmnctnTpcCcCdngCVrsn) 
+        {
+      this.cmmnctnTpcCcCdngCVrsn = cmmnctnTpcCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnTpcCcCdngCCde()
+    {
+        return this.cmmnctnTpcCcCdngCCde;
+    }
+    
+    public void setCmmnctnTpcCcCdngCCde
+        (String cmmnctnTpcCcCdngCCde) 
+        {
+      this.cmmnctnTpcCcCdngCCde = cmmnctnTpcCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnTpcCcCdngCDsplay()
+    {
+        return this.cmmnctnTpcCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnTpcCcCdngCDsplay
+        (String cmmnctnTpcCcCdngCDsplay) 
+        {
+      this.cmmnctnTpcCcCdngCDsplay = cmmnctnTpcCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnTpcCcCdngCSrSlctd()
+    {
+        return this.cmmnctnTpcCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnTpcCcCdngCSrSlctd
+        (String cmmnctnTpcCcCdngCSrSlctd) 
+        {
+      this.cmmnctnTpcCcCdngCSrSlctd = cmmnctnTpcCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCommunicationTopicCcText()
+    {
+        return this.communicationTopicCcText;
+    }
+    
+    public void setCommunicationTopicCcText
+        (String communicationTopicCcText) 
+        {
+      this.communicationTopicCcText = communicationTopicCcText;
+}
+    public 
+    String 
+    getCommunicationAboutReference()
+    {
+        return this.communicationAboutReference;
+    }
+    
+    public void setCommunicationAboutReference
+        (String communicationAboutReference) 
+        {
+      this.communicationAboutReference = communicationAboutReference;
+}
+    public 
+    String 
+    getCommunicationEncounterReference()
+    {
+        return this.communicationEncounterReference;
+    }
+    
+    public void setCommunicationEncounterReference
+        (String communicationEncounterReference) 
+        {
+      this.communicationEncounterReference = communicationEncounterReference;
+}
+    public 
+    String 
+    getCommunicationSentDateTime()
+    {
+        return this.communicationSentDateTime;
+    }
+    
+    public void setCommunicationSentDateTime
+        (String communicationSentDateTime) 
+        {
+      this.communicationSentDateTime = communicationSentDateTime;
+}
+    public 
+    String 
+    getCommunicationReceivedDateTime()
+    {
+        return this.communicationReceivedDateTime;
+    }
+    
+    public void setCommunicationReceivedDateTime
+        (String communicationReceivedDateTime) 
+        {
+      this.communicationReceivedDateTime = communicationReceivedDateTime;
+}
+    public 
+    String 
+    getCommunicationRecipientReference()
+    {
+        return this.communicationRecipientReference;
+    }
+    
+    public void setCommunicationRecipientReference
+        (String communicationRecipientReference) 
+        {
+      this.communicationRecipientReference = communicationRecipientReference;
+}
+    public 
+    String 
+    getCommunicationSenderReference()
+    {
+        return this.communicationSenderReference;
+    }
+    
+    public void setCommunicationSenderReference
+        (String communicationSenderReference) 
+        {
+      this.communicationSenderReference = communicationSenderReference;
+}
+    public 
+    String 
+    getCmmnctnRsnCdCcCdngCSstm()
+    {
+        return this.cmmnctnRsnCdCcCdngCSstm;
+    }
+    
+    public void setCmmnctnRsnCdCcCdngCSstm
+        (String cmmnctnRsnCdCcCdngCSstm) 
+        {
+      this.cmmnctnRsnCdCcCdngCSstm = cmmnctnRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnRsnCdCcCdngCVrsn()
+    {
+        return this.cmmnctnRsnCdCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnRsnCdCcCdngCVrsn
+        (String cmmnctnRsnCdCcCdngCVrsn) 
+        {
+      this.cmmnctnRsnCdCcCdngCVrsn = cmmnctnRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRsnCdCcCdngCCde()
+    {
+        return this.cmmnctnRsnCdCcCdngCCde;
+    }
+    
+    public void setCmmnctnRsnCdCcCdngCCde
+        (String cmmnctnRsnCdCcCdngCCde) 
+        {
+      this.cmmnctnRsnCdCcCdngCCde = cmmnctnRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnRsnCdCcCdngCDsplay()
+    {
+        return this.cmmnctnRsnCdCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnRsnCdCcCdngCDsplay
+        (String cmmnctnRsnCdCcCdngCDsplay) 
+        {
+      this.cmmnctnRsnCdCcCdngCDsplay = cmmnctnRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRsnCdCcCdngCSrSlctd()
+    {
+        return this.cmmnctnRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnRsnCdCcCdngCSrSlctd
+        (String cmmnctnRsnCdCcCdngCSrSlctd) 
+        {
+      this.cmmnctnRsnCdCcCdngCSrSlctd = cmmnctnRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCommunicationReasonCodeCcText()
+    {
+        return this.communicationReasonCodeCcText;
+    }
+    
+    public void setCommunicationReasonCodeCcText
+        (String communicationReasonCodeCcText) 
+        {
+      this.communicationReasonCodeCcText = communicationReasonCodeCcText;
+}
+    public 
+    String 
+    getCmmnctnRsnRfrncRfrnce()
+    {
+        return this.cmmnctnRsnRfrncRfrnce;
+    }
+    
+    public void setCmmnctnRsnRfrncRfrnce
+        (String cmmnctnRsnRfrncRfrnce) 
+        {
+      this.cmmnctnRsnRfrncRfrnce = cmmnctnRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getCmmnctnPldCntntStrngStrng()
+    {
+        return this.cmmnctnPldCntntStrngStrng;
+    }
+    
+    public void setCmmnctnPldCntntStrngStrng
+        (String cmmnctnPldCntntStrngStrng) 
+        {
+      this.cmmnctnPldCntntStrngStrng = cmmnctnPldCntntStrngStrng;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntDta()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntDta;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntDta
+        (String cmmnctnPldCntntttchmntTtchmntDta) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntDta = cmmnctnPldCntntttchmntTtchmntDta;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntHsh()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntHsh;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntHsh
+        (String cmmnctnPldCntntttchmntTtchmntHsh) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntHsh = cmmnctnPldCntntttchmntTtchmntHsh;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntCntntTpe()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntCntntTpe;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntCntntTpe
+        (String cmmnctnPldCntntttchmntTtchmntCntntTpe) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntCntntTpe = cmmnctnPldCntntttchmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntLngge()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntLngge;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntLngge
+        (String cmmnctnPldCntntttchmntTtchmntLngge) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntLngge = cmmnctnPldCntntttchmntTtchmntLngge;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntCrtn()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntCrtn;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntCrtn
+        (String cmmnctnPldCntntttchmntTtchmntCrtn) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntCrtn = cmmnctnPldCntntttchmntTtchmntCrtn;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntTtle()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntTtle;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntTtle
+        (String cmmnctnPldCntntttchmntTtchmntTtle) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntTtle = cmmnctnPldCntntttchmntTtchmntTtle;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntSze()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntSze;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntSze
+        (String cmmnctnPldCntntttchmntTtchmntSze) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntSze = cmmnctnPldCntntttchmntTtchmntSze;
+}
+    public 
+    String 
+    getCmmnctnPldCntntttchmntTtchmntRl()
+    {
+        return this.cmmnctnPldCntntttchmntTtchmntRl;
+    }
+    
+    public void setCmmnctnPldCntntttchmntTtchmntRl
+        (String cmmnctnPldCntntttchmntTtchmntRl) 
+        {
+      this.cmmnctnPldCntntttchmntTtchmntRl = cmmnctnPldCntntttchmntTtchmntRl;
+}
+    public 
+    String 
+    getCmmnctnPldCntntRfrncRfrnce()
+    {
+        return this.cmmnctnPldCntntRfrncRfrnce;
+    }
+    
+    public void setCmmnctnPldCntntRfrncRfrnce
+        (String cmmnctnPldCntntRfrncRfrnce) 
+        {
+      this.cmmnctnPldCntntRfrncRfrnce = cmmnctnPldCntntRfrncRfrnce;
+}
+    public 
+    String 
+    getCommunicationNoteAnnotationTime()
+    {
+        return this.communicationNoteAnnotationTime;
+    }
+    
+    public void setCommunicationNoteAnnotationTime
+        (String communicationNoteAnnotationTime) 
+        {
+      this.communicationNoteAnnotationTime = communicationNoteAnnotationTime;
+}
+    public 
+    String 
+    getCommunicationNoteAnnotationText()
+    {
+        return this.communicationNoteAnnotationText;
+    }
+    
+    public void setCommunicationNoteAnnotationText
+        (String communicationNoteAnnotationText) 
+        {
+      this.communicationNoteAnnotationText = communicationNoteAnnotationText;
+}
+    public 
+    String 
+    getCmmnctnNtNnttnThrRfrnce()
+    {
+        return this.cmmnctnNtNnttnThrRfrnce;
+    }
+    
+    public void setCmmnctnNtNnttnThrRfrnce
+        (String cmmnctnNtNnttnThrRfrnce) 
+        {
+      this.cmmnctnNtNnttnThrRfrnce = cmmnctnNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getCmmnctnNtNnttnThrStrng()
+    {
+        return this.cmmnctnNtNnttnThrStrng;
+    }
+    
+    public void setCmmnctnNtNnttnThrStrng
+        (String cmmnctnNtNnttnThrStrng) 
+        {
+      this.cmmnctnNtNnttnThrStrng = cmmnctnNtNnttnThrStrng;
+}
 
 
 

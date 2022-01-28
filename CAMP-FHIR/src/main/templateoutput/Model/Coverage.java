@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,761 +10,894 @@ package main.templateoutput.Model;
 public class Coverage  implements java.io.Serializable {
 
 
-     private String coverageIdentifierCodingCode;
-     private String cvrgDntfrCdngSrSlctd;
-     private String coverageIdentifierCodingVersion;
-     private String coverageIdentifierCodingDisplay;
-     private String coverageIdentifierCodingSystem;
-     private String coverageStatus;
-     private String coverageTypeCodingUserSelected;
-     private String coverageTypeCodingCode;
-     private String coverageTypeCodingVersion;
-     private String coverageTypeCodingDisplay;
-     private String coverageTypeCodingSystem;
-     private String coveragePolicyHolder;
-     private String coverageSubscriber;
-     private String coverageSubscriberId;
-     private String coverageBeneficiary;
-     private String coverageDependent;
-     private String cvrgRltnshpCdngSrSlctd;
-     private String coverageRelationshipCodingCode;
-     private String cvrgRltnshpCdngVrsn;
-     private String cvrgRltnshpCdngDsplay;
-     private String cvrgRltnshpCdngSstm;
-     private String cvrgPrdCdngSrSlctd;
-     private String coveragePeriodCodingCode;
-     private String coveragePeriodCodingVersion;
-     private String coveragePeriodCodingDisplay;
-     private String coveragePeriodCodingSystem;
-     private String coveragePayor;
-     private String coverageClass;
-     private String cvrgClssTpCdngSrSlctd;
-     private String coverageClassTypeCodingCode;
-     private String coverageClassTypeCodingVersion;
-     private String coverageClassTypeCodingDisplay;
-     private String coverageClassTypeCodingSystem;
-     private String coverageClassValue;
-     private String coverageClassName;
-     private String coverageOrder;
-     private String coverageNetwork;
-     private String coverageCostToBeneficiary;
-     private String cvrgCstTbnfcrTpCdngSrSlctd;
-     private String cvrgCstTbnfcrTpCdngCde;
-     private String cvrgCstTbnfcrTpCdngVrsn;
-     private String cvrgCstTbnfcrTpCdngDsplay;
-     private String cvrgCstTbnfcrTpCdngSstm;
-     private String cvrgCstTbnfcrVlSmplqntty;
-     private String cvrgCstTbnfcrVlMnCdngSrSlctd;
-     private String cvrgCstTbnfcrVlMnCdngCde;
-     private String cvrgCstTbnfcrVlMnCdngVrsn;
-     private String cvrgCstTbnfcrVlMnCdngDsplay;
-     private String cvrgCstTbnfcrVlMnCdngSstm;
-     private String cvrgCstTbnfcrXcptn;
-     private String cvrgCstTbnfcrXcptnTpCdngSrSlctd;
-     private String cvrgCstTbnfcrXcptnTpCdngCde;
-     private String cvrgCstTbnfcrXcptnTpCdngVrsn;
-     private String cvrgCstTbnfcrXcptnTpCdngDsplay;
-     private String cvrgCstTbnfcrXcptnTpCdngSstm;
-     private String cvrgCstTbnfcrXcptnPrdCdngSrSlctd;
-     private String cvrgCstTbnfcrXcptnPrdCdngCde;
-     private String cvrgCstTbnfcrXcptnPrdCdngVrsn;
-     private String cvrgCstTbnfcrXcptnPrdCdngDsplay;
-     private String cvrgCstTbnfcrXcptnPrdCdngSstm;
-     private String coverageSubrogation;
-     private String coverageContract;
+     private Integer id;
+     private String coverageIdentifierIdentifierUse;
+     private String cvrgDntfrDntfrTpCcCSstm;
+     private String cvrgDntfrDntfrTpCcCVrsn;
+     private String cvrgDntfrDntfrTpCcCCde;
+     private String cvrgDntfrDntfrTpCcCDsplay;
+     private String cvrgDntfrDntfrTpCcCSrSlctd;
+     private String cvrgDntfrDntfrTpCcTxt;
+     private String cvrgDntfrDntfrPrdPrdStrt;
+     private String cvrgDntfrDntfrPrdPrdNd;
+     private String cvrgDntfrDntfrSsgnr;
+     private String cvrgDntfrDntfrVlue;
+     private String cvrgDntfrDntfrSstm;
+     private String coverageStatusCode;
+     private String coverageTypeCcCodingCSystem;
+     private String coverageTypeCcCodingCVersion;
+     private String coverageTypeCcCodingCCode;
+     private String coverageTypeCcCodingCDisplay;
+     private String cvrgTpCcCdngCSrSlctd;
+     private String coverageTypeCcText;
+     private String coveragePolicyHolderReference;
+     private String coverageSubscriberReference;
+     private String coverageSubscriberIdString;
+     private String coverageBeneficiaryReference;
+     private String coverageDependentString;
+     private String cvrgRltnshpCcCdngCSstm;
+     private String cvrgRltnshpCcCdngCVrsn;
+     private String cvrgRltnshpCcCdngCCde;
+     private String cvrgRltnshpCcCdngCDsplay;
+     private String cvrgRltnshpCcCdngCSrSlctd;
+     private String coverageRelationshipCcText;
+     private String coveragePeriodPeriodStart;
+     private String coveragePeriodPeriodEnd;
+     private String coveragePayorReference;
+     private String cvrgClssTpCcCdngCSstm;
+     private String cvrgClssTpCcCdngCVrsn;
+     private String cvrgClssTpCcCdngCCde;
+     private String cvrgClssTpCcCdngCDsplay;
+     private String cvrgClssTpCcCdngCSrSlctd;
+     private String coverageClassTypeCcText;
+     private String coverageClassValueString;
+     private String coverageClassNameString;
+     private String coverageOrderPositiveInt;
+     private String coverageNetworkString;
+     private String cvrgCstTbnfcrTpCcCdngCSstm;
+     private String cvrgCstTbnfcrTpCcCdngCVrsn;
+     private String cvrgCstTbnfcrTpCcCdngCCde;
+     private String cvrgCstTbnfcrTpCcCdngCDsplay;
+     private String cvrgCstTbnfcrTpCcCdngCSrSlctd;
+     private String cvrgCstTbnfcrTpCcTxt;
+     private String cvrgCstTbnfcrVlSmplqnttSmplQntty;
+     private String cvrgCstTbnfcrVlMnMnCrrncy;
+     private String cvrgCstTbnfcrVlMnMnVlue;
+     private String cvrgCstTbnfcrXcptnTpCcCdngCSstm;
+     private String cvrgCstTbnfcrXcptnTpCcCdngCVrsn;
+     private String cvrgCstTbnfcrXcptnTpCcCdngCCde;
+     private String cvrgCstTbnfcrXcptnTpCcCdngCDsplay;
+     private String cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd;
+     private String cvrgCstTbnfcrXcptnTpCcTxt;
+     private String cvrgCstTbnfcrXcptnPrdPrdStrt;
+     private String cvrgCstTbnfcrXcptnPrdPrdNd;
+     private String coverageSubrogationBoolean;
+     private String coverageContractReference;
 
     public Coverage() {
     }
 
-	
-    public Coverage(String coverageIdentifierCodingCode) {
-        this.coverageIdentifierCodingCode = coverageIdentifierCodingCode;
-    }
-    public Coverage(String coverageIdentifierCodingCode, String cvrgDntfrCdngSrSlctd, String coverageIdentifierCodingVersion, String coverageIdentifierCodingDisplay, String coverageIdentifierCodingSystem, String coverageStatus, String coverageTypeCodingUserSelected, String coverageTypeCodingCode, String coverageTypeCodingVersion, String coverageTypeCodingDisplay, String coverageTypeCodingSystem, String coveragePolicyHolder, String coverageSubscriber, String coverageSubscriberId, String coverageBeneficiary, String coverageDependent, String cvrgRltnshpCdngSrSlctd, String coverageRelationshipCodingCode, String cvrgRltnshpCdngVrsn, String cvrgRltnshpCdngDsplay, String cvrgRltnshpCdngSstm, String cvrgPrdCdngSrSlctd, String coveragePeriodCodingCode, String coveragePeriodCodingVersion, String coveragePeriodCodingDisplay, String coveragePeriodCodingSystem, String coveragePayor, String coverageClass, String cvrgClssTpCdngSrSlctd, String coverageClassTypeCodingCode, String coverageClassTypeCodingVersion, String coverageClassTypeCodingDisplay, String coverageClassTypeCodingSystem, String coverageClassValue, String coverageClassName, String coverageOrder, String coverageNetwork, String coverageCostToBeneficiary, String cvrgCstTbnfcrTpCdngSrSlctd, String cvrgCstTbnfcrTpCdngCde, String cvrgCstTbnfcrTpCdngVrsn, String cvrgCstTbnfcrTpCdngDsplay, String cvrgCstTbnfcrTpCdngSstm, String cvrgCstTbnfcrVlSmplqntty, String cvrgCstTbnfcrVlMnCdngSrSlctd, String cvrgCstTbnfcrVlMnCdngCde, String cvrgCstTbnfcrVlMnCdngVrsn, String cvrgCstTbnfcrVlMnCdngDsplay, String cvrgCstTbnfcrVlMnCdngSstm, String cvrgCstTbnfcrXcptn, String cvrgCstTbnfcrXcptnTpCdngSrSlctd, String cvrgCstTbnfcrXcptnTpCdngCde, String cvrgCstTbnfcrXcptnTpCdngVrsn, String cvrgCstTbnfcrXcptnTpCdngDsplay, String cvrgCstTbnfcrXcptnTpCdngSstm, String cvrgCstTbnfcrXcptnPrdCdngSrSlctd, String cvrgCstTbnfcrXcptnPrdCdngCde, String cvrgCstTbnfcrXcptnPrdCdngVrsn, String cvrgCstTbnfcrXcptnPrdCdngDsplay, String cvrgCstTbnfcrXcptnPrdCdngSstm, String coverageSubrogation, String coverageContract) {
-       this.coverageIdentifierCodingCode = coverageIdentifierCodingCode;
-       this.cvrgDntfrCdngSrSlctd = cvrgDntfrCdngSrSlctd;
-       this.coverageIdentifierCodingVersion = coverageIdentifierCodingVersion;
-       this.coverageIdentifierCodingDisplay = coverageIdentifierCodingDisplay;
-       this.coverageIdentifierCodingSystem = coverageIdentifierCodingSystem;
-       this.coverageStatus = coverageStatus;
-       this.coverageTypeCodingUserSelected = coverageTypeCodingUserSelected;
-       this.coverageTypeCodingCode = coverageTypeCodingCode;
-       this.coverageTypeCodingVersion = coverageTypeCodingVersion;
-       this.coverageTypeCodingDisplay = coverageTypeCodingDisplay;
-       this.coverageTypeCodingSystem = coverageTypeCodingSystem;
-       this.coveragePolicyHolder = coveragePolicyHolder;
-       this.coverageSubscriber = coverageSubscriber;
-       this.coverageSubscriberId = coverageSubscriberId;
-       this.coverageBeneficiary = coverageBeneficiary;
-       this.coverageDependent = coverageDependent;
-       this.cvrgRltnshpCdngSrSlctd = cvrgRltnshpCdngSrSlctd;
-       this.coverageRelationshipCodingCode = coverageRelationshipCodingCode;
-       this.cvrgRltnshpCdngVrsn = cvrgRltnshpCdngVrsn;
-       this.cvrgRltnshpCdngDsplay = cvrgRltnshpCdngDsplay;
-       this.cvrgRltnshpCdngSstm = cvrgRltnshpCdngSstm;
-       this.cvrgPrdCdngSrSlctd = cvrgPrdCdngSrSlctd;
-       this.coveragePeriodCodingCode = coveragePeriodCodingCode;
-       this.coveragePeriodCodingVersion = coveragePeriodCodingVersion;
-       this.coveragePeriodCodingDisplay = coveragePeriodCodingDisplay;
-       this.coveragePeriodCodingSystem = coveragePeriodCodingSystem;
-       this.coveragePayor = coveragePayor;
-       this.coverageClass = coverageClass;
-       this.cvrgClssTpCdngSrSlctd = cvrgClssTpCdngSrSlctd;
-       this.coverageClassTypeCodingCode = coverageClassTypeCodingCode;
-       this.coverageClassTypeCodingVersion = coverageClassTypeCodingVersion;
-       this.coverageClassTypeCodingDisplay = coverageClassTypeCodingDisplay;
-       this.coverageClassTypeCodingSystem = coverageClassTypeCodingSystem;
-       this.coverageClassValue = coverageClassValue;
-       this.coverageClassName = coverageClassName;
-       this.coverageOrder = coverageOrder;
-       this.coverageNetwork = coverageNetwork;
-       this.coverageCostToBeneficiary = coverageCostToBeneficiary;
-       this.cvrgCstTbnfcrTpCdngSrSlctd = cvrgCstTbnfcrTpCdngSrSlctd;
-       this.cvrgCstTbnfcrTpCdngCde = cvrgCstTbnfcrTpCdngCde;
-       this.cvrgCstTbnfcrTpCdngVrsn = cvrgCstTbnfcrTpCdngVrsn;
-       this.cvrgCstTbnfcrTpCdngDsplay = cvrgCstTbnfcrTpCdngDsplay;
-       this.cvrgCstTbnfcrTpCdngSstm = cvrgCstTbnfcrTpCdngSstm;
-       this.cvrgCstTbnfcrVlSmplqntty = cvrgCstTbnfcrVlSmplqntty;
-       this.cvrgCstTbnfcrVlMnCdngSrSlctd = cvrgCstTbnfcrVlMnCdngSrSlctd;
-       this.cvrgCstTbnfcrVlMnCdngCde = cvrgCstTbnfcrVlMnCdngCde;
-       this.cvrgCstTbnfcrVlMnCdngVrsn = cvrgCstTbnfcrVlMnCdngVrsn;
-       this.cvrgCstTbnfcrVlMnCdngDsplay = cvrgCstTbnfcrVlMnCdngDsplay;
-       this.cvrgCstTbnfcrVlMnCdngSstm = cvrgCstTbnfcrVlMnCdngSstm;
-       this.cvrgCstTbnfcrXcptn = cvrgCstTbnfcrXcptn;
-       this.cvrgCstTbnfcrXcptnTpCdngSrSlctd = cvrgCstTbnfcrXcptnTpCdngSrSlctd;
-       this.cvrgCstTbnfcrXcptnTpCdngCde = cvrgCstTbnfcrXcptnTpCdngCde;
-       this.cvrgCstTbnfcrXcptnTpCdngVrsn = cvrgCstTbnfcrXcptnTpCdngVrsn;
-       this.cvrgCstTbnfcrXcptnTpCdngDsplay = cvrgCstTbnfcrXcptnTpCdngDsplay;
-       this.cvrgCstTbnfcrXcptnTpCdngSstm = cvrgCstTbnfcrXcptnTpCdngSstm;
-       this.cvrgCstTbnfcrXcptnPrdCdngSrSlctd = cvrgCstTbnfcrXcptnPrdCdngSrSlctd;
-       this.cvrgCstTbnfcrXcptnPrdCdngCde = cvrgCstTbnfcrXcptnPrdCdngCde;
-       this.cvrgCstTbnfcrXcptnPrdCdngVrsn = cvrgCstTbnfcrXcptnPrdCdngVrsn;
-       this.cvrgCstTbnfcrXcptnPrdCdngDsplay = cvrgCstTbnfcrXcptnPrdCdngDsplay;
-       this.cvrgCstTbnfcrXcptnPrdCdngSstm = cvrgCstTbnfcrXcptnPrdCdngSstm;
-       this.coverageSubrogation = coverageSubrogation;
-       this.coverageContract = coverageContract;
+    public Coverage(String coverageIdentifierIdentifierUse, String cvrgDntfrDntfrTpCcCSstm, String cvrgDntfrDntfrTpCcCVrsn, String cvrgDntfrDntfrTpCcCCde, String cvrgDntfrDntfrTpCcCDsplay, String cvrgDntfrDntfrTpCcCSrSlctd, String cvrgDntfrDntfrTpCcTxt, String cvrgDntfrDntfrPrdPrdStrt, String cvrgDntfrDntfrPrdPrdNd, String cvrgDntfrDntfrSsgnr, String cvrgDntfrDntfrVlue, String cvrgDntfrDntfrSstm, String coverageStatusCode, String coverageTypeCcCodingCSystem, String coverageTypeCcCodingCVersion, String coverageTypeCcCodingCCode, String coverageTypeCcCodingCDisplay, String cvrgTpCcCdngCSrSlctd, String coverageTypeCcText, String coveragePolicyHolderReference, String coverageSubscriberReference, String coverageSubscriberIdString, String coverageBeneficiaryReference, String coverageDependentString, String cvrgRltnshpCcCdngCSstm, String cvrgRltnshpCcCdngCVrsn, String cvrgRltnshpCcCdngCCde, String cvrgRltnshpCcCdngCDsplay, String cvrgRltnshpCcCdngCSrSlctd, String coverageRelationshipCcText, String coveragePeriodPeriodStart, String coveragePeriodPeriodEnd, String coveragePayorReference, String cvrgClssTpCcCdngCSstm, String cvrgClssTpCcCdngCVrsn, String cvrgClssTpCcCdngCCde, String cvrgClssTpCcCdngCDsplay, String cvrgClssTpCcCdngCSrSlctd, String coverageClassTypeCcText, String coverageClassValueString, String coverageClassNameString, String coverageOrderPositiveInt, String coverageNetworkString, String cvrgCstTbnfcrTpCcCdngCSstm, String cvrgCstTbnfcrTpCcCdngCVrsn, String cvrgCstTbnfcrTpCcCdngCCde, String cvrgCstTbnfcrTpCcCdngCDsplay, String cvrgCstTbnfcrTpCcCdngCSrSlctd, String cvrgCstTbnfcrTpCcTxt, String cvrgCstTbnfcrVlSmplqnttSmplQntty, String cvrgCstTbnfcrVlMnMnCrrncy, String cvrgCstTbnfcrVlMnMnVlue, String cvrgCstTbnfcrXcptnTpCcCdngCSstm, String cvrgCstTbnfcrXcptnTpCcCdngCVrsn, String cvrgCstTbnfcrXcptnTpCcCdngCCde, String cvrgCstTbnfcrXcptnTpCcCdngCDsplay, String cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd, String cvrgCstTbnfcrXcptnTpCcTxt, String cvrgCstTbnfcrXcptnPrdPrdStrt, String cvrgCstTbnfcrXcptnPrdPrdNd, String coverageSubrogationBoolean, String coverageContractReference) {
+       this.coverageIdentifierIdentifierUse = coverageIdentifierIdentifierUse;
+       this.cvrgDntfrDntfrTpCcCSstm = cvrgDntfrDntfrTpCcCSstm;
+       this.cvrgDntfrDntfrTpCcCVrsn = cvrgDntfrDntfrTpCcCVrsn;
+       this.cvrgDntfrDntfrTpCcCCde = cvrgDntfrDntfrTpCcCCde;
+       this.cvrgDntfrDntfrTpCcCDsplay = cvrgDntfrDntfrTpCcCDsplay;
+       this.cvrgDntfrDntfrTpCcCSrSlctd = cvrgDntfrDntfrTpCcCSrSlctd;
+       this.cvrgDntfrDntfrTpCcTxt = cvrgDntfrDntfrTpCcTxt;
+       this.cvrgDntfrDntfrPrdPrdStrt = cvrgDntfrDntfrPrdPrdStrt;
+       this.cvrgDntfrDntfrPrdPrdNd = cvrgDntfrDntfrPrdPrdNd;
+       this.cvrgDntfrDntfrSsgnr = cvrgDntfrDntfrSsgnr;
+       this.cvrgDntfrDntfrVlue = cvrgDntfrDntfrVlue;
+       this.cvrgDntfrDntfrSstm = cvrgDntfrDntfrSstm;
+       this.coverageStatusCode = coverageStatusCode;
+       this.coverageTypeCcCodingCSystem = coverageTypeCcCodingCSystem;
+       this.coverageTypeCcCodingCVersion = coverageTypeCcCodingCVersion;
+       this.coverageTypeCcCodingCCode = coverageTypeCcCodingCCode;
+       this.coverageTypeCcCodingCDisplay = coverageTypeCcCodingCDisplay;
+       this.cvrgTpCcCdngCSrSlctd = cvrgTpCcCdngCSrSlctd;
+       this.coverageTypeCcText = coverageTypeCcText;
+       this.coveragePolicyHolderReference = coveragePolicyHolderReference;
+       this.coverageSubscriberReference = coverageSubscriberReference;
+       this.coverageSubscriberIdString = coverageSubscriberIdString;
+       this.coverageBeneficiaryReference = coverageBeneficiaryReference;
+       this.coverageDependentString = coverageDependentString;
+       this.cvrgRltnshpCcCdngCSstm = cvrgRltnshpCcCdngCSstm;
+       this.cvrgRltnshpCcCdngCVrsn = cvrgRltnshpCcCdngCVrsn;
+       this.cvrgRltnshpCcCdngCCde = cvrgRltnshpCcCdngCCde;
+       this.cvrgRltnshpCcCdngCDsplay = cvrgRltnshpCcCdngCDsplay;
+       this.cvrgRltnshpCcCdngCSrSlctd = cvrgRltnshpCcCdngCSrSlctd;
+       this.coverageRelationshipCcText = coverageRelationshipCcText;
+       this.coveragePeriodPeriodStart = coveragePeriodPeriodStart;
+       this.coveragePeriodPeriodEnd = coveragePeriodPeriodEnd;
+       this.coveragePayorReference = coveragePayorReference;
+       this.cvrgClssTpCcCdngCSstm = cvrgClssTpCcCdngCSstm;
+       this.cvrgClssTpCcCdngCVrsn = cvrgClssTpCcCdngCVrsn;
+       this.cvrgClssTpCcCdngCCde = cvrgClssTpCcCdngCCde;
+       this.cvrgClssTpCcCdngCDsplay = cvrgClssTpCcCdngCDsplay;
+       this.cvrgClssTpCcCdngCSrSlctd = cvrgClssTpCcCdngCSrSlctd;
+       this.coverageClassTypeCcText = coverageClassTypeCcText;
+       this.coverageClassValueString = coverageClassValueString;
+       this.coverageClassNameString = coverageClassNameString;
+       this.coverageOrderPositiveInt = coverageOrderPositiveInt;
+       this.coverageNetworkString = coverageNetworkString;
+       this.cvrgCstTbnfcrTpCcCdngCSstm = cvrgCstTbnfcrTpCcCdngCSstm;
+       this.cvrgCstTbnfcrTpCcCdngCVrsn = cvrgCstTbnfcrTpCcCdngCVrsn;
+       this.cvrgCstTbnfcrTpCcCdngCCde = cvrgCstTbnfcrTpCcCdngCCde;
+       this.cvrgCstTbnfcrTpCcCdngCDsplay = cvrgCstTbnfcrTpCcCdngCDsplay;
+       this.cvrgCstTbnfcrTpCcCdngCSrSlctd = cvrgCstTbnfcrTpCcCdngCSrSlctd;
+       this.cvrgCstTbnfcrTpCcTxt = cvrgCstTbnfcrTpCcTxt;
+       this.cvrgCstTbnfcrVlSmplqnttSmplQntty = cvrgCstTbnfcrVlSmplqnttSmplQntty;
+       this.cvrgCstTbnfcrVlMnMnCrrncy = cvrgCstTbnfcrVlMnMnCrrncy;
+       this.cvrgCstTbnfcrVlMnMnVlue = cvrgCstTbnfcrVlMnMnVlue;
+       this.cvrgCstTbnfcrXcptnTpCcCdngCSstm = cvrgCstTbnfcrXcptnTpCcCdngCSstm;
+       this.cvrgCstTbnfcrXcptnTpCcCdngCVrsn = cvrgCstTbnfcrXcptnTpCcCdngCVrsn;
+       this.cvrgCstTbnfcrXcptnTpCcCdngCCde = cvrgCstTbnfcrXcptnTpCcCdngCCde;
+       this.cvrgCstTbnfcrXcptnTpCcCdngCDsplay = cvrgCstTbnfcrXcptnTpCcCdngCDsplay;
+       this.cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd = cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd;
+       this.cvrgCstTbnfcrXcptnTpCcTxt = cvrgCstTbnfcrXcptnTpCcTxt;
+       this.cvrgCstTbnfcrXcptnPrdPrdStrt = cvrgCstTbnfcrXcptnPrdPrdStrt;
+       this.cvrgCstTbnfcrXcptnPrdPrdNd = cvrgCstTbnfcrXcptnPrdPrdNd;
+       this.coverageSubrogationBoolean = coverageSubrogationBoolean;
+       this.coverageContractReference = coverageContractReference;
     }
    
-    public String getCoverageIdentifierCodingCode() {
-        return this.coverageIdentifierCodingCode;
-    }
-    
-    public void setCoverageIdentifierCodingCode(String coverageIdentifierCodingCode) {
-        this.coverageIdentifierCodingCode = coverageIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getCvrgDntfrCdngSrSlctd() {
-        return this.cvrgDntfrCdngSrSlctd;
-    }
-    
-    public void setCvrgDntfrCdngSrSlctd(String cvrgDntfrCdngSrSlctd) {
-        this.cvrgDntfrCdngSrSlctd = cvrgDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCoverageIdentifierCodingVersion() {
-        return this.coverageIdentifierCodingVersion;
-    }
-    
-    public void setCoverageIdentifierCodingVersion(String coverageIdentifierCodingVersion) {
-        this.coverageIdentifierCodingVersion = coverageIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getCoverageIdentifierCodingDisplay() {
-        return this.coverageIdentifierCodingDisplay;
-    }
-    
-    public void setCoverageIdentifierCodingDisplay(String coverageIdentifierCodingDisplay) {
-        this.coverageIdentifierCodingDisplay = coverageIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getCoverageIdentifierCodingSystem() {
-        return this.coverageIdentifierCodingSystem;
-    }
-    
-    public void setCoverageIdentifierCodingSystem(String coverageIdentifierCodingSystem) {
-        this.coverageIdentifierCodingSystem = coverageIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getCoverageStatus() {
-        return this.coverageStatus;
-    }
-    
-    public void setCoverageStatus(String coverageStatus) {
-        this.coverageStatus = coverageStatus;
-    }
-    
-    
-    
-    public String getCoverageTypeCodingUserSelected() {
-        return this.coverageTypeCodingUserSelected;
-    }
-    
-    public void setCoverageTypeCodingUserSelected(String coverageTypeCodingUserSelected) {
-        this.coverageTypeCodingUserSelected = coverageTypeCodingUserSelected;
-    }
-    
-    
-    
-    public String getCoverageTypeCodingCode() {
-        return this.coverageTypeCodingCode;
-    }
-    
-    public void setCoverageTypeCodingCode(String coverageTypeCodingCode) {
-        this.coverageTypeCodingCode = coverageTypeCodingCode;
-    }
-    
-    
-    
-    public String getCoverageTypeCodingVersion() {
-        return this.coverageTypeCodingVersion;
-    }
-    
-    public void setCoverageTypeCodingVersion(String coverageTypeCodingVersion) {
-        this.coverageTypeCodingVersion = coverageTypeCodingVersion;
-    }
-    
-    
-    
-    public String getCoverageTypeCodingDisplay() {
-        return this.coverageTypeCodingDisplay;
-    }
-    
-    public void setCoverageTypeCodingDisplay(String coverageTypeCodingDisplay) {
-        this.coverageTypeCodingDisplay = coverageTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getCoverageTypeCodingSystem() {
-        return this.coverageTypeCodingSystem;
-    }
-    
-    public void setCoverageTypeCodingSystem(String coverageTypeCodingSystem) {
-        this.coverageTypeCodingSystem = coverageTypeCodingSystem;
-    }
-    
-    
-    
-    public String getCoveragePolicyHolder() {
-        return this.coveragePolicyHolder;
-    }
-    
-    public void setCoveragePolicyHolder(String coveragePolicyHolder) {
-        this.coveragePolicyHolder = coveragePolicyHolder;
-    }
-    
-    
-    
-    public String getCoverageSubscriber() {
-        return this.coverageSubscriber;
-    }
-    
-    public void setCoverageSubscriber(String coverageSubscriber) {
-        this.coverageSubscriber = coverageSubscriber;
-    }
-    
-    
-    
-    public String getCoverageSubscriberId() {
-        return this.coverageSubscriberId;
-    }
-    
-    public void setCoverageSubscriberId(String coverageSubscriberId) {
-        this.coverageSubscriberId = coverageSubscriberId;
-    }
-    
-    
-    
-    public String getCoverageBeneficiary() {
-        return this.coverageBeneficiary;
-    }
-    
-    public void setCoverageBeneficiary(String coverageBeneficiary) {
-        this.coverageBeneficiary = coverageBeneficiary;
-    }
-    
-    
-    
-    public String getCoverageDependent() {
-        return this.coverageDependent;
-    }
-    
-    public void setCoverageDependent(String coverageDependent) {
-        this.coverageDependent = coverageDependent;
-    }
-    
-    
-    
-    public String getCvrgRltnshpCdngSrSlctd() {
-        return this.cvrgRltnshpCdngSrSlctd;
-    }
-    
-    public void setCvrgRltnshpCdngSrSlctd(String cvrgRltnshpCdngSrSlctd) {
-        this.cvrgRltnshpCdngSrSlctd = cvrgRltnshpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCoverageRelationshipCodingCode() {
-        return this.coverageRelationshipCodingCode;
-    }
-    
-    public void setCoverageRelationshipCodingCode(String coverageRelationshipCodingCode) {
-        this.coverageRelationshipCodingCode = coverageRelationshipCodingCode;
-    }
-    
-    
-    
-    public String getCvrgRltnshpCdngVrsn() {
-        return this.cvrgRltnshpCdngVrsn;
-    }
-    
-    public void setCvrgRltnshpCdngVrsn(String cvrgRltnshpCdngVrsn) {
-        this.cvrgRltnshpCdngVrsn = cvrgRltnshpCdngVrsn;
-    }
-    
-    
-    
-    public String getCvrgRltnshpCdngDsplay() {
-        return this.cvrgRltnshpCdngDsplay;
-    }
-    
-    public void setCvrgRltnshpCdngDsplay(String cvrgRltnshpCdngDsplay) {
-        this.cvrgRltnshpCdngDsplay = cvrgRltnshpCdngDsplay;
-    }
-    
-    
-    
-    public String getCvrgRltnshpCdngSstm() {
-        return this.cvrgRltnshpCdngSstm;
-    }
-    
-    public void setCvrgRltnshpCdngSstm(String cvrgRltnshpCdngSstm) {
-        this.cvrgRltnshpCdngSstm = cvrgRltnshpCdngSstm;
-    }
-    
-    
-    
-    public String getCvrgPrdCdngSrSlctd() {
-        return this.cvrgPrdCdngSrSlctd;
-    }
-    
-    public void setCvrgPrdCdngSrSlctd(String cvrgPrdCdngSrSlctd) {
-        this.cvrgPrdCdngSrSlctd = cvrgPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCoveragePeriodCodingCode() {
-        return this.coveragePeriodCodingCode;
-    }
-    
-    public void setCoveragePeriodCodingCode(String coveragePeriodCodingCode) {
-        this.coveragePeriodCodingCode = coveragePeriodCodingCode;
-    }
-    
-    
-    
-    public String getCoveragePeriodCodingVersion() {
-        return this.coveragePeriodCodingVersion;
-    }
-    
-    public void setCoveragePeriodCodingVersion(String coveragePeriodCodingVersion) {
-        this.coveragePeriodCodingVersion = coveragePeriodCodingVersion;
-    }
-    
-    
-    
-    public String getCoveragePeriodCodingDisplay() {
-        return this.coveragePeriodCodingDisplay;
-    }
-    
-    public void setCoveragePeriodCodingDisplay(String coveragePeriodCodingDisplay) {
-        this.coveragePeriodCodingDisplay = coveragePeriodCodingDisplay;
-    }
-    
-    
-    
-    public String getCoveragePeriodCodingSystem() {
-        return this.coveragePeriodCodingSystem;
-    }
-    
-    public void setCoveragePeriodCodingSystem(String coveragePeriodCodingSystem) {
-        this.coveragePeriodCodingSystem = coveragePeriodCodingSystem;
-    }
-    
-    
-    
-    public String getCoveragePayor() {
-        return this.coveragePayor;
-    }
-    
-    public void setCoveragePayor(String coveragePayor) {
-        this.coveragePayor = coveragePayor;
-    }
-    
-    
-    
-    public String getCoverageClass() {
-        return this.coverageClass;
-    }
-    
-    public void setCoverageClass(String coverageClass) {
-        this.coverageClass = coverageClass;
-    }
-    
-    
-    
-    public String getCvrgClssTpCdngSrSlctd() {
-        return this.cvrgClssTpCdngSrSlctd;
-    }
-    
-    public void setCvrgClssTpCdngSrSlctd(String cvrgClssTpCdngSrSlctd) {
-        this.cvrgClssTpCdngSrSlctd = cvrgClssTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCoverageClassTypeCodingCode() {
-        return this.coverageClassTypeCodingCode;
-    }
-    
-    public void setCoverageClassTypeCodingCode(String coverageClassTypeCodingCode) {
-        this.coverageClassTypeCodingCode = coverageClassTypeCodingCode;
-    }
-    
-    
-    
-    public String getCoverageClassTypeCodingVersion() {
-        return this.coverageClassTypeCodingVersion;
-    }
-    
-    public void setCoverageClassTypeCodingVersion(String coverageClassTypeCodingVersion) {
-        this.coverageClassTypeCodingVersion = coverageClassTypeCodingVersion;
-    }
-    
-    
-    
-    public String getCoverageClassTypeCodingDisplay() {
-        return this.coverageClassTypeCodingDisplay;
-    }
-    
-    public void setCoverageClassTypeCodingDisplay(String coverageClassTypeCodingDisplay) {
-        this.coverageClassTypeCodingDisplay = coverageClassTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getCoverageClassTypeCodingSystem() {
-        return this.coverageClassTypeCodingSystem;
-    }
-    
-    public void setCoverageClassTypeCodingSystem(String coverageClassTypeCodingSystem) {
-        this.coverageClassTypeCodingSystem = coverageClassTypeCodingSystem;
-    }
-    
-    
-    
-    public String getCoverageClassValue() {
-        return this.coverageClassValue;
-    }
-    
-    public void setCoverageClassValue(String coverageClassValue) {
-        this.coverageClassValue = coverageClassValue;
-    }
-    
-    
-    
-    public String getCoverageClassName() {
-        return this.coverageClassName;
-    }
-    
-    public void setCoverageClassName(String coverageClassName) {
-        this.coverageClassName = coverageClassName;
-    }
-    
-    
-    
-    public String getCoverageOrder() {
-        return this.coverageOrder;
-    }
-    
-    public void setCoverageOrder(String coverageOrder) {
-        this.coverageOrder = coverageOrder;
-    }
-    
-    
-    
-    public String getCoverageNetwork() {
-        return this.coverageNetwork;
-    }
-    
-    public void setCoverageNetwork(String coverageNetwork) {
-        this.coverageNetwork = coverageNetwork;
-    }
-    
-    
-    
-    public String getCoverageCostToBeneficiary() {
-        return this.coverageCostToBeneficiary;
-    }
-    
-    public void setCoverageCostToBeneficiary(String coverageCostToBeneficiary) {
-        this.coverageCostToBeneficiary = coverageCostToBeneficiary;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrTpCdngSrSlctd() {
-        return this.cvrgCstTbnfcrTpCdngSrSlctd;
-    }
-    
-    public void setCvrgCstTbnfcrTpCdngSrSlctd(String cvrgCstTbnfcrTpCdngSrSlctd) {
-        this.cvrgCstTbnfcrTpCdngSrSlctd = cvrgCstTbnfcrTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrTpCdngCde() {
-        return this.cvrgCstTbnfcrTpCdngCde;
-    }
-    
-    public void setCvrgCstTbnfcrTpCdngCde(String cvrgCstTbnfcrTpCdngCde) {
-        this.cvrgCstTbnfcrTpCdngCde = cvrgCstTbnfcrTpCdngCde;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrTpCdngVrsn() {
-        return this.cvrgCstTbnfcrTpCdngVrsn;
-    }
-    
-    public void setCvrgCstTbnfcrTpCdngVrsn(String cvrgCstTbnfcrTpCdngVrsn) {
-        this.cvrgCstTbnfcrTpCdngVrsn = cvrgCstTbnfcrTpCdngVrsn;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrTpCdngDsplay() {
-        return this.cvrgCstTbnfcrTpCdngDsplay;
-    }
-    
-    public void setCvrgCstTbnfcrTpCdngDsplay(String cvrgCstTbnfcrTpCdngDsplay) {
-        this.cvrgCstTbnfcrTpCdngDsplay = cvrgCstTbnfcrTpCdngDsplay;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrTpCdngSstm() {
-        return this.cvrgCstTbnfcrTpCdngSstm;
-    }
-    
-    public void setCvrgCstTbnfcrTpCdngSstm(String cvrgCstTbnfcrTpCdngSstm) {
-        this.cvrgCstTbnfcrTpCdngSstm = cvrgCstTbnfcrTpCdngSstm;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlSmplqntty() {
-        return this.cvrgCstTbnfcrVlSmplqntty;
-    }
-    
-    public void setCvrgCstTbnfcrVlSmplqntty(String cvrgCstTbnfcrVlSmplqntty) {
-        this.cvrgCstTbnfcrVlSmplqntty = cvrgCstTbnfcrVlSmplqntty;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlMnCdngSrSlctd() {
-        return this.cvrgCstTbnfcrVlMnCdngSrSlctd;
-    }
-    
-    public void setCvrgCstTbnfcrVlMnCdngSrSlctd(String cvrgCstTbnfcrVlMnCdngSrSlctd) {
-        this.cvrgCstTbnfcrVlMnCdngSrSlctd = cvrgCstTbnfcrVlMnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlMnCdngCde() {
-        return this.cvrgCstTbnfcrVlMnCdngCde;
-    }
-    
-    public void setCvrgCstTbnfcrVlMnCdngCde(String cvrgCstTbnfcrVlMnCdngCde) {
-        this.cvrgCstTbnfcrVlMnCdngCde = cvrgCstTbnfcrVlMnCdngCde;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlMnCdngVrsn() {
-        return this.cvrgCstTbnfcrVlMnCdngVrsn;
-    }
-    
-    public void setCvrgCstTbnfcrVlMnCdngVrsn(String cvrgCstTbnfcrVlMnCdngVrsn) {
-        this.cvrgCstTbnfcrVlMnCdngVrsn = cvrgCstTbnfcrVlMnCdngVrsn;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlMnCdngDsplay() {
-        return this.cvrgCstTbnfcrVlMnCdngDsplay;
-    }
-    
-    public void setCvrgCstTbnfcrVlMnCdngDsplay(String cvrgCstTbnfcrVlMnCdngDsplay) {
-        this.cvrgCstTbnfcrVlMnCdngDsplay = cvrgCstTbnfcrVlMnCdngDsplay;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrVlMnCdngSstm() {
-        return this.cvrgCstTbnfcrVlMnCdngSstm;
-    }
-    
-    public void setCvrgCstTbnfcrVlMnCdngSstm(String cvrgCstTbnfcrVlMnCdngSstm) {
-        this.cvrgCstTbnfcrVlMnCdngSstm = cvrgCstTbnfcrVlMnCdngSstm;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptn() {
-        return this.cvrgCstTbnfcrXcptn;
-    }
-    
-    public void setCvrgCstTbnfcrXcptn(String cvrgCstTbnfcrXcptn) {
-        this.cvrgCstTbnfcrXcptn = cvrgCstTbnfcrXcptn;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnTpCdngSrSlctd() {
-        return this.cvrgCstTbnfcrXcptnTpCdngSrSlctd;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnTpCdngSrSlctd(String cvrgCstTbnfcrXcptnTpCdngSrSlctd) {
-        this.cvrgCstTbnfcrXcptnTpCdngSrSlctd = cvrgCstTbnfcrXcptnTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnTpCdngCde() {
-        return this.cvrgCstTbnfcrXcptnTpCdngCde;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnTpCdngCde(String cvrgCstTbnfcrXcptnTpCdngCde) {
-        this.cvrgCstTbnfcrXcptnTpCdngCde = cvrgCstTbnfcrXcptnTpCdngCde;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnTpCdngVrsn() {
-        return this.cvrgCstTbnfcrXcptnTpCdngVrsn;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnTpCdngVrsn(String cvrgCstTbnfcrXcptnTpCdngVrsn) {
-        this.cvrgCstTbnfcrXcptnTpCdngVrsn = cvrgCstTbnfcrXcptnTpCdngVrsn;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnTpCdngDsplay() {
-        return this.cvrgCstTbnfcrXcptnTpCdngDsplay;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnTpCdngDsplay(String cvrgCstTbnfcrXcptnTpCdngDsplay) {
-        this.cvrgCstTbnfcrXcptnTpCdngDsplay = cvrgCstTbnfcrXcptnTpCdngDsplay;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnTpCdngSstm() {
-        return this.cvrgCstTbnfcrXcptnTpCdngSstm;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnTpCdngSstm(String cvrgCstTbnfcrXcptnTpCdngSstm) {
-        this.cvrgCstTbnfcrXcptnTpCdngSstm = cvrgCstTbnfcrXcptnTpCdngSstm;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnPrdCdngSrSlctd() {
-        return this.cvrgCstTbnfcrXcptnPrdCdngSrSlctd;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnPrdCdngSrSlctd(String cvrgCstTbnfcrXcptnPrdCdngSrSlctd) {
-        this.cvrgCstTbnfcrXcptnPrdCdngSrSlctd = cvrgCstTbnfcrXcptnPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnPrdCdngCde() {
-        return this.cvrgCstTbnfcrXcptnPrdCdngCde;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnPrdCdngCde(String cvrgCstTbnfcrXcptnPrdCdngCde) {
-        this.cvrgCstTbnfcrXcptnPrdCdngCde = cvrgCstTbnfcrXcptnPrdCdngCde;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnPrdCdngVrsn() {
-        return this.cvrgCstTbnfcrXcptnPrdCdngVrsn;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnPrdCdngVrsn(String cvrgCstTbnfcrXcptnPrdCdngVrsn) {
-        this.cvrgCstTbnfcrXcptnPrdCdngVrsn = cvrgCstTbnfcrXcptnPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnPrdCdngDsplay() {
-        return this.cvrgCstTbnfcrXcptnPrdCdngDsplay;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnPrdCdngDsplay(String cvrgCstTbnfcrXcptnPrdCdngDsplay) {
-        this.cvrgCstTbnfcrXcptnPrdCdngDsplay = cvrgCstTbnfcrXcptnPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getCvrgCstTbnfcrXcptnPrdCdngSstm() {
-        return this.cvrgCstTbnfcrXcptnPrdCdngSstm;
-    }
-    
-    public void setCvrgCstTbnfcrXcptnPrdCdngSstm(String cvrgCstTbnfcrXcptnPrdCdngSstm) {
-        this.cvrgCstTbnfcrXcptnPrdCdngSstm = cvrgCstTbnfcrXcptnPrdCdngSstm;
-    }
-    
-    
-    
-    public String getCoverageSubrogation() {
-        return this.coverageSubrogation;
-    }
-    
-    public void setCoverageSubrogation(String coverageSubrogation) {
-        this.coverageSubrogation = coverageSubrogation;
-    }
-    
-    
-    
-    public String getCoverageContract() {
-        return this.coverageContract;
-    }
-    
-    public void setCoverageContract(String coverageContract) {
-        this.coverageContract = coverageContract;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCoverageIdentifierIdentifierUse()
+    {
+        return this.coverageIdentifierIdentifierUse;
+    }
+    
+    public void setCoverageIdentifierIdentifierUse
+        (String coverageIdentifierIdentifierUse) 
+        {
+      this.coverageIdentifierIdentifierUse = coverageIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcCSstm()
+    {
+        return this.cvrgDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcCSstm
+        (String cvrgDntfrDntfrTpCcCSstm) 
+        {
+      this.cvrgDntfrDntfrTpCcCSstm = cvrgDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcCVrsn()
+    {
+        return this.cvrgDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcCVrsn
+        (String cvrgDntfrDntfrTpCcCVrsn) 
+        {
+      this.cvrgDntfrDntfrTpCcCVrsn = cvrgDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcCCde()
+    {
+        return this.cvrgDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcCCde
+        (String cvrgDntfrDntfrTpCcCCde) 
+        {
+      this.cvrgDntfrDntfrTpCcCCde = cvrgDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcCDsplay()
+    {
+        return this.cvrgDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcCDsplay
+        (String cvrgDntfrDntfrTpCcCDsplay) 
+        {
+      this.cvrgDntfrDntfrTpCcCDsplay = cvrgDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cvrgDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcCSrSlctd
+        (String cvrgDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cvrgDntfrDntfrTpCcCSrSlctd = cvrgDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrTpCcTxt()
+    {
+        return this.cvrgDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCvrgDntfrDntfrTpCcTxt
+        (String cvrgDntfrDntfrTpCcTxt) 
+        {
+      this.cvrgDntfrDntfrTpCcTxt = cvrgDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrPrdPrdStrt()
+    {
+        return this.cvrgDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCvrgDntfrDntfrPrdPrdStrt
+        (String cvrgDntfrDntfrPrdPrdStrt) 
+        {
+      this.cvrgDntfrDntfrPrdPrdStrt = cvrgDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrPrdPrdNd()
+    {
+        return this.cvrgDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCvrgDntfrDntfrPrdPrdNd
+        (String cvrgDntfrDntfrPrdPrdNd) 
+        {
+      this.cvrgDntfrDntfrPrdPrdNd = cvrgDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrSsgnr()
+    {
+        return this.cvrgDntfrDntfrSsgnr;
+    }
+    
+    public void setCvrgDntfrDntfrSsgnr
+        (String cvrgDntfrDntfrSsgnr) 
+        {
+      this.cvrgDntfrDntfrSsgnr = cvrgDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrVlue()
+    {
+        return this.cvrgDntfrDntfrVlue;
+    }
+    
+    public void setCvrgDntfrDntfrVlue
+        (String cvrgDntfrDntfrVlue) 
+        {
+      this.cvrgDntfrDntfrVlue = cvrgDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCvrgDntfrDntfrSstm()
+    {
+        return this.cvrgDntfrDntfrSstm;
+    }
+    
+    public void setCvrgDntfrDntfrSstm
+        (String cvrgDntfrDntfrSstm) 
+        {
+      this.cvrgDntfrDntfrSstm = cvrgDntfrDntfrSstm;
+}
+    public 
+    String 
+    getCoverageStatusCode()
+    {
+        return this.coverageStatusCode;
+    }
+    
+    public void setCoverageStatusCode
+        (String coverageStatusCode) 
+        {
+      this.coverageStatusCode = coverageStatusCode;
+}
+    public 
+    String 
+    getCoverageTypeCcCodingCSystem()
+    {
+        return this.coverageTypeCcCodingCSystem;
+    }
+    
+    public void setCoverageTypeCcCodingCSystem
+        (String coverageTypeCcCodingCSystem) 
+        {
+      this.coverageTypeCcCodingCSystem = coverageTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getCoverageTypeCcCodingCVersion()
+    {
+        return this.coverageTypeCcCodingCVersion;
+    }
+    
+    public void setCoverageTypeCcCodingCVersion
+        (String coverageTypeCcCodingCVersion) 
+        {
+      this.coverageTypeCcCodingCVersion = coverageTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getCoverageTypeCcCodingCCode()
+    {
+        return this.coverageTypeCcCodingCCode;
+    }
+    
+    public void setCoverageTypeCcCodingCCode
+        (String coverageTypeCcCodingCCode) 
+        {
+      this.coverageTypeCcCodingCCode = coverageTypeCcCodingCCode;
+}
+    public 
+    String 
+    getCoverageTypeCcCodingCDisplay()
+    {
+        return this.coverageTypeCcCodingCDisplay;
+    }
+    
+    public void setCoverageTypeCcCodingCDisplay
+        (String coverageTypeCcCodingCDisplay) 
+        {
+      this.coverageTypeCcCodingCDisplay = coverageTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getCvrgTpCcCdngCSrSlctd()
+    {
+        return this.cvrgTpCcCdngCSrSlctd;
+    }
+    
+    public void setCvrgTpCcCdngCSrSlctd
+        (String cvrgTpCcCdngCSrSlctd) 
+        {
+      this.cvrgTpCcCdngCSrSlctd = cvrgTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCoverageTypeCcText()
+    {
+        return this.coverageTypeCcText;
+    }
+    
+    public void setCoverageTypeCcText
+        (String coverageTypeCcText) 
+        {
+      this.coverageTypeCcText = coverageTypeCcText;
+}
+    public 
+    String 
+    getCoveragePolicyHolderReference()
+    {
+        return this.coveragePolicyHolderReference;
+    }
+    
+    public void setCoveragePolicyHolderReference
+        (String coveragePolicyHolderReference) 
+        {
+      this.coveragePolicyHolderReference = coveragePolicyHolderReference;
+}
+    public 
+    String 
+    getCoverageSubscriberReference()
+    {
+        return this.coverageSubscriberReference;
+    }
+    
+    public void setCoverageSubscriberReference
+        (String coverageSubscriberReference) 
+        {
+      this.coverageSubscriberReference = coverageSubscriberReference;
+}
+    public 
+    String 
+    getCoverageSubscriberIdString()
+    {
+        return this.coverageSubscriberIdString;
+    }
+    
+    public void setCoverageSubscriberIdString
+        (String coverageSubscriberIdString) 
+        {
+      this.coverageSubscriberIdString = coverageSubscriberIdString;
+}
+    public 
+    String 
+    getCoverageBeneficiaryReference()
+    {
+        return this.coverageBeneficiaryReference;
+    }
+    
+    public void setCoverageBeneficiaryReference
+        (String coverageBeneficiaryReference) 
+        {
+      this.coverageBeneficiaryReference = coverageBeneficiaryReference;
+}
+    public 
+    String 
+    getCoverageDependentString()
+    {
+        return this.coverageDependentString;
+    }
+    
+    public void setCoverageDependentString
+        (String coverageDependentString) 
+        {
+      this.coverageDependentString = coverageDependentString;
+}
+    public 
+    String 
+    getCvrgRltnshpCcCdngCSstm()
+    {
+        return this.cvrgRltnshpCcCdngCSstm;
+    }
+    
+    public void setCvrgRltnshpCcCdngCSstm
+        (String cvrgRltnshpCcCdngCSstm) 
+        {
+      this.cvrgRltnshpCcCdngCSstm = cvrgRltnshpCcCdngCSstm;
+}
+    public 
+    String 
+    getCvrgRltnshpCcCdngCVrsn()
+    {
+        return this.cvrgRltnshpCcCdngCVrsn;
+    }
+    
+    public void setCvrgRltnshpCcCdngCVrsn
+        (String cvrgRltnshpCcCdngCVrsn) 
+        {
+      this.cvrgRltnshpCcCdngCVrsn = cvrgRltnshpCcCdngCVrsn;
+}
+    public 
+    String 
+    getCvrgRltnshpCcCdngCCde()
+    {
+        return this.cvrgRltnshpCcCdngCCde;
+    }
+    
+    public void setCvrgRltnshpCcCdngCCde
+        (String cvrgRltnshpCcCdngCCde) 
+        {
+      this.cvrgRltnshpCcCdngCCde = cvrgRltnshpCcCdngCCde;
+}
+    public 
+    String 
+    getCvrgRltnshpCcCdngCDsplay()
+    {
+        return this.cvrgRltnshpCcCdngCDsplay;
+    }
+    
+    public void setCvrgRltnshpCcCdngCDsplay
+        (String cvrgRltnshpCcCdngCDsplay) 
+        {
+      this.cvrgRltnshpCcCdngCDsplay = cvrgRltnshpCcCdngCDsplay;
+}
+    public 
+    String 
+    getCvrgRltnshpCcCdngCSrSlctd()
+    {
+        return this.cvrgRltnshpCcCdngCSrSlctd;
+    }
+    
+    public void setCvrgRltnshpCcCdngCSrSlctd
+        (String cvrgRltnshpCcCdngCSrSlctd) 
+        {
+      this.cvrgRltnshpCcCdngCSrSlctd = cvrgRltnshpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCoverageRelationshipCcText()
+    {
+        return this.coverageRelationshipCcText;
+    }
+    
+    public void setCoverageRelationshipCcText
+        (String coverageRelationshipCcText) 
+        {
+      this.coverageRelationshipCcText = coverageRelationshipCcText;
+}
+    public 
+    String 
+    getCoveragePeriodPeriodStart()
+    {
+        return this.coveragePeriodPeriodStart;
+    }
+    
+    public void setCoveragePeriodPeriodStart
+        (String coveragePeriodPeriodStart) 
+        {
+      this.coveragePeriodPeriodStart = coveragePeriodPeriodStart;
+}
+    public 
+    String 
+    getCoveragePeriodPeriodEnd()
+    {
+        return this.coveragePeriodPeriodEnd;
+    }
+    
+    public void setCoveragePeriodPeriodEnd
+        (String coveragePeriodPeriodEnd) 
+        {
+      this.coveragePeriodPeriodEnd = coveragePeriodPeriodEnd;
+}
+    public 
+    String 
+    getCoveragePayorReference()
+    {
+        return this.coveragePayorReference;
+    }
+    
+    public void setCoveragePayorReference
+        (String coveragePayorReference) 
+        {
+      this.coveragePayorReference = coveragePayorReference;
+}
+    public 
+    String 
+    getCvrgClssTpCcCdngCSstm()
+    {
+        return this.cvrgClssTpCcCdngCSstm;
+    }
+    
+    public void setCvrgClssTpCcCdngCSstm
+        (String cvrgClssTpCcCdngCSstm) 
+        {
+      this.cvrgClssTpCcCdngCSstm = cvrgClssTpCcCdngCSstm;
+}
+    public 
+    String 
+    getCvrgClssTpCcCdngCVrsn()
+    {
+        return this.cvrgClssTpCcCdngCVrsn;
+    }
+    
+    public void setCvrgClssTpCcCdngCVrsn
+        (String cvrgClssTpCcCdngCVrsn) 
+        {
+      this.cvrgClssTpCcCdngCVrsn = cvrgClssTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getCvrgClssTpCcCdngCCde()
+    {
+        return this.cvrgClssTpCcCdngCCde;
+    }
+    
+    public void setCvrgClssTpCcCdngCCde
+        (String cvrgClssTpCcCdngCCde) 
+        {
+      this.cvrgClssTpCcCdngCCde = cvrgClssTpCcCdngCCde;
+}
+    public 
+    String 
+    getCvrgClssTpCcCdngCDsplay()
+    {
+        return this.cvrgClssTpCcCdngCDsplay;
+    }
+    
+    public void setCvrgClssTpCcCdngCDsplay
+        (String cvrgClssTpCcCdngCDsplay) 
+        {
+      this.cvrgClssTpCcCdngCDsplay = cvrgClssTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getCvrgClssTpCcCdngCSrSlctd()
+    {
+        return this.cvrgClssTpCcCdngCSrSlctd;
+    }
+    
+    public void setCvrgClssTpCcCdngCSrSlctd
+        (String cvrgClssTpCcCdngCSrSlctd) 
+        {
+      this.cvrgClssTpCcCdngCSrSlctd = cvrgClssTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCoverageClassTypeCcText()
+    {
+        return this.coverageClassTypeCcText;
+    }
+    
+    public void setCoverageClassTypeCcText
+        (String coverageClassTypeCcText) 
+        {
+      this.coverageClassTypeCcText = coverageClassTypeCcText;
+}
+    public 
+    String 
+    getCoverageClassValueString()
+    {
+        return this.coverageClassValueString;
+    }
+    
+    public void setCoverageClassValueString
+        (String coverageClassValueString) 
+        {
+      this.coverageClassValueString = coverageClassValueString;
+}
+    public 
+    String 
+    getCoverageClassNameString()
+    {
+        return this.coverageClassNameString;
+    }
+    
+    public void setCoverageClassNameString
+        (String coverageClassNameString) 
+        {
+      this.coverageClassNameString = coverageClassNameString;
+}
+    public 
+    String 
+    getCoverageOrderPositiveInt()
+    {
+        return this.coverageOrderPositiveInt;
+    }
+    
+    public void setCoverageOrderPositiveInt
+        (String coverageOrderPositiveInt) 
+        {
+      this.coverageOrderPositiveInt = coverageOrderPositiveInt;
+}
+    public 
+    String 
+    getCoverageNetworkString()
+    {
+        return this.coverageNetworkString;
+    }
+    
+    public void setCoverageNetworkString
+        (String coverageNetworkString) 
+        {
+      this.coverageNetworkString = coverageNetworkString;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcCdngCSstm()
+    {
+        return this.cvrgCstTbnfcrTpCcCdngCSstm;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcCdngCSstm
+        (String cvrgCstTbnfcrTpCcCdngCSstm) 
+        {
+      this.cvrgCstTbnfcrTpCcCdngCSstm = cvrgCstTbnfcrTpCcCdngCSstm;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcCdngCVrsn()
+    {
+        return this.cvrgCstTbnfcrTpCcCdngCVrsn;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcCdngCVrsn
+        (String cvrgCstTbnfcrTpCcCdngCVrsn) 
+        {
+      this.cvrgCstTbnfcrTpCcCdngCVrsn = cvrgCstTbnfcrTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcCdngCCde()
+    {
+        return this.cvrgCstTbnfcrTpCcCdngCCde;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcCdngCCde
+        (String cvrgCstTbnfcrTpCcCdngCCde) 
+        {
+      this.cvrgCstTbnfcrTpCcCdngCCde = cvrgCstTbnfcrTpCcCdngCCde;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcCdngCDsplay()
+    {
+        return this.cvrgCstTbnfcrTpCcCdngCDsplay;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcCdngCDsplay
+        (String cvrgCstTbnfcrTpCcCdngCDsplay) 
+        {
+      this.cvrgCstTbnfcrTpCcCdngCDsplay = cvrgCstTbnfcrTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcCdngCSrSlctd()
+    {
+        return this.cvrgCstTbnfcrTpCcCdngCSrSlctd;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcCdngCSrSlctd
+        (String cvrgCstTbnfcrTpCcCdngCSrSlctd) 
+        {
+      this.cvrgCstTbnfcrTpCcCdngCSrSlctd = cvrgCstTbnfcrTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrTpCcTxt()
+    {
+        return this.cvrgCstTbnfcrTpCcTxt;
+    }
+    
+    public void setCvrgCstTbnfcrTpCcTxt
+        (String cvrgCstTbnfcrTpCcTxt) 
+        {
+      this.cvrgCstTbnfcrTpCcTxt = cvrgCstTbnfcrTpCcTxt;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrVlSmplqnttSmplQntty()
+    {
+        return this.cvrgCstTbnfcrVlSmplqnttSmplQntty;
+    }
+    
+    public void setCvrgCstTbnfcrVlSmplqnttSmplQntty
+        (String cvrgCstTbnfcrVlSmplqnttSmplQntty) 
+        {
+      this.cvrgCstTbnfcrVlSmplqnttSmplQntty = cvrgCstTbnfcrVlSmplqnttSmplQntty;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrVlMnMnCrrncy()
+    {
+        return this.cvrgCstTbnfcrVlMnMnCrrncy;
+    }
+    
+    public void setCvrgCstTbnfcrVlMnMnCrrncy
+        (String cvrgCstTbnfcrVlMnMnCrrncy) 
+        {
+      this.cvrgCstTbnfcrVlMnMnCrrncy = cvrgCstTbnfcrVlMnMnCrrncy;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrVlMnMnVlue()
+    {
+        return this.cvrgCstTbnfcrVlMnMnVlue;
+    }
+    
+    public void setCvrgCstTbnfcrVlMnMnVlue
+        (String cvrgCstTbnfcrVlMnMnVlue) 
+        {
+      this.cvrgCstTbnfcrVlMnMnVlue = cvrgCstTbnfcrVlMnMnVlue;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcCdngCSstm()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcCdngCSstm;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcCdngCSstm
+        (String cvrgCstTbnfcrXcptnTpCcCdngCSstm) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcCdngCSstm = cvrgCstTbnfcrXcptnTpCcCdngCSstm;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcCdngCVrsn()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcCdngCVrsn;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcCdngCVrsn
+        (String cvrgCstTbnfcrXcptnTpCcCdngCVrsn) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcCdngCVrsn = cvrgCstTbnfcrXcptnTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcCdngCCde()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcCdngCCde;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcCdngCCde
+        (String cvrgCstTbnfcrXcptnTpCcCdngCCde) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcCdngCCde = cvrgCstTbnfcrXcptnTpCcCdngCCde;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcCdngCDsplay()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcCdngCDsplay;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcCdngCDsplay
+        (String cvrgCstTbnfcrXcptnTpCcCdngCDsplay) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcCdngCDsplay = cvrgCstTbnfcrXcptnTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcCdngCSrSlctd()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcCdngCSrSlctd
+        (String cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd = cvrgCstTbnfcrXcptnTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnTpCcTxt()
+    {
+        return this.cvrgCstTbnfcrXcptnTpCcTxt;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnTpCcTxt
+        (String cvrgCstTbnfcrXcptnTpCcTxt) 
+        {
+      this.cvrgCstTbnfcrXcptnTpCcTxt = cvrgCstTbnfcrXcptnTpCcTxt;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnPrdPrdStrt()
+    {
+        return this.cvrgCstTbnfcrXcptnPrdPrdStrt;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnPrdPrdStrt
+        (String cvrgCstTbnfcrXcptnPrdPrdStrt) 
+        {
+      this.cvrgCstTbnfcrXcptnPrdPrdStrt = cvrgCstTbnfcrXcptnPrdPrdStrt;
+}
+    public 
+    String 
+    getCvrgCstTbnfcrXcptnPrdPrdNd()
+    {
+        return this.cvrgCstTbnfcrXcptnPrdPrdNd;
+    }
+    
+    public void setCvrgCstTbnfcrXcptnPrdPrdNd
+        (String cvrgCstTbnfcrXcptnPrdPrdNd) 
+        {
+      this.cvrgCstTbnfcrXcptnPrdPrdNd = cvrgCstTbnfcrXcptnPrdPrdNd;
+}
+    public 
+    String 
+    getCoverageSubrogationBoolean()
+    {
+        return this.coverageSubrogationBoolean;
+    }
+    
+    public void setCoverageSubrogationBoolean
+        (String coverageSubrogationBoolean) 
+        {
+      this.coverageSubrogationBoolean = coverageSubrogationBoolean;
+}
+    public 
+    String 
+    getCoverageContractReference()
+    {
+        return this.coverageContractReference;
+    }
+    
+    public void setCoverageContractReference
+        (String coverageContractReference) 
+        {
+      this.coverageContractReference = coverageContractReference;
+}
 
 
 

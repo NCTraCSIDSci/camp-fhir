@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,785 +10,1216 @@ package main.templateoutput.Model;
 public class Examplescenario  implements java.io.Serializable {
 
 
-     private String exampleScenarioUrl;
-     private String exmplScnrDntfrDntfrSCde;
-     private String exmplScnrDntfrDntfrTpCdblCncptCdngSstm;
-     private String exmplScnrDntfrDntfrTpCdblCncptCdngVrsn;
-     private String exmplScnrDntfrDntfrTpCdblCncptCdngCde;
-     private String exmplScnrDntfrDntfrTpCdblCncptCdngDsplay;
-     private String exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String exmplScnrDntfrDntfrCdblCncptTxt;
-     private String exmplScnrDntfrDntfrPrdStrt;
-     private String exmplScnrDntfrDntfrPrdNd;
-     private String exmplScnrDntfrDntfrRfrncRfrnce;
-     private String exmplScnrDntfrDntfrRfrncTpe;
-     private String exmplScnrDntfrDntfrRfrncDntfr;
-     private String exmplScnrDntfrDntfrRfrncDsplay;
-     private String exmplScnrDntfrDntfrVlStrng;
-     private String exmplScnrDntfrDntfrSstmRi;
-     private String exampleScenarioVersion;
-     private String exampleScenarioName;
-     private String exampleScenarioStatus;
-     private String exampleScenarioExperimental;
-     private String exampleScenarioDate;
-     private String exampleScenarioPublisher;
-     private String exampleScenarioContact;
-     private String exampleScenarioUseContext;
-     private String exmplScnrJrsdctnCdblCncptCdngSstm;
-     private String exmplScnrJrsdctnCdblCncptCdngVrsn;
-     private String exmplScnrJrsdctnCdblCncptCdngCde;
-     private String exmplScnrJrsdctnCdblCncptCdngDsplay;
-     private String exmplScnrJrsdctnCdblCncptCdngSrSlctd;
-     private String exmplScnrJrsdctnCdblCncptTxtStrng;
-     private String exampleScenarioCopyright;
-     private String exampleScenarioPurpose;
-     private String exampleScenarioActorActorId;
-     private String exampleScenarioActorType;
-     private String exampleScenarioActorName;
-     private String exampleScenarioActorDescription;
-     private String exmplScnrNstncRsrcd;
-     private String exmplScnrNstncRsrcTpe;
-     private String exampleScenarioInstanceName;
-     private String exmplScnrNstncDscrptn;
-     private String exmplScnrNstncVrsnVrsnd;
-     private String exmplScnrNstncVrsnDscrptn;
-     private String exmplScnrNstncCntndnstncRsrcd;
-     private String exmplScnrNstncCntndnstncVrsnd;
-     private String exampleScenarioProcessTitle;
-     private String exmplScnrPrcssDscrptn;
-     private String exmplScnrPrcssPrCndtns;
-     private String exmplScnrPrcssPstCndtns;
-     private String exmplScnrPrcssStpPrcss;
-     private String exampleScenarioProcessStepPause;
-     private String exmplScnrPrcssStpPrtnNmbr;
-     private String exmplScnrPrcssStpPrtnTpe;
-     private String exmplScnrPrcssStpPrtnNme;
-     private String exmplScnrPrcssStpPrtnNttr;
-     private String exmplScnrPrcssStpPrtnRcvr;
-     private String exmplScnrPrcssStpPrtnDscrptn;
-     private String exmplScnrPrcssStpPrtnNttrctve;
-     private String exmplScnrPrcssStpPrtnRcvrctve;
-     private String exmplScnrPrcssStpPrtnRqst;
-     private String exmplScnrPrcssStpPrtnRspnse;
-     private String exmplScnrPrcssStpLtrntvTtle;
-     private String exmplScnrPrcssStpLtrntvDscrptn;
-     private String exmplScnrPrcssStpLtrntvStp;
-     private String exampleScenarioWorkflow;
+     private Integer id;
+     private String exampleScenarioUrlUri;
+     private String exmplScnrDntfrDntfrSe;
+     private String exmplScnrDntfrDntfrTpCcCSstm;
+     private String exmplScnrDntfrDntfrTpCcCVrsn;
+     private String exmplScnrDntfrDntfrTpCcCCde;
+     private String exmplScnrDntfrDntfrTpCcCDsplay;
+     private String exmplScnrDntfrDntfrTpCcCSrSlctd;
+     private String exmplScnrDntfrDntfrTpCcTxt;
+     private String exmplScnrDntfrDntfrPrdPrdStrt;
+     private String exmplScnrDntfrDntfrPrdPrdNd;
+     private String exmplScnrDntfrDntfrSsgnr;
+     private String exmplScnrDntfrDntfrVlue;
+     private String exmplScnrDntfrDntfrSstm;
+     private String exampleScenarioVersionString;
+     private String exampleScenarioNameString;
+     private String exampleScenarioStatusCode;
+     private String exmplScnrXprmntlBln;
+     private String exampleScenarioDateDateTime;
+     private String exampleScenarioPublisherString;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntPrdNd;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntSstm;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntVlue;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntSe;
+     private String exmplScnrCntctCntctDtlTlcmCntctPntRnk;
+     private String exmplScnrCntctCntctDtlNme;
+     private String exmplScnrSCntxtSgCntxtVlCcCcCSstm;
+     private String exmplScnrSCntxtSgCntxtVlCcCcCVrsn;
+     private String exmplScnrSCntxtSgCntxtVlCcCcCCde;
+     private String exmplScnrSCntxtSgCntxtVlCcCcCDsplay;
+     private String exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String exmplScnrSCntxtSgCntxtVlCcCcTxt;
+     private String exmplScnrSCntxtSgCntxtCdCSstm;
+     private String exmplScnrSCntxtSgCntxtCdCVrsn;
+     private String exmplScnrSCntxtSgCntxtCdCCde;
+     private String exmplScnrSCntxtSgCntxtCdCDsplay;
+     private String exmplScnrSCntxtSgCntxtCdCSrSlctd;
+     private String exmplScnrSCntxtSgCntxtVlQnttQnttVlue;
+     private String exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String exmplScnrSCntxtSgCntxtVlQnttQnttNt;
+     private String exmplScnrSCntxtSgCntxtVlQnttQnttSstm;
+     private String exmplScnrSCntxtSgCntxtVlQnttQnttCde;
+     private String exmplScnrSCntxtSgCntxtVlRngRngLw;
+     private String exmplScnrSCntxtSgCntxtVlRngRngHgh;
+     private String exmplScnrSCntxtSgCntxtVlRfrnce;
+     private String exmplScnrJrsdctnCcCdngCSstm;
+     private String exmplScnrJrsdctnCcCdngCVrsn;
+     private String exmplScnrJrsdctnCcCdngCCde;
+     private String exmplScnrJrsdctnCcCdngCDsplay;
+     private String exmplScnrJrsdctnCcCdngCSrSlctd;
+     private String exmplScnrJrsdctnCcTxt;
+     private String exampleScenarioCopyrightMarkdown;
+     private String exampleScenarioPurposeMarkdown;
+     private String exmplScnrCtrCtrdStrng;
+     private String exampleScenarioActorTypeCode;
+     private String exampleScenarioActorNameString;
+     private String exmplScnrCtrDscrptnMrkdwn;
+     private String exmplScnrNstncRsrcdStrng;
+     private String exmplScnrNstncRsrcTpCde;
+     private String exmplScnrNstncNmStrng;
+     private String exmplScnrNstncDscrptnMrkdwn;
+     private String exmplScnrNstncVrsnVrsndStrng;
+     private String exmplScnrNstncVrsnDscrptnMrkdwn;
+     private String exmplScnrNstncCntndnstncRsrcdStrng;
+     private String exmplScnrNstncCntndnstncVrsndStrng;
+     private String exmplScnrPrcssTtlStrng;
+     private String exmplScnrPrcssDscrptnMrkdwn;
+     private String exmplScnrPrcssPrCndtnsMrkdwn;
+     private String exmplScnrPrcssPstCndtnsMrkdwn;
+     private String exmplScnrPrcssStpPrcssPrcss;
+     private String exmplScnrPrcssStpPsBln;
+     private String exmplScnrPrcssStpPrtnNmbrStrng;
+     private String exmplScnrPrcssStpPrtnTpStrng;
+     private String exmplScnrPrcssStpPrtnNmStrng;
+     private String exmplScnrPrcssStpPrtnNttrStrng;
+     private String exmplScnrPrcssStpPrtnRcvrStrng;
+     private String exmplScnrPrcssStpPrtnDscrptnMrkdwn;
+     private String exmplScnrPrcssStpPrtnNttrctvBln;
+     private String exmplScnrPrcssStpPrtnRcvrctvBln;
+     private String exmplScnrPrcssStpPrtnRqstCntndnstnce;
+     private String exmplScnrPrcssStpPrtnRspnsCntndnstnce;
+     private String exmplScnrPrcssStpLtrntvTtlStrng;
+     private String exmplScnrPrcssStpLtrntvDscrptnMrkdwn;
+     private String exmplScnrPrcssStpLtrntvStpStp;
+     private String exampleScenarioWorkflowCanonical;
 
     public Examplescenario() {
     }
 
-	
-    public Examplescenario(String exampleScenarioUrl) {
-        this.exampleScenarioUrl = exampleScenarioUrl;
-    }
-    public Examplescenario(String exampleScenarioUrl, String exmplScnrDntfrDntfrSCde, String exmplScnrDntfrDntfrTpCdblCncptCdngSstm, String exmplScnrDntfrDntfrTpCdblCncptCdngVrsn, String exmplScnrDntfrDntfrTpCdblCncptCdngCde, String exmplScnrDntfrDntfrTpCdblCncptCdngDsplay, String exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd, String exmplScnrDntfrDntfrCdblCncptTxt, String exmplScnrDntfrDntfrPrdStrt, String exmplScnrDntfrDntfrPrdNd, String exmplScnrDntfrDntfrRfrncRfrnce, String exmplScnrDntfrDntfrRfrncTpe, String exmplScnrDntfrDntfrRfrncDntfr, String exmplScnrDntfrDntfrRfrncDsplay, String exmplScnrDntfrDntfrVlStrng, String exmplScnrDntfrDntfrSstmRi, String exampleScenarioVersion, String exampleScenarioName, String exampleScenarioStatus, String exampleScenarioExperimental, String exampleScenarioDate, String exampleScenarioPublisher, String exampleScenarioContact, String exampleScenarioUseContext, String exmplScnrJrsdctnCdblCncptCdngSstm, String exmplScnrJrsdctnCdblCncptCdngVrsn, String exmplScnrJrsdctnCdblCncptCdngCde, String exmplScnrJrsdctnCdblCncptCdngDsplay, String exmplScnrJrsdctnCdblCncptCdngSrSlctd, String exmplScnrJrsdctnCdblCncptTxtStrng, String exampleScenarioCopyright, String exampleScenarioPurpose, String exampleScenarioActorActorId, String exampleScenarioActorType, String exampleScenarioActorName, String exampleScenarioActorDescription, String exmplScnrNstncRsrcd, String exmplScnrNstncRsrcTpe, String exampleScenarioInstanceName, String exmplScnrNstncDscrptn, String exmplScnrNstncVrsnVrsnd, String exmplScnrNstncVrsnDscrptn, String exmplScnrNstncCntndnstncRsrcd, String exmplScnrNstncCntndnstncVrsnd, String exampleScenarioProcessTitle, String exmplScnrPrcssDscrptn, String exmplScnrPrcssPrCndtns, String exmplScnrPrcssPstCndtns, String exmplScnrPrcssStpPrcss, String exampleScenarioProcessStepPause, String exmplScnrPrcssStpPrtnNmbr, String exmplScnrPrcssStpPrtnTpe, String exmplScnrPrcssStpPrtnNme, String exmplScnrPrcssStpPrtnNttr, String exmplScnrPrcssStpPrtnRcvr, String exmplScnrPrcssStpPrtnDscrptn, String exmplScnrPrcssStpPrtnNttrctve, String exmplScnrPrcssStpPrtnRcvrctve, String exmplScnrPrcssStpPrtnRqst, String exmplScnrPrcssStpPrtnRspnse, String exmplScnrPrcssStpLtrntvTtle, String exmplScnrPrcssStpLtrntvDscrptn, String exmplScnrPrcssStpLtrntvStp, String exampleScenarioWorkflow) {
-       this.exampleScenarioUrl = exampleScenarioUrl;
-       this.exmplScnrDntfrDntfrSCde = exmplScnrDntfrDntfrSCde;
-       this.exmplScnrDntfrDntfrTpCdblCncptCdngSstm = exmplScnrDntfrDntfrTpCdblCncptCdngSstm;
-       this.exmplScnrDntfrDntfrTpCdblCncptCdngVrsn = exmplScnrDntfrDntfrTpCdblCncptCdngVrsn;
-       this.exmplScnrDntfrDntfrTpCdblCncptCdngCde = exmplScnrDntfrDntfrTpCdblCncptCdngCde;
-       this.exmplScnrDntfrDntfrTpCdblCncptCdngDsplay = exmplScnrDntfrDntfrTpCdblCncptCdngDsplay;
-       this.exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd = exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.exmplScnrDntfrDntfrCdblCncptTxt = exmplScnrDntfrDntfrCdblCncptTxt;
-       this.exmplScnrDntfrDntfrPrdStrt = exmplScnrDntfrDntfrPrdStrt;
-       this.exmplScnrDntfrDntfrPrdNd = exmplScnrDntfrDntfrPrdNd;
-       this.exmplScnrDntfrDntfrRfrncRfrnce = exmplScnrDntfrDntfrRfrncRfrnce;
-       this.exmplScnrDntfrDntfrRfrncTpe = exmplScnrDntfrDntfrRfrncTpe;
-       this.exmplScnrDntfrDntfrRfrncDntfr = exmplScnrDntfrDntfrRfrncDntfr;
-       this.exmplScnrDntfrDntfrRfrncDsplay = exmplScnrDntfrDntfrRfrncDsplay;
-       this.exmplScnrDntfrDntfrVlStrng = exmplScnrDntfrDntfrVlStrng;
-       this.exmplScnrDntfrDntfrSstmRi = exmplScnrDntfrDntfrSstmRi;
-       this.exampleScenarioVersion = exampleScenarioVersion;
-       this.exampleScenarioName = exampleScenarioName;
-       this.exampleScenarioStatus = exampleScenarioStatus;
-       this.exampleScenarioExperimental = exampleScenarioExperimental;
-       this.exampleScenarioDate = exampleScenarioDate;
-       this.exampleScenarioPublisher = exampleScenarioPublisher;
-       this.exampleScenarioContact = exampleScenarioContact;
-       this.exampleScenarioUseContext = exampleScenarioUseContext;
-       this.exmplScnrJrsdctnCdblCncptCdngSstm = exmplScnrJrsdctnCdblCncptCdngSstm;
-       this.exmplScnrJrsdctnCdblCncptCdngVrsn = exmplScnrJrsdctnCdblCncptCdngVrsn;
-       this.exmplScnrJrsdctnCdblCncptCdngCde = exmplScnrJrsdctnCdblCncptCdngCde;
-       this.exmplScnrJrsdctnCdblCncptCdngDsplay = exmplScnrJrsdctnCdblCncptCdngDsplay;
-       this.exmplScnrJrsdctnCdblCncptCdngSrSlctd = exmplScnrJrsdctnCdblCncptCdngSrSlctd;
-       this.exmplScnrJrsdctnCdblCncptTxtStrng = exmplScnrJrsdctnCdblCncptTxtStrng;
-       this.exampleScenarioCopyright = exampleScenarioCopyright;
-       this.exampleScenarioPurpose = exampleScenarioPurpose;
-       this.exampleScenarioActorActorId = exampleScenarioActorActorId;
-       this.exampleScenarioActorType = exampleScenarioActorType;
-       this.exampleScenarioActorName = exampleScenarioActorName;
-       this.exampleScenarioActorDescription = exampleScenarioActorDescription;
-       this.exmplScnrNstncRsrcd = exmplScnrNstncRsrcd;
-       this.exmplScnrNstncRsrcTpe = exmplScnrNstncRsrcTpe;
-       this.exampleScenarioInstanceName = exampleScenarioInstanceName;
-       this.exmplScnrNstncDscrptn = exmplScnrNstncDscrptn;
-       this.exmplScnrNstncVrsnVrsnd = exmplScnrNstncVrsnVrsnd;
-       this.exmplScnrNstncVrsnDscrptn = exmplScnrNstncVrsnDscrptn;
-       this.exmplScnrNstncCntndnstncRsrcd = exmplScnrNstncCntndnstncRsrcd;
-       this.exmplScnrNstncCntndnstncVrsnd = exmplScnrNstncCntndnstncVrsnd;
-       this.exampleScenarioProcessTitle = exampleScenarioProcessTitle;
-       this.exmplScnrPrcssDscrptn = exmplScnrPrcssDscrptn;
-       this.exmplScnrPrcssPrCndtns = exmplScnrPrcssPrCndtns;
-       this.exmplScnrPrcssPstCndtns = exmplScnrPrcssPstCndtns;
-       this.exmplScnrPrcssStpPrcss = exmplScnrPrcssStpPrcss;
-       this.exampleScenarioProcessStepPause = exampleScenarioProcessStepPause;
-       this.exmplScnrPrcssStpPrtnNmbr = exmplScnrPrcssStpPrtnNmbr;
-       this.exmplScnrPrcssStpPrtnTpe = exmplScnrPrcssStpPrtnTpe;
-       this.exmplScnrPrcssStpPrtnNme = exmplScnrPrcssStpPrtnNme;
-       this.exmplScnrPrcssStpPrtnNttr = exmplScnrPrcssStpPrtnNttr;
-       this.exmplScnrPrcssStpPrtnRcvr = exmplScnrPrcssStpPrtnRcvr;
-       this.exmplScnrPrcssStpPrtnDscrptn = exmplScnrPrcssStpPrtnDscrptn;
-       this.exmplScnrPrcssStpPrtnNttrctve = exmplScnrPrcssStpPrtnNttrctve;
-       this.exmplScnrPrcssStpPrtnRcvrctve = exmplScnrPrcssStpPrtnRcvrctve;
-       this.exmplScnrPrcssStpPrtnRqst = exmplScnrPrcssStpPrtnRqst;
-       this.exmplScnrPrcssStpPrtnRspnse = exmplScnrPrcssStpPrtnRspnse;
-       this.exmplScnrPrcssStpLtrntvTtle = exmplScnrPrcssStpLtrntvTtle;
-       this.exmplScnrPrcssStpLtrntvDscrptn = exmplScnrPrcssStpLtrntvDscrptn;
-       this.exmplScnrPrcssStpLtrntvStp = exmplScnrPrcssStpLtrntvStp;
-       this.exampleScenarioWorkflow = exampleScenarioWorkflow;
+    public Examplescenario(String exampleScenarioUrlUri, String exmplScnrDntfrDntfrSe, String exmplScnrDntfrDntfrTpCcCSstm, String exmplScnrDntfrDntfrTpCcCVrsn, String exmplScnrDntfrDntfrTpCcCCde, String exmplScnrDntfrDntfrTpCcCDsplay, String exmplScnrDntfrDntfrTpCcCSrSlctd, String exmplScnrDntfrDntfrTpCcTxt, String exmplScnrDntfrDntfrPrdPrdStrt, String exmplScnrDntfrDntfrPrdPrdNd, String exmplScnrDntfrDntfrSsgnr, String exmplScnrDntfrDntfrVlue, String exmplScnrDntfrDntfrSstm, String exampleScenarioVersionString, String exampleScenarioNameString, String exampleScenarioStatusCode, String exmplScnrXprmntlBln, String exampleScenarioDateDateTime, String exampleScenarioPublisherString, String exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt, String exmplScnrCntctCntctDtlTlcmCntctPntPrdNd, String exmplScnrCntctCntctDtlTlcmCntctPntSstm, String exmplScnrCntctCntctDtlTlcmCntctPntVlue, String exmplScnrCntctCntctDtlTlcmCntctPntSe, String exmplScnrCntctCntctDtlTlcmCntctPntRnk, String exmplScnrCntctCntctDtlNme, String exmplScnrSCntxtSgCntxtVlCcCcCSstm, String exmplScnrSCntxtSgCntxtVlCcCcCVrsn, String exmplScnrSCntxtSgCntxtVlCcCcCCde, String exmplScnrSCntxtSgCntxtVlCcCcCDsplay, String exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd, String exmplScnrSCntxtSgCntxtVlCcCcTxt, String exmplScnrSCntxtSgCntxtCdCSstm, String exmplScnrSCntxtSgCntxtCdCVrsn, String exmplScnrSCntxtSgCntxtCdCCde, String exmplScnrSCntxtSgCntxtCdCDsplay, String exmplScnrSCntxtSgCntxtCdCSrSlctd, String exmplScnrSCntxtSgCntxtVlQnttQnttVlue, String exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr, String exmplScnrSCntxtSgCntxtVlQnttQnttNt, String exmplScnrSCntxtSgCntxtVlQnttQnttSstm, String exmplScnrSCntxtSgCntxtVlQnttQnttCde, String exmplScnrSCntxtSgCntxtVlRngRngLw, String exmplScnrSCntxtSgCntxtVlRngRngHgh, String exmplScnrSCntxtSgCntxtVlRfrnce, String exmplScnrJrsdctnCcCdngCSstm, String exmplScnrJrsdctnCcCdngCVrsn, String exmplScnrJrsdctnCcCdngCCde, String exmplScnrJrsdctnCcCdngCDsplay, String exmplScnrJrsdctnCcCdngCSrSlctd, String exmplScnrJrsdctnCcTxt, String exampleScenarioCopyrightMarkdown, String exampleScenarioPurposeMarkdown, String exmplScnrCtrCtrdStrng, String exampleScenarioActorTypeCode, String exampleScenarioActorNameString, String exmplScnrCtrDscrptnMrkdwn, String exmplScnrNstncRsrcdStrng, String exmplScnrNstncRsrcTpCde, String exmplScnrNstncNmStrng, String exmplScnrNstncDscrptnMrkdwn, String exmplScnrNstncVrsnVrsndStrng, String exmplScnrNstncVrsnDscrptnMrkdwn, String exmplScnrNstncCntndnstncRsrcdStrng, String exmplScnrNstncCntndnstncVrsndStrng, String exmplScnrPrcssTtlStrng, String exmplScnrPrcssDscrptnMrkdwn, String exmplScnrPrcssPrCndtnsMrkdwn, String exmplScnrPrcssPstCndtnsMrkdwn, String exmplScnrPrcssStpPrcssPrcss, String exmplScnrPrcssStpPsBln, String exmplScnrPrcssStpPrtnNmbrStrng, String exmplScnrPrcssStpPrtnTpStrng, String exmplScnrPrcssStpPrtnNmStrng, String exmplScnrPrcssStpPrtnNttrStrng, String exmplScnrPrcssStpPrtnRcvrStrng, String exmplScnrPrcssStpPrtnDscrptnMrkdwn, String exmplScnrPrcssStpPrtnNttrctvBln, String exmplScnrPrcssStpPrtnRcvrctvBln, String exmplScnrPrcssStpPrtnRqstCntndnstnce, String exmplScnrPrcssStpPrtnRspnsCntndnstnce, String exmplScnrPrcssStpLtrntvTtlStrng, String exmplScnrPrcssStpLtrntvDscrptnMrkdwn, String exmplScnrPrcssStpLtrntvStpStp, String exampleScenarioWorkflowCanonical) {
+       this.exampleScenarioUrlUri = exampleScenarioUrlUri;
+       this.exmplScnrDntfrDntfrSe = exmplScnrDntfrDntfrSe;
+       this.exmplScnrDntfrDntfrTpCcCSstm = exmplScnrDntfrDntfrTpCcCSstm;
+       this.exmplScnrDntfrDntfrTpCcCVrsn = exmplScnrDntfrDntfrTpCcCVrsn;
+       this.exmplScnrDntfrDntfrTpCcCCde = exmplScnrDntfrDntfrTpCcCCde;
+       this.exmplScnrDntfrDntfrTpCcCDsplay = exmplScnrDntfrDntfrTpCcCDsplay;
+       this.exmplScnrDntfrDntfrTpCcCSrSlctd = exmplScnrDntfrDntfrTpCcCSrSlctd;
+       this.exmplScnrDntfrDntfrTpCcTxt = exmplScnrDntfrDntfrTpCcTxt;
+       this.exmplScnrDntfrDntfrPrdPrdStrt = exmplScnrDntfrDntfrPrdPrdStrt;
+       this.exmplScnrDntfrDntfrPrdPrdNd = exmplScnrDntfrDntfrPrdPrdNd;
+       this.exmplScnrDntfrDntfrSsgnr = exmplScnrDntfrDntfrSsgnr;
+       this.exmplScnrDntfrDntfrVlue = exmplScnrDntfrDntfrVlue;
+       this.exmplScnrDntfrDntfrSstm = exmplScnrDntfrDntfrSstm;
+       this.exampleScenarioVersionString = exampleScenarioVersionString;
+       this.exampleScenarioNameString = exampleScenarioNameString;
+       this.exampleScenarioStatusCode = exampleScenarioStatusCode;
+       this.exmplScnrXprmntlBln = exmplScnrXprmntlBln;
+       this.exampleScenarioDateDateTime = exampleScenarioDateDateTime;
+       this.exampleScenarioPublisherString = exampleScenarioPublisherString;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt = exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntPrdNd = exmplScnrCntctCntctDtlTlcmCntctPntPrdNd;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntSstm = exmplScnrCntctCntctDtlTlcmCntctPntSstm;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntVlue = exmplScnrCntctCntctDtlTlcmCntctPntVlue;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntSe = exmplScnrCntctCntctDtlTlcmCntctPntSe;
+       this.exmplScnrCntctCntctDtlTlcmCntctPntRnk = exmplScnrCntctCntctDtlTlcmCntctPntRnk;
+       this.exmplScnrCntctCntctDtlNme = exmplScnrCntctCntctDtlNme;
+       this.exmplScnrSCntxtSgCntxtVlCcCcCSstm = exmplScnrSCntxtSgCntxtVlCcCcCSstm;
+       this.exmplScnrSCntxtSgCntxtVlCcCcCVrsn = exmplScnrSCntxtSgCntxtVlCcCcCVrsn;
+       this.exmplScnrSCntxtSgCntxtVlCcCcCCde = exmplScnrSCntxtSgCntxtVlCcCcCCde;
+       this.exmplScnrSCntxtSgCntxtVlCcCcCDsplay = exmplScnrSCntxtSgCntxtVlCcCcCDsplay;
+       this.exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd = exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.exmplScnrSCntxtSgCntxtVlCcCcTxt = exmplScnrSCntxtSgCntxtVlCcCcTxt;
+       this.exmplScnrSCntxtSgCntxtCdCSstm = exmplScnrSCntxtSgCntxtCdCSstm;
+       this.exmplScnrSCntxtSgCntxtCdCVrsn = exmplScnrSCntxtSgCntxtCdCVrsn;
+       this.exmplScnrSCntxtSgCntxtCdCCde = exmplScnrSCntxtSgCntxtCdCCde;
+       this.exmplScnrSCntxtSgCntxtCdCDsplay = exmplScnrSCntxtSgCntxtCdCDsplay;
+       this.exmplScnrSCntxtSgCntxtCdCSrSlctd = exmplScnrSCntxtSgCntxtCdCSrSlctd;
+       this.exmplScnrSCntxtSgCntxtVlQnttQnttVlue = exmplScnrSCntxtSgCntxtVlQnttQnttVlue;
+       this.exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr = exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.exmplScnrSCntxtSgCntxtVlQnttQnttNt = exmplScnrSCntxtSgCntxtVlQnttQnttNt;
+       this.exmplScnrSCntxtSgCntxtVlQnttQnttSstm = exmplScnrSCntxtSgCntxtVlQnttQnttSstm;
+       this.exmplScnrSCntxtSgCntxtVlQnttQnttCde = exmplScnrSCntxtSgCntxtVlQnttQnttCde;
+       this.exmplScnrSCntxtSgCntxtVlRngRngLw = exmplScnrSCntxtSgCntxtVlRngRngLw;
+       this.exmplScnrSCntxtSgCntxtVlRngRngHgh = exmplScnrSCntxtSgCntxtVlRngRngHgh;
+       this.exmplScnrSCntxtSgCntxtVlRfrnce = exmplScnrSCntxtSgCntxtVlRfrnce;
+       this.exmplScnrJrsdctnCcCdngCSstm = exmplScnrJrsdctnCcCdngCSstm;
+       this.exmplScnrJrsdctnCcCdngCVrsn = exmplScnrJrsdctnCcCdngCVrsn;
+       this.exmplScnrJrsdctnCcCdngCCde = exmplScnrJrsdctnCcCdngCCde;
+       this.exmplScnrJrsdctnCcCdngCDsplay = exmplScnrJrsdctnCcCdngCDsplay;
+       this.exmplScnrJrsdctnCcCdngCSrSlctd = exmplScnrJrsdctnCcCdngCSrSlctd;
+       this.exmplScnrJrsdctnCcTxt = exmplScnrJrsdctnCcTxt;
+       this.exampleScenarioCopyrightMarkdown = exampleScenarioCopyrightMarkdown;
+       this.exampleScenarioPurposeMarkdown = exampleScenarioPurposeMarkdown;
+       this.exmplScnrCtrCtrdStrng = exmplScnrCtrCtrdStrng;
+       this.exampleScenarioActorTypeCode = exampleScenarioActorTypeCode;
+       this.exampleScenarioActorNameString = exampleScenarioActorNameString;
+       this.exmplScnrCtrDscrptnMrkdwn = exmplScnrCtrDscrptnMrkdwn;
+       this.exmplScnrNstncRsrcdStrng = exmplScnrNstncRsrcdStrng;
+       this.exmplScnrNstncRsrcTpCde = exmplScnrNstncRsrcTpCde;
+       this.exmplScnrNstncNmStrng = exmplScnrNstncNmStrng;
+       this.exmplScnrNstncDscrptnMrkdwn = exmplScnrNstncDscrptnMrkdwn;
+       this.exmplScnrNstncVrsnVrsndStrng = exmplScnrNstncVrsnVrsndStrng;
+       this.exmplScnrNstncVrsnDscrptnMrkdwn = exmplScnrNstncVrsnDscrptnMrkdwn;
+       this.exmplScnrNstncCntndnstncRsrcdStrng = exmplScnrNstncCntndnstncRsrcdStrng;
+       this.exmplScnrNstncCntndnstncVrsndStrng = exmplScnrNstncCntndnstncVrsndStrng;
+       this.exmplScnrPrcssTtlStrng = exmplScnrPrcssTtlStrng;
+       this.exmplScnrPrcssDscrptnMrkdwn = exmplScnrPrcssDscrptnMrkdwn;
+       this.exmplScnrPrcssPrCndtnsMrkdwn = exmplScnrPrcssPrCndtnsMrkdwn;
+       this.exmplScnrPrcssPstCndtnsMrkdwn = exmplScnrPrcssPstCndtnsMrkdwn;
+       this.exmplScnrPrcssStpPrcssPrcss = exmplScnrPrcssStpPrcssPrcss;
+       this.exmplScnrPrcssStpPsBln = exmplScnrPrcssStpPsBln;
+       this.exmplScnrPrcssStpPrtnNmbrStrng = exmplScnrPrcssStpPrtnNmbrStrng;
+       this.exmplScnrPrcssStpPrtnTpStrng = exmplScnrPrcssStpPrtnTpStrng;
+       this.exmplScnrPrcssStpPrtnNmStrng = exmplScnrPrcssStpPrtnNmStrng;
+       this.exmplScnrPrcssStpPrtnNttrStrng = exmplScnrPrcssStpPrtnNttrStrng;
+       this.exmplScnrPrcssStpPrtnRcvrStrng = exmplScnrPrcssStpPrtnRcvrStrng;
+       this.exmplScnrPrcssStpPrtnDscrptnMrkdwn = exmplScnrPrcssStpPrtnDscrptnMrkdwn;
+       this.exmplScnrPrcssStpPrtnNttrctvBln = exmplScnrPrcssStpPrtnNttrctvBln;
+       this.exmplScnrPrcssStpPrtnRcvrctvBln = exmplScnrPrcssStpPrtnRcvrctvBln;
+       this.exmplScnrPrcssStpPrtnRqstCntndnstnce = exmplScnrPrcssStpPrtnRqstCntndnstnce;
+       this.exmplScnrPrcssStpPrtnRspnsCntndnstnce = exmplScnrPrcssStpPrtnRspnsCntndnstnce;
+       this.exmplScnrPrcssStpLtrntvTtlStrng = exmplScnrPrcssStpLtrntvTtlStrng;
+       this.exmplScnrPrcssStpLtrntvDscrptnMrkdwn = exmplScnrPrcssStpLtrntvDscrptnMrkdwn;
+       this.exmplScnrPrcssStpLtrntvStpStp = exmplScnrPrcssStpLtrntvStpStp;
+       this.exampleScenarioWorkflowCanonical = exampleScenarioWorkflowCanonical;
     }
    
-    public String getExampleScenarioUrl() {
-        return this.exampleScenarioUrl;
-    }
-    
-    public void setExampleScenarioUrl(String exampleScenarioUrl) {
-        this.exampleScenarioUrl = exampleScenarioUrl;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrSCde() {
-        return this.exmplScnrDntfrDntfrSCde;
-    }
-    
-    public void setExmplScnrDntfrDntfrSCde(String exmplScnrDntfrDntfrSCde) {
-        this.exmplScnrDntfrDntfrSCde = exmplScnrDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.exmplScnrDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setExmplScnrDntfrDntfrTpCdblCncptCdngSstm(String exmplScnrDntfrDntfrTpCdblCncptCdngSstm) {
-        this.exmplScnrDntfrDntfrTpCdblCncptCdngSstm = exmplScnrDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.exmplScnrDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setExmplScnrDntfrDntfrTpCdblCncptCdngVrsn(String exmplScnrDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.exmplScnrDntfrDntfrTpCdblCncptCdngVrsn = exmplScnrDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrTpCdblCncptCdngCde() {
-        return this.exmplScnrDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setExmplScnrDntfrDntfrTpCdblCncptCdngCde(String exmplScnrDntfrDntfrTpCdblCncptCdngCde) {
-        this.exmplScnrDntfrDntfrTpCdblCncptCdngCde = exmplScnrDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.exmplScnrDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setExmplScnrDntfrDntfrTpCdblCncptCdngDsplay(String exmplScnrDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.exmplScnrDntfrDntfrTpCdblCncptCdngDsplay = exmplScnrDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setExmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd(String exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd = exmplScnrDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrCdblCncptTxt() {
-        return this.exmplScnrDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setExmplScnrDntfrDntfrCdblCncptTxt(String exmplScnrDntfrDntfrCdblCncptTxt) {
-        this.exmplScnrDntfrDntfrCdblCncptTxt = exmplScnrDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrPrdStrt() {
-        return this.exmplScnrDntfrDntfrPrdStrt;
-    }
-    
-    public void setExmplScnrDntfrDntfrPrdStrt(String exmplScnrDntfrDntfrPrdStrt) {
-        this.exmplScnrDntfrDntfrPrdStrt = exmplScnrDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrPrdNd() {
-        return this.exmplScnrDntfrDntfrPrdNd;
-    }
-    
-    public void setExmplScnrDntfrDntfrPrdNd(String exmplScnrDntfrDntfrPrdNd) {
-        this.exmplScnrDntfrDntfrPrdNd = exmplScnrDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrRfrncRfrnce() {
-        return this.exmplScnrDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setExmplScnrDntfrDntfrRfrncRfrnce(String exmplScnrDntfrDntfrRfrncRfrnce) {
-        this.exmplScnrDntfrDntfrRfrncRfrnce = exmplScnrDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrRfrncTpe() {
-        return this.exmplScnrDntfrDntfrRfrncTpe;
-    }
-    
-    public void setExmplScnrDntfrDntfrRfrncTpe(String exmplScnrDntfrDntfrRfrncTpe) {
-        this.exmplScnrDntfrDntfrRfrncTpe = exmplScnrDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrRfrncDntfr() {
-        return this.exmplScnrDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setExmplScnrDntfrDntfrRfrncDntfr(String exmplScnrDntfrDntfrRfrncDntfr) {
-        this.exmplScnrDntfrDntfrRfrncDntfr = exmplScnrDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrRfrncDsplay() {
-        return this.exmplScnrDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setExmplScnrDntfrDntfrRfrncDsplay(String exmplScnrDntfrDntfrRfrncDsplay) {
-        this.exmplScnrDntfrDntfrRfrncDsplay = exmplScnrDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrVlStrng() {
-        return this.exmplScnrDntfrDntfrVlStrng;
-    }
-    
-    public void setExmplScnrDntfrDntfrVlStrng(String exmplScnrDntfrDntfrVlStrng) {
-        this.exmplScnrDntfrDntfrVlStrng = exmplScnrDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getExmplScnrDntfrDntfrSstmRi() {
-        return this.exmplScnrDntfrDntfrSstmRi;
-    }
-    
-    public void setExmplScnrDntfrDntfrSstmRi(String exmplScnrDntfrDntfrSstmRi) {
-        this.exmplScnrDntfrDntfrSstmRi = exmplScnrDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getExampleScenarioVersion() {
-        return this.exampleScenarioVersion;
-    }
-    
-    public void setExampleScenarioVersion(String exampleScenarioVersion) {
-        this.exampleScenarioVersion = exampleScenarioVersion;
-    }
-    
-    
-    
-    public String getExampleScenarioName() {
-        return this.exampleScenarioName;
-    }
-    
-    public void setExampleScenarioName(String exampleScenarioName) {
-        this.exampleScenarioName = exampleScenarioName;
-    }
-    
-    
-    
-    public String getExampleScenarioStatus() {
-        return this.exampleScenarioStatus;
-    }
-    
-    public void setExampleScenarioStatus(String exampleScenarioStatus) {
-        this.exampleScenarioStatus = exampleScenarioStatus;
-    }
-    
-    
-    
-    public String getExampleScenarioExperimental() {
-        return this.exampleScenarioExperimental;
-    }
-    
-    public void setExampleScenarioExperimental(String exampleScenarioExperimental) {
-        this.exampleScenarioExperimental = exampleScenarioExperimental;
-    }
-    
-    
-    
-    public String getExampleScenarioDate() {
-        return this.exampleScenarioDate;
-    }
-    
-    public void setExampleScenarioDate(String exampleScenarioDate) {
-        this.exampleScenarioDate = exampleScenarioDate;
-    }
-    
-    
-    
-    public String getExampleScenarioPublisher() {
-        return this.exampleScenarioPublisher;
-    }
-    
-    public void setExampleScenarioPublisher(String exampleScenarioPublisher) {
-        this.exampleScenarioPublisher = exampleScenarioPublisher;
-    }
-    
-    
-    
-    public String getExampleScenarioContact() {
-        return this.exampleScenarioContact;
-    }
-    
-    public void setExampleScenarioContact(String exampleScenarioContact) {
-        this.exampleScenarioContact = exampleScenarioContact;
-    }
-    
-    
-    
-    public String getExampleScenarioUseContext() {
-        return this.exampleScenarioUseContext;
-    }
-    
-    public void setExampleScenarioUseContext(String exampleScenarioUseContext) {
-        this.exampleScenarioUseContext = exampleScenarioUseContext;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptCdngSstm() {
-        return this.exmplScnrJrsdctnCdblCncptCdngSstm;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptCdngSstm(String exmplScnrJrsdctnCdblCncptCdngSstm) {
-        this.exmplScnrJrsdctnCdblCncptCdngSstm = exmplScnrJrsdctnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptCdngVrsn() {
-        return this.exmplScnrJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptCdngVrsn(String exmplScnrJrsdctnCdblCncptCdngVrsn) {
-        this.exmplScnrJrsdctnCdblCncptCdngVrsn = exmplScnrJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptCdngCde() {
-        return this.exmplScnrJrsdctnCdblCncptCdngCde;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptCdngCde(String exmplScnrJrsdctnCdblCncptCdngCde) {
-        this.exmplScnrJrsdctnCdblCncptCdngCde = exmplScnrJrsdctnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptCdngDsplay() {
-        return this.exmplScnrJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptCdngDsplay(String exmplScnrJrsdctnCdblCncptCdngDsplay) {
-        this.exmplScnrJrsdctnCdblCncptCdngDsplay = exmplScnrJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptCdngSrSlctd() {
-        return this.exmplScnrJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptCdngSrSlctd(String exmplScnrJrsdctnCdblCncptCdngSrSlctd) {
-        this.exmplScnrJrsdctnCdblCncptCdngSrSlctd = exmplScnrJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getExmplScnrJrsdctnCdblCncptTxtStrng() {
-        return this.exmplScnrJrsdctnCdblCncptTxtStrng;
-    }
-    
-    public void setExmplScnrJrsdctnCdblCncptTxtStrng(String exmplScnrJrsdctnCdblCncptTxtStrng) {
-        this.exmplScnrJrsdctnCdblCncptTxtStrng = exmplScnrJrsdctnCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getExampleScenarioCopyright() {
-        return this.exampleScenarioCopyright;
-    }
-    
-    public void setExampleScenarioCopyright(String exampleScenarioCopyright) {
-        this.exampleScenarioCopyright = exampleScenarioCopyright;
-    }
-    
-    
-    
-    public String getExampleScenarioPurpose() {
-        return this.exampleScenarioPurpose;
-    }
-    
-    public void setExampleScenarioPurpose(String exampleScenarioPurpose) {
-        this.exampleScenarioPurpose = exampleScenarioPurpose;
-    }
-    
-    
-    
-    public String getExampleScenarioActorActorId() {
-        return this.exampleScenarioActorActorId;
-    }
-    
-    public void setExampleScenarioActorActorId(String exampleScenarioActorActorId) {
-        this.exampleScenarioActorActorId = exampleScenarioActorActorId;
-    }
-    
-    
-    
-    public String getExampleScenarioActorType() {
-        return this.exampleScenarioActorType;
-    }
-    
-    public void setExampleScenarioActorType(String exampleScenarioActorType) {
-        this.exampleScenarioActorType = exampleScenarioActorType;
-    }
-    
-    
-    
-    public String getExampleScenarioActorName() {
-        return this.exampleScenarioActorName;
-    }
-    
-    public void setExampleScenarioActorName(String exampleScenarioActorName) {
-        this.exampleScenarioActorName = exampleScenarioActorName;
-    }
-    
-    
-    
-    public String getExampleScenarioActorDescription() {
-        return this.exampleScenarioActorDescription;
-    }
-    
-    public void setExampleScenarioActorDescription(String exampleScenarioActorDescription) {
-        this.exampleScenarioActorDescription = exampleScenarioActorDescription;
-    }
-    
-    
-    
-    public String getExmplScnrNstncRsrcd() {
-        return this.exmplScnrNstncRsrcd;
-    }
-    
-    public void setExmplScnrNstncRsrcd(String exmplScnrNstncRsrcd) {
-        this.exmplScnrNstncRsrcd = exmplScnrNstncRsrcd;
-    }
-    
-    
-    
-    public String getExmplScnrNstncRsrcTpe() {
-        return this.exmplScnrNstncRsrcTpe;
-    }
-    
-    public void setExmplScnrNstncRsrcTpe(String exmplScnrNstncRsrcTpe) {
-        this.exmplScnrNstncRsrcTpe = exmplScnrNstncRsrcTpe;
-    }
-    
-    
-    
-    public String getExampleScenarioInstanceName() {
-        return this.exampleScenarioInstanceName;
-    }
-    
-    public void setExampleScenarioInstanceName(String exampleScenarioInstanceName) {
-        this.exampleScenarioInstanceName = exampleScenarioInstanceName;
-    }
-    
-    
-    
-    public String getExmplScnrNstncDscrptn() {
-        return this.exmplScnrNstncDscrptn;
-    }
-    
-    public void setExmplScnrNstncDscrptn(String exmplScnrNstncDscrptn) {
-        this.exmplScnrNstncDscrptn = exmplScnrNstncDscrptn;
-    }
-    
-    
-    
-    public String getExmplScnrNstncVrsnVrsnd() {
-        return this.exmplScnrNstncVrsnVrsnd;
-    }
-    
-    public void setExmplScnrNstncVrsnVrsnd(String exmplScnrNstncVrsnVrsnd) {
-        this.exmplScnrNstncVrsnVrsnd = exmplScnrNstncVrsnVrsnd;
-    }
-    
-    
-    
-    public String getExmplScnrNstncVrsnDscrptn() {
-        return this.exmplScnrNstncVrsnDscrptn;
-    }
-    
-    public void setExmplScnrNstncVrsnDscrptn(String exmplScnrNstncVrsnDscrptn) {
-        this.exmplScnrNstncVrsnDscrptn = exmplScnrNstncVrsnDscrptn;
-    }
-    
-    
-    
-    public String getExmplScnrNstncCntndnstncRsrcd() {
-        return this.exmplScnrNstncCntndnstncRsrcd;
-    }
-    
-    public void setExmplScnrNstncCntndnstncRsrcd(String exmplScnrNstncCntndnstncRsrcd) {
-        this.exmplScnrNstncCntndnstncRsrcd = exmplScnrNstncCntndnstncRsrcd;
-    }
-    
-    
-    
-    public String getExmplScnrNstncCntndnstncVrsnd() {
-        return this.exmplScnrNstncCntndnstncVrsnd;
-    }
-    
-    public void setExmplScnrNstncCntndnstncVrsnd(String exmplScnrNstncCntndnstncVrsnd) {
-        this.exmplScnrNstncCntndnstncVrsnd = exmplScnrNstncCntndnstncVrsnd;
-    }
-    
-    
-    
-    public String getExampleScenarioProcessTitle() {
-        return this.exampleScenarioProcessTitle;
-    }
-    
-    public void setExampleScenarioProcessTitle(String exampleScenarioProcessTitle) {
-        this.exampleScenarioProcessTitle = exampleScenarioProcessTitle;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssDscrptn() {
-        return this.exmplScnrPrcssDscrptn;
-    }
-    
-    public void setExmplScnrPrcssDscrptn(String exmplScnrPrcssDscrptn) {
-        this.exmplScnrPrcssDscrptn = exmplScnrPrcssDscrptn;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssPrCndtns() {
-        return this.exmplScnrPrcssPrCndtns;
-    }
-    
-    public void setExmplScnrPrcssPrCndtns(String exmplScnrPrcssPrCndtns) {
-        this.exmplScnrPrcssPrCndtns = exmplScnrPrcssPrCndtns;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssPstCndtns() {
-        return this.exmplScnrPrcssPstCndtns;
-    }
-    
-    public void setExmplScnrPrcssPstCndtns(String exmplScnrPrcssPstCndtns) {
-        this.exmplScnrPrcssPstCndtns = exmplScnrPrcssPstCndtns;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrcss() {
-        return this.exmplScnrPrcssStpPrcss;
-    }
-    
-    public void setExmplScnrPrcssStpPrcss(String exmplScnrPrcssStpPrcss) {
-        this.exmplScnrPrcssStpPrcss = exmplScnrPrcssStpPrcss;
-    }
-    
-    
-    
-    public String getExampleScenarioProcessStepPause() {
-        return this.exampleScenarioProcessStepPause;
-    }
-    
-    public void setExampleScenarioProcessStepPause(String exampleScenarioProcessStepPause) {
-        this.exampleScenarioProcessStepPause = exampleScenarioProcessStepPause;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnNmbr() {
-        return this.exmplScnrPrcssStpPrtnNmbr;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnNmbr(String exmplScnrPrcssStpPrtnNmbr) {
-        this.exmplScnrPrcssStpPrtnNmbr = exmplScnrPrcssStpPrtnNmbr;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnTpe() {
-        return this.exmplScnrPrcssStpPrtnTpe;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnTpe(String exmplScnrPrcssStpPrtnTpe) {
-        this.exmplScnrPrcssStpPrtnTpe = exmplScnrPrcssStpPrtnTpe;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnNme() {
-        return this.exmplScnrPrcssStpPrtnNme;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnNme(String exmplScnrPrcssStpPrtnNme) {
-        this.exmplScnrPrcssStpPrtnNme = exmplScnrPrcssStpPrtnNme;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnNttr() {
-        return this.exmplScnrPrcssStpPrtnNttr;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnNttr(String exmplScnrPrcssStpPrtnNttr) {
-        this.exmplScnrPrcssStpPrtnNttr = exmplScnrPrcssStpPrtnNttr;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnRcvr() {
-        return this.exmplScnrPrcssStpPrtnRcvr;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnRcvr(String exmplScnrPrcssStpPrtnRcvr) {
-        this.exmplScnrPrcssStpPrtnRcvr = exmplScnrPrcssStpPrtnRcvr;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnDscrptn() {
-        return this.exmplScnrPrcssStpPrtnDscrptn;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnDscrptn(String exmplScnrPrcssStpPrtnDscrptn) {
-        this.exmplScnrPrcssStpPrtnDscrptn = exmplScnrPrcssStpPrtnDscrptn;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnNttrctve() {
-        return this.exmplScnrPrcssStpPrtnNttrctve;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnNttrctve(String exmplScnrPrcssStpPrtnNttrctve) {
-        this.exmplScnrPrcssStpPrtnNttrctve = exmplScnrPrcssStpPrtnNttrctve;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnRcvrctve() {
-        return this.exmplScnrPrcssStpPrtnRcvrctve;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnRcvrctve(String exmplScnrPrcssStpPrtnRcvrctve) {
-        this.exmplScnrPrcssStpPrtnRcvrctve = exmplScnrPrcssStpPrtnRcvrctve;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnRqst() {
-        return this.exmplScnrPrcssStpPrtnRqst;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnRqst(String exmplScnrPrcssStpPrtnRqst) {
-        this.exmplScnrPrcssStpPrtnRqst = exmplScnrPrcssStpPrtnRqst;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpPrtnRspnse() {
-        return this.exmplScnrPrcssStpPrtnRspnse;
-    }
-    
-    public void setExmplScnrPrcssStpPrtnRspnse(String exmplScnrPrcssStpPrtnRspnse) {
-        this.exmplScnrPrcssStpPrtnRspnse = exmplScnrPrcssStpPrtnRspnse;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpLtrntvTtle() {
-        return this.exmplScnrPrcssStpLtrntvTtle;
-    }
-    
-    public void setExmplScnrPrcssStpLtrntvTtle(String exmplScnrPrcssStpLtrntvTtle) {
-        this.exmplScnrPrcssStpLtrntvTtle = exmplScnrPrcssStpLtrntvTtle;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpLtrntvDscrptn() {
-        return this.exmplScnrPrcssStpLtrntvDscrptn;
-    }
-    
-    public void setExmplScnrPrcssStpLtrntvDscrptn(String exmplScnrPrcssStpLtrntvDscrptn) {
-        this.exmplScnrPrcssStpLtrntvDscrptn = exmplScnrPrcssStpLtrntvDscrptn;
-    }
-    
-    
-    
-    public String getExmplScnrPrcssStpLtrntvStp() {
-        return this.exmplScnrPrcssStpLtrntvStp;
-    }
-    
-    public void setExmplScnrPrcssStpLtrntvStp(String exmplScnrPrcssStpLtrntvStp) {
-        this.exmplScnrPrcssStpLtrntvStp = exmplScnrPrcssStpLtrntvStp;
-    }
-    
-    
-    
-    public String getExampleScenarioWorkflow() {
-        return this.exampleScenarioWorkflow;
-    }
-    
-    public void setExampleScenarioWorkflow(String exampleScenarioWorkflow) {
-        this.exampleScenarioWorkflow = exampleScenarioWorkflow;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getExampleScenarioUrlUri()
+    {
+        return this.exampleScenarioUrlUri;
+    }
+    
+    public void setExampleScenarioUrlUri
+        (String exampleScenarioUrlUri) 
+        {
+      this.exampleScenarioUrlUri = exampleScenarioUrlUri;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrSe()
+    {
+        return this.exmplScnrDntfrDntfrSe;
+    }
+    
+    public void setExmplScnrDntfrDntfrSe
+        (String exmplScnrDntfrDntfrSe) 
+        {
+      this.exmplScnrDntfrDntfrSe = exmplScnrDntfrDntfrSe;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcCSstm()
+    {
+        return this.exmplScnrDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcCSstm
+        (String exmplScnrDntfrDntfrTpCcCSstm) 
+        {
+      this.exmplScnrDntfrDntfrTpCcCSstm = exmplScnrDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcCVrsn()
+    {
+        return this.exmplScnrDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcCVrsn
+        (String exmplScnrDntfrDntfrTpCcCVrsn) 
+        {
+      this.exmplScnrDntfrDntfrTpCcCVrsn = exmplScnrDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcCCde()
+    {
+        return this.exmplScnrDntfrDntfrTpCcCCde;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcCCde
+        (String exmplScnrDntfrDntfrTpCcCCde) 
+        {
+      this.exmplScnrDntfrDntfrTpCcCCde = exmplScnrDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcCDsplay()
+    {
+        return this.exmplScnrDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcCDsplay
+        (String exmplScnrDntfrDntfrTpCcCDsplay) 
+        {
+      this.exmplScnrDntfrDntfrTpCcCDsplay = exmplScnrDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.exmplScnrDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcCSrSlctd
+        (String exmplScnrDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.exmplScnrDntfrDntfrTpCcCSrSlctd = exmplScnrDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrTpCcTxt()
+    {
+        return this.exmplScnrDntfrDntfrTpCcTxt;
+    }
+    
+    public void setExmplScnrDntfrDntfrTpCcTxt
+        (String exmplScnrDntfrDntfrTpCcTxt) 
+        {
+      this.exmplScnrDntfrDntfrTpCcTxt = exmplScnrDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrPrdPrdStrt()
+    {
+        return this.exmplScnrDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setExmplScnrDntfrDntfrPrdPrdStrt
+        (String exmplScnrDntfrDntfrPrdPrdStrt) 
+        {
+      this.exmplScnrDntfrDntfrPrdPrdStrt = exmplScnrDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrPrdPrdNd()
+    {
+        return this.exmplScnrDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setExmplScnrDntfrDntfrPrdPrdNd
+        (String exmplScnrDntfrDntfrPrdPrdNd) 
+        {
+      this.exmplScnrDntfrDntfrPrdPrdNd = exmplScnrDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrSsgnr()
+    {
+        return this.exmplScnrDntfrDntfrSsgnr;
+    }
+    
+    public void setExmplScnrDntfrDntfrSsgnr
+        (String exmplScnrDntfrDntfrSsgnr) 
+        {
+      this.exmplScnrDntfrDntfrSsgnr = exmplScnrDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrVlue()
+    {
+        return this.exmplScnrDntfrDntfrVlue;
+    }
+    
+    public void setExmplScnrDntfrDntfrVlue
+        (String exmplScnrDntfrDntfrVlue) 
+        {
+      this.exmplScnrDntfrDntfrVlue = exmplScnrDntfrDntfrVlue;
+}
+    public 
+    String 
+    getExmplScnrDntfrDntfrSstm()
+    {
+        return this.exmplScnrDntfrDntfrSstm;
+    }
+    
+    public void setExmplScnrDntfrDntfrSstm
+        (String exmplScnrDntfrDntfrSstm) 
+        {
+      this.exmplScnrDntfrDntfrSstm = exmplScnrDntfrDntfrSstm;
+}
+    public 
+    String 
+    getExampleScenarioVersionString()
+    {
+        return this.exampleScenarioVersionString;
+    }
+    
+    public void setExampleScenarioVersionString
+        (String exampleScenarioVersionString) 
+        {
+      this.exampleScenarioVersionString = exampleScenarioVersionString;
+}
+    public 
+    String 
+    getExampleScenarioNameString()
+    {
+        return this.exampleScenarioNameString;
+    }
+    
+    public void setExampleScenarioNameString
+        (String exampleScenarioNameString) 
+        {
+      this.exampleScenarioNameString = exampleScenarioNameString;
+}
+    public 
+    String 
+    getExampleScenarioStatusCode()
+    {
+        return this.exampleScenarioStatusCode;
+    }
+    
+    public void setExampleScenarioStatusCode
+        (String exampleScenarioStatusCode) 
+        {
+      this.exampleScenarioStatusCode = exampleScenarioStatusCode;
+}
+    public 
+    String 
+    getExmplScnrXprmntlBln()
+    {
+        return this.exmplScnrXprmntlBln;
+    }
+    
+    public void setExmplScnrXprmntlBln
+        (String exmplScnrXprmntlBln) 
+        {
+      this.exmplScnrXprmntlBln = exmplScnrXprmntlBln;
+}
+    public 
+    String 
+    getExampleScenarioDateDateTime()
+    {
+        return this.exampleScenarioDateDateTime;
+    }
+    
+    public void setExampleScenarioDateDateTime
+        (String exampleScenarioDateDateTime) 
+        {
+      this.exampleScenarioDateDateTime = exampleScenarioDateDateTime;
+}
+    public 
+    String 
+    getExampleScenarioPublisherString()
+    {
+        return this.exampleScenarioPublisherString;
+    }
+    
+    public void setExampleScenarioPublisherString
+        (String exampleScenarioPublisherString) 
+        {
+      this.exampleScenarioPublisherString = exampleScenarioPublisherString;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntPrdStrt
+        (String exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt = exmplScnrCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntPrdNd
+        (String exmplScnrCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntPrdNd = exmplScnrCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntSstm
+        (String exmplScnrCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntSstm = exmplScnrCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntVlue
+        (String exmplScnrCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntVlue = exmplScnrCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntSe
+        (String exmplScnrCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntSe = exmplScnrCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.exmplScnrCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setExmplScnrCntctCntctDtlTlcmCntctPntRnk
+        (String exmplScnrCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.exmplScnrCntctCntctDtlTlcmCntctPntRnk = exmplScnrCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getExmplScnrCntctCntctDtlNme()
+    {
+        return this.exmplScnrCntctCntctDtlNme;
+    }
+    
+    public void setExmplScnrCntctCntctDtlNme
+        (String exmplScnrCntctCntctDtlNme) 
+        {
+      this.exmplScnrCntctCntctDtlNme = exmplScnrCntctCntctDtlNme;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcCSstm
+        (String exmplScnrSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcCSstm = exmplScnrSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcCVrsn
+        (String exmplScnrSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcCVrsn = exmplScnrSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcCCde
+        (String exmplScnrSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcCCde = exmplScnrSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcCDsplay
+        (String exmplScnrSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcCDsplay = exmplScnrSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcCSrSlctd
+        (String exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd = exmplScnrSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlCcCcTxt
+        (String exmplScnrSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlCcCcTxt = exmplScnrSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtCdCSstm()
+    {
+        return this.exmplScnrSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtCdCSstm
+        (String exmplScnrSCntxtSgCntxtCdCSstm) 
+        {
+      this.exmplScnrSCntxtSgCntxtCdCSstm = exmplScnrSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtCdCVrsn()
+    {
+        return this.exmplScnrSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtCdCVrsn
+        (String exmplScnrSCntxtSgCntxtCdCVrsn) 
+        {
+      this.exmplScnrSCntxtSgCntxtCdCVrsn = exmplScnrSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtCdCCde()
+    {
+        return this.exmplScnrSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtCdCCde
+        (String exmplScnrSCntxtSgCntxtCdCCde) 
+        {
+      this.exmplScnrSCntxtSgCntxtCdCCde = exmplScnrSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtCdCDsplay()
+    {
+        return this.exmplScnrSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtCdCDsplay
+        (String exmplScnrSCntxtSgCntxtCdCDsplay) 
+        {
+      this.exmplScnrSCntxtSgCntxtCdCDsplay = exmplScnrSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.exmplScnrSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtCdCSrSlctd
+        (String exmplScnrSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.exmplScnrSCntxtSgCntxtCdCSrSlctd = exmplScnrSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlQnttQnttVlue
+        (String exmplScnrSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlQnttQnttVlue = exmplScnrSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlQnttQnttCmprtr
+        (String exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr = exmplScnrSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlQnttQnttNt
+        (String exmplScnrSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlQnttQnttNt = exmplScnrSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlQnttQnttSstm
+        (String exmplScnrSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlQnttQnttSstm = exmplScnrSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlQnttQnttCde
+        (String exmplScnrSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlQnttQnttCde = exmplScnrSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlRngRngLw
+        (String exmplScnrSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlRngRngLw = exmplScnrSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlRngRngHgh
+        (String exmplScnrSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlRngRngHgh = exmplScnrSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getExmplScnrSCntxtSgCntxtVlRfrnce()
+    {
+        return this.exmplScnrSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setExmplScnrSCntxtSgCntxtVlRfrnce
+        (String exmplScnrSCntxtSgCntxtVlRfrnce) 
+        {
+      this.exmplScnrSCntxtSgCntxtVlRfrnce = exmplScnrSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcCdngCSstm()
+    {
+        return this.exmplScnrJrsdctnCcCdngCSstm;
+    }
+    
+    public void setExmplScnrJrsdctnCcCdngCSstm
+        (String exmplScnrJrsdctnCcCdngCSstm) 
+        {
+      this.exmplScnrJrsdctnCcCdngCSstm = exmplScnrJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcCdngCVrsn()
+    {
+        return this.exmplScnrJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setExmplScnrJrsdctnCcCdngCVrsn
+        (String exmplScnrJrsdctnCcCdngCVrsn) 
+        {
+      this.exmplScnrJrsdctnCcCdngCVrsn = exmplScnrJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcCdngCCde()
+    {
+        return this.exmplScnrJrsdctnCcCdngCCde;
+    }
+    
+    public void setExmplScnrJrsdctnCcCdngCCde
+        (String exmplScnrJrsdctnCcCdngCCde) 
+        {
+      this.exmplScnrJrsdctnCcCdngCCde = exmplScnrJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcCdngCDsplay()
+    {
+        return this.exmplScnrJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setExmplScnrJrsdctnCcCdngCDsplay
+        (String exmplScnrJrsdctnCcCdngCDsplay) 
+        {
+      this.exmplScnrJrsdctnCcCdngCDsplay = exmplScnrJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcCdngCSrSlctd()
+    {
+        return this.exmplScnrJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setExmplScnrJrsdctnCcCdngCSrSlctd
+        (String exmplScnrJrsdctnCcCdngCSrSlctd) 
+        {
+      this.exmplScnrJrsdctnCcCdngCSrSlctd = exmplScnrJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getExmplScnrJrsdctnCcTxt()
+    {
+        return this.exmplScnrJrsdctnCcTxt;
+    }
+    
+    public void setExmplScnrJrsdctnCcTxt
+        (String exmplScnrJrsdctnCcTxt) 
+        {
+      this.exmplScnrJrsdctnCcTxt = exmplScnrJrsdctnCcTxt;
+}
+    public 
+    String 
+    getExampleScenarioCopyrightMarkdown()
+    {
+        return this.exampleScenarioCopyrightMarkdown;
+    }
+    
+    public void setExampleScenarioCopyrightMarkdown
+        (String exampleScenarioCopyrightMarkdown) 
+        {
+      this.exampleScenarioCopyrightMarkdown = exampleScenarioCopyrightMarkdown;
+}
+    public 
+    String 
+    getExampleScenarioPurposeMarkdown()
+    {
+        return this.exampleScenarioPurposeMarkdown;
+    }
+    
+    public void setExampleScenarioPurposeMarkdown
+        (String exampleScenarioPurposeMarkdown) 
+        {
+      this.exampleScenarioPurposeMarkdown = exampleScenarioPurposeMarkdown;
+}
+    public 
+    String 
+    getExmplScnrCtrCtrdStrng()
+    {
+        return this.exmplScnrCtrCtrdStrng;
+    }
+    
+    public void setExmplScnrCtrCtrdStrng
+        (String exmplScnrCtrCtrdStrng) 
+        {
+      this.exmplScnrCtrCtrdStrng = exmplScnrCtrCtrdStrng;
+}
+    public 
+    String 
+    getExampleScenarioActorTypeCode()
+    {
+        return this.exampleScenarioActorTypeCode;
+    }
+    
+    public void setExampleScenarioActorTypeCode
+        (String exampleScenarioActorTypeCode) 
+        {
+      this.exampleScenarioActorTypeCode = exampleScenarioActorTypeCode;
+}
+    public 
+    String 
+    getExampleScenarioActorNameString()
+    {
+        return this.exampleScenarioActorNameString;
+    }
+    
+    public void setExampleScenarioActorNameString
+        (String exampleScenarioActorNameString) 
+        {
+      this.exampleScenarioActorNameString = exampleScenarioActorNameString;
+}
+    public 
+    String 
+    getExmplScnrCtrDscrptnMrkdwn()
+    {
+        return this.exmplScnrCtrDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrCtrDscrptnMrkdwn
+        (String exmplScnrCtrDscrptnMrkdwn) 
+        {
+      this.exmplScnrCtrDscrptnMrkdwn = exmplScnrCtrDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrNstncRsrcdStrng()
+    {
+        return this.exmplScnrNstncRsrcdStrng;
+    }
+    
+    public void setExmplScnrNstncRsrcdStrng
+        (String exmplScnrNstncRsrcdStrng) 
+        {
+      this.exmplScnrNstncRsrcdStrng = exmplScnrNstncRsrcdStrng;
+}
+    public 
+    String 
+    getExmplScnrNstncRsrcTpCde()
+    {
+        return this.exmplScnrNstncRsrcTpCde;
+    }
+    
+    public void setExmplScnrNstncRsrcTpCde
+        (String exmplScnrNstncRsrcTpCde) 
+        {
+      this.exmplScnrNstncRsrcTpCde = exmplScnrNstncRsrcTpCde;
+}
+    public 
+    String 
+    getExmplScnrNstncNmStrng()
+    {
+        return this.exmplScnrNstncNmStrng;
+    }
+    
+    public void setExmplScnrNstncNmStrng
+        (String exmplScnrNstncNmStrng) 
+        {
+      this.exmplScnrNstncNmStrng = exmplScnrNstncNmStrng;
+}
+    public 
+    String 
+    getExmplScnrNstncDscrptnMrkdwn()
+    {
+        return this.exmplScnrNstncDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrNstncDscrptnMrkdwn
+        (String exmplScnrNstncDscrptnMrkdwn) 
+        {
+      this.exmplScnrNstncDscrptnMrkdwn = exmplScnrNstncDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrNstncVrsnVrsndStrng()
+    {
+        return this.exmplScnrNstncVrsnVrsndStrng;
+    }
+    
+    public void setExmplScnrNstncVrsnVrsndStrng
+        (String exmplScnrNstncVrsnVrsndStrng) 
+        {
+      this.exmplScnrNstncVrsnVrsndStrng = exmplScnrNstncVrsnVrsndStrng;
+}
+    public 
+    String 
+    getExmplScnrNstncVrsnDscrptnMrkdwn()
+    {
+        return this.exmplScnrNstncVrsnDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrNstncVrsnDscrptnMrkdwn
+        (String exmplScnrNstncVrsnDscrptnMrkdwn) 
+        {
+      this.exmplScnrNstncVrsnDscrptnMrkdwn = exmplScnrNstncVrsnDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrNstncCntndnstncRsrcdStrng()
+    {
+        return this.exmplScnrNstncCntndnstncRsrcdStrng;
+    }
+    
+    public void setExmplScnrNstncCntndnstncRsrcdStrng
+        (String exmplScnrNstncCntndnstncRsrcdStrng) 
+        {
+      this.exmplScnrNstncCntndnstncRsrcdStrng = exmplScnrNstncCntndnstncRsrcdStrng;
+}
+    public 
+    String 
+    getExmplScnrNstncCntndnstncVrsndStrng()
+    {
+        return this.exmplScnrNstncCntndnstncVrsndStrng;
+    }
+    
+    public void setExmplScnrNstncCntndnstncVrsndStrng
+        (String exmplScnrNstncCntndnstncVrsndStrng) 
+        {
+      this.exmplScnrNstncCntndnstncVrsndStrng = exmplScnrNstncCntndnstncVrsndStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssTtlStrng()
+    {
+        return this.exmplScnrPrcssTtlStrng;
+    }
+    
+    public void setExmplScnrPrcssTtlStrng
+        (String exmplScnrPrcssTtlStrng) 
+        {
+      this.exmplScnrPrcssTtlStrng = exmplScnrPrcssTtlStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssDscrptnMrkdwn()
+    {
+        return this.exmplScnrPrcssDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrPrcssDscrptnMrkdwn
+        (String exmplScnrPrcssDscrptnMrkdwn) 
+        {
+      this.exmplScnrPrcssDscrptnMrkdwn = exmplScnrPrcssDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrPrcssPrCndtnsMrkdwn()
+    {
+        return this.exmplScnrPrcssPrCndtnsMrkdwn;
+    }
+    
+    public void setExmplScnrPrcssPrCndtnsMrkdwn
+        (String exmplScnrPrcssPrCndtnsMrkdwn) 
+        {
+      this.exmplScnrPrcssPrCndtnsMrkdwn = exmplScnrPrcssPrCndtnsMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrPrcssPstCndtnsMrkdwn()
+    {
+        return this.exmplScnrPrcssPstCndtnsMrkdwn;
+    }
+    
+    public void setExmplScnrPrcssPstCndtnsMrkdwn
+        (String exmplScnrPrcssPstCndtnsMrkdwn) 
+        {
+      this.exmplScnrPrcssPstCndtnsMrkdwn = exmplScnrPrcssPstCndtnsMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrcssPrcss()
+    {
+        return this.exmplScnrPrcssStpPrcssPrcss;
+    }
+    
+    public void setExmplScnrPrcssStpPrcssPrcss
+        (String exmplScnrPrcssStpPrcssPrcss) 
+        {
+      this.exmplScnrPrcssStpPrcssPrcss = exmplScnrPrcssStpPrcssPrcss;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPsBln()
+    {
+        return this.exmplScnrPrcssStpPsBln;
+    }
+    
+    public void setExmplScnrPrcssStpPsBln
+        (String exmplScnrPrcssStpPsBln) 
+        {
+      this.exmplScnrPrcssStpPsBln = exmplScnrPrcssStpPsBln;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnNmbrStrng()
+    {
+        return this.exmplScnrPrcssStpPrtnNmbrStrng;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnNmbrStrng
+        (String exmplScnrPrcssStpPrtnNmbrStrng) 
+        {
+      this.exmplScnrPrcssStpPrtnNmbrStrng = exmplScnrPrcssStpPrtnNmbrStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnTpStrng()
+    {
+        return this.exmplScnrPrcssStpPrtnTpStrng;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnTpStrng
+        (String exmplScnrPrcssStpPrtnTpStrng) 
+        {
+      this.exmplScnrPrcssStpPrtnTpStrng = exmplScnrPrcssStpPrtnTpStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnNmStrng()
+    {
+        return this.exmplScnrPrcssStpPrtnNmStrng;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnNmStrng
+        (String exmplScnrPrcssStpPrtnNmStrng) 
+        {
+      this.exmplScnrPrcssStpPrtnNmStrng = exmplScnrPrcssStpPrtnNmStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnNttrStrng()
+    {
+        return this.exmplScnrPrcssStpPrtnNttrStrng;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnNttrStrng
+        (String exmplScnrPrcssStpPrtnNttrStrng) 
+        {
+      this.exmplScnrPrcssStpPrtnNttrStrng = exmplScnrPrcssStpPrtnNttrStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnRcvrStrng()
+    {
+        return this.exmplScnrPrcssStpPrtnRcvrStrng;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnRcvrStrng
+        (String exmplScnrPrcssStpPrtnRcvrStrng) 
+        {
+      this.exmplScnrPrcssStpPrtnRcvrStrng = exmplScnrPrcssStpPrtnRcvrStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnDscrptnMrkdwn()
+    {
+        return this.exmplScnrPrcssStpPrtnDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnDscrptnMrkdwn
+        (String exmplScnrPrcssStpPrtnDscrptnMrkdwn) 
+        {
+      this.exmplScnrPrcssStpPrtnDscrptnMrkdwn = exmplScnrPrcssStpPrtnDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnNttrctvBln()
+    {
+        return this.exmplScnrPrcssStpPrtnNttrctvBln;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnNttrctvBln
+        (String exmplScnrPrcssStpPrtnNttrctvBln) 
+        {
+      this.exmplScnrPrcssStpPrtnNttrctvBln = exmplScnrPrcssStpPrtnNttrctvBln;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnRcvrctvBln()
+    {
+        return this.exmplScnrPrcssStpPrtnRcvrctvBln;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnRcvrctvBln
+        (String exmplScnrPrcssStpPrtnRcvrctvBln) 
+        {
+      this.exmplScnrPrcssStpPrtnRcvrctvBln = exmplScnrPrcssStpPrtnRcvrctvBln;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnRqstCntndnstnce()
+    {
+        return this.exmplScnrPrcssStpPrtnRqstCntndnstnce;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnRqstCntndnstnce
+        (String exmplScnrPrcssStpPrtnRqstCntndnstnce) 
+        {
+      this.exmplScnrPrcssStpPrtnRqstCntndnstnce = exmplScnrPrcssStpPrtnRqstCntndnstnce;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpPrtnRspnsCntndnstnce()
+    {
+        return this.exmplScnrPrcssStpPrtnRspnsCntndnstnce;
+    }
+    
+    public void setExmplScnrPrcssStpPrtnRspnsCntndnstnce
+        (String exmplScnrPrcssStpPrtnRspnsCntndnstnce) 
+        {
+      this.exmplScnrPrcssStpPrtnRspnsCntndnstnce = exmplScnrPrcssStpPrtnRspnsCntndnstnce;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpLtrntvTtlStrng()
+    {
+        return this.exmplScnrPrcssStpLtrntvTtlStrng;
+    }
+    
+    public void setExmplScnrPrcssStpLtrntvTtlStrng
+        (String exmplScnrPrcssStpLtrntvTtlStrng) 
+        {
+      this.exmplScnrPrcssStpLtrntvTtlStrng = exmplScnrPrcssStpLtrntvTtlStrng;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpLtrntvDscrptnMrkdwn()
+    {
+        return this.exmplScnrPrcssStpLtrntvDscrptnMrkdwn;
+    }
+    
+    public void setExmplScnrPrcssStpLtrntvDscrptnMrkdwn
+        (String exmplScnrPrcssStpLtrntvDscrptnMrkdwn) 
+        {
+      this.exmplScnrPrcssStpLtrntvDscrptnMrkdwn = exmplScnrPrcssStpLtrntvDscrptnMrkdwn;
+}
+    public 
+    String 
+    getExmplScnrPrcssStpLtrntvStpStp()
+    {
+        return this.exmplScnrPrcssStpLtrntvStpStp;
+    }
+    
+    public void setExmplScnrPrcssStpLtrntvStpStp
+        (String exmplScnrPrcssStpLtrntvStpStp) 
+        {
+      this.exmplScnrPrcssStpLtrntvStpStp = exmplScnrPrcssStpLtrntvStpStp;
+}
+    public 
+    String 
+    getExampleScenarioWorkflowCanonical()
+    {
+        return this.exampleScenarioWorkflowCanonical;
+    }
+    
+    public void setExampleScenarioWorkflowCanonical
+        (String exampleScenarioWorkflowCanonical) 
+        {
+      this.exampleScenarioWorkflowCanonical = exampleScenarioWorkflowCanonical;
+}
 
 
 

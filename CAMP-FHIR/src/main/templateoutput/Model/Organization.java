@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1217 +10,1020 @@ package main.templateoutput.Model;
 public class Organization  implements java.io.Serializable {
 
 
-     private String orgnztnDntfrDntfrTpCdblCncptCdngCde;
-     private String orgnztnDntfrDntfrSCde;
-     private String orgnztnDntfrDntfrTpCdblCncptCdngSstm;
-     private String orgnztnDntfrDntfrTpCdblCncptCdngVrsn;
-     private String orgnztnDntfrDntfrTpCdblCncptCdngDsplay;
-     private String orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String orgnztnDntfrDntfrCdblCncptTxt;
-     private String orgnztnDntfrDntfrPrdStrt;
-     private String orgnztnDntfrDntfrPrdNd;
-     private String orgnztnDntfrDntfrRfrncRfrnce;
-     private String orgnztnDntfrDntfrRfrncTpe;
-     private String orgnztnDntfrDntfrRfrncDntfr;
-     private String orgnztnDntfrDntfrRfrncDsplay;
-     private String orgnztnDntfrDntfrVlStrng;
-     private String orgnztnDntfrDntfrSstmRi;
-     private String organizationActive;
-     private String orgnztnTpCdblCncptCdngSstm;
-     private String orgnztnTpCdblCncptCdngVrsn;
-     private String orgnztnTpCdblCncptCdngCde;
-     private String orgnztnTpCdblCncptCdngDsplay;
-     private String orgnztnTpCdblCncptCdngSrSlctd;
-     private String orgnztnTpCdblCncptTxtStrng;
-     private String organizationName;
-     private String organizationAlias;
-     private String orgnztnTlcmCntctPntSstmCde;
-     private String orgnztnTlcmCntctPntSCde;
-     private String orgnztnTlcmCntctPntPrdStrt;
-     private String orgnztnTlcmCntctPntPrdNd;
-     private String orgnztnTlcmCntctPntRnkPstvnt;
-     private String orgnztnTlcmCntctPntVlStrng;
-     private String orgnztnDdrssDdrssSCde;
-     private String orgnztnDdrssDdrssTpCde;
-     private String orgnztnDdrssDdrssPrdStrt;
-     private String orgnztnDdrssDdrssPrdNd;
-     private String orgnztnDdrssDdrssTxtStrng;
-     private String orgnztnDdrssDdrssLnStrng;
-     private String orgnztnDdrssDdrssCtStrng;
-     private String orgnztnDdrssDdrssDstrctStrng;
-     private String orgnztnDdrssDdrssSttStrng;
-     private String orgnztnDdrssDdrssPstlCdStrng;
-     private String orgnztnDdrssDdrssCntrStrng;
-     private String orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng;
-     private String orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt;
-     private String orgnztnPrtfRfrncDntfrDntfrPrdStrt;
-     private String orgnztnPrtfRfrncDntfrDntfrPrdNd;
-     private String orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce;
-     private String orgnztnPrtfRfrncDntfrDntfrRfrncTpe;
-     private String orgnztnPrtfRfrncDntfrDntfrRfrncDntfr;
-     private String orgnztnPrtfRfrncDntfrDntfrRfrncDsplay;
-     private String orgnztnPrtfRfrncDntfrSe;
-     private String orgnztnPrtfRfrncDntfrSstm;
-     private String orgnztnPrtfRfrncDntfrVlue;
-     private String orgnztnPrtfRfrncRfrncStrng;
-     private String orgnztnPrtfRfrncDsplStrng;
-     private String orgnztnPrtfRfrncTpRi;
-     private String orgnztnCntctPrpsCdblCncptCdngSstm;
-     private String orgnztnCntctPrpsCdblCncptCdngVrsn;
-     private String orgnztnCntctPrpsCdblCncptCdngCde;
-     private String orgnztnCntctPrpsCdblCncptCdngDsplay;
-     private String orgnztnCntctPrpsCdblCncptCdngSrSlctd;
-     private String orgnztnCntctPrpsCdblCncptTxtStrng;
-     private String orgnztnCntctNmHmnNmSCde;
-     private String orgnztnCntctNmHmnNmPrdStrt;
-     private String orgnztnCntctNmHmnNmPrdNd;
-     private String orgnztnCntctNmHmnNmTxtStrng;
-     private String orgnztnCntctNmHmnNmFmlStrng;
-     private String orgnztnCntctNmHmnNmGvnStrng;
-     private String orgnztnCntctNmHmnNmPrfxStrng;
-     private String orgnztnCntctNmHmnNmSffxStrng;
-     private String orgnztnCntctTlcmCntctPntSstmCde;
-     private String orgnztnCntctTlcmCntctPntSCde;
-     private String orgnztnCntctTlcmCntctPntPrdStrt;
-     private String orgnztnCntctTlcmCntctPntPrdNd;
-     private String orgnztnCntctTlcmCntctPntRnkPstvnt;
-     private String orgnztnCntctTlcmCntctPntVlStrng;
-     private String orgnztnCntctDdrssDdrssSCde;
-     private String orgnztnCntctDdrssDdrssTpCde;
-     private String orgnztnCntctDdrssDdrssPrdStrt;
-     private String orgnztnCntctDdrssDdrssPrdNd;
-     private String orgnztnCntctDdrssDdrssTxtStrng;
-     private String orgnztnCntctDdrssDdrssLnStrng;
-     private String orgnztnCntctDdrssDdrssCtStrng;
-     private String orgnztnCntctDdrssDdrssDstrctStrng;
-     private String orgnztnCntctDdrssDdrssSttStrng;
-     private String orgnztnCntctDdrssDdrssPstlCdStrng;
-     private String orgnztnCntctDdrssDdrssCntrStrng;
-     private String orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng;
-     private String orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt;
-     private String orgnztnNdpntRfrncDntfrDntfrPrdStrt;
-     private String orgnztnNdpntRfrncDntfrDntfrPrdNd;
-     private String orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce;
-     private String orgnztnNdpntRfrncDntfrDntfrRfrncTpe;
-     private String orgnztnNdpntRfrncDntfrDntfrRfrncDntfr;
-     private String orgnztnNdpntRfrncDntfrDntfrRfrncDsplay;
-     private String orgnztnNdpntRfrncDntfrSe;
-     private String orgnztnNdpntRfrncDntfrSstm;
-     private String orgnztnNdpntRfrncDntfrVlue;
-     private String orgnztnNdpntRfrncRfrncStrng;
-     private String orgnztnNdpntRfrncDsplStrng;
-     private String orgnztnNdpntRfrncTpRi;
+     private Integer id;
+     private String orgnztnDntfrDntfrSe;
+     private String orgnztnDntfrDntfrTpCcCSstm;
+     private String orgnztnDntfrDntfrTpCcCVrsn;
+     private String orgnztnDntfrDntfrTpCcCCde;
+     private String orgnztnDntfrDntfrTpCcCDsplay;
+     private String orgnztnDntfrDntfrTpCcCSrSlctd;
+     private String orgnztnDntfrDntfrTpCcTxt;
+     private String orgnztnDntfrDntfrPrdPrdStrt;
+     private String orgnztnDntfrDntfrPrdPrdNd;
+     private String orgnztnDntfrDntfrSsgnr;
+     private String orgnztnDntfrDntfrVlue;
+     private String orgnztnDntfrDntfrSstm;
+     private String organizationActiveBoolean;
+     private String orgnztnTpCcCdngCSstm;
+     private String orgnztnTpCcCdngCVrsn;
+     private String organizationTypeCcCodingCCode;
+     private String orgnztnTpCcCdngCDsplay;
+     private String orgnztnTpCcCdngCSrSlctd;
+     private String organizationTypeCcText;
+     private String organizationNameString;
+     private String organizationAliasString;
+     private String orgnztnTlcmCntctPntSstm;
+     private String orgnztnTlcmCntctPntSe;
+     private String orgnztnTlcmCntctPntPrdPrdStrt;
+     private String orgnztnTlcmCntctPntPrdPrdNd;
+     private String orgnztnTlcmCntctPntRnk;
+     private String orgnztnTlcmCntctPntVlue;
+     private String organizationAddressAddressUse;
+     private String organizationAddressAddressType;
+     private String orgnztnDdrssDdrssPrdPrdStrt;
+     private String orgnztnDdrssDdrssPrdPrdNd;
+     private String organizationAddressAddressText;
+     private String organizationAddressAddressLine;
+     private String organizationAddressAddressCity;
+     private String orgnztnDdrssDdrssDstrct;
+     private String organizationAddressAddressState;
+     private String orgnztnDdrssDdrssPstlCde;
+     private String orgnztnDdrssDdrssCntry;
+     private String organizationPartOfReference;
+     private String orgnztnCntctPrpsCcCdngCSstm;
+     private String orgnztnCntctPrpsCcCdngCVrsn;
+     private String orgnztnCntctPrpsCcCdngCCde;
+     private String orgnztnCntctPrpsCcCdngCDsplay;
+     private String orgnztnCntctPrpsCcCdngCSrSlctd;
+     private String orgnztnCntctPrpsCcTxt;
+     private String orgnztnCntctNmHmnNmSe;
+     private String orgnztnCntctNmHmnNmPrdPrdStrt;
+     private String orgnztnCntctNmHmnNmPrdPrdNd;
+     private String orgnztnCntctNmHmnNmTxt;
+     private String orgnztnCntctNmHmnNmFmly;
+     private String orgnztnCntctNmHmnNmGvn;
+     private String orgnztnCntctNmHmnNmPrfx;
+     private String orgnztnCntctNmHmnNmSffx;
+     private String orgnztnCntctTlcmCntctPntSstm;
+     private String orgnztnCntctTlcmCntctPntSe;
+     private String orgnztnCntctTlcmCntctPntPrdPrdStrt;
+     private String orgnztnCntctTlcmCntctPntPrdPrdNd;
+     private String orgnztnCntctTlcmCntctPntRnk;
+     private String orgnztnCntctTlcmCntctPntVlue;
+     private String orgnztnCntctDdrssDdrssSe;
+     private String orgnztnCntctDdrssDdrssTpe;
+     private String orgnztnCntctDdrssDdrssPrdPrdStrt;
+     private String orgnztnCntctDdrssDdrssPrdPrdNd;
+     private String orgnztnCntctDdrssDdrssTxt;
+     private String orgnztnCntctDdrssDdrssLne;
+     private String orgnztnCntctDdrssDdrssCty;
+     private String orgnztnCntctDdrssDdrssDstrct;
+     private String orgnztnCntctDdrssDdrssStte;
+     private String orgnztnCntctDdrssDdrssPstlCde;
+     private String orgnztnCntctDdrssDdrssCntry;
+     private String organizationEndpointReference;
 
     public Organization() {
     }
 
-	
-    public Organization(String orgnztnDntfrDntfrTpCdblCncptCdngCde) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngCde = orgnztnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Organization(String orgnztnDntfrDntfrTpCdblCncptCdngCde, String orgnztnDntfrDntfrSCde, String orgnztnDntfrDntfrTpCdblCncptCdngSstm, String orgnztnDntfrDntfrTpCdblCncptCdngVrsn, String orgnztnDntfrDntfrTpCdblCncptCdngDsplay, String orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd, String orgnztnDntfrDntfrCdblCncptTxt, String orgnztnDntfrDntfrPrdStrt, String orgnztnDntfrDntfrPrdNd, String orgnztnDntfrDntfrRfrncRfrnce, String orgnztnDntfrDntfrRfrncTpe, String orgnztnDntfrDntfrRfrncDntfr, String orgnztnDntfrDntfrRfrncDsplay, String orgnztnDntfrDntfrVlStrng, String orgnztnDntfrDntfrSstmRi, String organizationActive, String orgnztnTpCdblCncptCdngSstm, String orgnztnTpCdblCncptCdngVrsn, String orgnztnTpCdblCncptCdngCde, String orgnztnTpCdblCncptCdngDsplay, String orgnztnTpCdblCncptCdngSrSlctd, String orgnztnTpCdblCncptTxtStrng, String organizationName, String organizationAlias, String orgnztnTlcmCntctPntSstmCde, String orgnztnTlcmCntctPntSCde, String orgnztnTlcmCntctPntPrdStrt, String orgnztnTlcmCntctPntPrdNd, String orgnztnTlcmCntctPntRnkPstvnt, String orgnztnTlcmCntctPntVlStrng, String orgnztnDdrssDdrssSCde, String orgnztnDdrssDdrssTpCde, String orgnztnDdrssDdrssPrdStrt, String orgnztnDdrssDdrssPrdNd, String orgnztnDdrssDdrssTxtStrng, String orgnztnDdrssDdrssLnStrng, String orgnztnDdrssDdrssCtStrng, String orgnztnDdrssDdrssDstrctStrng, String orgnztnDdrssDdrssSttStrng, String orgnztnDdrssDdrssPstlCdStrng, String orgnztnDdrssDdrssCntrStrng, String orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng, String orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt, String orgnztnPrtfRfrncDntfrDntfrPrdStrt, String orgnztnPrtfRfrncDntfrDntfrPrdNd, String orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce, String orgnztnPrtfRfrncDntfrDntfrRfrncTpe, String orgnztnPrtfRfrncDntfrDntfrRfrncDntfr, String orgnztnPrtfRfrncDntfrDntfrRfrncDsplay, String orgnztnPrtfRfrncDntfrSe, String orgnztnPrtfRfrncDntfrSstm, String orgnztnPrtfRfrncDntfrVlue, String orgnztnPrtfRfrncRfrncStrng, String orgnztnPrtfRfrncDsplStrng, String orgnztnPrtfRfrncTpRi, String orgnztnCntctPrpsCdblCncptCdngSstm, String orgnztnCntctPrpsCdblCncptCdngVrsn, String orgnztnCntctPrpsCdblCncptCdngCde, String orgnztnCntctPrpsCdblCncptCdngDsplay, String orgnztnCntctPrpsCdblCncptCdngSrSlctd, String orgnztnCntctPrpsCdblCncptTxtStrng, String orgnztnCntctNmHmnNmSCde, String orgnztnCntctNmHmnNmPrdStrt, String orgnztnCntctNmHmnNmPrdNd, String orgnztnCntctNmHmnNmTxtStrng, String orgnztnCntctNmHmnNmFmlStrng, String orgnztnCntctNmHmnNmGvnStrng, String orgnztnCntctNmHmnNmPrfxStrng, String orgnztnCntctNmHmnNmSffxStrng, String orgnztnCntctTlcmCntctPntSstmCde, String orgnztnCntctTlcmCntctPntSCde, String orgnztnCntctTlcmCntctPntPrdStrt, String orgnztnCntctTlcmCntctPntPrdNd, String orgnztnCntctTlcmCntctPntRnkPstvnt, String orgnztnCntctTlcmCntctPntVlStrng, String orgnztnCntctDdrssDdrssSCde, String orgnztnCntctDdrssDdrssTpCde, String orgnztnCntctDdrssDdrssPrdStrt, String orgnztnCntctDdrssDdrssPrdNd, String orgnztnCntctDdrssDdrssTxtStrng, String orgnztnCntctDdrssDdrssLnStrng, String orgnztnCntctDdrssDdrssCtStrng, String orgnztnCntctDdrssDdrssDstrctStrng, String orgnztnCntctDdrssDdrssSttStrng, String orgnztnCntctDdrssDdrssPstlCdStrng, String orgnztnCntctDdrssDdrssCntrStrng, String orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng, String orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt, String orgnztnNdpntRfrncDntfrDntfrPrdStrt, String orgnztnNdpntRfrncDntfrDntfrPrdNd, String orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce, String orgnztnNdpntRfrncDntfrDntfrRfrncTpe, String orgnztnNdpntRfrncDntfrDntfrRfrncDntfr, String orgnztnNdpntRfrncDntfrDntfrRfrncDsplay, String orgnztnNdpntRfrncDntfrSe, String orgnztnNdpntRfrncDntfrSstm, String orgnztnNdpntRfrncDntfrVlue, String orgnztnNdpntRfrncRfrncStrng, String orgnztnNdpntRfrncDsplStrng, String orgnztnNdpntRfrncTpRi) {
-       this.orgnztnDntfrDntfrTpCdblCncptCdngCde = orgnztnDntfrDntfrTpCdblCncptCdngCde;
-       this.orgnztnDntfrDntfrSCde = orgnztnDntfrDntfrSCde;
-       this.orgnztnDntfrDntfrTpCdblCncptCdngSstm = orgnztnDntfrDntfrTpCdblCncptCdngSstm;
-       this.orgnztnDntfrDntfrTpCdblCncptCdngVrsn = orgnztnDntfrDntfrTpCdblCncptCdngVrsn;
-       this.orgnztnDntfrDntfrTpCdblCncptCdngDsplay = orgnztnDntfrDntfrTpCdblCncptCdngDsplay;
-       this.orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd = orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.orgnztnDntfrDntfrCdblCncptTxt = orgnztnDntfrDntfrCdblCncptTxt;
-       this.orgnztnDntfrDntfrPrdStrt = orgnztnDntfrDntfrPrdStrt;
-       this.orgnztnDntfrDntfrPrdNd = orgnztnDntfrDntfrPrdNd;
-       this.orgnztnDntfrDntfrRfrncRfrnce = orgnztnDntfrDntfrRfrncRfrnce;
-       this.orgnztnDntfrDntfrRfrncTpe = orgnztnDntfrDntfrRfrncTpe;
-       this.orgnztnDntfrDntfrRfrncDntfr = orgnztnDntfrDntfrRfrncDntfr;
-       this.orgnztnDntfrDntfrRfrncDsplay = orgnztnDntfrDntfrRfrncDsplay;
-       this.orgnztnDntfrDntfrVlStrng = orgnztnDntfrDntfrVlStrng;
-       this.orgnztnDntfrDntfrSstmRi = orgnztnDntfrDntfrSstmRi;
-       this.organizationActive = organizationActive;
-       this.orgnztnTpCdblCncptCdngSstm = orgnztnTpCdblCncptCdngSstm;
-       this.orgnztnTpCdblCncptCdngVrsn = orgnztnTpCdblCncptCdngVrsn;
-       this.orgnztnTpCdblCncptCdngCde = orgnztnTpCdblCncptCdngCde;
-       this.orgnztnTpCdblCncptCdngDsplay = orgnztnTpCdblCncptCdngDsplay;
-       this.orgnztnTpCdblCncptCdngSrSlctd = orgnztnTpCdblCncptCdngSrSlctd;
-       this.orgnztnTpCdblCncptTxtStrng = orgnztnTpCdblCncptTxtStrng;
-       this.organizationName = organizationName;
-       this.organizationAlias = organizationAlias;
-       this.orgnztnTlcmCntctPntSstmCde = orgnztnTlcmCntctPntSstmCde;
-       this.orgnztnTlcmCntctPntSCde = orgnztnTlcmCntctPntSCde;
-       this.orgnztnTlcmCntctPntPrdStrt = orgnztnTlcmCntctPntPrdStrt;
-       this.orgnztnTlcmCntctPntPrdNd = orgnztnTlcmCntctPntPrdNd;
-       this.orgnztnTlcmCntctPntRnkPstvnt = orgnztnTlcmCntctPntRnkPstvnt;
-       this.orgnztnTlcmCntctPntVlStrng = orgnztnTlcmCntctPntVlStrng;
-       this.orgnztnDdrssDdrssSCde = orgnztnDdrssDdrssSCde;
-       this.orgnztnDdrssDdrssTpCde = orgnztnDdrssDdrssTpCde;
-       this.orgnztnDdrssDdrssPrdStrt = orgnztnDdrssDdrssPrdStrt;
-       this.orgnztnDdrssDdrssPrdNd = orgnztnDdrssDdrssPrdNd;
-       this.orgnztnDdrssDdrssTxtStrng = orgnztnDdrssDdrssTxtStrng;
-       this.orgnztnDdrssDdrssLnStrng = orgnztnDdrssDdrssLnStrng;
-       this.orgnztnDdrssDdrssCtStrng = orgnztnDdrssDdrssCtStrng;
-       this.orgnztnDdrssDdrssDstrctStrng = orgnztnDdrssDdrssDstrctStrng;
-       this.orgnztnDdrssDdrssSttStrng = orgnztnDdrssDdrssSttStrng;
-       this.orgnztnDdrssDdrssPstlCdStrng = orgnztnDdrssDdrssPstlCdStrng;
-       this.orgnztnDdrssDdrssCntrStrng = orgnztnDdrssDdrssCntrStrng;
-       this.orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng = orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng;
-       this.orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt = orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt;
-       this.orgnztnPrtfRfrncDntfrDntfrPrdStrt = orgnztnPrtfRfrncDntfrDntfrPrdStrt;
-       this.orgnztnPrtfRfrncDntfrDntfrPrdNd = orgnztnPrtfRfrncDntfrDntfrPrdNd;
-       this.orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce = orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce;
-       this.orgnztnPrtfRfrncDntfrDntfrRfrncTpe = orgnztnPrtfRfrncDntfrDntfrRfrncTpe;
-       this.orgnztnPrtfRfrncDntfrDntfrRfrncDntfr = orgnztnPrtfRfrncDntfrDntfrRfrncDntfr;
-       this.orgnztnPrtfRfrncDntfrDntfrRfrncDsplay = orgnztnPrtfRfrncDntfrDntfrRfrncDsplay;
-       this.orgnztnPrtfRfrncDntfrSe = orgnztnPrtfRfrncDntfrSe;
-       this.orgnztnPrtfRfrncDntfrSstm = orgnztnPrtfRfrncDntfrSstm;
-       this.orgnztnPrtfRfrncDntfrVlue = orgnztnPrtfRfrncDntfrVlue;
-       this.orgnztnPrtfRfrncRfrncStrng = orgnztnPrtfRfrncRfrncStrng;
-       this.orgnztnPrtfRfrncDsplStrng = orgnztnPrtfRfrncDsplStrng;
-       this.orgnztnPrtfRfrncTpRi = orgnztnPrtfRfrncTpRi;
-       this.orgnztnCntctPrpsCdblCncptCdngSstm = orgnztnCntctPrpsCdblCncptCdngSstm;
-       this.orgnztnCntctPrpsCdblCncptCdngVrsn = orgnztnCntctPrpsCdblCncptCdngVrsn;
-       this.orgnztnCntctPrpsCdblCncptCdngCde = orgnztnCntctPrpsCdblCncptCdngCde;
-       this.orgnztnCntctPrpsCdblCncptCdngDsplay = orgnztnCntctPrpsCdblCncptCdngDsplay;
-       this.orgnztnCntctPrpsCdblCncptCdngSrSlctd = orgnztnCntctPrpsCdblCncptCdngSrSlctd;
-       this.orgnztnCntctPrpsCdblCncptTxtStrng = orgnztnCntctPrpsCdblCncptTxtStrng;
-       this.orgnztnCntctNmHmnNmSCde = orgnztnCntctNmHmnNmSCde;
-       this.orgnztnCntctNmHmnNmPrdStrt = orgnztnCntctNmHmnNmPrdStrt;
-       this.orgnztnCntctNmHmnNmPrdNd = orgnztnCntctNmHmnNmPrdNd;
-       this.orgnztnCntctNmHmnNmTxtStrng = orgnztnCntctNmHmnNmTxtStrng;
-       this.orgnztnCntctNmHmnNmFmlStrng = orgnztnCntctNmHmnNmFmlStrng;
-       this.orgnztnCntctNmHmnNmGvnStrng = orgnztnCntctNmHmnNmGvnStrng;
-       this.orgnztnCntctNmHmnNmPrfxStrng = orgnztnCntctNmHmnNmPrfxStrng;
-       this.orgnztnCntctNmHmnNmSffxStrng = orgnztnCntctNmHmnNmSffxStrng;
-       this.orgnztnCntctTlcmCntctPntSstmCde = orgnztnCntctTlcmCntctPntSstmCde;
-       this.orgnztnCntctTlcmCntctPntSCde = orgnztnCntctTlcmCntctPntSCde;
-       this.orgnztnCntctTlcmCntctPntPrdStrt = orgnztnCntctTlcmCntctPntPrdStrt;
-       this.orgnztnCntctTlcmCntctPntPrdNd = orgnztnCntctTlcmCntctPntPrdNd;
-       this.orgnztnCntctTlcmCntctPntRnkPstvnt = orgnztnCntctTlcmCntctPntRnkPstvnt;
-       this.orgnztnCntctTlcmCntctPntVlStrng = orgnztnCntctTlcmCntctPntVlStrng;
-       this.orgnztnCntctDdrssDdrssSCde = orgnztnCntctDdrssDdrssSCde;
-       this.orgnztnCntctDdrssDdrssTpCde = orgnztnCntctDdrssDdrssTpCde;
-       this.orgnztnCntctDdrssDdrssPrdStrt = orgnztnCntctDdrssDdrssPrdStrt;
-       this.orgnztnCntctDdrssDdrssPrdNd = orgnztnCntctDdrssDdrssPrdNd;
-       this.orgnztnCntctDdrssDdrssTxtStrng = orgnztnCntctDdrssDdrssTxtStrng;
-       this.orgnztnCntctDdrssDdrssLnStrng = orgnztnCntctDdrssDdrssLnStrng;
-       this.orgnztnCntctDdrssDdrssCtStrng = orgnztnCntctDdrssDdrssCtStrng;
-       this.orgnztnCntctDdrssDdrssDstrctStrng = orgnztnCntctDdrssDdrssDstrctStrng;
-       this.orgnztnCntctDdrssDdrssSttStrng = orgnztnCntctDdrssDdrssSttStrng;
-       this.orgnztnCntctDdrssDdrssPstlCdStrng = orgnztnCntctDdrssDdrssPstlCdStrng;
-       this.orgnztnCntctDdrssDdrssCntrStrng = orgnztnCntctDdrssDdrssCntrStrng;
-       this.orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng = orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng;
-       this.orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt = orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt;
-       this.orgnztnNdpntRfrncDntfrDntfrPrdStrt = orgnztnNdpntRfrncDntfrDntfrPrdStrt;
-       this.orgnztnNdpntRfrncDntfrDntfrPrdNd = orgnztnNdpntRfrncDntfrDntfrPrdNd;
-       this.orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce = orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce;
-       this.orgnztnNdpntRfrncDntfrDntfrRfrncTpe = orgnztnNdpntRfrncDntfrDntfrRfrncTpe;
-       this.orgnztnNdpntRfrncDntfrDntfrRfrncDntfr = orgnztnNdpntRfrncDntfrDntfrRfrncDntfr;
-       this.orgnztnNdpntRfrncDntfrDntfrRfrncDsplay = orgnztnNdpntRfrncDntfrDntfrRfrncDsplay;
-       this.orgnztnNdpntRfrncDntfrSe = orgnztnNdpntRfrncDntfrSe;
-       this.orgnztnNdpntRfrncDntfrSstm = orgnztnNdpntRfrncDntfrSstm;
-       this.orgnztnNdpntRfrncDntfrVlue = orgnztnNdpntRfrncDntfrVlue;
-       this.orgnztnNdpntRfrncRfrncStrng = orgnztnNdpntRfrncRfrncStrng;
-       this.orgnztnNdpntRfrncDsplStrng = orgnztnNdpntRfrncDsplStrng;
-       this.orgnztnNdpntRfrncTpRi = orgnztnNdpntRfrncTpRi;
+    public Organization(String orgnztnDntfrDntfrSe, String orgnztnDntfrDntfrTpCcCSstm, String orgnztnDntfrDntfrTpCcCVrsn, String orgnztnDntfrDntfrTpCcCCde, String orgnztnDntfrDntfrTpCcCDsplay, String orgnztnDntfrDntfrTpCcCSrSlctd, String orgnztnDntfrDntfrTpCcTxt, String orgnztnDntfrDntfrPrdPrdStrt, String orgnztnDntfrDntfrPrdPrdNd, String orgnztnDntfrDntfrSsgnr, String orgnztnDntfrDntfrVlue, String orgnztnDntfrDntfrSstm, String organizationActiveBoolean, String orgnztnTpCcCdngCSstm, String orgnztnTpCcCdngCVrsn, String organizationTypeCcCodingCCode, String orgnztnTpCcCdngCDsplay, String orgnztnTpCcCdngCSrSlctd, String organizationTypeCcText, String organizationNameString, String organizationAliasString, String orgnztnTlcmCntctPntSstm, String orgnztnTlcmCntctPntSe, String orgnztnTlcmCntctPntPrdPrdStrt, String orgnztnTlcmCntctPntPrdPrdNd, String orgnztnTlcmCntctPntRnk, String orgnztnTlcmCntctPntVlue, String organizationAddressAddressUse, String organizationAddressAddressType, String orgnztnDdrssDdrssPrdPrdStrt, String orgnztnDdrssDdrssPrdPrdNd, String organizationAddressAddressText, String organizationAddressAddressLine, String organizationAddressAddressCity, String orgnztnDdrssDdrssDstrct, String organizationAddressAddressState, String orgnztnDdrssDdrssPstlCde, String orgnztnDdrssDdrssCntry, String organizationPartOfReference, String orgnztnCntctPrpsCcCdngCSstm, String orgnztnCntctPrpsCcCdngCVrsn, String orgnztnCntctPrpsCcCdngCCde, String orgnztnCntctPrpsCcCdngCDsplay, String orgnztnCntctPrpsCcCdngCSrSlctd, String orgnztnCntctPrpsCcTxt, String orgnztnCntctNmHmnNmSe, String orgnztnCntctNmHmnNmPrdPrdStrt, String orgnztnCntctNmHmnNmPrdPrdNd, String orgnztnCntctNmHmnNmTxt, String orgnztnCntctNmHmnNmFmly, String orgnztnCntctNmHmnNmGvn, String orgnztnCntctNmHmnNmPrfx, String orgnztnCntctNmHmnNmSffx, String orgnztnCntctTlcmCntctPntSstm, String orgnztnCntctTlcmCntctPntSe, String orgnztnCntctTlcmCntctPntPrdPrdStrt, String orgnztnCntctTlcmCntctPntPrdPrdNd, String orgnztnCntctTlcmCntctPntRnk, String orgnztnCntctTlcmCntctPntVlue, String orgnztnCntctDdrssDdrssSe, String orgnztnCntctDdrssDdrssTpe, String orgnztnCntctDdrssDdrssPrdPrdStrt, String orgnztnCntctDdrssDdrssPrdPrdNd, String orgnztnCntctDdrssDdrssTxt, String orgnztnCntctDdrssDdrssLne, String orgnztnCntctDdrssDdrssCty, String orgnztnCntctDdrssDdrssDstrct, String orgnztnCntctDdrssDdrssStte, String orgnztnCntctDdrssDdrssPstlCde, String orgnztnCntctDdrssDdrssCntry, String organizationEndpointReference) {
+       this.orgnztnDntfrDntfrSe = orgnztnDntfrDntfrSe;
+       this.orgnztnDntfrDntfrTpCcCSstm = orgnztnDntfrDntfrTpCcCSstm;
+       this.orgnztnDntfrDntfrTpCcCVrsn = orgnztnDntfrDntfrTpCcCVrsn;
+       this.orgnztnDntfrDntfrTpCcCCde = orgnztnDntfrDntfrTpCcCCde;
+       this.orgnztnDntfrDntfrTpCcCDsplay = orgnztnDntfrDntfrTpCcCDsplay;
+       this.orgnztnDntfrDntfrTpCcCSrSlctd = orgnztnDntfrDntfrTpCcCSrSlctd;
+       this.orgnztnDntfrDntfrTpCcTxt = orgnztnDntfrDntfrTpCcTxt;
+       this.orgnztnDntfrDntfrPrdPrdStrt = orgnztnDntfrDntfrPrdPrdStrt;
+       this.orgnztnDntfrDntfrPrdPrdNd = orgnztnDntfrDntfrPrdPrdNd;
+       this.orgnztnDntfrDntfrSsgnr = orgnztnDntfrDntfrSsgnr;
+       this.orgnztnDntfrDntfrVlue = orgnztnDntfrDntfrVlue;
+       this.orgnztnDntfrDntfrSstm = orgnztnDntfrDntfrSstm;
+       this.organizationActiveBoolean = organizationActiveBoolean;
+       this.orgnztnTpCcCdngCSstm = orgnztnTpCcCdngCSstm;
+       this.orgnztnTpCcCdngCVrsn = orgnztnTpCcCdngCVrsn;
+       this.organizationTypeCcCodingCCode = organizationTypeCcCodingCCode;
+       this.orgnztnTpCcCdngCDsplay = orgnztnTpCcCdngCDsplay;
+       this.orgnztnTpCcCdngCSrSlctd = orgnztnTpCcCdngCSrSlctd;
+       this.organizationTypeCcText = organizationTypeCcText;
+       this.organizationNameString = organizationNameString;
+       this.organizationAliasString = organizationAliasString;
+       this.orgnztnTlcmCntctPntSstm = orgnztnTlcmCntctPntSstm;
+       this.orgnztnTlcmCntctPntSe = orgnztnTlcmCntctPntSe;
+       this.orgnztnTlcmCntctPntPrdPrdStrt = orgnztnTlcmCntctPntPrdPrdStrt;
+       this.orgnztnTlcmCntctPntPrdPrdNd = orgnztnTlcmCntctPntPrdPrdNd;
+       this.orgnztnTlcmCntctPntRnk = orgnztnTlcmCntctPntRnk;
+       this.orgnztnTlcmCntctPntVlue = orgnztnTlcmCntctPntVlue;
+       this.organizationAddressAddressUse = organizationAddressAddressUse;
+       this.organizationAddressAddressType = organizationAddressAddressType;
+       this.orgnztnDdrssDdrssPrdPrdStrt = orgnztnDdrssDdrssPrdPrdStrt;
+       this.orgnztnDdrssDdrssPrdPrdNd = orgnztnDdrssDdrssPrdPrdNd;
+       this.organizationAddressAddressText = organizationAddressAddressText;
+       this.organizationAddressAddressLine = organizationAddressAddressLine;
+       this.organizationAddressAddressCity = organizationAddressAddressCity;
+       this.orgnztnDdrssDdrssDstrct = orgnztnDdrssDdrssDstrct;
+       this.organizationAddressAddressState = organizationAddressAddressState;
+       this.orgnztnDdrssDdrssPstlCde = orgnztnDdrssDdrssPstlCde;
+       this.orgnztnDdrssDdrssCntry = orgnztnDdrssDdrssCntry;
+       this.organizationPartOfReference = organizationPartOfReference;
+       this.orgnztnCntctPrpsCcCdngCSstm = orgnztnCntctPrpsCcCdngCSstm;
+       this.orgnztnCntctPrpsCcCdngCVrsn = orgnztnCntctPrpsCcCdngCVrsn;
+       this.orgnztnCntctPrpsCcCdngCCde = orgnztnCntctPrpsCcCdngCCde;
+       this.orgnztnCntctPrpsCcCdngCDsplay = orgnztnCntctPrpsCcCdngCDsplay;
+       this.orgnztnCntctPrpsCcCdngCSrSlctd = orgnztnCntctPrpsCcCdngCSrSlctd;
+       this.orgnztnCntctPrpsCcTxt = orgnztnCntctPrpsCcTxt;
+       this.orgnztnCntctNmHmnNmSe = orgnztnCntctNmHmnNmSe;
+       this.orgnztnCntctNmHmnNmPrdPrdStrt = orgnztnCntctNmHmnNmPrdPrdStrt;
+       this.orgnztnCntctNmHmnNmPrdPrdNd = orgnztnCntctNmHmnNmPrdPrdNd;
+       this.orgnztnCntctNmHmnNmTxt = orgnztnCntctNmHmnNmTxt;
+       this.orgnztnCntctNmHmnNmFmly = orgnztnCntctNmHmnNmFmly;
+       this.orgnztnCntctNmHmnNmGvn = orgnztnCntctNmHmnNmGvn;
+       this.orgnztnCntctNmHmnNmPrfx = orgnztnCntctNmHmnNmPrfx;
+       this.orgnztnCntctNmHmnNmSffx = orgnztnCntctNmHmnNmSffx;
+       this.orgnztnCntctTlcmCntctPntSstm = orgnztnCntctTlcmCntctPntSstm;
+       this.orgnztnCntctTlcmCntctPntSe = orgnztnCntctTlcmCntctPntSe;
+       this.orgnztnCntctTlcmCntctPntPrdPrdStrt = orgnztnCntctTlcmCntctPntPrdPrdStrt;
+       this.orgnztnCntctTlcmCntctPntPrdPrdNd = orgnztnCntctTlcmCntctPntPrdPrdNd;
+       this.orgnztnCntctTlcmCntctPntRnk = orgnztnCntctTlcmCntctPntRnk;
+       this.orgnztnCntctTlcmCntctPntVlue = orgnztnCntctTlcmCntctPntVlue;
+       this.orgnztnCntctDdrssDdrssSe = orgnztnCntctDdrssDdrssSe;
+       this.orgnztnCntctDdrssDdrssTpe = orgnztnCntctDdrssDdrssTpe;
+       this.orgnztnCntctDdrssDdrssPrdPrdStrt = orgnztnCntctDdrssDdrssPrdPrdStrt;
+       this.orgnztnCntctDdrssDdrssPrdPrdNd = orgnztnCntctDdrssDdrssPrdPrdNd;
+       this.orgnztnCntctDdrssDdrssTxt = orgnztnCntctDdrssDdrssTxt;
+       this.orgnztnCntctDdrssDdrssLne = orgnztnCntctDdrssDdrssLne;
+       this.orgnztnCntctDdrssDdrssCty = orgnztnCntctDdrssDdrssCty;
+       this.orgnztnCntctDdrssDdrssDstrct = orgnztnCntctDdrssDdrssDstrct;
+       this.orgnztnCntctDdrssDdrssStte = orgnztnCntctDdrssDdrssStte;
+       this.orgnztnCntctDdrssDdrssPstlCde = orgnztnCntctDdrssDdrssPstlCde;
+       this.orgnztnCntctDdrssDdrssCntry = orgnztnCntctDdrssDdrssCntry;
+       this.organizationEndpointReference = organizationEndpointReference;
     }
    
-    public String getOrgnztnDntfrDntfrTpCdblCncptCdngCde() {
-        return this.orgnztnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setOrgnztnDntfrDntfrTpCdblCncptCdngCde(String orgnztnDntfrDntfrTpCdblCncptCdngCde) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngCde = orgnztnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrSCde() {
-        return this.orgnztnDntfrDntfrSCde;
-    }
-    
-    public void setOrgnztnDntfrDntfrSCde(String orgnztnDntfrDntfrSCde) {
-        this.orgnztnDntfrDntfrSCde = orgnztnDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.orgnztnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setOrgnztnDntfrDntfrTpCdblCncptCdngSstm(String orgnztnDntfrDntfrTpCdblCncptCdngSstm) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngSstm = orgnztnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.orgnztnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setOrgnztnDntfrDntfrTpCdblCncptCdngVrsn(String orgnztnDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngVrsn = orgnztnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.orgnztnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setOrgnztnDntfrDntfrTpCdblCncptCdngDsplay(String orgnztnDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngDsplay = orgnztnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setOrgnztnDntfrDntfrTpCdblCncptCdngSrSlctd(String orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd = orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrCdblCncptTxt() {
-        return this.orgnztnDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setOrgnztnDntfrDntfrCdblCncptTxt(String orgnztnDntfrDntfrCdblCncptTxt) {
-        this.orgnztnDntfrDntfrCdblCncptTxt = orgnztnDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrPrdStrt() {
-        return this.orgnztnDntfrDntfrPrdStrt;
-    }
-    
-    public void setOrgnztnDntfrDntfrPrdStrt(String orgnztnDntfrDntfrPrdStrt) {
-        this.orgnztnDntfrDntfrPrdStrt = orgnztnDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrPrdNd() {
-        return this.orgnztnDntfrDntfrPrdNd;
-    }
-    
-    public void setOrgnztnDntfrDntfrPrdNd(String orgnztnDntfrDntfrPrdNd) {
-        this.orgnztnDntfrDntfrPrdNd = orgnztnDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrRfrncRfrnce() {
-        return this.orgnztnDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setOrgnztnDntfrDntfrRfrncRfrnce(String orgnztnDntfrDntfrRfrncRfrnce) {
-        this.orgnztnDntfrDntfrRfrncRfrnce = orgnztnDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrRfrncTpe() {
-        return this.orgnztnDntfrDntfrRfrncTpe;
-    }
-    
-    public void setOrgnztnDntfrDntfrRfrncTpe(String orgnztnDntfrDntfrRfrncTpe) {
-        this.orgnztnDntfrDntfrRfrncTpe = orgnztnDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrRfrncDntfr() {
-        return this.orgnztnDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setOrgnztnDntfrDntfrRfrncDntfr(String orgnztnDntfrDntfrRfrncDntfr) {
-        this.orgnztnDntfrDntfrRfrncDntfr = orgnztnDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrRfrncDsplay() {
-        return this.orgnztnDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setOrgnztnDntfrDntfrRfrncDsplay(String orgnztnDntfrDntfrRfrncDsplay) {
-        this.orgnztnDntfrDntfrRfrncDsplay = orgnztnDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrVlStrng() {
-        return this.orgnztnDntfrDntfrVlStrng;
-    }
-    
-    public void setOrgnztnDntfrDntfrVlStrng(String orgnztnDntfrDntfrVlStrng) {
-        this.orgnztnDntfrDntfrVlStrng = orgnztnDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDntfrDntfrSstmRi() {
-        return this.orgnztnDntfrDntfrSstmRi;
-    }
-    
-    public void setOrgnztnDntfrDntfrSstmRi(String orgnztnDntfrDntfrSstmRi) {
-        this.orgnztnDntfrDntfrSstmRi = orgnztnDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getOrganizationActive() {
-        return this.organizationActive;
-    }
-    
-    public void setOrganizationActive(String organizationActive) {
-        this.organizationActive = organizationActive;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptCdngSstm() {
-        return this.orgnztnTpCdblCncptCdngSstm;
-    }
-    
-    public void setOrgnztnTpCdblCncptCdngSstm(String orgnztnTpCdblCncptCdngSstm) {
-        this.orgnztnTpCdblCncptCdngSstm = orgnztnTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptCdngVrsn() {
-        return this.orgnztnTpCdblCncptCdngVrsn;
-    }
-    
-    public void setOrgnztnTpCdblCncptCdngVrsn(String orgnztnTpCdblCncptCdngVrsn) {
-        this.orgnztnTpCdblCncptCdngVrsn = orgnztnTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptCdngCde() {
-        return this.orgnztnTpCdblCncptCdngCde;
-    }
-    
-    public void setOrgnztnTpCdblCncptCdngCde(String orgnztnTpCdblCncptCdngCde) {
-        this.orgnztnTpCdblCncptCdngCde = orgnztnTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptCdngDsplay() {
-        return this.orgnztnTpCdblCncptCdngDsplay;
-    }
-    
-    public void setOrgnztnTpCdblCncptCdngDsplay(String orgnztnTpCdblCncptCdngDsplay) {
-        this.orgnztnTpCdblCncptCdngDsplay = orgnztnTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptCdngSrSlctd() {
-        return this.orgnztnTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setOrgnztnTpCdblCncptCdngSrSlctd(String orgnztnTpCdblCncptCdngSrSlctd) {
-        this.orgnztnTpCdblCncptCdngSrSlctd = orgnztnTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getOrgnztnTpCdblCncptTxtStrng() {
-        return this.orgnztnTpCdblCncptTxtStrng;
-    }
-    
-    public void setOrgnztnTpCdblCncptTxtStrng(String orgnztnTpCdblCncptTxtStrng) {
-        this.orgnztnTpCdblCncptTxtStrng = orgnztnTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getOrganizationName() {
-        return this.organizationName;
-    }
-    
-    public void setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
-    }
-    
-    
-    
-    public String getOrganizationAlias() {
-        return this.organizationAlias;
-    }
-    
-    public void setOrganizationAlias(String organizationAlias) {
-        this.organizationAlias = organizationAlias;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntSstmCde() {
-        return this.orgnztnTlcmCntctPntSstmCde;
-    }
-    
-    public void setOrgnztnTlcmCntctPntSstmCde(String orgnztnTlcmCntctPntSstmCde) {
-        this.orgnztnTlcmCntctPntSstmCde = orgnztnTlcmCntctPntSstmCde;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntSCde() {
-        return this.orgnztnTlcmCntctPntSCde;
-    }
-    
-    public void setOrgnztnTlcmCntctPntSCde(String orgnztnTlcmCntctPntSCde) {
-        this.orgnztnTlcmCntctPntSCde = orgnztnTlcmCntctPntSCde;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntPrdStrt() {
-        return this.orgnztnTlcmCntctPntPrdStrt;
-    }
-    
-    public void setOrgnztnTlcmCntctPntPrdStrt(String orgnztnTlcmCntctPntPrdStrt) {
-        this.orgnztnTlcmCntctPntPrdStrt = orgnztnTlcmCntctPntPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntPrdNd() {
-        return this.orgnztnTlcmCntctPntPrdNd;
-    }
-    
-    public void setOrgnztnTlcmCntctPntPrdNd(String orgnztnTlcmCntctPntPrdNd) {
-        this.orgnztnTlcmCntctPntPrdNd = orgnztnTlcmCntctPntPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntRnkPstvnt() {
-        return this.orgnztnTlcmCntctPntRnkPstvnt;
-    }
-    
-    public void setOrgnztnTlcmCntctPntRnkPstvnt(String orgnztnTlcmCntctPntRnkPstvnt) {
-        this.orgnztnTlcmCntctPntRnkPstvnt = orgnztnTlcmCntctPntRnkPstvnt;
-    }
-    
-    
-    
-    public String getOrgnztnTlcmCntctPntVlStrng() {
-        return this.orgnztnTlcmCntctPntVlStrng;
-    }
-    
-    public void setOrgnztnTlcmCntctPntVlStrng(String orgnztnTlcmCntctPntVlStrng) {
-        this.orgnztnTlcmCntctPntVlStrng = orgnztnTlcmCntctPntVlStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssSCde() {
-        return this.orgnztnDdrssDdrssSCde;
-    }
-    
-    public void setOrgnztnDdrssDdrssSCde(String orgnztnDdrssDdrssSCde) {
-        this.orgnztnDdrssDdrssSCde = orgnztnDdrssDdrssSCde;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssTpCde() {
-        return this.orgnztnDdrssDdrssTpCde;
-    }
-    
-    public void setOrgnztnDdrssDdrssTpCde(String orgnztnDdrssDdrssTpCde) {
-        this.orgnztnDdrssDdrssTpCde = orgnztnDdrssDdrssTpCde;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssPrdStrt() {
-        return this.orgnztnDdrssDdrssPrdStrt;
-    }
-    
-    public void setOrgnztnDdrssDdrssPrdStrt(String orgnztnDdrssDdrssPrdStrt) {
-        this.orgnztnDdrssDdrssPrdStrt = orgnztnDdrssDdrssPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssPrdNd() {
-        return this.orgnztnDdrssDdrssPrdNd;
-    }
-    
-    public void setOrgnztnDdrssDdrssPrdNd(String orgnztnDdrssDdrssPrdNd) {
-        this.orgnztnDdrssDdrssPrdNd = orgnztnDdrssDdrssPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssTxtStrng() {
-        return this.orgnztnDdrssDdrssTxtStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssTxtStrng(String orgnztnDdrssDdrssTxtStrng) {
-        this.orgnztnDdrssDdrssTxtStrng = orgnztnDdrssDdrssTxtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssLnStrng() {
-        return this.orgnztnDdrssDdrssLnStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssLnStrng(String orgnztnDdrssDdrssLnStrng) {
-        this.orgnztnDdrssDdrssLnStrng = orgnztnDdrssDdrssLnStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssCtStrng() {
-        return this.orgnztnDdrssDdrssCtStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssCtStrng(String orgnztnDdrssDdrssCtStrng) {
-        this.orgnztnDdrssDdrssCtStrng = orgnztnDdrssDdrssCtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssDstrctStrng() {
-        return this.orgnztnDdrssDdrssDstrctStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssDstrctStrng(String orgnztnDdrssDdrssDstrctStrng) {
-        this.orgnztnDdrssDdrssDstrctStrng = orgnztnDdrssDdrssDstrctStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssSttStrng() {
-        return this.orgnztnDdrssDdrssSttStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssSttStrng(String orgnztnDdrssDdrssSttStrng) {
-        this.orgnztnDdrssDdrssSttStrng = orgnztnDdrssDdrssSttStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssPstlCdStrng() {
-        return this.orgnztnDdrssDdrssPstlCdStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssPstlCdStrng(String orgnztnDdrssDdrssPstlCdStrng) {
-        this.orgnztnDdrssDdrssPstlCdStrng = orgnztnDdrssDdrssPstlCdStrng;
-    }
-    
-    
-    
-    public String getOrgnztnDdrssDdrssCntrStrng() {
-        return this.orgnztnDdrssDdrssCntrStrng;
-    }
-    
-    public void setOrgnztnDdrssDdrssCntrStrng(String orgnztnDdrssDdrssCntrStrng) {
-        this.orgnztnDdrssDdrssCntrStrng = orgnztnDdrssDdrssCntrStrng;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrCdblCncptCdng() {
-        return this.orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrCdblCncptCdng(String orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng) {
-        this.orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng = orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrCdblCncptTxt() {
-        return this.orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrCdblCncptTxt(String orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt) {
-        this.orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt = orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrPrdStrt() {
-        return this.orgnztnPrtfRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrPrdStrt(String orgnztnPrtfRfrncDntfrDntfrPrdStrt) {
-        this.orgnztnPrtfRfrncDntfrDntfrPrdStrt = orgnztnPrtfRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrPrdNd() {
-        return this.orgnztnPrtfRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrPrdNd(String orgnztnPrtfRfrncDntfrDntfrPrdNd) {
-        this.orgnztnPrtfRfrncDntfrDntfrPrdNd = orgnztnPrtfRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrRfrncRfrnce() {
-        return this.orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrRfrncRfrnce(String orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce) {
-        this.orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce = orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrRfrncTpe() {
-        return this.orgnztnPrtfRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrRfrncTpe(String orgnztnPrtfRfrncDntfrDntfrRfrncTpe) {
-        this.orgnztnPrtfRfrncDntfrDntfrRfrncTpe = orgnztnPrtfRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrRfrncDntfr() {
-        return this.orgnztnPrtfRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrRfrncDntfr(String orgnztnPrtfRfrncDntfrDntfrRfrncDntfr) {
-        this.orgnztnPrtfRfrncDntfrDntfrRfrncDntfr = orgnztnPrtfRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrDntfrRfrncDsplay() {
-        return this.orgnztnPrtfRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrDntfrRfrncDsplay(String orgnztnPrtfRfrncDntfrDntfrRfrncDsplay) {
-        this.orgnztnPrtfRfrncDntfrDntfrRfrncDsplay = orgnztnPrtfRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrSe() {
-        return this.orgnztnPrtfRfrncDntfrSe;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrSe(String orgnztnPrtfRfrncDntfrSe) {
-        this.orgnztnPrtfRfrncDntfrSe = orgnztnPrtfRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrSstm() {
-        return this.orgnztnPrtfRfrncDntfrSstm;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrSstm(String orgnztnPrtfRfrncDntfrSstm) {
-        this.orgnztnPrtfRfrncDntfrSstm = orgnztnPrtfRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDntfrVlue() {
-        return this.orgnztnPrtfRfrncDntfrVlue;
-    }
-    
-    public void setOrgnztnPrtfRfrncDntfrVlue(String orgnztnPrtfRfrncDntfrVlue) {
-        this.orgnztnPrtfRfrncDntfrVlue = orgnztnPrtfRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncRfrncStrng() {
-        return this.orgnztnPrtfRfrncRfrncStrng;
-    }
-    
-    public void setOrgnztnPrtfRfrncRfrncStrng(String orgnztnPrtfRfrncRfrncStrng) {
-        this.orgnztnPrtfRfrncRfrncStrng = orgnztnPrtfRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncDsplStrng() {
-        return this.orgnztnPrtfRfrncDsplStrng;
-    }
-    
-    public void setOrgnztnPrtfRfrncDsplStrng(String orgnztnPrtfRfrncDsplStrng) {
-        this.orgnztnPrtfRfrncDsplStrng = orgnztnPrtfRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getOrgnztnPrtfRfrncTpRi() {
-        return this.orgnztnPrtfRfrncTpRi;
-    }
-    
-    public void setOrgnztnPrtfRfrncTpRi(String orgnztnPrtfRfrncTpRi) {
-        this.orgnztnPrtfRfrncTpRi = orgnztnPrtfRfrncTpRi;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptCdngSstm() {
-        return this.orgnztnCntctPrpsCdblCncptCdngSstm;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptCdngSstm(String orgnztnCntctPrpsCdblCncptCdngSstm) {
-        this.orgnztnCntctPrpsCdblCncptCdngSstm = orgnztnCntctPrpsCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptCdngVrsn() {
-        return this.orgnztnCntctPrpsCdblCncptCdngVrsn;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptCdngVrsn(String orgnztnCntctPrpsCdblCncptCdngVrsn) {
-        this.orgnztnCntctPrpsCdblCncptCdngVrsn = orgnztnCntctPrpsCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptCdngCde() {
-        return this.orgnztnCntctPrpsCdblCncptCdngCde;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptCdngCde(String orgnztnCntctPrpsCdblCncptCdngCde) {
-        this.orgnztnCntctPrpsCdblCncptCdngCde = orgnztnCntctPrpsCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptCdngDsplay() {
-        return this.orgnztnCntctPrpsCdblCncptCdngDsplay;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptCdngDsplay(String orgnztnCntctPrpsCdblCncptCdngDsplay) {
-        this.orgnztnCntctPrpsCdblCncptCdngDsplay = orgnztnCntctPrpsCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptCdngSrSlctd() {
-        return this.orgnztnCntctPrpsCdblCncptCdngSrSlctd;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptCdngSrSlctd(String orgnztnCntctPrpsCdblCncptCdngSrSlctd) {
-        this.orgnztnCntctPrpsCdblCncptCdngSrSlctd = orgnztnCntctPrpsCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getOrgnztnCntctPrpsCdblCncptTxtStrng() {
-        return this.orgnztnCntctPrpsCdblCncptTxtStrng;
-    }
-    
-    public void setOrgnztnCntctPrpsCdblCncptTxtStrng(String orgnztnCntctPrpsCdblCncptTxtStrng) {
-        this.orgnztnCntctPrpsCdblCncptTxtStrng = orgnztnCntctPrpsCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmSCde() {
-        return this.orgnztnCntctNmHmnNmSCde;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmSCde(String orgnztnCntctNmHmnNmSCde) {
-        this.orgnztnCntctNmHmnNmSCde = orgnztnCntctNmHmnNmSCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmPrdStrt() {
-        return this.orgnztnCntctNmHmnNmPrdStrt;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmPrdStrt(String orgnztnCntctNmHmnNmPrdStrt) {
-        this.orgnztnCntctNmHmnNmPrdStrt = orgnztnCntctNmHmnNmPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmPrdNd() {
-        return this.orgnztnCntctNmHmnNmPrdNd;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmPrdNd(String orgnztnCntctNmHmnNmPrdNd) {
-        this.orgnztnCntctNmHmnNmPrdNd = orgnztnCntctNmHmnNmPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmTxtStrng() {
-        return this.orgnztnCntctNmHmnNmTxtStrng;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmTxtStrng(String orgnztnCntctNmHmnNmTxtStrng) {
-        this.orgnztnCntctNmHmnNmTxtStrng = orgnztnCntctNmHmnNmTxtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmFmlStrng() {
-        return this.orgnztnCntctNmHmnNmFmlStrng;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmFmlStrng(String orgnztnCntctNmHmnNmFmlStrng) {
-        this.orgnztnCntctNmHmnNmFmlStrng = orgnztnCntctNmHmnNmFmlStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmGvnStrng() {
-        return this.orgnztnCntctNmHmnNmGvnStrng;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmGvnStrng(String orgnztnCntctNmHmnNmGvnStrng) {
-        this.orgnztnCntctNmHmnNmGvnStrng = orgnztnCntctNmHmnNmGvnStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmPrfxStrng() {
-        return this.orgnztnCntctNmHmnNmPrfxStrng;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmPrfxStrng(String orgnztnCntctNmHmnNmPrfxStrng) {
-        this.orgnztnCntctNmHmnNmPrfxStrng = orgnztnCntctNmHmnNmPrfxStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctNmHmnNmSffxStrng() {
-        return this.orgnztnCntctNmHmnNmSffxStrng;
-    }
-    
-    public void setOrgnztnCntctNmHmnNmSffxStrng(String orgnztnCntctNmHmnNmSffxStrng) {
-        this.orgnztnCntctNmHmnNmSffxStrng = orgnztnCntctNmHmnNmSffxStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntSstmCde() {
-        return this.orgnztnCntctTlcmCntctPntSstmCde;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntSstmCde(String orgnztnCntctTlcmCntctPntSstmCde) {
-        this.orgnztnCntctTlcmCntctPntSstmCde = orgnztnCntctTlcmCntctPntSstmCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntSCde() {
-        return this.orgnztnCntctTlcmCntctPntSCde;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntSCde(String orgnztnCntctTlcmCntctPntSCde) {
-        this.orgnztnCntctTlcmCntctPntSCde = orgnztnCntctTlcmCntctPntSCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntPrdStrt() {
-        return this.orgnztnCntctTlcmCntctPntPrdStrt;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntPrdStrt(String orgnztnCntctTlcmCntctPntPrdStrt) {
-        this.orgnztnCntctTlcmCntctPntPrdStrt = orgnztnCntctTlcmCntctPntPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntPrdNd() {
-        return this.orgnztnCntctTlcmCntctPntPrdNd;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntPrdNd(String orgnztnCntctTlcmCntctPntPrdNd) {
-        this.orgnztnCntctTlcmCntctPntPrdNd = orgnztnCntctTlcmCntctPntPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntRnkPstvnt() {
-        return this.orgnztnCntctTlcmCntctPntRnkPstvnt;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntRnkPstvnt(String orgnztnCntctTlcmCntctPntRnkPstvnt) {
-        this.orgnztnCntctTlcmCntctPntRnkPstvnt = orgnztnCntctTlcmCntctPntRnkPstvnt;
-    }
-    
-    
-    
-    public String getOrgnztnCntctTlcmCntctPntVlStrng() {
-        return this.orgnztnCntctTlcmCntctPntVlStrng;
-    }
-    
-    public void setOrgnztnCntctTlcmCntctPntVlStrng(String orgnztnCntctTlcmCntctPntVlStrng) {
-        this.orgnztnCntctTlcmCntctPntVlStrng = orgnztnCntctTlcmCntctPntVlStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssSCde() {
-        return this.orgnztnCntctDdrssDdrssSCde;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssSCde(String orgnztnCntctDdrssDdrssSCde) {
-        this.orgnztnCntctDdrssDdrssSCde = orgnztnCntctDdrssDdrssSCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssTpCde() {
-        return this.orgnztnCntctDdrssDdrssTpCde;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssTpCde(String orgnztnCntctDdrssDdrssTpCde) {
-        this.orgnztnCntctDdrssDdrssTpCde = orgnztnCntctDdrssDdrssTpCde;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssPrdStrt() {
-        return this.orgnztnCntctDdrssDdrssPrdStrt;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssPrdStrt(String orgnztnCntctDdrssDdrssPrdStrt) {
-        this.orgnztnCntctDdrssDdrssPrdStrt = orgnztnCntctDdrssDdrssPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssPrdNd() {
-        return this.orgnztnCntctDdrssDdrssPrdNd;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssPrdNd(String orgnztnCntctDdrssDdrssPrdNd) {
-        this.orgnztnCntctDdrssDdrssPrdNd = orgnztnCntctDdrssDdrssPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssTxtStrng() {
-        return this.orgnztnCntctDdrssDdrssTxtStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssTxtStrng(String orgnztnCntctDdrssDdrssTxtStrng) {
-        this.orgnztnCntctDdrssDdrssTxtStrng = orgnztnCntctDdrssDdrssTxtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssLnStrng() {
-        return this.orgnztnCntctDdrssDdrssLnStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssLnStrng(String orgnztnCntctDdrssDdrssLnStrng) {
-        this.orgnztnCntctDdrssDdrssLnStrng = orgnztnCntctDdrssDdrssLnStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssCtStrng() {
-        return this.orgnztnCntctDdrssDdrssCtStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssCtStrng(String orgnztnCntctDdrssDdrssCtStrng) {
-        this.orgnztnCntctDdrssDdrssCtStrng = orgnztnCntctDdrssDdrssCtStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssDstrctStrng() {
-        return this.orgnztnCntctDdrssDdrssDstrctStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssDstrctStrng(String orgnztnCntctDdrssDdrssDstrctStrng) {
-        this.orgnztnCntctDdrssDdrssDstrctStrng = orgnztnCntctDdrssDdrssDstrctStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssSttStrng() {
-        return this.orgnztnCntctDdrssDdrssSttStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssSttStrng(String orgnztnCntctDdrssDdrssSttStrng) {
-        this.orgnztnCntctDdrssDdrssSttStrng = orgnztnCntctDdrssDdrssSttStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssPstlCdStrng() {
-        return this.orgnztnCntctDdrssDdrssPstlCdStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssPstlCdStrng(String orgnztnCntctDdrssDdrssPstlCdStrng) {
-        this.orgnztnCntctDdrssDdrssPstlCdStrng = orgnztnCntctDdrssDdrssPstlCdStrng;
-    }
-    
-    
-    
-    public String getOrgnztnCntctDdrssDdrssCntrStrng() {
-        return this.orgnztnCntctDdrssDdrssCntrStrng;
-    }
-    
-    public void setOrgnztnCntctDdrssDdrssCntrStrng(String orgnztnCntctDdrssDdrssCntrStrng) {
-        this.orgnztnCntctDdrssDdrssCntrStrng = orgnztnCntctDdrssDdrssCntrStrng;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrCdblCncptCdng() {
-        return this.orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrCdblCncptCdng(String orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng) {
-        this.orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng = orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrCdblCncptTxt() {
-        return this.orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrCdblCncptTxt(String orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt) {
-        this.orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt = orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrPrdStrt() {
-        return this.orgnztnNdpntRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrPrdStrt(String orgnztnNdpntRfrncDntfrDntfrPrdStrt) {
-        this.orgnztnNdpntRfrncDntfrDntfrPrdStrt = orgnztnNdpntRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrPrdNd() {
-        return this.orgnztnNdpntRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrPrdNd(String orgnztnNdpntRfrncDntfrDntfrPrdNd) {
-        this.orgnztnNdpntRfrncDntfrDntfrPrdNd = orgnztnNdpntRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrRfrncRfrnce() {
-        return this.orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrRfrncRfrnce(String orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce) {
-        this.orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce = orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrRfrncTpe() {
-        return this.orgnztnNdpntRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrRfrncTpe(String orgnztnNdpntRfrncDntfrDntfrRfrncTpe) {
-        this.orgnztnNdpntRfrncDntfrDntfrRfrncTpe = orgnztnNdpntRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrRfrncDntfr() {
-        return this.orgnztnNdpntRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrRfrncDntfr(String orgnztnNdpntRfrncDntfrDntfrRfrncDntfr) {
-        this.orgnztnNdpntRfrncDntfrDntfrRfrncDntfr = orgnztnNdpntRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrDntfrRfrncDsplay() {
-        return this.orgnztnNdpntRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrDntfrRfrncDsplay(String orgnztnNdpntRfrncDntfrDntfrRfrncDsplay) {
-        this.orgnztnNdpntRfrncDntfrDntfrRfrncDsplay = orgnztnNdpntRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrSe() {
-        return this.orgnztnNdpntRfrncDntfrSe;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrSe(String orgnztnNdpntRfrncDntfrSe) {
-        this.orgnztnNdpntRfrncDntfrSe = orgnztnNdpntRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrSstm() {
-        return this.orgnztnNdpntRfrncDntfrSstm;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrSstm(String orgnztnNdpntRfrncDntfrSstm) {
-        this.orgnztnNdpntRfrncDntfrSstm = orgnztnNdpntRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDntfrVlue() {
-        return this.orgnztnNdpntRfrncDntfrVlue;
-    }
-    
-    public void setOrgnztnNdpntRfrncDntfrVlue(String orgnztnNdpntRfrncDntfrVlue) {
-        this.orgnztnNdpntRfrncDntfrVlue = orgnztnNdpntRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncRfrncStrng() {
-        return this.orgnztnNdpntRfrncRfrncStrng;
-    }
-    
-    public void setOrgnztnNdpntRfrncRfrncStrng(String orgnztnNdpntRfrncRfrncStrng) {
-        this.orgnztnNdpntRfrncRfrncStrng = orgnztnNdpntRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncDsplStrng() {
-        return this.orgnztnNdpntRfrncDsplStrng;
-    }
-    
-    public void setOrgnztnNdpntRfrncDsplStrng(String orgnztnNdpntRfrncDsplStrng) {
-        this.orgnztnNdpntRfrncDsplStrng = orgnztnNdpntRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getOrgnztnNdpntRfrncTpRi() {
-        return this.orgnztnNdpntRfrncTpRi;
-    }
-    
-    public void setOrgnztnNdpntRfrncTpRi(String orgnztnNdpntRfrncTpRi) {
-        this.orgnztnNdpntRfrncTpRi = orgnztnNdpntRfrncTpRi;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrSe()
+    {
+        return this.orgnztnDntfrDntfrSe;
+    }
+    
+    public void setOrgnztnDntfrDntfrSe
+        (String orgnztnDntfrDntfrSe) 
+        {
+      this.orgnztnDntfrDntfrSe = orgnztnDntfrDntfrSe;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcCSstm()
+    {
+        return this.orgnztnDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcCSstm
+        (String orgnztnDntfrDntfrTpCcCSstm) 
+        {
+      this.orgnztnDntfrDntfrTpCcCSstm = orgnztnDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcCVrsn()
+    {
+        return this.orgnztnDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcCVrsn
+        (String orgnztnDntfrDntfrTpCcCVrsn) 
+        {
+      this.orgnztnDntfrDntfrTpCcCVrsn = orgnztnDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcCCde()
+    {
+        return this.orgnztnDntfrDntfrTpCcCCde;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcCCde
+        (String orgnztnDntfrDntfrTpCcCCde) 
+        {
+      this.orgnztnDntfrDntfrTpCcCCde = orgnztnDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcCDsplay()
+    {
+        return this.orgnztnDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcCDsplay
+        (String orgnztnDntfrDntfrTpCcCDsplay) 
+        {
+      this.orgnztnDntfrDntfrTpCcCDsplay = orgnztnDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.orgnztnDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcCSrSlctd
+        (String orgnztnDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.orgnztnDntfrDntfrTpCcCSrSlctd = orgnztnDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrTpCcTxt()
+    {
+        return this.orgnztnDntfrDntfrTpCcTxt;
+    }
+    
+    public void setOrgnztnDntfrDntfrTpCcTxt
+        (String orgnztnDntfrDntfrTpCcTxt) 
+        {
+      this.orgnztnDntfrDntfrTpCcTxt = orgnztnDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrPrdPrdStrt()
+    {
+        return this.orgnztnDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setOrgnztnDntfrDntfrPrdPrdStrt
+        (String orgnztnDntfrDntfrPrdPrdStrt) 
+        {
+      this.orgnztnDntfrDntfrPrdPrdStrt = orgnztnDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrPrdPrdNd()
+    {
+        return this.orgnztnDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setOrgnztnDntfrDntfrPrdPrdNd
+        (String orgnztnDntfrDntfrPrdPrdNd) 
+        {
+      this.orgnztnDntfrDntfrPrdPrdNd = orgnztnDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrSsgnr()
+    {
+        return this.orgnztnDntfrDntfrSsgnr;
+    }
+    
+    public void setOrgnztnDntfrDntfrSsgnr
+        (String orgnztnDntfrDntfrSsgnr) 
+        {
+      this.orgnztnDntfrDntfrSsgnr = orgnztnDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrVlue()
+    {
+        return this.orgnztnDntfrDntfrVlue;
+    }
+    
+    public void setOrgnztnDntfrDntfrVlue
+        (String orgnztnDntfrDntfrVlue) 
+        {
+      this.orgnztnDntfrDntfrVlue = orgnztnDntfrDntfrVlue;
+}
+    public 
+    String 
+    getOrgnztnDntfrDntfrSstm()
+    {
+        return this.orgnztnDntfrDntfrSstm;
+    }
+    
+    public void setOrgnztnDntfrDntfrSstm
+        (String orgnztnDntfrDntfrSstm) 
+        {
+      this.orgnztnDntfrDntfrSstm = orgnztnDntfrDntfrSstm;
+}
+    public 
+    String 
+    getOrganizationActiveBoolean()
+    {
+        return this.organizationActiveBoolean;
+    }
+    
+    public void setOrganizationActiveBoolean
+        (String organizationActiveBoolean) 
+        {
+      this.organizationActiveBoolean = organizationActiveBoolean;
+}
+    public 
+    String 
+    getOrgnztnTpCcCdngCSstm()
+    {
+        return this.orgnztnTpCcCdngCSstm;
+    }
+    
+    public void setOrgnztnTpCcCdngCSstm
+        (String orgnztnTpCcCdngCSstm) 
+        {
+      this.orgnztnTpCcCdngCSstm = orgnztnTpCcCdngCSstm;
+}
+    public 
+    String 
+    getOrgnztnTpCcCdngCVrsn()
+    {
+        return this.orgnztnTpCcCdngCVrsn;
+    }
+    
+    public void setOrgnztnTpCcCdngCVrsn
+        (String orgnztnTpCcCdngCVrsn) 
+        {
+      this.orgnztnTpCcCdngCVrsn = orgnztnTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getOrganizationTypeCcCodingCCode()
+    {
+        return this.organizationTypeCcCodingCCode;
+    }
+    
+    public void setOrganizationTypeCcCodingCCode
+        (String organizationTypeCcCodingCCode) 
+        {
+      this.organizationTypeCcCodingCCode = organizationTypeCcCodingCCode;
+}
+    public 
+    String 
+    getOrgnztnTpCcCdngCDsplay()
+    {
+        return this.orgnztnTpCcCdngCDsplay;
+    }
+    
+    public void setOrgnztnTpCcCdngCDsplay
+        (String orgnztnTpCcCdngCDsplay) 
+        {
+      this.orgnztnTpCcCdngCDsplay = orgnztnTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getOrgnztnTpCcCdngCSrSlctd()
+    {
+        return this.orgnztnTpCcCdngCSrSlctd;
+    }
+    
+    public void setOrgnztnTpCcCdngCSrSlctd
+        (String orgnztnTpCcCdngCSrSlctd) 
+        {
+      this.orgnztnTpCcCdngCSrSlctd = orgnztnTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getOrganizationTypeCcText()
+    {
+        return this.organizationTypeCcText;
+    }
+    
+    public void setOrganizationTypeCcText
+        (String organizationTypeCcText) 
+        {
+      this.organizationTypeCcText = organizationTypeCcText;
+}
+    public 
+    String 
+    getOrganizationNameString()
+    {
+        return this.organizationNameString;
+    }
+    
+    public void setOrganizationNameString
+        (String organizationNameString) 
+        {
+      this.organizationNameString = organizationNameString;
+}
+    public 
+    String 
+    getOrganizationAliasString()
+    {
+        return this.organizationAliasString;
+    }
+    
+    public void setOrganizationAliasString
+        (String organizationAliasString) 
+        {
+      this.organizationAliasString = organizationAliasString;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntSstm()
+    {
+        return this.orgnztnTlcmCntctPntSstm;
+    }
+    
+    public void setOrgnztnTlcmCntctPntSstm
+        (String orgnztnTlcmCntctPntSstm) 
+        {
+      this.orgnztnTlcmCntctPntSstm = orgnztnTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntSe()
+    {
+        return this.orgnztnTlcmCntctPntSe;
+    }
+    
+    public void setOrgnztnTlcmCntctPntSe
+        (String orgnztnTlcmCntctPntSe) 
+        {
+      this.orgnztnTlcmCntctPntSe = orgnztnTlcmCntctPntSe;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntPrdPrdStrt()
+    {
+        return this.orgnztnTlcmCntctPntPrdPrdStrt;
+    }
+    
+    public void setOrgnztnTlcmCntctPntPrdPrdStrt
+        (String orgnztnTlcmCntctPntPrdPrdStrt) 
+        {
+      this.orgnztnTlcmCntctPntPrdPrdStrt = orgnztnTlcmCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntPrdPrdNd()
+    {
+        return this.orgnztnTlcmCntctPntPrdPrdNd;
+    }
+    
+    public void setOrgnztnTlcmCntctPntPrdPrdNd
+        (String orgnztnTlcmCntctPntPrdPrdNd) 
+        {
+      this.orgnztnTlcmCntctPntPrdPrdNd = orgnztnTlcmCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntRnk()
+    {
+        return this.orgnztnTlcmCntctPntRnk;
+    }
+    
+    public void setOrgnztnTlcmCntctPntRnk
+        (String orgnztnTlcmCntctPntRnk) 
+        {
+      this.orgnztnTlcmCntctPntRnk = orgnztnTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getOrgnztnTlcmCntctPntVlue()
+    {
+        return this.orgnztnTlcmCntctPntVlue;
+    }
+    
+    public void setOrgnztnTlcmCntctPntVlue
+        (String orgnztnTlcmCntctPntVlue) 
+        {
+      this.orgnztnTlcmCntctPntVlue = orgnztnTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getOrganizationAddressAddressUse()
+    {
+        return this.organizationAddressAddressUse;
+    }
+    
+    public void setOrganizationAddressAddressUse
+        (String organizationAddressAddressUse) 
+        {
+      this.organizationAddressAddressUse = organizationAddressAddressUse;
+}
+    public 
+    String 
+    getOrganizationAddressAddressType()
+    {
+        return this.organizationAddressAddressType;
+    }
+    
+    public void setOrganizationAddressAddressType
+        (String organizationAddressAddressType) 
+        {
+      this.organizationAddressAddressType = organizationAddressAddressType;
+}
+    public 
+    String 
+    getOrgnztnDdrssDdrssPrdPrdStrt()
+    {
+        return this.orgnztnDdrssDdrssPrdPrdStrt;
+    }
+    
+    public void setOrgnztnDdrssDdrssPrdPrdStrt
+        (String orgnztnDdrssDdrssPrdPrdStrt) 
+        {
+      this.orgnztnDdrssDdrssPrdPrdStrt = orgnztnDdrssDdrssPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnDdrssDdrssPrdPrdNd()
+    {
+        return this.orgnztnDdrssDdrssPrdPrdNd;
+    }
+    
+    public void setOrgnztnDdrssDdrssPrdPrdNd
+        (String orgnztnDdrssDdrssPrdPrdNd) 
+        {
+      this.orgnztnDdrssDdrssPrdPrdNd = orgnztnDdrssDdrssPrdPrdNd;
+}
+    public 
+    String 
+    getOrganizationAddressAddressText()
+    {
+        return this.organizationAddressAddressText;
+    }
+    
+    public void setOrganizationAddressAddressText
+        (String organizationAddressAddressText) 
+        {
+      this.organizationAddressAddressText = organizationAddressAddressText;
+}
+    public 
+    String 
+    getOrganizationAddressAddressLine()
+    {
+        return this.organizationAddressAddressLine;
+    }
+    
+    public void setOrganizationAddressAddressLine
+        (String organizationAddressAddressLine) 
+        {
+      this.organizationAddressAddressLine = organizationAddressAddressLine;
+}
+    public 
+    String 
+    getOrganizationAddressAddressCity()
+    {
+        return this.organizationAddressAddressCity;
+    }
+    
+    public void setOrganizationAddressAddressCity
+        (String organizationAddressAddressCity) 
+        {
+      this.organizationAddressAddressCity = organizationAddressAddressCity;
+}
+    public 
+    String 
+    getOrgnztnDdrssDdrssDstrct()
+    {
+        return this.orgnztnDdrssDdrssDstrct;
+    }
+    
+    public void setOrgnztnDdrssDdrssDstrct
+        (String orgnztnDdrssDdrssDstrct) 
+        {
+      this.orgnztnDdrssDdrssDstrct = orgnztnDdrssDdrssDstrct;
+}
+    public 
+    String 
+    getOrganizationAddressAddressState()
+    {
+        return this.organizationAddressAddressState;
+    }
+    
+    public void setOrganizationAddressAddressState
+        (String organizationAddressAddressState) 
+        {
+      this.organizationAddressAddressState = organizationAddressAddressState;
+}
+    public 
+    String 
+    getOrgnztnDdrssDdrssPstlCde()
+    {
+        return this.orgnztnDdrssDdrssPstlCde;
+    }
+    
+    public void setOrgnztnDdrssDdrssPstlCde
+        (String orgnztnDdrssDdrssPstlCde) 
+        {
+      this.orgnztnDdrssDdrssPstlCde = orgnztnDdrssDdrssPstlCde;
+}
+    public 
+    String 
+    getOrgnztnDdrssDdrssCntry()
+    {
+        return this.orgnztnDdrssDdrssCntry;
+    }
+    
+    public void setOrgnztnDdrssDdrssCntry
+        (String orgnztnDdrssDdrssCntry) 
+        {
+      this.orgnztnDdrssDdrssCntry = orgnztnDdrssDdrssCntry;
+}
+    public 
+    String 
+    getOrganizationPartOfReference()
+    {
+        return this.organizationPartOfReference;
+    }
+    
+    public void setOrganizationPartOfReference
+        (String organizationPartOfReference) 
+        {
+      this.organizationPartOfReference = organizationPartOfReference;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcCdngCSstm()
+    {
+        return this.orgnztnCntctPrpsCcCdngCSstm;
+    }
+    
+    public void setOrgnztnCntctPrpsCcCdngCSstm
+        (String orgnztnCntctPrpsCcCdngCSstm) 
+        {
+      this.orgnztnCntctPrpsCcCdngCSstm = orgnztnCntctPrpsCcCdngCSstm;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcCdngCVrsn()
+    {
+        return this.orgnztnCntctPrpsCcCdngCVrsn;
+    }
+    
+    public void setOrgnztnCntctPrpsCcCdngCVrsn
+        (String orgnztnCntctPrpsCcCdngCVrsn) 
+        {
+      this.orgnztnCntctPrpsCcCdngCVrsn = orgnztnCntctPrpsCcCdngCVrsn;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcCdngCCde()
+    {
+        return this.orgnztnCntctPrpsCcCdngCCde;
+    }
+    
+    public void setOrgnztnCntctPrpsCcCdngCCde
+        (String orgnztnCntctPrpsCcCdngCCde) 
+        {
+      this.orgnztnCntctPrpsCcCdngCCde = orgnztnCntctPrpsCcCdngCCde;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcCdngCDsplay()
+    {
+        return this.orgnztnCntctPrpsCcCdngCDsplay;
+    }
+    
+    public void setOrgnztnCntctPrpsCcCdngCDsplay
+        (String orgnztnCntctPrpsCcCdngCDsplay) 
+        {
+      this.orgnztnCntctPrpsCcCdngCDsplay = orgnztnCntctPrpsCcCdngCDsplay;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcCdngCSrSlctd()
+    {
+        return this.orgnztnCntctPrpsCcCdngCSrSlctd;
+    }
+    
+    public void setOrgnztnCntctPrpsCcCdngCSrSlctd
+        (String orgnztnCntctPrpsCcCdngCSrSlctd) 
+        {
+      this.orgnztnCntctPrpsCcCdngCSrSlctd = orgnztnCntctPrpsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getOrgnztnCntctPrpsCcTxt()
+    {
+        return this.orgnztnCntctPrpsCcTxt;
+    }
+    
+    public void setOrgnztnCntctPrpsCcTxt
+        (String orgnztnCntctPrpsCcTxt) 
+        {
+      this.orgnztnCntctPrpsCcTxt = orgnztnCntctPrpsCcTxt;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmSe()
+    {
+        return this.orgnztnCntctNmHmnNmSe;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmSe
+        (String orgnztnCntctNmHmnNmSe) 
+        {
+      this.orgnztnCntctNmHmnNmSe = orgnztnCntctNmHmnNmSe;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmPrdPrdStrt()
+    {
+        return this.orgnztnCntctNmHmnNmPrdPrdStrt;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmPrdPrdStrt
+        (String orgnztnCntctNmHmnNmPrdPrdStrt) 
+        {
+      this.orgnztnCntctNmHmnNmPrdPrdStrt = orgnztnCntctNmHmnNmPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmPrdPrdNd()
+    {
+        return this.orgnztnCntctNmHmnNmPrdPrdNd;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmPrdPrdNd
+        (String orgnztnCntctNmHmnNmPrdPrdNd) 
+        {
+      this.orgnztnCntctNmHmnNmPrdPrdNd = orgnztnCntctNmHmnNmPrdPrdNd;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmTxt()
+    {
+        return this.orgnztnCntctNmHmnNmTxt;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmTxt
+        (String orgnztnCntctNmHmnNmTxt) 
+        {
+      this.orgnztnCntctNmHmnNmTxt = orgnztnCntctNmHmnNmTxt;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmFmly()
+    {
+        return this.orgnztnCntctNmHmnNmFmly;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmFmly
+        (String orgnztnCntctNmHmnNmFmly) 
+        {
+      this.orgnztnCntctNmHmnNmFmly = orgnztnCntctNmHmnNmFmly;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmGvn()
+    {
+        return this.orgnztnCntctNmHmnNmGvn;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmGvn
+        (String orgnztnCntctNmHmnNmGvn) 
+        {
+      this.orgnztnCntctNmHmnNmGvn = orgnztnCntctNmHmnNmGvn;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmPrfx()
+    {
+        return this.orgnztnCntctNmHmnNmPrfx;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmPrfx
+        (String orgnztnCntctNmHmnNmPrfx) 
+        {
+      this.orgnztnCntctNmHmnNmPrfx = orgnztnCntctNmHmnNmPrfx;
+}
+    public 
+    String 
+    getOrgnztnCntctNmHmnNmSffx()
+    {
+        return this.orgnztnCntctNmHmnNmSffx;
+    }
+    
+    public void setOrgnztnCntctNmHmnNmSffx
+        (String orgnztnCntctNmHmnNmSffx) 
+        {
+      this.orgnztnCntctNmHmnNmSffx = orgnztnCntctNmHmnNmSffx;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntSstm()
+    {
+        return this.orgnztnCntctTlcmCntctPntSstm;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntSstm
+        (String orgnztnCntctTlcmCntctPntSstm) 
+        {
+      this.orgnztnCntctTlcmCntctPntSstm = orgnztnCntctTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntSe()
+    {
+        return this.orgnztnCntctTlcmCntctPntSe;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntSe
+        (String orgnztnCntctTlcmCntctPntSe) 
+        {
+      this.orgnztnCntctTlcmCntctPntSe = orgnztnCntctTlcmCntctPntSe;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntPrdPrdStrt()
+    {
+        return this.orgnztnCntctTlcmCntctPntPrdPrdStrt;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntPrdPrdStrt
+        (String orgnztnCntctTlcmCntctPntPrdPrdStrt) 
+        {
+      this.orgnztnCntctTlcmCntctPntPrdPrdStrt = orgnztnCntctTlcmCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntPrdPrdNd()
+    {
+        return this.orgnztnCntctTlcmCntctPntPrdPrdNd;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntPrdPrdNd
+        (String orgnztnCntctTlcmCntctPntPrdPrdNd) 
+        {
+      this.orgnztnCntctTlcmCntctPntPrdPrdNd = orgnztnCntctTlcmCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntRnk()
+    {
+        return this.orgnztnCntctTlcmCntctPntRnk;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntRnk
+        (String orgnztnCntctTlcmCntctPntRnk) 
+        {
+      this.orgnztnCntctTlcmCntctPntRnk = orgnztnCntctTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getOrgnztnCntctTlcmCntctPntVlue()
+    {
+        return this.orgnztnCntctTlcmCntctPntVlue;
+    }
+    
+    public void setOrgnztnCntctTlcmCntctPntVlue
+        (String orgnztnCntctTlcmCntctPntVlue) 
+        {
+      this.orgnztnCntctTlcmCntctPntVlue = orgnztnCntctTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssSe()
+    {
+        return this.orgnztnCntctDdrssDdrssSe;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssSe
+        (String orgnztnCntctDdrssDdrssSe) 
+        {
+      this.orgnztnCntctDdrssDdrssSe = orgnztnCntctDdrssDdrssSe;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssTpe()
+    {
+        return this.orgnztnCntctDdrssDdrssTpe;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssTpe
+        (String orgnztnCntctDdrssDdrssTpe) 
+        {
+      this.orgnztnCntctDdrssDdrssTpe = orgnztnCntctDdrssDdrssTpe;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssPrdPrdStrt()
+    {
+        return this.orgnztnCntctDdrssDdrssPrdPrdStrt;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssPrdPrdStrt
+        (String orgnztnCntctDdrssDdrssPrdPrdStrt) 
+        {
+      this.orgnztnCntctDdrssDdrssPrdPrdStrt = orgnztnCntctDdrssDdrssPrdPrdStrt;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssPrdPrdNd()
+    {
+        return this.orgnztnCntctDdrssDdrssPrdPrdNd;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssPrdPrdNd
+        (String orgnztnCntctDdrssDdrssPrdPrdNd) 
+        {
+      this.orgnztnCntctDdrssDdrssPrdPrdNd = orgnztnCntctDdrssDdrssPrdPrdNd;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssTxt()
+    {
+        return this.orgnztnCntctDdrssDdrssTxt;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssTxt
+        (String orgnztnCntctDdrssDdrssTxt) 
+        {
+      this.orgnztnCntctDdrssDdrssTxt = orgnztnCntctDdrssDdrssTxt;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssLne()
+    {
+        return this.orgnztnCntctDdrssDdrssLne;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssLne
+        (String orgnztnCntctDdrssDdrssLne) 
+        {
+      this.orgnztnCntctDdrssDdrssLne = orgnztnCntctDdrssDdrssLne;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssCty()
+    {
+        return this.orgnztnCntctDdrssDdrssCty;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssCty
+        (String orgnztnCntctDdrssDdrssCty) 
+        {
+      this.orgnztnCntctDdrssDdrssCty = orgnztnCntctDdrssDdrssCty;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssDstrct()
+    {
+        return this.orgnztnCntctDdrssDdrssDstrct;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssDstrct
+        (String orgnztnCntctDdrssDdrssDstrct) 
+        {
+      this.orgnztnCntctDdrssDdrssDstrct = orgnztnCntctDdrssDdrssDstrct;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssStte()
+    {
+        return this.orgnztnCntctDdrssDdrssStte;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssStte
+        (String orgnztnCntctDdrssDdrssStte) 
+        {
+      this.orgnztnCntctDdrssDdrssStte = orgnztnCntctDdrssDdrssStte;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssPstlCde()
+    {
+        return this.orgnztnCntctDdrssDdrssPstlCde;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssPstlCde
+        (String orgnztnCntctDdrssDdrssPstlCde) 
+        {
+      this.orgnztnCntctDdrssDdrssPstlCde = orgnztnCntctDdrssDdrssPstlCde;
+}
+    public 
+    String 
+    getOrgnztnCntctDdrssDdrssCntry()
+    {
+        return this.orgnztnCntctDdrssDdrssCntry;
+    }
+    
+    public void setOrgnztnCntctDdrssDdrssCntry
+        (String orgnztnCntctDdrssDdrssCntry) 
+        {
+      this.orgnztnCntctDdrssDdrssCntry = orgnztnCntctDdrssDdrssCntry;
+}
+    public 
+    String 
+    getOrganizationEndpointReference()
+    {
+        return this.organizationEndpointReference;
+    }
+    
+    public void setOrganizationEndpointReference
+        (String organizationEndpointReference) 
+        {
+      this.organizationEndpointReference = organizationEndpointReference;
+}
 
 
 

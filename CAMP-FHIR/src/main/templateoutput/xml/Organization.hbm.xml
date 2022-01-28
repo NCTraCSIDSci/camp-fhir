@@ -1,603 +1,435 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Organization" optimistic-lock="none" table="organization">
-        <id name="orgnztnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="orgnztnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_use_code</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_s_cde">
-                <comment>Organization_identifierIdentifier_use_code</comment>
+        <property name="orgnztnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_se">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="orgnztnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="orgnztnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="orgnztnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Organization_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="orgnztnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Organization_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="orgnztnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Prd_strt">
-                <comment>Organization_identifierIdentifier_Period_start</comment>
+        <property name="orgnztnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Prd_nd">
-                <comment>Organization_identifierIdentifier_Period_end</comment>
+        <property name="orgnztnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Organization_identifierIdentifier_Reference_reference</comment>
+        <property name="orgnztnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Organization_identifierIdentifier_Reference_type</comment>
+        <property name="orgnztnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Organization_identifierIdentifier_Reference_identifier</comment>
+        <property name="orgnztnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Organization_identifierIdentifier_Reference_display</comment>
+        <property name="orgnztnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Orgnztn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Organization.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_value_string</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_vl_strng">
-                <comment>Organization_identifierIdentifier_value_string</comment>
+        <property name="organizationActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="Organization_active_boolean">
+                <comment>{ "tree" :"Organization.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="orgnztnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Organization_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Orgnztn_dntfr_dntfr_sstm_ri">
-                <comment>Organization_identifierIdentifier_system_uri</comment>
+        <property name="orgnztnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Orgnztn_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="organizationActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Organization_active">
-                <comment>boolean</comment>
+        <property name="orgnztnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Orgnztn_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="organizationTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="Organization_type_CC_coding_C_code">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="orgnztnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Orgnztn_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="orgnztnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Orgnztn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="organizationTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="Organization_type_CC_text">
+                <comment>{ "tree" :"Organization.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="organizationNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Organization_name_string">
+                <comment>{ "tree" :"Organization.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="orgnztnTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Orgnztn_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="organizationAliasString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</meta>
+            <column length="65535" name="Organization_alias_string">
+                <comment>{ "tree" :"Organization.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</comment>
             </column>
         </property>
-        <property name="organizationName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Organization_name">
-                <comment>string</comment>
+        <property name="orgnztnTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="organizationAlias" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Organization_alias">
-                <comment>string</comment>
+        <property name="orgnztnTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="orgnztnTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="orgnztnTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
+        <property name="orgnztnTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
+        <property name="orgnztnTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Orgnztn_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Organization.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
+        <property name="organizationAddressAddressUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</meta>
+            <column length="65535" name="Organization_address_Address_use">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Orgnztn_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
+        <property name="organizationAddressAddressType" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</meta>
+            <column length="65535" name="Organization_address_Address_type">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssSCde" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_s_cde">
-                <comment>Address_use_code</comment>
+        <property name="orgnztnDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssTpCde" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_tp_cde">
-                <comment>Address_type_code</comment>
+        <property name="orgnztnDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
+        <property name="organizationAddressAddressText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</meta>
+            <column length="65535" name="Organization_address_Address_text">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssPrdNd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_Prd_nd">
-                <comment>Address_Period_end</comment>
+        <property name="organizationAddressAddressLine" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</meta>
+            <column length="65535" name="Organization_address_Address_line">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
+        <property name="organizationAddressAddressCity" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</meta>
+            <column length="65535" name="Organization_address_Address_city">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
+        <property name="orgnztnDdrssDdrssDstrct" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_dstrct">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
+        <property name="organizationAddressAddressState" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</meta>
+            <column length="65535" name="Organization_address_Address_state">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
+        <property name="orgnztnDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
+        <property name="orgnztnDdrssDdrssCntry" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</meta>
+            <column length="65535" name="Orgnztn_ddrss_ddrss_cntry">
+                <comment>{ "tree" :"Organization.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
+        <property name="organizationPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</meta>
+            <column length="65535" name="Organization_partOf_Reference">
+                <comment>{ "tree" :"Organization.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</comment>
             </column>
         </property>
-        <property name="orgnztnDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="Orgnztn_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
+        <property name="orgnztnCntctPrpsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setSystem"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="orgnztnCntctPrpsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setVersion"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="orgnztnCntctPrpsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setCode"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_cdng_C_cde">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="orgnztnCntctPrpsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="orgnztnCntctPrpsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="orgnztnCntctPrpsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, setText"}</meta>
+            <column length="65535" name="Orgnztn_cntct_prps_CC_txt">
+                <comment>{ "tree" :"Organization.contact.purpose", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="orgnztnCntctNmHmnNmSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_se">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="orgnztnCntctNmHmnNmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="orgnztnCntctNmHmnNmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="orgnztnCntctNmHmnNmTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_txt">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="orgnztnCntctNmHmnNmFmly" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_fmly">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="orgnztnCntctNmHmnNmGvn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_gvn">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="orgnztnCntctNmHmnNmPrfx" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_prfx">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="orgnztnCntctNmHmnNmSffx" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</meta>
+            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_sffx">
+                <comment>{ "tree" :"Organization.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</comment>
             </column>
         </property>
-        <property name="orgnztnPrtfRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztn_prtf_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="orgnztnCntctTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="orgnztnCntctTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="orgnztnCntctTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="orgnztnCntctTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="orgnztnCntctTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="orgnztnCntctTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Organization.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctPrpsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Orgnztn_cntct_prps_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="orgnztnCntctDdrssDdrssSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_se">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmSCde" type="string">
-            <meta attribute="resource-type">HumanName_use_code</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_s_cde">
-                <comment>HumanName_use_code</comment>
+        <property name="orgnztnCntctDdrssDdrssTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_tpe">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmPrdStrt" type="string">
-            <meta attribute="resource-type">HumanName_Period_start</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_Prd_strt">
-                <comment>HumanName_Period_start</comment>
+        <property name="orgnztnCntctDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmPrdNd" type="string">
-            <meta attribute="resource-type">HumanName_Period_end</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_Prd_nd">
-                <comment>HumanName_Period_end</comment>
+        <property name="orgnztnCntctDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmTxtStrng" type="string">
-            <meta attribute="resource-type">HumanName_text_string</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_txt_strng">
-                <comment>HumanName_text_string</comment>
+        <property name="orgnztnCntctDdrssDdrssTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_txt">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmFmlStrng" type="string">
-            <meta attribute="resource-type">HumanName_family_string</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_fml_strng">
-                <comment>HumanName_family_string</comment>
+        <property name="orgnztnCntctDdrssDdrssLne" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_lne">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmGvnStrng" type="string">
-            <meta attribute="resource-type">HumanName_given_string</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_gvn_strng">
-                <comment>HumanName_given_string</comment>
+        <property name="orgnztnCntctDdrssDdrssCty" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_cty">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmPrfxStrng" type="string">
-            <meta attribute="resource-type">HumanName_prefix_string</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_prfx_strng">
-                <comment>HumanName_prefix_string</comment>
+        <property name="orgnztnCntctDdrssDdrssDstrct" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_dstrct">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctNmHmnNmSffxStrng" type="string">
-            <meta attribute="resource-type">HumanName_suffix_string</meta>
-            <column length="65535" name="Orgnztn_cntct_nm_HmnNm_sffx_strng">
-                <comment>HumanName_suffix_string</comment>
+        <property name="orgnztnCntctDdrssDdrssStte" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_stte">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="orgnztnCntctDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="orgnztnCntctDdrssDdrssCntry" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</meta>
+            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_cntry">
+                <comment>{ "tree" :"Organization.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="orgnztnCntctTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Orgnztn_cntct_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssSCde" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_s_cde">
-                <comment>Address_use_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssTpCde" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_tp_cde">
-                <comment>Address_type_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssPrdNd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_Prd_nd">
-                <comment>Address_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnCntctDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="Orgnztn_cntct_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztn_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="organizationEndpointReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Organization.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="Organization_endpoint_Reference">
+                <comment>{ "tree" :"Organization.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
     </class>

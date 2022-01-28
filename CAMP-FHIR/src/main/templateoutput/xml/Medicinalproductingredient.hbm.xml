@@ -1,507 +1,759 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproductingredient" optimistic-lock="none" table="medicinalproductingredient">
-        <id name="mpngrdntDntfrCdngCde" type="string">
-            <column length="512" name="MPngrdnt_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mpngrdntDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="MPngrdnt_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mpngrdntDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="MPngrdnt_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="MPngrdnt_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="MPngrdnt_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntRlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_rl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpingredientRoleCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPIngredient_role_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpingredientRoleCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPIngredient_role_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpingredientRoleCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPIngredient_role_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mpingredientRoleCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPIngredient_role_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mpingredientAllergenicIndicator" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MPIngredient_allergenicIndicator">
-                <comment>boolean</comment>
+        <property name="mpngrdntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mpingredientManufacturer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPIngredient_manufacturer">
-                <comment>Reference</comment>
+        <property name="mpngrdntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mpingredientSpecifiedSubstance" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPIngredient_specifiedSubstance">
-                <comment>BackboneElement</comment>
+        <property name="mpngrdntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="512" name="MPngrdnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_rl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_rl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpingredientRoleCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setCode"}</meta>
+            <column length="65535" name="MPIngredient_role_CC_coding_C_code">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_rl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_rl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncGrpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpingredientRoleCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, setText"}</meta>
+            <column length="65535" name="MPIngredient_role_CC_text">
+                <comment>{ "tree" :"MedicinalProductIngredient.role", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRole, setText"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncGrpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntLlrgncndctrBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.allergenicIndicator", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAllergenicIndicator"}</meta>
+            <column length="65535" name="MPngrdnt_llrgncndctr_bln">
+                <comment>{ "tree" :"MedicinalProductIngredient.allergenicIndicator", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAllergenicIndicator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncGrpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntMnfctrrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManufacturer"}</meta>
+            <column length="65535" name="MPngrdnt_mnfctrr_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductIngredient.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManufacturer"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncGrpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncGrpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCnfdntltCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCnfdntltCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCnfdntltCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCnfdntltCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cd_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncCnfdntltCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStr" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str">
-                <comment>BackboneElement</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncGrpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_grp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.group", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setGroup, setText"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncCnfdntltCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_cnfdntlt_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.confidentiality", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance"] , "methodName" : "setConfidentiality, setText"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttn_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentation", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentation, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrMsrmntPnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_msrmntPnt">
-                <comment>string</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCntrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrCntrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStr" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr">
-                <comment>BackboneElement</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrPrsnttnLwLmtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_prsnttnLwLmt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.presentationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setPresentationLowLimit, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtn_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentration", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentration, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrMsrmntPnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_msrmntPnt">
-                <comment>string</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpingredientSubstance" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPIngredient_substance">
-                <comment>BackboneElement</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSbstncCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPngrdnt_sbstnc_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpngrdntSpcfdSbstncStrCncntrtnLwLmtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cncntrtnLwLmt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.concentrationLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setConcentrationLowLimit, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSbstncCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPngrdnt_sbstnc_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpngrdntSpcfdSbstncStrMsrmntPntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.measurementPoint", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setMeasurementPoint"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_msrmntPnt_strng">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.measurementPoint", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "setMeasurementPoint"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSbstncCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPngrdnt_sbstnc_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSbstncCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPngrdnt_sbstnc_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpngrdntSbstncCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPngrdnt_sbstnc_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpingredientSubstanceStr" type="string">
-            <meta attribute="resource-type">see strength</meta>
-            <column length="65535" name="MPIngredient_substance_str">
-                <comment>see strength</comment>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrCntrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_cntr_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.country", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength"] , "methodName" : "addCountry, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrSbstncCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_sbstnc_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setSubstance, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, string", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, uri", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setNumerator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_str_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strength", "datatype" : "Ratio, Quantity, code", "cardinality" : "Required", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrength, setDenominator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setNumerator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrStrLwLmtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_strLwLmt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.strengthLowLimit", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setStrengthLowLimit, setDenominator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrMsrmntPntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.measurementPoint", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setMeasurementPoint"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_msrmntPnt_strng">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.measurementPoint", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "setMeasurementPoint"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSpcfdSbstncStrRfrncStrCntrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, setText"}</meta>
+            <column length="65535" name="MPngrdnt_spcfdSbstnc_str_rfrncStr_cntr_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.country", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecifiedSubstance", "addStrength", "addReferenceStrength"] , "methodName" : "addCountry, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_cd_CC_txt">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setSubstance"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpngrdntSbstncStrStrngth" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductIngredient.substance.strength", "datatype" : "strength", "cardinality" : "Many", "elementtree" : ["setSubstance"] , "methodName" : "addStrength"}</meta>
+            <column length="65535" name="MPngrdnt_sbstnc_str_strngth">
+                <comment>{ "tree" :"MedicinalProductIngredient.substance.strength", "datatype" : "strength", "cardinality" : "Many", "elementtree" : ["setSubstance"] , "methodName" : "addStrength"}</comment>
             </column>
         </property>
     </class>

@@ -1,783 +1,1023 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproduct" optimistic-lock="none" table="medicinalproduct">
-        <id name="mpIdentifierCodingCode" type="string">
-            <column length="512" name="MP_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mpIdentifierCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="MP_identifier_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="mpIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="MP_identifier_Identifier_use">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mpIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="MP_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="MP_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="MP_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpTypeCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_type_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="mpDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mpTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MP_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mpDomainCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_domain_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="mpIdentifierIdentifierAssigner" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="MP_identifier_Identifier_assigner">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mpDomainCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_domain_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="MP_identifier_Identifier_value">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mpDomainCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_domain_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="MP_identifier_Identifier_system">
+                <comment>{ "tree" :"MedicinalProduct.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpDomainCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_domain_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_type_CC_coding_C_system">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpDomainCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_domain_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_type_CC_coding_C_version">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpCmbndPhrmctclDsFrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_cmbndPhrmctclDsFrm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_type_CC_coding_C_code">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpCmbndPhrmctclDsFrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_cmbndPhrmctclDsFrm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_type_CC_coding_C_display">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpCmbndPhrmctclDsFrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_cmbndPhrmctclDsFrm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpTypeCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_type_CC_coding_C_userSelected">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpCmbndPhrmctclDsFrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_cmbndPhrmctclDsFrm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="MP_type_CC_text">
+                <comment>{ "tree" :"MedicinalProduct.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpCmbndPhrmctclDsFrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_cmbndPhrmctclDsFrm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpDomainCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setUserSelected"}</meta>
+            <column length="65535" name="MP_domain_C_userSelected">
+                <comment>{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpLglSttsfSpplCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_lglSttsfSppl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpDomainCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setCode"}</meta>
+            <column length="65535" name="MP_domain_C_code">
+                <comment>{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setCode"}</comment>
             </column>
         </property>
-        <property name="mpLegalStatusOfSupplyCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_legalStatusOfSupply_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpDomainCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setVersion"}</meta>
+            <column length="65535" name="MP_domain_C_version">
+                <comment>{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpLglSttsfSpplCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_lglSttsfSppl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpDomainCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setDisplay"}</meta>
+            <column length="65535" name="MP_domain_C_display">
+                <comment>{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpLglSttsfSpplCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_lglSttsfSppl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpDomainCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setSystem"}</meta>
+            <column length="65535" name="MP_domain_C_system">
+                <comment>{ "tree" :"MedicinalProduct.domain", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDomain, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpLglSttsfSpplCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_lglSttsfSppl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpDdtnlMntrngndctrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_ddtnlMntrngndctr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpDdtnlMntrngndctrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_ddtnlMntrngndctr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpDdtnlMntrngndctrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_ddtnlMntrngndctr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpDdtnlMntrngndctrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_ddtnlMntrngndctr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpDdtnlMntrngndctrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_ddtnlMntrngndctr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpCmbndPhrmctclDsFrmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, setText"}</meta>
+            <column length="65535" name="MP_cmbndPhrmctclDsFrm_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.combinedPharmaceuticalDoseForm", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCombinedPharmaceuticalDoseForm, setText"}</comment>
             </column>
         </property>
-        <property name="mpSpecialMeasures" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MP_specialMeasures">
-                <comment>string</comment>
+        <property name="mpLglSttsfSpplCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_lglSttsfSppl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpPdtrcsndctrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_pdtrcsndctr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpLglSttsfSpplCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_lglSttsfSppl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpPdtrcsndctrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_pdtrcsndctr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpLglSttsfSpplCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_lglSttsfSppl_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpPdtrcsndctrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_pdtrcsndctr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpLglSttsfSpplCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_lglSttsfSppl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpPdtrcsndctrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_pdtrcsndctr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpLglSttsfSpplCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_lglSttsfSppl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpPdtrcsndctrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_pdtrcsndctr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpLegalStatusOfSupplyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, setText"}</meta>
+            <column length="65535" name="MP_legalStatusOfSupply_CC_text">
+                <comment>{ "tree" :"MedicinalProduct.legalStatusOfSupply", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, setText"}</comment>
             </column>
         </property>
-        <property name="mpPrdctClssfctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_prdctClssfctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpDdtnlMntrngndctrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpPrdctClssfctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_prdctClssfctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpDdtnlMntrngndctrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpPrdctClssfctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_prdctClssfctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpDdtnlMntrngndctrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpPrdctClssfctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_prdctClssfctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpDdtnlMntrngndctrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpPrdctClssfctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_prdctClssfctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpDdtnlMntrngndctrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpMarketingStatus" type="string">
-            <meta attribute="resource-type">MarketingStatus</meta>
-            <column length="65535" name="MP_marketingStatus">
-                <comment>MarketingStatus</comment>
+        <property name="mpDdtnlMntrngndctrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, setText"}</meta>
+            <column length="65535" name="MP_ddtnlMntrngndctr_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.additionalMonitoringIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdditionalMonitoringIndicator, setText"}</comment>
             </column>
         </property>
-        <property name="mpPharmaceuticalProduct" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_pharmaceuticalProduct">
-                <comment>Reference</comment>
+        <property name="mpSpecialMeasuresString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialMeasures", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialMeasures"}</meta>
+            <column length="65535" name="MP_specialMeasures_string">
+                <comment>{ "tree" :"MedicinalProduct.specialMeasures", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialMeasures"}</comment>
             </column>
         </property>
-        <property name="mpPackagedMp" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_packagedMP">
-                <comment>Reference</comment>
+        <property name="mpPdtrcsndctrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_pdtrcsndctr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpAttachedDocument" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_attachedDocument">
-                <comment>Reference</comment>
+        <property name="mpPdtrcsndctrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_pdtrcsndctr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpMasterFile" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_masterFile">
-                <comment>Reference</comment>
+        <property name="mpPdtrcsndctrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_pdtrcsndctr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpContact" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_contact">
-                <comment>Reference</comment>
+        <property name="mpPdtrcsndctrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_pdtrcsndctr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpClinicalTrial" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_clinicalTrial">
-                <comment>Reference</comment>
+        <property name="mpPdtrcsndctrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_pdtrcsndctr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpName" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MP_name">
-                <comment>BackboneElement</comment>
+        <property name="mpPaediatricUseIndicatorCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, setText"}</meta>
+            <column length="65535" name="MP_paediatricUseIndicator_CC_text">
+                <comment>{ "tree" :"MedicinalProduct.paediatricUseIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaediatricUseIndicator, setText"}</comment>
             </column>
         </property>
-        <property name="mpNameProductName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MP_name_productName">
-                <comment>string</comment>
+        <property name="mpPrdctClssfctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_prdctClssfctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpNameNamePart" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MP_name_namePart">
-                <comment>BackboneElement</comment>
+        <property name="mpPrdctClssfctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_prdctClssfctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpNameNamePartPart" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MP_name_namePart_part">
-                <comment>string</comment>
+        <property name="mpPrdctClssfctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_prdctClssfctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpNmNmPrtTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_nm_nmPrt_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpPrdctClssfctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_prdctClssfctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpNameNamePartTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_name_namePart_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpPrdctClssfctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_prdctClssfctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpNmNmPrtTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_nm_nmPrt_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpProductClassificationCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, setText"}</meta>
+            <column length="65535" name="MP_productClassification_CC_text">
+                <comment>{ "tree" :"MedicinalProduct.productClassification", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProductClassification, setText"}</comment>
             </column>
         </property>
-        <property name="mpNmNmPrtTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_nm_nmPrt_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMarketingStatusMarketingStatus" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.marketingStatus", "datatype" : "MarketingStatus", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMarketingStatus"}</meta>
+            <column length="65535" name="MP_marketingStatus_MarketingStatus">
+                <comment>{ "tree" :"MedicinalProduct.marketingStatus", "datatype" : "MarketingStatus", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMarketingStatus"}</comment>
             </column>
         </property>
-        <property name="mpNmNmPrtTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_nm_nmPrt_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpPharmaceuticalProductReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.pharmaceuticalProduct", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPharmaceuticalProduct"}</meta>
+            <column length="65535" name="MP_pharmaceuticalProduct_Reference">
+                <comment>{ "tree" :"MedicinalProduct.pharmaceuticalProduct", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPharmaceuticalProduct"}</comment>
             </column>
         </property>
-        <property name="mpNameCountryLanguage" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MP_name_countryLanguage">
-                <comment>BackboneElement</comment>
+        <property name="mpPackagedMpReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.packagedMedicinalProduct", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPackagedMedicinalProduct"}</meta>
+            <column length="65535" name="MP_packagedMP_Reference">
+                <comment>{ "tree" :"MedicinalProduct.packagedMedicinalProduct", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPackagedMedicinalProduct"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggCntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_nm_cntrLngg_cntr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpAttachedDocumentReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.attachedDocument", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAttachedDocument"}</meta>
+            <column length="65535" name="MP_attachedDocument_Reference">
+                <comment>{ "tree" :"MedicinalProduct.attachedDocument", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAttachedDocument"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggCntrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_nm_cntrLngg_cntr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMasterFileReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.masterFile", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMasterFile"}</meta>
+            <column length="65535" name="MP_masterFile_Reference">
+                <comment>{ "tree" :"MedicinalProduct.masterFile", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMasterFile"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggCntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_nm_cntrLngg_cntr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpContactReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.contact", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact"}</meta>
+            <column length="65535" name="MP_contact_Reference">
+                <comment>{ "tree" :"MedicinalProduct.contact", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggCntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_nm_cntrLngg_cntr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpClinicalTrialReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.clinicalTrial", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addClinicalTrial"}</meta>
+            <column length="65535" name="MP_clinicalTrial_Reference">
+                <comment>{ "tree" :"MedicinalProduct.clinicalTrial", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addClinicalTrial"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggCntrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_nm_cntrLngg_cntr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpNameProductNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.productName", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addName"] , "methodName" : "setProductName"}</meta>
+            <column length="65535" name="MP_name_productName_string">
+                <comment>{ "tree" :"MedicinalProduct.name.productName", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addName"] , "methodName" : "setProductName"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggJrsdctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpNameNamePartPartString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.part", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setPart"}</meta>
+            <column length="65535" name="MP_name_namePart_part_string">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.part", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setPart"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggJrsdctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpNmNmPrtTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setUserSelected"}</meta>
+            <column length="65535" name="MP_nm_nmPrt_tp_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggJrsdctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpNameNamePartTypeCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setCode"}</meta>
+            <column length="65535" name="MP_name_namePart_type_C_code">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setCode"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggJrsdctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpNameNamePartTypeCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setVersion"}</meta>
+            <column length="65535" name="MP_name_namePart_type_C_version">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggJrsdctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpNameNamePartTypeCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setDisplay"}</meta>
+            <column length="65535" name="MP_name_namePart_type_C_display">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggLnggCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_nm_cntrLngg_lngg_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpNameNamePartTypeCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setSystem"}</meta>
+            <column length="65535" name="MP_name_namePart_type_C_system">
+                <comment>{ "tree" :"MedicinalProduct.name.namePart.type", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart"] , "methodName" : "setType, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggLnggCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_nm_cntrLngg_lngg_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpNmCntrLnggCntrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggLnggCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_nm_cntrLngg_lngg_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpNmCntrLnggCntrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggLnggCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_nm_cntrLngg_lngg_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpNmCntrLnggCntrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpNmCntrLnggLnggCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_nm_cntrLngg_lngg_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpNmCntrLnggCntrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpCrssRfrncCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_crssRfrnc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpNmCntrLnggCntrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpCrossReferenceCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_crossReference_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpNmCntrLnggCntrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, setText"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_cntr_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.country", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setCountry, setText"}</comment>
             </column>
         </property>
-        <property name="mpCrossReferenceCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_crossReference_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpNmCntrLnggJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpCrossReferenceCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_crossReference_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpNmCntrLnggJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpCrossReferenceCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_crossReference_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpNmCntrLnggJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpManufacturingBusinessOperation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MP_manufacturingBusinessOperation">
-                <comment>BackboneElement</comment>
+        <property name="mpNmCntrLnggJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnPrtnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_prtnTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpNmCntrLnggJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnPrtnTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_prtnTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpNmCntrLnggJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, setText"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_jrsdctn_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnPrtnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_prtnTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpNmCntrLnggLnggCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnPrtnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_prtnTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpNmCntrLnggLnggCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnPrtnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_prtnTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpNmCntrLnggLnggCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnThrstnRfrncNmbrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_thrstnRfrncNmbr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpNmCntrLnggLnggCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnThrstnRfrncNmbrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_thrstnRfrncNmbr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpNmCntrLnggLnggCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnThrstnRfrncNmbrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_thrstnRfrncNmbr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpNmCntrLnggLnggCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, setText"}</meta>
+            <column length="65535" name="MP_nm_cntrLngg_lngg_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.name.countryLanguage.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addName", "addNamePart", "addCountryLanguage"] , "methodName" : "setLanguage, setText"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnThrstnRfrncNmbrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_thrstnRfrncNmbr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpCrossReferenceIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setUse"}</meta>
+            <column length="65535" name="MP_crossReference_Identifier_use">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setUse"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnThrstnRfrncNmbrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_thrstnRfrncNmbr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpCrssRfrncDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnFfctvDte" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_ffctvDte">
-                <comment>dateTime</comment>
+        <property name="mpCrssRfrncDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnCnfdntltndctrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_cnfdntltndctr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpCrssRfrncDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnCnfdntltndctrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_cnfdntltndctr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpCrssRfrncDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnCnfdntltndctrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_cnfdntltndctr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpCrssRfrncDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnCnfdntltndctrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_cnfdntltndctr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpCrssRfrncDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, setText"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnCnfdntltndctrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_cnfdntltndctr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpCrssRfrncDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setPeriod, setStart"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnMnfctrr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_mnfctrr">
-                <comment>Reference</comment>
+        <property name="mpCrssRfrncDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mpMnfctrngBsnssprtnRgltr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_mnfctrngBsnssprtn_rgltr">
-                <comment>Reference</comment>
+        <property name="mpCrssRfrncDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setAssigner"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mpSpecialDesignation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MP_specialDesignation">
-                <comment>BackboneElement</comment>
+        <property name="mpCrossReferenceIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setValue"}</meta>
+            <column length="65535" name="MP_crossReference_Identifier_value">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setValue"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpCrssRfrncDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setSystem"}</meta>
+            <column length="65535" name="MP_crssRfrnc_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProduct.crossReference", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCrossReference, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMnfcBsprPrtnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpMnfcBsprPrtnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMnfcBsprPrtnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpMnfcBsprPrtnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpMnfcBsprPrtnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMnfcBsprPrtnTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, setText"}</meta>
+            <column length="65535" name="MP_mnfcBspr_prtnTp_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.operationType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setOperationType, setText"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpMnfcBsprThRfNmDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setUse"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_se">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setUse"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNtnddsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_ntndds_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNtnddsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_ntndds_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNtnddsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_ntndds_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNtnddsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_ntndds_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMnfcBsprThRfNmDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, setText"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNtnddsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_ntndds_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpMnfcBsprThRfNmDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setPeriod, setStart"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctncdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctncdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpMnfcBsprThRfNmDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctncdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctncdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMnfcBsprThRfNmDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setAssigner"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctncdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctncdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpMnfcBsprThRfNmDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setValue"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setValue"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctncdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctncdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMnfcBsprThRfNmDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setSystem"}</meta>
+            <column length="65535" name="MP_mnfcBspr_thRfNm_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.authorisationReferenceNumber", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setAuthorisationReferenceNumber, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctncdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctncdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpMnfcBsprFfctvDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.effectiveDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setEffectiveDate"}</meta>
+            <column length="65535" name="MP_mnfcBspr_ffctvDt_dtTme">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.effectiveDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setEffectiveDate"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnNdctnRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MP_spclDsgntn_ndctnRfrnce">
-                <comment>Reference</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSttsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_stts_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSttsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_stts_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSttsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_stts_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSttsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_stts_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSttsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_stts_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpMnfcBsprCnfdntltndctrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, setText"}</meta>
+            <column length="65535" name="MP_mnfcBspr_cnfdntltndctr_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.confidentialityIndicator", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setConfidentialityIndicator, setText"}</comment>
             </column>
         </property>
-        <property name="mpSpecialDesignationDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="MP_specialDesignation_date">
-                <comment>dateTime</comment>
+        <property name="mpMnfcBsprMnfctrrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "addManufacturer"}</meta>
+            <column length="65535" name="MP_mnfcBspr_mnfctrr_Rfrnce">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "addManufacturer"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSpcsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MP_spclDsgntn_spcs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpMnfcBsprRgltrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.regulator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setRegulator"}</meta>
+            <column length="65535" name="MP_mnfcBspr_rgltr_Rfrnce">
+                <comment>{ "tree" :"MedicinalProduct.manufacturingBusinessOperation.regulator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addManufacturingBusinessOperation"] , "methodName" : "setRegulator"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSpcsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MP_spclDsgntn_spcs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpSpclDsgntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSpcsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MP_spclDsgntn_spcs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSpcsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MP_spclDsgntn_spcs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpSpclDsgntnSpcsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MP_spclDsgntn_spcs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addSpecialDesignation"] , "methodName" : "addIdentifier, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpecialDesignationTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="MP_specialDesignation_type_CC_text">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNtnddsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, setText"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ntndds_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.intendedUse", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIntendedUse, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, setText"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnCdblcncpt_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationCodeableconcept, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnNdctnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.indicationReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationReference(medicinalproductindication)"}</meta>
+            <column length="65535" name="MP_spclDsgntn_ndctnRfrnc_Rfrnce">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.indicationReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setIndicationReference(medicinalproductindication)"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSttsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, setText"}</meta>
+            <column length="65535" name="MP_spclDsgntn_stts_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.status", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setStatus, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="MP_spclDsgntn_dt_dtTme">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setDate"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setSystem"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setVersion"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setCode"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpSpclDsgntnSpcsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, setText"}</meta>
+            <column length="65535" name="MP_spclDsgntn_spcs_CC_txt">
+                <comment>{ "tree" :"MedicinalProduct.specialDesignation.species", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialDesignation"] , "methodName" : "setSpecies, setText"}</comment>
             </column>
         </property>
     </class>

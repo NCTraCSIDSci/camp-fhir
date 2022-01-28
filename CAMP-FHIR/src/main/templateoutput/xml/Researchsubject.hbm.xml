@@ -1,99 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Researchsubject" optimistic-lock="none" table="researchsubject">
-        <id name="rsrchSbjctDntfrCdngCde" type="string">
-            <column length="512" name="RsrchSbjct_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="rsrchSbjctDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="RsrchSbjct_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rsrchSbjctDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_se">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="RsrchSbjct_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="RsrchSbjct_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="RsrchSbjct_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="researchSubjectStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ResearchSubject_status">
-                <comment>code</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RsrchSbjct_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="researchSubjectPeriodCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ResearchSubject_period_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="rsrchSbjctDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RsrchSbjct_prd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rsrchSbjctDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RsrchSbjct_prd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rsrchSbjctDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rsrchSbjctPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RsrchSbjct_prd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rsrchSbjctDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="researchSubjectStudy" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ResearchSubject_study">
-                <comment>Reference</comment>
+        <property name="rsrchSbjctDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="researchSubjectIndividual" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ResearchSubject_individual">
-                <comment>Reference</comment>
+        <property name="rsrchSbjctDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="RsrchSbjct_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ResearchSubject.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="researchSubjectAssignedArm" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ResearchSubject_assignedArm">
-                <comment>string</comment>
+        <property name="researchSubjectStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ResearchSubject_status_code">
+                <comment>{ "tree" :"ResearchSubject.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="researchSubjectActualArm" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ResearchSubject_actualArm">
-                <comment>string</comment>
+        <property name="rsrchSbjctPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="RsrchSbjct_prd_Prd_strt">
+                <comment>{ "tree" :"ResearchSubject.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="researchSubjectConsent" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ResearchSubject_consent">
-                <comment>Reference</comment>
+        <property name="researchSubjectPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="ResearchSubject_period_Period_end">
+                <comment>{ "tree" :"ResearchSubject.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="researchSubjectStudyReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.study", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStudy"}</meta>
+            <column length="65535" name="ResearchSubject_study_Reference">
+                <comment>{ "tree" :"ResearchSubject.study", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStudy"}</comment>
+            </column>
+        </property>
+        <property name="rsrchSbjctNdvdlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.individual", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIndividual"}</meta>
+            <column length="65535" name="RsrchSbjct_ndvdl_Rfrnce">
+                <comment>{ "tree" :"ResearchSubject.individual", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIndividual"}</comment>
+            </column>
+        </property>
+        <property name="researchSubjectAssignedArmString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.assignedArm", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAssignedArm"}</meta>
+            <column length="65535" name="ResearchSubject_assignedArm_string">
+                <comment>{ "tree" :"ResearchSubject.assignedArm", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAssignedArm"}</comment>
+            </column>
+        </property>
+        <property name="researchSubjectActualArmString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.actualArm", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActualArm"}</meta>
+            <column length="65535" name="ResearchSubject_actualArm_string">
+                <comment>{ "tree" :"ResearchSubject.actualArm", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActualArm"}</comment>
+            </column>
+        </property>
+        <property name="researchSubjectConsentReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ResearchSubject.consent", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setConsent"}</meta>
+            <column length="65535" name="ResearchSubject_consent_Reference">
+                <comment>{ "tree" :"ResearchSubject.consent", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setConsent"}</comment>
             </column>
         </property>
     </class>

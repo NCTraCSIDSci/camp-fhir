@@ -1,567 +1,321 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Group" optimistic-lock="none" table="group">
-        <id name="grpDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Grp_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="grpDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_use_code</meta>
-            <column length="512" name="Grp_dntfr_dntfr_s_cde">
-                <comment>Group_identifierIdentifier_use_code</comment>
+        <property name="groupIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Group_identifier_Identifier_use">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Grp_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Group_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="grpDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Grp_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Group_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="grpDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Grp_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Group_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="grpDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Grp_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Group_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="grpDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Grp_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Group_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="grpDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Prd_strt">
-                <comment>Group_identifierIdentifier_Period_start</comment>
+        <property name="grpDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Prd_nd">
-                <comment>Group_identifierIdentifier_Period_end</comment>
+        <property name="grpDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Group_identifierIdentifier_Reference_reference</comment>
+        <property name="grpDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Group_identifierIdentifier_Reference_type</comment>
+        <property name="grpDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Grp_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Group_identifierIdentifier_Reference_identifier</comment>
+        <property name="groupIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Group_identifier_Identifier_value">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Grp_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Group_identifierIdentifier_Reference_display</comment>
+        <property name="groupIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Group_identifier_Identifier_system">
+                <comment>{ "tree" :"Group.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_value_string</meta>
-            <column length="512" name="Grp_dntfr_dntfr_vl_strng">
-                <comment>Group_identifierIdentifier_value_string</comment>
+        <property name="groupActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="Group_active_boolean">
+                <comment>{ "tree" :"Group.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="grpDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Group_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Grp_dntfr_dntfr_sstm_ri">
-                <comment>Group_identifierIdentifier_system_uri</comment>
+        <property name="groupTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Group_type_code">
+                <comment>{ "tree" :"Group.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="groupActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Group_active">
-                <comment>boolean</comment>
+        <property name="groupActualBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.actual", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setActual"}</meta>
+            <column length="65535" name="Group_actual_boolean">
+                <comment>{ "tree" :"Group.actual", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setActual"}</comment>
             </column>
         </property>
-        <property name="groupType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Group_type">
-                <comment>code</comment>
+        <property name="groupCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Group_code_CC_coding_C_system">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="groupActual" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Group_actual">
-                <comment>boolean</comment>
+        <property name="groupCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Group_code_CC_coding_C_version">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="groupCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Group_code_CC_coding_C_code">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="groupCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Group_code_CC_coding_C_display">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="grpCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Grp_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="groupCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Group_code_CC_text">
+                <comment>{ "tree" :"Group.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="groupNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Group_name_string">
+                <comment>{ "tree" :"Group.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="grpCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Grp_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="groupQuantityUnsignedInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.quantity", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="Group_quantity_unsignedInt">
+                <comment>{ "tree" :"Group.quantity", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity"}</comment>
             </column>
         </property>
-        <property name="groupName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Group_name">
-                <comment>string</comment>
+        <property name="groupManagingEntityReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.managingEntity", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingEntity"}</meta>
+            <column length="65535" name="Group_managingEntity_Reference">
+                <comment>{ "tree" :"Group.managingEntity", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingEntity"}</comment>
             </column>
         </property>
-        <property name="groupQuantity" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="Group_quantity">
-                <comment>unsignedInt</comment>
+        <property name="grpChrctrCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Grp_chrctr_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="grpChrctrCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Grp_chrctr_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="groupChrctrCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Group_chrctr_code_CC_coding_C_code">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="grpChrctrCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Grp_chrctr_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="grpChrctrCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Grp_chrctr_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="groupChrctrCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Group_chrctr_code_CC_text">
+                <comment>{ "tree" :"Group.characteristic.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="grpChrctrVlCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="grpChrctrVlCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="grpChrctrVlCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="grpChrctrVlCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="grpChrctrVlCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="grpChrctrVlCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, setText"}</meta>
+            <column length="65535" name="Grp_chrctr_vlCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Group.characteristic.valueCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="groupChrctrValueBooleanBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueBoolean"}</meta>
+            <column length="65535" name="Group_chrctr_valueBoolean_boolean">
+                <comment>{ "tree" :"Group.characteristic.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueBoolean"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="grpChrctrVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="grpMngngnttRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Grp_mngngntt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="grpChrctrVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setCode"}</meta>
+            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="grpChrctrVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setValue"}</meta>
+            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="grpChrctrVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="grpChrctrVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Group.characteristic.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="groupChrctrValueRangeRangeLow" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueRange, setLow"}</meta>
+            <column length="65535" name="Group_chrctr_valueRange_Range_low">
+                <comment>{ "tree" :"Group.characteristic.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="groupChrctrValueRangeRangeHigh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueRange, setHigh"}</meta>
+            <column length="65535" name="Group_chrctr_valueRange_Range_high">
+                <comment>{ "tree" :"Group.characteristic.valueRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="grpChrctrCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Grp_chrctr_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="grpChrctrVlRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueReference()"}</meta>
+            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnce">
+                <comment>{ "tree" :"Group.characteristic.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setValueReference()"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="groupChrctrExcludeBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.exclude", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setExclude"}</meta>
+            <column length="65535" name="Group_chrctr_exclude_boolean">
+                <comment>{ "tree" :"Group.characteristic.exclude", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristic"] , "methodName" : "setExclude"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="groupChrctrPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristic"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Group_chrctr_period_Period_start">
+                <comment>{ "tree" :"Group.characteristic.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristic"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="groupChrctrPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.characteristic.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristic"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Group_chrctr_period_Period_end">
+                <comment>{ "tree" :"Group.characteristic.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristic"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="groupMemberEntityReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.member.entity", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addMember"] , "methodName" : "setEntity"}</meta>
+            <column length="65535" name="Group_member_entity_Reference">
+                <comment>{ "tree" :"Group.member.entity", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addMember"] , "methodName" : "setEntity"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="groupMemberPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.member.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Group_member_period_Period_start">
+                <comment>{ "tree" :"Group.member.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="grpChrctrVlcdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Grp_chrctr_vlcdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="groupMemberPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.member.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Group_member_period_Period_end">
+                <comment>{ "tree" :"Group.member.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="groupChrctrValueBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Group_chrctr_valueBoolean">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlQnttQnttCmprtrCde" type="string">
-            <meta attribute="resource-type">Quantity_comparator_code</meta>
-            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_cmprtr_cde">
-                <comment>Quantity_comparator_code</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlQnttQnttCdCde" type="string">
-            <meta attribute="resource-type">Quantity_code_code</meta>
-            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_cd_cde">
-                <comment>Quantity_code_code</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlQnttQnttVlDcml" type="string">
-            <meta attribute="resource-type">Quantity_value_decimal</meta>
-            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_vl_dcml">
-                <comment>Quantity_value_decimal</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlQnttQnttNtStrng" type="string">
-            <meta attribute="resource-type">Quantity_unit_string</meta>
-            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_nt_strng">
-                <comment>Quantity_unit_string</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlQnttQnttSstmRi" type="string">
-            <meta attribute="resource-type">Quantity_system_uri</meta>
-            <column length="65535" name="Grp_chrctr_vlQntt_Qntt_sstm_ri">
-                <comment>Quantity_system_uri</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRngRngLwSmplQntty" type="string">
-            <meta attribute="resource-type">Range_low_SimpleQuantity</meta>
-            <column length="65535" name="Grp_chrctr_vlRng_Rng_lw_SmplQntty">
-                <comment>Range_low_SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRngRngHghSmplQntty" type="string">
-            <meta attribute="resource-type">Range_high_SimpleQuantity</meta>
-            <column length="65535" name="Grp_chrctr_vlRng_Rng_hgh_SmplQntty">
-                <comment>Range_high_SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="grpChrctrVlRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Grp_chrctr_vlRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="groupChrctrExclude" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Group_chrctr_exclude">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="grpChrctrPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Grp_chrctr_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="grpChrctrPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Grp_chrctr_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="grpMmbrNttRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Grp_mmbr_ntt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="grpMmbrPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Grp_mmbr_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="grpMmbrPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Grp_mmbr_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="groupMemberInactive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Group_member_inactive">
-                <comment>boolean</comment>
+        <property name="groupMemberInactiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Group.member.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setInactive"}</meta>
+            <column length="65535" name="Group_member_inactive_boolean">
+                <comment>{ "tree" :"Group.member.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMember"] , "methodName" : "setInactive"}</comment>
             </column>
         </property>
     </class>

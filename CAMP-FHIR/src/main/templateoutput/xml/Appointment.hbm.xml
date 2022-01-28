@@ -1,855 +1,453 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Appointment" optimistic-lock="none" table="appointment">
-        <id name="appntmntDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="appntmntDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_use_code</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_s_cde">
-                <comment>Appointment_identifierIdentifier_use_code</comment>
+        <property name="appntmntDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_se">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Appointment_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="appntmntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Appointment_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="appntmntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Appointment_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="appntmntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Appointment_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Appointment_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="appntmntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Prd_strt">
-                <comment>Appointment_identifierIdentifier_Period_start</comment>
+        <property name="appntmntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Prd_nd">
-                <comment>Appointment_identifierIdentifier_Period_end</comment>
+        <property name="appntmntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Appointment_identifierIdentifier_Reference_reference</comment>
+        <property name="appntmntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Appointment_identifierIdentifier_Reference_type</comment>
+        <property name="appntmntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Appointment_identifierIdentifier_Reference_identifier</comment>
+        <property name="appntmntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Appointment_identifierIdentifier_Reference_display</comment>
+        <property name="appntmntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Appntmnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Appointment.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_value_string</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_vl_strng">
-                <comment>Appointment_identifierIdentifier_value_string</comment>
+        <property name="appointmentStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Appointment_status_code">
+                <comment>{ "tree" :"Appointment.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="appntmntDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Appointment_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Appntmnt_dntfr_dntfr_sstm_ri">
-                <comment>Appointment_identifierIdentifier_system_uri</comment>
+        <property name="appntmntCncltnRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appointmentStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Appointment_status">
-                <comment>code</comment>
+        <property name="appntmntCncltnRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntCncltnRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntCncltnRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntCncltnRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appntmntCncltnRsnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, setText"}</meta>
+            <column length="65535" name="Appntmnt_cncltnRsn_CC_txt">
+                <comment>{ "tree" :"Appointment.cancelationReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelationReason, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntSrvcCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntCncltnRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_cncltnRsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appntmntSrvcCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntSrvcCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntSrvcCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntSrvcCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appntmntSrvcCtgrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</meta>
+            <column length="65535" name="Appntmnt_srvcCtgr_CC_txt">
+                <comment>{ "tree" :"Appointment.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntSrvcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_srvcTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_srvcCtgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appntmntSrvcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_srvcTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntSrvcTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_srvcTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntSrvcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_srvcTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntSrvcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_srvcTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appointmentServiceTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</meta>
+            <column length="65535" name="Appointment_serviceType_CC_text">
+                <comment>{ "tree" :"Appointment.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntSpcltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_spclt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntSrvcTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_srvcTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appntmntSpcltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_spclt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntSpcltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_spclt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntSpcltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_spclt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntSpcltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_spclt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appointmentSpecialtyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</meta>
+            <column length="65535" name="Appointment_specialty_CC_text">
+                <comment>{ "tree" :"Appointment.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntPpntmntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntSpcltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_spclt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appntmntPpntmntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntPpntmntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntPpntmntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntPpntmntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appntmntPpntmntTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, setText"}</meta>
+            <column length="65535" name="Appntmnt_ppntmntTp_CC_txt">
+                <comment>{ "tree" :"Appointment.appointmentType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntPpntmntTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_ppntmntTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appntmntRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="appntmntRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="appntmntRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="appntmntRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="appointmentReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="Appointment_reasonCode_CC_text">
+                <comment>{ "tree" :"Appointment.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="appntmntRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"Appointment.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_rsnCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="appointmentPriorityUnsignedInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.priority", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="Appointment_priority_unsignedInt">
+                <comment>{ "tree" :"Appointment.priority", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="appointmentDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Appointment_description_string">
+                <comment>{ "tree" :"Appointment.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="appntmntSpprtngnfrmtnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.supportingInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInformation"}</meta>
+            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnce">
+                <comment>{ "tree" :"Appointment.supportingInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInformation"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="appointmentStartInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.start", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="Appointment_start_instant">
+                <comment>{ "tree" :"Appointment.start", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="appointmentEndInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.end", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="Appointment_end_instant">
+                <comment>{ "tree" :"Appointment.end", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="appntmntMntsDrtnPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.minutesDuration", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMinutesDuration"}</meta>
+            <column length="65535" name="Appntmnt_mntsDrtn_pstvnt">
+                <comment>{ "tree" :"Appointment.minutesDuration", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMinutesDuration"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="appointmentSlotReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.slot", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSlot"}</meta>
+            <column length="65535" name="Appointment_slot_Reference">
+                <comment>{ "tree" :"Appointment.slot", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSlot"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="appointmentCreatedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.created", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreated"}</meta>
+            <column length="65535" name="Appointment_created_dateTime">
+                <comment>{ "tree" :"Appointment.created", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreated"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="appointmentCommentString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="Appointment_comment_string">
+                <comment>{ "tree" :"Appointment.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="appointmentPntInstructionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.patientInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatientInstruction"}</meta>
+            <column length="65535" name="Appointment_pntInstruction_string">
+                <comment>{ "tree" :"Appointment.patientInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatientInstruction"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="appointmentBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="Appointment_basedOn_Reference">
+                <comment>{ "tree" :"Appointment.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="appntmntPrtcpntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="appntmntPrtcpntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="appntmntPrtcpntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="appntmntRsnRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Appntmnt_rsnRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="appntmntPrtcpntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="appointmentPriority" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="Appointment_priority">
-                <comment>unsignedInt</comment>
+        <property name="appntmntPrtcpntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="appointmentDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Appointment_description">
-                <comment>string</comment>
+        <property name="appntmntPrtcpntTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_tp_CC_txt">
+                <comment>{ "tree" :"Appointment.participant.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="appntmntPrtcpntCtrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.actor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setActor"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnce">
+                <comment>{ "tree" :"Appointment.participant.actor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setActor"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="appntmntPrtcpntRqrdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.required", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRequired"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_rqrd_cde">
+                <comment>{ "tree" :"Appointment.participant.required", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRequired"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="appntmntPrtcpntSttsCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_stts_cde">
+                <comment>{ "tree" :"Appointment.participant.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="appntmntPrtcpntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_prd_Prd_strt">
+                <comment>{ "tree" :"Appointment.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="appntmntPrtcpntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Appntmnt_prtcpnt_prd_Prd_nd">
+                <comment>{ "tree" :"Appointment.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="appntmntRqstdPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.requestedPeriod", "datatype" : "Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequestedPeriod, setStart"}</meta>
+            <column length="65535" name="Appntmnt_rqstdPrd_Prd_strt">
+                <comment>{ "tree" :"Appointment.requestedPeriod", "datatype" : "Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequestedPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="appntmntSpprtngnfrmtnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Appntmnt_spprtngnfrmtn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="appointmentStart" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Appointment_start">
-                <comment>instant</comment>
-            </column>
-        </property>
-        <property name="appointmentEnd" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Appointment_end">
-                <comment>instant</comment>
-            </column>
-        </property>
-        <property name="appointmentMinutesDuration" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Appointment_minutesDuration">
-                <comment>positiveInt</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="appntmntSltRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Appntmnt_slt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="appointmentCreated" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Appointment_created">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="appointmentComment" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Appointment_comment">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="appointmentPntInstruction" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Appointment_pntInstruction">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="appntmntBsdnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Appntmnt_bsdn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntCtrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_ctr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="appointmentParticipantRequired" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Appointment_participant_required">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="appointmentParticipantStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Appointment_participant_status">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="appntmntPrtcpntPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Appntmnt_prtcpnt_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="appntmntRqstdPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Appntmnt_rqstdPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="appntmntRqstdPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Appntmnt_rqstdPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="appntmntRqstdPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Appointment.requestedPeriod", "datatype" : "Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequestedPeriod, setEnd"}</meta>
+            <column length="65535" name="Appntmnt_rqstdPrd_Prd_nd">
+                <comment>{ "tree" :"Appointment.requestedPeriod", "datatype" : "Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequestedPeriod, setEnd"}</comment>
             </column>
         </property>
     </class>

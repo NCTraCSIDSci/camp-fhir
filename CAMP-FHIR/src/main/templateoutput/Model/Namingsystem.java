@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,353 +10,754 @@ package main.templateoutput.Model;
 public class Namingsystem  implements java.io.Serializable {
 
 
-     private String namingSystemName;
-     private String namingSystemStatus;
-     private String namingSystemKind;
-     private String namingSystemDate;
-     private String namingSystemPublisher;
-     private String namingSystemContact;
-     private String namingSystemResponsible;
-     private String nmngSstmTpCdblCncptCdngSstm;
-     private String nmngSstmTpCdblCncptCdngVrsn;
-     private String nmngSstmTpCdblCncptCdngCde;
-     private String nmngSstmTpCdblCncptCdngDsplay;
-     private String nmngSstmTpCdblCncptCdngSrSlctd;
-     private String nmngSstmTpCdblCncptTxtStrng;
-     private String namingSystemDescription;
-     private String namingSystemUseContext;
-     private String nmngSstmJrsdctnCdblCncptCdngSstm;
-     private String nmngSstmJrsdctnCdblCncptCdngVrsn;
-     private String nmngSstmJrsdctnCdblCncptCdngCde;
-     private String nmngSstmJrsdctnCdblCncptCdngDsplay;
-     private String nmngSstmJrsdctnCdblCncptCdngSrSlctd;
-     private String nmngSstmJrsdctnCdblCncptTxtStrng;
-     private String namingSystemUsage;
-     private String namingSystemUniqueIdType;
-     private String namingSystemUniqueIdValue;
-     private String namingSystemUniqueIdPreferred;
-     private String namingSystemUniqueIdComment;
-     private String nmngSstmNqdPrdPrdStrtDtTme;
-     private String nmngSstmNqdPrdPrdNdDtTme;
+     private Integer id;
+     private String namingSystemNameString;
+     private String namingSystemStatusCode;
+     private String namingSystemKindCode;
+     private String namingSystemDateDateTime;
+     private String namingSystemPublisherString;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntPrdNd;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntSstm;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntVlue;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntSe;
+     private String nmngSstmCntctCntctDtlTlcmCntctPntRnk;
+     private String nmngSstmCntctCntctDtlNme;
+     private String namingSystemResponsibleString;
+     private String nmngSstmTpCcCdngCSstm;
+     private String nmngSstmTpCcCdngCVrsn;
+     private String namingSystemTypeCcCodingCCode;
+     private String nmngSstmTpCcCdngCDsplay;
+     private String nmngSstmTpCcCdngCSrSlctd;
+     private String namingSystemTypeCcText;
+     private String namingSystemDescriptionMarkdown;
+     private String nmngSstmSCntxtSgCntxtVlCcCcCSstm;
+     private String nmngSstmSCntxtSgCntxtVlCcCcCVrsn;
+     private String nmngSstmSCntxtSgCntxtVlCcCcCCde;
+     private String nmngSstmSCntxtSgCntxtVlCcCcCDsplay;
+     private String nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String nmngSstmSCntxtSgCntxtVlCcCcTxt;
+     private String nmngSstmSCntxtSgCntxtCdCSstm;
+     private String nmngSstmSCntxtSgCntxtCdCVrsn;
+     private String nmngSstmSCntxtSgCntxtCdCCde;
+     private String nmngSstmSCntxtSgCntxtCdCDsplay;
+     private String nmngSstmSCntxtSgCntxtCdCSrSlctd;
+     private String nmngSstmSCntxtSgCntxtVlQnttQnttVlue;
+     private String nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String nmngSstmSCntxtSgCntxtVlQnttQnttNt;
+     private String nmngSstmSCntxtSgCntxtVlQnttQnttSstm;
+     private String nmngSstmSCntxtSgCntxtVlQnttQnttCde;
+     private String nmngSstmSCntxtSgCntxtVlRngRngLw;
+     private String nmngSstmSCntxtSgCntxtVlRngRngHgh;
+     private String nmngSstmSCntxtSgCntxtVlRfrnce;
+     private String nmngSstmJrsdctnCcCdngCSstm;
+     private String nmngSstmJrsdctnCcCdngCVrsn;
+     private String nmngSstmJrsdctnCcCdngCCde;
+     private String nmngSstmJrsdctnCcCdngCDsplay;
+     private String nmngSstmJrsdctnCcCdngCSrSlctd;
+     private String namingSystemJurisdictionCcText;
+     private String namingSystemUsageString;
+     private String namingSystemUniqueIdTypeCode;
+     private String namingSystemUniqueIdValueString;
+     private String nmngSstmNqdPrfrrdBln;
+     private String nmngSstmNqdCmmntStrng;
+     private String nmngSstmNqdPrdPrdStrt;
+     private String nmngSstmNqdPrdPrdNd;
 
     public Namingsystem() {
     }
 
-	
-    public Namingsystem(String namingSystemName) {
-        this.namingSystemName = namingSystemName;
-    }
-    public Namingsystem(String namingSystemName, String namingSystemStatus, String namingSystemKind, String namingSystemDate, String namingSystemPublisher, String namingSystemContact, String namingSystemResponsible, String nmngSstmTpCdblCncptCdngSstm, String nmngSstmTpCdblCncptCdngVrsn, String nmngSstmTpCdblCncptCdngCde, String nmngSstmTpCdblCncptCdngDsplay, String nmngSstmTpCdblCncptCdngSrSlctd, String nmngSstmTpCdblCncptTxtStrng, String namingSystemDescription, String namingSystemUseContext, String nmngSstmJrsdctnCdblCncptCdngSstm, String nmngSstmJrsdctnCdblCncptCdngVrsn, String nmngSstmJrsdctnCdblCncptCdngCde, String nmngSstmJrsdctnCdblCncptCdngDsplay, String nmngSstmJrsdctnCdblCncptCdngSrSlctd, String nmngSstmJrsdctnCdblCncptTxtStrng, String namingSystemUsage, String namingSystemUniqueIdType, String namingSystemUniqueIdValue, String namingSystemUniqueIdPreferred, String namingSystemUniqueIdComment, String nmngSstmNqdPrdPrdStrtDtTme, String nmngSstmNqdPrdPrdNdDtTme) {
-       this.namingSystemName = namingSystemName;
-       this.namingSystemStatus = namingSystemStatus;
-       this.namingSystemKind = namingSystemKind;
-       this.namingSystemDate = namingSystemDate;
-       this.namingSystemPublisher = namingSystemPublisher;
-       this.namingSystemContact = namingSystemContact;
-       this.namingSystemResponsible = namingSystemResponsible;
-       this.nmngSstmTpCdblCncptCdngSstm = nmngSstmTpCdblCncptCdngSstm;
-       this.nmngSstmTpCdblCncptCdngVrsn = nmngSstmTpCdblCncptCdngVrsn;
-       this.nmngSstmTpCdblCncptCdngCde = nmngSstmTpCdblCncptCdngCde;
-       this.nmngSstmTpCdblCncptCdngDsplay = nmngSstmTpCdblCncptCdngDsplay;
-       this.nmngSstmTpCdblCncptCdngSrSlctd = nmngSstmTpCdblCncptCdngSrSlctd;
-       this.nmngSstmTpCdblCncptTxtStrng = nmngSstmTpCdblCncptTxtStrng;
-       this.namingSystemDescription = namingSystemDescription;
-       this.namingSystemUseContext = namingSystemUseContext;
-       this.nmngSstmJrsdctnCdblCncptCdngSstm = nmngSstmJrsdctnCdblCncptCdngSstm;
-       this.nmngSstmJrsdctnCdblCncptCdngVrsn = nmngSstmJrsdctnCdblCncptCdngVrsn;
-       this.nmngSstmJrsdctnCdblCncptCdngCde = nmngSstmJrsdctnCdblCncptCdngCde;
-       this.nmngSstmJrsdctnCdblCncptCdngDsplay = nmngSstmJrsdctnCdblCncptCdngDsplay;
-       this.nmngSstmJrsdctnCdblCncptCdngSrSlctd = nmngSstmJrsdctnCdblCncptCdngSrSlctd;
-       this.nmngSstmJrsdctnCdblCncptTxtStrng = nmngSstmJrsdctnCdblCncptTxtStrng;
-       this.namingSystemUsage = namingSystemUsage;
-       this.namingSystemUniqueIdType = namingSystemUniqueIdType;
-       this.namingSystemUniqueIdValue = namingSystemUniqueIdValue;
-       this.namingSystemUniqueIdPreferred = namingSystemUniqueIdPreferred;
-       this.namingSystemUniqueIdComment = namingSystemUniqueIdComment;
-       this.nmngSstmNqdPrdPrdStrtDtTme = nmngSstmNqdPrdPrdStrtDtTme;
-       this.nmngSstmNqdPrdPrdNdDtTme = nmngSstmNqdPrdPrdNdDtTme;
+    public Namingsystem(String namingSystemNameString, String namingSystemStatusCode, String namingSystemKindCode, String namingSystemDateDateTime, String namingSystemPublisherString, String nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt, String nmngSstmCntctCntctDtlTlcmCntctPntPrdNd, String nmngSstmCntctCntctDtlTlcmCntctPntSstm, String nmngSstmCntctCntctDtlTlcmCntctPntVlue, String nmngSstmCntctCntctDtlTlcmCntctPntSe, String nmngSstmCntctCntctDtlTlcmCntctPntRnk, String nmngSstmCntctCntctDtlNme, String namingSystemResponsibleString, String nmngSstmTpCcCdngCSstm, String nmngSstmTpCcCdngCVrsn, String namingSystemTypeCcCodingCCode, String nmngSstmTpCcCdngCDsplay, String nmngSstmTpCcCdngCSrSlctd, String namingSystemTypeCcText, String namingSystemDescriptionMarkdown, String nmngSstmSCntxtSgCntxtVlCcCcCSstm, String nmngSstmSCntxtSgCntxtVlCcCcCVrsn, String nmngSstmSCntxtSgCntxtVlCcCcCCde, String nmngSstmSCntxtSgCntxtVlCcCcCDsplay, String nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd, String nmngSstmSCntxtSgCntxtVlCcCcTxt, String nmngSstmSCntxtSgCntxtCdCSstm, String nmngSstmSCntxtSgCntxtCdCVrsn, String nmngSstmSCntxtSgCntxtCdCCde, String nmngSstmSCntxtSgCntxtCdCDsplay, String nmngSstmSCntxtSgCntxtCdCSrSlctd, String nmngSstmSCntxtSgCntxtVlQnttQnttVlue, String nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr, String nmngSstmSCntxtSgCntxtVlQnttQnttNt, String nmngSstmSCntxtSgCntxtVlQnttQnttSstm, String nmngSstmSCntxtSgCntxtVlQnttQnttCde, String nmngSstmSCntxtSgCntxtVlRngRngLw, String nmngSstmSCntxtSgCntxtVlRngRngHgh, String nmngSstmSCntxtSgCntxtVlRfrnce, String nmngSstmJrsdctnCcCdngCSstm, String nmngSstmJrsdctnCcCdngCVrsn, String nmngSstmJrsdctnCcCdngCCde, String nmngSstmJrsdctnCcCdngCDsplay, String nmngSstmJrsdctnCcCdngCSrSlctd, String namingSystemJurisdictionCcText, String namingSystemUsageString, String namingSystemUniqueIdTypeCode, String namingSystemUniqueIdValueString, String nmngSstmNqdPrfrrdBln, String nmngSstmNqdCmmntStrng, String nmngSstmNqdPrdPrdStrt, String nmngSstmNqdPrdPrdNd) {
+       this.namingSystemNameString = namingSystemNameString;
+       this.namingSystemStatusCode = namingSystemStatusCode;
+       this.namingSystemKindCode = namingSystemKindCode;
+       this.namingSystemDateDateTime = namingSystemDateDateTime;
+       this.namingSystemPublisherString = namingSystemPublisherString;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt = nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntPrdNd = nmngSstmCntctCntctDtlTlcmCntctPntPrdNd;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntSstm = nmngSstmCntctCntctDtlTlcmCntctPntSstm;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntVlue = nmngSstmCntctCntctDtlTlcmCntctPntVlue;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntSe = nmngSstmCntctCntctDtlTlcmCntctPntSe;
+       this.nmngSstmCntctCntctDtlTlcmCntctPntRnk = nmngSstmCntctCntctDtlTlcmCntctPntRnk;
+       this.nmngSstmCntctCntctDtlNme = nmngSstmCntctCntctDtlNme;
+       this.namingSystemResponsibleString = namingSystemResponsibleString;
+       this.nmngSstmTpCcCdngCSstm = nmngSstmTpCcCdngCSstm;
+       this.nmngSstmTpCcCdngCVrsn = nmngSstmTpCcCdngCVrsn;
+       this.namingSystemTypeCcCodingCCode = namingSystemTypeCcCodingCCode;
+       this.nmngSstmTpCcCdngCDsplay = nmngSstmTpCcCdngCDsplay;
+       this.nmngSstmTpCcCdngCSrSlctd = nmngSstmTpCcCdngCSrSlctd;
+       this.namingSystemTypeCcText = namingSystemTypeCcText;
+       this.namingSystemDescriptionMarkdown = namingSystemDescriptionMarkdown;
+       this.nmngSstmSCntxtSgCntxtVlCcCcCSstm = nmngSstmSCntxtSgCntxtVlCcCcCSstm;
+       this.nmngSstmSCntxtSgCntxtVlCcCcCVrsn = nmngSstmSCntxtSgCntxtVlCcCcCVrsn;
+       this.nmngSstmSCntxtSgCntxtVlCcCcCCde = nmngSstmSCntxtSgCntxtVlCcCcCCde;
+       this.nmngSstmSCntxtSgCntxtVlCcCcCDsplay = nmngSstmSCntxtSgCntxtVlCcCcCDsplay;
+       this.nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd = nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.nmngSstmSCntxtSgCntxtVlCcCcTxt = nmngSstmSCntxtSgCntxtVlCcCcTxt;
+       this.nmngSstmSCntxtSgCntxtCdCSstm = nmngSstmSCntxtSgCntxtCdCSstm;
+       this.nmngSstmSCntxtSgCntxtCdCVrsn = nmngSstmSCntxtSgCntxtCdCVrsn;
+       this.nmngSstmSCntxtSgCntxtCdCCde = nmngSstmSCntxtSgCntxtCdCCde;
+       this.nmngSstmSCntxtSgCntxtCdCDsplay = nmngSstmSCntxtSgCntxtCdCDsplay;
+       this.nmngSstmSCntxtSgCntxtCdCSrSlctd = nmngSstmSCntxtSgCntxtCdCSrSlctd;
+       this.nmngSstmSCntxtSgCntxtVlQnttQnttVlue = nmngSstmSCntxtSgCntxtVlQnttQnttVlue;
+       this.nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr = nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.nmngSstmSCntxtSgCntxtVlQnttQnttNt = nmngSstmSCntxtSgCntxtVlQnttQnttNt;
+       this.nmngSstmSCntxtSgCntxtVlQnttQnttSstm = nmngSstmSCntxtSgCntxtVlQnttQnttSstm;
+       this.nmngSstmSCntxtSgCntxtVlQnttQnttCde = nmngSstmSCntxtSgCntxtVlQnttQnttCde;
+       this.nmngSstmSCntxtSgCntxtVlRngRngLw = nmngSstmSCntxtSgCntxtVlRngRngLw;
+       this.nmngSstmSCntxtSgCntxtVlRngRngHgh = nmngSstmSCntxtSgCntxtVlRngRngHgh;
+       this.nmngSstmSCntxtSgCntxtVlRfrnce = nmngSstmSCntxtSgCntxtVlRfrnce;
+       this.nmngSstmJrsdctnCcCdngCSstm = nmngSstmJrsdctnCcCdngCSstm;
+       this.nmngSstmJrsdctnCcCdngCVrsn = nmngSstmJrsdctnCcCdngCVrsn;
+       this.nmngSstmJrsdctnCcCdngCCde = nmngSstmJrsdctnCcCdngCCde;
+       this.nmngSstmJrsdctnCcCdngCDsplay = nmngSstmJrsdctnCcCdngCDsplay;
+       this.nmngSstmJrsdctnCcCdngCSrSlctd = nmngSstmJrsdctnCcCdngCSrSlctd;
+       this.namingSystemJurisdictionCcText = namingSystemJurisdictionCcText;
+       this.namingSystemUsageString = namingSystemUsageString;
+       this.namingSystemUniqueIdTypeCode = namingSystemUniqueIdTypeCode;
+       this.namingSystemUniqueIdValueString = namingSystemUniqueIdValueString;
+       this.nmngSstmNqdPrfrrdBln = nmngSstmNqdPrfrrdBln;
+       this.nmngSstmNqdCmmntStrng = nmngSstmNqdCmmntStrng;
+       this.nmngSstmNqdPrdPrdStrt = nmngSstmNqdPrdPrdStrt;
+       this.nmngSstmNqdPrdPrdNd = nmngSstmNqdPrdPrdNd;
     }
    
-    public String getNamingSystemName() {
-        return this.namingSystemName;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setNamingSystemName(String namingSystemName) {
-        this.namingSystemName = namingSystemName;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getNamingSystemNameString()
+    {
+        return this.namingSystemNameString;
     }
     
-    
-    
-    public String getNamingSystemStatus() {
-        return this.namingSystemStatus;
+    public void setNamingSystemNameString
+        (String namingSystemNameString) 
+        {
+      this.namingSystemNameString = namingSystemNameString;
+}
+    public 
+    String 
+    getNamingSystemStatusCode()
+    {
+        return this.namingSystemStatusCode;
     }
     
-    public void setNamingSystemStatus(String namingSystemStatus) {
-        this.namingSystemStatus = namingSystemStatus;
+    public void setNamingSystemStatusCode
+        (String namingSystemStatusCode) 
+        {
+      this.namingSystemStatusCode = namingSystemStatusCode;
+}
+    public 
+    String 
+    getNamingSystemKindCode()
+    {
+        return this.namingSystemKindCode;
     }
     
-    
-    
-    public String getNamingSystemKind() {
-        return this.namingSystemKind;
+    public void setNamingSystemKindCode
+        (String namingSystemKindCode) 
+        {
+      this.namingSystemKindCode = namingSystemKindCode;
+}
+    public 
+    String 
+    getNamingSystemDateDateTime()
+    {
+        return this.namingSystemDateDateTime;
     }
     
-    public void setNamingSystemKind(String namingSystemKind) {
-        this.namingSystemKind = namingSystemKind;
+    public void setNamingSystemDateDateTime
+        (String namingSystemDateDateTime) 
+        {
+      this.namingSystemDateDateTime = namingSystemDateDateTime;
+}
+    public 
+    String 
+    getNamingSystemPublisherString()
+    {
+        return this.namingSystemPublisherString;
     }
     
-    
-    
-    public String getNamingSystemDate() {
-        return this.namingSystemDate;
+    public void setNamingSystemPublisherString
+        (String namingSystemPublisherString) 
+        {
+      this.namingSystemPublisherString = namingSystemPublisherString;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt;
     }
     
-    public void setNamingSystemDate(String namingSystemDate) {
-        this.namingSystemDate = namingSystemDate;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntPrdStrt
+        (String nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt = nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntPrdNd;
     }
     
-    
-    
-    public String getNamingSystemPublisher() {
-        return this.namingSystemPublisher;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntPrdNd
+        (String nmngSstmCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntPrdNd = nmngSstmCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntSstm;
     }
     
-    public void setNamingSystemPublisher(String namingSystemPublisher) {
-        this.namingSystemPublisher = namingSystemPublisher;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntSstm
+        (String nmngSstmCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntSstm = nmngSstmCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntVlue;
     }
     
-    
-    
-    public String getNamingSystemContact() {
-        return this.namingSystemContact;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntVlue
+        (String nmngSstmCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntVlue = nmngSstmCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntSe;
     }
     
-    public void setNamingSystemContact(String namingSystemContact) {
-        this.namingSystemContact = namingSystemContact;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntSe
+        (String nmngSstmCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntSe = nmngSstmCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.nmngSstmCntctCntctDtlTlcmCntctPntRnk;
     }
     
-    
-    
-    public String getNamingSystemResponsible() {
-        return this.namingSystemResponsible;
+    public void setNmngSstmCntctCntctDtlTlcmCntctPntRnk
+        (String nmngSstmCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.nmngSstmCntctCntctDtlTlcmCntctPntRnk = nmngSstmCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getNmngSstmCntctCntctDtlNme()
+    {
+        return this.nmngSstmCntctCntctDtlNme;
     }
     
-    public void setNamingSystemResponsible(String namingSystemResponsible) {
-        this.namingSystemResponsible = namingSystemResponsible;
+    public void setNmngSstmCntctCntctDtlNme
+        (String nmngSstmCntctCntctDtlNme) 
+        {
+      this.nmngSstmCntctCntctDtlNme = nmngSstmCntctCntctDtlNme;
+}
+    public 
+    String 
+    getNamingSystemResponsibleString()
+    {
+        return this.namingSystemResponsibleString;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptCdngSstm() {
-        return this.nmngSstmTpCdblCncptCdngSstm;
+    public void setNamingSystemResponsibleString
+        (String namingSystemResponsibleString) 
+        {
+      this.namingSystemResponsibleString = namingSystemResponsibleString;
+}
+    public 
+    String 
+    getNmngSstmTpCcCdngCSstm()
+    {
+        return this.nmngSstmTpCcCdngCSstm;
     }
     
-    public void setNmngSstmTpCdblCncptCdngSstm(String nmngSstmTpCdblCncptCdngSstm) {
-        this.nmngSstmTpCdblCncptCdngSstm = nmngSstmTpCdblCncptCdngSstm;
+    public void setNmngSstmTpCcCdngCSstm
+        (String nmngSstmTpCcCdngCSstm) 
+        {
+      this.nmngSstmTpCcCdngCSstm = nmngSstmTpCcCdngCSstm;
+}
+    public 
+    String 
+    getNmngSstmTpCcCdngCVrsn()
+    {
+        return this.nmngSstmTpCcCdngCVrsn;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptCdngVrsn() {
-        return this.nmngSstmTpCdblCncptCdngVrsn;
+    public void setNmngSstmTpCcCdngCVrsn
+        (String nmngSstmTpCcCdngCVrsn) 
+        {
+      this.nmngSstmTpCcCdngCVrsn = nmngSstmTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getNamingSystemTypeCcCodingCCode()
+    {
+        return this.namingSystemTypeCcCodingCCode;
     }
     
-    public void setNmngSstmTpCdblCncptCdngVrsn(String nmngSstmTpCdblCncptCdngVrsn) {
-        this.nmngSstmTpCdblCncptCdngVrsn = nmngSstmTpCdblCncptCdngVrsn;
+    public void setNamingSystemTypeCcCodingCCode
+        (String namingSystemTypeCcCodingCCode) 
+        {
+      this.namingSystemTypeCcCodingCCode = namingSystemTypeCcCodingCCode;
+}
+    public 
+    String 
+    getNmngSstmTpCcCdngCDsplay()
+    {
+        return this.nmngSstmTpCcCdngCDsplay;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptCdngCde() {
-        return this.nmngSstmTpCdblCncptCdngCde;
+    public void setNmngSstmTpCcCdngCDsplay
+        (String nmngSstmTpCcCdngCDsplay) 
+        {
+      this.nmngSstmTpCcCdngCDsplay = nmngSstmTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getNmngSstmTpCcCdngCSrSlctd()
+    {
+        return this.nmngSstmTpCcCdngCSrSlctd;
     }
     
-    public void setNmngSstmTpCdblCncptCdngCde(String nmngSstmTpCdblCncptCdngCde) {
-        this.nmngSstmTpCdblCncptCdngCde = nmngSstmTpCdblCncptCdngCde;
+    public void setNmngSstmTpCcCdngCSrSlctd
+        (String nmngSstmTpCcCdngCSrSlctd) 
+        {
+      this.nmngSstmTpCcCdngCSrSlctd = nmngSstmTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getNamingSystemTypeCcText()
+    {
+        return this.namingSystemTypeCcText;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptCdngDsplay() {
-        return this.nmngSstmTpCdblCncptCdngDsplay;
+    public void setNamingSystemTypeCcText
+        (String namingSystemTypeCcText) 
+        {
+      this.namingSystemTypeCcText = namingSystemTypeCcText;
+}
+    public 
+    String 
+    getNamingSystemDescriptionMarkdown()
+    {
+        return this.namingSystemDescriptionMarkdown;
     }
     
-    public void setNmngSstmTpCdblCncptCdngDsplay(String nmngSstmTpCdblCncptCdngDsplay) {
-        this.nmngSstmTpCdblCncptCdngDsplay = nmngSstmTpCdblCncptCdngDsplay;
+    public void setNamingSystemDescriptionMarkdown
+        (String namingSystemDescriptionMarkdown) 
+        {
+      this.namingSystemDescriptionMarkdown = namingSystemDescriptionMarkdown;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcCSstm;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptCdngSrSlctd() {
-        return this.nmngSstmTpCdblCncptCdngSrSlctd;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcCSstm
+        (String nmngSstmSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcCSstm = nmngSstmSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcCVrsn;
     }
     
-    public void setNmngSstmTpCdblCncptCdngSrSlctd(String nmngSstmTpCdblCncptCdngSrSlctd) {
-        this.nmngSstmTpCdblCncptCdngSrSlctd = nmngSstmTpCdblCncptCdngSrSlctd;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcCVrsn
+        (String nmngSstmSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcCVrsn = nmngSstmSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcCCde;
     }
     
-    
-    
-    public String getNmngSstmTpCdblCncptTxtStrng() {
-        return this.nmngSstmTpCdblCncptTxtStrng;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcCCde
+        (String nmngSstmSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcCCde = nmngSstmSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcCDsplay;
     }
     
-    public void setNmngSstmTpCdblCncptTxtStrng(String nmngSstmTpCdblCncptTxtStrng) {
-        this.nmngSstmTpCdblCncptTxtStrng = nmngSstmTpCdblCncptTxtStrng;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcCDsplay
+        (String nmngSstmSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcCDsplay = nmngSstmSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd;
     }
     
-    
-    
-    public String getNamingSystemDescription() {
-        return this.namingSystemDescription;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcCSrSlctd
+        (String nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd = nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlCcCcTxt;
     }
     
-    public void setNamingSystemDescription(String namingSystemDescription) {
-        this.namingSystemDescription = namingSystemDescription;
+    public void setNmngSstmSCntxtSgCntxtVlCcCcTxt
+        (String nmngSstmSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlCcCcTxt = nmngSstmSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtCdCSstm()
+    {
+        return this.nmngSstmSCntxtSgCntxtCdCSstm;
     }
     
-    
-    
-    public String getNamingSystemUseContext() {
-        return this.namingSystemUseContext;
+    public void setNmngSstmSCntxtSgCntxtCdCSstm
+        (String nmngSstmSCntxtSgCntxtCdCSstm) 
+        {
+      this.nmngSstmSCntxtSgCntxtCdCSstm = nmngSstmSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtCdCVrsn()
+    {
+        return this.nmngSstmSCntxtSgCntxtCdCVrsn;
     }
     
-    public void setNamingSystemUseContext(String namingSystemUseContext) {
-        this.namingSystemUseContext = namingSystemUseContext;
+    public void setNmngSstmSCntxtSgCntxtCdCVrsn
+        (String nmngSstmSCntxtSgCntxtCdCVrsn) 
+        {
+      this.nmngSstmSCntxtSgCntxtCdCVrsn = nmngSstmSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtCdCCde()
+    {
+        return this.nmngSstmSCntxtSgCntxtCdCCde;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptCdngSstm() {
-        return this.nmngSstmJrsdctnCdblCncptCdngSstm;
+    public void setNmngSstmSCntxtSgCntxtCdCCde
+        (String nmngSstmSCntxtSgCntxtCdCCde) 
+        {
+      this.nmngSstmSCntxtSgCntxtCdCCde = nmngSstmSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtCdCDsplay()
+    {
+        return this.nmngSstmSCntxtSgCntxtCdCDsplay;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptCdngSstm(String nmngSstmJrsdctnCdblCncptCdngSstm) {
-        this.nmngSstmJrsdctnCdblCncptCdngSstm = nmngSstmJrsdctnCdblCncptCdngSstm;
+    public void setNmngSstmSCntxtSgCntxtCdCDsplay
+        (String nmngSstmSCntxtSgCntxtCdCDsplay) 
+        {
+      this.nmngSstmSCntxtSgCntxtCdCDsplay = nmngSstmSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.nmngSstmSCntxtSgCntxtCdCSrSlctd;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptCdngVrsn() {
-        return this.nmngSstmJrsdctnCdblCncptCdngVrsn;
+    public void setNmngSstmSCntxtSgCntxtCdCSrSlctd
+        (String nmngSstmSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.nmngSstmSCntxtSgCntxtCdCSrSlctd = nmngSstmSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlQnttQnttVlue;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptCdngVrsn(String nmngSstmJrsdctnCdblCncptCdngVrsn) {
-        this.nmngSstmJrsdctnCdblCncptCdngVrsn = nmngSstmJrsdctnCdblCncptCdngVrsn;
+    public void setNmngSstmSCntxtSgCntxtVlQnttQnttVlue
+        (String nmngSstmSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlQnttQnttVlue = nmngSstmSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptCdngCde() {
-        return this.nmngSstmJrsdctnCdblCncptCdngCde;
+    public void setNmngSstmSCntxtSgCntxtVlQnttQnttCmprtr
+        (String nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr = nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlQnttQnttNt;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptCdngCde(String nmngSstmJrsdctnCdblCncptCdngCde) {
-        this.nmngSstmJrsdctnCdblCncptCdngCde = nmngSstmJrsdctnCdblCncptCdngCde;
+    public void setNmngSstmSCntxtSgCntxtVlQnttQnttNt
+        (String nmngSstmSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlQnttQnttNt = nmngSstmSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlQnttQnttSstm;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptCdngDsplay() {
-        return this.nmngSstmJrsdctnCdblCncptCdngDsplay;
+    public void setNmngSstmSCntxtSgCntxtVlQnttQnttSstm
+        (String nmngSstmSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlQnttQnttSstm = nmngSstmSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlQnttQnttCde;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptCdngDsplay(String nmngSstmJrsdctnCdblCncptCdngDsplay) {
-        this.nmngSstmJrsdctnCdblCncptCdngDsplay = nmngSstmJrsdctnCdblCncptCdngDsplay;
+    public void setNmngSstmSCntxtSgCntxtVlQnttQnttCde
+        (String nmngSstmSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlQnttQnttCde = nmngSstmSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlRngRngLw;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptCdngSrSlctd() {
-        return this.nmngSstmJrsdctnCdblCncptCdngSrSlctd;
+    public void setNmngSstmSCntxtSgCntxtVlRngRngLw
+        (String nmngSstmSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlRngRngLw = nmngSstmSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlRngRngHgh;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptCdngSrSlctd(String nmngSstmJrsdctnCdblCncptCdngSrSlctd) {
-        this.nmngSstmJrsdctnCdblCncptCdngSrSlctd = nmngSstmJrsdctnCdblCncptCdngSrSlctd;
+    public void setNmngSstmSCntxtSgCntxtVlRngRngHgh
+        (String nmngSstmSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlRngRngHgh = nmngSstmSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getNmngSstmSCntxtSgCntxtVlRfrnce()
+    {
+        return this.nmngSstmSCntxtSgCntxtVlRfrnce;
     }
     
-    
-    
-    public String getNmngSstmJrsdctnCdblCncptTxtStrng() {
-        return this.nmngSstmJrsdctnCdblCncptTxtStrng;
+    public void setNmngSstmSCntxtSgCntxtVlRfrnce
+        (String nmngSstmSCntxtSgCntxtVlRfrnce) 
+        {
+      this.nmngSstmSCntxtSgCntxtVlRfrnce = nmngSstmSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getNmngSstmJrsdctnCcCdngCSstm()
+    {
+        return this.nmngSstmJrsdctnCcCdngCSstm;
     }
     
-    public void setNmngSstmJrsdctnCdblCncptTxtStrng(String nmngSstmJrsdctnCdblCncptTxtStrng) {
-        this.nmngSstmJrsdctnCdblCncptTxtStrng = nmngSstmJrsdctnCdblCncptTxtStrng;
+    public void setNmngSstmJrsdctnCcCdngCSstm
+        (String nmngSstmJrsdctnCcCdngCSstm) 
+        {
+      this.nmngSstmJrsdctnCcCdngCSstm = nmngSstmJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getNmngSstmJrsdctnCcCdngCVrsn()
+    {
+        return this.nmngSstmJrsdctnCcCdngCVrsn;
     }
     
-    
-    
-    public String getNamingSystemUsage() {
-        return this.namingSystemUsage;
+    public void setNmngSstmJrsdctnCcCdngCVrsn
+        (String nmngSstmJrsdctnCcCdngCVrsn) 
+        {
+      this.nmngSstmJrsdctnCcCdngCVrsn = nmngSstmJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getNmngSstmJrsdctnCcCdngCCde()
+    {
+        return this.nmngSstmJrsdctnCcCdngCCde;
     }
     
-    public void setNamingSystemUsage(String namingSystemUsage) {
-        this.namingSystemUsage = namingSystemUsage;
+    public void setNmngSstmJrsdctnCcCdngCCde
+        (String nmngSstmJrsdctnCcCdngCCde) 
+        {
+      this.nmngSstmJrsdctnCcCdngCCde = nmngSstmJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getNmngSstmJrsdctnCcCdngCDsplay()
+    {
+        return this.nmngSstmJrsdctnCcCdngCDsplay;
     }
     
-    
-    
-    public String getNamingSystemUniqueIdType() {
-        return this.namingSystemUniqueIdType;
+    public void setNmngSstmJrsdctnCcCdngCDsplay
+        (String nmngSstmJrsdctnCcCdngCDsplay) 
+        {
+      this.nmngSstmJrsdctnCcCdngCDsplay = nmngSstmJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getNmngSstmJrsdctnCcCdngCSrSlctd()
+    {
+        return this.nmngSstmJrsdctnCcCdngCSrSlctd;
     }
     
-    public void setNamingSystemUniqueIdType(String namingSystemUniqueIdType) {
-        this.namingSystemUniqueIdType = namingSystemUniqueIdType;
+    public void setNmngSstmJrsdctnCcCdngCSrSlctd
+        (String nmngSstmJrsdctnCcCdngCSrSlctd) 
+        {
+      this.nmngSstmJrsdctnCcCdngCSrSlctd = nmngSstmJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getNamingSystemJurisdictionCcText()
+    {
+        return this.namingSystemJurisdictionCcText;
     }
     
-    
-    
-    public String getNamingSystemUniqueIdValue() {
-        return this.namingSystemUniqueIdValue;
+    public void setNamingSystemJurisdictionCcText
+        (String namingSystemJurisdictionCcText) 
+        {
+      this.namingSystemJurisdictionCcText = namingSystemJurisdictionCcText;
+}
+    public 
+    String 
+    getNamingSystemUsageString()
+    {
+        return this.namingSystemUsageString;
     }
     
-    public void setNamingSystemUniqueIdValue(String namingSystemUniqueIdValue) {
-        this.namingSystemUniqueIdValue = namingSystemUniqueIdValue;
+    public void setNamingSystemUsageString
+        (String namingSystemUsageString) 
+        {
+      this.namingSystemUsageString = namingSystemUsageString;
+}
+    public 
+    String 
+    getNamingSystemUniqueIdTypeCode()
+    {
+        return this.namingSystemUniqueIdTypeCode;
     }
     
-    
-    
-    public String getNamingSystemUniqueIdPreferred() {
-        return this.namingSystemUniqueIdPreferred;
+    public void setNamingSystemUniqueIdTypeCode
+        (String namingSystemUniqueIdTypeCode) 
+        {
+      this.namingSystemUniqueIdTypeCode = namingSystemUniqueIdTypeCode;
+}
+    public 
+    String 
+    getNamingSystemUniqueIdValueString()
+    {
+        return this.namingSystemUniqueIdValueString;
     }
     
-    public void setNamingSystemUniqueIdPreferred(String namingSystemUniqueIdPreferred) {
-        this.namingSystemUniqueIdPreferred = namingSystemUniqueIdPreferred;
+    public void setNamingSystemUniqueIdValueString
+        (String namingSystemUniqueIdValueString) 
+        {
+      this.namingSystemUniqueIdValueString = namingSystemUniqueIdValueString;
+}
+    public 
+    String 
+    getNmngSstmNqdPrfrrdBln()
+    {
+        return this.nmngSstmNqdPrfrrdBln;
     }
     
-    
-    
-    public String getNamingSystemUniqueIdComment() {
-        return this.namingSystemUniqueIdComment;
+    public void setNmngSstmNqdPrfrrdBln
+        (String nmngSstmNqdPrfrrdBln) 
+        {
+      this.nmngSstmNqdPrfrrdBln = nmngSstmNqdPrfrrdBln;
+}
+    public 
+    String 
+    getNmngSstmNqdCmmntStrng()
+    {
+        return this.nmngSstmNqdCmmntStrng;
     }
     
-    public void setNamingSystemUniqueIdComment(String namingSystemUniqueIdComment) {
-        this.namingSystemUniqueIdComment = namingSystemUniqueIdComment;
+    public void setNmngSstmNqdCmmntStrng
+        (String nmngSstmNqdCmmntStrng) 
+        {
+      this.nmngSstmNqdCmmntStrng = nmngSstmNqdCmmntStrng;
+}
+    public 
+    String 
+    getNmngSstmNqdPrdPrdStrt()
+    {
+        return this.nmngSstmNqdPrdPrdStrt;
     }
     
-    
-    
-    public String getNmngSstmNqdPrdPrdStrtDtTme() {
-        return this.nmngSstmNqdPrdPrdStrtDtTme;
+    public void setNmngSstmNqdPrdPrdStrt
+        (String nmngSstmNqdPrdPrdStrt) 
+        {
+      this.nmngSstmNqdPrdPrdStrt = nmngSstmNqdPrdPrdStrt;
+}
+    public 
+    String 
+    getNmngSstmNqdPrdPrdNd()
+    {
+        return this.nmngSstmNqdPrdPrdNd;
     }
     
-    public void setNmngSstmNqdPrdPrdStrtDtTme(String nmngSstmNqdPrdPrdStrtDtTme) {
-        this.nmngSstmNqdPrdPrdStrtDtTme = nmngSstmNqdPrdPrdStrtDtTme;
-    }
-    
-    
-    
-    public String getNmngSstmNqdPrdPrdNdDtTme() {
-        return this.nmngSstmNqdPrdPrdNdDtTme;
-    }
-    
-    public void setNmngSstmNqdPrdPrdNdDtTme(String nmngSstmNqdPrdPrdNdDtTme) {
-        this.nmngSstmNqdPrdPrdNdDtTme = nmngSstmNqdPrdPrdNdDtTme;
-    }
-    
-    
-    
+    public void setNmngSstmNqdPrdPrdNd
+        (String nmngSstmNqdPrdPrdNd) 
+        {
+      this.nmngSstmNqdPrdPrdNd = nmngSstmNqdPrdPrdNd;
+}
 
 
 

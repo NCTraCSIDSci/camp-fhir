@@ -1,291 +1,693 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Evidence" optimistic-lock="none" table="evidence">
-        <id name="evidenceUrl" type="string">
-            <column length="512" name="Evidence_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="evdncDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Evdnc_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="evidenceUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="Evidence_url_uri">
+                <comment>{ "tree" :"Evidence.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="evidenceIdentifierCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Evidence_identifier_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="evidenceIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="Evidence_identifier_Identifier_use">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="evidenceIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Evidence_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="evdncDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="evidenceIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Evidence_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="evdncDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="evidenceIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Evidence_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="evdncDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="evidenceVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_version">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="evidenceName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_name">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="evidenceTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_title">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="evidenceShortTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_shortTitle">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="evidenceSubtitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_subtitle">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="evidenceStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Evidence_status">
-                <comment>code</comment>
+        <property name="evdncDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="evidenceDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Evidence_date">
-                <comment>dateTime</comment>
+        <property name="evdncDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="evidencePublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Evidence_publisher">
-                <comment>string</comment>
+        <property name="evdncDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="Evdnc_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Evidence.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="evidenceContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Evidence_contact">
-                <comment>ContactDetail</comment>
+        <property name="evidenceVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="Evidence_version_string">
+                <comment>{ "tree" :"Evidence.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="evidenceDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Evidence_description">
-                <comment>markdown</comment>
+        <property name="evidenceNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Evidence_name_string">
+                <comment>{ "tree" :"Evidence.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="evidenceNoteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Evidence_note_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="evidenceTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="Evidence_title_string">
+                <comment>{ "tree" :"Evidence.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="evidenceNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Evidence_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="evidenceShortTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.shortTitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setShortTitle"}</meta>
+            <column length="65535" name="Evidence_shortTitle_string">
+                <comment>{ "tree" :"Evidence.shortTitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setShortTitle"}</comment>
             </column>
         </property>
-        <property name="evidenceNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Evidence_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="evidenceSubtitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</meta>
+            <column length="65535" name="Evidence_subtitle_string">
+                <comment>{ "tree" :"Evidence.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</comment>
             </column>
         </property>
-        <property name="evidenceNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Evidence_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="evidenceStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Evidence_status_code">
+                <comment>{ "tree" :"Evidence.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="evidenceNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Evidence_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="evidenceDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Evidence_date_dateTime">
+                <comment>{ "tree" :"Evidence.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="evidenceUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="Evidence_useContext">
-                <comment>UsageContext</comment>
+        <property name="evidencePublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="Evidence_publisher_string">
+                <comment>{ "tree" :"Evidence.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="evdncJrsdctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Evdnc_jrsdctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="evidenceJurisdictionCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Evidence_jurisdiction_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="evdncJrsdctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Evdnc_jrsdctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="evdncJrsdctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Evdnc_jrsdctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="evdncJrsdctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Evdnc_jrsdctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="evidenceCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Evidence_copyright">
-                <comment>markdown</comment>
+        <property name="evdncCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="evidenceApprovalDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Evidence_approvalDate">
-                <comment>date</comment>
+        <property name="evdncCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="Evdnc_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"Evidence.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="evidenceLastReviewDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Evidence_lastReviewDate">
-                <comment>date</comment>
+        <property name="evidenceDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Evidence_description_markdown">
+                <comment>{ "tree" :"Evidence.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="evdncFfctvPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Evdnc_ffctvPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="evidenceNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Evidence_note_Annotation_time">
+                <comment>{ "tree" :"Evidence.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="evdncFfctvPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Evdnc_ffctvPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="evidenceNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Evidence_note_Annotation_text">
+                <comment>{ "tree" :"Evidence.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="evdncFfctvPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Evdnc_ffctvPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="evdncNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Evdnc_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Evidence.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="evdncFfctvPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Evdnc_ffctvPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="evdncNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Evdnc_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"Evidence.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="evdncFfctvPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Evdnc_ffctvPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="evidenceTopicCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Evidence_topic_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="evidenceTopicCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Evidence_topic_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="evidenceTopicCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Evidence_topic_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="evidenceTopicCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Evidence_topic_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="evidenceTopicCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Evidence_topic_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="evdncSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="evidenceAuthor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Evidence_author">
-                <comment>ContactDetail</comment>
+        <property name="evdncSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="evidenceEditor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Evidence_editor">
-                <comment>ContactDetail</comment>
+        <property name="evdncSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="evidenceReviewer" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Evidence_reviewer">
-                <comment>ContactDetail</comment>
+        <property name="evdncSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="evidenceEndorser" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Evidence_endorser">
-                <comment>ContactDetail</comment>
+        <property name="evdncSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="evidenceRelatedArtifact" type="string">
-            <meta attribute="resource-type">RelatedArtifact</meta>
-            <column length="65535" name="Evidence_relatedArtifact">
-                <comment>RelatedArtifact</comment>
+        <property name="evdncSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="evidenceExposureBackground" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Evidence_exposureBackground">
-                <comment>Reference</comment>
+        <property name="evdncSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="evidenceExposureVariant" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Evidence_exposureVariant">
-                <comment>Reference</comment>
+        <property name="evdncSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="evidenceOutcome" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Evidence_outcome">
-                <comment>Reference</comment>
+        <property name="evdncSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="evdncSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="evdncSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
+            </column>
+        </property>
+        <property name="evdncSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
+            </column>
+        </property>
+        <property name="evdncSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="Evdnc_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"Evidence.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Evdnc_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Evdnc_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="Evdnc_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Evdnc_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="evdncJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Evdnc_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="evidenceJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="Evidence_jurisdiction_CC_text">
+                <comment>{ "tree" :"Evidence.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="evidenceCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="Evidence_copyright_markdown">
+                <comment>{ "tree" :"Evidence.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
+            </column>
+        </property>
+        <property name="evidenceApprovalDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</meta>
+            <column length="65535" name="Evidence_approvalDate_date">
+                <comment>{ "tree" :"Evidence.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</comment>
+            </column>
+        </property>
+        <property name="evidenceLastReviewDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</meta>
+            <column length="65535" name="Evidence_lastReviewDate_date">
+                <comment>{ "tree" :"Evidence.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Prd_strt">
+                <comment>{ "tree" :"Evidence.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="evdncFfctvPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_ffctvPrd_Prd_nd">
+                <comment>{ "tree" :"Evidence.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</meta>
+            <column length="65535" name="Evidence_topic_CC_coding_C_system">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</meta>
+            <column length="65535" name="Evidence_topic_CC_coding_C_version">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</meta>
+            <column length="65535" name="Evidence_topic_CC_coding_C_code">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Evidence_topic_CC_coding_C_display">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="evdncTpcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Evdnc_tpc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="evidenceTopicCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</meta>
+            <column length="65535" name="Evidence_topic_CC_text">
+                <comment>{ "tree" :"Evidence.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="evdncThrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Evdnc_thr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="evidenceAuthorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</meta>
+            <column length="65535" name="Evidence_author_ContactDetail_name">
+                <comment>{ "tree" :"Evidence.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="evdncDtrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Evdnc_dtr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="evidenceEditorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</meta>
+            <column length="65535" name="Evidence_editor_ContactDetail_name">
+                <comment>{ "tree" :"Evidence.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="evdncRvwrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</meta>
+            <column length="65535" name="Evdnc_rvwr_CntctDtl_nme">
+                <comment>{ "tree" :"Evidence.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="evdncNdrsrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</meta>
+            <column length="65535" name="Evdnc_ndrsr_CntctDtl_nme">
+                <comment>{ "tree" :"Evidence.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDcmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_rsrce">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_tpe">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctCttn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_cttn">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctLbl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_lbl">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_dsplay">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="evdncRltdrtfctRltdrtfctRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</meta>
+            <column length="65535" name="Evdnc_rltdrtfct_Rltdrtfct_rl">
+                <comment>{ "tree" :"Evidence.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="evdncXpsrBckgrndRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.exposureBackground", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setExposureBackground"}</meta>
+            <column length="65535" name="Evdnc_xpsrBckgrnd_Rfrnce">
+                <comment>{ "tree" :"Evidence.exposureBackground", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setExposureBackground"}</comment>
+            </column>
+        </property>
+        <property name="evidenceExposureVariantReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.exposureVariant", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExposureVariant"}</meta>
+            <column length="65535" name="Evidence_exposureVariant_Reference">
+                <comment>{ "tree" :"Evidence.exposureVariant", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExposureVariant"}</comment>
+            </column>
+        </property>
+        <property name="evidenceOutcomeReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Evidence.outcome", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcome"}</meta>
+            <column length="65535" name="Evidence_outcome_Reference">
+                <comment>{ "tree" :"Evidence.outcome", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcome"}</comment>
             </column>
         </property>
     </class>

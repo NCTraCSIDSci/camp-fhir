@@ -1,615 +1,855 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Servicerequest" optimistic-lock="none" table="servicerequest">
-        <id name="srvcRqstDntfrCdngCde" type="string">
-            <column length="512" name="SrvcRqst_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="srvcRqstDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SrvcRqst_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_se">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="srvcRqstDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SrvcRqst_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SrvcRqst_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SrvcRqst_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstNstnttsCnncl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="SrvcRqst_nstnttsCnncl">
-                <comment>canonical</comment>
+        <property name="srvcRqstDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="serviceRequestInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="ServiceRequest_instantiatesUri">
-                <comment>uri</comment>
+        <property name="srvcRqstDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="serviceRequestBasedOn" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_basedOn">
-                <comment>Reference</comment>
+        <property name="srvcRqstDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="serviceRequestReplaces" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_replaces">
-                <comment>Reference</comment>
+        <property name="srvcRqstDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRqstnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_rqstn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRqstnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_rqstn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRqstnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_rqstn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRqstnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_rqstn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="SrvcRqst_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ServiceRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRqstnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_rqstn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</meta>
+            <column length="65535" name="SrvcRqst_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"ServiceRequest.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</comment>
             </column>
         </property>
-        <property name="serviceRequestStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ServiceRequest_status">
-                <comment>code</comment>
+        <property name="serviceRequestInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</meta>
+            <column length="65535" name="ServiceRequest_instantiatesUri_uri">
+                <comment>{ "tree" :"ServiceRequest.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</comment>
             </column>
         </property>
-        <property name="serviceRequestIntent" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ServiceRequest_intent">
-                <comment>code</comment>
+        <property name="serviceRequestBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="ServiceRequest_basedOn_Reference">
+                <comment>{ "tree" :"ServiceRequest.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="serviceRequestReplacesReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.replaces", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</meta>
+            <column length="65535" name="ServiceRequest_replaces_Reference">
+                <comment>{ "tree" :"ServiceRequest.replaces", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCtgrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_ctgr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstRqstnDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setUse"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_se">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setUse"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstRqstnDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstRqstnDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstRqstnDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="serviceRequestPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ServiceRequest_priority">
-                <comment>code</comment>
+        <property name="srvcRqstRqstnDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="serviceRequestDoNotPerform" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ServiceRequest_doNotPerform">
-                <comment>boolean</comment>
+        <property name="srvcRqstRqstnDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstRqstnDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, setText"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setType, setText"}</comment>
             </column>
         </property>
-        <property name="serviceRequestCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ServiceRequest_code_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstRqstnDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setPeriod, setStart"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="serviceRequestCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ServiceRequest_code_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstRqstnDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="serviceRequestCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ServiceRequest_code_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstRqstnDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setAssigner"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_ssgnr">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setAssigner"}</comment>
             </column>
         </property>
-        <property name="serviceRequestCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ServiceRequest_code_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstRqstnDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setValue"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_vlue">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setValue"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRdrDtlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstRqstnDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_rqstn_dntfr_sstm">
+                <comment>{ "tree" :"ServiceRequest.requisition", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequisition, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRdrDtlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="serviceRequestStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ServiceRequest_status_code">
+                <comment>{ "tree" :"ServiceRequest.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRdrDtlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="serviceRequestIntentCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</meta>
+            <column length="65535" name="ServiceRequest_intent_code">
+                <comment>{ "tree" :"ServiceRequest.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRdrDtlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRdrDtlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_rdrDtl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="serviceRequestCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="ServiceRequest_category_CC_text">
+                <comment>{ "tree" :"ServiceRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_qnttQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="serviceRequestPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="ServiceRequest_priority_code">
+                <comment>{ "tree" :"ServiceRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_qnttRt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstDNtPrfrmBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.doNotPerform", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoNotPerform"}</meta>
+            <column length="65535" name="SrvcRqst_dNtPrfrm_bln">
+                <comment>{ "tree" :"ServiceRequest.doNotPerform", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoNotPerform"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_qnttRt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_qnttRt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_qnttRt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_qnttRt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_qnttRng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_qnttRng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="serviceRequestCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="ServiceRequest_code_CC_text">
+                <comment>{ "tree" :"ServiceRequest.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_qnttRng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstRdrDtlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_qnttRng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstRdrDtlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstQnttRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_qnttRng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstRdrDtlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="serviceRequestSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_subject">
-                <comment>Reference</comment>
+        <property name="srvcRqstRdrDtlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="serviceRequestEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_encounter">
-                <comment>Reference</comment>
+        <property name="srvcRqstRdrDtlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_rdrDtl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="serviceRequestOccurrenceDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ServiceRequest_occurrenceDatetime">
-                <comment>dateTime</comment>
+        <property name="serviceRequestOrderDetailCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, setText"}</meta>
+            <column length="65535" name="ServiceRequest_orderDetail_CC_text">
+                <comment>{ "tree" :"ServiceRequest.orderDetail", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrderDetail, setText"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstQnttQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setComparator"}</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstQnttQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Qntt_cde">
+                <comment>{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstQnttQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setValue"}</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Qntt_vlue">
+                <comment>{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstQnttQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setUnit"}</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Qntt_nt">
+                <comment>{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_ccrrncPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstQnttQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_qnttQntt_Qntt_sstm">
+                <comment>{ "tree" :"ServiceRequest.quantityQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncTmngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstQnttRtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setValue"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncTmngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstQnttRtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setValue"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncTmngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstQnttRtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setComparator"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncTmngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstQnttRtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setComparator"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="srvcRqstCcrrncTmngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_ccrrncTmng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstQnttRtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setUnit"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="serviceRequestAsNeededBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ServiceRequest_asNeededBoolean">
-                <comment>boolean</comment>
+        <property name="srvcRqstQnttRtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setUnit"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="srvcRqstSNddcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstQnttRtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstSNddcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstQnttRtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="srvcRqstSNddcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstQnttRtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstSNddcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstQnttRtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"ServiceRequest.quantityRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRatio, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstSNddcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_sNddcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstQnttRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRange, setLow"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Rng_lw">
+                <comment>{ "tree" :"ServiceRequest.quantityRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRange, setLow"}</comment>
             </column>
         </property>
-        <property name="serviceRequestAuthoredOn" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ServiceRequest_authoredOn">
-                <comment>dateTime</comment>
+        <property name="srvcRqstQnttRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.quantityRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRange, setHigh"}</meta>
+            <column length="65535" name="SrvcRqst_qnttRng_Rng_hgh">
+                <comment>{ "tree" :"ServiceRequest.quantityRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantityRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="serviceRequestRequester" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_requester">
-                <comment>Reference</comment>
+        <property name="serviceRequestSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="ServiceRequest_subject_Reference">
+                <comment>{ "tree" :"ServiceRequest.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="srvcRqstPrfrmrTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="serviceRequestEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="ServiceRequest_encounter_Reference">
+                <comment>{ "tree" :"ServiceRequest.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="srvcRqstPrfrmrTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCcrrncDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncDttm_dtTme">
+                <comment>{ "tree" :"ServiceRequest.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</comment>
             </column>
         </property>
-        <property name="srvcRqstPrfrmrTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCcrrncPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setStart"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Prd_strt">
+                <comment>{ "tree" :"ServiceRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="srvcRqstPrfrmrTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCcrrncPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setEnd"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncPrd_Prd_nd">
+                <comment>{ "tree" :"ServiceRequest.occurrencePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrencePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="srvcRqstPrfrmrTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_prfrmrTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="serviceRequestPerformer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_performer">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="srvcRqstLctnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_lctnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="srvcRqstLctnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_lctnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="srvcRqstLctnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_lctnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="srvcRqstLctnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_lctnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCcrrncTmngTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, setText"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="srvcRqstLctnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_lctnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCcrrncTmngTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, addEvent"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_vnt">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, addEvent"}</comment>
             </column>
         </property>
-        <property name="serviceRequestLocationReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_locationReference">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRsnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_rsnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRsnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_rsnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRsnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_rsnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addWhen"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_whn">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addWhen"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRsnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_rsnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDuration"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_drtn">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDuration"}</comment>
             </column>
         </property>
-        <property name="srvcRqstRsnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_rsnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setDurationMax"}</comment>
             </column>
         </property>
-        <property name="serviceRequestReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_reasonReference">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_prd">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriod"}</comment>
             </column>
         </property>
-        <property name="serviceRequestInsurance" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_insurance">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setPeriodMax"}</comment>
             </column>
         </property>
-        <property name="serviceRequestSupportingInfo" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_supportingInfo">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsDuration"}</comment>
             </column>
         </property>
-        <property name="serviceRequestSpecimen" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_specimen">
-                <comment>Reference</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsPeriod"}</comment>
             </column>
         </property>
-        <property name="srvcRqstBdStCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_bdSt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCount"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_cnt">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCount"}</comment>
             </column>
         </property>
-        <property name="srvcRqstBdStCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SrvcRqst_bdSt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setCountMax"}</comment>
             </column>
         </property>
-        <property name="srvcRqstBdStCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SrvcRqst_bdSt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequency"}</comment>
             </column>
         </property>
-        <property name="srvcRqstBdStCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SrvcRqst_bdSt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setFrequencyMax"}</comment>
             </column>
         </property>
-        <property name="srvcRqstBdStCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SrvcRqst_bdSt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setBoundsRange"}</comment>
             </column>
         </property>
-        <property name="srvcRqstNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SrvcRqst_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, addTimeOfDay"}</comment>
             </column>
         </property>
-        <property name="serviceRequestNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ServiceRequest_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="srvcRqstCcrrncTmngTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setOffset"}</meta>
+            <column length="65535" name="SrvcRqst_ccrrncTmng_Tmng_rpt_ffst">
+                <comment>{ "tree" :"ServiceRequest.occurrenceTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurrenceTiming, setRepeat, setOffset"}</comment>
             </column>
         </property>
-        <property name="serviceRequestNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ServiceRequest_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="srvcRqstSNddBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededBoolean"}</meta>
+            <column length="65535" name="SrvcRqst_sNddBln_bln">
+                <comment>{ "tree" :"ServiceRequest.asNeededBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededBoolean"}</comment>
             </column>
         </property>
-        <property name="serviceRequestNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ServiceRequest_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="srvcRqstSNddCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="serviceRequestNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ServiceRequest_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="srvcRqstSNddCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="serviceRequestPntInstruction" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ServiceRequest_pntInstruction">
-                <comment>string</comment>
+        <property name="srvcRqstSNddCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="serviceRequestRelevantHistory" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ServiceRequest_relevantHistory">
-                <comment>Reference</comment>
+        <property name="srvcRqstSNddCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSNddCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, setText"}</meta>
+            <column length="65535" name="SrvcRqst_sNddCdblcncpt_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.asNeededCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAsNeededCodeableconcept, setText"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestAuthoredOnDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</meta>
+            <column length="65535" name="ServiceRequest_authoredOn_dateTime">
+                <comment>{ "tree" :"ServiceRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestRequesterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</meta>
+            <column length="65535" name="ServiceRequest_requester_Reference">
+                <comment>{ "tree" :"ServiceRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPrfrmrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, setText"}</meta>
+            <column length="65535" name="SrvcRqst_prfrmrTp_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, setText"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestPerformerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.performer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformer"}</meta>
+            <column length="65535" name="ServiceRequest_performer_Reference">
+                <comment>{ "tree" :"ServiceRequest.performer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformer"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, setText"}</meta>
+            <column length="65535" name="SrvcRqst_lctnCd_CC_txt">
+                <comment>{ "tree" :"ServiceRequest.locationCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstLctnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.locationReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationReference"}</meta>
+            <column length="65535" name="SrvcRqst_lctnRfrnc_Rfrnce">
+                <comment>{ "tree" :"ServiceRequest.locationReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationReference"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="ServiceRequest_reasonCode_CC_text">
+                <comment>{ "tree" :"ServiceRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="SrvcRqst_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"ServiceRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestInsuranceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</meta>
+            <column length="65535" name="ServiceRequest_insurance_Reference">
+                <comment>{ "tree" :"ServiceRequest.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstSpprtngnfRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.supportingInfo", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInfo"}</meta>
+            <column length="65535" name="SrvcRqst_spprtngnf_Rfrnce">
+                <comment>{ "tree" :"ServiceRequest.supportingInfo", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInfo"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestSpecimenReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.specimen", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecimen"}</meta>
+            <column length="65535" name="ServiceRequest_specimen_Reference">
+                <comment>{ "tree" :"ServiceRequest.specimen", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecimen"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrvcRqst_bdSt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrvcRqst_bdSt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setCode"}</meta>
+            <column length="65535" name="SrvcRqst_bdSt_CC_cdng_C_cde">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrvcRqst_bdSt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstBdStCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrvcRqst_bdSt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="serviceRequestBodySiteCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, setText"}</meta>
+            <column length="65535" name="ServiceRequest_bodySite_CC_text">
+                <comment>{ "tree" :"ServiceRequest.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBodySite, setText"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNtNnttnTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="SrvcRqst_nt_nnttn_tme">
+                <comment>{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNtNnttnTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="SrvcRqst_nt_nnttn_txt">
+                <comment>{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="SrvcRqst_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="SrvcRqst_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"ServiceRequest.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstPntnstrctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.patientInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatientInstruction"}</meta>
+            <column length="65535" name="SrvcRqst_pntnstrctn_strng">
+                <comment>{ "tree" :"ServiceRequest.patientInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatientInstruction"}</comment>
+            </column>
+        </property>
+        <property name="srvcRqstRlvntHstrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ServiceRequest.relevantHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelevantHistory"}</meta>
+            <column length="65535" name="SrvcRqst_rlvntHstr_Rfrnce">
+                <comment>{ "tree" :"ServiceRequest.relevantHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelevantHistory"}</comment>
             </column>
         </property>
     </class>

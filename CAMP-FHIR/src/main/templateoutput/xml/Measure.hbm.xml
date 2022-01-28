@@ -1,723 +1,1263 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Measure" optimistic-lock="none" table="measure">
-        <id name="measureUrl" type="string">
-            <column length="512" name="Measure_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="msrDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="measureUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="Measure_url_uri">
+                <comment>{ "tree" :"Measure.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="measureIdentifierCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_identifier_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="measureIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="Measure_identifier_Identifier_use">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="measureIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Measure_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="msrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Measure_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="msrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="measureIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="msrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="measureVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_version">
-                <comment>string</comment>
+        <property name="msrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="measureName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_name">
-                <comment>string</comment>
+        <property name="msrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="measureTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_title">
-                <comment>string</comment>
+        <property name="msrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="measureSubtitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_subtitle">
-                <comment>string</comment>
+        <property name="msrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="measureStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Measure_status">
-                <comment>code</comment>
+        <property name="msrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="measureExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Measure_experimental">
-                <comment>boolean</comment>
+        <property name="msrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="msrSbjctcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_sbjctcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="measureSubjectcdblcptCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_subjectcdblcpt_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="msrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="Msr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Measure.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="msrSbjctcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_sbjctcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="measureVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="Measure_version_string">
+                <comment>{ "tree" :"Measure.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="msrSbjctcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_sbjctcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="measureNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Measure_name_string">
+                <comment>{ "tree" :"Measure.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="msrSbjctcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_sbjctcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="measureTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="Measure_title_string">
+                <comment>{ "tree" :"Measure.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="measureSubjectReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Measure_subjectReference">
-                <comment>Reference</comment>
+        <property name="measureSubtitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</meta>
+            <column length="65535" name="Measure_subtitle_string">
+                <comment>{ "tree" :"Measure.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</comment>
             </column>
         </property>
-        <property name="measureDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Measure_date">
-                <comment>dateTime</comment>
+        <property name="measureStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Measure_status_code">
+                <comment>{ "tree" :"Measure.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="measurePublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_publisher">
-                <comment>string</comment>
+        <property name="measureExperimentalBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="Measure_experimental_boolean">
+                <comment>{ "tree" :"Measure.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="measureContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Measure_contact">
-                <comment>ContactDetail</comment>
+        <property name="msrSbjctCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_description">
-                <comment>markdown</comment>
+        <property name="msrSbjctCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="measureUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="Measure_useContext">
-                <comment>UsageContext</comment>
+        <property name="msrSbjctCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="msrJrsdctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_jrsdctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrSbjctCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="measureJurisdictionCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_jurisdiction_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="msrSbjctCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="msrJrsdctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_jrsdctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrSbjctCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, setText"}</meta>
+            <column length="65535" name="Msr_sbjctCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Measure.subjectCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="msrJrsdctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_jrsdctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="measureSubjectReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.subjectReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectReference(group)"}</meta>
+            <column length="65535" name="Measure_subjectReference_Reference">
+                <comment>{ "tree" :"Measure.subjectReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectReference(group)"}</comment>
             </column>
         </property>
-        <property name="measureJurisdictionCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_jurisdiction_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="measureDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Measure_date_dateTime">
+                <comment>{ "tree" :"Measure.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="measurePurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_purpose">
-                <comment>markdown</comment>
+        <property name="measurePublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="Measure_publisher_string">
+                <comment>{ "tree" :"Measure.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="measureUsage" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_usage">
-                <comment>string</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="measureCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_copyright">
-                <comment>markdown</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="measureApprovalDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Measure_approvalDate">
-                <comment>date</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureLastReviewDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Measure_lastReviewDate">
-                <comment>date</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="msrFfctvPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_ffctvPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="msrFfctvPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_ffctvPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="Msr_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="msrFfctvPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_ffctvPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="measureContactContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="Measure_contact_ContactDetail_name">
+                <comment>{ "tree" :"Measure.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="msrFfctvPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_ffctvPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="measureDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Measure_description_markdown">
+                <comment>{ "tree" :"Measure.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="msrFfctvPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_ffctvPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureTopicCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Measure_topic_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="measureTopicCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_topic_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="measureTopicCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Measure_topic_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="measureTopicCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Measure_topic_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="measureTopicCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_topic_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="msrSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="measureAuthor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Measure_author">
-                <comment>ContactDetail</comment>
+        <property name="msrSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureEditor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Measure_editor">
-                <comment>ContactDetail</comment>
+        <property name="msrSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="measureReviewer" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Measure_reviewer">
-                <comment>ContactDetail</comment>
+        <property name="msrSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="measureEndorser" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Measure_endorser">
-                <comment>ContactDetail</comment>
+        <property name="msrSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="measureRelatedArtifact" type="string">
-            <meta attribute="resource-type">RelatedArtifact</meta>
-            <column length="65535" name="Measure_relatedArtifact">
-                <comment>RelatedArtifact</comment>
+        <property name="msrSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="measureLibrary" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Measure_library">
-                <comment>canonical</comment>
+        <property name="msrSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="measureDisclaimer" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_disclaimer">
-                <comment>markdown</comment>
+        <property name="msrSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="msrScrngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_scrng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="measureScoringCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_scoring_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="msrSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureScoringCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Measure_scoring_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="msrSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="measureScoringCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Measure_scoring_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="msrSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="measureScoringCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_scoring_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="msrSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="msrCmpstScrngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_cmpstScrng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="Msr_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"Measure.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="msrCmpstScrngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_cmpstScrng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="msrCmpstScrngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_cmpstScrng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="msrCmpstScrngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_cmpstScrng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="msrCmpstScrngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_cmpstScrng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="measureTypeCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Measure_type_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="msrJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="measureTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="measureJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="Measure_jurisdiction_CC_text">
+                <comment>{ "tree" :"Measure.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="measureTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Measure_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="measurePurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="Measure_purpose_markdown">
+                <comment>{ "tree" :"Measure.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="measureTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Measure_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="measureUsageString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</meta>
+            <column length="65535" name="Measure_usage_string">
+                <comment>{ "tree" :"Measure.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</comment>
             </column>
         </property>
-        <property name="measureTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="measureCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="Measure_copyright_markdown">
+                <comment>{ "tree" :"Measure.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="measureRiskAdjustment" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_riskAdjustment">
-                <comment>string</comment>
+        <property name="measureApprovalDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</meta>
+            <column length="65535" name="Measure_approvalDate_date">
+                <comment>{ "tree" :"Measure.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</comment>
             </column>
         </property>
-        <property name="measureRateAggregation" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_rateAggregation">
-                <comment>string</comment>
+        <property name="measureLastReviewDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</meta>
+            <column length="65535" name="Measure_lastReviewDate_date">
+                <comment>{ "tree" :"Measure.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</comment>
             </column>
         </property>
-        <property name="measureRationale" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_rationale">
-                <comment>markdown</comment>
+        <property name="msrFfctvPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</meta>
+            <column length="65535" name="Msr_ffctvPrd_Prd_strt">
+                <comment>{ "tree" :"Measure.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="msrClnclRcmmndtnSttmnt" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Msr_clnclRcmmndtnSttmnt">
-                <comment>markdown</comment>
+        <property name="measureEffectivePeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</meta>
+            <column length="65535" name="Measure_effectivePeriod_Period_end">
+                <comment>{ "tree" :"Measure.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="msrMprvmntNttnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_mprvmntNttn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="measureTopicCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</meta>
+            <column length="65535" name="Measure_topic_CC_coding_C_system">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="msrMprvmntNttnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_mprvmntNttn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="measureTopicCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</meta>
+            <column length="65535" name="Measure_topic_CC_coding_C_version">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="msrMprvmntNttnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_mprvmntNttn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="measureTopicCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</meta>
+            <column length="65535" name="Measure_topic_CC_coding_C_code">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="msrMprvmntNttnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_mprvmntNttn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="measureTopicCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Measure_topic_CC_coding_C_display">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="msrMprvmntNttnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_mprvmntNttn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrTpcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_tpc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="measureDefinition" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_definition">
-                <comment>markdown</comment>
+        <property name="measureTopicCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</meta>
+            <column length="65535" name="Measure_topic_CC_text">
+                <comment>{ "tree" :"Measure.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</comment>
             </column>
         </property>
-        <property name="measureGuidance" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Measure_guidance">
-                <comment>markdown</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="measureGroup" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Measure_group">
-                <comment>BackboneElement</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="msrGrpCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_grp_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureGroupCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Measure_group_code_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="measureGroupCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Measure_group_code_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="measureGroupCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Measure_group_code_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="msrThrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Msr_thr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="measureGroupCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Measure_group_code_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="measureAuthorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</meta>
+            <column length="65535" name="Measure_author_ContactDetail_name">
+                <comment>{ "tree" :"Measure.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</comment>
             </column>
         </property>
-        <property name="measureGroupDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Measure_group_description">
-                <comment>string</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="measureGroupPopulation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Measure_group_population">
-                <comment>BackboneElement</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_grp_ppltn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_grp_ppltn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_grp_ppltn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_grp_ppltn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrDtrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Msr_dtr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_grp_ppltn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="measureEditorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</meta>
+            <column length="65535" name="Measure_editor_ContactDetail_name">
+                <comment>{ "tree" :"Measure.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</comment>
             </column>
         </property>
-        <property name="msrGrpPpltnDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Msr_grp_ppltn_dscrptn">
-                <comment>string</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="measureGroupPopulationCriteria" type="string">
-            <meta attribute="resource-type">Expression</meta>
-            <column length="65535" name="Measure_group_population_criteria">
-                <comment>Expression</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="measureGroupStratifier" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Measure_group_stratifier">
-                <comment>BackboneElement</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_grp_strtfr_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_grp_strtfr_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_grp_strtfr_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrRvwrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_grp_strtfr_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrRvwrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</meta>
+            <column length="65535" name="Msr_rvwr_CntctDtl_nme">
+                <comment>{ "tree" :"Measure.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_grp_strtfr_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Msr_grp_strtfr_dscrptn">
-                <comment>string</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="measureGroupStratifierCriteria" type="string">
-            <meta attribute="resource-type">Expression</meta>
-            <column length="65535" name="Measure_group_stratifier_criteria">
-                <comment>Expression</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="measureGroupStratifierComponent" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Measure_group_stratifier_component">
-                <comment>BackboneElement</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrNdrsrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrNdrsrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</meta>
+            <column length="65535" name="Msr_ndrsr_CntctDtl_nme">
+                <comment>{ "tree" :"Measure.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_dscrptn">
-                <comment>string</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</comment>
             </column>
         </property>
-        <property name="msrGrpStrtfrCmpnntCrtria" type="string">
-            <meta attribute="resource-type">Expression</meta>
-            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtria">
-                <comment>Expression</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</comment>
             </column>
         </property>
-        <property name="measureSupplementalData" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Measure_supplementalData">
-                <comment>BackboneElement</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_spplmntlDt_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_spplmntlDt_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_spplmntlDt_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrRltdrtfctRltdrtfctDcmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_spplmntlDt_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrRltdrtfctRltdrtfctRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_rsrce">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_spplmntlDt_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="msrRltdrtfctRltdrtfctTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_tpe">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtSgCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Msr_spplmntlDt_sg_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="msrRltdrtfctRltdrtfctCttn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_cttn">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtSgCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Msr_spplmntlDt_sg_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="msrRltdrtfctRltdrtfctLbl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_lbl">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtSgCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Msr_spplmntlDt_sg_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="msrRltdrtfctRltdrtfctDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_dsplay">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtSgCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Msr_spplmntlDt_sg_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="msrRltdrtfctRltdrtfctRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</meta>
+            <column length="65535" name="Msr_rltdrtfct_Rltdrtfct_rl">
+                <comment>{ "tree" :"Measure.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtSgCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Msr_spplmntlDt_sg_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="measureLibraryCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.library", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLibrary"}</meta>
+            <column length="65535" name="Measure_library_canonical">
+                <comment>{ "tree" :"Measure.library", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLibrary"}</comment>
             </column>
         </property>
-        <property name="msrSpplmntlDtDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Msr_spplmntlDt_dscrptn">
-                <comment>string</comment>
+        <property name="measureDisclaimerMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.disclaimer", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisclaimer"}</meta>
+            <column length="65535" name="Measure_disclaimer_markdown">
+                <comment>{ "tree" :"Measure.disclaimer", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisclaimer"}</comment>
             </column>
         </property>
-        <property name="measureSupplementalDataCriteria" type="string">
-            <meta attribute="resource-type">Expression</meta>
-            <column length="65535" name="Measure_supplementalData_criteria">
-                <comment>Expression</comment>
+        <property name="measureScoringCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setSystem"}</meta>
+            <column length="65535" name="Measure_scoring_CC_coding_C_system">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrScrngCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_scrng_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="measureScoringCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setCode"}</meta>
+            <column length="65535" name="Measure_scoring_CC_coding_C_code">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrScrngCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_scrng_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrScrngCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_scrng_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="measureScoringCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, setText"}</meta>
+            <column length="65535" name="Measure_scoring_CC_text">
+                <comment>{ "tree" :"Measure.scoring", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScoring, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrCmpstScrngCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_cmpstScrng_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrCmpstScrngCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_cmpstScrng_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrCmpstScrngCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_cmpstScrng_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrCmpstScrngCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_cmpstScrng_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrCmpstScrngCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_cmpstScrng_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="measureCompositeScoringCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, setText"}</meta>
+            <column length="65535" name="Measure_compositeScoring_CC_text">
+                <comment>{ "tree" :"Measure.compositeScoring", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCompositeScoring, setText"}</comment>
+            </column>
+        </property>
+        <property name="measureTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Measure_type_CC_coding_C_system">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="measureTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Measure_type_CC_coding_C_version">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="measureTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="Measure_type_CC_coding_C_code">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="measureTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Measure_type_CC_coding_C_display">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="measureTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="Measure_type_CC_text">
+                <comment>{ "tree" :"Measure.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</comment>
+            </column>
+        </property>
+        <property name="measureRiskAdjustmentString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.riskAdjustment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRiskAdjustment"}</meta>
+            <column length="65535" name="Measure_riskAdjustment_string">
+                <comment>{ "tree" :"Measure.riskAdjustment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRiskAdjustment"}</comment>
+            </column>
+        </property>
+        <property name="measureRateAggregationString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.rateAggregation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRateAggregation"}</meta>
+            <column length="65535" name="Measure_rateAggregation_string">
+                <comment>{ "tree" :"Measure.rateAggregation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRateAggregation"}</comment>
+            </column>
+        </property>
+        <property name="measureRationaleMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.rationale", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRationale"}</meta>
+            <column length="65535" name="Measure_rationale_markdown">
+                <comment>{ "tree" :"Measure.rationale", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRationale"}</comment>
+            </column>
+        </property>
+        <property name="msrClnclRcmmndtnSttmntMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.clinicalRecommendationStatement", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalRecommendationStatement"}</meta>
+            <column length="65535" name="Msr_clnclRcmmndtnSttmnt_mrkdwn">
+                <comment>{ "tree" :"Measure.clinicalRecommendationStatement", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClinicalRecommendationStatement"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrMprvmntNttnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, setText"}</meta>
+            <column length="65535" name="Msr_mprvmntNttn_CC_txt">
+                <comment>{ "tree" :"Measure.improvementNotation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImprovementNotation, setText"}</comment>
+            </column>
+        </property>
+        <property name="measureDefinitionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.definition", "datatype" : "markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDefinition"}</meta>
+            <column length="65535" name="Measure_definition_markdown">
+                <comment>{ "tree" :"Measure.definition", "datatype" : "markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDefinition"}</comment>
+            </column>
+        </property>
+        <property name="measureGuidanceMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.guidance", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGuidance"}</meta>
+            <column length="65535" name="Measure_guidance_markdown">
+                <comment>{ "tree" :"Measure.guidance", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGuidance"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_grp_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_grp_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_grp_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_grp_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_grp_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="measureGroupCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Measure_group_code_CC_text">
+                <comment>{ "tree" :"Measure.group.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="measureGroupDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Measure_group_description_string">
+                <comment>{ "tree" :"Measure.group.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_cd_CC_txt">
+                <comment>{ "tree" :"Measure.group.population.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_dscrptn_strng">
+                <comment>{ "tree" :"Measure.group.population.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCrtrXprssnLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setLanguage"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_crtr_xprssn_lngge">
+                <comment>{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCrtrXprssnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setName"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_crtr_xprssn_nme">
+                <comment>{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setName"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCrtrXprssnDscrptn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setDescription"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_crtr_xprssn_dscrptn">
+                <comment>{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCrtrXprssnXprssn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setExpression"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_crtr_xprssn_xprssn">
+                <comment>{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setExpression"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpPpltnCrtrXprssnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setReference"}</meta>
+            <column length="65535" name="Msr_grp_ppltn_crtr_xprssn_rfrnce">
+                <comment>{ "tree" :"Measure.group.population.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation"] , "methodName" : "setCriteria, setReference"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cd_CC_txt">
+                <comment>{ "tree" :"Measure.group.stratifier.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_dscrptn_strng">
+                <comment>{ "tree" :"Measure.group.stratifier.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCrtrXprssnLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setLanguage"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_crtr_xprssn_lngge">
+                <comment>{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCrtrXprssnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setName"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_crtr_xprssn_nme">
+                <comment>{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setName"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCrtrXprssnDscrptn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setDescription"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_crtr_xprssn_dscrptn">
+                <comment>{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCrtrXprssnXprssn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setExpression"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_crtr_xprssn_xprssn">
+                <comment>{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setExpression"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCrtrXprssnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setReference"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_crtr_xprssn_rfrnce">
+                <comment>{ "tree" :"Measure.group.stratifier.criteria", "datatype" : "Expression, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier"] , "methodName" : "setCriteria, setReference"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_cd_CC_txt">
+                <comment>{ "tree" :"Measure.group.stratifier.component.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_dscrptn_strng">
+                <comment>{ "tree" :"Measure.group.stratifier.component.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCrtrXprssnLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setLanguage"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtr_xprssn_lngge">
+                <comment>{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCrtrXprssnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setName"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtr_xprssn_nme">
+                <comment>{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setName"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCrtrXprssnDscrptn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setDescription"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtr_xprssn_dscrptn">
+                <comment>{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCrtrXprssnXprssn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setExpression"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtr_xprssn_xprssn">
+                <comment>{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setExpression"}</comment>
+            </column>
+        </property>
+        <property name="msrGrpStrtfrCmpnntCrtrXprssnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setReference"}</meta>
+            <column length="65535" name="Msr_grp_strtfr_cmpnnt_crtr_xprssn_rfrnce">
+                <comment>{ "tree" :"Measure.group.stratifier.component.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addGroup", "addPopulation", "addStratifier", "addComponent"] , "methodName" : "setCriteria, setReference"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_cd_CC_txt">
+                <comment>{ "tree" :"Measure.supplementalData.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setSystem"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setVersion"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setCode"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_cdng_C_cde">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtSgCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, setText"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_sg_CC_txt">
+                <comment>{ "tree" :"Measure.supplementalData.usage", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSupplementalData"] , "methodName" : "addUsage, setText"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_dscrptn_strng">
+                <comment>{ "tree" :"Measure.supplementalData.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplementalData"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCrtrXprssnLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setLanguage"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_crtr_xprssn_lngge">
+                <comment>{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, code", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCrtrXprssnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setName"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_crtr_xprssn_nme">
+                <comment>{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, id", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setName"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCrtrXprssnDscrptn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setDescription"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_crtr_xprssn_dscrptn">
+                <comment>{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setDescription"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCrtrXprssnXprssn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setExpression"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_crtr_xprssn_xprssn">
+                <comment>{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, string", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setExpression"}</comment>
+            </column>
+        </property>
+        <property name="msrSpplmntlDtCrtrXprssnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setReference"}</meta>
+            <column length="65535" name="Msr_spplmntlDt_crtr_xprssn_rfrnce">
+                <comment>{ "tree" :"Measure.supplementalData.criteria", "datatype" : "Expression, uri", "cardinality" : "Required", "elementtree" : ["addSupplementalData"] , "methodName" : "setCriteria, setReference"}</comment>
             </column>
         </property>
     </class>

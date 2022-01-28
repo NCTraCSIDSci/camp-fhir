@@ -1,1197 +1,663 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Specimen" optimistic-lock="none" table="specimen">
-        <id name="spcmnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Spcmn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="spcmnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_use_code</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_s_cde">
-                <comment>Specimen_identifierIdentifier_use_code</comment>
+        <property name="specimenIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Specimen_identifier_Identifier_use">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Specimen_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="spcmnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Specimen_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="spcmnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Specimen_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="spcmnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Specimen_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="spcmnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Specimen_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="spcmnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Prd_strt">
-                <comment>Specimen_identifierIdentifier_Period_start</comment>
+        <property name="spcmnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Prd_nd">
-                <comment>Specimen_identifierIdentifier_Period_end</comment>
+        <property name="spcmnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Specimen_identifierIdentifier_Reference_reference</comment>
+        <property name="spcmnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Specimen_identifierIdentifier_Reference_type</comment>
+        <property name="spcmnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Specimen_identifierIdentifier_Reference_identifier</comment>
+        <property name="spcmnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Specimen_identifierIdentifier_Reference_display</comment>
+        <property name="spcmnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Spcmn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Specimen.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_value_string</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_vl_strng">
-                <comment>Specimen_identifierIdentifier_value_string</comment>
+        <property name="spcmnCcssndntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setUse"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_se">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="spcmnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Specimen_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Spcmn_dntfr_dntfr_sstm_ri">
-                <comment>Specimen_identifierIdentifier_system_uri</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="spcmnCcssndntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="spcmnCcssndntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="spcmnCcssndntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="spcmnCcssndntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="spcmnCcssndntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setValue"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_vlue">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="spcmnCcssndntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setSystem"}</meta>
+            <column length="65535" name="Spcmn_ccssndntfr_dntfr_sstm">
+                <comment>{ "tree" :"Specimen.accessionIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccessionIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="specimenStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Specimen_status_code">
+                <comment>{ "tree" :"Specimen.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="specimenTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Specimen_type_CC_coding_C_system">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="specimenTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Specimen_type_CC_coding_C_version">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="specimenTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Specimen_type_CC_coding_C_code">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnCcssndntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="Spcmn_ccssndntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="specimenTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Specimen_type_CC_coding_C_display">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="specimenStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Specimen_status">
-                <comment>code</comment>
+        <property name="spcmnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="specimenTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Specimen_type_CC_text">
+                <comment>{ "tree" :"Specimen.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="specimenSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Specimen_subject_Reference">
+                <comment>{ "tree" :"Specimen.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="specimenReceivedTimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.receivedTime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReceivedTime"}</meta>
+            <column length="65535" name="Specimen_receivedTime_dateTime">
+                <comment>{ "tree" :"Specimen.receivedTime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReceivedTime"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="specimenParentReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.parent", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParent"}</meta>
+            <column length="65535" name="Specimen_parent_Reference">
+                <comment>{ "tree" :"Specimen.parent", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParent"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="specimenRequestReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.request", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequest"}</meta>
+            <column length="65535" name="Specimen_request_Reference">
+                <comment>{ "tree" :"Specimen.request", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRequest"}</comment>
             </column>
         </property>
-        <property name="spcmnTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="spcmnCllctnCllctrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.collector", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollector"}</meta>
+            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnce">
+                <comment>{ "tree" :"Specimen.collection.collector", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollector"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="spcmnCllctnCllctdDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.collectedDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedDatetime"}</meta>
+            <column length="65535" name="Spcmn_cllctn_cllctdDttm_dtTme">
+                <comment>{ "tree" :"Specimen.collection.collectedDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedDatetime"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="spcmnCllctnCllctdPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.collectedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedPeriod, setStart"}</meta>
+            <column length="65535" name="Spcmn_cllctn_cllctdPrd_Prd_strt">
+                <comment>{ "tree" :"Specimen.collection.collectedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="spcmnCllctnCllctdPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.collectedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedPeriod, setEnd"}</meta>
+            <column length="65535" name="Spcmn_cllctn_cllctdPrd_Prd_nd">
+                <comment>{ "tree" :"Specimen.collection.collectedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setCollectedPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="spcmnCllctnDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.duration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setDuration"}</meta>
+            <column length="65535" name="Spcmn_cllctn_drtn_Drtn">
+                <comment>{ "tree" :"Specimen.collection.duration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setDuration"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="spcmnCllctnQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="Spcmn_cllctn_qntt_SmplQntty">
+                <comment>{ "tree" :"Specimen.collection.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setQuantity"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="spcmnCllctnMthdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cllctn_mthd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="spcmnCllctnMthdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cllctn_mthd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="spcmnCllctnMthdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cllctn_mthd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="spcmnCllctnMthdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cllctn_mthd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="spcmnCllctnMthdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cllctn_mthd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="specimenCollectionMethodCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, setText"}</meta>
+            <column length="65535" name="Specimen_collection_method_CC_text">
+                <comment>{ "tree" :"Specimen.collection.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setMethod, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="spcmnCllctnBdStCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="spcmnCllctnBdStCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnSbjctRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Spcmn_sbjct_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="spcmnCllctnBdStCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="specimenReceivedTime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Specimen_receivedTime">
-                <comment>dateTime</comment>
+        <property name="spcmnCllctnBdStCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="spcmnCllctnBdStCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="spcmnCllctnBdStCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, setText"}</meta>
+            <column length="65535" name="Spcmn_cllctn_bdSt_CC_txt">
+                <comment>{ "tree" :"Specimen.collection.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setBodySite, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="spcmnCllctnFstngSttsCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, setText"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="spcmnCllctnFstngSttsDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.collection.fastingStatusDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusDuration"}</meta>
+            <column length="65535" name="Spcmn_cllctn_fstngSttsDrtn_Drtn">
+                <comment>{ "tree" :"Specimen.collection.fastingStatusDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setCollection"] , "methodName" : "setFastingStatusDuration"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="spcmnPrcssngDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Spcmn_prcssng_dscrptn_strng">
+                <comment>{ "tree" :"Specimen.processing.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="spcmnPrcssngPrcdrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="spcmnPrcssngPrcdrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnPrntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_prnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="spcmnPrcssngPrcdrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="specimenParentReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Specimen_parent_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="spcmnPrcssngPrcdrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="spcmnPrcssngPrcdrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="spcmnPrcssngPrcdrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, setText"}</meta>
+            <column length="65535" name="Spcmn_prcssng_prcdr_CC_txt">
+                <comment>{ "tree" :"Specimen.processing.procedure", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setProcedure, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="spcmnPrcssngDdtvRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.additive", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addProcessing"] , "methodName" : "addAdditive"}</meta>
+            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnce">
+                <comment>{ "tree" :"Specimen.processing.additive", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addProcessing"] , "methodName" : "addAdditive"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="spcmnPrcssngTmDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.timeDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimeDatetime"}</meta>
+            <column length="65535" name="Spcmn_prcssng_tmDttm_dtTme">
+                <comment>{ "tree" :"Specimen.processing.timeDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimeDatetime"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="spcmnPrcssngTmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.timePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimePeriod, setStart"}</meta>
+            <column length="65535" name="Spcmn_prcssng_tmPrd_Prd_strt">
+                <comment>{ "tree" :"Specimen.processing.timePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="spcmnPrcssngTmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.processing.timePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimePeriod, setEnd"}</meta>
+            <column length="65535" name="Spcmn_prcssng_tmPrd_Prd_nd">
+                <comment>{ "tree" :"Specimen.processing.timePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addProcessing"] , "methodName" : "setTimePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="spcmnCntnrDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_se">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="spcmnCntnrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnRqstRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Spcmn_rqst_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="spcmnCntnrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="spcmnCntnrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="spcmnCntnrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="spcmnCntnrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="spcmnCntnrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Specimen.container.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addContainer"] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="spcmnCntnrDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Spcmn_cntnr_dscrptn_strng">
+                <comment>{ "tree" :"Specimen.container.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="spcmnCntnrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cntnr_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="spcmnCntnrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cntnr_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="spcmnCntnrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cntnr_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="spcmnCntnrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cntnr_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="spcmnCntnrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cntnr_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="specimenContainerTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Specimen_container_type_CC_text">
+                <comment>{ "tree" :"Specimen.container.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="spcmnCntnrCpctSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.capacity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setCapacity"}</meta>
+            <column length="65535" name="Spcmn_cntnr_cpct_SmplQntty">
+                <comment>{ "tree" :"Specimen.container.capacity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setCapacity"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="spcmnCntnrSpcmnQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.specimenQuantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setSpecimenQuantity"}</meta>
+            <column length="65535" name="Spcmn_cntnr_spcmnQntt_SmplQntty">
+                <comment>{ "tree" :"Specimen.container.specimenQuantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setSpecimenQuantity"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctdDttme" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctdDttme">
-                <comment>dateTime</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctdPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctdPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnCllctdPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Spcmn_cllctn_cllctdPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="specimenCollectionDuration" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="Specimen_collection_duration">
-                <comment>Duration</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="specimenCollectionQuantity" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Specimen_collection_quantity">
-                <comment>SimpleQuantity</comment>
+        <property name="spcmnCntnrDdtvCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, setText"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Specimen.container.additiveCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="spcmnCntnrDdtvRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.container.additiveReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveReference(substance)"}</meta>
+            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnce">
+                <comment>{ "tree" :"Specimen.container.additiveReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addContainer"] , "methodName" : "setAdditiveReference(substance)"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="spcmnCndtnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setSystem"}</meta>
+            <column length="65535" name="Spcmn_cndtn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="spcmnCndtnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setVersion"}</meta>
+            <column length="65535" name="Spcmn_cndtn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="spcmnCndtnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setCode"}</meta>
+            <column length="65535" name="Spcmn_cndtn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="spcmnCndtnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Spcmn_cndtn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnMthdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cllctn_mthd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="spcmnCndtnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Spcmn_cndtn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnBdStCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="specimenConditionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, setText"}</meta>
+            <column length="65535" name="Specimen_condition_CC_text">
+                <comment>{ "tree" :"Specimen.condition", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCondition, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnBdStCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="specimenNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Specimen_note_Annotation_time">
+                <comment>{ "tree" :"Specimen.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnBdStCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="specimenNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Specimen_note_Annotation_text">
+                <comment>{ "tree" :"Specimen.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnBdStCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="spcmnNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Spcmn_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Specimen.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="spcmnCllctnBdStCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnBdStCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cllctn_bdSt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttscdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttscdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCllctnFstngSttsDrtn" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="Spcmn_cllctn_fstngSttsDrtn">
-                <comment>Duration</comment>
-            </column>
-        </property>
-        <property name="specimenProcessingDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Specimen_processing_description">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngPrcdrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_prcssng_prcdr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngDdtvRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Spcmn_prcssng_ddtv_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="specimenProcessingTimeDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Specimen_processing_timeDatetime">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngTmPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Spcmn_prcssng_tmPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="spcmnPrcssngTmPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Spcmn_prcssng_tmPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="Spcmn_cntnr_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
-            </column>
-        </property>
-        <property name="specimenContainerDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Specimen_container_description">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cntnr_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="specimenContainerCapacity" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Specimen_container_capacity">
-                <comment>SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrSpcmnQntty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Spcmn_cntnr_spcmnQntty">
-                <comment>SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvcdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvcdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="spcmnCntnrDdtvRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Spcmn_cntnr_ddtvRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="spcmnCndtnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Spcmn_cndtn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnTmDtTme" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_tm_dtTme">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnTxtMrkdwn" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_txt_mrkdwn">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="spcmnNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="Spcmn_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
+        <property name="spcmnNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Specimen.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Spcmn_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"Specimen.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

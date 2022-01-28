@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,653 +10,544 @@ package main.templateoutput.Model;
 public class Endpoint  implements java.io.Serializable {
 
 
-     private String endpntDntfrDntfrTpCdblCncptCdngCde;
-     private String endpntDntfrDntfrSCde;
-     private String endpntDntfrDntfrTpCdblCncptCdngSstm;
-     private String endpntDntfrDntfrTpCdblCncptCdngVrsn;
-     private String endpntDntfrDntfrTpCdblCncptCdngDsplay;
-     private String endpntDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String endpntDntfrDntfrCdblCncptTxt;
-     private String endpntDntfrDntfrPrdStrt;
-     private String endpntDntfrDntfrPrdNd;
-     private String endpntDntfrDntfrRfrncRfrnce;
-     private String endpntDntfrDntfrRfrncTpe;
-     private String endpntDntfrDntfrRfrncDntfr;
-     private String endpntDntfrDntfrRfrncDsplay;
-     private String endpntDntfrDntfrVlStrng;
-     private String endpntDntfrDntfrSstmRi;
-     private String endpointStatus;
-     private String endpntCnnctnTpCdngSrSlctdBln;
-     private String endpntCnnctnTpCdngCdCde;
-     private String endpntCnnctnTpCdngVrsnStrng;
-     private String endpntCnnctnTpCdngDsplStrng;
-     private String endpntCnnctnTpCdngSstmRi;
-     private String endpointName;
-     private String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-     private String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-     private String endpntMngngrgnztnRfrncDntfrDntfrPrdStrt;
-     private String endpntMngngrgnztnRfrncDntfrDntfrPrdNd;
-     private String endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-     private String endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-     private String endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-     private String endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-     private String endpntMngngrgnztnRfrncDntfrSe;
-     private String endpntMngngrgnztnRfrncDntfrSstm;
-     private String endpntMngngrgnztnRfrncDntfrVlue;
-     private String endpntMngngrgnztnRfrncRfrncStrng;
-     private String endpntMngngrgnztnRfrncDsplStrng;
-     private String endpntMngngrgnztnRfrncTpRi;
-     private String endpntCntctCntctPntSstmCde;
-     private String endpntCntctCntctPntSCde;
-     private String endpntCntctCntctPntPrdStrt;
-     private String endpntCntctCntctPntPrdNd;
-     private String endpntCntctCntctPntRnkPstvnt;
-     private String endpntCntctCntctPntVlStrng;
-     private String endpntPrdPrdStrtDtTme;
-     private String endpntPrdPrdNdDtTme;
-     private String endpntPldTpCdblCncptCdngSstm;
-     private String endpntPldTpCdblCncptCdngVrsn;
-     private String endpntPldTpCdblCncptCdngCde;
-     private String endpntPldTpCdblCncptCdngDsplay;
-     private String endpntPldTpCdblCncptCdngSrSlctd;
-     private String endpntPldTpCdblCncptTxtStrng;
-     private String endpointPayloadMimeType;
-     private String endpointAddress;
-     private String endpointHeader;
+     private Integer id;
+     private String endpointIdentifierIdentifierUse;
+     private String endpntDntfrDntfrTpCcCSstm;
+     private String endpntDntfrDntfrTpCcCVrsn;
+     private String endpntDntfrDntfrTpCcCCde;
+     private String endpntDntfrDntfrTpCcCDsplay;
+     private String endpntDntfrDntfrTpCcCSrSlctd;
+     private String endpntDntfrDntfrTpCcTxt;
+     private String endpntDntfrDntfrPrdPrdStrt;
+     private String endpntDntfrDntfrPrdPrdNd;
+     private String endpntDntfrDntfrSsgnr;
+     private String endpntDntfrDntfrVlue;
+     private String endpntDntfrDntfrSstm;
+     private String endpointStatusCode;
+     private String endpntCnnctnTpCSrSlctd;
+     private String endpointConnectionTypeCCode;
+     private String endpointConnectionTypeCVersion;
+     private String endpointConnectionTypeCDisplay;
+     private String endpointConnectionTypeCSystem;
+     private String endpointNameString;
+     private String endpntMngngrgnztnRfrnce;
+     private String endpntCntctCntctPntSstm;
+     private String endpointContactContactPointUse;
+     private String endpntCntctCntctPntPrdPrdStrt;
+     private String endpntCntctCntctPntPrdPrdNd;
+     private String endpointContactContactPointRank;
+     private String endpntCntctCntctPntVlue;
+     private String endpointPeriodPeriodStart;
+     private String endpointPeriodPeriodEnd;
+     private String endpntPldTpCcCdngCSstm;
+     private String endpntPldTpCcCdngCVrsn;
+     private String endpntPldTpCcCdngCCde;
+     private String endpntPldTpCcCdngCDsplay;
+     private String endpntPldTpCcCdngCSrSlctd;
+     private String endpointPayloadTypeCcText;
+     private String endpointPayloadMimeTypeCode;
+     private String endpointAddressUrl;
+     private String endpointHeaderString;
 
     public Endpoint() {
     }
 
-	
-    public Endpoint(String endpntDntfrDntfrTpCdblCncptCdngCde) {
-        this.endpntDntfrDntfrTpCdblCncptCdngCde = endpntDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Endpoint(String endpntDntfrDntfrTpCdblCncptCdngCde, String endpntDntfrDntfrSCde, String endpntDntfrDntfrTpCdblCncptCdngSstm, String endpntDntfrDntfrTpCdblCncptCdngVrsn, String endpntDntfrDntfrTpCdblCncptCdngDsplay, String endpntDntfrDntfrTpCdblCncptCdngSrSlctd, String endpntDntfrDntfrCdblCncptTxt, String endpntDntfrDntfrPrdStrt, String endpntDntfrDntfrPrdNd, String endpntDntfrDntfrRfrncRfrnce, String endpntDntfrDntfrRfrncTpe, String endpntDntfrDntfrRfrncDntfr, String endpntDntfrDntfrRfrncDsplay, String endpntDntfrDntfrVlStrng, String endpntDntfrDntfrSstmRi, String endpointStatus, String endpntCnnctnTpCdngSrSlctdBln, String endpntCnnctnTpCdngCdCde, String endpntCnnctnTpCdngVrsnStrng, String endpntCnnctnTpCdngDsplStrng, String endpntCnnctnTpCdngSstmRi, String endpointName, String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng, String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt, String endpntMngngrgnztnRfrncDntfrDntfrPrdStrt, String endpntMngngrgnztnRfrncDntfrDntfrPrdNd, String endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce, String endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe, String endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr, String endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay, String endpntMngngrgnztnRfrncDntfrSe, String endpntMngngrgnztnRfrncDntfrSstm, String endpntMngngrgnztnRfrncDntfrVlue, String endpntMngngrgnztnRfrncRfrncStrng, String endpntMngngrgnztnRfrncDsplStrng, String endpntMngngrgnztnRfrncTpRi, String endpntCntctCntctPntSstmCde, String endpntCntctCntctPntSCde, String endpntCntctCntctPntPrdStrt, String endpntCntctCntctPntPrdNd, String endpntCntctCntctPntRnkPstvnt, String endpntCntctCntctPntVlStrng, String endpntPrdPrdStrtDtTme, String endpntPrdPrdNdDtTme, String endpntPldTpCdblCncptCdngSstm, String endpntPldTpCdblCncptCdngVrsn, String endpntPldTpCdblCncptCdngCde, String endpntPldTpCdblCncptCdngDsplay, String endpntPldTpCdblCncptCdngSrSlctd, String endpntPldTpCdblCncptTxtStrng, String endpointPayloadMimeType, String endpointAddress, String endpointHeader) {
-       this.endpntDntfrDntfrTpCdblCncptCdngCde = endpntDntfrDntfrTpCdblCncptCdngCde;
-       this.endpntDntfrDntfrSCde = endpntDntfrDntfrSCde;
-       this.endpntDntfrDntfrTpCdblCncptCdngSstm = endpntDntfrDntfrTpCdblCncptCdngSstm;
-       this.endpntDntfrDntfrTpCdblCncptCdngVrsn = endpntDntfrDntfrTpCdblCncptCdngVrsn;
-       this.endpntDntfrDntfrTpCdblCncptCdngDsplay = endpntDntfrDntfrTpCdblCncptCdngDsplay;
-       this.endpntDntfrDntfrTpCdblCncptCdngSrSlctd = endpntDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.endpntDntfrDntfrCdblCncptTxt = endpntDntfrDntfrCdblCncptTxt;
-       this.endpntDntfrDntfrPrdStrt = endpntDntfrDntfrPrdStrt;
-       this.endpntDntfrDntfrPrdNd = endpntDntfrDntfrPrdNd;
-       this.endpntDntfrDntfrRfrncRfrnce = endpntDntfrDntfrRfrncRfrnce;
-       this.endpntDntfrDntfrRfrncTpe = endpntDntfrDntfrRfrncTpe;
-       this.endpntDntfrDntfrRfrncDntfr = endpntDntfrDntfrRfrncDntfr;
-       this.endpntDntfrDntfrRfrncDsplay = endpntDntfrDntfrRfrncDsplay;
-       this.endpntDntfrDntfrVlStrng = endpntDntfrDntfrVlStrng;
-       this.endpntDntfrDntfrSstmRi = endpntDntfrDntfrSstmRi;
-       this.endpointStatus = endpointStatus;
-       this.endpntCnnctnTpCdngSrSlctdBln = endpntCnnctnTpCdngSrSlctdBln;
-       this.endpntCnnctnTpCdngCdCde = endpntCnnctnTpCdngCdCde;
-       this.endpntCnnctnTpCdngVrsnStrng = endpntCnnctnTpCdngVrsnStrng;
-       this.endpntCnnctnTpCdngDsplStrng = endpntCnnctnTpCdngDsplStrng;
-       this.endpntCnnctnTpCdngSstmRi = endpntCnnctnTpCdngSstmRi;
-       this.endpointName = endpointName;
-       this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng = endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-       this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt = endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-       this.endpntMngngrgnztnRfrncDntfrDntfrPrdStrt = endpntMngngrgnztnRfrncDntfrDntfrPrdStrt;
-       this.endpntMngngrgnztnRfrncDntfrDntfrPrdNd = endpntMngngrgnztnRfrncDntfrDntfrPrdNd;
-       this.endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce = endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-       this.endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe = endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-       this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr = endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-       this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay = endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-       this.endpntMngngrgnztnRfrncDntfrSe = endpntMngngrgnztnRfrncDntfrSe;
-       this.endpntMngngrgnztnRfrncDntfrSstm = endpntMngngrgnztnRfrncDntfrSstm;
-       this.endpntMngngrgnztnRfrncDntfrVlue = endpntMngngrgnztnRfrncDntfrVlue;
-       this.endpntMngngrgnztnRfrncRfrncStrng = endpntMngngrgnztnRfrncRfrncStrng;
-       this.endpntMngngrgnztnRfrncDsplStrng = endpntMngngrgnztnRfrncDsplStrng;
-       this.endpntMngngrgnztnRfrncTpRi = endpntMngngrgnztnRfrncTpRi;
-       this.endpntCntctCntctPntSstmCde = endpntCntctCntctPntSstmCde;
-       this.endpntCntctCntctPntSCde = endpntCntctCntctPntSCde;
-       this.endpntCntctCntctPntPrdStrt = endpntCntctCntctPntPrdStrt;
-       this.endpntCntctCntctPntPrdNd = endpntCntctCntctPntPrdNd;
-       this.endpntCntctCntctPntRnkPstvnt = endpntCntctCntctPntRnkPstvnt;
-       this.endpntCntctCntctPntVlStrng = endpntCntctCntctPntVlStrng;
-       this.endpntPrdPrdStrtDtTme = endpntPrdPrdStrtDtTme;
-       this.endpntPrdPrdNdDtTme = endpntPrdPrdNdDtTme;
-       this.endpntPldTpCdblCncptCdngSstm = endpntPldTpCdblCncptCdngSstm;
-       this.endpntPldTpCdblCncptCdngVrsn = endpntPldTpCdblCncptCdngVrsn;
-       this.endpntPldTpCdblCncptCdngCde = endpntPldTpCdblCncptCdngCde;
-       this.endpntPldTpCdblCncptCdngDsplay = endpntPldTpCdblCncptCdngDsplay;
-       this.endpntPldTpCdblCncptCdngSrSlctd = endpntPldTpCdblCncptCdngSrSlctd;
-       this.endpntPldTpCdblCncptTxtStrng = endpntPldTpCdblCncptTxtStrng;
-       this.endpointPayloadMimeType = endpointPayloadMimeType;
-       this.endpointAddress = endpointAddress;
-       this.endpointHeader = endpointHeader;
+    public Endpoint(String endpointIdentifierIdentifierUse, String endpntDntfrDntfrTpCcCSstm, String endpntDntfrDntfrTpCcCVrsn, String endpntDntfrDntfrTpCcCCde, String endpntDntfrDntfrTpCcCDsplay, String endpntDntfrDntfrTpCcCSrSlctd, String endpntDntfrDntfrTpCcTxt, String endpntDntfrDntfrPrdPrdStrt, String endpntDntfrDntfrPrdPrdNd, String endpntDntfrDntfrSsgnr, String endpntDntfrDntfrVlue, String endpntDntfrDntfrSstm, String endpointStatusCode, String endpntCnnctnTpCSrSlctd, String endpointConnectionTypeCCode, String endpointConnectionTypeCVersion, String endpointConnectionTypeCDisplay, String endpointConnectionTypeCSystem, String endpointNameString, String endpntMngngrgnztnRfrnce, String endpntCntctCntctPntSstm, String endpointContactContactPointUse, String endpntCntctCntctPntPrdPrdStrt, String endpntCntctCntctPntPrdPrdNd, String endpointContactContactPointRank, String endpntCntctCntctPntVlue, String endpointPeriodPeriodStart, String endpointPeriodPeriodEnd, String endpntPldTpCcCdngCSstm, String endpntPldTpCcCdngCVrsn, String endpntPldTpCcCdngCCde, String endpntPldTpCcCdngCDsplay, String endpntPldTpCcCdngCSrSlctd, String endpointPayloadTypeCcText, String endpointPayloadMimeTypeCode, String endpointAddressUrl, String endpointHeaderString) {
+       this.endpointIdentifierIdentifierUse = endpointIdentifierIdentifierUse;
+       this.endpntDntfrDntfrTpCcCSstm = endpntDntfrDntfrTpCcCSstm;
+       this.endpntDntfrDntfrTpCcCVrsn = endpntDntfrDntfrTpCcCVrsn;
+       this.endpntDntfrDntfrTpCcCCde = endpntDntfrDntfrTpCcCCde;
+       this.endpntDntfrDntfrTpCcCDsplay = endpntDntfrDntfrTpCcCDsplay;
+       this.endpntDntfrDntfrTpCcCSrSlctd = endpntDntfrDntfrTpCcCSrSlctd;
+       this.endpntDntfrDntfrTpCcTxt = endpntDntfrDntfrTpCcTxt;
+       this.endpntDntfrDntfrPrdPrdStrt = endpntDntfrDntfrPrdPrdStrt;
+       this.endpntDntfrDntfrPrdPrdNd = endpntDntfrDntfrPrdPrdNd;
+       this.endpntDntfrDntfrSsgnr = endpntDntfrDntfrSsgnr;
+       this.endpntDntfrDntfrVlue = endpntDntfrDntfrVlue;
+       this.endpntDntfrDntfrSstm = endpntDntfrDntfrSstm;
+       this.endpointStatusCode = endpointStatusCode;
+       this.endpntCnnctnTpCSrSlctd = endpntCnnctnTpCSrSlctd;
+       this.endpointConnectionTypeCCode = endpointConnectionTypeCCode;
+       this.endpointConnectionTypeCVersion = endpointConnectionTypeCVersion;
+       this.endpointConnectionTypeCDisplay = endpointConnectionTypeCDisplay;
+       this.endpointConnectionTypeCSystem = endpointConnectionTypeCSystem;
+       this.endpointNameString = endpointNameString;
+       this.endpntMngngrgnztnRfrnce = endpntMngngrgnztnRfrnce;
+       this.endpntCntctCntctPntSstm = endpntCntctCntctPntSstm;
+       this.endpointContactContactPointUse = endpointContactContactPointUse;
+       this.endpntCntctCntctPntPrdPrdStrt = endpntCntctCntctPntPrdPrdStrt;
+       this.endpntCntctCntctPntPrdPrdNd = endpntCntctCntctPntPrdPrdNd;
+       this.endpointContactContactPointRank = endpointContactContactPointRank;
+       this.endpntCntctCntctPntVlue = endpntCntctCntctPntVlue;
+       this.endpointPeriodPeriodStart = endpointPeriodPeriodStart;
+       this.endpointPeriodPeriodEnd = endpointPeriodPeriodEnd;
+       this.endpntPldTpCcCdngCSstm = endpntPldTpCcCdngCSstm;
+       this.endpntPldTpCcCdngCVrsn = endpntPldTpCcCdngCVrsn;
+       this.endpntPldTpCcCdngCCde = endpntPldTpCcCdngCCde;
+       this.endpntPldTpCcCdngCDsplay = endpntPldTpCcCdngCDsplay;
+       this.endpntPldTpCcCdngCSrSlctd = endpntPldTpCcCdngCSrSlctd;
+       this.endpointPayloadTypeCcText = endpointPayloadTypeCcText;
+       this.endpointPayloadMimeTypeCode = endpointPayloadMimeTypeCode;
+       this.endpointAddressUrl = endpointAddressUrl;
+       this.endpointHeaderString = endpointHeaderString;
     }
    
-    public String getEndpntDntfrDntfrTpCdblCncptCdngCde() {
-        return this.endpntDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setEndpntDntfrDntfrTpCdblCncptCdngCde(String endpntDntfrDntfrTpCdblCncptCdngCde) {
-        this.endpntDntfrDntfrTpCdblCncptCdngCde = endpntDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrSCde() {
-        return this.endpntDntfrDntfrSCde;
-    }
-    
-    public void setEndpntDntfrDntfrSCde(String endpntDntfrDntfrSCde) {
-        this.endpntDntfrDntfrSCde = endpntDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.endpntDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setEndpntDntfrDntfrTpCdblCncptCdngSstm(String endpntDntfrDntfrTpCdblCncptCdngSstm) {
-        this.endpntDntfrDntfrTpCdblCncptCdngSstm = endpntDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.endpntDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setEndpntDntfrDntfrTpCdblCncptCdngVrsn(String endpntDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.endpntDntfrDntfrTpCdblCncptCdngVrsn = endpntDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.endpntDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setEndpntDntfrDntfrTpCdblCncptCdngDsplay(String endpntDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.endpntDntfrDntfrTpCdblCncptCdngDsplay = endpntDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.endpntDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setEndpntDntfrDntfrTpCdblCncptCdngSrSlctd(String endpntDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.endpntDntfrDntfrTpCdblCncptCdngSrSlctd = endpntDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrCdblCncptTxt() {
-        return this.endpntDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setEndpntDntfrDntfrCdblCncptTxt(String endpntDntfrDntfrCdblCncptTxt) {
-        this.endpntDntfrDntfrCdblCncptTxt = endpntDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrPrdStrt() {
-        return this.endpntDntfrDntfrPrdStrt;
-    }
-    
-    public void setEndpntDntfrDntfrPrdStrt(String endpntDntfrDntfrPrdStrt) {
-        this.endpntDntfrDntfrPrdStrt = endpntDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrPrdNd() {
-        return this.endpntDntfrDntfrPrdNd;
-    }
-    
-    public void setEndpntDntfrDntfrPrdNd(String endpntDntfrDntfrPrdNd) {
-        this.endpntDntfrDntfrPrdNd = endpntDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrRfrncRfrnce() {
-        return this.endpntDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setEndpntDntfrDntfrRfrncRfrnce(String endpntDntfrDntfrRfrncRfrnce) {
-        this.endpntDntfrDntfrRfrncRfrnce = endpntDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrRfrncTpe() {
-        return this.endpntDntfrDntfrRfrncTpe;
-    }
-    
-    public void setEndpntDntfrDntfrRfrncTpe(String endpntDntfrDntfrRfrncTpe) {
-        this.endpntDntfrDntfrRfrncTpe = endpntDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrRfrncDntfr() {
-        return this.endpntDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setEndpntDntfrDntfrRfrncDntfr(String endpntDntfrDntfrRfrncDntfr) {
-        this.endpntDntfrDntfrRfrncDntfr = endpntDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrRfrncDsplay() {
-        return this.endpntDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setEndpntDntfrDntfrRfrncDsplay(String endpntDntfrDntfrRfrncDsplay) {
-        this.endpntDntfrDntfrRfrncDsplay = endpntDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrVlStrng() {
-        return this.endpntDntfrDntfrVlStrng;
-    }
-    
-    public void setEndpntDntfrDntfrVlStrng(String endpntDntfrDntfrVlStrng) {
-        this.endpntDntfrDntfrVlStrng = endpntDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getEndpntDntfrDntfrSstmRi() {
-        return this.endpntDntfrDntfrSstmRi;
-    }
-    
-    public void setEndpntDntfrDntfrSstmRi(String endpntDntfrDntfrSstmRi) {
-        this.endpntDntfrDntfrSstmRi = endpntDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getEndpointStatus() {
-        return this.endpointStatus;
-    }
-    
-    public void setEndpointStatus(String endpointStatus) {
-        this.endpointStatus = endpointStatus;
-    }
-    
-    
-    
-    public String getEndpntCnnctnTpCdngSrSlctdBln() {
-        return this.endpntCnnctnTpCdngSrSlctdBln;
-    }
-    
-    public void setEndpntCnnctnTpCdngSrSlctdBln(String endpntCnnctnTpCdngSrSlctdBln) {
-        this.endpntCnnctnTpCdngSrSlctdBln = endpntCnnctnTpCdngSrSlctdBln;
-    }
-    
-    
-    
-    public String getEndpntCnnctnTpCdngCdCde() {
-        return this.endpntCnnctnTpCdngCdCde;
-    }
-    
-    public void setEndpntCnnctnTpCdngCdCde(String endpntCnnctnTpCdngCdCde) {
-        this.endpntCnnctnTpCdngCdCde = endpntCnnctnTpCdngCdCde;
-    }
-    
-    
-    
-    public String getEndpntCnnctnTpCdngVrsnStrng() {
-        return this.endpntCnnctnTpCdngVrsnStrng;
-    }
-    
-    public void setEndpntCnnctnTpCdngVrsnStrng(String endpntCnnctnTpCdngVrsnStrng) {
-        this.endpntCnnctnTpCdngVrsnStrng = endpntCnnctnTpCdngVrsnStrng;
-    }
-    
-    
-    
-    public String getEndpntCnnctnTpCdngDsplStrng() {
-        return this.endpntCnnctnTpCdngDsplStrng;
-    }
-    
-    public void setEndpntCnnctnTpCdngDsplStrng(String endpntCnnctnTpCdngDsplStrng) {
-        this.endpntCnnctnTpCdngDsplStrng = endpntCnnctnTpCdngDsplStrng;
-    }
-    
-    
-    
-    public String getEndpntCnnctnTpCdngSstmRi() {
-        return this.endpntCnnctnTpCdngSstmRi;
-    }
-    
-    public void setEndpntCnnctnTpCdngSstmRi(String endpntCnnctnTpCdngSstmRi) {
-        this.endpntCnnctnTpCdngSstmRi = endpntCnnctnTpCdngSstmRi;
-    }
-    
-    
-    
-    public String getEndpointName() {
-        return this.endpointName;
-    }
-    
-    public void setEndpointName(String endpointName) {
-        this.endpointName = endpointName;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng(String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng = endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt(String endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt = endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrPrdStrt() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrPrdStrt(String endpntMngngrgnztnRfrncDntfrDntfrPrdStrt) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrPrdStrt = endpntMngngrgnztnRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrPrdNd() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrPrdNd(String endpntMngngrgnztnRfrncDntfrDntfrPrdNd) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrPrdNd = endpntMngngrgnztnRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce(String endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce = endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrRfrncTpe() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrRfrncTpe(String endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe = endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr(String endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr = endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay() {
-        return this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay(String endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay) {
-        this.endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay = endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrSe() {
-        return this.endpntMngngrgnztnRfrncDntfrSe;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrSe(String endpntMngngrgnztnRfrncDntfrSe) {
-        this.endpntMngngrgnztnRfrncDntfrSe = endpntMngngrgnztnRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrSstm() {
-        return this.endpntMngngrgnztnRfrncDntfrSstm;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrSstm(String endpntMngngrgnztnRfrncDntfrSstm) {
-        this.endpntMngngrgnztnRfrncDntfrSstm = endpntMngngrgnztnRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDntfrVlue() {
-        return this.endpntMngngrgnztnRfrncDntfrVlue;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDntfrVlue(String endpntMngngrgnztnRfrncDntfrVlue) {
-        this.endpntMngngrgnztnRfrncDntfrVlue = endpntMngngrgnztnRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncRfrncStrng() {
-        return this.endpntMngngrgnztnRfrncRfrncStrng;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncRfrncStrng(String endpntMngngrgnztnRfrncRfrncStrng) {
-        this.endpntMngngrgnztnRfrncRfrncStrng = endpntMngngrgnztnRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncDsplStrng() {
-        return this.endpntMngngrgnztnRfrncDsplStrng;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncDsplStrng(String endpntMngngrgnztnRfrncDsplStrng) {
-        this.endpntMngngrgnztnRfrncDsplStrng = endpntMngngrgnztnRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getEndpntMngngrgnztnRfrncTpRi() {
-        return this.endpntMngngrgnztnRfrncTpRi;
-    }
-    
-    public void setEndpntMngngrgnztnRfrncTpRi(String endpntMngngrgnztnRfrncTpRi) {
-        this.endpntMngngrgnztnRfrncTpRi = endpntMngngrgnztnRfrncTpRi;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntSstmCde() {
-        return this.endpntCntctCntctPntSstmCde;
-    }
-    
-    public void setEndpntCntctCntctPntSstmCde(String endpntCntctCntctPntSstmCde) {
-        this.endpntCntctCntctPntSstmCde = endpntCntctCntctPntSstmCde;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntSCde() {
-        return this.endpntCntctCntctPntSCde;
-    }
-    
-    public void setEndpntCntctCntctPntSCde(String endpntCntctCntctPntSCde) {
-        this.endpntCntctCntctPntSCde = endpntCntctCntctPntSCde;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntPrdStrt() {
-        return this.endpntCntctCntctPntPrdStrt;
-    }
-    
-    public void setEndpntCntctCntctPntPrdStrt(String endpntCntctCntctPntPrdStrt) {
-        this.endpntCntctCntctPntPrdStrt = endpntCntctCntctPntPrdStrt;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntPrdNd() {
-        return this.endpntCntctCntctPntPrdNd;
-    }
-    
-    public void setEndpntCntctCntctPntPrdNd(String endpntCntctCntctPntPrdNd) {
-        this.endpntCntctCntctPntPrdNd = endpntCntctCntctPntPrdNd;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntRnkPstvnt() {
-        return this.endpntCntctCntctPntRnkPstvnt;
-    }
-    
-    public void setEndpntCntctCntctPntRnkPstvnt(String endpntCntctCntctPntRnkPstvnt) {
-        this.endpntCntctCntctPntRnkPstvnt = endpntCntctCntctPntRnkPstvnt;
-    }
-    
-    
-    
-    public String getEndpntCntctCntctPntVlStrng() {
-        return this.endpntCntctCntctPntVlStrng;
-    }
-    
-    public void setEndpntCntctCntctPntVlStrng(String endpntCntctCntctPntVlStrng) {
-        this.endpntCntctCntctPntVlStrng = endpntCntctCntctPntVlStrng;
-    }
-    
-    
-    
-    public String getEndpntPrdPrdStrtDtTme() {
-        return this.endpntPrdPrdStrtDtTme;
-    }
-    
-    public void setEndpntPrdPrdStrtDtTme(String endpntPrdPrdStrtDtTme) {
-        this.endpntPrdPrdStrtDtTme = endpntPrdPrdStrtDtTme;
-    }
-    
-    
-    
-    public String getEndpntPrdPrdNdDtTme() {
-        return this.endpntPrdPrdNdDtTme;
-    }
-    
-    public void setEndpntPrdPrdNdDtTme(String endpntPrdPrdNdDtTme) {
-        this.endpntPrdPrdNdDtTme = endpntPrdPrdNdDtTme;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptCdngSstm() {
-        return this.endpntPldTpCdblCncptCdngSstm;
-    }
-    
-    public void setEndpntPldTpCdblCncptCdngSstm(String endpntPldTpCdblCncptCdngSstm) {
-        this.endpntPldTpCdblCncptCdngSstm = endpntPldTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptCdngVrsn() {
-        return this.endpntPldTpCdblCncptCdngVrsn;
-    }
-    
-    public void setEndpntPldTpCdblCncptCdngVrsn(String endpntPldTpCdblCncptCdngVrsn) {
-        this.endpntPldTpCdblCncptCdngVrsn = endpntPldTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptCdngCde() {
-        return this.endpntPldTpCdblCncptCdngCde;
-    }
-    
-    public void setEndpntPldTpCdblCncptCdngCde(String endpntPldTpCdblCncptCdngCde) {
-        this.endpntPldTpCdblCncptCdngCde = endpntPldTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptCdngDsplay() {
-        return this.endpntPldTpCdblCncptCdngDsplay;
-    }
-    
-    public void setEndpntPldTpCdblCncptCdngDsplay(String endpntPldTpCdblCncptCdngDsplay) {
-        this.endpntPldTpCdblCncptCdngDsplay = endpntPldTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptCdngSrSlctd() {
-        return this.endpntPldTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setEndpntPldTpCdblCncptCdngSrSlctd(String endpntPldTpCdblCncptCdngSrSlctd) {
-        this.endpntPldTpCdblCncptCdngSrSlctd = endpntPldTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getEndpntPldTpCdblCncptTxtStrng() {
-        return this.endpntPldTpCdblCncptTxtStrng;
-    }
-    
-    public void setEndpntPldTpCdblCncptTxtStrng(String endpntPldTpCdblCncptTxtStrng) {
-        this.endpntPldTpCdblCncptTxtStrng = endpntPldTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getEndpointPayloadMimeType() {
-        return this.endpointPayloadMimeType;
-    }
-    
-    public void setEndpointPayloadMimeType(String endpointPayloadMimeType) {
-        this.endpointPayloadMimeType = endpointPayloadMimeType;
-    }
-    
-    
-    
-    public String getEndpointAddress() {
-        return this.endpointAddress;
-    }
-    
-    public void setEndpointAddress(String endpointAddress) {
-        this.endpointAddress = endpointAddress;
-    }
-    
-    
-    
-    public String getEndpointHeader() {
-        return this.endpointHeader;
-    }
-    
-    public void setEndpointHeader(String endpointHeader) {
-        this.endpointHeader = endpointHeader;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getEndpointIdentifierIdentifierUse()
+    {
+        return this.endpointIdentifierIdentifierUse;
+    }
+    
+    public void setEndpointIdentifierIdentifierUse
+        (String endpointIdentifierIdentifierUse) 
+        {
+      this.endpointIdentifierIdentifierUse = endpointIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcCSstm()
+    {
+        return this.endpntDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcCSstm
+        (String endpntDntfrDntfrTpCcCSstm) 
+        {
+      this.endpntDntfrDntfrTpCcCSstm = endpntDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcCVrsn()
+    {
+        return this.endpntDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcCVrsn
+        (String endpntDntfrDntfrTpCcCVrsn) 
+        {
+      this.endpntDntfrDntfrTpCcCVrsn = endpntDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcCCde()
+    {
+        return this.endpntDntfrDntfrTpCcCCde;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcCCde
+        (String endpntDntfrDntfrTpCcCCde) 
+        {
+      this.endpntDntfrDntfrTpCcCCde = endpntDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcCDsplay()
+    {
+        return this.endpntDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcCDsplay
+        (String endpntDntfrDntfrTpCcCDsplay) 
+        {
+      this.endpntDntfrDntfrTpCcCDsplay = endpntDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.endpntDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcCSrSlctd
+        (String endpntDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.endpntDntfrDntfrTpCcCSrSlctd = endpntDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrTpCcTxt()
+    {
+        return this.endpntDntfrDntfrTpCcTxt;
+    }
+    
+    public void setEndpntDntfrDntfrTpCcTxt
+        (String endpntDntfrDntfrTpCcTxt) 
+        {
+      this.endpntDntfrDntfrTpCcTxt = endpntDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrPrdPrdStrt()
+    {
+        return this.endpntDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setEndpntDntfrDntfrPrdPrdStrt
+        (String endpntDntfrDntfrPrdPrdStrt) 
+        {
+      this.endpntDntfrDntfrPrdPrdStrt = endpntDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrPrdPrdNd()
+    {
+        return this.endpntDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setEndpntDntfrDntfrPrdPrdNd
+        (String endpntDntfrDntfrPrdPrdNd) 
+        {
+      this.endpntDntfrDntfrPrdPrdNd = endpntDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrSsgnr()
+    {
+        return this.endpntDntfrDntfrSsgnr;
+    }
+    
+    public void setEndpntDntfrDntfrSsgnr
+        (String endpntDntfrDntfrSsgnr) 
+        {
+      this.endpntDntfrDntfrSsgnr = endpntDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrVlue()
+    {
+        return this.endpntDntfrDntfrVlue;
+    }
+    
+    public void setEndpntDntfrDntfrVlue
+        (String endpntDntfrDntfrVlue) 
+        {
+      this.endpntDntfrDntfrVlue = endpntDntfrDntfrVlue;
+}
+    public 
+    String 
+    getEndpntDntfrDntfrSstm()
+    {
+        return this.endpntDntfrDntfrSstm;
+    }
+    
+    public void setEndpntDntfrDntfrSstm
+        (String endpntDntfrDntfrSstm) 
+        {
+      this.endpntDntfrDntfrSstm = endpntDntfrDntfrSstm;
+}
+    public 
+    String 
+    getEndpointStatusCode()
+    {
+        return this.endpointStatusCode;
+    }
+    
+    public void setEndpointStatusCode
+        (String endpointStatusCode) 
+        {
+      this.endpointStatusCode = endpointStatusCode;
+}
+    public 
+    String 
+    getEndpntCnnctnTpCSrSlctd()
+    {
+        return this.endpntCnnctnTpCSrSlctd;
+    }
+    
+    public void setEndpntCnnctnTpCSrSlctd
+        (String endpntCnnctnTpCSrSlctd) 
+        {
+      this.endpntCnnctnTpCSrSlctd = endpntCnnctnTpCSrSlctd;
+}
+    public 
+    String 
+    getEndpointConnectionTypeCCode()
+    {
+        return this.endpointConnectionTypeCCode;
+    }
+    
+    public void setEndpointConnectionTypeCCode
+        (String endpointConnectionTypeCCode) 
+        {
+      this.endpointConnectionTypeCCode = endpointConnectionTypeCCode;
+}
+    public 
+    String 
+    getEndpointConnectionTypeCVersion()
+    {
+        return this.endpointConnectionTypeCVersion;
+    }
+    
+    public void setEndpointConnectionTypeCVersion
+        (String endpointConnectionTypeCVersion) 
+        {
+      this.endpointConnectionTypeCVersion = endpointConnectionTypeCVersion;
+}
+    public 
+    String 
+    getEndpointConnectionTypeCDisplay()
+    {
+        return this.endpointConnectionTypeCDisplay;
+    }
+    
+    public void setEndpointConnectionTypeCDisplay
+        (String endpointConnectionTypeCDisplay) 
+        {
+      this.endpointConnectionTypeCDisplay = endpointConnectionTypeCDisplay;
+}
+    public 
+    String 
+    getEndpointConnectionTypeCSystem()
+    {
+        return this.endpointConnectionTypeCSystem;
+    }
+    
+    public void setEndpointConnectionTypeCSystem
+        (String endpointConnectionTypeCSystem) 
+        {
+      this.endpointConnectionTypeCSystem = endpointConnectionTypeCSystem;
+}
+    public 
+    String 
+    getEndpointNameString()
+    {
+        return this.endpointNameString;
+    }
+    
+    public void setEndpointNameString
+        (String endpointNameString) 
+        {
+      this.endpointNameString = endpointNameString;
+}
+    public 
+    String 
+    getEndpntMngngrgnztnRfrnce()
+    {
+        return this.endpntMngngrgnztnRfrnce;
+    }
+    
+    public void setEndpntMngngrgnztnRfrnce
+        (String endpntMngngrgnztnRfrnce) 
+        {
+      this.endpntMngngrgnztnRfrnce = endpntMngngrgnztnRfrnce;
+}
+    public 
+    String 
+    getEndpntCntctCntctPntSstm()
+    {
+        return this.endpntCntctCntctPntSstm;
+    }
+    
+    public void setEndpntCntctCntctPntSstm
+        (String endpntCntctCntctPntSstm) 
+        {
+      this.endpntCntctCntctPntSstm = endpntCntctCntctPntSstm;
+}
+    public 
+    String 
+    getEndpointContactContactPointUse()
+    {
+        return this.endpointContactContactPointUse;
+    }
+    
+    public void setEndpointContactContactPointUse
+        (String endpointContactContactPointUse) 
+        {
+      this.endpointContactContactPointUse = endpointContactContactPointUse;
+}
+    public 
+    String 
+    getEndpntCntctCntctPntPrdPrdStrt()
+    {
+        return this.endpntCntctCntctPntPrdPrdStrt;
+    }
+    
+    public void setEndpntCntctCntctPntPrdPrdStrt
+        (String endpntCntctCntctPntPrdPrdStrt) 
+        {
+      this.endpntCntctCntctPntPrdPrdStrt = endpntCntctCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getEndpntCntctCntctPntPrdPrdNd()
+    {
+        return this.endpntCntctCntctPntPrdPrdNd;
+    }
+    
+    public void setEndpntCntctCntctPntPrdPrdNd
+        (String endpntCntctCntctPntPrdPrdNd) 
+        {
+      this.endpntCntctCntctPntPrdPrdNd = endpntCntctCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getEndpointContactContactPointRank()
+    {
+        return this.endpointContactContactPointRank;
+    }
+    
+    public void setEndpointContactContactPointRank
+        (String endpointContactContactPointRank) 
+        {
+      this.endpointContactContactPointRank = endpointContactContactPointRank;
+}
+    public 
+    String 
+    getEndpntCntctCntctPntVlue()
+    {
+        return this.endpntCntctCntctPntVlue;
+    }
+    
+    public void setEndpntCntctCntctPntVlue
+        (String endpntCntctCntctPntVlue) 
+        {
+      this.endpntCntctCntctPntVlue = endpntCntctCntctPntVlue;
+}
+    public 
+    String 
+    getEndpointPeriodPeriodStart()
+    {
+        return this.endpointPeriodPeriodStart;
+    }
+    
+    public void setEndpointPeriodPeriodStart
+        (String endpointPeriodPeriodStart) 
+        {
+      this.endpointPeriodPeriodStart = endpointPeriodPeriodStart;
+}
+    public 
+    String 
+    getEndpointPeriodPeriodEnd()
+    {
+        return this.endpointPeriodPeriodEnd;
+    }
+    
+    public void setEndpointPeriodPeriodEnd
+        (String endpointPeriodPeriodEnd) 
+        {
+      this.endpointPeriodPeriodEnd = endpointPeriodPeriodEnd;
+}
+    public 
+    String 
+    getEndpntPldTpCcCdngCSstm()
+    {
+        return this.endpntPldTpCcCdngCSstm;
+    }
+    
+    public void setEndpntPldTpCcCdngCSstm
+        (String endpntPldTpCcCdngCSstm) 
+        {
+      this.endpntPldTpCcCdngCSstm = endpntPldTpCcCdngCSstm;
+}
+    public 
+    String 
+    getEndpntPldTpCcCdngCVrsn()
+    {
+        return this.endpntPldTpCcCdngCVrsn;
+    }
+    
+    public void setEndpntPldTpCcCdngCVrsn
+        (String endpntPldTpCcCdngCVrsn) 
+        {
+      this.endpntPldTpCcCdngCVrsn = endpntPldTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getEndpntPldTpCcCdngCCde()
+    {
+        return this.endpntPldTpCcCdngCCde;
+    }
+    
+    public void setEndpntPldTpCcCdngCCde
+        (String endpntPldTpCcCdngCCde) 
+        {
+      this.endpntPldTpCcCdngCCde = endpntPldTpCcCdngCCde;
+}
+    public 
+    String 
+    getEndpntPldTpCcCdngCDsplay()
+    {
+        return this.endpntPldTpCcCdngCDsplay;
+    }
+    
+    public void setEndpntPldTpCcCdngCDsplay
+        (String endpntPldTpCcCdngCDsplay) 
+        {
+      this.endpntPldTpCcCdngCDsplay = endpntPldTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getEndpntPldTpCcCdngCSrSlctd()
+    {
+        return this.endpntPldTpCcCdngCSrSlctd;
+    }
+    
+    public void setEndpntPldTpCcCdngCSrSlctd
+        (String endpntPldTpCcCdngCSrSlctd) 
+        {
+      this.endpntPldTpCcCdngCSrSlctd = endpntPldTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getEndpointPayloadTypeCcText()
+    {
+        return this.endpointPayloadTypeCcText;
+    }
+    
+    public void setEndpointPayloadTypeCcText
+        (String endpointPayloadTypeCcText) 
+        {
+      this.endpointPayloadTypeCcText = endpointPayloadTypeCcText;
+}
+    public 
+    String 
+    getEndpointPayloadMimeTypeCode()
+    {
+        return this.endpointPayloadMimeTypeCode;
+    }
+    
+    public void setEndpointPayloadMimeTypeCode
+        (String endpointPayloadMimeTypeCode) 
+        {
+      this.endpointPayloadMimeTypeCode = endpointPayloadMimeTypeCode;
+}
+    public 
+    String 
+    getEndpointAddressUrl()
+    {
+        return this.endpointAddressUrl;
+    }
+    
+    public void setEndpointAddressUrl
+        (String endpointAddressUrl) 
+        {
+      this.endpointAddressUrl = endpointAddressUrl;
+}
+    public 
+    String 
+    getEndpointHeaderString()
+    {
+        return this.endpointHeaderString;
+    }
+    
+    public void setEndpointHeaderString
+        (String endpointHeaderString) 
+        {
+      this.endpointHeaderString = endpointHeaderString;
+}
 
 
 

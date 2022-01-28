@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,449 +10,600 @@ package main.templateoutput.Model;
 public class Visionprescription  implements java.io.Serializable {
 
 
-     private String vsnPrscrptnDntfrCdngCde;
-     private String vsnPrscrptnDntfrCdngSrSlctd;
-     private String vsnPrscrptnDntfrCdngVrsn;
-     private String vsnPrscrptnDntfrCdngDsplay;
-     private String vsnPrscrptnDntfrCdngSstm;
-     private String visionPrescriptionStatus;
-     private String visionPrescriptionCreated;
-     private String visionPrescriptionPnt;
-     private String visionPrescriptionEncounter;
-     private String visionPrescriptionDateWritten;
-     private String visionPrescriptionPrescriber;
-     private String vsnPrscrptnLnsSpcfctn;
-     private String vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd;
-     private String vsnPrscrptnLnsSpcfctnPrdctCdngCde;
-     private String vsnPrscrptnLnsSpcfctnPrdctCdngVrsn;
-     private String vsnPrscrptnLnsSpcfctnPrdctCdngDsplay;
-     private String vsnPrscrptnLnsSpcfctnPrdctCdngSstm;
-     private String vsnPrscrptnLnsSpcfctnEye;
-     private String vsnPrscrptnLnsSpcfctnSphre;
-     private String vsnPrscrptnLnsSpcfctnClndr;
-     private String vsnPrscrptnLnsSpcfctnXs;
-     private String vsnPrscrptnLnsSpcfctnPrsm;
-     private String vsnPrscrptnLnsSpcfctnPrsmMnt;
-     private String vsnPrscrptnLnsSpcfctnPrsmBse;
-     private String vsnPrscrptnLnsSpcfctnDd;
-     private String vsnPrscrptnLnsSpcfctnPwr;
-     private String vsnPrscrptnLnsSpcfctnBckCrve;
-     private String vsnPrscrptnLnsSpcfctnDmtr;
-     private String vsnPrscrptnLnsSpcfctnDrtn;
-     private String vsnPrscrptnLnsSpcfctnClr;
-     private String vsnPrscrptnLnsSpcfctnBrnd;
-     private String vsnPrscrptnLnsSpcfctnNtCdngSrSlctd;
-     private String vsnPrscrptnLnsSpcfctnNtCdngCde;
-     private String vsnPrscrptnLnsSpcfctnNtCdngVrsn;
-     private String vsnPrscrptnLnsSpcfctnNtCdngDsplay;
-     private String vsnPrscrptnLnsSpcfctnNtCdngSstm;
+     private Integer id;
+     private String vsnPrscrptnDntfrDntfrSe;
+     private String vsnPrscrptnDntfrDntfrTpCcCSstm;
+     private String vsnPrscrptnDntfrDntfrTpCcCVrsn;
+     private String vsnPrscrptnDntfrDntfrTpCcCCde;
+     private String vsnPrscrptnDntfrDntfrTpCcCDsplay;
+     private String vsnPrscrptnDntfrDntfrTpCcCSrSlctd;
+     private String vsnPrscrptnDntfrDntfrTpCcTxt;
+     private String vsnPrscrptnDntfrDntfrPrdPrdStrt;
+     private String vsnPrscrptnDntfrDntfrPrdPrdNd;
+     private String vsnPrscrptnDntfrDntfrSsgnr;
+     private String vsnPrscrptnDntfrDntfrVlue;
+     private String vsnPrscrptnDntfrDntfrSstm;
+     private String visionPrescriptionStatusCode;
+     private String vsnPrscrptnCrtdDtTme;
+     private String visionPrescriptionPntReference;
+     private String vsnPrscrptnNcntrRfrnce;
+     private String vsnPrscrptnDtWrttnDtTme;
+     private String vsnPrscrptnPrscrbrRfrnce;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd;
+     private String vsnPrscrptnLnsSpcfctnPrdctCcTxt;
+     private String vsnPrscrptnLnsSpcfctnCde;
+     private String vsnPrscrptnLnsSpcfctnSphrDcml;
+     private String vsnPrscrptnLnsSpcfctnClndrDcml;
+     private String vsnPrscrptnLnsSpcfctnXsNtgr;
+     private String vsnPrscrptnLnsSpcfctnPrsmMntDcml;
+     private String vsnPrscrptnLnsSpcfctnPrsmBsCde;
+     private String vsnPrscrptnLnsSpcfctnDdDcml;
+     private String vsnPrscrptnLnsSpcfctnPwrDcml;
+     private String vsnPrscrptnLnsSpcfctnBckCrvDcml;
+     private String vsnPrscrptnLnsSpcfctnDmtrDcml;
+     private String vsnPrscrptnLnsSpcfctnDrtnSmplQntty;
+     private String vsnPrscrptnLnsSpcfctnClrStrng;
+     private String vsnPrscrptnLnsSpcfctnBrndStrng;
+     private String vsnPrscrptnLnsSpcfctnNtNnttnTme;
+     private String vsnPrscrptnLnsSpcfctnNtNnttnTxt;
+     private String vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce;
+     private String vsnPrscrptnLnsSpcfctnNtNnttnThrStrng;
 
     public Visionprescription() {
     }
 
-	
-    public Visionprescription(String vsnPrscrptnDntfrCdngCde) {
-        this.vsnPrscrptnDntfrCdngCde = vsnPrscrptnDntfrCdngCde;
-    }
-    public Visionprescription(String vsnPrscrptnDntfrCdngCde, String vsnPrscrptnDntfrCdngSrSlctd, String vsnPrscrptnDntfrCdngVrsn, String vsnPrscrptnDntfrCdngDsplay, String vsnPrscrptnDntfrCdngSstm, String visionPrescriptionStatus, String visionPrescriptionCreated, String visionPrescriptionPnt, String visionPrescriptionEncounter, String visionPrescriptionDateWritten, String visionPrescriptionPrescriber, String vsnPrscrptnLnsSpcfctn, String vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd, String vsnPrscrptnLnsSpcfctnPrdctCdngCde, String vsnPrscrptnLnsSpcfctnPrdctCdngVrsn, String vsnPrscrptnLnsSpcfctnPrdctCdngDsplay, String vsnPrscrptnLnsSpcfctnPrdctCdngSstm, String vsnPrscrptnLnsSpcfctnEye, String vsnPrscrptnLnsSpcfctnSphre, String vsnPrscrptnLnsSpcfctnClndr, String vsnPrscrptnLnsSpcfctnXs, String vsnPrscrptnLnsSpcfctnPrsm, String vsnPrscrptnLnsSpcfctnPrsmMnt, String vsnPrscrptnLnsSpcfctnPrsmBse, String vsnPrscrptnLnsSpcfctnDd, String vsnPrscrptnLnsSpcfctnPwr, String vsnPrscrptnLnsSpcfctnBckCrve, String vsnPrscrptnLnsSpcfctnDmtr, String vsnPrscrptnLnsSpcfctnDrtn, String vsnPrscrptnLnsSpcfctnClr, String vsnPrscrptnLnsSpcfctnBrnd, String vsnPrscrptnLnsSpcfctnNtCdngSrSlctd, String vsnPrscrptnLnsSpcfctnNtCdngCde, String vsnPrscrptnLnsSpcfctnNtCdngVrsn, String vsnPrscrptnLnsSpcfctnNtCdngDsplay, String vsnPrscrptnLnsSpcfctnNtCdngSstm) {
-       this.vsnPrscrptnDntfrCdngCde = vsnPrscrptnDntfrCdngCde;
-       this.vsnPrscrptnDntfrCdngSrSlctd = vsnPrscrptnDntfrCdngSrSlctd;
-       this.vsnPrscrptnDntfrCdngVrsn = vsnPrscrptnDntfrCdngVrsn;
-       this.vsnPrscrptnDntfrCdngDsplay = vsnPrscrptnDntfrCdngDsplay;
-       this.vsnPrscrptnDntfrCdngSstm = vsnPrscrptnDntfrCdngSstm;
-       this.visionPrescriptionStatus = visionPrescriptionStatus;
-       this.visionPrescriptionCreated = visionPrescriptionCreated;
-       this.visionPrescriptionPnt = visionPrescriptionPnt;
-       this.visionPrescriptionEncounter = visionPrescriptionEncounter;
-       this.visionPrescriptionDateWritten = visionPrescriptionDateWritten;
-       this.visionPrescriptionPrescriber = visionPrescriptionPrescriber;
-       this.vsnPrscrptnLnsSpcfctn = vsnPrscrptnLnsSpcfctn;
-       this.vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd = vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd;
-       this.vsnPrscrptnLnsSpcfctnPrdctCdngCde = vsnPrscrptnLnsSpcfctnPrdctCdngCde;
-       this.vsnPrscrptnLnsSpcfctnPrdctCdngVrsn = vsnPrscrptnLnsSpcfctnPrdctCdngVrsn;
-       this.vsnPrscrptnLnsSpcfctnPrdctCdngDsplay = vsnPrscrptnLnsSpcfctnPrdctCdngDsplay;
-       this.vsnPrscrptnLnsSpcfctnPrdctCdngSstm = vsnPrscrptnLnsSpcfctnPrdctCdngSstm;
-       this.vsnPrscrptnLnsSpcfctnEye = vsnPrscrptnLnsSpcfctnEye;
-       this.vsnPrscrptnLnsSpcfctnSphre = vsnPrscrptnLnsSpcfctnSphre;
-       this.vsnPrscrptnLnsSpcfctnClndr = vsnPrscrptnLnsSpcfctnClndr;
-       this.vsnPrscrptnLnsSpcfctnXs = vsnPrscrptnLnsSpcfctnXs;
-       this.vsnPrscrptnLnsSpcfctnPrsm = vsnPrscrptnLnsSpcfctnPrsm;
-       this.vsnPrscrptnLnsSpcfctnPrsmMnt = vsnPrscrptnLnsSpcfctnPrsmMnt;
-       this.vsnPrscrptnLnsSpcfctnPrsmBse = vsnPrscrptnLnsSpcfctnPrsmBse;
-       this.vsnPrscrptnLnsSpcfctnDd = vsnPrscrptnLnsSpcfctnDd;
-       this.vsnPrscrptnLnsSpcfctnPwr = vsnPrscrptnLnsSpcfctnPwr;
-       this.vsnPrscrptnLnsSpcfctnBckCrve = vsnPrscrptnLnsSpcfctnBckCrve;
-       this.vsnPrscrptnLnsSpcfctnDmtr = vsnPrscrptnLnsSpcfctnDmtr;
-       this.vsnPrscrptnLnsSpcfctnDrtn = vsnPrscrptnLnsSpcfctnDrtn;
-       this.vsnPrscrptnLnsSpcfctnClr = vsnPrscrptnLnsSpcfctnClr;
-       this.vsnPrscrptnLnsSpcfctnBrnd = vsnPrscrptnLnsSpcfctnBrnd;
-       this.vsnPrscrptnLnsSpcfctnNtCdngSrSlctd = vsnPrscrptnLnsSpcfctnNtCdngSrSlctd;
-       this.vsnPrscrptnLnsSpcfctnNtCdngCde = vsnPrscrptnLnsSpcfctnNtCdngCde;
-       this.vsnPrscrptnLnsSpcfctnNtCdngVrsn = vsnPrscrptnLnsSpcfctnNtCdngVrsn;
-       this.vsnPrscrptnLnsSpcfctnNtCdngDsplay = vsnPrscrptnLnsSpcfctnNtCdngDsplay;
-       this.vsnPrscrptnLnsSpcfctnNtCdngSstm = vsnPrscrptnLnsSpcfctnNtCdngSstm;
+    public Visionprescription(String vsnPrscrptnDntfrDntfrSe, String vsnPrscrptnDntfrDntfrTpCcCSstm, String vsnPrscrptnDntfrDntfrTpCcCVrsn, String vsnPrscrptnDntfrDntfrTpCcCCde, String vsnPrscrptnDntfrDntfrTpCcCDsplay, String vsnPrscrptnDntfrDntfrTpCcCSrSlctd, String vsnPrscrptnDntfrDntfrTpCcTxt, String vsnPrscrptnDntfrDntfrPrdPrdStrt, String vsnPrscrptnDntfrDntfrPrdPrdNd, String vsnPrscrptnDntfrDntfrSsgnr, String vsnPrscrptnDntfrDntfrVlue, String vsnPrscrptnDntfrDntfrSstm, String visionPrescriptionStatusCode, String vsnPrscrptnCrtdDtTme, String visionPrescriptionPntReference, String vsnPrscrptnNcntrRfrnce, String vsnPrscrptnDtWrttnDtTme, String vsnPrscrptnPrscrbrRfrnce, String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm, String vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn, String vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde, String vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay, String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd, String vsnPrscrptnLnsSpcfctnPrdctCcTxt, String vsnPrscrptnLnsSpcfctnCde, String vsnPrscrptnLnsSpcfctnSphrDcml, String vsnPrscrptnLnsSpcfctnClndrDcml, String vsnPrscrptnLnsSpcfctnXsNtgr, String vsnPrscrptnLnsSpcfctnPrsmMntDcml, String vsnPrscrptnLnsSpcfctnPrsmBsCde, String vsnPrscrptnLnsSpcfctnDdDcml, String vsnPrscrptnLnsSpcfctnPwrDcml, String vsnPrscrptnLnsSpcfctnBckCrvDcml, String vsnPrscrptnLnsSpcfctnDmtrDcml, String vsnPrscrptnLnsSpcfctnDrtnSmplQntty, String vsnPrscrptnLnsSpcfctnClrStrng, String vsnPrscrptnLnsSpcfctnBrndStrng, String vsnPrscrptnLnsSpcfctnNtNnttnTme, String vsnPrscrptnLnsSpcfctnNtNnttnTxt, String vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce, String vsnPrscrptnLnsSpcfctnNtNnttnThrStrng) {
+       this.vsnPrscrptnDntfrDntfrSe = vsnPrscrptnDntfrDntfrSe;
+       this.vsnPrscrptnDntfrDntfrTpCcCSstm = vsnPrscrptnDntfrDntfrTpCcCSstm;
+       this.vsnPrscrptnDntfrDntfrTpCcCVrsn = vsnPrscrptnDntfrDntfrTpCcCVrsn;
+       this.vsnPrscrptnDntfrDntfrTpCcCCde = vsnPrscrptnDntfrDntfrTpCcCCde;
+       this.vsnPrscrptnDntfrDntfrTpCcCDsplay = vsnPrscrptnDntfrDntfrTpCcCDsplay;
+       this.vsnPrscrptnDntfrDntfrTpCcCSrSlctd = vsnPrscrptnDntfrDntfrTpCcCSrSlctd;
+       this.vsnPrscrptnDntfrDntfrTpCcTxt = vsnPrscrptnDntfrDntfrTpCcTxt;
+       this.vsnPrscrptnDntfrDntfrPrdPrdStrt = vsnPrscrptnDntfrDntfrPrdPrdStrt;
+       this.vsnPrscrptnDntfrDntfrPrdPrdNd = vsnPrscrptnDntfrDntfrPrdPrdNd;
+       this.vsnPrscrptnDntfrDntfrSsgnr = vsnPrscrptnDntfrDntfrSsgnr;
+       this.vsnPrscrptnDntfrDntfrVlue = vsnPrscrptnDntfrDntfrVlue;
+       this.vsnPrscrptnDntfrDntfrSstm = vsnPrscrptnDntfrDntfrSstm;
+       this.visionPrescriptionStatusCode = visionPrescriptionStatusCode;
+       this.vsnPrscrptnCrtdDtTme = vsnPrscrptnCrtdDtTme;
+       this.visionPrescriptionPntReference = visionPrescriptionPntReference;
+       this.vsnPrscrptnNcntrRfrnce = vsnPrscrptnNcntrRfrnce;
+       this.vsnPrscrptnDtWrttnDtTme = vsnPrscrptnDtWrttnDtTme;
+       this.vsnPrscrptnPrscrbrRfrnce = vsnPrscrptnPrscrbrRfrnce;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm = vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn = vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde = vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay = vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd = vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd;
+       this.vsnPrscrptnLnsSpcfctnPrdctCcTxt = vsnPrscrptnLnsSpcfctnPrdctCcTxt;
+       this.vsnPrscrptnLnsSpcfctnCde = vsnPrscrptnLnsSpcfctnCde;
+       this.vsnPrscrptnLnsSpcfctnSphrDcml = vsnPrscrptnLnsSpcfctnSphrDcml;
+       this.vsnPrscrptnLnsSpcfctnClndrDcml = vsnPrscrptnLnsSpcfctnClndrDcml;
+       this.vsnPrscrptnLnsSpcfctnXsNtgr = vsnPrscrptnLnsSpcfctnXsNtgr;
+       this.vsnPrscrptnLnsSpcfctnPrsmMntDcml = vsnPrscrptnLnsSpcfctnPrsmMntDcml;
+       this.vsnPrscrptnLnsSpcfctnPrsmBsCde = vsnPrscrptnLnsSpcfctnPrsmBsCde;
+       this.vsnPrscrptnLnsSpcfctnDdDcml = vsnPrscrptnLnsSpcfctnDdDcml;
+       this.vsnPrscrptnLnsSpcfctnPwrDcml = vsnPrscrptnLnsSpcfctnPwrDcml;
+       this.vsnPrscrptnLnsSpcfctnBckCrvDcml = vsnPrscrptnLnsSpcfctnBckCrvDcml;
+       this.vsnPrscrptnLnsSpcfctnDmtrDcml = vsnPrscrptnLnsSpcfctnDmtrDcml;
+       this.vsnPrscrptnLnsSpcfctnDrtnSmplQntty = vsnPrscrptnLnsSpcfctnDrtnSmplQntty;
+       this.vsnPrscrptnLnsSpcfctnClrStrng = vsnPrscrptnLnsSpcfctnClrStrng;
+       this.vsnPrscrptnLnsSpcfctnBrndStrng = vsnPrscrptnLnsSpcfctnBrndStrng;
+       this.vsnPrscrptnLnsSpcfctnNtNnttnTme = vsnPrscrptnLnsSpcfctnNtNnttnTme;
+       this.vsnPrscrptnLnsSpcfctnNtNnttnTxt = vsnPrscrptnLnsSpcfctnNtNnttnTxt;
+       this.vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce = vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce;
+       this.vsnPrscrptnLnsSpcfctnNtNnttnThrStrng = vsnPrscrptnLnsSpcfctnNtNnttnThrStrng;
     }
    
-    public String getVsnPrscrptnDntfrCdngCde() {
-        return this.vsnPrscrptnDntfrCdngCde;
-    }
-    
-    public void setVsnPrscrptnDntfrCdngCde(String vsnPrscrptnDntfrCdngCde) {
-        this.vsnPrscrptnDntfrCdngCde = vsnPrscrptnDntfrCdngCde;
-    }
-    
-    
-    
-    public String getVsnPrscrptnDntfrCdngSrSlctd() {
-        return this.vsnPrscrptnDntfrCdngSrSlctd;
-    }
-    
-    public void setVsnPrscrptnDntfrCdngSrSlctd(String vsnPrscrptnDntfrCdngSrSlctd) {
-        this.vsnPrscrptnDntfrCdngSrSlctd = vsnPrscrptnDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getVsnPrscrptnDntfrCdngVrsn() {
-        return this.vsnPrscrptnDntfrCdngVrsn;
-    }
-    
-    public void setVsnPrscrptnDntfrCdngVrsn(String vsnPrscrptnDntfrCdngVrsn) {
-        this.vsnPrscrptnDntfrCdngVrsn = vsnPrscrptnDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getVsnPrscrptnDntfrCdngDsplay() {
-        return this.vsnPrscrptnDntfrCdngDsplay;
-    }
-    
-    public void setVsnPrscrptnDntfrCdngDsplay(String vsnPrscrptnDntfrCdngDsplay) {
-        this.vsnPrscrptnDntfrCdngDsplay = vsnPrscrptnDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getVsnPrscrptnDntfrCdngSstm() {
-        return this.vsnPrscrptnDntfrCdngSstm;
-    }
-    
-    public void setVsnPrscrptnDntfrCdngSstm(String vsnPrscrptnDntfrCdngSstm) {
-        this.vsnPrscrptnDntfrCdngSstm = vsnPrscrptnDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getVisionPrescriptionStatus() {
-        return this.visionPrescriptionStatus;
-    }
-    
-    public void setVisionPrescriptionStatus(String visionPrescriptionStatus) {
-        this.visionPrescriptionStatus = visionPrescriptionStatus;
-    }
-    
-    
-    
-    public String getVisionPrescriptionCreated() {
-        return this.visionPrescriptionCreated;
-    }
-    
-    public void setVisionPrescriptionCreated(String visionPrescriptionCreated) {
-        this.visionPrescriptionCreated = visionPrescriptionCreated;
-    }
-    
-    
-    
-    public String getVisionPrescriptionPnt() {
-        return this.visionPrescriptionPnt;
-    }
-    
-    public void setVisionPrescriptionPnt(String visionPrescriptionPnt) {
-        this.visionPrescriptionPnt = visionPrescriptionPnt;
-    }
-    
-    
-    
-    public String getVisionPrescriptionEncounter() {
-        return this.visionPrescriptionEncounter;
-    }
-    
-    public void setVisionPrescriptionEncounter(String visionPrescriptionEncounter) {
-        this.visionPrescriptionEncounter = visionPrescriptionEncounter;
-    }
-    
-    
-    
-    public String getVisionPrescriptionDateWritten() {
-        return this.visionPrescriptionDateWritten;
-    }
-    
-    public void setVisionPrescriptionDateWritten(String visionPrescriptionDateWritten) {
-        this.visionPrescriptionDateWritten = visionPrescriptionDateWritten;
-    }
-    
-    
-    
-    public String getVisionPrescriptionPrescriber() {
-        return this.visionPrescriptionPrescriber;
-    }
-    
-    public void setVisionPrescriptionPrescriber(String visionPrescriptionPrescriber) {
-        this.visionPrescriptionPrescriber = visionPrescriptionPrescriber;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctn() {
-        return this.vsnPrscrptnLnsSpcfctn;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctn(String vsnPrscrptnLnsSpcfctn) {
-        this.vsnPrscrptnLnsSpcfctn = vsnPrscrptnLnsSpcfctn;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd() {
-        return this.vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd(String vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd) {
-        this.vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd = vsnPrscrptnLnsSpcfctnPrdctCdngSrSlctd;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrdctCdngCde() {
-        return this.vsnPrscrptnLnsSpcfctnPrdctCdngCde;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrdctCdngCde(String vsnPrscrptnLnsSpcfctnPrdctCdngCde) {
-        this.vsnPrscrptnLnsSpcfctnPrdctCdngCde = vsnPrscrptnLnsSpcfctnPrdctCdngCde;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrdctCdngVrsn() {
-        return this.vsnPrscrptnLnsSpcfctnPrdctCdngVrsn;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrdctCdngVrsn(String vsnPrscrptnLnsSpcfctnPrdctCdngVrsn) {
-        this.vsnPrscrptnLnsSpcfctnPrdctCdngVrsn = vsnPrscrptnLnsSpcfctnPrdctCdngVrsn;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrdctCdngDsplay() {
-        return this.vsnPrscrptnLnsSpcfctnPrdctCdngDsplay;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrdctCdngDsplay(String vsnPrscrptnLnsSpcfctnPrdctCdngDsplay) {
-        this.vsnPrscrptnLnsSpcfctnPrdctCdngDsplay = vsnPrscrptnLnsSpcfctnPrdctCdngDsplay;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrdctCdngSstm() {
-        return this.vsnPrscrptnLnsSpcfctnPrdctCdngSstm;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrdctCdngSstm(String vsnPrscrptnLnsSpcfctnPrdctCdngSstm) {
-        this.vsnPrscrptnLnsSpcfctnPrdctCdngSstm = vsnPrscrptnLnsSpcfctnPrdctCdngSstm;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnEye() {
-        return this.vsnPrscrptnLnsSpcfctnEye;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnEye(String vsnPrscrptnLnsSpcfctnEye) {
-        this.vsnPrscrptnLnsSpcfctnEye = vsnPrscrptnLnsSpcfctnEye;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnSphre() {
-        return this.vsnPrscrptnLnsSpcfctnSphre;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnSphre(String vsnPrscrptnLnsSpcfctnSphre) {
-        this.vsnPrscrptnLnsSpcfctnSphre = vsnPrscrptnLnsSpcfctnSphre;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnClndr() {
-        return this.vsnPrscrptnLnsSpcfctnClndr;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnClndr(String vsnPrscrptnLnsSpcfctnClndr) {
-        this.vsnPrscrptnLnsSpcfctnClndr = vsnPrscrptnLnsSpcfctnClndr;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnXs() {
-        return this.vsnPrscrptnLnsSpcfctnXs;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnXs(String vsnPrscrptnLnsSpcfctnXs) {
-        this.vsnPrscrptnLnsSpcfctnXs = vsnPrscrptnLnsSpcfctnXs;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrsm() {
-        return this.vsnPrscrptnLnsSpcfctnPrsm;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrsm(String vsnPrscrptnLnsSpcfctnPrsm) {
-        this.vsnPrscrptnLnsSpcfctnPrsm = vsnPrscrptnLnsSpcfctnPrsm;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrsmMnt() {
-        return this.vsnPrscrptnLnsSpcfctnPrsmMnt;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrsmMnt(String vsnPrscrptnLnsSpcfctnPrsmMnt) {
-        this.vsnPrscrptnLnsSpcfctnPrsmMnt = vsnPrscrptnLnsSpcfctnPrsmMnt;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPrsmBse() {
-        return this.vsnPrscrptnLnsSpcfctnPrsmBse;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPrsmBse(String vsnPrscrptnLnsSpcfctnPrsmBse) {
-        this.vsnPrscrptnLnsSpcfctnPrsmBse = vsnPrscrptnLnsSpcfctnPrsmBse;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnDd() {
-        return this.vsnPrscrptnLnsSpcfctnDd;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnDd(String vsnPrscrptnLnsSpcfctnDd) {
-        this.vsnPrscrptnLnsSpcfctnDd = vsnPrscrptnLnsSpcfctnDd;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnPwr() {
-        return this.vsnPrscrptnLnsSpcfctnPwr;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnPwr(String vsnPrscrptnLnsSpcfctnPwr) {
-        this.vsnPrscrptnLnsSpcfctnPwr = vsnPrscrptnLnsSpcfctnPwr;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnBckCrve() {
-        return this.vsnPrscrptnLnsSpcfctnBckCrve;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnBckCrve(String vsnPrscrptnLnsSpcfctnBckCrve) {
-        this.vsnPrscrptnLnsSpcfctnBckCrve = vsnPrscrptnLnsSpcfctnBckCrve;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnDmtr() {
-        return this.vsnPrscrptnLnsSpcfctnDmtr;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnDmtr(String vsnPrscrptnLnsSpcfctnDmtr) {
-        this.vsnPrscrptnLnsSpcfctnDmtr = vsnPrscrptnLnsSpcfctnDmtr;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnDrtn() {
-        return this.vsnPrscrptnLnsSpcfctnDrtn;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnDrtn(String vsnPrscrptnLnsSpcfctnDrtn) {
-        this.vsnPrscrptnLnsSpcfctnDrtn = vsnPrscrptnLnsSpcfctnDrtn;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnClr() {
-        return this.vsnPrscrptnLnsSpcfctnClr;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnClr(String vsnPrscrptnLnsSpcfctnClr) {
-        this.vsnPrscrptnLnsSpcfctnClr = vsnPrscrptnLnsSpcfctnClr;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnBrnd() {
-        return this.vsnPrscrptnLnsSpcfctnBrnd;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnBrnd(String vsnPrscrptnLnsSpcfctnBrnd) {
-        this.vsnPrscrptnLnsSpcfctnBrnd = vsnPrscrptnLnsSpcfctnBrnd;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnNtCdngSrSlctd() {
-        return this.vsnPrscrptnLnsSpcfctnNtCdngSrSlctd;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnNtCdngSrSlctd(String vsnPrscrptnLnsSpcfctnNtCdngSrSlctd) {
-        this.vsnPrscrptnLnsSpcfctnNtCdngSrSlctd = vsnPrscrptnLnsSpcfctnNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnNtCdngCde() {
-        return this.vsnPrscrptnLnsSpcfctnNtCdngCde;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnNtCdngCde(String vsnPrscrptnLnsSpcfctnNtCdngCde) {
-        this.vsnPrscrptnLnsSpcfctnNtCdngCde = vsnPrscrptnLnsSpcfctnNtCdngCde;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnNtCdngVrsn() {
-        return this.vsnPrscrptnLnsSpcfctnNtCdngVrsn;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnNtCdngVrsn(String vsnPrscrptnLnsSpcfctnNtCdngVrsn) {
-        this.vsnPrscrptnLnsSpcfctnNtCdngVrsn = vsnPrscrptnLnsSpcfctnNtCdngVrsn;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnNtCdngDsplay() {
-        return this.vsnPrscrptnLnsSpcfctnNtCdngDsplay;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnNtCdngDsplay(String vsnPrscrptnLnsSpcfctnNtCdngDsplay) {
-        this.vsnPrscrptnLnsSpcfctnNtCdngDsplay = vsnPrscrptnLnsSpcfctnNtCdngDsplay;
-    }
-    
-    
-    
-    public String getVsnPrscrptnLnsSpcfctnNtCdngSstm() {
-        return this.vsnPrscrptnLnsSpcfctnNtCdngSstm;
-    }
-    
-    public void setVsnPrscrptnLnsSpcfctnNtCdngSstm(String vsnPrscrptnLnsSpcfctnNtCdngSstm) {
-        this.vsnPrscrptnLnsSpcfctnNtCdngSstm = vsnPrscrptnLnsSpcfctnNtCdngSstm;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrSe()
+    {
+        return this.vsnPrscrptnDntfrDntfrSe;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrSe
+        (String vsnPrscrptnDntfrDntfrSe) 
+        {
+      this.vsnPrscrptnDntfrDntfrSe = vsnPrscrptnDntfrDntfrSe;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcCSstm()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcCSstm
+        (String vsnPrscrptnDntfrDntfrTpCcCSstm) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcCSstm = vsnPrscrptnDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcCVrsn()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcCVrsn
+        (String vsnPrscrptnDntfrDntfrTpCcCVrsn) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcCVrsn = vsnPrscrptnDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcCCde()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcCCde;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcCCde
+        (String vsnPrscrptnDntfrDntfrTpCcCCde) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcCCde = vsnPrscrptnDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcCDsplay()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcCDsplay
+        (String vsnPrscrptnDntfrDntfrTpCcCDsplay) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcCDsplay = vsnPrscrptnDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcCSrSlctd
+        (String vsnPrscrptnDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcCSrSlctd = vsnPrscrptnDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrTpCcTxt()
+    {
+        return this.vsnPrscrptnDntfrDntfrTpCcTxt;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrTpCcTxt
+        (String vsnPrscrptnDntfrDntfrTpCcTxt) 
+        {
+      this.vsnPrscrptnDntfrDntfrTpCcTxt = vsnPrscrptnDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrPrdPrdStrt()
+    {
+        return this.vsnPrscrptnDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrPrdPrdStrt
+        (String vsnPrscrptnDntfrDntfrPrdPrdStrt) 
+        {
+      this.vsnPrscrptnDntfrDntfrPrdPrdStrt = vsnPrscrptnDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrPrdPrdNd()
+    {
+        return this.vsnPrscrptnDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrPrdPrdNd
+        (String vsnPrscrptnDntfrDntfrPrdPrdNd) 
+        {
+      this.vsnPrscrptnDntfrDntfrPrdPrdNd = vsnPrscrptnDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrSsgnr()
+    {
+        return this.vsnPrscrptnDntfrDntfrSsgnr;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrSsgnr
+        (String vsnPrscrptnDntfrDntfrSsgnr) 
+        {
+      this.vsnPrscrptnDntfrDntfrSsgnr = vsnPrscrptnDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrVlue()
+    {
+        return this.vsnPrscrptnDntfrDntfrVlue;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrVlue
+        (String vsnPrscrptnDntfrDntfrVlue) 
+        {
+      this.vsnPrscrptnDntfrDntfrVlue = vsnPrscrptnDntfrDntfrVlue;
+}
+    public 
+    String 
+    getVsnPrscrptnDntfrDntfrSstm()
+    {
+        return this.vsnPrscrptnDntfrDntfrSstm;
+    }
+    
+    public void setVsnPrscrptnDntfrDntfrSstm
+        (String vsnPrscrptnDntfrDntfrSstm) 
+        {
+      this.vsnPrscrptnDntfrDntfrSstm = vsnPrscrptnDntfrDntfrSstm;
+}
+    public 
+    String 
+    getVisionPrescriptionStatusCode()
+    {
+        return this.visionPrescriptionStatusCode;
+    }
+    
+    public void setVisionPrescriptionStatusCode
+        (String visionPrescriptionStatusCode) 
+        {
+      this.visionPrescriptionStatusCode = visionPrescriptionStatusCode;
+}
+    public 
+    String 
+    getVsnPrscrptnCrtdDtTme()
+    {
+        return this.vsnPrscrptnCrtdDtTme;
+    }
+    
+    public void setVsnPrscrptnCrtdDtTme
+        (String vsnPrscrptnCrtdDtTme) 
+        {
+      this.vsnPrscrptnCrtdDtTme = vsnPrscrptnCrtdDtTme;
+}
+    public 
+    String 
+    getVisionPrescriptionPntReference()
+    {
+        return this.visionPrescriptionPntReference;
+    }
+    
+    public void setVisionPrescriptionPntReference
+        (String visionPrescriptionPntReference) 
+        {
+      this.visionPrescriptionPntReference = visionPrescriptionPntReference;
+}
+    public 
+    String 
+    getVsnPrscrptnNcntrRfrnce()
+    {
+        return this.vsnPrscrptnNcntrRfrnce;
+    }
+    
+    public void setVsnPrscrptnNcntrRfrnce
+        (String vsnPrscrptnNcntrRfrnce) 
+        {
+      this.vsnPrscrptnNcntrRfrnce = vsnPrscrptnNcntrRfrnce;
+}
+    public 
+    String 
+    getVsnPrscrptnDtWrttnDtTme()
+    {
+        return this.vsnPrscrptnDtWrttnDtTme;
+    }
+    
+    public void setVsnPrscrptnDtWrttnDtTme
+        (String vsnPrscrptnDtWrttnDtTme) 
+        {
+      this.vsnPrscrptnDtWrttnDtTme = vsnPrscrptnDtWrttnDtTme;
+}
+    public 
+    String 
+    getVsnPrscrptnPrscrbrRfrnce()
+    {
+        return this.vsnPrscrptnPrscrbrRfrnce;
+    }
+    
+    public void setVsnPrscrptnPrscrbrRfrnce
+        (String vsnPrscrptnPrscrbrRfrnce) 
+        {
+      this.vsnPrscrptnPrscrbrRfrnce = vsnPrscrptnPrscrbrRfrnce;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm
+        (String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm = vsnPrscrptnLnsSpcfctnPrdctCcCdngCSstm;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn
+        (String vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn = vsnPrscrptnLnsSpcfctnPrdctCcCdngCVrsn;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcCdngCCde()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcCdngCCde
+        (String vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde = vsnPrscrptnLnsSpcfctnPrdctCcCdngCCde;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay
+        (String vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay = vsnPrscrptnLnsSpcfctnPrdctCcCdngCDsplay;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd
+        (String vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd = vsnPrscrptnLnsSpcfctnPrdctCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrdctCcTxt()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrdctCcTxt;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrdctCcTxt
+        (String vsnPrscrptnLnsSpcfctnPrdctCcTxt) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrdctCcTxt = vsnPrscrptnLnsSpcfctnPrdctCcTxt;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnCde()
+    {
+        return this.vsnPrscrptnLnsSpcfctnCde;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnCde
+        (String vsnPrscrptnLnsSpcfctnCde) 
+        {
+      this.vsnPrscrptnLnsSpcfctnCde = vsnPrscrptnLnsSpcfctnCde;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnSphrDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnSphrDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnSphrDcml
+        (String vsnPrscrptnLnsSpcfctnSphrDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnSphrDcml = vsnPrscrptnLnsSpcfctnSphrDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnClndrDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnClndrDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnClndrDcml
+        (String vsnPrscrptnLnsSpcfctnClndrDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnClndrDcml = vsnPrscrptnLnsSpcfctnClndrDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnXsNtgr()
+    {
+        return this.vsnPrscrptnLnsSpcfctnXsNtgr;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnXsNtgr
+        (String vsnPrscrptnLnsSpcfctnXsNtgr) 
+        {
+      this.vsnPrscrptnLnsSpcfctnXsNtgr = vsnPrscrptnLnsSpcfctnXsNtgr;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrsmMntDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrsmMntDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrsmMntDcml
+        (String vsnPrscrptnLnsSpcfctnPrsmMntDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrsmMntDcml = vsnPrscrptnLnsSpcfctnPrsmMntDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPrsmBsCde()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPrsmBsCde;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPrsmBsCde
+        (String vsnPrscrptnLnsSpcfctnPrsmBsCde) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPrsmBsCde = vsnPrscrptnLnsSpcfctnPrsmBsCde;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnDdDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnDdDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnDdDcml
+        (String vsnPrscrptnLnsSpcfctnDdDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnDdDcml = vsnPrscrptnLnsSpcfctnDdDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnPwrDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnPwrDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnPwrDcml
+        (String vsnPrscrptnLnsSpcfctnPwrDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnPwrDcml = vsnPrscrptnLnsSpcfctnPwrDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnBckCrvDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnBckCrvDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnBckCrvDcml
+        (String vsnPrscrptnLnsSpcfctnBckCrvDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnBckCrvDcml = vsnPrscrptnLnsSpcfctnBckCrvDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnDmtrDcml()
+    {
+        return this.vsnPrscrptnLnsSpcfctnDmtrDcml;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnDmtrDcml
+        (String vsnPrscrptnLnsSpcfctnDmtrDcml) 
+        {
+      this.vsnPrscrptnLnsSpcfctnDmtrDcml = vsnPrscrptnLnsSpcfctnDmtrDcml;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnDrtnSmplQntty()
+    {
+        return this.vsnPrscrptnLnsSpcfctnDrtnSmplQntty;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnDrtnSmplQntty
+        (String vsnPrscrptnLnsSpcfctnDrtnSmplQntty) 
+        {
+      this.vsnPrscrptnLnsSpcfctnDrtnSmplQntty = vsnPrscrptnLnsSpcfctnDrtnSmplQntty;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnClrStrng()
+    {
+        return this.vsnPrscrptnLnsSpcfctnClrStrng;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnClrStrng
+        (String vsnPrscrptnLnsSpcfctnClrStrng) 
+        {
+      this.vsnPrscrptnLnsSpcfctnClrStrng = vsnPrscrptnLnsSpcfctnClrStrng;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnBrndStrng()
+    {
+        return this.vsnPrscrptnLnsSpcfctnBrndStrng;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnBrndStrng
+        (String vsnPrscrptnLnsSpcfctnBrndStrng) 
+        {
+      this.vsnPrscrptnLnsSpcfctnBrndStrng = vsnPrscrptnLnsSpcfctnBrndStrng;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnNtNnttnTme()
+    {
+        return this.vsnPrscrptnLnsSpcfctnNtNnttnTme;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnNtNnttnTme
+        (String vsnPrscrptnLnsSpcfctnNtNnttnTme) 
+        {
+      this.vsnPrscrptnLnsSpcfctnNtNnttnTme = vsnPrscrptnLnsSpcfctnNtNnttnTme;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnNtNnttnTxt()
+    {
+        return this.vsnPrscrptnLnsSpcfctnNtNnttnTxt;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnNtNnttnTxt
+        (String vsnPrscrptnLnsSpcfctnNtNnttnTxt) 
+        {
+      this.vsnPrscrptnLnsSpcfctnNtNnttnTxt = vsnPrscrptnLnsSpcfctnNtNnttnTxt;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce()
+    {
+        return this.vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce
+        (String vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce) 
+        {
+      this.vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce = vsnPrscrptnLnsSpcfctnNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getVsnPrscrptnLnsSpcfctnNtNnttnThrStrng()
+    {
+        return this.vsnPrscrptnLnsSpcfctnNtNnttnThrStrng;
+    }
+    
+    public void setVsnPrscrptnLnsSpcfctnNtNnttnThrStrng
+        (String vsnPrscrptnLnsSpcfctnNtNnttnThrStrng) 
+        {
+      this.vsnPrscrptnLnsSpcfctnNtNnttnThrStrng = vsnPrscrptnLnsSpcfctnNtNnttnThrStrng;
+}
 
 
 

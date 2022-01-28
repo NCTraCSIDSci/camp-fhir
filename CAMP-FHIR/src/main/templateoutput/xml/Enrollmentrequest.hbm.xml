@@ -1,69 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Enrollmentrequest" optimistic-lock="none" table="enrollmentrequest">
-        <id name="enrllmntRqstDntfrCdngCde" type="string">
-            <column length="512" name="EnrllmntRqst_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="enrllmntRqstDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="EnrllmntRqst_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="enrllmntRqstDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_se">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="enrllmntRqstDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="EnrllmntRqst_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="enrllmntRqstDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="EnrllmntRqst_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="enrllmntRqstDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="EnrllmntRqst_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="EnrollmentRequest_status">
-                <comment>code</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestCreated" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="EnrollmentRequest_created">
-                <comment>dateTime</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestInsurer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="EnrollmentRequest_insurer">
-                <comment>Reference</comment>
+        <property name="enrllmntRqstDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestProvider" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="EnrollmentRequest_provider">
-                <comment>Reference</comment>
+        <property name="enrllmntRqstDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestCandidate" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="EnrollmentRequest_candidate">
-                <comment>Reference</comment>
+        <property name="enrllmntRqstDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="enrollmentRequestCoverage" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="EnrollmentRequest_coverage">
-                <comment>Reference</comment>
+        <property name="enrllmntRqstDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="EnrllmntRqst_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"EnrollmentRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="EnrollmentRequest_status_code">
+                <comment>{ "tree" :"EnrollmentRequest.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
+            </column>
+        </property>
+        <property name="enrollmentRequestCreatedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.created", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreated"}</meta>
+            <column length="65535" name="EnrollmentRequest_created_dateTime">
+                <comment>{ "tree" :"EnrollmentRequest.created", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreated"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstNsrrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.insurer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInsurer"}</meta>
+            <column length="65535" name="EnrllmntRqst_nsrr_Rfrnce">
+                <comment>{ "tree" :"EnrollmentRequest.insurer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setInsurer"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstPrvdrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.provider", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setProvider"}</meta>
+            <column length="65535" name="EnrllmntRqst_prvdr_Rfrnce">
+                <comment>{ "tree" :"EnrollmentRequest.provider", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setProvider"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstCnddtRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.candidate", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCandidate"}</meta>
+            <column length="65535" name="EnrllmntRqst_cnddt_Rfrnce">
+                <comment>{ "tree" :"EnrollmentRequest.candidate", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCandidate"}</comment>
+            </column>
+        </property>
+        <property name="enrllmntRqstCvrgRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"EnrollmentRequest.coverage", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCoverage"}</meta>
+            <column length="65535" name="EnrllmntRqst_cvrg_Rfrnce">
+                <comment>{ "tree" :"EnrollmentRequest.coverage", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCoverage"}</comment>
             </column>
         </property>
     </class>

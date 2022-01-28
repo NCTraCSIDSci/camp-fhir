@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,965 +10,1342 @@ package main.templateoutput.Model;
 public class Goal  implements java.io.Serializable {
 
 
-     private String goalIdentifierCodingCode;
-     private String glDntfrCdngSrSlctd;
-     private String goalIdentifierCodingVersion;
-     private String goalIdentifierCodingDisplay;
-     private String goalIdentifierCodingSystem;
-     private String goalLifecycleStatus;
-     private String glChvmntSttsCdngSrSlctd;
-     private String goalAchievementStatusCodingCode;
-     private String glChvmntSttsCdngVrsn;
-     private String glChvmntSttsCdngDsplay;
-     private String glChvmntSttsCdngSstm;
-     private String goalCategoryCodingUserSelected;
-     private String goalCategoryCodingCode;
-     private String goalCategoryCodingVersion;
-     private String goalCategoryCodingDisplay;
-     private String goalCategoryCodingSystem;
-     private String goalPriorityCodingUserSelected;
-     private String goalPriorityCodingCode;
-     private String goalPriorityCodingVersion;
-     private String goalPriorityCodingDisplay;
-     private String goalPriorityCodingSystem;
-     private String glDscrptnCdngSrSlctd;
-     private String goalDescriptionCodingCode;
-     private String goalDescriptionCodingVersion;
-     private String goalDescriptionCodingDisplay;
-     private String goalDescriptionCodingSystem;
-     private String goalSubject;
-     private String goalStartDate;
-     private String glStrtcdblcptCdngSrSlctd;
-     private String goalStartcdblcptCodingCode;
-     private String goalStartcdblcptCodingVersion;
-     private String goalStartcdblcptCodingDisplay;
-     private String goalStartcdblcptCodingSystem;
-     private String goalTarget;
-     private String glTrgtMsrCdngSrSlctd;
-     private String goalTargetMeasureCodingCode;
-     private String goalTargetMeasureCodingVersion;
-     private String goalTargetMeasureCodingDisplay;
-     private String goalTargetMeasureCodingSystem;
-     private String glTrgtDtlQnttCdngSrSlctd;
-     private String glTrgtDtlQnttCdngCde;
-     private String glTrgtDtlQnttCdngVrsn;
-     private String glTrgtDtlQnttCdngDsplay;
-     private String glTrgtDtlQnttCdngSstm;
-     private String glTrgtDtlRngCdngSrSlctd;
-     private String glTrgtDtlRngCdngCde;
-     private String glTrgtDtlRngCdngVrsn;
-     private String glTrgtDtlRngCdngDsplay;
-     private String glTrgtDtlRngCdngSstm;
-     private String glTrgtDtlcdblcptCdngSrSlctd;
-     private String glTrgtDtlcdblcptCdngCde;
-     private String glTrgtDtlcdblcptCdngVrsn;
-     private String glTrgtDtlcdblcptCdngDsplay;
-     private String glTrgtDtlcdblcptCdngSstm;
-     private String goalTargetDetailString;
-     private String goalTargetDetailBoolean;
-     private String goalTargetDetailInteger;
-     private String glTrgtDtlRtCdngSrSlctd;
-     private String glTrgtDtlRtCdngCde;
-     private String glTrgtDtlRtCdngVrsn;
-     private String glTrgtDtlRtCdngDsplay;
-     private String glTrgtDtlRtCdngSstm;
-     private String goalTargetDueDate;
-     private String goalTargetDueDuration;
-     private String goalStatusDate;
-     private String goalStatusReason;
-     private String goalExpressedBy;
-     private String goalAddresses;
-     private String goalNoteCodingUserSelected;
-     private String goalNoteCodingCode;
-     private String goalNoteCodingVersion;
-     private String goalNoteCodingDisplay;
-     private String goalNoteCodingSystem;
-     private String glTcmCdCdngSrSlctd;
-     private String goalOutcomeCodeCodingCode;
-     private String goalOutcomeCodeCodingVersion;
-     private String goalOutcomeCodeCodingDisplay;
-     private String goalOutcomeCodeCodingSystem;
-     private String goalOutcomeReference;
+     private Integer id;
+     private String goalIdentifierIdentifierUse;
+     private String glDntfrDntfrTpCcCSstm;
+     private String glDntfrDntfrTpCcCVrsn;
+     private String glDntfrDntfrTpCcCCde;
+     private String glDntfrDntfrTpCcCDsplay;
+     private String glDntfrDntfrTpCcCSrSlctd;
+     private String glDntfrDntfrTpCcTxt;
+     private String glDntfrDntfrPrdPrdStrt;
+     private String glDntfrDntfrPrdPrdNd;
+     private String glDntfrDntfrSsgnr;
+     private String goalIdentifierIdentifierValue;
+     private String goalIdentifierIdentifierSystem;
+     private String goalLifecycleStatusCode;
+     private String glChvmntSttsCcCdngCSstm;
+     private String glChvmntSttsCcCdngCVrsn;
+     private String glChvmntSttsCcCdngCCde;
+     private String glChvmntSttsCcCdngCDsplay;
+     private String glChvmntSttsCcCdngCSrSlctd;
+     private String goalAchievementStatusCcText;
+     private String goalCategoryCcCodingCSystem;
+     private String goalCategoryCcCodingCVersion;
+     private String goalCategoryCcCodingCCode;
+     private String goalCategoryCcCodingCDisplay;
+     private String glCtgrCcCdngCSrSlctd;
+     private String goalCategoryCcText;
+     private String goalPriorityCcCodingCSystem;
+     private String goalPriorityCcCodingCVersion;
+     private String goalPriorityCcCodingCCode;
+     private String goalPriorityCcCodingCDisplay;
+     private String glPrrtCcCdngCSrSlctd;
+     private String goalPriorityCcText;
+     private String glDscrptnCcCdngCSstm;
+     private String glDscrptnCcCdngCVrsn;
+     private String goalDescriptionCcCodingCCode;
+     private String glDscrptnCcCdngCDsplay;
+     private String glDscrptnCcCdngCSrSlctd;
+     private String goalDescriptionCcText;
+     private String goalSubjectReference;
+     private String goalStartDateDate;
+     private String glStrtCdblcncptCcCdngCSstm;
+     private String glStrtCdblcncptCcCdngCVrsn;
+     private String glStrtCdblcncptCcCdngCCde;
+     private String glStrtCdblcncptCcCdngCDsplay;
+     private String glStrtCdblcncptCcCdngCSrSlctd;
+     private String goalStartCodeableconceptCcText;
+     private String glTrgtMsrCcCdngCSstm;
+     private String glTrgtMsrCcCdngCVrsn;
+     private String glTrgtMsrCcCdngCCde;
+     private String glTrgtMsrCcCdngCDsplay;
+     private String glTrgtMsrCcCdngCSrSlctd;
+     private String goalTargetMeasureCcText;
+     private String glTrgtDtlQnttQnttCmprtr;
+     private String glTrgtDtlQnttQnttCde;
+     private String glTrgtDtlQnttQnttVlue;
+     private String glTrgtDtlQnttQnttNt;
+     private String glTrgtDtlQnttQnttSstm;
+     private String goalTargetDetailRangeRangeLow;
+     private String goalTargetDetailRangeRangeHigh;
+     private String glTrgtDtlCdblcncptCcCdngCSstm;
+     private String glTrgtDtlCdblcncptCcCdngCVrsn;
+     private String glTrgtDtlCdblcncptCcCdngCCde;
+     private String glTrgtDtlCdblcncptCcCdngCDsplay;
+     private String glTrgtDtlCdblcncptCcCdngCSrSlctd;
+     private String glTrgtDtlCdblcncptCcTxt;
+     private String goalTargetDetailStringString;
+     private String goalTargetDetailBooleanBoolean;
+     private String goalTargetDetailIntegerInteger;
+     private String glTrgtDtlRtRtNmrtrQnttVlue;
+     private String glTrgtDtlRtRtDnmntrQnttVlue;
+     private String glTrgtDtlRtRtNmrtrQnttCmprtr;
+     private String glTrgtDtlRtRtDnmntrQnttCmprtr;
+     private String glTrgtDtlRtRtNmrtrQnttNt;
+     private String glTrgtDtlRtRtDnmntrQnttNt;
+     private String glTrgtDtlRtRtNmrtrQnttSstm;
+     private String glTrgtDtlRtRtDnmntrQnttSstm;
+     private String glTrgtDtlRtRtNmrtrQnttCde;
+     private String glTrgtDtlRtRtDnmntrQnttCde;
+     private String goalTargetDueDateDate;
+     private String goalTargetDueDurationDuration;
+     private String goalStatusDateDate;
+     private String goalStatusReasonString;
+     private String goalExpressedByReference;
+     private String goalAddressesReference;
+     private String goalNoteAnnotationTime;
+     private String goalNoteAnnotationText;
+     private String glNtNnttnThrRfrnce;
+     private String goalNoteAnnotationAuthorString;
+     private String glTcmCdCcCdngCSstm;
+     private String glTcmCdCcCdngCVrsn;
+     private String goalOutcomeCodeCcCodingCCode;
+     private String glTcmCdCcCdngCDsplay;
+     private String glTcmCdCcCdngCSrSlctd;
+     private String goalOutcomeCodeCcText;
+     private String goalOutcomeReferenceReference;
 
     public Goal() {
     }
 
-	
-    public Goal(String goalIdentifierCodingCode) {
-        this.goalIdentifierCodingCode = goalIdentifierCodingCode;
-    }
-    public Goal(String goalIdentifierCodingCode, String glDntfrCdngSrSlctd, String goalIdentifierCodingVersion, String goalIdentifierCodingDisplay, String goalIdentifierCodingSystem, String goalLifecycleStatus, String glChvmntSttsCdngSrSlctd, String goalAchievementStatusCodingCode, String glChvmntSttsCdngVrsn, String glChvmntSttsCdngDsplay, String glChvmntSttsCdngSstm, String goalCategoryCodingUserSelected, String goalCategoryCodingCode, String goalCategoryCodingVersion, String goalCategoryCodingDisplay, String goalCategoryCodingSystem, String goalPriorityCodingUserSelected, String goalPriorityCodingCode, String goalPriorityCodingVersion, String goalPriorityCodingDisplay, String goalPriorityCodingSystem, String glDscrptnCdngSrSlctd, String goalDescriptionCodingCode, String goalDescriptionCodingVersion, String goalDescriptionCodingDisplay, String goalDescriptionCodingSystem, String goalSubject, String goalStartDate, String glStrtcdblcptCdngSrSlctd, String goalStartcdblcptCodingCode, String goalStartcdblcptCodingVersion, String goalStartcdblcptCodingDisplay, String goalStartcdblcptCodingSystem, String goalTarget, String glTrgtMsrCdngSrSlctd, String goalTargetMeasureCodingCode, String goalTargetMeasureCodingVersion, String goalTargetMeasureCodingDisplay, String goalTargetMeasureCodingSystem, String glTrgtDtlQnttCdngSrSlctd, String glTrgtDtlQnttCdngCde, String glTrgtDtlQnttCdngVrsn, String glTrgtDtlQnttCdngDsplay, String glTrgtDtlQnttCdngSstm, String glTrgtDtlRngCdngSrSlctd, String glTrgtDtlRngCdngCde, String glTrgtDtlRngCdngVrsn, String glTrgtDtlRngCdngDsplay, String glTrgtDtlRngCdngSstm, String glTrgtDtlcdblcptCdngSrSlctd, String glTrgtDtlcdblcptCdngCde, String glTrgtDtlcdblcptCdngVrsn, String glTrgtDtlcdblcptCdngDsplay, String glTrgtDtlcdblcptCdngSstm, String goalTargetDetailString, String goalTargetDetailBoolean, String goalTargetDetailInteger, String glTrgtDtlRtCdngSrSlctd, String glTrgtDtlRtCdngCde, String glTrgtDtlRtCdngVrsn, String glTrgtDtlRtCdngDsplay, String glTrgtDtlRtCdngSstm, String goalTargetDueDate, String goalTargetDueDuration, String goalStatusDate, String goalStatusReason, String goalExpressedBy, String goalAddresses, String goalNoteCodingUserSelected, String goalNoteCodingCode, String goalNoteCodingVersion, String goalNoteCodingDisplay, String goalNoteCodingSystem, String glTcmCdCdngSrSlctd, String goalOutcomeCodeCodingCode, String goalOutcomeCodeCodingVersion, String goalOutcomeCodeCodingDisplay, String goalOutcomeCodeCodingSystem, String goalOutcomeReference) {
-       this.goalIdentifierCodingCode = goalIdentifierCodingCode;
-       this.glDntfrCdngSrSlctd = glDntfrCdngSrSlctd;
-       this.goalIdentifierCodingVersion = goalIdentifierCodingVersion;
-       this.goalIdentifierCodingDisplay = goalIdentifierCodingDisplay;
-       this.goalIdentifierCodingSystem = goalIdentifierCodingSystem;
-       this.goalLifecycleStatus = goalLifecycleStatus;
-       this.glChvmntSttsCdngSrSlctd = glChvmntSttsCdngSrSlctd;
-       this.goalAchievementStatusCodingCode = goalAchievementStatusCodingCode;
-       this.glChvmntSttsCdngVrsn = glChvmntSttsCdngVrsn;
-       this.glChvmntSttsCdngDsplay = glChvmntSttsCdngDsplay;
-       this.glChvmntSttsCdngSstm = glChvmntSttsCdngSstm;
-       this.goalCategoryCodingUserSelected = goalCategoryCodingUserSelected;
-       this.goalCategoryCodingCode = goalCategoryCodingCode;
-       this.goalCategoryCodingVersion = goalCategoryCodingVersion;
-       this.goalCategoryCodingDisplay = goalCategoryCodingDisplay;
-       this.goalCategoryCodingSystem = goalCategoryCodingSystem;
-       this.goalPriorityCodingUserSelected = goalPriorityCodingUserSelected;
-       this.goalPriorityCodingCode = goalPriorityCodingCode;
-       this.goalPriorityCodingVersion = goalPriorityCodingVersion;
-       this.goalPriorityCodingDisplay = goalPriorityCodingDisplay;
-       this.goalPriorityCodingSystem = goalPriorityCodingSystem;
-       this.glDscrptnCdngSrSlctd = glDscrptnCdngSrSlctd;
-       this.goalDescriptionCodingCode = goalDescriptionCodingCode;
-       this.goalDescriptionCodingVersion = goalDescriptionCodingVersion;
-       this.goalDescriptionCodingDisplay = goalDescriptionCodingDisplay;
-       this.goalDescriptionCodingSystem = goalDescriptionCodingSystem;
-       this.goalSubject = goalSubject;
-       this.goalStartDate = goalStartDate;
-       this.glStrtcdblcptCdngSrSlctd = glStrtcdblcptCdngSrSlctd;
-       this.goalStartcdblcptCodingCode = goalStartcdblcptCodingCode;
-       this.goalStartcdblcptCodingVersion = goalStartcdblcptCodingVersion;
-       this.goalStartcdblcptCodingDisplay = goalStartcdblcptCodingDisplay;
-       this.goalStartcdblcptCodingSystem = goalStartcdblcptCodingSystem;
-       this.goalTarget = goalTarget;
-       this.glTrgtMsrCdngSrSlctd = glTrgtMsrCdngSrSlctd;
-       this.goalTargetMeasureCodingCode = goalTargetMeasureCodingCode;
-       this.goalTargetMeasureCodingVersion = goalTargetMeasureCodingVersion;
-       this.goalTargetMeasureCodingDisplay = goalTargetMeasureCodingDisplay;
-       this.goalTargetMeasureCodingSystem = goalTargetMeasureCodingSystem;
-       this.glTrgtDtlQnttCdngSrSlctd = glTrgtDtlQnttCdngSrSlctd;
-       this.glTrgtDtlQnttCdngCde = glTrgtDtlQnttCdngCde;
-       this.glTrgtDtlQnttCdngVrsn = glTrgtDtlQnttCdngVrsn;
-       this.glTrgtDtlQnttCdngDsplay = glTrgtDtlQnttCdngDsplay;
-       this.glTrgtDtlQnttCdngSstm = glTrgtDtlQnttCdngSstm;
-       this.glTrgtDtlRngCdngSrSlctd = glTrgtDtlRngCdngSrSlctd;
-       this.glTrgtDtlRngCdngCde = glTrgtDtlRngCdngCde;
-       this.glTrgtDtlRngCdngVrsn = glTrgtDtlRngCdngVrsn;
-       this.glTrgtDtlRngCdngDsplay = glTrgtDtlRngCdngDsplay;
-       this.glTrgtDtlRngCdngSstm = glTrgtDtlRngCdngSstm;
-       this.glTrgtDtlcdblcptCdngSrSlctd = glTrgtDtlcdblcptCdngSrSlctd;
-       this.glTrgtDtlcdblcptCdngCde = glTrgtDtlcdblcptCdngCde;
-       this.glTrgtDtlcdblcptCdngVrsn = glTrgtDtlcdblcptCdngVrsn;
-       this.glTrgtDtlcdblcptCdngDsplay = glTrgtDtlcdblcptCdngDsplay;
-       this.glTrgtDtlcdblcptCdngSstm = glTrgtDtlcdblcptCdngSstm;
-       this.goalTargetDetailString = goalTargetDetailString;
-       this.goalTargetDetailBoolean = goalTargetDetailBoolean;
-       this.goalTargetDetailInteger = goalTargetDetailInteger;
-       this.glTrgtDtlRtCdngSrSlctd = glTrgtDtlRtCdngSrSlctd;
-       this.glTrgtDtlRtCdngCde = glTrgtDtlRtCdngCde;
-       this.glTrgtDtlRtCdngVrsn = glTrgtDtlRtCdngVrsn;
-       this.glTrgtDtlRtCdngDsplay = glTrgtDtlRtCdngDsplay;
-       this.glTrgtDtlRtCdngSstm = glTrgtDtlRtCdngSstm;
-       this.goalTargetDueDate = goalTargetDueDate;
-       this.goalTargetDueDuration = goalTargetDueDuration;
-       this.goalStatusDate = goalStatusDate;
-       this.goalStatusReason = goalStatusReason;
-       this.goalExpressedBy = goalExpressedBy;
-       this.goalAddresses = goalAddresses;
-       this.goalNoteCodingUserSelected = goalNoteCodingUserSelected;
-       this.goalNoteCodingCode = goalNoteCodingCode;
-       this.goalNoteCodingVersion = goalNoteCodingVersion;
-       this.goalNoteCodingDisplay = goalNoteCodingDisplay;
-       this.goalNoteCodingSystem = goalNoteCodingSystem;
-       this.glTcmCdCdngSrSlctd = glTcmCdCdngSrSlctd;
-       this.goalOutcomeCodeCodingCode = goalOutcomeCodeCodingCode;
-       this.goalOutcomeCodeCodingVersion = goalOutcomeCodeCodingVersion;
-       this.goalOutcomeCodeCodingDisplay = goalOutcomeCodeCodingDisplay;
-       this.goalOutcomeCodeCodingSystem = goalOutcomeCodeCodingSystem;
-       this.goalOutcomeReference = goalOutcomeReference;
+    public Goal(String goalIdentifierIdentifierUse, String glDntfrDntfrTpCcCSstm, String glDntfrDntfrTpCcCVrsn, String glDntfrDntfrTpCcCCde, String glDntfrDntfrTpCcCDsplay, String glDntfrDntfrTpCcCSrSlctd, String glDntfrDntfrTpCcTxt, String glDntfrDntfrPrdPrdStrt, String glDntfrDntfrPrdPrdNd, String glDntfrDntfrSsgnr, String goalIdentifierIdentifierValue, String goalIdentifierIdentifierSystem, String goalLifecycleStatusCode, String glChvmntSttsCcCdngCSstm, String glChvmntSttsCcCdngCVrsn, String glChvmntSttsCcCdngCCde, String glChvmntSttsCcCdngCDsplay, String glChvmntSttsCcCdngCSrSlctd, String goalAchievementStatusCcText, String goalCategoryCcCodingCSystem, String goalCategoryCcCodingCVersion, String goalCategoryCcCodingCCode, String goalCategoryCcCodingCDisplay, String glCtgrCcCdngCSrSlctd, String goalCategoryCcText, String goalPriorityCcCodingCSystem, String goalPriorityCcCodingCVersion, String goalPriorityCcCodingCCode, String goalPriorityCcCodingCDisplay, String glPrrtCcCdngCSrSlctd, String goalPriorityCcText, String glDscrptnCcCdngCSstm, String glDscrptnCcCdngCVrsn, String goalDescriptionCcCodingCCode, String glDscrptnCcCdngCDsplay, String glDscrptnCcCdngCSrSlctd, String goalDescriptionCcText, String goalSubjectReference, String goalStartDateDate, String glStrtCdblcncptCcCdngCSstm, String glStrtCdblcncptCcCdngCVrsn, String glStrtCdblcncptCcCdngCCde, String glStrtCdblcncptCcCdngCDsplay, String glStrtCdblcncptCcCdngCSrSlctd, String goalStartCodeableconceptCcText, String glTrgtMsrCcCdngCSstm, String glTrgtMsrCcCdngCVrsn, String glTrgtMsrCcCdngCCde, String glTrgtMsrCcCdngCDsplay, String glTrgtMsrCcCdngCSrSlctd, String goalTargetMeasureCcText, String glTrgtDtlQnttQnttCmprtr, String glTrgtDtlQnttQnttCde, String glTrgtDtlQnttQnttVlue, String glTrgtDtlQnttQnttNt, String glTrgtDtlQnttQnttSstm, String goalTargetDetailRangeRangeLow, String goalTargetDetailRangeRangeHigh, String glTrgtDtlCdblcncptCcCdngCSstm, String glTrgtDtlCdblcncptCcCdngCVrsn, String glTrgtDtlCdblcncptCcCdngCCde, String glTrgtDtlCdblcncptCcCdngCDsplay, String glTrgtDtlCdblcncptCcCdngCSrSlctd, String glTrgtDtlCdblcncptCcTxt, String goalTargetDetailStringString, String goalTargetDetailBooleanBoolean, String goalTargetDetailIntegerInteger, String glTrgtDtlRtRtNmrtrQnttVlue, String glTrgtDtlRtRtDnmntrQnttVlue, String glTrgtDtlRtRtNmrtrQnttCmprtr, String glTrgtDtlRtRtDnmntrQnttCmprtr, String glTrgtDtlRtRtNmrtrQnttNt, String glTrgtDtlRtRtDnmntrQnttNt, String glTrgtDtlRtRtNmrtrQnttSstm, String glTrgtDtlRtRtDnmntrQnttSstm, String glTrgtDtlRtRtNmrtrQnttCde, String glTrgtDtlRtRtDnmntrQnttCde, String goalTargetDueDateDate, String goalTargetDueDurationDuration, String goalStatusDateDate, String goalStatusReasonString, String goalExpressedByReference, String goalAddressesReference, String goalNoteAnnotationTime, String goalNoteAnnotationText, String glNtNnttnThrRfrnce, String goalNoteAnnotationAuthorString, String glTcmCdCcCdngCSstm, String glTcmCdCcCdngCVrsn, String goalOutcomeCodeCcCodingCCode, String glTcmCdCcCdngCDsplay, String glTcmCdCcCdngCSrSlctd, String goalOutcomeCodeCcText, String goalOutcomeReferenceReference) {
+       this.goalIdentifierIdentifierUse = goalIdentifierIdentifierUse;
+       this.glDntfrDntfrTpCcCSstm = glDntfrDntfrTpCcCSstm;
+       this.glDntfrDntfrTpCcCVrsn = glDntfrDntfrTpCcCVrsn;
+       this.glDntfrDntfrTpCcCCde = glDntfrDntfrTpCcCCde;
+       this.glDntfrDntfrTpCcCDsplay = glDntfrDntfrTpCcCDsplay;
+       this.glDntfrDntfrTpCcCSrSlctd = glDntfrDntfrTpCcCSrSlctd;
+       this.glDntfrDntfrTpCcTxt = glDntfrDntfrTpCcTxt;
+       this.glDntfrDntfrPrdPrdStrt = glDntfrDntfrPrdPrdStrt;
+       this.glDntfrDntfrPrdPrdNd = glDntfrDntfrPrdPrdNd;
+       this.glDntfrDntfrSsgnr = glDntfrDntfrSsgnr;
+       this.goalIdentifierIdentifierValue = goalIdentifierIdentifierValue;
+       this.goalIdentifierIdentifierSystem = goalIdentifierIdentifierSystem;
+       this.goalLifecycleStatusCode = goalLifecycleStatusCode;
+       this.glChvmntSttsCcCdngCSstm = glChvmntSttsCcCdngCSstm;
+       this.glChvmntSttsCcCdngCVrsn = glChvmntSttsCcCdngCVrsn;
+       this.glChvmntSttsCcCdngCCde = glChvmntSttsCcCdngCCde;
+       this.glChvmntSttsCcCdngCDsplay = glChvmntSttsCcCdngCDsplay;
+       this.glChvmntSttsCcCdngCSrSlctd = glChvmntSttsCcCdngCSrSlctd;
+       this.goalAchievementStatusCcText = goalAchievementStatusCcText;
+       this.goalCategoryCcCodingCSystem = goalCategoryCcCodingCSystem;
+       this.goalCategoryCcCodingCVersion = goalCategoryCcCodingCVersion;
+       this.goalCategoryCcCodingCCode = goalCategoryCcCodingCCode;
+       this.goalCategoryCcCodingCDisplay = goalCategoryCcCodingCDisplay;
+       this.glCtgrCcCdngCSrSlctd = glCtgrCcCdngCSrSlctd;
+       this.goalCategoryCcText = goalCategoryCcText;
+       this.goalPriorityCcCodingCSystem = goalPriorityCcCodingCSystem;
+       this.goalPriorityCcCodingCVersion = goalPriorityCcCodingCVersion;
+       this.goalPriorityCcCodingCCode = goalPriorityCcCodingCCode;
+       this.goalPriorityCcCodingCDisplay = goalPriorityCcCodingCDisplay;
+       this.glPrrtCcCdngCSrSlctd = glPrrtCcCdngCSrSlctd;
+       this.goalPriorityCcText = goalPriorityCcText;
+       this.glDscrptnCcCdngCSstm = glDscrptnCcCdngCSstm;
+       this.glDscrptnCcCdngCVrsn = glDscrptnCcCdngCVrsn;
+       this.goalDescriptionCcCodingCCode = goalDescriptionCcCodingCCode;
+       this.glDscrptnCcCdngCDsplay = glDscrptnCcCdngCDsplay;
+       this.glDscrptnCcCdngCSrSlctd = glDscrptnCcCdngCSrSlctd;
+       this.goalDescriptionCcText = goalDescriptionCcText;
+       this.goalSubjectReference = goalSubjectReference;
+       this.goalStartDateDate = goalStartDateDate;
+       this.glStrtCdblcncptCcCdngCSstm = glStrtCdblcncptCcCdngCSstm;
+       this.glStrtCdblcncptCcCdngCVrsn = glStrtCdblcncptCcCdngCVrsn;
+       this.glStrtCdblcncptCcCdngCCde = glStrtCdblcncptCcCdngCCde;
+       this.glStrtCdblcncptCcCdngCDsplay = glStrtCdblcncptCcCdngCDsplay;
+       this.glStrtCdblcncptCcCdngCSrSlctd = glStrtCdblcncptCcCdngCSrSlctd;
+       this.goalStartCodeableconceptCcText = goalStartCodeableconceptCcText;
+       this.glTrgtMsrCcCdngCSstm = glTrgtMsrCcCdngCSstm;
+       this.glTrgtMsrCcCdngCVrsn = glTrgtMsrCcCdngCVrsn;
+       this.glTrgtMsrCcCdngCCde = glTrgtMsrCcCdngCCde;
+       this.glTrgtMsrCcCdngCDsplay = glTrgtMsrCcCdngCDsplay;
+       this.glTrgtMsrCcCdngCSrSlctd = glTrgtMsrCcCdngCSrSlctd;
+       this.goalTargetMeasureCcText = goalTargetMeasureCcText;
+       this.glTrgtDtlQnttQnttCmprtr = glTrgtDtlQnttQnttCmprtr;
+       this.glTrgtDtlQnttQnttCde = glTrgtDtlQnttQnttCde;
+       this.glTrgtDtlQnttQnttVlue = glTrgtDtlQnttQnttVlue;
+       this.glTrgtDtlQnttQnttNt = glTrgtDtlQnttQnttNt;
+       this.glTrgtDtlQnttQnttSstm = glTrgtDtlQnttQnttSstm;
+       this.goalTargetDetailRangeRangeLow = goalTargetDetailRangeRangeLow;
+       this.goalTargetDetailRangeRangeHigh = goalTargetDetailRangeRangeHigh;
+       this.glTrgtDtlCdblcncptCcCdngCSstm = glTrgtDtlCdblcncptCcCdngCSstm;
+       this.glTrgtDtlCdblcncptCcCdngCVrsn = glTrgtDtlCdblcncptCcCdngCVrsn;
+       this.glTrgtDtlCdblcncptCcCdngCCde = glTrgtDtlCdblcncptCcCdngCCde;
+       this.glTrgtDtlCdblcncptCcCdngCDsplay = glTrgtDtlCdblcncptCcCdngCDsplay;
+       this.glTrgtDtlCdblcncptCcCdngCSrSlctd = glTrgtDtlCdblcncptCcCdngCSrSlctd;
+       this.glTrgtDtlCdblcncptCcTxt = glTrgtDtlCdblcncptCcTxt;
+       this.goalTargetDetailStringString = goalTargetDetailStringString;
+       this.goalTargetDetailBooleanBoolean = goalTargetDetailBooleanBoolean;
+       this.goalTargetDetailIntegerInteger = goalTargetDetailIntegerInteger;
+       this.glTrgtDtlRtRtNmrtrQnttVlue = glTrgtDtlRtRtNmrtrQnttVlue;
+       this.glTrgtDtlRtRtDnmntrQnttVlue = glTrgtDtlRtRtDnmntrQnttVlue;
+       this.glTrgtDtlRtRtNmrtrQnttCmprtr = glTrgtDtlRtRtNmrtrQnttCmprtr;
+       this.glTrgtDtlRtRtDnmntrQnttCmprtr = glTrgtDtlRtRtDnmntrQnttCmprtr;
+       this.glTrgtDtlRtRtNmrtrQnttNt = glTrgtDtlRtRtNmrtrQnttNt;
+       this.glTrgtDtlRtRtDnmntrQnttNt = glTrgtDtlRtRtDnmntrQnttNt;
+       this.glTrgtDtlRtRtNmrtrQnttSstm = glTrgtDtlRtRtNmrtrQnttSstm;
+       this.glTrgtDtlRtRtDnmntrQnttSstm = glTrgtDtlRtRtDnmntrQnttSstm;
+       this.glTrgtDtlRtRtNmrtrQnttCde = glTrgtDtlRtRtNmrtrQnttCde;
+       this.glTrgtDtlRtRtDnmntrQnttCde = glTrgtDtlRtRtDnmntrQnttCde;
+       this.goalTargetDueDateDate = goalTargetDueDateDate;
+       this.goalTargetDueDurationDuration = goalTargetDueDurationDuration;
+       this.goalStatusDateDate = goalStatusDateDate;
+       this.goalStatusReasonString = goalStatusReasonString;
+       this.goalExpressedByReference = goalExpressedByReference;
+       this.goalAddressesReference = goalAddressesReference;
+       this.goalNoteAnnotationTime = goalNoteAnnotationTime;
+       this.goalNoteAnnotationText = goalNoteAnnotationText;
+       this.glNtNnttnThrRfrnce = glNtNnttnThrRfrnce;
+       this.goalNoteAnnotationAuthorString = goalNoteAnnotationAuthorString;
+       this.glTcmCdCcCdngCSstm = glTcmCdCcCdngCSstm;
+       this.glTcmCdCcCdngCVrsn = glTcmCdCcCdngCVrsn;
+       this.goalOutcomeCodeCcCodingCCode = goalOutcomeCodeCcCodingCCode;
+       this.glTcmCdCcCdngCDsplay = glTcmCdCcCdngCDsplay;
+       this.glTcmCdCcCdngCSrSlctd = glTcmCdCcCdngCSrSlctd;
+       this.goalOutcomeCodeCcText = goalOutcomeCodeCcText;
+       this.goalOutcomeReferenceReference = goalOutcomeReferenceReference;
     }
    
-    public String getGoalIdentifierCodingCode() {
-        return this.goalIdentifierCodingCode;
-    }
-    
-    public void setGoalIdentifierCodingCode(String goalIdentifierCodingCode) {
-        this.goalIdentifierCodingCode = goalIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getGlDntfrCdngSrSlctd() {
-        return this.glDntfrCdngSrSlctd;
-    }
-    
-    public void setGlDntfrCdngSrSlctd(String glDntfrCdngSrSlctd) {
-        this.glDntfrCdngSrSlctd = glDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalIdentifierCodingVersion() {
-        return this.goalIdentifierCodingVersion;
-    }
-    
-    public void setGoalIdentifierCodingVersion(String goalIdentifierCodingVersion) {
-        this.goalIdentifierCodingVersion = goalIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getGoalIdentifierCodingDisplay() {
-        return this.goalIdentifierCodingDisplay;
-    }
-    
-    public void setGoalIdentifierCodingDisplay(String goalIdentifierCodingDisplay) {
-        this.goalIdentifierCodingDisplay = goalIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalIdentifierCodingSystem() {
-        return this.goalIdentifierCodingSystem;
-    }
-    
-    public void setGoalIdentifierCodingSystem(String goalIdentifierCodingSystem) {
-        this.goalIdentifierCodingSystem = goalIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getGoalLifecycleStatus() {
-        return this.goalLifecycleStatus;
-    }
-    
-    public void setGoalLifecycleStatus(String goalLifecycleStatus) {
-        this.goalLifecycleStatus = goalLifecycleStatus;
-    }
-    
-    
-    
-    public String getGlChvmntSttsCdngSrSlctd() {
-        return this.glChvmntSttsCdngSrSlctd;
-    }
-    
-    public void setGlChvmntSttsCdngSrSlctd(String glChvmntSttsCdngSrSlctd) {
-        this.glChvmntSttsCdngSrSlctd = glChvmntSttsCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalAchievementStatusCodingCode() {
-        return this.goalAchievementStatusCodingCode;
-    }
-    
-    public void setGoalAchievementStatusCodingCode(String goalAchievementStatusCodingCode) {
-        this.goalAchievementStatusCodingCode = goalAchievementStatusCodingCode;
-    }
-    
-    
-    
-    public String getGlChvmntSttsCdngVrsn() {
-        return this.glChvmntSttsCdngVrsn;
-    }
-    
-    public void setGlChvmntSttsCdngVrsn(String glChvmntSttsCdngVrsn) {
-        this.glChvmntSttsCdngVrsn = glChvmntSttsCdngVrsn;
-    }
-    
-    
-    
-    public String getGlChvmntSttsCdngDsplay() {
-        return this.glChvmntSttsCdngDsplay;
-    }
-    
-    public void setGlChvmntSttsCdngDsplay(String glChvmntSttsCdngDsplay) {
-        this.glChvmntSttsCdngDsplay = glChvmntSttsCdngDsplay;
-    }
-    
-    
-    
-    public String getGlChvmntSttsCdngSstm() {
-        return this.glChvmntSttsCdngSstm;
-    }
-    
-    public void setGlChvmntSttsCdngSstm(String glChvmntSttsCdngSstm) {
-        this.glChvmntSttsCdngSstm = glChvmntSttsCdngSstm;
-    }
-    
-    
-    
-    public String getGoalCategoryCodingUserSelected() {
-        return this.goalCategoryCodingUserSelected;
-    }
-    
-    public void setGoalCategoryCodingUserSelected(String goalCategoryCodingUserSelected) {
-        this.goalCategoryCodingUserSelected = goalCategoryCodingUserSelected;
-    }
-    
-    
-    
-    public String getGoalCategoryCodingCode() {
-        return this.goalCategoryCodingCode;
-    }
-    
-    public void setGoalCategoryCodingCode(String goalCategoryCodingCode) {
-        this.goalCategoryCodingCode = goalCategoryCodingCode;
-    }
-    
-    
-    
-    public String getGoalCategoryCodingVersion() {
-        return this.goalCategoryCodingVersion;
-    }
-    
-    public void setGoalCategoryCodingVersion(String goalCategoryCodingVersion) {
-        this.goalCategoryCodingVersion = goalCategoryCodingVersion;
-    }
-    
-    
-    
-    public String getGoalCategoryCodingDisplay() {
-        return this.goalCategoryCodingDisplay;
-    }
-    
-    public void setGoalCategoryCodingDisplay(String goalCategoryCodingDisplay) {
-        this.goalCategoryCodingDisplay = goalCategoryCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalCategoryCodingSystem() {
-        return this.goalCategoryCodingSystem;
-    }
-    
-    public void setGoalCategoryCodingSystem(String goalCategoryCodingSystem) {
-        this.goalCategoryCodingSystem = goalCategoryCodingSystem;
-    }
-    
-    
-    
-    public String getGoalPriorityCodingUserSelected() {
-        return this.goalPriorityCodingUserSelected;
-    }
-    
-    public void setGoalPriorityCodingUserSelected(String goalPriorityCodingUserSelected) {
-        this.goalPriorityCodingUserSelected = goalPriorityCodingUserSelected;
-    }
-    
-    
-    
-    public String getGoalPriorityCodingCode() {
-        return this.goalPriorityCodingCode;
-    }
-    
-    public void setGoalPriorityCodingCode(String goalPriorityCodingCode) {
-        this.goalPriorityCodingCode = goalPriorityCodingCode;
-    }
-    
-    
-    
-    public String getGoalPriorityCodingVersion() {
-        return this.goalPriorityCodingVersion;
-    }
-    
-    public void setGoalPriorityCodingVersion(String goalPriorityCodingVersion) {
-        this.goalPriorityCodingVersion = goalPriorityCodingVersion;
-    }
-    
-    
-    
-    public String getGoalPriorityCodingDisplay() {
-        return this.goalPriorityCodingDisplay;
-    }
-    
-    public void setGoalPriorityCodingDisplay(String goalPriorityCodingDisplay) {
-        this.goalPriorityCodingDisplay = goalPriorityCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalPriorityCodingSystem() {
-        return this.goalPriorityCodingSystem;
-    }
-    
-    public void setGoalPriorityCodingSystem(String goalPriorityCodingSystem) {
-        this.goalPriorityCodingSystem = goalPriorityCodingSystem;
-    }
-    
-    
-    
-    public String getGlDscrptnCdngSrSlctd() {
-        return this.glDscrptnCdngSrSlctd;
-    }
-    
-    public void setGlDscrptnCdngSrSlctd(String glDscrptnCdngSrSlctd) {
-        this.glDscrptnCdngSrSlctd = glDscrptnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalDescriptionCodingCode() {
-        return this.goalDescriptionCodingCode;
-    }
-    
-    public void setGoalDescriptionCodingCode(String goalDescriptionCodingCode) {
-        this.goalDescriptionCodingCode = goalDescriptionCodingCode;
-    }
-    
-    
-    
-    public String getGoalDescriptionCodingVersion() {
-        return this.goalDescriptionCodingVersion;
-    }
-    
-    public void setGoalDescriptionCodingVersion(String goalDescriptionCodingVersion) {
-        this.goalDescriptionCodingVersion = goalDescriptionCodingVersion;
-    }
-    
-    
-    
-    public String getGoalDescriptionCodingDisplay() {
-        return this.goalDescriptionCodingDisplay;
-    }
-    
-    public void setGoalDescriptionCodingDisplay(String goalDescriptionCodingDisplay) {
-        this.goalDescriptionCodingDisplay = goalDescriptionCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalDescriptionCodingSystem() {
-        return this.goalDescriptionCodingSystem;
-    }
-    
-    public void setGoalDescriptionCodingSystem(String goalDescriptionCodingSystem) {
-        this.goalDescriptionCodingSystem = goalDescriptionCodingSystem;
-    }
-    
-    
-    
-    public String getGoalSubject() {
-        return this.goalSubject;
-    }
-    
-    public void setGoalSubject(String goalSubject) {
-        this.goalSubject = goalSubject;
-    }
-    
-    
-    
-    public String getGoalStartDate() {
-        return this.goalStartDate;
-    }
-    
-    public void setGoalStartDate(String goalStartDate) {
-        this.goalStartDate = goalStartDate;
-    }
-    
-    
-    
-    public String getGlStrtcdblcptCdngSrSlctd() {
-        return this.glStrtcdblcptCdngSrSlctd;
-    }
-    
-    public void setGlStrtcdblcptCdngSrSlctd(String glStrtcdblcptCdngSrSlctd) {
-        this.glStrtcdblcptCdngSrSlctd = glStrtcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalStartcdblcptCodingCode() {
-        return this.goalStartcdblcptCodingCode;
-    }
-    
-    public void setGoalStartcdblcptCodingCode(String goalStartcdblcptCodingCode) {
-        this.goalStartcdblcptCodingCode = goalStartcdblcptCodingCode;
-    }
-    
-    
-    
-    public String getGoalStartcdblcptCodingVersion() {
-        return this.goalStartcdblcptCodingVersion;
-    }
-    
-    public void setGoalStartcdblcptCodingVersion(String goalStartcdblcptCodingVersion) {
-        this.goalStartcdblcptCodingVersion = goalStartcdblcptCodingVersion;
-    }
-    
-    
-    
-    public String getGoalStartcdblcptCodingDisplay() {
-        return this.goalStartcdblcptCodingDisplay;
-    }
-    
-    public void setGoalStartcdblcptCodingDisplay(String goalStartcdblcptCodingDisplay) {
-        this.goalStartcdblcptCodingDisplay = goalStartcdblcptCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalStartcdblcptCodingSystem() {
-        return this.goalStartcdblcptCodingSystem;
-    }
-    
-    public void setGoalStartcdblcptCodingSystem(String goalStartcdblcptCodingSystem) {
-        this.goalStartcdblcptCodingSystem = goalStartcdblcptCodingSystem;
-    }
-    
-    
-    
-    public String getGoalTarget() {
-        return this.goalTarget;
-    }
-    
-    public void setGoalTarget(String goalTarget) {
-        this.goalTarget = goalTarget;
-    }
-    
-    
-    
-    public String getGlTrgtMsrCdngSrSlctd() {
-        return this.glTrgtMsrCdngSrSlctd;
-    }
-    
-    public void setGlTrgtMsrCdngSrSlctd(String glTrgtMsrCdngSrSlctd) {
-        this.glTrgtMsrCdngSrSlctd = glTrgtMsrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalTargetMeasureCodingCode() {
-        return this.goalTargetMeasureCodingCode;
-    }
-    
-    public void setGoalTargetMeasureCodingCode(String goalTargetMeasureCodingCode) {
-        this.goalTargetMeasureCodingCode = goalTargetMeasureCodingCode;
-    }
-    
-    
-    
-    public String getGoalTargetMeasureCodingVersion() {
-        return this.goalTargetMeasureCodingVersion;
-    }
-    
-    public void setGoalTargetMeasureCodingVersion(String goalTargetMeasureCodingVersion) {
-        this.goalTargetMeasureCodingVersion = goalTargetMeasureCodingVersion;
-    }
-    
-    
-    
-    public String getGoalTargetMeasureCodingDisplay() {
-        return this.goalTargetMeasureCodingDisplay;
-    }
-    
-    public void setGoalTargetMeasureCodingDisplay(String goalTargetMeasureCodingDisplay) {
-        this.goalTargetMeasureCodingDisplay = goalTargetMeasureCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalTargetMeasureCodingSystem() {
-        return this.goalTargetMeasureCodingSystem;
-    }
-    
-    public void setGoalTargetMeasureCodingSystem(String goalTargetMeasureCodingSystem) {
-        this.goalTargetMeasureCodingSystem = goalTargetMeasureCodingSystem;
-    }
-    
-    
-    
-    public String getGlTrgtDtlQnttCdngSrSlctd() {
-        return this.glTrgtDtlQnttCdngSrSlctd;
-    }
-    
-    public void setGlTrgtDtlQnttCdngSrSlctd(String glTrgtDtlQnttCdngSrSlctd) {
-        this.glTrgtDtlQnttCdngSrSlctd = glTrgtDtlQnttCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGlTrgtDtlQnttCdngCde() {
-        return this.glTrgtDtlQnttCdngCde;
-    }
-    
-    public void setGlTrgtDtlQnttCdngCde(String glTrgtDtlQnttCdngCde) {
-        this.glTrgtDtlQnttCdngCde = glTrgtDtlQnttCdngCde;
-    }
-    
-    
-    
-    public String getGlTrgtDtlQnttCdngVrsn() {
-        return this.glTrgtDtlQnttCdngVrsn;
-    }
-    
-    public void setGlTrgtDtlQnttCdngVrsn(String glTrgtDtlQnttCdngVrsn) {
-        this.glTrgtDtlQnttCdngVrsn = glTrgtDtlQnttCdngVrsn;
-    }
-    
-    
-    
-    public String getGlTrgtDtlQnttCdngDsplay() {
-        return this.glTrgtDtlQnttCdngDsplay;
-    }
-    
-    public void setGlTrgtDtlQnttCdngDsplay(String glTrgtDtlQnttCdngDsplay) {
-        this.glTrgtDtlQnttCdngDsplay = glTrgtDtlQnttCdngDsplay;
-    }
-    
-    
-    
-    public String getGlTrgtDtlQnttCdngSstm() {
-        return this.glTrgtDtlQnttCdngSstm;
-    }
-    
-    public void setGlTrgtDtlQnttCdngSstm(String glTrgtDtlQnttCdngSstm) {
-        this.glTrgtDtlQnttCdngSstm = glTrgtDtlQnttCdngSstm;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRngCdngSrSlctd() {
-        return this.glTrgtDtlRngCdngSrSlctd;
-    }
-    
-    public void setGlTrgtDtlRngCdngSrSlctd(String glTrgtDtlRngCdngSrSlctd) {
-        this.glTrgtDtlRngCdngSrSlctd = glTrgtDtlRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRngCdngCde() {
-        return this.glTrgtDtlRngCdngCde;
-    }
-    
-    public void setGlTrgtDtlRngCdngCde(String glTrgtDtlRngCdngCde) {
-        this.glTrgtDtlRngCdngCde = glTrgtDtlRngCdngCde;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRngCdngVrsn() {
-        return this.glTrgtDtlRngCdngVrsn;
-    }
-    
-    public void setGlTrgtDtlRngCdngVrsn(String glTrgtDtlRngCdngVrsn) {
-        this.glTrgtDtlRngCdngVrsn = glTrgtDtlRngCdngVrsn;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRngCdngDsplay() {
-        return this.glTrgtDtlRngCdngDsplay;
-    }
-    
-    public void setGlTrgtDtlRngCdngDsplay(String glTrgtDtlRngCdngDsplay) {
-        this.glTrgtDtlRngCdngDsplay = glTrgtDtlRngCdngDsplay;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRngCdngSstm() {
-        return this.glTrgtDtlRngCdngSstm;
-    }
-    
-    public void setGlTrgtDtlRngCdngSstm(String glTrgtDtlRngCdngSstm) {
-        this.glTrgtDtlRngCdngSstm = glTrgtDtlRngCdngSstm;
-    }
-    
-    
-    
-    public String getGlTrgtDtlcdblcptCdngSrSlctd() {
-        return this.glTrgtDtlcdblcptCdngSrSlctd;
-    }
-    
-    public void setGlTrgtDtlcdblcptCdngSrSlctd(String glTrgtDtlcdblcptCdngSrSlctd) {
-        this.glTrgtDtlcdblcptCdngSrSlctd = glTrgtDtlcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGlTrgtDtlcdblcptCdngCde() {
-        return this.glTrgtDtlcdblcptCdngCde;
-    }
-    
-    public void setGlTrgtDtlcdblcptCdngCde(String glTrgtDtlcdblcptCdngCde) {
-        this.glTrgtDtlcdblcptCdngCde = glTrgtDtlcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getGlTrgtDtlcdblcptCdngVrsn() {
-        return this.glTrgtDtlcdblcptCdngVrsn;
-    }
-    
-    public void setGlTrgtDtlcdblcptCdngVrsn(String glTrgtDtlcdblcptCdngVrsn) {
-        this.glTrgtDtlcdblcptCdngVrsn = glTrgtDtlcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getGlTrgtDtlcdblcptCdngDsplay() {
-        return this.glTrgtDtlcdblcptCdngDsplay;
-    }
-    
-    public void setGlTrgtDtlcdblcptCdngDsplay(String glTrgtDtlcdblcptCdngDsplay) {
-        this.glTrgtDtlcdblcptCdngDsplay = glTrgtDtlcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getGlTrgtDtlcdblcptCdngSstm() {
-        return this.glTrgtDtlcdblcptCdngSstm;
-    }
-    
-    public void setGlTrgtDtlcdblcptCdngSstm(String glTrgtDtlcdblcptCdngSstm) {
-        this.glTrgtDtlcdblcptCdngSstm = glTrgtDtlcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getGoalTargetDetailString() {
-        return this.goalTargetDetailString;
-    }
-    
-    public void setGoalTargetDetailString(String goalTargetDetailString) {
-        this.goalTargetDetailString = goalTargetDetailString;
-    }
-    
-    
-    
-    public String getGoalTargetDetailBoolean() {
-        return this.goalTargetDetailBoolean;
-    }
-    
-    public void setGoalTargetDetailBoolean(String goalTargetDetailBoolean) {
-        this.goalTargetDetailBoolean = goalTargetDetailBoolean;
-    }
-    
-    
-    
-    public String getGoalTargetDetailInteger() {
-        return this.goalTargetDetailInteger;
-    }
-    
-    public void setGoalTargetDetailInteger(String goalTargetDetailInteger) {
-        this.goalTargetDetailInteger = goalTargetDetailInteger;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRtCdngSrSlctd() {
-        return this.glTrgtDtlRtCdngSrSlctd;
-    }
-    
-    public void setGlTrgtDtlRtCdngSrSlctd(String glTrgtDtlRtCdngSrSlctd) {
-        this.glTrgtDtlRtCdngSrSlctd = glTrgtDtlRtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRtCdngCde() {
-        return this.glTrgtDtlRtCdngCde;
-    }
-    
-    public void setGlTrgtDtlRtCdngCde(String glTrgtDtlRtCdngCde) {
-        this.glTrgtDtlRtCdngCde = glTrgtDtlRtCdngCde;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRtCdngVrsn() {
-        return this.glTrgtDtlRtCdngVrsn;
-    }
-    
-    public void setGlTrgtDtlRtCdngVrsn(String glTrgtDtlRtCdngVrsn) {
-        this.glTrgtDtlRtCdngVrsn = glTrgtDtlRtCdngVrsn;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRtCdngDsplay() {
-        return this.glTrgtDtlRtCdngDsplay;
-    }
-    
-    public void setGlTrgtDtlRtCdngDsplay(String glTrgtDtlRtCdngDsplay) {
-        this.glTrgtDtlRtCdngDsplay = glTrgtDtlRtCdngDsplay;
-    }
-    
-    
-    
-    public String getGlTrgtDtlRtCdngSstm() {
-        return this.glTrgtDtlRtCdngSstm;
-    }
-    
-    public void setGlTrgtDtlRtCdngSstm(String glTrgtDtlRtCdngSstm) {
-        this.glTrgtDtlRtCdngSstm = glTrgtDtlRtCdngSstm;
-    }
-    
-    
-    
-    public String getGoalTargetDueDate() {
-        return this.goalTargetDueDate;
-    }
-    
-    public void setGoalTargetDueDate(String goalTargetDueDate) {
-        this.goalTargetDueDate = goalTargetDueDate;
-    }
-    
-    
-    
-    public String getGoalTargetDueDuration() {
-        return this.goalTargetDueDuration;
-    }
-    
-    public void setGoalTargetDueDuration(String goalTargetDueDuration) {
-        this.goalTargetDueDuration = goalTargetDueDuration;
-    }
-    
-    
-    
-    public String getGoalStatusDate() {
-        return this.goalStatusDate;
-    }
-    
-    public void setGoalStatusDate(String goalStatusDate) {
-        this.goalStatusDate = goalStatusDate;
-    }
-    
-    
-    
-    public String getGoalStatusReason() {
-        return this.goalStatusReason;
-    }
-    
-    public void setGoalStatusReason(String goalStatusReason) {
-        this.goalStatusReason = goalStatusReason;
-    }
-    
-    
-    
-    public String getGoalExpressedBy() {
-        return this.goalExpressedBy;
-    }
-    
-    public void setGoalExpressedBy(String goalExpressedBy) {
-        this.goalExpressedBy = goalExpressedBy;
-    }
-    
-    
-    
-    public String getGoalAddresses() {
-        return this.goalAddresses;
-    }
-    
-    public void setGoalAddresses(String goalAddresses) {
-        this.goalAddresses = goalAddresses;
-    }
-    
-    
-    
-    public String getGoalNoteCodingUserSelected() {
-        return this.goalNoteCodingUserSelected;
-    }
-    
-    public void setGoalNoteCodingUserSelected(String goalNoteCodingUserSelected) {
-        this.goalNoteCodingUserSelected = goalNoteCodingUserSelected;
-    }
-    
-    
-    
-    public String getGoalNoteCodingCode() {
-        return this.goalNoteCodingCode;
-    }
-    
-    public void setGoalNoteCodingCode(String goalNoteCodingCode) {
-        this.goalNoteCodingCode = goalNoteCodingCode;
-    }
-    
-    
-    
-    public String getGoalNoteCodingVersion() {
-        return this.goalNoteCodingVersion;
-    }
-    
-    public void setGoalNoteCodingVersion(String goalNoteCodingVersion) {
-        this.goalNoteCodingVersion = goalNoteCodingVersion;
-    }
-    
-    
-    
-    public String getGoalNoteCodingDisplay() {
-        return this.goalNoteCodingDisplay;
-    }
-    
-    public void setGoalNoteCodingDisplay(String goalNoteCodingDisplay) {
-        this.goalNoteCodingDisplay = goalNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalNoteCodingSystem() {
-        return this.goalNoteCodingSystem;
-    }
-    
-    public void setGoalNoteCodingSystem(String goalNoteCodingSystem) {
-        this.goalNoteCodingSystem = goalNoteCodingSystem;
-    }
-    
-    
-    
-    public String getGlTcmCdCdngSrSlctd() {
-        return this.glTcmCdCdngSrSlctd;
-    }
-    
-    public void setGlTcmCdCdngSrSlctd(String glTcmCdCdngSrSlctd) {
-        this.glTcmCdCdngSrSlctd = glTcmCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGoalOutcomeCodeCodingCode() {
-        return this.goalOutcomeCodeCodingCode;
-    }
-    
-    public void setGoalOutcomeCodeCodingCode(String goalOutcomeCodeCodingCode) {
-        this.goalOutcomeCodeCodingCode = goalOutcomeCodeCodingCode;
-    }
-    
-    
-    
-    public String getGoalOutcomeCodeCodingVersion() {
-        return this.goalOutcomeCodeCodingVersion;
-    }
-    
-    public void setGoalOutcomeCodeCodingVersion(String goalOutcomeCodeCodingVersion) {
-        this.goalOutcomeCodeCodingVersion = goalOutcomeCodeCodingVersion;
-    }
-    
-    
-    
-    public String getGoalOutcomeCodeCodingDisplay() {
-        return this.goalOutcomeCodeCodingDisplay;
-    }
-    
-    public void setGoalOutcomeCodeCodingDisplay(String goalOutcomeCodeCodingDisplay) {
-        this.goalOutcomeCodeCodingDisplay = goalOutcomeCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getGoalOutcomeCodeCodingSystem() {
-        return this.goalOutcomeCodeCodingSystem;
-    }
-    
-    public void setGoalOutcomeCodeCodingSystem(String goalOutcomeCodeCodingSystem) {
-        this.goalOutcomeCodeCodingSystem = goalOutcomeCodeCodingSystem;
-    }
-    
-    
-    
-    public String getGoalOutcomeReference() {
-        return this.goalOutcomeReference;
-    }
-    
-    public void setGoalOutcomeReference(String goalOutcomeReference) {
-        this.goalOutcomeReference = goalOutcomeReference;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getGoalIdentifierIdentifierUse()
+    {
+        return this.goalIdentifierIdentifierUse;
+    }
+    
+    public void setGoalIdentifierIdentifierUse
+        (String goalIdentifierIdentifierUse) 
+        {
+      this.goalIdentifierIdentifierUse = goalIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcCSstm()
+    {
+        return this.glDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setGlDntfrDntfrTpCcCSstm
+        (String glDntfrDntfrTpCcCSstm) 
+        {
+      this.glDntfrDntfrTpCcCSstm = glDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcCVrsn()
+    {
+        return this.glDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setGlDntfrDntfrTpCcCVrsn
+        (String glDntfrDntfrTpCcCVrsn) 
+        {
+      this.glDntfrDntfrTpCcCVrsn = glDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcCCde()
+    {
+        return this.glDntfrDntfrTpCcCCde;
+    }
+    
+    public void setGlDntfrDntfrTpCcCCde
+        (String glDntfrDntfrTpCcCCde) 
+        {
+      this.glDntfrDntfrTpCcCCde = glDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcCDsplay()
+    {
+        return this.glDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setGlDntfrDntfrTpCcCDsplay
+        (String glDntfrDntfrTpCcCDsplay) 
+        {
+      this.glDntfrDntfrTpCcCDsplay = glDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.glDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setGlDntfrDntfrTpCcCSrSlctd
+        (String glDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.glDntfrDntfrTpCcCSrSlctd = glDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getGlDntfrDntfrTpCcTxt()
+    {
+        return this.glDntfrDntfrTpCcTxt;
+    }
+    
+    public void setGlDntfrDntfrTpCcTxt
+        (String glDntfrDntfrTpCcTxt) 
+        {
+      this.glDntfrDntfrTpCcTxt = glDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getGlDntfrDntfrPrdPrdStrt()
+    {
+        return this.glDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setGlDntfrDntfrPrdPrdStrt
+        (String glDntfrDntfrPrdPrdStrt) 
+        {
+      this.glDntfrDntfrPrdPrdStrt = glDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getGlDntfrDntfrPrdPrdNd()
+    {
+        return this.glDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setGlDntfrDntfrPrdPrdNd
+        (String glDntfrDntfrPrdPrdNd) 
+        {
+      this.glDntfrDntfrPrdPrdNd = glDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getGlDntfrDntfrSsgnr()
+    {
+        return this.glDntfrDntfrSsgnr;
+    }
+    
+    public void setGlDntfrDntfrSsgnr
+        (String glDntfrDntfrSsgnr) 
+        {
+      this.glDntfrDntfrSsgnr = glDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getGoalIdentifierIdentifierValue()
+    {
+        return this.goalIdentifierIdentifierValue;
+    }
+    
+    public void setGoalIdentifierIdentifierValue
+        (String goalIdentifierIdentifierValue) 
+        {
+      this.goalIdentifierIdentifierValue = goalIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getGoalIdentifierIdentifierSystem()
+    {
+        return this.goalIdentifierIdentifierSystem;
+    }
+    
+    public void setGoalIdentifierIdentifierSystem
+        (String goalIdentifierIdentifierSystem) 
+        {
+      this.goalIdentifierIdentifierSystem = goalIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getGoalLifecycleStatusCode()
+    {
+        return this.goalLifecycleStatusCode;
+    }
+    
+    public void setGoalLifecycleStatusCode
+        (String goalLifecycleStatusCode) 
+        {
+      this.goalLifecycleStatusCode = goalLifecycleStatusCode;
+}
+    public 
+    String 
+    getGlChvmntSttsCcCdngCSstm()
+    {
+        return this.glChvmntSttsCcCdngCSstm;
+    }
+    
+    public void setGlChvmntSttsCcCdngCSstm
+        (String glChvmntSttsCcCdngCSstm) 
+        {
+      this.glChvmntSttsCcCdngCSstm = glChvmntSttsCcCdngCSstm;
+}
+    public 
+    String 
+    getGlChvmntSttsCcCdngCVrsn()
+    {
+        return this.glChvmntSttsCcCdngCVrsn;
+    }
+    
+    public void setGlChvmntSttsCcCdngCVrsn
+        (String glChvmntSttsCcCdngCVrsn) 
+        {
+      this.glChvmntSttsCcCdngCVrsn = glChvmntSttsCcCdngCVrsn;
+}
+    public 
+    String 
+    getGlChvmntSttsCcCdngCCde()
+    {
+        return this.glChvmntSttsCcCdngCCde;
+    }
+    
+    public void setGlChvmntSttsCcCdngCCde
+        (String glChvmntSttsCcCdngCCde) 
+        {
+      this.glChvmntSttsCcCdngCCde = glChvmntSttsCcCdngCCde;
+}
+    public 
+    String 
+    getGlChvmntSttsCcCdngCDsplay()
+    {
+        return this.glChvmntSttsCcCdngCDsplay;
+    }
+    
+    public void setGlChvmntSttsCcCdngCDsplay
+        (String glChvmntSttsCcCdngCDsplay) 
+        {
+      this.glChvmntSttsCcCdngCDsplay = glChvmntSttsCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlChvmntSttsCcCdngCSrSlctd()
+    {
+        return this.glChvmntSttsCcCdngCSrSlctd;
+    }
+    
+    public void setGlChvmntSttsCcCdngCSrSlctd
+        (String glChvmntSttsCcCdngCSrSlctd) 
+        {
+      this.glChvmntSttsCcCdngCSrSlctd = glChvmntSttsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalAchievementStatusCcText()
+    {
+        return this.goalAchievementStatusCcText;
+    }
+    
+    public void setGoalAchievementStatusCcText
+        (String goalAchievementStatusCcText) 
+        {
+      this.goalAchievementStatusCcText = goalAchievementStatusCcText;
+}
+    public 
+    String 
+    getGoalCategoryCcCodingCSystem()
+    {
+        return this.goalCategoryCcCodingCSystem;
+    }
+    
+    public void setGoalCategoryCcCodingCSystem
+        (String goalCategoryCcCodingCSystem) 
+        {
+      this.goalCategoryCcCodingCSystem = goalCategoryCcCodingCSystem;
+}
+    public 
+    String 
+    getGoalCategoryCcCodingCVersion()
+    {
+        return this.goalCategoryCcCodingCVersion;
+    }
+    
+    public void setGoalCategoryCcCodingCVersion
+        (String goalCategoryCcCodingCVersion) 
+        {
+      this.goalCategoryCcCodingCVersion = goalCategoryCcCodingCVersion;
+}
+    public 
+    String 
+    getGoalCategoryCcCodingCCode()
+    {
+        return this.goalCategoryCcCodingCCode;
+    }
+    
+    public void setGoalCategoryCcCodingCCode
+        (String goalCategoryCcCodingCCode) 
+        {
+      this.goalCategoryCcCodingCCode = goalCategoryCcCodingCCode;
+}
+    public 
+    String 
+    getGoalCategoryCcCodingCDisplay()
+    {
+        return this.goalCategoryCcCodingCDisplay;
+    }
+    
+    public void setGoalCategoryCcCodingCDisplay
+        (String goalCategoryCcCodingCDisplay) 
+        {
+      this.goalCategoryCcCodingCDisplay = goalCategoryCcCodingCDisplay;
+}
+    public 
+    String 
+    getGlCtgrCcCdngCSrSlctd()
+    {
+        return this.glCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setGlCtgrCcCdngCSrSlctd
+        (String glCtgrCcCdngCSrSlctd) 
+        {
+      this.glCtgrCcCdngCSrSlctd = glCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalCategoryCcText()
+    {
+        return this.goalCategoryCcText;
+    }
+    
+    public void setGoalCategoryCcText
+        (String goalCategoryCcText) 
+        {
+      this.goalCategoryCcText = goalCategoryCcText;
+}
+    public 
+    String 
+    getGoalPriorityCcCodingCSystem()
+    {
+        return this.goalPriorityCcCodingCSystem;
+    }
+    
+    public void setGoalPriorityCcCodingCSystem
+        (String goalPriorityCcCodingCSystem) 
+        {
+      this.goalPriorityCcCodingCSystem = goalPriorityCcCodingCSystem;
+}
+    public 
+    String 
+    getGoalPriorityCcCodingCVersion()
+    {
+        return this.goalPriorityCcCodingCVersion;
+    }
+    
+    public void setGoalPriorityCcCodingCVersion
+        (String goalPriorityCcCodingCVersion) 
+        {
+      this.goalPriorityCcCodingCVersion = goalPriorityCcCodingCVersion;
+}
+    public 
+    String 
+    getGoalPriorityCcCodingCCode()
+    {
+        return this.goalPriorityCcCodingCCode;
+    }
+    
+    public void setGoalPriorityCcCodingCCode
+        (String goalPriorityCcCodingCCode) 
+        {
+      this.goalPriorityCcCodingCCode = goalPriorityCcCodingCCode;
+}
+    public 
+    String 
+    getGoalPriorityCcCodingCDisplay()
+    {
+        return this.goalPriorityCcCodingCDisplay;
+    }
+    
+    public void setGoalPriorityCcCodingCDisplay
+        (String goalPriorityCcCodingCDisplay) 
+        {
+      this.goalPriorityCcCodingCDisplay = goalPriorityCcCodingCDisplay;
+}
+    public 
+    String 
+    getGlPrrtCcCdngCSrSlctd()
+    {
+        return this.glPrrtCcCdngCSrSlctd;
+    }
+    
+    public void setGlPrrtCcCdngCSrSlctd
+        (String glPrrtCcCdngCSrSlctd) 
+        {
+      this.glPrrtCcCdngCSrSlctd = glPrrtCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalPriorityCcText()
+    {
+        return this.goalPriorityCcText;
+    }
+    
+    public void setGoalPriorityCcText
+        (String goalPriorityCcText) 
+        {
+      this.goalPriorityCcText = goalPriorityCcText;
+}
+    public 
+    String 
+    getGlDscrptnCcCdngCSstm()
+    {
+        return this.glDscrptnCcCdngCSstm;
+    }
+    
+    public void setGlDscrptnCcCdngCSstm
+        (String glDscrptnCcCdngCSstm) 
+        {
+      this.glDscrptnCcCdngCSstm = glDscrptnCcCdngCSstm;
+}
+    public 
+    String 
+    getGlDscrptnCcCdngCVrsn()
+    {
+        return this.glDscrptnCcCdngCVrsn;
+    }
+    
+    public void setGlDscrptnCcCdngCVrsn
+        (String glDscrptnCcCdngCVrsn) 
+        {
+      this.glDscrptnCcCdngCVrsn = glDscrptnCcCdngCVrsn;
+}
+    public 
+    String 
+    getGoalDescriptionCcCodingCCode()
+    {
+        return this.goalDescriptionCcCodingCCode;
+    }
+    
+    public void setGoalDescriptionCcCodingCCode
+        (String goalDescriptionCcCodingCCode) 
+        {
+      this.goalDescriptionCcCodingCCode = goalDescriptionCcCodingCCode;
+}
+    public 
+    String 
+    getGlDscrptnCcCdngCDsplay()
+    {
+        return this.glDscrptnCcCdngCDsplay;
+    }
+    
+    public void setGlDscrptnCcCdngCDsplay
+        (String glDscrptnCcCdngCDsplay) 
+        {
+      this.glDscrptnCcCdngCDsplay = glDscrptnCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlDscrptnCcCdngCSrSlctd()
+    {
+        return this.glDscrptnCcCdngCSrSlctd;
+    }
+    
+    public void setGlDscrptnCcCdngCSrSlctd
+        (String glDscrptnCcCdngCSrSlctd) 
+        {
+      this.glDscrptnCcCdngCSrSlctd = glDscrptnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalDescriptionCcText()
+    {
+        return this.goalDescriptionCcText;
+    }
+    
+    public void setGoalDescriptionCcText
+        (String goalDescriptionCcText) 
+        {
+      this.goalDescriptionCcText = goalDescriptionCcText;
+}
+    public 
+    String 
+    getGoalSubjectReference()
+    {
+        return this.goalSubjectReference;
+    }
+    
+    public void setGoalSubjectReference
+        (String goalSubjectReference) 
+        {
+      this.goalSubjectReference = goalSubjectReference;
+}
+    public 
+    String 
+    getGoalStartDateDate()
+    {
+        return this.goalStartDateDate;
+    }
+    
+    public void setGoalStartDateDate
+        (String goalStartDateDate) 
+        {
+      this.goalStartDateDate = goalStartDateDate;
+}
+    public 
+    String 
+    getGlStrtCdblcncptCcCdngCSstm()
+    {
+        return this.glStrtCdblcncptCcCdngCSstm;
+    }
+    
+    public void setGlStrtCdblcncptCcCdngCSstm
+        (String glStrtCdblcncptCcCdngCSstm) 
+        {
+      this.glStrtCdblcncptCcCdngCSstm = glStrtCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getGlStrtCdblcncptCcCdngCVrsn()
+    {
+        return this.glStrtCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setGlStrtCdblcncptCcCdngCVrsn
+        (String glStrtCdblcncptCcCdngCVrsn) 
+        {
+      this.glStrtCdblcncptCcCdngCVrsn = glStrtCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getGlStrtCdblcncptCcCdngCCde()
+    {
+        return this.glStrtCdblcncptCcCdngCCde;
+    }
+    
+    public void setGlStrtCdblcncptCcCdngCCde
+        (String glStrtCdblcncptCcCdngCCde) 
+        {
+      this.glStrtCdblcncptCcCdngCCde = glStrtCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getGlStrtCdblcncptCcCdngCDsplay()
+    {
+        return this.glStrtCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setGlStrtCdblcncptCcCdngCDsplay
+        (String glStrtCdblcncptCcCdngCDsplay) 
+        {
+      this.glStrtCdblcncptCcCdngCDsplay = glStrtCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlStrtCdblcncptCcCdngCSrSlctd()
+    {
+        return this.glStrtCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setGlStrtCdblcncptCcCdngCSrSlctd
+        (String glStrtCdblcncptCcCdngCSrSlctd) 
+        {
+      this.glStrtCdblcncptCcCdngCSrSlctd = glStrtCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalStartCodeableconceptCcText()
+    {
+        return this.goalStartCodeableconceptCcText;
+    }
+    
+    public void setGoalStartCodeableconceptCcText
+        (String goalStartCodeableconceptCcText) 
+        {
+      this.goalStartCodeableconceptCcText = goalStartCodeableconceptCcText;
+}
+    public 
+    String 
+    getGlTrgtMsrCcCdngCSstm()
+    {
+        return this.glTrgtMsrCcCdngCSstm;
+    }
+    
+    public void setGlTrgtMsrCcCdngCSstm
+        (String glTrgtMsrCcCdngCSstm) 
+        {
+      this.glTrgtMsrCcCdngCSstm = glTrgtMsrCcCdngCSstm;
+}
+    public 
+    String 
+    getGlTrgtMsrCcCdngCVrsn()
+    {
+        return this.glTrgtMsrCcCdngCVrsn;
+    }
+    
+    public void setGlTrgtMsrCcCdngCVrsn
+        (String glTrgtMsrCcCdngCVrsn) 
+        {
+      this.glTrgtMsrCcCdngCVrsn = glTrgtMsrCcCdngCVrsn;
+}
+    public 
+    String 
+    getGlTrgtMsrCcCdngCCde()
+    {
+        return this.glTrgtMsrCcCdngCCde;
+    }
+    
+    public void setGlTrgtMsrCcCdngCCde
+        (String glTrgtMsrCcCdngCCde) 
+        {
+      this.glTrgtMsrCcCdngCCde = glTrgtMsrCcCdngCCde;
+}
+    public 
+    String 
+    getGlTrgtMsrCcCdngCDsplay()
+    {
+        return this.glTrgtMsrCcCdngCDsplay;
+    }
+    
+    public void setGlTrgtMsrCcCdngCDsplay
+        (String glTrgtMsrCcCdngCDsplay) 
+        {
+      this.glTrgtMsrCcCdngCDsplay = glTrgtMsrCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlTrgtMsrCcCdngCSrSlctd()
+    {
+        return this.glTrgtMsrCcCdngCSrSlctd;
+    }
+    
+    public void setGlTrgtMsrCcCdngCSrSlctd
+        (String glTrgtMsrCcCdngCSrSlctd) 
+        {
+      this.glTrgtMsrCcCdngCSrSlctd = glTrgtMsrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalTargetMeasureCcText()
+    {
+        return this.goalTargetMeasureCcText;
+    }
+    
+    public void setGoalTargetMeasureCcText
+        (String goalTargetMeasureCcText) 
+        {
+      this.goalTargetMeasureCcText = goalTargetMeasureCcText;
+}
+    public 
+    String 
+    getGlTrgtDtlQnttQnttCmprtr()
+    {
+        return this.glTrgtDtlQnttQnttCmprtr;
+    }
+    
+    public void setGlTrgtDtlQnttQnttCmprtr
+        (String glTrgtDtlQnttQnttCmprtr) 
+        {
+      this.glTrgtDtlQnttQnttCmprtr = glTrgtDtlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getGlTrgtDtlQnttQnttCde()
+    {
+        return this.glTrgtDtlQnttQnttCde;
+    }
+    
+    public void setGlTrgtDtlQnttQnttCde
+        (String glTrgtDtlQnttQnttCde) 
+        {
+      this.glTrgtDtlQnttQnttCde = glTrgtDtlQnttQnttCde;
+}
+    public 
+    String 
+    getGlTrgtDtlQnttQnttVlue()
+    {
+        return this.glTrgtDtlQnttQnttVlue;
+    }
+    
+    public void setGlTrgtDtlQnttQnttVlue
+        (String glTrgtDtlQnttQnttVlue) 
+        {
+      this.glTrgtDtlQnttQnttVlue = glTrgtDtlQnttQnttVlue;
+}
+    public 
+    String 
+    getGlTrgtDtlQnttQnttNt()
+    {
+        return this.glTrgtDtlQnttQnttNt;
+    }
+    
+    public void setGlTrgtDtlQnttQnttNt
+        (String glTrgtDtlQnttQnttNt) 
+        {
+      this.glTrgtDtlQnttQnttNt = glTrgtDtlQnttQnttNt;
+}
+    public 
+    String 
+    getGlTrgtDtlQnttQnttSstm()
+    {
+        return this.glTrgtDtlQnttQnttSstm;
+    }
+    
+    public void setGlTrgtDtlQnttQnttSstm
+        (String glTrgtDtlQnttQnttSstm) 
+        {
+      this.glTrgtDtlQnttQnttSstm = glTrgtDtlQnttQnttSstm;
+}
+    public 
+    String 
+    getGoalTargetDetailRangeRangeLow()
+    {
+        return this.goalTargetDetailRangeRangeLow;
+    }
+    
+    public void setGoalTargetDetailRangeRangeLow
+        (String goalTargetDetailRangeRangeLow) 
+        {
+      this.goalTargetDetailRangeRangeLow = goalTargetDetailRangeRangeLow;
+}
+    public 
+    String 
+    getGoalTargetDetailRangeRangeHigh()
+    {
+        return this.goalTargetDetailRangeRangeHigh;
+    }
+    
+    public void setGoalTargetDetailRangeRangeHigh
+        (String goalTargetDetailRangeRangeHigh) 
+        {
+      this.goalTargetDetailRangeRangeHigh = goalTargetDetailRangeRangeHigh;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcCdngCSstm()
+    {
+        return this.glTrgtDtlCdblcncptCcCdngCSstm;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcCdngCSstm
+        (String glTrgtDtlCdblcncptCcCdngCSstm) 
+        {
+      this.glTrgtDtlCdblcncptCcCdngCSstm = glTrgtDtlCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcCdngCVrsn()
+    {
+        return this.glTrgtDtlCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcCdngCVrsn
+        (String glTrgtDtlCdblcncptCcCdngCVrsn) 
+        {
+      this.glTrgtDtlCdblcncptCcCdngCVrsn = glTrgtDtlCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcCdngCCde()
+    {
+        return this.glTrgtDtlCdblcncptCcCdngCCde;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcCdngCCde
+        (String glTrgtDtlCdblcncptCcCdngCCde) 
+        {
+      this.glTrgtDtlCdblcncptCcCdngCCde = glTrgtDtlCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcCdngCDsplay()
+    {
+        return this.glTrgtDtlCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcCdngCDsplay
+        (String glTrgtDtlCdblcncptCcCdngCDsplay) 
+        {
+      this.glTrgtDtlCdblcncptCcCdngCDsplay = glTrgtDtlCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcCdngCSrSlctd()
+    {
+        return this.glTrgtDtlCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcCdngCSrSlctd
+        (String glTrgtDtlCdblcncptCcCdngCSrSlctd) 
+        {
+      this.glTrgtDtlCdblcncptCcCdngCSrSlctd = glTrgtDtlCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGlTrgtDtlCdblcncptCcTxt()
+    {
+        return this.glTrgtDtlCdblcncptCcTxt;
+    }
+    
+    public void setGlTrgtDtlCdblcncptCcTxt
+        (String glTrgtDtlCdblcncptCcTxt) 
+        {
+      this.glTrgtDtlCdblcncptCcTxt = glTrgtDtlCdblcncptCcTxt;
+}
+    public 
+    String 
+    getGoalTargetDetailStringString()
+    {
+        return this.goalTargetDetailStringString;
+    }
+    
+    public void setGoalTargetDetailStringString
+        (String goalTargetDetailStringString) 
+        {
+      this.goalTargetDetailStringString = goalTargetDetailStringString;
+}
+    public 
+    String 
+    getGoalTargetDetailBooleanBoolean()
+    {
+        return this.goalTargetDetailBooleanBoolean;
+    }
+    
+    public void setGoalTargetDetailBooleanBoolean
+        (String goalTargetDetailBooleanBoolean) 
+        {
+      this.goalTargetDetailBooleanBoolean = goalTargetDetailBooleanBoolean;
+}
+    public 
+    String 
+    getGoalTargetDetailIntegerInteger()
+    {
+        return this.goalTargetDetailIntegerInteger;
+    }
+    
+    public void setGoalTargetDetailIntegerInteger
+        (String goalTargetDetailIntegerInteger) 
+        {
+      this.goalTargetDetailIntegerInteger = goalTargetDetailIntegerInteger;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtNmrtrQnttVlue()
+    {
+        return this.glTrgtDtlRtRtNmrtrQnttVlue;
+    }
+    
+    public void setGlTrgtDtlRtRtNmrtrQnttVlue
+        (String glTrgtDtlRtRtNmrtrQnttVlue) 
+        {
+      this.glTrgtDtlRtRtNmrtrQnttVlue = glTrgtDtlRtRtNmrtrQnttVlue;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtDnmntrQnttVlue()
+    {
+        return this.glTrgtDtlRtRtDnmntrQnttVlue;
+    }
+    
+    public void setGlTrgtDtlRtRtDnmntrQnttVlue
+        (String glTrgtDtlRtRtDnmntrQnttVlue) 
+        {
+      this.glTrgtDtlRtRtDnmntrQnttVlue = glTrgtDtlRtRtDnmntrQnttVlue;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtNmrtrQnttCmprtr()
+    {
+        return this.glTrgtDtlRtRtNmrtrQnttCmprtr;
+    }
+    
+    public void setGlTrgtDtlRtRtNmrtrQnttCmprtr
+        (String glTrgtDtlRtRtNmrtrQnttCmprtr) 
+        {
+      this.glTrgtDtlRtRtNmrtrQnttCmprtr = glTrgtDtlRtRtNmrtrQnttCmprtr;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtDnmntrQnttCmprtr()
+    {
+        return this.glTrgtDtlRtRtDnmntrQnttCmprtr;
+    }
+    
+    public void setGlTrgtDtlRtRtDnmntrQnttCmprtr
+        (String glTrgtDtlRtRtDnmntrQnttCmprtr) 
+        {
+      this.glTrgtDtlRtRtDnmntrQnttCmprtr = glTrgtDtlRtRtDnmntrQnttCmprtr;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtNmrtrQnttNt()
+    {
+        return this.glTrgtDtlRtRtNmrtrQnttNt;
+    }
+    
+    public void setGlTrgtDtlRtRtNmrtrQnttNt
+        (String glTrgtDtlRtRtNmrtrQnttNt) 
+        {
+      this.glTrgtDtlRtRtNmrtrQnttNt = glTrgtDtlRtRtNmrtrQnttNt;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtDnmntrQnttNt()
+    {
+        return this.glTrgtDtlRtRtDnmntrQnttNt;
+    }
+    
+    public void setGlTrgtDtlRtRtDnmntrQnttNt
+        (String glTrgtDtlRtRtDnmntrQnttNt) 
+        {
+      this.glTrgtDtlRtRtDnmntrQnttNt = glTrgtDtlRtRtDnmntrQnttNt;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtNmrtrQnttSstm()
+    {
+        return this.glTrgtDtlRtRtNmrtrQnttSstm;
+    }
+    
+    public void setGlTrgtDtlRtRtNmrtrQnttSstm
+        (String glTrgtDtlRtRtNmrtrQnttSstm) 
+        {
+      this.glTrgtDtlRtRtNmrtrQnttSstm = glTrgtDtlRtRtNmrtrQnttSstm;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtDnmntrQnttSstm()
+    {
+        return this.glTrgtDtlRtRtDnmntrQnttSstm;
+    }
+    
+    public void setGlTrgtDtlRtRtDnmntrQnttSstm
+        (String glTrgtDtlRtRtDnmntrQnttSstm) 
+        {
+      this.glTrgtDtlRtRtDnmntrQnttSstm = glTrgtDtlRtRtDnmntrQnttSstm;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtNmrtrQnttCde()
+    {
+        return this.glTrgtDtlRtRtNmrtrQnttCde;
+    }
+    
+    public void setGlTrgtDtlRtRtNmrtrQnttCde
+        (String glTrgtDtlRtRtNmrtrQnttCde) 
+        {
+      this.glTrgtDtlRtRtNmrtrQnttCde = glTrgtDtlRtRtNmrtrQnttCde;
+}
+    public 
+    String 
+    getGlTrgtDtlRtRtDnmntrQnttCde()
+    {
+        return this.glTrgtDtlRtRtDnmntrQnttCde;
+    }
+    
+    public void setGlTrgtDtlRtRtDnmntrQnttCde
+        (String glTrgtDtlRtRtDnmntrQnttCde) 
+        {
+      this.glTrgtDtlRtRtDnmntrQnttCde = glTrgtDtlRtRtDnmntrQnttCde;
+}
+    public 
+    String 
+    getGoalTargetDueDateDate()
+    {
+        return this.goalTargetDueDateDate;
+    }
+    
+    public void setGoalTargetDueDateDate
+        (String goalTargetDueDateDate) 
+        {
+      this.goalTargetDueDateDate = goalTargetDueDateDate;
+}
+    public 
+    String 
+    getGoalTargetDueDurationDuration()
+    {
+        return this.goalTargetDueDurationDuration;
+    }
+    
+    public void setGoalTargetDueDurationDuration
+        (String goalTargetDueDurationDuration) 
+        {
+      this.goalTargetDueDurationDuration = goalTargetDueDurationDuration;
+}
+    public 
+    String 
+    getGoalStatusDateDate()
+    {
+        return this.goalStatusDateDate;
+    }
+    
+    public void setGoalStatusDateDate
+        (String goalStatusDateDate) 
+        {
+      this.goalStatusDateDate = goalStatusDateDate;
+}
+    public 
+    String 
+    getGoalStatusReasonString()
+    {
+        return this.goalStatusReasonString;
+    }
+    
+    public void setGoalStatusReasonString
+        (String goalStatusReasonString) 
+        {
+      this.goalStatusReasonString = goalStatusReasonString;
+}
+    public 
+    String 
+    getGoalExpressedByReference()
+    {
+        return this.goalExpressedByReference;
+    }
+    
+    public void setGoalExpressedByReference
+        (String goalExpressedByReference) 
+        {
+      this.goalExpressedByReference = goalExpressedByReference;
+}
+    public 
+    String 
+    getGoalAddressesReference()
+    {
+        return this.goalAddressesReference;
+    }
+    
+    public void setGoalAddressesReference
+        (String goalAddressesReference) 
+        {
+      this.goalAddressesReference = goalAddressesReference;
+}
+    public 
+    String 
+    getGoalNoteAnnotationTime()
+    {
+        return this.goalNoteAnnotationTime;
+    }
+    
+    public void setGoalNoteAnnotationTime
+        (String goalNoteAnnotationTime) 
+        {
+      this.goalNoteAnnotationTime = goalNoteAnnotationTime;
+}
+    public 
+    String 
+    getGoalNoteAnnotationText()
+    {
+        return this.goalNoteAnnotationText;
+    }
+    
+    public void setGoalNoteAnnotationText
+        (String goalNoteAnnotationText) 
+        {
+      this.goalNoteAnnotationText = goalNoteAnnotationText;
+}
+    public 
+    String 
+    getGlNtNnttnThrRfrnce()
+    {
+        return this.glNtNnttnThrRfrnce;
+    }
+    
+    public void setGlNtNnttnThrRfrnce
+        (String glNtNnttnThrRfrnce) 
+        {
+      this.glNtNnttnThrRfrnce = glNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getGoalNoteAnnotationAuthorString()
+    {
+        return this.goalNoteAnnotationAuthorString;
+    }
+    
+    public void setGoalNoteAnnotationAuthorString
+        (String goalNoteAnnotationAuthorString) 
+        {
+      this.goalNoteAnnotationAuthorString = goalNoteAnnotationAuthorString;
+}
+    public 
+    String 
+    getGlTcmCdCcCdngCSstm()
+    {
+        return this.glTcmCdCcCdngCSstm;
+    }
+    
+    public void setGlTcmCdCcCdngCSstm
+        (String glTcmCdCcCdngCSstm) 
+        {
+      this.glTcmCdCcCdngCSstm = glTcmCdCcCdngCSstm;
+}
+    public 
+    String 
+    getGlTcmCdCcCdngCVrsn()
+    {
+        return this.glTcmCdCcCdngCVrsn;
+    }
+    
+    public void setGlTcmCdCcCdngCVrsn
+        (String glTcmCdCcCdngCVrsn) 
+        {
+      this.glTcmCdCcCdngCVrsn = glTcmCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getGoalOutcomeCodeCcCodingCCode()
+    {
+        return this.goalOutcomeCodeCcCodingCCode;
+    }
+    
+    public void setGoalOutcomeCodeCcCodingCCode
+        (String goalOutcomeCodeCcCodingCCode) 
+        {
+      this.goalOutcomeCodeCcCodingCCode = goalOutcomeCodeCcCodingCCode;
+}
+    public 
+    String 
+    getGlTcmCdCcCdngCDsplay()
+    {
+        return this.glTcmCdCcCdngCDsplay;
+    }
+    
+    public void setGlTcmCdCcCdngCDsplay
+        (String glTcmCdCcCdngCDsplay) 
+        {
+      this.glTcmCdCcCdngCDsplay = glTcmCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getGlTcmCdCcCdngCSrSlctd()
+    {
+        return this.glTcmCdCcCdngCSrSlctd;
+    }
+    
+    public void setGlTcmCdCcCdngCSrSlctd
+        (String glTcmCdCcCdngCSrSlctd) 
+        {
+      this.glTcmCdCcCdngCSrSlctd = glTcmCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGoalOutcomeCodeCcText()
+    {
+        return this.goalOutcomeCodeCcText;
+    }
+    
+    public void setGoalOutcomeCodeCcText
+        (String goalOutcomeCodeCcText) 
+        {
+      this.goalOutcomeCodeCcText = goalOutcomeCodeCcText;
+}
+    public 
+    String 
+    getGoalOutcomeReferenceReference()
+    {
+        return this.goalOutcomeReferenceReference;
+    }
+    
+    public void setGoalOutcomeReferenceReference
+        (String goalOutcomeReferenceReference) 
+        {
+      this.goalOutcomeReferenceReference = goalOutcomeReferenceReference;
+}
 
 
 

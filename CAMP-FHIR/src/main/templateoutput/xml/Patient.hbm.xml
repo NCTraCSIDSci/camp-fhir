@@ -1,957 +1,633 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Patient" optimistic-lock="none" table="patient">
-        <id name="ptntDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Ptnt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="ptntDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_use_code</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_s_cde">
-                <comment>Patient_identifierIdentifier_use_code</comment>
+        <property name="patientIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Patient_identifier_Identifier_use">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Patient_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="ptntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Patient_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="ptntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Patient_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="ptntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Patient_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="ptntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Patient_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="ptntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Prd_strt">
-                <comment>Patient_identifierIdentifier_Period_start</comment>
+        <property name="ptntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Prd_nd">
-                <comment>Patient_identifierIdentifier_Period_end</comment>
+        <property name="ptntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Patient_identifierIdentifier_Reference_reference</comment>
+        <property name="ptntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Patient_identifierIdentifier_Reference_type</comment>
+        <property name="ptntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Patient_identifierIdentifier_Reference_identifier</comment>
+        <property name="ptntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Patient_identifierIdentifier_Reference_display</comment>
+        <property name="ptntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Ptnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Patient.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_value_string</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_vl_strng">
-                <comment>Patient_identifierIdentifier_value_string</comment>
+        <property name="patientActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="Patient_active_boolean">
+                <comment>{ "tree" :"Patient.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="ptntDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Patient_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Ptnt_dntfr_dntfr_sstm_ri">
-                <comment>Patient_identifierIdentifier_system_uri</comment>
+        <property name="patientNameHumanNameUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setUse"}</meta>
+            <column length="65535" name="Patient_name_HumanName_use">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setUse"}</comment>
             </column>
         </property>
-        <property name="patientActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Patient_active">
-                <comment>boolean</comment>
+        <property name="ptntNmHmnNmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_nm_HmnNm_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="patientNameHumanNameUseCode" type="string">
-            <meta attribute="resource-type">HumanName_use_code</meta>
-            <column length="65535" name="Patient_name_HumanName_use_code">
-                <comment>HumanName_use_code</comment>
+        <property name="ptntNmHmnNmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_nm_HmnNm_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntNmHmnNmPrdStrt" type="string">
-            <meta attribute="resource-type">HumanName_Period_start</meta>
-            <column length="65535" name="Ptnt_nm_HmnNm_Prd_strt">
-                <comment>HumanName_Period_start</comment>
+        <property name="patientNameHumanNameText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setText"}</meta>
+            <column length="65535" name="Patient_name_HumanName_text">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setText"}</comment>
             </column>
         </property>
-        <property name="patientNameHumanNamePeriodEnd" type="string">
-            <meta attribute="resource-type">HumanName_Period_end</meta>
-            <column length="65535" name="Patient_name_HumanName_Period_end">
-                <comment>HumanName_Period_end</comment>
+        <property name="patientNameHumanNameFamily" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setFamily"}</meta>
+            <column length="65535" name="Patient_name_HumanName_family">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setFamily"}</comment>
             </column>
         </property>
-        <property name="patientNameHumanNameTextString" type="string">
-            <meta attribute="resource-type">HumanName_text_string</meta>
-            <column length="65535" name="Patient_name_HumanName_text_string">
-                <comment>HumanName_text_string</comment>
+        <property name="patientNameHumanNameGiven" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addGiven"}</meta>
+            <column length="65535" name="Patient_name_HumanName_given">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addGiven"}</comment>
             </column>
         </property>
-        <property name="ptntNmHmnNmFmlStrng" type="string">
-            <meta attribute="resource-type">HumanName_family_string</meta>
-            <column length="65535" name="Ptnt_nm_HmnNm_fml_strng">
-                <comment>HumanName_family_string</comment>
+        <property name="patientNameHumanNamePrefix" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addPrefix"}</meta>
+            <column length="65535" name="Patient_name_HumanName_prefix">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addPrefix"}</comment>
             </column>
         </property>
-        <property name="ptntNmHmnNmGvnStrng" type="string">
-            <meta attribute="resource-type">HumanName_given_string</meta>
-            <column length="65535" name="Ptnt_nm_HmnNm_gvn_strng">
-                <comment>HumanName_given_string</comment>
+        <property name="patientNameHumanNameSuffix" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addSuffix"}</meta>
+            <column length="65535" name="Patient_name_HumanName_suffix">
+                <comment>{ "tree" :"Patient.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addSuffix"}</comment>
             </column>
         </property>
-        <property name="ptntNmHmnNmPrfxStrng" type="string">
-            <meta attribute="resource-type">HumanName_prefix_string</meta>
-            <column length="65535" name="Ptnt_nm_HmnNm_prfx_strng">
-                <comment>HumanName_prefix_string</comment>
+        <property name="ptntTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Ptnt_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntNmHmnNmSffxStrng" type="string">
-            <meta attribute="resource-type">HumanName_suffix_string</meta>
-            <column length="65535" name="Ptnt_nm_HmnNm_sffx_strng">
-                <comment>HumanName_suffix_string</comment>
+        <property name="patientTelecomContactPointUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Patient_telecom_ContactPoint_use">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="ptntTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="ptntTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
+        <property name="patientTelecomContactPointRank" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Patient_telecom_ContactPoint_rank">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
+        <property name="patientTelecomContactPointValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Patient_telecom_ContactPoint_value">
+                <comment>{ "tree" :"Patient.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
+        <property name="patientGenderCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGender"}</meta>
+            <column length="65535" name="Patient_gender_code">
+                <comment>{ "tree" :"Patient.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGender"}</comment>
             </column>
         </property>
-        <property name="ptntTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Ptnt_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
+        <property name="patientBirthDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.birthDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBirthDate"}</meta>
+            <column length="65535" name="Patient_birthDate_date">
+                <comment>{ "tree" :"Patient.birthDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBirthDate"}</comment>
             </column>
         </property>
-        <property name="patientGender" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Patient_gender">
-                <comment>code</comment>
+        <property name="patientDeceasedBooleanBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.deceasedBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeceasedBoolean"}</meta>
+            <column length="65535" name="Patient_deceasedBoolean_boolean">
+                <comment>{ "tree" :"Patient.deceasedBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeceasedBoolean"}</comment>
             </column>
         </property>
-        <property name="patientBirthDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Patient_birthDate">
-                <comment>date</comment>
+        <property name="patientDeceasedDatetimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.deceasedDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeceasedDatetime"}</meta>
+            <column length="65535" name="Patient_deceasedDatetime_dateTime">
+                <comment>{ "tree" :"Patient.deceasedDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeceasedDatetime"}</comment>
             </column>
         </property>
-        <property name="patientDeceasedBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Patient_deceasedBoolean">
-                <comment>boolean</comment>
+        <property name="patientAddressAddressUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</meta>
+            <column length="65535" name="Patient_address_Address_use">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="patientDeceasedDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Patient_deceasedDatetime">
-                <comment>dateTime</comment>
+        <property name="patientAddressAddressType" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</meta>
+            <column length="65535" name="Patient_address_Address_type">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</comment>
             </column>
         </property>
-        <property name="patientAddressAddressUseCode" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="Patient_address_Address_use_code">
-                <comment>Address_use_code</comment>
+        <property name="ptntDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="patientAddressAddressTypeCode" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="Patient_address_Address_type_code">
-                <comment>Address_type_code</comment>
+        <property name="ptntDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
+        <property name="patientAddressAddressText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</meta>
+            <column length="65535" name="Patient_address_Address_text">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</comment>
             </column>
         </property>
-        <property name="patientAddressAddressPeriodEnd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="Patient_address_Address_Period_end">
-                <comment>Address_Period_end</comment>
+        <property name="patientAddressAddressLine" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</meta>
+            <column length="65535" name="Patient_address_Address_line">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
+        <property name="patientAddressAddressCity" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</meta>
+            <column length="65535" name="Patient_address_Address_city">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
+        <property name="patientAddressAddressDistrict" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</meta>
+            <column length="65535" name="Patient_address_Address_district">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
+        <property name="patientAddressAddressState" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</meta>
+            <column length="65535" name="Patient_address_Address_state">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
+        <property name="patientAddressAddressPostalCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</meta>
+            <column length="65535" name="Patient_address_Address_postalCode">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
+        <property name="patientAddressAddressCountry" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</meta>
+            <column length="65535" name="Patient_address_Address_country">
+                <comment>{ "tree" :"Patient.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
+        <property name="ptntMrtlSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ptnt_mrtlStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="Ptnt_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
+        <property name="ptntMrtlSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ptnt_mrtlStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="ptntMrtlSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="Ptnt_mrtlStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="ptntMrtlSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ptnt_mrtlStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="ptntMrtlSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ptnt_mrtlStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="patientMaritalStatusCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, setText"}</meta>
+            <column length="65535" name="Patient_maritalStatus_CC_text">
+                <comment>{ "tree" :"Patient.maritalStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMaritalStatus, setText"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="ptntMltplBrthBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.multipleBirthBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleBirthBoolean"}</meta>
+            <column length="65535" name="Ptnt_mltplBrthBln_bln">
+                <comment>{ "tree" :"Patient.multipleBirthBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleBirthBoolean"}</comment>
             </column>
         </property>
-        <property name="ptntMrtlSttsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Ptnt_mrtlStts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="ptntMltplBrthntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.multipleBirthInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleBirthInteger"}</meta>
+            <column length="65535" name="Ptnt_mltplBrthntgr_ntgr">
+                <comment>{ "tree" :"Patient.multipleBirthInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleBirthInteger"}</comment>
             </column>
         </property>
-        <property name="patientMultipleBirthBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Patient_multipleBirthBoolean">
-                <comment>boolean</comment>
+        <property name="patientPhotoAttachmentData" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setData"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_data">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setData"}</comment>
             </column>
         </property>
-        <property name="patientMultipleBirthInteger" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Patient_multipleBirthInteger">
-                <comment>integer</comment>
+        <property name="patientPhotoAttachmentHash" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setHash"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_hash">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setHash"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
+        <property name="ptntPhtTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setContentType"}</meta>
+            <column length="65535" name="Ptnt_pht_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setContentType"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
+        <property name="patientPhotoAttachmentLanguage" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setLanguage"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_language">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setLanguage"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
+        <property name="patientPhotoAttachmentCreation" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setCreation"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_creation">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setCreation"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
+        <property name="patientPhotoAttachmentTitle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setTitle"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_title">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setTitle"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
+        <property name="patientPhotoAttachmentSize" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setSize"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_size">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setSize"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
+        <property name="patientPhotoAttachmentUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.photo", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setUrl"}</meta>
+            <column length="65535" name="Patient_photo_Attachment_url">
+                <comment>{ "tree" :"Patient.photo", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setUrl"}</comment>
             </column>
         </property>
-        <property name="ptntPhtTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="Ptnt_pht_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
+        <property name="ptntCntctRltnshpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="patientPhotoAttachmentUrlUrl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="Patient_photo_Attachment_url_url">
-                <comment>Attachment_url_url</comment>
+        <property name="ptntCntctRltnshpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="ptntCntctRltnshpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setCode"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="ptntCntctRltnshpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="ptntCntctRltnshpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="ptntCntctRltnshpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, setText"}</meta>
+            <column length="65535" name="Ptnt_cntct_rltnshp_CC_txt">
+                <comment>{ "tree" :"Patient.contact.relationship", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addRelationship, setText"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="patientContactNameHumanNameUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</meta>
+            <column length="65535" name="Patient_contact_name_HumanName_use">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRltnshpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Ptnt_cntct_rltnshp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="ptntCntctNmHmnNmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmSCde" type="string">
-            <meta attribute="resource-type">HumanName_use_code</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_s_cde">
-                <comment>HumanName_use_code</comment>
+        <property name="ptntCntctNmHmnNmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmPrdStrt" type="string">
-            <meta attribute="resource-type">HumanName_Period_start</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_Prd_strt">
-                <comment>HumanName_Period_start</comment>
+        <property name="ptntCntctNmHmnNmTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_txt">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmPrdNd" type="string">
-            <meta attribute="resource-type">HumanName_Period_end</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_Prd_nd">
-                <comment>HumanName_Period_end</comment>
+        <property name="ptntCntctNmHmnNmFmly" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_fmly">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmTxtStrng" type="string">
-            <meta attribute="resource-type">HumanName_text_string</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_txt_strng">
-                <comment>HumanName_text_string</comment>
+        <property name="ptntCntctNmHmnNmGvn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_gvn">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmFmlStrng" type="string">
-            <meta attribute="resource-type">HumanName_family_string</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_fml_strng">
-                <comment>HumanName_family_string</comment>
+        <property name="ptntCntctNmHmnNmPrfx" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_prfx">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmGvnStrng" type="string">
-            <meta attribute="resource-type">HumanName_given_string</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_gvn_strng">
-                <comment>HumanName_given_string</comment>
+        <property name="ptntCntctNmHmnNmSffx" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</meta>
+            <column length="65535" name="Ptnt_cntct_nm_HmnNm_sffx">
+                <comment>{ "tree" :"Patient.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmPrfxStrng" type="string">
-            <meta attribute="resource-type">HumanName_prefix_string</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_prfx_strng">
-                <comment>HumanName_prefix_string</comment>
+        <property name="ptntCntctTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntCntctNmHmnNmSffxStrng" type="string">
-            <meta attribute="resource-type">HumanName_suffix_string</meta>
-            <column length="65535" name="Ptnt_cntct_nm_HmnNm_sffx_strng">
-                <comment>HumanName_suffix_string</comment>
+        <property name="ptntCntctTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="ptntCntctTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="ptntCntctTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
+        <property name="ptntCntctTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
+        <property name="ptntCntctTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Patient.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
+        <property name="ptntCntctDdrssDdrssSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_se">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="ptntCntctTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Ptnt_cntct_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
+        <property name="ptntCntctDdrssDdrssTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_tpe">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssSCde" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_s_cde">
-                <comment>Address_use_code</comment>
+        <property name="ptntCntctDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssTpCde" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_tp_cde">
-                <comment>Address_type_code</comment>
+        <property name="ptntCntctDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
+        <property name="ptntCntctDdrssDdrssTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_txt">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssPrdNd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_Prd_nd">
-                <comment>Address_Period_end</comment>
+        <property name="ptntCntctDdrssDdrssLne" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_lne">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
+        <property name="ptntCntctDdrssDdrssCty" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_cty">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
+        <property name="ptntCntctDdrssDdrssDstrct" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_dstrct">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
+        <property name="ptntCntctDdrssDdrssStte" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_stte">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
+        <property name="ptntCntctDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
+        <property name="ptntCntctDdrssDdrssCntry" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</meta>
+            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_cntry">
+                <comment>{ "tree" :"Patient.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
+        <property name="patientContactGenderCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setGender"}</meta>
+            <column length="65535" name="Patient_contact_gender_code">
+                <comment>{ "tree" :"Patient.contact.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setGender"}</comment>
             </column>
         </property>
-        <property name="ptntCntctDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="Ptnt_cntct_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
+        <property name="ptntCntctRgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setOrganization"}</meta>
+            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnce">
+                <comment>{ "tree" :"Patient.contact.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setOrganization"}</comment>
             </column>
         </property>
-        <property name="patientContactGender" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Patient_contact_gender">
-                <comment>code</comment>
+        <property name="ptntCntctPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Ptnt_cntct_prd_Prd_strt">
+                <comment>{ "tree" :"Patient.contact.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="patientContactPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.contact.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Patient_contact_period_Period_end">
+                <comment>{ "tree" :"Patient.contact.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="ptntCmmnctnLnggCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="ptntCmmnctnLnggCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="ptntCmmnctnLnggCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setCode"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_cdng_C_cde">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="ptntCmmnctnLnggCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="ptntCmmnctnLnggCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="ptntCmmnctnLnggCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, setText"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_lngg_CC_txt">
+                <comment>{ "tree" :"Patient.communication.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, setText"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="ptntCmmnctnPrfrrdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.communication.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCommunication"] , "methodName" : "setPreferred"}</meta>
+            <column length="65535" name="Ptnt_cmmnctn_prfrrd_bln">
+                <comment>{ "tree" :"Patient.communication.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCommunication"] , "methodName" : "setPreferred"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="ptntGnrlPrcttnrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.generalPractitioner", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGeneralPractitioner"}</meta>
+            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnce">
+                <comment>{ "tree" :"Patient.generalPractitioner", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGeneralPractitioner"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="ptntMngngrgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</meta>
+            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnce">
+                <comment>{ "tree" :"Patient.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="patientLinkOtherReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.link.other", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setOther"}</meta>
+            <column length="65535" name="Patient_link_other_Reference">
+                <comment>{ "tree" :"Patient.link.other", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setOther"}</comment>
             </column>
         </property>
-        <property name="ptntCntctRgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="ptntCntctRgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="ptntCntctRgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Ptnt_cntct_rgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="ptntCntctPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Ptnt_cntct_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="ptntCntctPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Ptnt_cntct_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="ptntCmmnctnLnggCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Ptnt_cmmnctn_lngg_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="patientCommunicationPreferred" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Patient_communication_preferred">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="ptntGnrlPrcttnrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Ptnt_gnrlPrcttnr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="ptntMngngrgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Ptnt_mngngrgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="ptntLnkThrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Ptnt_lnk_thr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="patientLinkType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Patient_link_type">
-                <comment>code</comment>
+        <property name="patientLinkTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Patient.link.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Patient_link_type_code">
+                <comment>{ "tree" :"Patient.link.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setType"}</comment>
             </column>
         </property>
     </class>

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1313 +10,726 @@ package main.templateoutput.Model;
 public class List  implements java.io.Serializable {
 
 
-     private String lstDntfrDntfrTpCdblCncptCdngCde;
-     private String lstDntfrDntfrSCde;
-     private String lstDntfrDntfrTpCdblCncptCdngSstm;
-     private String lstDntfrDntfrTpCdblCncptCdngVrsn;
-     private String lstDntfrDntfrTpCdblCncptCdngDsplay;
-     private String lstDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String lstDntfrDntfrCdblCncptTxt;
-     private String lstDntfrDntfrPrdStrt;
-     private String lstDntfrDntfrPrdNd;
-     private String lstDntfrDntfrRfrncRfrnce;
-     private String lstDntfrDntfrRfrncTpe;
-     private String lstDntfrDntfrRfrncDntfr;
-     private String lstDntfrDntfrRfrncDsplay;
-     private String lstDntfrDntfrVlStrng;
-     private String lstDntfrDntfrSstmRi;
-     private String listStatus;
-     private String listMode;
-     private String listTitle;
-     private String lstCdCdblCncptCdngSstm;
-     private String lstCdCdblCncptCdngVrsn;
-     private String lstCdCdblCncptCdngCde;
-     private String lstCdCdblCncptCdngDsplay;
-     private String lstCdCdblCncptCdngSrSlctd;
-     private String lstCdCdblCncptTxtStrng;
-     private String lstSbjctRfrncDntfrDntfrCdblCncptCdng;
-     private String lstSbjctRfrncDntfrDntfrCdblCncptTxt;
-     private String lstSbjctRfrncDntfrDntfrPrdStrt;
-     private String lstSbjctRfrncDntfrDntfrPrdNd;
-     private String lstSbjctRfrncDntfrDntfrRfrncRfrnce;
-     private String lstSbjctRfrncDntfrDntfrRfrncTpe;
-     private String lstSbjctRfrncDntfrDntfrRfrncDntfr;
-     private String lstSbjctRfrncDntfrDntfrRfrncDsplay;
-     private String lstSbjctRfrncDntfrSe;
-     private String lstSbjctRfrncDntfrSstm;
-     private String lstSbjctRfrncDntfrVlue;
-     private String lstSbjctRfrncRfrncStrng;
-     private String lstSbjctRfrncDsplStrng;
-     private String listSubjectReferenceTypeUri;
-     private String lstNcntrRfrncDntfrDntfrCdblCncptCdng;
-     private String lstNcntrRfrncDntfrDntfrCdblCncptTxt;
-     private String lstNcntrRfrncDntfrDntfrPrdStrt;
-     private String lstNcntrRfrncDntfrDntfrPrdNd;
-     private String lstNcntrRfrncDntfrDntfrRfrncRfrnce;
-     private String lstNcntrRfrncDntfrDntfrRfrncTpe;
-     private String lstNcntrRfrncDntfrDntfrRfrncDntfr;
-     private String lstNcntrRfrncDntfrDntfrRfrncDsplay;
-     private String lstNcntrRfrncDntfrSe;
-     private String lstNcntrRfrncDntfrSstm;
-     private String lstNcntrRfrncDntfrVlue;
-     private String lstNcntrRfrncRfrncStrng;
-     private String lstNcntrRfrncDsplStrng;
-     private String listEncounterReferenceTypeUri;
-     private String listDate;
-     private String lstSrcRfrncDntfrDntfrCdblCncptCdng;
-     private String lstSrcRfrncDntfrDntfrCdblCncptTxt;
-     private String lstSrcRfrncDntfrDntfrPrdStrt;
-     private String lstSrcRfrncDntfrDntfrPrdNd;
-     private String lstSrcRfrncDntfrDntfrRfrncRfrnce;
-     private String lstSrcRfrncDntfrDntfrRfrncTpe;
-     private String lstSrcRfrncDntfrDntfrRfrncDntfr;
-     private String lstSrcRfrncDntfrDntfrRfrncDsplay;
-     private String lstSrcRfrncDntfrSe;
-     private String lstSrcRfrncDntfrSstm;
-     private String lstSrcRfrncDntfrVlue;
-     private String lstSrcRfrncRfrncStrng;
-     private String lstSrcRfrncDsplStrng;
-     private String listSourceReferenceTypeUri;
-     private String lstRdrdBCdblCncptCdngSstm;
-     private String lstRdrdBCdblCncptCdngVrsn;
-     private String lstRdrdBCdblCncptCdngCde;
-     private String lstRdrdBCdblCncptCdngDsplay;
-     private String lstRdrdBCdblCncptCdngSrSlctd;
-     private String lstRdrdBCdblCncptTxtStrng;
-     private String listNoteAnnotationTimeDateTime;
-     private String listNoteAnnotationTextMarkdown;
-     private String lstNtNnttnRfrncRfrnce;
-     private String lstNtNnttnRfrncTpe;
-     private String lstNtNnttnRfrncDntfr;
-     private String lstNtNnttnRfrncDsplay;
-     private String lstNtNnttnThrStrngStrng;
-     private String lstNtrFlgCdblCncptCdngSstm;
-     private String lstNtrFlgCdblCncptCdngVrsn;
-     private String lstNtrFlgCdblCncptCdngCde;
-     private String lstNtrFlgCdblCncptCdngDsplay;
-     private String lstNtrFlgCdblCncptCdngSrSlctd;
-     private String lstNtrFlgCdblCncptTxtStrng;
-     private String listEntryDeleted;
-     private String listEntryDate;
-     private String lstNtrTmRfrncDntfrDntfrCdblCncptCdng;
-     private String lstNtrTmRfrncDntfrDntfrCdblCncptTxt;
-     private String lstNtrTmRfrncDntfrDntfrPrdStrt;
-     private String lstNtrTmRfrncDntfrDntfrPrdNd;
-     private String lstNtrTmRfrncDntfrDntfrRfrncRfrnce;
-     private String lstNtrTmRfrncDntfrDntfrRfrncTpe;
-     private String lstNtrTmRfrncDntfrDntfrRfrncDntfr;
-     private String lstNtrTmRfrncDntfrDntfrRfrncDsplay;
-     private String lstNtrTmRfrncDntfrSe;
-     private String lstNtrTmRfrncDntfrSstm;
-     private String lstNtrTmRfrncDntfrVlue;
-     private String lstNtrTmRfrncRfrncStrng;
-     private String lstNtrTmRfrncDsplStrng;
-     private String listEntryItemReferenceTypeUri;
-     private String lstMptRsnCdblCncptCdngSstm;
-     private String lstMptRsnCdblCncptCdngVrsn;
-     private String lstMptRsnCdblCncptCdngCde;
-     private String lstMptRsnCdblCncptCdngDsplay;
-     private String lstMptRsnCdblCncptCdngSrSlctd;
-     private String lstMptRsnCdblCncptTxtStrng;
+     private Integer id;
+     private String listIdentifierIdentifierUse;
+     private String lstDntfrDntfrTpCcCSstm;
+     private String lstDntfrDntfrTpCcCVrsn;
+     private String lstDntfrDntfrTpCcCCde;
+     private String lstDntfrDntfrTpCcCDsplay;
+     private String lstDntfrDntfrTpCcCSrSlctd;
+     private String lstDntfrDntfrTpCcTxt;
+     private String lstDntfrDntfrPrdPrdStrt;
+     private String lstDntfrDntfrPrdPrdNd;
+     private String lstDntfrDntfrSsgnr;
+     private String listIdentifierIdentifierValue;
+     private String listIdentifierIdentifierSystem;
+     private String listStatusCode;
+     private String listModeCode;
+     private String listTitleString;
+     private String listCodeCcCodingCSystem;
+     private String listCodeCcCodingCVersion;
+     private String listCodeCcCodingCCode;
+     private String listCodeCcCodingCDisplay;
+     private String listCodeCcCodingCUserSelected;
+     private String listCodeCcText;
+     private String listSubjectReference;
+     private String listEncounterReference;
+     private String listDateDateTime;
+     private String listSourceReference;
+     private String listOrderedByCcCodingCSystem;
+     private String listOrderedByCcCodingCVersion;
+     private String listOrderedByCcCodingCCode;
+     private String listOrderedByCcCodingCDisplay;
+     private String lstRdrdBCcCdngCSrSlctd;
+     private String listOrderedByCcText;
+     private String listNoteAnnotationTime;
+     private String listNoteAnnotationText;
+     private String lstNtNnttnThrRfrnce;
+     private String listNoteAnnotationAuthorString;
+     private String listEntryFlagCcCodingCSystem;
+     private String lstNtrFlgCcCdngCVrsn;
+     private String listEntryFlagCcCodingCCode;
+     private String lstNtrFlgCcCdngCDsplay;
+     private String lstNtrFlgCcCdngCSrSlctd;
+     private String listEntryFlagCcText;
+     private String listEntryDeletedBoolean;
+     private String listEntryDateDateTime;
+     private String listEntryItemReference;
+     private String lstMptRsnCcCdngCSstm;
+     private String lstMptRsnCcCdngCVrsn;
+     private String listEmptyReasonCcCodingCCode;
+     private String lstMptRsnCcCdngCDsplay;
+     private String lstMptRsnCcCdngCSrSlctd;
+     private String listEmptyReasonCcText;
 
     public List() {
     }
 
-	
-    public List(String lstDntfrDntfrTpCdblCncptCdngCde) {
-        this.lstDntfrDntfrTpCdblCncptCdngCde = lstDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public List(String lstDntfrDntfrTpCdblCncptCdngCde, String lstDntfrDntfrSCde, String lstDntfrDntfrTpCdblCncptCdngSstm, String lstDntfrDntfrTpCdblCncptCdngVrsn, String lstDntfrDntfrTpCdblCncptCdngDsplay, String lstDntfrDntfrTpCdblCncptCdngSrSlctd, String lstDntfrDntfrCdblCncptTxt, String lstDntfrDntfrPrdStrt, String lstDntfrDntfrPrdNd, String lstDntfrDntfrRfrncRfrnce, String lstDntfrDntfrRfrncTpe, String lstDntfrDntfrRfrncDntfr, String lstDntfrDntfrRfrncDsplay, String lstDntfrDntfrVlStrng, String lstDntfrDntfrSstmRi, String listStatus, String listMode, String listTitle, String lstCdCdblCncptCdngSstm, String lstCdCdblCncptCdngVrsn, String lstCdCdblCncptCdngCde, String lstCdCdblCncptCdngDsplay, String lstCdCdblCncptCdngSrSlctd, String lstCdCdblCncptTxtStrng, String lstSbjctRfrncDntfrDntfrCdblCncptCdng, String lstSbjctRfrncDntfrDntfrCdblCncptTxt, String lstSbjctRfrncDntfrDntfrPrdStrt, String lstSbjctRfrncDntfrDntfrPrdNd, String lstSbjctRfrncDntfrDntfrRfrncRfrnce, String lstSbjctRfrncDntfrDntfrRfrncTpe, String lstSbjctRfrncDntfrDntfrRfrncDntfr, String lstSbjctRfrncDntfrDntfrRfrncDsplay, String lstSbjctRfrncDntfrSe, String lstSbjctRfrncDntfrSstm, String lstSbjctRfrncDntfrVlue, String lstSbjctRfrncRfrncStrng, String lstSbjctRfrncDsplStrng, String listSubjectReferenceTypeUri, String lstNcntrRfrncDntfrDntfrCdblCncptCdng, String lstNcntrRfrncDntfrDntfrCdblCncptTxt, String lstNcntrRfrncDntfrDntfrPrdStrt, String lstNcntrRfrncDntfrDntfrPrdNd, String lstNcntrRfrncDntfrDntfrRfrncRfrnce, String lstNcntrRfrncDntfrDntfrRfrncTpe, String lstNcntrRfrncDntfrDntfrRfrncDntfr, String lstNcntrRfrncDntfrDntfrRfrncDsplay, String lstNcntrRfrncDntfrSe, String lstNcntrRfrncDntfrSstm, String lstNcntrRfrncDntfrVlue, String lstNcntrRfrncRfrncStrng, String lstNcntrRfrncDsplStrng, String listEncounterReferenceTypeUri, String listDate, String lstSrcRfrncDntfrDntfrCdblCncptCdng, String lstSrcRfrncDntfrDntfrCdblCncptTxt, String lstSrcRfrncDntfrDntfrPrdStrt, String lstSrcRfrncDntfrDntfrPrdNd, String lstSrcRfrncDntfrDntfrRfrncRfrnce, String lstSrcRfrncDntfrDntfrRfrncTpe, String lstSrcRfrncDntfrDntfrRfrncDntfr, String lstSrcRfrncDntfrDntfrRfrncDsplay, String lstSrcRfrncDntfrSe, String lstSrcRfrncDntfrSstm, String lstSrcRfrncDntfrVlue, String lstSrcRfrncRfrncStrng, String lstSrcRfrncDsplStrng, String listSourceReferenceTypeUri, String lstRdrdBCdblCncptCdngSstm, String lstRdrdBCdblCncptCdngVrsn, String lstRdrdBCdblCncptCdngCde, String lstRdrdBCdblCncptCdngDsplay, String lstRdrdBCdblCncptCdngSrSlctd, String lstRdrdBCdblCncptTxtStrng, String listNoteAnnotationTimeDateTime, String listNoteAnnotationTextMarkdown, String lstNtNnttnRfrncRfrnce, String lstNtNnttnRfrncTpe, String lstNtNnttnRfrncDntfr, String lstNtNnttnRfrncDsplay, String lstNtNnttnThrStrngStrng, String lstNtrFlgCdblCncptCdngSstm, String lstNtrFlgCdblCncptCdngVrsn, String lstNtrFlgCdblCncptCdngCde, String lstNtrFlgCdblCncptCdngDsplay, String lstNtrFlgCdblCncptCdngSrSlctd, String lstNtrFlgCdblCncptTxtStrng, String listEntryDeleted, String listEntryDate, String lstNtrTmRfrncDntfrDntfrCdblCncptCdng, String lstNtrTmRfrncDntfrDntfrCdblCncptTxt, String lstNtrTmRfrncDntfrDntfrPrdStrt, String lstNtrTmRfrncDntfrDntfrPrdNd, String lstNtrTmRfrncDntfrDntfrRfrncRfrnce, String lstNtrTmRfrncDntfrDntfrRfrncTpe, String lstNtrTmRfrncDntfrDntfrRfrncDntfr, String lstNtrTmRfrncDntfrDntfrRfrncDsplay, String lstNtrTmRfrncDntfrSe, String lstNtrTmRfrncDntfrSstm, String lstNtrTmRfrncDntfrVlue, String lstNtrTmRfrncRfrncStrng, String lstNtrTmRfrncDsplStrng, String listEntryItemReferenceTypeUri, String lstMptRsnCdblCncptCdngSstm, String lstMptRsnCdblCncptCdngVrsn, String lstMptRsnCdblCncptCdngCde, String lstMptRsnCdblCncptCdngDsplay, String lstMptRsnCdblCncptCdngSrSlctd, String lstMptRsnCdblCncptTxtStrng) {
-       this.lstDntfrDntfrTpCdblCncptCdngCde = lstDntfrDntfrTpCdblCncptCdngCde;
-       this.lstDntfrDntfrSCde = lstDntfrDntfrSCde;
-       this.lstDntfrDntfrTpCdblCncptCdngSstm = lstDntfrDntfrTpCdblCncptCdngSstm;
-       this.lstDntfrDntfrTpCdblCncptCdngVrsn = lstDntfrDntfrTpCdblCncptCdngVrsn;
-       this.lstDntfrDntfrTpCdblCncptCdngDsplay = lstDntfrDntfrTpCdblCncptCdngDsplay;
-       this.lstDntfrDntfrTpCdblCncptCdngSrSlctd = lstDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.lstDntfrDntfrCdblCncptTxt = lstDntfrDntfrCdblCncptTxt;
-       this.lstDntfrDntfrPrdStrt = lstDntfrDntfrPrdStrt;
-       this.lstDntfrDntfrPrdNd = lstDntfrDntfrPrdNd;
-       this.lstDntfrDntfrRfrncRfrnce = lstDntfrDntfrRfrncRfrnce;
-       this.lstDntfrDntfrRfrncTpe = lstDntfrDntfrRfrncTpe;
-       this.lstDntfrDntfrRfrncDntfr = lstDntfrDntfrRfrncDntfr;
-       this.lstDntfrDntfrRfrncDsplay = lstDntfrDntfrRfrncDsplay;
-       this.lstDntfrDntfrVlStrng = lstDntfrDntfrVlStrng;
-       this.lstDntfrDntfrSstmRi = lstDntfrDntfrSstmRi;
-       this.listStatus = listStatus;
-       this.listMode = listMode;
-       this.listTitle = listTitle;
-       this.lstCdCdblCncptCdngSstm = lstCdCdblCncptCdngSstm;
-       this.lstCdCdblCncptCdngVrsn = lstCdCdblCncptCdngVrsn;
-       this.lstCdCdblCncptCdngCde = lstCdCdblCncptCdngCde;
-       this.lstCdCdblCncptCdngDsplay = lstCdCdblCncptCdngDsplay;
-       this.lstCdCdblCncptCdngSrSlctd = lstCdCdblCncptCdngSrSlctd;
-       this.lstCdCdblCncptTxtStrng = lstCdCdblCncptTxtStrng;
-       this.lstSbjctRfrncDntfrDntfrCdblCncptCdng = lstSbjctRfrncDntfrDntfrCdblCncptCdng;
-       this.lstSbjctRfrncDntfrDntfrCdblCncptTxt = lstSbjctRfrncDntfrDntfrCdblCncptTxt;
-       this.lstSbjctRfrncDntfrDntfrPrdStrt = lstSbjctRfrncDntfrDntfrPrdStrt;
-       this.lstSbjctRfrncDntfrDntfrPrdNd = lstSbjctRfrncDntfrDntfrPrdNd;
-       this.lstSbjctRfrncDntfrDntfrRfrncRfrnce = lstSbjctRfrncDntfrDntfrRfrncRfrnce;
-       this.lstSbjctRfrncDntfrDntfrRfrncTpe = lstSbjctRfrncDntfrDntfrRfrncTpe;
-       this.lstSbjctRfrncDntfrDntfrRfrncDntfr = lstSbjctRfrncDntfrDntfrRfrncDntfr;
-       this.lstSbjctRfrncDntfrDntfrRfrncDsplay = lstSbjctRfrncDntfrDntfrRfrncDsplay;
-       this.lstSbjctRfrncDntfrSe = lstSbjctRfrncDntfrSe;
-       this.lstSbjctRfrncDntfrSstm = lstSbjctRfrncDntfrSstm;
-       this.lstSbjctRfrncDntfrVlue = lstSbjctRfrncDntfrVlue;
-       this.lstSbjctRfrncRfrncStrng = lstSbjctRfrncRfrncStrng;
-       this.lstSbjctRfrncDsplStrng = lstSbjctRfrncDsplStrng;
-       this.listSubjectReferenceTypeUri = listSubjectReferenceTypeUri;
-       this.lstNcntrRfrncDntfrDntfrCdblCncptCdng = lstNcntrRfrncDntfrDntfrCdblCncptCdng;
-       this.lstNcntrRfrncDntfrDntfrCdblCncptTxt = lstNcntrRfrncDntfrDntfrCdblCncptTxt;
-       this.lstNcntrRfrncDntfrDntfrPrdStrt = lstNcntrRfrncDntfrDntfrPrdStrt;
-       this.lstNcntrRfrncDntfrDntfrPrdNd = lstNcntrRfrncDntfrDntfrPrdNd;
-       this.lstNcntrRfrncDntfrDntfrRfrncRfrnce = lstNcntrRfrncDntfrDntfrRfrncRfrnce;
-       this.lstNcntrRfrncDntfrDntfrRfrncTpe = lstNcntrRfrncDntfrDntfrRfrncTpe;
-       this.lstNcntrRfrncDntfrDntfrRfrncDntfr = lstNcntrRfrncDntfrDntfrRfrncDntfr;
-       this.lstNcntrRfrncDntfrDntfrRfrncDsplay = lstNcntrRfrncDntfrDntfrRfrncDsplay;
-       this.lstNcntrRfrncDntfrSe = lstNcntrRfrncDntfrSe;
-       this.lstNcntrRfrncDntfrSstm = lstNcntrRfrncDntfrSstm;
-       this.lstNcntrRfrncDntfrVlue = lstNcntrRfrncDntfrVlue;
-       this.lstNcntrRfrncRfrncStrng = lstNcntrRfrncRfrncStrng;
-       this.lstNcntrRfrncDsplStrng = lstNcntrRfrncDsplStrng;
-       this.listEncounterReferenceTypeUri = listEncounterReferenceTypeUri;
-       this.listDate = listDate;
-       this.lstSrcRfrncDntfrDntfrCdblCncptCdng = lstSrcRfrncDntfrDntfrCdblCncptCdng;
-       this.lstSrcRfrncDntfrDntfrCdblCncptTxt = lstSrcRfrncDntfrDntfrCdblCncptTxt;
-       this.lstSrcRfrncDntfrDntfrPrdStrt = lstSrcRfrncDntfrDntfrPrdStrt;
-       this.lstSrcRfrncDntfrDntfrPrdNd = lstSrcRfrncDntfrDntfrPrdNd;
-       this.lstSrcRfrncDntfrDntfrRfrncRfrnce = lstSrcRfrncDntfrDntfrRfrncRfrnce;
-       this.lstSrcRfrncDntfrDntfrRfrncTpe = lstSrcRfrncDntfrDntfrRfrncTpe;
-       this.lstSrcRfrncDntfrDntfrRfrncDntfr = lstSrcRfrncDntfrDntfrRfrncDntfr;
-       this.lstSrcRfrncDntfrDntfrRfrncDsplay = lstSrcRfrncDntfrDntfrRfrncDsplay;
-       this.lstSrcRfrncDntfrSe = lstSrcRfrncDntfrSe;
-       this.lstSrcRfrncDntfrSstm = lstSrcRfrncDntfrSstm;
-       this.lstSrcRfrncDntfrVlue = lstSrcRfrncDntfrVlue;
-       this.lstSrcRfrncRfrncStrng = lstSrcRfrncRfrncStrng;
-       this.lstSrcRfrncDsplStrng = lstSrcRfrncDsplStrng;
-       this.listSourceReferenceTypeUri = listSourceReferenceTypeUri;
-       this.lstRdrdBCdblCncptCdngSstm = lstRdrdBCdblCncptCdngSstm;
-       this.lstRdrdBCdblCncptCdngVrsn = lstRdrdBCdblCncptCdngVrsn;
-       this.lstRdrdBCdblCncptCdngCde = lstRdrdBCdblCncptCdngCde;
-       this.lstRdrdBCdblCncptCdngDsplay = lstRdrdBCdblCncptCdngDsplay;
-       this.lstRdrdBCdblCncptCdngSrSlctd = lstRdrdBCdblCncptCdngSrSlctd;
-       this.lstRdrdBCdblCncptTxtStrng = lstRdrdBCdblCncptTxtStrng;
-       this.listNoteAnnotationTimeDateTime = listNoteAnnotationTimeDateTime;
-       this.listNoteAnnotationTextMarkdown = listNoteAnnotationTextMarkdown;
-       this.lstNtNnttnRfrncRfrnce = lstNtNnttnRfrncRfrnce;
-       this.lstNtNnttnRfrncTpe = lstNtNnttnRfrncTpe;
-       this.lstNtNnttnRfrncDntfr = lstNtNnttnRfrncDntfr;
-       this.lstNtNnttnRfrncDsplay = lstNtNnttnRfrncDsplay;
-       this.lstNtNnttnThrStrngStrng = lstNtNnttnThrStrngStrng;
-       this.lstNtrFlgCdblCncptCdngSstm = lstNtrFlgCdblCncptCdngSstm;
-       this.lstNtrFlgCdblCncptCdngVrsn = lstNtrFlgCdblCncptCdngVrsn;
-       this.lstNtrFlgCdblCncptCdngCde = lstNtrFlgCdblCncptCdngCde;
-       this.lstNtrFlgCdblCncptCdngDsplay = lstNtrFlgCdblCncptCdngDsplay;
-       this.lstNtrFlgCdblCncptCdngSrSlctd = lstNtrFlgCdblCncptCdngSrSlctd;
-       this.lstNtrFlgCdblCncptTxtStrng = lstNtrFlgCdblCncptTxtStrng;
-       this.listEntryDeleted = listEntryDeleted;
-       this.listEntryDate = listEntryDate;
-       this.lstNtrTmRfrncDntfrDntfrCdblCncptCdng = lstNtrTmRfrncDntfrDntfrCdblCncptCdng;
-       this.lstNtrTmRfrncDntfrDntfrCdblCncptTxt = lstNtrTmRfrncDntfrDntfrCdblCncptTxt;
-       this.lstNtrTmRfrncDntfrDntfrPrdStrt = lstNtrTmRfrncDntfrDntfrPrdStrt;
-       this.lstNtrTmRfrncDntfrDntfrPrdNd = lstNtrTmRfrncDntfrDntfrPrdNd;
-       this.lstNtrTmRfrncDntfrDntfrRfrncRfrnce = lstNtrTmRfrncDntfrDntfrRfrncRfrnce;
-       this.lstNtrTmRfrncDntfrDntfrRfrncTpe = lstNtrTmRfrncDntfrDntfrRfrncTpe;
-       this.lstNtrTmRfrncDntfrDntfrRfrncDntfr = lstNtrTmRfrncDntfrDntfrRfrncDntfr;
-       this.lstNtrTmRfrncDntfrDntfrRfrncDsplay = lstNtrTmRfrncDntfrDntfrRfrncDsplay;
-       this.lstNtrTmRfrncDntfrSe = lstNtrTmRfrncDntfrSe;
-       this.lstNtrTmRfrncDntfrSstm = lstNtrTmRfrncDntfrSstm;
-       this.lstNtrTmRfrncDntfrVlue = lstNtrTmRfrncDntfrVlue;
-       this.lstNtrTmRfrncRfrncStrng = lstNtrTmRfrncRfrncStrng;
-       this.lstNtrTmRfrncDsplStrng = lstNtrTmRfrncDsplStrng;
-       this.listEntryItemReferenceTypeUri = listEntryItemReferenceTypeUri;
-       this.lstMptRsnCdblCncptCdngSstm = lstMptRsnCdblCncptCdngSstm;
-       this.lstMptRsnCdblCncptCdngVrsn = lstMptRsnCdblCncptCdngVrsn;
-       this.lstMptRsnCdblCncptCdngCde = lstMptRsnCdblCncptCdngCde;
-       this.lstMptRsnCdblCncptCdngDsplay = lstMptRsnCdblCncptCdngDsplay;
-       this.lstMptRsnCdblCncptCdngSrSlctd = lstMptRsnCdblCncptCdngSrSlctd;
-       this.lstMptRsnCdblCncptTxtStrng = lstMptRsnCdblCncptTxtStrng;
+    public List(String listIdentifierIdentifierUse, String lstDntfrDntfrTpCcCSstm, String lstDntfrDntfrTpCcCVrsn, String lstDntfrDntfrTpCcCCde, String lstDntfrDntfrTpCcCDsplay, String lstDntfrDntfrTpCcCSrSlctd, String lstDntfrDntfrTpCcTxt, String lstDntfrDntfrPrdPrdStrt, String lstDntfrDntfrPrdPrdNd, String lstDntfrDntfrSsgnr, String listIdentifierIdentifierValue, String listIdentifierIdentifierSystem, String listStatusCode, String listModeCode, String listTitleString, String listCodeCcCodingCSystem, String listCodeCcCodingCVersion, String listCodeCcCodingCCode, String listCodeCcCodingCDisplay, String listCodeCcCodingCUserSelected, String listCodeCcText, String listSubjectReference, String listEncounterReference, String listDateDateTime, String listSourceReference, String listOrderedByCcCodingCSystem, String listOrderedByCcCodingCVersion, String listOrderedByCcCodingCCode, String listOrderedByCcCodingCDisplay, String lstRdrdBCcCdngCSrSlctd, String listOrderedByCcText, String listNoteAnnotationTime, String listNoteAnnotationText, String lstNtNnttnThrRfrnce, String listNoteAnnotationAuthorString, String listEntryFlagCcCodingCSystem, String lstNtrFlgCcCdngCVrsn, String listEntryFlagCcCodingCCode, String lstNtrFlgCcCdngCDsplay, String lstNtrFlgCcCdngCSrSlctd, String listEntryFlagCcText, String listEntryDeletedBoolean, String listEntryDateDateTime, String listEntryItemReference, String lstMptRsnCcCdngCSstm, String lstMptRsnCcCdngCVrsn, String listEmptyReasonCcCodingCCode, String lstMptRsnCcCdngCDsplay, String lstMptRsnCcCdngCSrSlctd, String listEmptyReasonCcText) {
+       this.listIdentifierIdentifierUse = listIdentifierIdentifierUse;
+       this.lstDntfrDntfrTpCcCSstm = lstDntfrDntfrTpCcCSstm;
+       this.lstDntfrDntfrTpCcCVrsn = lstDntfrDntfrTpCcCVrsn;
+       this.lstDntfrDntfrTpCcCCde = lstDntfrDntfrTpCcCCde;
+       this.lstDntfrDntfrTpCcCDsplay = lstDntfrDntfrTpCcCDsplay;
+       this.lstDntfrDntfrTpCcCSrSlctd = lstDntfrDntfrTpCcCSrSlctd;
+       this.lstDntfrDntfrTpCcTxt = lstDntfrDntfrTpCcTxt;
+       this.lstDntfrDntfrPrdPrdStrt = lstDntfrDntfrPrdPrdStrt;
+       this.lstDntfrDntfrPrdPrdNd = lstDntfrDntfrPrdPrdNd;
+       this.lstDntfrDntfrSsgnr = lstDntfrDntfrSsgnr;
+       this.listIdentifierIdentifierValue = listIdentifierIdentifierValue;
+       this.listIdentifierIdentifierSystem = listIdentifierIdentifierSystem;
+       this.listStatusCode = listStatusCode;
+       this.listModeCode = listModeCode;
+       this.listTitleString = listTitleString;
+       this.listCodeCcCodingCSystem = listCodeCcCodingCSystem;
+       this.listCodeCcCodingCVersion = listCodeCcCodingCVersion;
+       this.listCodeCcCodingCCode = listCodeCcCodingCCode;
+       this.listCodeCcCodingCDisplay = listCodeCcCodingCDisplay;
+       this.listCodeCcCodingCUserSelected = listCodeCcCodingCUserSelected;
+       this.listCodeCcText = listCodeCcText;
+       this.listSubjectReference = listSubjectReference;
+       this.listEncounterReference = listEncounterReference;
+       this.listDateDateTime = listDateDateTime;
+       this.listSourceReference = listSourceReference;
+       this.listOrderedByCcCodingCSystem = listOrderedByCcCodingCSystem;
+       this.listOrderedByCcCodingCVersion = listOrderedByCcCodingCVersion;
+       this.listOrderedByCcCodingCCode = listOrderedByCcCodingCCode;
+       this.listOrderedByCcCodingCDisplay = listOrderedByCcCodingCDisplay;
+       this.lstRdrdBCcCdngCSrSlctd = lstRdrdBCcCdngCSrSlctd;
+       this.listOrderedByCcText = listOrderedByCcText;
+       this.listNoteAnnotationTime = listNoteAnnotationTime;
+       this.listNoteAnnotationText = listNoteAnnotationText;
+       this.lstNtNnttnThrRfrnce = lstNtNnttnThrRfrnce;
+       this.listNoteAnnotationAuthorString = listNoteAnnotationAuthorString;
+       this.listEntryFlagCcCodingCSystem = listEntryFlagCcCodingCSystem;
+       this.lstNtrFlgCcCdngCVrsn = lstNtrFlgCcCdngCVrsn;
+       this.listEntryFlagCcCodingCCode = listEntryFlagCcCodingCCode;
+       this.lstNtrFlgCcCdngCDsplay = lstNtrFlgCcCdngCDsplay;
+       this.lstNtrFlgCcCdngCSrSlctd = lstNtrFlgCcCdngCSrSlctd;
+       this.listEntryFlagCcText = listEntryFlagCcText;
+       this.listEntryDeletedBoolean = listEntryDeletedBoolean;
+       this.listEntryDateDateTime = listEntryDateDateTime;
+       this.listEntryItemReference = listEntryItemReference;
+       this.lstMptRsnCcCdngCSstm = lstMptRsnCcCdngCSstm;
+       this.lstMptRsnCcCdngCVrsn = lstMptRsnCcCdngCVrsn;
+       this.listEmptyReasonCcCodingCCode = listEmptyReasonCcCodingCCode;
+       this.lstMptRsnCcCdngCDsplay = lstMptRsnCcCdngCDsplay;
+       this.lstMptRsnCcCdngCSrSlctd = lstMptRsnCcCdngCSrSlctd;
+       this.listEmptyReasonCcText = listEmptyReasonCcText;
     }
    
-    public String getLstDntfrDntfrTpCdblCncptCdngCde() {
-        return this.lstDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setLstDntfrDntfrTpCdblCncptCdngCde(String lstDntfrDntfrTpCdblCncptCdngCde) {
-        this.lstDntfrDntfrTpCdblCncptCdngCde = lstDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrSCde() {
-        return this.lstDntfrDntfrSCde;
-    }
-    
-    public void setLstDntfrDntfrSCde(String lstDntfrDntfrSCde) {
-        this.lstDntfrDntfrSCde = lstDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.lstDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setLstDntfrDntfrTpCdblCncptCdngSstm(String lstDntfrDntfrTpCdblCncptCdngSstm) {
-        this.lstDntfrDntfrTpCdblCncptCdngSstm = lstDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.lstDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setLstDntfrDntfrTpCdblCncptCdngVrsn(String lstDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.lstDntfrDntfrTpCdblCncptCdngVrsn = lstDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.lstDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setLstDntfrDntfrTpCdblCncptCdngDsplay(String lstDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.lstDntfrDntfrTpCdblCncptCdngDsplay = lstDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.lstDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLstDntfrDntfrTpCdblCncptCdngSrSlctd(String lstDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.lstDntfrDntfrTpCdblCncptCdngSrSlctd = lstDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrCdblCncptTxt() {
-        return this.lstDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLstDntfrDntfrCdblCncptTxt(String lstDntfrDntfrCdblCncptTxt) {
-        this.lstDntfrDntfrCdblCncptTxt = lstDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrPrdStrt() {
-        return this.lstDntfrDntfrPrdStrt;
-    }
-    
-    public void setLstDntfrDntfrPrdStrt(String lstDntfrDntfrPrdStrt) {
-        this.lstDntfrDntfrPrdStrt = lstDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrPrdNd() {
-        return this.lstDntfrDntfrPrdNd;
-    }
-    
-    public void setLstDntfrDntfrPrdNd(String lstDntfrDntfrPrdNd) {
-        this.lstDntfrDntfrPrdNd = lstDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrRfrncRfrnce() {
-        return this.lstDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLstDntfrDntfrRfrncRfrnce(String lstDntfrDntfrRfrncRfrnce) {
-        this.lstDntfrDntfrRfrncRfrnce = lstDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrRfrncTpe() {
-        return this.lstDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLstDntfrDntfrRfrncTpe(String lstDntfrDntfrRfrncTpe) {
-        this.lstDntfrDntfrRfrncTpe = lstDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrRfrncDntfr() {
-        return this.lstDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLstDntfrDntfrRfrncDntfr(String lstDntfrDntfrRfrncDntfr) {
-        this.lstDntfrDntfrRfrncDntfr = lstDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrRfrncDsplay() {
-        return this.lstDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLstDntfrDntfrRfrncDsplay(String lstDntfrDntfrRfrncDsplay) {
-        this.lstDntfrDntfrRfrncDsplay = lstDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrVlStrng() {
-        return this.lstDntfrDntfrVlStrng;
-    }
-    
-    public void setLstDntfrDntfrVlStrng(String lstDntfrDntfrVlStrng) {
-        this.lstDntfrDntfrVlStrng = lstDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getLstDntfrDntfrSstmRi() {
-        return this.lstDntfrDntfrSstmRi;
-    }
-    
-    public void setLstDntfrDntfrSstmRi(String lstDntfrDntfrSstmRi) {
-        this.lstDntfrDntfrSstmRi = lstDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getListStatus() {
-        return this.listStatus;
-    }
-    
-    public void setListStatus(String listStatus) {
-        this.listStatus = listStatus;
-    }
-    
-    
-    
-    public String getListMode() {
-        return this.listMode;
-    }
-    
-    public void setListMode(String listMode) {
-        this.listMode = listMode;
-    }
-    
-    
-    
-    public String getListTitle() {
-        return this.listTitle;
-    }
-    
-    public void setListTitle(String listTitle) {
-        this.listTitle = listTitle;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptCdngSstm() {
-        return this.lstCdCdblCncptCdngSstm;
-    }
-    
-    public void setLstCdCdblCncptCdngSstm(String lstCdCdblCncptCdngSstm) {
-        this.lstCdCdblCncptCdngSstm = lstCdCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptCdngVrsn() {
-        return this.lstCdCdblCncptCdngVrsn;
-    }
-    
-    public void setLstCdCdblCncptCdngVrsn(String lstCdCdblCncptCdngVrsn) {
-        this.lstCdCdblCncptCdngVrsn = lstCdCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptCdngCde() {
-        return this.lstCdCdblCncptCdngCde;
-    }
-    
-    public void setLstCdCdblCncptCdngCde(String lstCdCdblCncptCdngCde) {
-        this.lstCdCdblCncptCdngCde = lstCdCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptCdngDsplay() {
-        return this.lstCdCdblCncptCdngDsplay;
-    }
-    
-    public void setLstCdCdblCncptCdngDsplay(String lstCdCdblCncptCdngDsplay) {
-        this.lstCdCdblCncptCdngDsplay = lstCdCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptCdngSrSlctd() {
-        return this.lstCdCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLstCdCdblCncptCdngSrSlctd(String lstCdCdblCncptCdngSrSlctd) {
-        this.lstCdCdblCncptCdngSrSlctd = lstCdCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLstCdCdblCncptTxtStrng() {
-        return this.lstCdCdblCncptTxtStrng;
-    }
-    
-    public void setLstCdCdblCncptTxtStrng(String lstCdCdblCncptTxtStrng) {
-        this.lstCdCdblCncptTxtStrng = lstCdCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lstSbjctRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrCdblCncptCdng(String lstSbjctRfrncDntfrDntfrCdblCncptCdng) {
-        this.lstSbjctRfrncDntfrDntfrCdblCncptCdng = lstSbjctRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lstSbjctRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrCdblCncptTxt(String lstSbjctRfrncDntfrDntfrCdblCncptTxt) {
-        this.lstSbjctRfrncDntfrDntfrCdblCncptTxt = lstSbjctRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrPrdStrt() {
-        return this.lstSbjctRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrPrdStrt(String lstSbjctRfrncDntfrDntfrPrdStrt) {
-        this.lstSbjctRfrncDntfrDntfrPrdStrt = lstSbjctRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrPrdNd() {
-        return this.lstSbjctRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrPrdNd(String lstSbjctRfrncDntfrDntfrPrdNd) {
-        this.lstSbjctRfrncDntfrDntfrPrdNd = lstSbjctRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lstSbjctRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrRfrncRfrnce(String lstSbjctRfrncDntfrDntfrRfrncRfrnce) {
-        this.lstSbjctRfrncDntfrDntfrRfrncRfrnce = lstSbjctRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrRfrncTpe() {
-        return this.lstSbjctRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrRfrncTpe(String lstSbjctRfrncDntfrDntfrRfrncTpe) {
-        this.lstSbjctRfrncDntfrDntfrRfrncTpe = lstSbjctRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrRfrncDntfr() {
-        return this.lstSbjctRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrRfrncDntfr(String lstSbjctRfrncDntfrDntfrRfrncDntfr) {
-        this.lstSbjctRfrncDntfrDntfrRfrncDntfr = lstSbjctRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrDntfrRfrncDsplay() {
-        return this.lstSbjctRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLstSbjctRfrncDntfrDntfrRfrncDsplay(String lstSbjctRfrncDntfrDntfrRfrncDsplay) {
-        this.lstSbjctRfrncDntfrDntfrRfrncDsplay = lstSbjctRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrSe() {
-        return this.lstSbjctRfrncDntfrSe;
-    }
-    
-    public void setLstSbjctRfrncDntfrSe(String lstSbjctRfrncDntfrSe) {
-        this.lstSbjctRfrncDntfrSe = lstSbjctRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrSstm() {
-        return this.lstSbjctRfrncDntfrSstm;
-    }
-    
-    public void setLstSbjctRfrncDntfrSstm(String lstSbjctRfrncDntfrSstm) {
-        this.lstSbjctRfrncDntfrSstm = lstSbjctRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDntfrVlue() {
-        return this.lstSbjctRfrncDntfrVlue;
-    }
-    
-    public void setLstSbjctRfrncDntfrVlue(String lstSbjctRfrncDntfrVlue) {
-        this.lstSbjctRfrncDntfrVlue = lstSbjctRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncRfrncStrng() {
-        return this.lstSbjctRfrncRfrncStrng;
-    }
-    
-    public void setLstSbjctRfrncRfrncStrng(String lstSbjctRfrncRfrncStrng) {
-        this.lstSbjctRfrncRfrncStrng = lstSbjctRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLstSbjctRfrncDsplStrng() {
-        return this.lstSbjctRfrncDsplStrng;
-    }
-    
-    public void setLstSbjctRfrncDsplStrng(String lstSbjctRfrncDsplStrng) {
-        this.lstSbjctRfrncDsplStrng = lstSbjctRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getListSubjectReferenceTypeUri() {
-        return this.listSubjectReferenceTypeUri;
-    }
-    
-    public void setListSubjectReferenceTypeUri(String listSubjectReferenceTypeUri) {
-        this.listSubjectReferenceTypeUri = listSubjectReferenceTypeUri;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lstNcntrRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrCdblCncptCdng(String lstNcntrRfrncDntfrDntfrCdblCncptCdng) {
-        this.lstNcntrRfrncDntfrDntfrCdblCncptCdng = lstNcntrRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lstNcntrRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrCdblCncptTxt(String lstNcntrRfrncDntfrDntfrCdblCncptTxt) {
-        this.lstNcntrRfrncDntfrDntfrCdblCncptTxt = lstNcntrRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrPrdStrt() {
-        return this.lstNcntrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrPrdStrt(String lstNcntrRfrncDntfrDntfrPrdStrt) {
-        this.lstNcntrRfrncDntfrDntfrPrdStrt = lstNcntrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrPrdNd() {
-        return this.lstNcntrRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrPrdNd(String lstNcntrRfrncDntfrDntfrPrdNd) {
-        this.lstNcntrRfrncDntfrDntfrPrdNd = lstNcntrRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lstNcntrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrRfrncRfrnce(String lstNcntrRfrncDntfrDntfrRfrncRfrnce) {
-        this.lstNcntrRfrncDntfrDntfrRfrncRfrnce = lstNcntrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrRfrncTpe() {
-        return this.lstNcntrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrRfrncTpe(String lstNcntrRfrncDntfrDntfrRfrncTpe) {
-        this.lstNcntrRfrncDntfrDntfrRfrncTpe = lstNcntrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrRfrncDntfr() {
-        return this.lstNcntrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrRfrncDntfr(String lstNcntrRfrncDntfrDntfrRfrncDntfr) {
-        this.lstNcntrRfrncDntfrDntfrRfrncDntfr = lstNcntrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrDntfrRfrncDsplay() {
-        return this.lstNcntrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLstNcntrRfrncDntfrDntfrRfrncDsplay(String lstNcntrRfrncDntfrDntfrRfrncDsplay) {
-        this.lstNcntrRfrncDntfrDntfrRfrncDsplay = lstNcntrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrSe() {
-        return this.lstNcntrRfrncDntfrSe;
-    }
-    
-    public void setLstNcntrRfrncDntfrSe(String lstNcntrRfrncDntfrSe) {
-        this.lstNcntrRfrncDntfrSe = lstNcntrRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrSstm() {
-        return this.lstNcntrRfrncDntfrSstm;
-    }
-    
-    public void setLstNcntrRfrncDntfrSstm(String lstNcntrRfrncDntfrSstm) {
-        this.lstNcntrRfrncDntfrSstm = lstNcntrRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDntfrVlue() {
-        return this.lstNcntrRfrncDntfrVlue;
-    }
-    
-    public void setLstNcntrRfrncDntfrVlue(String lstNcntrRfrncDntfrVlue) {
-        this.lstNcntrRfrncDntfrVlue = lstNcntrRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncRfrncStrng() {
-        return this.lstNcntrRfrncRfrncStrng;
-    }
-    
-    public void setLstNcntrRfrncRfrncStrng(String lstNcntrRfrncRfrncStrng) {
-        this.lstNcntrRfrncRfrncStrng = lstNcntrRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLstNcntrRfrncDsplStrng() {
-        return this.lstNcntrRfrncDsplStrng;
-    }
-    
-    public void setLstNcntrRfrncDsplStrng(String lstNcntrRfrncDsplStrng) {
-        this.lstNcntrRfrncDsplStrng = lstNcntrRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getListEncounterReferenceTypeUri() {
-        return this.listEncounterReferenceTypeUri;
-    }
-    
-    public void setListEncounterReferenceTypeUri(String listEncounterReferenceTypeUri) {
-        this.listEncounterReferenceTypeUri = listEncounterReferenceTypeUri;
-    }
-    
-    
-    
-    public String getListDate() {
-        return this.listDate;
-    }
-    
-    public void setListDate(String listDate) {
-        this.listDate = listDate;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lstSrcRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrCdblCncptCdng(String lstSrcRfrncDntfrDntfrCdblCncptCdng) {
-        this.lstSrcRfrncDntfrDntfrCdblCncptCdng = lstSrcRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lstSrcRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrCdblCncptTxt(String lstSrcRfrncDntfrDntfrCdblCncptTxt) {
-        this.lstSrcRfrncDntfrDntfrCdblCncptTxt = lstSrcRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrPrdStrt() {
-        return this.lstSrcRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrPrdStrt(String lstSrcRfrncDntfrDntfrPrdStrt) {
-        this.lstSrcRfrncDntfrDntfrPrdStrt = lstSrcRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrPrdNd() {
-        return this.lstSrcRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrPrdNd(String lstSrcRfrncDntfrDntfrPrdNd) {
-        this.lstSrcRfrncDntfrDntfrPrdNd = lstSrcRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lstSrcRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrRfrncRfrnce(String lstSrcRfrncDntfrDntfrRfrncRfrnce) {
-        this.lstSrcRfrncDntfrDntfrRfrncRfrnce = lstSrcRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrRfrncTpe() {
-        return this.lstSrcRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrRfrncTpe(String lstSrcRfrncDntfrDntfrRfrncTpe) {
-        this.lstSrcRfrncDntfrDntfrRfrncTpe = lstSrcRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrRfrncDntfr() {
-        return this.lstSrcRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrRfrncDntfr(String lstSrcRfrncDntfrDntfrRfrncDntfr) {
-        this.lstSrcRfrncDntfrDntfrRfrncDntfr = lstSrcRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrDntfrRfrncDsplay() {
-        return this.lstSrcRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLstSrcRfrncDntfrDntfrRfrncDsplay(String lstSrcRfrncDntfrDntfrRfrncDsplay) {
-        this.lstSrcRfrncDntfrDntfrRfrncDsplay = lstSrcRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrSe() {
-        return this.lstSrcRfrncDntfrSe;
-    }
-    
-    public void setLstSrcRfrncDntfrSe(String lstSrcRfrncDntfrSe) {
-        this.lstSrcRfrncDntfrSe = lstSrcRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrSstm() {
-        return this.lstSrcRfrncDntfrSstm;
-    }
-    
-    public void setLstSrcRfrncDntfrSstm(String lstSrcRfrncDntfrSstm) {
-        this.lstSrcRfrncDntfrSstm = lstSrcRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDntfrVlue() {
-        return this.lstSrcRfrncDntfrVlue;
-    }
-    
-    public void setLstSrcRfrncDntfrVlue(String lstSrcRfrncDntfrVlue) {
-        this.lstSrcRfrncDntfrVlue = lstSrcRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLstSrcRfrncRfrncStrng() {
-        return this.lstSrcRfrncRfrncStrng;
-    }
-    
-    public void setLstSrcRfrncRfrncStrng(String lstSrcRfrncRfrncStrng) {
-        this.lstSrcRfrncRfrncStrng = lstSrcRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLstSrcRfrncDsplStrng() {
-        return this.lstSrcRfrncDsplStrng;
-    }
-    
-    public void setLstSrcRfrncDsplStrng(String lstSrcRfrncDsplStrng) {
-        this.lstSrcRfrncDsplStrng = lstSrcRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getListSourceReferenceTypeUri() {
-        return this.listSourceReferenceTypeUri;
-    }
-    
-    public void setListSourceReferenceTypeUri(String listSourceReferenceTypeUri) {
-        this.listSourceReferenceTypeUri = listSourceReferenceTypeUri;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptCdngSstm() {
-        return this.lstRdrdBCdblCncptCdngSstm;
-    }
-    
-    public void setLstRdrdBCdblCncptCdngSstm(String lstRdrdBCdblCncptCdngSstm) {
-        this.lstRdrdBCdblCncptCdngSstm = lstRdrdBCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptCdngVrsn() {
-        return this.lstRdrdBCdblCncptCdngVrsn;
-    }
-    
-    public void setLstRdrdBCdblCncptCdngVrsn(String lstRdrdBCdblCncptCdngVrsn) {
-        this.lstRdrdBCdblCncptCdngVrsn = lstRdrdBCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptCdngCde() {
-        return this.lstRdrdBCdblCncptCdngCde;
-    }
-    
-    public void setLstRdrdBCdblCncptCdngCde(String lstRdrdBCdblCncptCdngCde) {
-        this.lstRdrdBCdblCncptCdngCde = lstRdrdBCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptCdngDsplay() {
-        return this.lstRdrdBCdblCncptCdngDsplay;
-    }
-    
-    public void setLstRdrdBCdblCncptCdngDsplay(String lstRdrdBCdblCncptCdngDsplay) {
-        this.lstRdrdBCdblCncptCdngDsplay = lstRdrdBCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptCdngSrSlctd() {
-        return this.lstRdrdBCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLstRdrdBCdblCncptCdngSrSlctd(String lstRdrdBCdblCncptCdngSrSlctd) {
-        this.lstRdrdBCdblCncptCdngSrSlctd = lstRdrdBCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLstRdrdBCdblCncptTxtStrng() {
-        return this.lstRdrdBCdblCncptTxtStrng;
-    }
-    
-    public void setLstRdrdBCdblCncptTxtStrng(String lstRdrdBCdblCncptTxtStrng) {
-        this.lstRdrdBCdblCncptTxtStrng = lstRdrdBCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getListNoteAnnotationTimeDateTime() {
-        return this.listNoteAnnotationTimeDateTime;
-    }
-    
-    public void setListNoteAnnotationTimeDateTime(String listNoteAnnotationTimeDateTime) {
-        this.listNoteAnnotationTimeDateTime = listNoteAnnotationTimeDateTime;
-    }
-    
-    
-    
-    public String getListNoteAnnotationTextMarkdown() {
-        return this.listNoteAnnotationTextMarkdown;
-    }
-    
-    public void setListNoteAnnotationTextMarkdown(String listNoteAnnotationTextMarkdown) {
-        this.listNoteAnnotationTextMarkdown = listNoteAnnotationTextMarkdown;
-    }
-    
-    
-    
-    public String getLstNtNnttnRfrncRfrnce() {
-        return this.lstNtNnttnRfrncRfrnce;
-    }
-    
-    public void setLstNtNnttnRfrncRfrnce(String lstNtNnttnRfrncRfrnce) {
-        this.lstNtNnttnRfrncRfrnce = lstNtNnttnRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstNtNnttnRfrncTpe() {
-        return this.lstNtNnttnRfrncTpe;
-    }
-    
-    public void setLstNtNnttnRfrncTpe(String lstNtNnttnRfrncTpe) {
-        this.lstNtNnttnRfrncTpe = lstNtNnttnRfrncTpe;
-    }
-    
-    
-    
-    public String getLstNtNnttnRfrncDntfr() {
-        return this.lstNtNnttnRfrncDntfr;
-    }
-    
-    public void setLstNtNnttnRfrncDntfr(String lstNtNnttnRfrncDntfr) {
-        this.lstNtNnttnRfrncDntfr = lstNtNnttnRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstNtNnttnRfrncDsplay() {
-        return this.lstNtNnttnRfrncDsplay;
-    }
-    
-    public void setLstNtNnttnRfrncDsplay(String lstNtNnttnRfrncDsplay) {
-        this.lstNtNnttnRfrncDsplay = lstNtNnttnRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstNtNnttnThrStrngStrng() {
-        return this.lstNtNnttnThrStrngStrng;
-    }
-    
-    public void setLstNtNnttnThrStrngStrng(String lstNtNnttnThrStrngStrng) {
-        this.lstNtNnttnThrStrngStrng = lstNtNnttnThrStrngStrng;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptCdngSstm() {
-        return this.lstNtrFlgCdblCncptCdngSstm;
-    }
-    
-    public void setLstNtrFlgCdblCncptCdngSstm(String lstNtrFlgCdblCncptCdngSstm) {
-        this.lstNtrFlgCdblCncptCdngSstm = lstNtrFlgCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptCdngVrsn() {
-        return this.lstNtrFlgCdblCncptCdngVrsn;
-    }
-    
-    public void setLstNtrFlgCdblCncptCdngVrsn(String lstNtrFlgCdblCncptCdngVrsn) {
-        this.lstNtrFlgCdblCncptCdngVrsn = lstNtrFlgCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptCdngCde() {
-        return this.lstNtrFlgCdblCncptCdngCde;
-    }
-    
-    public void setLstNtrFlgCdblCncptCdngCde(String lstNtrFlgCdblCncptCdngCde) {
-        this.lstNtrFlgCdblCncptCdngCde = lstNtrFlgCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptCdngDsplay() {
-        return this.lstNtrFlgCdblCncptCdngDsplay;
-    }
-    
-    public void setLstNtrFlgCdblCncptCdngDsplay(String lstNtrFlgCdblCncptCdngDsplay) {
-        this.lstNtrFlgCdblCncptCdngDsplay = lstNtrFlgCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptCdngSrSlctd() {
-        return this.lstNtrFlgCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLstNtrFlgCdblCncptCdngSrSlctd(String lstNtrFlgCdblCncptCdngSrSlctd) {
-        this.lstNtrFlgCdblCncptCdngSrSlctd = lstNtrFlgCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLstNtrFlgCdblCncptTxtStrng() {
-        return this.lstNtrFlgCdblCncptTxtStrng;
-    }
-    
-    public void setLstNtrFlgCdblCncptTxtStrng(String lstNtrFlgCdblCncptTxtStrng) {
-        this.lstNtrFlgCdblCncptTxtStrng = lstNtrFlgCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getListEntryDeleted() {
-        return this.listEntryDeleted;
-    }
-    
-    public void setListEntryDeleted(String listEntryDeleted) {
-        this.listEntryDeleted = listEntryDeleted;
-    }
-    
-    
-    
-    public String getListEntryDate() {
-        return this.listEntryDate;
-    }
-    
-    public void setListEntryDate(String listEntryDate) {
-        this.listEntryDate = listEntryDate;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lstNtrTmRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrCdblCncptCdng(String lstNtrTmRfrncDntfrDntfrCdblCncptCdng) {
-        this.lstNtrTmRfrncDntfrDntfrCdblCncptCdng = lstNtrTmRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lstNtrTmRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrCdblCncptTxt(String lstNtrTmRfrncDntfrDntfrCdblCncptTxt) {
-        this.lstNtrTmRfrncDntfrDntfrCdblCncptTxt = lstNtrTmRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrPrdStrt() {
-        return this.lstNtrTmRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrPrdStrt(String lstNtrTmRfrncDntfrDntfrPrdStrt) {
-        this.lstNtrTmRfrncDntfrDntfrPrdStrt = lstNtrTmRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrPrdNd() {
-        return this.lstNtrTmRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrPrdNd(String lstNtrTmRfrncDntfrDntfrPrdNd) {
-        this.lstNtrTmRfrncDntfrDntfrPrdNd = lstNtrTmRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lstNtrTmRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrRfrncRfrnce(String lstNtrTmRfrncDntfrDntfrRfrncRfrnce) {
-        this.lstNtrTmRfrncDntfrDntfrRfrncRfrnce = lstNtrTmRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrRfrncTpe() {
-        return this.lstNtrTmRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrRfrncTpe(String lstNtrTmRfrncDntfrDntfrRfrncTpe) {
-        this.lstNtrTmRfrncDntfrDntfrRfrncTpe = lstNtrTmRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrRfrncDntfr() {
-        return this.lstNtrTmRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrRfrncDntfr(String lstNtrTmRfrncDntfrDntfrRfrncDntfr) {
-        this.lstNtrTmRfrncDntfrDntfrRfrncDntfr = lstNtrTmRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrDntfrRfrncDsplay() {
-        return this.lstNtrTmRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLstNtrTmRfrncDntfrDntfrRfrncDsplay(String lstNtrTmRfrncDntfrDntfrRfrncDsplay) {
-        this.lstNtrTmRfrncDntfrDntfrRfrncDsplay = lstNtrTmRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrSe() {
-        return this.lstNtrTmRfrncDntfrSe;
-    }
-    
-    public void setLstNtrTmRfrncDntfrSe(String lstNtrTmRfrncDntfrSe) {
-        this.lstNtrTmRfrncDntfrSe = lstNtrTmRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrSstm() {
-        return this.lstNtrTmRfrncDntfrSstm;
-    }
-    
-    public void setLstNtrTmRfrncDntfrSstm(String lstNtrTmRfrncDntfrSstm) {
-        this.lstNtrTmRfrncDntfrSstm = lstNtrTmRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDntfrVlue() {
-        return this.lstNtrTmRfrncDntfrVlue;
-    }
-    
-    public void setLstNtrTmRfrncDntfrVlue(String lstNtrTmRfrncDntfrVlue) {
-        this.lstNtrTmRfrncDntfrVlue = lstNtrTmRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncRfrncStrng() {
-        return this.lstNtrTmRfrncRfrncStrng;
-    }
-    
-    public void setLstNtrTmRfrncRfrncStrng(String lstNtrTmRfrncRfrncStrng) {
-        this.lstNtrTmRfrncRfrncStrng = lstNtrTmRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLstNtrTmRfrncDsplStrng() {
-        return this.lstNtrTmRfrncDsplStrng;
-    }
-    
-    public void setLstNtrTmRfrncDsplStrng(String lstNtrTmRfrncDsplStrng) {
-        this.lstNtrTmRfrncDsplStrng = lstNtrTmRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getListEntryItemReferenceTypeUri() {
-        return this.listEntryItemReferenceTypeUri;
-    }
-    
-    public void setListEntryItemReferenceTypeUri(String listEntryItemReferenceTypeUri) {
-        this.listEntryItemReferenceTypeUri = listEntryItemReferenceTypeUri;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptCdngSstm() {
-        return this.lstMptRsnCdblCncptCdngSstm;
-    }
-    
-    public void setLstMptRsnCdblCncptCdngSstm(String lstMptRsnCdblCncptCdngSstm) {
-        this.lstMptRsnCdblCncptCdngSstm = lstMptRsnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptCdngVrsn() {
-        return this.lstMptRsnCdblCncptCdngVrsn;
-    }
-    
-    public void setLstMptRsnCdblCncptCdngVrsn(String lstMptRsnCdblCncptCdngVrsn) {
-        this.lstMptRsnCdblCncptCdngVrsn = lstMptRsnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptCdngCde() {
-        return this.lstMptRsnCdblCncptCdngCde;
-    }
-    
-    public void setLstMptRsnCdblCncptCdngCde(String lstMptRsnCdblCncptCdngCde) {
-        this.lstMptRsnCdblCncptCdngCde = lstMptRsnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptCdngDsplay() {
-        return this.lstMptRsnCdblCncptCdngDsplay;
-    }
-    
-    public void setLstMptRsnCdblCncptCdngDsplay(String lstMptRsnCdblCncptCdngDsplay) {
-        this.lstMptRsnCdblCncptCdngDsplay = lstMptRsnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptCdngSrSlctd() {
-        return this.lstMptRsnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLstMptRsnCdblCncptCdngSrSlctd(String lstMptRsnCdblCncptCdngSrSlctd) {
-        this.lstMptRsnCdblCncptCdngSrSlctd = lstMptRsnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLstMptRsnCdblCncptTxtStrng() {
-        return this.lstMptRsnCdblCncptTxtStrng;
-    }
-    
-    public void setLstMptRsnCdblCncptTxtStrng(String lstMptRsnCdblCncptTxtStrng) {
-        this.lstMptRsnCdblCncptTxtStrng = lstMptRsnCdblCncptTxtStrng;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getListIdentifierIdentifierUse()
+    {
+        return this.listIdentifierIdentifierUse;
+    }
+    
+    public void setListIdentifierIdentifierUse
+        (String listIdentifierIdentifierUse) 
+        {
+      this.listIdentifierIdentifierUse = listIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcCSstm()
+    {
+        return this.lstDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setLstDntfrDntfrTpCcCSstm
+        (String lstDntfrDntfrTpCcCSstm) 
+        {
+      this.lstDntfrDntfrTpCcCSstm = lstDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcCVrsn()
+    {
+        return this.lstDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setLstDntfrDntfrTpCcCVrsn
+        (String lstDntfrDntfrTpCcCVrsn) 
+        {
+      this.lstDntfrDntfrTpCcCVrsn = lstDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcCCde()
+    {
+        return this.lstDntfrDntfrTpCcCCde;
+    }
+    
+    public void setLstDntfrDntfrTpCcCCde
+        (String lstDntfrDntfrTpCcCCde) 
+        {
+      this.lstDntfrDntfrTpCcCCde = lstDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcCDsplay()
+    {
+        return this.lstDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setLstDntfrDntfrTpCcCDsplay
+        (String lstDntfrDntfrTpCcCDsplay) 
+        {
+      this.lstDntfrDntfrTpCcCDsplay = lstDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.lstDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setLstDntfrDntfrTpCcCSrSlctd
+        (String lstDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.lstDntfrDntfrTpCcCSrSlctd = lstDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getLstDntfrDntfrTpCcTxt()
+    {
+        return this.lstDntfrDntfrTpCcTxt;
+    }
+    
+    public void setLstDntfrDntfrTpCcTxt
+        (String lstDntfrDntfrTpCcTxt) 
+        {
+      this.lstDntfrDntfrTpCcTxt = lstDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getLstDntfrDntfrPrdPrdStrt()
+    {
+        return this.lstDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setLstDntfrDntfrPrdPrdStrt
+        (String lstDntfrDntfrPrdPrdStrt) 
+        {
+      this.lstDntfrDntfrPrdPrdStrt = lstDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getLstDntfrDntfrPrdPrdNd()
+    {
+        return this.lstDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setLstDntfrDntfrPrdPrdNd
+        (String lstDntfrDntfrPrdPrdNd) 
+        {
+      this.lstDntfrDntfrPrdPrdNd = lstDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getLstDntfrDntfrSsgnr()
+    {
+        return this.lstDntfrDntfrSsgnr;
+    }
+    
+    public void setLstDntfrDntfrSsgnr
+        (String lstDntfrDntfrSsgnr) 
+        {
+      this.lstDntfrDntfrSsgnr = lstDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getListIdentifierIdentifierValue()
+    {
+        return this.listIdentifierIdentifierValue;
+    }
+    
+    public void setListIdentifierIdentifierValue
+        (String listIdentifierIdentifierValue) 
+        {
+      this.listIdentifierIdentifierValue = listIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getListIdentifierIdentifierSystem()
+    {
+        return this.listIdentifierIdentifierSystem;
+    }
+    
+    public void setListIdentifierIdentifierSystem
+        (String listIdentifierIdentifierSystem) 
+        {
+      this.listIdentifierIdentifierSystem = listIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getListStatusCode()
+    {
+        return this.listStatusCode;
+    }
+    
+    public void setListStatusCode
+        (String listStatusCode) 
+        {
+      this.listStatusCode = listStatusCode;
+}
+    public 
+    String 
+    getListModeCode()
+    {
+        return this.listModeCode;
+    }
+    
+    public void setListModeCode
+        (String listModeCode) 
+        {
+      this.listModeCode = listModeCode;
+}
+    public 
+    String 
+    getListTitleString()
+    {
+        return this.listTitleString;
+    }
+    
+    public void setListTitleString
+        (String listTitleString) 
+        {
+      this.listTitleString = listTitleString;
+}
+    public 
+    String 
+    getListCodeCcCodingCSystem()
+    {
+        return this.listCodeCcCodingCSystem;
+    }
+    
+    public void setListCodeCcCodingCSystem
+        (String listCodeCcCodingCSystem) 
+        {
+      this.listCodeCcCodingCSystem = listCodeCcCodingCSystem;
+}
+    public 
+    String 
+    getListCodeCcCodingCVersion()
+    {
+        return this.listCodeCcCodingCVersion;
+    }
+    
+    public void setListCodeCcCodingCVersion
+        (String listCodeCcCodingCVersion) 
+        {
+      this.listCodeCcCodingCVersion = listCodeCcCodingCVersion;
+}
+    public 
+    String 
+    getListCodeCcCodingCCode()
+    {
+        return this.listCodeCcCodingCCode;
+    }
+    
+    public void setListCodeCcCodingCCode
+        (String listCodeCcCodingCCode) 
+        {
+      this.listCodeCcCodingCCode = listCodeCcCodingCCode;
+}
+    public 
+    String 
+    getListCodeCcCodingCDisplay()
+    {
+        return this.listCodeCcCodingCDisplay;
+    }
+    
+    public void setListCodeCcCodingCDisplay
+        (String listCodeCcCodingCDisplay) 
+        {
+      this.listCodeCcCodingCDisplay = listCodeCcCodingCDisplay;
+}
+    public 
+    String 
+    getListCodeCcCodingCUserSelected()
+    {
+        return this.listCodeCcCodingCUserSelected;
+    }
+    
+    public void setListCodeCcCodingCUserSelected
+        (String listCodeCcCodingCUserSelected) 
+        {
+      this.listCodeCcCodingCUserSelected = listCodeCcCodingCUserSelected;
+}
+    public 
+    String 
+    getListCodeCcText()
+    {
+        return this.listCodeCcText;
+    }
+    
+    public void setListCodeCcText
+        (String listCodeCcText) 
+        {
+      this.listCodeCcText = listCodeCcText;
+}
+    public 
+    String 
+    getListSubjectReference()
+    {
+        return this.listSubjectReference;
+    }
+    
+    public void setListSubjectReference
+        (String listSubjectReference) 
+        {
+      this.listSubjectReference = listSubjectReference;
+}
+    public 
+    String 
+    getListEncounterReference()
+    {
+        return this.listEncounterReference;
+    }
+    
+    public void setListEncounterReference
+        (String listEncounterReference) 
+        {
+      this.listEncounterReference = listEncounterReference;
+}
+    public 
+    String 
+    getListDateDateTime()
+    {
+        return this.listDateDateTime;
+    }
+    
+    public void setListDateDateTime
+        (String listDateDateTime) 
+        {
+      this.listDateDateTime = listDateDateTime;
+}
+    public 
+    String 
+    getListSourceReference()
+    {
+        return this.listSourceReference;
+    }
+    
+    public void setListSourceReference
+        (String listSourceReference) 
+        {
+      this.listSourceReference = listSourceReference;
+}
+    public 
+    String 
+    getListOrderedByCcCodingCSystem()
+    {
+        return this.listOrderedByCcCodingCSystem;
+    }
+    
+    public void setListOrderedByCcCodingCSystem
+        (String listOrderedByCcCodingCSystem) 
+        {
+      this.listOrderedByCcCodingCSystem = listOrderedByCcCodingCSystem;
+}
+    public 
+    String 
+    getListOrderedByCcCodingCVersion()
+    {
+        return this.listOrderedByCcCodingCVersion;
+    }
+    
+    public void setListOrderedByCcCodingCVersion
+        (String listOrderedByCcCodingCVersion) 
+        {
+      this.listOrderedByCcCodingCVersion = listOrderedByCcCodingCVersion;
+}
+    public 
+    String 
+    getListOrderedByCcCodingCCode()
+    {
+        return this.listOrderedByCcCodingCCode;
+    }
+    
+    public void setListOrderedByCcCodingCCode
+        (String listOrderedByCcCodingCCode) 
+        {
+      this.listOrderedByCcCodingCCode = listOrderedByCcCodingCCode;
+}
+    public 
+    String 
+    getListOrderedByCcCodingCDisplay()
+    {
+        return this.listOrderedByCcCodingCDisplay;
+    }
+    
+    public void setListOrderedByCcCodingCDisplay
+        (String listOrderedByCcCodingCDisplay) 
+        {
+      this.listOrderedByCcCodingCDisplay = listOrderedByCcCodingCDisplay;
+}
+    public 
+    String 
+    getLstRdrdBCcCdngCSrSlctd()
+    {
+        return this.lstRdrdBCcCdngCSrSlctd;
+    }
+    
+    public void setLstRdrdBCcCdngCSrSlctd
+        (String lstRdrdBCcCdngCSrSlctd) 
+        {
+      this.lstRdrdBCcCdngCSrSlctd = lstRdrdBCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getListOrderedByCcText()
+    {
+        return this.listOrderedByCcText;
+    }
+    
+    public void setListOrderedByCcText
+        (String listOrderedByCcText) 
+        {
+      this.listOrderedByCcText = listOrderedByCcText;
+}
+    public 
+    String 
+    getListNoteAnnotationTime()
+    {
+        return this.listNoteAnnotationTime;
+    }
+    
+    public void setListNoteAnnotationTime
+        (String listNoteAnnotationTime) 
+        {
+      this.listNoteAnnotationTime = listNoteAnnotationTime;
+}
+    public 
+    String 
+    getListNoteAnnotationText()
+    {
+        return this.listNoteAnnotationText;
+    }
+    
+    public void setListNoteAnnotationText
+        (String listNoteAnnotationText) 
+        {
+      this.listNoteAnnotationText = listNoteAnnotationText;
+}
+    public 
+    String 
+    getLstNtNnttnThrRfrnce()
+    {
+        return this.lstNtNnttnThrRfrnce;
+    }
+    
+    public void setLstNtNnttnThrRfrnce
+        (String lstNtNnttnThrRfrnce) 
+        {
+      this.lstNtNnttnThrRfrnce = lstNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getListNoteAnnotationAuthorString()
+    {
+        return this.listNoteAnnotationAuthorString;
+    }
+    
+    public void setListNoteAnnotationAuthorString
+        (String listNoteAnnotationAuthorString) 
+        {
+      this.listNoteAnnotationAuthorString = listNoteAnnotationAuthorString;
+}
+    public 
+    String 
+    getListEntryFlagCcCodingCSystem()
+    {
+        return this.listEntryFlagCcCodingCSystem;
+    }
+    
+    public void setListEntryFlagCcCodingCSystem
+        (String listEntryFlagCcCodingCSystem) 
+        {
+      this.listEntryFlagCcCodingCSystem = listEntryFlagCcCodingCSystem;
+}
+    public 
+    String 
+    getLstNtrFlgCcCdngCVrsn()
+    {
+        return this.lstNtrFlgCcCdngCVrsn;
+    }
+    
+    public void setLstNtrFlgCcCdngCVrsn
+        (String lstNtrFlgCcCdngCVrsn) 
+        {
+      this.lstNtrFlgCcCdngCVrsn = lstNtrFlgCcCdngCVrsn;
+}
+    public 
+    String 
+    getListEntryFlagCcCodingCCode()
+    {
+        return this.listEntryFlagCcCodingCCode;
+    }
+    
+    public void setListEntryFlagCcCodingCCode
+        (String listEntryFlagCcCodingCCode) 
+        {
+      this.listEntryFlagCcCodingCCode = listEntryFlagCcCodingCCode;
+}
+    public 
+    String 
+    getLstNtrFlgCcCdngCDsplay()
+    {
+        return this.lstNtrFlgCcCdngCDsplay;
+    }
+    
+    public void setLstNtrFlgCcCdngCDsplay
+        (String lstNtrFlgCcCdngCDsplay) 
+        {
+      this.lstNtrFlgCcCdngCDsplay = lstNtrFlgCcCdngCDsplay;
+}
+    public 
+    String 
+    getLstNtrFlgCcCdngCSrSlctd()
+    {
+        return this.lstNtrFlgCcCdngCSrSlctd;
+    }
+    
+    public void setLstNtrFlgCcCdngCSrSlctd
+        (String lstNtrFlgCcCdngCSrSlctd) 
+        {
+      this.lstNtrFlgCcCdngCSrSlctd = lstNtrFlgCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getListEntryFlagCcText()
+    {
+        return this.listEntryFlagCcText;
+    }
+    
+    public void setListEntryFlagCcText
+        (String listEntryFlagCcText) 
+        {
+      this.listEntryFlagCcText = listEntryFlagCcText;
+}
+    public 
+    String 
+    getListEntryDeletedBoolean()
+    {
+        return this.listEntryDeletedBoolean;
+    }
+    
+    public void setListEntryDeletedBoolean
+        (String listEntryDeletedBoolean) 
+        {
+      this.listEntryDeletedBoolean = listEntryDeletedBoolean;
+}
+    public 
+    String 
+    getListEntryDateDateTime()
+    {
+        return this.listEntryDateDateTime;
+    }
+    
+    public void setListEntryDateDateTime
+        (String listEntryDateDateTime) 
+        {
+      this.listEntryDateDateTime = listEntryDateDateTime;
+}
+    public 
+    String 
+    getListEntryItemReference()
+    {
+        return this.listEntryItemReference;
+    }
+    
+    public void setListEntryItemReference
+        (String listEntryItemReference) 
+        {
+      this.listEntryItemReference = listEntryItemReference;
+}
+    public 
+    String 
+    getLstMptRsnCcCdngCSstm()
+    {
+        return this.lstMptRsnCcCdngCSstm;
+    }
+    
+    public void setLstMptRsnCcCdngCSstm
+        (String lstMptRsnCcCdngCSstm) 
+        {
+      this.lstMptRsnCcCdngCSstm = lstMptRsnCcCdngCSstm;
+}
+    public 
+    String 
+    getLstMptRsnCcCdngCVrsn()
+    {
+        return this.lstMptRsnCcCdngCVrsn;
+    }
+    
+    public void setLstMptRsnCcCdngCVrsn
+        (String lstMptRsnCcCdngCVrsn) 
+        {
+      this.lstMptRsnCcCdngCVrsn = lstMptRsnCcCdngCVrsn;
+}
+    public 
+    String 
+    getListEmptyReasonCcCodingCCode()
+    {
+        return this.listEmptyReasonCcCodingCCode;
+    }
+    
+    public void setListEmptyReasonCcCodingCCode
+        (String listEmptyReasonCcCodingCCode) 
+        {
+      this.listEmptyReasonCcCodingCCode = listEmptyReasonCcCodingCCode;
+}
+    public 
+    String 
+    getLstMptRsnCcCdngCDsplay()
+    {
+        return this.lstMptRsnCcCdngCDsplay;
+    }
+    
+    public void setLstMptRsnCcCdngCDsplay
+        (String lstMptRsnCcCdngCDsplay) 
+        {
+      this.lstMptRsnCcCdngCDsplay = lstMptRsnCcCdngCDsplay;
+}
+    public 
+    String 
+    getLstMptRsnCcCdngCSrSlctd()
+    {
+        return this.lstMptRsnCcCdngCSrSlctd;
+    }
+    
+    public void setLstMptRsnCcCdngCSrSlctd
+        (String lstMptRsnCcCdngCSrSlctd) 
+        {
+      this.lstMptRsnCcCdngCSrSlctd = lstMptRsnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getListEmptyReasonCcText()
+    {
+        return this.listEmptyReasonCcText;
+    }
+    
+    public void setListEmptyReasonCcText
+        (String listEmptyReasonCcText) 
+        {
+      this.listEmptyReasonCcText = listEmptyReasonCcText;
+}
 
 
 

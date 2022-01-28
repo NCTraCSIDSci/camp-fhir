@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,377 +10,82 @@ package main.templateoutput.Model;
 public class Linkage  implements java.io.Serializable {
 
 
-     private String linkageActive;
-     private String lnkgThrRfrncDntfrDntfrCdblCncptCdng;
-     private String lnkgThrRfrncDntfrDntfrCdblCncptTxt;
-     private String lnkgThrRfrncDntfrDntfrPrdStrt;
-     private String lnkgThrRfrncDntfrDntfrPrdNd;
-     private String lnkgThrRfrncDntfrDntfrRfrncRfrnce;
-     private String lnkgThrRfrncDntfrDntfrRfrncTpe;
-     private String lnkgThrRfrncDntfrDntfrRfrncDntfr;
-     private String lnkgThrRfrncDntfrDntfrRfrncDsplay;
-     private String lnkgThrRfrncDntfrSe;
-     private String lnkgThrRfrncDntfrSstm;
-     private String lnkgThrRfrncDntfrVlue;
-     private String lnkgThrRfrncRfrncStrng;
-     private String lnkgThrRfrncDsplStrng;
-     private String linkageAuthorReferenceTypeUri;
-     private String linkageItemType;
-     private String lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng;
-     private String lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt;
-     private String lnkgTmRsrcRfrncDntfrDntfrPrdStrt;
-     private String lnkgTmRsrcRfrncDntfrDntfrPrdNd;
-     private String lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce;
-     private String lnkgTmRsrcRfrncDntfrDntfrRfrncTpe;
-     private String lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr;
-     private String lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay;
-     private String lnkgTmRsrcRfrncDntfrSe;
-     private String lnkgTmRsrcRfrncDntfrSstm;
-     private String lnkgTmRsrcRfrncDntfrVlue;
-     private String lnkgTmRsrcRfrncRfrncStrng;
-     private String lnkgTmRsrcRfrncDsplStrng;
-     private String lnkgTmRsrcRfrncTpRi;
+     private Integer id;
+     private String linkageActiveBoolean;
+     private String linkageAuthorReference;
+     private String linkageItemTypeCode;
+     private String linkageItemResourceReference;
 
     public Linkage() {
     }
 
-	
-    public Linkage(String linkageActive) {
-        this.linkageActive = linkageActive;
-    }
-    public Linkage(String linkageActive, String lnkgThrRfrncDntfrDntfrCdblCncptCdng, String lnkgThrRfrncDntfrDntfrCdblCncptTxt, String lnkgThrRfrncDntfrDntfrPrdStrt, String lnkgThrRfrncDntfrDntfrPrdNd, String lnkgThrRfrncDntfrDntfrRfrncRfrnce, String lnkgThrRfrncDntfrDntfrRfrncTpe, String lnkgThrRfrncDntfrDntfrRfrncDntfr, String lnkgThrRfrncDntfrDntfrRfrncDsplay, String lnkgThrRfrncDntfrSe, String lnkgThrRfrncDntfrSstm, String lnkgThrRfrncDntfrVlue, String lnkgThrRfrncRfrncStrng, String lnkgThrRfrncDsplStrng, String linkageAuthorReferenceTypeUri, String linkageItemType, String lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng, String lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt, String lnkgTmRsrcRfrncDntfrDntfrPrdStrt, String lnkgTmRsrcRfrncDntfrDntfrPrdNd, String lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce, String lnkgTmRsrcRfrncDntfrDntfrRfrncTpe, String lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr, String lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay, String lnkgTmRsrcRfrncDntfrSe, String lnkgTmRsrcRfrncDntfrSstm, String lnkgTmRsrcRfrncDntfrVlue, String lnkgTmRsrcRfrncRfrncStrng, String lnkgTmRsrcRfrncDsplStrng, String lnkgTmRsrcRfrncTpRi) {
-       this.linkageActive = linkageActive;
-       this.lnkgThrRfrncDntfrDntfrCdblCncptCdng = lnkgThrRfrncDntfrDntfrCdblCncptCdng;
-       this.lnkgThrRfrncDntfrDntfrCdblCncptTxt = lnkgThrRfrncDntfrDntfrCdblCncptTxt;
-       this.lnkgThrRfrncDntfrDntfrPrdStrt = lnkgThrRfrncDntfrDntfrPrdStrt;
-       this.lnkgThrRfrncDntfrDntfrPrdNd = lnkgThrRfrncDntfrDntfrPrdNd;
-       this.lnkgThrRfrncDntfrDntfrRfrncRfrnce = lnkgThrRfrncDntfrDntfrRfrncRfrnce;
-       this.lnkgThrRfrncDntfrDntfrRfrncTpe = lnkgThrRfrncDntfrDntfrRfrncTpe;
-       this.lnkgThrRfrncDntfrDntfrRfrncDntfr = lnkgThrRfrncDntfrDntfrRfrncDntfr;
-       this.lnkgThrRfrncDntfrDntfrRfrncDsplay = lnkgThrRfrncDntfrDntfrRfrncDsplay;
-       this.lnkgThrRfrncDntfrSe = lnkgThrRfrncDntfrSe;
-       this.lnkgThrRfrncDntfrSstm = lnkgThrRfrncDntfrSstm;
-       this.lnkgThrRfrncDntfrVlue = lnkgThrRfrncDntfrVlue;
-       this.lnkgThrRfrncRfrncStrng = lnkgThrRfrncRfrncStrng;
-       this.lnkgThrRfrncDsplStrng = lnkgThrRfrncDsplStrng;
-       this.linkageAuthorReferenceTypeUri = linkageAuthorReferenceTypeUri;
-       this.linkageItemType = linkageItemType;
-       this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng = lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng;
-       this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt = lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt;
-       this.lnkgTmRsrcRfrncDntfrDntfrPrdStrt = lnkgTmRsrcRfrncDntfrDntfrPrdStrt;
-       this.lnkgTmRsrcRfrncDntfrDntfrPrdNd = lnkgTmRsrcRfrncDntfrDntfrPrdNd;
-       this.lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce = lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce;
-       this.lnkgTmRsrcRfrncDntfrDntfrRfrncTpe = lnkgTmRsrcRfrncDntfrDntfrRfrncTpe;
-       this.lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr = lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr;
-       this.lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay = lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay;
-       this.lnkgTmRsrcRfrncDntfrSe = lnkgTmRsrcRfrncDntfrSe;
-       this.lnkgTmRsrcRfrncDntfrSstm = lnkgTmRsrcRfrncDntfrSstm;
-       this.lnkgTmRsrcRfrncDntfrVlue = lnkgTmRsrcRfrncDntfrVlue;
-       this.lnkgTmRsrcRfrncRfrncStrng = lnkgTmRsrcRfrncRfrncStrng;
-       this.lnkgTmRsrcRfrncDsplStrng = lnkgTmRsrcRfrncDsplStrng;
-       this.lnkgTmRsrcRfrncTpRi = lnkgTmRsrcRfrncTpRi;
+    public Linkage(String linkageActiveBoolean, String linkageAuthorReference, String linkageItemTypeCode, String linkageItemResourceReference) {
+       this.linkageActiveBoolean = linkageActiveBoolean;
+       this.linkageAuthorReference = linkageAuthorReference;
+       this.linkageItemTypeCode = linkageItemTypeCode;
+       this.linkageItemResourceReference = linkageItemResourceReference;
     }
    
-    public String getLinkageActive() {
-        return this.linkageActive;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setLinkageActive(String linkageActive) {
-        this.linkageActive = linkageActive;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getLinkageActiveBoolean()
+    {
+        return this.linkageActiveBoolean;
     }
     
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lnkgThrRfrncDntfrDntfrCdblCncptCdng;
+    public void setLinkageActiveBoolean
+        (String linkageActiveBoolean) 
+        {
+      this.linkageActiveBoolean = linkageActiveBoolean;
+}
+    public 
+    String 
+    getLinkageAuthorReference()
+    {
+        return this.linkageAuthorReference;
     }
     
-    public void setLnkgThrRfrncDntfrDntfrCdblCncptCdng(String lnkgThrRfrncDntfrDntfrCdblCncptCdng) {
-        this.lnkgThrRfrncDntfrDntfrCdblCncptCdng = lnkgThrRfrncDntfrDntfrCdblCncptCdng;
+    public void setLinkageAuthorReference
+        (String linkageAuthorReference) 
+        {
+      this.linkageAuthorReference = linkageAuthorReference;
+}
+    public 
+    String 
+    getLinkageItemTypeCode()
+    {
+        return this.linkageItemTypeCode;
     }
     
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lnkgThrRfrncDntfrDntfrCdblCncptTxt;
+    public void setLinkageItemTypeCode
+        (String linkageItemTypeCode) 
+        {
+      this.linkageItemTypeCode = linkageItemTypeCode;
+}
+    public 
+    String 
+    getLinkageItemResourceReference()
+    {
+        return this.linkageItemResourceReference;
     }
     
-    public void setLnkgThrRfrncDntfrDntfrCdblCncptTxt(String lnkgThrRfrncDntfrDntfrCdblCncptTxt) {
-        this.lnkgThrRfrncDntfrDntfrCdblCncptTxt = lnkgThrRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrPrdStrt() {
-        return this.lnkgThrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrPrdStrt(String lnkgThrRfrncDntfrDntfrPrdStrt) {
-        this.lnkgThrRfrncDntfrDntfrPrdStrt = lnkgThrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrPrdNd() {
-        return this.lnkgThrRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrPrdNd(String lnkgThrRfrncDntfrDntfrPrdNd) {
-        this.lnkgThrRfrncDntfrDntfrPrdNd = lnkgThrRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lnkgThrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrRfrncRfrnce(String lnkgThrRfrncDntfrDntfrRfrncRfrnce) {
-        this.lnkgThrRfrncDntfrDntfrRfrncRfrnce = lnkgThrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrRfrncTpe() {
-        return this.lnkgThrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrRfrncTpe(String lnkgThrRfrncDntfrDntfrRfrncTpe) {
-        this.lnkgThrRfrncDntfrDntfrRfrncTpe = lnkgThrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrRfrncDntfr() {
-        return this.lnkgThrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrRfrncDntfr(String lnkgThrRfrncDntfrDntfrRfrncDntfr) {
-        this.lnkgThrRfrncDntfrDntfrRfrncDntfr = lnkgThrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrDntfrRfrncDsplay() {
-        return this.lnkgThrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLnkgThrRfrncDntfrDntfrRfrncDsplay(String lnkgThrRfrncDntfrDntfrRfrncDsplay) {
-        this.lnkgThrRfrncDntfrDntfrRfrncDsplay = lnkgThrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrSe() {
-        return this.lnkgThrRfrncDntfrSe;
-    }
-    
-    public void setLnkgThrRfrncDntfrSe(String lnkgThrRfrncDntfrSe) {
-        this.lnkgThrRfrncDntfrSe = lnkgThrRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrSstm() {
-        return this.lnkgThrRfrncDntfrSstm;
-    }
-    
-    public void setLnkgThrRfrncDntfrSstm(String lnkgThrRfrncDntfrSstm) {
-        this.lnkgThrRfrncDntfrSstm = lnkgThrRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDntfrVlue() {
-        return this.lnkgThrRfrncDntfrVlue;
-    }
-    
-    public void setLnkgThrRfrncDntfrVlue(String lnkgThrRfrncDntfrVlue) {
-        this.lnkgThrRfrncDntfrVlue = lnkgThrRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncRfrncStrng() {
-        return this.lnkgThrRfrncRfrncStrng;
-    }
-    
-    public void setLnkgThrRfrncRfrncStrng(String lnkgThrRfrncRfrncStrng) {
-        this.lnkgThrRfrncRfrncStrng = lnkgThrRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLnkgThrRfrncDsplStrng() {
-        return this.lnkgThrRfrncDsplStrng;
-    }
-    
-    public void setLnkgThrRfrncDsplStrng(String lnkgThrRfrncDsplStrng) {
-        this.lnkgThrRfrncDsplStrng = lnkgThrRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getLinkageAuthorReferenceTypeUri() {
-        return this.linkageAuthorReferenceTypeUri;
-    }
-    
-    public void setLinkageAuthorReferenceTypeUri(String linkageAuthorReferenceTypeUri) {
-        this.linkageAuthorReferenceTypeUri = linkageAuthorReferenceTypeUri;
-    }
-    
-    
-    
-    public String getLinkageItemType() {
-        return this.linkageItemType;
-    }
-    
-    public void setLinkageItemType(String linkageItemType) {
-        this.linkageItemType = linkageItemType;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng(String lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng) {
-        this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng = lnkgTmRsrcRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt(String lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt) {
-        this.lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt = lnkgTmRsrcRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrPrdStrt() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrPrdStrt(String lnkgTmRsrcRfrncDntfrDntfrPrdStrt) {
-        this.lnkgTmRsrcRfrncDntfrDntfrPrdStrt = lnkgTmRsrcRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrPrdNd() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrPrdNd(String lnkgTmRsrcRfrncDntfrDntfrPrdNd) {
-        this.lnkgTmRsrcRfrncDntfrDntfrPrdNd = lnkgTmRsrcRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce(String lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce) {
-        this.lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce = lnkgTmRsrcRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrRfrncTpe() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrRfrncTpe(String lnkgTmRsrcRfrncDntfrDntfrRfrncTpe) {
-        this.lnkgTmRsrcRfrncDntfrDntfrRfrncTpe = lnkgTmRsrcRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrRfrncDntfr() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrRfrncDntfr(String lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr) {
-        this.lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr = lnkgTmRsrcRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrDntfrRfrncDsplay() {
-        return this.lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrDntfrRfrncDsplay(String lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay) {
-        this.lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay = lnkgTmRsrcRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrSe() {
-        return this.lnkgTmRsrcRfrncDntfrSe;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrSe(String lnkgTmRsrcRfrncDntfrSe) {
-        this.lnkgTmRsrcRfrncDntfrSe = lnkgTmRsrcRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrSstm() {
-        return this.lnkgTmRsrcRfrncDntfrSstm;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrSstm(String lnkgTmRsrcRfrncDntfrSstm) {
-        this.lnkgTmRsrcRfrncDntfrSstm = lnkgTmRsrcRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDntfrVlue() {
-        return this.lnkgTmRsrcRfrncDntfrVlue;
-    }
-    
-    public void setLnkgTmRsrcRfrncDntfrVlue(String lnkgTmRsrcRfrncDntfrVlue) {
-        this.lnkgTmRsrcRfrncDntfrVlue = lnkgTmRsrcRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncRfrncStrng() {
-        return this.lnkgTmRsrcRfrncRfrncStrng;
-    }
-    
-    public void setLnkgTmRsrcRfrncRfrncStrng(String lnkgTmRsrcRfrncRfrncStrng) {
-        this.lnkgTmRsrcRfrncRfrncStrng = lnkgTmRsrcRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncDsplStrng() {
-        return this.lnkgTmRsrcRfrncDsplStrng;
-    }
-    
-    public void setLnkgTmRsrcRfrncDsplStrng(String lnkgTmRsrcRfrncDsplStrng) {
-        this.lnkgTmRsrcRfrncDsplStrng = lnkgTmRsrcRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getLnkgTmRsrcRfrncTpRi() {
-        return this.lnkgTmRsrcRfrncTpRi;
-    }
-    
-    public void setLnkgTmRsrcRfrncTpRi(String lnkgTmRsrcRfrncTpRi) {
-        this.lnkgTmRsrcRfrncTpRi = lnkgTmRsrcRfrncTpRi;
-    }
-    
-    
-    
+    public void setLinkageItemResourceReference
+        (String linkageItemResourceReference) 
+        {
+      this.linkageItemResourceReference = linkageItemResourceReference;
+}
 
 
 

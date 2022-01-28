@@ -1,351 +1,435 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Communication" optimistic-lock="none" table="communication">
-        <id name="cmmnctnDntfrCdngCde" type="string">
-            <column length="512" name="Cmmnctn_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="cmmnctnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Cmmnctn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_se">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="cmmnctnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Cmmnctn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cmmnctnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cmmnctnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Cmmnctn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cmmnctnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cmmnctnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Cmmnctn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cmmnctnNstnttsCnncl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Cmmnctn_nstnttsCnncl">
-                <comment>canonical</comment>
+        <property name="cmmnctnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="communicationInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Communication_instantiatesUri">
-                <comment>uri</comment>
+        <property name="cmmnctnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="communicationBasedOn" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_basedOn">
-                <comment>Reference</comment>
+        <property name="cmmnctnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="communicationPartOf" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_partOf">
-                <comment>Reference</comment>
+        <property name="cmmnctnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="communicationInResponseTo" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_inResponseTo">
-                <comment>Reference</comment>
+        <property name="cmmnctnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="communicationStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Communication_status">
-                <comment>code</comment>
+        <property name="cmmnctnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="cmmnctnSttsRsnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_sttsRsn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="cmmnctnSttsRsnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Cmmnctn_sttsRsn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Cmmnctn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Communication.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="cmmnctnSttsRsnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Cmmnctn_sttsRsn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cmmnctnNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</meta>
+            <column length="65535" name="Cmmnctn_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"Communication.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</comment>
             </column>
         </property>
-        <property name="cmmnctnSttsRsnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Cmmnctn_sttsRsn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="communicationInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</meta>
+            <column length="65535" name="Communication_instantiatesUri_uri">
+                <comment>{ "tree" :"Communication.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</comment>
             </column>
         </property>
-        <property name="cmmnctnSttsRsnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Cmmnctn_sttsRsn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="communicationBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="Communication_basedOn_Reference">
+                <comment>{ "tree" :"Communication.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="cmmnctnCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="communicationPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</meta>
+            <column length="65535" name="Communication_partOf_Reference">
+                <comment>{ "tree" :"Communication.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</comment>
             </column>
         </property>
-        <property name="communicationCategoryCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Communication_category_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnNRspnsTRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.inResponseTo", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInResponseTo"}</meta>
+            <column length="65535" name="Cmmnctn_nRspnsT_Rfrnce">
+                <comment>{ "tree" :"Communication.inResponseTo", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInResponseTo"}</comment>
             </column>
         </property>
-        <property name="cmmnctnCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Cmmnctn_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="communicationStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Communication_status_code">
+                <comment>{ "tree" :"Communication.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="cmmnctnCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Cmmnctn_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cmmnctnSttsRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cmmnctn_sttsRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cmmnctnCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Cmmnctn_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnSttsRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cmmnctn_sttsRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="communicationPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Communication_priority">
-                <comment>code</comment>
+        <property name="cmmnctnSttsRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Cmmnctn_sttsRsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cmmnctnMdmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_mdm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnSttsRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cmmnctn_sttsRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="communicationMediumCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Communication_medium_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnSttsRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cmmnctn_sttsRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cmmnctnMdmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Cmmnctn_mdm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="communicationStatusReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</meta>
+            <column length="65535" name="Communication_statusReason_CC_text">
+                <comment>{ "tree" :"Communication.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</comment>
             </column>
         </property>
-        <property name="cmmnctnMdmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Cmmnctn_mdm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cmmnctnCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cmmnctn_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="communicationMediumCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Communication_medium_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cmmnctn_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="communicationSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_subject">
-                <comment>Reference</comment>
+        <property name="cmmnctnCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Cmmnctn_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cmmnctnTpcCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_tpc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cmmnctn_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="communicationTopicCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Communication_topic_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cmmnctn_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="communicationTopicCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Communication_topic_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="communicationCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="Communication_category_CC_text">
+                <comment>{ "tree" :"Communication.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="communicationTopicCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Communication_topic_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="communicationPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="Communication_priority_code">
+                <comment>{ "tree" :"Communication.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="communicationTopicCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Communication_topic_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnMdmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cmmnctn_mdm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="communicationAbout" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_about">
-                <comment>Reference</comment>
+        <property name="cmmnctnMdmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cmmnctn_mdm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="communicationEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_encounter">
-                <comment>Reference</comment>
+        <property name="cmmnctnMdmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setCode"}</meta>
+            <column length="65535" name="Cmmnctn_mdm_CC_cdng_C_cde">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="communicationSent" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Communication_sent">
-                <comment>dateTime</comment>
+        <property name="cmmnctnMdmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cmmnctn_mdm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="communicationReceived" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Communication_received">
-                <comment>dateTime</comment>
+        <property name="cmmnctnMdmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cmmnctn_mdm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="communicationRecipient" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_recipient">
-                <comment>Reference</comment>
+        <property name="communicationMediumCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, setText"}</meta>
+            <column length="65535" name="Communication_medium_CC_text">
+                <comment>{ "tree" :"Communication.medium", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMedium, setText"}</comment>
             </column>
         </property>
-        <property name="communicationSender" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_sender">
-                <comment>Reference</comment>
+        <property name="communicationSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Communication_subject_Reference">
+                <comment>{ "tree" :"Communication.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="cmmnctnRsnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_rsnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnTpcCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cmmnctn_tpc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cmmnctnRsnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Cmmnctn_rsnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnTpcCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cmmnctn_tpc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cmmnctnRsnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Cmmnctn_rsnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cmmnctnTpcCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setCode"}</meta>
+            <column length="65535" name="Cmmnctn_tpc_CC_cdng_C_cde">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cmmnctnRsnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Cmmnctn_rsnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cmmnctnTpcCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cmmnctn_tpc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cmmnctnRsnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Cmmnctn_rsnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnTpcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cmmnctn_tpc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="communicationReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Communication_reasonReference">
-                <comment>Reference</comment>
+        <property name="communicationTopicCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, setText"}</meta>
+            <column length="65535" name="Communication_topic_CC_text">
+                <comment>{ "tree" :"Communication.topic", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTopic, setText"}</comment>
             </column>
         </property>
-        <property name="communicationPayload" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Communication_payload">
-                <comment>BackboneElement</comment>
+        <property name="communicationAboutReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.about", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAbout"}</meta>
+            <column length="65535" name="Communication_about_Reference">
+                <comment>{ "tree" :"Communication.about", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAbout"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntStrng">
-                <comment>string</comment>
+        <property name="communicationEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="Communication_encounter_Reference">
+                <comment>{ "tree" :"Communication.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntttchmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="communicationSentDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.sent", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSent"}</meta>
+            <column length="65535" name="Communication_sent_dateTime">
+                <comment>{ "tree" :"Communication.sent", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSent"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntttchmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="communicationReceivedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.received", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReceived"}</meta>
+            <column length="65535" name="Communication_received_dateTime">
+                <comment>{ "tree" :"Communication.received", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReceived"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntttchmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="communicationRecipientReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.recipient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRecipient"}</meta>
+            <column length="65535" name="Communication_recipient_Reference">
+                <comment>{ "tree" :"Communication.recipient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRecipient"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntttchmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="communicationSenderReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.sender", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSender"}</meta>
+            <column length="65535" name="Communication_sender_Reference">
+                <comment>{ "tree" :"Communication.sender", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSender"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntttchmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cmmnctn_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cmmnctnPldCntntRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Cmmnctn_pld_cntntRfrnce">
-                <comment>Reference</comment>
+        <property name="cmmnctnRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cmmnctn_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cmmnctnNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Cmmnctn_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cmmnctnRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Cmmnctn_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="communicationNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Communication_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="cmmnctnRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cmmnctn_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="communicationNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Communication_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="cmmnctnRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cmmnctn_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="communicationNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Communication_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="communicationReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="Communication_reasonCode_CC_text">
+                <comment>{ "tree" :"Communication.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="communicationNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Communication_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="cmmnctnRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="Cmmnctn_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"Communication.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentString"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntStrng_strng">
+                <comment>{ "tree" :"Communication.payload.contentString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentString"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setData"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setData"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setHash"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setHash"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setContentType"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setLanguage"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setCreation"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setTitle"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setSize"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setSize"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntttchmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setUrl"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntttchmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Communication.payload.contentAttachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentAttachment, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnPldCntntRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.payload.contentReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentReference(any)"}</meta>
+            <column length="65535" name="Cmmnctn_pld_cntntRfrnc_Rfrnce">
+                <comment>{ "tree" :"Communication.payload.contentReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addPayload"] , "methodName" : "setContentReference(any)"}</comment>
+            </column>
+        </property>
+        <property name="communicationNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Communication_note_Annotation_time">
+                <comment>{ "tree" :"Communication.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
+            </column>
+        </property>
+        <property name="communicationNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Communication_note_Annotation_text">
+                <comment>{ "tree" :"Communication.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Cmmnctn_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Communication.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
+            </column>
+        </property>
+        <property name="cmmnctnNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Communication.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Cmmnctn_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"Communication.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

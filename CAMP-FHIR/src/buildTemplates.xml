@@ -89,13 +89,19 @@
       <classpath>
         <path location="${build.dir}"/>
       </classpath>
-    	 <!--Template for generating hibernate XML code-->
-    		      <hbm2hbmxml destdir="C:/Users/pikovach/camp-fhir/CAMP-FHIR/src/main/templateoutput/xml">
-    		        <property key="ejb3" value="false"/>
-    		        <property key="jdk5" value="false"/>
-    		      </hbm2hbmxml>
+    	 
+    	    
+   	 <!--Template for generating hibernate XML code-->
+   	      <hbm2hbmxml destdir="C:/Users/pikovach/camp-fhir/CAMP-FHIR/src/main/templateoutput/xml">
+   	        <property key="ejb3" value="false"/>
+   	        <property key="jdk5" value="false"/>
+   	      </hbm2hbmxml>
+    	
 	   <!--Template for generating hibernate model code-->
-       <hbm2java destdir="C:/Users/pikovach/camp-fhir/CAMP-FHIR/src/main/templateoutput/Model"/>    
+       <hbm2java destdir="C:/Users/pikovach/camp-fhir/CAMP-FHIR/src/main/templateoutput/Model">
+       	        <property key="needsFullConstructor" value="false"/> 
+       
+       </hbm2java>    
 	    <!--Template for generating service code-->
 	      <hbmtemplate destdir="C:/Users/pikovach/camp-fhir/CAMP-FHIR/src/main/templateoutput/Service" filepattern="{package-name}/{class-name}Service.java" template="dao/service.ftl">
 		      <property key="ejb3" value="false"/>

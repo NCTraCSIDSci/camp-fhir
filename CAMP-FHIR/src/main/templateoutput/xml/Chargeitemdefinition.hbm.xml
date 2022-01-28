@@ -1,339 +1,495 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Chargeitemdefinition" optimistic-lock="none" table="chargeitemdefinition">
-        <id name="chargeItemDefinitionUrl" type="string">
-            <column length="512" name="ChargeItemDefinition_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="chrgtmDfntnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chargeItemDefinitionUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="ChargeItemDefinition_url_uri">
+                <comment>{ "tree" :"ChargeItemDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chrgtmDfntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChargeItemDefinition_version">
-                <comment>string</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChargeItemDefinition_title">
-                <comment>string</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnDrvdFrmri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="ChrgtmDfntn_drvdFrmri">
-                <comment>uri</comment>
+        <property name="chrgtmDfntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionPartOf" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ChargeItemDefinition_partOf">
-                <comment>canonical</comment>
+        <property name="chrgtmDfntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionReplaces" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ChargeItemDefinition_replaces">
-                <comment>canonical</comment>
+        <property name="chrgtmDfntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ChargeItemDefinition_status">
-                <comment>code</comment>
+        <property name="chrgtmDfntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ChargeItemDefinition_experimental">
-                <comment>boolean</comment>
+        <property name="chrgtmDfntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ChargeItemDefinition_date">
-                <comment>dateTime</comment>
+        <property name="chrgtmDfntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChargeItemDefinition_publisher">
-                <comment>string</comment>
+        <property name="chrgtmDfntnVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_vrsn_strng">
+                <comment>{ "tree" :"ChargeItemDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="ChargeItemDefinition_contact">
-                <comment>ContactDetail</comment>
+        <property name="chargeItemDefinitionTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ChargeItemDefinition_title_string">
+                <comment>{ "tree" :"ChargeItemDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ChargeItemDefinition_description">
-                <comment>markdown</comment>
+        <property name="chrgtmDfntnDrvdFrmrRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.derivedFromUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDerivedFromUri"}</meta>
+            <column length="65535" name="ChrgtmDfntn_drvdFrmr_ri">
+                <comment>{ "tree" :"ChargeItemDefinition.derivedFromUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDerivedFromUri"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="ChargeItemDefinition_useContext">
-                <comment>UsageContext</comment>
+        <property name="chrgtmDfntnPrtfCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.partOf", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prtf_cnncl">
+                <comment>{ "tree" :"ChargeItemDefinition.partOf", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnJrsdctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chrgtmDfntnRplcsCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.replaces", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</meta>
+            <column length="65535" name="ChrgtmDfntn_rplcs_cnncl">
+                <comment>{ "tree" :"ChargeItemDefinition.replaces", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnJrsdctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chargeItemDefinitionStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ChargeItemDefinition_status_code">
+                <comment>{ "tree" :"ChargeItemDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnJrsdctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="ChrgtmDfntn_xprmntl_bln">
+                <comment>{ "tree" :"ChargeItemDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnJrsdctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chargeItemDefinitionDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="ChargeItemDefinition_date_dateTime">
+                <comment>{ "tree" :"ChargeItemDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnJrsdctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_jrsdctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="ChrgtmDfntn_pblshr_strng">
+                <comment>{ "tree" :"ChargeItemDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ChargeItemDefinition_copyright">
-                <comment>markdown</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionApprovalDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="ChargeItemDefinition_approvalDate">
-                <comment>date</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnLstRvwDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="ChrgtmDfntn_lstRvwDte">
-                <comment>date</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnFfctvPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnFfctvPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnFfctvPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnFfctvPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chrgtmDfntnCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"ChargeItemDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnFfctvPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ChrgtmDfntn_dscrptn_mrkdwn">
+                <comment>{ "tree" :"ChargeItemDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionInstance" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ChargeItemDefinition_instance">
-                <comment>Reference</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionApplicability" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ChargeItemDefinition_applicability">
-                <comment>BackboneElement</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPplcbltDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChrgtmDfntn_pplcblt_dscrptn">
-                <comment>string</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPplcbltLngge" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChrgtmDfntn_pplcblt_lngge">
-                <comment>string</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPplcbltXprssn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ChrgtmDfntn_pplcblt_xprssn">
-                <comment>string</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="chargeItemDefinitionPropertyGroup" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ChargeItemDefinition_propertyGroup">
-                <comment>BackboneElement</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPplcblty" type="string">
-            <meta attribute="resource-type">see applicability</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_pplcblty">
-                <comment>see applicability</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnnt" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt">
-                <comment>BackboneElement</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_tpe">
-                <comment>code</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="ChrgtmDfntn_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"ChargeItemDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntFctr" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_fctr">
-                <comment>decimal</comment>
+        <property name="chrgtmDfntnJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="chrgtmDfntnJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="chrgtmDfntnJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="chrgtmDfntnJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="chrgtmDfntnJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="chrgtmDfntnJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="ChrgtmDfntn_jrsdctn_CC_txt">
+                <comment>{ "tree" :"ChargeItemDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cprght_mrkdwn">
+                <comment>{ "tree" :"ChargeItemDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPprvlDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</meta>
+            <column length="65535" name="ChrgtmDfntn_pprvlDt_dte">
+                <comment>{ "tree" :"ChargeItemDefinition.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnLstRvwDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</meta>
+            <column length="65535" name="ChrgtmDfntn_lstRvwDt_dte">
+                <comment>{ "tree" :"ChargeItemDefinition.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Prd_strt">
+                <comment>{ "tree" :"ChargeItemDefinition.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnFfctvPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</meta>
+            <column length="65535" name="ChrgtmDfntn_ffctvPrd_Prd_nd">
+                <comment>{ "tree" :"ChargeItemDefinition.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="chargeItemDefinitionCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="ChargeItemDefinition_code_CC_text">
+                <comment>{ "tree" :"ChargeItemDefinition.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnNstncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.instance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstance"}</meta>
+            <column length="65535" name="ChrgtmDfntn_nstnc_Rfrnce">
+                <comment>{ "tree" :"ChargeItemDefinition.instance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstance"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.applicability.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_dscrptn_strng">
+                <comment>{ "tree" :"ChargeItemDefinition.applicability.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltLnggStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.applicability.language", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setLanguage"}</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_lngg_strng">
+                <comment>{ "tree" :"ChargeItemDefinition.applicability.language", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPplcbltXprssnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.applicability.expression", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setExpression"}</meta>
+            <column length="65535" name="ChrgtmDfntn_pplcblt_xprssn_strng">
+                <comment>{ "tree" :"ChargeItemDefinition.applicability.expression", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addApplicability"] , "methodName" : "setExpression"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPplcbltPplcblty" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.applicability", "datatype" : "applicability", "cardinality" : "Many", "elementtree" : ["addPropertyGroup"] , "methodName" : "addApplicability"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_pplcblt_pplcblty">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.applicability", "datatype" : "applicability", "cardinality" : "Many", "elementtree" : ["addPropertyGroup"] , "methodName" : "addApplicability"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_tp_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_cd_CC_txt">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntFctrDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.factor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setFactor"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_fctr_dcml">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.factor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setFactor"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setAmount, setCurrency"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Mn_crrncy">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setAmount, setCurrency"}</comment>
+            </column>
+        </property>
+        <property name="chrgtmDfntnPrprtGrpPrcCmpnntMntMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setAmount, setVal"}</meta>
+            <column length="65535" name="ChrgtmDfntn_prprtGrp_prcCmpnnt_mnt_Mn_vlue">
+                <comment>{ "tree" :"ChargeItemDefinition.propertyGroup.priceComponent.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPropertyGroup", "addPriceComponent"] , "methodName" : "setAmount, setVal"}</comment>
             </column>
         </property>
     </class>

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,713 +10,614 @@ package main.templateoutput.Model;
 public class Slot  implements java.io.Serializable {
 
 
-     private String sltDntfrDntfrTpCdblCncptCdngCde;
-     private String sltDntfrDntfrSCde;
-     private String sltDntfrDntfrTpCdblCncptCdngSstm;
-     private String sltDntfrDntfrTpCdblCncptCdngVrsn;
-     private String sltDntfrDntfrTpCdblCncptCdngDsplay;
-     private String sltDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String sltDntfrDntfrCdblCncptTxt;
-     private String sltDntfrDntfrPrdStrt;
-     private String sltDntfrDntfrPrdNd;
-     private String sltDntfrDntfrRfrncRfrnce;
-     private String sltDntfrDntfrRfrncTpe;
-     private String sltDntfrDntfrRfrncDntfr;
-     private String sltDntfrDntfrRfrncDsplay;
-     private String sltDntfrDntfrVlStrng;
-     private String sltDntfrDntfrSstmRi;
-     private String sltSrvcCtgrCdblCncptCdngSstm;
-     private String sltSrvcCtgrCdblCncptCdngVrsn;
-     private String sltSrvcCtgrCdblCncptCdngCde;
-     private String sltSrvcCtgrCdblCncptCdngDsplay;
-     private String sltSrvcCtgrCdblCncptCdngSrSlctd;
-     private String sltSrvcCtgrCdblCncptTxtStrng;
-     private String sltSrvcTpCdblCncptCdngSstm;
-     private String sltSrvcTpCdblCncptCdngVrsn;
-     private String sltSrvcTpCdblCncptCdngCde;
-     private String sltSrvcTpCdblCncptCdngDsplay;
-     private String sltSrvcTpCdblCncptCdngSrSlctd;
-     private String sltSrvcTpCdblCncptTxtStrng;
-     private String sltSpcltCdblCncptCdngSstm;
-     private String sltSpcltCdblCncptCdngVrsn;
-     private String sltSpcltCdblCncptCdngCde;
-     private String sltSpcltCdblCncptCdngDsplay;
-     private String sltSpcltCdblCncptCdngSrSlctd;
-     private String sltSpcltCdblCncptTxtStrng;
-     private String sltPpntmntTpCdblCncptCdngSstm;
-     private String sltPpntmntTpCdblCncptCdngVrsn;
-     private String sltPpntmntTpCdblCncptCdngCde;
-     private String sltPpntmntTpCdblCncptCdngDsplay;
-     private String sltPpntmntTpCdblCncptCdngSrSlctd;
-     private String sltPpntmntTpCdblCncptTxtStrng;
-     private String sltSchdlRfrncDntfrDntfrCdblCncptCdng;
-     private String sltSchdlRfrncDntfrDntfrCdblCncptTxt;
-     private String sltSchdlRfrncDntfrDntfrPrdStrt;
-     private String sltSchdlRfrncDntfrDntfrPrdNd;
-     private String sltSchdlRfrncDntfrDntfrRfrncRfrnce;
-     private String sltSchdlRfrncDntfrDntfrRfrncTpe;
-     private String sltSchdlRfrncDntfrDntfrRfrncDntfr;
-     private String sltSchdlRfrncDntfrDntfrRfrncDsplay;
-     private String sltSchdlRfrncDntfrSe;
-     private String sltSchdlRfrncDntfrSstm;
-     private String sltSchdlRfrncDntfrVlue;
-     private String sltSchdlRfrncRfrncStrng;
-     private String sltSchdlRfrncDsplStrng;
-     private String slotScheduleReferenceTypeUri;
-     private String slotStatus;
-     private String slotStart;
-     private String slotEnd;
-     private String slotOverbooked;
-     private String slotComment;
+     private Integer id;
+     private String slotIdentifierIdentifierUse;
+     private String sltDntfrDntfrTpCcCSstm;
+     private String sltDntfrDntfrTpCcCVrsn;
+     private String sltDntfrDntfrTpCcCCde;
+     private String sltDntfrDntfrTpCcCDsplay;
+     private String sltDntfrDntfrTpCcCSrSlctd;
+     private String sltDntfrDntfrTpCcTxt;
+     private String sltDntfrDntfrPrdPrdStrt;
+     private String sltDntfrDntfrPrdPrdNd;
+     private String sltDntfrDntfrSsgnr;
+     private String slotIdentifierIdentifierValue;
+     private String slotIdentifierIdentifierSystem;
+     private String sltSrvcCtgrCcCdngCSstm;
+     private String sltSrvcCtgrCcCdngCVrsn;
+     private String sltSrvcCtgrCcCdngCCde;
+     private String sltSrvcCtgrCcCdngCDsplay;
+     private String sltSrvcCtgrCcCdngCSrSlctd;
+     private String slotServiceCategoryCcText;
+     private String sltSrvcTpCcCdngCSstm;
+     private String sltSrvcTpCcCdngCVrsn;
+     private String slotServiceTypeCcCodingCCode;
+     private String sltSrvcTpCcCdngCDsplay;
+     private String sltSrvcTpCcCdngCSrSlctd;
+     private String slotServiceTypeCcText;
+     private String slotSpecialtyCcCodingCSystem;
+     private String slotSpecialtyCcCodingCVersion;
+     private String slotSpecialtyCcCodingCCode;
+     private String slotSpecialtyCcCodingCDisplay;
+     private String sltSpcltCcCdngCSrSlctd;
+     private String slotSpecialtyCcText;
+     private String sltPpntmntTpCcCdngCSstm;
+     private String sltPpntmntTpCcCdngCVrsn;
+     private String sltPpntmntTpCcCdngCCde;
+     private String sltPpntmntTpCcCdngCDsplay;
+     private String sltPpntmntTpCcCdngCSrSlctd;
+     private String slotAppointmentTypeCcText;
+     private String slotScheduleReference;
+     private String slotStatusCode;
+     private String slotStartInstant;
+     private String slotEndInstant;
+     private String slotOverbookedBoolean;
+     private String slotCommentString;
 
     public Slot() {
     }
 
-	
-    public Slot(String sltDntfrDntfrTpCdblCncptCdngCde) {
-        this.sltDntfrDntfrTpCdblCncptCdngCde = sltDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Slot(String sltDntfrDntfrTpCdblCncptCdngCde, String sltDntfrDntfrSCde, String sltDntfrDntfrTpCdblCncptCdngSstm, String sltDntfrDntfrTpCdblCncptCdngVrsn, String sltDntfrDntfrTpCdblCncptCdngDsplay, String sltDntfrDntfrTpCdblCncptCdngSrSlctd, String sltDntfrDntfrCdblCncptTxt, String sltDntfrDntfrPrdStrt, String sltDntfrDntfrPrdNd, String sltDntfrDntfrRfrncRfrnce, String sltDntfrDntfrRfrncTpe, String sltDntfrDntfrRfrncDntfr, String sltDntfrDntfrRfrncDsplay, String sltDntfrDntfrVlStrng, String sltDntfrDntfrSstmRi, String sltSrvcCtgrCdblCncptCdngSstm, String sltSrvcCtgrCdblCncptCdngVrsn, String sltSrvcCtgrCdblCncptCdngCde, String sltSrvcCtgrCdblCncptCdngDsplay, String sltSrvcCtgrCdblCncptCdngSrSlctd, String sltSrvcCtgrCdblCncptTxtStrng, String sltSrvcTpCdblCncptCdngSstm, String sltSrvcTpCdblCncptCdngVrsn, String sltSrvcTpCdblCncptCdngCde, String sltSrvcTpCdblCncptCdngDsplay, String sltSrvcTpCdblCncptCdngSrSlctd, String sltSrvcTpCdblCncptTxtStrng, String sltSpcltCdblCncptCdngSstm, String sltSpcltCdblCncptCdngVrsn, String sltSpcltCdblCncptCdngCde, String sltSpcltCdblCncptCdngDsplay, String sltSpcltCdblCncptCdngSrSlctd, String sltSpcltCdblCncptTxtStrng, String sltPpntmntTpCdblCncptCdngSstm, String sltPpntmntTpCdblCncptCdngVrsn, String sltPpntmntTpCdblCncptCdngCde, String sltPpntmntTpCdblCncptCdngDsplay, String sltPpntmntTpCdblCncptCdngSrSlctd, String sltPpntmntTpCdblCncptTxtStrng, String sltSchdlRfrncDntfrDntfrCdblCncptCdng, String sltSchdlRfrncDntfrDntfrCdblCncptTxt, String sltSchdlRfrncDntfrDntfrPrdStrt, String sltSchdlRfrncDntfrDntfrPrdNd, String sltSchdlRfrncDntfrDntfrRfrncRfrnce, String sltSchdlRfrncDntfrDntfrRfrncTpe, String sltSchdlRfrncDntfrDntfrRfrncDntfr, String sltSchdlRfrncDntfrDntfrRfrncDsplay, String sltSchdlRfrncDntfrSe, String sltSchdlRfrncDntfrSstm, String sltSchdlRfrncDntfrVlue, String sltSchdlRfrncRfrncStrng, String sltSchdlRfrncDsplStrng, String slotScheduleReferenceTypeUri, String slotStatus, String slotStart, String slotEnd, String slotOverbooked, String slotComment) {
-       this.sltDntfrDntfrTpCdblCncptCdngCde = sltDntfrDntfrTpCdblCncptCdngCde;
-       this.sltDntfrDntfrSCde = sltDntfrDntfrSCde;
-       this.sltDntfrDntfrTpCdblCncptCdngSstm = sltDntfrDntfrTpCdblCncptCdngSstm;
-       this.sltDntfrDntfrTpCdblCncptCdngVrsn = sltDntfrDntfrTpCdblCncptCdngVrsn;
-       this.sltDntfrDntfrTpCdblCncptCdngDsplay = sltDntfrDntfrTpCdblCncptCdngDsplay;
-       this.sltDntfrDntfrTpCdblCncptCdngSrSlctd = sltDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.sltDntfrDntfrCdblCncptTxt = sltDntfrDntfrCdblCncptTxt;
-       this.sltDntfrDntfrPrdStrt = sltDntfrDntfrPrdStrt;
-       this.sltDntfrDntfrPrdNd = sltDntfrDntfrPrdNd;
-       this.sltDntfrDntfrRfrncRfrnce = sltDntfrDntfrRfrncRfrnce;
-       this.sltDntfrDntfrRfrncTpe = sltDntfrDntfrRfrncTpe;
-       this.sltDntfrDntfrRfrncDntfr = sltDntfrDntfrRfrncDntfr;
-       this.sltDntfrDntfrRfrncDsplay = sltDntfrDntfrRfrncDsplay;
-       this.sltDntfrDntfrVlStrng = sltDntfrDntfrVlStrng;
-       this.sltDntfrDntfrSstmRi = sltDntfrDntfrSstmRi;
-       this.sltSrvcCtgrCdblCncptCdngSstm = sltSrvcCtgrCdblCncptCdngSstm;
-       this.sltSrvcCtgrCdblCncptCdngVrsn = sltSrvcCtgrCdblCncptCdngVrsn;
-       this.sltSrvcCtgrCdblCncptCdngCde = sltSrvcCtgrCdblCncptCdngCde;
-       this.sltSrvcCtgrCdblCncptCdngDsplay = sltSrvcCtgrCdblCncptCdngDsplay;
-       this.sltSrvcCtgrCdblCncptCdngSrSlctd = sltSrvcCtgrCdblCncptCdngSrSlctd;
-       this.sltSrvcCtgrCdblCncptTxtStrng = sltSrvcCtgrCdblCncptTxtStrng;
-       this.sltSrvcTpCdblCncptCdngSstm = sltSrvcTpCdblCncptCdngSstm;
-       this.sltSrvcTpCdblCncptCdngVrsn = sltSrvcTpCdblCncptCdngVrsn;
-       this.sltSrvcTpCdblCncptCdngCde = sltSrvcTpCdblCncptCdngCde;
-       this.sltSrvcTpCdblCncptCdngDsplay = sltSrvcTpCdblCncptCdngDsplay;
-       this.sltSrvcTpCdblCncptCdngSrSlctd = sltSrvcTpCdblCncptCdngSrSlctd;
-       this.sltSrvcTpCdblCncptTxtStrng = sltSrvcTpCdblCncptTxtStrng;
-       this.sltSpcltCdblCncptCdngSstm = sltSpcltCdblCncptCdngSstm;
-       this.sltSpcltCdblCncptCdngVrsn = sltSpcltCdblCncptCdngVrsn;
-       this.sltSpcltCdblCncptCdngCde = sltSpcltCdblCncptCdngCde;
-       this.sltSpcltCdblCncptCdngDsplay = sltSpcltCdblCncptCdngDsplay;
-       this.sltSpcltCdblCncptCdngSrSlctd = sltSpcltCdblCncptCdngSrSlctd;
-       this.sltSpcltCdblCncptTxtStrng = sltSpcltCdblCncptTxtStrng;
-       this.sltPpntmntTpCdblCncptCdngSstm = sltPpntmntTpCdblCncptCdngSstm;
-       this.sltPpntmntTpCdblCncptCdngVrsn = sltPpntmntTpCdblCncptCdngVrsn;
-       this.sltPpntmntTpCdblCncptCdngCde = sltPpntmntTpCdblCncptCdngCde;
-       this.sltPpntmntTpCdblCncptCdngDsplay = sltPpntmntTpCdblCncptCdngDsplay;
-       this.sltPpntmntTpCdblCncptCdngSrSlctd = sltPpntmntTpCdblCncptCdngSrSlctd;
-       this.sltPpntmntTpCdblCncptTxtStrng = sltPpntmntTpCdblCncptTxtStrng;
-       this.sltSchdlRfrncDntfrDntfrCdblCncptCdng = sltSchdlRfrncDntfrDntfrCdblCncptCdng;
-       this.sltSchdlRfrncDntfrDntfrCdblCncptTxt = sltSchdlRfrncDntfrDntfrCdblCncptTxt;
-       this.sltSchdlRfrncDntfrDntfrPrdStrt = sltSchdlRfrncDntfrDntfrPrdStrt;
-       this.sltSchdlRfrncDntfrDntfrPrdNd = sltSchdlRfrncDntfrDntfrPrdNd;
-       this.sltSchdlRfrncDntfrDntfrRfrncRfrnce = sltSchdlRfrncDntfrDntfrRfrncRfrnce;
-       this.sltSchdlRfrncDntfrDntfrRfrncTpe = sltSchdlRfrncDntfrDntfrRfrncTpe;
-       this.sltSchdlRfrncDntfrDntfrRfrncDntfr = sltSchdlRfrncDntfrDntfrRfrncDntfr;
-       this.sltSchdlRfrncDntfrDntfrRfrncDsplay = sltSchdlRfrncDntfrDntfrRfrncDsplay;
-       this.sltSchdlRfrncDntfrSe = sltSchdlRfrncDntfrSe;
-       this.sltSchdlRfrncDntfrSstm = sltSchdlRfrncDntfrSstm;
-       this.sltSchdlRfrncDntfrVlue = sltSchdlRfrncDntfrVlue;
-       this.sltSchdlRfrncRfrncStrng = sltSchdlRfrncRfrncStrng;
-       this.sltSchdlRfrncDsplStrng = sltSchdlRfrncDsplStrng;
-       this.slotScheduleReferenceTypeUri = slotScheduleReferenceTypeUri;
-       this.slotStatus = slotStatus;
-       this.slotStart = slotStart;
-       this.slotEnd = slotEnd;
-       this.slotOverbooked = slotOverbooked;
-       this.slotComment = slotComment;
+    public Slot(String slotIdentifierIdentifierUse, String sltDntfrDntfrTpCcCSstm, String sltDntfrDntfrTpCcCVrsn, String sltDntfrDntfrTpCcCCde, String sltDntfrDntfrTpCcCDsplay, String sltDntfrDntfrTpCcCSrSlctd, String sltDntfrDntfrTpCcTxt, String sltDntfrDntfrPrdPrdStrt, String sltDntfrDntfrPrdPrdNd, String sltDntfrDntfrSsgnr, String slotIdentifierIdentifierValue, String slotIdentifierIdentifierSystem, String sltSrvcCtgrCcCdngCSstm, String sltSrvcCtgrCcCdngCVrsn, String sltSrvcCtgrCcCdngCCde, String sltSrvcCtgrCcCdngCDsplay, String sltSrvcCtgrCcCdngCSrSlctd, String slotServiceCategoryCcText, String sltSrvcTpCcCdngCSstm, String sltSrvcTpCcCdngCVrsn, String slotServiceTypeCcCodingCCode, String sltSrvcTpCcCdngCDsplay, String sltSrvcTpCcCdngCSrSlctd, String slotServiceTypeCcText, String slotSpecialtyCcCodingCSystem, String slotSpecialtyCcCodingCVersion, String slotSpecialtyCcCodingCCode, String slotSpecialtyCcCodingCDisplay, String sltSpcltCcCdngCSrSlctd, String slotSpecialtyCcText, String sltPpntmntTpCcCdngCSstm, String sltPpntmntTpCcCdngCVrsn, String sltPpntmntTpCcCdngCCde, String sltPpntmntTpCcCdngCDsplay, String sltPpntmntTpCcCdngCSrSlctd, String slotAppointmentTypeCcText, String slotScheduleReference, String slotStatusCode, String slotStartInstant, String slotEndInstant, String slotOverbookedBoolean, String slotCommentString) {
+       this.slotIdentifierIdentifierUse = slotIdentifierIdentifierUse;
+       this.sltDntfrDntfrTpCcCSstm = sltDntfrDntfrTpCcCSstm;
+       this.sltDntfrDntfrTpCcCVrsn = sltDntfrDntfrTpCcCVrsn;
+       this.sltDntfrDntfrTpCcCCde = sltDntfrDntfrTpCcCCde;
+       this.sltDntfrDntfrTpCcCDsplay = sltDntfrDntfrTpCcCDsplay;
+       this.sltDntfrDntfrTpCcCSrSlctd = sltDntfrDntfrTpCcCSrSlctd;
+       this.sltDntfrDntfrTpCcTxt = sltDntfrDntfrTpCcTxt;
+       this.sltDntfrDntfrPrdPrdStrt = sltDntfrDntfrPrdPrdStrt;
+       this.sltDntfrDntfrPrdPrdNd = sltDntfrDntfrPrdPrdNd;
+       this.sltDntfrDntfrSsgnr = sltDntfrDntfrSsgnr;
+       this.slotIdentifierIdentifierValue = slotIdentifierIdentifierValue;
+       this.slotIdentifierIdentifierSystem = slotIdentifierIdentifierSystem;
+       this.sltSrvcCtgrCcCdngCSstm = sltSrvcCtgrCcCdngCSstm;
+       this.sltSrvcCtgrCcCdngCVrsn = sltSrvcCtgrCcCdngCVrsn;
+       this.sltSrvcCtgrCcCdngCCde = sltSrvcCtgrCcCdngCCde;
+       this.sltSrvcCtgrCcCdngCDsplay = sltSrvcCtgrCcCdngCDsplay;
+       this.sltSrvcCtgrCcCdngCSrSlctd = sltSrvcCtgrCcCdngCSrSlctd;
+       this.slotServiceCategoryCcText = slotServiceCategoryCcText;
+       this.sltSrvcTpCcCdngCSstm = sltSrvcTpCcCdngCSstm;
+       this.sltSrvcTpCcCdngCVrsn = sltSrvcTpCcCdngCVrsn;
+       this.slotServiceTypeCcCodingCCode = slotServiceTypeCcCodingCCode;
+       this.sltSrvcTpCcCdngCDsplay = sltSrvcTpCcCdngCDsplay;
+       this.sltSrvcTpCcCdngCSrSlctd = sltSrvcTpCcCdngCSrSlctd;
+       this.slotServiceTypeCcText = slotServiceTypeCcText;
+       this.slotSpecialtyCcCodingCSystem = slotSpecialtyCcCodingCSystem;
+       this.slotSpecialtyCcCodingCVersion = slotSpecialtyCcCodingCVersion;
+       this.slotSpecialtyCcCodingCCode = slotSpecialtyCcCodingCCode;
+       this.slotSpecialtyCcCodingCDisplay = slotSpecialtyCcCodingCDisplay;
+       this.sltSpcltCcCdngCSrSlctd = sltSpcltCcCdngCSrSlctd;
+       this.slotSpecialtyCcText = slotSpecialtyCcText;
+       this.sltPpntmntTpCcCdngCSstm = sltPpntmntTpCcCdngCSstm;
+       this.sltPpntmntTpCcCdngCVrsn = sltPpntmntTpCcCdngCVrsn;
+       this.sltPpntmntTpCcCdngCCde = sltPpntmntTpCcCdngCCde;
+       this.sltPpntmntTpCcCdngCDsplay = sltPpntmntTpCcCdngCDsplay;
+       this.sltPpntmntTpCcCdngCSrSlctd = sltPpntmntTpCcCdngCSrSlctd;
+       this.slotAppointmentTypeCcText = slotAppointmentTypeCcText;
+       this.slotScheduleReference = slotScheduleReference;
+       this.slotStatusCode = slotStatusCode;
+       this.slotStartInstant = slotStartInstant;
+       this.slotEndInstant = slotEndInstant;
+       this.slotOverbookedBoolean = slotOverbookedBoolean;
+       this.slotCommentString = slotCommentString;
     }
    
-    public String getSltDntfrDntfrTpCdblCncptCdngCde() {
-        return this.sltDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setSltDntfrDntfrTpCdblCncptCdngCde(String sltDntfrDntfrTpCdblCncptCdngCde) {
-        this.sltDntfrDntfrTpCdblCncptCdngCde = sltDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrSCde() {
-        return this.sltDntfrDntfrSCde;
-    }
-    
-    public void setSltDntfrDntfrSCde(String sltDntfrDntfrSCde) {
-        this.sltDntfrDntfrSCde = sltDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.sltDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setSltDntfrDntfrTpCdblCncptCdngSstm(String sltDntfrDntfrTpCdblCncptCdngSstm) {
-        this.sltDntfrDntfrTpCdblCncptCdngSstm = sltDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.sltDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setSltDntfrDntfrTpCdblCncptCdngVrsn(String sltDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.sltDntfrDntfrTpCdblCncptCdngVrsn = sltDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.sltDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setSltDntfrDntfrTpCdblCncptCdngDsplay(String sltDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.sltDntfrDntfrTpCdblCncptCdngDsplay = sltDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.sltDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setSltDntfrDntfrTpCdblCncptCdngSrSlctd(String sltDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.sltDntfrDntfrTpCdblCncptCdngSrSlctd = sltDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrCdblCncptTxt() {
-        return this.sltDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setSltDntfrDntfrCdblCncptTxt(String sltDntfrDntfrCdblCncptTxt) {
-        this.sltDntfrDntfrCdblCncptTxt = sltDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrPrdStrt() {
-        return this.sltDntfrDntfrPrdStrt;
-    }
-    
-    public void setSltDntfrDntfrPrdStrt(String sltDntfrDntfrPrdStrt) {
-        this.sltDntfrDntfrPrdStrt = sltDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrPrdNd() {
-        return this.sltDntfrDntfrPrdNd;
-    }
-    
-    public void setSltDntfrDntfrPrdNd(String sltDntfrDntfrPrdNd) {
-        this.sltDntfrDntfrPrdNd = sltDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrRfrncRfrnce() {
-        return this.sltDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setSltDntfrDntfrRfrncRfrnce(String sltDntfrDntfrRfrncRfrnce) {
-        this.sltDntfrDntfrRfrncRfrnce = sltDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrRfrncTpe() {
-        return this.sltDntfrDntfrRfrncTpe;
-    }
-    
-    public void setSltDntfrDntfrRfrncTpe(String sltDntfrDntfrRfrncTpe) {
-        this.sltDntfrDntfrRfrncTpe = sltDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrRfrncDntfr() {
-        return this.sltDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setSltDntfrDntfrRfrncDntfr(String sltDntfrDntfrRfrncDntfr) {
-        this.sltDntfrDntfrRfrncDntfr = sltDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrRfrncDsplay() {
-        return this.sltDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setSltDntfrDntfrRfrncDsplay(String sltDntfrDntfrRfrncDsplay) {
-        this.sltDntfrDntfrRfrncDsplay = sltDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrVlStrng() {
-        return this.sltDntfrDntfrVlStrng;
-    }
-    
-    public void setSltDntfrDntfrVlStrng(String sltDntfrDntfrVlStrng) {
-        this.sltDntfrDntfrVlStrng = sltDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getSltDntfrDntfrSstmRi() {
-        return this.sltDntfrDntfrSstmRi;
-    }
-    
-    public void setSltDntfrDntfrSstmRi(String sltDntfrDntfrSstmRi) {
-        this.sltDntfrDntfrSstmRi = sltDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptCdngSstm() {
-        return this.sltSrvcCtgrCdblCncptCdngSstm;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptCdngSstm(String sltSrvcCtgrCdblCncptCdngSstm) {
-        this.sltSrvcCtgrCdblCncptCdngSstm = sltSrvcCtgrCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptCdngVrsn() {
-        return this.sltSrvcCtgrCdblCncptCdngVrsn;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptCdngVrsn(String sltSrvcCtgrCdblCncptCdngVrsn) {
-        this.sltSrvcCtgrCdblCncptCdngVrsn = sltSrvcCtgrCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptCdngCde() {
-        return this.sltSrvcCtgrCdblCncptCdngCde;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptCdngCde(String sltSrvcCtgrCdblCncptCdngCde) {
-        this.sltSrvcCtgrCdblCncptCdngCde = sltSrvcCtgrCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptCdngDsplay() {
-        return this.sltSrvcCtgrCdblCncptCdngDsplay;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptCdngDsplay(String sltSrvcCtgrCdblCncptCdngDsplay) {
-        this.sltSrvcCtgrCdblCncptCdngDsplay = sltSrvcCtgrCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptCdngSrSlctd() {
-        return this.sltSrvcCtgrCdblCncptCdngSrSlctd;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptCdngSrSlctd(String sltSrvcCtgrCdblCncptCdngSrSlctd) {
-        this.sltSrvcCtgrCdblCncptCdngSrSlctd = sltSrvcCtgrCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSltSrvcCtgrCdblCncptTxtStrng() {
-        return this.sltSrvcCtgrCdblCncptTxtStrng;
-    }
-    
-    public void setSltSrvcCtgrCdblCncptTxtStrng(String sltSrvcCtgrCdblCncptTxtStrng) {
-        this.sltSrvcCtgrCdblCncptTxtStrng = sltSrvcCtgrCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptCdngSstm() {
-        return this.sltSrvcTpCdblCncptCdngSstm;
-    }
-    
-    public void setSltSrvcTpCdblCncptCdngSstm(String sltSrvcTpCdblCncptCdngSstm) {
-        this.sltSrvcTpCdblCncptCdngSstm = sltSrvcTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptCdngVrsn() {
-        return this.sltSrvcTpCdblCncptCdngVrsn;
-    }
-    
-    public void setSltSrvcTpCdblCncptCdngVrsn(String sltSrvcTpCdblCncptCdngVrsn) {
-        this.sltSrvcTpCdblCncptCdngVrsn = sltSrvcTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptCdngCde() {
-        return this.sltSrvcTpCdblCncptCdngCde;
-    }
-    
-    public void setSltSrvcTpCdblCncptCdngCde(String sltSrvcTpCdblCncptCdngCde) {
-        this.sltSrvcTpCdblCncptCdngCde = sltSrvcTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptCdngDsplay() {
-        return this.sltSrvcTpCdblCncptCdngDsplay;
-    }
-    
-    public void setSltSrvcTpCdblCncptCdngDsplay(String sltSrvcTpCdblCncptCdngDsplay) {
-        this.sltSrvcTpCdblCncptCdngDsplay = sltSrvcTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptCdngSrSlctd() {
-        return this.sltSrvcTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setSltSrvcTpCdblCncptCdngSrSlctd(String sltSrvcTpCdblCncptCdngSrSlctd) {
-        this.sltSrvcTpCdblCncptCdngSrSlctd = sltSrvcTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSltSrvcTpCdblCncptTxtStrng() {
-        return this.sltSrvcTpCdblCncptTxtStrng;
-    }
-    
-    public void setSltSrvcTpCdblCncptTxtStrng(String sltSrvcTpCdblCncptTxtStrng) {
-        this.sltSrvcTpCdblCncptTxtStrng = sltSrvcTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptCdngSstm() {
-        return this.sltSpcltCdblCncptCdngSstm;
-    }
-    
-    public void setSltSpcltCdblCncptCdngSstm(String sltSpcltCdblCncptCdngSstm) {
-        this.sltSpcltCdblCncptCdngSstm = sltSpcltCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptCdngVrsn() {
-        return this.sltSpcltCdblCncptCdngVrsn;
-    }
-    
-    public void setSltSpcltCdblCncptCdngVrsn(String sltSpcltCdblCncptCdngVrsn) {
-        this.sltSpcltCdblCncptCdngVrsn = sltSpcltCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptCdngCde() {
-        return this.sltSpcltCdblCncptCdngCde;
-    }
-    
-    public void setSltSpcltCdblCncptCdngCde(String sltSpcltCdblCncptCdngCde) {
-        this.sltSpcltCdblCncptCdngCde = sltSpcltCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptCdngDsplay() {
-        return this.sltSpcltCdblCncptCdngDsplay;
-    }
-    
-    public void setSltSpcltCdblCncptCdngDsplay(String sltSpcltCdblCncptCdngDsplay) {
-        this.sltSpcltCdblCncptCdngDsplay = sltSpcltCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptCdngSrSlctd() {
-        return this.sltSpcltCdblCncptCdngSrSlctd;
-    }
-    
-    public void setSltSpcltCdblCncptCdngSrSlctd(String sltSpcltCdblCncptCdngSrSlctd) {
-        this.sltSpcltCdblCncptCdngSrSlctd = sltSpcltCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSltSpcltCdblCncptTxtStrng() {
-        return this.sltSpcltCdblCncptTxtStrng;
-    }
-    
-    public void setSltSpcltCdblCncptTxtStrng(String sltSpcltCdblCncptTxtStrng) {
-        this.sltSpcltCdblCncptTxtStrng = sltSpcltCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptCdngSstm() {
-        return this.sltPpntmntTpCdblCncptCdngSstm;
-    }
-    
-    public void setSltPpntmntTpCdblCncptCdngSstm(String sltPpntmntTpCdblCncptCdngSstm) {
-        this.sltPpntmntTpCdblCncptCdngSstm = sltPpntmntTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptCdngVrsn() {
-        return this.sltPpntmntTpCdblCncptCdngVrsn;
-    }
-    
-    public void setSltPpntmntTpCdblCncptCdngVrsn(String sltPpntmntTpCdblCncptCdngVrsn) {
-        this.sltPpntmntTpCdblCncptCdngVrsn = sltPpntmntTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptCdngCde() {
-        return this.sltPpntmntTpCdblCncptCdngCde;
-    }
-    
-    public void setSltPpntmntTpCdblCncptCdngCde(String sltPpntmntTpCdblCncptCdngCde) {
-        this.sltPpntmntTpCdblCncptCdngCde = sltPpntmntTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptCdngDsplay() {
-        return this.sltPpntmntTpCdblCncptCdngDsplay;
-    }
-    
-    public void setSltPpntmntTpCdblCncptCdngDsplay(String sltPpntmntTpCdblCncptCdngDsplay) {
-        this.sltPpntmntTpCdblCncptCdngDsplay = sltPpntmntTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptCdngSrSlctd() {
-        return this.sltPpntmntTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setSltPpntmntTpCdblCncptCdngSrSlctd(String sltPpntmntTpCdblCncptCdngSrSlctd) {
-        this.sltPpntmntTpCdblCncptCdngSrSlctd = sltPpntmntTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSltPpntmntTpCdblCncptTxtStrng() {
-        return this.sltPpntmntTpCdblCncptTxtStrng;
-    }
-    
-    public void setSltPpntmntTpCdblCncptTxtStrng(String sltPpntmntTpCdblCncptTxtStrng) {
-        this.sltPpntmntTpCdblCncptTxtStrng = sltPpntmntTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrCdblCncptCdng() {
-        return this.sltSchdlRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrCdblCncptCdng(String sltSchdlRfrncDntfrDntfrCdblCncptCdng) {
-        this.sltSchdlRfrncDntfrDntfrCdblCncptCdng = sltSchdlRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrCdblCncptTxt() {
-        return this.sltSchdlRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrCdblCncptTxt(String sltSchdlRfrncDntfrDntfrCdblCncptTxt) {
-        this.sltSchdlRfrncDntfrDntfrCdblCncptTxt = sltSchdlRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrPrdStrt() {
-        return this.sltSchdlRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrPrdStrt(String sltSchdlRfrncDntfrDntfrPrdStrt) {
-        this.sltSchdlRfrncDntfrDntfrPrdStrt = sltSchdlRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrPrdNd() {
-        return this.sltSchdlRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrPrdNd(String sltSchdlRfrncDntfrDntfrPrdNd) {
-        this.sltSchdlRfrncDntfrDntfrPrdNd = sltSchdlRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrRfrncRfrnce() {
-        return this.sltSchdlRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrRfrncRfrnce(String sltSchdlRfrncDntfrDntfrRfrncRfrnce) {
-        this.sltSchdlRfrncDntfrDntfrRfrncRfrnce = sltSchdlRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrRfrncTpe() {
-        return this.sltSchdlRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrRfrncTpe(String sltSchdlRfrncDntfrDntfrRfrncTpe) {
-        this.sltSchdlRfrncDntfrDntfrRfrncTpe = sltSchdlRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrRfrncDntfr() {
-        return this.sltSchdlRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrRfrncDntfr(String sltSchdlRfrncDntfrDntfrRfrncDntfr) {
-        this.sltSchdlRfrncDntfrDntfrRfrncDntfr = sltSchdlRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrDntfrRfrncDsplay() {
-        return this.sltSchdlRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setSltSchdlRfrncDntfrDntfrRfrncDsplay(String sltSchdlRfrncDntfrDntfrRfrncDsplay) {
-        this.sltSchdlRfrncDntfrDntfrRfrncDsplay = sltSchdlRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrSe() {
-        return this.sltSchdlRfrncDntfrSe;
-    }
-    
-    public void setSltSchdlRfrncDntfrSe(String sltSchdlRfrncDntfrSe) {
-        this.sltSchdlRfrncDntfrSe = sltSchdlRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrSstm() {
-        return this.sltSchdlRfrncDntfrSstm;
-    }
-    
-    public void setSltSchdlRfrncDntfrSstm(String sltSchdlRfrncDntfrSstm) {
-        this.sltSchdlRfrncDntfrSstm = sltSchdlRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDntfrVlue() {
-        return this.sltSchdlRfrncDntfrVlue;
-    }
-    
-    public void setSltSchdlRfrncDntfrVlue(String sltSchdlRfrncDntfrVlue) {
-        this.sltSchdlRfrncDntfrVlue = sltSchdlRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncRfrncStrng() {
-        return this.sltSchdlRfrncRfrncStrng;
-    }
-    
-    public void setSltSchdlRfrncRfrncStrng(String sltSchdlRfrncRfrncStrng) {
-        this.sltSchdlRfrncRfrncStrng = sltSchdlRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getSltSchdlRfrncDsplStrng() {
-        return this.sltSchdlRfrncDsplStrng;
-    }
-    
-    public void setSltSchdlRfrncDsplStrng(String sltSchdlRfrncDsplStrng) {
-        this.sltSchdlRfrncDsplStrng = sltSchdlRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getSlotScheduleReferenceTypeUri() {
-        return this.slotScheduleReferenceTypeUri;
-    }
-    
-    public void setSlotScheduleReferenceTypeUri(String slotScheduleReferenceTypeUri) {
-        this.slotScheduleReferenceTypeUri = slotScheduleReferenceTypeUri;
-    }
-    
-    
-    
-    public String getSlotStatus() {
-        return this.slotStatus;
-    }
-    
-    public void setSlotStatus(String slotStatus) {
-        this.slotStatus = slotStatus;
-    }
-    
-    
-    
-    public String getSlotStart() {
-        return this.slotStart;
-    }
-    
-    public void setSlotStart(String slotStart) {
-        this.slotStart = slotStart;
-    }
-    
-    
-    
-    public String getSlotEnd() {
-        return this.slotEnd;
-    }
-    
-    public void setSlotEnd(String slotEnd) {
-        this.slotEnd = slotEnd;
-    }
-    
-    
-    
-    public String getSlotOverbooked() {
-        return this.slotOverbooked;
-    }
-    
-    public void setSlotOverbooked(String slotOverbooked) {
-        this.slotOverbooked = slotOverbooked;
-    }
-    
-    
-    
-    public String getSlotComment() {
-        return this.slotComment;
-    }
-    
-    public void setSlotComment(String slotComment) {
-        this.slotComment = slotComment;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getSlotIdentifierIdentifierUse()
+    {
+        return this.slotIdentifierIdentifierUse;
+    }
+    
+    public void setSlotIdentifierIdentifierUse
+        (String slotIdentifierIdentifierUse) 
+        {
+      this.slotIdentifierIdentifierUse = slotIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcCSstm()
+    {
+        return this.sltDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setSltDntfrDntfrTpCcCSstm
+        (String sltDntfrDntfrTpCcCSstm) 
+        {
+      this.sltDntfrDntfrTpCcCSstm = sltDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcCVrsn()
+    {
+        return this.sltDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setSltDntfrDntfrTpCcCVrsn
+        (String sltDntfrDntfrTpCcCVrsn) 
+        {
+      this.sltDntfrDntfrTpCcCVrsn = sltDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcCCde()
+    {
+        return this.sltDntfrDntfrTpCcCCde;
+    }
+    
+    public void setSltDntfrDntfrTpCcCCde
+        (String sltDntfrDntfrTpCcCCde) 
+        {
+      this.sltDntfrDntfrTpCcCCde = sltDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcCDsplay()
+    {
+        return this.sltDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setSltDntfrDntfrTpCcCDsplay
+        (String sltDntfrDntfrTpCcCDsplay) 
+        {
+      this.sltDntfrDntfrTpCcCDsplay = sltDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.sltDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setSltDntfrDntfrTpCcCSrSlctd
+        (String sltDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.sltDntfrDntfrTpCcCSrSlctd = sltDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getSltDntfrDntfrTpCcTxt()
+    {
+        return this.sltDntfrDntfrTpCcTxt;
+    }
+    
+    public void setSltDntfrDntfrTpCcTxt
+        (String sltDntfrDntfrTpCcTxt) 
+        {
+      this.sltDntfrDntfrTpCcTxt = sltDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getSltDntfrDntfrPrdPrdStrt()
+    {
+        return this.sltDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setSltDntfrDntfrPrdPrdStrt
+        (String sltDntfrDntfrPrdPrdStrt) 
+        {
+      this.sltDntfrDntfrPrdPrdStrt = sltDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getSltDntfrDntfrPrdPrdNd()
+    {
+        return this.sltDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setSltDntfrDntfrPrdPrdNd
+        (String sltDntfrDntfrPrdPrdNd) 
+        {
+      this.sltDntfrDntfrPrdPrdNd = sltDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getSltDntfrDntfrSsgnr()
+    {
+        return this.sltDntfrDntfrSsgnr;
+    }
+    
+    public void setSltDntfrDntfrSsgnr
+        (String sltDntfrDntfrSsgnr) 
+        {
+      this.sltDntfrDntfrSsgnr = sltDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getSlotIdentifierIdentifierValue()
+    {
+        return this.slotIdentifierIdentifierValue;
+    }
+    
+    public void setSlotIdentifierIdentifierValue
+        (String slotIdentifierIdentifierValue) 
+        {
+      this.slotIdentifierIdentifierValue = slotIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getSlotIdentifierIdentifierSystem()
+    {
+        return this.slotIdentifierIdentifierSystem;
+    }
+    
+    public void setSlotIdentifierIdentifierSystem
+        (String slotIdentifierIdentifierSystem) 
+        {
+      this.slotIdentifierIdentifierSystem = slotIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getSltSrvcCtgrCcCdngCSstm()
+    {
+        return this.sltSrvcCtgrCcCdngCSstm;
+    }
+    
+    public void setSltSrvcCtgrCcCdngCSstm
+        (String sltSrvcCtgrCcCdngCSstm) 
+        {
+      this.sltSrvcCtgrCcCdngCSstm = sltSrvcCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getSltSrvcCtgrCcCdngCVrsn()
+    {
+        return this.sltSrvcCtgrCcCdngCVrsn;
+    }
+    
+    public void setSltSrvcCtgrCcCdngCVrsn
+        (String sltSrvcCtgrCcCdngCVrsn) 
+        {
+      this.sltSrvcCtgrCcCdngCVrsn = sltSrvcCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getSltSrvcCtgrCcCdngCCde()
+    {
+        return this.sltSrvcCtgrCcCdngCCde;
+    }
+    
+    public void setSltSrvcCtgrCcCdngCCde
+        (String sltSrvcCtgrCcCdngCCde) 
+        {
+      this.sltSrvcCtgrCcCdngCCde = sltSrvcCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getSltSrvcCtgrCcCdngCDsplay()
+    {
+        return this.sltSrvcCtgrCcCdngCDsplay;
+    }
+    
+    public void setSltSrvcCtgrCcCdngCDsplay
+        (String sltSrvcCtgrCcCdngCDsplay) 
+        {
+      this.sltSrvcCtgrCcCdngCDsplay = sltSrvcCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getSltSrvcCtgrCcCdngCSrSlctd()
+    {
+        return this.sltSrvcCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setSltSrvcCtgrCcCdngCSrSlctd
+        (String sltSrvcCtgrCcCdngCSrSlctd) 
+        {
+      this.sltSrvcCtgrCcCdngCSrSlctd = sltSrvcCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSlotServiceCategoryCcText()
+    {
+        return this.slotServiceCategoryCcText;
+    }
+    
+    public void setSlotServiceCategoryCcText
+        (String slotServiceCategoryCcText) 
+        {
+      this.slotServiceCategoryCcText = slotServiceCategoryCcText;
+}
+    public 
+    String 
+    getSltSrvcTpCcCdngCSstm()
+    {
+        return this.sltSrvcTpCcCdngCSstm;
+    }
+    
+    public void setSltSrvcTpCcCdngCSstm
+        (String sltSrvcTpCcCdngCSstm) 
+        {
+      this.sltSrvcTpCcCdngCSstm = sltSrvcTpCcCdngCSstm;
+}
+    public 
+    String 
+    getSltSrvcTpCcCdngCVrsn()
+    {
+        return this.sltSrvcTpCcCdngCVrsn;
+    }
+    
+    public void setSltSrvcTpCcCdngCVrsn
+        (String sltSrvcTpCcCdngCVrsn) 
+        {
+      this.sltSrvcTpCcCdngCVrsn = sltSrvcTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getSlotServiceTypeCcCodingCCode()
+    {
+        return this.slotServiceTypeCcCodingCCode;
+    }
+    
+    public void setSlotServiceTypeCcCodingCCode
+        (String slotServiceTypeCcCodingCCode) 
+        {
+      this.slotServiceTypeCcCodingCCode = slotServiceTypeCcCodingCCode;
+}
+    public 
+    String 
+    getSltSrvcTpCcCdngCDsplay()
+    {
+        return this.sltSrvcTpCcCdngCDsplay;
+    }
+    
+    public void setSltSrvcTpCcCdngCDsplay
+        (String sltSrvcTpCcCdngCDsplay) 
+        {
+      this.sltSrvcTpCcCdngCDsplay = sltSrvcTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getSltSrvcTpCcCdngCSrSlctd()
+    {
+        return this.sltSrvcTpCcCdngCSrSlctd;
+    }
+    
+    public void setSltSrvcTpCcCdngCSrSlctd
+        (String sltSrvcTpCcCdngCSrSlctd) 
+        {
+      this.sltSrvcTpCcCdngCSrSlctd = sltSrvcTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSlotServiceTypeCcText()
+    {
+        return this.slotServiceTypeCcText;
+    }
+    
+    public void setSlotServiceTypeCcText
+        (String slotServiceTypeCcText) 
+        {
+      this.slotServiceTypeCcText = slotServiceTypeCcText;
+}
+    public 
+    String 
+    getSlotSpecialtyCcCodingCSystem()
+    {
+        return this.slotSpecialtyCcCodingCSystem;
+    }
+    
+    public void setSlotSpecialtyCcCodingCSystem
+        (String slotSpecialtyCcCodingCSystem) 
+        {
+      this.slotSpecialtyCcCodingCSystem = slotSpecialtyCcCodingCSystem;
+}
+    public 
+    String 
+    getSlotSpecialtyCcCodingCVersion()
+    {
+        return this.slotSpecialtyCcCodingCVersion;
+    }
+    
+    public void setSlotSpecialtyCcCodingCVersion
+        (String slotSpecialtyCcCodingCVersion) 
+        {
+      this.slotSpecialtyCcCodingCVersion = slotSpecialtyCcCodingCVersion;
+}
+    public 
+    String 
+    getSlotSpecialtyCcCodingCCode()
+    {
+        return this.slotSpecialtyCcCodingCCode;
+    }
+    
+    public void setSlotSpecialtyCcCodingCCode
+        (String slotSpecialtyCcCodingCCode) 
+        {
+      this.slotSpecialtyCcCodingCCode = slotSpecialtyCcCodingCCode;
+}
+    public 
+    String 
+    getSlotSpecialtyCcCodingCDisplay()
+    {
+        return this.slotSpecialtyCcCodingCDisplay;
+    }
+    
+    public void setSlotSpecialtyCcCodingCDisplay
+        (String slotSpecialtyCcCodingCDisplay) 
+        {
+      this.slotSpecialtyCcCodingCDisplay = slotSpecialtyCcCodingCDisplay;
+}
+    public 
+    String 
+    getSltSpcltCcCdngCSrSlctd()
+    {
+        return this.sltSpcltCcCdngCSrSlctd;
+    }
+    
+    public void setSltSpcltCcCdngCSrSlctd
+        (String sltSpcltCcCdngCSrSlctd) 
+        {
+      this.sltSpcltCcCdngCSrSlctd = sltSpcltCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSlotSpecialtyCcText()
+    {
+        return this.slotSpecialtyCcText;
+    }
+    
+    public void setSlotSpecialtyCcText
+        (String slotSpecialtyCcText) 
+        {
+      this.slotSpecialtyCcText = slotSpecialtyCcText;
+}
+    public 
+    String 
+    getSltPpntmntTpCcCdngCSstm()
+    {
+        return this.sltPpntmntTpCcCdngCSstm;
+    }
+    
+    public void setSltPpntmntTpCcCdngCSstm
+        (String sltPpntmntTpCcCdngCSstm) 
+        {
+      this.sltPpntmntTpCcCdngCSstm = sltPpntmntTpCcCdngCSstm;
+}
+    public 
+    String 
+    getSltPpntmntTpCcCdngCVrsn()
+    {
+        return this.sltPpntmntTpCcCdngCVrsn;
+    }
+    
+    public void setSltPpntmntTpCcCdngCVrsn
+        (String sltPpntmntTpCcCdngCVrsn) 
+        {
+      this.sltPpntmntTpCcCdngCVrsn = sltPpntmntTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getSltPpntmntTpCcCdngCCde()
+    {
+        return this.sltPpntmntTpCcCdngCCde;
+    }
+    
+    public void setSltPpntmntTpCcCdngCCde
+        (String sltPpntmntTpCcCdngCCde) 
+        {
+      this.sltPpntmntTpCcCdngCCde = sltPpntmntTpCcCdngCCde;
+}
+    public 
+    String 
+    getSltPpntmntTpCcCdngCDsplay()
+    {
+        return this.sltPpntmntTpCcCdngCDsplay;
+    }
+    
+    public void setSltPpntmntTpCcCdngCDsplay
+        (String sltPpntmntTpCcCdngCDsplay) 
+        {
+      this.sltPpntmntTpCcCdngCDsplay = sltPpntmntTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getSltPpntmntTpCcCdngCSrSlctd()
+    {
+        return this.sltPpntmntTpCcCdngCSrSlctd;
+    }
+    
+    public void setSltPpntmntTpCcCdngCSrSlctd
+        (String sltPpntmntTpCcCdngCSrSlctd) 
+        {
+      this.sltPpntmntTpCcCdngCSrSlctd = sltPpntmntTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSlotAppointmentTypeCcText()
+    {
+        return this.slotAppointmentTypeCcText;
+    }
+    
+    public void setSlotAppointmentTypeCcText
+        (String slotAppointmentTypeCcText) 
+        {
+      this.slotAppointmentTypeCcText = slotAppointmentTypeCcText;
+}
+    public 
+    String 
+    getSlotScheduleReference()
+    {
+        return this.slotScheduleReference;
+    }
+    
+    public void setSlotScheduleReference
+        (String slotScheduleReference) 
+        {
+      this.slotScheduleReference = slotScheduleReference;
+}
+    public 
+    String 
+    getSlotStatusCode()
+    {
+        return this.slotStatusCode;
+    }
+    
+    public void setSlotStatusCode
+        (String slotStatusCode) 
+        {
+      this.slotStatusCode = slotStatusCode;
+}
+    public 
+    String 
+    getSlotStartInstant()
+    {
+        return this.slotStartInstant;
+    }
+    
+    public void setSlotStartInstant
+        (String slotStartInstant) 
+        {
+      this.slotStartInstant = slotStartInstant;
+}
+    public 
+    String 
+    getSlotEndInstant()
+    {
+        return this.slotEndInstant;
+    }
+    
+    public void setSlotEndInstant
+        (String slotEndInstant) 
+        {
+      this.slotEndInstant = slotEndInstant;
+}
+    public 
+    String 
+    getSlotOverbookedBoolean()
+    {
+        return this.slotOverbookedBoolean;
+    }
+    
+    public void setSlotOverbookedBoolean
+        (String slotOverbookedBoolean) 
+        {
+      this.slotOverbookedBoolean = slotOverbookedBoolean;
+}
+    public 
+    String 
+    getSlotCommentString()
+    {
+        return this.slotCommentString;
+    }
+    
+    public void setSlotCommentString
+        (String slotCommentString) 
+        {
+      this.slotCommentString = slotCommentString;
+}
 
 
 

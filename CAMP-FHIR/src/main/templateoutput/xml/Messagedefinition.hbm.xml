@@ -1,315 +1,447 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Messagedefinition" optimistic-lock="none" table="messagedefinition">
-        <id name="messageDefinitionUrl" type="string">
-            <column length="512" name="MessageDefinition_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mssgDfntnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="messageDefinitionUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="MessageDefinition_url_uri">
+                <comment>{ "tree" :"MessageDefinition.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="mssgDfntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="mssgDfntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="mssgDfntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="mssgDfntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="mssgDfntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="mssgDfntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="mssgDfntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MessageDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="messageDefinitionVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="MessageDefinition_version_string">
+                <comment>{ "tree" :"MessageDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="MssgDfntn_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="messageDefinitionNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="MessageDefinition_name_string">
+                <comment>{ "tree" :"MessageDefinition.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageDefinition_version">
-                <comment>string</comment>
+        <property name="messageDefinitionTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="MessageDefinition_title_string">
+                <comment>{ "tree" :"MessageDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageDefinition_name">
-                <comment>string</comment>
+        <property name="mssgDfntnRplcsCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.replaces", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</meta>
+            <column length="65535" name="MssgDfntn_rplcs_cnncl">
+                <comment>{ "tree" :"MessageDefinition.replaces", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageDefinition_title">
-                <comment>string</comment>
+        <property name="messageDefinitionStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="MessageDefinition_status_code">
+                <comment>{ "tree" :"MessageDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionReplaces" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageDefinition_replaces">
-                <comment>canonical</comment>
+        <property name="mssgDfntnXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="MssgDfntn_xprmntl_bln">
+                <comment>{ "tree" :"MessageDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MessageDefinition_status">
-                <comment>code</comment>
+        <property name="messageDefinitionDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="MessageDefinition_date_dateTime">
+                <comment>{ "tree" :"MessageDefinition.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MessageDefinition_experimental">
-                <comment>boolean</comment>
+        <property name="messageDefinitionPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="MessageDefinition_publisher_string">
+                <comment>{ "tree" :"MessageDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="MessageDefinition_date">
-                <comment>dateTime</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageDefinition_publisher">
-                <comment>string</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="MessageDefinition_contact">
-                <comment>ContactDetail</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="MessageDefinition_description">
-                <comment>markdown</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="MessageDefinition_useContext">
-                <comment>UsageContext</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mssgDfntnCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mssgDfntnCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="MssgDfntn_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"MessageDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mssgDfntnDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="MssgDfntn_dscrptn_mrkdwn">
+                <comment>{ "tree" :"MessageDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MssgDfntn_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="MessageDefinition_purpose">
-                <comment>markdown</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="MessageDefinition_copyright">
-                <comment>markdown</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionBase" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageDefinition_base">
-                <comment>canonical</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionParent" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageDefinition_parent">
-                <comment>canonical</comment>
+        <property name="mssgDfntnSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnVntCdngCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="MssgDfntn_vntCdng_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="mssgDfntnSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnVntCdngCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="MssgDfntn_vntCdng_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="mssgDfntnSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnVntCdngCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="MssgDfntn_vntCdng_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="mssgDfntnSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnVntCdngCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="MssgDfntn_vntCdng_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="mssgDfntnSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnVntCdngCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="MssgDfntn_vntCdng_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionEventUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="MessageDefinition_eventUri">
-                <comment>uri</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionCategory" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MessageDefinition_category">
-                <comment>code</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionFocusCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MessageDefinition_focus_code">
-                <comment>code</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionFocusProfile" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageDefinition_focus_profile">
-                <comment>canonical</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionFocusMin" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="MessageDefinition_focus_min">
-                <comment>unsignedInt</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionFocusMax" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageDefinition_focus_max">
-                <comment>string</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionResponseRequired" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MessageDefinition_responseRequired">
-                <comment>code</comment>
+        <property name="mssgDfntnSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="MssgDfntn_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"MessageDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnLlwdRspnsMssge" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MssgDfntn_llwdRspns_mssge">
-                <comment>canonical</comment>
+        <property name="mssgDfntnJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgDfntnLlwdRspnsSttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="MssgDfntn_llwdRspns_sttn">
-                <comment>markdown</comment>
+        <property name="mssgDfntnJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="messageDefinitionGraph" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageDefinition_graph">
-                <comment>canonical</comment>
+        <property name="mssgDfntnJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="MssgDfntn_jrsdctn_CC_txt">
+                <comment>{ "tree" :"MessageDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionPurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="MessageDefinition_purpose_markdown">
+                <comment>{ "tree" :"MessageDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="MssgDfntn_cprght_mrkdwn">
+                <comment>{ "tree" :"MessageDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionBaseCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.base", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBase"}</meta>
+            <column length="65535" name="MessageDefinition_base_canonical">
+                <comment>{ "tree" :"MessageDefinition.base", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBase"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionParentCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.parent", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParent"}</meta>
+            <column length="65535" name="MessageDefinition_parent_canonical">
+                <comment>{ "tree" :"MessageDefinition.parent", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParent"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setUserSelected"}</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_C_srSlctd">
+                <comment>{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setCode"}</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_C_cde">
+                <comment>{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setVersion"}</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_C_vrsn">
+                <comment>{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setDisplay"}</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_C_dsplay">
+                <comment>{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnVntCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setSystem"}</meta>
+            <column length="65535" name="MssgDfntn_vntCdng_C_sstm">
+                <comment>{ "tree" :"MessageDefinition.eventCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionEventUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.eventUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventUri"}</meta>
+            <column length="65535" name="MessageDefinition_eventUri_uri">
+                <comment>{ "tree" :"MessageDefinition.eventUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventUri"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionCategoryCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.category", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory"}</meta>
+            <column length="65535" name="MessageDefinition_category_code">
+                <comment>{ "tree" :"MessageDefinition.category", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCategory"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusCodeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.focus.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addFocus"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="MessageDefinition_focus_code_code">
+                <comment>{ "tree" :"MessageDefinition.focus.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addFocus"] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnFcsPrflCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.focus.profile", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addFocus"] , "methodName" : "setProfile"}</meta>
+            <column length="65535" name="MssgDfntn_fcs_prfl_cnncl">
+                <comment>{ "tree" :"MessageDefinition.focus.profile", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addFocus"] , "methodName" : "setProfile"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnFcsMnNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.focus.min", "datatype" : "unsignedInt", "cardinality" : "Required", "elementtree" : ["addFocus"] , "methodName" : "setMin"}</meta>
+            <column length="65535" name="MssgDfntn_fcs_mn_nsgndnt">
+                <comment>{ "tree" :"MessageDefinition.focus.min", "datatype" : "unsignedInt", "cardinality" : "Required", "elementtree" : ["addFocus"] , "methodName" : "setMin"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionFocusMaxString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.focus.max", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addFocus"] , "methodName" : "setMax"}</meta>
+            <column length="65535" name="MessageDefinition_focus_max_string">
+                <comment>{ "tree" :"MessageDefinition.focus.max", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addFocus"] , "methodName" : "setMax"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnRspnsRqrdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.responseRequired", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponseRequired"}</meta>
+            <column length="65535" name="MssgDfntn_rspnsRqrd_cde">
+                <comment>{ "tree" :"MessageDefinition.responseRequired", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponseRequired"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnLlwdRspnsMssgCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.allowedResponse.message", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addAllowedResponse"] , "methodName" : "setMessage"}</meta>
+            <column length="65535" name="MssgDfntn_llwdRspns_mssg_cnncl">
+                <comment>{ "tree" :"MessageDefinition.allowedResponse.message", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addAllowedResponse"] , "methodName" : "setMessage"}</comment>
+            </column>
+        </property>
+        <property name="mssgDfntnLlwdRspnsSttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.allowedResponse.situation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addAllowedResponse"] , "methodName" : "setSituation"}</meta>
+            <column length="65535" name="MssgDfntn_llwdRspns_sttn_mrkdwn">
+                <comment>{ "tree" :"MessageDefinition.allowedResponse.situation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addAllowedResponse"] , "methodName" : "setSituation"}</comment>
+            </column>
+        </property>
+        <property name="messageDefinitionGraphCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageDefinition.graph", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGraph"}</meta>
+            <column length="65535" name="MessageDefinition_graph_canonical">
+                <comment>{ "tree" :"MessageDefinition.graph", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGraph"}</comment>
             </column>
         </property>
     </class>

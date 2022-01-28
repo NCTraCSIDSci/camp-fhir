@@ -1,927 +1,429 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Media" optimistic-lock="none" table="media">
-        <id name="mdDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Md_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mdDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_use_code</meta>
-            <column length="512" name="Md_dntfr_dntfr_s_cde">
-                <comment>Media_identifierIdentifier_use_code</comment>
+        <property name="mediaIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Media_identifier_Identifier_use">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Md_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Media_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="mdDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Md_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Media_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="mdDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Md_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Media_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="mdDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Md_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Media_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="mdDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Md_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Media_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="mdDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Md_dntfr_dntfr_Prd_strt">
-                <comment>Media_identifierIdentifier_Period_start</comment>
+        <property name="mdDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Md_dntfr_dntfr_Prd_nd">
-                <comment>Media_identifierIdentifier_Period_end</comment>
+        <property name="mdDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Md_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Media_identifierIdentifier_Reference_reference</comment>
+        <property name="mdDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Md_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Media_identifierIdentifier_Reference_type</comment>
+        <property name="mdDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Md_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Md_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Media_identifierIdentifier_Reference_identifier</comment>
+        <property name="mediaIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Media_identifier_Identifier_value">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Md_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Media_identifierIdentifier_Reference_display</comment>
+        <property name="mediaIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Media_identifier_Identifier_system">
+                <comment>{ "tree" :"Media.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_value_string</meta>
-            <column length="512" name="Md_dntfr_dntfr_vl_strng">
-                <comment>Media_identifierIdentifier_value_string</comment>
+        <property name="mediaBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="Media_basedOn_Reference">
+                <comment>{ "tree" :"Media.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="mdDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Media_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Md_dntfr_dntfr_sstm_ri">
-                <comment>Media_identifierIdentifier_system_uri</comment>
+        <property name="mediaPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</meta>
+            <column length="65535" name="Media_partOf_Reference">
+                <comment>{ "tree" :"Media.partOf", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPartOf"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mediaStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Media_status_code">
+                <comment>{ "tree" :"Media.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mediaTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Media_type_CC_coding_C_system">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mediaTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Media_type_CC_coding_C_version">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mediaTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Media_type_CC_coding_C_code">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mediaTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Media_type_CC_coding_C_display">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mdTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Md_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mediaTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Media_type_CC_text">
+                <comment>{ "tree" :"Media.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mediaModalityCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setSystem"}</meta>
+            <column length="65535" name="Media_modality_CC_coding_C_system">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mediaModalityCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setVersion"}</meta>
+            <column length="65535" name="Media_modality_CC_coding_C_version">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mediaModalityCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setCode"}</meta>
+            <column length="65535" name="Media_modality_CC_coding_C_code">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mediaModalityCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Media_modality_CC_coding_C_display">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mdMdltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Md_mdlt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdBsdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_bsdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mediaModalityCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.modality", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, setText"}</meta>
+            <column length="65535" name="Media_modality_CC_text">
+                <comment>{ "tree" :"Media.modality", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModality, setText"}</comment>
             </column>
         </property>
-        <property name="mediaBasedOnReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_basedOn_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="mediaViewCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setSystem"}</meta>
+            <column length="65535" name="Media_view_CC_coding_C_system">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mediaViewCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setVersion"}</meta>
+            <column length="65535" name="Media_view_CC_coding_C_version">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mediaViewCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setCode"}</meta>
+            <column length="65535" name="Media_view_CC_coding_C_code">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mediaViewCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Media_view_CC_coding_C_display">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdVwCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Md_vw_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mediaViewCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.view", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, setText"}</meta>
+            <column length="65535" name="Media_view_CC_text">
+                <comment>{ "tree" :"Media.view", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setView, setText"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mediaSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Media_subject_Reference">
+                <comment>{ "tree" :"Media.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mediaEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="Media_encounter_Reference">
+                <comment>{ "tree" :"Media.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mediaCreatedDatetimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.createdDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedDatetime"}</meta>
+            <column length="65535" name="Media_createdDatetime_dateTime">
+                <comment>{ "tree" :"Media.createdDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedDatetime"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mediaCreatedPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.createdPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedPeriod, setStart"}</meta>
+            <column length="65535" name="Media_createdPeriod_Period_start">
+                <comment>{ "tree" :"Media.createdPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mediaCreatedPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.createdPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedPeriod, setEnd"}</meta>
+            <column length="65535" name="Media_createdPeriod_Period_end">
+                <comment>{ "tree" :"Media.createdPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCreatedPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mediaIssuedInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.issued", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssued"}</meta>
+            <column length="65535" name="Media_issued_instant">
+                <comment>{ "tree" :"Media.issued", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssued"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mediaOperatorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.operator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperator"}</meta>
+            <column length="65535" name="Media_operator_Reference">
+                <comment>{ "tree" :"Media.operator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperator"}</comment>
             </column>
         </property>
-        <property name="mdPrtfRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_prtf_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Md_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mediaPartOfReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_partOf_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="mdRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Md_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mediaStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Media_status">
-                <comment>code</comment>
+        <property name="mediaReasonCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Media_reasonCode_CC_coding_C_code">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mdRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Md_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mdRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Md_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mediaReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="Media_reasonCode_CC_text">
+                <comment>{ "tree" :"Media.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mediaBodySiteCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setSystem"}</meta>
+            <column length="65535" name="Media_bodySite_CC_coding_C_system">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mediaBodySiteCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setVersion"}</meta>
+            <column length="65535" name="Media_bodySite_CC_coding_C_version">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Md_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mediaBodySiteCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setCode"}</meta>
+            <column length="65535" name="Media_bodySite_CC_coding_C_code">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mediaBodySiteCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Media_bodySite_CC_coding_C_display">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mdBdStCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Md_bdSt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mediaBodySiteCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, setText"}</meta>
+            <column length="65535" name="Media_bodySite_CC_text">
+                <comment>{ "tree" :"Media.bodySite", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBodySite, setText"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mediaDeviceNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.deviceName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeviceName"}</meta>
+            <column length="65535" name="Media_deviceName_string">
+                <comment>{ "tree" :"Media.deviceName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDeviceName"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mediaDeviceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.device", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevice"}</meta>
+            <column length="65535" name="Media_device_Reference">
+                <comment>{ "tree" :"Media.device", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevice"}</comment>
             </column>
         </property>
-        <property name="mdMdltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Md_mdlt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mediaHeightPositiveInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.height", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setHeight"}</meta>
+            <column length="65535" name="Media_height_positiveInt">
+                <comment>{ "tree" :"Media.height", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setHeight"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mediaWidthPositiveInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.width", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setWidth"}</meta>
+            <column length="65535" name="Media_width_positiveInt">
+                <comment>{ "tree" :"Media.width", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setWidth"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mediaFramesPositiveInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.frames", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrames"}</meta>
+            <column length="65535" name="Media_frames_positiveInt">
+                <comment>{ "tree" :"Media.frames", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrames"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mediaDurationDecimal" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.duration", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDuration"}</meta>
+            <column length="65535" name="Media_duration_decimal">
+                <comment>{ "tree" :"Media.duration", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDuration"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="mediaContentAttachmentData" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setData"}</meta>
+            <column length="65535" name="Media_content_Attachment_data">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setData"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="mediaContentAttachmentHash" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setHash"}</meta>
+            <column length="65535" name="Media_content_Attachment_hash">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setHash"}</comment>
             </column>
         </property>
-        <property name="mdVwCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Md_vw_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mdCntntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setContentType"}</meta>
+            <column length="65535" name="Md_cntnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setContentType"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mediaContentAttachmentLanguage" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setLanguage"}</meta>
+            <column length="65535" name="Media_content_Attachment_language">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setLanguage"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mediaContentAttachmentCreation" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setCreation"}</meta>
+            <column length="65535" name="Media_content_Attachment_creation">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setCreation"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mediaContentAttachmentTitle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setTitle"}</meta>
+            <column length="65535" name="Media_content_Attachment_title">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setTitle"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mediaContentAttachmentSize" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setSize"}</meta>
+            <column length="65535" name="Media_content_Attachment_size">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setSize"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mediaContentAttachmentUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.content", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setUrl"}</meta>
+            <column length="65535" name="Media_content_Attachment_url">
+                <comment>{ "tree" :"Media.content", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setContent, setUrl"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mediaNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Media_note_Annotation_time">
+                <comment>{ "tree" :"Media.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mediaNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Media_note_Annotation_text">
+                <comment>{ "tree" :"Media.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mdNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Md_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Media.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="mdSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mediaSubjectReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_subject_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mediaEncounterReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_encounter_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mediaCreatedDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Media_createdDatetime">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="mdCrtdPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Md_crtdPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdCrtdPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Md_crtdPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="mediaIssued" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Media_issued">
-                <comment>instant</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdPrtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_prtr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mediaOperatorReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_operator_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Md_rsnCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdBdStCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Md_bdSt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mediaDeviceName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Media_deviceName">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdDvcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Md_dvc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mediaDeviceReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Media_device_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mediaHeight" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Media_height">
-                <comment>positiveInt</comment>
-            </column>
-        </property>
-        <property name="mediaWidth" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Media_width">
-                <comment>positiveInt</comment>
-            </column>
-        </property>
-        <property name="mediaFrames" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Media_frames">
-                <comment>positiveInt</comment>
-            </column>
-        </property>
-        <property name="mediaDuration" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Media_duration">
-                <comment>decimal</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
-            </column>
-        </property>
-        <property name="mdCntntTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="Md_cntnt_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
-            </column>
-        </property>
-        <property name="mediaContentAttachmentUrlUrl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="Media_content_Attachment_url_url">
-                <comment>Attachment_url_url</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnTmDtTme" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="Md_nt_nnttn_tm_dtTme">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnTxtMrkdwn" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="Md_nt_nnttn_txt_mrkdwn">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="Md_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="Md_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="Md_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="Md_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="Md_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
+        <property name="mediaNoteAnnotationAuthorString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Media.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Media_note_Annotation_authorString">
+                <comment>{ "tree" :"Media.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

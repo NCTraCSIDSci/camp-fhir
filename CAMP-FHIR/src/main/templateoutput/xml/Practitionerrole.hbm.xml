@@ -1,687 +1,285 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Practitionerrole" optimistic-lock="none" table="practitionerrole">
-        <id name="prcttnrRlDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="prcttnrRlDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_use_code</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_s_cde">
-                <comment>PractitionerRole_identifierIdentifier_use_code</comment>
+        <property name="prcttnrRlDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_se">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>PractitionerRole_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_CdblCncpt_txt">
-                <comment>PractitionerRole_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Period_start</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Prd_strt">
-                <comment>PractitionerRole_identifierIdentifier_Period_start</comment>
+        <property name="prcttnrRlDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Period_end</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Prd_nd">
-                <comment>PractitionerRole_identifierIdentifier_Period_end</comment>
+        <property name="prcttnrRlDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>PractitionerRole_identifierIdentifier_Reference_reference</comment>
+        <property name="prcttnrRlDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Rfrnc_tpe">
-                <comment>PractitionerRole_identifierIdentifier_Reference_type</comment>
+        <property name="prcttnrRlDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>PractitionerRole_identifierIdentifier_Reference_identifier</comment>
+        <property name="prcttnrRlDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>PractitionerRole_identifierIdentifier_Reference_display</comment>
+        <property name="prcttnrRlDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="PrcttnrRl_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"PractitionerRole.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_value_string</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_vl_strng">
-                <comment>PractitionerRole_identifierIdentifier_value_string</comment>
+        <property name="practitionerRoleActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="PractitionerRole_active_boolean">
+                <comment>{ "tree" :"PractitionerRole.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">PractitionerRole_identifierIdentifier_system_uri</meta>
-            <column length="512" name="PrcttnrRl_dntfr_dntfr_sstm_ri">
-                <comment>PractitionerRole_identifierIdentifier_system_uri</comment>
+        <property name="prcttnrRlPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="PrcttnrRl_prd_Prd_strt">
+                <comment>{ "tree" :"PractitionerRole.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="practitionerRoleActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="PractitionerRole_active">
-                <comment>boolean</comment>
+        <property name="practitionerRolePeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="PractitionerRole_period_Period_end">
+                <comment>{ "tree" :"PractitionerRole.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="PrcttnrRl_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="prcttnrRlPrcttnrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.practitioner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPractitioner"}</meta>
+            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnce">
+                <comment>{ "tree" :"PractitionerRole.practitioner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPractitioner"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="PrcttnrRl_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="prcttnrRlRgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganization"}</meta>
+            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnce">
+                <comment>{ "tree" :"PractitionerRole.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganization"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="prcttnrRlCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="PrcttnrRl_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="prcttnrRlCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="PrcttnrRl_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="prcttnrRlCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setCode"}</meta>
+            <column length="65535" name="PrcttnrRl_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="prcttnrRlCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PrcttnrRl_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="prcttnrRlCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PrcttnrRl_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="practitionerRoleCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setText"}</meta>
+            <column length="65535" name="PractitionerRole_code_CC_text">
+                <comment>{ "tree" :"PractitionerRole.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setText"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="prcttnrRlSpcltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</meta>
+            <column length="65535" name="PrcttnrRl_spclt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="prcttnrRlSpcltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</meta>
+            <column length="65535" name="PrcttnrRl_spclt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="prcttnrRlSpcltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</meta>
+            <column length="65535" name="PrcttnrRl_spclt_CC_cdng_C_cde">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="prcttnrRlSpcltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PrcttnrRl_spclt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="prcttnrRlSpcltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PrcttnrRl_spclt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="practitionerRoleSpecialtyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</meta>
+            <column length="65535" name="PractitionerRole_specialty_CC_text">
+                <comment>{ "tree" :"PractitionerRole.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="prcttnrRlLctnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.location", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocation"}</meta>
+            <column length="65535" name="PrcttnrRl_lctn_Rfrnce">
+                <comment>{ "tree" :"PractitionerRole.location", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocation"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlPrcttnrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="PrcttnrRl_prcttnr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="prcttnrRlHlthcrSrvcRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.healthcareService", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHealthcareService"}</meta>
+            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnce">
+                <comment>{ "tree" :"PractitionerRole.healthcareService", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHealthcareService"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="prcttnrRlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="prcttnrRlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="prcttnrRlTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="prcttnrRlTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="prcttnrRlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="prcttnrRlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"PractitionerRole.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="prcttnrRlVlblTmDsfWkCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.availableTime.daysOfWeek", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addAvailableTime"] , "methodName" : "addDaysOfWeek"}</meta>
+            <column length="65535" name="PrcttnrRl_vlblTm_dsfWk_cde">
+                <comment>{ "tree" :"PractitionerRole.availableTime.daysOfWeek", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addAvailableTime"] , "methodName" : "addDaysOfWeek"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="prcttnrRlVlblTmLlDBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.availableTime.allDay", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAllDay"}</meta>
+            <column length="65535" name="PrcttnrRl_vlblTm_llD_bln">
+                <comment>{ "tree" :"PractitionerRole.availableTime.allDay", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAllDay"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="prcttnrRlVlblTmVlblStrtTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.availableTime.availableStartTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAvailableStartTime"}</meta>
+            <column length="65535" name="PrcttnrRl_vlblTm_vlblStrtTm_tme">
+                <comment>{ "tree" :"PractitionerRole.availableTime.availableStartTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAvailableStartTime"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="prcttnrRlVlblTmVlblndTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.availableTime.availableEndTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAvailableEndTime"}</meta>
+            <column length="65535" name="PrcttnrRl_vlblTm_vlblndTm_tme">
+                <comment>{ "tree" :"PractitionerRole.availableTime.availableEndTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addAvailableTime"] , "methodName" : "setAvailableEndTime"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="prcttnrRlNtvlblDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.notAvailable.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addNotAvailable"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="PrcttnrRl_ntvlbl_dscrptn_strng">
+                <comment>{ "tree" :"PractitionerRole.notAvailable.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addNotAvailable"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="prcttnrRlNtvlblDrngPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.notAvailable.during", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addNotAvailable"] , "methodName" : "setDuring, setStart"}</meta>
+            <column length="65535" name="PrcttnrRl_ntvlbl_drng_Prd_strt">
+                <comment>{ "tree" :"PractitionerRole.notAvailable.during", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addNotAvailable"] , "methodName" : "setDuring, setStart"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="prcttnrRlNtvlblDrngPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.notAvailable.during", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addNotAvailable"] , "methodName" : "setDuring, setEnd"}</meta>
+            <column length="65535" name="PrcttnrRl_ntvlbl_drng_Prd_nd">
+                <comment>{ "tree" :"PractitionerRole.notAvailable.during", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addNotAvailable"] , "methodName" : "setDuring, setEnd"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlRgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="PrcttnrRl_rgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="prcttnrRlVlbltxcptnsStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.availabilityExceptions", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAvailabilityExceptions"}</meta>
+            <column length="65535" name="PrcttnrRl_vlbltxcptns_strng">
+                <comment>{ "tree" :"PractitionerRole.availabilityExceptions", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAvailabilityExceptions"}</comment>
             </column>
         </property>
-        <property name="prcttnrRlCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="PrcttnrRl_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlSpcltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="PrcttnrRl_spclt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlLctnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="PrcttnrRl_lctn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlHlthcrSrvcRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="PrcttnrRl_hlthcrSrvc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="PrcttnrRl_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlVlblTmDsfWk" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="PrcttnrRl_vlblTm_dsfWk">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlVlblTmLlDay" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="PrcttnrRl_vlblTm_llDay">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlVlblTmVlblStrtTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="PrcttnrRl_vlblTm_vlblStrtTme">
-                <comment>time</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlVlblTmVlblndTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="PrcttnrRl_vlblTm_vlblndTme">
-                <comment>time</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNtvlblDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="PrcttnrRl_ntvlbl_dscrptn">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNtvlblDrngPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="PrcttnrRl_ntvlbl_drng_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNtvlblDrngPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="PrcttnrRl_ntvlbl_drng_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlVlbltxcptns" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="PrcttnrRl_vlbltxcptns">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prcttnrRlNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="prcttnrRlNdpntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PractitionerRole.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="PrcttnrRl_ndpnt_Rfrnce">
+                <comment>{ "tree" :"PractitionerRole.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
     </class>

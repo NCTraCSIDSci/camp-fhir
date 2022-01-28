@@ -1,477 +1,573 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Goal" optimistic-lock="none" table="goal">
-        <id name="goalIdentifierCodingCode" type="string">
-            <column length="512" name="Goal_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="glDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Gl_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Goal_identifier_Identifier_use">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="goalIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Goal_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Goal_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="glDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="goalIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Goal_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="glDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalLifecycleStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Goal_lifecycleStatus">
-                <comment>code</comment>
+        <property name="glDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="glChvmntSttsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_chvmntStts_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="glDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalAchievementStatusCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_achievementStatus_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="glDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="glChvmntSttsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Gl_chvmntStts_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="glDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="glChvmntSttsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Gl_chvmntStts_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="glDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="glChvmntSttsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Gl_chvmntStts_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="glDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Gl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="goalCategoryCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Goal_category_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="goalIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Goal_identifier_Identifier_value">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="goalCategoryCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_category_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="goalIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Goal_identifier_Identifier_system">
+                <comment>{ "tree" :"Goal.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalCategoryCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_category_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="goalLifecycleStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.lifecycleStatus", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setLifecycleStatus"}</meta>
+            <column length="65535" name="Goal_lifecycleStatus_code">
+                <comment>{ "tree" :"Goal.lifecycleStatus", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setLifecycleStatus"}</comment>
             </column>
         </property>
-        <property name="goalCategoryCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_category_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="glChvmntSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_chvmntStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalCategoryCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_category_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="glChvmntSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_chvmntStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="goalPriorityCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Goal_priority_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="glChvmntSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="Gl_chvmntStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalPriorityCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_priority_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="glChvmntSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_chvmntStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="goalPriorityCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_priority_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glChvmntSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_chvmntStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalPriorityCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_priority_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="goalAchievementStatusCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, setText"}</meta>
+            <column length="65535" name="Goal_achievementStatus_CC_text">
+                <comment>{ "tree" :"Goal.achievementStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAchievementStatus, setText"}</comment>
             </column>
         </property>
-        <property name="goalPriorityCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_priority_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="goalCategoryCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Goal_category_CC_coding_C_system">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="glDscrptnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_dscrptn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalCategoryCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Goal_category_CC_coding_C_version">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="goalDescriptionCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_description_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="goalCategoryCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Goal_category_CC_coding_C_code">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalDescriptionCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_description_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="goalCategoryCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Goal_category_CC_coding_C_display">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="goalDescriptionCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_description_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="glCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalDescriptionCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_description_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="goalCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="Goal_category_CC_text">
+                <comment>{ "tree" :"Goal.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="goalSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Goal_subject">
-                <comment>Reference</comment>
+        <property name="goalPriorityCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setSystem"}</meta>
+            <column length="65535" name="Goal_priority_CC_coding_C_system">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalStartDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Goal_startDate">
-                <comment>date</comment>
+        <property name="goalPriorityCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setVersion"}</meta>
+            <column length="65535" name="Goal_priority_CC_coding_C_version">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="glStrtcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_strtcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalPriorityCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setCode"}</meta>
+            <column length="65535" name="Goal_priority_CC_coding_C_code">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalStartcdblcptCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_startcdblcpt_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="goalPriorityCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Goal_priority_CC_coding_C_display">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="goalStartcdblcptCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_startcdblcpt_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glPrrtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_prrt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalStartcdblcptCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_startcdblcpt_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="goalPriorityCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, setText"}</meta>
+            <column length="65535" name="Goal_priority_CC_text">
+                <comment>{ "tree" :"Goal.priority", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority, setText"}</comment>
             </column>
         </property>
-        <property name="goalStartcdblcptCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_startcdblcpt_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="glDscrptnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_dscrptn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalTarget" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Goal_target">
-                <comment>BackboneElement</comment>
+        <property name="glDscrptnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_dscrptn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="glTrgtMsrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_trgt_msr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalDescriptionCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setCode"}</meta>
+            <column length="65535" name="Goal_description_CC_coding_C_code">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalTargetMeasureCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_target_measure_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="glDscrptnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_dscrptn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="goalTargetMeasureCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_target_measure_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glDscrptnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_dscrptn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalTargetMeasureCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_target_measure_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="goalDescriptionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.description", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, setText"}</meta>
+            <column length="65535" name="Goal_description_CC_text">
+                <comment>{ "tree" :"Goal.description", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription, setText"}</comment>
             </column>
         </property>
-        <property name="goalTargetMeasureCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_target_measure_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="goalSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Goal_subject_Reference">
+                <comment>{ "tree" :"Goal.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalStartDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartDate"}</meta>
+            <column length="65535" name="Goal_startDate_date">
+                <comment>{ "tree" :"Goal.startDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartDate"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="glStrtCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_strtCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="glStrtCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_strtCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="glStrtCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Gl_strtCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Gl_trgt_dtlQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="glStrtCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_strtCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_trgt_dtlRng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="glStrtCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_strtCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Gl_trgt_dtlRng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="goalStartCodeableconceptCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, setText"}</meta>
+            <column length="65535" name="Goal_startCodeableconcept_CC_text">
+                <comment>{ "tree" :"Goal.startCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStartCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Gl_trgt_dtlRng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="glTrgtMsrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_trgt_msr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Gl_trgt_dtlRng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="glTrgtMsrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_trgt_msr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Gl_trgt_dtlRng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="glTrgtMsrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setCode"}</meta>
+            <column length="65535" name="Gl_trgt_msr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="glTrgtMsrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_trgt_msr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="glTrgtMsrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_trgt_msr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="goalTargetMeasureCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, setText"}</meta>
+            <column length="65535" name="Goal_target_measure_CC_text">
+                <comment>{ "tree" :"Goal.target.measure", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setMeasure, setText"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="glTrgtDtlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setComparator"}</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Gl_trgt_dtlcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="glTrgtDtlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setCode"}</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Qntt_cde">
+                <comment>{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="goalTargetDetailString" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Goal_target_detailString">
-                <comment>string</comment>
+        <property name="glTrgtDtlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setValue"}</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="goalTargetDetailBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Goal_target_detailBoolean">
-                <comment>boolean</comment>
+        <property name="glTrgtDtlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setUnit"}</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Qntt_nt">
+                <comment>{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="goalTargetDetailInteger" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Goal_target_detailInteger">
-                <comment>integer</comment>
+        <property name="glTrgtDtlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setSystem"}</meta>
+            <column length="65535" name="Gl_trgt_dtlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Goal.target.detailQuantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_trgt_dtlRt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="goalTargetDetailRangeRangeLow" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRange, setLow"}</meta>
+            <column length="65535" name="Goal_target_detailRange_Range_low">
+                <comment>{ "tree" :"Goal.target.detailRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRange, setLow"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Gl_trgt_dtlRt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="goalTargetDetailRangeRangeHigh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRange, setHigh"}</meta>
+            <column length="65535" name="Goal_target_detailRange_Range_high">
+                <comment>{ "tree" :"Goal.target.detailRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Gl_trgt_dtlRt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="glTrgtDtlCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Gl_trgt_dtlRt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="glTrgtDtlCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="glTrgtDtlRtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Gl_trgt_dtlRt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="glTrgtDtlCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="goalTargetDueDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Goal_target_dueDate">
-                <comment>date</comment>
+        <property name="glTrgtDtlCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="goalTargetDueDuration" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="Goal_target_dueDuration">
-                <comment>Duration</comment>
+        <property name="glTrgtDtlCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="goalStatusDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Goal_statusDate">
-                <comment>date</comment>
+        <property name="glTrgtDtlCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, setText"}</meta>
+            <column length="65535" name="Gl_trgt_dtlCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Goal.target.detailCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="goalStatusReason" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Goal_statusReason">
-                <comment>string</comment>
+        <property name="goalTargetDetailStringString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailString"}</meta>
+            <column length="65535" name="Goal_target_detailString_string">
+                <comment>{ "tree" :"Goal.target.detailString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailString"}</comment>
             </column>
         </property>
-        <property name="goalExpressedBy" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Goal_expressedBy">
-                <comment>Reference</comment>
+        <property name="goalTargetDetailBooleanBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailBoolean"}</meta>
+            <column length="65535" name="Goal_target_detailBoolean_boolean">
+                <comment>{ "tree" :"Goal.target.detailBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailBoolean"}</comment>
             </column>
         </property>
-        <property name="goalAddresses" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Goal_addresses">
-                <comment>Reference</comment>
+        <property name="goalTargetDetailIntegerInteger" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailInteger"}</meta>
+            <column length="65535" name="Goal_target_detailInteger_integer">
+                <comment>{ "tree" :"Goal.target.detailInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailInteger"}</comment>
             </column>
         </property>
-        <property name="goalNoteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Goal_note_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="glTrgtDtlRtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setValue"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="goalNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="glTrgtDtlRtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setValue"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="goalNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glTrgtDtlRtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setComparator"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="goalNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="glTrgtDtlRtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setComparator"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="goalNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="glTrgtDtlRtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setUnit"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="glTcmCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Gl_tcmCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="glTrgtDtlRtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setUnit"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="goalOutcomeCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Goal_outcomeCode_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="glTrgtDtlRtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setSystem"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalOutcomeCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Goal_outcomeCode_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="glTrgtDtlRtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setSystem"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="goalOutcomeCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Goal_outcomeCode_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="glTrgtDtlRtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setCode"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="goalOutcomeCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Goal_outcomeCode_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="glTrgtDtlRtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setCode"}</meta>
+            <column length="65535" name="Gl_trgt_dtlRt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"Goal.target.detailRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDetailRatio, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="goalOutcomeReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Goal_outcomeReference">
-                <comment>Reference</comment>
+        <property name="goalTargetDueDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.dueDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDueDate"}</meta>
+            <column length="65535" name="Goal_target_dueDate_date">
+                <comment>{ "tree" :"Goal.target.dueDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDueDate"}</comment>
+            </column>
+        </property>
+        <property name="goalTargetDueDurationDuration" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.target.dueDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDueDuration"}</meta>
+            <column length="65535" name="Goal_target_dueDuration_Duration">
+                <comment>{ "tree" :"Goal.target.dueDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addTarget"] , "methodName" : "setDueDuration"}</comment>
+            </column>
+        </property>
+        <property name="goalStatusDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.statusDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusDate"}</meta>
+            <column length="65535" name="Goal_statusDate_date">
+                <comment>{ "tree" :"Goal.statusDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusDate"}</comment>
+            </column>
+        </property>
+        <property name="goalStatusReasonString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.statusReason", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason"}</meta>
+            <column length="65535" name="Goal_statusReason_string">
+                <comment>{ "tree" :"Goal.statusReason", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason"}</comment>
+            </column>
+        </property>
+        <property name="goalExpressedByReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.expressedBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpressedBy"}</meta>
+            <column length="65535" name="Goal_expressedBy_Reference">
+                <comment>{ "tree" :"Goal.expressedBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpressedBy"}</comment>
+            </column>
+        </property>
+        <property name="goalAddressesReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.addresses", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddresses"}</meta>
+            <column length="65535" name="Goal_addresses_Reference">
+                <comment>{ "tree" :"Goal.addresses", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddresses"}</comment>
+            </column>
+        </property>
+        <property name="goalNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Goal_note_Annotation_time">
+                <comment>{ "tree" :"Goal.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
+            </column>
+        </property>
+        <property name="goalNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Goal_note_Annotation_text">
+                <comment>{ "tree" :"Goal.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
+            </column>
+        </property>
+        <property name="glNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Gl_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Goal.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
+            </column>
+        </property>
+        <property name="goalNoteAnnotationAuthorString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Goal_note_Annotation_authorString">
+                <comment>{ "tree" :"Goal.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
+            </column>
+        </property>
+        <property name="glTcmCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Gl_tcmCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="glTcmCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Gl_tcmCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Goal_outcomeCode_CC_coding_C_code">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="glTcmCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Gl_tcmCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="glTcmCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Gl_tcmCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, setText"}</meta>
+            <column length="65535" name="Goal_outcomeCode_CC_text">
+                <comment>{ "tree" :"Goal.outcomeCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="goalOutcomeReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Goal.outcomeReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeReference"}</meta>
+            <column length="65535" name="Goal_outcomeReference_Reference">
+                <comment>{ "tree" :"Goal.outcomeReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOutcomeReference"}</comment>
             </column>
         </property>
     </class>

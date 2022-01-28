@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,605 +10,754 @@ package main.templateoutput.Model;
 public class Careteam  implements java.io.Serializable {
 
 
-     private String careTeamIdentifierCodingCode;
-     private String crTmDntfrCdngSrSlctd;
-     private String careTeamIdentifierCodingVersion;
-     private String careTeamIdentifierCodingDisplay;
-     private String careTeamIdentifierCodingSystem;
-     private String careTeamStatus;
-     private String crTmCtgrCdngSrSlctd;
-     private String careTeamCategoryCodingCode;
-     private String careTeamCategoryCodingVersion;
-     private String careTeamCategoryCodingDisplay;
-     private String careTeamCategoryCodingSystem;
-     private String careTeamName;
-     private String careTeamSubject;
-     private String careTeamEncounter;
-     private String crTmPrdCdngSrSlctd;
-     private String careTeamPeriodCodingCode;
-     private String careTeamPeriodCodingVersion;
-     private String careTeamPeriodCodingDisplay;
-     private String careTeamPeriodCodingSystem;
-     private String careTeamParticipant;
-     private String crTmPrtcpntRlCdngSrSlctd;
-     private String crTmPrtcpntRlCdngCde;
-     private String crTmPrtcpntRlCdngVrsn;
-     private String crTmPrtcpntRlCdngDsplay;
-     private String crTmPrtcpntRlCdngSstm;
-     private String careTeamParticipantMember;
-     private String careTeamParticipantOnBehalfOf;
-     private String crTmPrtcpntPrdCdngSrSlctd;
-     private String crTmPrtcpntPrdCdngCde;
-     private String crTmPrtcpntPrdCdngVrsn;
-     private String crTmPrtcpntPrdCdngDsplay;
-     private String crTmPrtcpntPrdCdngSstm;
-     private String crTmRsnCdCdngSrSlctd;
-     private String careTeamReasonCodeCodingCode;
-     private String careTeamReasonCodeCodingVersion;
-     private String careTeamReasonCodeCodingDisplay;
-     private String careTeamReasonCodeCodingSystem;
-     private String careTeamReasonReference;
-     private String careTeamManagingOrganization;
-     private String crTmTlcmCdngSrSlctd;
-     private String careTeamTelecomCodingCode;
-     private String careTeamTelecomCodingVersion;
-     private String careTeamTelecomCodingDisplay;
-     private String careTeamTelecomCodingSystem;
-     private String careTeamNoteCodingUserSelected;
-     private String careTeamNoteCodingCode;
-     private String careTeamNoteCodingVersion;
-     private String careTeamNoteCodingDisplay;
-     private String careTeamNoteCodingSystem;
+     private Integer id;
+     private String careTeamIdentifierIdentifierUse;
+     private String crTmDntfrDntfrTpCcCSstm;
+     private String crTmDntfrDntfrTpCcCVrsn;
+     private String crTmDntfrDntfrTpCcCCde;
+     private String crTmDntfrDntfrTpCcCDsplay;
+     private String crTmDntfrDntfrTpCcCSrSlctd;
+     private String crTmDntfrDntfrTpCcTxt;
+     private String crTmDntfrDntfrPrdPrdStrt;
+     private String crTmDntfrDntfrPrdPrdNd;
+     private String crTmDntfrDntfrSsgnr;
+     private String crTmDntfrDntfrVlue;
+     private String crTmDntfrDntfrSstm;
+     private String careTeamStatusCode;
+     private String crTmCtgrCcCdngCSstm;
+     private String crTmCtgrCcCdngCVrsn;
+     private String careTeamCategoryCcCodingCCode;
+     private String crTmCtgrCcCdngCDsplay;
+     private String crTmCtgrCcCdngCSrSlctd;
+     private String careTeamCategoryCcText;
+     private String careTeamNameString;
+     private String careTeamSubjectReference;
+     private String careTeamEncounterReference;
+     private String careTeamPeriodPeriodStart;
+     private String careTeamPeriodPeriodEnd;
+     private String crTmPrtcpntRlCcCdngCSstm;
+     private String crTmPrtcpntRlCcCdngCVrsn;
+     private String crTmPrtcpntRlCcCdngCCde;
+     private String crTmPrtcpntRlCcCdngCDsplay;
+     private String crTmPrtcpntRlCcCdngCSrSlctd;
+     private String careTeamParticipantRoleCcText;
+     private String crTmPrtcpntMmbrRfrnce;
+     private String crTmPrtcpntNBhlffRfrnce;
+     private String crTmPrtcpntPrdPrdStrt;
+     private String crTmPrtcpntPrdPrdNd;
+     private String crTmRsnCdCcCdngCSstm;
+     private String crTmRsnCdCcCdngCVrsn;
+     private String crTmRsnCdCcCdngCCde;
+     private String crTmRsnCdCcCdngCDsplay;
+     private String crTmRsnCdCcCdngCSrSlctd;
+     private String careTeamReasonCodeCcText;
+     private String careTeamReasonReferenceReference;
+     private String crTmMngngrgnztnRfrnce;
+     private String crTmTlcmCntctPntSstm;
+     private String careTeamTelecomContactPointUse;
+     private String crTmTlcmCntctPntPrdPrdStrt;
+     private String crTmTlcmCntctPntPrdPrdNd;
+     private String careTeamTelecomContactPointRank;
+     private String crTmTlcmCntctPntVlue;
+     private String careTeamNoteAnnotationTime;
+     private String careTeamNoteAnnotationText;
+     private String crTmNtNnttnThrRfrnce;
+     private String crTmNtNnttnThrStrng;
 
     public Careteam() {
     }
 
-	
-    public Careteam(String careTeamIdentifierCodingCode) {
-        this.careTeamIdentifierCodingCode = careTeamIdentifierCodingCode;
-    }
-    public Careteam(String careTeamIdentifierCodingCode, String crTmDntfrCdngSrSlctd, String careTeamIdentifierCodingVersion, String careTeamIdentifierCodingDisplay, String careTeamIdentifierCodingSystem, String careTeamStatus, String crTmCtgrCdngSrSlctd, String careTeamCategoryCodingCode, String careTeamCategoryCodingVersion, String careTeamCategoryCodingDisplay, String careTeamCategoryCodingSystem, String careTeamName, String careTeamSubject, String careTeamEncounter, String crTmPrdCdngSrSlctd, String careTeamPeriodCodingCode, String careTeamPeriodCodingVersion, String careTeamPeriodCodingDisplay, String careTeamPeriodCodingSystem, String careTeamParticipant, String crTmPrtcpntRlCdngSrSlctd, String crTmPrtcpntRlCdngCde, String crTmPrtcpntRlCdngVrsn, String crTmPrtcpntRlCdngDsplay, String crTmPrtcpntRlCdngSstm, String careTeamParticipantMember, String careTeamParticipantOnBehalfOf, String crTmPrtcpntPrdCdngSrSlctd, String crTmPrtcpntPrdCdngCde, String crTmPrtcpntPrdCdngVrsn, String crTmPrtcpntPrdCdngDsplay, String crTmPrtcpntPrdCdngSstm, String crTmRsnCdCdngSrSlctd, String careTeamReasonCodeCodingCode, String careTeamReasonCodeCodingVersion, String careTeamReasonCodeCodingDisplay, String careTeamReasonCodeCodingSystem, String careTeamReasonReference, String careTeamManagingOrganization, String crTmTlcmCdngSrSlctd, String careTeamTelecomCodingCode, String careTeamTelecomCodingVersion, String careTeamTelecomCodingDisplay, String careTeamTelecomCodingSystem, String careTeamNoteCodingUserSelected, String careTeamNoteCodingCode, String careTeamNoteCodingVersion, String careTeamNoteCodingDisplay, String careTeamNoteCodingSystem) {
-       this.careTeamIdentifierCodingCode = careTeamIdentifierCodingCode;
-       this.crTmDntfrCdngSrSlctd = crTmDntfrCdngSrSlctd;
-       this.careTeamIdentifierCodingVersion = careTeamIdentifierCodingVersion;
-       this.careTeamIdentifierCodingDisplay = careTeamIdentifierCodingDisplay;
-       this.careTeamIdentifierCodingSystem = careTeamIdentifierCodingSystem;
-       this.careTeamStatus = careTeamStatus;
-       this.crTmCtgrCdngSrSlctd = crTmCtgrCdngSrSlctd;
-       this.careTeamCategoryCodingCode = careTeamCategoryCodingCode;
-       this.careTeamCategoryCodingVersion = careTeamCategoryCodingVersion;
-       this.careTeamCategoryCodingDisplay = careTeamCategoryCodingDisplay;
-       this.careTeamCategoryCodingSystem = careTeamCategoryCodingSystem;
-       this.careTeamName = careTeamName;
-       this.careTeamSubject = careTeamSubject;
-       this.careTeamEncounter = careTeamEncounter;
-       this.crTmPrdCdngSrSlctd = crTmPrdCdngSrSlctd;
-       this.careTeamPeriodCodingCode = careTeamPeriodCodingCode;
-       this.careTeamPeriodCodingVersion = careTeamPeriodCodingVersion;
-       this.careTeamPeriodCodingDisplay = careTeamPeriodCodingDisplay;
-       this.careTeamPeriodCodingSystem = careTeamPeriodCodingSystem;
-       this.careTeamParticipant = careTeamParticipant;
-       this.crTmPrtcpntRlCdngSrSlctd = crTmPrtcpntRlCdngSrSlctd;
-       this.crTmPrtcpntRlCdngCde = crTmPrtcpntRlCdngCde;
-       this.crTmPrtcpntRlCdngVrsn = crTmPrtcpntRlCdngVrsn;
-       this.crTmPrtcpntRlCdngDsplay = crTmPrtcpntRlCdngDsplay;
-       this.crTmPrtcpntRlCdngSstm = crTmPrtcpntRlCdngSstm;
-       this.careTeamParticipantMember = careTeamParticipantMember;
-       this.careTeamParticipantOnBehalfOf = careTeamParticipantOnBehalfOf;
-       this.crTmPrtcpntPrdCdngSrSlctd = crTmPrtcpntPrdCdngSrSlctd;
-       this.crTmPrtcpntPrdCdngCde = crTmPrtcpntPrdCdngCde;
-       this.crTmPrtcpntPrdCdngVrsn = crTmPrtcpntPrdCdngVrsn;
-       this.crTmPrtcpntPrdCdngDsplay = crTmPrtcpntPrdCdngDsplay;
-       this.crTmPrtcpntPrdCdngSstm = crTmPrtcpntPrdCdngSstm;
-       this.crTmRsnCdCdngSrSlctd = crTmRsnCdCdngSrSlctd;
-       this.careTeamReasonCodeCodingCode = careTeamReasonCodeCodingCode;
-       this.careTeamReasonCodeCodingVersion = careTeamReasonCodeCodingVersion;
-       this.careTeamReasonCodeCodingDisplay = careTeamReasonCodeCodingDisplay;
-       this.careTeamReasonCodeCodingSystem = careTeamReasonCodeCodingSystem;
-       this.careTeamReasonReference = careTeamReasonReference;
-       this.careTeamManagingOrganization = careTeamManagingOrganization;
-       this.crTmTlcmCdngSrSlctd = crTmTlcmCdngSrSlctd;
-       this.careTeamTelecomCodingCode = careTeamTelecomCodingCode;
-       this.careTeamTelecomCodingVersion = careTeamTelecomCodingVersion;
-       this.careTeamTelecomCodingDisplay = careTeamTelecomCodingDisplay;
-       this.careTeamTelecomCodingSystem = careTeamTelecomCodingSystem;
-       this.careTeamNoteCodingUserSelected = careTeamNoteCodingUserSelected;
-       this.careTeamNoteCodingCode = careTeamNoteCodingCode;
-       this.careTeamNoteCodingVersion = careTeamNoteCodingVersion;
-       this.careTeamNoteCodingDisplay = careTeamNoteCodingDisplay;
-       this.careTeamNoteCodingSystem = careTeamNoteCodingSystem;
+    public Careteam(String careTeamIdentifierIdentifierUse, String crTmDntfrDntfrTpCcCSstm, String crTmDntfrDntfrTpCcCVrsn, String crTmDntfrDntfrTpCcCCde, String crTmDntfrDntfrTpCcCDsplay, String crTmDntfrDntfrTpCcCSrSlctd, String crTmDntfrDntfrTpCcTxt, String crTmDntfrDntfrPrdPrdStrt, String crTmDntfrDntfrPrdPrdNd, String crTmDntfrDntfrSsgnr, String crTmDntfrDntfrVlue, String crTmDntfrDntfrSstm, String careTeamStatusCode, String crTmCtgrCcCdngCSstm, String crTmCtgrCcCdngCVrsn, String careTeamCategoryCcCodingCCode, String crTmCtgrCcCdngCDsplay, String crTmCtgrCcCdngCSrSlctd, String careTeamCategoryCcText, String careTeamNameString, String careTeamSubjectReference, String careTeamEncounterReference, String careTeamPeriodPeriodStart, String careTeamPeriodPeriodEnd, String crTmPrtcpntRlCcCdngCSstm, String crTmPrtcpntRlCcCdngCVrsn, String crTmPrtcpntRlCcCdngCCde, String crTmPrtcpntRlCcCdngCDsplay, String crTmPrtcpntRlCcCdngCSrSlctd, String careTeamParticipantRoleCcText, String crTmPrtcpntMmbrRfrnce, String crTmPrtcpntNBhlffRfrnce, String crTmPrtcpntPrdPrdStrt, String crTmPrtcpntPrdPrdNd, String crTmRsnCdCcCdngCSstm, String crTmRsnCdCcCdngCVrsn, String crTmRsnCdCcCdngCCde, String crTmRsnCdCcCdngCDsplay, String crTmRsnCdCcCdngCSrSlctd, String careTeamReasonCodeCcText, String careTeamReasonReferenceReference, String crTmMngngrgnztnRfrnce, String crTmTlcmCntctPntSstm, String careTeamTelecomContactPointUse, String crTmTlcmCntctPntPrdPrdStrt, String crTmTlcmCntctPntPrdPrdNd, String careTeamTelecomContactPointRank, String crTmTlcmCntctPntVlue, String careTeamNoteAnnotationTime, String careTeamNoteAnnotationText, String crTmNtNnttnThrRfrnce, String crTmNtNnttnThrStrng) {
+       this.careTeamIdentifierIdentifierUse = careTeamIdentifierIdentifierUse;
+       this.crTmDntfrDntfrTpCcCSstm = crTmDntfrDntfrTpCcCSstm;
+       this.crTmDntfrDntfrTpCcCVrsn = crTmDntfrDntfrTpCcCVrsn;
+       this.crTmDntfrDntfrTpCcCCde = crTmDntfrDntfrTpCcCCde;
+       this.crTmDntfrDntfrTpCcCDsplay = crTmDntfrDntfrTpCcCDsplay;
+       this.crTmDntfrDntfrTpCcCSrSlctd = crTmDntfrDntfrTpCcCSrSlctd;
+       this.crTmDntfrDntfrTpCcTxt = crTmDntfrDntfrTpCcTxt;
+       this.crTmDntfrDntfrPrdPrdStrt = crTmDntfrDntfrPrdPrdStrt;
+       this.crTmDntfrDntfrPrdPrdNd = crTmDntfrDntfrPrdPrdNd;
+       this.crTmDntfrDntfrSsgnr = crTmDntfrDntfrSsgnr;
+       this.crTmDntfrDntfrVlue = crTmDntfrDntfrVlue;
+       this.crTmDntfrDntfrSstm = crTmDntfrDntfrSstm;
+       this.careTeamStatusCode = careTeamStatusCode;
+       this.crTmCtgrCcCdngCSstm = crTmCtgrCcCdngCSstm;
+       this.crTmCtgrCcCdngCVrsn = crTmCtgrCcCdngCVrsn;
+       this.careTeamCategoryCcCodingCCode = careTeamCategoryCcCodingCCode;
+       this.crTmCtgrCcCdngCDsplay = crTmCtgrCcCdngCDsplay;
+       this.crTmCtgrCcCdngCSrSlctd = crTmCtgrCcCdngCSrSlctd;
+       this.careTeamCategoryCcText = careTeamCategoryCcText;
+       this.careTeamNameString = careTeamNameString;
+       this.careTeamSubjectReference = careTeamSubjectReference;
+       this.careTeamEncounterReference = careTeamEncounterReference;
+       this.careTeamPeriodPeriodStart = careTeamPeriodPeriodStart;
+       this.careTeamPeriodPeriodEnd = careTeamPeriodPeriodEnd;
+       this.crTmPrtcpntRlCcCdngCSstm = crTmPrtcpntRlCcCdngCSstm;
+       this.crTmPrtcpntRlCcCdngCVrsn = crTmPrtcpntRlCcCdngCVrsn;
+       this.crTmPrtcpntRlCcCdngCCde = crTmPrtcpntRlCcCdngCCde;
+       this.crTmPrtcpntRlCcCdngCDsplay = crTmPrtcpntRlCcCdngCDsplay;
+       this.crTmPrtcpntRlCcCdngCSrSlctd = crTmPrtcpntRlCcCdngCSrSlctd;
+       this.careTeamParticipantRoleCcText = careTeamParticipantRoleCcText;
+       this.crTmPrtcpntMmbrRfrnce = crTmPrtcpntMmbrRfrnce;
+       this.crTmPrtcpntNBhlffRfrnce = crTmPrtcpntNBhlffRfrnce;
+       this.crTmPrtcpntPrdPrdStrt = crTmPrtcpntPrdPrdStrt;
+       this.crTmPrtcpntPrdPrdNd = crTmPrtcpntPrdPrdNd;
+       this.crTmRsnCdCcCdngCSstm = crTmRsnCdCcCdngCSstm;
+       this.crTmRsnCdCcCdngCVrsn = crTmRsnCdCcCdngCVrsn;
+       this.crTmRsnCdCcCdngCCde = crTmRsnCdCcCdngCCde;
+       this.crTmRsnCdCcCdngCDsplay = crTmRsnCdCcCdngCDsplay;
+       this.crTmRsnCdCcCdngCSrSlctd = crTmRsnCdCcCdngCSrSlctd;
+       this.careTeamReasonCodeCcText = careTeamReasonCodeCcText;
+       this.careTeamReasonReferenceReference = careTeamReasonReferenceReference;
+       this.crTmMngngrgnztnRfrnce = crTmMngngrgnztnRfrnce;
+       this.crTmTlcmCntctPntSstm = crTmTlcmCntctPntSstm;
+       this.careTeamTelecomContactPointUse = careTeamTelecomContactPointUse;
+       this.crTmTlcmCntctPntPrdPrdStrt = crTmTlcmCntctPntPrdPrdStrt;
+       this.crTmTlcmCntctPntPrdPrdNd = crTmTlcmCntctPntPrdPrdNd;
+       this.careTeamTelecomContactPointRank = careTeamTelecomContactPointRank;
+       this.crTmTlcmCntctPntVlue = crTmTlcmCntctPntVlue;
+       this.careTeamNoteAnnotationTime = careTeamNoteAnnotationTime;
+       this.careTeamNoteAnnotationText = careTeamNoteAnnotationText;
+       this.crTmNtNnttnThrRfrnce = crTmNtNnttnThrRfrnce;
+       this.crTmNtNnttnThrStrng = crTmNtNnttnThrStrng;
     }
    
-    public String getCareTeamIdentifierCodingCode() {
-        return this.careTeamIdentifierCodingCode;
-    }
-    
-    public void setCareTeamIdentifierCodingCode(String careTeamIdentifierCodingCode) {
-        this.careTeamIdentifierCodingCode = careTeamIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getCrTmDntfrCdngSrSlctd() {
-        return this.crTmDntfrCdngSrSlctd;
-    }
-    
-    public void setCrTmDntfrCdngSrSlctd(String crTmDntfrCdngSrSlctd) {
-        this.crTmDntfrCdngSrSlctd = crTmDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCareTeamIdentifierCodingVersion() {
-        return this.careTeamIdentifierCodingVersion;
-    }
-    
-    public void setCareTeamIdentifierCodingVersion(String careTeamIdentifierCodingVersion) {
-        this.careTeamIdentifierCodingVersion = careTeamIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamIdentifierCodingDisplay() {
-        return this.careTeamIdentifierCodingDisplay;
-    }
-    
-    public void setCareTeamIdentifierCodingDisplay(String careTeamIdentifierCodingDisplay) {
-        this.careTeamIdentifierCodingDisplay = careTeamIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamIdentifierCodingSystem() {
-        return this.careTeamIdentifierCodingSystem;
-    }
-    
-    public void setCareTeamIdentifierCodingSystem(String careTeamIdentifierCodingSystem) {
-        this.careTeamIdentifierCodingSystem = careTeamIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getCareTeamStatus() {
-        return this.careTeamStatus;
-    }
-    
-    public void setCareTeamStatus(String careTeamStatus) {
-        this.careTeamStatus = careTeamStatus;
-    }
-    
-    
-    
-    public String getCrTmCtgrCdngSrSlctd() {
-        return this.crTmCtgrCdngSrSlctd;
-    }
-    
-    public void setCrTmCtgrCdngSrSlctd(String crTmCtgrCdngSrSlctd) {
-        this.crTmCtgrCdngSrSlctd = crTmCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCareTeamCategoryCodingCode() {
-        return this.careTeamCategoryCodingCode;
-    }
-    
-    public void setCareTeamCategoryCodingCode(String careTeamCategoryCodingCode) {
-        this.careTeamCategoryCodingCode = careTeamCategoryCodingCode;
-    }
-    
-    
-    
-    public String getCareTeamCategoryCodingVersion() {
-        return this.careTeamCategoryCodingVersion;
-    }
-    
-    public void setCareTeamCategoryCodingVersion(String careTeamCategoryCodingVersion) {
-        this.careTeamCategoryCodingVersion = careTeamCategoryCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamCategoryCodingDisplay() {
-        return this.careTeamCategoryCodingDisplay;
-    }
-    
-    public void setCareTeamCategoryCodingDisplay(String careTeamCategoryCodingDisplay) {
-        this.careTeamCategoryCodingDisplay = careTeamCategoryCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamCategoryCodingSystem() {
-        return this.careTeamCategoryCodingSystem;
-    }
-    
-    public void setCareTeamCategoryCodingSystem(String careTeamCategoryCodingSystem) {
-        this.careTeamCategoryCodingSystem = careTeamCategoryCodingSystem;
-    }
-    
-    
-    
-    public String getCareTeamName() {
-        return this.careTeamName;
-    }
-    
-    public void setCareTeamName(String careTeamName) {
-        this.careTeamName = careTeamName;
-    }
-    
-    
-    
-    public String getCareTeamSubject() {
-        return this.careTeamSubject;
-    }
-    
-    public void setCareTeamSubject(String careTeamSubject) {
-        this.careTeamSubject = careTeamSubject;
-    }
-    
-    
-    
-    public String getCareTeamEncounter() {
-        return this.careTeamEncounter;
-    }
-    
-    public void setCareTeamEncounter(String careTeamEncounter) {
-        this.careTeamEncounter = careTeamEncounter;
-    }
-    
-    
-    
-    public String getCrTmPrdCdngSrSlctd() {
-        return this.crTmPrdCdngSrSlctd;
-    }
-    
-    public void setCrTmPrdCdngSrSlctd(String crTmPrdCdngSrSlctd) {
-        this.crTmPrdCdngSrSlctd = crTmPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCareTeamPeriodCodingCode() {
-        return this.careTeamPeriodCodingCode;
-    }
-    
-    public void setCareTeamPeriodCodingCode(String careTeamPeriodCodingCode) {
-        this.careTeamPeriodCodingCode = careTeamPeriodCodingCode;
-    }
-    
-    
-    
-    public String getCareTeamPeriodCodingVersion() {
-        return this.careTeamPeriodCodingVersion;
-    }
-    
-    public void setCareTeamPeriodCodingVersion(String careTeamPeriodCodingVersion) {
-        this.careTeamPeriodCodingVersion = careTeamPeriodCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamPeriodCodingDisplay() {
-        return this.careTeamPeriodCodingDisplay;
-    }
-    
-    public void setCareTeamPeriodCodingDisplay(String careTeamPeriodCodingDisplay) {
-        this.careTeamPeriodCodingDisplay = careTeamPeriodCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamPeriodCodingSystem() {
-        return this.careTeamPeriodCodingSystem;
-    }
-    
-    public void setCareTeamPeriodCodingSystem(String careTeamPeriodCodingSystem) {
-        this.careTeamPeriodCodingSystem = careTeamPeriodCodingSystem;
-    }
-    
-    
-    
-    public String getCareTeamParticipant() {
-        return this.careTeamParticipant;
-    }
-    
-    public void setCareTeamParticipant(String careTeamParticipant) {
-        this.careTeamParticipant = careTeamParticipant;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntRlCdngSrSlctd() {
-        return this.crTmPrtcpntRlCdngSrSlctd;
-    }
-    
-    public void setCrTmPrtcpntRlCdngSrSlctd(String crTmPrtcpntRlCdngSrSlctd) {
-        this.crTmPrtcpntRlCdngSrSlctd = crTmPrtcpntRlCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntRlCdngCde() {
-        return this.crTmPrtcpntRlCdngCde;
-    }
-    
-    public void setCrTmPrtcpntRlCdngCde(String crTmPrtcpntRlCdngCde) {
-        this.crTmPrtcpntRlCdngCde = crTmPrtcpntRlCdngCde;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntRlCdngVrsn() {
-        return this.crTmPrtcpntRlCdngVrsn;
-    }
-    
-    public void setCrTmPrtcpntRlCdngVrsn(String crTmPrtcpntRlCdngVrsn) {
-        this.crTmPrtcpntRlCdngVrsn = crTmPrtcpntRlCdngVrsn;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntRlCdngDsplay() {
-        return this.crTmPrtcpntRlCdngDsplay;
-    }
-    
-    public void setCrTmPrtcpntRlCdngDsplay(String crTmPrtcpntRlCdngDsplay) {
-        this.crTmPrtcpntRlCdngDsplay = crTmPrtcpntRlCdngDsplay;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntRlCdngSstm() {
-        return this.crTmPrtcpntRlCdngSstm;
-    }
-    
-    public void setCrTmPrtcpntRlCdngSstm(String crTmPrtcpntRlCdngSstm) {
-        this.crTmPrtcpntRlCdngSstm = crTmPrtcpntRlCdngSstm;
-    }
-    
-    
-    
-    public String getCareTeamParticipantMember() {
-        return this.careTeamParticipantMember;
-    }
-    
-    public void setCareTeamParticipantMember(String careTeamParticipantMember) {
-        this.careTeamParticipantMember = careTeamParticipantMember;
-    }
-    
-    
-    
-    public String getCareTeamParticipantOnBehalfOf() {
-        return this.careTeamParticipantOnBehalfOf;
-    }
-    
-    public void setCareTeamParticipantOnBehalfOf(String careTeamParticipantOnBehalfOf) {
-        this.careTeamParticipantOnBehalfOf = careTeamParticipantOnBehalfOf;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntPrdCdngSrSlctd() {
-        return this.crTmPrtcpntPrdCdngSrSlctd;
-    }
-    
-    public void setCrTmPrtcpntPrdCdngSrSlctd(String crTmPrtcpntPrdCdngSrSlctd) {
-        this.crTmPrtcpntPrdCdngSrSlctd = crTmPrtcpntPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntPrdCdngCde() {
-        return this.crTmPrtcpntPrdCdngCde;
-    }
-    
-    public void setCrTmPrtcpntPrdCdngCde(String crTmPrtcpntPrdCdngCde) {
-        this.crTmPrtcpntPrdCdngCde = crTmPrtcpntPrdCdngCde;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntPrdCdngVrsn() {
-        return this.crTmPrtcpntPrdCdngVrsn;
-    }
-    
-    public void setCrTmPrtcpntPrdCdngVrsn(String crTmPrtcpntPrdCdngVrsn) {
-        this.crTmPrtcpntPrdCdngVrsn = crTmPrtcpntPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntPrdCdngDsplay() {
-        return this.crTmPrtcpntPrdCdngDsplay;
-    }
-    
-    public void setCrTmPrtcpntPrdCdngDsplay(String crTmPrtcpntPrdCdngDsplay) {
-        this.crTmPrtcpntPrdCdngDsplay = crTmPrtcpntPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getCrTmPrtcpntPrdCdngSstm() {
-        return this.crTmPrtcpntPrdCdngSstm;
-    }
-    
-    public void setCrTmPrtcpntPrdCdngSstm(String crTmPrtcpntPrdCdngSstm) {
-        this.crTmPrtcpntPrdCdngSstm = crTmPrtcpntPrdCdngSstm;
-    }
-    
-    
-    
-    public String getCrTmRsnCdCdngSrSlctd() {
-        return this.crTmRsnCdCdngSrSlctd;
-    }
-    
-    public void setCrTmRsnCdCdngSrSlctd(String crTmRsnCdCdngSrSlctd) {
-        this.crTmRsnCdCdngSrSlctd = crTmRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCareTeamReasonCodeCodingCode() {
-        return this.careTeamReasonCodeCodingCode;
-    }
-    
-    public void setCareTeamReasonCodeCodingCode(String careTeamReasonCodeCodingCode) {
-        this.careTeamReasonCodeCodingCode = careTeamReasonCodeCodingCode;
-    }
-    
-    
-    
-    public String getCareTeamReasonCodeCodingVersion() {
-        return this.careTeamReasonCodeCodingVersion;
-    }
-    
-    public void setCareTeamReasonCodeCodingVersion(String careTeamReasonCodeCodingVersion) {
-        this.careTeamReasonCodeCodingVersion = careTeamReasonCodeCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamReasonCodeCodingDisplay() {
-        return this.careTeamReasonCodeCodingDisplay;
-    }
-    
-    public void setCareTeamReasonCodeCodingDisplay(String careTeamReasonCodeCodingDisplay) {
-        this.careTeamReasonCodeCodingDisplay = careTeamReasonCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamReasonCodeCodingSystem() {
-        return this.careTeamReasonCodeCodingSystem;
-    }
-    
-    public void setCareTeamReasonCodeCodingSystem(String careTeamReasonCodeCodingSystem) {
-        this.careTeamReasonCodeCodingSystem = careTeamReasonCodeCodingSystem;
-    }
-    
-    
-    
-    public String getCareTeamReasonReference() {
-        return this.careTeamReasonReference;
-    }
-    
-    public void setCareTeamReasonReference(String careTeamReasonReference) {
-        this.careTeamReasonReference = careTeamReasonReference;
-    }
-    
-    
-    
-    public String getCareTeamManagingOrganization() {
-        return this.careTeamManagingOrganization;
-    }
-    
-    public void setCareTeamManagingOrganization(String careTeamManagingOrganization) {
-        this.careTeamManagingOrganization = careTeamManagingOrganization;
-    }
-    
-    
-    
-    public String getCrTmTlcmCdngSrSlctd() {
-        return this.crTmTlcmCdngSrSlctd;
-    }
-    
-    public void setCrTmTlcmCdngSrSlctd(String crTmTlcmCdngSrSlctd) {
-        this.crTmTlcmCdngSrSlctd = crTmTlcmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCareTeamTelecomCodingCode() {
-        return this.careTeamTelecomCodingCode;
-    }
-    
-    public void setCareTeamTelecomCodingCode(String careTeamTelecomCodingCode) {
-        this.careTeamTelecomCodingCode = careTeamTelecomCodingCode;
-    }
-    
-    
-    
-    public String getCareTeamTelecomCodingVersion() {
-        return this.careTeamTelecomCodingVersion;
-    }
-    
-    public void setCareTeamTelecomCodingVersion(String careTeamTelecomCodingVersion) {
-        this.careTeamTelecomCodingVersion = careTeamTelecomCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamTelecomCodingDisplay() {
-        return this.careTeamTelecomCodingDisplay;
-    }
-    
-    public void setCareTeamTelecomCodingDisplay(String careTeamTelecomCodingDisplay) {
-        this.careTeamTelecomCodingDisplay = careTeamTelecomCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamTelecomCodingSystem() {
-        return this.careTeamTelecomCodingSystem;
-    }
-    
-    public void setCareTeamTelecomCodingSystem(String careTeamTelecomCodingSystem) {
-        this.careTeamTelecomCodingSystem = careTeamTelecomCodingSystem;
-    }
-    
-    
-    
-    public String getCareTeamNoteCodingUserSelected() {
-        return this.careTeamNoteCodingUserSelected;
-    }
-    
-    public void setCareTeamNoteCodingUserSelected(String careTeamNoteCodingUserSelected) {
-        this.careTeamNoteCodingUserSelected = careTeamNoteCodingUserSelected;
-    }
-    
-    
-    
-    public String getCareTeamNoteCodingCode() {
-        return this.careTeamNoteCodingCode;
-    }
-    
-    public void setCareTeamNoteCodingCode(String careTeamNoteCodingCode) {
-        this.careTeamNoteCodingCode = careTeamNoteCodingCode;
-    }
-    
-    
-    
-    public String getCareTeamNoteCodingVersion() {
-        return this.careTeamNoteCodingVersion;
-    }
-    
-    public void setCareTeamNoteCodingVersion(String careTeamNoteCodingVersion) {
-        this.careTeamNoteCodingVersion = careTeamNoteCodingVersion;
-    }
-    
-    
-    
-    public String getCareTeamNoteCodingDisplay() {
-        return this.careTeamNoteCodingDisplay;
-    }
-    
-    public void setCareTeamNoteCodingDisplay(String careTeamNoteCodingDisplay) {
-        this.careTeamNoteCodingDisplay = careTeamNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getCareTeamNoteCodingSystem() {
-        return this.careTeamNoteCodingSystem;
-    }
-    
-    public void setCareTeamNoteCodingSystem(String careTeamNoteCodingSystem) {
-        this.careTeamNoteCodingSystem = careTeamNoteCodingSystem;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCareTeamIdentifierIdentifierUse()
+    {
+        return this.careTeamIdentifierIdentifierUse;
+    }
+    
+    public void setCareTeamIdentifierIdentifierUse
+        (String careTeamIdentifierIdentifierUse) 
+        {
+      this.careTeamIdentifierIdentifierUse = careTeamIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcCSstm()
+    {
+        return this.crTmDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcCSstm
+        (String crTmDntfrDntfrTpCcCSstm) 
+        {
+      this.crTmDntfrDntfrTpCcCSstm = crTmDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcCVrsn()
+    {
+        return this.crTmDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcCVrsn
+        (String crTmDntfrDntfrTpCcCVrsn) 
+        {
+      this.crTmDntfrDntfrTpCcCVrsn = crTmDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcCCde()
+    {
+        return this.crTmDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcCCde
+        (String crTmDntfrDntfrTpCcCCde) 
+        {
+      this.crTmDntfrDntfrTpCcCCde = crTmDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcCDsplay()
+    {
+        return this.crTmDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcCDsplay
+        (String crTmDntfrDntfrTpCcCDsplay) 
+        {
+      this.crTmDntfrDntfrTpCcCDsplay = crTmDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.crTmDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcCSrSlctd
+        (String crTmDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.crTmDntfrDntfrTpCcCSrSlctd = crTmDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrTpCcTxt()
+    {
+        return this.crTmDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCrTmDntfrDntfrTpCcTxt
+        (String crTmDntfrDntfrTpCcTxt) 
+        {
+      this.crTmDntfrDntfrTpCcTxt = crTmDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrPrdPrdStrt()
+    {
+        return this.crTmDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCrTmDntfrDntfrPrdPrdStrt
+        (String crTmDntfrDntfrPrdPrdStrt) 
+        {
+      this.crTmDntfrDntfrPrdPrdStrt = crTmDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrPrdPrdNd()
+    {
+        return this.crTmDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCrTmDntfrDntfrPrdPrdNd
+        (String crTmDntfrDntfrPrdPrdNd) 
+        {
+      this.crTmDntfrDntfrPrdPrdNd = crTmDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrSsgnr()
+    {
+        return this.crTmDntfrDntfrSsgnr;
+    }
+    
+    public void setCrTmDntfrDntfrSsgnr
+        (String crTmDntfrDntfrSsgnr) 
+        {
+      this.crTmDntfrDntfrSsgnr = crTmDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrVlue()
+    {
+        return this.crTmDntfrDntfrVlue;
+    }
+    
+    public void setCrTmDntfrDntfrVlue
+        (String crTmDntfrDntfrVlue) 
+        {
+      this.crTmDntfrDntfrVlue = crTmDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCrTmDntfrDntfrSstm()
+    {
+        return this.crTmDntfrDntfrSstm;
+    }
+    
+    public void setCrTmDntfrDntfrSstm
+        (String crTmDntfrDntfrSstm) 
+        {
+      this.crTmDntfrDntfrSstm = crTmDntfrDntfrSstm;
+}
+    public 
+    String 
+    getCareTeamStatusCode()
+    {
+        return this.careTeamStatusCode;
+    }
+    
+    public void setCareTeamStatusCode
+        (String careTeamStatusCode) 
+        {
+      this.careTeamStatusCode = careTeamStatusCode;
+}
+    public 
+    String 
+    getCrTmCtgrCcCdngCSstm()
+    {
+        return this.crTmCtgrCcCdngCSstm;
+    }
+    
+    public void setCrTmCtgrCcCdngCSstm
+        (String crTmCtgrCcCdngCSstm) 
+        {
+      this.crTmCtgrCcCdngCSstm = crTmCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getCrTmCtgrCcCdngCVrsn()
+    {
+        return this.crTmCtgrCcCdngCVrsn;
+    }
+    
+    public void setCrTmCtgrCcCdngCVrsn
+        (String crTmCtgrCcCdngCVrsn) 
+        {
+      this.crTmCtgrCcCdngCVrsn = crTmCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getCareTeamCategoryCcCodingCCode()
+    {
+        return this.careTeamCategoryCcCodingCCode;
+    }
+    
+    public void setCareTeamCategoryCcCodingCCode
+        (String careTeamCategoryCcCodingCCode) 
+        {
+      this.careTeamCategoryCcCodingCCode = careTeamCategoryCcCodingCCode;
+}
+    public 
+    String 
+    getCrTmCtgrCcCdngCDsplay()
+    {
+        return this.crTmCtgrCcCdngCDsplay;
+    }
+    
+    public void setCrTmCtgrCcCdngCDsplay
+        (String crTmCtgrCcCdngCDsplay) 
+        {
+      this.crTmCtgrCcCdngCDsplay = crTmCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getCrTmCtgrCcCdngCSrSlctd()
+    {
+        return this.crTmCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setCrTmCtgrCcCdngCSrSlctd
+        (String crTmCtgrCcCdngCSrSlctd) 
+        {
+      this.crTmCtgrCcCdngCSrSlctd = crTmCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCareTeamCategoryCcText()
+    {
+        return this.careTeamCategoryCcText;
+    }
+    
+    public void setCareTeamCategoryCcText
+        (String careTeamCategoryCcText) 
+        {
+      this.careTeamCategoryCcText = careTeamCategoryCcText;
+}
+    public 
+    String 
+    getCareTeamNameString()
+    {
+        return this.careTeamNameString;
+    }
+    
+    public void setCareTeamNameString
+        (String careTeamNameString) 
+        {
+      this.careTeamNameString = careTeamNameString;
+}
+    public 
+    String 
+    getCareTeamSubjectReference()
+    {
+        return this.careTeamSubjectReference;
+    }
+    
+    public void setCareTeamSubjectReference
+        (String careTeamSubjectReference) 
+        {
+      this.careTeamSubjectReference = careTeamSubjectReference;
+}
+    public 
+    String 
+    getCareTeamEncounterReference()
+    {
+        return this.careTeamEncounterReference;
+    }
+    
+    public void setCareTeamEncounterReference
+        (String careTeamEncounterReference) 
+        {
+      this.careTeamEncounterReference = careTeamEncounterReference;
+}
+    public 
+    String 
+    getCareTeamPeriodPeriodStart()
+    {
+        return this.careTeamPeriodPeriodStart;
+    }
+    
+    public void setCareTeamPeriodPeriodStart
+        (String careTeamPeriodPeriodStart) 
+        {
+      this.careTeamPeriodPeriodStart = careTeamPeriodPeriodStart;
+}
+    public 
+    String 
+    getCareTeamPeriodPeriodEnd()
+    {
+        return this.careTeamPeriodPeriodEnd;
+    }
+    
+    public void setCareTeamPeriodPeriodEnd
+        (String careTeamPeriodPeriodEnd) 
+        {
+      this.careTeamPeriodPeriodEnd = careTeamPeriodPeriodEnd;
+}
+    public 
+    String 
+    getCrTmPrtcpntRlCcCdngCSstm()
+    {
+        return this.crTmPrtcpntRlCcCdngCSstm;
+    }
+    
+    public void setCrTmPrtcpntRlCcCdngCSstm
+        (String crTmPrtcpntRlCcCdngCSstm) 
+        {
+      this.crTmPrtcpntRlCcCdngCSstm = crTmPrtcpntRlCcCdngCSstm;
+}
+    public 
+    String 
+    getCrTmPrtcpntRlCcCdngCVrsn()
+    {
+        return this.crTmPrtcpntRlCcCdngCVrsn;
+    }
+    
+    public void setCrTmPrtcpntRlCcCdngCVrsn
+        (String crTmPrtcpntRlCcCdngCVrsn) 
+        {
+      this.crTmPrtcpntRlCcCdngCVrsn = crTmPrtcpntRlCcCdngCVrsn;
+}
+    public 
+    String 
+    getCrTmPrtcpntRlCcCdngCCde()
+    {
+        return this.crTmPrtcpntRlCcCdngCCde;
+    }
+    
+    public void setCrTmPrtcpntRlCcCdngCCde
+        (String crTmPrtcpntRlCcCdngCCde) 
+        {
+      this.crTmPrtcpntRlCcCdngCCde = crTmPrtcpntRlCcCdngCCde;
+}
+    public 
+    String 
+    getCrTmPrtcpntRlCcCdngCDsplay()
+    {
+        return this.crTmPrtcpntRlCcCdngCDsplay;
+    }
+    
+    public void setCrTmPrtcpntRlCcCdngCDsplay
+        (String crTmPrtcpntRlCcCdngCDsplay) 
+        {
+      this.crTmPrtcpntRlCcCdngCDsplay = crTmPrtcpntRlCcCdngCDsplay;
+}
+    public 
+    String 
+    getCrTmPrtcpntRlCcCdngCSrSlctd()
+    {
+        return this.crTmPrtcpntRlCcCdngCSrSlctd;
+    }
+    
+    public void setCrTmPrtcpntRlCcCdngCSrSlctd
+        (String crTmPrtcpntRlCcCdngCSrSlctd) 
+        {
+      this.crTmPrtcpntRlCcCdngCSrSlctd = crTmPrtcpntRlCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCareTeamParticipantRoleCcText()
+    {
+        return this.careTeamParticipantRoleCcText;
+    }
+    
+    public void setCareTeamParticipantRoleCcText
+        (String careTeamParticipantRoleCcText) 
+        {
+      this.careTeamParticipantRoleCcText = careTeamParticipantRoleCcText;
+}
+    public 
+    String 
+    getCrTmPrtcpntMmbrRfrnce()
+    {
+        return this.crTmPrtcpntMmbrRfrnce;
+    }
+    
+    public void setCrTmPrtcpntMmbrRfrnce
+        (String crTmPrtcpntMmbrRfrnce) 
+        {
+      this.crTmPrtcpntMmbrRfrnce = crTmPrtcpntMmbrRfrnce;
+}
+    public 
+    String 
+    getCrTmPrtcpntNBhlffRfrnce()
+    {
+        return this.crTmPrtcpntNBhlffRfrnce;
+    }
+    
+    public void setCrTmPrtcpntNBhlffRfrnce
+        (String crTmPrtcpntNBhlffRfrnce) 
+        {
+      this.crTmPrtcpntNBhlffRfrnce = crTmPrtcpntNBhlffRfrnce;
+}
+    public 
+    String 
+    getCrTmPrtcpntPrdPrdStrt()
+    {
+        return this.crTmPrtcpntPrdPrdStrt;
+    }
+    
+    public void setCrTmPrtcpntPrdPrdStrt
+        (String crTmPrtcpntPrdPrdStrt) 
+        {
+      this.crTmPrtcpntPrdPrdStrt = crTmPrtcpntPrdPrdStrt;
+}
+    public 
+    String 
+    getCrTmPrtcpntPrdPrdNd()
+    {
+        return this.crTmPrtcpntPrdPrdNd;
+    }
+    
+    public void setCrTmPrtcpntPrdPrdNd
+        (String crTmPrtcpntPrdPrdNd) 
+        {
+      this.crTmPrtcpntPrdPrdNd = crTmPrtcpntPrdPrdNd;
+}
+    public 
+    String 
+    getCrTmRsnCdCcCdngCSstm()
+    {
+        return this.crTmRsnCdCcCdngCSstm;
+    }
+    
+    public void setCrTmRsnCdCcCdngCSstm
+        (String crTmRsnCdCcCdngCSstm) 
+        {
+      this.crTmRsnCdCcCdngCSstm = crTmRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getCrTmRsnCdCcCdngCVrsn()
+    {
+        return this.crTmRsnCdCcCdngCVrsn;
+    }
+    
+    public void setCrTmRsnCdCcCdngCVrsn
+        (String crTmRsnCdCcCdngCVrsn) 
+        {
+      this.crTmRsnCdCcCdngCVrsn = crTmRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getCrTmRsnCdCcCdngCCde()
+    {
+        return this.crTmRsnCdCcCdngCCde;
+    }
+    
+    public void setCrTmRsnCdCcCdngCCde
+        (String crTmRsnCdCcCdngCCde) 
+        {
+      this.crTmRsnCdCcCdngCCde = crTmRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getCrTmRsnCdCcCdngCDsplay()
+    {
+        return this.crTmRsnCdCcCdngCDsplay;
+    }
+    
+    public void setCrTmRsnCdCcCdngCDsplay
+        (String crTmRsnCdCcCdngCDsplay) 
+        {
+      this.crTmRsnCdCcCdngCDsplay = crTmRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getCrTmRsnCdCcCdngCSrSlctd()
+    {
+        return this.crTmRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setCrTmRsnCdCcCdngCSrSlctd
+        (String crTmRsnCdCcCdngCSrSlctd) 
+        {
+      this.crTmRsnCdCcCdngCSrSlctd = crTmRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCareTeamReasonCodeCcText()
+    {
+        return this.careTeamReasonCodeCcText;
+    }
+    
+    public void setCareTeamReasonCodeCcText
+        (String careTeamReasonCodeCcText) 
+        {
+      this.careTeamReasonCodeCcText = careTeamReasonCodeCcText;
+}
+    public 
+    String 
+    getCareTeamReasonReferenceReference()
+    {
+        return this.careTeamReasonReferenceReference;
+    }
+    
+    public void setCareTeamReasonReferenceReference
+        (String careTeamReasonReferenceReference) 
+        {
+      this.careTeamReasonReferenceReference = careTeamReasonReferenceReference;
+}
+    public 
+    String 
+    getCrTmMngngrgnztnRfrnce()
+    {
+        return this.crTmMngngrgnztnRfrnce;
+    }
+    
+    public void setCrTmMngngrgnztnRfrnce
+        (String crTmMngngrgnztnRfrnce) 
+        {
+      this.crTmMngngrgnztnRfrnce = crTmMngngrgnztnRfrnce;
+}
+    public 
+    String 
+    getCrTmTlcmCntctPntSstm()
+    {
+        return this.crTmTlcmCntctPntSstm;
+    }
+    
+    public void setCrTmTlcmCntctPntSstm
+        (String crTmTlcmCntctPntSstm) 
+        {
+      this.crTmTlcmCntctPntSstm = crTmTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getCareTeamTelecomContactPointUse()
+    {
+        return this.careTeamTelecomContactPointUse;
+    }
+    
+    public void setCareTeamTelecomContactPointUse
+        (String careTeamTelecomContactPointUse) 
+        {
+      this.careTeamTelecomContactPointUse = careTeamTelecomContactPointUse;
+}
+    public 
+    String 
+    getCrTmTlcmCntctPntPrdPrdStrt()
+    {
+        return this.crTmTlcmCntctPntPrdPrdStrt;
+    }
+    
+    public void setCrTmTlcmCntctPntPrdPrdStrt
+        (String crTmTlcmCntctPntPrdPrdStrt) 
+        {
+      this.crTmTlcmCntctPntPrdPrdStrt = crTmTlcmCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getCrTmTlcmCntctPntPrdPrdNd()
+    {
+        return this.crTmTlcmCntctPntPrdPrdNd;
+    }
+    
+    public void setCrTmTlcmCntctPntPrdPrdNd
+        (String crTmTlcmCntctPntPrdPrdNd) 
+        {
+      this.crTmTlcmCntctPntPrdPrdNd = crTmTlcmCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getCareTeamTelecomContactPointRank()
+    {
+        return this.careTeamTelecomContactPointRank;
+    }
+    
+    public void setCareTeamTelecomContactPointRank
+        (String careTeamTelecomContactPointRank) 
+        {
+      this.careTeamTelecomContactPointRank = careTeamTelecomContactPointRank;
+}
+    public 
+    String 
+    getCrTmTlcmCntctPntVlue()
+    {
+        return this.crTmTlcmCntctPntVlue;
+    }
+    
+    public void setCrTmTlcmCntctPntVlue
+        (String crTmTlcmCntctPntVlue) 
+        {
+      this.crTmTlcmCntctPntVlue = crTmTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getCareTeamNoteAnnotationTime()
+    {
+        return this.careTeamNoteAnnotationTime;
+    }
+    
+    public void setCareTeamNoteAnnotationTime
+        (String careTeamNoteAnnotationTime) 
+        {
+      this.careTeamNoteAnnotationTime = careTeamNoteAnnotationTime;
+}
+    public 
+    String 
+    getCareTeamNoteAnnotationText()
+    {
+        return this.careTeamNoteAnnotationText;
+    }
+    
+    public void setCareTeamNoteAnnotationText
+        (String careTeamNoteAnnotationText) 
+        {
+      this.careTeamNoteAnnotationText = careTeamNoteAnnotationText;
+}
+    public 
+    String 
+    getCrTmNtNnttnThrRfrnce()
+    {
+        return this.crTmNtNnttnThrRfrnce;
+    }
+    
+    public void setCrTmNtNnttnThrRfrnce
+        (String crTmNtNnttnThrRfrnce) 
+        {
+      this.crTmNtNnttnThrRfrnce = crTmNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getCrTmNtNnttnThrStrng()
+    {
+        return this.crTmNtNnttnThrStrng;
+    }
+    
+    public void setCrTmNtNnttnThrStrng
+        (String crTmNtNnttnThrStrng) 
+        {
+      this.crTmNtNnttnThrStrng = crTmNtNnttnThrStrng;
+}
 
 
 

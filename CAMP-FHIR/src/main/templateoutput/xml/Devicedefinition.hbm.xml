@@ -1,543 +1,603 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Devicedefinition" optimistic-lock="none" table="devicedefinition">
-        <id name="dvcDfntnDntfrCdngCde" type="string">
-            <column length="512" name="DvcDfntn_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="dvcDfntnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="DvcDfntn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="DvcDfntn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="DvcDfntn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="DvcDfntn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDDvcdntfr" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DvcDfntn_dDvcdntfr">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDDvcdntfrDvcdntfr" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DvcDfntn_dDvcdntfr_dvcdntfr">
-                <comment>string</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDDvcdntfrSsr" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="DvcDfntn_dDvcdntfr_ssr">
-                <comment>uri</comment>
+        <property name="dvcDfntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnDDvcdntfrJrsdctn" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="DvcDfntn_dDvcdntfr_jrsdctn">
-                <comment>uri</comment>
+        <property name="dvcDfntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMnfctrrStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DvcDfntn_mnfctrrStrng">
-                <comment>string</comment>
+        <property name="dvcDfntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMnfctrrRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="DvcDfntn_mnfctrrRfrnce">
-                <comment>Reference</comment>
+        <property name="dvcDfntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionDeviceName" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DeviceDefinition_deviceName">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionDeviceNameName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DeviceDefinition_deviceName_name">
-                <comment>string</comment>
+        <property name="dvcDfntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="DvcDfntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"DeviceDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionDeviceNameType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceDefinition_deviceName_type">
-                <comment>code</comment>
+        <property name="dvcDfntnDDvcdntfrDvcdntfrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.udiDeviceIdentifier.deviceIdentifier", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setDeviceIdentifier"}</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_dvcdntfr_strng">
+                <comment>{ "tree" :"DeviceDefinition.udiDeviceIdentifier.deviceIdentifier", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setDeviceIdentifier"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionModelNumber" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DeviceDefinition_modelNumber">
-                <comment>string</comment>
+        <property name="dvcDfntnDDvcdntfrSsrRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.udiDeviceIdentifier.issuer", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setIssuer"}</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_ssr_ri">
+                <comment>{ "tree" :"DeviceDefinition.udiDeviceIdentifier.issuer", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setIssuer"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnDDvcdntfrJrsdctnRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.udiDeviceIdentifier.jurisdiction", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setJurisdiction"}</meta>
+            <column length="65535" name="DvcDfntn_dDvcdntfr_jrsdctn_ri">
+                <comment>{ "tree" :"DeviceDefinition.udiDeviceIdentifier.jurisdiction", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addUdiDeviceIdentifier"] , "methodName" : "setJurisdiction"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DeviceDefinition_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnMnfctrrStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.manufacturerString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturerString"}</meta>
+            <column length="65535" name="DvcDfntn_mnfctrrStrng_strng">
+                <comment>{ "tree" :"DeviceDefinition.manufacturerString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturerString"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnMnfctrrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.manufacturerReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturerReference(organization)"}</meta>
+            <column length="65535" name="DvcDfntn_mnfctrrRfrnc_Rfrnce">
+                <comment>{ "tree" :"DeviceDefinition.manufacturerReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturerReference(organization)"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnDvcNmNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.deviceName.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addDeviceName"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="DvcDfntn_dvcNm_nm_strng">
+                <comment>{ "tree" :"DeviceDefinition.deviceName.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addDeviceName"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnDvcNmTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.deviceName.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addDeviceName"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="DvcDfntn_dvcNm_tp_cde">
+                <comment>{ "tree" :"DeviceDefinition.deviceName.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addDeviceName"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionSpecialization" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DeviceDefinition_specialization">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnMdlNmbrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.modelNumber", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModelNumber"}</meta>
+            <column length="65535" name="DvcDfntn_mdlNmbr_strng">
+                <comment>{ "tree" :"DeviceDefinition.modelNumber", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setModelNumber"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSpclztnSstmTpe" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DvcDfntn_spclztn_sstmTpe">
-                <comment>string</comment>
+        <property name="dvcDfntnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSpclztnVrsn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DvcDfntn_spclztn_vrsn">
-                <comment>string</comment>
+        <property name="dvcDfntnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DeviceDefinition_version">
-                <comment>string</comment>
+        <property name="dvcDfntnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSftCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_sft_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSftCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_sft_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSftCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_sft_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="deviceDefinitionTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="DeviceDefinition_type_CC_text">
+                <comment>{ "tree" :"DeviceDefinition.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSftCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_sft_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnSpclztnSstmTpStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.specialization.systemType", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addSpecialization"] , "methodName" : "setSystemType"}</meta>
+            <column length="65535" name="DvcDfntn_spclztn_sstmTp_strng">
+                <comment>{ "tree" :"DeviceDefinition.specialization.systemType", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addSpecialization"] , "methodName" : "setSystemType"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnSftCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_sft_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnSpclztnVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.specialization.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialization"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_spclztn_vrsn_strng">
+                <comment>{ "tree" :"DeviceDefinition.specialization.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSpecialization"] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionShelfLifeStorage" type="string">
-            <meta attribute="resource-type">ProductShelfLife</meta>
-            <column length="65535" name="DeviceDefinition_shelfLifeStorage">
-                <comment>ProductShelfLife</comment>
+        <property name="deviceDefinitionVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.version", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addVersion"}</meta>
+            <column length="65535" name="DeviceDefinition_version_string">
+                <comment>{ "tree" :"DeviceDefinition.version", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addVersion"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionPhysicalchrctrs" type="string">
-            <meta attribute="resource-type">ProdCharacteristic</meta>
-            <column length="65535" name="DeviceDefinition_physicalchrctrs">
-                <comment>ProdCharacteristic</comment>
+        <property name="dvcDfntnSftCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_sft_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnLnggCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_lnggCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnSftCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_sft_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnLnggCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_lnggCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnSftCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_sft_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnLnggCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_lnggCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnSftCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_sft_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnLnggCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_lnggCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnSftCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_sft_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnLnggCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_lnggCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="deviceDefinitionSafetyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, setText"}</meta>
+            <column length="65535" name="DeviceDefinition_safety_CC_text">
+                <comment>{ "tree" :"DeviceDefinition.safety", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSafety, setText"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionCapability" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DeviceDefinition_capability">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnShlfLfStrgPrdctShlfLfe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.shelfLifeStorage", "datatype" : "ProductShelfLife", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addShelfLifeStorage"}</meta>
+            <column length="65535" name="DvcDfntn_shlfLfStrg_PrdctShlfLfe">
+                <comment>{ "tree" :"DeviceDefinition.shelfLifeStorage", "datatype" : "ProductShelfLife", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addShelfLifeStorage"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnPhsclchrctrsPrdChrctrstc" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.physicalCharacteristics", "datatype" : "ProdCharacteristic", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalCharacteristics"}</meta>
+            <column length="65535" name="DvcDfntn_phsclchrctrs_PrdChrctrstc">
+                <comment>{ "tree" :"DeviceDefinition.physicalCharacteristics", "datatype" : "ProdCharacteristic", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalCharacteristics"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnLnggCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnLnggCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnLnggCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_cpblt_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnLnggCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltDscrptnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnLnggCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltDscrptnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnLnggCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, setText"}</meta>
+            <column length="65535" name="DvcDfntn_lnggCd_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.languageCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLanguageCode, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltDscrptnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnCpbltTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltDscrptnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnCpbltTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCpbltDscrptnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_cpblt_dscrptn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnCpbltTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionProperty" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DeviceDefinition_property">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnCpbltTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnCpbltTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnCpbltTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_tp_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.capability.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCapability"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnCpbltDscrptnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnCpbltDscrptnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_prprt_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnCpbltDscrptnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnCpbltDscrptnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnCpbltDscrptnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnCpbltDscrptnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, setText"}</meta>
+            <column length="65535" name="DvcDfntn_cpblt_dscrptn_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.capability.description", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addCapability"] , "methodName" : "addDescription, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnPrprtTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnPrprtTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnPrprtTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnPrprtTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnPrprtTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnPrprtTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_tp_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.property.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addProperty"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnPrprtVlCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_prprt_vlCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnPrprtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionOwner" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="DeviceDefinition_owner">
-                <comment>Reference</comment>
+        <property name="dvcDfntnPrprtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCntctCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_cntct_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnPrprtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setValue"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCntctCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_cntct_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnPrprtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCntctCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_cntct_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnPrprtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"DeviceDefinition.property.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCntctCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_cntct_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnPrprtVlCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnCntctCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_cntct_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnPrprtVlCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionUrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="DeviceDefinition_url">
-                <comment>uri</comment>
+        <property name="dvcDfntnPrprtVlCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionOnlineInformation" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="DeviceDefinition_onlineInformation">
-                <comment>uri</comment>
+        <property name="dvcDfntnPrprtVlCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnPrprtVlCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DeviceDefinition_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnPrprtVlCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, setText"}</meta>
+            <column length="65535" name="DvcDfntn_prprt_vlCd_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.property.valueCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addProperty"] , "methodName" : "addValueCode, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnNtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_nt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="deviceDefinitionOwnerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</meta>
+            <column length="65535" name="DeviceDefinition_owner_Reference">
+                <comment>{ "tree" :"DeviceDefinition.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnNtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_nt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnCntctCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_sstm">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnNtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_nt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnCntctCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setUse"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_se">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setUse"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_qntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnCntctCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setStart"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_qntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnCntctCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setEnd"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_qntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnCntctCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setRank"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_rnk">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setRank"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_qntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnCntctCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setValue"}</meta>
+            <column length="65535" name="DvcDfntn_cntct_CntctPnt_vlue">
+                <comment>{ "tree" :"DeviceDefinition.contact", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setValue"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_qntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="deviceDefinitionUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="DeviceDefinition_url_uri">
+                <comment>{ "tree" :"DeviceDefinition.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionParentDevice" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="DeviceDefinition_parentDevice">
-                <comment>Reference</comment>
+        <property name="dvcDfntnNlnnfrmtnRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.onlineInformation", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnlineInformation"}</meta>
+            <column length="65535" name="DvcDfntn_nlnnfrmtn_ri">
+                <comment>{ "tree" :"DeviceDefinition.onlineInformation", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOnlineInformation"}</comment>
             </column>
         </property>
-        <property name="deviceDefinitionMaterial" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="DeviceDefinition_material">
-                <comment>BackboneElement</comment>
+        <property name="dvcDfntnNtNnttnTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="DvcDfntn_nt_nnttn_tme">
+                <comment>{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlSbstncCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="dvcDfntnNtNnttnTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="DvcDfntn_nt_nnttn_txt">
+                <comment>{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlSbstncCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="dvcDfntnNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="DvcDfntn_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlSbstncCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="dvcDfntnNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="DvcDfntn_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"DeviceDefinition.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlSbstncCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="dvcDfntnQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</meta>
+            <column length="65535" name="DvcDfntn_qntt_Qntt_cmprtr">
+                <comment>{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlSbstncCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="DvcDfntn_mtrl_sbstnc_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="dvcDfntnQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_qntt_Qntt_cde">
+                <comment>{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlLtrnte" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="DvcDfntn_mtrl_ltrnte">
-                <comment>boolean</comment>
+        <property name="dvcDfntnQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</meta>
+            <column length="65535" name="DvcDfntn_qntt_Qntt_vlue">
+                <comment>{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="dvcDfntnMtrlLlrgncndctr" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="DvcDfntn_mtrl_llrgncndctr">
-                <comment>boolean</comment>
+        <property name="dvcDfntnQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</meta>
+            <column length="65535" name="DvcDfntn_qntt_Qntt_nt">
+                <comment>{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_qntt_Qntt_sstm">
+                <comment>{ "tree" :"DeviceDefinition.quantity", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnPrntDvcRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.parentDevice", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParentDevice"}</meta>
+            <column length="65535" name="DvcDfntn_prntDvc_Rfrnce">
+                <comment>{ "tree" :"DeviceDefinition.parentDevice", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParentDevice"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_cdng_C_cde">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlSbstncCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, setText"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_sbstnc_CC_txt">
+                <comment>{ "tree" :"DeviceDefinition.material.substance", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addMaterial"] , "methodName" : "setSubstance, setText"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlLtrntBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.alternate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMaterial"] , "methodName" : "setAlternate"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_ltrnt_bln">
+                <comment>{ "tree" :"DeviceDefinition.material.alternate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMaterial"] , "methodName" : "setAlternate"}</comment>
+            </column>
+        </property>
+        <property name="dvcDfntnMtrlLlrgncndctrBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceDefinition.material.allergenicIndicator", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMaterial"] , "methodName" : "setAllergenicIndicator"}</meta>
+            <column length="65535" name="DvcDfntn_mtrl_llrgncndctr_bln">
+                <comment>{ "tree" :"DeviceDefinition.material.allergenicIndicator", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMaterial"] , "methodName" : "setAllergenicIndicator"}</comment>
             </column>
         </property>
     </class>

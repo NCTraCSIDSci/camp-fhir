@@ -1,579 +1,651 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Capabilitystatement" optimistic-lock="none" table="capabilitystatement">
-        <id name="capabilityStatementUrl" type="string">
-            <column length="512" name="CapabilityStatement_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="capabilityStatementVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CapabilityStatement_version">
-                <comment>string</comment>
+        <property name="capabilityStatementUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="CapabilityStatement_url_uri">
+                <comment>{ "tree" :"CapabilityStatement.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CapabilityStatement_name">
-                <comment>string</comment>
+        <property name="capabilityStatementVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="CapabilityStatement_version_string">
+                <comment>{ "tree" :"CapabilityStatement.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CapabilityStatement_title">
-                <comment>string</comment>
+        <property name="capabilityStatementNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CapabilityStatement_name_string">
+                <comment>{ "tree" :"CapabilityStatement.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_status">
-                <comment>code</comment>
+        <property name="capabilityStatementTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="CapabilityStatement_title_string">
+                <comment>{ "tree" :"CapabilityStatement.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CapabilityStatement_experimental">
-                <comment>boolean</comment>
+        <property name="capabilityStatementStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="CapabilityStatement_status_code">
+                <comment>{ "tree" :"CapabilityStatement.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="CapabilityStatement_date">
-                <comment>dateTime</comment>
+        <property name="cpbltSttmntXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="CpbltSttmnt_xprmntl_bln">
+                <comment>{ "tree" :"CapabilityStatement.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CapabilityStatement_publisher">
-                <comment>string</comment>
+        <property name="capabilityStatementDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="CapabilityStatement_date_dateTime">
+                <comment>{ "tree" :"CapabilityStatement.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="CapabilityStatement_contact">
-                <comment>ContactDetail</comment>
+        <property name="cpbltSttmntPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="CpbltSttmnt_pblshr_strng">
+                <comment>{ "tree" :"CapabilityStatement.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CapabilityStatement_description">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="CapabilityStatement_useContext">
-                <comment>UsageContext</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="cpbltSttmntCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cpbltSttmntCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="CpbltSttmnt_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"CapabilityStatement.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="CpbltSttmnt_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cpbltSttmntDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="CpbltSttmnt_dscrptn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CapabilityStatement_purpose">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CapabilityStatement_copyright">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementKind" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_kind">
-                <comment>code</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementInstantiates" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CapabilityStatement_instantiates">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementImports" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CapabilityStatement_imports">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementSoftwareName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CapabilityStatement_software_name">
-                <comment>string</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntSftwrVrsn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_sftwr_vrsn">
-                <comment>string</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntSftwrRlsDte" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="CpbltSttmnt_sftwr_rlsDte">
-                <comment>dateTime</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_dscrptn">
-                <comment>string</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnRl" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_rl">
-                <comment>url</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="cpbltSttmntSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="CpbltSttmnt_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"CapabilityStatement.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cpbltSttmntJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cpbltSttmntJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="cpbltSttmntJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="cpbltSttmntJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnCstdnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="cpbltSttmntJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementFhirVersion" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_fhirVersion">
-                <comment>code</comment>
+        <property name="cpbltSttmntJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="CpbltSttmnt_jrsdctn_CC_txt">
+                <comment>{ "tree" :"CapabilityStatement.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementFormat" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_format">
-                <comment>code</comment>
+        <property name="cpbltSttmntPrpsMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="CpbltSttmnt_prps_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementPatchFormat" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_patchFormat">
-                <comment>code</comment>
+        <property name="cpbltSttmntCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="CpbltSttmnt_cprght_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMplmnttnGde" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_mplmnttnGde">
-                <comment>canonical</comment>
+        <property name="capabilityStatementKindCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</meta>
+            <column length="65535" name="CapabilityStatement_kind_code">
+                <comment>{ "tree" :"CapabilityStatement.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementRestMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_rest_mode">
-                <comment>code</comment>
+        <property name="cpbltSttmntNstnttsCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.instantiates", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiates"}</meta>
+            <column length="65535" name="CpbltSttmnt_nstntts_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.instantiates", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiates"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntMprtsCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.imports", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImports"}</meta>
+            <column length="65535" name="CpbltSttmnt_mprts_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.imports", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImports"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtCrs" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_crs">
-                <comment>boolean</comment>
+        <property name="cpbltSttmntSftwrNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.software.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setSoftware"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CpbltSttmnt_sftwr_nm_strng">
+                <comment>{ "tree" :"CapabilityStatement.software.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setSoftware"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="cpbltSttmntSftwrVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.software.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_sftwr_vrsn_strng">
+                <comment>{ "tree" :"CapabilityStatement.software.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cpbltSttmntSftwrRlsDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.software.releaseDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setReleaseDate"}</meta>
+            <column length="65535" name="CpbltSttmnt_sftwr_rlsDt_dtTme">
+                <comment>{ "tree" :"CapabilityStatement.software.releaseDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setReleaseDate"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cpbltSttmntMplmnttnDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.implementation.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setImplementation"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_dscrptn_strng">
+                <comment>{ "tree" :"CapabilityStatement.implementation.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setImplementation"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="cpbltSttmntMplmnttnRlRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.implementation.url", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_rl_rl">
+                <comment>{ "tree" :"CapabilityStatement.implementation.url", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cpbltSttmntMplmnttnCstdnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.implementation.custodian", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setCustodian"}</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttn_cstdn_Rfrnce">
+                <comment>{ "tree" :"CapabilityStatement.implementation.custodian", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setCustodian"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtSrvcCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cpbltSttmntFhrVrsnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.fhirVersion", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setFhirVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_fhrVrsn_cde">
+                <comment>{ "tree" :"CapabilityStatement.fhirVersion", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setFhirVersion"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstScrtDscrptn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_scrt_dscrptn">
-                <comment>markdown</comment>
+        <property name="capabilityStatementFormatCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.format", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setFormat"}</meta>
+            <column length="65535" name="CapabilityStatement_format_code">
+                <comment>{ "tree" :"CapabilityStatement.format", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setFormat"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_tpe">
-                <comment>code</comment>
+        <property name="cpbltSttmntPtchFrmtCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.patchFormat", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPatchFormat"}</meta>
+            <column length="65535" name="CpbltSttmnt_ptchFrmt_cde">
+                <comment>{ "tree" :"CapabilityStatement.patchFormat", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPatchFormat"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcPrfle" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_prfle">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntMplmnttnGdCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.implementationGuide", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImplementationGuide"}</meta>
+            <column length="65535" name="CpbltSttmnt_mplmnttnGd_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.implementationGuide", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImplementationGuide"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSpprtdPrfle" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_spprtdPrfle">
-                <comment>canonical</comment>
+        <property name="capabilityStatementRestModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="CapabilityStatement_rest_mode_code">
+                <comment>{ "tree" :"CapabilityStatement.rest.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest"] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcNtrctnCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_cde">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstScrtCrsBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.cors", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "setCors"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_crs_bln">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.cors", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "setCors"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcNtrctnDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcVrsnng" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_vrsnng">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcRdHstry" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_rdHstry">
-                <comment>boolean</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_cdng_C_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcPdtCrte" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_pdtCrte">
-                <comment>boolean</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcCndtnlCrte" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlCrte">
-                <comment>boolean</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcCndtnlRd" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlRd">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstScrtSrvcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, setText"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_srvc_CC_txt">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.service", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "addService, setText"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcCndtnlpdte" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlpdte">
-                <comment>boolean</comment>
+        <property name="cpbltSttmntRstScrtDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.security.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_scrt_dscrptn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.security.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcCndtnlDlte" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlDlte">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstRsrcTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_tp_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcRfrncPlcy" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_rfrncPlcy">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstRsrcPrflCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.profile", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setProfile"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prfl_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.profile", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setProfile"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchnclde" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchnclde">
-                <comment>string</comment>
+        <property name="cpbltSttmntRstRsrcSpprtdPrflCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.supportedProfile", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "addSupportedProfile"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_spprtdPrfl_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.supportedProfile", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "addSupportedProfile"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchRvnclde" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchRvnclde">
-                <comment>string</comment>
+        <property name="cpbltSttmntRstRsrcDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchPrmNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_nme">
-                <comment>string</comment>
+        <property name="cpbltSttmntRstRsrcNtrctnCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.interaction.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_cd_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.interaction.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchPrmDfntn" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dfntn">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntRstRsrcNtrctnDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.interaction.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_ntrctn_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.interaction.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchPrmTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_tpe">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstRsrcVrsnngCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.versioning", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setVersioning"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_vrsnng_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.versioning", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setVersioning"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcSrchPrmDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstRsrcRdHstrBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.readHistory", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setReadHistory"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_rdHstr_bln">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.readHistory", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setReadHistory"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcPrtnNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_nme">
-                <comment>string</comment>
+        <property name="cpbltSttmntRstRsrcPdtCrtBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.updateCreate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setUpdateCreate"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_pdtCrt_bln">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.updateCreate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setUpdateCreate"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcPrtnDfntn" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dfntn">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntRstRsrcCndtnlCrtBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.conditionalCreate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalCreate"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlCrt_bln">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.conditionalCreate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalCreate"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstRsrcPrtnDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstRsrcCndtnlRdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.conditionalRead", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalRead"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlRd_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.conditionalRead", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalRead"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstNtrctnCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_rst_ntrctn_cde">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstRsrcCndtnlpdtBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.conditionalUpdate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalUpdate"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlpdt_bln">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.conditionalUpdate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalUpdate"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstNtrctnDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_rst_ntrctn_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstRsrcCndtnlDltCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.conditionalDelete", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalDelete"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_cndtnlDlt_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.conditionalDelete", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "setConditionalDelete"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstSrchPrm" type="string">
-            <meta attribute="resource-type">see searchParam</meta>
-            <column length="65535" name="CpbltSttmnt_rst_srchPrm">
-                <comment>see searchParam</comment>
+        <property name="cpbltSttmntRstRsrcRfrncPlcCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.referencePolicy", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addReferencePolicy"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_rfrncPlc_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.referencePolicy", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addReferencePolicy"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementRestOperation" type="string">
-            <meta attribute="resource-type">see operation</meta>
-            <column length="65535" name="CapabilityStatement_rest_operation">
-                <comment>see operation</comment>
+        <property name="cpbltSttmntRstRsrcSrchncldStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchInclude", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addSearchInclude"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchncld_strng">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchInclude", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addSearchInclude"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntRstCmprtmnt" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_rst_cmprtmnt">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntRstRsrcSrchRvncldStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchRevInclude", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addSearchRevInclude"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchRvncld_strng">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchRevInclude", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction"] , "methodName" : "addSearchRevInclude"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntPrtclCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="cpbltSttmntRstRsrcSrchPrmNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchParam.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_nm_strng">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchParam.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntPrtclCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="cpbltSttmntRstRsrcSrchPrmDfntnCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchParam.definition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dfntn_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchParam.definition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setDefinition"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntPrtclCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="cpbltSttmntRstRsrcSrchPrmTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchParam.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_tp_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchParam.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntPrtclCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="cpbltSttmntRstRsrcSrchPrmDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.searchParam.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_srchPrm_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.searchParam.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntPrtclCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="cpbltSttmntRstRsrcPrtnNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.operation.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_nm_strng">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.operation.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngNdpntDdrss" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_ddrss">
-                <comment>url</comment>
+        <property name="cpbltSttmntRstRsrcPrtnDfntnCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.operation.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dfntn_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.operation.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setDefinition"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngRlblCche" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_rlblCche">
-                <comment>unsignedInt</comment>
+        <property name="cpbltSttmntRstRsrcPrtnDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.resource.operation.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_rsrc_prtn_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.resource.operation.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstNtrctnCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.interaction.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_ntrctn_cd_cde">
+                <comment>{ "tree" :"CapabilityStatement.rest.interaction.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngSpprtdMssgMde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_mde">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstNtrctnDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.interaction.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_ntrctn_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.rest.interaction.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntMssgngSpprtdMssgDfntn" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_dfntn">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntRstSrchPrmSrchPrm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.searchParam", "datatype" : "searchParam", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addSearchParam"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_srchPrm_srchPrm">
+                <comment>{ "tree" :"CapabilityStatement.rest.searchParam", "datatype" : "searchParam", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addSearchParam"}</comment>
             </column>
         </property>
-        <property name="capabilityStatementDocumentMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CapabilityStatement_document_mode">
-                <comment>code</comment>
+        <property name="cpbltSttmntRstPrtnPrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.operation", "datatype" : "operation", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addOperation"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_prtn_prtn">
+                <comment>{ "tree" :"CapabilityStatement.rest.operation", "datatype" : "operation", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addOperation"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntDcmntDcmnttn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CpbltSttmnt_dcmnt_dcmnttn">
-                <comment>markdown</comment>
+        <property name="cpbltSttmntRstCmprtmntCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.rest.compartment", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addCompartment"}</meta>
+            <column length="65535" name="CpbltSttmnt_rst_cmprtmnt_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.rest.compartment", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["addRest", "setSecurity", "addResource", "addInteraction", "addSearchParam", "addOperation", "addInteraction"] , "methodName" : "addCompartment"}</comment>
             </column>
         </property>
-        <property name="cpbltSttmntDcmntPrfle" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="CpbltSttmnt_dcmnt_prfle">
-                <comment>canonical</comment>
+        <property name="cpbltSttmntMssgngNdpntPrtclCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setUserSelected"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_C_srSlctd">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setCode"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_C_cde">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setCode"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setVersion"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_C_vrsn">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setDisplay"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_C_dsplay">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntPrtclCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setSystem"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_prtcl_C_sstm">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.protocol", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setProtocol, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngNdpntDdrssRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.endpoint.address", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setAddress"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_ndpnt_ddrss_rl">
+                <comment>{ "tree" :"CapabilityStatement.messaging.endpoint.address", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setAddress"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngRlblCchNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.reliableCache", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setReliableCache"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_rlblCch_nsgndnt">
+                <comment>{ "tree" :"CapabilityStatement.messaging.reliableCache", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setReliableCache"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.messaging.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addMessaging", "addEndpoint"] , "methodName" : "setDocumentation"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngSpprtdMssgMdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.supportedMessage.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint", "addSupportedMessage"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_md_cde">
+                <comment>{ "tree" :"CapabilityStatement.messaging.supportedMessage.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint", "addSupportedMessage"] , "methodName" : "setMode"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntMssgngSpprtdMssgDfntnCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.messaging.supportedMessage.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint", "addSupportedMessage"] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="CpbltSttmnt_mssgng_spprtdMssg_dfntn_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.messaging.supportedMessage.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addMessaging", "addEndpoint", "addSupportedMessage"] , "methodName" : "setDefinition"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntDcmntMdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.document.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addDocument"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="CpbltSttmnt_dcmnt_md_cde">
+                <comment>{ "tree" :"CapabilityStatement.document.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addDocument"] , "methodName" : "setMode"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntDcmntDcmnttnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.document.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addDocument"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CpbltSttmnt_dcmnt_dcmnttn_mrkdwn">
+                <comment>{ "tree" :"CapabilityStatement.document.documentation", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["addDocument"] , "methodName" : "setDocumentation"}</comment>
+            </column>
+        </property>
+        <property name="cpbltSttmntDcmntPrflCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"CapabilityStatement.document.profile", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addDocument"] , "methodName" : "setProfile"}</meta>
+            <column length="65535" name="CpbltSttmnt_dcmnt_prfl_cnncl">
+                <comment>{ "tree" :"CapabilityStatement.document.profile", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addDocument"] , "methodName" : "setProfile"}</comment>
             </column>
         </property>
     </class>

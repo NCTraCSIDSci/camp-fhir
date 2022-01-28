@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Parameters" optimistic-lock="none" table="parameters">
-        <id name="parametersParameterName" type="string">
-            <column length="512" name="Parameters_parameter_name"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="parametersParameterResource" type="string">
-            <meta attribute="resource-type">Resource</meta>
-            <column length="65535" name="Parameters_parameter_resource">
-                <comment>Resource</comment>
+        <property name="parametersParameterNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Parameters.parameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addParameter"] , "methodName" : "setName"}</meta>
+            <column length="512" name="Parameters_parameter_name_string">
+                <comment>{ "tree" :"Parameters.parameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addParameter"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="parametersParameterPart" type="string">
-            <meta attribute="resource-type">see parameter</meta>
-            <column length="65535" name="Parameters_parameter_part">
-                <comment>see parameter</comment>
+        <property name="prmtrsPrmtrRsrcRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Parameters.parameter.resource", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setResource"}</meta>
+            <column length="65535" name="Prmtrs_prmtr_rsrc_Rsrce">
+                <comment>{ "tree" :"Parameters.parameter.resource", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addParameter"] , "methodName" : "setResource"}</comment>
+            </column>
+        </property>
+        <property name="prmtrsPrmtrPrtPrmtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Parameters.parameter.part", "datatype" : "parameter", "cardinality" : "Many", "elementtree" : ["addParameter"] , "methodName" : "addPart"}</meta>
+            <column length="65535" name="Prmtrs_prmtr_prt_prmtr">
+                <comment>{ "tree" :"Parameters.parameter.part", "datatype" : "parameter", "cardinality" : "Many", "elementtree" : ["addParameter"] , "methodName" : "addPart"}</comment>
             </column>
         </property>
     </class>

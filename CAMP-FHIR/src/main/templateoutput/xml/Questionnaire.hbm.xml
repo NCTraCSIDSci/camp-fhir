@@ -1,681 +1,855 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Questionnaire" optimistic-lock="none" table="questionnaire">
-        <id name="questionnaireUrl" type="string">
-            <column length="512" name="Questionnaire_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="qstnnrDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="questionnaireUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="Questionnaire_url_uri">
+                <comment>{ "tree" :"Questionnaire.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="qstnnrDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_se">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="qstnnrDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="qstnnrDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="questionnaireVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_version">
-                <comment>string</comment>
+        <property name="qstnnrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="questionnaireName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_name">
-                <comment>string</comment>
+        <property name="qstnnrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="questionnaireTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_title">
-                <comment>string</comment>
+        <property name="qstnnrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="questionnaireDerivedFrom" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Questionnaire_derivedFrom">
-                <comment>canonical</comment>
+        <property name="qstnnrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="questionnaireStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Questionnaire_status">
-                <comment>code</comment>
+        <property name="qstnnrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="questionnaireExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Questionnaire_experimental">
-                <comment>boolean</comment>
+        <property name="qstnnrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="questionnaireSubjectType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Questionnaire_subjectType">
-                <comment>code</comment>
+        <property name="qstnnrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="questionnaireDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Questionnaire_date">
-                <comment>dateTime</comment>
+        <property name="qstnnrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Questionnaire.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnairePublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_publisher">
-                <comment>string</comment>
+        <property name="questionnaireVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="Questionnaire_version_string">
+                <comment>{ "tree" :"Questionnaire.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="questionnaireContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Questionnaire_contact">
-                <comment>ContactDetail</comment>
+        <property name="questionnaireNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Questionnaire_name_string">
+                <comment>{ "tree" :"Questionnaire.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="questionnaireDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Questionnaire_description">
-                <comment>markdown</comment>
+        <property name="questionnaireTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="Questionnaire_title_string">
+                <comment>{ "tree" :"Questionnaire.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="questionnaireUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="Questionnaire_useContext">
-                <comment>UsageContext</comment>
+        <property name="qstnnrDrvdFrmCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.derivedFrom", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDerivedFrom"}</meta>
+            <column length="65535" name="Qstnnr_drvdFrm_cnncl">
+                <comment>{ "tree" :"Questionnaire.derivedFrom", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDerivedFrom"}</comment>
             </column>
         </property>
-        <property name="qstnnrJrsdctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_jrsdctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="questionnaireStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Questionnaire_status_code">
+                <comment>{ "tree" :"Questionnaire.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="qstnnrJrsdctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_jrsdctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="questionnaireExperimentalBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="Questionnaire_experimental_boolean">
+                <comment>{ "tree" :"Questionnaire.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="qstnnrJrsdctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_jrsdctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="questionnaireSubjectTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.subjectType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubjectType"}</meta>
+            <column length="65535" name="Questionnaire_subjectType_code">
+                <comment>{ "tree" :"Questionnaire.subjectType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubjectType"}</comment>
             </column>
         </property>
-        <property name="qstnnrJrsdctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_jrsdctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="questionnaireDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Questionnaire_date_dateTime">
+                <comment>{ "tree" :"Questionnaire.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="qstnnrJrsdctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_jrsdctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="questionnairePublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="Questionnaire_publisher_string">
+                <comment>{ "tree" :"Questionnaire.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="questionnairePurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Questionnaire_purpose">
-                <comment>markdown</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="questionnaireCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Questionnaire_copyright">
-                <comment>markdown</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="questionnaireApprovalDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Questionnaire_approvalDate">
-                <comment>date</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnaireLastReviewDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Questionnaire_lastReviewDate">
-                <comment>date</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="qstnnrFfctvPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="qstnnrFfctvPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="qstnnrFfctvPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="Qstnnr_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"Questionnaire.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="qstnnrFfctvPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="questionnaireDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Questionnaire_description_markdown">
+                <comment>{ "tree" :"Questionnaire.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="qstnnrFfctvPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_ffctvPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="questionnaireCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Questionnaire_code_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="questionnaireCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Questionnaire_code_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="questionnaireCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Questionnaire_code_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="questionnaireCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Questionnaire_code_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="qstnnrSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="questionnaireItem" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Questionnaire_item">
-                <comment>BackboneElement</comment>
+        <property name="qstnnrSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemLinkId" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_item_linkId">
-                <comment>string</comment>
+        <property name="qstnnrSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemDefinition" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Questionnaire_item_definition">
-                <comment>uri</comment>
+        <property name="qstnnrSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemPrefix" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_item_prefix">
-                <comment>string</comment>
+        <property name="qstnnrSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemText" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Questionnaire_item_text">
-                <comment>string</comment>
+        <property name="qstnnrSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Questionnaire_item_type">
-                <comment>code</comment>
+        <property name="qstnnrSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemEnableWhen" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Questionnaire_item_enableWhen">
-                <comment>BackboneElement</comment>
+        <property name="qstnnrSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnQstn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_qstn">
-                <comment>string</comment>
+        <property name="qstnnrSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="Qstnnr_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"Questionnaire.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnPrtr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_prtr">
-                <comment>code</comment>
+        <property name="qstnnrJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrBln">
-                <comment>boolean</comment>
+        <property name="qstnnrJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrDcml" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDcml">
-                <comment>decimal</comment>
+        <property name="qstnnrJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrntgr" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrntgr">
-                <comment>integer</comment>
+        <property name="qstnnrJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDte">
-                <comment>date</comment>
+        <property name="qstnnrJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrDttme" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDttme">
-                <comment>dateTime</comment>
+        <property name="questionnaireJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="Questionnaire_jurisdiction_CC_text">
+                <comment>{ "tree" :"Questionnaire.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrTme">
-                <comment>time</comment>
+        <property name="questionnairePurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="Questionnaire_purpose_markdown">
+                <comment>{ "tree" :"Questionnaire.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrStrng">
-                <comment>string</comment>
+        <property name="questionnaireCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="Questionnaire_copyright_markdown">
+                <comment>{ "tree" :"Questionnaire.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrCdngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="questionnaireApprovalDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</meta>
+            <column length="65535" name="Questionnaire_approvalDate_date">
+                <comment>{ "tree" :"Questionnaire.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrCdngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="questionnaireLastReviewDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</meta>
+            <column length="65535" name="Questionnaire_lastReviewDate_date">
+                <comment>{ "tree" :"Questionnaire.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrCdngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrFfctvPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Prd_strt">
+                <comment>{ "tree" :"Questionnaire.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrCdngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrFfctvPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</meta>
+            <column length="65535" name="Qstnnr_ffctvPrd_Prd_nd">
+                <comment>{ "tree" :"Questionnaire.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrCdngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="questionnaireCodeCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.code", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setUserSelected"}</meta>
+            <column length="65535" name="Questionnaire_code_C_userSelected">
+                <comment>{ "tree" :"Questionnaire.code", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="questionnaireCodeCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.code", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setCode"}</meta>
+            <column length="65535" name="Questionnaire_code_C_code">
+                <comment>{ "tree" :"Questionnaire.code", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="questionnaireCodeCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setVersion"}</meta>
+            <column length="65535" name="Questionnaire_code_C_version">
+                <comment>{ "tree" :"Questionnaire.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="questionnaireCodeCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setDisplay"}</meta>
+            <column length="65535" name="Questionnaire_code_C_display">
+                <comment>{ "tree" :"Questionnaire.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="questionnaireCodeCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.code", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setSystem"}</meta>
+            <column length="65535" name="Questionnaire_code_C_system">
+                <comment>{ "tree" :"Questionnaire.code", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="questionnaireItemLinkIdString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.linkId", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem"] , "methodName" : "setLinkId"}</meta>
+            <column length="65535" name="Questionnaire_item_linkId_string">
+                <comment>{ "tree" :"Questionnaire.item.linkId", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem"] , "methodName" : "setLinkId"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNblWhnNswrRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Qstnnr_tm_nblWhn_nswrRfrnce">
-                <comment>Reference</comment>
+        <property name="questionnaireItemDefinitionUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.definition", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="Questionnaire_item_definition_uri">
+                <comment>{ "tree" :"Questionnaire.item.definition", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setDefinition"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemEnableBehavior" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Questionnaire_item_enableBehavior">
-                <comment>code</comment>
+        <property name="qstnnrTmCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_tm_cd_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemRequired" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Questionnaire_item_required">
-                <comment>boolean</comment>
+        <property name="questionnaireItemCodeCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setCode"}</meta>
+            <column length="65535" name="Questionnaire_item_code_C_code">
+                <comment>{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemRepeats" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Questionnaire_item_repeats">
-                <comment>boolean</comment>
+        <property name="questionnaireItemCodeCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setVersion"}</meta>
+            <column length="65535" name="Questionnaire_item_code_C_version">
+                <comment>{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemReadOnly" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Questionnaire_item_readOnly">
-                <comment>boolean</comment>
+        <property name="questionnaireItemCodeCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setDisplay"}</meta>
+            <column length="65535" name="Questionnaire_item_code_C_display">
+                <comment>{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemMaxLength" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Questionnaire_item_maxLength">
-                <comment>integer</comment>
+        <property name="questionnaireItemCodeCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setSystem"}</meta>
+            <column length="65535" name="Questionnaire_item_code_C_system">
+                <comment>{ "tree" :"Questionnaire.item.code", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["addItem"] , "methodName" : "addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemAnswerValueSet" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Questionnaire_item_answerValueSet">
-                <comment>canonical</comment>
+        <property name="questionnaireItemPrefixString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.prefix", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setPrefix"}</meta>
+            <column length="65535" name="Questionnaire_item_prefix_string">
+                <comment>{ "tree" :"Questionnaire.item.prefix", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setPrefix"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemAnswerOption" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Questionnaire_item_answerOption">
-                <comment>BackboneElement</comment>
+        <property name="questionnaireItemTextString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.text", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setText"}</meta>
+            <column length="65535" name="Questionnaire_item_text_string">
+                <comment>{ "tree" :"Questionnaire.item.text", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addItem"] , "methodName" : "setText"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlntgr" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlntgr">
-                <comment>integer</comment>
+        <property name="questionnaireItemTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addItem"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Questionnaire_item_type_code">
+                <comment>{ "tree" :"Questionnaire.item.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addItem"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlDte">
-                <comment>date</comment>
+        <property name="qstnnrTmNblWhnQstnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.question", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setQuestion"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_qstn_strng">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.question", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setQuestion"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlTme">
-                <comment>time</comment>
+        <property name="qstnnrTmNblWhnPrtrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.operator", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setOperator"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_prtr_cde">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.operator", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setOperator"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlStrng">
-                <comment>string</comment>
+        <property name="qstnnrTmNblWhnNswrBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerBoolean"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrBln_bln">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerBoolean"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlCdngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrTmNblWhnNswrDcmlDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDecimal"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDcml_dcml">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDecimal"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlCdngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrTmNblWhnNswrntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerInteger"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrntgr_ntgr">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerInteger"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlCdngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrTmNblWhnNswrDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDate"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDt_dte">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDate"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlCdngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrTmNblWhnNswrDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDatetime"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrDttm_dtTme">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerDatetime"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlCdngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrTmNblWhnNswrTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerTime"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrTm_tme">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerTime"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnVlRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_vlRfrnce">
-                <comment>Reference</comment>
+        <property name="qstnnrTmNblWhnNswrStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerString"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrStrng_strng">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerString"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNswrptnNtlSlctd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Qstnnr_tm_nswrptn_ntlSlctd">
-                <comment>boolean</comment>
+        <property name="qstnnrTmNblWhnNswrCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemInitial" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Questionnaire_item_initial">
-                <comment>BackboneElement</comment>
+        <property name="qstnnrTmNblWhnNswrCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_C_cde">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlBln">
-                <comment>boolean</comment>
+        <property name="qstnnrTmNblWhnNswrCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlDcml" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlDcml">
-                <comment>decimal</comment>
+        <property name="qstnnrTmNblWhnNswrCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlntgr" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlntgr">
-                <comment>integer</comment>
+        <property name="qstnnrTmNblWhnNswrCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrCdng_C_sstm">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlDte">
-                <comment>date</comment>
+        <property name="qstnnrTmNblWhnNswrQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setComparator"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlDttme" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlDttme">
-                <comment>dateTime</comment>
+        <property name="qstnnrTmNblWhnNswrQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setCode"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Qntt_cde">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlTme">
-                <comment>time</comment>
+        <property name="qstnnrTmNblWhnNswrQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setValue"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Qntt_vlue">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlStrng">
-                <comment>string</comment>
+        <property name="qstnnrTmNblWhnNswrQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setUnit"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Qntt_nt">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlri">
-                <comment>uri</comment>
+        <property name="qstnnrTmNblWhnNswrQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrQntt_Qntt_sstm">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlttchmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrTmNblWhnNswrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableWhen.answerReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerReference(any)"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblWhn_nswrRfrnc_Rfrnce">
+                <comment>{ "tree" :"Questionnaire.item.enableWhen.answerReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerReference(any)"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlttchmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrTmNblBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.enableBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setEnableBehavior"}</meta>
+            <column length="65535" name="Qstnnr_tm_nblBhvr_cde">
+                <comment>{ "tree" :"Questionnaire.item.enableBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setEnableBehavior"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlttchmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrTmRqrdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.required", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setRequired"}</meta>
+            <column length="65535" name="Qstnnr_tm_rqrd_bln">
+                <comment>{ "tree" :"Questionnaire.item.required", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setRequired"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlttchmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="questionnaireItemRepeatsBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.repeats", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setRepeats"}</meta>
+            <column length="65535" name="Questionnaire_item_repeats_boolean">
+                <comment>{ "tree" :"Questionnaire.item.repeats", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setRepeats"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlttchmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrTmRdnlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.readOnly", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setReadOnly"}</meta>
+            <column length="65535" name="Qstnnr_tm_rdnl_bln">
+                <comment>{ "tree" :"Questionnaire.item.readOnly", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setReadOnly"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlCdngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrTmMxLngthNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.maxLength", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setMaxLength"}</meta>
+            <column length="65535" name="Qstnnr_tm_mxLngth_ntgr">
+                <comment>{ "tree" :"Questionnaire.item.maxLength", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setMaxLength"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlCdngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrTmNswrVlStCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerValueSet", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerValueSet"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrVlSt_cnncl">
+                <comment>{ "tree" :"Questionnaire.item.answerValueSet", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen"] , "methodName" : "setAnswerValueSet"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlCdngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrTmNswrptnVlntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueInteger"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlntgr_ntgr">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueInteger"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlCdngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrTmNswrptnVlDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueDate"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlDt_dte">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueDate"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlCdngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrTmNswrptnVlTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueTime"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlTm_tme">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueTime"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="qstnnrTmNswrptnVlStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueString"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlStrng_strng">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueString"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="qstnnrTmNswrptnVlCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="qstnnrTmNswrptnVlCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_C_cde">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="qstnnrTmNswrptnVlCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="qstnnrTmNswrptnVlCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="qstnnrTmNtlVlRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Qstnnr_tm_ntl_vlRfrnce">
-                <comment>Reference</comment>
+        <property name="qstnnrTmNswrptnVlCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlCdng_C_sstm">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="questionnaireItemItem" type="string">
-            <meta attribute="resource-type">see item</meta>
-            <column length="65535" name="Questionnaire_item_item">
-                <comment>see item</comment>
+        <property name="qstnnrTmNswrptnVlRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueReference(any)"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_vlRfrnc_Rfrnce">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setValueReference(any)"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNswrptnNtlSlctdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.answerOption.initialSelected", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setInitialSelected"}</meta>
+            <column length="65535" name="Qstnnr_tm_nswrptn_ntlSlctd_bln">
+                <comment>{ "tree" :"Questionnaire.item.answerOption.initialSelected", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption"] , "methodName" : "setInitialSelected"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueBoolean"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlBln_bln">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueBoolean"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDcmlDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDecimal"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDcml_dcml">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDecimal"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueInteger"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlntgr_ntgr">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueInteger"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDate"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDt_dte">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDate"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDatetime"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlDttm_dtTme">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueDatetime"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueTime"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlTm_tme">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueTime", "datatype" : "time", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueTime"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueString"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlStrng_strng">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueString"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlrRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueUri"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlr_ri">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueUri"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setData"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setData"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setHash"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setHash"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setContentType"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setLanguage"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setCreation"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setTitle"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setSize"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setSize"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlttchmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setUrl"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlttchmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueAttachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueAttachment, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setUserSelected"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_C_srSlctd">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setCode"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_C_cde">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setVersion"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_C_vrsn">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setDisplay"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_C_dsplay">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlCdng_C_sstm">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setCode"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setValue"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setValue"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueQuantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="qstnnrTmNtlVlRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.initial.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueReference(any)"}</meta>
+            <column length="65535" name="Qstnnr_tm_ntl_vlRfrnc_Rfrnce">
+                <comment>{ "tree" :"Questionnaire.item.initial.valueReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "setValueReference(any)"}</comment>
+            </column>
+        </property>
+        <property name="questionnaireItemItemItem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Questionnaire.item.item", "datatype" : "item", "cardinality" : "Many", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "addItem"}</meta>
+            <column length="65535" name="Questionnaire_item_item_item">
+                <comment>{ "tree" :"Questionnaire.item.item", "datatype" : "item", "cardinality" : "Many", "elementtree" : ["addItem", "addEnableWhen", "addAnswerOption", "addInitial"] , "methodName" : "addItem"}</comment>
             </column>
         </property>
     </class>

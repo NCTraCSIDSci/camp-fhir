@@ -1,441 +1,573 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Valueset" optimistic-lock="none" table="valueset">
-        <id name="valueSetUrl" type="string">
-            <column length="512" name="ValueSet_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="vlStDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="valueSetUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="ValueSet_url_uri">
+                <comment>{ "tree" :"ValueSet.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="valueSetIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="ValueSet_identifier_Identifier_use">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="vlStDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="vlStDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="vlStDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="vlStDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="vlStDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="vlStDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="vlStDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="vlStDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="vlStDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="vlStDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="vlStDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="VlSt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ValueSet.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="valueSetVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="ValueSet_version_string">
+                <comment>{ "tree" :"ValueSet.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="VlSt_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="valueSetNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="ValueSet_name_string">
+                <comment>{ "tree" :"ValueSet.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="valueSetVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_version">
-                <comment>string</comment>
+        <property name="valueSetTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ValueSet_title_string">
+                <comment>{ "tree" :"ValueSet.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="valueSetName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_name">
-                <comment>string</comment>
+        <property name="valueSetStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ValueSet_status_code">
+                <comment>{ "tree" :"ValueSet.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="valueSetTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_title">
-                <comment>string</comment>
+        <property name="valueSetExperimentalBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="ValueSet_experimental_boolean">
+                <comment>{ "tree" :"ValueSet.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="valueSetStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ValueSet_status">
-                <comment>code</comment>
+        <property name="valueSetDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="ValueSet_date_dateTime">
+                <comment>{ "tree" :"ValueSet.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="valueSetExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ValueSet_experimental">
-                <comment>boolean</comment>
+        <property name="valueSetPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="ValueSet_publisher_string">
+                <comment>{ "tree" :"ValueSet.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="valueSetDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ValueSet_date">
-                <comment>dateTime</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="valueSetPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_publisher">
-                <comment>string</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="valueSetContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="ValueSet_contact">
-                <comment>ContactDetail</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="valueSetDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ValueSet_description">
-                <comment>markdown</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="valueSetUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="ValueSet_useContext">
-                <comment>UsageContext</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vlStCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vlStCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="VlSt_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"ValueSet.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="valueSetDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ValueSet_description_markdown">
+                <comment>{ "tree" :"ValueSet.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VlSt_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="valueSetImmutable" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ValueSet_immutable">
-                <comment>boolean</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="valueSetPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ValueSet_purpose">
-                <comment>markdown</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="valueSetCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ValueSet_copyright">
-                <comment>markdown</comment>
+        <property name="vlStSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeLockedDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="ValueSet_compose_lockedDate">
-                <comment>date</comment>
+        <property name="vlStSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeInactive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ValueSet_compose_inactive">
-                <comment>boolean</comment>
+        <property name="vlStSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeIncludeSystem" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="ValueSet_compose_include_system">
-                <comment>uri</comment>
+        <property name="vlStSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeIncludeVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_compose_include_version">
-                <comment>string</comment>
+        <property name="vlStSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_cde">
-                <comment>code</comment>
+        <property name="vlStSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsplay" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsplay">
-                <comment>string</comment>
+        <property name="vlStSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnLngge" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_lngge">
-                <comment>code</comment>
+        <property name="vlStSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnSCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="vlStSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnSCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="vlStSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnSCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="vlStSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnSCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="vlStSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnSCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="vlStSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldCncptDsgntnVlue" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_vlue">
-                <comment>string</comment>
+        <property name="vlStSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="VlSt_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"ValueSet.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldFltrPrprty" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="VlSt_cmps_ncld_fltr_prprty">
-                <comment>code</comment>
+        <property name="vlStJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="VlSt_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeIncludeFilterOp" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ValueSet_compose_include_filter_op">
-                <comment>code</comment>
+        <property name="vlStJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="VlSt_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStCmpsNcldFltrVlue" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_cmps_ncld_fltr_vlue">
-                <comment>string</comment>
+        <property name="vlStJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="VlSt_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeIncludeValueSet" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ValueSet_compose_include_valueSet">
-                <comment>canonical</comment>
+        <property name="vlStJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VlSt_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="valueSetComposeExclude" type="string">
-            <meta attribute="resource-type">see include</meta>
-            <column length="65535" name="ValueSet_compose_exclude">
-                <comment>see include</comment>
+        <property name="vlStJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VlSt_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionIdentifier" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="ValueSet_expansion_identifier">
-                <comment>uri</comment>
+        <property name="valueSetJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="ValueSet_jurisdiction_CC_text">
+                <comment>{ "tree" :"ValueSet.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionTimestamp" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ValueSet_expansion_timestamp">
-                <comment>dateTime</comment>
+        <property name="valueSetImmutableBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.immutable", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImmutable"}</meta>
+            <column length="65535" name="ValueSet_immutable_boolean">
+                <comment>{ "tree" :"ValueSet.immutable", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setImmutable"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionTotal" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="ValueSet_expansion_total">
-                <comment>integer</comment>
+        <property name="valueSetPurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="ValueSet_purpose_markdown">
+                <comment>{ "tree" :"ValueSet.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionOffset" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="ValueSet_expansion_offset">
-                <comment>integer</comment>
+        <property name="valueSetCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="ValueSet_copyright_markdown">
+                <comment>{ "tree" :"ValueSet.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionParameterName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ValueSet_expansion_parameter_name">
-                <comment>string</comment>
+        <property name="valueSetComposeLockedDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.lockedDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["setCompose"] , "methodName" : "setLockedDate"}</meta>
+            <column length="65535" name="ValueSet_compose_lockedDate_date">
+                <comment>{ "tree" :"ValueSet.compose.lockedDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["setCompose"] , "methodName" : "setLockedDate"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlStrng">
-                <comment>string</comment>
+        <property name="valueSetComposeInactiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCompose"] , "methodName" : "setInactive"}</meta>
+            <column length="65535" name="ValueSet_compose_inactive_boolean">
+                <comment>{ "tree" :"ValueSet.compose.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCompose"] , "methodName" : "setInactive"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlBln">
-                <comment>boolean</comment>
+        <property name="vlStCmpsNcldSstmRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.system", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude"] , "methodName" : "setSystem"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_sstm_ri">
+                <comment>{ "tree" :"ValueSet.compose.include.system", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude"] , "methodName" : "setSystem"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlntgr" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlntgr">
-                <comment>integer</comment>
+        <property name="vlStCmpsNcldVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_vrsn_strng">
+                <comment>{ "tree" :"ValueSet.compose.include.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude"] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlDcml" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlDcml">
-                <comment>decimal</comment>
+        <property name="vlStCmpsNcldCncptCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_cd_cde">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlri">
-                <comment>uri</comment>
+        <property name="vlStCmpsNcldCncptDsplStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept"] , "methodName" : "setDisplay"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dspl_strng">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept"] , "methodName" : "setDisplay"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlCde">
-                <comment>code</comment>
+        <property name="vlStCmpsNcldCncptDsgntnLnggCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.language", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setLanguage"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_lngg_cde">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.language", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setLanguage"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnPrmtrVlDttme" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="VlSt_xpnsn_prmtr_vlDttme">
-                <comment>dateTime</comment>
+        <property name="vlStCmpsNcldCncptDsgntnSCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setUserSelected"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_C_srSlctd">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionContainsSystem" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="ValueSet_expansion_contains_system">
-                <comment>uri</comment>
+        <property name="vlStCmpsNcldCncptDsgntnSCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setCode"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_C_cde">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setCode"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsBstrct" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_bstrct">
-                <comment>boolean</comment>
+        <property name="vlStCmpsNcldCncptDsgntnSCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setVersion"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_C_vrsn">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setVersion"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsNctve" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_nctve">
-                <comment>boolean</comment>
+        <property name="vlStCmpsNcldCncptDsgntnSCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setDisplay"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_C_dsplay">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsVrsn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_vrsn">
-                <comment>string</comment>
+        <property name="vlStCmpsNcldCncptDsgntnSCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setSystem"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_s_C_sstm">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.use", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setUse, setSystem"}</comment>
             </column>
         </property>
-        <property name="valueSetExpansionContainsCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ValueSet_expansion_contains_code">
-                <comment>code</comment>
+        <property name="vlStCmpsNcldCncptDsgntnVlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.concept.designation.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setValue"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_cncpt_dsgntn_vl_strng">
+                <comment>{ "tree" :"ValueSet.compose.include.concept.designation.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation"] , "methodName" : "setValue"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsDsplay" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_dsplay">
-                <comment>string</comment>
+        <property name="vlStCmpsNcldFltrPrprtCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.filter.property", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setProperty"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_fltr_prprt_cde">
+                <comment>{ "tree" :"ValueSet.compose.include.filter.property", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setProperty"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsDsgntn" type="string">
-            <meta attribute="resource-type">see designation</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_dsgntn">
-                <comment>see designation</comment>
+        <property name="vlStCmpsNcldFltrPCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.filter.op", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setOp"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_fltr_p_cde">
+                <comment>{ "tree" :"ValueSet.compose.include.filter.op", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setOp"}</comment>
             </column>
         </property>
-        <property name="vlStXpnsnCntnsCntns" type="string">
-            <meta attribute="resource-type">see contains</meta>
-            <column length="65535" name="VlSt_xpnsn_cntns_cntns">
-                <comment>see contains</comment>
+        <property name="vlStCmpsNcldFltrVlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.filter.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setValue"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_fltr_vl_strng">
+                <comment>{ "tree" :"ValueSet.compose.include.filter.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "setValue"}</comment>
+            </column>
+        </property>
+        <property name="vlStCmpsNcldVlStCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.include.valueSet", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "addValueSet"}</meta>
+            <column length="65535" name="VlSt_cmps_ncld_vlSt_cnncl">
+                <comment>{ "tree" :"ValueSet.compose.include.valueSet", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "addValueSet"}</comment>
+            </column>
+        </property>
+        <property name="valueSetComposeExcludeInclude" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.compose.exclude", "datatype" : "include", "cardinality" : "Many", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "addExclude"}</meta>
+            <column length="65535" name="ValueSet_compose_exclude_include">
+                <comment>{ "tree" :"ValueSet.compose.exclude", "datatype" : "include", "cardinality" : "Many", "elementtree" : ["setCompose", "setInclude", "addConcept", "addDesignation", "addFilter"] , "methodName" : "addExclude"}</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionIdentifierUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.identifier", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setIdentifier"}</meta>
+            <column length="65535" name="ValueSet_expansion_identifier_uri">
+                <comment>{ "tree" :"ValueSet.expansion.identifier", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setIdentifier"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnTmstmpDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.timestamp", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["setExpansion"] , "methodName" : "setTimestamp"}</meta>
+            <column length="65535" name="VlSt_xpnsn_tmstmp_dtTme">
+                <comment>{ "tree" :"ValueSet.expansion.timestamp", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["setExpansion"] , "methodName" : "setTimestamp"}</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionTotalInteger" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.total", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setTotal"}</meta>
+            <column length="65535" name="ValueSet_expansion_total_integer">
+                <comment>{ "tree" :"ValueSet.expansion.total", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setTotal"}</comment>
+            </column>
+        </property>
+        <property name="valueSetExpansionOffsetInteger" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.offset", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setOffset"}</meta>
+            <column length="65535" name="ValueSet_expansion_offset_integer">
+                <comment>{ "tree" :"ValueSet.expansion.offset", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setOffset"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_nm_strng">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueString"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlStrng_strng">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueString"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueBoolean"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlBln_bln">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueBoolean"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueInteger"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlntgr_ntgr">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueInteger", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueInteger"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlDcmlDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueDecimal", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueDecimal"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlDcml_dcml">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueDecimal", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueDecimal"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlrRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueUri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueUri"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlr_ri">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueUri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueUri"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueCode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueCode"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlCd_cde">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueCode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueCode"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnPrmtrVlDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.parameter.valueDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueDatetime"}</meta>
+            <column length="65535" name="VlSt_xpnsn_prmtr_vlDttm_dtTme">
+                <comment>{ "tree" :"ValueSet.expansion.parameter.valueDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setValueDatetime"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsSstmRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.system", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setSystem"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_sstm_ri">
+                <comment>{ "tree" :"ValueSet.expansion.contains.system", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setSystem"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsBstrctBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.abstract", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setAbstract"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_bstrct_bln">
+                <comment>{ "tree" :"ValueSet.expansion.contains.abstract", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setAbstract"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsNctvBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setInactive"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_nctv_bln">
+                <comment>{ "tree" :"ValueSet.expansion.contains.inactive", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setInactive"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_vrsn_strng">
+                <comment>{ "tree" :"ValueSet.expansion.contains.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setVersion"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.code", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_cd_cde">
+                <comment>{ "tree" :"ValueSet.expansion.contains.code", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsDsplStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setDisplay"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_dspl_strng">
+                <comment>{ "tree" :"ValueSet.expansion.contains.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsDsgntnDsgntn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.designation", "datatype" : "designation", "cardinality" : "Many", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "addDesignation"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_dsgntn_dsgntn">
+                <comment>{ "tree" :"ValueSet.expansion.contains.designation", "datatype" : "designation", "cardinality" : "Many", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "addDesignation"}</comment>
+            </column>
+        </property>
+        <property name="vlStXpnsnCntnsCntnsCntns" type="string">
+            <meta attribute="resource-type">{ "tree" :"ValueSet.expansion.contains.contains", "datatype" : "contains", "cardinality" : "Many", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "addContains"}</meta>
+            <column length="65535" name="VlSt_xpnsn_cntns_cntns_cntns">
+                <comment>{ "tree" :"ValueSet.expansion.contains.contains", "datatype" : "contains", "cardinality" : "Many", "elementtree" : ["setExpansion", "addParameter", "addContains"] , "methodName" : "addContains"}</comment>
             </column>
         </property>
     </class>

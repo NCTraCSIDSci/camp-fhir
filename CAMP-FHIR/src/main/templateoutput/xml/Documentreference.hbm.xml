@@ -1,1191 +1,537 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Documentreference" optimistic-lock="none" table="documentreference">
-        <id name="dcmntRfrncMstrdntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="dcmntRfrncMstrdntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_use_code</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_s_cde">
-                <comment>DocumentReference_masterIdentifierIdentifier_use_code</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setUse"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_se">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>DocumentReference_masterIdentifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_CdblCncpt_txt">
-                <comment>DocumentReference_masterIdentifierIdentifier_CodeableConcept_text</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Period_start</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Prd_strt">
-                <comment>DocumentReference_masterIdentifierIdentifier_Period_start</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, setText"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Period_end</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Prd_nd">
-                <comment>DocumentReference_masterIdentifierIdentifier_Period_end</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Reference_reference</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Rfrnc_rfrnce">
-                <comment>DocumentReference_masterIdentifierIdentifier_Reference_reference</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Reference_type</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Rfrnc_tpe">
-                <comment>DocumentReference_masterIdentifierIdentifier_Reference_type</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setAssigner"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Rfrnc_dntfr">
-                <comment>DocumentReference_masterIdentifierIdentifier_Reference_identifier</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setValue"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_vlue">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_Reference_display</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_Rfrnc_dsplay">
-                <comment>DocumentReference_masterIdentifierIdentifier_Reference_display</comment>
+        <property name="dcmntRfrncMstrdntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setSystem"}</meta>
+            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_sstm">
+                <comment>{ "tree" :"DocumentReference.masterIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMasterIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_value_string</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_vl_strng">
-                <comment>DocumentReference_masterIdentifierIdentifier_value_string</comment>
+        <property name="dcmntRfrncDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_se">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncMstrdntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">DocumentReference_masterIdentifierIdentifier_system_uri</meta>
-            <column length="512" name="DcmntRfrnc_mstrdntfr_dntfr_sstm_ri">
-                <comment>DocumentReference_masterIdentifierIdentifier_system_uri</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="dcmntRfrncDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="dcmntRfrncDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="dcmntRfrncDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="dcmntRfrncDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="dcmntRfrncDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="dcmntRfrncDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"DocumentReference.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="documentReferenceStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="DocumentReference_status_code">
+                <comment>{ "tree" :"DocumentReference.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="documentReferenceDocStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.docStatus", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDocStatus"}</meta>
+            <column length="65535" name="DocumentReference_docStatus_code">
+                <comment>{ "tree" :"DocumentReference.docStatus", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDocStatus"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="dcmntRfrncTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="dcmntRfrncTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="DcmntRfrnc_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="dcmntRfrncTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="documentReferenceStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DocumentReference_status">
-                <comment>code</comment>
+        <property name="dcmntRfrncTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="documentReferenceDocStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DocumentReference_docStatus">
-                <comment>code</comment>
+        <property name="dcmntRfrncTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="documentReferenceTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="DocumentReference_type_CC_text">
+                <comment>{ "tree" :"DocumentReference.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="dcmntRfrncCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="dcmntRfrncCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="dcmntRfrncCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="dcmntRfrncCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="dcmntRfrncCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="documentReferenceCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="DocumentReference_category_CC_text">
+                <comment>{ "tree" :"DocumentReference.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="dcmntRfrncSbjctRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="documentReferenceDateInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.date", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="DocumentReference_date_instant">
+                <comment>{ "tree" :"DocumentReference.date", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="documentReferenceAuthorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.author", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor"}</meta>
+            <column length="65535" name="DocumentReference_author_Reference">
+                <comment>{ "tree" :"DocumentReference.author", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="dcmntRfrncThntctrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.authenticator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthenticator"}</meta>
+            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.authenticator", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthenticator"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_ctgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="dcmntRfrncCstdnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.custodian", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCustodian"}</meta>
+            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.custodian", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCustodian"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dcmntRfrncRltsTCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.relatesTo.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRelatesTo"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_rltsT_cd_cde">
+                <comment>{ "tree" :"DocumentReference.relatesTo.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addRelatesTo"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="dcmntRfrncRltsTTrgtRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.relatesTo.target", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addRelatesTo"] , "methodName" : "setTarget"}</meta>
+            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.relatesTo.target", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addRelatesTo"] , "methodName" : "setTarget"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="dcmntRfrncDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="DcmntRfrnc_dscrptn_strng">
+                <comment>{ "tree" :"DocumentReference.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="dcmntRfrncScrtLblCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="dcmntRfrncScrtLblCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="dcmntRfrncScrtLblCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="dcmntRfrncScrtLblCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="dcmntRfrncScrtLblCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="dcmntRfrncScrtLblCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, setText"}</meta>
+            <column length="65535" name="DcmntRfrnc_scrtLbl_CC_txt">
+                <comment>{ "tree" :"DocumentReference.securityLabel", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSecurityLabel, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setData"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_dta">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setData"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setHash"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setHash"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setContentType"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setContentType"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setLanguage"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, code", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setLanguage"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncSbjctRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_sbjct_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setCreation"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, dateTime", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setCreation"}</comment>
             </column>
         </property>
-        <property name="documentReferenceDate" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="DocumentReference_date">
-                <comment>instant</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setTitle"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, string", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setTitle"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setSize"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_sze">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setSize"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="dcmntRfrncCntntTmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setUrl"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_tmnt_ttchmnt_rl">
+                <comment>{ "tree" :"DocumentReference.content.attachment", "datatype" : "Attachment, url", "cardinality" : "Required", "elementtree" : ["addContent"] , "methodName" : "setAttachment, setUrl"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="dcmntRfrncCntntFrmtCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_frmt_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="dcmntRfrncCntntFrmtCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_frmt_C_cde">
+                <comment>{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="dcmntRfrncCntntFrmtCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_frmt_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="dcmntRfrncCntntFrmtCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_frmt_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="dcmntRfrncCntntFrmtCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntnt_frmt_C_sstm">
+                <comment>{ "tree" :"DocumentReference.content.format", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContent"] , "methodName" : "setFormat, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="dcmntRfrncCntxtNcntrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.encounter", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEncounter"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.context.encounter", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEncounter"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="dcmntRfrncCntxtVntCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="dcmntRfrncCntxtVntCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="dcmntRfrncCntxtVntCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="dcmntRfrncCntxtVntCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="dcmntRfrncCntxtVntCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_thr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="dcmntRfrncCntxtVntCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, setText"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CC_txt">
+                <comment>{ "tree" :"DocumentReference.context.event", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addEvent, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dcmntRfrncCntxtPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prd_Prd_strt">
+                <comment>{ "tree" :"DocumentReference.context.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="dcmntRfrncCntxtPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prd_Prd_nd">
+                <comment>{ "tree" :"DocumentReference.context.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="dcmntRfrncCntxtFcltTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, setText"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CC_txt">
+                <comment>{ "tree" :"DocumentReference.context.facilityType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setFacilityType, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setSystem"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setVersion"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setCode"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_cdng_C_cde">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncThntctrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_thntctr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="dcmntRfrncCntxtPrctcSttngCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, setText"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CC_txt">
+                <comment>{ "tree" :"DocumentReference.context.practiceSetting", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setPracticeSetting, setText"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dcmntRfrncCntxtSrcPtntnfRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.sourcePatientInfo", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setSourcePatientInfo"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.context.sourcePatientInfo", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setContext"] , "methodName" : "setSourcePatientInfo"}</comment>
             </column>
         </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCstdnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_cstdn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="documentReferenceRelatesToCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DocumentReference_relatesTo_code">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncRltsTTrgtRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_rltsT_trgt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="documentReferenceDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="DocumentReference_description">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncScrtLblCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_scrtLbl_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntTtchmntTtchmntRlRl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_ttchmnt_ttchmnt_rl_rl">
-                <comment>Attachment_url_url</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntFrmtCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_frmt_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntFrmtCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_frmt_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntFrmtCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_frmt_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntFrmtCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_frmt_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntntFrmtCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="DcmntRfrnc_cntnt_frmt_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtNcntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_ncntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtVntCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_vnt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtFcltTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_fcltTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtPrctcSttngCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_prctcSttng_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtSrcPtntnfRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_srcPtntnf_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="dcmntRfrncCntxtRltdRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="dcmntRfrncCntxtRltdRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"DocumentReference.context.related", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addRelated"}</meta>
+            <column length="65535" name="DcmntRfrnc_cntxt_rltd_Rfrnce">
+                <comment>{ "tree" :"DocumentReference.context.related", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setContext"] , "methodName" : "addRelated"}</comment>
             </column>
         </property>
     </class>

@@ -1,555 +1,807 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Requestgroup" optimistic-lock="none" table="requestgroup">
-        <id name="rqstGrpDntfrCdngCde" type="string">
-            <column length="512" name="RqstGrp_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="rqstGrpDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="RqstGrp_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_se">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="rqstGrpDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="RqstGrp_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rqstGrpDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="RqstGrp_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rqstGrpDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="RqstGrp_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="requestGroupInstantiatesCanonical" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="RequestGroup_instantiatesCanonical">
-                <comment>canonical</comment>
+        <property name="rqstGrpDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="requestGroupInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="RequestGroup_instantiatesUri">
-                <comment>uri</comment>
+        <property name="rqstGrpDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="requestGroupBasedOn" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_basedOn">
-                <comment>Reference</comment>
+        <property name="rqstGrpDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="requestGroupReplaces" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_replaces">
-                <comment>Reference</comment>
+        <property name="rqstGrpDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rqstGrpGrpdntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_grpdntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rqstGrpGrpdntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_grpdntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="rqstGrpGrpdntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_grpdntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="rqstGrpGrpdntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_grpdntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="RqstGrp_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"RequestGroup.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="rqstGrpGrpdntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_grpdntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</meta>
+            <column length="65535" name="RqstGrp_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"RequestGroup.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</comment>
             </column>
         </property>
-        <property name="requestGroupStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RequestGroup_status">
-                <comment>code</comment>
+        <property name="requestGroupInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</meta>
+            <column length="65535" name="RequestGroup_instantiatesUri_uri">
+                <comment>{ "tree" :"RequestGroup.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</comment>
             </column>
         </property>
-        <property name="requestGroupIntent" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RequestGroup_intent">
-                <comment>code</comment>
+        <property name="requestGroupBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="RequestGroup_basedOn_Reference">
+                <comment>{ "tree" :"RequestGroup.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="requestGroupPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RequestGroup_priority">
-                <comment>code</comment>
+        <property name="requestGroupReplacesReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.replaces", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</meta>
+            <column length="65535" name="RequestGroup_replaces_Reference">
+                <comment>{ "tree" :"RequestGroup.replaces", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReplaces"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpGrpdntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_se">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="requestGroupCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RequestGroup_code_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="requestGroupCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RequestGroup_code_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="requestGroupCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RequestGroup_code_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="requestGroupCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RequestGroup_code_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="requestGroupSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_subject">
-                <comment>Reference</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="requestGroupEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_encounter">
-                <comment>Reference</comment>
+        <property name="rqstGrpGrpdntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="requestGroupAuthoredOn" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="RequestGroup_authoredOn">
-                <comment>dateTime</comment>
+        <property name="rqstGrpGrpdntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="requestGroupAuthor" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_author">
-                <comment>Reference</comment>
+        <property name="rqstGrpGrpdntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rqstGrpRsnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_rsnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpGrpdntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="rqstGrpRsnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_rsnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpGrpdntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_vlue">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="rqstGrpRsnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_rsnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpGrpdntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_grpdntfr_dntfr_sstm">
+                <comment>{ "tree" :"RequestGroup.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="rqstGrpRsnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_rsnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="requestGroupStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="RequestGroup_status_code">
+                <comment>{ "tree" :"RequestGroup.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="rqstGrpRsnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_rsnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="requestGroupIntentCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</meta>
+            <column length="65535" name="RequestGroup_intent_code">
+                <comment>{ "tree" :"RequestGroup.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</comment>
             </column>
         </property>
-        <property name="requestGroupReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_reasonReference">
-                <comment>Reference</comment>
+        <property name="requestGroupPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="RequestGroup_priority_code">
+                <comment>{ "tree" :"RequestGroup.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="rqstGrpNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="requestGroupNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RequestGroup_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="requestGroupNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RequestGroup_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="requestGroupCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="RequestGroup_code_CC_coding_C_code">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="requestGroupNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RequestGroup_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="requestGroupNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RequestGroup_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="requestGroupAction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="RequestGroup_action">
-                <comment>BackboneElement</comment>
+        <property name="requestGroupCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="RequestGroup_code_CC_text">
+                <comment>{ "tree" :"RequestGroup.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionPrefix" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="RequestGroup_action_prefix">
-                <comment>string</comment>
+        <property name="requestGroupSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="RequestGroup_subject_Reference">
+                <comment>{ "tree" :"RequestGroup.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="RequestGroup_action_title">
-                <comment>string</comment>
+        <property name="requestGroupEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="RequestGroup_encounter_Reference">
+                <comment>{ "tree" :"RequestGroup.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="RequestGroup_action_description">
-                <comment>string</comment>
+        <property name="requestGroupAuthoredOnDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</meta>
+            <column length="65535" name="RequestGroup_authoredOn_dateTime">
+                <comment>{ "tree" :"RequestGroup.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionTextEquivalent" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="RequestGroup_action_textEquivalent">
-                <comment>string</comment>
+        <property name="requestGroupAuthorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.author", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthor"}</meta>
+            <column length="65535" name="RequestGroup_author_Reference">
+                <comment>{ "tree" :"RequestGroup.author", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthor"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RequestGroup_action_priority">
-                <comment>code</comment>
+        <property name="rqstGrpRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="RqstGrp_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="requestGroupReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="RequestGroup_reasonCode_CC_text">
+                <comment>{ "tree" :"RequestGroup.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionDocumentation" type="string">
-            <meta attribute="resource-type">RelatedArtifact</meta>
-            <column length="65535" name="RequestGroup_action_documentation">
-                <comment>RelatedArtifact</comment>
+        <property name="rqstGrpRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="RqstGrp_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"RequestGroup.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionCondition" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="RequestGroup_action_condition">
-                <comment>BackboneElement</comment>
+        <property name="requestGroupNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="RequestGroup_note_Annotation_time">
+                <comment>{ "tree" :"RequestGroup.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionConditionKind" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RequestGroup_action_condition_kind">
-                <comment>code</comment>
+        <property name="requestGroupNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="RequestGroup_note_Annotation_text">
+                <comment>{ "tree" :"RequestGroup.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCndtnXprssn" type="string">
-            <meta attribute="resource-type">Expression</meta>
-            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn">
-                <comment>Expression</comment>
+        <property name="rqstGrpNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="RqstGrp_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"RequestGroup.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionRelatedAction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="RequestGroup_action_relatedAction">
-                <comment>BackboneElement</comment>
+        <property name="rqstGrpNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="RqstGrp_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"RequestGroup.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnCtnd" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ctnd">
-                <comment>id</comment>
+        <property name="requestGroupActionPrefixString" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.prefix", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setPrefix"}</meta>
+            <column length="65535" name="RequestGroup_action_prefix_string">
+                <comment>{ "tree" :"RequestGroup.action.prefix", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setPrefix"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnRltnshp" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_rltnshp">
-                <comment>code</comment>
+        <property name="requestGroupActionTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="RequestGroup_action_title_string">
+                <comment>{ "tree" :"RequestGroup.action.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstDrtn" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstDrtn">
-                <comment>Duration</comment>
+        <property name="rqstGrpCtnDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dscrptn_strng">
+                <comment>{ "tree" :"RequestGroup.action.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpCtnTxtqvlntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.textEquivalent", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setTextEquivalent"}</meta>
+            <column length="65535" name="RqstGrp_ctn_txtqvlnt_strng">
+                <comment>{ "tree" :"RequestGroup.action.textEquivalent", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setTextEquivalent"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="requestGroupActionPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="RequestGroup_action_priority_code">
+                <comment>{ "tree" :"RequestGroup.action.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction"] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpCtnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCtnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRltdctnFfstRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCtnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setCode"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionTimingDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="RequestGroup_action_timingDatetime">
-                <comment>dateTime</comment>
+        <property name="rqstGrpCtnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionTimingAge" type="string">
-            <meta attribute="resource-type">Age</meta>
-            <column length="65535" name="RequestGroup_action_timingAge">
-                <comment>Age</comment>
+        <property name="rqstGrpCtnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="requestGroupActionCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, setText"}</meta>
+            <column length="65535" name="RequestGroup_action_code_CC_text">
+                <comment>{ "tree" :"RequestGroup.action.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addCode, setText"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setContentType"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setContentType"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setLanguage"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setLanguage"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setData"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_dta">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setData"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setUrl"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_rl">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setUrl"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionTimingDuration" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="RequestGroup_action_timingDuration">
-                <comment>Duration</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setSize"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_sze">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setSize"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setHash"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setHash"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setTitle"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setTitle"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setCreation"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dcmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDocument, setCreation"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setResource"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_rsrce">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setResource"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngRng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setType"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_tpe">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setType"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngTmngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctCttn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setCitation"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_cttn">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setCitation"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngTmngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctLbl" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setLabel"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_lbl">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setLabel"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngTmngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_dsplay">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngTmngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCtnDcmnttnRltdrtfctRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setUrl"}</meta>
+            <column length="65535" name="RqstGrp_ctn_dcmnttn_Rltdrtfct_rl">
+                <comment>{ "tree" :"RequestGroup.action.documentation", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : ["addAction"] , "methodName" : "addDocumentation, setUrl"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTmngTmngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_tmngTmng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCtnCndtnKndCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setKind"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_knd_cde">
+                <comment>{ "tree" :"RequestGroup.action.condition.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setKind"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionParticipant" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_action_participant">
-                <comment>Reference</comment>
+        <property name="rqstGrpCtnCndtnXprssnXprssnLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setLanguage"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn_xprssn_lngge">
+                <comment>{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setLanguage"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="RqstGrp_ctn_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="rqstGrpCtnCndtnXprssnXprssnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, id", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setName"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn_xprssn_nme">
+                <comment>{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, id", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setName"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="RqstGrp_ctn_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="rqstGrpCtnCndtnXprssnXprssnDscrptn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setDescription"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn_xprssn_dscrptn">
+                <comment>{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setDescription"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="RqstGrp_ctn_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="rqstGrpCtnCndtnXprssnXprssnXprssn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setExpression"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn_xprssn_xprssn">
+                <comment>{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setExpression"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="RqstGrp_ctn_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="rqstGrpCtnCndtnXprssnXprssnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setReference"}</meta>
+            <column length="65535" name="RqstGrp_ctn_cndtn_xprssn_xprssn_rfrnce">
+                <comment>{ "tree" :"RequestGroup.action.condition.expression", "datatype" : "Expression, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition"] , "methodName" : "setExpression, setReference"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="RqstGrp_ctn_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="rqstGrpCtnRltdctnCtndD" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.relatedAction.actionId", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setActionId"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ctnd_d">
+                <comment>{ "tree" :"RequestGroup.action.relatedAction.actionId", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setActionId"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnGrpngBhvr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_grpngBhvr">
-                <comment>code</comment>
+        <property name="rqstGrpCtnRltdctnRltnshpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.relatedAction.relationship", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setRelationship"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_rltnshp_cde">
+                <comment>{ "tree" :"RequestGroup.action.relatedAction.relationship", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setRelationship"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnSlctnBhvr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_slctnBhvr">
-                <comment>code</comment>
+        <property name="rqstGrpCtnRltdctnFfstDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.relatedAction.offsetDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetDuration"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstDrtn_Drtn">
+                <comment>{ "tree" :"RequestGroup.action.relatedAction.offsetDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetDuration"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnRqrdBhvr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_rqrdBhvr">
-                <comment>code</comment>
+        <property name="rqstGrpCtnRltdctnFfstRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.relatedAction.offsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetRange, setLow"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Rng_lw">
+                <comment>{ "tree" :"RequestGroup.action.relatedAction.offsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetRange, setLow"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnPrchckBhvr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_prchckBhvr">
-                <comment>code</comment>
+        <property name="rqstGrpCtnRltdctnFfstRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.relatedAction.offsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetRange, setHigh"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rltdctn_ffstRng_Rng_hgh">
+                <comment>{ "tree" :"RequestGroup.action.relatedAction.offsetRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setOffsetRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="rqstGrpCtnCrdnltBhvr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RqstGrp_ctn_crdnltBhvr">
-                <comment>code</comment>
+        <property name="rqstGrpCtnTmngDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingDatetime"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngDttm_dtTme">
+                <comment>{ "tree" :"RequestGroup.action.timingDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingDatetime"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionResource" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="RequestGroup_action_resource">
-                <comment>Reference</comment>
+        <property name="requestGroupActionTimingAgeAge" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingAge"}</meta>
+            <column length="65535" name="RequestGroup_action_timingAge_Age">
+                <comment>{ "tree" :"RequestGroup.action.timingAge", "datatype" : "Age", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingAge"}</comment>
             </column>
         </property>
-        <property name="requestGroupActionAction" type="string">
-            <meta attribute="resource-type">see action</meta>
-            <column length="65535" name="RequestGroup_action_action">
-                <comment>see action</comment>
+        <property name="rqstGrpCtnTmngPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingPeriod, setStart"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Prd_strt">
+                <comment>{ "tree" :"RequestGroup.action.timingPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingPeriod, setEnd"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngPrd_Prd_nd">
+                <comment>{ "tree" :"RequestGroup.action.timingPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingDuration"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngDrtn_Drtn">
+                <comment>{ "tree" :"RequestGroup.action.timingDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingDuration"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingRange, setLow"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Rng_lw">
+                <comment>{ "tree" :"RequestGroup.action.timingRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingRange, setLow"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingRange, setHigh"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngRng_Rng_hgh">
+                <comment>{ "tree" :"RequestGroup.action.timingRange", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingRange, setHigh"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, setText"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, addEvent"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_vnt">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, addEvent"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDurationUnit"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriodUnit"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addDayOfWeek"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addWhen"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_whn">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addWhen"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDuration"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_drtn">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDuration"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setDurationMax"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_prd">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriod"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setPeriodMax"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsDuration"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsPeriod"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setCount"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_cnt">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setCount"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setCountMax"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setFrequency"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setFrequencyMax"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setBoundsRange"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, addTimeOfDay"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTmngTmngTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setOffset"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tmngTmng_Tmng_rpt_ffst">
+                <comment>{ "tree" :"RequestGroup.action.timingTiming", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setTimingTiming, setRepeat, setOffset"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnPrtcpntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.participant", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "addParticipant"}</meta>
+            <column length="65535" name="RqstGrp_ctn_prtcpnt_Rfrnce">
+                <comment>{ "tree" :"RequestGroup.action.participant", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "addParticipant"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RqstGrp_ctn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="RequestGroup_action_type_CC_text">
+                <comment>{ "tree" :"RequestGroup.action.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnGrpngBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.groupingBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setGroupingBehavior"}</meta>
+            <column length="65535" name="RqstGrp_ctn_grpngBhvr_cde">
+                <comment>{ "tree" :"RequestGroup.action.groupingBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setGroupingBehavior"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnSlctnBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.selectionBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setSelectionBehavior"}</meta>
+            <column length="65535" name="RqstGrp_ctn_slctnBhvr_cde">
+                <comment>{ "tree" :"RequestGroup.action.selectionBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setSelectionBehavior"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRqrdBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.requiredBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setRequiredBehavior"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rqrdBhvr_cde">
+                <comment>{ "tree" :"RequestGroup.action.requiredBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setRequiredBehavior"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnPrchckBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.precheckBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setPrecheckBehavior"}</meta>
+            <column length="65535" name="RqstGrp_ctn_prchckBhvr_cde">
+                <comment>{ "tree" :"RequestGroup.action.precheckBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setPrecheckBehavior"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnCrdnltBhvrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.cardinalityBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setCardinalityBehavior"}</meta>
+            <column length="65535" name="RqstGrp_ctn_crdnltBhvr_cde">
+                <comment>{ "tree" :"RequestGroup.action.cardinalityBehavior", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setCardinalityBehavior"}</comment>
+            </column>
+        </property>
+        <property name="rqstGrpCtnRsrcRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.resource", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setResource"}</meta>
+            <column length="65535" name="RqstGrp_ctn_rsrc_Rfrnce">
+                <comment>{ "tree" :"RequestGroup.action.resource", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "setResource"}</comment>
+            </column>
+        </property>
+        <property name="requestGroupActionActionAction" type="string">
+            <meta attribute="resource-type">{ "tree" :"RequestGroup.action.action", "datatype" : "action", "cardinality" : "Many", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "addAction"}</meta>
+            <column length="65535" name="RequestGroup_action_action_action">
+                <comment>{ "tree" :"RequestGroup.action.action", "datatype" : "action", "cardinality" : "Many", "elementtree" : ["addAction", "addCondition", "addRelatedAction"] , "methodName" : "addAction"}</comment>
             </column>
         </property>
     </class>

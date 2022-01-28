@@ -1,1113 +1,555 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Consent" optimistic-lock="none" table="consent">
-        <id name="cnsntDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="cnsntDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_use_code</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_s_cde">
-                <comment>Consent_identifierIdentifier_use_code</comment>
+        <property name="consentIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Consent_identifier_Identifier_use">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Consent_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="cnsntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Consent_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="cnsntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Consent_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="cnsntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Consent_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="cnsntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Consent_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="cnsntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Prd_strt">
-                <comment>Consent_identifierIdentifier_Period_start</comment>
+        <property name="cnsntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Prd_nd">
-                <comment>Consent_identifierIdentifier_Period_end</comment>
+        <property name="cnsntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Consent_identifierIdentifier_Reference_reference</comment>
+        <property name="cnsntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Consent_identifierIdentifier_Reference_type</comment>
+        <property name="cnsntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Consent_identifierIdentifier_Reference_identifier</comment>
+        <property name="cnsntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Consent_identifierIdentifier_Reference_display</comment>
+        <property name="cnsntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Cnsnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Consent.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_value_string</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_vl_strng">
-                <comment>Consent_identifierIdentifier_value_string</comment>
+        <property name="consentStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Consent_status_code">
+                <comment>{ "tree" :"Consent.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="cnsntDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Consent_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Cnsnt_dntfr_dntfr_sstm_ri">
-                <comment>Consent_identifierIdentifier_system_uri</comment>
+        <property name="consentScopeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setSystem"}</meta>
+            <column length="65535" name="Consent_scope_CC_coding_C_system">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="consentStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Consent_status">
-                <comment>code</comment>
+        <property name="consentScopeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setVersion"}</meta>
+            <column length="65535" name="Consent_scope_CC_coding_C_version">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="consentScopeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setCode"}</meta>
+            <column length="65535" name="Consent_scope_CC_coding_C_code">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="consentScopeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Consent_scope_CC_coding_C_display">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cnsntScpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_scp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="consentScopeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, setText"}</meta>
+            <column length="65535" name="Consent_scope_CC_text">
+                <comment>{ "tree" :"Consent.scope", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setScope, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="cnsntCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntScpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_scp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="cnsntCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="consentCategoryCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Consent_category_CC_coding_C_code">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="cnsntCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="cnsntCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="consentCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.category", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, setText"}</meta>
+            <column length="65535" name="Consent_category_CC_text">
+                <comment>{ "tree" :"Consent.category", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="consentPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.patient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="Consent_pnt_Reference">
+                <comment>{ "tree" :"Consent.patient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="cnsntCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_ctgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="consentDateTimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.dateTime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDateTime"}</meta>
+            <column length="65535" name="Consent_dateTime_dateTime">
+                <comment>{ "tree" :"Consent.dateTime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDateTime"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="consentPerformerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.performer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformer"}</meta>
+            <column length="65535" name="Consent_performer_Reference">
+                <comment>{ "tree" :"Consent.performer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPerformer"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="consentOrganizationReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.organization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrganization"}</meta>
+            <column length="65535" name="Consent_organization_Reference">
+                <comment>{ "tree" :"Consent.organization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addOrganization"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="cnsntSrcttchmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setData"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setData"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="cnsntSrcttchmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setHash"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setHash"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cnsntSrcttchmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setContentType"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setContentType"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cnsntSrcttchmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setLanguage"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setLanguage"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cnsntSrcttchmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setCreation"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setCreation"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="cnsntSrcttchmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setTitle"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setTitle"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="cnsntSrcttchmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setSize"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setSize"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cnsntSrcttchmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setUrl"}</meta>
+            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Consent.sourceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceAttachment, setUrl"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="consentSourceReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.sourceReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceReference(consent | documentreference | contract | questionnaireresponse)"}</meta>
+            <column length="65535" name="Consent_sourceReference_Reference">
+                <comment>{ "tree" :"Consent.sourceReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceReference(consent | documentreference | contract | questionnaireresponse)"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="consentPolicyAuthorityUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policy.authority", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addPolicy"] , "methodName" : "setAuthority"}</meta>
+            <column length="65535" name="Consent_policy_authority_uri">
+                <comment>{ "tree" :"Consent.policy.authority", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addPolicy"] , "methodName" : "setAuthority"}</comment>
             </column>
         </property>
-        <property name="cnsntPntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_pnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="consentPolicyUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policy.uri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addPolicy"] , "methodName" : "setUri"}</meta>
+            <column length="65535" name="Consent_policy_uri_uri">
+                <comment>{ "tree" :"Consent.policy.uri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addPolicy"] , "methodName" : "setUri"}</comment>
             </column>
         </property>
-        <property name="consentPntReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Consent_pnt_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="cnsntPlcRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_plcRl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="consentDateTime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Consent_dateTime">
-                <comment>dateTime</comment>
+        <property name="cnsntPlcRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_plcRl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="cnsntPlcRlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setCode"}</meta>
+            <column length="65535" name="Cnsnt_plcRl_CC_cdng_C_cde">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="cnsntPlcRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_plcRl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="cnsntPlcRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_plcRl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="consentPolicyRuleCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, setText"}</meta>
+            <column length="65535" name="Consent_policyRule_CC_text">
+                <comment>{ "tree" :"Consent.policyRule", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPolicyRule, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cnsntVrfctnVrfdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.verification.verified", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addVerification"] , "methodName" : "setVerified"}</meta>
+            <column length="65535" name="Cnsnt_vrfctn_vrfd_bln">
+                <comment>{ "tree" :"Consent.verification.verified", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addVerification"] , "methodName" : "setVerified"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cnsntVrfctnVrfdWthRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.verification.verifiedWith", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addVerification"] , "methodName" : "setVerifiedWith"}</meta>
+            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnce">
+                <comment>{ "tree" :"Consent.verification.verifiedWith", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addVerification"] , "methodName" : "setVerifiedWith"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cnsntVrfctnVrfctnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.verification.verificationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addVerification"] , "methodName" : "setVerificationDate"}</meta>
+            <column length="65535" name="Cnsnt_vrfctn_vrfctnDt_dtTme">
+                <comment>{ "tree" :"Consent.verification.verificationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addVerification"] , "methodName" : "setVerificationDate"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="consentProvisionTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Consent_provision_type_code">
+                <comment>{ "tree" :"Consent.provision.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="cnsntPrvsnPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prd_Prd_strt">
+                <comment>{ "tree" :"Consent.provision.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cnsntPrvsnPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prd_Prd_nd">
+                <comment>{ "tree" :"Consent.provision.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cnsntPrvsnCtrRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="cnsntPrvsnCtrRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="cnsntPrvsnCtrRlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setCode"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_cdng_C_cde">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntPrfrmrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_prfrmr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="cnsntPrvsnCtrRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="cnsntPrvsnCtrRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="cnsntPrvsnCtrRlCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, setText"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CC_txt">
+                <comment>{ "tree" :"Consent.provision.actor.role", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setRole, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="cnsntPrvsnCtrRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.actor.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setReference"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnce">
+                <comment>{ "tree" :"Consent.provision.actor.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setReference"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="cnsntPrvsnCtnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cnsntPrvsnCtnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cnsntPrvsnCtnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setCode"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cnsntPrvsnCtnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="cnsntPrvsnCtnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_ctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="consentProvisionActionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, setText"}</meta>
+            <column length="65535" name="Consent_provision_action_CC_text">
+                <comment>{ "tree" :"Consent.provision.action", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addAction, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cnsntPrvsnScrtLblCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_scrtLbl_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cnsntPrvsnScrtLblCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setCode"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_scrtLbl_C_cde">
+                <comment>{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="cnsntPrvsnScrtLblCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_scrtLbl_C_vrsn">
+                <comment>{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="cnsntPrvsnScrtLblCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_scrtLbl_C_dsplay">
+                <comment>{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntRgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_rgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="cnsntPrvsnScrtLblCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_scrtLbl_C_sstm">
+                <comment>{ "tree" :"Consent.provision.securityLabel", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addSecurityLabel, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
+        <property name="cnsntPrvsnPrpsCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prps_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
+        <property name="consentProvisionPurposeCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setCode"}</meta>
+            <column length="65535" name="Consent_provision_purpose_C_code">
+                <comment>{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
+        <property name="cnsntPrvsnPrpsCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prps_C_vrsn">
+                <comment>{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
+        <property name="cnsntPrvsnPrpsCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prps_C_dsplay">
+                <comment>{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
+        <property name="consentProvisionPurposeCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setSystem"}</meta>
+            <column length="65535" name="Consent_provision_purpose_C_system">
+                <comment>{ "tree" :"Consent.provision.purpose", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addPurpose, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
+        <property name="cnsntPrvsnClssCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.class", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_clss_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.class", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
+        <property name="consentProvisionClassCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.class", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setCode"}</meta>
+            <column length="65535" name="Consent_provision_class_C_code">
+                <comment>{ "tree" :"Consent.provision.class", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcttchmntTtchmntRlRl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="Cnsnt_srcttchmnt_ttchmnt_rl_rl">
-                <comment>Attachment_url_url</comment>
+        <property name="consentProvisionClassCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.class", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setVersion"}</meta>
+            <column length="65535" name="Consent_provision_class_C_version">
+                <comment>{ "tree" :"Consent.provision.class", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="consentProvisionClassCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.class", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setDisplay"}</meta>
+            <column length="65535" name="Consent_provision_class_C_display">
+                <comment>{ "tree" :"Consent.provision.class", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="consentProvisionClassCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.class", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setSystem"}</meta>
+            <column length="65535" name="Consent_provision_class_C_system">
+                <comment>{ "tree" :"Consent.provision.class", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addClass, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="cnsntPrvsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="cnsntPrvsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="cnsntPrvsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="cnsntPrvsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="cnsntPrvsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="consentProvisionCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, setText"}</meta>
+            <column length="65535" name="Consent_provision_code_CC_text">
+                <comment>{ "tree" :"Consent.provision.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor"] , "methodName" : "addCode, setText"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="cnsntPrvsnDtPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.dataPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setDataPeriod, setStart"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_dtPrd_Prd_strt">
+                <comment>{ "tree" :"Consent.provision.dataPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setDataPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="cnsntPrvsnDtPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.dataPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setDataPeriod, setEnd"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_dtPrd_Prd_nd">
+                <comment>{ "tree" :"Consent.provision.dataPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setProvision", "addActor"] , "methodName" : "setDataPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="cnsntPrvsnDtMnngCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.data.meaning", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "setMeaning"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_dt_mnng_cde">
+                <comment>{ "tree" :"Consent.provision.data.meaning", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "setMeaning"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="cnsntPrvsnDtRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.data.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "setReference"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnce">
+                <comment>{ "tree" :"Consent.provision.data.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "setReference"}</comment>
             </column>
         </property>
-        <property name="cnsntSrcRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntSrcRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_srcRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="consentPolicyAuthority" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Consent_policy_authority">
-                <comment>uri</comment>
-            </column>
-        </property>
-        <property name="consentPolicyUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Consent_policy_uri">
-                <comment>uri</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cnsntPlcRlCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_plcRl_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="consentVerificationVerified" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Consent_verification_verified">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfdWthRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfdWth_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cnsntVrfctnVrfctnDte" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Cnsnt_vrfctn_vrfctnDte">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="consentProvisionType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Consent_provision_type">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Cnsnt_prvsn_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Cnsnt_prvsn_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRlCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rl_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtrRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctr_rfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCtnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_ctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnScrtLblCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="Cnsnt_prvsn_scrtLbl_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnScrtLblCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_scrtLbl_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnScrtLblCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_scrtLbl_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnScrtLblCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_scrtLbl_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnScrtLblCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="Cnsnt_prvsn_scrtLbl_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrpsCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="Cnsnt_prvsn_prps_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrpsCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_prps_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrpsCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_prps_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrpsCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_prps_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnPrpsCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="Cnsnt_prvsn_prps_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnClssCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="Cnsnt_prvsn_clss_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnClssCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_clss_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnClssCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_clss_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnClssCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_clss_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnClssCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="Cnsnt_prvsn_clss_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Cnsnt_prvsn_dtPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Cnsnt_prvsn_dtPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="consentProvisionDataMeaning" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Consent_provision_data_meaning">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="cnsntPrvsnDtRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Cnsnt_prvsn_dt_rfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="consentProvisionProvision" type="string">
-            <meta attribute="resource-type">see provision</meta>
-            <column length="65535" name="Consent_provision_provision">
-                <comment>see provision</comment>
+        <property name="cnsntPrvsnPrvsnPrvsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Consent.provision.provision", "datatype" : "provision", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "addProvision"}</meta>
+            <column length="65535" name="Cnsnt_prvsn_prvsn_prvsn">
+                <comment>{ "tree" :"Consent.provision.provision", "datatype" : "provision", "cardinality" : "Many", "elementtree" : ["setProvision", "addActor", "addData"] , "methodName" : "addProvision"}</comment>
             </column>
         </property>
     </class>

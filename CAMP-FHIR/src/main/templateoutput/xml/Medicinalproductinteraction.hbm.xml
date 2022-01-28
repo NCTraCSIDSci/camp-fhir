@@ -1,177 +1,207 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproductinteraction" optimistic-lock="none" table="medicinalproductinteraction">
-        <id name="mpinteractionSubject" type="string">
-            <column length="512" name="MPInteraction_subject"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mpinteractionDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MPInteraction_description">
-                <comment>string</comment>
+        <property name="mpinteractionSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</meta>
+            <column length="512" name="MPInteraction_subject_Reference">
+                <comment>{ "tree" :"MedicinalProductInteraction.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</comment>
             </column>
         </property>
-        <property name="mpinteractionInteractant" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPInteraction_interactant">
-                <comment>BackboneElement</comment>
+        <property name="mpinteractionDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="MPInteraction_description_string">
+                <comment>{ "tree" :"MedicinalProductInteraction.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmRfrnce">
-                <comment>Reference</comment>
+        <property name="mpntrctnNtrctntTmRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemReference(medicinalproduct | medication | substance | observationdefinition)"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmRfrnc_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemReference(medicinalproduct | medication | substance | observationdefinition)"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNtrctntTmcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPntrctn_ntrctnt_tmcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpntrctnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPntrctn_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpntrctnNtrctntTmCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, setText"}</meta>
+            <column length="65535" name="MPntrctn_ntrctnt_tmCdblcncpt_CC_txt">
+                <comment>{ "tree" :"MedicinalProductInteraction.interactant.itemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInteractant"] , "methodName" : "setItemCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="mpinteractionTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPInteraction_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpntrctnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPntrctn_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpinteractionTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPInteraction_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="mpntrctnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPntrctn_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpinteractionTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPInteraction_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="mpntrctnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MPntrctn_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpinteractionTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPInteraction_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpntrctnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPntrctn_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpntrctnFfctCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPntrctn_ffct_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpntrctnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPntrctn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpinteractionEffectCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPInteraction_effect_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="mpinteractionTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="MPInteraction_type_CC_text">
+                <comment>{ "tree" :"MedicinalProductInteraction.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpntrctnFfctCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPntrctn_ffct_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpntrctnFfctCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPntrctn_ffct_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpntrctnFfctCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPntrctn_ffct_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpntrctnFfctCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPntrctn_ffct_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpinteractionEffectCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPInteraction_effect_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="mpntrctnFfctCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setCode"}</meta>
+            <column length="65535" name="MPntrctn_ffct_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNcdncCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPntrctn_ncdnc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpntrctnFfctCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPntrctn_ffct_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNcdncCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPntrctn_ncdnc_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpntrctnFfctCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPntrctn_ffct_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNcdncCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPntrctn_ncdnc_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpinteractionEffectCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, setText"}</meta>
+            <column length="65535" name="MPInteraction_effect_CC_text">
+                <comment>{ "tree" :"MedicinalProductInteraction.effect", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffect, setText"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNcdncCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPntrctn_ncdnc_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpntrctnNcdncCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPntrctn_ncdnc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpntrctnNcdncCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPntrctn_ncdnc_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpntrctnNcdncCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPntrctn_ncdnc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpntrctnMngmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPntrctn_mngmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpntrctnNcdncCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setCode"}</meta>
+            <column length="65535" name="MPntrctn_ncdnc_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpntrctnMngmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPntrctn_mngmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpntrctnNcdncCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPntrctn_ncdnc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpntrctnMngmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPntrctn_mngmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpntrctnNcdncCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPntrctn_ncdnc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpntrctnMngmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPntrctn_mngmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpinteractionIncidenceCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, setText"}</meta>
+            <column length="65535" name="MPInteraction_incidence_CC_text">
+                <comment>{ "tree" :"MedicinalProductInteraction.incidence", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIncidence, setText"}</comment>
             </column>
         </property>
-        <property name="mpntrctnMngmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPntrctn_mngmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpntrctnMngmntCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPntrctn_mngmnt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPntrctn_mngmnt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setCode"}</meta>
+            <column length="65535" name="MPntrctn_mngmnt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPntrctn_mngmnt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpntrctnMngmntCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPntrctn_mngmnt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpinteractionManagementCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, setText"}</meta>
+            <column length="65535" name="MPInteraction_management_CC_text">
+                <comment>{ "tree" :"MedicinalProductInteraction.management", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagement, setText"}</comment>
             </column>
         </property>
     </class>

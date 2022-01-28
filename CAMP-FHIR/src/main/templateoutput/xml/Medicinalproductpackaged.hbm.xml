@@ -1,381 +1,573 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproductpackaged" optimistic-lock="none" table="medicinalproductpackaged">
-        <id name="mppackagedIdentifierCodingCode" type="string">
-            <column length="512" name="MPPackaged_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mppckgdDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="MPPckgd_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mppckgdDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="MPPckgd_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="MPPckgd_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="MPPckgd_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppackagedSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPackaged_subject">
-                <comment>Reference</comment>
+        <property name="mppckgdDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppackagedDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MPPackaged_description">
-                <comment>string</comment>
+        <property name="mppckgdDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mppckgdLglSttsfSpplCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_lglSttsfSppl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mppckgdLglSttsfSpplCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_lglSttsfSppl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mppckgdLglSttsfSpplCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_lglSttsfSppl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mppckgdLglSttsfSpplCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_lglSttsfSppl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mppckgdLglSttsfSpplCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_lglSttsfSppl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mppackagedMarketingStatus" type="string">
-            <meta attribute="resource-type">MarketingStatus</meta>
-            <column length="65535" name="MPPackaged_marketingStatus">
-                <comment>MarketingStatus</comment>
+        <property name="mppckgdDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="MPPckgd_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppackagedMarketingAuthorization" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPackaged_marketingAuthorization">
-                <comment>Reference</comment>
+        <property name="mppackagedSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</meta>
+            <column length="65535" name="MPPackaged_subject_Reference">
+                <comment>{ "tree" :"MedicinalProductPackaged.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</comment>
             </column>
         </property>
-        <property name="mppackagedManufacturer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPackaged_manufacturer">
-                <comment>Reference</comment>
+        <property name="mppackagedDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="MPPackaged_description_string">
+                <comment>{ "tree" :"MedicinalProductPackaged.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="mppackagedBatchIdentifier" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPackaged_batchIdentifier">
-                <comment>BackboneElement</comment>
+        <property name="mppckgdLglSttsfSpplCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrTrPckgngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdLglSttsfSpplCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrTrPckgngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdLglSttsfSpplCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrTrPckgngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdLglSttsfSpplCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrTrPckgngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdLglSttsfSpplCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrTrPckgngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdLglSttsfSpplCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, setText"}</meta>
+            <column length="65535" name="MPPckgd_lglSttsfSppl_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.legalStatusOfSupply", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLegalStatusOfSupply, setText"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrMmdtPckgngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdMrktngSttsMrktngStts" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.marketingStatus", "datatype" : "MarketingStatus", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMarketingStatus"}</meta>
+            <column length="65535" name="MPPckgd_mrktngStts_MrktngStts">
+                <comment>{ "tree" :"MedicinalProductPackaged.marketingStatus", "datatype" : "MarketingStatus", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addMarketingStatus"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrMmdtPckgngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdMrktngthrztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.marketingAuthorization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMarketingAuthorization"}</meta>
+            <column length="65535" name="MPPckgd_mrktngthrztn_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductPackaged.marketingAuthorization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMarketingAuthorization"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrMmdtPckgngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppackagedManufacturerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManufacturer"}</meta>
+            <column length="65535" name="MPPackaged_manufacturer_Reference">
+                <comment>{ "tree" :"MedicinalProductPackaged.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManufacturer"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrMmdtPckgngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, code", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setUse"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, code", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setUse"}</comment>
             </column>
         </property>
-        <property name="mppckgdBtchdntfrMmdtPckgngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppackagedPackageItem" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPackaged_packageItem">
-                <comment>BackboneElement</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, setText"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setPeriod, setStart"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Reference", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setAssigner"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, Reference", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setValue"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, string", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setValue"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdBtchdntfrTrPckgngDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, uri", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_trPckgng_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.outerPackaging", "datatype" : "Identifier, uri", "cardinality" : "Required", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setOuterPackaging, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setUse"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setUse"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmQnttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_qntt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmQnttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_qntt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmQnttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_qntt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmQnttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_qntt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmQnttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_qntt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMtrlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mtrl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, setText"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMtrlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mtrl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setPeriod, setStart"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMtrlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mtrl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMtrlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mtrl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setAssigner"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMtrlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mtrl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setValue"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setValue"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmLtrntMtrlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdBtchdntfrMmdtPckgngDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_btchdntfr_mmdtPckgng_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.batchIdentifier.immediatePackaging", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addBatchIdentifier"] , "methodName" : "setImmediatePackaging, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmLtrntMtrlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdPckgtmDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmLtrntMtrlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmLtrntMtrlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmLtrntMtrlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppackagedPackageItemDevice" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPackaged_packageItem_device">
-                <comment>Reference</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMnfctrdtm" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mnfctrdtm">
-                <comment>Reference</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mppackagedPackageItemPackageItem" type="string">
-            <meta attribute="resource-type">see packageItem</meta>
-            <column length="65535" name="MPPackaged_packageItem_packageItem">
-                <comment>see packageItem</comment>
+        <property name="mppckgdPckgtmDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmPhsclchrctrs" type="string">
-            <meta attribute="resource-type">ProdCharacteristic</meta>
-            <column length="65535" name="MPPckgd_pckgtm_phsclchrctrs">
-                <comment>ProdCharacteristic</comment>
+        <property name="mppckgdPckgtmDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmThrchrctrsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mppckgdPckgtmDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmThrchrctrsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mppckgdPckgtmDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmThrchrctrsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mppckgdPckgtmDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmThrchrctrsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppckgdPckgtmDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmThrchrctrsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mppckgdPckgtmTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmShlfLfStrge" type="string">
-            <meta attribute="resource-type">ProductShelfLife</meta>
-            <column length="65535" name="MPPckgd_pckgtm_shlfLfStrge">
-                <comment>ProductShelfLife</comment>
+        <property name="mppckgdPckgtmTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppckgdPckgtmMnfctrr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPckgd_pckgtm_mnfctrr">
-                <comment>Reference</comment>
+        <property name="mppckgdPckgtmTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setComparator"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_qntt_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_qntt_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setValue"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_qntt_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setUnit"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_qntt_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_qntt_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.quantity", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["setPackageItem"] , "methodName" : "setQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMtrlCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, setText"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mtrl_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.material", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addMaterial, setText"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmLtrntMtrlCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, setText"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_ltrntMtrl_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.alternateMaterial", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addAlternateMaterial, setText"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmDvcRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.device", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addDevice"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_dvc_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.device", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addDevice"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMnfctrdtmRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.manufacturedItem", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addManufacturedItem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mnfctrdtm_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.manufacturedItem", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addManufacturedItem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmPckgtmPckgtm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.packageItem", "datatype" : "packageItem", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addPackageItem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_pckgtm_pckgtm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.packageItem", "datatype" : "packageItem", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addPackageItem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmPhsclchrctrsPrdChrctrstc" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.physicalCharacteristics", "datatype" : "ProdCharacteristic", "cardinality" : "ZeroOne", "elementtree" : ["setPackageItem"] , "methodName" : "setPhysicalCharacteristics"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_phsclchrctrs_PrdChrctrstc">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.physicalCharacteristics", "datatype" : "ProdCharacteristic", "cardinality" : "ZeroOne", "elementtree" : ["setPackageItem"] , "methodName" : "setPhysicalCharacteristics"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmThrchrctrsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, setText"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_thrchrctrs_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.otherCharacteristics", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addOtherCharacteristics, setText"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmShlfLfStrgPrdctShlfLfe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.shelfLifeStorage", "datatype" : "ProductShelfLife", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addShelfLifeStorage"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_shlfLfStrg_PrdctShlfLfe">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.shelfLifeStorage", "datatype" : "ProductShelfLife", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addShelfLifeStorage"}</comment>
+            </column>
+        </property>
+        <property name="mppckgdPckgtmMnfctrrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPackaged.packageItem.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addManufacturer"}</meta>
+            <column length="65535" name="MPPckgd_pckgtm_mnfctrr_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductPackaged.packageItem.manufacturer", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setPackageItem"] , "methodName" : "addManufacturer"}</comment>
             </column>
         </property>
     </class>

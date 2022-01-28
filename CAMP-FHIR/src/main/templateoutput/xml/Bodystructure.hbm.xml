@@ -1,345 +1,255 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Bodystructure" optimistic-lock="none" table="bodystructure">
-        <id name="bdStrctrDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="bdStrctrDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_use_code</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_s_cde">
-                <comment>BodyStructure_identifierIdentifier_use_code</comment>
+        <property name="bdStrctrDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_se">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="bdStrctrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="bdStrctrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="bdStrctrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>BodyStructure_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="bdStrctrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_CdblCncpt_txt">
-                <comment>BodyStructure_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="bdStrctrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Period_start</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Prd_strt">
-                <comment>BodyStructure_identifierIdentifier_Period_start</comment>
+        <property name="bdStrctrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Period_end</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Prd_nd">
-                <comment>BodyStructure_identifierIdentifier_Period_end</comment>
+        <property name="bdStrctrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>BodyStructure_identifierIdentifier_Reference_reference</comment>
+        <property name="bdStrctrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Rfrnc_tpe">
-                <comment>BodyStructure_identifierIdentifier_Reference_type</comment>
+        <property name="bdStrctrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>BodyStructure_identifierIdentifier_Reference_identifier</comment>
+        <property name="bdStrctrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>BodyStructure_identifierIdentifier_Reference_display</comment>
+        <property name="bdStrctrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="BdStrctr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"BodyStructure.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_value_string</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_vl_strng">
-                <comment>BodyStructure_identifierIdentifier_value_string</comment>
+        <property name="bodyStructureActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="BodyStructure_active_boolean">
+                <comment>{ "tree" :"BodyStructure.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="bdStrctrDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">BodyStructure_identifierIdentifier_system_uri</meta>
-            <column length="512" name="BdStrctr_dntfr_dntfr_sstm_ri">
-                <comment>BodyStructure_identifierIdentifier_system_uri</comment>
+        <property name="bdStrctrMrphlgCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setSystem"}</meta>
+            <column length="65535" name="BdStrctr_mrphlg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="bodyStructureActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="BodyStructure_active">
-                <comment>boolean</comment>
+        <property name="bdStrctrMrphlgCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setVersion"}</meta>
+            <column length="65535" name="BdStrctr_mrphlg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="bdStrctrMrphlgCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setCode"}</meta>
+            <column length="65535" name="BdStrctr_mrphlg_CC_cdng_C_cde">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="bdStrctrMrphlgCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setDisplay"}</meta>
+            <column length="65535" name="BdStrctr_mrphlg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="bdStrctrMrphlgCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="BdStrctr_mrphlg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="bodyStructureMorphologyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, setText"}</meta>
+            <column length="65535" name="BodyStructure_morphology_CC_text">
+                <comment>{ "tree" :"BodyStructure.morphology", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMorphology, setText"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="bdStrctrLctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setSystem"}</meta>
+            <column length="65535" name="BdStrctr_lctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMrphlgCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="BdStrctr_mrphlg_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="bdStrctrLctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setVersion"}</meta>
+            <column length="65535" name="BdStrctr_lctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="bdStrctrLctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setCode"}</meta>
+            <column length="65535" name="BdStrctr_lctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="bdStrctrLctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setDisplay"}</meta>
+            <column length="65535" name="BdStrctr_lctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="bdStrctrLctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="BdStrctr_lctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="bodyStructureLocationCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, setText"}</meta>
+            <column length="65535" name="BodyStructure_location_CC_text">
+                <comment>{ "tree" :"BodyStructure.location", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation, setText"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="bdStrctrLctnQlfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="BdStrctr_lctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="bdStrctrLctnQlfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="bdStrctrLctnQlfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setCode"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="bdStrctrLctnQlfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="bdStrctrLctnQlfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="bdStrctrLctnQlfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, setText"}</meta>
+            <column length="65535" name="BdStrctr_lctnQlfr_CC_txt">
+                <comment>{ "tree" :"BodyStructure.locationQualifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocationQualifier, setText"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="bodyStructureDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="BodyStructure_description_string">
+                <comment>{ "tree" :"BodyStructure.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="bdStrctrLctnQlfrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="BdStrctr_lctnQlfr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="bdStrctrMgTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setData"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_dta">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setData"}</comment>
             </column>
         </property>
-        <property name="bodyStructureDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="BodyStructure_description">
-                <comment>string</comment>
+        <property name="bdStrctrMgTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setHash"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_hsh">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setHash"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
+        <property name="bdStrctrMgTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setContentType"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setContentType"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
+        <property name="bdStrctrMgTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setLanguage"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_lngge">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setLanguage"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
+        <property name="bdStrctrMgTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setCreation"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_crtn">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setCreation"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
+        <property name="bdStrctrMgTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setTitle"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_ttle">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setTitle"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
+        <property name="bdStrctrMgTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setSize"}</meta>
+            <column length="65535" name="BdStrctr_mg_ttchmnt_sze">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setSize"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
+        <property name="bodyStructureImageAttachmentUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.image", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setUrl"}</meta>
+            <column length="65535" name="BodyStructure_image_Attachment_url">
+                <comment>{ "tree" :"BodyStructure.image", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImage, setUrl"}</comment>
             </column>
         </property>
-        <property name="bdStrctrMgTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
-            </column>
-        </property>
-        <property name="bdStrctrMgTtchmntRlRl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="BdStrctr_mg_ttchmnt_rl_rl">
-                <comment>Attachment_url_url</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="bdStrctrPntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="BdStrctr_pnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="bodyStructurePntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"BodyStructure.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="BodyStructure_pnt_Reference">
+                <comment>{ "tree" :"BodyStructure.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
     </class>

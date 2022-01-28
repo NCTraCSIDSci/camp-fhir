@@ -1,321 +1,231 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Endpoint" optimistic-lock="none" table="endpoint">
-        <id name="endpntDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Endpnt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="endpntDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_use_code</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_s_cde">
-                <comment>Endpoint_identifierIdentifier_use_code</comment>
+        <property name="endpointIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Endpoint_identifier_Identifier_use">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Endpoint_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="endpntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Endpoint_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="endpntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Endpoint_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="endpntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Endpoint_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="endpntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Endpoint_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="endpntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Prd_strt">
-                <comment>Endpoint_identifierIdentifier_Period_start</comment>
+        <property name="endpntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Prd_nd">
-                <comment>Endpoint_identifierIdentifier_Period_end</comment>
+        <property name="endpntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Endpoint_identifierIdentifier_Reference_reference</comment>
+        <property name="endpntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Endpoint_identifierIdentifier_Reference_type</comment>
+        <property name="endpntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Endpoint_identifierIdentifier_Reference_identifier</comment>
+        <property name="endpntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Endpoint_identifierIdentifier_Reference_display</comment>
+        <property name="endpntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Endpnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Endpoint.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_value_string</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_vl_strng">
-                <comment>Endpoint_identifierIdentifier_value_string</comment>
+        <property name="endpointStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Endpoint_status_code">
+                <comment>{ "tree" :"Endpoint.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="endpntDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Endpoint_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Endpnt_dntfr_dntfr_sstm_ri">
-                <comment>Endpoint_identifierIdentifier_system_uri</comment>
+        <property name="endpntCnnctnTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setUserSelected"}</meta>
+            <column length="65535" name="Endpnt_cnnctnTp_C_srSlctd">
+                <comment>{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="endpointStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Endpoint_status">
-                <comment>code</comment>
+        <property name="endpointConnectionTypeCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setCode"}</meta>
+            <column length="65535" name="Endpoint_connectionType_C_code">
+                <comment>{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setCode"}</comment>
             </column>
         </property>
-        <property name="endpntCnnctnTpCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="Endpnt_cnnctnTp_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="endpointConnectionTypeCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setVersion"}</meta>
+            <column length="65535" name="Endpoint_connectionType_C_version">
+                <comment>{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setVersion"}</comment>
             </column>
         </property>
-        <property name="endpntCnnctnTpCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="Endpnt_cnnctnTp_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="endpointConnectionTypeCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setDisplay"}</meta>
+            <column length="65535" name="Endpoint_connectionType_C_display">
+                <comment>{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="endpntCnnctnTpCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="Endpnt_cnnctnTp_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="endpointConnectionTypeCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setSystem"}</meta>
+            <column length="65535" name="Endpoint_connectionType_C_system">
+                <comment>{ "tree" :"Endpoint.connectionType", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setConnectionType, setSystem"}</comment>
             </column>
         </property>
-        <property name="endpntCnnctnTpCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="Endpnt_cnnctnTp_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="endpointNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Endpoint_name_string">
+                <comment>{ "tree" :"Endpoint.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="endpntCnnctnTpCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="Endpnt_cnnctnTp_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="endpntMngngrgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</meta>
+            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnce">
+                <comment>{ "tree" :"Endpoint.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</comment>
             </column>
         </property>
-        <property name="endpointName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Endpoint_name">
-                <comment>string</comment>
+        <property name="endpntCntctCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setSystem"}</meta>
+            <column length="65535" name="Endpnt_cntct_CntctPnt_sstm">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setSystem"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="endpointContactContactPointUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setUse"}</meta>
+            <column length="65535" name="Endpoint_contact_ContactPoint_use">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setUse"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="endpntCntctCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setStart"}</meta>
+            <column length="65535" name="Endpnt_cntct_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="endpntCntctCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Endpnt_cntct_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="endpointContactContactPointRank" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setRank"}</meta>
+            <column length="65535" name="Endpoint_contact_ContactPoint_rank">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setRank"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="endpntCntctCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setValue"}</meta>
+            <column length="65535" name="Endpnt_cntct_CntctPnt_vlue">
+                <comment>{ "tree" :"Endpoint.contact", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setValue"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="endpointPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Endpoint_period_Period_start">
+                <comment>{ "tree" :"Endpoint.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="endpointPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Endpoint_period_Period_end">
+                <comment>{ "tree" :"Endpoint.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="endpntPldTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Endpnt_pldTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="endpntPldTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Endpnt_pldTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="endpntPldTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setCode"}</meta>
+            <column length="65535" name="Endpnt_pldTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="endpntPldTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Endpnt_pldTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="endpntPldTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Endpnt_pldTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="endpointPayloadTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, setText"}</meta>
+            <column length="65535" name="Endpoint_payloadType_CC_text">
+                <comment>{ "tree" :"Endpoint.payloadType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPayloadType, setText"}</comment>
             </column>
         </property>
-        <property name="endpntMngngrgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Endpnt_mngngrgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="endpointPayloadMimeTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.payloadMimeType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPayloadMimeType"}</meta>
+            <column length="65535" name="Endpoint_payloadMimeType_code">
+                <comment>{ "tree" :"Endpoint.payloadMimeType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPayloadMimeType"}</comment>
             </column>
         </property>
-        <property name="endpntCntctCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="endpointAddressUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.address", "datatype" : "url", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAddress"}</meta>
+            <column length="65535" name="Endpoint_address_url">
+                <comment>{ "tree" :"Endpoint.address", "datatype" : "url", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAddress"}</comment>
             </column>
         </property>
-        <property name="endpntCntctCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
-            </column>
-        </property>
-        <property name="endpntCntctCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
-            </column>
-        </property>
-        <property name="endpntCntctCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
-            </column>
-        </property>
-        <property name="endpntCntctCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
-            </column>
-        </property>
-        <property name="endpntCntctCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Endpnt_cntct_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
-            </column>
-        </property>
-        <property name="endpntPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Endpnt_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="endpntPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Endpnt_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="endpntPldTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Endpnt_pldTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="endpointPayloadMimeType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Endpoint_payloadMimeType">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="endpointAddress" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="Endpoint_address">
-                <comment>url</comment>
-            </column>
-        </property>
-        <property name="endpointHeader" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Endpoint_header">
-                <comment>string</comment>
+        <property name="endpointHeaderString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Endpoint.header", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHeader"}</meta>
+            <column length="65535" name="Endpoint_header_string">
+                <comment>{ "tree" :"Endpoint.header", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHeader"}</comment>
             </column>
         </property>
     </class>

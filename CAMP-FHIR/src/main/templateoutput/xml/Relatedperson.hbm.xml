@@ -1,483 +1,393 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Relatedperson" optimistic-lock="none" table="relatedperson">
-        <id name="rltdPrsnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="rltdPrsnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_use_code</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_s_cde">
-                <comment>RelatedPerson_identifierIdentifier_use_code</comment>
+        <property name="rltdPrsnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_se">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>RelatedPerson_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>RelatedPerson_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Period_start</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Prd_strt">
-                <comment>RelatedPerson_identifierIdentifier_Period_start</comment>
+        <property name="rltdPrsnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Period_end</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Prd_nd">
-                <comment>RelatedPerson_identifierIdentifier_Period_end</comment>
+        <property name="rltdPrsnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>RelatedPerson_identifierIdentifier_Reference_reference</comment>
+        <property name="rltdPrsnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>RelatedPerson_identifierIdentifier_Reference_type</comment>
+        <property name="rltdPrsnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>RelatedPerson_identifierIdentifier_Reference_identifier</comment>
+        <property name="rltdPrsnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>RelatedPerson_identifierIdentifier_Reference_display</comment>
+        <property name="rltdPrsnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="RltdPrsn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"RelatedPerson.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_value_string</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_vl_strng">
-                <comment>RelatedPerson_identifierIdentifier_value_string</comment>
+        <property name="relatedPersonActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="RelatedPerson_active_boolean">
+                <comment>{ "tree" :"RelatedPerson.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">RelatedPerson_identifierIdentifier_system_uri</meta>
-            <column length="512" name="RltdPrsn_dntfr_dntfr_sstm_ri">
-                <comment>RelatedPerson_identifierIdentifier_system_uri</comment>
+        <property name="relatedPersonPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="RelatedPerson_pnt_Reference">
+                <comment>{ "tree" :"RelatedPerson.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="relatedPersonActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="RelatedPerson_active">
-                <comment>boolean</comment>
+        <property name="rltdPrsnRltnshpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setSystem"}</meta>
+            <column length="65535" name="RltdPrsn_rltnshp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="rltdPrsnRltnshpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setVersion"}</meta>
+            <column length="65535" name="RltdPrsn_rltnshp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="rltdPrsnRltnshpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setCode"}</meta>
+            <column length="65535" name="RltdPrsn_rltnshp_CC_cdng_C_cde">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="rltdPrsnRltnshpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RltdPrsn_rltnshp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="rltdPrsnRltnshpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RltdPrsn_rltnshp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="relatedPersonRelationshipCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, setText"}</meta>
+            <column length="65535" name="RelatedPerson_relationship_CC_text">
+                <comment>{ "tree" :"RelatedPerson.relationship", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelationship, setText"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="relatedPersonNameHumanNameUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setUse"}</meta>
+            <column length="65535" name="RelatedPerson_name_HumanName_use">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setUse"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="rltdPrsnNmHmnNmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setStart"}</meta>
+            <column length="65535" name="RltdPrsn_nm_HmnNm_prd_Prd_strt">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="rltdPrsnNmHmnNmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setEnd"}</meta>
+            <column length="65535" name="RltdPrsn_nm_HmnNm_prd_Prd_nd">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="relatedPersonNameHumanNameText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setText"}</meta>
+            <column length="65535" name="RelatedPerson_name_HumanName_text">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setText"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="rltdPrsnNmHmnNmFmly" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setFamily"}</meta>
+            <column length="65535" name="RltdPrsn_nm_HmnNm_fmly">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, setFamily"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="relatedPersonNameHumanNameGiven" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addGiven"}</meta>
+            <column length="65535" name="RelatedPerson_name_HumanName_given">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addGiven"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="rltdPrsnNmHmnNmPrfx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addPrefix"}</meta>
+            <column length="65535" name="RltdPrsn_nm_HmnNm_prfx">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addPrefix"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="rltdPrsnNmHmnNmSffx" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addSuffix"}</meta>
+            <column length="65535" name="RltdPrsn_nm_HmnNm_sffx">
+                <comment>{ "tree" :"RelatedPerson.name", "datatype" : "HumanName, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addName, addSuffix"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="RltdPrsn_pnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="rltdPrsnTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="rltdPrsnTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="rltdPrsnTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="rltdPrsnTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="rltdPrsnTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="rltdPrsnTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"RelatedPerson.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnRltnshpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="RltdPrsn_rltnshp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="relatedPersonGenderCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGender"}</meta>
+            <column length="65535" name="RelatedPerson_gender_code">
+                <comment>{ "tree" :"RelatedPerson.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGender"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmSCde" type="string">
-            <meta attribute="resource-type">HumanName_use_code</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_s_cde">
-                <comment>HumanName_use_code</comment>
+        <property name="relatedPersonBirthDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.birthDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBirthDate"}</meta>
+            <column length="65535" name="RelatedPerson_birthDate_date">
+                <comment>{ "tree" :"RelatedPerson.birthDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBirthDate"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmPrdStrt" type="string">
-            <meta attribute="resource-type">HumanName_Period_start</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_Prd_strt">
-                <comment>HumanName_Period_start</comment>
+        <property name="relatedPersonAddressAddressUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</meta>
+            <column length="65535" name="RelatedPerson_address_Address_use">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmPrdNd" type="string">
-            <meta attribute="resource-type">HumanName_Period_end</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_Prd_nd">
-                <comment>HumanName_Period_end</comment>
+        <property name="relatedPersonAddressAddressType" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</meta>
+            <column length="65535" name="RelatedPerson_address_Address_type">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setType"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmTxtStrng" type="string">
-            <meta attribute="resource-type">HumanName_text_string</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_txt_strng">
-                <comment>HumanName_text_string</comment>
+        <property name="rltdPrsnDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmFmlStrng" type="string">
-            <meta attribute="resource-type">HumanName_family_string</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_fml_strng">
-                <comment>HumanName_family_string</comment>
+        <property name="rltdPrsnDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmGvnStrng" type="string">
-            <meta attribute="resource-type">HumanName_given_string</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_gvn_strng">
-                <comment>HumanName_given_string</comment>
+        <property name="relatedPersonAddressAddressText" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</meta>
+            <column length="65535" name="RelatedPerson_address_Address_text">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setText"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmPrfxStrng" type="string">
-            <meta attribute="resource-type">HumanName_prefix_string</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_prfx_strng">
-                <comment>HumanName_prefix_string</comment>
+        <property name="relatedPersonAddressAddressLine" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</meta>
+            <column length="65535" name="RelatedPerson_address_Address_line">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnNmHmnNmSffxStrng" type="string">
-            <meta attribute="resource-type">HumanName_suffix_string</meta>
-            <column length="65535" name="RltdPrsn_nm_HmnNm_sffx_strng">
-                <comment>HumanName_suffix_string</comment>
+        <property name="relatedPersonAddressAddressCity" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</meta>
+            <column length="65535" name="RelatedPerson_address_Address_city">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="rltdPrsnDdrssDdrssDstrct" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_dstrct">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="rltdPrsnDdrssDdrssStte" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_stte">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setState"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
+        <property name="rltdPrsnDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
+        <property name="rltdPrsnDdrssDdrssCntry" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</meta>
+            <column length="65535" name="RltdPrsn_ddrss_ddrss_cntry">
+                <comment>{ "tree" :"RelatedPerson.address", "datatype" : "Address, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
+        <property name="rltdPrsnPhtTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setData"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_dta">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setData"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="RltdPrsn_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
+        <property name="rltdPrsnPhtTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setHash"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_hsh">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setHash"}</comment>
             </column>
         </property>
-        <property name="relatedPersonGender" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="RelatedPerson_gender">
-                <comment>code</comment>
+        <property name="rltdPrsnPhtTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setContentType"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setContentType"}</comment>
             </column>
         </property>
-        <property name="relatedPersonBirthDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="RelatedPerson_birthDate">
-                <comment>date</comment>
+        <property name="rltdPrsnPhtTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setLanguage"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_lngge">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setLanguage"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssSCde" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_s_cde">
-                <comment>Address_use_code</comment>
+        <property name="rltdPrsnPhtTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setCreation"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_crtn">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setCreation"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssTpCde" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_tp_cde">
-                <comment>Address_type_code</comment>
+        <property name="rltdPrsnPhtTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setTitle"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_ttle">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setTitle"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
+        <property name="rltdPrsnPhtTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setSize"}</meta>
+            <column length="65535" name="RltdPrsn_pht_ttchmnt_sze">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setSize"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssPrdNd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_Prd_nd">
-                <comment>Address_Period_end</comment>
+        <property name="relatedPersonPhotoAttachmentUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setUrl"}</meta>
+            <column length="65535" name="RelatedPerson_photo_Attachment_url">
+                <comment>{ "tree" :"RelatedPerson.photo", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPhoto, setUrl"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
+        <property name="relatedPersonPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="RelatedPerson_period_Period_start">
+                <comment>{ "tree" :"RelatedPerson.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
+        <property name="relatedPersonPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="RelatedPerson_period_Period_end">
+                <comment>{ "tree" :"RelatedPerson.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
+        <property name="rltdPrsnCmmnctnLnggCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setSystem"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
+        <property name="rltdPrsnCmmnctnLnggCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setVersion"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
+        <property name="rltdPrsnCmmnctnLnggCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setCode"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_cdng_C_cde">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
+        <property name="rltdPrsnCmmnctnLnggCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setDisplay"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="RltdPrsn_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
+        <property name="rltdPrsnCmmnctnLnggCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPhtTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
+        <property name="rltdPrsnCmmnctnLnggCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, setText"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CC_txt">
+                <comment>{ "tree" :"RelatedPerson.communication.language", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCommunication"] , "methodName" : "setLanguage, setText"}</comment>
             </column>
         </property>
-        <property name="rltdPrsnPhtTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPhtTtchmntRlRl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="RltdPrsn_pht_ttchmnt_rl_rl">
-                <comment>Attachment_url_url</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="RltdPrsn_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="RltdPrsn_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnLnggCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_lngg_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="rltdPrsnCmmnctnPrfrrd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="RltdPrsn_cmmnctn_prfrrd">
-                <comment>boolean</comment>
+        <property name="rltdPrsnCmmnctnPrfrrdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"RelatedPerson.communication.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCommunication"] , "methodName" : "setPreferred"}</meta>
+            <column length="65535" name="RltdPrsn_cmmnctn_prfrrd_bln">
+                <comment>{ "tree" :"RelatedPerson.communication.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCommunication"] , "methodName" : "setPreferred"}</comment>
             </column>
         </property>
     </class>

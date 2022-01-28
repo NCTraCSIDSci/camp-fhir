@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1469 +10,1944 @@ package main.templateoutput.Model;
 public class Testscript  implements java.io.Serializable {
 
 
-     private String testScriptUrl;
-     private String tstScrptDntfrCdngSrSlctd;
-     private String testScriptIdentifierCodingCode;
-     private String tstScrptDntfrCdngDsplay;
-     private String tstScrptDntfrCdngVrsn;
-     private String tstScrptDntfrCdngSstm;
-     private String testScriptVersion;
-     private String testScriptName;
-     private String testScriptTitle;
-     private String testScriptStatus;
-     private String testScriptExperimental;
-     private String testScriptDate;
-     private String testScriptPublisher;
-     private String testScriptContact;
-     private String testScriptDescription;
-     private String testScriptUseContext;
-     private String tstScrptJrsdctnCdngSrSlctd;
-     private String tstScrptJrsdctnCdngCde;
-     private String tstScrptJrsdctnCdngDsplay;
-     private String tstScrptJrsdctnCdngVrsn;
-     private String tstScrptJrsdctnCdngSstm;
-     private String testScriptPurpose;
-     private String testScriptCopyright;
-     private String testScriptOrigin;
-     private String testScriptOriginIndex;
-     private String tstScrptRgnPrflCdngSrSlctd;
-     private String tstScrptRgnPrflCdngCde;
-     private String tstScrptRgnPrflCdngDsplay;
-     private String tstScrptRgnPrflCdngVrsn;
-     private String tstScrptRgnPrflCdngSstm;
-     private String testScriptDestination;
-     private String testScriptDestinationIndex;
-     private String tstScrptDstntnPrflCdngSrSlctd;
-     private String tstScrptDstntnPrflCdngCde;
-     private String tstScrptDstntnPrflCdngDsplay;
-     private String tstScrptDstntnPrflCdngVrsn;
-     private String tstScrptDstntnPrflCdngSstm;
-     private String testScriptMetadata;
-     private String testScriptMetadataLink;
-     private String testScriptMetadataLinkUrl;
-     private String tstScrptMtdtLnkDscrptn;
-     private String testScriptMetadataCapability;
-     private String tstScrptMtdtCpbltRqrd;
-     private String tstScrptMtdtCpbltVldtd;
-     private String tstScrptMtdtCpbltDscrptn;
-     private String tstScrptMtdtCpbltRgn;
-     private String tstScrptMtdtCpbltDstntn;
-     private String tstScrptMtdtCpbltLnk;
-     private String tstScrptMtdtCpbltCpblts;
-     private String testScriptFixture;
-     private String testScriptFixtureAutocreate;
-     private String testScriptFixtureAutodelete;
-     private String testScriptFixtureResource;
-     private String testScriptProfile;
-     private String testScriptVariable;
-     private String testScriptVariableName;
-     private String testScriptVariableDefaultValue;
-     private String testScriptVariableDescription;
-     private String testScriptVariableExpression;
-     private String testScriptVariableHeaderField;
-     private String testScriptVariableHint;
-     private String testScriptVariablePath;
-     private String testScriptVariableSourceId;
-     private String testScriptSetup;
-     private String testScriptSetupAction;
-     private String testScriptSetupActionOperation;
-     private String tstScrptStpCtnPrtnTpCdngSrSlctd;
-     private String tstScrptStpCtnPrtnTpCdngCde;
-     private String tstScrptStpCtnPrtnTpCdngDsplay;
-     private String tstScrptStpCtnPrtnTpCdngVrsn;
-     private String tstScrptStpCtnPrtnTpCdngSstm;
-     private String tstScrptStpCtnPrtnRsrce;
-     private String tstScrptStpCtnPrtnLbl;
-     private String tstScrptStpCtnPrtnDscrptn;
-     private String tstScrptStpCtnPrtnCcpt;
-     private String tstScrptStpCtnPrtnCntntTpe;
-     private String tstScrptStpCtnPrtnDstntn;
-     private String tstScrptStpCtnPrtnNcdRqstrl;
-     private String tstScrptStpCtnPrtnMthd;
-     private String tstScrptStpCtnPrtnRgn;
-     private String tstScrptStpCtnPrtnPrms;
-     private String tstScrptStpCtnPrtnRqstHdr;
-     private String tstScrptStpCtnPrtnRqstHdrFld;
-     private String tstScrptStpCtnPrtnRqstHdrVlue;
-     private String tstScrptStpCtnPrtnRqstd;
-     private String tstScrptStpCtnPrtnRspnsd;
-     private String tstScrptStpCtnPrtnSrcd;
-     private String tstScrptStpCtnPrtnTrgtd;
-     private String tstScrptStpCtnPrtnRl;
-     private String testScriptSetupActionAssert;
-     private String tstScrptStpCtnSsrtLbl;
-     private String tstScrptStpCtnSsrtDscrptn;
-     private String tstScrptStpCtnSsrtDrctn;
-     private String tstScrptStpCtnSsrtCmprTsrcd;
-     private String tstScrptStpCtnSsrtCmprTsrcxprssn;
-     private String tstScrptStpCtnSsrtCmprTsrcPth;
-     private String tstScrptStpCtnSsrtCntntTpe;
-     private String tstScrptStpCtnSsrtXprssn;
-     private String tstScrptStpCtnSsrtHdrFld;
-     private String tstScrptStpCtnSsrtMnmmd;
-     private String tstScrptStpCtnSsrtNvgtnLnks;
-     private String tstScrptStpCtnSsrtPrtr;
-     private String tstScrptStpCtnSsrtPth;
-     private String tstScrptStpCtnSsrtRqstMthd;
-     private String tstScrptStpCtnSsrtRqstRl;
-     private String tstScrptStpCtnSsrtRsrce;
-     private String tstScrptStpCtnSsrtRspnse;
+     private Integer id;
+     private String testScriptUrlUri;
+     private String tstScrptDntfrDntfrSe;
+     private String tstScrptDntfrDntfrTpCcCSstm;
+     private String tstScrptDntfrDntfrTpCcCVrsn;
+     private String tstScrptDntfrDntfrTpCcCCde;
+     private String tstScrptDntfrDntfrTpCcCDsplay;
+     private String tstScrptDntfrDntfrTpCcCSrSlctd;
+     private String tstScrptDntfrDntfrTpCcTxt;
+     private String tstScrptDntfrDntfrPrdPrdStrt;
+     private String tstScrptDntfrDntfrPrdPrdNd;
+     private String tstScrptDntfrDntfrSsgnr;
+     private String tstScrptDntfrDntfrVlue;
+     private String tstScrptDntfrDntfrSstm;
+     private String testScriptVersionString;
+     private String testScriptNameString;
+     private String testScriptTitleString;
+     private String testScriptStatusCode;
+     private String testScriptExperimentalBoolean;
+     private String testScriptDateDateTime;
+     private String testScriptPublisherString;
+     private String tstScrptCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String tstScrptCntctCntctDtlTlcmCntctPntPrdNd;
+     private String tstScrptCntctCntctDtlTlcmCntctPntSstm;
+     private String tstScrptCntctCntctDtlTlcmCntctPntVlue;
+     private String tstScrptCntctCntctDtlTlcmCntctPntSe;
+     private String tstScrptCntctCntctDtlTlcmCntctPntRnk;
+     private String tstScrptCntctCntctDtlNme;
+     private String testScriptDescriptionMarkdown;
+     private String tstScrptSCntxtSgCntxtVlCcCcCSstm;
+     private String tstScrptSCntxtSgCntxtVlCcCcCVrsn;
+     private String tstScrptSCntxtSgCntxtVlCcCcCCde;
+     private String tstScrptSCntxtSgCntxtVlCcCcCDsplay;
+     private String tstScrptSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String tstScrptSCntxtSgCntxtVlCcCcTxt;
+     private String tstScrptSCntxtSgCntxtCdCSstm;
+     private String tstScrptSCntxtSgCntxtCdCVrsn;
+     private String tstScrptSCntxtSgCntxtCdCCde;
+     private String tstScrptSCntxtSgCntxtCdCDsplay;
+     private String tstScrptSCntxtSgCntxtCdCSrSlctd;
+     private String tstScrptSCntxtSgCntxtVlQnttQnttVlue;
+     private String tstScrptSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String tstScrptSCntxtSgCntxtVlQnttQnttNt;
+     private String tstScrptSCntxtSgCntxtVlQnttQnttSstm;
+     private String tstScrptSCntxtSgCntxtVlQnttQnttCde;
+     private String tstScrptSCntxtSgCntxtVlRngRngLw;
+     private String tstScrptSCntxtSgCntxtVlRngRngHgh;
+     private String tstScrptSCntxtSgCntxtVlRfrnce;
+     private String tstScrptJrsdctnCcCdngCSstm;
+     private String tstScrptJrsdctnCcCdngCVrsn;
+     private String tstScrptJrsdctnCcCdngCCde;
+     private String tstScrptJrsdctnCcCdngCDsplay;
+     private String tstScrptJrsdctnCcCdngCSrSlctd;
+     private String testScriptJurisdictionCcText;
+     private String testScriptPurposeMarkdown;
+     private String testScriptCopyrightMarkdown;
+     private String testScriptOriginIndexInteger;
+     private String tstScrptRgnPrflCSrSlctd;
+     private String testScriptOriginProfileCCode;
+     private String tstScrptRgnPrflCVrsn;
+     private String tstScrptRgnPrflCDsplay;
+     private String testScriptOriginProfileCSystem;
+     private String tstScrptDstntnNdxNtgr;
+     private String tstScrptDstntnPrflCSrSlctd;
+     private String tstScrptDstntnPrflCCde;
+     private String tstScrptDstntnPrflCVrsn;
+     private String tstScrptDstntnPrflCDsplay;
+     private String tstScrptDstntnPrflCSstm;
+     private String testScriptMetadataLinkUrlUri;
+     private String tstScrptMtdtLnkDscrptnStrng;
+     private String tstScrptMtdtCpbltRqrdBln;
+     private String tstScrptMtdtCpbltVldtdBln;
+     private String tstScrptMtdtCpbltDscrptnStrng;
+     private String tstScrptMtdtCpbltRgnNtgr;
+     private String tstScrptMtdtCpbltDstntnNtgr;
+     private String tstScrptMtdtCpbltLnkRi;
+     private String tstScrptMtdtCpbltCpbltsCnncl;
+     private String tstScrptFxtrTcrtBln;
+     private String tstScrptFxtrTdltBln;
+     private String tstScrptFxtrRsrcRfrnce;
+     private String testScriptProfileReference;
+     private String testScriptVariableNameString;
+     private String tstScrptVrblDfltVlStrng;
+     private String tstScrptVrblDscrptnStrng;
+     private String tstScrptVrblXprssnStrng;
+     private String tstScrptVrblHdrFldStrng;
+     private String testScriptVariableHintString;
+     private String testScriptVariablePathString;
+     private String testScriptVariableSourceIdId;
+     private String tstScrptStpCtnPrtnTpCSrSlctd;
+     private String tstScrptStpCtnPrtnTpCCde;
+     private String tstScrptStpCtnPrtnTpCVrsn;
+     private String tstScrptStpCtnPrtnTpCDsplay;
+     private String tstScrptStpCtnPrtnTpCSstm;
+     private String tstScrptStpCtnPrtnRsrcCde;
+     private String tstScrptStpCtnPrtnLblStrng;
+     private String tstScrptStpCtnPrtnDscrptnStrng;
+     private String tstScrptStpCtnPrtnCcptCde;
+     private String tstScrptStpCtnPrtnCntntTpCde;
+     private String tstScrptStpCtnPrtnDstntnNtgr;
+     private String tstScrptStpCtnPrtnNcdRqstrlBln;
+     private String tstScrptStpCtnPrtnMthdCde;
+     private String tstScrptStpCtnPrtnRgnNtgr;
+     private String tstScrptStpCtnPrtnPrmsStrng;
+     private String tstScrptStpCtnPrtnRqstHdrFldStrng;
+     private String tstScrptStpCtnPrtnRqstHdrVlStrng;
+     private String tstScrptStpCtnPrtnRqstdD;
+     private String tstScrptStpCtnPrtnRspnsdD;
+     private String tstScrptStpCtnPrtnSrcdD;
+     private String tstScrptStpCtnPrtnTrgtdD;
+     private String tstScrptStpCtnPrtnRlStrng;
+     private String tstScrptStpCtnSsrtLblStrng;
+     private String tstScrptStpCtnSsrtDscrptnStrng;
+     private String tstScrptStpCtnSsrtDrctnCde;
+     private String tstScrptStpCtnSsrtCmprTsrcdStrng;
+     private String tstScrptStpCtnSsrtCmprTsrcxprssnStrng;
+     private String tstScrptStpCtnSsrtCmprTsrcPthStrng;
+     private String tstScrptStpCtnSsrtCntntTpCde;
+     private String tstScrptStpCtnSsrtXprssnStrng;
+     private String tstScrptStpCtnSsrtHdrFldStrng;
+     private String tstScrptStpCtnSsrtMnmmdStrng;
+     private String tstScrptStpCtnSsrtNvgtnLnksBln;
+     private String tstScrptStpCtnSsrtPrtrCde;
+     private String tstScrptStpCtnSsrtPthStrng;
+     private String tstScrptStpCtnSsrtRqstMthdCde;
+     private String tstScrptStpCtnSsrtRqstRlStrng;
+     private String tstScrptStpCtnSsrtRsrcCde;
      private String tstScrptStpCtnSsrtRspnsCde;
-     private String tstScrptStpCtnSsrtSrcd;
-     private String tstScrptStpCtnSsrtVldtPrfld;
-     private String tstScrptStpCtnSsrtVlue;
-     private String tstScrptStpCtnSsrtWrnngnly;
-     private String testScriptTest;
-     private String testScriptTestName;
-     private String testScriptTestDescription;
-     private String testScriptTestAction;
-     private String testScriptTestActionOperation;
-     private String testScriptTestActionAssert;
-     private String testScriptTeardown;
-     private String testScriptTeardownAction;
-     private String tstScrptTrdwnCtnPrtn;
+     private String tstScrptStpCtnSsrtRspnsCdStrng;
+     private String tstScrptStpCtnSsrtSrcdD;
+     private String tstScrptStpCtnSsrtVldtPrfldD;
+     private String tstScrptStpCtnSsrtVlStrng;
+     private String tstScrptStpCtnSsrtWrnngnlBln;
+     private String testScriptTestNameString;
+     private String testScriptTestDescriptionString;
+     private String tstScrptTstCtnPrtnPrtn;
+     private String tstScrptTstCtnSsrtSsrt;
+     private String tstScrptTrdwnCtnPrtnPrtn;
 
     public Testscript() {
     }
 
-	
-    public Testscript(String testScriptUrl) {
-        this.testScriptUrl = testScriptUrl;
-    }
-    public Testscript(String testScriptUrl, String tstScrptDntfrCdngSrSlctd, String testScriptIdentifierCodingCode, String tstScrptDntfrCdngDsplay, String tstScrptDntfrCdngVrsn, String tstScrptDntfrCdngSstm, String testScriptVersion, String testScriptName, String testScriptTitle, String testScriptStatus, String testScriptExperimental, String testScriptDate, String testScriptPublisher, String testScriptContact, String testScriptDescription, String testScriptUseContext, String tstScrptJrsdctnCdngSrSlctd, String tstScrptJrsdctnCdngCde, String tstScrptJrsdctnCdngDsplay, String tstScrptJrsdctnCdngVrsn, String tstScrptJrsdctnCdngSstm, String testScriptPurpose, String testScriptCopyright, String testScriptOrigin, String testScriptOriginIndex, String tstScrptRgnPrflCdngSrSlctd, String tstScrptRgnPrflCdngCde, String tstScrptRgnPrflCdngDsplay, String tstScrptRgnPrflCdngVrsn, String tstScrptRgnPrflCdngSstm, String testScriptDestination, String testScriptDestinationIndex, String tstScrptDstntnPrflCdngSrSlctd, String tstScrptDstntnPrflCdngCde, String tstScrptDstntnPrflCdngDsplay, String tstScrptDstntnPrflCdngVrsn, String tstScrptDstntnPrflCdngSstm, String testScriptMetadata, String testScriptMetadataLink, String testScriptMetadataLinkUrl, String tstScrptMtdtLnkDscrptn, String testScriptMetadataCapability, String tstScrptMtdtCpbltRqrd, String tstScrptMtdtCpbltVldtd, String tstScrptMtdtCpbltDscrptn, String tstScrptMtdtCpbltRgn, String tstScrptMtdtCpbltDstntn, String tstScrptMtdtCpbltLnk, String tstScrptMtdtCpbltCpblts, String testScriptFixture, String testScriptFixtureAutocreate, String testScriptFixtureAutodelete, String testScriptFixtureResource, String testScriptProfile, String testScriptVariable, String testScriptVariableName, String testScriptVariableDefaultValue, String testScriptVariableDescription, String testScriptVariableExpression, String testScriptVariableHeaderField, String testScriptVariableHint, String testScriptVariablePath, String testScriptVariableSourceId, String testScriptSetup, String testScriptSetupAction, String testScriptSetupActionOperation, String tstScrptStpCtnPrtnTpCdngSrSlctd, String tstScrptStpCtnPrtnTpCdngCde, String tstScrptStpCtnPrtnTpCdngDsplay, String tstScrptStpCtnPrtnTpCdngVrsn, String tstScrptStpCtnPrtnTpCdngSstm, String tstScrptStpCtnPrtnRsrce, String tstScrptStpCtnPrtnLbl, String tstScrptStpCtnPrtnDscrptn, String tstScrptStpCtnPrtnCcpt, String tstScrptStpCtnPrtnCntntTpe, String tstScrptStpCtnPrtnDstntn, String tstScrptStpCtnPrtnNcdRqstrl, String tstScrptStpCtnPrtnMthd, String tstScrptStpCtnPrtnRgn, String tstScrptStpCtnPrtnPrms, String tstScrptStpCtnPrtnRqstHdr, String tstScrptStpCtnPrtnRqstHdrFld, String tstScrptStpCtnPrtnRqstHdrVlue, String tstScrptStpCtnPrtnRqstd, String tstScrptStpCtnPrtnRspnsd, String tstScrptStpCtnPrtnSrcd, String tstScrptStpCtnPrtnTrgtd, String tstScrptStpCtnPrtnRl, String testScriptSetupActionAssert, String tstScrptStpCtnSsrtLbl, String tstScrptStpCtnSsrtDscrptn, String tstScrptStpCtnSsrtDrctn, String tstScrptStpCtnSsrtCmprTsrcd, String tstScrptStpCtnSsrtCmprTsrcxprssn, String tstScrptStpCtnSsrtCmprTsrcPth, String tstScrptStpCtnSsrtCntntTpe, String tstScrptStpCtnSsrtXprssn, String tstScrptStpCtnSsrtHdrFld, String tstScrptStpCtnSsrtMnmmd, String tstScrptStpCtnSsrtNvgtnLnks, String tstScrptStpCtnSsrtPrtr, String tstScrptStpCtnSsrtPth, String tstScrptStpCtnSsrtRqstMthd, String tstScrptStpCtnSsrtRqstRl, String tstScrptStpCtnSsrtRsrce, String tstScrptStpCtnSsrtRspnse, String tstScrptStpCtnSsrtRspnsCde, String tstScrptStpCtnSsrtSrcd, String tstScrptStpCtnSsrtVldtPrfld, String tstScrptStpCtnSsrtVlue, String tstScrptStpCtnSsrtWrnngnly, String testScriptTest, String testScriptTestName, String testScriptTestDescription, String testScriptTestAction, String testScriptTestActionOperation, String testScriptTestActionAssert, String testScriptTeardown, String testScriptTeardownAction, String tstScrptTrdwnCtnPrtn) {
-       this.testScriptUrl = testScriptUrl;
-       this.tstScrptDntfrCdngSrSlctd = tstScrptDntfrCdngSrSlctd;
-       this.testScriptIdentifierCodingCode = testScriptIdentifierCodingCode;
-       this.tstScrptDntfrCdngDsplay = tstScrptDntfrCdngDsplay;
-       this.tstScrptDntfrCdngVrsn = tstScrptDntfrCdngVrsn;
-       this.tstScrptDntfrCdngSstm = tstScrptDntfrCdngSstm;
-       this.testScriptVersion = testScriptVersion;
-       this.testScriptName = testScriptName;
-       this.testScriptTitle = testScriptTitle;
-       this.testScriptStatus = testScriptStatus;
-       this.testScriptExperimental = testScriptExperimental;
-       this.testScriptDate = testScriptDate;
-       this.testScriptPublisher = testScriptPublisher;
-       this.testScriptContact = testScriptContact;
-       this.testScriptDescription = testScriptDescription;
-       this.testScriptUseContext = testScriptUseContext;
-       this.tstScrptJrsdctnCdngSrSlctd = tstScrptJrsdctnCdngSrSlctd;
-       this.tstScrptJrsdctnCdngCde = tstScrptJrsdctnCdngCde;
-       this.tstScrptJrsdctnCdngDsplay = tstScrptJrsdctnCdngDsplay;
-       this.tstScrptJrsdctnCdngVrsn = tstScrptJrsdctnCdngVrsn;
-       this.tstScrptJrsdctnCdngSstm = tstScrptJrsdctnCdngSstm;
-       this.testScriptPurpose = testScriptPurpose;
-       this.testScriptCopyright = testScriptCopyright;
-       this.testScriptOrigin = testScriptOrigin;
-       this.testScriptOriginIndex = testScriptOriginIndex;
-       this.tstScrptRgnPrflCdngSrSlctd = tstScrptRgnPrflCdngSrSlctd;
-       this.tstScrptRgnPrflCdngCde = tstScrptRgnPrflCdngCde;
-       this.tstScrptRgnPrflCdngDsplay = tstScrptRgnPrflCdngDsplay;
-       this.tstScrptRgnPrflCdngVrsn = tstScrptRgnPrflCdngVrsn;
-       this.tstScrptRgnPrflCdngSstm = tstScrptRgnPrflCdngSstm;
-       this.testScriptDestination = testScriptDestination;
-       this.testScriptDestinationIndex = testScriptDestinationIndex;
-       this.tstScrptDstntnPrflCdngSrSlctd = tstScrptDstntnPrflCdngSrSlctd;
-       this.tstScrptDstntnPrflCdngCde = tstScrptDstntnPrflCdngCde;
-       this.tstScrptDstntnPrflCdngDsplay = tstScrptDstntnPrflCdngDsplay;
-       this.tstScrptDstntnPrflCdngVrsn = tstScrptDstntnPrflCdngVrsn;
-       this.tstScrptDstntnPrflCdngSstm = tstScrptDstntnPrflCdngSstm;
-       this.testScriptMetadata = testScriptMetadata;
-       this.testScriptMetadataLink = testScriptMetadataLink;
-       this.testScriptMetadataLinkUrl = testScriptMetadataLinkUrl;
-       this.tstScrptMtdtLnkDscrptn = tstScrptMtdtLnkDscrptn;
-       this.testScriptMetadataCapability = testScriptMetadataCapability;
-       this.tstScrptMtdtCpbltRqrd = tstScrptMtdtCpbltRqrd;
-       this.tstScrptMtdtCpbltVldtd = tstScrptMtdtCpbltVldtd;
-       this.tstScrptMtdtCpbltDscrptn = tstScrptMtdtCpbltDscrptn;
-       this.tstScrptMtdtCpbltRgn = tstScrptMtdtCpbltRgn;
-       this.tstScrptMtdtCpbltDstntn = tstScrptMtdtCpbltDstntn;
-       this.tstScrptMtdtCpbltLnk = tstScrptMtdtCpbltLnk;
-       this.tstScrptMtdtCpbltCpblts = tstScrptMtdtCpbltCpblts;
-       this.testScriptFixture = testScriptFixture;
-       this.testScriptFixtureAutocreate = testScriptFixtureAutocreate;
-       this.testScriptFixtureAutodelete = testScriptFixtureAutodelete;
-       this.testScriptFixtureResource = testScriptFixtureResource;
-       this.testScriptProfile = testScriptProfile;
-       this.testScriptVariable = testScriptVariable;
-       this.testScriptVariableName = testScriptVariableName;
-       this.testScriptVariableDefaultValue = testScriptVariableDefaultValue;
-       this.testScriptVariableDescription = testScriptVariableDescription;
-       this.testScriptVariableExpression = testScriptVariableExpression;
-       this.testScriptVariableHeaderField = testScriptVariableHeaderField;
-       this.testScriptVariableHint = testScriptVariableHint;
-       this.testScriptVariablePath = testScriptVariablePath;
-       this.testScriptVariableSourceId = testScriptVariableSourceId;
-       this.testScriptSetup = testScriptSetup;
-       this.testScriptSetupAction = testScriptSetupAction;
-       this.testScriptSetupActionOperation = testScriptSetupActionOperation;
-       this.tstScrptStpCtnPrtnTpCdngSrSlctd = tstScrptStpCtnPrtnTpCdngSrSlctd;
-       this.tstScrptStpCtnPrtnTpCdngCde = tstScrptStpCtnPrtnTpCdngCde;
-       this.tstScrptStpCtnPrtnTpCdngDsplay = tstScrptStpCtnPrtnTpCdngDsplay;
-       this.tstScrptStpCtnPrtnTpCdngVrsn = tstScrptStpCtnPrtnTpCdngVrsn;
-       this.tstScrptStpCtnPrtnTpCdngSstm = tstScrptStpCtnPrtnTpCdngSstm;
-       this.tstScrptStpCtnPrtnRsrce = tstScrptStpCtnPrtnRsrce;
-       this.tstScrptStpCtnPrtnLbl = tstScrptStpCtnPrtnLbl;
-       this.tstScrptStpCtnPrtnDscrptn = tstScrptStpCtnPrtnDscrptn;
-       this.tstScrptStpCtnPrtnCcpt = tstScrptStpCtnPrtnCcpt;
-       this.tstScrptStpCtnPrtnCntntTpe = tstScrptStpCtnPrtnCntntTpe;
-       this.tstScrptStpCtnPrtnDstntn = tstScrptStpCtnPrtnDstntn;
-       this.tstScrptStpCtnPrtnNcdRqstrl = tstScrptStpCtnPrtnNcdRqstrl;
-       this.tstScrptStpCtnPrtnMthd = tstScrptStpCtnPrtnMthd;
-       this.tstScrptStpCtnPrtnRgn = tstScrptStpCtnPrtnRgn;
-       this.tstScrptStpCtnPrtnPrms = tstScrptStpCtnPrtnPrms;
-       this.tstScrptStpCtnPrtnRqstHdr = tstScrptStpCtnPrtnRqstHdr;
-       this.tstScrptStpCtnPrtnRqstHdrFld = tstScrptStpCtnPrtnRqstHdrFld;
-       this.tstScrptStpCtnPrtnRqstHdrVlue = tstScrptStpCtnPrtnRqstHdrVlue;
-       this.tstScrptStpCtnPrtnRqstd = tstScrptStpCtnPrtnRqstd;
-       this.tstScrptStpCtnPrtnRspnsd = tstScrptStpCtnPrtnRspnsd;
-       this.tstScrptStpCtnPrtnSrcd = tstScrptStpCtnPrtnSrcd;
-       this.tstScrptStpCtnPrtnTrgtd = tstScrptStpCtnPrtnTrgtd;
-       this.tstScrptStpCtnPrtnRl = tstScrptStpCtnPrtnRl;
-       this.testScriptSetupActionAssert = testScriptSetupActionAssert;
-       this.tstScrptStpCtnSsrtLbl = tstScrptStpCtnSsrtLbl;
-       this.tstScrptStpCtnSsrtDscrptn = tstScrptStpCtnSsrtDscrptn;
-       this.tstScrptStpCtnSsrtDrctn = tstScrptStpCtnSsrtDrctn;
-       this.tstScrptStpCtnSsrtCmprTsrcd = tstScrptStpCtnSsrtCmprTsrcd;
-       this.tstScrptStpCtnSsrtCmprTsrcxprssn = tstScrptStpCtnSsrtCmprTsrcxprssn;
-       this.tstScrptStpCtnSsrtCmprTsrcPth = tstScrptStpCtnSsrtCmprTsrcPth;
-       this.tstScrptStpCtnSsrtCntntTpe = tstScrptStpCtnSsrtCntntTpe;
-       this.tstScrptStpCtnSsrtXprssn = tstScrptStpCtnSsrtXprssn;
-       this.tstScrptStpCtnSsrtHdrFld = tstScrptStpCtnSsrtHdrFld;
-       this.tstScrptStpCtnSsrtMnmmd = tstScrptStpCtnSsrtMnmmd;
-       this.tstScrptStpCtnSsrtNvgtnLnks = tstScrptStpCtnSsrtNvgtnLnks;
-       this.tstScrptStpCtnSsrtPrtr = tstScrptStpCtnSsrtPrtr;
-       this.tstScrptStpCtnSsrtPth = tstScrptStpCtnSsrtPth;
-       this.tstScrptStpCtnSsrtRqstMthd = tstScrptStpCtnSsrtRqstMthd;
-       this.tstScrptStpCtnSsrtRqstRl = tstScrptStpCtnSsrtRqstRl;
-       this.tstScrptStpCtnSsrtRsrce = tstScrptStpCtnSsrtRsrce;
-       this.tstScrptStpCtnSsrtRspnse = tstScrptStpCtnSsrtRspnse;
+    public Testscript(String testScriptUrlUri, String tstScrptDntfrDntfrSe, String tstScrptDntfrDntfrTpCcCSstm, String tstScrptDntfrDntfrTpCcCVrsn, String tstScrptDntfrDntfrTpCcCCde, String tstScrptDntfrDntfrTpCcCDsplay, String tstScrptDntfrDntfrTpCcCSrSlctd, String tstScrptDntfrDntfrTpCcTxt, String tstScrptDntfrDntfrPrdPrdStrt, String tstScrptDntfrDntfrPrdPrdNd, String tstScrptDntfrDntfrSsgnr, String tstScrptDntfrDntfrVlue, String tstScrptDntfrDntfrSstm, String testScriptVersionString, String testScriptNameString, String testScriptTitleString, String testScriptStatusCode, String testScriptExperimentalBoolean, String testScriptDateDateTime, String testScriptPublisherString, String tstScrptCntctCntctDtlTlcmCntctPntPrdStrt, String tstScrptCntctCntctDtlTlcmCntctPntPrdNd, String tstScrptCntctCntctDtlTlcmCntctPntSstm, String tstScrptCntctCntctDtlTlcmCntctPntVlue, String tstScrptCntctCntctDtlTlcmCntctPntSe, String tstScrptCntctCntctDtlTlcmCntctPntRnk, String tstScrptCntctCntctDtlNme, String testScriptDescriptionMarkdown, String tstScrptSCntxtSgCntxtVlCcCcCSstm, String tstScrptSCntxtSgCntxtVlCcCcCVrsn, String tstScrptSCntxtSgCntxtVlCcCcCCde, String tstScrptSCntxtSgCntxtVlCcCcCDsplay, String tstScrptSCntxtSgCntxtVlCcCcCSrSlctd, String tstScrptSCntxtSgCntxtVlCcCcTxt, String tstScrptSCntxtSgCntxtCdCSstm, String tstScrptSCntxtSgCntxtCdCVrsn, String tstScrptSCntxtSgCntxtCdCCde, String tstScrptSCntxtSgCntxtCdCDsplay, String tstScrptSCntxtSgCntxtCdCSrSlctd, String tstScrptSCntxtSgCntxtVlQnttQnttVlue, String tstScrptSCntxtSgCntxtVlQnttQnttCmprtr, String tstScrptSCntxtSgCntxtVlQnttQnttNt, String tstScrptSCntxtSgCntxtVlQnttQnttSstm, String tstScrptSCntxtSgCntxtVlQnttQnttCde, String tstScrptSCntxtSgCntxtVlRngRngLw, String tstScrptSCntxtSgCntxtVlRngRngHgh, String tstScrptSCntxtSgCntxtVlRfrnce, String tstScrptJrsdctnCcCdngCSstm, String tstScrptJrsdctnCcCdngCVrsn, String tstScrptJrsdctnCcCdngCCde, String tstScrptJrsdctnCcCdngCDsplay, String tstScrptJrsdctnCcCdngCSrSlctd, String testScriptJurisdictionCcText, String testScriptPurposeMarkdown, String testScriptCopyrightMarkdown, String testScriptOriginIndexInteger, String tstScrptRgnPrflCSrSlctd, String testScriptOriginProfileCCode, String tstScrptRgnPrflCVrsn, String tstScrptRgnPrflCDsplay, String testScriptOriginProfileCSystem, String tstScrptDstntnNdxNtgr, String tstScrptDstntnPrflCSrSlctd, String tstScrptDstntnPrflCCde, String tstScrptDstntnPrflCVrsn, String tstScrptDstntnPrflCDsplay, String tstScrptDstntnPrflCSstm, String testScriptMetadataLinkUrlUri, String tstScrptMtdtLnkDscrptnStrng, String tstScrptMtdtCpbltRqrdBln, String tstScrptMtdtCpbltVldtdBln, String tstScrptMtdtCpbltDscrptnStrng, String tstScrptMtdtCpbltRgnNtgr, String tstScrptMtdtCpbltDstntnNtgr, String tstScrptMtdtCpbltLnkRi, String tstScrptMtdtCpbltCpbltsCnncl, String tstScrptFxtrTcrtBln, String tstScrptFxtrTdltBln, String tstScrptFxtrRsrcRfrnce, String testScriptProfileReference, String testScriptVariableNameString, String tstScrptVrblDfltVlStrng, String tstScrptVrblDscrptnStrng, String tstScrptVrblXprssnStrng, String tstScrptVrblHdrFldStrng, String testScriptVariableHintString, String testScriptVariablePathString, String testScriptVariableSourceIdId, String tstScrptStpCtnPrtnTpCSrSlctd, String tstScrptStpCtnPrtnTpCCde, String tstScrptStpCtnPrtnTpCVrsn, String tstScrptStpCtnPrtnTpCDsplay, String tstScrptStpCtnPrtnTpCSstm, String tstScrptStpCtnPrtnRsrcCde, String tstScrptStpCtnPrtnLblStrng, String tstScrptStpCtnPrtnDscrptnStrng, String tstScrptStpCtnPrtnCcptCde, String tstScrptStpCtnPrtnCntntTpCde, String tstScrptStpCtnPrtnDstntnNtgr, String tstScrptStpCtnPrtnNcdRqstrlBln, String tstScrptStpCtnPrtnMthdCde, String tstScrptStpCtnPrtnRgnNtgr, String tstScrptStpCtnPrtnPrmsStrng, String tstScrptStpCtnPrtnRqstHdrFldStrng, String tstScrptStpCtnPrtnRqstHdrVlStrng, String tstScrptStpCtnPrtnRqstdD, String tstScrptStpCtnPrtnRspnsdD, String tstScrptStpCtnPrtnSrcdD, String tstScrptStpCtnPrtnTrgtdD, String tstScrptStpCtnPrtnRlStrng, String tstScrptStpCtnSsrtLblStrng, String tstScrptStpCtnSsrtDscrptnStrng, String tstScrptStpCtnSsrtDrctnCde, String tstScrptStpCtnSsrtCmprTsrcdStrng, String tstScrptStpCtnSsrtCmprTsrcxprssnStrng, String tstScrptStpCtnSsrtCmprTsrcPthStrng, String tstScrptStpCtnSsrtCntntTpCde, String tstScrptStpCtnSsrtXprssnStrng, String tstScrptStpCtnSsrtHdrFldStrng, String tstScrptStpCtnSsrtMnmmdStrng, String tstScrptStpCtnSsrtNvgtnLnksBln, String tstScrptStpCtnSsrtPrtrCde, String tstScrptStpCtnSsrtPthStrng, String tstScrptStpCtnSsrtRqstMthdCde, String tstScrptStpCtnSsrtRqstRlStrng, String tstScrptStpCtnSsrtRsrcCde, String tstScrptStpCtnSsrtRspnsCde, String tstScrptStpCtnSsrtRspnsCdStrng, String tstScrptStpCtnSsrtSrcdD, String tstScrptStpCtnSsrtVldtPrfldD, String tstScrptStpCtnSsrtVlStrng, String tstScrptStpCtnSsrtWrnngnlBln, String testScriptTestNameString, String testScriptTestDescriptionString, String tstScrptTstCtnPrtnPrtn, String tstScrptTstCtnSsrtSsrt, String tstScrptTrdwnCtnPrtnPrtn) {
+       this.testScriptUrlUri = testScriptUrlUri;
+       this.tstScrptDntfrDntfrSe = tstScrptDntfrDntfrSe;
+       this.tstScrptDntfrDntfrTpCcCSstm = tstScrptDntfrDntfrTpCcCSstm;
+       this.tstScrptDntfrDntfrTpCcCVrsn = tstScrptDntfrDntfrTpCcCVrsn;
+       this.tstScrptDntfrDntfrTpCcCCde = tstScrptDntfrDntfrTpCcCCde;
+       this.tstScrptDntfrDntfrTpCcCDsplay = tstScrptDntfrDntfrTpCcCDsplay;
+       this.tstScrptDntfrDntfrTpCcCSrSlctd = tstScrptDntfrDntfrTpCcCSrSlctd;
+       this.tstScrptDntfrDntfrTpCcTxt = tstScrptDntfrDntfrTpCcTxt;
+       this.tstScrptDntfrDntfrPrdPrdStrt = tstScrptDntfrDntfrPrdPrdStrt;
+       this.tstScrptDntfrDntfrPrdPrdNd = tstScrptDntfrDntfrPrdPrdNd;
+       this.tstScrptDntfrDntfrSsgnr = tstScrptDntfrDntfrSsgnr;
+       this.tstScrptDntfrDntfrVlue = tstScrptDntfrDntfrVlue;
+       this.tstScrptDntfrDntfrSstm = tstScrptDntfrDntfrSstm;
+       this.testScriptVersionString = testScriptVersionString;
+       this.testScriptNameString = testScriptNameString;
+       this.testScriptTitleString = testScriptTitleString;
+       this.testScriptStatusCode = testScriptStatusCode;
+       this.testScriptExperimentalBoolean = testScriptExperimentalBoolean;
+       this.testScriptDateDateTime = testScriptDateDateTime;
+       this.testScriptPublisherString = testScriptPublisherString;
+       this.tstScrptCntctCntctDtlTlcmCntctPntPrdStrt = tstScrptCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.tstScrptCntctCntctDtlTlcmCntctPntPrdNd = tstScrptCntctCntctDtlTlcmCntctPntPrdNd;
+       this.tstScrptCntctCntctDtlTlcmCntctPntSstm = tstScrptCntctCntctDtlTlcmCntctPntSstm;
+       this.tstScrptCntctCntctDtlTlcmCntctPntVlue = tstScrptCntctCntctDtlTlcmCntctPntVlue;
+       this.tstScrptCntctCntctDtlTlcmCntctPntSe = tstScrptCntctCntctDtlTlcmCntctPntSe;
+       this.tstScrptCntctCntctDtlTlcmCntctPntRnk = tstScrptCntctCntctDtlTlcmCntctPntRnk;
+       this.tstScrptCntctCntctDtlNme = tstScrptCntctCntctDtlNme;
+       this.testScriptDescriptionMarkdown = testScriptDescriptionMarkdown;
+       this.tstScrptSCntxtSgCntxtVlCcCcCSstm = tstScrptSCntxtSgCntxtVlCcCcCSstm;
+       this.tstScrptSCntxtSgCntxtVlCcCcCVrsn = tstScrptSCntxtSgCntxtVlCcCcCVrsn;
+       this.tstScrptSCntxtSgCntxtVlCcCcCCde = tstScrptSCntxtSgCntxtVlCcCcCCde;
+       this.tstScrptSCntxtSgCntxtVlCcCcCDsplay = tstScrptSCntxtSgCntxtVlCcCcCDsplay;
+       this.tstScrptSCntxtSgCntxtVlCcCcCSrSlctd = tstScrptSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.tstScrptSCntxtSgCntxtVlCcCcTxt = tstScrptSCntxtSgCntxtVlCcCcTxt;
+       this.tstScrptSCntxtSgCntxtCdCSstm = tstScrptSCntxtSgCntxtCdCSstm;
+       this.tstScrptSCntxtSgCntxtCdCVrsn = tstScrptSCntxtSgCntxtCdCVrsn;
+       this.tstScrptSCntxtSgCntxtCdCCde = tstScrptSCntxtSgCntxtCdCCde;
+       this.tstScrptSCntxtSgCntxtCdCDsplay = tstScrptSCntxtSgCntxtCdCDsplay;
+       this.tstScrptSCntxtSgCntxtCdCSrSlctd = tstScrptSCntxtSgCntxtCdCSrSlctd;
+       this.tstScrptSCntxtSgCntxtVlQnttQnttVlue = tstScrptSCntxtSgCntxtVlQnttQnttVlue;
+       this.tstScrptSCntxtSgCntxtVlQnttQnttCmprtr = tstScrptSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.tstScrptSCntxtSgCntxtVlQnttQnttNt = tstScrptSCntxtSgCntxtVlQnttQnttNt;
+       this.tstScrptSCntxtSgCntxtVlQnttQnttSstm = tstScrptSCntxtSgCntxtVlQnttQnttSstm;
+       this.tstScrptSCntxtSgCntxtVlQnttQnttCde = tstScrptSCntxtSgCntxtVlQnttQnttCde;
+       this.tstScrptSCntxtSgCntxtVlRngRngLw = tstScrptSCntxtSgCntxtVlRngRngLw;
+       this.tstScrptSCntxtSgCntxtVlRngRngHgh = tstScrptSCntxtSgCntxtVlRngRngHgh;
+       this.tstScrptSCntxtSgCntxtVlRfrnce = tstScrptSCntxtSgCntxtVlRfrnce;
+       this.tstScrptJrsdctnCcCdngCSstm = tstScrptJrsdctnCcCdngCSstm;
+       this.tstScrptJrsdctnCcCdngCVrsn = tstScrptJrsdctnCcCdngCVrsn;
+       this.tstScrptJrsdctnCcCdngCCde = tstScrptJrsdctnCcCdngCCde;
+       this.tstScrptJrsdctnCcCdngCDsplay = tstScrptJrsdctnCcCdngCDsplay;
+       this.tstScrptJrsdctnCcCdngCSrSlctd = tstScrptJrsdctnCcCdngCSrSlctd;
+       this.testScriptJurisdictionCcText = testScriptJurisdictionCcText;
+       this.testScriptPurposeMarkdown = testScriptPurposeMarkdown;
+       this.testScriptCopyrightMarkdown = testScriptCopyrightMarkdown;
+       this.testScriptOriginIndexInteger = testScriptOriginIndexInteger;
+       this.tstScrptRgnPrflCSrSlctd = tstScrptRgnPrflCSrSlctd;
+       this.testScriptOriginProfileCCode = testScriptOriginProfileCCode;
+       this.tstScrptRgnPrflCVrsn = tstScrptRgnPrflCVrsn;
+       this.tstScrptRgnPrflCDsplay = tstScrptRgnPrflCDsplay;
+       this.testScriptOriginProfileCSystem = testScriptOriginProfileCSystem;
+       this.tstScrptDstntnNdxNtgr = tstScrptDstntnNdxNtgr;
+       this.tstScrptDstntnPrflCSrSlctd = tstScrptDstntnPrflCSrSlctd;
+       this.tstScrptDstntnPrflCCde = tstScrptDstntnPrflCCde;
+       this.tstScrptDstntnPrflCVrsn = tstScrptDstntnPrflCVrsn;
+       this.tstScrptDstntnPrflCDsplay = tstScrptDstntnPrflCDsplay;
+       this.tstScrptDstntnPrflCSstm = tstScrptDstntnPrflCSstm;
+       this.testScriptMetadataLinkUrlUri = testScriptMetadataLinkUrlUri;
+       this.tstScrptMtdtLnkDscrptnStrng = tstScrptMtdtLnkDscrptnStrng;
+       this.tstScrptMtdtCpbltRqrdBln = tstScrptMtdtCpbltRqrdBln;
+       this.tstScrptMtdtCpbltVldtdBln = tstScrptMtdtCpbltVldtdBln;
+       this.tstScrptMtdtCpbltDscrptnStrng = tstScrptMtdtCpbltDscrptnStrng;
+       this.tstScrptMtdtCpbltRgnNtgr = tstScrptMtdtCpbltRgnNtgr;
+       this.tstScrptMtdtCpbltDstntnNtgr = tstScrptMtdtCpbltDstntnNtgr;
+       this.tstScrptMtdtCpbltLnkRi = tstScrptMtdtCpbltLnkRi;
+       this.tstScrptMtdtCpbltCpbltsCnncl = tstScrptMtdtCpbltCpbltsCnncl;
+       this.tstScrptFxtrTcrtBln = tstScrptFxtrTcrtBln;
+       this.tstScrptFxtrTdltBln = tstScrptFxtrTdltBln;
+       this.tstScrptFxtrRsrcRfrnce = tstScrptFxtrRsrcRfrnce;
+       this.testScriptProfileReference = testScriptProfileReference;
+       this.testScriptVariableNameString = testScriptVariableNameString;
+       this.tstScrptVrblDfltVlStrng = tstScrptVrblDfltVlStrng;
+       this.tstScrptVrblDscrptnStrng = tstScrptVrblDscrptnStrng;
+       this.tstScrptVrblXprssnStrng = tstScrptVrblXprssnStrng;
+       this.tstScrptVrblHdrFldStrng = tstScrptVrblHdrFldStrng;
+       this.testScriptVariableHintString = testScriptVariableHintString;
+       this.testScriptVariablePathString = testScriptVariablePathString;
+       this.testScriptVariableSourceIdId = testScriptVariableSourceIdId;
+       this.tstScrptStpCtnPrtnTpCSrSlctd = tstScrptStpCtnPrtnTpCSrSlctd;
+       this.tstScrptStpCtnPrtnTpCCde = tstScrptStpCtnPrtnTpCCde;
+       this.tstScrptStpCtnPrtnTpCVrsn = tstScrptStpCtnPrtnTpCVrsn;
+       this.tstScrptStpCtnPrtnTpCDsplay = tstScrptStpCtnPrtnTpCDsplay;
+       this.tstScrptStpCtnPrtnTpCSstm = tstScrptStpCtnPrtnTpCSstm;
+       this.tstScrptStpCtnPrtnRsrcCde = tstScrptStpCtnPrtnRsrcCde;
+       this.tstScrptStpCtnPrtnLblStrng = tstScrptStpCtnPrtnLblStrng;
+       this.tstScrptStpCtnPrtnDscrptnStrng = tstScrptStpCtnPrtnDscrptnStrng;
+       this.tstScrptStpCtnPrtnCcptCde = tstScrptStpCtnPrtnCcptCde;
+       this.tstScrptStpCtnPrtnCntntTpCde = tstScrptStpCtnPrtnCntntTpCde;
+       this.tstScrptStpCtnPrtnDstntnNtgr = tstScrptStpCtnPrtnDstntnNtgr;
+       this.tstScrptStpCtnPrtnNcdRqstrlBln = tstScrptStpCtnPrtnNcdRqstrlBln;
+       this.tstScrptStpCtnPrtnMthdCde = tstScrptStpCtnPrtnMthdCde;
+       this.tstScrptStpCtnPrtnRgnNtgr = tstScrptStpCtnPrtnRgnNtgr;
+       this.tstScrptStpCtnPrtnPrmsStrng = tstScrptStpCtnPrtnPrmsStrng;
+       this.tstScrptStpCtnPrtnRqstHdrFldStrng = tstScrptStpCtnPrtnRqstHdrFldStrng;
+       this.tstScrptStpCtnPrtnRqstHdrVlStrng = tstScrptStpCtnPrtnRqstHdrVlStrng;
+       this.tstScrptStpCtnPrtnRqstdD = tstScrptStpCtnPrtnRqstdD;
+       this.tstScrptStpCtnPrtnRspnsdD = tstScrptStpCtnPrtnRspnsdD;
+       this.tstScrptStpCtnPrtnSrcdD = tstScrptStpCtnPrtnSrcdD;
+       this.tstScrptStpCtnPrtnTrgtdD = tstScrptStpCtnPrtnTrgtdD;
+       this.tstScrptStpCtnPrtnRlStrng = tstScrptStpCtnPrtnRlStrng;
+       this.tstScrptStpCtnSsrtLblStrng = tstScrptStpCtnSsrtLblStrng;
+       this.tstScrptStpCtnSsrtDscrptnStrng = tstScrptStpCtnSsrtDscrptnStrng;
+       this.tstScrptStpCtnSsrtDrctnCde = tstScrptStpCtnSsrtDrctnCde;
+       this.tstScrptStpCtnSsrtCmprTsrcdStrng = tstScrptStpCtnSsrtCmprTsrcdStrng;
+       this.tstScrptStpCtnSsrtCmprTsrcxprssnStrng = tstScrptStpCtnSsrtCmprTsrcxprssnStrng;
+       this.tstScrptStpCtnSsrtCmprTsrcPthStrng = tstScrptStpCtnSsrtCmprTsrcPthStrng;
+       this.tstScrptStpCtnSsrtCntntTpCde = tstScrptStpCtnSsrtCntntTpCde;
+       this.tstScrptStpCtnSsrtXprssnStrng = tstScrptStpCtnSsrtXprssnStrng;
+       this.tstScrptStpCtnSsrtHdrFldStrng = tstScrptStpCtnSsrtHdrFldStrng;
+       this.tstScrptStpCtnSsrtMnmmdStrng = tstScrptStpCtnSsrtMnmmdStrng;
+       this.tstScrptStpCtnSsrtNvgtnLnksBln = tstScrptStpCtnSsrtNvgtnLnksBln;
+       this.tstScrptStpCtnSsrtPrtrCde = tstScrptStpCtnSsrtPrtrCde;
+       this.tstScrptStpCtnSsrtPthStrng = tstScrptStpCtnSsrtPthStrng;
+       this.tstScrptStpCtnSsrtRqstMthdCde = tstScrptStpCtnSsrtRqstMthdCde;
+       this.tstScrptStpCtnSsrtRqstRlStrng = tstScrptStpCtnSsrtRqstRlStrng;
+       this.tstScrptStpCtnSsrtRsrcCde = tstScrptStpCtnSsrtRsrcCde;
        this.tstScrptStpCtnSsrtRspnsCde = tstScrptStpCtnSsrtRspnsCde;
-       this.tstScrptStpCtnSsrtSrcd = tstScrptStpCtnSsrtSrcd;
-       this.tstScrptStpCtnSsrtVldtPrfld = tstScrptStpCtnSsrtVldtPrfld;
-       this.tstScrptStpCtnSsrtVlue = tstScrptStpCtnSsrtVlue;
-       this.tstScrptStpCtnSsrtWrnngnly = tstScrptStpCtnSsrtWrnngnly;
-       this.testScriptTest = testScriptTest;
-       this.testScriptTestName = testScriptTestName;
-       this.testScriptTestDescription = testScriptTestDescription;
-       this.testScriptTestAction = testScriptTestAction;
-       this.testScriptTestActionOperation = testScriptTestActionOperation;
-       this.testScriptTestActionAssert = testScriptTestActionAssert;
-       this.testScriptTeardown = testScriptTeardown;
-       this.testScriptTeardownAction = testScriptTeardownAction;
-       this.tstScrptTrdwnCtnPrtn = tstScrptTrdwnCtnPrtn;
+       this.tstScrptStpCtnSsrtRspnsCdStrng = tstScrptStpCtnSsrtRspnsCdStrng;
+       this.tstScrptStpCtnSsrtSrcdD = tstScrptStpCtnSsrtSrcdD;
+       this.tstScrptStpCtnSsrtVldtPrfldD = tstScrptStpCtnSsrtVldtPrfldD;
+       this.tstScrptStpCtnSsrtVlStrng = tstScrptStpCtnSsrtVlStrng;
+       this.tstScrptStpCtnSsrtWrnngnlBln = tstScrptStpCtnSsrtWrnngnlBln;
+       this.testScriptTestNameString = testScriptTestNameString;
+       this.testScriptTestDescriptionString = testScriptTestDescriptionString;
+       this.tstScrptTstCtnPrtnPrtn = tstScrptTstCtnPrtnPrtn;
+       this.tstScrptTstCtnSsrtSsrt = tstScrptTstCtnSsrtSsrt;
+       this.tstScrptTrdwnCtnPrtnPrtn = tstScrptTrdwnCtnPrtnPrtn;
     }
    
-    public String getTestScriptUrl() {
-        return this.testScriptUrl;
-    }
-    
-    public void setTestScriptUrl(String testScriptUrl) {
-        this.testScriptUrl = testScriptUrl;
-    }
-    
-    
-    
-    public String getTstScrptDntfrCdngSrSlctd() {
-        return this.tstScrptDntfrCdngSrSlctd;
-    }
-    
-    public void setTstScrptDntfrCdngSrSlctd(String tstScrptDntfrCdngSrSlctd) {
-        this.tstScrptDntfrCdngSrSlctd = tstScrptDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTestScriptIdentifierCodingCode() {
-        return this.testScriptIdentifierCodingCode;
-    }
-    
-    public void setTestScriptIdentifierCodingCode(String testScriptIdentifierCodingCode) {
-        this.testScriptIdentifierCodingCode = testScriptIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getTstScrptDntfrCdngDsplay() {
-        return this.tstScrptDntfrCdngDsplay;
-    }
-    
-    public void setTstScrptDntfrCdngDsplay(String tstScrptDntfrCdngDsplay) {
-        this.tstScrptDntfrCdngDsplay = tstScrptDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getTstScrptDntfrCdngVrsn() {
-        return this.tstScrptDntfrCdngVrsn;
-    }
-    
-    public void setTstScrptDntfrCdngVrsn(String tstScrptDntfrCdngVrsn) {
-        this.tstScrptDntfrCdngVrsn = tstScrptDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getTstScrptDntfrCdngSstm() {
-        return this.tstScrptDntfrCdngSstm;
-    }
-    
-    public void setTstScrptDntfrCdngSstm(String tstScrptDntfrCdngSstm) {
-        this.tstScrptDntfrCdngSstm = tstScrptDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getTestScriptVersion() {
-        return this.testScriptVersion;
-    }
-    
-    public void setTestScriptVersion(String testScriptVersion) {
-        this.testScriptVersion = testScriptVersion;
-    }
-    
-    
-    
-    public String getTestScriptName() {
-        return this.testScriptName;
-    }
-    
-    public void setTestScriptName(String testScriptName) {
-        this.testScriptName = testScriptName;
-    }
-    
-    
-    
-    public String getTestScriptTitle() {
-        return this.testScriptTitle;
-    }
-    
-    public void setTestScriptTitle(String testScriptTitle) {
-        this.testScriptTitle = testScriptTitle;
-    }
-    
-    
-    
-    public String getTestScriptStatus() {
-        return this.testScriptStatus;
-    }
-    
-    public void setTestScriptStatus(String testScriptStatus) {
-        this.testScriptStatus = testScriptStatus;
-    }
-    
-    
-    
-    public String getTestScriptExperimental() {
-        return this.testScriptExperimental;
-    }
-    
-    public void setTestScriptExperimental(String testScriptExperimental) {
-        this.testScriptExperimental = testScriptExperimental;
-    }
-    
-    
-    
-    public String getTestScriptDate() {
-        return this.testScriptDate;
-    }
-    
-    public void setTestScriptDate(String testScriptDate) {
-        this.testScriptDate = testScriptDate;
-    }
-    
-    
-    
-    public String getTestScriptPublisher() {
-        return this.testScriptPublisher;
-    }
-    
-    public void setTestScriptPublisher(String testScriptPublisher) {
-        this.testScriptPublisher = testScriptPublisher;
-    }
-    
-    
-    
-    public String getTestScriptContact() {
-        return this.testScriptContact;
-    }
-    
-    public void setTestScriptContact(String testScriptContact) {
-        this.testScriptContact = testScriptContact;
-    }
-    
-    
-    
-    public String getTestScriptDescription() {
-        return this.testScriptDescription;
-    }
-    
-    public void setTestScriptDescription(String testScriptDescription) {
-        this.testScriptDescription = testScriptDescription;
-    }
-    
-    
-    
-    public String getTestScriptUseContext() {
-        return this.testScriptUseContext;
-    }
-    
-    public void setTestScriptUseContext(String testScriptUseContext) {
-        this.testScriptUseContext = testScriptUseContext;
-    }
-    
-    
-    
-    public String getTstScrptJrsdctnCdngSrSlctd() {
-        return this.tstScrptJrsdctnCdngSrSlctd;
-    }
-    
-    public void setTstScrptJrsdctnCdngSrSlctd(String tstScrptJrsdctnCdngSrSlctd) {
-        this.tstScrptJrsdctnCdngSrSlctd = tstScrptJrsdctnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTstScrptJrsdctnCdngCde() {
-        return this.tstScrptJrsdctnCdngCde;
-    }
-    
-    public void setTstScrptJrsdctnCdngCde(String tstScrptJrsdctnCdngCde) {
-        this.tstScrptJrsdctnCdngCde = tstScrptJrsdctnCdngCde;
-    }
-    
-    
-    
-    public String getTstScrptJrsdctnCdngDsplay() {
-        return this.tstScrptJrsdctnCdngDsplay;
-    }
-    
-    public void setTstScrptJrsdctnCdngDsplay(String tstScrptJrsdctnCdngDsplay) {
-        this.tstScrptJrsdctnCdngDsplay = tstScrptJrsdctnCdngDsplay;
-    }
-    
-    
-    
-    public String getTstScrptJrsdctnCdngVrsn() {
-        return this.tstScrptJrsdctnCdngVrsn;
-    }
-    
-    public void setTstScrptJrsdctnCdngVrsn(String tstScrptJrsdctnCdngVrsn) {
-        this.tstScrptJrsdctnCdngVrsn = tstScrptJrsdctnCdngVrsn;
-    }
-    
-    
-    
-    public String getTstScrptJrsdctnCdngSstm() {
-        return this.tstScrptJrsdctnCdngSstm;
-    }
-    
-    public void setTstScrptJrsdctnCdngSstm(String tstScrptJrsdctnCdngSstm) {
-        this.tstScrptJrsdctnCdngSstm = tstScrptJrsdctnCdngSstm;
-    }
-    
-    
-    
-    public String getTestScriptPurpose() {
-        return this.testScriptPurpose;
-    }
-    
-    public void setTestScriptPurpose(String testScriptPurpose) {
-        this.testScriptPurpose = testScriptPurpose;
-    }
-    
-    
-    
-    public String getTestScriptCopyright() {
-        return this.testScriptCopyright;
-    }
-    
-    public void setTestScriptCopyright(String testScriptCopyright) {
-        this.testScriptCopyright = testScriptCopyright;
-    }
-    
-    
-    
-    public String getTestScriptOrigin() {
-        return this.testScriptOrigin;
-    }
-    
-    public void setTestScriptOrigin(String testScriptOrigin) {
-        this.testScriptOrigin = testScriptOrigin;
-    }
-    
-    
-    
-    public String getTestScriptOriginIndex() {
-        return this.testScriptOriginIndex;
-    }
-    
-    public void setTestScriptOriginIndex(String testScriptOriginIndex) {
-        this.testScriptOriginIndex = testScriptOriginIndex;
-    }
-    
-    
-    
-    public String getTstScrptRgnPrflCdngSrSlctd() {
-        return this.tstScrptRgnPrflCdngSrSlctd;
-    }
-    
-    public void setTstScrptRgnPrflCdngSrSlctd(String tstScrptRgnPrflCdngSrSlctd) {
-        this.tstScrptRgnPrflCdngSrSlctd = tstScrptRgnPrflCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTstScrptRgnPrflCdngCde() {
-        return this.tstScrptRgnPrflCdngCde;
-    }
-    
-    public void setTstScrptRgnPrflCdngCde(String tstScrptRgnPrflCdngCde) {
-        this.tstScrptRgnPrflCdngCde = tstScrptRgnPrflCdngCde;
-    }
-    
-    
-    
-    public String getTstScrptRgnPrflCdngDsplay() {
-        return this.tstScrptRgnPrflCdngDsplay;
-    }
-    
-    public void setTstScrptRgnPrflCdngDsplay(String tstScrptRgnPrflCdngDsplay) {
-        this.tstScrptRgnPrflCdngDsplay = tstScrptRgnPrflCdngDsplay;
-    }
-    
-    
-    
-    public String getTstScrptRgnPrflCdngVrsn() {
-        return this.tstScrptRgnPrflCdngVrsn;
-    }
-    
-    public void setTstScrptRgnPrflCdngVrsn(String tstScrptRgnPrflCdngVrsn) {
-        this.tstScrptRgnPrflCdngVrsn = tstScrptRgnPrflCdngVrsn;
-    }
-    
-    
-    
-    public String getTstScrptRgnPrflCdngSstm() {
-        return this.tstScrptRgnPrflCdngSstm;
-    }
-    
-    public void setTstScrptRgnPrflCdngSstm(String tstScrptRgnPrflCdngSstm) {
-        this.tstScrptRgnPrflCdngSstm = tstScrptRgnPrflCdngSstm;
-    }
-    
-    
-    
-    public String getTestScriptDestination() {
-        return this.testScriptDestination;
-    }
-    
-    public void setTestScriptDestination(String testScriptDestination) {
-        this.testScriptDestination = testScriptDestination;
-    }
-    
-    
-    
-    public String getTestScriptDestinationIndex() {
-        return this.testScriptDestinationIndex;
-    }
-    
-    public void setTestScriptDestinationIndex(String testScriptDestinationIndex) {
-        this.testScriptDestinationIndex = testScriptDestinationIndex;
-    }
-    
-    
-    
-    public String getTstScrptDstntnPrflCdngSrSlctd() {
-        return this.tstScrptDstntnPrflCdngSrSlctd;
-    }
-    
-    public void setTstScrptDstntnPrflCdngSrSlctd(String tstScrptDstntnPrflCdngSrSlctd) {
-        this.tstScrptDstntnPrflCdngSrSlctd = tstScrptDstntnPrflCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTstScrptDstntnPrflCdngCde() {
-        return this.tstScrptDstntnPrflCdngCde;
-    }
-    
-    public void setTstScrptDstntnPrflCdngCde(String tstScrptDstntnPrflCdngCde) {
-        this.tstScrptDstntnPrflCdngCde = tstScrptDstntnPrflCdngCde;
-    }
-    
-    
-    
-    public String getTstScrptDstntnPrflCdngDsplay() {
-        return this.tstScrptDstntnPrflCdngDsplay;
-    }
-    
-    public void setTstScrptDstntnPrflCdngDsplay(String tstScrptDstntnPrflCdngDsplay) {
-        this.tstScrptDstntnPrflCdngDsplay = tstScrptDstntnPrflCdngDsplay;
-    }
-    
-    
-    
-    public String getTstScrptDstntnPrflCdngVrsn() {
-        return this.tstScrptDstntnPrflCdngVrsn;
-    }
-    
-    public void setTstScrptDstntnPrflCdngVrsn(String tstScrptDstntnPrflCdngVrsn) {
-        this.tstScrptDstntnPrflCdngVrsn = tstScrptDstntnPrflCdngVrsn;
-    }
-    
-    
-    
-    public String getTstScrptDstntnPrflCdngSstm() {
-        return this.tstScrptDstntnPrflCdngSstm;
-    }
-    
-    public void setTstScrptDstntnPrflCdngSstm(String tstScrptDstntnPrflCdngSstm) {
-        this.tstScrptDstntnPrflCdngSstm = tstScrptDstntnPrflCdngSstm;
-    }
-    
-    
-    
-    public String getTestScriptMetadata() {
-        return this.testScriptMetadata;
-    }
-    
-    public void setTestScriptMetadata(String testScriptMetadata) {
-        this.testScriptMetadata = testScriptMetadata;
-    }
-    
-    
-    
-    public String getTestScriptMetadataLink() {
-        return this.testScriptMetadataLink;
-    }
-    
-    public void setTestScriptMetadataLink(String testScriptMetadataLink) {
-        this.testScriptMetadataLink = testScriptMetadataLink;
-    }
-    
-    
-    
-    public String getTestScriptMetadataLinkUrl() {
-        return this.testScriptMetadataLinkUrl;
-    }
-    
-    public void setTestScriptMetadataLinkUrl(String testScriptMetadataLinkUrl) {
-        this.testScriptMetadataLinkUrl = testScriptMetadataLinkUrl;
-    }
-    
-    
-    
-    public String getTstScrptMtdtLnkDscrptn() {
-        return this.tstScrptMtdtLnkDscrptn;
-    }
-    
-    public void setTstScrptMtdtLnkDscrptn(String tstScrptMtdtLnkDscrptn) {
-        this.tstScrptMtdtLnkDscrptn = tstScrptMtdtLnkDscrptn;
-    }
-    
-    
-    
-    public String getTestScriptMetadataCapability() {
-        return this.testScriptMetadataCapability;
-    }
-    
-    public void setTestScriptMetadataCapability(String testScriptMetadataCapability) {
-        this.testScriptMetadataCapability = testScriptMetadataCapability;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltRqrd() {
-        return this.tstScrptMtdtCpbltRqrd;
-    }
-    
-    public void setTstScrptMtdtCpbltRqrd(String tstScrptMtdtCpbltRqrd) {
-        this.tstScrptMtdtCpbltRqrd = tstScrptMtdtCpbltRqrd;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltVldtd() {
-        return this.tstScrptMtdtCpbltVldtd;
-    }
-    
-    public void setTstScrptMtdtCpbltVldtd(String tstScrptMtdtCpbltVldtd) {
-        this.tstScrptMtdtCpbltVldtd = tstScrptMtdtCpbltVldtd;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltDscrptn() {
-        return this.tstScrptMtdtCpbltDscrptn;
-    }
-    
-    public void setTstScrptMtdtCpbltDscrptn(String tstScrptMtdtCpbltDscrptn) {
-        this.tstScrptMtdtCpbltDscrptn = tstScrptMtdtCpbltDscrptn;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltRgn() {
-        return this.tstScrptMtdtCpbltRgn;
-    }
-    
-    public void setTstScrptMtdtCpbltRgn(String tstScrptMtdtCpbltRgn) {
-        this.tstScrptMtdtCpbltRgn = tstScrptMtdtCpbltRgn;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltDstntn() {
-        return this.tstScrptMtdtCpbltDstntn;
-    }
-    
-    public void setTstScrptMtdtCpbltDstntn(String tstScrptMtdtCpbltDstntn) {
-        this.tstScrptMtdtCpbltDstntn = tstScrptMtdtCpbltDstntn;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltLnk() {
-        return this.tstScrptMtdtCpbltLnk;
-    }
-    
-    public void setTstScrptMtdtCpbltLnk(String tstScrptMtdtCpbltLnk) {
-        this.tstScrptMtdtCpbltLnk = tstScrptMtdtCpbltLnk;
-    }
-    
-    
-    
-    public String getTstScrptMtdtCpbltCpblts() {
-        return this.tstScrptMtdtCpbltCpblts;
-    }
-    
-    public void setTstScrptMtdtCpbltCpblts(String tstScrptMtdtCpbltCpblts) {
-        this.tstScrptMtdtCpbltCpblts = tstScrptMtdtCpbltCpblts;
-    }
-    
-    
-    
-    public String getTestScriptFixture() {
-        return this.testScriptFixture;
-    }
-    
-    public void setTestScriptFixture(String testScriptFixture) {
-        this.testScriptFixture = testScriptFixture;
-    }
-    
-    
-    
-    public String getTestScriptFixtureAutocreate() {
-        return this.testScriptFixtureAutocreate;
-    }
-    
-    public void setTestScriptFixtureAutocreate(String testScriptFixtureAutocreate) {
-        this.testScriptFixtureAutocreate = testScriptFixtureAutocreate;
-    }
-    
-    
-    
-    public String getTestScriptFixtureAutodelete() {
-        return this.testScriptFixtureAutodelete;
-    }
-    
-    public void setTestScriptFixtureAutodelete(String testScriptFixtureAutodelete) {
-        this.testScriptFixtureAutodelete = testScriptFixtureAutodelete;
-    }
-    
-    
-    
-    public String getTestScriptFixtureResource() {
-        return this.testScriptFixtureResource;
-    }
-    
-    public void setTestScriptFixtureResource(String testScriptFixtureResource) {
-        this.testScriptFixtureResource = testScriptFixtureResource;
-    }
-    
-    
-    
-    public String getTestScriptProfile() {
-        return this.testScriptProfile;
-    }
-    
-    public void setTestScriptProfile(String testScriptProfile) {
-        this.testScriptProfile = testScriptProfile;
-    }
-    
-    
-    
-    public String getTestScriptVariable() {
-        return this.testScriptVariable;
-    }
-    
-    public void setTestScriptVariable(String testScriptVariable) {
-        this.testScriptVariable = testScriptVariable;
-    }
-    
-    
-    
-    public String getTestScriptVariableName() {
-        return this.testScriptVariableName;
-    }
-    
-    public void setTestScriptVariableName(String testScriptVariableName) {
-        this.testScriptVariableName = testScriptVariableName;
-    }
-    
-    
-    
-    public String getTestScriptVariableDefaultValue() {
-        return this.testScriptVariableDefaultValue;
-    }
-    
-    public void setTestScriptVariableDefaultValue(String testScriptVariableDefaultValue) {
-        this.testScriptVariableDefaultValue = testScriptVariableDefaultValue;
-    }
-    
-    
-    
-    public String getTestScriptVariableDescription() {
-        return this.testScriptVariableDescription;
-    }
-    
-    public void setTestScriptVariableDescription(String testScriptVariableDescription) {
-        this.testScriptVariableDescription = testScriptVariableDescription;
-    }
-    
-    
-    
-    public String getTestScriptVariableExpression() {
-        return this.testScriptVariableExpression;
-    }
-    
-    public void setTestScriptVariableExpression(String testScriptVariableExpression) {
-        this.testScriptVariableExpression = testScriptVariableExpression;
-    }
-    
-    
-    
-    public String getTestScriptVariableHeaderField() {
-        return this.testScriptVariableHeaderField;
-    }
-    
-    public void setTestScriptVariableHeaderField(String testScriptVariableHeaderField) {
-        this.testScriptVariableHeaderField = testScriptVariableHeaderField;
-    }
-    
-    
-    
-    public String getTestScriptVariableHint() {
-        return this.testScriptVariableHint;
-    }
-    
-    public void setTestScriptVariableHint(String testScriptVariableHint) {
-        this.testScriptVariableHint = testScriptVariableHint;
-    }
-    
-    
-    
-    public String getTestScriptVariablePath() {
-        return this.testScriptVariablePath;
-    }
-    
-    public void setTestScriptVariablePath(String testScriptVariablePath) {
-        this.testScriptVariablePath = testScriptVariablePath;
-    }
-    
-    
-    
-    public String getTestScriptVariableSourceId() {
-        return this.testScriptVariableSourceId;
-    }
-    
-    public void setTestScriptVariableSourceId(String testScriptVariableSourceId) {
-        this.testScriptVariableSourceId = testScriptVariableSourceId;
-    }
-    
-    
-    
-    public String getTestScriptSetup() {
-        return this.testScriptSetup;
-    }
-    
-    public void setTestScriptSetup(String testScriptSetup) {
-        this.testScriptSetup = testScriptSetup;
-    }
-    
-    
-    
-    public String getTestScriptSetupAction() {
-        return this.testScriptSetupAction;
-    }
-    
-    public void setTestScriptSetupAction(String testScriptSetupAction) {
-        this.testScriptSetupAction = testScriptSetupAction;
-    }
-    
-    
-    
-    public String getTestScriptSetupActionOperation() {
-        return this.testScriptSetupActionOperation;
-    }
-    
-    public void setTestScriptSetupActionOperation(String testScriptSetupActionOperation) {
-        this.testScriptSetupActionOperation = testScriptSetupActionOperation;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTpCdngSrSlctd() {
-        return this.tstScrptStpCtnPrtnTpCdngSrSlctd;
-    }
-    
-    public void setTstScrptStpCtnPrtnTpCdngSrSlctd(String tstScrptStpCtnPrtnTpCdngSrSlctd) {
-        this.tstScrptStpCtnPrtnTpCdngSrSlctd = tstScrptStpCtnPrtnTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTpCdngCde() {
-        return this.tstScrptStpCtnPrtnTpCdngCde;
-    }
-    
-    public void setTstScrptStpCtnPrtnTpCdngCde(String tstScrptStpCtnPrtnTpCdngCde) {
-        this.tstScrptStpCtnPrtnTpCdngCde = tstScrptStpCtnPrtnTpCdngCde;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTpCdngDsplay() {
-        return this.tstScrptStpCtnPrtnTpCdngDsplay;
-    }
-    
-    public void setTstScrptStpCtnPrtnTpCdngDsplay(String tstScrptStpCtnPrtnTpCdngDsplay) {
-        this.tstScrptStpCtnPrtnTpCdngDsplay = tstScrptStpCtnPrtnTpCdngDsplay;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTpCdngVrsn() {
-        return this.tstScrptStpCtnPrtnTpCdngVrsn;
-    }
-    
-    public void setTstScrptStpCtnPrtnTpCdngVrsn(String tstScrptStpCtnPrtnTpCdngVrsn) {
-        this.tstScrptStpCtnPrtnTpCdngVrsn = tstScrptStpCtnPrtnTpCdngVrsn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTpCdngSstm() {
-        return this.tstScrptStpCtnPrtnTpCdngSstm;
-    }
-    
-    public void setTstScrptStpCtnPrtnTpCdngSstm(String tstScrptStpCtnPrtnTpCdngSstm) {
-        this.tstScrptStpCtnPrtnTpCdngSstm = tstScrptStpCtnPrtnTpCdngSstm;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRsrce() {
-        return this.tstScrptStpCtnPrtnRsrce;
-    }
-    
-    public void setTstScrptStpCtnPrtnRsrce(String tstScrptStpCtnPrtnRsrce) {
-        this.tstScrptStpCtnPrtnRsrce = tstScrptStpCtnPrtnRsrce;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnLbl() {
-        return this.tstScrptStpCtnPrtnLbl;
-    }
-    
-    public void setTstScrptStpCtnPrtnLbl(String tstScrptStpCtnPrtnLbl) {
-        this.tstScrptStpCtnPrtnLbl = tstScrptStpCtnPrtnLbl;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnDscrptn() {
-        return this.tstScrptStpCtnPrtnDscrptn;
-    }
-    
-    public void setTstScrptStpCtnPrtnDscrptn(String tstScrptStpCtnPrtnDscrptn) {
-        this.tstScrptStpCtnPrtnDscrptn = tstScrptStpCtnPrtnDscrptn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnCcpt() {
-        return this.tstScrptStpCtnPrtnCcpt;
-    }
-    
-    public void setTstScrptStpCtnPrtnCcpt(String tstScrptStpCtnPrtnCcpt) {
-        this.tstScrptStpCtnPrtnCcpt = tstScrptStpCtnPrtnCcpt;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnCntntTpe() {
-        return this.tstScrptStpCtnPrtnCntntTpe;
-    }
-    
-    public void setTstScrptStpCtnPrtnCntntTpe(String tstScrptStpCtnPrtnCntntTpe) {
-        this.tstScrptStpCtnPrtnCntntTpe = tstScrptStpCtnPrtnCntntTpe;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnDstntn() {
-        return this.tstScrptStpCtnPrtnDstntn;
-    }
-    
-    public void setTstScrptStpCtnPrtnDstntn(String tstScrptStpCtnPrtnDstntn) {
-        this.tstScrptStpCtnPrtnDstntn = tstScrptStpCtnPrtnDstntn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnNcdRqstrl() {
-        return this.tstScrptStpCtnPrtnNcdRqstrl;
-    }
-    
-    public void setTstScrptStpCtnPrtnNcdRqstrl(String tstScrptStpCtnPrtnNcdRqstrl) {
-        this.tstScrptStpCtnPrtnNcdRqstrl = tstScrptStpCtnPrtnNcdRqstrl;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnMthd() {
-        return this.tstScrptStpCtnPrtnMthd;
-    }
-    
-    public void setTstScrptStpCtnPrtnMthd(String tstScrptStpCtnPrtnMthd) {
-        this.tstScrptStpCtnPrtnMthd = tstScrptStpCtnPrtnMthd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRgn() {
-        return this.tstScrptStpCtnPrtnRgn;
-    }
-    
-    public void setTstScrptStpCtnPrtnRgn(String tstScrptStpCtnPrtnRgn) {
-        this.tstScrptStpCtnPrtnRgn = tstScrptStpCtnPrtnRgn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnPrms() {
-        return this.tstScrptStpCtnPrtnPrms;
-    }
-    
-    public void setTstScrptStpCtnPrtnPrms(String tstScrptStpCtnPrtnPrms) {
-        this.tstScrptStpCtnPrtnPrms = tstScrptStpCtnPrtnPrms;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRqstHdr() {
-        return this.tstScrptStpCtnPrtnRqstHdr;
-    }
-    
-    public void setTstScrptStpCtnPrtnRqstHdr(String tstScrptStpCtnPrtnRqstHdr) {
-        this.tstScrptStpCtnPrtnRqstHdr = tstScrptStpCtnPrtnRqstHdr;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRqstHdrFld() {
-        return this.tstScrptStpCtnPrtnRqstHdrFld;
-    }
-    
-    public void setTstScrptStpCtnPrtnRqstHdrFld(String tstScrptStpCtnPrtnRqstHdrFld) {
-        this.tstScrptStpCtnPrtnRqstHdrFld = tstScrptStpCtnPrtnRqstHdrFld;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRqstHdrVlue() {
-        return this.tstScrptStpCtnPrtnRqstHdrVlue;
-    }
-    
-    public void setTstScrptStpCtnPrtnRqstHdrVlue(String tstScrptStpCtnPrtnRqstHdrVlue) {
-        this.tstScrptStpCtnPrtnRqstHdrVlue = tstScrptStpCtnPrtnRqstHdrVlue;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRqstd() {
-        return this.tstScrptStpCtnPrtnRqstd;
-    }
-    
-    public void setTstScrptStpCtnPrtnRqstd(String tstScrptStpCtnPrtnRqstd) {
-        this.tstScrptStpCtnPrtnRqstd = tstScrptStpCtnPrtnRqstd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRspnsd() {
-        return this.tstScrptStpCtnPrtnRspnsd;
-    }
-    
-    public void setTstScrptStpCtnPrtnRspnsd(String tstScrptStpCtnPrtnRspnsd) {
-        this.tstScrptStpCtnPrtnRspnsd = tstScrptStpCtnPrtnRspnsd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnSrcd() {
-        return this.tstScrptStpCtnPrtnSrcd;
-    }
-    
-    public void setTstScrptStpCtnPrtnSrcd(String tstScrptStpCtnPrtnSrcd) {
-        this.tstScrptStpCtnPrtnSrcd = tstScrptStpCtnPrtnSrcd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnTrgtd() {
-        return this.tstScrptStpCtnPrtnTrgtd;
-    }
-    
-    public void setTstScrptStpCtnPrtnTrgtd(String tstScrptStpCtnPrtnTrgtd) {
-        this.tstScrptStpCtnPrtnTrgtd = tstScrptStpCtnPrtnTrgtd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnPrtnRl() {
-        return this.tstScrptStpCtnPrtnRl;
-    }
-    
-    public void setTstScrptStpCtnPrtnRl(String tstScrptStpCtnPrtnRl) {
-        this.tstScrptStpCtnPrtnRl = tstScrptStpCtnPrtnRl;
-    }
-    
-    
-    
-    public String getTestScriptSetupActionAssert() {
-        return this.testScriptSetupActionAssert;
-    }
-    
-    public void setTestScriptSetupActionAssert(String testScriptSetupActionAssert) {
-        this.testScriptSetupActionAssert = testScriptSetupActionAssert;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtLbl() {
-        return this.tstScrptStpCtnSsrtLbl;
-    }
-    
-    public void setTstScrptStpCtnSsrtLbl(String tstScrptStpCtnSsrtLbl) {
-        this.tstScrptStpCtnSsrtLbl = tstScrptStpCtnSsrtLbl;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtDscrptn() {
-        return this.tstScrptStpCtnSsrtDscrptn;
-    }
-    
-    public void setTstScrptStpCtnSsrtDscrptn(String tstScrptStpCtnSsrtDscrptn) {
-        this.tstScrptStpCtnSsrtDscrptn = tstScrptStpCtnSsrtDscrptn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtDrctn() {
-        return this.tstScrptStpCtnSsrtDrctn;
-    }
-    
-    public void setTstScrptStpCtnSsrtDrctn(String tstScrptStpCtnSsrtDrctn) {
-        this.tstScrptStpCtnSsrtDrctn = tstScrptStpCtnSsrtDrctn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtCmprTsrcd() {
-        return this.tstScrptStpCtnSsrtCmprTsrcd;
-    }
-    
-    public void setTstScrptStpCtnSsrtCmprTsrcd(String tstScrptStpCtnSsrtCmprTsrcd) {
-        this.tstScrptStpCtnSsrtCmprTsrcd = tstScrptStpCtnSsrtCmprTsrcd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtCmprTsrcxprssn() {
-        return this.tstScrptStpCtnSsrtCmprTsrcxprssn;
-    }
-    
-    public void setTstScrptStpCtnSsrtCmprTsrcxprssn(String tstScrptStpCtnSsrtCmprTsrcxprssn) {
-        this.tstScrptStpCtnSsrtCmprTsrcxprssn = tstScrptStpCtnSsrtCmprTsrcxprssn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtCmprTsrcPth() {
-        return this.tstScrptStpCtnSsrtCmprTsrcPth;
-    }
-    
-    public void setTstScrptStpCtnSsrtCmprTsrcPth(String tstScrptStpCtnSsrtCmprTsrcPth) {
-        this.tstScrptStpCtnSsrtCmprTsrcPth = tstScrptStpCtnSsrtCmprTsrcPth;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtCntntTpe() {
-        return this.tstScrptStpCtnSsrtCntntTpe;
-    }
-    
-    public void setTstScrptStpCtnSsrtCntntTpe(String tstScrptStpCtnSsrtCntntTpe) {
-        this.tstScrptStpCtnSsrtCntntTpe = tstScrptStpCtnSsrtCntntTpe;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtXprssn() {
-        return this.tstScrptStpCtnSsrtXprssn;
-    }
-    
-    public void setTstScrptStpCtnSsrtXprssn(String tstScrptStpCtnSsrtXprssn) {
-        this.tstScrptStpCtnSsrtXprssn = tstScrptStpCtnSsrtXprssn;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtHdrFld() {
-        return this.tstScrptStpCtnSsrtHdrFld;
-    }
-    
-    public void setTstScrptStpCtnSsrtHdrFld(String tstScrptStpCtnSsrtHdrFld) {
-        this.tstScrptStpCtnSsrtHdrFld = tstScrptStpCtnSsrtHdrFld;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtMnmmd() {
-        return this.tstScrptStpCtnSsrtMnmmd;
-    }
-    
-    public void setTstScrptStpCtnSsrtMnmmd(String tstScrptStpCtnSsrtMnmmd) {
-        this.tstScrptStpCtnSsrtMnmmd = tstScrptStpCtnSsrtMnmmd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtNvgtnLnks() {
-        return this.tstScrptStpCtnSsrtNvgtnLnks;
-    }
-    
-    public void setTstScrptStpCtnSsrtNvgtnLnks(String tstScrptStpCtnSsrtNvgtnLnks) {
-        this.tstScrptStpCtnSsrtNvgtnLnks = tstScrptStpCtnSsrtNvgtnLnks;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtPrtr() {
-        return this.tstScrptStpCtnSsrtPrtr;
-    }
-    
-    public void setTstScrptStpCtnSsrtPrtr(String tstScrptStpCtnSsrtPrtr) {
-        this.tstScrptStpCtnSsrtPrtr = tstScrptStpCtnSsrtPrtr;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtPth() {
-        return this.tstScrptStpCtnSsrtPth;
-    }
-    
-    public void setTstScrptStpCtnSsrtPth(String tstScrptStpCtnSsrtPth) {
-        this.tstScrptStpCtnSsrtPth = tstScrptStpCtnSsrtPth;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtRqstMthd() {
-        return this.tstScrptStpCtnSsrtRqstMthd;
-    }
-    
-    public void setTstScrptStpCtnSsrtRqstMthd(String tstScrptStpCtnSsrtRqstMthd) {
-        this.tstScrptStpCtnSsrtRqstMthd = tstScrptStpCtnSsrtRqstMthd;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtRqstRl() {
-        return this.tstScrptStpCtnSsrtRqstRl;
-    }
-    
-    public void setTstScrptStpCtnSsrtRqstRl(String tstScrptStpCtnSsrtRqstRl) {
-        this.tstScrptStpCtnSsrtRqstRl = tstScrptStpCtnSsrtRqstRl;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtRsrce() {
-        return this.tstScrptStpCtnSsrtRsrce;
-    }
-    
-    public void setTstScrptStpCtnSsrtRsrce(String tstScrptStpCtnSsrtRsrce) {
-        this.tstScrptStpCtnSsrtRsrce = tstScrptStpCtnSsrtRsrce;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtRspnse() {
-        return this.tstScrptStpCtnSsrtRspnse;
-    }
-    
-    public void setTstScrptStpCtnSsrtRspnse(String tstScrptStpCtnSsrtRspnse) {
-        this.tstScrptStpCtnSsrtRspnse = tstScrptStpCtnSsrtRspnse;
-    }
-    
-    
-    
-    public String getTstScrptStpCtnSsrtRspnsCde() {
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getTestScriptUrlUri()
+    {
+        return this.testScriptUrlUri;
+    }
+    
+    public void setTestScriptUrlUri
+        (String testScriptUrlUri) 
+        {
+      this.testScriptUrlUri = testScriptUrlUri;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrSe()
+    {
+        return this.tstScrptDntfrDntfrSe;
+    }
+    
+    public void setTstScrptDntfrDntfrSe
+        (String tstScrptDntfrDntfrSe) 
+        {
+      this.tstScrptDntfrDntfrSe = tstScrptDntfrDntfrSe;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcCSstm()
+    {
+        return this.tstScrptDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcCSstm
+        (String tstScrptDntfrDntfrTpCcCSstm) 
+        {
+      this.tstScrptDntfrDntfrTpCcCSstm = tstScrptDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcCVrsn()
+    {
+        return this.tstScrptDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcCVrsn
+        (String tstScrptDntfrDntfrTpCcCVrsn) 
+        {
+      this.tstScrptDntfrDntfrTpCcCVrsn = tstScrptDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcCCde()
+    {
+        return this.tstScrptDntfrDntfrTpCcCCde;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcCCde
+        (String tstScrptDntfrDntfrTpCcCCde) 
+        {
+      this.tstScrptDntfrDntfrTpCcCCde = tstScrptDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcCDsplay()
+    {
+        return this.tstScrptDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcCDsplay
+        (String tstScrptDntfrDntfrTpCcCDsplay) 
+        {
+      this.tstScrptDntfrDntfrTpCcCDsplay = tstScrptDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.tstScrptDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcCSrSlctd
+        (String tstScrptDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.tstScrptDntfrDntfrTpCcCSrSlctd = tstScrptDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrTpCcTxt()
+    {
+        return this.tstScrptDntfrDntfrTpCcTxt;
+    }
+    
+    public void setTstScrptDntfrDntfrTpCcTxt
+        (String tstScrptDntfrDntfrTpCcTxt) 
+        {
+      this.tstScrptDntfrDntfrTpCcTxt = tstScrptDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrPrdPrdStrt()
+    {
+        return this.tstScrptDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setTstScrptDntfrDntfrPrdPrdStrt
+        (String tstScrptDntfrDntfrPrdPrdStrt) 
+        {
+      this.tstScrptDntfrDntfrPrdPrdStrt = tstScrptDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrPrdPrdNd()
+    {
+        return this.tstScrptDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setTstScrptDntfrDntfrPrdPrdNd
+        (String tstScrptDntfrDntfrPrdPrdNd) 
+        {
+      this.tstScrptDntfrDntfrPrdPrdNd = tstScrptDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrSsgnr()
+    {
+        return this.tstScrptDntfrDntfrSsgnr;
+    }
+    
+    public void setTstScrptDntfrDntfrSsgnr
+        (String tstScrptDntfrDntfrSsgnr) 
+        {
+      this.tstScrptDntfrDntfrSsgnr = tstScrptDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrVlue()
+    {
+        return this.tstScrptDntfrDntfrVlue;
+    }
+    
+    public void setTstScrptDntfrDntfrVlue
+        (String tstScrptDntfrDntfrVlue) 
+        {
+      this.tstScrptDntfrDntfrVlue = tstScrptDntfrDntfrVlue;
+}
+    public 
+    String 
+    getTstScrptDntfrDntfrSstm()
+    {
+        return this.tstScrptDntfrDntfrSstm;
+    }
+    
+    public void setTstScrptDntfrDntfrSstm
+        (String tstScrptDntfrDntfrSstm) 
+        {
+      this.tstScrptDntfrDntfrSstm = tstScrptDntfrDntfrSstm;
+}
+    public 
+    String 
+    getTestScriptVersionString()
+    {
+        return this.testScriptVersionString;
+    }
+    
+    public void setTestScriptVersionString
+        (String testScriptVersionString) 
+        {
+      this.testScriptVersionString = testScriptVersionString;
+}
+    public 
+    String 
+    getTestScriptNameString()
+    {
+        return this.testScriptNameString;
+    }
+    
+    public void setTestScriptNameString
+        (String testScriptNameString) 
+        {
+      this.testScriptNameString = testScriptNameString;
+}
+    public 
+    String 
+    getTestScriptTitleString()
+    {
+        return this.testScriptTitleString;
+    }
+    
+    public void setTestScriptTitleString
+        (String testScriptTitleString) 
+        {
+      this.testScriptTitleString = testScriptTitleString;
+}
+    public 
+    String 
+    getTestScriptStatusCode()
+    {
+        return this.testScriptStatusCode;
+    }
+    
+    public void setTestScriptStatusCode
+        (String testScriptStatusCode) 
+        {
+      this.testScriptStatusCode = testScriptStatusCode;
+}
+    public 
+    String 
+    getTestScriptExperimentalBoolean()
+    {
+        return this.testScriptExperimentalBoolean;
+    }
+    
+    public void setTestScriptExperimentalBoolean
+        (String testScriptExperimentalBoolean) 
+        {
+      this.testScriptExperimentalBoolean = testScriptExperimentalBoolean;
+}
+    public 
+    String 
+    getTestScriptDateDateTime()
+    {
+        return this.testScriptDateDateTime;
+    }
+    
+    public void setTestScriptDateDateTime
+        (String testScriptDateDateTime) 
+        {
+      this.testScriptDateDateTime = testScriptDateDateTime;
+}
+    public 
+    String 
+    getTestScriptPublisherString()
+    {
+        return this.testScriptPublisherString;
+    }
+    
+    public void setTestScriptPublisherString
+        (String testScriptPublisherString) 
+        {
+      this.testScriptPublisherString = testScriptPublisherString;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntPrdStrt
+        (String tstScrptCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntPrdStrt = tstScrptCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntPrdNd
+        (String tstScrptCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntPrdNd = tstScrptCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntSstm
+        (String tstScrptCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntSstm = tstScrptCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntVlue
+        (String tstScrptCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntVlue = tstScrptCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntSe
+        (String tstScrptCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntSe = tstScrptCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.tstScrptCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setTstScrptCntctCntctDtlTlcmCntctPntRnk
+        (String tstScrptCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.tstScrptCntctCntctDtlTlcmCntctPntRnk = tstScrptCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getTstScrptCntctCntctDtlNme()
+    {
+        return this.tstScrptCntctCntctDtlNme;
+    }
+    
+    public void setTstScrptCntctCntctDtlNme
+        (String tstScrptCntctCntctDtlNme) 
+        {
+      this.tstScrptCntctCntctDtlNme = tstScrptCntctCntctDtlNme;
+}
+    public 
+    String 
+    getTestScriptDescriptionMarkdown()
+    {
+        return this.testScriptDescriptionMarkdown;
+    }
+    
+    public void setTestScriptDescriptionMarkdown
+        (String testScriptDescriptionMarkdown) 
+        {
+      this.testScriptDescriptionMarkdown = testScriptDescriptionMarkdown;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcCSstm
+        (String tstScrptSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcCSstm = tstScrptSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcCVrsn
+        (String tstScrptSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcCVrsn = tstScrptSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcCCde
+        (String tstScrptSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcCCde = tstScrptSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcCDsplay
+        (String tstScrptSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcCDsplay = tstScrptSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcCSrSlctd
+        (String tstScrptSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcCSrSlctd = tstScrptSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.tstScrptSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlCcCcTxt
+        (String tstScrptSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.tstScrptSCntxtSgCntxtVlCcCcTxt = tstScrptSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtCdCSstm()
+    {
+        return this.tstScrptSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtCdCSstm
+        (String tstScrptSCntxtSgCntxtCdCSstm) 
+        {
+      this.tstScrptSCntxtSgCntxtCdCSstm = tstScrptSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtCdCVrsn()
+    {
+        return this.tstScrptSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtCdCVrsn
+        (String tstScrptSCntxtSgCntxtCdCVrsn) 
+        {
+      this.tstScrptSCntxtSgCntxtCdCVrsn = tstScrptSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtCdCCde()
+    {
+        return this.tstScrptSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtCdCCde
+        (String tstScrptSCntxtSgCntxtCdCCde) 
+        {
+      this.tstScrptSCntxtSgCntxtCdCCde = tstScrptSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtCdCDsplay()
+    {
+        return this.tstScrptSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtCdCDsplay
+        (String tstScrptSCntxtSgCntxtCdCDsplay) 
+        {
+      this.tstScrptSCntxtSgCntxtCdCDsplay = tstScrptSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.tstScrptSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtCdCSrSlctd
+        (String tstScrptSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.tstScrptSCntxtSgCntxtCdCSrSlctd = tstScrptSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.tstScrptSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlQnttQnttVlue
+        (String tstScrptSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.tstScrptSCntxtSgCntxtVlQnttQnttVlue = tstScrptSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.tstScrptSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlQnttQnttCmprtr
+        (String tstScrptSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.tstScrptSCntxtSgCntxtVlQnttQnttCmprtr = tstScrptSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.tstScrptSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlQnttQnttNt
+        (String tstScrptSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.tstScrptSCntxtSgCntxtVlQnttQnttNt = tstScrptSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.tstScrptSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlQnttQnttSstm
+        (String tstScrptSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.tstScrptSCntxtSgCntxtVlQnttQnttSstm = tstScrptSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.tstScrptSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlQnttQnttCde
+        (String tstScrptSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.tstScrptSCntxtSgCntxtVlQnttQnttCde = tstScrptSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.tstScrptSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlRngRngLw
+        (String tstScrptSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.tstScrptSCntxtSgCntxtVlRngRngLw = tstScrptSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.tstScrptSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlRngRngHgh
+        (String tstScrptSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.tstScrptSCntxtSgCntxtVlRngRngHgh = tstScrptSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getTstScrptSCntxtSgCntxtVlRfrnce()
+    {
+        return this.tstScrptSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setTstScrptSCntxtSgCntxtVlRfrnce
+        (String tstScrptSCntxtSgCntxtVlRfrnce) 
+        {
+      this.tstScrptSCntxtSgCntxtVlRfrnce = tstScrptSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getTstScrptJrsdctnCcCdngCSstm()
+    {
+        return this.tstScrptJrsdctnCcCdngCSstm;
+    }
+    
+    public void setTstScrptJrsdctnCcCdngCSstm
+        (String tstScrptJrsdctnCcCdngCSstm) 
+        {
+      this.tstScrptJrsdctnCcCdngCSstm = tstScrptJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getTstScrptJrsdctnCcCdngCVrsn()
+    {
+        return this.tstScrptJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setTstScrptJrsdctnCcCdngCVrsn
+        (String tstScrptJrsdctnCcCdngCVrsn) 
+        {
+      this.tstScrptJrsdctnCcCdngCVrsn = tstScrptJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getTstScrptJrsdctnCcCdngCCde()
+    {
+        return this.tstScrptJrsdctnCcCdngCCde;
+    }
+    
+    public void setTstScrptJrsdctnCcCdngCCde
+        (String tstScrptJrsdctnCcCdngCCde) 
+        {
+      this.tstScrptJrsdctnCcCdngCCde = tstScrptJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getTstScrptJrsdctnCcCdngCDsplay()
+    {
+        return this.tstScrptJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setTstScrptJrsdctnCcCdngCDsplay
+        (String tstScrptJrsdctnCcCdngCDsplay) 
+        {
+      this.tstScrptJrsdctnCcCdngCDsplay = tstScrptJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getTstScrptJrsdctnCcCdngCSrSlctd()
+    {
+        return this.tstScrptJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setTstScrptJrsdctnCcCdngCSrSlctd
+        (String tstScrptJrsdctnCcCdngCSrSlctd) 
+        {
+      this.tstScrptJrsdctnCcCdngCSrSlctd = tstScrptJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getTestScriptJurisdictionCcText()
+    {
+        return this.testScriptJurisdictionCcText;
+    }
+    
+    public void setTestScriptJurisdictionCcText
+        (String testScriptJurisdictionCcText) 
+        {
+      this.testScriptJurisdictionCcText = testScriptJurisdictionCcText;
+}
+    public 
+    String 
+    getTestScriptPurposeMarkdown()
+    {
+        return this.testScriptPurposeMarkdown;
+    }
+    
+    public void setTestScriptPurposeMarkdown
+        (String testScriptPurposeMarkdown) 
+        {
+      this.testScriptPurposeMarkdown = testScriptPurposeMarkdown;
+}
+    public 
+    String 
+    getTestScriptCopyrightMarkdown()
+    {
+        return this.testScriptCopyrightMarkdown;
+    }
+    
+    public void setTestScriptCopyrightMarkdown
+        (String testScriptCopyrightMarkdown) 
+        {
+      this.testScriptCopyrightMarkdown = testScriptCopyrightMarkdown;
+}
+    public 
+    String 
+    getTestScriptOriginIndexInteger()
+    {
+        return this.testScriptOriginIndexInteger;
+    }
+    
+    public void setTestScriptOriginIndexInteger
+        (String testScriptOriginIndexInteger) 
+        {
+      this.testScriptOriginIndexInteger = testScriptOriginIndexInteger;
+}
+    public 
+    String 
+    getTstScrptRgnPrflCSrSlctd()
+    {
+        return this.tstScrptRgnPrflCSrSlctd;
+    }
+    
+    public void setTstScrptRgnPrflCSrSlctd
+        (String tstScrptRgnPrflCSrSlctd) 
+        {
+      this.tstScrptRgnPrflCSrSlctd = tstScrptRgnPrflCSrSlctd;
+}
+    public 
+    String 
+    getTestScriptOriginProfileCCode()
+    {
+        return this.testScriptOriginProfileCCode;
+    }
+    
+    public void setTestScriptOriginProfileCCode
+        (String testScriptOriginProfileCCode) 
+        {
+      this.testScriptOriginProfileCCode = testScriptOriginProfileCCode;
+}
+    public 
+    String 
+    getTstScrptRgnPrflCVrsn()
+    {
+        return this.tstScrptRgnPrflCVrsn;
+    }
+    
+    public void setTstScrptRgnPrflCVrsn
+        (String tstScrptRgnPrflCVrsn) 
+        {
+      this.tstScrptRgnPrflCVrsn = tstScrptRgnPrflCVrsn;
+}
+    public 
+    String 
+    getTstScrptRgnPrflCDsplay()
+    {
+        return this.tstScrptRgnPrflCDsplay;
+    }
+    
+    public void setTstScrptRgnPrflCDsplay
+        (String tstScrptRgnPrflCDsplay) 
+        {
+      this.tstScrptRgnPrflCDsplay = tstScrptRgnPrflCDsplay;
+}
+    public 
+    String 
+    getTestScriptOriginProfileCSystem()
+    {
+        return this.testScriptOriginProfileCSystem;
+    }
+    
+    public void setTestScriptOriginProfileCSystem
+        (String testScriptOriginProfileCSystem) 
+        {
+      this.testScriptOriginProfileCSystem = testScriptOriginProfileCSystem;
+}
+    public 
+    String 
+    getTstScrptDstntnNdxNtgr()
+    {
+        return this.tstScrptDstntnNdxNtgr;
+    }
+    
+    public void setTstScrptDstntnNdxNtgr
+        (String tstScrptDstntnNdxNtgr) 
+        {
+      this.tstScrptDstntnNdxNtgr = tstScrptDstntnNdxNtgr;
+}
+    public 
+    String 
+    getTstScrptDstntnPrflCSrSlctd()
+    {
+        return this.tstScrptDstntnPrflCSrSlctd;
+    }
+    
+    public void setTstScrptDstntnPrflCSrSlctd
+        (String tstScrptDstntnPrflCSrSlctd) 
+        {
+      this.tstScrptDstntnPrflCSrSlctd = tstScrptDstntnPrflCSrSlctd;
+}
+    public 
+    String 
+    getTstScrptDstntnPrflCCde()
+    {
+        return this.tstScrptDstntnPrflCCde;
+    }
+    
+    public void setTstScrptDstntnPrflCCde
+        (String tstScrptDstntnPrflCCde) 
+        {
+      this.tstScrptDstntnPrflCCde = tstScrptDstntnPrflCCde;
+}
+    public 
+    String 
+    getTstScrptDstntnPrflCVrsn()
+    {
+        return this.tstScrptDstntnPrflCVrsn;
+    }
+    
+    public void setTstScrptDstntnPrflCVrsn
+        (String tstScrptDstntnPrflCVrsn) 
+        {
+      this.tstScrptDstntnPrflCVrsn = tstScrptDstntnPrflCVrsn;
+}
+    public 
+    String 
+    getTstScrptDstntnPrflCDsplay()
+    {
+        return this.tstScrptDstntnPrflCDsplay;
+    }
+    
+    public void setTstScrptDstntnPrflCDsplay
+        (String tstScrptDstntnPrflCDsplay) 
+        {
+      this.tstScrptDstntnPrflCDsplay = tstScrptDstntnPrflCDsplay;
+}
+    public 
+    String 
+    getTstScrptDstntnPrflCSstm()
+    {
+        return this.tstScrptDstntnPrflCSstm;
+    }
+    
+    public void setTstScrptDstntnPrflCSstm
+        (String tstScrptDstntnPrflCSstm) 
+        {
+      this.tstScrptDstntnPrflCSstm = tstScrptDstntnPrflCSstm;
+}
+    public 
+    String 
+    getTestScriptMetadataLinkUrlUri()
+    {
+        return this.testScriptMetadataLinkUrlUri;
+    }
+    
+    public void setTestScriptMetadataLinkUrlUri
+        (String testScriptMetadataLinkUrlUri) 
+        {
+      this.testScriptMetadataLinkUrlUri = testScriptMetadataLinkUrlUri;
+}
+    public 
+    String 
+    getTstScrptMtdtLnkDscrptnStrng()
+    {
+        return this.tstScrptMtdtLnkDscrptnStrng;
+    }
+    
+    public void setTstScrptMtdtLnkDscrptnStrng
+        (String tstScrptMtdtLnkDscrptnStrng) 
+        {
+      this.tstScrptMtdtLnkDscrptnStrng = tstScrptMtdtLnkDscrptnStrng;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltRqrdBln()
+    {
+        return this.tstScrptMtdtCpbltRqrdBln;
+    }
+    
+    public void setTstScrptMtdtCpbltRqrdBln
+        (String tstScrptMtdtCpbltRqrdBln) 
+        {
+      this.tstScrptMtdtCpbltRqrdBln = tstScrptMtdtCpbltRqrdBln;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltVldtdBln()
+    {
+        return this.tstScrptMtdtCpbltVldtdBln;
+    }
+    
+    public void setTstScrptMtdtCpbltVldtdBln
+        (String tstScrptMtdtCpbltVldtdBln) 
+        {
+      this.tstScrptMtdtCpbltVldtdBln = tstScrptMtdtCpbltVldtdBln;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltDscrptnStrng()
+    {
+        return this.tstScrptMtdtCpbltDscrptnStrng;
+    }
+    
+    public void setTstScrptMtdtCpbltDscrptnStrng
+        (String tstScrptMtdtCpbltDscrptnStrng) 
+        {
+      this.tstScrptMtdtCpbltDscrptnStrng = tstScrptMtdtCpbltDscrptnStrng;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltRgnNtgr()
+    {
+        return this.tstScrptMtdtCpbltRgnNtgr;
+    }
+    
+    public void setTstScrptMtdtCpbltRgnNtgr
+        (String tstScrptMtdtCpbltRgnNtgr) 
+        {
+      this.tstScrptMtdtCpbltRgnNtgr = tstScrptMtdtCpbltRgnNtgr;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltDstntnNtgr()
+    {
+        return this.tstScrptMtdtCpbltDstntnNtgr;
+    }
+    
+    public void setTstScrptMtdtCpbltDstntnNtgr
+        (String tstScrptMtdtCpbltDstntnNtgr) 
+        {
+      this.tstScrptMtdtCpbltDstntnNtgr = tstScrptMtdtCpbltDstntnNtgr;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltLnkRi()
+    {
+        return this.tstScrptMtdtCpbltLnkRi;
+    }
+    
+    public void setTstScrptMtdtCpbltLnkRi
+        (String tstScrptMtdtCpbltLnkRi) 
+        {
+      this.tstScrptMtdtCpbltLnkRi = tstScrptMtdtCpbltLnkRi;
+}
+    public 
+    String 
+    getTstScrptMtdtCpbltCpbltsCnncl()
+    {
+        return this.tstScrptMtdtCpbltCpbltsCnncl;
+    }
+    
+    public void setTstScrptMtdtCpbltCpbltsCnncl
+        (String tstScrptMtdtCpbltCpbltsCnncl) 
+        {
+      this.tstScrptMtdtCpbltCpbltsCnncl = tstScrptMtdtCpbltCpbltsCnncl;
+}
+    public 
+    String 
+    getTstScrptFxtrTcrtBln()
+    {
+        return this.tstScrptFxtrTcrtBln;
+    }
+    
+    public void setTstScrptFxtrTcrtBln
+        (String tstScrptFxtrTcrtBln) 
+        {
+      this.tstScrptFxtrTcrtBln = tstScrptFxtrTcrtBln;
+}
+    public 
+    String 
+    getTstScrptFxtrTdltBln()
+    {
+        return this.tstScrptFxtrTdltBln;
+    }
+    
+    public void setTstScrptFxtrTdltBln
+        (String tstScrptFxtrTdltBln) 
+        {
+      this.tstScrptFxtrTdltBln = tstScrptFxtrTdltBln;
+}
+    public 
+    String 
+    getTstScrptFxtrRsrcRfrnce()
+    {
+        return this.tstScrptFxtrRsrcRfrnce;
+    }
+    
+    public void setTstScrptFxtrRsrcRfrnce
+        (String tstScrptFxtrRsrcRfrnce) 
+        {
+      this.tstScrptFxtrRsrcRfrnce = tstScrptFxtrRsrcRfrnce;
+}
+    public 
+    String 
+    getTestScriptProfileReference()
+    {
+        return this.testScriptProfileReference;
+    }
+    
+    public void setTestScriptProfileReference
+        (String testScriptProfileReference) 
+        {
+      this.testScriptProfileReference = testScriptProfileReference;
+}
+    public 
+    String 
+    getTestScriptVariableNameString()
+    {
+        return this.testScriptVariableNameString;
+    }
+    
+    public void setTestScriptVariableNameString
+        (String testScriptVariableNameString) 
+        {
+      this.testScriptVariableNameString = testScriptVariableNameString;
+}
+    public 
+    String 
+    getTstScrptVrblDfltVlStrng()
+    {
+        return this.tstScrptVrblDfltVlStrng;
+    }
+    
+    public void setTstScrptVrblDfltVlStrng
+        (String tstScrptVrblDfltVlStrng) 
+        {
+      this.tstScrptVrblDfltVlStrng = tstScrptVrblDfltVlStrng;
+}
+    public 
+    String 
+    getTstScrptVrblDscrptnStrng()
+    {
+        return this.tstScrptVrblDscrptnStrng;
+    }
+    
+    public void setTstScrptVrblDscrptnStrng
+        (String tstScrptVrblDscrptnStrng) 
+        {
+      this.tstScrptVrblDscrptnStrng = tstScrptVrblDscrptnStrng;
+}
+    public 
+    String 
+    getTstScrptVrblXprssnStrng()
+    {
+        return this.tstScrptVrblXprssnStrng;
+    }
+    
+    public void setTstScrptVrblXprssnStrng
+        (String tstScrptVrblXprssnStrng) 
+        {
+      this.tstScrptVrblXprssnStrng = tstScrptVrblXprssnStrng;
+}
+    public 
+    String 
+    getTstScrptVrblHdrFldStrng()
+    {
+        return this.tstScrptVrblHdrFldStrng;
+    }
+    
+    public void setTstScrptVrblHdrFldStrng
+        (String tstScrptVrblHdrFldStrng) 
+        {
+      this.tstScrptVrblHdrFldStrng = tstScrptVrblHdrFldStrng;
+}
+    public 
+    String 
+    getTestScriptVariableHintString()
+    {
+        return this.testScriptVariableHintString;
+    }
+    
+    public void setTestScriptVariableHintString
+        (String testScriptVariableHintString) 
+        {
+      this.testScriptVariableHintString = testScriptVariableHintString;
+}
+    public 
+    String 
+    getTestScriptVariablePathString()
+    {
+        return this.testScriptVariablePathString;
+    }
+    
+    public void setTestScriptVariablePathString
+        (String testScriptVariablePathString) 
+        {
+      this.testScriptVariablePathString = testScriptVariablePathString;
+}
+    public 
+    String 
+    getTestScriptVariableSourceIdId()
+    {
+        return this.testScriptVariableSourceIdId;
+    }
+    
+    public void setTestScriptVariableSourceIdId
+        (String testScriptVariableSourceIdId) 
+        {
+      this.testScriptVariableSourceIdId = testScriptVariableSourceIdId;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTpCSrSlctd()
+    {
+        return this.tstScrptStpCtnPrtnTpCSrSlctd;
+    }
+    
+    public void setTstScrptStpCtnPrtnTpCSrSlctd
+        (String tstScrptStpCtnPrtnTpCSrSlctd) 
+        {
+      this.tstScrptStpCtnPrtnTpCSrSlctd = tstScrptStpCtnPrtnTpCSrSlctd;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTpCCde()
+    {
+        return this.tstScrptStpCtnPrtnTpCCde;
+    }
+    
+    public void setTstScrptStpCtnPrtnTpCCde
+        (String tstScrptStpCtnPrtnTpCCde) 
+        {
+      this.tstScrptStpCtnPrtnTpCCde = tstScrptStpCtnPrtnTpCCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTpCVrsn()
+    {
+        return this.tstScrptStpCtnPrtnTpCVrsn;
+    }
+    
+    public void setTstScrptStpCtnPrtnTpCVrsn
+        (String tstScrptStpCtnPrtnTpCVrsn) 
+        {
+      this.tstScrptStpCtnPrtnTpCVrsn = tstScrptStpCtnPrtnTpCVrsn;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTpCDsplay()
+    {
+        return this.tstScrptStpCtnPrtnTpCDsplay;
+    }
+    
+    public void setTstScrptStpCtnPrtnTpCDsplay
+        (String tstScrptStpCtnPrtnTpCDsplay) 
+        {
+      this.tstScrptStpCtnPrtnTpCDsplay = tstScrptStpCtnPrtnTpCDsplay;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTpCSstm()
+    {
+        return this.tstScrptStpCtnPrtnTpCSstm;
+    }
+    
+    public void setTstScrptStpCtnPrtnTpCSstm
+        (String tstScrptStpCtnPrtnTpCSstm) 
+        {
+      this.tstScrptStpCtnPrtnTpCSstm = tstScrptStpCtnPrtnTpCSstm;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRsrcCde()
+    {
+        return this.tstScrptStpCtnPrtnRsrcCde;
+    }
+    
+    public void setTstScrptStpCtnPrtnRsrcCde
+        (String tstScrptStpCtnPrtnRsrcCde) 
+        {
+      this.tstScrptStpCtnPrtnRsrcCde = tstScrptStpCtnPrtnRsrcCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnLblStrng()
+    {
+        return this.tstScrptStpCtnPrtnLblStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnLblStrng
+        (String tstScrptStpCtnPrtnLblStrng) 
+        {
+      this.tstScrptStpCtnPrtnLblStrng = tstScrptStpCtnPrtnLblStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnDscrptnStrng()
+    {
+        return this.tstScrptStpCtnPrtnDscrptnStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnDscrptnStrng
+        (String tstScrptStpCtnPrtnDscrptnStrng) 
+        {
+      this.tstScrptStpCtnPrtnDscrptnStrng = tstScrptStpCtnPrtnDscrptnStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnCcptCde()
+    {
+        return this.tstScrptStpCtnPrtnCcptCde;
+    }
+    
+    public void setTstScrptStpCtnPrtnCcptCde
+        (String tstScrptStpCtnPrtnCcptCde) 
+        {
+      this.tstScrptStpCtnPrtnCcptCde = tstScrptStpCtnPrtnCcptCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnCntntTpCde()
+    {
+        return this.tstScrptStpCtnPrtnCntntTpCde;
+    }
+    
+    public void setTstScrptStpCtnPrtnCntntTpCde
+        (String tstScrptStpCtnPrtnCntntTpCde) 
+        {
+      this.tstScrptStpCtnPrtnCntntTpCde = tstScrptStpCtnPrtnCntntTpCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnDstntnNtgr()
+    {
+        return this.tstScrptStpCtnPrtnDstntnNtgr;
+    }
+    
+    public void setTstScrptStpCtnPrtnDstntnNtgr
+        (String tstScrptStpCtnPrtnDstntnNtgr) 
+        {
+      this.tstScrptStpCtnPrtnDstntnNtgr = tstScrptStpCtnPrtnDstntnNtgr;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnNcdRqstrlBln()
+    {
+        return this.tstScrptStpCtnPrtnNcdRqstrlBln;
+    }
+    
+    public void setTstScrptStpCtnPrtnNcdRqstrlBln
+        (String tstScrptStpCtnPrtnNcdRqstrlBln) 
+        {
+      this.tstScrptStpCtnPrtnNcdRqstrlBln = tstScrptStpCtnPrtnNcdRqstrlBln;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnMthdCde()
+    {
+        return this.tstScrptStpCtnPrtnMthdCde;
+    }
+    
+    public void setTstScrptStpCtnPrtnMthdCde
+        (String tstScrptStpCtnPrtnMthdCde) 
+        {
+      this.tstScrptStpCtnPrtnMthdCde = tstScrptStpCtnPrtnMthdCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRgnNtgr()
+    {
+        return this.tstScrptStpCtnPrtnRgnNtgr;
+    }
+    
+    public void setTstScrptStpCtnPrtnRgnNtgr
+        (String tstScrptStpCtnPrtnRgnNtgr) 
+        {
+      this.tstScrptStpCtnPrtnRgnNtgr = tstScrptStpCtnPrtnRgnNtgr;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnPrmsStrng()
+    {
+        return this.tstScrptStpCtnPrtnPrmsStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnPrmsStrng
+        (String tstScrptStpCtnPrtnPrmsStrng) 
+        {
+      this.tstScrptStpCtnPrtnPrmsStrng = tstScrptStpCtnPrtnPrmsStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRqstHdrFldStrng()
+    {
+        return this.tstScrptStpCtnPrtnRqstHdrFldStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnRqstHdrFldStrng
+        (String tstScrptStpCtnPrtnRqstHdrFldStrng) 
+        {
+      this.tstScrptStpCtnPrtnRqstHdrFldStrng = tstScrptStpCtnPrtnRqstHdrFldStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRqstHdrVlStrng()
+    {
+        return this.tstScrptStpCtnPrtnRqstHdrVlStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnRqstHdrVlStrng
+        (String tstScrptStpCtnPrtnRqstHdrVlStrng) 
+        {
+      this.tstScrptStpCtnPrtnRqstHdrVlStrng = tstScrptStpCtnPrtnRqstHdrVlStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRqstdD()
+    {
+        return this.tstScrptStpCtnPrtnRqstdD;
+    }
+    
+    public void setTstScrptStpCtnPrtnRqstdD
+        (String tstScrptStpCtnPrtnRqstdD) 
+        {
+      this.tstScrptStpCtnPrtnRqstdD = tstScrptStpCtnPrtnRqstdD;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRspnsdD()
+    {
+        return this.tstScrptStpCtnPrtnRspnsdD;
+    }
+    
+    public void setTstScrptStpCtnPrtnRspnsdD
+        (String tstScrptStpCtnPrtnRspnsdD) 
+        {
+      this.tstScrptStpCtnPrtnRspnsdD = tstScrptStpCtnPrtnRspnsdD;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnSrcdD()
+    {
+        return this.tstScrptStpCtnPrtnSrcdD;
+    }
+    
+    public void setTstScrptStpCtnPrtnSrcdD
+        (String tstScrptStpCtnPrtnSrcdD) 
+        {
+      this.tstScrptStpCtnPrtnSrcdD = tstScrptStpCtnPrtnSrcdD;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnTrgtdD()
+    {
+        return this.tstScrptStpCtnPrtnTrgtdD;
+    }
+    
+    public void setTstScrptStpCtnPrtnTrgtdD
+        (String tstScrptStpCtnPrtnTrgtdD) 
+        {
+      this.tstScrptStpCtnPrtnTrgtdD = tstScrptStpCtnPrtnTrgtdD;
+}
+    public 
+    String 
+    getTstScrptStpCtnPrtnRlStrng()
+    {
+        return this.tstScrptStpCtnPrtnRlStrng;
+    }
+    
+    public void setTstScrptStpCtnPrtnRlStrng
+        (String tstScrptStpCtnPrtnRlStrng) 
+        {
+      this.tstScrptStpCtnPrtnRlStrng = tstScrptStpCtnPrtnRlStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtLblStrng()
+    {
+        return this.tstScrptStpCtnSsrtLblStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtLblStrng
+        (String tstScrptStpCtnSsrtLblStrng) 
+        {
+      this.tstScrptStpCtnSsrtLblStrng = tstScrptStpCtnSsrtLblStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtDscrptnStrng()
+    {
+        return this.tstScrptStpCtnSsrtDscrptnStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtDscrptnStrng
+        (String tstScrptStpCtnSsrtDscrptnStrng) 
+        {
+      this.tstScrptStpCtnSsrtDscrptnStrng = tstScrptStpCtnSsrtDscrptnStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtDrctnCde()
+    {
+        return this.tstScrptStpCtnSsrtDrctnCde;
+    }
+    
+    public void setTstScrptStpCtnSsrtDrctnCde
+        (String tstScrptStpCtnSsrtDrctnCde) 
+        {
+      this.tstScrptStpCtnSsrtDrctnCde = tstScrptStpCtnSsrtDrctnCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtCmprTsrcdStrng()
+    {
+        return this.tstScrptStpCtnSsrtCmprTsrcdStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtCmprTsrcdStrng
+        (String tstScrptStpCtnSsrtCmprTsrcdStrng) 
+        {
+      this.tstScrptStpCtnSsrtCmprTsrcdStrng = tstScrptStpCtnSsrtCmprTsrcdStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtCmprTsrcxprssnStrng()
+    {
+        return this.tstScrptStpCtnSsrtCmprTsrcxprssnStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtCmprTsrcxprssnStrng
+        (String tstScrptStpCtnSsrtCmprTsrcxprssnStrng) 
+        {
+      this.tstScrptStpCtnSsrtCmprTsrcxprssnStrng = tstScrptStpCtnSsrtCmprTsrcxprssnStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtCmprTsrcPthStrng()
+    {
+        return this.tstScrptStpCtnSsrtCmprTsrcPthStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtCmprTsrcPthStrng
+        (String tstScrptStpCtnSsrtCmprTsrcPthStrng) 
+        {
+      this.tstScrptStpCtnSsrtCmprTsrcPthStrng = tstScrptStpCtnSsrtCmprTsrcPthStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtCntntTpCde()
+    {
+        return this.tstScrptStpCtnSsrtCntntTpCde;
+    }
+    
+    public void setTstScrptStpCtnSsrtCntntTpCde
+        (String tstScrptStpCtnSsrtCntntTpCde) 
+        {
+      this.tstScrptStpCtnSsrtCntntTpCde = tstScrptStpCtnSsrtCntntTpCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtXprssnStrng()
+    {
+        return this.tstScrptStpCtnSsrtXprssnStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtXprssnStrng
+        (String tstScrptStpCtnSsrtXprssnStrng) 
+        {
+      this.tstScrptStpCtnSsrtXprssnStrng = tstScrptStpCtnSsrtXprssnStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtHdrFldStrng()
+    {
+        return this.tstScrptStpCtnSsrtHdrFldStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtHdrFldStrng
+        (String tstScrptStpCtnSsrtHdrFldStrng) 
+        {
+      this.tstScrptStpCtnSsrtHdrFldStrng = tstScrptStpCtnSsrtHdrFldStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtMnmmdStrng()
+    {
+        return this.tstScrptStpCtnSsrtMnmmdStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtMnmmdStrng
+        (String tstScrptStpCtnSsrtMnmmdStrng) 
+        {
+      this.tstScrptStpCtnSsrtMnmmdStrng = tstScrptStpCtnSsrtMnmmdStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtNvgtnLnksBln()
+    {
+        return this.tstScrptStpCtnSsrtNvgtnLnksBln;
+    }
+    
+    public void setTstScrptStpCtnSsrtNvgtnLnksBln
+        (String tstScrptStpCtnSsrtNvgtnLnksBln) 
+        {
+      this.tstScrptStpCtnSsrtNvgtnLnksBln = tstScrptStpCtnSsrtNvgtnLnksBln;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtPrtrCde()
+    {
+        return this.tstScrptStpCtnSsrtPrtrCde;
+    }
+    
+    public void setTstScrptStpCtnSsrtPrtrCde
+        (String tstScrptStpCtnSsrtPrtrCde) 
+        {
+      this.tstScrptStpCtnSsrtPrtrCde = tstScrptStpCtnSsrtPrtrCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtPthStrng()
+    {
+        return this.tstScrptStpCtnSsrtPthStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtPthStrng
+        (String tstScrptStpCtnSsrtPthStrng) 
+        {
+      this.tstScrptStpCtnSsrtPthStrng = tstScrptStpCtnSsrtPthStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtRqstMthdCde()
+    {
+        return this.tstScrptStpCtnSsrtRqstMthdCde;
+    }
+    
+    public void setTstScrptStpCtnSsrtRqstMthdCde
+        (String tstScrptStpCtnSsrtRqstMthdCde) 
+        {
+      this.tstScrptStpCtnSsrtRqstMthdCde = tstScrptStpCtnSsrtRqstMthdCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtRqstRlStrng()
+    {
+        return this.tstScrptStpCtnSsrtRqstRlStrng;
+    }
+    
+    public void setTstScrptStpCtnSsrtRqstRlStrng
+        (String tstScrptStpCtnSsrtRqstRlStrng) 
+        {
+      this.tstScrptStpCtnSsrtRqstRlStrng = tstScrptStpCtnSsrtRqstRlStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtRsrcCde()
+    {
+        return this.tstScrptStpCtnSsrtRsrcCde;
+    }
+    
+    public void setTstScrptStpCtnSsrtRsrcCde
+        (String tstScrptStpCtnSsrtRsrcCde) 
+        {
+      this.tstScrptStpCtnSsrtRsrcCde = tstScrptStpCtnSsrtRsrcCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtRspnsCde()
+    {
         return this.tstScrptStpCtnSsrtRspnsCde;
     }
     
-    public void setTstScrptStpCtnSsrtRspnsCde(String tstScrptStpCtnSsrtRspnsCde) {
-        this.tstScrptStpCtnSsrtRspnsCde = tstScrptStpCtnSsrtRspnsCde;
+    public void setTstScrptStpCtnSsrtRspnsCde
+        (String tstScrptStpCtnSsrtRspnsCde) 
+        {
+      this.tstScrptStpCtnSsrtRspnsCde = tstScrptStpCtnSsrtRspnsCde;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtRspnsCdStrng()
+    {
+        return this.tstScrptStpCtnSsrtRspnsCdStrng;
     }
     
-    
-    
-    public String getTstScrptStpCtnSsrtSrcd() {
-        return this.tstScrptStpCtnSsrtSrcd;
+    public void setTstScrptStpCtnSsrtRspnsCdStrng
+        (String tstScrptStpCtnSsrtRspnsCdStrng) 
+        {
+      this.tstScrptStpCtnSsrtRspnsCdStrng = tstScrptStpCtnSsrtRspnsCdStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtSrcdD()
+    {
+        return this.tstScrptStpCtnSsrtSrcdD;
     }
     
-    public void setTstScrptStpCtnSsrtSrcd(String tstScrptStpCtnSsrtSrcd) {
-        this.tstScrptStpCtnSsrtSrcd = tstScrptStpCtnSsrtSrcd;
+    public void setTstScrptStpCtnSsrtSrcdD
+        (String tstScrptStpCtnSsrtSrcdD) 
+        {
+      this.tstScrptStpCtnSsrtSrcdD = tstScrptStpCtnSsrtSrcdD;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtVldtPrfldD()
+    {
+        return this.tstScrptStpCtnSsrtVldtPrfldD;
     }
     
-    
-    
-    public String getTstScrptStpCtnSsrtVldtPrfld() {
-        return this.tstScrptStpCtnSsrtVldtPrfld;
+    public void setTstScrptStpCtnSsrtVldtPrfldD
+        (String tstScrptStpCtnSsrtVldtPrfldD) 
+        {
+      this.tstScrptStpCtnSsrtVldtPrfldD = tstScrptStpCtnSsrtVldtPrfldD;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtVlStrng()
+    {
+        return this.tstScrptStpCtnSsrtVlStrng;
     }
     
-    public void setTstScrptStpCtnSsrtVldtPrfld(String tstScrptStpCtnSsrtVldtPrfld) {
-        this.tstScrptStpCtnSsrtVldtPrfld = tstScrptStpCtnSsrtVldtPrfld;
+    public void setTstScrptStpCtnSsrtVlStrng
+        (String tstScrptStpCtnSsrtVlStrng) 
+        {
+      this.tstScrptStpCtnSsrtVlStrng = tstScrptStpCtnSsrtVlStrng;
+}
+    public 
+    String 
+    getTstScrptStpCtnSsrtWrnngnlBln()
+    {
+        return this.tstScrptStpCtnSsrtWrnngnlBln;
     }
     
-    
-    
-    public String getTstScrptStpCtnSsrtVlue() {
-        return this.tstScrptStpCtnSsrtVlue;
+    public void setTstScrptStpCtnSsrtWrnngnlBln
+        (String tstScrptStpCtnSsrtWrnngnlBln) 
+        {
+      this.tstScrptStpCtnSsrtWrnngnlBln = tstScrptStpCtnSsrtWrnngnlBln;
+}
+    public 
+    String 
+    getTestScriptTestNameString()
+    {
+        return this.testScriptTestNameString;
     }
     
-    public void setTstScrptStpCtnSsrtVlue(String tstScrptStpCtnSsrtVlue) {
-        this.tstScrptStpCtnSsrtVlue = tstScrptStpCtnSsrtVlue;
+    public void setTestScriptTestNameString
+        (String testScriptTestNameString) 
+        {
+      this.testScriptTestNameString = testScriptTestNameString;
+}
+    public 
+    String 
+    getTestScriptTestDescriptionString()
+    {
+        return this.testScriptTestDescriptionString;
     }
     
-    
-    
-    public String getTstScrptStpCtnSsrtWrnngnly() {
-        return this.tstScrptStpCtnSsrtWrnngnly;
+    public void setTestScriptTestDescriptionString
+        (String testScriptTestDescriptionString) 
+        {
+      this.testScriptTestDescriptionString = testScriptTestDescriptionString;
+}
+    public 
+    String 
+    getTstScrptTstCtnPrtnPrtn()
+    {
+        return this.tstScrptTstCtnPrtnPrtn;
     }
     
-    public void setTstScrptStpCtnSsrtWrnngnly(String tstScrptStpCtnSsrtWrnngnly) {
-        this.tstScrptStpCtnSsrtWrnngnly = tstScrptStpCtnSsrtWrnngnly;
+    public void setTstScrptTstCtnPrtnPrtn
+        (String tstScrptTstCtnPrtnPrtn) 
+        {
+      this.tstScrptTstCtnPrtnPrtn = tstScrptTstCtnPrtnPrtn;
+}
+    public 
+    String 
+    getTstScrptTstCtnSsrtSsrt()
+    {
+        return this.tstScrptTstCtnSsrtSsrt;
     }
     
-    
-    
-    public String getTestScriptTest() {
-        return this.testScriptTest;
+    public void setTstScrptTstCtnSsrtSsrt
+        (String tstScrptTstCtnSsrtSsrt) 
+        {
+      this.tstScrptTstCtnSsrtSsrt = tstScrptTstCtnSsrtSsrt;
+}
+    public 
+    String 
+    getTstScrptTrdwnCtnPrtnPrtn()
+    {
+        return this.tstScrptTrdwnCtnPrtnPrtn;
     }
     
-    public void setTestScriptTest(String testScriptTest) {
-        this.testScriptTest = testScriptTest;
-    }
-    
-    
-    
-    public String getTestScriptTestName() {
-        return this.testScriptTestName;
-    }
-    
-    public void setTestScriptTestName(String testScriptTestName) {
-        this.testScriptTestName = testScriptTestName;
-    }
-    
-    
-    
-    public String getTestScriptTestDescription() {
-        return this.testScriptTestDescription;
-    }
-    
-    public void setTestScriptTestDescription(String testScriptTestDescription) {
-        this.testScriptTestDescription = testScriptTestDescription;
-    }
-    
-    
-    
-    public String getTestScriptTestAction() {
-        return this.testScriptTestAction;
-    }
-    
-    public void setTestScriptTestAction(String testScriptTestAction) {
-        this.testScriptTestAction = testScriptTestAction;
-    }
-    
-    
-    
-    public String getTestScriptTestActionOperation() {
-        return this.testScriptTestActionOperation;
-    }
-    
-    public void setTestScriptTestActionOperation(String testScriptTestActionOperation) {
-        this.testScriptTestActionOperation = testScriptTestActionOperation;
-    }
-    
-    
-    
-    public String getTestScriptTestActionAssert() {
-        return this.testScriptTestActionAssert;
-    }
-    
-    public void setTestScriptTestActionAssert(String testScriptTestActionAssert) {
-        this.testScriptTestActionAssert = testScriptTestActionAssert;
-    }
-    
-    
-    
-    public String getTestScriptTeardown() {
-        return this.testScriptTeardown;
-    }
-    
-    public void setTestScriptTeardown(String testScriptTeardown) {
-        this.testScriptTeardown = testScriptTeardown;
-    }
-    
-    
-    
-    public String getTestScriptTeardownAction() {
-        return this.testScriptTeardownAction;
-    }
-    
-    public void setTestScriptTeardownAction(String testScriptTeardownAction) {
-        this.testScriptTeardownAction = testScriptTeardownAction;
-    }
-    
-    
-    
-    public String getTstScrptTrdwnCtnPrtn() {
-        return this.tstScrptTrdwnCtnPrtn;
-    }
-    
-    public void setTstScrptTrdwnCtnPrtn(String tstScrptTrdwnCtnPrtn) {
-        this.tstScrptTrdwnCtnPrtn = tstScrptTrdwnCtnPrtn;
-    }
-    
-    
-    
+    public void setTstScrptTrdwnCtnPrtnPrtn
+        (String tstScrptTrdwnCtnPrtnPrtn) 
+        {
+      this.tstScrptTrdwnCtnPrtnPrtn = tstScrptTrdwnCtnPrtnPrtn;
+}
 
 
 

@@ -1,615 +1,627 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Coverageeligibilityresponse" optimistic-lock="none" table="coverageeligibilityresponse">
-        <id name="cvrglgbltRspnsDntfrCdngCde" type="string">
-            <column length="512" name="CvrglgbltRspns_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="cvrglgbltRspnsDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="CvrglgbltRspns_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cerIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="CER_identifier_Identifier_use">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="CvrglgbltRspns_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="CvrglgbltRspns_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="CvrglgbltRspns_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="coverageEligibilityResponseStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CoverageEligibilityResponse_status">
-                <comment>code</comment>
+        <property name="crDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsPrpse" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CvrglgbltRspns_prpse">
-                <comment>code</comment>
+        <property name="crDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="coverageEligibilityResponsePnt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CoverageEligibilityResponse_pnt">
-                <comment>Reference</comment>
+        <property name="crDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdDte">
-                <comment>date</comment>
+        <property name="crDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="CR_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cerIdentifierIdentifierAssigner" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="CER_identifier_Identifier_assigner">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cerIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="CER_identifier_Identifier_value">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cerIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="CER_identifier_Identifier_system">
+                <comment>{ "tree" :"CoverageEligibilityResponse.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsSrvcdPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_srvcdPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cerStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="CER_status_code">
+                <comment>{ "tree" :"CoverageEligibilityResponse.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsCrtd" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="CvrglgbltRspns_crtd">
-                <comment>dateTime</comment>
+        <property name="cerPurposeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.purpose", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="CER_purpose_code">
+                <comment>{ "tree" :"CoverageEligibilityResponse.purpose", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRqstr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CvrglgbltRspns_rqstr">
-                <comment>Reference</comment>
+        <property name="cerPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="CER_pnt_Reference">
+                <comment>{ "tree" :"CoverageEligibilityResponse.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRqst" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CvrglgbltRspns_rqst">
-                <comment>Reference</comment>
+        <property name="cerServicedDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.servicedDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedDate"}</meta>
+            <column length="65535" name="CER_servicedDate_date">
+                <comment>{ "tree" :"CoverageEligibilityResponse.servicedDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedDate"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsTcme" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CvrglgbltRspns_tcme">
-                <comment>code</comment>
+        <property name="cerServicedPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.servicedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedPeriod, setStart"}</meta>
+            <column length="65535" name="CER_servicedPeriod_Period_start">
+                <comment>{ "tree" :"CoverageEligibilityResponse.servicedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsDspstn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_dspstn">
-                <comment>string</comment>
+        <property name="cerServicedPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.servicedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedPeriod, setEnd"}</meta>
+            <column length="65535" name="CER_servicedPeriod_Period_end">
+                <comment>{ "tree" :"CoverageEligibilityResponse.servicedPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicedPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrr">
-                <comment>Reference</comment>
+        <property name="cerCreatedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.created", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCreated"}</meta>
+            <column length="65535" name="CER_created_dateTime">
+                <comment>{ "tree" :"CoverageEligibilityResponse.created", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCreated"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrnce" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnce">
-                <comment>BackboneElement</comment>
+        <property name="cerRequestorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.requestor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequestor"}</meta>
+            <column length="65535" name="CER_requestor_Reference">
+                <comment>{ "tree" :"CoverageEligibilityResponse.requestor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequestor"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncCvrge" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_cvrge">
-                <comment>Reference</comment>
+        <property name="cerRequestReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.request", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRequest"}</meta>
+            <column length="65535" name="CER_request_Reference">
+                <comment>{ "tree" :"CoverageEligibilityResponse.request", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRequest"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncNfrce" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_nfrce">
-                <comment>boolean</comment>
+        <property name="cerOutcomeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.outcome", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOutcome"}</meta>
+            <column length="65535" name="CER_outcome_code">
+                <comment>{ "tree" :"CoverageEligibilityResponse.outcome", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOutcome"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncBnftPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_bnftPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cerDispositionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.disposition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisposition"}</meta>
+            <column length="65535" name="CER_disposition_string">
+                <comment>{ "tree" :"CoverageEligibilityResponse.disposition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisposition"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncBnftPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_bnftPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cerInsurerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurer", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setInsurer"}</meta>
+            <column length="65535" name="CER_insurer_Reference">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurer", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setInsurer"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncBnftPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_bnftPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cerInsuranceCoverageReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.coverage", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addInsurance"] , "methodName" : "setCoverage"}</meta>
+            <column length="65535" name="CER_insurance_coverage_Reference">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.coverage", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addInsurance"] , "methodName" : "setCoverage"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncBnftPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_bnftPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cerInsuranceInforceBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.inforce", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setInforce"}</meta>
+            <column length="65535" name="CER_insurance_inforce_boolean">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.inforce", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setInforce"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncBnftPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_bnftPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncBnftPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.benefitPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setBenefitPeriod, setStart"}</meta>
+            <column length="65535" name="CR_nsrnc_bnftPrd_Prd_strt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.benefitPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setBenefitPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTm" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm">
-                <comment>BackboneElement</comment>
+        <property name="crNsrncBnftPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.benefitPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setBenefitPeriod, setEnd"}</meta>
+            <column length="65535" name="CR_nsrnc_bnftPrd_Prd_nd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.benefitPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance"] , "methodName" : "setBenefitPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmCtgrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ctgr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrdctrSrvcCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prdctrSrvc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmCtgrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, setText"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ctgr_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.category", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setCategory, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrdctrSrvcCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prdctrSrvc_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmPrdctrSrvcCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrdctrSrvcCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prdctrSrvc_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmPrdctrSrvcCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrdctrSrvcCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prdctrSrvc_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmPrdctrSrvcCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrdctrSrvcCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prdctrSrvc_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmPrdctrSrvcCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmMdfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_mdfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmPrdctrSrvcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmMdfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_mdfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmPrdctrSrvcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, setText"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prdctrSrvc_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.productOrService", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProductOrService, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmMdfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_mdfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmMdfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmMdfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_mdfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmMdfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmMdfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_mdfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmMdfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmPrvdr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_prvdr">
-                <comment>Reference</comment>
+        <property name="crNsrncTmMdfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmXcldd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_xcldd">
-                <comment>boolean</comment>
+        <property name="crNsrncTmMdfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nme">
-                <comment>string</comment>
+        <property name="crNsrncTmMdfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, setText"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_mdfr_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "addModifier, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_dscrptn">
-                <comment>string</comment>
+        <property name="crNsrncTmPrvdrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.provider", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProvider"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_prvdr_Rfrnce">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.provider", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setProvider"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtwrkCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ntwrk_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmXclddBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.excluded", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setExcluded"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_xcldd_bln">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.excluded", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setExcluded"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtwrkCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ntwrk_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cerInsuranceItemNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CER_insurance_item_name_string">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtwrkCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ntwrk_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_dscrptn_strng">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtwrkCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ntwrk_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmNtwrkCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ntwrk_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtwrkCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_ntwrk_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmNtwrkCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ntwrk_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmNtwrkCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ntwrk_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmNtwrkCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ntwrk_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmNtwrkCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_ntwrk_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cerInsuranceItemNetworkCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, setText"}</meta>
+            <column length="65535" name="CER_insurance_item_network_CC_text">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.network", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setNetwork, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmNtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_nt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmNtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_nt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmTrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_trm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmNtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_nt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmTrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_trm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmNtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_nt_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmTrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_trm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmNtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_nt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmTrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_trm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmNtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_nt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmTrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_trm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cerInsuranceItemUnitCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, setText"}</meta>
+            <column length="65535" name="CER_insurance_item_unit_CC_text">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setUnit, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnft" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft">
-                <comment>BackboneElement</comment>
+        <property name="crNsrncTmTrmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_trm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmTrmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_trm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmTrmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_trm_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmTrmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_trm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmTrmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_trm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cerInsuranceItemTermCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, setText"}</meta>
+            <column length="65535" name="CER_insurance_item_term_CC_text">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.term", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem"] , "methodName" : "setTerm, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdnsgndnt" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdnsgndnt">
-                <comment>unsignedInt</comment>
+        <property name="crNsrncTmBnftTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdStrng">
-                <comment>string</comment>
+        <property name="crNsrncTmBnftTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdMnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdMn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmBnftTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdMnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdMn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmBnftTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdMnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdMn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmBnftTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdMnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdMn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmBnftTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_tp_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftLlwdMnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_llwdMn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmBnftLlwdnsgndntNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedUnsignedint", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedUnsignedint"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_llwdnsgndnt_nsgndnt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedUnsignedint", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedUnsignedint"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdnsgndnt" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdnsgndnt">
-                <comment>unsignedInt</comment>
+        <property name="crNsrncTmBnftLlwdStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedString"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_llwdStrng_strng">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedString"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdStrng">
-                <comment>string</comment>
+        <property name="crNsrncTmBnftLlwdMnMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedMoney", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedMoney, setCurrency"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_llwdMn_Mn_crrncy">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedMoney", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedMoney, setCurrency"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdMnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdMn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmBnftLlwdMnMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedMoney", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedMoney, setVal"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_llwdMn_Mn_vlue">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.allowedMoney", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAllowedMoney, setVal"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdMnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdMn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmBnftSdnsgndntNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedUnsignedint", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedUnsignedint"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_sdnsgndnt_nsgndnt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedUnsignedint", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedUnsignedint"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdMnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdMn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmBnftSdStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedString"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_sdStrng_strng">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedString"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdMnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdMn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmBnftSdMnMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedMoney", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedMoney, setCurrency"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_sdMn_Mn_crrncy">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedMoney", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedMoney, setCurrency"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmBnftSdMnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_bnft_sdMn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmBnftSdMnMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedMoney", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedMoney, setVal"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_bnft_sdMn_Mn_vlue">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.benefit.usedMoney", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setUsedMoney, setVal"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnRqrd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnRqrd">
-                <comment>boolean</comment>
+        <property name="crNsrncTmThrztnRqrdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationRequired", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAuthorizationRequired"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnRqrd_bln">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationRequired", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAuthorizationRequired"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnSpprtngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnSpprtng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crNsrncTmThrztnSpprtngCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setSystem"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnSpprtngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnSpprtng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crNsrncTmThrztnSpprtngCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setVersion"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnSpprtngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnSpprtng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crNsrncTmThrztnSpprtngCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setCode"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_cdng_C_cde">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnSpprtngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnSpprtng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="crNsrncTmThrztnSpprtngCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnSpprtngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnSpprtng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crNsrncTmThrztnSpprtngCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsNsrncTmThrztnrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="CvrglgbltRspns_nsrnc_tm_thrztnrl">
-                <comment>uri</comment>
+        <property name="crNsrncTmThrztnSpprtngCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, setText"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnSpprtng_CC_txt">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationSupporting", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "addAuthorizationSupporting, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsPrthRf" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CvrglgbltRspns_prthRf">
-                <comment>string</comment>
+        <property name="crNsrncTmThrztnrlRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationUrl", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAuthorizationUrl"}</meta>
+            <column length="65535" name="CR_nsrnc_tm_thrztnrl_ri">
+                <comment>{ "tree" :"CoverageEligibilityResponse.insurance.item.authorizationUrl", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addInsurance", "addItem", "addBenefit"] , "methodName" : "setAuthorizationUrl"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsFrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_frm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cerPreAuthRefString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.preAuthRef", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPreAuthRef"}</meta>
+            <column length="65535" name="CER_preAuthRef_string">
+                <comment>{ "tree" :"CoverageEligibilityResponse.preAuthRef", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPreAuthRef"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsFrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_frm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cerFormCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setSystem"}</meta>
+            <column length="65535" name="CER_form_CC_coding_C_system">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsFrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_frm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cerFormCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setVersion"}</meta>
+            <column length="65535" name="CER_form_CC_coding_C_version">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsFrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_frm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cerFormCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setCode"}</meta>
+            <column length="65535" name="CER_form_CC_coding_C_code">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsFrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_frm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cerFormCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CER_form_CC_coding_C_display">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="coverageEligibilityResponseError" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="CoverageEligibilityResponse_error">
-                <comment>BackboneElement</comment>
+        <property name="cerFormCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CER_form_CC_coding_C_userSelected">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRrrCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CvrglgbltRspns_rrr_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="cerFormCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, setText"}</meta>
+            <column length="65535" name="CER_form_CC_text">
+                <comment>{ "tree" :"CoverageEligibilityResponse.form", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setForm, setText"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRrrCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CvrglgbltRspns_rrr_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="cerErrorCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="CER_error_code_CC_coding_C_system">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRrrCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CvrglgbltRspns_rrr_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="cerErrorCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="CER_error_code_CC_coding_C_version">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRrrCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CvrglgbltRspns_rrr_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="cerErrorCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="CER_error_code_CC_coding_C_code">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="cvrglgbltRspnsRrrCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CvrglgbltRspns_rrr_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="cerErrorCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CER_error_code_CC_coding_C_display">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="crRrrCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CR_rrr_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="cerErrorCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="CER_error_code_CC_text">
+                <comment>{ "tree" :"CoverageEligibilityResponse.error.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addError"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
     </class>

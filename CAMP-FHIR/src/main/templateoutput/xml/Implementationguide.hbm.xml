@@ -1,567 +1,483 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Implementationguide" optimistic-lock="none" table="implementationguide">
-        <id name="implementationGuideUrl" type="string">
-            <column length="512" name="ImplementationGuide_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="implementationGuideVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_version">
-                <comment>string</comment>
+        <property name="implementationGuideUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="ImplementationGuide_url_uri">
+                <comment>{ "tree" :"ImplementationGuide.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="implementationGuideName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_name">
-                <comment>string</comment>
+        <property name="implementationGuideVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="ImplementationGuide_version_string">
+                <comment>{ "tree" :"ImplementationGuide.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="implementationGuideTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_title">
-                <comment>string</comment>
+        <property name="implementationGuideNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="ImplementationGuide_name_string">
+                <comment>{ "tree" :"ImplementationGuide.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="implementationGuideStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplementationGuide_status">
-                <comment>code</comment>
+        <property name="implementationGuideTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ImplementationGuide_title_string">
+                <comment>{ "tree" :"ImplementationGuide.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="implementationGuideExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ImplementationGuide_experimental">
-                <comment>boolean</comment>
+        <property name="implementationGuideStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="ImplementationGuide_status_code">
+                <comment>{ "tree" :"ImplementationGuide.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="implementationGuideDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ImplementationGuide_date">
-                <comment>dateTime</comment>
+        <property name="implmnttnGdXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="ImplmnttnGd_xprmntl_bln">
+                <comment>{ "tree" :"ImplementationGuide.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="implementationGuidePublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_publisher">
-                <comment>string</comment>
+        <property name="implementationGuideDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="ImplementationGuide_date_dateTime">
+                <comment>{ "tree" :"ImplementationGuide.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="implementationGuideContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="ImplementationGuide_contact">
-                <comment>ContactDetail</comment>
+        <property name="implmnttnGdPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="ImplmnttnGd_pblshr_strng">
+                <comment>{ "tree" :"ImplementationGuide.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="implementationGuideDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ImplementationGuide_description">
-                <comment>markdown</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="implementationGuideUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="ImplementationGuide_useContext">
-                <comment>UsageContext</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="implmnttnGdCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="implmnttnGdCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="ImplmnttnGd_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"ImplementationGuide.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="ImplmnttnGd_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="implmnttnGdDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ImplmnttnGd_dscrptn_mrkdwn">
+                <comment>{ "tree" :"ImplementationGuide.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="implementationGuideCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="ImplementationGuide_copyright">
-                <comment>markdown</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="implementationGuidePackageId" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="ImplementationGuide_packageId">
-                <comment>id</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="implementationGuideLicense" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplementationGuide_license">
-                <comment>code</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="implementationGuideFhirVersion" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplementationGuide_fhirVersion">
-                <comment>code</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="implementationGuideDependsOnUri" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ImplementationGuide_dependsOn_uri">
-                <comment>canonical</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDpndsnPckgd" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="ImplmnttnGd_dpndsn_pckgd">
-                <comment>id</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDpndsnVrsn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dpndsn_vrsn">
-                <comment>string</comment>
+        <property name="implmnttnGdSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="implementationGuideGlobalType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplementationGuide_global_type">
-                <comment>code</comment>
+        <property name="implmnttnGdSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="implementationGuideGlobalProfile" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ImplementationGuide_global_profile">
-                <comment>canonical</comment>
+        <property name="implmnttnGdSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnGrpngNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_grpng_nme">
-                <comment>string</comment>
+        <property name="implmnttnGdSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnGrpngDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_grpng_dscrptn">
-                <comment>string</comment>
+        <property name="implmnttnGdSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="implmnttnGdSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="ImplmnttnGd_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"ImplementationGuide.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="implmnttnGdJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="implmnttnGdJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="implmnttnGdJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="implmnttnGdJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="implmnttnGdJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="implmnttnGdJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="ImplmnttnGd_jrsdctn_CC_txt">
+                <comment>{ "tree" :"ImplementationGuide.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcFhrVrsn" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_fhrVrsn">
-                <comment>code</comment>
+        <property name="implmnttnGdCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="ImplmnttnGd_cprght_mrkdwn">
+                <comment>{ "tree" :"ImplementationGuide.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_nme">
-                <comment>string</comment>
+        <property name="implementationGuidePackageIdId" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.packageId", "datatype" : "id", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPackageId"}</meta>
+            <column length="65535" name="ImplementationGuide_packageId_id">
+                <comment>{ "tree" :"ImplementationGuide.packageId", "datatype" : "id", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPackageId"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_dscrptn">
-                <comment>string</comment>
+        <property name="implementationGuideLicenseCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.license", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLicense"}</meta>
+            <column length="65535" name="ImplementationGuide_license_code">
+                <comment>{ "tree" :"ImplementationGuide.license", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLicense"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcXmplBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplBln">
-                <comment>boolean</comment>
+        <property name="implmnttnGdFhrVrsnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.fhirVersion", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFhirVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_fhrVrsn_cde">
+                <comment>{ "tree" :"ImplementationGuide.fhirVersion", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFhirVersion"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcXmplCnncl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplCnncl">
-                <comment>canonical</comment>
+        <property name="implmnttnGdDpndsnRCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.dependsOn.uri", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addDependsOn"] , "methodName" : "setUri"}</meta>
+            <column length="65535" name="ImplmnttnGd_dpndsn_r_cnncl">
+                <comment>{ "tree" :"ImplementationGuide.dependsOn.uri", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addDependsOn"] , "methodName" : "setUri"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnRsrcGrpngd" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_grpngd">
-                <comment>id</comment>
+        <property name="implmnttnGdDpndsnPckgdD" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.dependsOn.packageId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addDependsOn"] , "methodName" : "setPackageId"}</meta>
+            <column length="65535" name="ImplmnttnGd_dpndsn_pckgd_d">
+                <comment>{ "tree" :"ImplementationGuide.dependsOn.packageId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addDependsOn"] , "methodName" : "setPackageId"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmrl" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmrl">
-                <comment>url</comment>
+        <property name="implmnttnGdDpndsnVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.dependsOn.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addDependsOn"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_dpndsn_vrsn_strng">
+                <comment>{ "tree" :"ImplementationGuide.dependsOn.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addDependsOn"] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="implmnttnGdGlblTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.global.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGlobal"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="ImplmnttnGd_glbl_tp_cde">
+                <comment>{ "tree" :"ImplementationGuide.global.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGlobal"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="implmnttnGdGlblPrflCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.global.profile", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addGlobal"] , "methodName" : "setProfile"}</meta>
+            <column length="65535" name="ImplmnttnGd_glbl_prfl_cnncl">
+                <comment>{ "tree" :"ImplementationGuide.global.profile", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addGlobal"] , "methodName" : "setProfile"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="implmnttnGdDfntnGrpngNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.grouping.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_grpng_nm_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.grouping.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="implmnttnGdDfntnGrpngDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.grouping.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_grpng_dscrptn_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.grouping.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="implmnttnGdDfntnRsrcRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setReference"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_rfrnc_Rfrnce">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setReference"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="implmnttnGdDfntnRsrcFhrVrsnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.fhirVersion", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "addFhirVersion"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_fhrVrsn_cde">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.fhirVersion", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "addFhirVersion"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="implmnttnGdDfntnRsrcNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_nm_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="implmnttnGdDfntnRsrcDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_dscrptn_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="implmnttnGdDfntnRsrcXmplBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.exampleBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setExampleBoolean"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplBln_bln">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.exampleBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setExampleBoolean"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="implmnttnGdDfntnRsrcXmplCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.exampleCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setExampleCanonical(structuredefinition)"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_xmplCnncl_cnncl">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.exampleCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setExampleCanonical(structuredefinition)"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="implmnttnGdDfntnRsrcGrpngdD" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.resource.groupingId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setGroupingId"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_rsrc_grpngd_d">
+                <comment>{ "tree" :"ImplementationGuide.definition.resource.groupingId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource"] , "methodName" : "setGroupingId"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="implmnttnGdDfntnPgNmrlRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.page.nameUrl", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setNameUrl"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmrl_rl">
+                <comment>{ "tree" :"ImplementationGuide.definition.page.nameUrl", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setNameUrl"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="implmnttnGdDfntnPgNmRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.page.nameReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setNameReference(binary)"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnce">
+                <comment>{ "tree" :"ImplementationGuide.definition.page.nameReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setNameReference(binary)"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgNmRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_nmRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="implmnttnGdDfntnPgTtlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.page.title", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_ttl_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.page.title", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgTtle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_ttle">
-                <comment>string</comment>
+        <property name="implmnttnGdDfntnPgGnrtnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.page.generation", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setGeneration"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_gnrtn_cde">
+                <comment>{ "tree" :"ImplementationGuide.definition.page.generation", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "setGeneration"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgGnrtn" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_gnrtn">
-                <comment>code</comment>
+        <property name="implmnttnGdDfntnPgPgPge" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.page.page", "datatype" : "page", "cardinality" : "Many", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "addPage"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_pg_pg_pge">
+                <comment>{ "tree" :"ImplementationGuide.definition.page.page", "datatype" : "page", "cardinality" : "Many", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage"] , "methodName" : "addPage"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPgPge" type="string">
-            <meta attribute="resource-type">see page</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_pg_pge">
-                <comment>see page</comment>
+        <property name="implmnttnGdDfntnPrmtrCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.parameter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_cd_cde">
+                <comment>{ "tree" :"ImplementationGuide.definition.parameter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPrmtrCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_cde">
-                <comment>code</comment>
+        <property name="implmnttnGdDfntnPrmtrVlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.parameter.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter"] , "methodName" : "setValue"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_vl_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.parameter.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter"] , "methodName" : "setValue"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnPrmtrVlue" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_prmtr_vlue">
-                <comment>string</comment>
+        <property name="implmnttnGdDfntnTmpltCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.template.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_cd_cde">
+                <comment>{ "tree" :"ImplementationGuide.definition.template.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnTmpltCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_cde">
-                <comment>code</comment>
+        <property name="implmnttnGdDfntnTmpltSrcStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.template.source", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setSource"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_src_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.template.source", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setSource"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnTmpltSrce" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_srce">
-                <comment>string</comment>
+        <property name="implmnttnGdDfntnTmpltScpStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.definition.template.scope", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setScope"}</meta>
+            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_scp_strng">
+                <comment>{ "tree" :"ImplementationGuide.definition.template.scope", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setDefinition", "addGrouping", "setResource", "setPage", "addParameter", "addTemplate"] , "methodName" : "setScope"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdDfntnTmpltScpe" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_dfntn_tmplt_scpe">
-                <comment>string</comment>
+        <property name="implmnttnGdMnfstRndrngRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.rendering", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setManifest"] , "methodName" : "setRendering"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rndrng_rl">
+                <comment>{ "tree" :"ImplementationGuide.manifest.rendering", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setManifest"] , "methodName" : "setRendering"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRndrng" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rndrng">
-                <comment>url</comment>
+        <property name="implmnttnGdMnfstRsrcRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.resource.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setReference"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnce">
+                <comment>{ "tree" :"ImplementationGuide.manifest.resource.reference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setReference"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="implmnttnGdMnfstRsrcXmplBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.resource.exampleBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setExampleBoolean"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplBln_bln">
+                <comment>{ "tree" :"ImplementationGuide.manifest.resource.exampleBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setExampleBoolean"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="implmnttnGdMnfstRsrcXmplCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.resource.exampleCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setExampleCanonical(structuredefinition)"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplCnncl_cnncl">
+                <comment>{ "tree" :"ImplementationGuide.manifest.resource.exampleCanonical", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setExampleCanonical(structuredefinition)"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="implmnttnGdMnfstRsrcRltvPthRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.resource.relativePath", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setRelativePath"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rltvPth_rl">
+                <comment>{ "tree" :"ImplementationGuide.manifest.resource.relativePath", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource"] , "methodName" : "setRelativePath"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="implmnttnGdMnfstPgNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.page.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_nm_strng">
+                <comment>{ "tree" :"ImplementationGuide.manifest.page.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="implmnttnGdMnfstPgTtlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.page.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_ttl_strng">
+                <comment>{ "tree" :"ImplementationGuide.manifest.page.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="implmnttnGdMnfstPgNchrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.page.anchor", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addAnchor"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_pg_nchr_strng">
+                <comment>{ "tree" :"ImplementationGuide.manifest.page.anchor", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addAnchor"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="implmnttnGdMnfstMgStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.image", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addImage"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_mg_strng">
+                <comment>{ "tree" :"ImplementationGuide.manifest.image", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addImage"}</comment>
             </column>
         </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcXmplBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplBln">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcXmplCnncl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_xmplCnncl">
-                <comment>canonical</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstRsrcRltvPth" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_rsrc_rltvPth">
-                <comment>url</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstPgNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_pg_nme">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstPgTtle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_pg_ttle">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="implmnttnGdMnfstPgNchr" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplmnttnGd_mnfst_pg_nchr">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="implementationGuideManifestImage" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_manifest_image">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="implementationGuideManifestOther" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImplementationGuide_manifest_other">
-                <comment>string</comment>
+        <property name="implmnttnGdMnfstThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImplementationGuide.manifest.other", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addOther"}</meta>
+            <column length="65535" name="ImplmnttnGd_mnfst_thr_strng">
+                <comment>{ "tree" :"ImplementationGuide.manifest.other", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["setManifest", "setResource", "addPage"] , "methodName" : "addOther"}</comment>
             </column>
         </property>
     </class>

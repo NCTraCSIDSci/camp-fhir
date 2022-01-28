@@ -1,681 +1,1125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Nutritionorder" optimistic-lock="none" table="nutritionorder">
-        <id name="ntrtnrdrDntfrCdngCde" type="string">
-            <column length="512" name="Ntrtnrdr_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="ntrtnrdrDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Ntrtnrdr_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_se">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Ntrtnrdr_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Ntrtnrdr_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Ntrtnrdr_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNstnttsCnncl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="Ntrtnrdr_nstnttsCnncl">
-                <comment>canonical</comment>
+        <property name="ntrtnrdrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Ntrtnrdr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"NutritionOrder.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</meta>
+            <column length="65535" name="Ntrtnrdr_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"NutritionOrder.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</comment>
+            </column>
+        </property>
+        <property name="nutritionOrderInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</meta>
+            <column length="65535" name="NutritionOrder_instantiatesUri_uri">
+                <comment>{ "tree" :"NutritionOrder.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</comment>
             </column>
         </property>
         <property name="nutritionOrderInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="NutritionOrder_instantiatesUri">
-                <comment>uri</comment>
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.instantiates", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiates"}</meta>
+            <column length="65535" name="NutritionOrder_instantiates_uri">
+                <comment>{ "tree" :"NutritionOrder.instantiates", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiates"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderInstantiates" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="NutritionOrder_instantiates">
-                <comment>uri</comment>
+        <property name="nutritionOrderStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="NutritionOrder_status_code">
+                <comment>{ "tree" :"NutritionOrder.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="NutritionOrder_status">
-                <comment>code</comment>
+        <property name="nutritionOrderIntentCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</meta>
+            <column length="65535" name="NutritionOrder_intent_code">
+                <comment>{ "tree" :"NutritionOrder.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderIntent" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="NutritionOrder_intent">
-                <comment>code</comment>
+        <property name="nutritionOrderPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="NutritionOrder_pnt_Reference">
+                <comment>{ "tree" :"NutritionOrder.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderPnt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="NutritionOrder_pnt">
-                <comment>Reference</comment>
+        <property name="nutritionOrderEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="NutritionOrder_encounter_Reference">
+                <comment>{ "tree" :"NutritionOrder.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="NutritionOrder_encounter">
-                <comment>Reference</comment>
+        <property name="nutritionOrderDateTimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.dateTime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDateTime"}</meta>
+            <column length="65535" name="NutritionOrder_dateTime_dateTime">
+                <comment>{ "tree" :"NutritionOrder.dateTime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDateTime"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderDateTime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="NutritionOrder_dateTime">
-                <comment>dateTime</comment>
+        <property name="nutritionOrderOrdererReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.orderer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderer"}</meta>
+            <column length="65535" name="NutritionOrder_orderer_Reference">
+                <comment>{ "tree" :"NutritionOrder.orderer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderer"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderOrderer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="NutritionOrder_orderer">
-                <comment>Reference</comment>
+        <property name="ntrtnrdrLlrgntlrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.allergyIntolerance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAllergyIntolerance"}</meta>
+            <column length="65535" name="Ntrtnrdr_llrgntlrnc_Rfrnce">
+                <comment>{ "tree" :"NutritionOrder.allergyIntolerance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAllergyIntolerance"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderAllergyIntolerance" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="NutritionOrder_allergyIntolerance">
-                <comment>Reference</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrFdPrfrncMdfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrFdPrfrncMdfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrFdPrfrncMdfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrFdPrfrncMdfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrFdPrfrncMdfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrFdPrfrncMdfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_fdPrfrncMdfr_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.foodPreferenceModifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFoodPreferenceModifier, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrXcldFdMdfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrXcldFdMdfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrXcldFdMdfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrXcldFdMdfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrXcldFdMdfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderOralDiet" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="NutritionOrder_oralDiet">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrXcldFdMdfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_xcldFdMdfr_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.excludeFoodModifier", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addExcludeFoodModifier, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtSchdlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_tp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtSchdlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtSchdlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtSchdlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtSchdlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderOralDietNutrient" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="NutritionOrder_oralDiet_nutrient">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMdfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMdfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, dateTime", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, addEvent"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_vnt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, dateTime", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, addEvent"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMdfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMdfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMdfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNtrntMnt" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mnt">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addWhen"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_whn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addWhen"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderOralDietTexture" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="NutritionOrder_oralDiet_texture">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_drtn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDuration"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrMdfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setDurationMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrMdfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_prd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriod"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrMdfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setPeriodMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrMdfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsDuration"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrMdfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsPeriod"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrFdTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setCount"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_cnt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setCount"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrFdTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setCountMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrFdTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setFrequency"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrFdTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setFrequencyMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtTxtrFdTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setBoundsRange"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtFldCnsstncTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, time", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, time", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, addTimeOfDay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtFldCnsstncTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtSchdlTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setOffset"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_schdl_Tmng_rpt_ffst">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "Many", "elementtree" : ["setOralDiet"] , "methodName" : "addSchedule, setRepeat, setOffset"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtFldCnsstncTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtFldCnsstncTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtFldCnsstncTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrRlDtNstrctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_rlDt_nstrctn">
-                <comment>string</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderSupplement" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="NutritionOrder_supplement">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtNtrntMdfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mdfr_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setModifier, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtNtrntMntSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.nutrient.amount", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setAmount"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_ntrnt_mnt_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.nutrient.amount", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient"] , "methodName" : "setAmount"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntPrdctNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_prdctNme">
-                <comment>string</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntSchdlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntSchdlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtTxtrMdfrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_mdfr_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.modifier", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setModifier, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntSchdlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntSchdlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntSchdlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderSupplementQuantity" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="NutritionOrder_supplement_quantity">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrSpplmntNstrctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_spplmnt_nstrctn">
-                <comment>string</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderEnteralFormula" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="NutritionOrder_enteralFormula">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrRlDtTxtrFdTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_txtr_fdTp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.texture.foodType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setFoodType, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlBsFrmlPrdctNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlPrdctNme">
-                <comment>string</comment>
+        <property name="ntrtnrdrRlDtFldCnsstncTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_fldCnsstncTp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.fluidConsistencyType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "addFluidConsistencyType, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrRlDtNstrctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.oralDiet.instruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setInstruction"}</meta>
+            <column length="65535" name="Ntrtnrdr_rlDt_nstrctn_strng">
+                <comment>{ "tree" :"NutritionOrder.oralDiet.instruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOralDiet", "addNutrient", "addTexture"] , "methodName" : "setInstruction"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrSpplmntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrSpplmntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrSpplmntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrSpplmntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDdtvPrdctNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvPrdctNme">
-                <comment>string</comment>
+        <property name="ntrtnrdrSpplmntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlClrcDnsty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_clrcDnsty">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrSpplmntTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_tp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.supplement.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrSpplmntPrdctNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.productName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setProductName"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_prdctNm_strng">
+                <comment>{ "tree" :"NutritionOrder.supplement.productName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setProductName"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlRtfdmnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn">
-                <comment>BackboneElement</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, dateTime", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, addEvent"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_vnt">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, dateTime", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, addEvent"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnSchdlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnQntty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_qntty">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addWhen"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_whn">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, code", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addWhen"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtSmplqntty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtSmplqntty">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_drtn">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDuration"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setDurationMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_prd">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriod"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setPeriodMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsDuration"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnRtRtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsPeriod"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlMxVlmTdlvr" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_mxVlmTDlvr">
-                <comment>SimpleQuantity</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setCount"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_cnt">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setCount"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtrlFrmlDmnnstrctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmnnstrctn">
-                <comment>string</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setCountMax"}</comment>
             </column>
         </property>
-        <property name="ntrtnrdrNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Ntrtnrdr_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setFrequency"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="NutritionOrder_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setFrequencyMax"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="NutritionOrder_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setBoundsRange"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="NutritionOrder_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, time", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, time", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, addTimeOfDay"}</comment>
             </column>
         </property>
-        <property name="nutritionOrderNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="NutritionOrder_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="ntrtnrdrSpplmntSchdlTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setOffset"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_schdl_Tmng_rpt_ffst">
+                <comment>{ "tree" :"NutritionOrder.supplement.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "Many", "elementtree" : ["addSupplement"] , "methodName" : "addSchedule, setRepeat, setOffset"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_qntt_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.supplement.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setQuantity"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrSpplmntNstrctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.supplement.instruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setInstruction"}</meta>
+            <column length="65535" name="Ntrtnrdr_spplmnt_nstrctn_strng">
+                <comment>{ "tree" :"NutritionOrder.supplement.instruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSupplement"] , "methodName" : "setInstruction"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlTp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaType, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlBsFrmlPrdctNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.baseFormulaProductName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaProductName"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_bsFrmlPrdctNm_strng">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.baseFormulaProductName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setBaseFormulaProductName"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvTp_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveType, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDdtvPrdctNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.additiveProductName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveProductName"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_ddtvPrdctNm_strng">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.additiveProductName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setAdditiveProductName"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlClrcDnstSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.caloricDensity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setCaloricDensity"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_clrcDnst_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.caloricDensity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setCaloricDensity"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_cdng_C_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlRtfdmnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_rtfdmn_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.routeofAdministration", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula"] , "methodName" : "setRouteofAdministration, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, addEvent"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_vnt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, addEvent"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDurationUnit"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriodUnit"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addDayOfWeek"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addWhen"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_whn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addWhen"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_drtn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDuration"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setDurationMax"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_prd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriod"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setPeriodMax"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsDuration"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsPeriod"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setCount"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_cnt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setCount"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setCountMax"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setFrequency"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setFrequencyMax"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setBoundsRange"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, addTimeOfDay"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnSchdlTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setOffset"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_schdl_Tmng_rpt_ffst">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.schedule", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setSchedule, setRepeat, setOffset"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_qntt_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setQuantity"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtSmplqnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateSimplequantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateSimplequantity"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtSmplqntt_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateSimplequantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateSimplequantity"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setValue"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setValue"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setValue"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setComparator"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setComparator"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setUnit"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setSystem"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setNumerator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnRtRtRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setCode"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmn_rtRt_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administration.rateRatio", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setRateRatio, setDenominator, setCode"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlMxVlmTdlvrSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.maxVolumeToDeliver", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setMaxVolumeToDeliver"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_mxVlmTDlvr_SmplQntty">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.maxVolumeToDeliver", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setMaxVolumeToDeliver"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtrlFrmlDmnnstrctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.enteralFormula.administrationInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setAdministrationInstruction"}</meta>
+            <column length="65535" name="Ntrtnrdr_ntrlFrml_dmnnstrctn_strng">
+                <comment>{ "tree" :"NutritionOrder.enteralFormula.administrationInstruction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setEnteralFormula", "addAdministration"] , "methodName" : "setAdministrationInstruction"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtNnttnTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Ntrtnrdr_nt_nnttn_tme">
+                <comment>{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtNnttnTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Ntrtnrdr_nt_nnttn_txt">
+                <comment>{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Ntrtnrdr_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
+            </column>
+        </property>
+        <property name="ntrtnrdrNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Ntrtnrdr_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"NutritionOrder.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

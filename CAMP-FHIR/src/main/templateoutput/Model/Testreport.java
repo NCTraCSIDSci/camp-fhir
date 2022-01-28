@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,437 +10,488 @@ package main.templateoutput.Model;
 public class Testreport  implements java.io.Serializable {
 
 
-     private String testReportIdentifierCodingCode;
-     private String tstRprtDntfrCdngSrSlctd;
-     private String tstRprtDntfrCdngDsplay;
-     private String tstRprtDntfrCdngVrsn;
-     private String tstRprtDntfrCdngSstm;
-     private String testReportName;
-     private String testReportStatus;
-     private String testReportTestScript;
-     private String testReportResult;
-     private String testReportScore;
-     private String testReportTester;
-     private String testReportIssued;
-     private String testReportParticipant;
-     private String testReportParticipantType;
-     private String testReportParticipantUri;
-     private String testReportParticipantDisplay;
-     private String testReportSetup;
-     private String testReportSetupAction;
-     private String testReportSetupActionOperation;
-     private String tstRprtStpCtnPrtnRslt;
-     private String tstRprtStpCtnPrtnMssge;
-     private String tstRprtStpCtnPrtnDtl;
-     private String testReportSetupActionAssert;
-     private String tstRprtStpCtnSsrtRslt;
-     private String tstRprtStpCtnSsrtMssge;
-     private String tstRprtStpCtnSsrtDtl;
-     private String testReportTest;
-     private String testReportTestName;
-     private String testReportTestDescription;
-     private String testReportTestAction;
-     private String testReportTestActionOperation;
-     private String testReportTestActionAssert;
-     private String testReportTeardown;
-     private String testReportTeardownAction;
-     private String tstRprtTrdwnCtnPrtn;
+     private Integer id;
+     private String tstRprtDntfrDntfrSe;
+     private String tstRprtDntfrDntfrTpCcCSstm;
+     private String tstRprtDntfrDntfrTpCcCVrsn;
+     private String tstRprtDntfrDntfrTpCcCCde;
+     private String tstRprtDntfrDntfrTpCcCDsplay;
+     private String tstRprtDntfrDntfrTpCcCSrSlctd;
+     private String tstRprtDntfrDntfrTpCcTxt;
+     private String tstRprtDntfrDntfrPrdPrdStrt;
+     private String tstRprtDntfrDntfrPrdPrdNd;
+     private String tstRprtDntfrDntfrSsgnr;
+     private String tstRprtDntfrDntfrVlue;
+     private String tstRprtDntfrDntfrSstm;
+     private String testReportNameString;
+     private String testReportStatusCode;
+     private String testReportTestScriptReference;
+     private String testReportResultCode;
+     private String testReportScoreDecimal;
+     private String testReportTesterString;
+     private String testReportIssuedDateTime;
+     private String testReportParticipantTypeCode;
+     private String testReportParticipantUriUri;
+     private String tstRprtPrtcpntDsplStrng;
+     private String tstRprtStpCtnPrtnRsltCde;
+     private String tstRprtStpCtnPrtnMssgMrkdwn;
+     private String tstRprtStpCtnPrtnDtlRi;
+     private String tstRprtStpCtnSsrtRsltCde;
+     private String tstRprtStpCtnSsrtMssgMrkdwn;
+     private String tstRprtStpCtnSsrtDtlStrng;
+     private String testReportTestNameString;
+     private String testReportTestDescriptionString;
+     private String tstRprtTstCtnPrtnPrtn;
+     private String tstRprtTstCtnSsrtSsrt;
+     private String tstRprtTrdwnCtnPrtnPrtn;
 
     public Testreport() {
     }
 
-	
-    public Testreport(String testReportIdentifierCodingCode) {
-        this.testReportIdentifierCodingCode = testReportIdentifierCodingCode;
-    }
-    public Testreport(String testReportIdentifierCodingCode, String tstRprtDntfrCdngSrSlctd, String tstRprtDntfrCdngDsplay, String tstRprtDntfrCdngVrsn, String tstRprtDntfrCdngSstm, String testReportName, String testReportStatus, String testReportTestScript, String testReportResult, String testReportScore, String testReportTester, String testReportIssued, String testReportParticipant, String testReportParticipantType, String testReportParticipantUri, String testReportParticipantDisplay, String testReportSetup, String testReportSetupAction, String testReportSetupActionOperation, String tstRprtStpCtnPrtnRslt, String tstRprtStpCtnPrtnMssge, String tstRprtStpCtnPrtnDtl, String testReportSetupActionAssert, String tstRprtStpCtnSsrtRslt, String tstRprtStpCtnSsrtMssge, String tstRprtStpCtnSsrtDtl, String testReportTest, String testReportTestName, String testReportTestDescription, String testReportTestAction, String testReportTestActionOperation, String testReportTestActionAssert, String testReportTeardown, String testReportTeardownAction, String tstRprtTrdwnCtnPrtn) {
-       this.testReportIdentifierCodingCode = testReportIdentifierCodingCode;
-       this.tstRprtDntfrCdngSrSlctd = tstRprtDntfrCdngSrSlctd;
-       this.tstRprtDntfrCdngDsplay = tstRprtDntfrCdngDsplay;
-       this.tstRprtDntfrCdngVrsn = tstRprtDntfrCdngVrsn;
-       this.tstRprtDntfrCdngSstm = tstRprtDntfrCdngSstm;
-       this.testReportName = testReportName;
-       this.testReportStatus = testReportStatus;
-       this.testReportTestScript = testReportTestScript;
-       this.testReportResult = testReportResult;
-       this.testReportScore = testReportScore;
-       this.testReportTester = testReportTester;
-       this.testReportIssued = testReportIssued;
-       this.testReportParticipant = testReportParticipant;
-       this.testReportParticipantType = testReportParticipantType;
-       this.testReportParticipantUri = testReportParticipantUri;
-       this.testReportParticipantDisplay = testReportParticipantDisplay;
-       this.testReportSetup = testReportSetup;
-       this.testReportSetupAction = testReportSetupAction;
-       this.testReportSetupActionOperation = testReportSetupActionOperation;
-       this.tstRprtStpCtnPrtnRslt = tstRprtStpCtnPrtnRslt;
-       this.tstRprtStpCtnPrtnMssge = tstRprtStpCtnPrtnMssge;
-       this.tstRprtStpCtnPrtnDtl = tstRprtStpCtnPrtnDtl;
-       this.testReportSetupActionAssert = testReportSetupActionAssert;
-       this.tstRprtStpCtnSsrtRslt = tstRprtStpCtnSsrtRslt;
-       this.tstRprtStpCtnSsrtMssge = tstRprtStpCtnSsrtMssge;
-       this.tstRprtStpCtnSsrtDtl = tstRprtStpCtnSsrtDtl;
-       this.testReportTest = testReportTest;
-       this.testReportTestName = testReportTestName;
-       this.testReportTestDescription = testReportTestDescription;
-       this.testReportTestAction = testReportTestAction;
-       this.testReportTestActionOperation = testReportTestActionOperation;
-       this.testReportTestActionAssert = testReportTestActionAssert;
-       this.testReportTeardown = testReportTeardown;
-       this.testReportTeardownAction = testReportTeardownAction;
-       this.tstRprtTrdwnCtnPrtn = tstRprtTrdwnCtnPrtn;
+    public Testreport(String tstRprtDntfrDntfrSe, String tstRprtDntfrDntfrTpCcCSstm, String tstRprtDntfrDntfrTpCcCVrsn, String tstRprtDntfrDntfrTpCcCCde, String tstRprtDntfrDntfrTpCcCDsplay, String tstRprtDntfrDntfrTpCcCSrSlctd, String tstRprtDntfrDntfrTpCcTxt, String tstRprtDntfrDntfrPrdPrdStrt, String tstRprtDntfrDntfrPrdPrdNd, String tstRprtDntfrDntfrSsgnr, String tstRprtDntfrDntfrVlue, String tstRprtDntfrDntfrSstm, String testReportNameString, String testReportStatusCode, String testReportTestScriptReference, String testReportResultCode, String testReportScoreDecimal, String testReportTesterString, String testReportIssuedDateTime, String testReportParticipantTypeCode, String testReportParticipantUriUri, String tstRprtPrtcpntDsplStrng, String tstRprtStpCtnPrtnRsltCde, String tstRprtStpCtnPrtnMssgMrkdwn, String tstRprtStpCtnPrtnDtlRi, String tstRprtStpCtnSsrtRsltCde, String tstRprtStpCtnSsrtMssgMrkdwn, String tstRprtStpCtnSsrtDtlStrng, String testReportTestNameString, String testReportTestDescriptionString, String tstRprtTstCtnPrtnPrtn, String tstRprtTstCtnSsrtSsrt, String tstRprtTrdwnCtnPrtnPrtn) {
+       this.tstRprtDntfrDntfrSe = tstRprtDntfrDntfrSe;
+       this.tstRprtDntfrDntfrTpCcCSstm = tstRprtDntfrDntfrTpCcCSstm;
+       this.tstRprtDntfrDntfrTpCcCVrsn = tstRprtDntfrDntfrTpCcCVrsn;
+       this.tstRprtDntfrDntfrTpCcCCde = tstRprtDntfrDntfrTpCcCCde;
+       this.tstRprtDntfrDntfrTpCcCDsplay = tstRprtDntfrDntfrTpCcCDsplay;
+       this.tstRprtDntfrDntfrTpCcCSrSlctd = tstRprtDntfrDntfrTpCcCSrSlctd;
+       this.tstRprtDntfrDntfrTpCcTxt = tstRprtDntfrDntfrTpCcTxt;
+       this.tstRprtDntfrDntfrPrdPrdStrt = tstRprtDntfrDntfrPrdPrdStrt;
+       this.tstRprtDntfrDntfrPrdPrdNd = tstRprtDntfrDntfrPrdPrdNd;
+       this.tstRprtDntfrDntfrSsgnr = tstRprtDntfrDntfrSsgnr;
+       this.tstRprtDntfrDntfrVlue = tstRprtDntfrDntfrVlue;
+       this.tstRprtDntfrDntfrSstm = tstRprtDntfrDntfrSstm;
+       this.testReportNameString = testReportNameString;
+       this.testReportStatusCode = testReportStatusCode;
+       this.testReportTestScriptReference = testReportTestScriptReference;
+       this.testReportResultCode = testReportResultCode;
+       this.testReportScoreDecimal = testReportScoreDecimal;
+       this.testReportTesterString = testReportTesterString;
+       this.testReportIssuedDateTime = testReportIssuedDateTime;
+       this.testReportParticipantTypeCode = testReportParticipantTypeCode;
+       this.testReportParticipantUriUri = testReportParticipantUriUri;
+       this.tstRprtPrtcpntDsplStrng = tstRprtPrtcpntDsplStrng;
+       this.tstRprtStpCtnPrtnRsltCde = tstRprtStpCtnPrtnRsltCde;
+       this.tstRprtStpCtnPrtnMssgMrkdwn = tstRprtStpCtnPrtnMssgMrkdwn;
+       this.tstRprtStpCtnPrtnDtlRi = tstRprtStpCtnPrtnDtlRi;
+       this.tstRprtStpCtnSsrtRsltCde = tstRprtStpCtnSsrtRsltCde;
+       this.tstRprtStpCtnSsrtMssgMrkdwn = tstRprtStpCtnSsrtMssgMrkdwn;
+       this.tstRprtStpCtnSsrtDtlStrng = tstRprtStpCtnSsrtDtlStrng;
+       this.testReportTestNameString = testReportTestNameString;
+       this.testReportTestDescriptionString = testReportTestDescriptionString;
+       this.tstRprtTstCtnPrtnPrtn = tstRprtTstCtnPrtnPrtn;
+       this.tstRprtTstCtnSsrtSsrt = tstRprtTstCtnSsrtSsrt;
+       this.tstRprtTrdwnCtnPrtnPrtn = tstRprtTrdwnCtnPrtnPrtn;
     }
    
-    public String getTestReportIdentifierCodingCode() {
-        return this.testReportIdentifierCodingCode;
-    }
-    
-    public void setTestReportIdentifierCodingCode(String testReportIdentifierCodingCode) {
-        this.testReportIdentifierCodingCode = testReportIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getTstRprtDntfrCdngSrSlctd() {
-        return this.tstRprtDntfrCdngSrSlctd;
-    }
-    
-    public void setTstRprtDntfrCdngSrSlctd(String tstRprtDntfrCdngSrSlctd) {
-        this.tstRprtDntfrCdngSrSlctd = tstRprtDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getTstRprtDntfrCdngDsplay() {
-        return this.tstRprtDntfrCdngDsplay;
-    }
-    
-    public void setTstRprtDntfrCdngDsplay(String tstRprtDntfrCdngDsplay) {
-        this.tstRprtDntfrCdngDsplay = tstRprtDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getTstRprtDntfrCdngVrsn() {
-        return this.tstRprtDntfrCdngVrsn;
-    }
-    
-    public void setTstRprtDntfrCdngVrsn(String tstRprtDntfrCdngVrsn) {
-        this.tstRprtDntfrCdngVrsn = tstRprtDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getTstRprtDntfrCdngSstm() {
-        return this.tstRprtDntfrCdngSstm;
-    }
-    
-    public void setTstRprtDntfrCdngSstm(String tstRprtDntfrCdngSstm) {
-        this.tstRprtDntfrCdngSstm = tstRprtDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getTestReportName() {
-        return this.testReportName;
-    }
-    
-    public void setTestReportName(String testReportName) {
-        this.testReportName = testReportName;
-    }
-    
-    
-    
-    public String getTestReportStatus() {
-        return this.testReportStatus;
-    }
-    
-    public void setTestReportStatus(String testReportStatus) {
-        this.testReportStatus = testReportStatus;
-    }
-    
-    
-    
-    public String getTestReportTestScript() {
-        return this.testReportTestScript;
-    }
-    
-    public void setTestReportTestScript(String testReportTestScript) {
-        this.testReportTestScript = testReportTestScript;
-    }
-    
-    
-    
-    public String getTestReportResult() {
-        return this.testReportResult;
-    }
-    
-    public void setTestReportResult(String testReportResult) {
-        this.testReportResult = testReportResult;
-    }
-    
-    
-    
-    public String getTestReportScore() {
-        return this.testReportScore;
-    }
-    
-    public void setTestReportScore(String testReportScore) {
-        this.testReportScore = testReportScore;
-    }
-    
-    
-    
-    public String getTestReportTester() {
-        return this.testReportTester;
-    }
-    
-    public void setTestReportTester(String testReportTester) {
-        this.testReportTester = testReportTester;
-    }
-    
-    
-    
-    public String getTestReportIssued() {
-        return this.testReportIssued;
-    }
-    
-    public void setTestReportIssued(String testReportIssued) {
-        this.testReportIssued = testReportIssued;
-    }
-    
-    
-    
-    public String getTestReportParticipant() {
-        return this.testReportParticipant;
-    }
-    
-    public void setTestReportParticipant(String testReportParticipant) {
-        this.testReportParticipant = testReportParticipant;
-    }
-    
-    
-    
-    public String getTestReportParticipantType() {
-        return this.testReportParticipantType;
-    }
-    
-    public void setTestReportParticipantType(String testReportParticipantType) {
-        this.testReportParticipantType = testReportParticipantType;
-    }
-    
-    
-    
-    public String getTestReportParticipantUri() {
-        return this.testReportParticipantUri;
-    }
-    
-    public void setTestReportParticipantUri(String testReportParticipantUri) {
-        this.testReportParticipantUri = testReportParticipantUri;
-    }
-    
-    
-    
-    public String getTestReportParticipantDisplay() {
-        return this.testReportParticipantDisplay;
-    }
-    
-    public void setTestReportParticipantDisplay(String testReportParticipantDisplay) {
-        this.testReportParticipantDisplay = testReportParticipantDisplay;
-    }
-    
-    
-    
-    public String getTestReportSetup() {
-        return this.testReportSetup;
-    }
-    
-    public void setTestReportSetup(String testReportSetup) {
-        this.testReportSetup = testReportSetup;
-    }
-    
-    
-    
-    public String getTestReportSetupAction() {
-        return this.testReportSetupAction;
-    }
-    
-    public void setTestReportSetupAction(String testReportSetupAction) {
-        this.testReportSetupAction = testReportSetupAction;
-    }
-    
-    
-    
-    public String getTestReportSetupActionOperation() {
-        return this.testReportSetupActionOperation;
-    }
-    
-    public void setTestReportSetupActionOperation(String testReportSetupActionOperation) {
-        this.testReportSetupActionOperation = testReportSetupActionOperation;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnPrtnRslt() {
-        return this.tstRprtStpCtnPrtnRslt;
-    }
-    
-    public void setTstRprtStpCtnPrtnRslt(String tstRprtStpCtnPrtnRslt) {
-        this.tstRprtStpCtnPrtnRslt = tstRprtStpCtnPrtnRslt;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnPrtnMssge() {
-        return this.tstRprtStpCtnPrtnMssge;
-    }
-    
-    public void setTstRprtStpCtnPrtnMssge(String tstRprtStpCtnPrtnMssge) {
-        this.tstRprtStpCtnPrtnMssge = tstRprtStpCtnPrtnMssge;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnPrtnDtl() {
-        return this.tstRprtStpCtnPrtnDtl;
-    }
-    
-    public void setTstRprtStpCtnPrtnDtl(String tstRprtStpCtnPrtnDtl) {
-        this.tstRprtStpCtnPrtnDtl = tstRprtStpCtnPrtnDtl;
-    }
-    
-    
-    
-    public String getTestReportSetupActionAssert() {
-        return this.testReportSetupActionAssert;
-    }
-    
-    public void setTestReportSetupActionAssert(String testReportSetupActionAssert) {
-        this.testReportSetupActionAssert = testReportSetupActionAssert;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnSsrtRslt() {
-        return this.tstRprtStpCtnSsrtRslt;
-    }
-    
-    public void setTstRprtStpCtnSsrtRslt(String tstRprtStpCtnSsrtRslt) {
-        this.tstRprtStpCtnSsrtRslt = tstRprtStpCtnSsrtRslt;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnSsrtMssge() {
-        return this.tstRprtStpCtnSsrtMssge;
-    }
-    
-    public void setTstRprtStpCtnSsrtMssge(String tstRprtStpCtnSsrtMssge) {
-        this.tstRprtStpCtnSsrtMssge = tstRprtStpCtnSsrtMssge;
-    }
-    
-    
-    
-    public String getTstRprtStpCtnSsrtDtl() {
-        return this.tstRprtStpCtnSsrtDtl;
-    }
-    
-    public void setTstRprtStpCtnSsrtDtl(String tstRprtStpCtnSsrtDtl) {
-        this.tstRprtStpCtnSsrtDtl = tstRprtStpCtnSsrtDtl;
-    }
-    
-    
-    
-    public String getTestReportTest() {
-        return this.testReportTest;
-    }
-    
-    public void setTestReportTest(String testReportTest) {
-        this.testReportTest = testReportTest;
-    }
-    
-    
-    
-    public String getTestReportTestName() {
-        return this.testReportTestName;
-    }
-    
-    public void setTestReportTestName(String testReportTestName) {
-        this.testReportTestName = testReportTestName;
-    }
-    
-    
-    
-    public String getTestReportTestDescription() {
-        return this.testReportTestDescription;
-    }
-    
-    public void setTestReportTestDescription(String testReportTestDescription) {
-        this.testReportTestDescription = testReportTestDescription;
-    }
-    
-    
-    
-    public String getTestReportTestAction() {
-        return this.testReportTestAction;
-    }
-    
-    public void setTestReportTestAction(String testReportTestAction) {
-        this.testReportTestAction = testReportTestAction;
-    }
-    
-    
-    
-    public String getTestReportTestActionOperation() {
-        return this.testReportTestActionOperation;
-    }
-    
-    public void setTestReportTestActionOperation(String testReportTestActionOperation) {
-        this.testReportTestActionOperation = testReportTestActionOperation;
-    }
-    
-    
-    
-    public String getTestReportTestActionAssert() {
-        return this.testReportTestActionAssert;
-    }
-    
-    public void setTestReportTestActionAssert(String testReportTestActionAssert) {
-        this.testReportTestActionAssert = testReportTestActionAssert;
-    }
-    
-    
-    
-    public String getTestReportTeardown() {
-        return this.testReportTeardown;
-    }
-    
-    public void setTestReportTeardown(String testReportTeardown) {
-        this.testReportTeardown = testReportTeardown;
-    }
-    
-    
-    
-    public String getTestReportTeardownAction() {
-        return this.testReportTeardownAction;
-    }
-    
-    public void setTestReportTeardownAction(String testReportTeardownAction) {
-        this.testReportTeardownAction = testReportTeardownAction;
-    }
-    
-    
-    
-    public String getTstRprtTrdwnCtnPrtn() {
-        return this.tstRprtTrdwnCtnPrtn;
-    }
-    
-    public void setTstRprtTrdwnCtnPrtn(String tstRprtTrdwnCtnPrtn) {
-        this.tstRprtTrdwnCtnPrtn = tstRprtTrdwnCtnPrtn;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrSe()
+    {
+        return this.tstRprtDntfrDntfrSe;
+    }
+    
+    public void setTstRprtDntfrDntfrSe
+        (String tstRprtDntfrDntfrSe) 
+        {
+      this.tstRprtDntfrDntfrSe = tstRprtDntfrDntfrSe;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcCSstm()
+    {
+        return this.tstRprtDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcCSstm
+        (String tstRprtDntfrDntfrTpCcCSstm) 
+        {
+      this.tstRprtDntfrDntfrTpCcCSstm = tstRprtDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcCVrsn()
+    {
+        return this.tstRprtDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcCVrsn
+        (String tstRprtDntfrDntfrTpCcCVrsn) 
+        {
+      this.tstRprtDntfrDntfrTpCcCVrsn = tstRprtDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcCCde()
+    {
+        return this.tstRprtDntfrDntfrTpCcCCde;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcCCde
+        (String tstRprtDntfrDntfrTpCcCCde) 
+        {
+      this.tstRprtDntfrDntfrTpCcCCde = tstRprtDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcCDsplay()
+    {
+        return this.tstRprtDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcCDsplay
+        (String tstRprtDntfrDntfrTpCcCDsplay) 
+        {
+      this.tstRprtDntfrDntfrTpCcCDsplay = tstRprtDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.tstRprtDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcCSrSlctd
+        (String tstRprtDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.tstRprtDntfrDntfrTpCcCSrSlctd = tstRprtDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrTpCcTxt()
+    {
+        return this.tstRprtDntfrDntfrTpCcTxt;
+    }
+    
+    public void setTstRprtDntfrDntfrTpCcTxt
+        (String tstRprtDntfrDntfrTpCcTxt) 
+        {
+      this.tstRprtDntfrDntfrTpCcTxt = tstRprtDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrPrdPrdStrt()
+    {
+        return this.tstRprtDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setTstRprtDntfrDntfrPrdPrdStrt
+        (String tstRprtDntfrDntfrPrdPrdStrt) 
+        {
+      this.tstRprtDntfrDntfrPrdPrdStrt = tstRprtDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrPrdPrdNd()
+    {
+        return this.tstRprtDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setTstRprtDntfrDntfrPrdPrdNd
+        (String tstRprtDntfrDntfrPrdPrdNd) 
+        {
+      this.tstRprtDntfrDntfrPrdPrdNd = tstRprtDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrSsgnr()
+    {
+        return this.tstRprtDntfrDntfrSsgnr;
+    }
+    
+    public void setTstRprtDntfrDntfrSsgnr
+        (String tstRprtDntfrDntfrSsgnr) 
+        {
+      this.tstRprtDntfrDntfrSsgnr = tstRprtDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrVlue()
+    {
+        return this.tstRprtDntfrDntfrVlue;
+    }
+    
+    public void setTstRprtDntfrDntfrVlue
+        (String tstRprtDntfrDntfrVlue) 
+        {
+      this.tstRprtDntfrDntfrVlue = tstRprtDntfrDntfrVlue;
+}
+    public 
+    String 
+    getTstRprtDntfrDntfrSstm()
+    {
+        return this.tstRprtDntfrDntfrSstm;
+    }
+    
+    public void setTstRprtDntfrDntfrSstm
+        (String tstRprtDntfrDntfrSstm) 
+        {
+      this.tstRprtDntfrDntfrSstm = tstRprtDntfrDntfrSstm;
+}
+    public 
+    String 
+    getTestReportNameString()
+    {
+        return this.testReportNameString;
+    }
+    
+    public void setTestReportNameString
+        (String testReportNameString) 
+        {
+      this.testReportNameString = testReportNameString;
+}
+    public 
+    String 
+    getTestReportStatusCode()
+    {
+        return this.testReportStatusCode;
+    }
+    
+    public void setTestReportStatusCode
+        (String testReportStatusCode) 
+        {
+      this.testReportStatusCode = testReportStatusCode;
+}
+    public 
+    String 
+    getTestReportTestScriptReference()
+    {
+        return this.testReportTestScriptReference;
+    }
+    
+    public void setTestReportTestScriptReference
+        (String testReportTestScriptReference) 
+        {
+      this.testReportTestScriptReference = testReportTestScriptReference;
+}
+    public 
+    String 
+    getTestReportResultCode()
+    {
+        return this.testReportResultCode;
+    }
+    
+    public void setTestReportResultCode
+        (String testReportResultCode) 
+        {
+      this.testReportResultCode = testReportResultCode;
+}
+    public 
+    String 
+    getTestReportScoreDecimal()
+    {
+        return this.testReportScoreDecimal;
+    }
+    
+    public void setTestReportScoreDecimal
+        (String testReportScoreDecimal) 
+        {
+      this.testReportScoreDecimal = testReportScoreDecimal;
+}
+    public 
+    String 
+    getTestReportTesterString()
+    {
+        return this.testReportTesterString;
+    }
+    
+    public void setTestReportTesterString
+        (String testReportTesterString) 
+        {
+      this.testReportTesterString = testReportTesterString;
+}
+    public 
+    String 
+    getTestReportIssuedDateTime()
+    {
+        return this.testReportIssuedDateTime;
+    }
+    
+    public void setTestReportIssuedDateTime
+        (String testReportIssuedDateTime) 
+        {
+      this.testReportIssuedDateTime = testReportIssuedDateTime;
+}
+    public 
+    String 
+    getTestReportParticipantTypeCode()
+    {
+        return this.testReportParticipantTypeCode;
+    }
+    
+    public void setTestReportParticipantTypeCode
+        (String testReportParticipantTypeCode) 
+        {
+      this.testReportParticipantTypeCode = testReportParticipantTypeCode;
+}
+    public 
+    String 
+    getTestReportParticipantUriUri()
+    {
+        return this.testReportParticipantUriUri;
+    }
+    
+    public void setTestReportParticipantUriUri
+        (String testReportParticipantUriUri) 
+        {
+      this.testReportParticipantUriUri = testReportParticipantUriUri;
+}
+    public 
+    String 
+    getTstRprtPrtcpntDsplStrng()
+    {
+        return this.tstRprtPrtcpntDsplStrng;
+    }
+    
+    public void setTstRprtPrtcpntDsplStrng
+        (String tstRprtPrtcpntDsplStrng) 
+        {
+      this.tstRprtPrtcpntDsplStrng = tstRprtPrtcpntDsplStrng;
+}
+    public 
+    String 
+    getTstRprtStpCtnPrtnRsltCde()
+    {
+        return this.tstRprtStpCtnPrtnRsltCde;
+    }
+    
+    public void setTstRprtStpCtnPrtnRsltCde
+        (String tstRprtStpCtnPrtnRsltCde) 
+        {
+      this.tstRprtStpCtnPrtnRsltCde = tstRprtStpCtnPrtnRsltCde;
+}
+    public 
+    String 
+    getTstRprtStpCtnPrtnMssgMrkdwn()
+    {
+        return this.tstRprtStpCtnPrtnMssgMrkdwn;
+    }
+    
+    public void setTstRprtStpCtnPrtnMssgMrkdwn
+        (String tstRprtStpCtnPrtnMssgMrkdwn) 
+        {
+      this.tstRprtStpCtnPrtnMssgMrkdwn = tstRprtStpCtnPrtnMssgMrkdwn;
+}
+    public 
+    String 
+    getTstRprtStpCtnPrtnDtlRi()
+    {
+        return this.tstRprtStpCtnPrtnDtlRi;
+    }
+    
+    public void setTstRprtStpCtnPrtnDtlRi
+        (String tstRprtStpCtnPrtnDtlRi) 
+        {
+      this.tstRprtStpCtnPrtnDtlRi = tstRprtStpCtnPrtnDtlRi;
+}
+    public 
+    String 
+    getTstRprtStpCtnSsrtRsltCde()
+    {
+        return this.tstRprtStpCtnSsrtRsltCde;
+    }
+    
+    public void setTstRprtStpCtnSsrtRsltCde
+        (String tstRprtStpCtnSsrtRsltCde) 
+        {
+      this.tstRprtStpCtnSsrtRsltCde = tstRprtStpCtnSsrtRsltCde;
+}
+    public 
+    String 
+    getTstRprtStpCtnSsrtMssgMrkdwn()
+    {
+        return this.tstRprtStpCtnSsrtMssgMrkdwn;
+    }
+    
+    public void setTstRprtStpCtnSsrtMssgMrkdwn
+        (String tstRprtStpCtnSsrtMssgMrkdwn) 
+        {
+      this.tstRprtStpCtnSsrtMssgMrkdwn = tstRprtStpCtnSsrtMssgMrkdwn;
+}
+    public 
+    String 
+    getTstRprtStpCtnSsrtDtlStrng()
+    {
+        return this.tstRprtStpCtnSsrtDtlStrng;
+    }
+    
+    public void setTstRprtStpCtnSsrtDtlStrng
+        (String tstRprtStpCtnSsrtDtlStrng) 
+        {
+      this.tstRprtStpCtnSsrtDtlStrng = tstRprtStpCtnSsrtDtlStrng;
+}
+    public 
+    String 
+    getTestReportTestNameString()
+    {
+        return this.testReportTestNameString;
+    }
+    
+    public void setTestReportTestNameString
+        (String testReportTestNameString) 
+        {
+      this.testReportTestNameString = testReportTestNameString;
+}
+    public 
+    String 
+    getTestReportTestDescriptionString()
+    {
+        return this.testReportTestDescriptionString;
+    }
+    
+    public void setTestReportTestDescriptionString
+        (String testReportTestDescriptionString) 
+        {
+      this.testReportTestDescriptionString = testReportTestDescriptionString;
+}
+    public 
+    String 
+    getTstRprtTstCtnPrtnPrtn()
+    {
+        return this.tstRprtTstCtnPrtnPrtn;
+    }
+    
+    public void setTstRprtTstCtnPrtnPrtn
+        (String tstRprtTstCtnPrtnPrtn) 
+        {
+      this.tstRprtTstCtnPrtnPrtn = tstRprtTstCtnPrtnPrtn;
+}
+    public 
+    String 
+    getTstRprtTstCtnSsrtSsrt()
+    {
+        return this.tstRprtTstCtnSsrtSsrt;
+    }
+    
+    public void setTstRprtTstCtnSsrtSsrt
+        (String tstRprtTstCtnSsrtSsrt) 
+        {
+      this.tstRprtTstCtnSsrtSsrt = tstRprtTstCtnSsrtSsrt;
+}
+    public 
+    String 
+    getTstRprtTrdwnCtnPrtnPrtn()
+    {
+        return this.tstRprtTrdwnCtnPrtnPrtn;
+    }
+    
+    public void setTstRprtTrdwnCtnPrtnPrtn
+        (String tstRprtTrdwnCtnPrtnPrtn) 
+        {
+      this.tstRprtTrdwnCtnPrtnPrtn = tstRprtTrdwnCtnPrtnPrtn;
+}
 
 
 

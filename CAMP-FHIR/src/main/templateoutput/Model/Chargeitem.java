@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,917 +10,1398 @@ package main.templateoutput.Model;
 public class Chargeitem  implements java.io.Serializable {
 
 
-     private String chargeItemIdentifierCodingCode;
-     private String chrgtmDntfrCdngSrSlctd;
-     private String chrgtmDntfrCdngDsplay;
-     private String chrgtmDntfrCdngVrsn;
-     private String chrgtmDntfrCdngSstm;
-     private String chargeItemDefinitionUri;
-     private String chargeItemDefinitionCanonical;
-     private String chargeItemStatus;
-     private String chargeItemPartOf;
-     private String chrgtmCdCdngSrSlctd;
-     private String chargeItemCodeCodingCode;
-     private String chargeItemCodeCodingDisplay;
-     private String chargeItemCodeCodingVersion;
-     private String chargeItemCodeCodingSystem;
-     private String chargeItemSubject;
-     private String chargeItemContext;
-     private String chargeItemOccurrenceDatetime;
-     private String chrgtmCcrrncPrdCdngSrSlctd;
-     private String chrgtmCcrrncPrdCdngCde;
-     private String chrgtmCcrrncPrdCdngDsplay;
-     private String chrgtmCcrrncPrdCdngVrsn;
-     private String chrgtmCcrrncPrdCdngSstm;
-     private String chrgtmCcrrncTmngCdngSrSlctd;
-     private String chrgtmCcrrncTmngCdngCde;
-     private String chrgtmCcrrncTmngCdngDsplay;
-     private String chrgtmCcrrncTmngCdngVrsn;
-     private String chrgtmCcrrncTmngCdngSstm;
-     private String chargeItemPerformer;
-     private String chrgtmPrfrmrFnctnCdngSrSlctd;
-     private String chrgtmPrfrmrFnctnCdngCde;
-     private String chrgtmPrfrmrFnctnCdngDsplay;
-     private String chrgtmPrfrmrFnctnCdngVrsn;
-     private String chrgtmPrfrmrFnctnCdngSstm;
-     private String chargeItemPerformerActor;
-     private String chargeItemPerformingOrganization;
-     private String chargeItemRequestingOrganization;
-     private String chargeItemCostCenter;
-     private String chrgtmQnttCdngSrSlctd;
-     private String chargeItemQuantityCodingCode;
-     private String chargeItemQuantityCodingDisplay;
-     private String chargeItemQuantityCodingVersion;
-     private String chargeItemQuantityCodingSystem;
-     private String chrgtmBdstCdngSrSlctd;
-     private String chargeItemBodysiteCodingCode;
-     private String chargeItemBodysiteCodingDisplay;
-     private String chargeItemBodysiteCodingVersion;
-     private String chargeItemBodysiteCodingSystem;
-     private String chargeItemFactorOverride;
-     private String chrgtmPrcvrrdCdngSrSlctd;
-     private String chrgtmPrcvrrdCdngCde;
-     private String chrgtmPrcvrrdCdngDsplay;
-     private String chrgtmPrcvrrdCdngVrsn;
-     private String chrgtmPrcvrrdCdngSstm;
-     private String chargeItemOverrideReason;
-     private String chargeItemEnterer;
-     private String chargeItemEnteredDate;
-     private String chrgtmRsnCdngSrSlctd;
-     private String chargeItemReasonCodingCode;
-     private String chargeItemReasonCodingDisplay;
-     private String chargeItemReasonCodingVersion;
-     private String chargeItemReasonCodingSystem;
-     private String chargeItemService;
-     private String chargeItemProductReference;
-     private String chrgtmPrdctcdblcptCdngSrSlctd;
-     private String chrgtmPrdctcdblcptCdngCde;
-     private String chrgtmPrdctcdblcptCdngDsplay;
-     private String chrgtmPrdctcdblcptCdngVrsn;
-     private String chrgtmPrdctcdblcptCdngSstm;
-     private String chargeItemAccount;
-     private String chrgtmNtCdngSrSlctd;
-     private String chargeItemNoteCodingCode;
-     private String chargeItemNoteCodingDisplay;
-     private String chargeItemNoteCodingVersion;
-     private String chargeItemNoteCodingSystem;
-     private String chargeItemSupportingInformation;
+     private Integer id;
+     private String chrgtmDntfrDntfrSe;
+     private String chrgtmDntfrDntfrTpCcCSstm;
+     private String chrgtmDntfrDntfrTpCcCVrsn;
+     private String chrgtmDntfrDntfrTpCcCCde;
+     private String chrgtmDntfrDntfrTpCcCDsplay;
+     private String chrgtmDntfrDntfrTpCcCSrSlctd;
+     private String chrgtmDntfrDntfrTpCcTxt;
+     private String chrgtmDntfrDntfrPrdPrdStrt;
+     private String chrgtmDntfrDntfrPrdPrdNd;
+     private String chrgtmDntfrDntfrSsgnr;
+     private String chrgtmDntfrDntfrVlue;
+     private String chrgtmDntfrDntfrSstm;
+     private String chargeItemDefinitionUriUri;
+     private String chrgtmDfntnCnnclCnncl;
+     private String chargeItemStatusCode;
+     private String chargeItemPartOfReference;
+     private String chargeItemCodeCcCodingCSystem;
+     private String chrgtmCdCcCdngCVrsn;
+     private String chargeItemCodeCcCodingCCode;
+     private String chrgtmCdCcCdngCDsplay;
+     private String chrgtmCdCcCdngCSrSlctd;
+     private String chargeItemCodeCcText;
+     private String chargeItemSubjectReference;
+     private String chargeItemContextReference;
+     private String chrgtmCcrrncDttmDtTme;
+     private String chrgtmCcrrncPrdPrdStrt;
+     private String chrgtmCcrrncPrdPrdNd;
+     private String chrgtmCcrrncTmngTmngCdCcCSstm;
+     private String chrgtmCcrrncTmngTmngCdCcCVrsn;
+     private String chrgtmCcrrncTmngTmngCdCcCCde;
+     private String chrgtmCcrrncTmngTmngCdCcCDsplay;
+     private String chrgtmCcrrncTmngTmngCdCcCSrSlctd;
+     private String chrgtmCcrrncTmngTmngCdCcTxt;
+     private String chrgtmCcrrncTmngTmngVnt;
+     private String chrgtmCcrrncTmngTmngRptDrtnnt;
+     private String chrgtmCcrrncTmngTmngRptPrdnt;
+     private String chrgtmCcrrncTmngTmngRptDfWk;
+     private String chrgtmCcrrncTmngTmngRptWhn;
+     private String chrgtmCcrrncTmngTmngRptDrtn;
+     private String chrgtmCcrrncTmngTmngRptDrtnMx;
+     private String chrgtmCcrrncTmngTmngRptPrd;
+     private String chrgtmCcrrncTmngTmngRptPrdMx;
+     private String chrgtmCcrrncTmngTmngRptBndsDrtn;
+     private String chrgtmCcrrncTmngTmngRptBndsPrd;
+     private String chrgtmCcrrncTmngTmngRptCnt;
+     private String chrgtmCcrrncTmngTmngRptCntMx;
+     private String chrgtmCcrrncTmngTmngRptFrqncy;
+     private String chrgtmCcrrncTmngTmngRptFrqncMx;
+     private String chrgtmCcrrncTmngTmngRptBndsRnge;
+     private String chrgtmCcrrncTmngTmngRptTmfDay;
+     private String chrgtmCcrrncTmngTmngRptFfst;
+     private String chrgtmPrfrmrFnctnCcCdngCSstm;
+     private String chrgtmPrfrmrFnctnCcCdngCVrsn;
+     private String chrgtmPrfrmrFnctnCcCdngCCde;
+     private String chrgtmPrfrmrFnctnCcCdngCDsplay;
+     private String chrgtmPrfrmrFnctnCcCdngCSrSlctd;
+     private String chrgtmPrfrmrFnctnCcTxt;
+     private String chrgtmPrfrmrCtrRfrnce;
+     private String chrgtmPrfrmngrgnztnRfrnce;
+     private String chrgtmRqstngrgnztnRfrnce;
+     private String chargeItemCostCenterReference;
+     private String chrgtmQnttQnttCmprtr;
+     private String chargeItemQuantityQuantityCode;
+     private String chargeItemQuantityQuantityValue;
+     private String chargeItemQuantityQuantityUnit;
+     private String chrgtmQnttQnttSstm;
+     private String chrgtmBdstCcCdngCSstm;
+     private String chrgtmBdstCcCdngCVrsn;
+     private String chrgtmBdstCcCdngCCde;
+     private String chrgtmBdstCcCdngCDsplay;
+     private String chrgtmBdstCcCdngCSrSlctd;
+     private String chargeItemBodysiteCcText;
+     private String chargeItemFactorOverrideDecimal;
+     private String chrgtmPrcvrrdMnCrrncy;
+     private String chrgtmPrcvrrdMnVlue;
+     private String chargeItemOverrideReasonString;
+     private String chargeItemEntererReference;
+     private String chargeItemEnteredDateDateTime;
+     private String chrgtmRsnCcCdngCSstm;
+     private String chrgtmRsnCcCdngCVrsn;
+     private String chargeItemReasonCcCodingCCode;
+     private String chrgtmRsnCcCdngCDsplay;
+     private String chrgtmRsnCcCdngCSrSlctd;
+     private String chargeItemReasonCcText;
+     private String chargeItemServiceReference;
+     private String chrgtmPrdctRfrncRfrnce;
+     private String chrgtmPrdctCdblcncptCcCdngCSstm;
+     private String chrgtmPrdctCdblcncptCcCdngCVrsn;
+     private String chrgtmPrdctCdblcncptCcCdngCCde;
+     private String chrgtmPrdctCdblcncptCcCdngCDsplay;
+     private String chrgtmPrdctCdblcncptCcCdngCSrSlctd;
+     private String chrgtmPrdctCdblcncptCcTxt;
+     private String chargeItemAccountReference;
+     private String chargeItemNoteAnnotationTime;
+     private String chargeItemNoteAnnotationText;
+     private String chrgtmNtNnttnThrRfrnce;
+     private String chrgtmNtNnttnThrStrng;
+     private String chrgtmSpprtngnfrmtnRfrnce;
 
     public Chargeitem() {
     }
 
-	
-    public Chargeitem(String chargeItemIdentifierCodingCode) {
-        this.chargeItemIdentifierCodingCode = chargeItemIdentifierCodingCode;
-    }
-    public Chargeitem(String chargeItemIdentifierCodingCode, String chrgtmDntfrCdngSrSlctd, String chrgtmDntfrCdngDsplay, String chrgtmDntfrCdngVrsn, String chrgtmDntfrCdngSstm, String chargeItemDefinitionUri, String chargeItemDefinitionCanonical, String chargeItemStatus, String chargeItemPartOf, String chrgtmCdCdngSrSlctd, String chargeItemCodeCodingCode, String chargeItemCodeCodingDisplay, String chargeItemCodeCodingVersion, String chargeItemCodeCodingSystem, String chargeItemSubject, String chargeItemContext, String chargeItemOccurrenceDatetime, String chrgtmCcrrncPrdCdngSrSlctd, String chrgtmCcrrncPrdCdngCde, String chrgtmCcrrncPrdCdngDsplay, String chrgtmCcrrncPrdCdngVrsn, String chrgtmCcrrncPrdCdngSstm, String chrgtmCcrrncTmngCdngSrSlctd, String chrgtmCcrrncTmngCdngCde, String chrgtmCcrrncTmngCdngDsplay, String chrgtmCcrrncTmngCdngVrsn, String chrgtmCcrrncTmngCdngSstm, String chargeItemPerformer, String chrgtmPrfrmrFnctnCdngSrSlctd, String chrgtmPrfrmrFnctnCdngCde, String chrgtmPrfrmrFnctnCdngDsplay, String chrgtmPrfrmrFnctnCdngVrsn, String chrgtmPrfrmrFnctnCdngSstm, String chargeItemPerformerActor, String chargeItemPerformingOrganization, String chargeItemRequestingOrganization, String chargeItemCostCenter, String chrgtmQnttCdngSrSlctd, String chargeItemQuantityCodingCode, String chargeItemQuantityCodingDisplay, String chargeItemQuantityCodingVersion, String chargeItemQuantityCodingSystem, String chrgtmBdstCdngSrSlctd, String chargeItemBodysiteCodingCode, String chargeItemBodysiteCodingDisplay, String chargeItemBodysiteCodingVersion, String chargeItemBodysiteCodingSystem, String chargeItemFactorOverride, String chrgtmPrcvrrdCdngSrSlctd, String chrgtmPrcvrrdCdngCde, String chrgtmPrcvrrdCdngDsplay, String chrgtmPrcvrrdCdngVrsn, String chrgtmPrcvrrdCdngSstm, String chargeItemOverrideReason, String chargeItemEnterer, String chargeItemEnteredDate, String chrgtmRsnCdngSrSlctd, String chargeItemReasonCodingCode, String chargeItemReasonCodingDisplay, String chargeItemReasonCodingVersion, String chargeItemReasonCodingSystem, String chargeItemService, String chargeItemProductReference, String chrgtmPrdctcdblcptCdngSrSlctd, String chrgtmPrdctcdblcptCdngCde, String chrgtmPrdctcdblcptCdngDsplay, String chrgtmPrdctcdblcptCdngVrsn, String chrgtmPrdctcdblcptCdngSstm, String chargeItemAccount, String chrgtmNtCdngSrSlctd, String chargeItemNoteCodingCode, String chargeItemNoteCodingDisplay, String chargeItemNoteCodingVersion, String chargeItemNoteCodingSystem, String chargeItemSupportingInformation) {
-       this.chargeItemIdentifierCodingCode = chargeItemIdentifierCodingCode;
-       this.chrgtmDntfrCdngSrSlctd = chrgtmDntfrCdngSrSlctd;
-       this.chrgtmDntfrCdngDsplay = chrgtmDntfrCdngDsplay;
-       this.chrgtmDntfrCdngVrsn = chrgtmDntfrCdngVrsn;
-       this.chrgtmDntfrCdngSstm = chrgtmDntfrCdngSstm;
-       this.chargeItemDefinitionUri = chargeItemDefinitionUri;
-       this.chargeItemDefinitionCanonical = chargeItemDefinitionCanonical;
-       this.chargeItemStatus = chargeItemStatus;
-       this.chargeItemPartOf = chargeItemPartOf;
-       this.chrgtmCdCdngSrSlctd = chrgtmCdCdngSrSlctd;
-       this.chargeItemCodeCodingCode = chargeItemCodeCodingCode;
-       this.chargeItemCodeCodingDisplay = chargeItemCodeCodingDisplay;
-       this.chargeItemCodeCodingVersion = chargeItemCodeCodingVersion;
-       this.chargeItemCodeCodingSystem = chargeItemCodeCodingSystem;
-       this.chargeItemSubject = chargeItemSubject;
-       this.chargeItemContext = chargeItemContext;
-       this.chargeItemOccurrenceDatetime = chargeItemOccurrenceDatetime;
-       this.chrgtmCcrrncPrdCdngSrSlctd = chrgtmCcrrncPrdCdngSrSlctd;
-       this.chrgtmCcrrncPrdCdngCde = chrgtmCcrrncPrdCdngCde;
-       this.chrgtmCcrrncPrdCdngDsplay = chrgtmCcrrncPrdCdngDsplay;
-       this.chrgtmCcrrncPrdCdngVrsn = chrgtmCcrrncPrdCdngVrsn;
-       this.chrgtmCcrrncPrdCdngSstm = chrgtmCcrrncPrdCdngSstm;
-       this.chrgtmCcrrncTmngCdngSrSlctd = chrgtmCcrrncTmngCdngSrSlctd;
-       this.chrgtmCcrrncTmngCdngCde = chrgtmCcrrncTmngCdngCde;
-       this.chrgtmCcrrncTmngCdngDsplay = chrgtmCcrrncTmngCdngDsplay;
-       this.chrgtmCcrrncTmngCdngVrsn = chrgtmCcrrncTmngCdngVrsn;
-       this.chrgtmCcrrncTmngCdngSstm = chrgtmCcrrncTmngCdngSstm;
-       this.chargeItemPerformer = chargeItemPerformer;
-       this.chrgtmPrfrmrFnctnCdngSrSlctd = chrgtmPrfrmrFnctnCdngSrSlctd;
-       this.chrgtmPrfrmrFnctnCdngCde = chrgtmPrfrmrFnctnCdngCde;
-       this.chrgtmPrfrmrFnctnCdngDsplay = chrgtmPrfrmrFnctnCdngDsplay;
-       this.chrgtmPrfrmrFnctnCdngVrsn = chrgtmPrfrmrFnctnCdngVrsn;
-       this.chrgtmPrfrmrFnctnCdngSstm = chrgtmPrfrmrFnctnCdngSstm;
-       this.chargeItemPerformerActor = chargeItemPerformerActor;
-       this.chargeItemPerformingOrganization = chargeItemPerformingOrganization;
-       this.chargeItemRequestingOrganization = chargeItemRequestingOrganization;
-       this.chargeItemCostCenter = chargeItemCostCenter;
-       this.chrgtmQnttCdngSrSlctd = chrgtmQnttCdngSrSlctd;
-       this.chargeItemQuantityCodingCode = chargeItemQuantityCodingCode;
-       this.chargeItemQuantityCodingDisplay = chargeItemQuantityCodingDisplay;
-       this.chargeItemQuantityCodingVersion = chargeItemQuantityCodingVersion;
-       this.chargeItemQuantityCodingSystem = chargeItemQuantityCodingSystem;
-       this.chrgtmBdstCdngSrSlctd = chrgtmBdstCdngSrSlctd;
-       this.chargeItemBodysiteCodingCode = chargeItemBodysiteCodingCode;
-       this.chargeItemBodysiteCodingDisplay = chargeItemBodysiteCodingDisplay;
-       this.chargeItemBodysiteCodingVersion = chargeItemBodysiteCodingVersion;
-       this.chargeItemBodysiteCodingSystem = chargeItemBodysiteCodingSystem;
-       this.chargeItemFactorOverride = chargeItemFactorOverride;
-       this.chrgtmPrcvrrdCdngSrSlctd = chrgtmPrcvrrdCdngSrSlctd;
-       this.chrgtmPrcvrrdCdngCde = chrgtmPrcvrrdCdngCde;
-       this.chrgtmPrcvrrdCdngDsplay = chrgtmPrcvrrdCdngDsplay;
-       this.chrgtmPrcvrrdCdngVrsn = chrgtmPrcvrrdCdngVrsn;
-       this.chrgtmPrcvrrdCdngSstm = chrgtmPrcvrrdCdngSstm;
-       this.chargeItemOverrideReason = chargeItemOverrideReason;
-       this.chargeItemEnterer = chargeItemEnterer;
-       this.chargeItemEnteredDate = chargeItemEnteredDate;
-       this.chrgtmRsnCdngSrSlctd = chrgtmRsnCdngSrSlctd;
-       this.chargeItemReasonCodingCode = chargeItemReasonCodingCode;
-       this.chargeItemReasonCodingDisplay = chargeItemReasonCodingDisplay;
-       this.chargeItemReasonCodingVersion = chargeItemReasonCodingVersion;
-       this.chargeItemReasonCodingSystem = chargeItemReasonCodingSystem;
-       this.chargeItemService = chargeItemService;
-       this.chargeItemProductReference = chargeItemProductReference;
-       this.chrgtmPrdctcdblcptCdngSrSlctd = chrgtmPrdctcdblcptCdngSrSlctd;
-       this.chrgtmPrdctcdblcptCdngCde = chrgtmPrdctcdblcptCdngCde;
-       this.chrgtmPrdctcdblcptCdngDsplay = chrgtmPrdctcdblcptCdngDsplay;
-       this.chrgtmPrdctcdblcptCdngVrsn = chrgtmPrdctcdblcptCdngVrsn;
-       this.chrgtmPrdctcdblcptCdngSstm = chrgtmPrdctcdblcptCdngSstm;
-       this.chargeItemAccount = chargeItemAccount;
-       this.chrgtmNtCdngSrSlctd = chrgtmNtCdngSrSlctd;
-       this.chargeItemNoteCodingCode = chargeItemNoteCodingCode;
-       this.chargeItemNoteCodingDisplay = chargeItemNoteCodingDisplay;
-       this.chargeItemNoteCodingVersion = chargeItemNoteCodingVersion;
-       this.chargeItemNoteCodingSystem = chargeItemNoteCodingSystem;
-       this.chargeItemSupportingInformation = chargeItemSupportingInformation;
+    public Chargeitem(String chrgtmDntfrDntfrSe, String chrgtmDntfrDntfrTpCcCSstm, String chrgtmDntfrDntfrTpCcCVrsn, String chrgtmDntfrDntfrTpCcCCde, String chrgtmDntfrDntfrTpCcCDsplay, String chrgtmDntfrDntfrTpCcCSrSlctd, String chrgtmDntfrDntfrTpCcTxt, String chrgtmDntfrDntfrPrdPrdStrt, String chrgtmDntfrDntfrPrdPrdNd, String chrgtmDntfrDntfrSsgnr, String chrgtmDntfrDntfrVlue, String chrgtmDntfrDntfrSstm, String chargeItemDefinitionUriUri, String chrgtmDfntnCnnclCnncl, String chargeItemStatusCode, String chargeItemPartOfReference, String chargeItemCodeCcCodingCSystem, String chrgtmCdCcCdngCVrsn, String chargeItemCodeCcCodingCCode, String chrgtmCdCcCdngCDsplay, String chrgtmCdCcCdngCSrSlctd, String chargeItemCodeCcText, String chargeItemSubjectReference, String chargeItemContextReference, String chrgtmCcrrncDttmDtTme, String chrgtmCcrrncPrdPrdStrt, String chrgtmCcrrncPrdPrdNd, String chrgtmCcrrncTmngTmngCdCcCSstm, String chrgtmCcrrncTmngTmngCdCcCVrsn, String chrgtmCcrrncTmngTmngCdCcCCde, String chrgtmCcrrncTmngTmngCdCcCDsplay, String chrgtmCcrrncTmngTmngCdCcCSrSlctd, String chrgtmCcrrncTmngTmngCdCcTxt, String chrgtmCcrrncTmngTmngVnt, String chrgtmCcrrncTmngTmngRptDrtnnt, String chrgtmCcrrncTmngTmngRptPrdnt, String chrgtmCcrrncTmngTmngRptDfWk, String chrgtmCcrrncTmngTmngRptWhn, String chrgtmCcrrncTmngTmngRptDrtn, String chrgtmCcrrncTmngTmngRptDrtnMx, String chrgtmCcrrncTmngTmngRptPrd, String chrgtmCcrrncTmngTmngRptPrdMx, String chrgtmCcrrncTmngTmngRptBndsDrtn, String chrgtmCcrrncTmngTmngRptBndsPrd, String chrgtmCcrrncTmngTmngRptCnt, String chrgtmCcrrncTmngTmngRptCntMx, String chrgtmCcrrncTmngTmngRptFrqncy, String chrgtmCcrrncTmngTmngRptFrqncMx, String chrgtmCcrrncTmngTmngRptBndsRnge, String chrgtmCcrrncTmngTmngRptTmfDay, String chrgtmCcrrncTmngTmngRptFfst, String chrgtmPrfrmrFnctnCcCdngCSstm, String chrgtmPrfrmrFnctnCcCdngCVrsn, String chrgtmPrfrmrFnctnCcCdngCCde, String chrgtmPrfrmrFnctnCcCdngCDsplay, String chrgtmPrfrmrFnctnCcCdngCSrSlctd, String chrgtmPrfrmrFnctnCcTxt, String chrgtmPrfrmrCtrRfrnce, String chrgtmPrfrmngrgnztnRfrnce, String chrgtmRqstngrgnztnRfrnce, String chargeItemCostCenterReference, String chrgtmQnttQnttCmprtr, String chargeItemQuantityQuantityCode, String chargeItemQuantityQuantityValue, String chargeItemQuantityQuantityUnit, String chrgtmQnttQnttSstm, String chrgtmBdstCcCdngCSstm, String chrgtmBdstCcCdngCVrsn, String chrgtmBdstCcCdngCCde, String chrgtmBdstCcCdngCDsplay, String chrgtmBdstCcCdngCSrSlctd, String chargeItemBodysiteCcText, String chargeItemFactorOverrideDecimal, String chrgtmPrcvrrdMnCrrncy, String chrgtmPrcvrrdMnVlue, String chargeItemOverrideReasonString, String chargeItemEntererReference, String chargeItemEnteredDateDateTime, String chrgtmRsnCcCdngCSstm, String chrgtmRsnCcCdngCVrsn, String chargeItemReasonCcCodingCCode, String chrgtmRsnCcCdngCDsplay, String chrgtmRsnCcCdngCSrSlctd, String chargeItemReasonCcText, String chargeItemServiceReference, String chrgtmPrdctRfrncRfrnce, String chrgtmPrdctCdblcncptCcCdngCSstm, String chrgtmPrdctCdblcncptCcCdngCVrsn, String chrgtmPrdctCdblcncptCcCdngCCde, String chrgtmPrdctCdblcncptCcCdngCDsplay, String chrgtmPrdctCdblcncptCcCdngCSrSlctd, String chrgtmPrdctCdblcncptCcTxt, String chargeItemAccountReference, String chargeItemNoteAnnotationTime, String chargeItemNoteAnnotationText, String chrgtmNtNnttnThrRfrnce, String chrgtmNtNnttnThrStrng, String chrgtmSpprtngnfrmtnRfrnce) {
+       this.chrgtmDntfrDntfrSe = chrgtmDntfrDntfrSe;
+       this.chrgtmDntfrDntfrTpCcCSstm = chrgtmDntfrDntfrTpCcCSstm;
+       this.chrgtmDntfrDntfrTpCcCVrsn = chrgtmDntfrDntfrTpCcCVrsn;
+       this.chrgtmDntfrDntfrTpCcCCde = chrgtmDntfrDntfrTpCcCCde;
+       this.chrgtmDntfrDntfrTpCcCDsplay = chrgtmDntfrDntfrTpCcCDsplay;
+       this.chrgtmDntfrDntfrTpCcCSrSlctd = chrgtmDntfrDntfrTpCcCSrSlctd;
+       this.chrgtmDntfrDntfrTpCcTxt = chrgtmDntfrDntfrTpCcTxt;
+       this.chrgtmDntfrDntfrPrdPrdStrt = chrgtmDntfrDntfrPrdPrdStrt;
+       this.chrgtmDntfrDntfrPrdPrdNd = chrgtmDntfrDntfrPrdPrdNd;
+       this.chrgtmDntfrDntfrSsgnr = chrgtmDntfrDntfrSsgnr;
+       this.chrgtmDntfrDntfrVlue = chrgtmDntfrDntfrVlue;
+       this.chrgtmDntfrDntfrSstm = chrgtmDntfrDntfrSstm;
+       this.chargeItemDefinitionUriUri = chargeItemDefinitionUriUri;
+       this.chrgtmDfntnCnnclCnncl = chrgtmDfntnCnnclCnncl;
+       this.chargeItemStatusCode = chargeItemStatusCode;
+       this.chargeItemPartOfReference = chargeItemPartOfReference;
+       this.chargeItemCodeCcCodingCSystem = chargeItemCodeCcCodingCSystem;
+       this.chrgtmCdCcCdngCVrsn = chrgtmCdCcCdngCVrsn;
+       this.chargeItemCodeCcCodingCCode = chargeItemCodeCcCodingCCode;
+       this.chrgtmCdCcCdngCDsplay = chrgtmCdCcCdngCDsplay;
+       this.chrgtmCdCcCdngCSrSlctd = chrgtmCdCcCdngCSrSlctd;
+       this.chargeItemCodeCcText = chargeItemCodeCcText;
+       this.chargeItemSubjectReference = chargeItemSubjectReference;
+       this.chargeItemContextReference = chargeItemContextReference;
+       this.chrgtmCcrrncDttmDtTme = chrgtmCcrrncDttmDtTme;
+       this.chrgtmCcrrncPrdPrdStrt = chrgtmCcrrncPrdPrdStrt;
+       this.chrgtmCcrrncPrdPrdNd = chrgtmCcrrncPrdPrdNd;
+       this.chrgtmCcrrncTmngTmngCdCcCSstm = chrgtmCcrrncTmngTmngCdCcCSstm;
+       this.chrgtmCcrrncTmngTmngCdCcCVrsn = chrgtmCcrrncTmngTmngCdCcCVrsn;
+       this.chrgtmCcrrncTmngTmngCdCcCCde = chrgtmCcrrncTmngTmngCdCcCCde;
+       this.chrgtmCcrrncTmngTmngCdCcCDsplay = chrgtmCcrrncTmngTmngCdCcCDsplay;
+       this.chrgtmCcrrncTmngTmngCdCcCSrSlctd = chrgtmCcrrncTmngTmngCdCcCSrSlctd;
+       this.chrgtmCcrrncTmngTmngCdCcTxt = chrgtmCcrrncTmngTmngCdCcTxt;
+       this.chrgtmCcrrncTmngTmngVnt = chrgtmCcrrncTmngTmngVnt;
+       this.chrgtmCcrrncTmngTmngRptDrtnnt = chrgtmCcrrncTmngTmngRptDrtnnt;
+       this.chrgtmCcrrncTmngTmngRptPrdnt = chrgtmCcrrncTmngTmngRptPrdnt;
+       this.chrgtmCcrrncTmngTmngRptDfWk = chrgtmCcrrncTmngTmngRptDfWk;
+       this.chrgtmCcrrncTmngTmngRptWhn = chrgtmCcrrncTmngTmngRptWhn;
+       this.chrgtmCcrrncTmngTmngRptDrtn = chrgtmCcrrncTmngTmngRptDrtn;
+       this.chrgtmCcrrncTmngTmngRptDrtnMx = chrgtmCcrrncTmngTmngRptDrtnMx;
+       this.chrgtmCcrrncTmngTmngRptPrd = chrgtmCcrrncTmngTmngRptPrd;
+       this.chrgtmCcrrncTmngTmngRptPrdMx = chrgtmCcrrncTmngTmngRptPrdMx;
+       this.chrgtmCcrrncTmngTmngRptBndsDrtn = chrgtmCcrrncTmngTmngRptBndsDrtn;
+       this.chrgtmCcrrncTmngTmngRptBndsPrd = chrgtmCcrrncTmngTmngRptBndsPrd;
+       this.chrgtmCcrrncTmngTmngRptCnt = chrgtmCcrrncTmngTmngRptCnt;
+       this.chrgtmCcrrncTmngTmngRptCntMx = chrgtmCcrrncTmngTmngRptCntMx;
+       this.chrgtmCcrrncTmngTmngRptFrqncy = chrgtmCcrrncTmngTmngRptFrqncy;
+       this.chrgtmCcrrncTmngTmngRptFrqncMx = chrgtmCcrrncTmngTmngRptFrqncMx;
+       this.chrgtmCcrrncTmngTmngRptBndsRnge = chrgtmCcrrncTmngTmngRptBndsRnge;
+       this.chrgtmCcrrncTmngTmngRptTmfDay = chrgtmCcrrncTmngTmngRptTmfDay;
+       this.chrgtmCcrrncTmngTmngRptFfst = chrgtmCcrrncTmngTmngRptFfst;
+       this.chrgtmPrfrmrFnctnCcCdngCSstm = chrgtmPrfrmrFnctnCcCdngCSstm;
+       this.chrgtmPrfrmrFnctnCcCdngCVrsn = chrgtmPrfrmrFnctnCcCdngCVrsn;
+       this.chrgtmPrfrmrFnctnCcCdngCCde = chrgtmPrfrmrFnctnCcCdngCCde;
+       this.chrgtmPrfrmrFnctnCcCdngCDsplay = chrgtmPrfrmrFnctnCcCdngCDsplay;
+       this.chrgtmPrfrmrFnctnCcCdngCSrSlctd = chrgtmPrfrmrFnctnCcCdngCSrSlctd;
+       this.chrgtmPrfrmrFnctnCcTxt = chrgtmPrfrmrFnctnCcTxt;
+       this.chrgtmPrfrmrCtrRfrnce = chrgtmPrfrmrCtrRfrnce;
+       this.chrgtmPrfrmngrgnztnRfrnce = chrgtmPrfrmngrgnztnRfrnce;
+       this.chrgtmRqstngrgnztnRfrnce = chrgtmRqstngrgnztnRfrnce;
+       this.chargeItemCostCenterReference = chargeItemCostCenterReference;
+       this.chrgtmQnttQnttCmprtr = chrgtmQnttQnttCmprtr;
+       this.chargeItemQuantityQuantityCode = chargeItemQuantityQuantityCode;
+       this.chargeItemQuantityQuantityValue = chargeItemQuantityQuantityValue;
+       this.chargeItemQuantityQuantityUnit = chargeItemQuantityQuantityUnit;
+       this.chrgtmQnttQnttSstm = chrgtmQnttQnttSstm;
+       this.chrgtmBdstCcCdngCSstm = chrgtmBdstCcCdngCSstm;
+       this.chrgtmBdstCcCdngCVrsn = chrgtmBdstCcCdngCVrsn;
+       this.chrgtmBdstCcCdngCCde = chrgtmBdstCcCdngCCde;
+       this.chrgtmBdstCcCdngCDsplay = chrgtmBdstCcCdngCDsplay;
+       this.chrgtmBdstCcCdngCSrSlctd = chrgtmBdstCcCdngCSrSlctd;
+       this.chargeItemBodysiteCcText = chargeItemBodysiteCcText;
+       this.chargeItemFactorOverrideDecimal = chargeItemFactorOverrideDecimal;
+       this.chrgtmPrcvrrdMnCrrncy = chrgtmPrcvrrdMnCrrncy;
+       this.chrgtmPrcvrrdMnVlue = chrgtmPrcvrrdMnVlue;
+       this.chargeItemOverrideReasonString = chargeItemOverrideReasonString;
+       this.chargeItemEntererReference = chargeItemEntererReference;
+       this.chargeItemEnteredDateDateTime = chargeItemEnteredDateDateTime;
+       this.chrgtmRsnCcCdngCSstm = chrgtmRsnCcCdngCSstm;
+       this.chrgtmRsnCcCdngCVrsn = chrgtmRsnCcCdngCVrsn;
+       this.chargeItemReasonCcCodingCCode = chargeItemReasonCcCodingCCode;
+       this.chrgtmRsnCcCdngCDsplay = chrgtmRsnCcCdngCDsplay;
+       this.chrgtmRsnCcCdngCSrSlctd = chrgtmRsnCcCdngCSrSlctd;
+       this.chargeItemReasonCcText = chargeItemReasonCcText;
+       this.chargeItemServiceReference = chargeItemServiceReference;
+       this.chrgtmPrdctRfrncRfrnce = chrgtmPrdctRfrncRfrnce;
+       this.chrgtmPrdctCdblcncptCcCdngCSstm = chrgtmPrdctCdblcncptCcCdngCSstm;
+       this.chrgtmPrdctCdblcncptCcCdngCVrsn = chrgtmPrdctCdblcncptCcCdngCVrsn;
+       this.chrgtmPrdctCdblcncptCcCdngCCde = chrgtmPrdctCdblcncptCcCdngCCde;
+       this.chrgtmPrdctCdblcncptCcCdngCDsplay = chrgtmPrdctCdblcncptCcCdngCDsplay;
+       this.chrgtmPrdctCdblcncptCcCdngCSrSlctd = chrgtmPrdctCdblcncptCcCdngCSrSlctd;
+       this.chrgtmPrdctCdblcncptCcTxt = chrgtmPrdctCdblcncptCcTxt;
+       this.chargeItemAccountReference = chargeItemAccountReference;
+       this.chargeItemNoteAnnotationTime = chargeItemNoteAnnotationTime;
+       this.chargeItemNoteAnnotationText = chargeItemNoteAnnotationText;
+       this.chrgtmNtNnttnThrRfrnce = chrgtmNtNnttnThrRfrnce;
+       this.chrgtmNtNnttnThrStrng = chrgtmNtNnttnThrStrng;
+       this.chrgtmSpprtngnfrmtnRfrnce = chrgtmSpprtngnfrmtnRfrnce;
     }
    
-    public String getChargeItemIdentifierCodingCode() {
-        return this.chargeItemIdentifierCodingCode;
-    }
-    
-    public void setChargeItemIdentifierCodingCode(String chargeItemIdentifierCodingCode) {
-        this.chargeItemIdentifierCodingCode = chargeItemIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getChrgtmDntfrCdngSrSlctd() {
-        return this.chrgtmDntfrCdngSrSlctd;
-    }
-    
-    public void setChrgtmDntfrCdngSrSlctd(String chrgtmDntfrCdngSrSlctd) {
-        this.chrgtmDntfrCdngSrSlctd = chrgtmDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmDntfrCdngDsplay() {
-        return this.chrgtmDntfrCdngDsplay;
-    }
-    
-    public void setChrgtmDntfrCdngDsplay(String chrgtmDntfrCdngDsplay) {
-        this.chrgtmDntfrCdngDsplay = chrgtmDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmDntfrCdngVrsn() {
-        return this.chrgtmDntfrCdngVrsn;
-    }
-    
-    public void setChrgtmDntfrCdngVrsn(String chrgtmDntfrCdngVrsn) {
-        this.chrgtmDntfrCdngVrsn = chrgtmDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmDntfrCdngSstm() {
-        return this.chrgtmDntfrCdngSstm;
-    }
-    
-    public void setChrgtmDntfrCdngSstm(String chrgtmDntfrCdngSstm) {
-        this.chrgtmDntfrCdngSstm = chrgtmDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getChargeItemDefinitionUri() {
-        return this.chargeItemDefinitionUri;
-    }
-    
-    public void setChargeItemDefinitionUri(String chargeItemDefinitionUri) {
-        this.chargeItemDefinitionUri = chargeItemDefinitionUri;
-    }
-    
-    
-    
-    public String getChargeItemDefinitionCanonical() {
-        return this.chargeItemDefinitionCanonical;
-    }
-    
-    public void setChargeItemDefinitionCanonical(String chargeItemDefinitionCanonical) {
-        this.chargeItemDefinitionCanonical = chargeItemDefinitionCanonical;
-    }
-    
-    
-    
-    public String getChargeItemStatus() {
-        return this.chargeItemStatus;
-    }
-    
-    public void setChargeItemStatus(String chargeItemStatus) {
-        this.chargeItemStatus = chargeItemStatus;
-    }
-    
-    
-    
-    public String getChargeItemPartOf() {
-        return this.chargeItemPartOf;
-    }
-    
-    public void setChargeItemPartOf(String chargeItemPartOf) {
-        this.chargeItemPartOf = chargeItemPartOf;
-    }
-    
-    
-    
-    public String getChrgtmCdCdngSrSlctd() {
-        return this.chrgtmCdCdngSrSlctd;
-    }
-    
-    public void setChrgtmCdCdngSrSlctd(String chrgtmCdCdngSrSlctd) {
-        this.chrgtmCdCdngSrSlctd = chrgtmCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChargeItemCodeCodingCode() {
-        return this.chargeItemCodeCodingCode;
-    }
-    
-    public void setChargeItemCodeCodingCode(String chargeItemCodeCodingCode) {
-        this.chargeItemCodeCodingCode = chargeItemCodeCodingCode;
-    }
-    
-    
-    
-    public String getChargeItemCodeCodingDisplay() {
-        return this.chargeItemCodeCodingDisplay;
-    }
-    
-    public void setChargeItemCodeCodingDisplay(String chargeItemCodeCodingDisplay) {
-        this.chargeItemCodeCodingDisplay = chargeItemCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getChargeItemCodeCodingVersion() {
-        return this.chargeItemCodeCodingVersion;
-    }
-    
-    public void setChargeItemCodeCodingVersion(String chargeItemCodeCodingVersion) {
-        this.chargeItemCodeCodingVersion = chargeItemCodeCodingVersion;
-    }
-    
-    
-    
-    public String getChargeItemCodeCodingSystem() {
-        return this.chargeItemCodeCodingSystem;
-    }
-    
-    public void setChargeItemCodeCodingSystem(String chargeItemCodeCodingSystem) {
-        this.chargeItemCodeCodingSystem = chargeItemCodeCodingSystem;
-    }
-    
-    
-    
-    public String getChargeItemSubject() {
-        return this.chargeItemSubject;
-    }
-    
-    public void setChargeItemSubject(String chargeItemSubject) {
-        this.chargeItemSubject = chargeItemSubject;
-    }
-    
-    
-    
-    public String getChargeItemContext() {
-        return this.chargeItemContext;
-    }
-    
-    public void setChargeItemContext(String chargeItemContext) {
-        this.chargeItemContext = chargeItemContext;
-    }
-    
-    
-    
-    public String getChargeItemOccurrenceDatetime() {
-        return this.chargeItemOccurrenceDatetime;
-    }
-    
-    public void setChargeItemOccurrenceDatetime(String chargeItemOccurrenceDatetime) {
-        this.chargeItemOccurrenceDatetime = chargeItemOccurrenceDatetime;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncPrdCdngSrSlctd() {
-        return this.chrgtmCcrrncPrdCdngSrSlctd;
-    }
-    
-    public void setChrgtmCcrrncPrdCdngSrSlctd(String chrgtmCcrrncPrdCdngSrSlctd) {
-        this.chrgtmCcrrncPrdCdngSrSlctd = chrgtmCcrrncPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncPrdCdngCde() {
-        return this.chrgtmCcrrncPrdCdngCde;
-    }
-    
-    public void setChrgtmCcrrncPrdCdngCde(String chrgtmCcrrncPrdCdngCde) {
-        this.chrgtmCcrrncPrdCdngCde = chrgtmCcrrncPrdCdngCde;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncPrdCdngDsplay() {
-        return this.chrgtmCcrrncPrdCdngDsplay;
-    }
-    
-    public void setChrgtmCcrrncPrdCdngDsplay(String chrgtmCcrrncPrdCdngDsplay) {
-        this.chrgtmCcrrncPrdCdngDsplay = chrgtmCcrrncPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncPrdCdngVrsn() {
-        return this.chrgtmCcrrncPrdCdngVrsn;
-    }
-    
-    public void setChrgtmCcrrncPrdCdngVrsn(String chrgtmCcrrncPrdCdngVrsn) {
-        this.chrgtmCcrrncPrdCdngVrsn = chrgtmCcrrncPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncPrdCdngSstm() {
-        return this.chrgtmCcrrncPrdCdngSstm;
-    }
-    
-    public void setChrgtmCcrrncPrdCdngSstm(String chrgtmCcrrncPrdCdngSstm) {
-        this.chrgtmCcrrncPrdCdngSstm = chrgtmCcrrncPrdCdngSstm;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncTmngCdngSrSlctd() {
-        return this.chrgtmCcrrncTmngCdngSrSlctd;
-    }
-    
-    public void setChrgtmCcrrncTmngCdngSrSlctd(String chrgtmCcrrncTmngCdngSrSlctd) {
-        this.chrgtmCcrrncTmngCdngSrSlctd = chrgtmCcrrncTmngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncTmngCdngCde() {
-        return this.chrgtmCcrrncTmngCdngCde;
-    }
-    
-    public void setChrgtmCcrrncTmngCdngCde(String chrgtmCcrrncTmngCdngCde) {
-        this.chrgtmCcrrncTmngCdngCde = chrgtmCcrrncTmngCdngCde;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncTmngCdngDsplay() {
-        return this.chrgtmCcrrncTmngCdngDsplay;
-    }
-    
-    public void setChrgtmCcrrncTmngCdngDsplay(String chrgtmCcrrncTmngCdngDsplay) {
-        this.chrgtmCcrrncTmngCdngDsplay = chrgtmCcrrncTmngCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncTmngCdngVrsn() {
-        return this.chrgtmCcrrncTmngCdngVrsn;
-    }
-    
-    public void setChrgtmCcrrncTmngCdngVrsn(String chrgtmCcrrncTmngCdngVrsn) {
-        this.chrgtmCcrrncTmngCdngVrsn = chrgtmCcrrncTmngCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmCcrrncTmngCdngSstm() {
-        return this.chrgtmCcrrncTmngCdngSstm;
-    }
-    
-    public void setChrgtmCcrrncTmngCdngSstm(String chrgtmCcrrncTmngCdngSstm) {
-        this.chrgtmCcrrncTmngCdngSstm = chrgtmCcrrncTmngCdngSstm;
-    }
-    
-    
-    
-    public String getChargeItemPerformer() {
-        return this.chargeItemPerformer;
-    }
-    
-    public void setChargeItemPerformer(String chargeItemPerformer) {
-        this.chargeItemPerformer = chargeItemPerformer;
-    }
-    
-    
-    
-    public String getChrgtmPrfrmrFnctnCdngSrSlctd() {
-        return this.chrgtmPrfrmrFnctnCdngSrSlctd;
-    }
-    
-    public void setChrgtmPrfrmrFnctnCdngSrSlctd(String chrgtmPrfrmrFnctnCdngSrSlctd) {
-        this.chrgtmPrfrmrFnctnCdngSrSlctd = chrgtmPrfrmrFnctnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmPrfrmrFnctnCdngCde() {
-        return this.chrgtmPrfrmrFnctnCdngCde;
-    }
-    
-    public void setChrgtmPrfrmrFnctnCdngCde(String chrgtmPrfrmrFnctnCdngCde) {
-        this.chrgtmPrfrmrFnctnCdngCde = chrgtmPrfrmrFnctnCdngCde;
-    }
-    
-    
-    
-    public String getChrgtmPrfrmrFnctnCdngDsplay() {
-        return this.chrgtmPrfrmrFnctnCdngDsplay;
-    }
-    
-    public void setChrgtmPrfrmrFnctnCdngDsplay(String chrgtmPrfrmrFnctnCdngDsplay) {
-        this.chrgtmPrfrmrFnctnCdngDsplay = chrgtmPrfrmrFnctnCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmPrfrmrFnctnCdngVrsn() {
-        return this.chrgtmPrfrmrFnctnCdngVrsn;
-    }
-    
-    public void setChrgtmPrfrmrFnctnCdngVrsn(String chrgtmPrfrmrFnctnCdngVrsn) {
-        this.chrgtmPrfrmrFnctnCdngVrsn = chrgtmPrfrmrFnctnCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmPrfrmrFnctnCdngSstm() {
-        return this.chrgtmPrfrmrFnctnCdngSstm;
-    }
-    
-    public void setChrgtmPrfrmrFnctnCdngSstm(String chrgtmPrfrmrFnctnCdngSstm) {
-        this.chrgtmPrfrmrFnctnCdngSstm = chrgtmPrfrmrFnctnCdngSstm;
-    }
-    
-    
-    
-    public String getChargeItemPerformerActor() {
-        return this.chargeItemPerformerActor;
-    }
-    
-    public void setChargeItemPerformerActor(String chargeItemPerformerActor) {
-        this.chargeItemPerformerActor = chargeItemPerformerActor;
-    }
-    
-    
-    
-    public String getChargeItemPerformingOrganization() {
-        return this.chargeItemPerformingOrganization;
-    }
-    
-    public void setChargeItemPerformingOrganization(String chargeItemPerformingOrganization) {
-        this.chargeItemPerformingOrganization = chargeItemPerformingOrganization;
-    }
-    
-    
-    
-    public String getChargeItemRequestingOrganization() {
-        return this.chargeItemRequestingOrganization;
-    }
-    
-    public void setChargeItemRequestingOrganization(String chargeItemRequestingOrganization) {
-        this.chargeItemRequestingOrganization = chargeItemRequestingOrganization;
-    }
-    
-    
-    
-    public String getChargeItemCostCenter() {
-        return this.chargeItemCostCenter;
-    }
-    
-    public void setChargeItemCostCenter(String chargeItemCostCenter) {
-        this.chargeItemCostCenter = chargeItemCostCenter;
-    }
-    
-    
-    
-    public String getChrgtmQnttCdngSrSlctd() {
-        return this.chrgtmQnttCdngSrSlctd;
-    }
-    
-    public void setChrgtmQnttCdngSrSlctd(String chrgtmQnttCdngSrSlctd) {
-        this.chrgtmQnttCdngSrSlctd = chrgtmQnttCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChargeItemQuantityCodingCode() {
-        return this.chargeItemQuantityCodingCode;
-    }
-    
-    public void setChargeItemQuantityCodingCode(String chargeItemQuantityCodingCode) {
-        this.chargeItemQuantityCodingCode = chargeItemQuantityCodingCode;
-    }
-    
-    
-    
-    public String getChargeItemQuantityCodingDisplay() {
-        return this.chargeItemQuantityCodingDisplay;
-    }
-    
-    public void setChargeItemQuantityCodingDisplay(String chargeItemQuantityCodingDisplay) {
-        this.chargeItemQuantityCodingDisplay = chargeItemQuantityCodingDisplay;
-    }
-    
-    
-    
-    public String getChargeItemQuantityCodingVersion() {
-        return this.chargeItemQuantityCodingVersion;
-    }
-    
-    public void setChargeItemQuantityCodingVersion(String chargeItemQuantityCodingVersion) {
-        this.chargeItemQuantityCodingVersion = chargeItemQuantityCodingVersion;
-    }
-    
-    
-    
-    public String getChargeItemQuantityCodingSystem() {
-        return this.chargeItemQuantityCodingSystem;
-    }
-    
-    public void setChargeItemQuantityCodingSystem(String chargeItemQuantityCodingSystem) {
-        this.chargeItemQuantityCodingSystem = chargeItemQuantityCodingSystem;
-    }
-    
-    
-    
-    public String getChrgtmBdstCdngSrSlctd() {
-        return this.chrgtmBdstCdngSrSlctd;
-    }
-    
-    public void setChrgtmBdstCdngSrSlctd(String chrgtmBdstCdngSrSlctd) {
-        this.chrgtmBdstCdngSrSlctd = chrgtmBdstCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChargeItemBodysiteCodingCode() {
-        return this.chargeItemBodysiteCodingCode;
-    }
-    
-    public void setChargeItemBodysiteCodingCode(String chargeItemBodysiteCodingCode) {
-        this.chargeItemBodysiteCodingCode = chargeItemBodysiteCodingCode;
-    }
-    
-    
-    
-    public String getChargeItemBodysiteCodingDisplay() {
-        return this.chargeItemBodysiteCodingDisplay;
-    }
-    
-    public void setChargeItemBodysiteCodingDisplay(String chargeItemBodysiteCodingDisplay) {
-        this.chargeItemBodysiteCodingDisplay = chargeItemBodysiteCodingDisplay;
-    }
-    
-    
-    
-    public String getChargeItemBodysiteCodingVersion() {
-        return this.chargeItemBodysiteCodingVersion;
-    }
-    
-    public void setChargeItemBodysiteCodingVersion(String chargeItemBodysiteCodingVersion) {
-        this.chargeItemBodysiteCodingVersion = chargeItemBodysiteCodingVersion;
-    }
-    
-    
-    
-    public String getChargeItemBodysiteCodingSystem() {
-        return this.chargeItemBodysiteCodingSystem;
-    }
-    
-    public void setChargeItemBodysiteCodingSystem(String chargeItemBodysiteCodingSystem) {
-        this.chargeItemBodysiteCodingSystem = chargeItemBodysiteCodingSystem;
-    }
-    
-    
-    
-    public String getChargeItemFactorOverride() {
-        return this.chargeItemFactorOverride;
-    }
-    
-    public void setChargeItemFactorOverride(String chargeItemFactorOverride) {
-        this.chargeItemFactorOverride = chargeItemFactorOverride;
-    }
-    
-    
-    
-    public String getChrgtmPrcvrrdCdngSrSlctd() {
-        return this.chrgtmPrcvrrdCdngSrSlctd;
-    }
-    
-    public void setChrgtmPrcvrrdCdngSrSlctd(String chrgtmPrcvrrdCdngSrSlctd) {
-        this.chrgtmPrcvrrdCdngSrSlctd = chrgtmPrcvrrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmPrcvrrdCdngCde() {
-        return this.chrgtmPrcvrrdCdngCde;
-    }
-    
-    public void setChrgtmPrcvrrdCdngCde(String chrgtmPrcvrrdCdngCde) {
-        this.chrgtmPrcvrrdCdngCde = chrgtmPrcvrrdCdngCde;
-    }
-    
-    
-    
-    public String getChrgtmPrcvrrdCdngDsplay() {
-        return this.chrgtmPrcvrrdCdngDsplay;
-    }
-    
-    public void setChrgtmPrcvrrdCdngDsplay(String chrgtmPrcvrrdCdngDsplay) {
-        this.chrgtmPrcvrrdCdngDsplay = chrgtmPrcvrrdCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmPrcvrrdCdngVrsn() {
-        return this.chrgtmPrcvrrdCdngVrsn;
-    }
-    
-    public void setChrgtmPrcvrrdCdngVrsn(String chrgtmPrcvrrdCdngVrsn) {
-        this.chrgtmPrcvrrdCdngVrsn = chrgtmPrcvrrdCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmPrcvrrdCdngSstm() {
-        return this.chrgtmPrcvrrdCdngSstm;
-    }
-    
-    public void setChrgtmPrcvrrdCdngSstm(String chrgtmPrcvrrdCdngSstm) {
-        this.chrgtmPrcvrrdCdngSstm = chrgtmPrcvrrdCdngSstm;
-    }
-    
-    
-    
-    public String getChargeItemOverrideReason() {
-        return this.chargeItemOverrideReason;
-    }
-    
-    public void setChargeItemOverrideReason(String chargeItemOverrideReason) {
-        this.chargeItemOverrideReason = chargeItemOverrideReason;
-    }
-    
-    
-    
-    public String getChargeItemEnterer() {
-        return this.chargeItemEnterer;
-    }
-    
-    public void setChargeItemEnterer(String chargeItemEnterer) {
-        this.chargeItemEnterer = chargeItemEnterer;
-    }
-    
-    
-    
-    public String getChargeItemEnteredDate() {
-        return this.chargeItemEnteredDate;
-    }
-    
-    public void setChargeItemEnteredDate(String chargeItemEnteredDate) {
-        this.chargeItemEnteredDate = chargeItemEnteredDate;
-    }
-    
-    
-    
-    public String getChrgtmRsnCdngSrSlctd() {
-        return this.chrgtmRsnCdngSrSlctd;
-    }
-    
-    public void setChrgtmRsnCdngSrSlctd(String chrgtmRsnCdngSrSlctd) {
-        this.chrgtmRsnCdngSrSlctd = chrgtmRsnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChargeItemReasonCodingCode() {
-        return this.chargeItemReasonCodingCode;
-    }
-    
-    public void setChargeItemReasonCodingCode(String chargeItemReasonCodingCode) {
-        this.chargeItemReasonCodingCode = chargeItemReasonCodingCode;
-    }
-    
-    
-    
-    public String getChargeItemReasonCodingDisplay() {
-        return this.chargeItemReasonCodingDisplay;
-    }
-    
-    public void setChargeItemReasonCodingDisplay(String chargeItemReasonCodingDisplay) {
-        this.chargeItemReasonCodingDisplay = chargeItemReasonCodingDisplay;
-    }
-    
-    
-    
-    public String getChargeItemReasonCodingVersion() {
-        return this.chargeItemReasonCodingVersion;
-    }
-    
-    public void setChargeItemReasonCodingVersion(String chargeItemReasonCodingVersion) {
-        this.chargeItemReasonCodingVersion = chargeItemReasonCodingVersion;
-    }
-    
-    
-    
-    public String getChargeItemReasonCodingSystem() {
-        return this.chargeItemReasonCodingSystem;
-    }
-    
-    public void setChargeItemReasonCodingSystem(String chargeItemReasonCodingSystem) {
-        this.chargeItemReasonCodingSystem = chargeItemReasonCodingSystem;
-    }
-    
-    
-    
-    public String getChargeItemService() {
-        return this.chargeItemService;
-    }
-    
-    public void setChargeItemService(String chargeItemService) {
-        this.chargeItemService = chargeItemService;
-    }
-    
-    
-    
-    public String getChargeItemProductReference() {
-        return this.chargeItemProductReference;
-    }
-    
-    public void setChargeItemProductReference(String chargeItemProductReference) {
-        this.chargeItemProductReference = chargeItemProductReference;
-    }
-    
-    
-    
-    public String getChrgtmPrdctcdblcptCdngSrSlctd() {
-        return this.chrgtmPrdctcdblcptCdngSrSlctd;
-    }
-    
-    public void setChrgtmPrdctcdblcptCdngSrSlctd(String chrgtmPrdctcdblcptCdngSrSlctd) {
-        this.chrgtmPrdctcdblcptCdngSrSlctd = chrgtmPrdctcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChrgtmPrdctcdblcptCdngCde() {
-        return this.chrgtmPrdctcdblcptCdngCde;
-    }
-    
-    public void setChrgtmPrdctcdblcptCdngCde(String chrgtmPrdctcdblcptCdngCde) {
-        this.chrgtmPrdctcdblcptCdngCde = chrgtmPrdctcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getChrgtmPrdctcdblcptCdngDsplay() {
-        return this.chrgtmPrdctcdblcptCdngDsplay;
-    }
-    
-    public void setChrgtmPrdctcdblcptCdngDsplay(String chrgtmPrdctcdblcptCdngDsplay) {
-        this.chrgtmPrdctcdblcptCdngDsplay = chrgtmPrdctcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getChrgtmPrdctcdblcptCdngVrsn() {
-        return this.chrgtmPrdctcdblcptCdngVrsn;
-    }
-    
-    public void setChrgtmPrdctcdblcptCdngVrsn(String chrgtmPrdctcdblcptCdngVrsn) {
-        this.chrgtmPrdctcdblcptCdngVrsn = chrgtmPrdctcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getChrgtmPrdctcdblcptCdngSstm() {
-        return this.chrgtmPrdctcdblcptCdngSstm;
-    }
-    
-    public void setChrgtmPrdctcdblcptCdngSstm(String chrgtmPrdctcdblcptCdngSstm) {
-        this.chrgtmPrdctcdblcptCdngSstm = chrgtmPrdctcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getChargeItemAccount() {
-        return this.chargeItemAccount;
-    }
-    
-    public void setChargeItemAccount(String chargeItemAccount) {
-        this.chargeItemAccount = chargeItemAccount;
-    }
-    
-    
-    
-    public String getChrgtmNtCdngSrSlctd() {
-        return this.chrgtmNtCdngSrSlctd;
-    }
-    
-    public void setChrgtmNtCdngSrSlctd(String chrgtmNtCdngSrSlctd) {
-        this.chrgtmNtCdngSrSlctd = chrgtmNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getChargeItemNoteCodingCode() {
-        return this.chargeItemNoteCodingCode;
-    }
-    
-    public void setChargeItemNoteCodingCode(String chargeItemNoteCodingCode) {
-        this.chargeItemNoteCodingCode = chargeItemNoteCodingCode;
-    }
-    
-    
-    
-    public String getChargeItemNoteCodingDisplay() {
-        return this.chargeItemNoteCodingDisplay;
-    }
-    
-    public void setChargeItemNoteCodingDisplay(String chargeItemNoteCodingDisplay) {
-        this.chargeItemNoteCodingDisplay = chargeItemNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getChargeItemNoteCodingVersion() {
-        return this.chargeItemNoteCodingVersion;
-    }
-    
-    public void setChargeItemNoteCodingVersion(String chargeItemNoteCodingVersion) {
-        this.chargeItemNoteCodingVersion = chargeItemNoteCodingVersion;
-    }
-    
-    
-    
-    public String getChargeItemNoteCodingSystem() {
-        return this.chargeItemNoteCodingSystem;
-    }
-    
-    public void setChargeItemNoteCodingSystem(String chargeItemNoteCodingSystem) {
-        this.chargeItemNoteCodingSystem = chargeItemNoteCodingSystem;
-    }
-    
-    
-    
-    public String getChargeItemSupportingInformation() {
-        return this.chargeItemSupportingInformation;
-    }
-    
-    public void setChargeItemSupportingInformation(String chargeItemSupportingInformation) {
-        this.chargeItemSupportingInformation = chargeItemSupportingInformation;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrSe()
+    {
+        return this.chrgtmDntfrDntfrSe;
+    }
+    
+    public void setChrgtmDntfrDntfrSe
+        (String chrgtmDntfrDntfrSe) 
+        {
+      this.chrgtmDntfrDntfrSe = chrgtmDntfrDntfrSe;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcCSstm()
+    {
+        return this.chrgtmDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcCSstm
+        (String chrgtmDntfrDntfrTpCcCSstm) 
+        {
+      this.chrgtmDntfrDntfrTpCcCSstm = chrgtmDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcCVrsn()
+    {
+        return this.chrgtmDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcCVrsn
+        (String chrgtmDntfrDntfrTpCcCVrsn) 
+        {
+      this.chrgtmDntfrDntfrTpCcCVrsn = chrgtmDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcCCde()
+    {
+        return this.chrgtmDntfrDntfrTpCcCCde;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcCCde
+        (String chrgtmDntfrDntfrTpCcCCde) 
+        {
+      this.chrgtmDntfrDntfrTpCcCCde = chrgtmDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcCDsplay()
+    {
+        return this.chrgtmDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcCDsplay
+        (String chrgtmDntfrDntfrTpCcCDsplay) 
+        {
+      this.chrgtmDntfrDntfrTpCcCDsplay = chrgtmDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.chrgtmDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcCSrSlctd
+        (String chrgtmDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.chrgtmDntfrDntfrTpCcCSrSlctd = chrgtmDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrTpCcTxt()
+    {
+        return this.chrgtmDntfrDntfrTpCcTxt;
+    }
+    
+    public void setChrgtmDntfrDntfrTpCcTxt
+        (String chrgtmDntfrDntfrTpCcTxt) 
+        {
+      this.chrgtmDntfrDntfrTpCcTxt = chrgtmDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrPrdPrdStrt()
+    {
+        return this.chrgtmDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setChrgtmDntfrDntfrPrdPrdStrt
+        (String chrgtmDntfrDntfrPrdPrdStrt) 
+        {
+      this.chrgtmDntfrDntfrPrdPrdStrt = chrgtmDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrPrdPrdNd()
+    {
+        return this.chrgtmDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setChrgtmDntfrDntfrPrdPrdNd
+        (String chrgtmDntfrDntfrPrdPrdNd) 
+        {
+      this.chrgtmDntfrDntfrPrdPrdNd = chrgtmDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrSsgnr()
+    {
+        return this.chrgtmDntfrDntfrSsgnr;
+    }
+    
+    public void setChrgtmDntfrDntfrSsgnr
+        (String chrgtmDntfrDntfrSsgnr) 
+        {
+      this.chrgtmDntfrDntfrSsgnr = chrgtmDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrVlue()
+    {
+        return this.chrgtmDntfrDntfrVlue;
+    }
+    
+    public void setChrgtmDntfrDntfrVlue
+        (String chrgtmDntfrDntfrVlue) 
+        {
+      this.chrgtmDntfrDntfrVlue = chrgtmDntfrDntfrVlue;
+}
+    public 
+    String 
+    getChrgtmDntfrDntfrSstm()
+    {
+        return this.chrgtmDntfrDntfrSstm;
+    }
+    
+    public void setChrgtmDntfrDntfrSstm
+        (String chrgtmDntfrDntfrSstm) 
+        {
+      this.chrgtmDntfrDntfrSstm = chrgtmDntfrDntfrSstm;
+}
+    public 
+    String 
+    getChargeItemDefinitionUriUri()
+    {
+        return this.chargeItemDefinitionUriUri;
+    }
+    
+    public void setChargeItemDefinitionUriUri
+        (String chargeItemDefinitionUriUri) 
+        {
+      this.chargeItemDefinitionUriUri = chargeItemDefinitionUriUri;
+}
+    public 
+    String 
+    getChrgtmDfntnCnnclCnncl()
+    {
+        return this.chrgtmDfntnCnnclCnncl;
+    }
+    
+    public void setChrgtmDfntnCnnclCnncl
+        (String chrgtmDfntnCnnclCnncl) 
+        {
+      this.chrgtmDfntnCnnclCnncl = chrgtmDfntnCnnclCnncl;
+}
+    public 
+    String 
+    getChargeItemStatusCode()
+    {
+        return this.chargeItemStatusCode;
+    }
+    
+    public void setChargeItemStatusCode
+        (String chargeItemStatusCode) 
+        {
+      this.chargeItemStatusCode = chargeItemStatusCode;
+}
+    public 
+    String 
+    getChargeItemPartOfReference()
+    {
+        return this.chargeItemPartOfReference;
+    }
+    
+    public void setChargeItemPartOfReference
+        (String chargeItemPartOfReference) 
+        {
+      this.chargeItemPartOfReference = chargeItemPartOfReference;
+}
+    public 
+    String 
+    getChargeItemCodeCcCodingCSystem()
+    {
+        return this.chargeItemCodeCcCodingCSystem;
+    }
+    
+    public void setChargeItemCodeCcCodingCSystem
+        (String chargeItemCodeCcCodingCSystem) 
+        {
+      this.chargeItemCodeCcCodingCSystem = chargeItemCodeCcCodingCSystem;
+}
+    public 
+    String 
+    getChrgtmCdCcCdngCVrsn()
+    {
+        return this.chrgtmCdCcCdngCVrsn;
+    }
+    
+    public void setChrgtmCdCcCdngCVrsn
+        (String chrgtmCdCcCdngCVrsn) 
+        {
+      this.chrgtmCdCcCdngCVrsn = chrgtmCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getChargeItemCodeCcCodingCCode()
+    {
+        return this.chargeItemCodeCcCodingCCode;
+    }
+    
+    public void setChargeItemCodeCcCodingCCode
+        (String chargeItemCodeCcCodingCCode) 
+        {
+      this.chargeItemCodeCcCodingCCode = chargeItemCodeCcCodingCCode;
+}
+    public 
+    String 
+    getChrgtmCdCcCdngCDsplay()
+    {
+        return this.chrgtmCdCcCdngCDsplay;
+    }
+    
+    public void setChrgtmCdCcCdngCDsplay
+        (String chrgtmCdCcCdngCDsplay) 
+        {
+      this.chrgtmCdCcCdngCDsplay = chrgtmCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getChrgtmCdCcCdngCSrSlctd()
+    {
+        return this.chrgtmCdCcCdngCSrSlctd;
+    }
+    
+    public void setChrgtmCdCcCdngCSrSlctd
+        (String chrgtmCdCcCdngCSrSlctd) 
+        {
+      this.chrgtmCdCcCdngCSrSlctd = chrgtmCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getChargeItemCodeCcText()
+    {
+        return this.chargeItemCodeCcText;
+    }
+    
+    public void setChargeItemCodeCcText
+        (String chargeItemCodeCcText) 
+        {
+      this.chargeItemCodeCcText = chargeItemCodeCcText;
+}
+    public 
+    String 
+    getChargeItemSubjectReference()
+    {
+        return this.chargeItemSubjectReference;
+    }
+    
+    public void setChargeItemSubjectReference
+        (String chargeItemSubjectReference) 
+        {
+      this.chargeItemSubjectReference = chargeItemSubjectReference;
+}
+    public 
+    String 
+    getChargeItemContextReference()
+    {
+        return this.chargeItemContextReference;
+    }
+    
+    public void setChargeItemContextReference
+        (String chargeItemContextReference) 
+        {
+      this.chargeItemContextReference = chargeItemContextReference;
+}
+    public 
+    String 
+    getChrgtmCcrrncDttmDtTme()
+    {
+        return this.chrgtmCcrrncDttmDtTme;
+    }
+    
+    public void setChrgtmCcrrncDttmDtTme
+        (String chrgtmCcrrncDttmDtTme) 
+        {
+      this.chrgtmCcrrncDttmDtTme = chrgtmCcrrncDttmDtTme;
+}
+    public 
+    String 
+    getChrgtmCcrrncPrdPrdStrt()
+    {
+        return this.chrgtmCcrrncPrdPrdStrt;
+    }
+    
+    public void setChrgtmCcrrncPrdPrdStrt
+        (String chrgtmCcrrncPrdPrdStrt) 
+        {
+      this.chrgtmCcrrncPrdPrdStrt = chrgtmCcrrncPrdPrdStrt;
+}
+    public 
+    String 
+    getChrgtmCcrrncPrdPrdNd()
+    {
+        return this.chrgtmCcrrncPrdPrdNd;
+    }
+    
+    public void setChrgtmCcrrncPrdPrdNd
+        (String chrgtmCcrrncPrdPrdNd) 
+        {
+      this.chrgtmCcrrncPrdPrdNd = chrgtmCcrrncPrdPrdNd;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcCSstm()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcCSstm;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcCSstm
+        (String chrgtmCcrrncTmngTmngCdCcCSstm) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcCSstm = chrgtmCcrrncTmngTmngCdCcCSstm;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcCVrsn()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcCVrsn;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcCVrsn
+        (String chrgtmCcrrncTmngTmngCdCcCVrsn) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcCVrsn = chrgtmCcrrncTmngTmngCdCcCVrsn;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcCCde()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcCCde;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcCCde
+        (String chrgtmCcrrncTmngTmngCdCcCCde) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcCCde = chrgtmCcrrncTmngTmngCdCcCCde;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcCDsplay()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcCDsplay;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcCDsplay
+        (String chrgtmCcrrncTmngTmngCdCcCDsplay) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcCDsplay = chrgtmCcrrncTmngTmngCdCcCDsplay;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcCSrSlctd()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcCSrSlctd;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcCSrSlctd
+        (String chrgtmCcrrncTmngTmngCdCcCSrSlctd) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcCSrSlctd = chrgtmCcrrncTmngTmngCdCcCSrSlctd;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngCdCcTxt()
+    {
+        return this.chrgtmCcrrncTmngTmngCdCcTxt;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngCdCcTxt
+        (String chrgtmCcrrncTmngTmngCdCcTxt) 
+        {
+      this.chrgtmCcrrncTmngTmngCdCcTxt = chrgtmCcrrncTmngTmngCdCcTxt;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngVnt()
+    {
+        return this.chrgtmCcrrncTmngTmngVnt;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngVnt
+        (String chrgtmCcrrncTmngTmngVnt) 
+        {
+      this.chrgtmCcrrncTmngTmngVnt = chrgtmCcrrncTmngTmngVnt;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptDrtnnt()
+    {
+        return this.chrgtmCcrrncTmngTmngRptDrtnnt;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptDrtnnt
+        (String chrgtmCcrrncTmngTmngRptDrtnnt) 
+        {
+      this.chrgtmCcrrncTmngTmngRptDrtnnt = chrgtmCcrrncTmngTmngRptDrtnnt;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptPrdnt()
+    {
+        return this.chrgtmCcrrncTmngTmngRptPrdnt;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptPrdnt
+        (String chrgtmCcrrncTmngTmngRptPrdnt) 
+        {
+      this.chrgtmCcrrncTmngTmngRptPrdnt = chrgtmCcrrncTmngTmngRptPrdnt;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptDfWk()
+    {
+        return this.chrgtmCcrrncTmngTmngRptDfWk;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptDfWk
+        (String chrgtmCcrrncTmngTmngRptDfWk) 
+        {
+      this.chrgtmCcrrncTmngTmngRptDfWk = chrgtmCcrrncTmngTmngRptDfWk;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptWhn()
+    {
+        return this.chrgtmCcrrncTmngTmngRptWhn;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptWhn
+        (String chrgtmCcrrncTmngTmngRptWhn) 
+        {
+      this.chrgtmCcrrncTmngTmngRptWhn = chrgtmCcrrncTmngTmngRptWhn;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptDrtn()
+    {
+        return this.chrgtmCcrrncTmngTmngRptDrtn;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptDrtn
+        (String chrgtmCcrrncTmngTmngRptDrtn) 
+        {
+      this.chrgtmCcrrncTmngTmngRptDrtn = chrgtmCcrrncTmngTmngRptDrtn;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptDrtnMx()
+    {
+        return this.chrgtmCcrrncTmngTmngRptDrtnMx;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptDrtnMx
+        (String chrgtmCcrrncTmngTmngRptDrtnMx) 
+        {
+      this.chrgtmCcrrncTmngTmngRptDrtnMx = chrgtmCcrrncTmngTmngRptDrtnMx;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptPrd()
+    {
+        return this.chrgtmCcrrncTmngTmngRptPrd;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptPrd
+        (String chrgtmCcrrncTmngTmngRptPrd) 
+        {
+      this.chrgtmCcrrncTmngTmngRptPrd = chrgtmCcrrncTmngTmngRptPrd;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptPrdMx()
+    {
+        return this.chrgtmCcrrncTmngTmngRptPrdMx;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptPrdMx
+        (String chrgtmCcrrncTmngTmngRptPrdMx) 
+        {
+      this.chrgtmCcrrncTmngTmngRptPrdMx = chrgtmCcrrncTmngTmngRptPrdMx;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptBndsDrtn()
+    {
+        return this.chrgtmCcrrncTmngTmngRptBndsDrtn;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptBndsDrtn
+        (String chrgtmCcrrncTmngTmngRptBndsDrtn) 
+        {
+      this.chrgtmCcrrncTmngTmngRptBndsDrtn = chrgtmCcrrncTmngTmngRptBndsDrtn;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptBndsPrd()
+    {
+        return this.chrgtmCcrrncTmngTmngRptBndsPrd;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptBndsPrd
+        (String chrgtmCcrrncTmngTmngRptBndsPrd) 
+        {
+      this.chrgtmCcrrncTmngTmngRptBndsPrd = chrgtmCcrrncTmngTmngRptBndsPrd;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptCnt()
+    {
+        return this.chrgtmCcrrncTmngTmngRptCnt;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptCnt
+        (String chrgtmCcrrncTmngTmngRptCnt) 
+        {
+      this.chrgtmCcrrncTmngTmngRptCnt = chrgtmCcrrncTmngTmngRptCnt;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptCntMx()
+    {
+        return this.chrgtmCcrrncTmngTmngRptCntMx;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptCntMx
+        (String chrgtmCcrrncTmngTmngRptCntMx) 
+        {
+      this.chrgtmCcrrncTmngTmngRptCntMx = chrgtmCcrrncTmngTmngRptCntMx;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptFrqncy()
+    {
+        return this.chrgtmCcrrncTmngTmngRptFrqncy;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptFrqncy
+        (String chrgtmCcrrncTmngTmngRptFrqncy) 
+        {
+      this.chrgtmCcrrncTmngTmngRptFrqncy = chrgtmCcrrncTmngTmngRptFrqncy;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptFrqncMx()
+    {
+        return this.chrgtmCcrrncTmngTmngRptFrqncMx;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptFrqncMx
+        (String chrgtmCcrrncTmngTmngRptFrqncMx) 
+        {
+      this.chrgtmCcrrncTmngTmngRptFrqncMx = chrgtmCcrrncTmngTmngRptFrqncMx;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptBndsRnge()
+    {
+        return this.chrgtmCcrrncTmngTmngRptBndsRnge;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptBndsRnge
+        (String chrgtmCcrrncTmngTmngRptBndsRnge) 
+        {
+      this.chrgtmCcrrncTmngTmngRptBndsRnge = chrgtmCcrrncTmngTmngRptBndsRnge;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptTmfDay()
+    {
+        return this.chrgtmCcrrncTmngTmngRptTmfDay;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptTmfDay
+        (String chrgtmCcrrncTmngTmngRptTmfDay) 
+        {
+      this.chrgtmCcrrncTmngTmngRptTmfDay = chrgtmCcrrncTmngTmngRptTmfDay;
+}
+    public 
+    String 
+    getChrgtmCcrrncTmngTmngRptFfst()
+    {
+        return this.chrgtmCcrrncTmngTmngRptFfst;
+    }
+    
+    public void setChrgtmCcrrncTmngTmngRptFfst
+        (String chrgtmCcrrncTmngTmngRptFfst) 
+        {
+      this.chrgtmCcrrncTmngTmngRptFfst = chrgtmCcrrncTmngTmngRptFfst;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcCdngCSstm()
+    {
+        return this.chrgtmPrfrmrFnctnCcCdngCSstm;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcCdngCSstm
+        (String chrgtmPrfrmrFnctnCcCdngCSstm) 
+        {
+      this.chrgtmPrfrmrFnctnCcCdngCSstm = chrgtmPrfrmrFnctnCcCdngCSstm;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcCdngCVrsn()
+    {
+        return this.chrgtmPrfrmrFnctnCcCdngCVrsn;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcCdngCVrsn
+        (String chrgtmPrfrmrFnctnCcCdngCVrsn) 
+        {
+      this.chrgtmPrfrmrFnctnCcCdngCVrsn = chrgtmPrfrmrFnctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcCdngCCde()
+    {
+        return this.chrgtmPrfrmrFnctnCcCdngCCde;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcCdngCCde
+        (String chrgtmPrfrmrFnctnCcCdngCCde) 
+        {
+      this.chrgtmPrfrmrFnctnCcCdngCCde = chrgtmPrfrmrFnctnCcCdngCCde;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcCdngCDsplay()
+    {
+        return this.chrgtmPrfrmrFnctnCcCdngCDsplay;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcCdngCDsplay
+        (String chrgtmPrfrmrFnctnCcCdngCDsplay) 
+        {
+      this.chrgtmPrfrmrFnctnCcCdngCDsplay = chrgtmPrfrmrFnctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcCdngCSrSlctd()
+    {
+        return this.chrgtmPrfrmrFnctnCcCdngCSrSlctd;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcCdngCSrSlctd
+        (String chrgtmPrfrmrFnctnCcCdngCSrSlctd) 
+        {
+      this.chrgtmPrfrmrFnctnCcCdngCSrSlctd = chrgtmPrfrmrFnctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getChrgtmPrfrmrFnctnCcTxt()
+    {
+        return this.chrgtmPrfrmrFnctnCcTxt;
+    }
+    
+    public void setChrgtmPrfrmrFnctnCcTxt
+        (String chrgtmPrfrmrFnctnCcTxt) 
+        {
+      this.chrgtmPrfrmrFnctnCcTxt = chrgtmPrfrmrFnctnCcTxt;
+}
+    public 
+    String 
+    getChrgtmPrfrmrCtrRfrnce()
+    {
+        return this.chrgtmPrfrmrCtrRfrnce;
+    }
+    
+    public void setChrgtmPrfrmrCtrRfrnce
+        (String chrgtmPrfrmrCtrRfrnce) 
+        {
+      this.chrgtmPrfrmrCtrRfrnce = chrgtmPrfrmrCtrRfrnce;
+}
+    public 
+    String 
+    getChrgtmPrfrmngrgnztnRfrnce()
+    {
+        return this.chrgtmPrfrmngrgnztnRfrnce;
+    }
+    
+    public void setChrgtmPrfrmngrgnztnRfrnce
+        (String chrgtmPrfrmngrgnztnRfrnce) 
+        {
+      this.chrgtmPrfrmngrgnztnRfrnce = chrgtmPrfrmngrgnztnRfrnce;
+}
+    public 
+    String 
+    getChrgtmRqstngrgnztnRfrnce()
+    {
+        return this.chrgtmRqstngrgnztnRfrnce;
+    }
+    
+    public void setChrgtmRqstngrgnztnRfrnce
+        (String chrgtmRqstngrgnztnRfrnce) 
+        {
+      this.chrgtmRqstngrgnztnRfrnce = chrgtmRqstngrgnztnRfrnce;
+}
+    public 
+    String 
+    getChargeItemCostCenterReference()
+    {
+        return this.chargeItemCostCenterReference;
+    }
+    
+    public void setChargeItemCostCenterReference
+        (String chargeItemCostCenterReference) 
+        {
+      this.chargeItemCostCenterReference = chargeItemCostCenterReference;
+}
+    public 
+    String 
+    getChrgtmQnttQnttCmprtr()
+    {
+        return this.chrgtmQnttQnttCmprtr;
+    }
+    
+    public void setChrgtmQnttQnttCmprtr
+        (String chrgtmQnttQnttCmprtr) 
+        {
+      this.chrgtmQnttQnttCmprtr = chrgtmQnttQnttCmprtr;
+}
+    public 
+    String 
+    getChargeItemQuantityQuantityCode()
+    {
+        return this.chargeItemQuantityQuantityCode;
+    }
+    
+    public void setChargeItemQuantityQuantityCode
+        (String chargeItemQuantityQuantityCode) 
+        {
+      this.chargeItemQuantityQuantityCode = chargeItemQuantityQuantityCode;
+}
+    public 
+    String 
+    getChargeItemQuantityQuantityValue()
+    {
+        return this.chargeItemQuantityQuantityValue;
+    }
+    
+    public void setChargeItemQuantityQuantityValue
+        (String chargeItemQuantityQuantityValue) 
+        {
+      this.chargeItemQuantityQuantityValue = chargeItemQuantityQuantityValue;
+}
+    public 
+    String 
+    getChargeItemQuantityQuantityUnit()
+    {
+        return this.chargeItemQuantityQuantityUnit;
+    }
+    
+    public void setChargeItemQuantityQuantityUnit
+        (String chargeItemQuantityQuantityUnit) 
+        {
+      this.chargeItemQuantityQuantityUnit = chargeItemQuantityQuantityUnit;
+}
+    public 
+    String 
+    getChrgtmQnttQnttSstm()
+    {
+        return this.chrgtmQnttQnttSstm;
+    }
+    
+    public void setChrgtmQnttQnttSstm
+        (String chrgtmQnttQnttSstm) 
+        {
+      this.chrgtmQnttQnttSstm = chrgtmQnttQnttSstm;
+}
+    public 
+    String 
+    getChrgtmBdstCcCdngCSstm()
+    {
+        return this.chrgtmBdstCcCdngCSstm;
+    }
+    
+    public void setChrgtmBdstCcCdngCSstm
+        (String chrgtmBdstCcCdngCSstm) 
+        {
+      this.chrgtmBdstCcCdngCSstm = chrgtmBdstCcCdngCSstm;
+}
+    public 
+    String 
+    getChrgtmBdstCcCdngCVrsn()
+    {
+        return this.chrgtmBdstCcCdngCVrsn;
+    }
+    
+    public void setChrgtmBdstCcCdngCVrsn
+        (String chrgtmBdstCcCdngCVrsn) 
+        {
+      this.chrgtmBdstCcCdngCVrsn = chrgtmBdstCcCdngCVrsn;
+}
+    public 
+    String 
+    getChrgtmBdstCcCdngCCde()
+    {
+        return this.chrgtmBdstCcCdngCCde;
+    }
+    
+    public void setChrgtmBdstCcCdngCCde
+        (String chrgtmBdstCcCdngCCde) 
+        {
+      this.chrgtmBdstCcCdngCCde = chrgtmBdstCcCdngCCde;
+}
+    public 
+    String 
+    getChrgtmBdstCcCdngCDsplay()
+    {
+        return this.chrgtmBdstCcCdngCDsplay;
+    }
+    
+    public void setChrgtmBdstCcCdngCDsplay
+        (String chrgtmBdstCcCdngCDsplay) 
+        {
+      this.chrgtmBdstCcCdngCDsplay = chrgtmBdstCcCdngCDsplay;
+}
+    public 
+    String 
+    getChrgtmBdstCcCdngCSrSlctd()
+    {
+        return this.chrgtmBdstCcCdngCSrSlctd;
+    }
+    
+    public void setChrgtmBdstCcCdngCSrSlctd
+        (String chrgtmBdstCcCdngCSrSlctd) 
+        {
+      this.chrgtmBdstCcCdngCSrSlctd = chrgtmBdstCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getChargeItemBodysiteCcText()
+    {
+        return this.chargeItemBodysiteCcText;
+    }
+    
+    public void setChargeItemBodysiteCcText
+        (String chargeItemBodysiteCcText) 
+        {
+      this.chargeItemBodysiteCcText = chargeItemBodysiteCcText;
+}
+    public 
+    String 
+    getChargeItemFactorOverrideDecimal()
+    {
+        return this.chargeItemFactorOverrideDecimal;
+    }
+    
+    public void setChargeItemFactorOverrideDecimal
+        (String chargeItemFactorOverrideDecimal) 
+        {
+      this.chargeItemFactorOverrideDecimal = chargeItemFactorOverrideDecimal;
+}
+    public 
+    String 
+    getChrgtmPrcvrrdMnCrrncy()
+    {
+        return this.chrgtmPrcvrrdMnCrrncy;
+    }
+    
+    public void setChrgtmPrcvrrdMnCrrncy
+        (String chrgtmPrcvrrdMnCrrncy) 
+        {
+      this.chrgtmPrcvrrdMnCrrncy = chrgtmPrcvrrdMnCrrncy;
+}
+    public 
+    String 
+    getChrgtmPrcvrrdMnVlue()
+    {
+        return this.chrgtmPrcvrrdMnVlue;
+    }
+    
+    public void setChrgtmPrcvrrdMnVlue
+        (String chrgtmPrcvrrdMnVlue) 
+        {
+      this.chrgtmPrcvrrdMnVlue = chrgtmPrcvrrdMnVlue;
+}
+    public 
+    String 
+    getChargeItemOverrideReasonString()
+    {
+        return this.chargeItemOverrideReasonString;
+    }
+    
+    public void setChargeItemOverrideReasonString
+        (String chargeItemOverrideReasonString) 
+        {
+      this.chargeItemOverrideReasonString = chargeItemOverrideReasonString;
+}
+    public 
+    String 
+    getChargeItemEntererReference()
+    {
+        return this.chargeItemEntererReference;
+    }
+    
+    public void setChargeItemEntererReference
+        (String chargeItemEntererReference) 
+        {
+      this.chargeItemEntererReference = chargeItemEntererReference;
+}
+    public 
+    String 
+    getChargeItemEnteredDateDateTime()
+    {
+        return this.chargeItemEnteredDateDateTime;
+    }
+    
+    public void setChargeItemEnteredDateDateTime
+        (String chargeItemEnteredDateDateTime) 
+        {
+      this.chargeItemEnteredDateDateTime = chargeItemEnteredDateDateTime;
+}
+    public 
+    String 
+    getChrgtmRsnCcCdngCSstm()
+    {
+        return this.chrgtmRsnCcCdngCSstm;
+    }
+    
+    public void setChrgtmRsnCcCdngCSstm
+        (String chrgtmRsnCcCdngCSstm) 
+        {
+      this.chrgtmRsnCcCdngCSstm = chrgtmRsnCcCdngCSstm;
+}
+    public 
+    String 
+    getChrgtmRsnCcCdngCVrsn()
+    {
+        return this.chrgtmRsnCcCdngCVrsn;
+    }
+    
+    public void setChrgtmRsnCcCdngCVrsn
+        (String chrgtmRsnCcCdngCVrsn) 
+        {
+      this.chrgtmRsnCcCdngCVrsn = chrgtmRsnCcCdngCVrsn;
+}
+    public 
+    String 
+    getChargeItemReasonCcCodingCCode()
+    {
+        return this.chargeItemReasonCcCodingCCode;
+    }
+    
+    public void setChargeItemReasonCcCodingCCode
+        (String chargeItemReasonCcCodingCCode) 
+        {
+      this.chargeItemReasonCcCodingCCode = chargeItemReasonCcCodingCCode;
+}
+    public 
+    String 
+    getChrgtmRsnCcCdngCDsplay()
+    {
+        return this.chrgtmRsnCcCdngCDsplay;
+    }
+    
+    public void setChrgtmRsnCcCdngCDsplay
+        (String chrgtmRsnCcCdngCDsplay) 
+        {
+      this.chrgtmRsnCcCdngCDsplay = chrgtmRsnCcCdngCDsplay;
+}
+    public 
+    String 
+    getChrgtmRsnCcCdngCSrSlctd()
+    {
+        return this.chrgtmRsnCcCdngCSrSlctd;
+    }
+    
+    public void setChrgtmRsnCcCdngCSrSlctd
+        (String chrgtmRsnCcCdngCSrSlctd) 
+        {
+      this.chrgtmRsnCcCdngCSrSlctd = chrgtmRsnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getChargeItemReasonCcText()
+    {
+        return this.chargeItemReasonCcText;
+    }
+    
+    public void setChargeItemReasonCcText
+        (String chargeItemReasonCcText) 
+        {
+      this.chargeItemReasonCcText = chargeItemReasonCcText;
+}
+    public 
+    String 
+    getChargeItemServiceReference()
+    {
+        return this.chargeItemServiceReference;
+    }
+    
+    public void setChargeItemServiceReference
+        (String chargeItemServiceReference) 
+        {
+      this.chargeItemServiceReference = chargeItemServiceReference;
+}
+    public 
+    String 
+    getChrgtmPrdctRfrncRfrnce()
+    {
+        return this.chrgtmPrdctRfrncRfrnce;
+    }
+    
+    public void setChrgtmPrdctRfrncRfrnce
+        (String chrgtmPrdctRfrncRfrnce) 
+        {
+      this.chrgtmPrdctRfrncRfrnce = chrgtmPrdctRfrncRfrnce;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcCdngCSstm()
+    {
+        return this.chrgtmPrdctCdblcncptCcCdngCSstm;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcCdngCSstm
+        (String chrgtmPrdctCdblcncptCcCdngCSstm) 
+        {
+      this.chrgtmPrdctCdblcncptCcCdngCSstm = chrgtmPrdctCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcCdngCVrsn()
+    {
+        return this.chrgtmPrdctCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcCdngCVrsn
+        (String chrgtmPrdctCdblcncptCcCdngCVrsn) 
+        {
+      this.chrgtmPrdctCdblcncptCcCdngCVrsn = chrgtmPrdctCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcCdngCCde()
+    {
+        return this.chrgtmPrdctCdblcncptCcCdngCCde;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcCdngCCde
+        (String chrgtmPrdctCdblcncptCcCdngCCde) 
+        {
+      this.chrgtmPrdctCdblcncptCcCdngCCde = chrgtmPrdctCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcCdngCDsplay()
+    {
+        return this.chrgtmPrdctCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcCdngCDsplay
+        (String chrgtmPrdctCdblcncptCcCdngCDsplay) 
+        {
+      this.chrgtmPrdctCdblcncptCcCdngCDsplay = chrgtmPrdctCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcCdngCSrSlctd()
+    {
+        return this.chrgtmPrdctCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcCdngCSrSlctd
+        (String chrgtmPrdctCdblcncptCcCdngCSrSlctd) 
+        {
+      this.chrgtmPrdctCdblcncptCcCdngCSrSlctd = chrgtmPrdctCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getChrgtmPrdctCdblcncptCcTxt()
+    {
+        return this.chrgtmPrdctCdblcncptCcTxt;
+    }
+    
+    public void setChrgtmPrdctCdblcncptCcTxt
+        (String chrgtmPrdctCdblcncptCcTxt) 
+        {
+      this.chrgtmPrdctCdblcncptCcTxt = chrgtmPrdctCdblcncptCcTxt;
+}
+    public 
+    String 
+    getChargeItemAccountReference()
+    {
+        return this.chargeItemAccountReference;
+    }
+    
+    public void setChargeItemAccountReference
+        (String chargeItemAccountReference) 
+        {
+      this.chargeItemAccountReference = chargeItemAccountReference;
+}
+    public 
+    String 
+    getChargeItemNoteAnnotationTime()
+    {
+        return this.chargeItemNoteAnnotationTime;
+    }
+    
+    public void setChargeItemNoteAnnotationTime
+        (String chargeItemNoteAnnotationTime) 
+        {
+      this.chargeItemNoteAnnotationTime = chargeItemNoteAnnotationTime;
+}
+    public 
+    String 
+    getChargeItemNoteAnnotationText()
+    {
+        return this.chargeItemNoteAnnotationText;
+    }
+    
+    public void setChargeItemNoteAnnotationText
+        (String chargeItemNoteAnnotationText) 
+        {
+      this.chargeItemNoteAnnotationText = chargeItemNoteAnnotationText;
+}
+    public 
+    String 
+    getChrgtmNtNnttnThrRfrnce()
+    {
+        return this.chrgtmNtNnttnThrRfrnce;
+    }
+    
+    public void setChrgtmNtNnttnThrRfrnce
+        (String chrgtmNtNnttnThrRfrnce) 
+        {
+      this.chrgtmNtNnttnThrRfrnce = chrgtmNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getChrgtmNtNnttnThrStrng()
+    {
+        return this.chrgtmNtNnttnThrStrng;
+    }
+    
+    public void setChrgtmNtNnttnThrStrng
+        (String chrgtmNtNnttnThrStrng) 
+        {
+      this.chrgtmNtNnttnThrStrng = chrgtmNtNnttnThrStrng;
+}
+    public 
+    String 
+    getChrgtmSpprtngnfrmtnRfrnce()
+    {
+        return this.chrgtmSpprtngnfrmtnRfrnce;
+    }
+    
+    public void setChrgtmSpprtngnfrmtnRfrnce
+        (String chrgtmSpprtngnfrmtnRfrnce) 
+        {
+      this.chrgtmSpprtngnfrmtnRfrnce = chrgtmSpprtngnfrmtnRfrnce;
+}
 
 
 

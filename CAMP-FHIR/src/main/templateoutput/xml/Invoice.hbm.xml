@@ -1,375 +1,369 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Invoice" optimistic-lock="none" table="invoice">
-        <id name="invoiceIdentifierCodingCode" type="string">
-            <column length="512" name="Invoice_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="invcDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Invc_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invoiceIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Invoice_identifier_Identifier_use">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="invoiceIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Invoice_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="invcDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="invoiceIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Invoice_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="invcDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="invoiceIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Invoice_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="invcDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="invoiceStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Invoice_status">
-                <comment>code</comment>
+        <property name="invcDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="invoiceCancelledReason" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Invoice_cancelledReason">
-                <comment>string</comment>
+        <property name="invcDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="invoiceTypeCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invoice_type_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="invcDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="invoiceTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invoice_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="invcDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="invoiceTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invoice_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="invcDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="invoiceTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invoice_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="invcDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="invoiceTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invoice_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="invcDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="invoiceSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invoice_subject">
-                <comment>Reference</comment>
+        <property name="invcDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Invc_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Invoice.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="invoiceRecipient" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invoice_recipient">
-                <comment>Reference</comment>
+        <property name="invoiceStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Invoice_status_code">
+                <comment>{ "tree" :"Invoice.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="invoiceDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Invoice_date">
-                <comment>dateTime</comment>
+        <property name="invoiceCancelledReasonString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.cancelledReason", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelledReason"}</meta>
+            <column length="65535" name="Invoice_cancelledReason_string">
+                <comment>{ "tree" :"Invoice.cancelledReason", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCancelledReason"}</comment>
             </column>
         </property>
-        <property name="invoiceParticipant" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Invoice_participant">
-                <comment>BackboneElement</comment>
+        <property name="invoiceTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Invoice_type_CC_coding_C_system">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="invcPrtcpntRlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_prtcpnt_rl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invoiceTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Invoice_type_CC_coding_C_version">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="invcPrtcpntRlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invc_prtcpnt_rl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="invoiceTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Invoice_type_CC_coding_C_code">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="invcPrtcpntRlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invc_prtcpnt_rl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="invoiceTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Invoice_type_CC_coding_C_display">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="invcPrtcpntRlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invc_prtcpnt_rl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="invcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Invc_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="invcPrtcpntRlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invc_prtcpnt_rl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="invoiceTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Invoice_type_CC_text">
+                <comment>{ "tree" :"Invoice.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="invoiceParticipantActor" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invoice_participant_actor">
-                <comment>Reference</comment>
+        <property name="invoiceSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="Invoice_subject_Reference">
+                <comment>{ "tree" :"Invoice.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="invoiceIssuer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invoice_issuer">
-                <comment>Reference</comment>
+        <property name="invoiceRecipientReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.recipient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecipient"}</meta>
+            <column length="65535" name="Invoice_recipient_Reference">
+                <comment>{ "tree" :"Invoice.recipient", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecipient"}</comment>
             </column>
         </property>
-        <property name="invoiceAccount" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invoice_account">
-                <comment>Reference</comment>
+        <property name="invoiceDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Invoice_date_dateTime">
+                <comment>{ "tree" :"Invoice.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="invoiceLineItem" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Invoice_lineItem">
-                <comment>BackboneElement</comment>
+        <property name="invcPrtcpntRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setSystem"}</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="invoiceLineItemSequence" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Invoice_lineItem_sequence">
-                <comment>positiveInt</comment>
+        <property name="invcPrtcpntRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setVersion"}</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmRfrnce" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Invc_lntm_chrgtmRfrnce">
-                <comment>Reference</comment>
+        <property name="invcPrtcpntRlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setCode"}</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_CC_cdng_C_cde">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmcdblcptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invcPrtcpntRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmcdblcptCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="invcPrtcpntRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Invc_prtcpnt_rl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmcdblcptCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="invoiceParticipantRoleCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, setText"}</meta>
+            <column length="65535" name="Invoice_participant_role_CC_text">
+                <comment>{ "tree" :"Invoice.participant.role", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setRole, setText"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmcdblcptCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="invcPrtcpntCtrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.participant.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setActor"}</meta>
+            <column length="65535" name="Invc_prtcpnt_ctr_Rfrnce">
+                <comment>{ "tree" :"Invoice.participant.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setActor"}</comment>
             </column>
         </property>
-        <property name="invcLntmChrgtmcdblcptCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invc_lntm_chrgtmcdblcpt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="invoiceIssuerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.issuer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssuer"}</meta>
+            <column length="65535" name="Invoice_issuer_Reference">
+                <comment>{ "tree" :"Invoice.issuer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssuer"}</comment>
             </column>
         </property>
-        <property name="invoiceLineItemPriceComponent" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Invoice_lineItem_priceComponent">
-                <comment>BackboneElement</comment>
+        <property name="invoiceAccountReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.account", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccount"}</meta>
+            <column length="65535" name="Invoice_account_Reference">
+                <comment>{ "tree" :"Invoice.account", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAccount"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_tpe">
-                <comment>code</comment>
+        <property name="invcLntmSqncPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.sequence", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem"] , "methodName" : "setSequence"}</meta>
+            <column length="65535" name="Invc_lntm_sqnc_pstvnt">
+                <comment>{ "tree" :"Invoice.lineItem.sequence", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem"] , "methodName" : "setSequence"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invcLntmChrgtmRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemReference(chargeitem)"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmRfrnc_Rfrnce">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemReference(chargeitem)"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="invcLntmChrgtmCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="invcLntmChrgtmCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="invcLntmChrgtmCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="invcLntmChrgtmCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntFctr" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_fctr">
-                <comment>decimal</comment>
+        <property name="invcLntmChrgtmCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntMntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invcLntmChrgtmCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, setText"}</meta>
+            <column length="65535" name="Invc_lntm_chrgtmCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Invoice.lineItem.chargeItemCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addLineItem"] , "methodName" : "setChargeItemCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntMntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="invcLntmPrcCmpnntTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_tp_cde">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntMntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="invcLntmPrcCmpnntCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntMntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="invcLntmPrcCmpnntCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="invcLntmPrcCmpnntMntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="invcLntmPrcCmpnntCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalPriceComponent" type="string">
-            <meta attribute="resource-type">see priceComponent</meta>
-            <column length="65535" name="Invoice_totalPriceComponent">
-                <comment>see priceComponent</comment>
+        <property name="invcLntmPrcCmpnntCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="invcTtlNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_ttlNt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invcLntmPrcCmpnntCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalNetCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invoice_totalNet_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="invcLntmPrcCmpnntCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_cd_CC_txt">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalNetCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invoice_totalNet_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="invcLntmPrcCmpnntFctrDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.factor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setFactor"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_fctr_dcml">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.factor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setFactor"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalNetCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invoice_totalNet_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="invcLntmPrcCmpnntMntMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setAmount, setCurrency"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Mn_crrncy">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setAmount, setCurrency"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalNetCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invoice_totalNet_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="invcLntmPrcCmpnntMntMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.lineItem.priceComponent.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setAmount, setVal"}</meta>
+            <column length="65535" name="Invc_lntm_prcCmpnnt_mnt_Mn_vlue">
+                <comment>{ "tree" :"Invoice.lineItem.priceComponent.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addLineItem", "addPriceComponent"] , "methodName" : "setAmount, setVal"}</comment>
             </column>
         </property>
-        <property name="invcTtlGrssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invc_ttlGrss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="invcTtlPrcCmpnntPrcCmpnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.totalPriceComponent", "datatype" : "priceComponent", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTotalPriceComponent"}</meta>
+            <column length="65535" name="Invc_ttlPrcCmpnnt_prcCmpnnt">
+                <comment>{ "tree" :"Invoice.totalPriceComponent", "datatype" : "priceComponent", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTotalPriceComponent"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalGrossCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invoice_totalGross_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="invoiceTotalNetMoneyCurrency" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.totalNet", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalNet, setCurrency"}</meta>
+            <column length="65535" name="Invoice_totalNet_Money_currency">
+                <comment>{ "tree" :"Invoice.totalNet", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalNet, setCurrency"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalGrossCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invoice_totalGross_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="invoiceTotalNetMoneyValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.totalNet", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalNet, setVal"}</meta>
+            <column length="65535" name="Invoice_totalNet_Money_value">
+                <comment>{ "tree" :"Invoice.totalNet", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalNet, setVal"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalGrossCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invoice_totalGross_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="invoiceTotalGrossMoneyCurrency" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.totalGross", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalGross, setCurrency"}</meta>
+            <column length="65535" name="Invoice_totalGross_Money_currency">
+                <comment>{ "tree" :"Invoice.totalGross", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalGross, setCurrency"}</comment>
             </column>
         </property>
-        <property name="invoiceTotalGrossCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invoice_totalGross_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="invoiceTotalGrossMoneyValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.totalGross", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalGross, setVal"}</meta>
+            <column length="65535" name="Invoice_totalGross_Money_value">
+                <comment>{ "tree" :"Invoice.totalGross", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotalGross, setVal"}</comment>
             </column>
         </property>
-        <property name="invoicePaymentTerms" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Invoice_paymentTerms">
-                <comment>markdown</comment>
+        <property name="invoicePaymentTermsMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.paymentTerms", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentTerms"}</meta>
+            <column length="65535" name="Invoice_paymentTerms_markdown">
+                <comment>{ "tree" :"Invoice.paymentTerms", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentTerms"}</comment>
             </column>
         </property>
-        <property name="invoiceNoteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Invoice_note_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="invoiceNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Invoice_note_Annotation_time">
+                <comment>{ "tree" :"Invoice.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="invoiceNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Invoice_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="invoiceNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Invoice_note_Annotation_text">
+                <comment>{ "tree" :"Invoice.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="invoiceNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Invoice_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="invcNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Invc_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Invoice.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="invoiceNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Invoice_note_Coding_version">
-                <comment>Coding_version</comment>
-            </column>
-        </property>
-        <property name="invoiceNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Invoice_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="invcNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Invoice.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Invc_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"Invoice.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

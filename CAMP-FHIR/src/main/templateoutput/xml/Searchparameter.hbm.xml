@@ -1,195 +1,345 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Searchparameter" optimistic-lock="none" table="searchparameter">
-        <id name="searchParameterUrl" type="string">
-            <column length="512" name="SearchParameter_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="searchParameterVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_version">
-                <comment>string</comment>
+        <property name="searchParameterUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="SearchParameter_url_uri">
+                <comment>{ "tree" :"SearchParameter.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="searchParameterName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_name">
-                <comment>string</comment>
+        <property name="searchParameterVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="SearchParameter_version_string">
+                <comment>{ "tree" :"SearchParameter.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="searchParameterDerivedFrom" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="SearchParameter_derivedFrom">
-                <comment>canonical</comment>
+        <property name="searchParameterNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="SearchParameter_name_string">
+                <comment>{ "tree" :"SearchParameter.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="searchParameterStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_status">
-                <comment>code</comment>
+        <property name="srchPrmtrDrvdFrmCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.derivedFrom", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDerivedFrom"}</meta>
+            <column length="65535" name="SrchPrmtr_drvdFrm_cnncl">
+                <comment>{ "tree" :"SearchParameter.derivedFrom", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDerivedFrom"}</comment>
             </column>
         </property>
-        <property name="searchParameterExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="SearchParameter_experimental">
-                <comment>boolean</comment>
+        <property name="searchParameterStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="SearchParameter_status_code">
+                <comment>{ "tree" :"SearchParameter.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="searchParameterDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="SearchParameter_date">
-                <comment>dateTime</comment>
+        <property name="srchPrmtrXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="SrchPrmtr_xprmntl_bln">
+                <comment>{ "tree" :"SearchParameter.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="searchParameterPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_publisher">
-                <comment>string</comment>
+        <property name="searchParameterDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="SearchParameter_date_dateTime">
+                <comment>{ "tree" :"SearchParameter.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="searchParameterContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="SearchParameter_contact">
-                <comment>ContactDetail</comment>
+        <property name="searchParameterPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="SearchParameter_publisher_string">
+                <comment>{ "tree" :"SearchParameter.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="searchParameterDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="SearchParameter_description">
-                <comment>markdown</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="searchParameterUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="SearchParameter_useContext">
-                <comment>UsageContext</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="srchPrmtrCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="srchPrmtrCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="SrchPrmtr_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"SearchParameter.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="SrchPrmtr_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="srchPrmtrDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.description", "datatype" : "markdown", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="SrchPrmtr_dscrptn_mrkdwn">
+                <comment>{ "tree" :"SearchParameter.description", "datatype" : "markdown", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="searchParameterPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="SearchParameter_purpose">
-                <comment>markdown</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="searchParameterCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_code">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="searchParameterBase" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_base">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="searchParameterType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_type">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="searchParameterExpression" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_expression">
-                <comment>string</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="searchParameterXpath" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_xpath">
-                <comment>string</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="searchParameterXpathUsage" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_xpathUsage">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="searchParameterTarget" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_target">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="searchParameterMultipleOr" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="SearchParameter_multipleOr">
-                <comment>boolean</comment>
+        <property name="srchPrmtrSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="searchParameterMultipleAnd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="SearchParameter_multipleAnd">
-                <comment>boolean</comment>
+        <property name="srchPrmtrSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="searchParameterComparator" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_comparator">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="searchParameterModifier" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="SearchParameter_modifier">
-                <comment>code</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="searchParameterChain" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SearchParameter_chain">
-                <comment>string</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrCmpnntDfntn" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="SrchPrmtr_cmpnnt_dfntn">
-                <comment>canonical</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="srchPrmtrCmpnntXprssn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SrchPrmtr_cmpnnt_xprssn">
-                <comment>string</comment>
+        <property name="srchPrmtrSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="SrchPrmtr_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"SearchParameter.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="SrchPrmtr_jrsdctn_CC_txt">
+                <comment>{ "tree" :"SearchParameter.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterPurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="SearchParameter_purpose_markdown">
+                <comment>{ "tree" :"SearchParameter.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterCodeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="SearchParameter_code_code">
+                <comment>{ "tree" :"SearchParameter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterBaseCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.base", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setBase"}</meta>
+            <column length="65535" name="SearchParameter_base_code">
+                <comment>{ "tree" :"SearchParameter.base", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setBase"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</meta>
+            <column length="65535" name="SearchParameter_type_code">
+                <comment>{ "tree" :"SearchParameter.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterExpressionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.expression", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpression"}</meta>
+            <column length="65535" name="SearchParameter_expression_string">
+                <comment>{ "tree" :"SearchParameter.expression", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpression"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterXpathString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.xpath", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setXpath"}</meta>
+            <column length="65535" name="SearchParameter_xpath_string">
+                <comment>{ "tree" :"SearchParameter.xpath", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setXpath"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterXpathUsageCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.xpathUsage", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setXpathUsage"}</meta>
+            <column length="65535" name="SearchParameter_xpathUsage_code">
+                <comment>{ "tree" :"SearchParameter.xpathUsage", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setXpathUsage"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterTargetCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.target", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTarget"}</meta>
+            <column length="65535" name="SearchParameter_target_code">
+                <comment>{ "tree" :"SearchParameter.target", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTarget"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterMultipleOrBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.multipleOr", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleOr"}</meta>
+            <column length="65535" name="SearchParameter_multipleOr_boolean">
+                <comment>{ "tree" :"SearchParameter.multipleOr", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleOr"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrMltplndBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.multipleAnd", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleAnd"}</meta>
+            <column length="65535" name="SrchPrmtr_mltplnd_bln">
+                <comment>{ "tree" :"SearchParameter.multipleAnd", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleAnd"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterComparatorCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.comparator", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addComparator"}</meta>
+            <column length="65535" name="SearchParameter_comparator_code">
+                <comment>{ "tree" :"SearchParameter.comparator", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addComparator"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterModifierCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.modifier", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModifier"}</meta>
+            <column length="65535" name="SearchParameter_modifier_code">
+                <comment>{ "tree" :"SearchParameter.modifier", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModifier"}</comment>
+            </column>
+        </property>
+        <property name="searchParameterChainString" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.chain", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addChain"}</meta>
+            <column length="65535" name="SearchParameter_chain_string">
+                <comment>{ "tree" :"SearchParameter.chain", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addChain"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrCmpnntDfntnCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.component.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addComponent"] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="SrchPrmtr_cmpnnt_dfntn_cnncl">
+                <comment>{ "tree" :"SearchParameter.component.definition", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addComponent"] , "methodName" : "setDefinition"}</comment>
+            </column>
+        </property>
+        <property name="srchPrmtrCmpnntXprssnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SearchParameter.component.expression", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addComponent"] , "methodName" : "setExpression"}</meta>
+            <column length="65535" name="SrchPrmtr_cmpnnt_xprssn_strng">
+                <comment>{ "tree" :"SearchParameter.component.expression", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addComponent"] , "methodName" : "setExpression"}</comment>
             </column>
         </property>
     </class>

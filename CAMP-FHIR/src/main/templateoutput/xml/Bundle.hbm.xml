@@ -1,297 +1,273 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Bundle" optimistic-lock="none" table="bundle">
-        <id name="bndlDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="bndlDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_use_code</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_s_cde">
-                <comment>Bundle_identifierIdentifier_use_code</comment>
+        <property name="bundleIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="512" name="Bundle_identifier_Identifier_use">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="bndlDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="bndlDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="bndlDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Bundle_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="bndlDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Bundle_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="bndlDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Prd_strt">
-                <comment>Bundle_identifierIdentifier_Period_start</comment>
+        <property name="bndlDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Prd_nd">
-                <comment>Bundle_identifierIdentifier_Period_end</comment>
+        <property name="bndlDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Bundle_identifierIdentifier_Reference_reference</comment>
+        <property name="bndlDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Bundle_identifierIdentifier_Reference_type</comment>
+        <property name="bndlDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Bundle_identifierIdentifier_Reference_identifier</comment>
+        <property name="bundleIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="512" name="Bundle_identifier_Identifier_value">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Bundle_identifierIdentifier_Reference_display</comment>
+        <property name="bndlDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="512" name="Bndl_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Bundle.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_value_string</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_vl_strng">
-                <comment>Bundle_identifierIdentifier_value_string</comment>
+        <property name="bundleTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</meta>
+            <column length="65535" name="Bundle_type_code">
+                <comment>{ "tree" :"Bundle.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="bndlDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Bundle_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Bndl_dntfr_dntfr_sstm_ri">
-                <comment>Bundle_identifierIdentifier_system_uri</comment>
+        <property name="bundleTimestampInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.timestamp", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTimestamp"}</meta>
+            <column length="65535" name="Bundle_timestamp_instant">
+                <comment>{ "tree" :"Bundle.timestamp", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTimestamp"}</comment>
             </column>
         </property>
-        <property name="bundleType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Bundle_type">
-                <comment>code</comment>
+        <property name="bundleTotalUnsignedInt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.total", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotal"}</meta>
+            <column length="65535" name="Bundle_total_unsignedInt">
+                <comment>{ "tree" :"Bundle.total", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTotal"}</comment>
             </column>
         </property>
-        <property name="bundleTimestamp" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Bundle_timestamp">
-                <comment>instant</comment>
+        <property name="bundleLinkRelationString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.link.relation", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setRelation"}</meta>
+            <column length="65535" name="Bundle_link_relation_string">
+                <comment>{ "tree" :"Bundle.link.relation", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setRelation"}</comment>
             </column>
         </property>
-        <property name="bundleTotal" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="Bundle_total">
-                <comment>unsignedInt</comment>
+        <property name="bundleLinkUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.link.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="Bundle_link_url_uri">
+                <comment>{ "tree" :"Bundle.link.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addLink"] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="bundleLinkRelation" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_link_relation">
-                <comment>string</comment>
+        <property name="bundleEntryLinkLink" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.link", "datatype" : "link", "cardinality" : "Many", "elementtree" : ["addEntry"] , "methodName" : "addLink"}</meta>
+            <column length="65535" name="Bundle_entry_link_link">
+                <comment>{ "tree" :"Bundle.entry.link", "datatype" : "link", "cardinality" : "Many", "elementtree" : ["addEntry"] , "methodName" : "addLink"}</comment>
             </column>
         </property>
-        <property name="bundleLinkUrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Bundle_link_url">
-                <comment>uri</comment>
+        <property name="bundleEntryFullUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.fullUrl", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFullUrl"}</meta>
+            <column length="65535" name="Bundle_entry_fullUrl_uri">
+                <comment>{ "tree" :"Bundle.entry.fullUrl", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFullUrl"}</comment>
             </column>
         </property>
-        <property name="bundleEntryLink" type="string">
-            <meta attribute="resource-type">see link</meta>
-            <column length="65535" name="Bundle_entry_link">
-                <comment>see link</comment>
+        <property name="bundleEntryResourceResource" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.resource", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setResource"}</meta>
+            <column length="65535" name="Bundle_entry_resource_Resource">
+                <comment>{ "tree" :"Bundle.entry.resource", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setResource"}</comment>
             </column>
         </property>
-        <property name="bundleEntryFullUrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Bundle_entry_fullUrl">
-                <comment>uri</comment>
+        <property name="bundleEntrySearchModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.search.mode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="Bundle_entry_search_mode_code">
+                <comment>{ "tree" :"Bundle.entry.search.mode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch"] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResource" type="string">
-            <meta attribute="resource-type">Resource</meta>
-            <column length="65535" name="Bundle_entry_resource">
-                <comment>Resource</comment>
+        <property name="bundleEntrySearchScoreDecimal" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.search.score", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch"] , "methodName" : "setScore"}</meta>
+            <column length="65535" name="Bundle_entry_search_score_decimal">
+                <comment>{ "tree" :"Bundle.entry.search.score", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch"] , "methodName" : "setScore"}</comment>
             </column>
         </property>
-        <property name="bundleEntrySearchMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Bundle_entry_search_mode">
-                <comment>code</comment>
+        <property name="bundleEntryRequestMethodCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.method", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setMethod"}</meta>
+            <column length="65535" name="Bundle_entry_request_method_code">
+                <comment>{ "tree" :"Bundle.entry.request.method", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setMethod"}</comment>
             </column>
         </property>
-        <property name="bundleEntrySearchScore" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Bundle_entry_search_score">
-                <comment>decimal</comment>
+        <property name="bundleEntryRequestUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="Bundle_entry_request_url_uri">
+                <comment>{ "tree" :"Bundle.entry.request.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="bundleEntryRequestMethod" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Bundle_entry_request_method">
-                <comment>code</comment>
+        <property name="bndlNtrRqstFNnMtchStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.ifNoneMatch", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfNoneMatch"}</meta>
+            <column length="65535" name="Bndl_ntr_rqst_fNnMtch_strng">
+                <comment>{ "tree" :"Bundle.entry.request.ifNoneMatch", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfNoneMatch"}</comment>
             </column>
         </property>
-        <property name="bundleEntryRequestUrl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Bundle_entry_request_url">
-                <comment>uri</comment>
+        <property name="bndlNtrRqstFMdfdSncNstnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.ifModifiedSince", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfModifiedSince"}</meta>
+            <column length="65535" name="Bndl_ntr_rqst_fMdfdSnc_nstnt">
+                <comment>{ "tree" :"Bundle.entry.request.ifModifiedSince", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfModifiedSince"}</comment>
             </column>
         </property>
-        <property name="bundleEntryRequestIfNoneMatch" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_entry_request_ifNoneMatch">
-                <comment>string</comment>
+        <property name="bndlNtrRqstFMtchStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.ifMatch", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfMatch"}</meta>
+            <column length="65535" name="Bndl_ntr_rqst_fMtch_strng">
+                <comment>{ "tree" :"Bundle.entry.request.ifMatch", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfMatch"}</comment>
             </column>
         </property>
-        <property name="bndlNtrRqstFMdfdSnce" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Bndl_ntr_rqst_fMdfdSnce">
-                <comment>instant</comment>
+        <property name="bndlNtrRqstFNnxstStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.request.ifNoneExist", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfNoneExist"}</meta>
+            <column length="65535" name="Bndl_ntr_rqst_fNnxst_strng">
+                <comment>{ "tree" :"Bundle.entry.request.ifNoneExist", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest"] , "methodName" : "setIfNoneExist"}</comment>
             </column>
         </property>
-        <property name="bundleEntryRequestIfMatch" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_entry_request_ifMatch">
-                <comment>string</comment>
+        <property name="bndlNtrRspnsSttsStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.response.status", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Bndl_ntr_rspns_stts_strng">
+                <comment>{ "tree" :"Bundle.entry.response.status", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="bundleEntryRequestIfNoneExist" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_entry_request_ifNoneExist">
-                <comment>string</comment>
+        <property name="bundleEntryResponseLocationUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.response.location", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setLocation"}</meta>
+            <column length="65535" name="Bundle_entry_response_location_uri">
+                <comment>{ "tree" :"Bundle.entry.response.location", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setLocation"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResponseStatus" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_entry_response_status">
-                <comment>string</comment>
+        <property name="bundleEntryResponseEtagString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.response.etag", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setEtag"}</meta>
+            <column length="65535" name="Bundle_entry_response_etag_string">
+                <comment>{ "tree" :"Bundle.entry.response.etag", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setEtag"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResponseLocation" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Bundle_entry_response_location">
-                <comment>uri</comment>
+        <property name="bndlNtrRspnsLstMdfdNstnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.response.lastModified", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setLastModified"}</meta>
+            <column length="65535" name="Bndl_ntr_rspns_lstMdfd_nstnt">
+                <comment>{ "tree" :"Bundle.entry.response.lastModified", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setLastModified"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResponseEtag" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Bundle_entry_response_etag">
-                <comment>string</comment>
+        <property name="bndlNtrRspnsTcmRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.entry.response.outcome", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setOutcome"}</meta>
+            <column length="65535" name="Bndl_ntr_rspns_tcm_Rsrce">
+                <comment>{ "tree" :"Bundle.entry.response.outcome", "datatype" : "Resource", "cardinality" : "ZeroOne", "elementtree" : ["addEntry", "setSearch", "setRequest", "setResponse"] , "methodName" : "setOutcome"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResponseLastModified" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Bundle_entry_response_lastModified">
-                <comment>instant</comment>
+        <property name="bundleSignatureSignatureData" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setData"}</meta>
+            <column length="65535" name="Bundle_signature_Signature_data">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setData"}</comment>
             </column>
         </property>
-        <property name="bundleEntryResponseOutcome" type="string">
-            <meta attribute="resource-type">Resource</meta>
-            <column length="65535" name="Bundle_entry_response_outcome">
-                <comment>Resource</comment>
+        <property name="bndlSgntrSgntrTrgtFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setTargetFormat"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_trgtFrmt">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setTargetFormat"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrDtBs64bnry" type="string">
-            <meta attribute="resource-type">Signature_data_base64Binary</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_dt_bs64Bnry">
-                <comment>Signature_data_base64Binary</comment>
+        <property name="bndlSgntrSgntrSgFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setSigFormat"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_sgFrmt">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setSigFormat"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrTrgtFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_targetFormat_code</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_trgtFrmt_cde">
-                <comment>Signature_targetFormat_code</comment>
+        <property name="bndlSgntrSgntrTpCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setSystem"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_tp_C_sstm">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setSystem"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrSgFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_sigFormat_code</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_sgFrmt_cde">
-                <comment>Signature_sigFormat_code</comment>
+        <property name="bndlSgntrSgntrTpCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setVersion"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_tp_C_vrsn">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setVersion"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrCdngSstm" type="string">
-            <meta attribute="resource-type">Signature_Coding_system</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_sstm">
-                <comment>Signature_Coding_system</comment>
+        <property name="bndlSgntrSgntrTpCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setCode"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_tp_C_cde">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setCode"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Signature_Coding_version</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_vrsn">
-                <comment>Signature_Coding_version</comment>
+        <property name="bndlSgntrSgntrTpCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setDisplay"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_tp_C_dsplay">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrCdngCde" type="string">
-            <meta attribute="resource-type">Signature_Coding_code</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_cde">
-                <comment>Signature_Coding_code</comment>
+        <property name="bndlSgntrSgntrTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setUserSelected"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_tp_C_srSlctd">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, addType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Signature_Coding_display</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_dsplay">
-                <comment>Signature_Coding_display</comment>
+        <property name="bundleSignatureSignatureWhen" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setWhen"}</meta>
+            <column length="65535" name="Bundle_signature_Signature_when">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setWhen"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Cdng_srSlctd">
-                <comment>Signature_Coding_userSelected</comment>
+        <property name="bundleSignatureSignatureWho" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setWho"}</meta>
+            <column length="65535" name="Bundle_signature_Signature_who">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setWho"}</comment>
             </column>
         </property>
-        <property name="bndlSgntrSgntrWhnNstnt" type="string">
-            <meta attribute="resource-type">Signature_when_instant</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_whn_nstnt">
-                <comment>Signature_when_instant</comment>
-            </column>
-        </property>
-        <property name="bndlSgntrSgntrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Signature_Reference_reference</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_rfrnce">
-                <comment>Signature_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="bndlSgntrSgntrRfrncTpe" type="string">
-            <meta attribute="resource-type">Signature_Reference_type</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_tpe">
-                <comment>Signature_Reference_type</comment>
-            </column>
-        </property>
-        <property name="bndlSgntrSgntrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Signature_Reference_identifier</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_dntfr">
-                <comment>Signature_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="bndlSgntrSgntrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Signature_Reference_display</meta>
-            <column length="65535" name="Bndl_sgntr_Sgntr_Rfrnc_dsplay">
-                <comment>Signature_Reference_display</comment>
+        <property name="bndlSgntrSgntrNBhlff" type="string">
+            <meta attribute="resource-type">{ "tree" :"Bundle.signature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setOnBehalfOf"}</meta>
+            <column length="65535" name="Bndl_sgntr_Sgntr_nBhlff">
+                <comment>{ "tree" :"Bundle.signature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSignature, setOnBehalfOf"}</comment>
             </column>
         </property>
     </class>

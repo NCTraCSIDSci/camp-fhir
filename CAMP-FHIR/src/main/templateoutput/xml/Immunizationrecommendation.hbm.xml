@@ -1,297 +1,369 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Immunizationrecommendation" optimistic-lock="none" table="immunizationrecommendation">
-        <id name="immRcmmndtnDntfrCdngCde" type="string">
-            <column length="512" name="ImmRcmmndtn_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="immRcmmndtnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="ImmRcmmndtn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="IR_identifier_Identifier_use">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="ImmRcmmndtn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="ImmRcmmndtn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="ImmRcmmndtn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRecommendationPnt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ImmRecommendation_pnt">
-                <comment>Reference</comment>
+        <property name="irDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRecommendationDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ImmRecommendation_date">
-                <comment>dateTime</comment>
+        <property name="irDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRecommendationAuthority" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ImmRecommendation_authority">
-                <comment>Reference</comment>
+        <property name="irDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="immRecommendationRecommendation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ImmRecommendation_recommendation">
-                <comment>BackboneElement</comment>
+        <property name="irDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnVccnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_vccnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="IR_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnVccnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_vccnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irIdentifierIdentifierAssigner" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="IR_identifier_Identifier_assigner">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnVccnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_vccnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="IR_identifier_Identifier_value">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnVccnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_vccnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="IR_identifier_Identifier_system">
+                <comment>{ "tree" :"ImmunizationRecommendation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnVccnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_vccnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="IR_pnt_Reference">
+                <comment>{ "tree" :"ImmunizationRecommendation.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnTrgtDssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_trgtDss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="IR_date_dateTime">
+                <comment>{ "tree" :"ImmunizationRecommendation.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnTrgtDssCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_trgtDss_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irAuthorityReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.authority", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthority"}</meta>
+            <column length="65535" name="IR_authority_Reference">
+                <comment>{ "tree" :"ImmunizationRecommendation.authority", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthority"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnTrgtDssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_trgtDss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irRcmmndtnVccnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnTrgtDssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_trgtDss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irRcmmndtnVccnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnTrgtDssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_trgtDss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irRcmmndtnVccnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnCntrndctdVccnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_cntrndctdVccnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irRcmmndtnVccnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnCntrndctdVccnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_cntrndctdVccnCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irRcmmndtnVccnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnCntrndctdVccnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_cntrndctdVccnCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irRcmmndtnVccnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_vccnCd_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.vaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addVaccineCode, setText"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnCntrndctdVccnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_cntrndctdVccnCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irRcmmndtnTrgtDssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnCntrndctdVccnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_cntrndctdVccnCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irRcmmndtnTrgtDssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstSttsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstStts_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irRcmmndtnTrgtDssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstSttsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstStts_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irRcmmndtnTrgtDssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstSttsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstStts_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irRcmmndtnTrgtDssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstSttsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstStts_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irRcmmndtnTrgtDssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_trgtDss_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.targetDisease", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation"] , "methodName" : "setTargetDisease, setText"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstSttsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstStts_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstRsnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstRsn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstRsnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstRsn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstRsnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstRsn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstRsnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstRsn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnFrcstRsnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_frcstRsn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irRcmmndtnCntrndctdVccnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_cntrndctdVccnCd_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.contraindicatedVaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addContraindicatedVaccineCode, setText"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn">
-                <comment>BackboneElement</comment>
+        <property name="irRcmmndtnFrcstSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="irRcmmndtnFrcstSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="irRcmmndtnFrcstSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="irRcmmndtnFrcstSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="irRcmmndtnFrcstSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="irRcmmndtnFrcstSttsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstStts_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastStatus", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRecommendation"] , "methodName" : "setForecastStatus, setText"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDtCrtrnVlue" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dtCrtrn_vlue">
-                <comment>dateTime</comment>
+        <property name="irRcmmndtnFrcstRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dscrptn">
-                <comment>string</comment>
+        <property name="irRcmmndtnFrcstRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnSrs" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_srs">
-                <comment>string</comment>
+        <property name="irRcmmndtnFrcstRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDsNmbrPstvnt" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dsNmbrPstvnt">
-                <comment>positiveInt</comment>
+        <property name="irRcmmndtnFrcstRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnDsNmbrStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_dsNmbrStrng">
-                <comment>string</comment>
+        <property name="irRcmmndtnFrcstRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnSrsDssPstvnt" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_srsDssPstvnt">
-                <comment>positiveInt</comment>
+        <property name="irRcmmndtnFrcstRsnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_frcstRsn_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.forecastReason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setRecommendation"] , "methodName" : "addForecastReason, setText"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnSrsDssStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_srsDssStrng">
-                <comment>string</comment>
+        <property name="irRcmmndtnDtCrtrnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnSpprtngmm" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_spprtngmm">
-                <comment>Reference</comment>
+        <property name="irRcmmndtnDtCrtrnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRcmmndtnRcmmndtnSpprtngPtntnfrmtn" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ImmRcmmndtn_rcmmndtn_spprtngPtntnfrmtn">
-                <comment>Reference</comment>
+        <property name="irRcmmndtnDtCrtrnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDtCrtrnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDtCrtrnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDtCrtrnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_cd_CC_txt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDtCrtrnVlDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.value", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setValue"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dtCrtrn_vl_dtTme">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.dateCriterion.value", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setValue"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dscrptn_strng">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="irRecommendationSeriesString" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.series", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeries"}</meta>
+            <column length="65535" name="IR_recommendation_series_string">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.series", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeries"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDsNmbrPstvntPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.doseNumberPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDoseNumberPositiveint"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dsNmbrPstvnt_pstvnt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.doseNumberPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDoseNumberPositiveint"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnDsNmbrStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.doseNumberString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDoseNumberString"}</meta>
+            <column length="65535" name="IR_rcmmndtn_dsNmbrStrng_strng">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.doseNumberString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setDoseNumberString"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnSrsDssPstvntPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.seriesDosesPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeriesDosesPositiveint"}</meta>
+            <column length="65535" name="IR_rcmmndtn_srsDssPstvnt_pstvnt">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.seriesDosesPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeriesDosesPositiveint"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnSrsDssStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.seriesDosesString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeriesDosesString"}</meta>
+            <column length="65535" name="IR_rcmmndtn_srsDssStrng_strng">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.seriesDosesString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "setSeriesDosesString"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnSpprtngmmRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.supportingImmunization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "addSupportingImmunization"}</meta>
+            <column length="65535" name="IR_rcmmndtn_spprtngmm_Rfrnce">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.supportingImmunization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "addSupportingImmunization"}</comment>
+            </column>
+        </property>
+        <property name="irRcmmndtnSpprtngPtntnfrmtnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ImmunizationRecommendation.recommendation.supportingPatientInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "addSupportingPatientInformation"}</meta>
+            <column length="65535" name="IR_rcmmndtn_spprtngPtntnfrmtn_Rfrnce">
+                <comment>{ "tree" :"ImmunizationRecommendation.recommendation.supportingPatientInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["setRecommendation", "addDateCriterion"] , "methodName" : "addSupportingPatientInformation"}</comment>
             </column>
         </property>
     </class>

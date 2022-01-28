@@ -1,195 +1,201 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Account" optimistic-lock="none" table="account">
-        <id name="accountIdentifierCodingCode" type="string">
-            <column length="512" name="Account_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="uuid"/>
         </id>
-        <property name="accntDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Accnt_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="accountIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Account_identifier_Identifier_use">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="accountIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Account_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="accntDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="accountIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Account_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="accntDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="accountIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Account_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="accntDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="accountStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Account_status">
-                <comment>code</comment>
+        <property name="accntDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="accountTypeCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Account_type_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="accntDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="accountTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Account_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="accntDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="accountTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Account_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="accntDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="accountTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Account_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="accntDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="accountTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Account_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="accntDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="accountName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Account_name">
-                <comment>string</comment>
+        <property name="accntDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="accountSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Account_subject">
-                <comment>Reference</comment>
+        <property name="accntDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Accnt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Account.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="accntSrvcPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Accnt_srvcPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="accountStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Account_status_code">
+                <comment>{ "tree" :"Account.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="accountServicePeriodCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Account_servicePeriod_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="accountTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Account_type_CC_coding_C_system">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="accntSrvcPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Accnt_srvcPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="accountTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Account_type_CC_coding_C_version">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="accntSrvcPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Accnt_srvcPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="accountTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Account_type_CC_coding_C_code">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="accntSrvcPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Accnt_srvcPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="accountTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Account_type_CC_coding_C_display">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="accountCoverage" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Account_coverage">
-                <comment>BackboneElement</comment>
+        <property name="accntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Accnt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="accountCoverageCoverage" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Account_coverage_coverage">
-                <comment>Reference</comment>
+        <property name="accountTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Account_type_CC_text">
+                <comment>{ "tree" :"Account.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="accountCoveragePriority" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Account_coverage_priority">
-                <comment>positiveInt</comment>
+        <property name="accountNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Account_name_string">
+                <comment>{ "tree" :"Account.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="accountOwner" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Account_owner">
-                <comment>Reference</comment>
+        <property name="accountSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</meta>
+            <column length="65535" name="Account_subject_Reference">
+                <comment>{ "tree" :"Account.subject", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubject"}</comment>
             </column>
         </property>
-        <property name="accountDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Account_description">
-                <comment>string</comment>
+        <property name="accountServicePeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.servicePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicePeriod, setStart"}</meta>
+            <column length="65535" name="Account_servicePeriod_Period_start">
+                <comment>{ "tree" :"Account.servicePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="accountGuarantor" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Account_guarantor">
-                <comment>BackboneElement</comment>
+        <property name="accountServicePeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.servicePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicePeriod, setEnd"}</meta>
+            <column length="65535" name="Account_servicePeriod_Period_end">
+                <comment>{ "tree" :"Account.servicePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setServicePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="accountGuarantorParty" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Account_guarantor_party">
-                <comment>Reference</comment>
+        <property name="accntCvrgCvrgRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.coverage.coverage", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setCoverage"}</meta>
+            <column length="65535" name="Accnt_cvrg_cvrg_Rfrnce">
+                <comment>{ "tree" :"Account.coverage.coverage", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setCoverage"}</comment>
             </column>
         </property>
-        <property name="accountGuarantorOnHold" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Account_guarantor_onHold">
-                <comment>boolean</comment>
+        <property name="accntCvrgPrrtPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.coverage.priority", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage"] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="Accnt_cvrg_prrt_pstvnt">
+                <comment>{ "tree" :"Account.coverage.priority", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage"] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="accntGrntrPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Accnt_grntr_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="accountOwnerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</meta>
+            <column length="65535" name="Account_owner_Reference">
+                <comment>{ "tree" :"Account.owner", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwner"}</comment>
             </column>
         </property>
-        <property name="accntGrntrPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Accnt_grntr_prd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="accountDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Account_description_string">
+                <comment>{ "tree" :"Account.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="accntGrntrPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Accnt_grntr_prd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="accountGuarantorPartyReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.guarantor.party", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addGuarantor"] , "methodName" : "setParty"}</meta>
+            <column length="65535" name="Account_guarantor_party_Reference">
+                <comment>{ "tree" :"Account.guarantor.party", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addGuarantor"] , "methodName" : "setParty"}</comment>
             </column>
         </property>
-        <property name="accntGrntrPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Accnt_grntr_prd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="accountGuarantorOnHoldBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.guarantor.onHold", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setOnHold"}</meta>
+            <column length="65535" name="Account_guarantor_onHold_boolean">
+                <comment>{ "tree" :"Account.guarantor.onHold", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setOnHold"}</comment>
             </column>
         </property>
-        <property name="accntGrntrPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Accnt_grntr_prd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="accntGrntrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.guarantor.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Accnt_grntr_prd_Prd_strt">
+                <comment>{ "tree" :"Account.guarantor.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="accountPartOf" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Account_partOf">
-                <comment>Reference</comment>
+        <property name="accntGrntrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.guarantor.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Accnt_grntr_prd_Prd_nd">
+                <comment>{ "tree" :"Account.guarantor.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addGuarantor"] , "methodName" : "setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="accountPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Account.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</meta>
+            <column length="65535" name="Account_partOf_Reference">
+                <comment>{ "tree" :"Account.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</comment>
             </column>
         </property>
     </class>

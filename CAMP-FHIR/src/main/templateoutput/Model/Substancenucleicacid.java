@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,593 +10,950 @@ package main.templateoutput.Model;
 public class Substancenucleicacid  implements java.io.Serializable {
 
 
-     private String sbstncNclccdSqncTpCdngCde;
-     private String sbstncNclccdSqncTpCdngSrSlctd;
-     private String sbstncNclccdSqncTpCdngDsplay;
-     private String sbstncNclccdSqncTpCdngVrsn;
-     private String sbstncNclccdSqncTpCdngSstm;
-     private String sbstncNclccdNmbrfSbnts;
-     private String sbstncNclccdRfHbrdstn;
-     private String sbstncNclccdLgNcltdTpCdngSrSlctd;
-     private String sbstncNclccdLgNcltdTpCdngCde;
-     private String sbstncNclccdLgNcltdTpCdngDsplay;
-     private String sbstncNclccdLgNcltdTpCdngVrsn;
-     private String sbstncNclccdLgNcltdTpCdngSstm;
-     private String substanceNucleicAcidSubunit;
-     private String sbstncNclccdSbntSbnt;
-     private String sbstncNclccdSbntSqnce;
-     private String sbstncNclccdSbntLngth;
-     private String sbstncNclccdSbntSqncttchmntCdngSrSlctd;
-     private String sbstncNclccdSbntSqncttchmntCdngCde;
-     private String sbstncNclccdSbntSqncttchmntCdngDsplay;
-     private String sbstncNclccdSbntSqncttchmntCdngVrsn;
-     private String sbstncNclccdSbntSqncttchmntCdngSstm;
-     private String sbstncNclccdSbntFvPrmCdngSrSlctd;
-     private String sbstncNclccdSbntFvPrmCdngCde;
-     private String sbstncNclccdSbntFvPrmCdngDsplay;
-     private String sbstncNclccdSbntFvPrmCdngVrsn;
-     private String sbstncNclccdSbntFvPrmCdngSstm;
-     private String sbstncNclccdSbntThrPrmCdngSrSlctd;
-     private String sbstncNclccdSbntThrPrmCdngCde;
-     private String sbstncNclccdSbntThrPrmCdngDsplay;
-     private String sbstncNclccdSbntThrPrmCdngVrsn;
-     private String sbstncNclccdSbntThrPrmCdngSstm;
-     private String sbstncNclccdSbntLnkge;
-     private String sbstncNclccdSbntLnkgCnnctvty;
-     private String sbstncNclccdSbntLnkgDntfrCdngSrSlctd;
-     private String sbstncNclccdSbntLnkgDntfrCdngCde;
-     private String sbstncNclccdSbntLnkgDntfrCdngDsplay;
-     private String sbstncNclccdSbntLnkgDntfrCdngVrsn;
-     private String sbstncNclccdSbntLnkgDntfrCdngSstm;
-     private String sbstncNclccdSbntLnkgNme;
-     private String sbstncNclccdSbntLnkgRsdSte;
-     private String substanceNucleicAcidSubunitSugar;
-     private String sbstncNclccdSbntSgrDntfrCdngSrSlctd;
-     private String sbstncNclccdSbntSgrDntfrCdngCde;
-     private String sbstncNclccdSbntSgrDntfrCdngDsplay;
-     private String sbstncNclccdSbntSgrDntfrCdngVrsn;
-     private String sbstncNclccdSbntSgrDntfrCdngSstm;
-     private String sbstncNclccdSbntSgrNme;
-     private String sbstncNclccdSbntSgrRsdSte;
+     private Integer id;
+     private String sbstncNclccdSqncTpCcCdngCSstm;
+     private String sbstncNclccdSqncTpCcCdngCVrsn;
+     private String sbstncNclccdSqncTpCcCdngCCde;
+     private String sbstncNclccdSqncTpCcCdngCDsplay;
+     private String sbstncNclccdSqncTpCcCdngCSrSlctd;
+     private String sbstncNclccdSqncTpCcTxt;
+     private String sbstncNclccdNmbrfSbntsNtgr;
+     private String sbstncNclccdRfHbrdstnStrng;
+     private String sbstncNclccdLgNcltdTpCcCdngCSstm;
+     private String sbstncNclccdLgNcltdTpCcCdngCVrsn;
+     private String sbstncNclccdLgNcltdTpCcCdngCCde;
+     private String sbstncNclccdLgNcltdTpCcCdngCDsplay;
+     private String sbstncNclccdLgNcltdTpCcCdngCSrSlctd;
+     private String sbstncNclccdLgNcltdTpCcTxt;
+     private String sbstncNclccdSbntSbntNtgr;
+     private String sbstncNclccdSbntSqncStrng;
+     private String sbstncNclccdSbntLngthNtgr;
+     private String sbstncNclccdSbntSqncttchmntTtchmntDta;
+     private String sbstncNclccdSbntSqncttchmntTtchmntHsh;
+     private String sbstncNclccdSbntSqncttchmntTtchmntCntntTpe;
+     private String sbstncNclccdSbntSqncttchmntTtchmntLngge;
+     private String sbstncNclccdSbntSqncttchmntTtchmntCrtn;
+     private String sbstncNclccdSbntSqncttchmntTtchmntTtle;
+     private String sbstncNclccdSbntSqncttchmntTtchmntSze;
+     private String sbstncNclccdSbntSqncttchmntTtchmntRl;
+     private String sbstncNclccdSbntFvPrmCcCdngCSstm;
+     private String sbstncNclccdSbntFvPrmCcCdngCVrsn;
+     private String sbstncNclccdSbntFvPrmCcCdngCCde;
+     private String sbstncNclccdSbntFvPrmCcCdngCDsplay;
+     private String sbstncNclccdSbntFvPrmCcCdngCSrSlctd;
+     private String sbstncNclccdSbntFvPrmCcTxt;
+     private String sbstncNclccdSbntThrPrmCcCdngCSstm;
+     private String sbstncNclccdSbntThrPrmCcCdngCVrsn;
+     private String sbstncNclccdSbntThrPrmCcCdngCCde;
+     private String sbstncNclccdSbntThrPrmCcCdngCDsplay;
+     private String sbstncNclccdSbntThrPrmCcCdngCSrSlctd;
+     private String sbstncNclccdSbntThrPrmCcTxt;
+     private String sbstncNclccdSbntLnkgCnnctvtStrng;
+     private String sbstncNclccdSbntLnkgDntfrDntfrSe;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd;
+     private String sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt;
+     private String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt;
+     private String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd;
+     private String sbstncNclccdSbntLnkgDntfrDntfrSsgnr;
+     private String sbstncNclccdSbntLnkgDntfrDntfrVlue;
+     private String sbstncNclccdSbntLnkgDntfrDntfrSstm;
+     private String sbstncNclccdSbntLnkgNmStrng;
+     private String sbstncNclccdSbntLnkgRsdStStrng;
+     private String sbstncNclccdSbntSgrDntfrDntfrSe;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcCCde;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd;
+     private String sbstncNclccdSbntSgrDntfrDntfrTpCcTxt;
+     private String sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt;
+     private String sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd;
+     private String sbstncNclccdSbntSgrDntfrDntfrSsgnr;
+     private String sbstncNclccdSbntSgrDntfrDntfrVlue;
+     private String sbstncNclccdSbntSgrDntfrDntfrSstm;
+     private String sbstncNclccdSbntSgrNmStrng;
+     private String sbstncNclccdSbntSgrRsdStStrng;
 
     public Substancenucleicacid() {
     }
 
-	
-    public Substancenucleicacid(String sbstncNclccdSqncTpCdngCde) {
-        this.sbstncNclccdSqncTpCdngCde = sbstncNclccdSqncTpCdngCde;
-    }
-    public Substancenucleicacid(String sbstncNclccdSqncTpCdngCde, String sbstncNclccdSqncTpCdngSrSlctd, String sbstncNclccdSqncTpCdngDsplay, String sbstncNclccdSqncTpCdngVrsn, String sbstncNclccdSqncTpCdngSstm, String sbstncNclccdNmbrfSbnts, String sbstncNclccdRfHbrdstn, String sbstncNclccdLgNcltdTpCdngSrSlctd, String sbstncNclccdLgNcltdTpCdngCde, String sbstncNclccdLgNcltdTpCdngDsplay, String sbstncNclccdLgNcltdTpCdngVrsn, String sbstncNclccdLgNcltdTpCdngSstm, String substanceNucleicAcidSubunit, String sbstncNclccdSbntSbnt, String sbstncNclccdSbntSqnce, String sbstncNclccdSbntLngth, String sbstncNclccdSbntSqncttchmntCdngSrSlctd, String sbstncNclccdSbntSqncttchmntCdngCde, String sbstncNclccdSbntSqncttchmntCdngDsplay, String sbstncNclccdSbntSqncttchmntCdngVrsn, String sbstncNclccdSbntSqncttchmntCdngSstm, String sbstncNclccdSbntFvPrmCdngSrSlctd, String sbstncNclccdSbntFvPrmCdngCde, String sbstncNclccdSbntFvPrmCdngDsplay, String sbstncNclccdSbntFvPrmCdngVrsn, String sbstncNclccdSbntFvPrmCdngSstm, String sbstncNclccdSbntThrPrmCdngSrSlctd, String sbstncNclccdSbntThrPrmCdngCde, String sbstncNclccdSbntThrPrmCdngDsplay, String sbstncNclccdSbntThrPrmCdngVrsn, String sbstncNclccdSbntThrPrmCdngSstm, String sbstncNclccdSbntLnkge, String sbstncNclccdSbntLnkgCnnctvty, String sbstncNclccdSbntLnkgDntfrCdngSrSlctd, String sbstncNclccdSbntLnkgDntfrCdngCde, String sbstncNclccdSbntLnkgDntfrCdngDsplay, String sbstncNclccdSbntLnkgDntfrCdngVrsn, String sbstncNclccdSbntLnkgDntfrCdngSstm, String sbstncNclccdSbntLnkgNme, String sbstncNclccdSbntLnkgRsdSte, String substanceNucleicAcidSubunitSugar, String sbstncNclccdSbntSgrDntfrCdngSrSlctd, String sbstncNclccdSbntSgrDntfrCdngCde, String sbstncNclccdSbntSgrDntfrCdngDsplay, String sbstncNclccdSbntSgrDntfrCdngVrsn, String sbstncNclccdSbntSgrDntfrCdngSstm, String sbstncNclccdSbntSgrNme, String sbstncNclccdSbntSgrRsdSte) {
-       this.sbstncNclccdSqncTpCdngCde = sbstncNclccdSqncTpCdngCde;
-       this.sbstncNclccdSqncTpCdngSrSlctd = sbstncNclccdSqncTpCdngSrSlctd;
-       this.sbstncNclccdSqncTpCdngDsplay = sbstncNclccdSqncTpCdngDsplay;
-       this.sbstncNclccdSqncTpCdngVrsn = sbstncNclccdSqncTpCdngVrsn;
-       this.sbstncNclccdSqncTpCdngSstm = sbstncNclccdSqncTpCdngSstm;
-       this.sbstncNclccdNmbrfSbnts = sbstncNclccdNmbrfSbnts;
-       this.sbstncNclccdRfHbrdstn = sbstncNclccdRfHbrdstn;
-       this.sbstncNclccdLgNcltdTpCdngSrSlctd = sbstncNclccdLgNcltdTpCdngSrSlctd;
-       this.sbstncNclccdLgNcltdTpCdngCde = sbstncNclccdLgNcltdTpCdngCde;
-       this.sbstncNclccdLgNcltdTpCdngDsplay = sbstncNclccdLgNcltdTpCdngDsplay;
-       this.sbstncNclccdLgNcltdTpCdngVrsn = sbstncNclccdLgNcltdTpCdngVrsn;
-       this.sbstncNclccdLgNcltdTpCdngSstm = sbstncNclccdLgNcltdTpCdngSstm;
-       this.substanceNucleicAcidSubunit = substanceNucleicAcidSubunit;
-       this.sbstncNclccdSbntSbnt = sbstncNclccdSbntSbnt;
-       this.sbstncNclccdSbntSqnce = sbstncNclccdSbntSqnce;
-       this.sbstncNclccdSbntLngth = sbstncNclccdSbntLngth;
-       this.sbstncNclccdSbntSqncttchmntCdngSrSlctd = sbstncNclccdSbntSqncttchmntCdngSrSlctd;
-       this.sbstncNclccdSbntSqncttchmntCdngCde = sbstncNclccdSbntSqncttchmntCdngCde;
-       this.sbstncNclccdSbntSqncttchmntCdngDsplay = sbstncNclccdSbntSqncttchmntCdngDsplay;
-       this.sbstncNclccdSbntSqncttchmntCdngVrsn = sbstncNclccdSbntSqncttchmntCdngVrsn;
-       this.sbstncNclccdSbntSqncttchmntCdngSstm = sbstncNclccdSbntSqncttchmntCdngSstm;
-       this.sbstncNclccdSbntFvPrmCdngSrSlctd = sbstncNclccdSbntFvPrmCdngSrSlctd;
-       this.sbstncNclccdSbntFvPrmCdngCde = sbstncNclccdSbntFvPrmCdngCde;
-       this.sbstncNclccdSbntFvPrmCdngDsplay = sbstncNclccdSbntFvPrmCdngDsplay;
-       this.sbstncNclccdSbntFvPrmCdngVrsn = sbstncNclccdSbntFvPrmCdngVrsn;
-       this.sbstncNclccdSbntFvPrmCdngSstm = sbstncNclccdSbntFvPrmCdngSstm;
-       this.sbstncNclccdSbntThrPrmCdngSrSlctd = sbstncNclccdSbntThrPrmCdngSrSlctd;
-       this.sbstncNclccdSbntThrPrmCdngCde = sbstncNclccdSbntThrPrmCdngCde;
-       this.sbstncNclccdSbntThrPrmCdngDsplay = sbstncNclccdSbntThrPrmCdngDsplay;
-       this.sbstncNclccdSbntThrPrmCdngVrsn = sbstncNclccdSbntThrPrmCdngVrsn;
-       this.sbstncNclccdSbntThrPrmCdngSstm = sbstncNclccdSbntThrPrmCdngSstm;
-       this.sbstncNclccdSbntLnkge = sbstncNclccdSbntLnkge;
-       this.sbstncNclccdSbntLnkgCnnctvty = sbstncNclccdSbntLnkgCnnctvty;
-       this.sbstncNclccdSbntLnkgDntfrCdngSrSlctd = sbstncNclccdSbntLnkgDntfrCdngSrSlctd;
-       this.sbstncNclccdSbntLnkgDntfrCdngCde = sbstncNclccdSbntLnkgDntfrCdngCde;
-       this.sbstncNclccdSbntLnkgDntfrCdngDsplay = sbstncNclccdSbntLnkgDntfrCdngDsplay;
-       this.sbstncNclccdSbntLnkgDntfrCdngVrsn = sbstncNclccdSbntLnkgDntfrCdngVrsn;
-       this.sbstncNclccdSbntLnkgDntfrCdngSstm = sbstncNclccdSbntLnkgDntfrCdngSstm;
-       this.sbstncNclccdSbntLnkgNme = sbstncNclccdSbntLnkgNme;
-       this.sbstncNclccdSbntLnkgRsdSte = sbstncNclccdSbntLnkgRsdSte;
-       this.substanceNucleicAcidSubunitSugar = substanceNucleicAcidSubunitSugar;
-       this.sbstncNclccdSbntSgrDntfrCdngSrSlctd = sbstncNclccdSbntSgrDntfrCdngSrSlctd;
-       this.sbstncNclccdSbntSgrDntfrCdngCde = sbstncNclccdSbntSgrDntfrCdngCde;
-       this.sbstncNclccdSbntSgrDntfrCdngDsplay = sbstncNclccdSbntSgrDntfrCdngDsplay;
-       this.sbstncNclccdSbntSgrDntfrCdngVrsn = sbstncNclccdSbntSgrDntfrCdngVrsn;
-       this.sbstncNclccdSbntSgrDntfrCdngSstm = sbstncNclccdSbntSgrDntfrCdngSstm;
-       this.sbstncNclccdSbntSgrNme = sbstncNclccdSbntSgrNme;
-       this.sbstncNclccdSbntSgrRsdSte = sbstncNclccdSbntSgrRsdSte;
+    public Substancenucleicacid(String sbstncNclccdSqncTpCcCdngCSstm, String sbstncNclccdSqncTpCcCdngCVrsn, String sbstncNclccdSqncTpCcCdngCCde, String sbstncNclccdSqncTpCcCdngCDsplay, String sbstncNclccdSqncTpCcCdngCSrSlctd, String sbstncNclccdSqncTpCcTxt, String sbstncNclccdNmbrfSbntsNtgr, String sbstncNclccdRfHbrdstnStrng, String sbstncNclccdLgNcltdTpCcCdngCSstm, String sbstncNclccdLgNcltdTpCcCdngCVrsn, String sbstncNclccdLgNcltdTpCcCdngCCde, String sbstncNclccdLgNcltdTpCcCdngCDsplay, String sbstncNclccdLgNcltdTpCcCdngCSrSlctd, String sbstncNclccdLgNcltdTpCcTxt, String sbstncNclccdSbntSbntNtgr, String sbstncNclccdSbntSqncStrng, String sbstncNclccdSbntLngthNtgr, String sbstncNclccdSbntSqncttchmntTtchmntDta, String sbstncNclccdSbntSqncttchmntTtchmntHsh, String sbstncNclccdSbntSqncttchmntTtchmntCntntTpe, String sbstncNclccdSbntSqncttchmntTtchmntLngge, String sbstncNclccdSbntSqncttchmntTtchmntCrtn, String sbstncNclccdSbntSqncttchmntTtchmntTtle, String sbstncNclccdSbntSqncttchmntTtchmntSze, String sbstncNclccdSbntSqncttchmntTtchmntRl, String sbstncNclccdSbntFvPrmCcCdngCSstm, String sbstncNclccdSbntFvPrmCcCdngCVrsn, String sbstncNclccdSbntFvPrmCcCdngCCde, String sbstncNclccdSbntFvPrmCcCdngCDsplay, String sbstncNclccdSbntFvPrmCcCdngCSrSlctd, String sbstncNclccdSbntFvPrmCcTxt, String sbstncNclccdSbntThrPrmCcCdngCSstm, String sbstncNclccdSbntThrPrmCcCdngCVrsn, String sbstncNclccdSbntThrPrmCcCdngCCde, String sbstncNclccdSbntThrPrmCcCdngCDsplay, String sbstncNclccdSbntThrPrmCcCdngCSrSlctd, String sbstncNclccdSbntThrPrmCcTxt, String sbstncNclccdSbntLnkgCnnctvtStrng, String sbstncNclccdSbntLnkgDntfrDntfrSe, String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm, String sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn, String sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde, String sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay, String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd, String sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt, String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt, String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd, String sbstncNclccdSbntLnkgDntfrDntfrSsgnr, String sbstncNclccdSbntLnkgDntfrDntfrVlue, String sbstncNclccdSbntLnkgDntfrDntfrSstm, String sbstncNclccdSbntLnkgNmStrng, String sbstncNclccdSbntLnkgRsdStStrng, String sbstncNclccdSbntSgrDntfrDntfrSe, String sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm, String sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn, String sbstncNclccdSbntSgrDntfrDntfrTpCcCCde, String sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay, String sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd, String sbstncNclccdSbntSgrDntfrDntfrTpCcTxt, String sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt, String sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd, String sbstncNclccdSbntSgrDntfrDntfrSsgnr, String sbstncNclccdSbntSgrDntfrDntfrVlue, String sbstncNclccdSbntSgrDntfrDntfrSstm, String sbstncNclccdSbntSgrNmStrng, String sbstncNclccdSbntSgrRsdStStrng) {
+       this.sbstncNclccdSqncTpCcCdngCSstm = sbstncNclccdSqncTpCcCdngCSstm;
+       this.sbstncNclccdSqncTpCcCdngCVrsn = sbstncNclccdSqncTpCcCdngCVrsn;
+       this.sbstncNclccdSqncTpCcCdngCCde = sbstncNclccdSqncTpCcCdngCCde;
+       this.sbstncNclccdSqncTpCcCdngCDsplay = sbstncNclccdSqncTpCcCdngCDsplay;
+       this.sbstncNclccdSqncTpCcCdngCSrSlctd = sbstncNclccdSqncTpCcCdngCSrSlctd;
+       this.sbstncNclccdSqncTpCcTxt = sbstncNclccdSqncTpCcTxt;
+       this.sbstncNclccdNmbrfSbntsNtgr = sbstncNclccdNmbrfSbntsNtgr;
+       this.sbstncNclccdRfHbrdstnStrng = sbstncNclccdRfHbrdstnStrng;
+       this.sbstncNclccdLgNcltdTpCcCdngCSstm = sbstncNclccdLgNcltdTpCcCdngCSstm;
+       this.sbstncNclccdLgNcltdTpCcCdngCVrsn = sbstncNclccdLgNcltdTpCcCdngCVrsn;
+       this.sbstncNclccdLgNcltdTpCcCdngCCde = sbstncNclccdLgNcltdTpCcCdngCCde;
+       this.sbstncNclccdLgNcltdTpCcCdngCDsplay = sbstncNclccdLgNcltdTpCcCdngCDsplay;
+       this.sbstncNclccdLgNcltdTpCcCdngCSrSlctd = sbstncNclccdLgNcltdTpCcCdngCSrSlctd;
+       this.sbstncNclccdLgNcltdTpCcTxt = sbstncNclccdLgNcltdTpCcTxt;
+       this.sbstncNclccdSbntSbntNtgr = sbstncNclccdSbntSbntNtgr;
+       this.sbstncNclccdSbntSqncStrng = sbstncNclccdSbntSqncStrng;
+       this.sbstncNclccdSbntLngthNtgr = sbstncNclccdSbntLngthNtgr;
+       this.sbstncNclccdSbntSqncttchmntTtchmntDta = sbstncNclccdSbntSqncttchmntTtchmntDta;
+       this.sbstncNclccdSbntSqncttchmntTtchmntHsh = sbstncNclccdSbntSqncttchmntTtchmntHsh;
+       this.sbstncNclccdSbntSqncttchmntTtchmntCntntTpe = sbstncNclccdSbntSqncttchmntTtchmntCntntTpe;
+       this.sbstncNclccdSbntSqncttchmntTtchmntLngge = sbstncNclccdSbntSqncttchmntTtchmntLngge;
+       this.sbstncNclccdSbntSqncttchmntTtchmntCrtn = sbstncNclccdSbntSqncttchmntTtchmntCrtn;
+       this.sbstncNclccdSbntSqncttchmntTtchmntTtle = sbstncNclccdSbntSqncttchmntTtchmntTtle;
+       this.sbstncNclccdSbntSqncttchmntTtchmntSze = sbstncNclccdSbntSqncttchmntTtchmntSze;
+       this.sbstncNclccdSbntSqncttchmntTtchmntRl = sbstncNclccdSbntSqncttchmntTtchmntRl;
+       this.sbstncNclccdSbntFvPrmCcCdngCSstm = sbstncNclccdSbntFvPrmCcCdngCSstm;
+       this.sbstncNclccdSbntFvPrmCcCdngCVrsn = sbstncNclccdSbntFvPrmCcCdngCVrsn;
+       this.sbstncNclccdSbntFvPrmCcCdngCCde = sbstncNclccdSbntFvPrmCcCdngCCde;
+       this.sbstncNclccdSbntFvPrmCcCdngCDsplay = sbstncNclccdSbntFvPrmCcCdngCDsplay;
+       this.sbstncNclccdSbntFvPrmCcCdngCSrSlctd = sbstncNclccdSbntFvPrmCcCdngCSrSlctd;
+       this.sbstncNclccdSbntFvPrmCcTxt = sbstncNclccdSbntFvPrmCcTxt;
+       this.sbstncNclccdSbntThrPrmCcCdngCSstm = sbstncNclccdSbntThrPrmCcCdngCSstm;
+       this.sbstncNclccdSbntThrPrmCcCdngCVrsn = sbstncNclccdSbntThrPrmCcCdngCVrsn;
+       this.sbstncNclccdSbntThrPrmCcCdngCCde = sbstncNclccdSbntThrPrmCcCdngCCde;
+       this.sbstncNclccdSbntThrPrmCcCdngCDsplay = sbstncNclccdSbntThrPrmCcCdngCDsplay;
+       this.sbstncNclccdSbntThrPrmCcCdngCSrSlctd = sbstncNclccdSbntThrPrmCcCdngCSrSlctd;
+       this.sbstncNclccdSbntThrPrmCcTxt = sbstncNclccdSbntThrPrmCcTxt;
+       this.sbstncNclccdSbntLnkgCnnctvtStrng = sbstncNclccdSbntLnkgCnnctvtStrng;
+       this.sbstncNclccdSbntLnkgDntfrDntfrSe = sbstncNclccdSbntLnkgDntfrDntfrSe;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm = sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn = sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde = sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay = sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd = sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd;
+       this.sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt = sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt;
+       this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt = sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt;
+       this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd = sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd;
+       this.sbstncNclccdSbntLnkgDntfrDntfrSsgnr = sbstncNclccdSbntLnkgDntfrDntfrSsgnr;
+       this.sbstncNclccdSbntLnkgDntfrDntfrVlue = sbstncNclccdSbntLnkgDntfrDntfrVlue;
+       this.sbstncNclccdSbntLnkgDntfrDntfrSstm = sbstncNclccdSbntLnkgDntfrDntfrSstm;
+       this.sbstncNclccdSbntLnkgNmStrng = sbstncNclccdSbntLnkgNmStrng;
+       this.sbstncNclccdSbntLnkgRsdStStrng = sbstncNclccdSbntLnkgRsdStStrng;
+       this.sbstncNclccdSbntSgrDntfrDntfrSe = sbstncNclccdSbntSgrDntfrDntfrSe;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm = sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn = sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcCCde = sbstncNclccdSbntSgrDntfrDntfrTpCcCCde;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay = sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd = sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd;
+       this.sbstncNclccdSbntSgrDntfrDntfrTpCcTxt = sbstncNclccdSbntSgrDntfrDntfrTpCcTxt;
+       this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt = sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt;
+       this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd = sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd;
+       this.sbstncNclccdSbntSgrDntfrDntfrSsgnr = sbstncNclccdSbntSgrDntfrDntfrSsgnr;
+       this.sbstncNclccdSbntSgrDntfrDntfrVlue = sbstncNclccdSbntSgrDntfrDntfrVlue;
+       this.sbstncNclccdSbntSgrDntfrDntfrSstm = sbstncNclccdSbntSgrDntfrDntfrSstm;
+       this.sbstncNclccdSbntSgrNmStrng = sbstncNclccdSbntSgrNmStrng;
+       this.sbstncNclccdSbntSgrRsdStStrng = sbstncNclccdSbntSgrRsdStStrng;
     }
    
-    public String getSbstncNclccdSqncTpCdngCde() {
-        return this.sbstncNclccdSqncTpCdngCde;
-    }
-    
-    public void setSbstncNclccdSqncTpCdngCde(String sbstncNclccdSqncTpCdngCde) {
-        this.sbstncNclccdSqncTpCdngCde = sbstncNclccdSqncTpCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSqncTpCdngSrSlctd() {
-        return this.sbstncNclccdSqncTpCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSqncTpCdngSrSlctd(String sbstncNclccdSqncTpCdngSrSlctd) {
-        this.sbstncNclccdSqncTpCdngSrSlctd = sbstncNclccdSqncTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSqncTpCdngDsplay() {
-        return this.sbstncNclccdSqncTpCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSqncTpCdngDsplay(String sbstncNclccdSqncTpCdngDsplay) {
-        this.sbstncNclccdSqncTpCdngDsplay = sbstncNclccdSqncTpCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSqncTpCdngVrsn() {
-        return this.sbstncNclccdSqncTpCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSqncTpCdngVrsn(String sbstncNclccdSqncTpCdngVrsn) {
-        this.sbstncNclccdSqncTpCdngVrsn = sbstncNclccdSqncTpCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSqncTpCdngSstm() {
-        return this.sbstncNclccdSqncTpCdngSstm;
-    }
-    
-    public void setSbstncNclccdSqncTpCdngSstm(String sbstncNclccdSqncTpCdngSstm) {
-        this.sbstncNclccdSqncTpCdngSstm = sbstncNclccdSqncTpCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdNmbrfSbnts() {
-        return this.sbstncNclccdNmbrfSbnts;
-    }
-    
-    public void setSbstncNclccdNmbrfSbnts(String sbstncNclccdNmbrfSbnts) {
-        this.sbstncNclccdNmbrfSbnts = sbstncNclccdNmbrfSbnts;
-    }
-    
-    
-    
-    public String getSbstncNclccdRfHbrdstn() {
-        return this.sbstncNclccdRfHbrdstn;
-    }
-    
-    public void setSbstncNclccdRfHbrdstn(String sbstncNclccdRfHbrdstn) {
-        this.sbstncNclccdRfHbrdstn = sbstncNclccdRfHbrdstn;
-    }
-    
-    
-    
-    public String getSbstncNclccdLgNcltdTpCdngSrSlctd() {
-        return this.sbstncNclccdLgNcltdTpCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdLgNcltdTpCdngSrSlctd(String sbstncNclccdLgNcltdTpCdngSrSlctd) {
-        this.sbstncNclccdLgNcltdTpCdngSrSlctd = sbstncNclccdLgNcltdTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdLgNcltdTpCdngCde() {
-        return this.sbstncNclccdLgNcltdTpCdngCde;
-    }
-    
-    public void setSbstncNclccdLgNcltdTpCdngCde(String sbstncNclccdLgNcltdTpCdngCde) {
-        this.sbstncNclccdLgNcltdTpCdngCde = sbstncNclccdLgNcltdTpCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdLgNcltdTpCdngDsplay() {
-        return this.sbstncNclccdLgNcltdTpCdngDsplay;
-    }
-    
-    public void setSbstncNclccdLgNcltdTpCdngDsplay(String sbstncNclccdLgNcltdTpCdngDsplay) {
-        this.sbstncNclccdLgNcltdTpCdngDsplay = sbstncNclccdLgNcltdTpCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdLgNcltdTpCdngVrsn() {
-        return this.sbstncNclccdLgNcltdTpCdngVrsn;
-    }
-    
-    public void setSbstncNclccdLgNcltdTpCdngVrsn(String sbstncNclccdLgNcltdTpCdngVrsn) {
-        this.sbstncNclccdLgNcltdTpCdngVrsn = sbstncNclccdLgNcltdTpCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdLgNcltdTpCdngSstm() {
-        return this.sbstncNclccdLgNcltdTpCdngSstm;
-    }
-    
-    public void setSbstncNclccdLgNcltdTpCdngSstm(String sbstncNclccdLgNcltdTpCdngSstm) {
-        this.sbstncNclccdLgNcltdTpCdngSstm = sbstncNclccdLgNcltdTpCdngSstm;
-    }
-    
-    
-    
-    public String getSubstanceNucleicAcidSubunit() {
-        return this.substanceNucleicAcidSubunit;
-    }
-    
-    public void setSubstanceNucleicAcidSubunit(String substanceNucleicAcidSubunit) {
-        this.substanceNucleicAcidSubunit = substanceNucleicAcidSubunit;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSbnt() {
-        return this.sbstncNclccdSbntSbnt;
-    }
-    
-    public void setSbstncNclccdSbntSbnt(String sbstncNclccdSbntSbnt) {
-        this.sbstncNclccdSbntSbnt = sbstncNclccdSbntSbnt;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqnce() {
-        return this.sbstncNclccdSbntSqnce;
-    }
-    
-    public void setSbstncNclccdSbntSqnce(String sbstncNclccdSbntSqnce) {
-        this.sbstncNclccdSbntSqnce = sbstncNclccdSbntSqnce;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLngth() {
-        return this.sbstncNclccdSbntLngth;
-    }
-    
-    public void setSbstncNclccdSbntLngth(String sbstncNclccdSbntLngth) {
-        this.sbstncNclccdSbntLngth = sbstncNclccdSbntLngth;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqncttchmntCdngSrSlctd() {
-        return this.sbstncNclccdSbntSqncttchmntCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSbntSqncttchmntCdngSrSlctd(String sbstncNclccdSbntSqncttchmntCdngSrSlctd) {
-        this.sbstncNclccdSbntSqncttchmntCdngSrSlctd = sbstncNclccdSbntSqncttchmntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqncttchmntCdngCde() {
-        return this.sbstncNclccdSbntSqncttchmntCdngCde;
-    }
-    
-    public void setSbstncNclccdSbntSqncttchmntCdngCde(String sbstncNclccdSbntSqncttchmntCdngCde) {
-        this.sbstncNclccdSbntSqncttchmntCdngCde = sbstncNclccdSbntSqncttchmntCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqncttchmntCdngDsplay() {
-        return this.sbstncNclccdSbntSqncttchmntCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSbntSqncttchmntCdngDsplay(String sbstncNclccdSbntSqncttchmntCdngDsplay) {
-        this.sbstncNclccdSbntSqncttchmntCdngDsplay = sbstncNclccdSbntSqncttchmntCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqncttchmntCdngVrsn() {
-        return this.sbstncNclccdSbntSqncttchmntCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSbntSqncttchmntCdngVrsn(String sbstncNclccdSbntSqncttchmntCdngVrsn) {
-        this.sbstncNclccdSbntSqncttchmntCdngVrsn = sbstncNclccdSbntSqncttchmntCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSqncttchmntCdngSstm() {
-        return this.sbstncNclccdSbntSqncttchmntCdngSstm;
-    }
-    
-    public void setSbstncNclccdSbntSqncttchmntCdngSstm(String sbstncNclccdSbntSqncttchmntCdngSstm) {
-        this.sbstncNclccdSbntSqncttchmntCdngSstm = sbstncNclccdSbntSqncttchmntCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntFvPrmCdngSrSlctd() {
-        return this.sbstncNclccdSbntFvPrmCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSbntFvPrmCdngSrSlctd(String sbstncNclccdSbntFvPrmCdngSrSlctd) {
-        this.sbstncNclccdSbntFvPrmCdngSrSlctd = sbstncNclccdSbntFvPrmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntFvPrmCdngCde() {
-        return this.sbstncNclccdSbntFvPrmCdngCde;
-    }
-    
-    public void setSbstncNclccdSbntFvPrmCdngCde(String sbstncNclccdSbntFvPrmCdngCde) {
-        this.sbstncNclccdSbntFvPrmCdngCde = sbstncNclccdSbntFvPrmCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntFvPrmCdngDsplay() {
-        return this.sbstncNclccdSbntFvPrmCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSbntFvPrmCdngDsplay(String sbstncNclccdSbntFvPrmCdngDsplay) {
-        this.sbstncNclccdSbntFvPrmCdngDsplay = sbstncNclccdSbntFvPrmCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntFvPrmCdngVrsn() {
-        return this.sbstncNclccdSbntFvPrmCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSbntFvPrmCdngVrsn(String sbstncNclccdSbntFvPrmCdngVrsn) {
-        this.sbstncNclccdSbntFvPrmCdngVrsn = sbstncNclccdSbntFvPrmCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntFvPrmCdngSstm() {
-        return this.sbstncNclccdSbntFvPrmCdngSstm;
-    }
-    
-    public void setSbstncNclccdSbntFvPrmCdngSstm(String sbstncNclccdSbntFvPrmCdngSstm) {
-        this.sbstncNclccdSbntFvPrmCdngSstm = sbstncNclccdSbntFvPrmCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntThrPrmCdngSrSlctd() {
-        return this.sbstncNclccdSbntThrPrmCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSbntThrPrmCdngSrSlctd(String sbstncNclccdSbntThrPrmCdngSrSlctd) {
-        this.sbstncNclccdSbntThrPrmCdngSrSlctd = sbstncNclccdSbntThrPrmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntThrPrmCdngCde() {
-        return this.sbstncNclccdSbntThrPrmCdngCde;
-    }
-    
-    public void setSbstncNclccdSbntThrPrmCdngCde(String sbstncNclccdSbntThrPrmCdngCde) {
-        this.sbstncNclccdSbntThrPrmCdngCde = sbstncNclccdSbntThrPrmCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntThrPrmCdngDsplay() {
-        return this.sbstncNclccdSbntThrPrmCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSbntThrPrmCdngDsplay(String sbstncNclccdSbntThrPrmCdngDsplay) {
-        this.sbstncNclccdSbntThrPrmCdngDsplay = sbstncNclccdSbntThrPrmCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntThrPrmCdngVrsn() {
-        return this.sbstncNclccdSbntThrPrmCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSbntThrPrmCdngVrsn(String sbstncNclccdSbntThrPrmCdngVrsn) {
-        this.sbstncNclccdSbntThrPrmCdngVrsn = sbstncNclccdSbntThrPrmCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntThrPrmCdngSstm() {
-        return this.sbstncNclccdSbntThrPrmCdngSstm;
-    }
-    
-    public void setSbstncNclccdSbntThrPrmCdngSstm(String sbstncNclccdSbntThrPrmCdngSstm) {
-        this.sbstncNclccdSbntThrPrmCdngSstm = sbstncNclccdSbntThrPrmCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkge() {
-        return this.sbstncNclccdSbntLnkge;
-    }
-    
-    public void setSbstncNclccdSbntLnkge(String sbstncNclccdSbntLnkge) {
-        this.sbstncNclccdSbntLnkge = sbstncNclccdSbntLnkge;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgCnnctvty() {
-        return this.sbstncNclccdSbntLnkgCnnctvty;
-    }
-    
-    public void setSbstncNclccdSbntLnkgCnnctvty(String sbstncNclccdSbntLnkgCnnctvty) {
-        this.sbstncNclccdSbntLnkgCnnctvty = sbstncNclccdSbntLnkgCnnctvty;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgDntfrCdngSrSlctd() {
-        return this.sbstncNclccdSbntLnkgDntfrCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSbntLnkgDntfrCdngSrSlctd(String sbstncNclccdSbntLnkgDntfrCdngSrSlctd) {
-        this.sbstncNclccdSbntLnkgDntfrCdngSrSlctd = sbstncNclccdSbntLnkgDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgDntfrCdngCde() {
-        return this.sbstncNclccdSbntLnkgDntfrCdngCde;
-    }
-    
-    public void setSbstncNclccdSbntLnkgDntfrCdngCde(String sbstncNclccdSbntLnkgDntfrCdngCde) {
-        this.sbstncNclccdSbntLnkgDntfrCdngCde = sbstncNclccdSbntLnkgDntfrCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgDntfrCdngDsplay() {
-        return this.sbstncNclccdSbntLnkgDntfrCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSbntLnkgDntfrCdngDsplay(String sbstncNclccdSbntLnkgDntfrCdngDsplay) {
-        this.sbstncNclccdSbntLnkgDntfrCdngDsplay = sbstncNclccdSbntLnkgDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgDntfrCdngVrsn() {
-        return this.sbstncNclccdSbntLnkgDntfrCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSbntLnkgDntfrCdngVrsn(String sbstncNclccdSbntLnkgDntfrCdngVrsn) {
-        this.sbstncNclccdSbntLnkgDntfrCdngVrsn = sbstncNclccdSbntLnkgDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgDntfrCdngSstm() {
-        return this.sbstncNclccdSbntLnkgDntfrCdngSstm;
-    }
-    
-    public void setSbstncNclccdSbntLnkgDntfrCdngSstm(String sbstncNclccdSbntLnkgDntfrCdngSstm) {
-        this.sbstncNclccdSbntLnkgDntfrCdngSstm = sbstncNclccdSbntLnkgDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgNme() {
-        return this.sbstncNclccdSbntLnkgNme;
-    }
-    
-    public void setSbstncNclccdSbntLnkgNme(String sbstncNclccdSbntLnkgNme) {
-        this.sbstncNclccdSbntLnkgNme = sbstncNclccdSbntLnkgNme;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntLnkgRsdSte() {
-        return this.sbstncNclccdSbntLnkgRsdSte;
-    }
-    
-    public void setSbstncNclccdSbntLnkgRsdSte(String sbstncNclccdSbntLnkgRsdSte) {
-        this.sbstncNclccdSbntLnkgRsdSte = sbstncNclccdSbntLnkgRsdSte;
-    }
-    
-    
-    
-    public String getSubstanceNucleicAcidSubunitSugar() {
-        return this.substanceNucleicAcidSubunitSugar;
-    }
-    
-    public void setSubstanceNucleicAcidSubunitSugar(String substanceNucleicAcidSubunitSugar) {
-        this.substanceNucleicAcidSubunitSugar = substanceNucleicAcidSubunitSugar;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrDntfrCdngSrSlctd() {
-        return this.sbstncNclccdSbntSgrDntfrCdngSrSlctd;
-    }
-    
-    public void setSbstncNclccdSbntSgrDntfrCdngSrSlctd(String sbstncNclccdSbntSgrDntfrCdngSrSlctd) {
-        this.sbstncNclccdSbntSgrDntfrCdngSrSlctd = sbstncNclccdSbntSgrDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrDntfrCdngCde() {
-        return this.sbstncNclccdSbntSgrDntfrCdngCde;
-    }
-    
-    public void setSbstncNclccdSbntSgrDntfrCdngCde(String sbstncNclccdSbntSgrDntfrCdngCde) {
-        this.sbstncNclccdSbntSgrDntfrCdngCde = sbstncNclccdSbntSgrDntfrCdngCde;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrDntfrCdngDsplay() {
-        return this.sbstncNclccdSbntSgrDntfrCdngDsplay;
-    }
-    
-    public void setSbstncNclccdSbntSgrDntfrCdngDsplay(String sbstncNclccdSbntSgrDntfrCdngDsplay) {
-        this.sbstncNclccdSbntSgrDntfrCdngDsplay = sbstncNclccdSbntSgrDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrDntfrCdngVrsn() {
-        return this.sbstncNclccdSbntSgrDntfrCdngVrsn;
-    }
-    
-    public void setSbstncNclccdSbntSgrDntfrCdngVrsn(String sbstncNclccdSbntSgrDntfrCdngVrsn) {
-        this.sbstncNclccdSbntSgrDntfrCdngVrsn = sbstncNclccdSbntSgrDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrDntfrCdngSstm() {
-        return this.sbstncNclccdSbntSgrDntfrCdngSstm;
-    }
-    
-    public void setSbstncNclccdSbntSgrDntfrCdngSstm(String sbstncNclccdSbntSgrDntfrCdngSstm) {
-        this.sbstncNclccdSbntSgrDntfrCdngSstm = sbstncNclccdSbntSgrDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrNme() {
-        return this.sbstncNclccdSbntSgrNme;
-    }
-    
-    public void setSbstncNclccdSbntSgrNme(String sbstncNclccdSbntSgrNme) {
-        this.sbstncNclccdSbntSgrNme = sbstncNclccdSbntSgrNme;
-    }
-    
-    
-    
-    public String getSbstncNclccdSbntSgrRsdSte() {
-        return this.sbstncNclccdSbntSgrRsdSte;
-    }
-    
-    public void setSbstncNclccdSbntSgrRsdSte(String sbstncNclccdSbntSgrRsdSte) {
-        this.sbstncNclccdSbntSgrRsdSte = sbstncNclccdSbntSgrRsdSte;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcCdngCSstm()
+    {
+        return this.sbstncNclccdSqncTpCcCdngCSstm;
+    }
+    
+    public void setSbstncNclccdSqncTpCcCdngCSstm
+        (String sbstncNclccdSqncTpCcCdngCSstm) 
+        {
+      this.sbstncNclccdSqncTpCcCdngCSstm = sbstncNclccdSqncTpCcCdngCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcCdngCVrsn()
+    {
+        return this.sbstncNclccdSqncTpCcCdngCVrsn;
+    }
+    
+    public void setSbstncNclccdSqncTpCcCdngCVrsn
+        (String sbstncNclccdSqncTpCcCdngCVrsn) 
+        {
+      this.sbstncNclccdSqncTpCcCdngCVrsn = sbstncNclccdSqncTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcCdngCCde()
+    {
+        return this.sbstncNclccdSqncTpCcCdngCCde;
+    }
+    
+    public void setSbstncNclccdSqncTpCcCdngCCde
+        (String sbstncNclccdSqncTpCcCdngCCde) 
+        {
+      this.sbstncNclccdSqncTpCcCdngCCde = sbstncNclccdSqncTpCcCdngCCde;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcCdngCDsplay()
+    {
+        return this.sbstncNclccdSqncTpCcCdngCDsplay;
+    }
+    
+    public void setSbstncNclccdSqncTpCcCdngCDsplay
+        (String sbstncNclccdSqncTpCcCdngCDsplay) 
+        {
+      this.sbstncNclccdSqncTpCcCdngCDsplay = sbstncNclccdSqncTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcCdngCSrSlctd()
+    {
+        return this.sbstncNclccdSqncTpCcCdngCSrSlctd;
+    }
+    
+    public void setSbstncNclccdSqncTpCcCdngCSrSlctd
+        (String sbstncNclccdSqncTpCcCdngCSrSlctd) 
+        {
+      this.sbstncNclccdSqncTpCcCdngCSrSlctd = sbstncNclccdSqncTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdSqncTpCcTxt()
+    {
+        return this.sbstncNclccdSqncTpCcTxt;
+    }
+    
+    public void setSbstncNclccdSqncTpCcTxt
+        (String sbstncNclccdSqncTpCcTxt) 
+        {
+      this.sbstncNclccdSqncTpCcTxt = sbstncNclccdSqncTpCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdNmbrfSbntsNtgr()
+    {
+        return this.sbstncNclccdNmbrfSbntsNtgr;
+    }
+    
+    public void setSbstncNclccdNmbrfSbntsNtgr
+        (String sbstncNclccdNmbrfSbntsNtgr) 
+        {
+      this.sbstncNclccdNmbrfSbntsNtgr = sbstncNclccdNmbrfSbntsNtgr;
+}
+    public 
+    String 
+    getSbstncNclccdRfHbrdstnStrng()
+    {
+        return this.sbstncNclccdRfHbrdstnStrng;
+    }
+    
+    public void setSbstncNclccdRfHbrdstnStrng
+        (String sbstncNclccdRfHbrdstnStrng) 
+        {
+      this.sbstncNclccdRfHbrdstnStrng = sbstncNclccdRfHbrdstnStrng;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcCdngCSstm()
+    {
+        return this.sbstncNclccdLgNcltdTpCcCdngCSstm;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcCdngCSstm
+        (String sbstncNclccdLgNcltdTpCcCdngCSstm) 
+        {
+      this.sbstncNclccdLgNcltdTpCcCdngCSstm = sbstncNclccdLgNcltdTpCcCdngCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcCdngCVrsn()
+    {
+        return this.sbstncNclccdLgNcltdTpCcCdngCVrsn;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcCdngCVrsn
+        (String sbstncNclccdLgNcltdTpCcCdngCVrsn) 
+        {
+      this.sbstncNclccdLgNcltdTpCcCdngCVrsn = sbstncNclccdLgNcltdTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcCdngCCde()
+    {
+        return this.sbstncNclccdLgNcltdTpCcCdngCCde;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcCdngCCde
+        (String sbstncNclccdLgNcltdTpCcCdngCCde) 
+        {
+      this.sbstncNclccdLgNcltdTpCcCdngCCde = sbstncNclccdLgNcltdTpCcCdngCCde;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcCdngCDsplay()
+    {
+        return this.sbstncNclccdLgNcltdTpCcCdngCDsplay;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcCdngCDsplay
+        (String sbstncNclccdLgNcltdTpCcCdngCDsplay) 
+        {
+      this.sbstncNclccdLgNcltdTpCcCdngCDsplay = sbstncNclccdLgNcltdTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcCdngCSrSlctd()
+    {
+        return this.sbstncNclccdLgNcltdTpCcCdngCSrSlctd;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcCdngCSrSlctd
+        (String sbstncNclccdLgNcltdTpCcCdngCSrSlctd) 
+        {
+      this.sbstncNclccdLgNcltdTpCcCdngCSrSlctd = sbstncNclccdLgNcltdTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdLgNcltdTpCcTxt()
+    {
+        return this.sbstncNclccdLgNcltdTpCcTxt;
+    }
+    
+    public void setSbstncNclccdLgNcltdTpCcTxt
+        (String sbstncNclccdLgNcltdTpCcTxt) 
+        {
+      this.sbstncNclccdLgNcltdTpCcTxt = sbstncNclccdLgNcltdTpCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSbntNtgr()
+    {
+        return this.sbstncNclccdSbntSbntNtgr;
+    }
+    
+    public void setSbstncNclccdSbntSbntNtgr
+        (String sbstncNclccdSbntSbntNtgr) 
+        {
+      this.sbstncNclccdSbntSbntNtgr = sbstncNclccdSbntSbntNtgr;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncStrng()
+    {
+        return this.sbstncNclccdSbntSqncStrng;
+    }
+    
+    public void setSbstncNclccdSbntSqncStrng
+        (String sbstncNclccdSbntSqncStrng) 
+        {
+      this.sbstncNclccdSbntSqncStrng = sbstncNclccdSbntSqncStrng;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLngthNtgr()
+    {
+        return this.sbstncNclccdSbntLngthNtgr;
+    }
+    
+    public void setSbstncNclccdSbntLngthNtgr
+        (String sbstncNclccdSbntLngthNtgr) 
+        {
+      this.sbstncNclccdSbntLngthNtgr = sbstncNclccdSbntLngthNtgr;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntDta()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntDta;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntDta
+        (String sbstncNclccdSbntSqncttchmntTtchmntDta) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntDta = sbstncNclccdSbntSqncttchmntTtchmntDta;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntHsh()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntHsh;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntHsh
+        (String sbstncNclccdSbntSqncttchmntTtchmntHsh) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntHsh = sbstncNclccdSbntSqncttchmntTtchmntHsh;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntCntntTpe()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntCntntTpe;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntCntntTpe
+        (String sbstncNclccdSbntSqncttchmntTtchmntCntntTpe) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntCntntTpe = sbstncNclccdSbntSqncttchmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntLngge()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntLngge;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntLngge
+        (String sbstncNclccdSbntSqncttchmntTtchmntLngge) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntLngge = sbstncNclccdSbntSqncttchmntTtchmntLngge;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntCrtn()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntCrtn;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntCrtn
+        (String sbstncNclccdSbntSqncttchmntTtchmntCrtn) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntCrtn = sbstncNclccdSbntSqncttchmntTtchmntCrtn;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntTtle()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntTtle;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntTtle
+        (String sbstncNclccdSbntSqncttchmntTtchmntTtle) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntTtle = sbstncNclccdSbntSqncttchmntTtchmntTtle;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntSze()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntSze;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntSze
+        (String sbstncNclccdSbntSqncttchmntTtchmntSze) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntSze = sbstncNclccdSbntSqncttchmntTtchmntSze;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSqncttchmntTtchmntRl()
+    {
+        return this.sbstncNclccdSbntSqncttchmntTtchmntRl;
+    }
+    
+    public void setSbstncNclccdSbntSqncttchmntTtchmntRl
+        (String sbstncNclccdSbntSqncttchmntTtchmntRl) 
+        {
+      this.sbstncNclccdSbntSqncttchmntTtchmntRl = sbstncNclccdSbntSqncttchmntTtchmntRl;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcCdngCSstm()
+    {
+        return this.sbstncNclccdSbntFvPrmCcCdngCSstm;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcCdngCSstm
+        (String sbstncNclccdSbntFvPrmCcCdngCSstm) 
+        {
+      this.sbstncNclccdSbntFvPrmCcCdngCSstm = sbstncNclccdSbntFvPrmCcCdngCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcCdngCVrsn()
+    {
+        return this.sbstncNclccdSbntFvPrmCcCdngCVrsn;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcCdngCVrsn
+        (String sbstncNclccdSbntFvPrmCcCdngCVrsn) 
+        {
+      this.sbstncNclccdSbntFvPrmCcCdngCVrsn = sbstncNclccdSbntFvPrmCcCdngCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcCdngCCde()
+    {
+        return this.sbstncNclccdSbntFvPrmCcCdngCCde;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcCdngCCde
+        (String sbstncNclccdSbntFvPrmCcCdngCCde) 
+        {
+      this.sbstncNclccdSbntFvPrmCcCdngCCde = sbstncNclccdSbntFvPrmCcCdngCCde;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcCdngCDsplay()
+    {
+        return this.sbstncNclccdSbntFvPrmCcCdngCDsplay;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcCdngCDsplay
+        (String sbstncNclccdSbntFvPrmCcCdngCDsplay) 
+        {
+      this.sbstncNclccdSbntFvPrmCcCdngCDsplay = sbstncNclccdSbntFvPrmCcCdngCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcCdngCSrSlctd()
+    {
+        return this.sbstncNclccdSbntFvPrmCcCdngCSrSlctd;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcCdngCSrSlctd
+        (String sbstncNclccdSbntFvPrmCcCdngCSrSlctd) 
+        {
+      this.sbstncNclccdSbntFvPrmCcCdngCSrSlctd = sbstncNclccdSbntFvPrmCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntFvPrmCcTxt()
+    {
+        return this.sbstncNclccdSbntFvPrmCcTxt;
+    }
+    
+    public void setSbstncNclccdSbntFvPrmCcTxt
+        (String sbstncNclccdSbntFvPrmCcTxt) 
+        {
+      this.sbstncNclccdSbntFvPrmCcTxt = sbstncNclccdSbntFvPrmCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcCdngCSstm()
+    {
+        return this.sbstncNclccdSbntThrPrmCcCdngCSstm;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcCdngCSstm
+        (String sbstncNclccdSbntThrPrmCcCdngCSstm) 
+        {
+      this.sbstncNclccdSbntThrPrmCcCdngCSstm = sbstncNclccdSbntThrPrmCcCdngCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcCdngCVrsn()
+    {
+        return this.sbstncNclccdSbntThrPrmCcCdngCVrsn;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcCdngCVrsn
+        (String sbstncNclccdSbntThrPrmCcCdngCVrsn) 
+        {
+      this.sbstncNclccdSbntThrPrmCcCdngCVrsn = sbstncNclccdSbntThrPrmCcCdngCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcCdngCCde()
+    {
+        return this.sbstncNclccdSbntThrPrmCcCdngCCde;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcCdngCCde
+        (String sbstncNclccdSbntThrPrmCcCdngCCde) 
+        {
+      this.sbstncNclccdSbntThrPrmCcCdngCCde = sbstncNclccdSbntThrPrmCcCdngCCde;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcCdngCDsplay()
+    {
+        return this.sbstncNclccdSbntThrPrmCcCdngCDsplay;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcCdngCDsplay
+        (String sbstncNclccdSbntThrPrmCcCdngCDsplay) 
+        {
+      this.sbstncNclccdSbntThrPrmCcCdngCDsplay = sbstncNclccdSbntThrPrmCcCdngCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcCdngCSrSlctd()
+    {
+        return this.sbstncNclccdSbntThrPrmCcCdngCSrSlctd;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcCdngCSrSlctd
+        (String sbstncNclccdSbntThrPrmCcCdngCSrSlctd) 
+        {
+      this.sbstncNclccdSbntThrPrmCcCdngCSrSlctd = sbstncNclccdSbntThrPrmCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntThrPrmCcTxt()
+    {
+        return this.sbstncNclccdSbntThrPrmCcTxt;
+    }
+    
+    public void setSbstncNclccdSbntThrPrmCcTxt
+        (String sbstncNclccdSbntThrPrmCcTxt) 
+        {
+      this.sbstncNclccdSbntThrPrmCcTxt = sbstncNclccdSbntThrPrmCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgCnnctvtStrng()
+    {
+        return this.sbstncNclccdSbntLnkgCnnctvtStrng;
+    }
+    
+    public void setSbstncNclccdSbntLnkgCnnctvtStrng
+        (String sbstncNclccdSbntLnkgCnnctvtStrng) 
+        {
+      this.sbstncNclccdSbntLnkgCnnctvtStrng = sbstncNclccdSbntLnkgCnnctvtStrng;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrSe()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrSe;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrSe
+        (String sbstncNclccdSbntLnkgDntfrDntfrSe) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrSe = sbstncNclccdSbntLnkgDntfrDntfrSe;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm = sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn = sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcCCde()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcCCde
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde = sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay = sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd = sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrTpCcTxt()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrTpCcTxt
+        (String sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt = sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt
+        (String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt = sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd
+        (String sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd = sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrSsgnr()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrSsgnr;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrSsgnr
+        (String sbstncNclccdSbntLnkgDntfrDntfrSsgnr) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrSsgnr = sbstncNclccdSbntLnkgDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrVlue()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrVlue;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrVlue
+        (String sbstncNclccdSbntLnkgDntfrDntfrVlue) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrVlue = sbstncNclccdSbntLnkgDntfrDntfrVlue;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgDntfrDntfrSstm()
+    {
+        return this.sbstncNclccdSbntLnkgDntfrDntfrSstm;
+    }
+    
+    public void setSbstncNclccdSbntLnkgDntfrDntfrSstm
+        (String sbstncNclccdSbntLnkgDntfrDntfrSstm) 
+        {
+      this.sbstncNclccdSbntLnkgDntfrDntfrSstm = sbstncNclccdSbntLnkgDntfrDntfrSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgNmStrng()
+    {
+        return this.sbstncNclccdSbntLnkgNmStrng;
+    }
+    
+    public void setSbstncNclccdSbntLnkgNmStrng
+        (String sbstncNclccdSbntLnkgNmStrng) 
+        {
+      this.sbstncNclccdSbntLnkgNmStrng = sbstncNclccdSbntLnkgNmStrng;
+}
+    public 
+    String 
+    getSbstncNclccdSbntLnkgRsdStStrng()
+    {
+        return this.sbstncNclccdSbntLnkgRsdStStrng;
+    }
+    
+    public void setSbstncNclccdSbntLnkgRsdStStrng
+        (String sbstncNclccdSbntLnkgRsdStStrng) 
+        {
+      this.sbstncNclccdSbntLnkgRsdStStrng = sbstncNclccdSbntLnkgRsdStStrng;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrSe()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrSe;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrSe
+        (String sbstncNclccdSbntSgrDntfrDntfrSe) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrSe = sbstncNclccdSbntSgrDntfrDntfrSe;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcCSstm()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcCSstm
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm = sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn = sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcCCde()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcCCde;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcCCde
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcCCde) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcCCde = sbstncNclccdSbntSgrDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay = sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd = sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrTpCcTxt()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrTpCcTxt;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrTpCcTxt
+        (String sbstncNclccdSbntSgrDntfrDntfrTpCcTxt) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrTpCcTxt = sbstncNclccdSbntSgrDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt
+        (String sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt = sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrPrdPrdNd()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrPrdPrdNd
+        (String sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd = sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrSsgnr()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrSsgnr;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrSsgnr
+        (String sbstncNclccdSbntSgrDntfrDntfrSsgnr) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrSsgnr = sbstncNclccdSbntSgrDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrVlue()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrVlue;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrVlue
+        (String sbstncNclccdSbntSgrDntfrDntfrVlue) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrVlue = sbstncNclccdSbntSgrDntfrDntfrVlue;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrDntfrDntfrSstm()
+    {
+        return this.sbstncNclccdSbntSgrDntfrDntfrSstm;
+    }
+    
+    public void setSbstncNclccdSbntSgrDntfrDntfrSstm
+        (String sbstncNclccdSbntSgrDntfrDntfrSstm) 
+        {
+      this.sbstncNclccdSbntSgrDntfrDntfrSstm = sbstncNclccdSbntSgrDntfrDntfrSstm;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrNmStrng()
+    {
+        return this.sbstncNclccdSbntSgrNmStrng;
+    }
+    
+    public void setSbstncNclccdSbntSgrNmStrng
+        (String sbstncNclccdSbntSgrNmStrng) 
+        {
+      this.sbstncNclccdSbntSgrNmStrng = sbstncNclccdSbntSgrNmStrng;
+}
+    public 
+    String 
+    getSbstncNclccdSbntSgrRsdStStrng()
+    {
+        return this.sbstncNclccdSbntSgrRsdStStrng;
+    }
+    
+    public void setSbstncNclccdSbntSgrRsdStStrng
+        (String sbstncNclccdSbntSgrRsdStStrng) 
+        {
+      this.sbstncNclccdSbntSgrRsdStStrng = sbstncNclccdSbntSgrRsdStStrng;
+}
 
 
 

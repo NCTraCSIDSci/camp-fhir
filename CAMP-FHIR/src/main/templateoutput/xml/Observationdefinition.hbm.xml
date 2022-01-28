@@ -1,417 +1,441 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Observationdefinition" optimistic-lock="none" table="observationdefinition">
-        <id name="obsrvtnDfntnCtgrCdngCde" type="string">
-            <column length="512" name="ObsrvtnDfntn_ctgr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="obsrvtnDfntnCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="ObsrvtnDfntn_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="ObsrvtnDfntn_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="ObsrvtnDfntn_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="ObsrvtnDfntn_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnCtgrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="512" name="ObsrvtnDfntn_ctgr_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="observationDefinitionCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="ObservationDefinition_code_CC_text">
+                <comment>{ "tree" :"ObservationDefinition.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnPrmttdDtTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ObsrvtnDfntn_prmttdDtTpe">
-                <comment>code</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMltplRsltsllwd" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="ObsrvtnDfntn_mltplRsltsllwd">
-                <comment>boolean</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMthdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_mthd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMthdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_mthd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMthdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_mthd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMthdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_mthd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnMthdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_mthd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnPrfrrdRprtNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ObsrvtnDfntn_prfrrdRprtNme">
-                <comment>string</comment>
+        <property name="obsrvtnDfntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtls" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls">
-                <comment>BackboneElement</comment>
+        <property name="obsrvtnDfntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCstmrntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"ObservationDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCstmrntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnPrmttdDtTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.permittedDataType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPermittedDataType"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_prmttdDtTp_cde">
+                <comment>{ "tree" :"ObservationDefinition.permittedDataType", "datatype" : "code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPermittedDataType"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCstmrntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnMltplRsltsllwdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.multipleResultsAllowed", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleResultsAllowed"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mltplRsltsllwd_bln">
+                <comment>{ "tree" :"ObservationDefinition.multipleResultsAllowed", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMultipleResultsAllowed"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCstmrntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnMthdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCstmrntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnMthdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsNtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnMthdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsNtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnMthdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsNtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnMthdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsNtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnMthdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_mthd_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.method", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMethod, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsNtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnPrfrrdRprtNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.preferredReportName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPreferredReportName"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_prfrrdRprtNm_strng">
+                <comment>{ "tree" :"ObservationDefinition.preferredReportName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPreferredReportName"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsCnvrsnFctr" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cnvrsnFctr">
-                <comment>decimal</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQntttvDtlsDcmlPrcsn" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_dcmlPrcsn">
-                <comment>integer</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvl" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl">
-                <comment>BackboneElement</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCtgry" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_ctgry">
-                <comment>code</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlRngCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlRngCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCstmrntCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cstmrnt_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.customaryUnit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setCustomaryUnit, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlRngCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlRngCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlRngCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCntxtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCntxtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCntxtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnQntttvDtlsNtCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_nt_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setUnit, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCntxtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnQntttvDtlsCnvrsnFctrDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.conversionFactor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setConversionFactor"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_cnvrsnFctr_dcml">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.conversionFactor", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setConversionFactor"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCntxtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnQntttvDtlsDcmlPrcsnNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.quantitativeDetails.decimalPrecision", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setDecimalPrecision"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qntttvDtls_dcmlPrcsn_ntgr">
+                <comment>{ "tree" :"ObservationDefinition.quantitativeDetails.decimalPrecision", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["setQuantitativeDetails"] , "methodName" : "setDecimalPrecision"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlPplsTCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCtgrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.category", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setCategory"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_ctgr_cde">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.category", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setCategory"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlPplsTCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnQlfdntrvlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.range", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setRange, setLow"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Rng_lw">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.range", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setRange, setLow"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlPplsTCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnQlfdntrvlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.range", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setRange, setHigh"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_rng_Rng_hgh">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.range", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlPplsTCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlPplsTCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGndr" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gndr">
-                <comment>code</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCntxtCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cntxt_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.context", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setContext, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setSystem"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_cdng_C_sstm">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setVersion"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGsttnlgCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setCode"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_cdng_C_cde">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGsttnlgCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setDisplay"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGsttnlgCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGsttnlgCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="obsrvtnDfntnQlfdntrvlPplsTCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, setText"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_pplsT_CC_txt">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.appliesTo", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addQualifiedInterval"] , "methodName" : "addAppliesTo, setText"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlGsttnlgCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="obsrvtnDfntnQlfdntrvlGndrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGender"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gndr_cde">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.gender", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGender"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnQlfdntrvlCndtn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cndtn">
-                <comment>string</comment>
+        <property name="obsrvtnDfntnQlfdntrvlGRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.age", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setAge, setLow"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Rng_lw">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.age", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setAge, setLow"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnVldCddVlSt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ObsrvtnDfntn_vldCddVlSt">
-                <comment>Reference</comment>
+        <property name="obsrvtnDfntnQlfdntrvlGRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.age", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setAge, setHigh"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_g_Rng_hgh">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.age", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setAge, setHigh"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnNrmlCddVlSt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ObsrvtnDfntn_nrmlCddVlSt">
-                <comment>Reference</comment>
+        <property name="obsrvtnDfntnQlfdntrvlGsttnlgRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.gestationalAge", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGestationalAge, setLow"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Rng_lw">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.gestationalAge", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGestationalAge, setLow"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnBnrmlCddVlSt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ObsrvtnDfntn_bnrmlCddVlSt">
-                <comment>Reference</comment>
+        <property name="obsrvtnDfntnQlfdntrvlGsttnlgRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.gestationalAge", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGestationalAge, setHigh"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_gsttnlg_Rng_hgh">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.gestationalAge", "datatype" : "Range, SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setGestationalAge, setHigh"}</comment>
             </column>
         </property>
-        <property name="obsrvtnDfntnCrtclCddVlSt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="ObsrvtnDfntn_crtclCddVlSt">
-                <comment>Reference</comment>
+        <property name="obsrvtnDfntnQlfdntrvlCndtnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.qualifiedInterval.condition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setCondition"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_qlfdntrvl_cndtn_strng">
+                <comment>{ "tree" :"ObservationDefinition.qualifiedInterval.condition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addQualifiedInterval"] , "methodName" : "setCondition"}</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDfntnVldCddVlStRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.validCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidCodedValueSet"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_vldCddVlSt_Rfrnce">
+                <comment>{ "tree" :"ObservationDefinition.validCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidCodedValueSet"}</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDfntnNrmlCddVlStRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.normalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNormalCodedValueSet"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_nrmlCddVlSt_Rfrnce">
+                <comment>{ "tree" :"ObservationDefinition.normalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNormalCodedValueSet"}</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDfntnBnrmlCddVlStRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.abnormalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbnormalCodedValueSet"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_bnrmlCddVlSt_Rfrnce">
+                <comment>{ "tree" :"ObservationDefinition.abnormalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAbnormalCodedValueSet"}</comment>
+            </column>
+        </property>
+        <property name="obsrvtnDfntnCrtclCddVlStRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"ObservationDefinition.criticalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCriticalCodedValueSet"}</meta>
+            <column length="65535" name="ObsrvtnDfntn_crtclCddVlSt_Rfrnce">
+                <comment>{ "tree" :"ObservationDefinition.criticalCodedValueSet", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCriticalCodedValueSet"}</comment>
             </column>
         </property>
     </class>

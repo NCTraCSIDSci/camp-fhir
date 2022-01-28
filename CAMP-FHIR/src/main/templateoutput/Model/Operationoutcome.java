@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,149 +10,180 @@ package main.templateoutput.Model;
 public class Operationoutcome  implements java.io.Serializable {
 
 
-     private String operationOutcomeIssueSeverity;
-     private String operationOutcomeIssueCode;
-     private String oprtntcmSsDtlsCdblCncptCdngSstm;
-     private String oprtntcmSsDtlsCdblCncptCdngVrsn;
-     private String oprtntcmSsDtlsCdblCncptCdngCde;
-     private String oprtntcmSsDtlsCdblCncptCdngDsplay;
-     private String oprtntcmSsDtlsCdblCncptCdngSrSlctd;
-     private String oprtntcmSsDtlsCdblCncptTxtStrng;
-     private String operationOutcomeIssueDiagnostics;
-     private String operationOutcomeIssueLocation;
-     private String operationOutcomeIssueExpression;
+     private Integer id;
+     private String oprtntcmSsSvrtCde;
+     private String operationOutcomeIssueCodeCode;
+     private String oprtntcmSsDtlsCcCdngCSstm;
+     private String oprtntcmSsDtlsCcCdngCVrsn;
+     private String oprtntcmSsDtlsCcCdngCCde;
+     private String oprtntcmSsDtlsCcCdngCDsplay;
+     private String oprtntcmSsDtlsCcCdngCSrSlctd;
+     private String oprtntcmSsDtlsCcTxt;
+     private String oprtntcmSsDgnstcsStrng;
+     private String oprtntcmSsLctnStrng;
+     private String oprtntcmSsXprssnStrng;
 
     public Operationoutcome() {
     }
 
-	
-    public Operationoutcome(String operationOutcomeIssueSeverity) {
-        this.operationOutcomeIssueSeverity = operationOutcomeIssueSeverity;
-    }
-    public Operationoutcome(String operationOutcomeIssueSeverity, String operationOutcomeIssueCode, String oprtntcmSsDtlsCdblCncptCdngSstm, String oprtntcmSsDtlsCdblCncptCdngVrsn, String oprtntcmSsDtlsCdblCncptCdngCde, String oprtntcmSsDtlsCdblCncptCdngDsplay, String oprtntcmSsDtlsCdblCncptCdngSrSlctd, String oprtntcmSsDtlsCdblCncptTxtStrng, String operationOutcomeIssueDiagnostics, String operationOutcomeIssueLocation, String operationOutcomeIssueExpression) {
-       this.operationOutcomeIssueSeverity = operationOutcomeIssueSeverity;
-       this.operationOutcomeIssueCode = operationOutcomeIssueCode;
-       this.oprtntcmSsDtlsCdblCncptCdngSstm = oprtntcmSsDtlsCdblCncptCdngSstm;
-       this.oprtntcmSsDtlsCdblCncptCdngVrsn = oprtntcmSsDtlsCdblCncptCdngVrsn;
-       this.oprtntcmSsDtlsCdblCncptCdngCde = oprtntcmSsDtlsCdblCncptCdngCde;
-       this.oprtntcmSsDtlsCdblCncptCdngDsplay = oprtntcmSsDtlsCdblCncptCdngDsplay;
-       this.oprtntcmSsDtlsCdblCncptCdngSrSlctd = oprtntcmSsDtlsCdblCncptCdngSrSlctd;
-       this.oprtntcmSsDtlsCdblCncptTxtStrng = oprtntcmSsDtlsCdblCncptTxtStrng;
-       this.operationOutcomeIssueDiagnostics = operationOutcomeIssueDiagnostics;
-       this.operationOutcomeIssueLocation = operationOutcomeIssueLocation;
-       this.operationOutcomeIssueExpression = operationOutcomeIssueExpression;
+    public Operationoutcome(String oprtntcmSsSvrtCde, String operationOutcomeIssueCodeCode, String oprtntcmSsDtlsCcCdngCSstm, String oprtntcmSsDtlsCcCdngCVrsn, String oprtntcmSsDtlsCcCdngCCde, String oprtntcmSsDtlsCcCdngCDsplay, String oprtntcmSsDtlsCcCdngCSrSlctd, String oprtntcmSsDtlsCcTxt, String oprtntcmSsDgnstcsStrng, String oprtntcmSsLctnStrng, String oprtntcmSsXprssnStrng) {
+       this.oprtntcmSsSvrtCde = oprtntcmSsSvrtCde;
+       this.operationOutcomeIssueCodeCode = operationOutcomeIssueCodeCode;
+       this.oprtntcmSsDtlsCcCdngCSstm = oprtntcmSsDtlsCcCdngCSstm;
+       this.oprtntcmSsDtlsCcCdngCVrsn = oprtntcmSsDtlsCcCdngCVrsn;
+       this.oprtntcmSsDtlsCcCdngCCde = oprtntcmSsDtlsCcCdngCCde;
+       this.oprtntcmSsDtlsCcCdngCDsplay = oprtntcmSsDtlsCcCdngCDsplay;
+       this.oprtntcmSsDtlsCcCdngCSrSlctd = oprtntcmSsDtlsCcCdngCSrSlctd;
+       this.oprtntcmSsDtlsCcTxt = oprtntcmSsDtlsCcTxt;
+       this.oprtntcmSsDgnstcsStrng = oprtntcmSsDgnstcsStrng;
+       this.oprtntcmSsLctnStrng = oprtntcmSsLctnStrng;
+       this.oprtntcmSsXprssnStrng = oprtntcmSsXprssnStrng;
     }
    
-    public String getOperationOutcomeIssueSeverity() {
-        return this.operationOutcomeIssueSeverity;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setOperationOutcomeIssueSeverity(String operationOutcomeIssueSeverity) {
-        this.operationOutcomeIssueSeverity = operationOutcomeIssueSeverity;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getOprtntcmSsSvrtCde()
+    {
+        return this.oprtntcmSsSvrtCde;
     }
     
-    
-    
-    public String getOperationOutcomeIssueCode() {
-        return this.operationOutcomeIssueCode;
+    public void setOprtntcmSsSvrtCde
+        (String oprtntcmSsSvrtCde) 
+        {
+      this.oprtntcmSsSvrtCde = oprtntcmSsSvrtCde;
+}
+    public 
+    String 
+    getOperationOutcomeIssueCodeCode()
+    {
+        return this.operationOutcomeIssueCodeCode;
     }
     
-    public void setOperationOutcomeIssueCode(String operationOutcomeIssueCode) {
-        this.operationOutcomeIssueCode = operationOutcomeIssueCode;
+    public void setOperationOutcomeIssueCodeCode
+        (String operationOutcomeIssueCodeCode) 
+        {
+      this.operationOutcomeIssueCodeCode = operationOutcomeIssueCodeCode;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcCdngCSstm()
+    {
+        return this.oprtntcmSsDtlsCcCdngCSstm;
     }
     
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptCdngSstm() {
-        return this.oprtntcmSsDtlsCdblCncptCdngSstm;
+    public void setOprtntcmSsDtlsCcCdngCSstm
+        (String oprtntcmSsDtlsCcCdngCSstm) 
+        {
+      this.oprtntcmSsDtlsCcCdngCSstm = oprtntcmSsDtlsCcCdngCSstm;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcCdngCVrsn()
+    {
+        return this.oprtntcmSsDtlsCcCdngCVrsn;
     }
     
-    public void setOprtntcmSsDtlsCdblCncptCdngSstm(String oprtntcmSsDtlsCdblCncptCdngSstm) {
-        this.oprtntcmSsDtlsCdblCncptCdngSstm = oprtntcmSsDtlsCdblCncptCdngSstm;
+    public void setOprtntcmSsDtlsCcCdngCVrsn
+        (String oprtntcmSsDtlsCcCdngCVrsn) 
+        {
+      this.oprtntcmSsDtlsCcCdngCVrsn = oprtntcmSsDtlsCcCdngCVrsn;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcCdngCCde()
+    {
+        return this.oprtntcmSsDtlsCcCdngCCde;
     }
     
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptCdngVrsn() {
-        return this.oprtntcmSsDtlsCdblCncptCdngVrsn;
+    public void setOprtntcmSsDtlsCcCdngCCde
+        (String oprtntcmSsDtlsCcCdngCCde) 
+        {
+      this.oprtntcmSsDtlsCcCdngCCde = oprtntcmSsDtlsCcCdngCCde;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcCdngCDsplay()
+    {
+        return this.oprtntcmSsDtlsCcCdngCDsplay;
     }
     
-    public void setOprtntcmSsDtlsCdblCncptCdngVrsn(String oprtntcmSsDtlsCdblCncptCdngVrsn) {
-        this.oprtntcmSsDtlsCdblCncptCdngVrsn = oprtntcmSsDtlsCdblCncptCdngVrsn;
+    public void setOprtntcmSsDtlsCcCdngCDsplay
+        (String oprtntcmSsDtlsCcCdngCDsplay) 
+        {
+      this.oprtntcmSsDtlsCcCdngCDsplay = oprtntcmSsDtlsCcCdngCDsplay;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcCdngCSrSlctd()
+    {
+        return this.oprtntcmSsDtlsCcCdngCSrSlctd;
     }
     
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptCdngCde() {
-        return this.oprtntcmSsDtlsCdblCncptCdngCde;
+    public void setOprtntcmSsDtlsCcCdngCSrSlctd
+        (String oprtntcmSsDtlsCcCdngCSrSlctd) 
+        {
+      this.oprtntcmSsDtlsCcCdngCSrSlctd = oprtntcmSsDtlsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getOprtntcmSsDtlsCcTxt()
+    {
+        return this.oprtntcmSsDtlsCcTxt;
     }
     
-    public void setOprtntcmSsDtlsCdblCncptCdngCde(String oprtntcmSsDtlsCdblCncptCdngCde) {
-        this.oprtntcmSsDtlsCdblCncptCdngCde = oprtntcmSsDtlsCdblCncptCdngCde;
+    public void setOprtntcmSsDtlsCcTxt
+        (String oprtntcmSsDtlsCcTxt) 
+        {
+      this.oprtntcmSsDtlsCcTxt = oprtntcmSsDtlsCcTxt;
+}
+    public 
+    String 
+    getOprtntcmSsDgnstcsStrng()
+    {
+        return this.oprtntcmSsDgnstcsStrng;
     }
     
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptCdngDsplay() {
-        return this.oprtntcmSsDtlsCdblCncptCdngDsplay;
+    public void setOprtntcmSsDgnstcsStrng
+        (String oprtntcmSsDgnstcsStrng) 
+        {
+      this.oprtntcmSsDgnstcsStrng = oprtntcmSsDgnstcsStrng;
+}
+    public 
+    String 
+    getOprtntcmSsLctnStrng()
+    {
+        return this.oprtntcmSsLctnStrng;
     }
     
-    public void setOprtntcmSsDtlsCdblCncptCdngDsplay(String oprtntcmSsDtlsCdblCncptCdngDsplay) {
-        this.oprtntcmSsDtlsCdblCncptCdngDsplay = oprtntcmSsDtlsCdblCncptCdngDsplay;
+    public void setOprtntcmSsLctnStrng
+        (String oprtntcmSsLctnStrng) 
+        {
+      this.oprtntcmSsLctnStrng = oprtntcmSsLctnStrng;
+}
+    public 
+    String 
+    getOprtntcmSsXprssnStrng()
+    {
+        return this.oprtntcmSsXprssnStrng;
     }
     
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptCdngSrSlctd() {
-        return this.oprtntcmSsDtlsCdblCncptCdngSrSlctd;
-    }
-    
-    public void setOprtntcmSsDtlsCdblCncptCdngSrSlctd(String oprtntcmSsDtlsCdblCncptCdngSrSlctd) {
-        this.oprtntcmSsDtlsCdblCncptCdngSrSlctd = oprtntcmSsDtlsCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getOprtntcmSsDtlsCdblCncptTxtStrng() {
-        return this.oprtntcmSsDtlsCdblCncptTxtStrng;
-    }
-    
-    public void setOprtntcmSsDtlsCdblCncptTxtStrng(String oprtntcmSsDtlsCdblCncptTxtStrng) {
-        this.oprtntcmSsDtlsCdblCncptTxtStrng = oprtntcmSsDtlsCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getOperationOutcomeIssueDiagnostics() {
-        return this.operationOutcomeIssueDiagnostics;
-    }
-    
-    public void setOperationOutcomeIssueDiagnostics(String operationOutcomeIssueDiagnostics) {
-        this.operationOutcomeIssueDiagnostics = operationOutcomeIssueDiagnostics;
-    }
-    
-    
-    
-    public String getOperationOutcomeIssueLocation() {
-        return this.operationOutcomeIssueLocation;
-    }
-    
-    public void setOperationOutcomeIssueLocation(String operationOutcomeIssueLocation) {
-        this.operationOutcomeIssueLocation = operationOutcomeIssueLocation;
-    }
-    
-    
-    
-    public String getOperationOutcomeIssueExpression() {
-        return this.operationOutcomeIssueExpression;
-    }
-    
-    public void setOperationOutcomeIssueExpression(String operationOutcomeIssueExpression) {
-        this.operationOutcomeIssueExpression = operationOutcomeIssueExpression;
-    }
-    
-    
-    
+    public void setOprtntcmSsXprssnStrng
+        (String oprtntcmSsXprssnStrng) 
+        {
+      this.oprtntcmSsXprssnStrng = oprtntcmSsXprssnStrng;
+}
 
 
 

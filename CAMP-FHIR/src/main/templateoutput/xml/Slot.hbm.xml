@@ -1,351 +1,261 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Slot" optimistic-lock="none" table="slot">
-        <id name="sltDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Slt_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="sltDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_use_code</meta>
-            <column length="512" name="Slt_dntfr_dntfr_s_cde">
-                <comment>Slot_identifierIdentifier_use_code</comment>
+        <property name="slotIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Slot_identifier_Identifier_use">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Slt_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Slot_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="sltDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Slt_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Slot_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="sltDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Slt_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Slot_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="sltDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Slt_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Slot_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="sltDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Slt_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Slot_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="sltDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Prd_strt">
-                <comment>Slot_identifierIdentifier_Period_start</comment>
+        <property name="sltDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Prd_nd">
-                <comment>Slot_identifierIdentifier_Period_end</comment>
+        <property name="sltDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Slot_identifierIdentifier_Reference_reference</comment>
+        <property name="sltDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Slot_identifierIdentifier_Reference_type</comment>
+        <property name="sltDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Slt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Slot_identifierIdentifier_Reference_identifier</comment>
+        <property name="slotIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Slot_identifier_Identifier_value">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Slt_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Slot_identifierIdentifier_Reference_display</comment>
+        <property name="slotIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Slot_identifier_Identifier_system">
+                <comment>{ "tree" :"Slot.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_value_string</meta>
-            <column length="512" name="Slt_dntfr_dntfr_vl_strng">
-                <comment>Slot_identifierIdentifier_value_string</comment>
+        <property name="sltSrvcCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Slt_srvcCtgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Slot_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Slt_dntfr_dntfr_sstm_ri">
-                <comment>Slot_identifierIdentifier_system_uri</comment>
+        <property name="sltSrvcCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Slt_srvcCtgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="sltSrvcCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Slt_srvcCtgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="sltSrvcCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Slt_srvcCtgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="sltSrvcCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Slt_srvcCtgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="slotServiceCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</meta>
+            <column length="65535" name="Slot_serviceCategory_CC_text">
+                <comment>{ "tree" :"Slot.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="sltSrvcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Slt_srvcTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltSrvcCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Slt_srvcCtgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="sltSrvcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Slt_srvcTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="slotServiceTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</meta>
+            <column length="65535" name="Slot_serviceType_CC_coding_C_code">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="sltSrvcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Slt_srvcTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="sltSrvcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Slt_srvcTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="slotServiceTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</meta>
+            <column length="65535" name="Slot_serviceType_CC_text">
+                <comment>{ "tree" :"Slot.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="slotSpecialtyCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</meta>
+            <column length="65535" name="Slot_specialty_CC_coding_C_system">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltSrvcTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Slt_srvcTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="slotSpecialtyCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</meta>
+            <column length="65535" name="Slot_specialty_CC_coding_C_version">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="slotSpecialtyCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</meta>
+            <column length="65535" name="Slot_specialty_CC_coding_C_code">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="slotSpecialtyCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Slot_specialty_CC_coding_C_display">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="sltSpcltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Slt_spclt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="slotSpecialtyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</meta>
+            <column length="65535" name="Slot_specialty_CC_text">
+                <comment>{ "tree" :"Slot.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="sltPpntmntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Slt_ppntmntTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sltSpcltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Slt_spclt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="sltPpntmntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Slt_ppntmntTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="sltPpntmntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setCode"}</meta>
+            <column length="65535" name="Slt_ppntmntTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="sltPpntmntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Slt_ppntmntTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="sltPpntmntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Slt_ppntmntTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="slotAppointmentTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, setText"}</meta>
+            <column length="65535" name="Slot_appointmentType_CC_text">
+                <comment>{ "tree" :"Slot.appointmentType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAppointmentType, setText"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="slotScheduleReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.schedule", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSchedule"}</meta>
+            <column length="65535" name="Slot_schedule_Reference">
+                <comment>{ "tree" :"Slot.schedule", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSchedule"}</comment>
             </column>
         </property>
-        <property name="sltPpntmntTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Slt_ppntmntTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="slotStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Slot_status_code">
+                <comment>{ "tree" :"Slot.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="sltSchdlRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="slotStartInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.start", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStart"}</meta>
+            <column length="65535" name="Slot_start_instant">
+                <comment>{ "tree" :"Slot.start", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStart"}</comment>
             </column>
         </property>
-        <property name="sltSchdlRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="slotEndInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.end", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEnd"}</meta>
+            <column length="65535" name="Slot_end_instant">
+                <comment>{ "tree" :"Slot.end", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEnd"}</comment>
             </column>
         </property>
-        <property name="sltSchdlRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="slotOverbookedBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.overbooked", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOverbooked"}</meta>
+            <column length="65535" name="Slot_overbooked_boolean">
+                <comment>{ "tree" :"Slot.overbooked", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOverbooked"}</comment>
             </column>
         </property>
-        <property name="sltSchdlRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="sltSchdlRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Slt_schdl_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="slotScheduleReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Slot_schedule_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="slotStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Slot_status">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="slotStart" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Slot_start">
-                <comment>instant</comment>
-            </column>
-        </property>
-        <property name="slotEnd" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Slot_end">
-                <comment>instant</comment>
-            </column>
-        </property>
-        <property name="slotOverbooked" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Slot_overbooked">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="slotComment" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Slot_comment">
-                <comment>string</comment>
+        <property name="slotCommentString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Slot.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="Slot_comment_string">
+                <comment>{ "tree" :"Slot.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</comment>
             </column>
         </property>
     </class>

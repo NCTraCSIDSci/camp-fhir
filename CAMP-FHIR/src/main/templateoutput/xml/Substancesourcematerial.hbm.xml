@@ -1,699 +1,861 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Substancesourcematerial" optimistic-lock="none" table="substancesourcematerial">
-        <id name="sbstncSrcMtrlSrcMtrlClssCdngCde" type="string">
-            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="sbstncSrcMtrlSrcMtrlClssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setSystem"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlClssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setVersion"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlClssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setCode"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlClssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setDisplay"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlSrcMtrlClssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, setText"}</meta>
+            <column length="512" name="SbstncSrcMtrl_srcMtrlClss_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialClass", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialClass, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlSttCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlSttCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlSttCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlSrcMtrlTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlTp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlSttCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlSrcMtrlSttCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlSrcMtrlSttCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_srcMtrlStt_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.sourceMaterialState", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSourceMaterialState, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setUse"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_se">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setUse"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsmNme">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrntSbstncNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_prntSbstncNme">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlCntrfrgnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlCntrfrgnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setAssigner"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setAssigner"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlCntrfrgnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setValue"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setValue"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlCntrfrgnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmdDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmd_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismId, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlCntrfrgnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismName"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsmNm_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganismName"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlGgrphclLctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_ggrphclLctn">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setUse"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_se">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setUse"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlDvlpmntStgCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlDvlpmntStgCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlDvlpmntStgCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlDvlpmntStgCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlDvlpmntStgCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnFrctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_frctn">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setAssigner"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setAssigner"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setValue"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setValue"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlPrntSbstncdDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncd_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceId", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceId, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlPrntSbstncNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.parentSubstanceName", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceName"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prntSbstncNm_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.parentSubstanceName", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParentSubstanceName"}</comment>
             </column>
         </property>
-        <property name="substanceSourceMaterialOrganism" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstanceSourceMaterial_organism">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmFmlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmFmlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmFmlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmFmlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmFmlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlCntrfrgnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_cntrfrgn_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.countryOfOrigin", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCountryOfOrigin, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmGnsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlGgrphclLctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.geographicalLocation", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGeographicalLocation"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_ggrphclLctn_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.geographicalLocation", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addGeographicalLocation"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmGnsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmGnsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmGnsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmGnsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmSpcsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmSpcsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlDvlpmntStgCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_dvlpmntStg_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.developmentStage", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDevelopmentStage, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmSpcsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnFrctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.fraction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setFraction"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_frctn_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.fraction", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setFraction"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmSpcsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmSpcsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlFrctnDscrptnMtrlTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_frctnDscrptn_mtrlTp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.fractionDescription.materialType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addFractionDescription"] , "methodName" : "setMaterialType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmNtrspcfcDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcDscrptn">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThr" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmFmlCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_fml_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.family", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setFamily, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmThrThrDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrDscrptn">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrd" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdMtrnlrgnsmd" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_mtrnlrgnsmd">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdMtrnlrgnsmNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_mtrnlrgnsmNme">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmGnsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_gns_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.genus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setGenus, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdPtrnlrgnsmd" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_ptrnlrgnsmd">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdPtrnlrgnsmNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_ptrnlrgnsmNme">
-                <comment>string</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmSpcsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_spcs_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.species", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setSpecies, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrl" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcTp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmNtrspcfcDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.intraspecificDescription", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificDescription"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_ntrspcfcDscrptn_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.intraspecificDescription", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism"] , "methodName" : "setIntraspecificDescription"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrTp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmThrThrDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.author.authorDescription", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorDescription"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_thr_thrDscrptn_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.author.authorDescription", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor"] , "methodName" : "setAuthorDescription"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdMtrnlrgnsmdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.maternalOrganismId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setMaternalOrganismId"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_mtrnlrgnsmd_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.maternalOrganismId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setMaternalOrganismId"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdMtrnlrgnsmNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.maternalOrganismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setMaternalOrganismName"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_mtrnlrgnsmNm_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.maternalOrganismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setMaternalOrganismName"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdPtrnlrgnsmdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.paternalOrganismId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setPaternalOrganismId"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_ptrnlrgnsmd_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.paternalOrganismId", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setPaternalOrganismId"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdPtrnlrgnsmNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.paternalOrganismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setPaternalOrganismName"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_ptrnlrgnsmNm_strng">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.paternalOrganismName", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setPaternalOrganismName"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn">
-                <comment>BackboneElement</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmHbrdHbrdTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_hbrd_hbrdTp_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.hybrid.hybridType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid"] , "methodName" : "setHybridType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlKngdmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_kngdm_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.kingdom", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setKingdom, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlPhlmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_phlm_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.phylum", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setPhylum, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlClssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_clss_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.class", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setClass, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlRgnsmRgnsmGnrlRdrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_rgnsm_rgnsmGnrl_rdr_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.organism.organismGeneral.order", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setOrganism", "addAuthor", "setHybrid", "setOrganismGeneral"] , "methodName" : "setOrder, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prt_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.part", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPart, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncSrcMtrlPrtDscrptnPrtLctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, setText"}</meta>
+            <column length="65535" name="SbstncSrcMtrl_prtDscrptn_prtLctn_CC_txt">
+                <comment>{ "tree" :"SubstanceSourceMaterial.partDescription.partLocation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPartDescription"] , "methodName" : "setPartLocation, setText"}</comment>
             </column>
         </property>
     </class>

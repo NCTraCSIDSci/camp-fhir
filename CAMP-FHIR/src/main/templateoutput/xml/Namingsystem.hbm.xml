@@ -1,171 +1,321 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Namingsystem" optimistic-lock="none" table="namingsystem">
-        <id name="namingSystemName" type="string">
-            <column length="512" name="NamingSystem_name"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="namingSystemStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="NamingSystem_status">
-                <comment>code</comment>
+        <property name="namingSystemNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="512" name="NamingSystem_name_string">
+                <comment>{ "tree" :"NamingSystem.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="namingSystemKind" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="NamingSystem_kind">
-                <comment>code</comment>
+        <property name="namingSystemStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="NamingSystem_status_code">
+                <comment>{ "tree" :"NamingSystem.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="namingSystemDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="NamingSystem_date">
-                <comment>dateTime</comment>
+        <property name="namingSystemKindCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</meta>
+            <column length="65535" name="NamingSystem_kind_code">
+                <comment>{ "tree" :"NamingSystem.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</comment>
             </column>
         </property>
-        <property name="namingSystemPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="NamingSystem_publisher">
-                <comment>string</comment>
+        <property name="namingSystemDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="NamingSystem_date_dateTime">
+                <comment>{ "tree" :"NamingSystem.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="namingSystemContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="NamingSystem_contact">
-                <comment>ContactDetail</comment>
+        <property name="namingSystemPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="NamingSystem_publisher_string">
+                <comment>{ "tree" :"NamingSystem.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="namingSystemResponsible" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="NamingSystem_responsible">
-                <comment>string</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="nmngSstmCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="nmngSstmTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="NmngSstm_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="nmngSstmCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="NmngSstm_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"NamingSystem.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="namingSystemDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="NamingSystem_description">
-                <comment>markdown</comment>
+        <property name="namingSystemResponsibleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.responsible", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponsible"}</meta>
+            <column length="65535" name="NamingSystem_responsible_string">
+                <comment>{ "tree" :"NamingSystem.responsible", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponsible"}</comment>
             </column>
         </property>
-        <property name="namingSystemUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="NamingSystem_useContext">
-                <comment>UsageContext</comment>
+        <property name="nmngSstmTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="nmngSstmTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="NmngSstm_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="namingSystemTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="NamingSystem_type_CC_coding_C_code">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="nmngSstmTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="NmngSstm_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="nmngSstmTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="NmngSstm_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="namingSystemTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="NamingSystem_type_CC_text">
+                <comment>{ "tree" :"NamingSystem.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="nmngSstmJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="NmngSstm_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="namingSystemDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="NamingSystem_description_markdown">
+                <comment>{ "tree" :"NamingSystem.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="namingSystemUsage" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="NamingSystem_usage">
-                <comment>string</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="namingSystemUniqueIdType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="NamingSystem_uniqueId_type">
-                <comment>code</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="namingSystemUniqueIdValue" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="NamingSystem_uniqueId_value">
-                <comment>string</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="namingSystemUniqueIdPreferred" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="NamingSystem_uniqueId_preferred">
-                <comment>boolean</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="namingSystemUniqueIdComment" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="NamingSystem_uniqueId_comment">
-                <comment>string</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="nmngSstmNqdPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="NmngSstm_nqd_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="nmngSstmSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="nmngSstmNqdPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="NmngSstm_nqd_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="nmngSstmSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="NmngSstm_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"NamingSystem.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="NmngSstm_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="namingSystemJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="NamingSystem_jurisdiction_CC_text">
+                <comment>{ "tree" :"NamingSystem.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="namingSystemUsageString" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</meta>
+            <column length="65535" name="NamingSystem_usage_string">
+                <comment>{ "tree" :"NamingSystem.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setUniqueId"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="NamingSystem_uniqueId_type_code">
+                <comment>{ "tree" :"NamingSystem.uniqueId.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setUniqueId"] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="namingSystemUniqueIdValueString" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setUniqueId"] , "methodName" : "setValue"}</meta>
+            <column length="65535" name="NamingSystem_uniqueId_value_string">
+                <comment>{ "tree" :"NamingSystem.uniqueId.value", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setUniqueId"] , "methodName" : "setValue"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdPrfrrdBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPreferred"}</meta>
+            <column length="65535" name="NmngSstm_nqd_prfrrd_bln">
+                <comment>{ "tree" :"NamingSystem.uniqueId.preferred", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPreferred"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdCmmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="NmngSstm_nqd_cmmnt_strng">
+                <comment>{ "tree" :"NamingSystem.uniqueId.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setComment"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="NmngSstm_nqd_prd_Prd_strt">
+                <comment>{ "tree" :"NamingSystem.uniqueId.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="nmngSstmNqdPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"NamingSystem.uniqueId.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="NmngSstm_nqd_prd_Prd_nd">
+                <comment>{ "tree" :"NamingSystem.uniqueId.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setUniqueId"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
     </class>

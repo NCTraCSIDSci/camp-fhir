@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,977 +10,1566 @@ package main.templateoutput.Model;
 public class Devicerequest  implements java.io.Serializable {
 
 
-     private String dvcRqstDntfrCdngCde;
-     private String dvcRqstDntfrCdngSrSlctd;
-     private String dvcRqstDntfrCdngVrsn;
-     private String dvcRqstDntfrCdngDsplay;
-     private String dvcRqstDntfrCdngSstm;
-     private String dvcRqstNstnttsCnncl;
-     private String deviceRequestInstantiatesUri;
-     private String deviceRequestBasedOn;
-     private String deviceRequestPriorRequest;
-     private String dvcRqstGrpdntfrCdngSrSlctd;
-     private String dvcRqstGrpdntfrCdngCde;
-     private String dvcRqstGrpdntfrCdngVrsn;
-     private String dvcRqstGrpdntfrCdngDsplay;
-     private String dvcRqstGrpdntfrCdngSstm;
-     private String deviceRequestStatus;
-     private String deviceRequestIntent;
-     private String deviceRequestPriority;
-     private String deviceRequestCodeReference;
-     private String dvcRqstCdcdblcptCdngSrSlctd;
-     private String dvcRqstCdcdblcptCdngCde;
-     private String dvcRqstCdcdblcptCdngVrsn;
-     private String dvcRqstCdcdblcptCdngDsplay;
-     private String dvcRqstCdcdblcptCdngSstm;
-     private String deviceRequestParameter;
-     private String dvcRqstPrmtrCdCdngSrSlctd;
-     private String dvcRqstPrmtrCdCdngCde;
-     private String dvcRqstPrmtrCdCdngVrsn;
-     private String dvcRqstPrmtrCdCdngDsplay;
-     private String dvcRqstPrmtrCdCdngSstm;
-     private String dvcRqstPrmtrVlcdblcptCdngSrSlctd;
-     private String dvcRqstPrmtrVlcdblcptCdngCde;
-     private String dvcRqstPrmtrVlcdblcptCdngVrsn;
-     private String dvcRqstPrmtrVlcdblcptCdngDsplay;
-     private String dvcRqstPrmtrVlcdblcptCdngSstm;
-     private String dvcRqstPrmtrVlQnttCdngSrSlctd;
-     private String dvcRqstPrmtrVlQnttCdngCde;
-     private String dvcRqstPrmtrVlQnttCdngVrsn;
-     private String dvcRqstPrmtrVlQnttCdngDsplay;
-     private String dvcRqstPrmtrVlQnttCdngSstm;
-     private String dvcRqstPrmtrVlRngCdngSrSlctd;
-     private String dvcRqstPrmtrVlRngCdngCde;
-     private String dvcRqstPrmtrVlRngCdngVrsn;
-     private String dvcRqstPrmtrVlRngCdngDsplay;
-     private String dvcRqstPrmtrVlRngCdngSstm;
-     private String dvcRqstPrmtrVlBln;
-     private String deviceRequestSubject;
-     private String deviceRequestEncounter;
-     private String deviceRequestOccurrenceDatetime;
-     private String dvcRqstCcrrncPrdCdngSrSlctd;
-     private String dvcRqstCcrrncPrdCdngCde;
-     private String dvcRqstCcrrncPrdCdngVrsn;
-     private String dvcRqstCcrrncPrdCdngDsplay;
-     private String dvcRqstCcrrncPrdCdngSstm;
-     private String dvcRqstCcrrncTmngCdngSrSlctd;
-     private String dvcRqstCcrrncTmngCdngCde;
-     private String dvcRqstCcrrncTmngCdngVrsn;
-     private String dvcRqstCcrrncTmngCdngDsplay;
-     private String dvcRqstCcrrncTmngCdngSstm;
-     private String deviceRequestAuthoredOn;
-     private String deviceRequestRequester;
-     private String dvcRqstPrfrmrTpCdngSrSlctd;
-     private String dvcRqstPrfrmrTpCdngCde;
-     private String dvcRqstPrfrmrTpCdngVrsn;
-     private String dvcRqstPrfrmrTpCdngDsplay;
-     private String dvcRqstPrfrmrTpCdngSstm;
-     private String deviceRequestPerformer;
-     private String dvcRqstRsnCdCdngSrSlctd;
-     private String dvcRqstRsnCdCdngCde;
-     private String dvcRqstRsnCdCdngVrsn;
-     private String dvcRqstRsnCdCdngDsplay;
-     private String dvcRqstRsnCdCdngSstm;
-     private String deviceRequestReasonReference;
-     private String deviceRequestInsurance;
-     private String deviceRequestSupportingInfo;
-     private String dvcRqstNtCdngSrSlctd;
-     private String deviceRequestNoteCodingCode;
-     private String deviceRequestNoteCodingVersion;
-     private String deviceRequestNoteCodingDisplay;
-     private String deviceRequestNoteCodingSystem;
-     private String deviceRequestRelevantHistory;
+     private Integer id;
+     private String dvcRqstDntfrDntfrSe;
+     private String dvcRqstDntfrDntfrTpCcCSstm;
+     private String dvcRqstDntfrDntfrTpCcCVrsn;
+     private String dvcRqstDntfrDntfrTpCcCCde;
+     private String dvcRqstDntfrDntfrTpCcCDsplay;
+     private String dvcRqstDntfrDntfrTpCcCSrSlctd;
+     private String dvcRqstDntfrDntfrTpCcTxt;
+     private String dvcRqstDntfrDntfrPrdPrdStrt;
+     private String dvcRqstDntfrDntfrPrdPrdNd;
+     private String dvcRqstDntfrDntfrSsgnr;
+     private String dvcRqstDntfrDntfrVlue;
+     private String dvcRqstDntfrDntfrSstm;
+     private String dvcRqstNstnttsCnnclCnncl;
+     private String deviceRequestInstantiatesUriUri;
+     private String deviceRequestBasedOnReference;
+     private String dvcRqstPrrRqstRfrnce;
+     private String dvcRqstGrpdntfrDntfrSe;
+     private String dvcRqstGrpdntfrDntfrTpCcCSstm;
+     private String dvcRqstGrpdntfrDntfrTpCcCVrsn;
+     private String dvcRqstGrpdntfrDntfrTpCcCCde;
+     private String dvcRqstGrpdntfrDntfrTpCcCDsplay;
+     private String dvcRqstGrpdntfrDntfrTpCcCSrSlctd;
+     private String dvcRqstGrpdntfrDntfrTpCcTxt;
+     private String dvcRqstGrpdntfrDntfrPrdPrdStrt;
+     private String dvcRqstGrpdntfrDntfrPrdPrdNd;
+     private String dvcRqstGrpdntfrDntfrSsgnr;
+     private String dvcRqstGrpdntfrDntfrVlue;
+     private String dvcRqstGrpdntfrDntfrSstm;
+     private String deviceRequestStatusCode;
+     private String deviceRequestIntentCode;
+     private String deviceRequestPriorityCode;
+     private String dvcRqstCdRfrncRfrnce;
+     private String dvcRqstCdCdblcncptCcCdngCSstm;
+     private String dvcRqstCdCdblcncptCcCdngCVrsn;
+     private String dvcRqstCdCdblcncptCcCdngCCde;
+     private String dvcRqstCdCdblcncptCcCdngCDsplay;
+     private String dvcRqstCdCdblcncptCcCdngCSrSlctd;
+     private String dvcRqstCdCdblcncptCcTxt;
+     private String dvcRqstPrmtrCdCcCdngCSstm;
+     private String dvcRqstPrmtrCdCcCdngCVrsn;
+     private String dvcRqstPrmtrCdCcCdngCCde;
+     private String dvcRqstPrmtrCdCcCdngCDsplay;
+     private String dvcRqstPrmtrCdCcCdngCSrSlctd;
+     private String dvcRqstPrmtrCdCcTxt;
+     private String dvcRqstPrmtrVlCdblcncptCcCdngCSstm;
+     private String dvcRqstPrmtrVlCdblcncptCcCdngCVrsn;
+     private String dvcRqstPrmtrVlCdblcncptCcCdngCCde;
+     private String dvcRqstPrmtrVlCdblcncptCcCdngCDsplay;
+     private String dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd;
+     private String dvcRqstPrmtrVlCdblcncptCcTxt;
+     private String dvcRqstPrmtrVlQnttQnttCmprtr;
+     private String dvcRqstPrmtrVlQnttQnttCde;
+     private String dvcRqstPrmtrVlQnttQnttVlue;
+     private String dvcRqstPrmtrVlQnttQnttNt;
+     private String dvcRqstPrmtrVlQnttQnttSstm;
+     private String dvcRqstPrmtrVlRngRngLw;
+     private String dvcRqstPrmtrVlRngRngHgh;
+     private String dvcRqstPrmtrVlBlnBln;
+     private String deviceRequestSubjectReference;
+     private String deviceRequestEncounterReference;
+     private String dvcRqstCcrrncDttmDtTme;
+     private String dvcRqstCcrrncPrdPrdStrt;
+     private String dvcRqstCcrrncPrdPrdNd;
+     private String dvcRqstCcrrncTmngTmngCdCcCSstm;
+     private String dvcRqstCcrrncTmngTmngCdCcCVrsn;
+     private String dvcRqstCcrrncTmngTmngCdCcCCde;
+     private String dvcRqstCcrrncTmngTmngCdCcCDsplay;
+     private String dvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+     private String dvcRqstCcrrncTmngTmngCdCcTxt;
+     private String dvcRqstCcrrncTmngTmngVnt;
+     private String dvcRqstCcrrncTmngTmngRptDrtnnt;
+     private String dvcRqstCcrrncTmngTmngRptPrdnt;
+     private String dvcRqstCcrrncTmngTmngRptDfWk;
+     private String dvcRqstCcrrncTmngTmngRptWhn;
+     private String dvcRqstCcrrncTmngTmngRptDrtn;
+     private String dvcRqstCcrrncTmngTmngRptDrtnMx;
+     private String dvcRqstCcrrncTmngTmngRptPrd;
+     private String dvcRqstCcrrncTmngTmngRptPrdMx;
+     private String dvcRqstCcrrncTmngTmngRptBndsDrtn;
+     private String dvcRqstCcrrncTmngTmngRptBndsPrd;
+     private String dvcRqstCcrrncTmngTmngRptCnt;
+     private String dvcRqstCcrrncTmngTmngRptCntMx;
+     private String dvcRqstCcrrncTmngTmngRptFrqncy;
+     private String dvcRqstCcrrncTmngTmngRptFrqncMx;
+     private String dvcRqstCcrrncTmngTmngRptBndsRnge;
+     private String dvcRqstCcrrncTmngTmngRptTmfDay;
+     private String dvcRqstCcrrncTmngTmngRptFfst;
+     private String deviceRequestAuthoredOnDateTime;
+     private String deviceRequestRequesterReference;
+     private String dvcRqstPrfrmrTpCcCdngCSstm;
+     private String dvcRqstPrfrmrTpCcCdngCVrsn;
+     private String dvcRqstPrfrmrTpCcCdngCCde;
+     private String dvcRqstPrfrmrTpCcCdngCDsplay;
+     private String dvcRqstPrfrmrTpCcCdngCSrSlctd;
+     private String dvcRqstPrfrmrTpCcTxt;
+     private String deviceRequestPerformerReference;
+     private String dvcRqstRsnCdCcCdngCSstm;
+     private String dvcRqstRsnCdCcCdngCVrsn;
+     private String dvcRqstRsnCdCcCdngCCde;
+     private String dvcRqstRsnCdCcCdngCDsplay;
+     private String dvcRqstRsnCdCcCdngCSrSlctd;
+     private String deviceRequestReasonCodeCcText;
+     private String dvcRqstRsnRfrncRfrnce;
+     private String deviceRequestInsuranceReference;
+     private String dvcRqstSpprtngnfRfrnce;
+     private String deviceRequestNoteAnnotationTime;
+     private String deviceRequestNoteAnnotationText;
+     private String dvcRqstNtNnttnThrRfrnce;
+     private String dvcRqstNtNnttnThrStrng;
+     private String dvcRqstRlvntHstrRfrnce;
 
     public Devicerequest() {
     }
 
-	
-    public Devicerequest(String dvcRqstDntfrCdngCde) {
-        this.dvcRqstDntfrCdngCde = dvcRqstDntfrCdngCde;
-    }
-    public Devicerequest(String dvcRqstDntfrCdngCde, String dvcRqstDntfrCdngSrSlctd, String dvcRqstDntfrCdngVrsn, String dvcRqstDntfrCdngDsplay, String dvcRqstDntfrCdngSstm, String dvcRqstNstnttsCnncl, String deviceRequestInstantiatesUri, String deviceRequestBasedOn, String deviceRequestPriorRequest, String dvcRqstGrpdntfrCdngSrSlctd, String dvcRqstGrpdntfrCdngCde, String dvcRqstGrpdntfrCdngVrsn, String dvcRqstGrpdntfrCdngDsplay, String dvcRqstGrpdntfrCdngSstm, String deviceRequestStatus, String deviceRequestIntent, String deviceRequestPriority, String deviceRequestCodeReference, String dvcRqstCdcdblcptCdngSrSlctd, String dvcRqstCdcdblcptCdngCde, String dvcRqstCdcdblcptCdngVrsn, String dvcRqstCdcdblcptCdngDsplay, String dvcRqstCdcdblcptCdngSstm, String deviceRequestParameter, String dvcRqstPrmtrCdCdngSrSlctd, String dvcRqstPrmtrCdCdngCde, String dvcRqstPrmtrCdCdngVrsn, String dvcRqstPrmtrCdCdngDsplay, String dvcRqstPrmtrCdCdngSstm, String dvcRqstPrmtrVlcdblcptCdngSrSlctd, String dvcRqstPrmtrVlcdblcptCdngCde, String dvcRqstPrmtrVlcdblcptCdngVrsn, String dvcRqstPrmtrVlcdblcptCdngDsplay, String dvcRqstPrmtrVlcdblcptCdngSstm, String dvcRqstPrmtrVlQnttCdngSrSlctd, String dvcRqstPrmtrVlQnttCdngCde, String dvcRqstPrmtrVlQnttCdngVrsn, String dvcRqstPrmtrVlQnttCdngDsplay, String dvcRqstPrmtrVlQnttCdngSstm, String dvcRqstPrmtrVlRngCdngSrSlctd, String dvcRqstPrmtrVlRngCdngCde, String dvcRqstPrmtrVlRngCdngVrsn, String dvcRqstPrmtrVlRngCdngDsplay, String dvcRqstPrmtrVlRngCdngSstm, String dvcRqstPrmtrVlBln, String deviceRequestSubject, String deviceRequestEncounter, String deviceRequestOccurrenceDatetime, String dvcRqstCcrrncPrdCdngSrSlctd, String dvcRqstCcrrncPrdCdngCde, String dvcRqstCcrrncPrdCdngVrsn, String dvcRqstCcrrncPrdCdngDsplay, String dvcRqstCcrrncPrdCdngSstm, String dvcRqstCcrrncTmngCdngSrSlctd, String dvcRqstCcrrncTmngCdngCde, String dvcRqstCcrrncTmngCdngVrsn, String dvcRqstCcrrncTmngCdngDsplay, String dvcRqstCcrrncTmngCdngSstm, String deviceRequestAuthoredOn, String deviceRequestRequester, String dvcRqstPrfrmrTpCdngSrSlctd, String dvcRqstPrfrmrTpCdngCde, String dvcRqstPrfrmrTpCdngVrsn, String dvcRqstPrfrmrTpCdngDsplay, String dvcRqstPrfrmrTpCdngSstm, String deviceRequestPerformer, String dvcRqstRsnCdCdngSrSlctd, String dvcRqstRsnCdCdngCde, String dvcRqstRsnCdCdngVrsn, String dvcRqstRsnCdCdngDsplay, String dvcRqstRsnCdCdngSstm, String deviceRequestReasonReference, String deviceRequestInsurance, String deviceRequestSupportingInfo, String dvcRqstNtCdngSrSlctd, String deviceRequestNoteCodingCode, String deviceRequestNoteCodingVersion, String deviceRequestNoteCodingDisplay, String deviceRequestNoteCodingSystem, String deviceRequestRelevantHistory) {
-       this.dvcRqstDntfrCdngCde = dvcRqstDntfrCdngCde;
-       this.dvcRqstDntfrCdngSrSlctd = dvcRqstDntfrCdngSrSlctd;
-       this.dvcRqstDntfrCdngVrsn = dvcRqstDntfrCdngVrsn;
-       this.dvcRqstDntfrCdngDsplay = dvcRqstDntfrCdngDsplay;
-       this.dvcRqstDntfrCdngSstm = dvcRqstDntfrCdngSstm;
-       this.dvcRqstNstnttsCnncl = dvcRqstNstnttsCnncl;
-       this.deviceRequestInstantiatesUri = deviceRequestInstantiatesUri;
-       this.deviceRequestBasedOn = deviceRequestBasedOn;
-       this.deviceRequestPriorRequest = deviceRequestPriorRequest;
-       this.dvcRqstGrpdntfrCdngSrSlctd = dvcRqstGrpdntfrCdngSrSlctd;
-       this.dvcRqstGrpdntfrCdngCde = dvcRqstGrpdntfrCdngCde;
-       this.dvcRqstGrpdntfrCdngVrsn = dvcRqstGrpdntfrCdngVrsn;
-       this.dvcRqstGrpdntfrCdngDsplay = dvcRqstGrpdntfrCdngDsplay;
-       this.dvcRqstGrpdntfrCdngSstm = dvcRqstGrpdntfrCdngSstm;
-       this.deviceRequestStatus = deviceRequestStatus;
-       this.deviceRequestIntent = deviceRequestIntent;
-       this.deviceRequestPriority = deviceRequestPriority;
-       this.deviceRequestCodeReference = deviceRequestCodeReference;
-       this.dvcRqstCdcdblcptCdngSrSlctd = dvcRqstCdcdblcptCdngSrSlctd;
-       this.dvcRqstCdcdblcptCdngCde = dvcRqstCdcdblcptCdngCde;
-       this.dvcRqstCdcdblcptCdngVrsn = dvcRqstCdcdblcptCdngVrsn;
-       this.dvcRqstCdcdblcptCdngDsplay = dvcRqstCdcdblcptCdngDsplay;
-       this.dvcRqstCdcdblcptCdngSstm = dvcRqstCdcdblcptCdngSstm;
-       this.deviceRequestParameter = deviceRequestParameter;
-       this.dvcRqstPrmtrCdCdngSrSlctd = dvcRqstPrmtrCdCdngSrSlctd;
-       this.dvcRqstPrmtrCdCdngCde = dvcRqstPrmtrCdCdngCde;
-       this.dvcRqstPrmtrCdCdngVrsn = dvcRqstPrmtrCdCdngVrsn;
-       this.dvcRqstPrmtrCdCdngDsplay = dvcRqstPrmtrCdCdngDsplay;
-       this.dvcRqstPrmtrCdCdngSstm = dvcRqstPrmtrCdCdngSstm;
-       this.dvcRqstPrmtrVlcdblcptCdngSrSlctd = dvcRqstPrmtrVlcdblcptCdngSrSlctd;
-       this.dvcRqstPrmtrVlcdblcptCdngCde = dvcRqstPrmtrVlcdblcptCdngCde;
-       this.dvcRqstPrmtrVlcdblcptCdngVrsn = dvcRqstPrmtrVlcdblcptCdngVrsn;
-       this.dvcRqstPrmtrVlcdblcptCdngDsplay = dvcRqstPrmtrVlcdblcptCdngDsplay;
-       this.dvcRqstPrmtrVlcdblcptCdngSstm = dvcRqstPrmtrVlcdblcptCdngSstm;
-       this.dvcRqstPrmtrVlQnttCdngSrSlctd = dvcRqstPrmtrVlQnttCdngSrSlctd;
-       this.dvcRqstPrmtrVlQnttCdngCde = dvcRqstPrmtrVlQnttCdngCde;
-       this.dvcRqstPrmtrVlQnttCdngVrsn = dvcRqstPrmtrVlQnttCdngVrsn;
-       this.dvcRqstPrmtrVlQnttCdngDsplay = dvcRqstPrmtrVlQnttCdngDsplay;
-       this.dvcRqstPrmtrVlQnttCdngSstm = dvcRqstPrmtrVlQnttCdngSstm;
-       this.dvcRqstPrmtrVlRngCdngSrSlctd = dvcRqstPrmtrVlRngCdngSrSlctd;
-       this.dvcRqstPrmtrVlRngCdngCde = dvcRqstPrmtrVlRngCdngCde;
-       this.dvcRqstPrmtrVlRngCdngVrsn = dvcRqstPrmtrVlRngCdngVrsn;
-       this.dvcRqstPrmtrVlRngCdngDsplay = dvcRqstPrmtrVlRngCdngDsplay;
-       this.dvcRqstPrmtrVlRngCdngSstm = dvcRqstPrmtrVlRngCdngSstm;
-       this.dvcRqstPrmtrVlBln = dvcRqstPrmtrVlBln;
-       this.deviceRequestSubject = deviceRequestSubject;
-       this.deviceRequestEncounter = deviceRequestEncounter;
-       this.deviceRequestOccurrenceDatetime = deviceRequestOccurrenceDatetime;
-       this.dvcRqstCcrrncPrdCdngSrSlctd = dvcRqstCcrrncPrdCdngSrSlctd;
-       this.dvcRqstCcrrncPrdCdngCde = dvcRqstCcrrncPrdCdngCde;
-       this.dvcRqstCcrrncPrdCdngVrsn = dvcRqstCcrrncPrdCdngVrsn;
-       this.dvcRqstCcrrncPrdCdngDsplay = dvcRqstCcrrncPrdCdngDsplay;
-       this.dvcRqstCcrrncPrdCdngSstm = dvcRqstCcrrncPrdCdngSstm;
-       this.dvcRqstCcrrncTmngCdngSrSlctd = dvcRqstCcrrncTmngCdngSrSlctd;
-       this.dvcRqstCcrrncTmngCdngCde = dvcRqstCcrrncTmngCdngCde;
-       this.dvcRqstCcrrncTmngCdngVrsn = dvcRqstCcrrncTmngCdngVrsn;
-       this.dvcRqstCcrrncTmngCdngDsplay = dvcRqstCcrrncTmngCdngDsplay;
-       this.dvcRqstCcrrncTmngCdngSstm = dvcRqstCcrrncTmngCdngSstm;
-       this.deviceRequestAuthoredOn = deviceRequestAuthoredOn;
-       this.deviceRequestRequester = deviceRequestRequester;
-       this.dvcRqstPrfrmrTpCdngSrSlctd = dvcRqstPrfrmrTpCdngSrSlctd;
-       this.dvcRqstPrfrmrTpCdngCde = dvcRqstPrfrmrTpCdngCde;
-       this.dvcRqstPrfrmrTpCdngVrsn = dvcRqstPrfrmrTpCdngVrsn;
-       this.dvcRqstPrfrmrTpCdngDsplay = dvcRqstPrfrmrTpCdngDsplay;
-       this.dvcRqstPrfrmrTpCdngSstm = dvcRqstPrfrmrTpCdngSstm;
-       this.deviceRequestPerformer = deviceRequestPerformer;
-       this.dvcRqstRsnCdCdngSrSlctd = dvcRqstRsnCdCdngSrSlctd;
-       this.dvcRqstRsnCdCdngCde = dvcRqstRsnCdCdngCde;
-       this.dvcRqstRsnCdCdngVrsn = dvcRqstRsnCdCdngVrsn;
-       this.dvcRqstRsnCdCdngDsplay = dvcRqstRsnCdCdngDsplay;
-       this.dvcRqstRsnCdCdngSstm = dvcRqstRsnCdCdngSstm;
-       this.deviceRequestReasonReference = deviceRequestReasonReference;
-       this.deviceRequestInsurance = deviceRequestInsurance;
-       this.deviceRequestSupportingInfo = deviceRequestSupportingInfo;
-       this.dvcRqstNtCdngSrSlctd = dvcRqstNtCdngSrSlctd;
-       this.deviceRequestNoteCodingCode = deviceRequestNoteCodingCode;
-       this.deviceRequestNoteCodingVersion = deviceRequestNoteCodingVersion;
-       this.deviceRequestNoteCodingDisplay = deviceRequestNoteCodingDisplay;
-       this.deviceRequestNoteCodingSystem = deviceRequestNoteCodingSystem;
-       this.deviceRequestRelevantHistory = deviceRequestRelevantHistory;
+    public Devicerequest(String dvcRqstDntfrDntfrSe, String dvcRqstDntfrDntfrTpCcCSstm, String dvcRqstDntfrDntfrTpCcCVrsn, String dvcRqstDntfrDntfrTpCcCCde, String dvcRqstDntfrDntfrTpCcCDsplay, String dvcRqstDntfrDntfrTpCcCSrSlctd, String dvcRqstDntfrDntfrTpCcTxt, String dvcRqstDntfrDntfrPrdPrdStrt, String dvcRqstDntfrDntfrPrdPrdNd, String dvcRqstDntfrDntfrSsgnr, String dvcRqstDntfrDntfrVlue, String dvcRqstDntfrDntfrSstm, String dvcRqstNstnttsCnnclCnncl, String deviceRequestInstantiatesUriUri, String deviceRequestBasedOnReference, String dvcRqstPrrRqstRfrnce, String dvcRqstGrpdntfrDntfrSe, String dvcRqstGrpdntfrDntfrTpCcCSstm, String dvcRqstGrpdntfrDntfrTpCcCVrsn, String dvcRqstGrpdntfrDntfrTpCcCCde, String dvcRqstGrpdntfrDntfrTpCcCDsplay, String dvcRqstGrpdntfrDntfrTpCcCSrSlctd, String dvcRqstGrpdntfrDntfrTpCcTxt, String dvcRqstGrpdntfrDntfrPrdPrdStrt, String dvcRqstGrpdntfrDntfrPrdPrdNd, String dvcRqstGrpdntfrDntfrSsgnr, String dvcRqstGrpdntfrDntfrVlue, String dvcRqstGrpdntfrDntfrSstm, String deviceRequestStatusCode, String deviceRequestIntentCode, String deviceRequestPriorityCode, String dvcRqstCdRfrncRfrnce, String dvcRqstCdCdblcncptCcCdngCSstm, String dvcRqstCdCdblcncptCcCdngCVrsn, String dvcRqstCdCdblcncptCcCdngCCde, String dvcRqstCdCdblcncptCcCdngCDsplay, String dvcRqstCdCdblcncptCcCdngCSrSlctd, String dvcRqstCdCdblcncptCcTxt, String dvcRqstPrmtrCdCcCdngCSstm, String dvcRqstPrmtrCdCcCdngCVrsn, String dvcRqstPrmtrCdCcCdngCCde, String dvcRqstPrmtrCdCcCdngCDsplay, String dvcRqstPrmtrCdCcCdngCSrSlctd, String dvcRqstPrmtrCdCcTxt, String dvcRqstPrmtrVlCdblcncptCcCdngCSstm, String dvcRqstPrmtrVlCdblcncptCcCdngCVrsn, String dvcRqstPrmtrVlCdblcncptCcCdngCCde, String dvcRqstPrmtrVlCdblcncptCcCdngCDsplay, String dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd, String dvcRqstPrmtrVlCdblcncptCcTxt, String dvcRqstPrmtrVlQnttQnttCmprtr, String dvcRqstPrmtrVlQnttQnttCde, String dvcRqstPrmtrVlQnttQnttVlue, String dvcRqstPrmtrVlQnttQnttNt, String dvcRqstPrmtrVlQnttQnttSstm, String dvcRqstPrmtrVlRngRngLw, String dvcRqstPrmtrVlRngRngHgh, String dvcRqstPrmtrVlBlnBln, String deviceRequestSubjectReference, String deviceRequestEncounterReference, String dvcRqstCcrrncDttmDtTme, String dvcRqstCcrrncPrdPrdStrt, String dvcRqstCcrrncPrdPrdNd, String dvcRqstCcrrncTmngTmngCdCcCSstm, String dvcRqstCcrrncTmngTmngCdCcCVrsn, String dvcRqstCcrrncTmngTmngCdCcCCde, String dvcRqstCcrrncTmngTmngCdCcCDsplay, String dvcRqstCcrrncTmngTmngCdCcCSrSlctd, String dvcRqstCcrrncTmngTmngCdCcTxt, String dvcRqstCcrrncTmngTmngVnt, String dvcRqstCcrrncTmngTmngRptDrtnnt, String dvcRqstCcrrncTmngTmngRptPrdnt, String dvcRqstCcrrncTmngTmngRptDfWk, String dvcRqstCcrrncTmngTmngRptWhn, String dvcRqstCcrrncTmngTmngRptDrtn, String dvcRqstCcrrncTmngTmngRptDrtnMx, String dvcRqstCcrrncTmngTmngRptPrd, String dvcRqstCcrrncTmngTmngRptPrdMx, String dvcRqstCcrrncTmngTmngRptBndsDrtn, String dvcRqstCcrrncTmngTmngRptBndsPrd, String dvcRqstCcrrncTmngTmngRptCnt, String dvcRqstCcrrncTmngTmngRptCntMx, String dvcRqstCcrrncTmngTmngRptFrqncy, String dvcRqstCcrrncTmngTmngRptFrqncMx, String dvcRqstCcrrncTmngTmngRptBndsRnge, String dvcRqstCcrrncTmngTmngRptTmfDay, String dvcRqstCcrrncTmngTmngRptFfst, String deviceRequestAuthoredOnDateTime, String deviceRequestRequesterReference, String dvcRqstPrfrmrTpCcCdngCSstm, String dvcRqstPrfrmrTpCcCdngCVrsn, String dvcRqstPrfrmrTpCcCdngCCde, String dvcRqstPrfrmrTpCcCdngCDsplay, String dvcRqstPrfrmrTpCcCdngCSrSlctd, String dvcRqstPrfrmrTpCcTxt, String deviceRequestPerformerReference, String dvcRqstRsnCdCcCdngCSstm, String dvcRqstRsnCdCcCdngCVrsn, String dvcRqstRsnCdCcCdngCCde, String dvcRqstRsnCdCcCdngCDsplay, String dvcRqstRsnCdCcCdngCSrSlctd, String deviceRequestReasonCodeCcText, String dvcRqstRsnRfrncRfrnce, String deviceRequestInsuranceReference, String dvcRqstSpprtngnfRfrnce, String deviceRequestNoteAnnotationTime, String deviceRequestNoteAnnotationText, String dvcRqstNtNnttnThrRfrnce, String dvcRqstNtNnttnThrStrng, String dvcRqstRlvntHstrRfrnce) {
+       this.dvcRqstDntfrDntfrSe = dvcRqstDntfrDntfrSe;
+       this.dvcRqstDntfrDntfrTpCcCSstm = dvcRqstDntfrDntfrTpCcCSstm;
+       this.dvcRqstDntfrDntfrTpCcCVrsn = dvcRqstDntfrDntfrTpCcCVrsn;
+       this.dvcRqstDntfrDntfrTpCcCCde = dvcRqstDntfrDntfrTpCcCCde;
+       this.dvcRqstDntfrDntfrTpCcCDsplay = dvcRqstDntfrDntfrTpCcCDsplay;
+       this.dvcRqstDntfrDntfrTpCcCSrSlctd = dvcRqstDntfrDntfrTpCcCSrSlctd;
+       this.dvcRqstDntfrDntfrTpCcTxt = dvcRqstDntfrDntfrTpCcTxt;
+       this.dvcRqstDntfrDntfrPrdPrdStrt = dvcRqstDntfrDntfrPrdPrdStrt;
+       this.dvcRqstDntfrDntfrPrdPrdNd = dvcRqstDntfrDntfrPrdPrdNd;
+       this.dvcRqstDntfrDntfrSsgnr = dvcRqstDntfrDntfrSsgnr;
+       this.dvcRqstDntfrDntfrVlue = dvcRqstDntfrDntfrVlue;
+       this.dvcRqstDntfrDntfrSstm = dvcRqstDntfrDntfrSstm;
+       this.dvcRqstNstnttsCnnclCnncl = dvcRqstNstnttsCnnclCnncl;
+       this.deviceRequestInstantiatesUriUri = deviceRequestInstantiatesUriUri;
+       this.deviceRequestBasedOnReference = deviceRequestBasedOnReference;
+       this.dvcRqstPrrRqstRfrnce = dvcRqstPrrRqstRfrnce;
+       this.dvcRqstGrpdntfrDntfrSe = dvcRqstGrpdntfrDntfrSe;
+       this.dvcRqstGrpdntfrDntfrTpCcCSstm = dvcRqstGrpdntfrDntfrTpCcCSstm;
+       this.dvcRqstGrpdntfrDntfrTpCcCVrsn = dvcRqstGrpdntfrDntfrTpCcCVrsn;
+       this.dvcRqstGrpdntfrDntfrTpCcCCde = dvcRqstGrpdntfrDntfrTpCcCCde;
+       this.dvcRqstGrpdntfrDntfrTpCcCDsplay = dvcRqstGrpdntfrDntfrTpCcCDsplay;
+       this.dvcRqstGrpdntfrDntfrTpCcCSrSlctd = dvcRqstGrpdntfrDntfrTpCcCSrSlctd;
+       this.dvcRqstGrpdntfrDntfrTpCcTxt = dvcRqstGrpdntfrDntfrTpCcTxt;
+       this.dvcRqstGrpdntfrDntfrPrdPrdStrt = dvcRqstGrpdntfrDntfrPrdPrdStrt;
+       this.dvcRqstGrpdntfrDntfrPrdPrdNd = dvcRqstGrpdntfrDntfrPrdPrdNd;
+       this.dvcRqstGrpdntfrDntfrSsgnr = dvcRqstGrpdntfrDntfrSsgnr;
+       this.dvcRqstGrpdntfrDntfrVlue = dvcRqstGrpdntfrDntfrVlue;
+       this.dvcRqstGrpdntfrDntfrSstm = dvcRqstGrpdntfrDntfrSstm;
+       this.deviceRequestStatusCode = deviceRequestStatusCode;
+       this.deviceRequestIntentCode = deviceRequestIntentCode;
+       this.deviceRequestPriorityCode = deviceRequestPriorityCode;
+       this.dvcRqstCdRfrncRfrnce = dvcRqstCdRfrncRfrnce;
+       this.dvcRqstCdCdblcncptCcCdngCSstm = dvcRqstCdCdblcncptCcCdngCSstm;
+       this.dvcRqstCdCdblcncptCcCdngCVrsn = dvcRqstCdCdblcncptCcCdngCVrsn;
+       this.dvcRqstCdCdblcncptCcCdngCCde = dvcRqstCdCdblcncptCcCdngCCde;
+       this.dvcRqstCdCdblcncptCcCdngCDsplay = dvcRqstCdCdblcncptCcCdngCDsplay;
+       this.dvcRqstCdCdblcncptCcCdngCSrSlctd = dvcRqstCdCdblcncptCcCdngCSrSlctd;
+       this.dvcRqstCdCdblcncptCcTxt = dvcRqstCdCdblcncptCcTxt;
+       this.dvcRqstPrmtrCdCcCdngCSstm = dvcRqstPrmtrCdCcCdngCSstm;
+       this.dvcRqstPrmtrCdCcCdngCVrsn = dvcRqstPrmtrCdCcCdngCVrsn;
+       this.dvcRqstPrmtrCdCcCdngCCde = dvcRqstPrmtrCdCcCdngCCde;
+       this.dvcRqstPrmtrCdCcCdngCDsplay = dvcRqstPrmtrCdCcCdngCDsplay;
+       this.dvcRqstPrmtrCdCcCdngCSrSlctd = dvcRqstPrmtrCdCcCdngCSrSlctd;
+       this.dvcRqstPrmtrCdCcTxt = dvcRqstPrmtrCdCcTxt;
+       this.dvcRqstPrmtrVlCdblcncptCcCdngCSstm = dvcRqstPrmtrVlCdblcncptCcCdngCSstm;
+       this.dvcRqstPrmtrVlCdblcncptCcCdngCVrsn = dvcRqstPrmtrVlCdblcncptCcCdngCVrsn;
+       this.dvcRqstPrmtrVlCdblcncptCcCdngCCde = dvcRqstPrmtrVlCdblcncptCcCdngCCde;
+       this.dvcRqstPrmtrVlCdblcncptCcCdngCDsplay = dvcRqstPrmtrVlCdblcncptCcCdngCDsplay;
+       this.dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd = dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd;
+       this.dvcRqstPrmtrVlCdblcncptCcTxt = dvcRqstPrmtrVlCdblcncptCcTxt;
+       this.dvcRqstPrmtrVlQnttQnttCmprtr = dvcRqstPrmtrVlQnttQnttCmprtr;
+       this.dvcRqstPrmtrVlQnttQnttCde = dvcRqstPrmtrVlQnttQnttCde;
+       this.dvcRqstPrmtrVlQnttQnttVlue = dvcRqstPrmtrVlQnttQnttVlue;
+       this.dvcRqstPrmtrVlQnttQnttNt = dvcRqstPrmtrVlQnttQnttNt;
+       this.dvcRqstPrmtrVlQnttQnttSstm = dvcRqstPrmtrVlQnttQnttSstm;
+       this.dvcRqstPrmtrVlRngRngLw = dvcRqstPrmtrVlRngRngLw;
+       this.dvcRqstPrmtrVlRngRngHgh = dvcRqstPrmtrVlRngRngHgh;
+       this.dvcRqstPrmtrVlBlnBln = dvcRqstPrmtrVlBlnBln;
+       this.deviceRequestSubjectReference = deviceRequestSubjectReference;
+       this.deviceRequestEncounterReference = deviceRequestEncounterReference;
+       this.dvcRqstCcrrncDttmDtTme = dvcRqstCcrrncDttmDtTme;
+       this.dvcRqstCcrrncPrdPrdStrt = dvcRqstCcrrncPrdPrdStrt;
+       this.dvcRqstCcrrncPrdPrdNd = dvcRqstCcrrncPrdPrdNd;
+       this.dvcRqstCcrrncTmngTmngCdCcCSstm = dvcRqstCcrrncTmngTmngCdCcCSstm;
+       this.dvcRqstCcrrncTmngTmngCdCcCVrsn = dvcRqstCcrrncTmngTmngCdCcCVrsn;
+       this.dvcRqstCcrrncTmngTmngCdCcCCde = dvcRqstCcrrncTmngTmngCdCcCCde;
+       this.dvcRqstCcrrncTmngTmngCdCcCDsplay = dvcRqstCcrrncTmngTmngCdCcCDsplay;
+       this.dvcRqstCcrrncTmngTmngCdCcCSrSlctd = dvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+       this.dvcRqstCcrrncTmngTmngCdCcTxt = dvcRqstCcrrncTmngTmngCdCcTxt;
+       this.dvcRqstCcrrncTmngTmngVnt = dvcRqstCcrrncTmngTmngVnt;
+       this.dvcRqstCcrrncTmngTmngRptDrtnnt = dvcRqstCcrrncTmngTmngRptDrtnnt;
+       this.dvcRqstCcrrncTmngTmngRptPrdnt = dvcRqstCcrrncTmngTmngRptPrdnt;
+       this.dvcRqstCcrrncTmngTmngRptDfWk = dvcRqstCcrrncTmngTmngRptDfWk;
+       this.dvcRqstCcrrncTmngTmngRptWhn = dvcRqstCcrrncTmngTmngRptWhn;
+       this.dvcRqstCcrrncTmngTmngRptDrtn = dvcRqstCcrrncTmngTmngRptDrtn;
+       this.dvcRqstCcrrncTmngTmngRptDrtnMx = dvcRqstCcrrncTmngTmngRptDrtnMx;
+       this.dvcRqstCcrrncTmngTmngRptPrd = dvcRqstCcrrncTmngTmngRptPrd;
+       this.dvcRqstCcrrncTmngTmngRptPrdMx = dvcRqstCcrrncTmngTmngRptPrdMx;
+       this.dvcRqstCcrrncTmngTmngRptBndsDrtn = dvcRqstCcrrncTmngTmngRptBndsDrtn;
+       this.dvcRqstCcrrncTmngTmngRptBndsPrd = dvcRqstCcrrncTmngTmngRptBndsPrd;
+       this.dvcRqstCcrrncTmngTmngRptCnt = dvcRqstCcrrncTmngTmngRptCnt;
+       this.dvcRqstCcrrncTmngTmngRptCntMx = dvcRqstCcrrncTmngTmngRptCntMx;
+       this.dvcRqstCcrrncTmngTmngRptFrqncy = dvcRqstCcrrncTmngTmngRptFrqncy;
+       this.dvcRqstCcrrncTmngTmngRptFrqncMx = dvcRqstCcrrncTmngTmngRptFrqncMx;
+       this.dvcRqstCcrrncTmngTmngRptBndsRnge = dvcRqstCcrrncTmngTmngRptBndsRnge;
+       this.dvcRqstCcrrncTmngTmngRptTmfDay = dvcRqstCcrrncTmngTmngRptTmfDay;
+       this.dvcRqstCcrrncTmngTmngRptFfst = dvcRqstCcrrncTmngTmngRptFfst;
+       this.deviceRequestAuthoredOnDateTime = deviceRequestAuthoredOnDateTime;
+       this.deviceRequestRequesterReference = deviceRequestRequesterReference;
+       this.dvcRqstPrfrmrTpCcCdngCSstm = dvcRqstPrfrmrTpCcCdngCSstm;
+       this.dvcRqstPrfrmrTpCcCdngCVrsn = dvcRqstPrfrmrTpCcCdngCVrsn;
+       this.dvcRqstPrfrmrTpCcCdngCCde = dvcRqstPrfrmrTpCcCdngCCde;
+       this.dvcRqstPrfrmrTpCcCdngCDsplay = dvcRqstPrfrmrTpCcCdngCDsplay;
+       this.dvcRqstPrfrmrTpCcCdngCSrSlctd = dvcRqstPrfrmrTpCcCdngCSrSlctd;
+       this.dvcRqstPrfrmrTpCcTxt = dvcRqstPrfrmrTpCcTxt;
+       this.deviceRequestPerformerReference = deviceRequestPerformerReference;
+       this.dvcRqstRsnCdCcCdngCSstm = dvcRqstRsnCdCcCdngCSstm;
+       this.dvcRqstRsnCdCcCdngCVrsn = dvcRqstRsnCdCcCdngCVrsn;
+       this.dvcRqstRsnCdCcCdngCCde = dvcRqstRsnCdCcCdngCCde;
+       this.dvcRqstRsnCdCcCdngCDsplay = dvcRqstRsnCdCcCdngCDsplay;
+       this.dvcRqstRsnCdCcCdngCSrSlctd = dvcRqstRsnCdCcCdngCSrSlctd;
+       this.deviceRequestReasonCodeCcText = deviceRequestReasonCodeCcText;
+       this.dvcRqstRsnRfrncRfrnce = dvcRqstRsnRfrncRfrnce;
+       this.deviceRequestInsuranceReference = deviceRequestInsuranceReference;
+       this.dvcRqstSpprtngnfRfrnce = dvcRqstSpprtngnfRfrnce;
+       this.deviceRequestNoteAnnotationTime = deviceRequestNoteAnnotationTime;
+       this.deviceRequestNoteAnnotationText = deviceRequestNoteAnnotationText;
+       this.dvcRqstNtNnttnThrRfrnce = dvcRqstNtNnttnThrRfrnce;
+       this.dvcRqstNtNnttnThrStrng = dvcRqstNtNnttnThrStrng;
+       this.dvcRqstRlvntHstrRfrnce = dvcRqstRlvntHstrRfrnce;
     }
    
-    public String getDvcRqstDntfrCdngCde() {
-        return this.dvcRqstDntfrCdngCde;
-    }
-    
-    public void setDvcRqstDntfrCdngCde(String dvcRqstDntfrCdngCde) {
-        this.dvcRqstDntfrCdngCde = dvcRqstDntfrCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstDntfrCdngSrSlctd() {
-        return this.dvcRqstDntfrCdngSrSlctd;
-    }
-    
-    public void setDvcRqstDntfrCdngSrSlctd(String dvcRqstDntfrCdngSrSlctd) {
-        this.dvcRqstDntfrCdngSrSlctd = dvcRqstDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstDntfrCdngVrsn() {
-        return this.dvcRqstDntfrCdngVrsn;
-    }
-    
-    public void setDvcRqstDntfrCdngVrsn(String dvcRqstDntfrCdngVrsn) {
-        this.dvcRqstDntfrCdngVrsn = dvcRqstDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstDntfrCdngDsplay() {
-        return this.dvcRqstDntfrCdngDsplay;
-    }
-    
-    public void setDvcRqstDntfrCdngDsplay(String dvcRqstDntfrCdngDsplay) {
-        this.dvcRqstDntfrCdngDsplay = dvcRqstDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstDntfrCdngSstm() {
-        return this.dvcRqstDntfrCdngSstm;
-    }
-    
-    public void setDvcRqstDntfrCdngSstm(String dvcRqstDntfrCdngSstm) {
-        this.dvcRqstDntfrCdngSstm = dvcRqstDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstNstnttsCnncl() {
-        return this.dvcRqstNstnttsCnncl;
-    }
-    
-    public void setDvcRqstNstnttsCnncl(String dvcRqstNstnttsCnncl) {
-        this.dvcRqstNstnttsCnncl = dvcRqstNstnttsCnncl;
-    }
-    
-    
-    
-    public String getDeviceRequestInstantiatesUri() {
-        return this.deviceRequestInstantiatesUri;
-    }
-    
-    public void setDeviceRequestInstantiatesUri(String deviceRequestInstantiatesUri) {
-        this.deviceRequestInstantiatesUri = deviceRequestInstantiatesUri;
-    }
-    
-    
-    
-    public String getDeviceRequestBasedOn() {
-        return this.deviceRequestBasedOn;
-    }
-    
-    public void setDeviceRequestBasedOn(String deviceRequestBasedOn) {
-        this.deviceRequestBasedOn = deviceRequestBasedOn;
-    }
-    
-    
-    
-    public String getDeviceRequestPriorRequest() {
-        return this.deviceRequestPriorRequest;
-    }
-    
-    public void setDeviceRequestPriorRequest(String deviceRequestPriorRequest) {
-        this.deviceRequestPriorRequest = deviceRequestPriorRequest;
-    }
-    
-    
-    
-    public String getDvcRqstGrpdntfrCdngSrSlctd() {
-        return this.dvcRqstGrpdntfrCdngSrSlctd;
-    }
-    
-    public void setDvcRqstGrpdntfrCdngSrSlctd(String dvcRqstGrpdntfrCdngSrSlctd) {
-        this.dvcRqstGrpdntfrCdngSrSlctd = dvcRqstGrpdntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstGrpdntfrCdngCde() {
-        return this.dvcRqstGrpdntfrCdngCde;
-    }
-    
-    public void setDvcRqstGrpdntfrCdngCde(String dvcRqstGrpdntfrCdngCde) {
-        this.dvcRqstGrpdntfrCdngCde = dvcRqstGrpdntfrCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstGrpdntfrCdngVrsn() {
-        return this.dvcRqstGrpdntfrCdngVrsn;
-    }
-    
-    public void setDvcRqstGrpdntfrCdngVrsn(String dvcRqstGrpdntfrCdngVrsn) {
-        this.dvcRqstGrpdntfrCdngVrsn = dvcRqstGrpdntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstGrpdntfrCdngDsplay() {
-        return this.dvcRqstGrpdntfrCdngDsplay;
-    }
-    
-    public void setDvcRqstGrpdntfrCdngDsplay(String dvcRqstGrpdntfrCdngDsplay) {
-        this.dvcRqstGrpdntfrCdngDsplay = dvcRqstGrpdntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstGrpdntfrCdngSstm() {
-        return this.dvcRqstGrpdntfrCdngSstm;
-    }
-    
-    public void setDvcRqstGrpdntfrCdngSstm(String dvcRqstGrpdntfrCdngSstm) {
-        this.dvcRqstGrpdntfrCdngSstm = dvcRqstGrpdntfrCdngSstm;
-    }
-    
-    
-    
-    public String getDeviceRequestStatus() {
-        return this.deviceRequestStatus;
-    }
-    
-    public void setDeviceRequestStatus(String deviceRequestStatus) {
-        this.deviceRequestStatus = deviceRequestStatus;
-    }
-    
-    
-    
-    public String getDeviceRequestIntent() {
-        return this.deviceRequestIntent;
-    }
-    
-    public void setDeviceRequestIntent(String deviceRequestIntent) {
-        this.deviceRequestIntent = deviceRequestIntent;
-    }
-    
-    
-    
-    public String getDeviceRequestPriority() {
-        return this.deviceRequestPriority;
-    }
-    
-    public void setDeviceRequestPriority(String deviceRequestPriority) {
-        this.deviceRequestPriority = deviceRequestPriority;
-    }
-    
-    
-    
-    public String getDeviceRequestCodeReference() {
-        return this.deviceRequestCodeReference;
-    }
-    
-    public void setDeviceRequestCodeReference(String deviceRequestCodeReference) {
-        this.deviceRequestCodeReference = deviceRequestCodeReference;
-    }
-    
-    
-    
-    public String getDvcRqstCdcdblcptCdngSrSlctd() {
-        return this.dvcRqstCdcdblcptCdngSrSlctd;
-    }
-    
-    public void setDvcRqstCdcdblcptCdngSrSlctd(String dvcRqstCdcdblcptCdngSrSlctd) {
-        this.dvcRqstCdcdblcptCdngSrSlctd = dvcRqstCdcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstCdcdblcptCdngCde() {
-        return this.dvcRqstCdcdblcptCdngCde;
-    }
-    
-    public void setDvcRqstCdcdblcptCdngCde(String dvcRqstCdcdblcptCdngCde) {
-        this.dvcRqstCdcdblcptCdngCde = dvcRqstCdcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstCdcdblcptCdngVrsn() {
-        return this.dvcRqstCdcdblcptCdngVrsn;
-    }
-    
-    public void setDvcRqstCdcdblcptCdngVrsn(String dvcRqstCdcdblcptCdngVrsn) {
-        this.dvcRqstCdcdblcptCdngVrsn = dvcRqstCdcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstCdcdblcptCdngDsplay() {
-        return this.dvcRqstCdcdblcptCdngDsplay;
-    }
-    
-    public void setDvcRqstCdcdblcptCdngDsplay(String dvcRqstCdcdblcptCdngDsplay) {
-        this.dvcRqstCdcdblcptCdngDsplay = dvcRqstCdcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstCdcdblcptCdngSstm() {
-        return this.dvcRqstCdcdblcptCdngSstm;
-    }
-    
-    public void setDvcRqstCdcdblcptCdngSstm(String dvcRqstCdcdblcptCdngSstm) {
-        this.dvcRqstCdcdblcptCdngSstm = dvcRqstCdcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getDeviceRequestParameter() {
-        return this.deviceRequestParameter;
-    }
-    
-    public void setDeviceRequestParameter(String deviceRequestParameter) {
-        this.deviceRequestParameter = deviceRequestParameter;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrCdCdngSrSlctd() {
-        return this.dvcRqstPrmtrCdCdngSrSlctd;
-    }
-    
-    public void setDvcRqstPrmtrCdCdngSrSlctd(String dvcRqstPrmtrCdCdngSrSlctd) {
-        this.dvcRqstPrmtrCdCdngSrSlctd = dvcRqstPrmtrCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrCdCdngCde() {
-        return this.dvcRqstPrmtrCdCdngCde;
-    }
-    
-    public void setDvcRqstPrmtrCdCdngCde(String dvcRqstPrmtrCdCdngCde) {
-        this.dvcRqstPrmtrCdCdngCde = dvcRqstPrmtrCdCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrCdCdngVrsn() {
-        return this.dvcRqstPrmtrCdCdngVrsn;
-    }
-    
-    public void setDvcRqstPrmtrCdCdngVrsn(String dvcRqstPrmtrCdCdngVrsn) {
-        this.dvcRqstPrmtrCdCdngVrsn = dvcRqstPrmtrCdCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrCdCdngDsplay() {
-        return this.dvcRqstPrmtrCdCdngDsplay;
-    }
-    
-    public void setDvcRqstPrmtrCdCdngDsplay(String dvcRqstPrmtrCdCdngDsplay) {
-        this.dvcRqstPrmtrCdCdngDsplay = dvcRqstPrmtrCdCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrCdCdngSstm() {
-        return this.dvcRqstPrmtrCdCdngSstm;
-    }
-    
-    public void setDvcRqstPrmtrCdCdngSstm(String dvcRqstPrmtrCdCdngSstm) {
-        this.dvcRqstPrmtrCdCdngSstm = dvcRqstPrmtrCdCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlcdblcptCdngSrSlctd() {
-        return this.dvcRqstPrmtrVlcdblcptCdngSrSlctd;
-    }
-    
-    public void setDvcRqstPrmtrVlcdblcptCdngSrSlctd(String dvcRqstPrmtrVlcdblcptCdngSrSlctd) {
-        this.dvcRqstPrmtrVlcdblcptCdngSrSlctd = dvcRqstPrmtrVlcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlcdblcptCdngCde() {
-        return this.dvcRqstPrmtrVlcdblcptCdngCde;
-    }
-    
-    public void setDvcRqstPrmtrVlcdblcptCdngCde(String dvcRqstPrmtrVlcdblcptCdngCde) {
-        this.dvcRqstPrmtrVlcdblcptCdngCde = dvcRqstPrmtrVlcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlcdblcptCdngVrsn() {
-        return this.dvcRqstPrmtrVlcdblcptCdngVrsn;
-    }
-    
-    public void setDvcRqstPrmtrVlcdblcptCdngVrsn(String dvcRqstPrmtrVlcdblcptCdngVrsn) {
-        this.dvcRqstPrmtrVlcdblcptCdngVrsn = dvcRqstPrmtrVlcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlcdblcptCdngDsplay() {
-        return this.dvcRqstPrmtrVlcdblcptCdngDsplay;
-    }
-    
-    public void setDvcRqstPrmtrVlcdblcptCdngDsplay(String dvcRqstPrmtrVlcdblcptCdngDsplay) {
-        this.dvcRqstPrmtrVlcdblcptCdngDsplay = dvcRqstPrmtrVlcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlcdblcptCdngSstm() {
-        return this.dvcRqstPrmtrVlcdblcptCdngSstm;
-    }
-    
-    public void setDvcRqstPrmtrVlcdblcptCdngSstm(String dvcRqstPrmtrVlcdblcptCdngSstm) {
-        this.dvcRqstPrmtrVlcdblcptCdngSstm = dvcRqstPrmtrVlcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlQnttCdngSrSlctd() {
-        return this.dvcRqstPrmtrVlQnttCdngSrSlctd;
-    }
-    
-    public void setDvcRqstPrmtrVlQnttCdngSrSlctd(String dvcRqstPrmtrVlQnttCdngSrSlctd) {
-        this.dvcRqstPrmtrVlQnttCdngSrSlctd = dvcRqstPrmtrVlQnttCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlQnttCdngCde() {
-        return this.dvcRqstPrmtrVlQnttCdngCde;
-    }
-    
-    public void setDvcRqstPrmtrVlQnttCdngCde(String dvcRqstPrmtrVlQnttCdngCde) {
-        this.dvcRqstPrmtrVlQnttCdngCde = dvcRqstPrmtrVlQnttCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlQnttCdngVrsn() {
-        return this.dvcRqstPrmtrVlQnttCdngVrsn;
-    }
-    
-    public void setDvcRqstPrmtrVlQnttCdngVrsn(String dvcRqstPrmtrVlQnttCdngVrsn) {
-        this.dvcRqstPrmtrVlQnttCdngVrsn = dvcRqstPrmtrVlQnttCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlQnttCdngDsplay() {
-        return this.dvcRqstPrmtrVlQnttCdngDsplay;
-    }
-    
-    public void setDvcRqstPrmtrVlQnttCdngDsplay(String dvcRqstPrmtrVlQnttCdngDsplay) {
-        this.dvcRqstPrmtrVlQnttCdngDsplay = dvcRqstPrmtrVlQnttCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlQnttCdngSstm() {
-        return this.dvcRqstPrmtrVlQnttCdngSstm;
-    }
-    
-    public void setDvcRqstPrmtrVlQnttCdngSstm(String dvcRqstPrmtrVlQnttCdngSstm) {
-        this.dvcRqstPrmtrVlQnttCdngSstm = dvcRqstPrmtrVlQnttCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlRngCdngSrSlctd() {
-        return this.dvcRqstPrmtrVlRngCdngSrSlctd;
-    }
-    
-    public void setDvcRqstPrmtrVlRngCdngSrSlctd(String dvcRqstPrmtrVlRngCdngSrSlctd) {
-        this.dvcRqstPrmtrVlRngCdngSrSlctd = dvcRqstPrmtrVlRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlRngCdngCde() {
-        return this.dvcRqstPrmtrVlRngCdngCde;
-    }
-    
-    public void setDvcRqstPrmtrVlRngCdngCde(String dvcRqstPrmtrVlRngCdngCde) {
-        this.dvcRqstPrmtrVlRngCdngCde = dvcRqstPrmtrVlRngCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlRngCdngVrsn() {
-        return this.dvcRqstPrmtrVlRngCdngVrsn;
-    }
-    
-    public void setDvcRqstPrmtrVlRngCdngVrsn(String dvcRqstPrmtrVlRngCdngVrsn) {
-        this.dvcRqstPrmtrVlRngCdngVrsn = dvcRqstPrmtrVlRngCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlRngCdngDsplay() {
-        return this.dvcRqstPrmtrVlRngCdngDsplay;
-    }
-    
-    public void setDvcRqstPrmtrVlRngCdngDsplay(String dvcRqstPrmtrVlRngCdngDsplay) {
-        this.dvcRqstPrmtrVlRngCdngDsplay = dvcRqstPrmtrVlRngCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlRngCdngSstm() {
-        return this.dvcRqstPrmtrVlRngCdngSstm;
-    }
-    
-    public void setDvcRqstPrmtrVlRngCdngSstm(String dvcRqstPrmtrVlRngCdngSstm) {
-        this.dvcRqstPrmtrVlRngCdngSstm = dvcRqstPrmtrVlRngCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstPrmtrVlBln() {
-        return this.dvcRqstPrmtrVlBln;
-    }
-    
-    public void setDvcRqstPrmtrVlBln(String dvcRqstPrmtrVlBln) {
-        this.dvcRqstPrmtrVlBln = dvcRqstPrmtrVlBln;
-    }
-    
-    
-    
-    public String getDeviceRequestSubject() {
-        return this.deviceRequestSubject;
-    }
-    
-    public void setDeviceRequestSubject(String deviceRequestSubject) {
-        this.deviceRequestSubject = deviceRequestSubject;
-    }
-    
-    
-    
-    public String getDeviceRequestEncounter() {
-        return this.deviceRequestEncounter;
-    }
-    
-    public void setDeviceRequestEncounter(String deviceRequestEncounter) {
-        this.deviceRequestEncounter = deviceRequestEncounter;
-    }
-    
-    
-    
-    public String getDeviceRequestOccurrenceDatetime() {
-        return this.deviceRequestOccurrenceDatetime;
-    }
-    
-    public void setDeviceRequestOccurrenceDatetime(String deviceRequestOccurrenceDatetime) {
-        this.deviceRequestOccurrenceDatetime = deviceRequestOccurrenceDatetime;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncPrdCdngSrSlctd() {
-        return this.dvcRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    public void setDvcRqstCcrrncPrdCdngSrSlctd(String dvcRqstCcrrncPrdCdngSrSlctd) {
-        this.dvcRqstCcrrncPrdCdngSrSlctd = dvcRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncPrdCdngCde() {
-        return this.dvcRqstCcrrncPrdCdngCde;
-    }
-    
-    public void setDvcRqstCcrrncPrdCdngCde(String dvcRqstCcrrncPrdCdngCde) {
-        this.dvcRqstCcrrncPrdCdngCde = dvcRqstCcrrncPrdCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncPrdCdngVrsn() {
-        return this.dvcRqstCcrrncPrdCdngVrsn;
-    }
-    
-    public void setDvcRqstCcrrncPrdCdngVrsn(String dvcRqstCcrrncPrdCdngVrsn) {
-        this.dvcRqstCcrrncPrdCdngVrsn = dvcRqstCcrrncPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncPrdCdngDsplay() {
-        return this.dvcRqstCcrrncPrdCdngDsplay;
-    }
-    
-    public void setDvcRqstCcrrncPrdCdngDsplay(String dvcRqstCcrrncPrdCdngDsplay) {
-        this.dvcRqstCcrrncPrdCdngDsplay = dvcRqstCcrrncPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncPrdCdngSstm() {
-        return this.dvcRqstCcrrncPrdCdngSstm;
-    }
-    
-    public void setDvcRqstCcrrncPrdCdngSstm(String dvcRqstCcrrncPrdCdngSstm) {
-        this.dvcRqstCcrrncPrdCdngSstm = dvcRqstCcrrncPrdCdngSstm;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncTmngCdngSrSlctd() {
-        return this.dvcRqstCcrrncTmngCdngSrSlctd;
-    }
-    
-    public void setDvcRqstCcrrncTmngCdngSrSlctd(String dvcRqstCcrrncTmngCdngSrSlctd) {
-        this.dvcRqstCcrrncTmngCdngSrSlctd = dvcRqstCcrrncTmngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncTmngCdngCde() {
-        return this.dvcRqstCcrrncTmngCdngCde;
-    }
-    
-    public void setDvcRqstCcrrncTmngCdngCde(String dvcRqstCcrrncTmngCdngCde) {
-        this.dvcRqstCcrrncTmngCdngCde = dvcRqstCcrrncTmngCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncTmngCdngVrsn() {
-        return this.dvcRqstCcrrncTmngCdngVrsn;
-    }
-    
-    public void setDvcRqstCcrrncTmngCdngVrsn(String dvcRqstCcrrncTmngCdngVrsn) {
-        this.dvcRqstCcrrncTmngCdngVrsn = dvcRqstCcrrncTmngCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncTmngCdngDsplay() {
-        return this.dvcRqstCcrrncTmngCdngDsplay;
-    }
-    
-    public void setDvcRqstCcrrncTmngCdngDsplay(String dvcRqstCcrrncTmngCdngDsplay) {
-        this.dvcRqstCcrrncTmngCdngDsplay = dvcRqstCcrrncTmngCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstCcrrncTmngCdngSstm() {
-        return this.dvcRqstCcrrncTmngCdngSstm;
-    }
-    
-    public void setDvcRqstCcrrncTmngCdngSstm(String dvcRqstCcrrncTmngCdngSstm) {
-        this.dvcRqstCcrrncTmngCdngSstm = dvcRqstCcrrncTmngCdngSstm;
-    }
-    
-    
-    
-    public String getDeviceRequestAuthoredOn() {
-        return this.deviceRequestAuthoredOn;
-    }
-    
-    public void setDeviceRequestAuthoredOn(String deviceRequestAuthoredOn) {
-        this.deviceRequestAuthoredOn = deviceRequestAuthoredOn;
-    }
-    
-    
-    
-    public String getDeviceRequestRequester() {
-        return this.deviceRequestRequester;
-    }
-    
-    public void setDeviceRequestRequester(String deviceRequestRequester) {
-        this.deviceRequestRequester = deviceRequestRequester;
-    }
-    
-    
-    
-    public String getDvcRqstPrfrmrTpCdngSrSlctd() {
-        return this.dvcRqstPrfrmrTpCdngSrSlctd;
-    }
-    
-    public void setDvcRqstPrfrmrTpCdngSrSlctd(String dvcRqstPrfrmrTpCdngSrSlctd) {
-        this.dvcRqstPrfrmrTpCdngSrSlctd = dvcRqstPrfrmrTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstPrfrmrTpCdngCde() {
-        return this.dvcRqstPrfrmrTpCdngCde;
-    }
-    
-    public void setDvcRqstPrfrmrTpCdngCde(String dvcRqstPrfrmrTpCdngCde) {
-        this.dvcRqstPrfrmrTpCdngCde = dvcRqstPrfrmrTpCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstPrfrmrTpCdngVrsn() {
-        return this.dvcRqstPrfrmrTpCdngVrsn;
-    }
-    
-    public void setDvcRqstPrfrmrTpCdngVrsn(String dvcRqstPrfrmrTpCdngVrsn) {
-        this.dvcRqstPrfrmrTpCdngVrsn = dvcRqstPrfrmrTpCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstPrfrmrTpCdngDsplay() {
-        return this.dvcRqstPrfrmrTpCdngDsplay;
-    }
-    
-    public void setDvcRqstPrfrmrTpCdngDsplay(String dvcRqstPrfrmrTpCdngDsplay) {
-        this.dvcRqstPrfrmrTpCdngDsplay = dvcRqstPrfrmrTpCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstPrfrmrTpCdngSstm() {
-        return this.dvcRqstPrfrmrTpCdngSstm;
-    }
-    
-    public void setDvcRqstPrfrmrTpCdngSstm(String dvcRqstPrfrmrTpCdngSstm) {
-        this.dvcRqstPrfrmrTpCdngSstm = dvcRqstPrfrmrTpCdngSstm;
-    }
-    
-    
-    
-    public String getDeviceRequestPerformer() {
-        return this.deviceRequestPerformer;
-    }
-    
-    public void setDeviceRequestPerformer(String deviceRequestPerformer) {
-        this.deviceRequestPerformer = deviceRequestPerformer;
-    }
-    
-    
-    
-    public String getDvcRqstRsnCdCdngSrSlctd() {
-        return this.dvcRqstRsnCdCdngSrSlctd;
-    }
-    
-    public void setDvcRqstRsnCdCdngSrSlctd(String dvcRqstRsnCdCdngSrSlctd) {
-        this.dvcRqstRsnCdCdngSrSlctd = dvcRqstRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDvcRqstRsnCdCdngCde() {
-        return this.dvcRqstRsnCdCdngCde;
-    }
-    
-    public void setDvcRqstRsnCdCdngCde(String dvcRqstRsnCdCdngCde) {
-        this.dvcRqstRsnCdCdngCde = dvcRqstRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getDvcRqstRsnCdCdngVrsn() {
-        return this.dvcRqstRsnCdCdngVrsn;
-    }
-    
-    public void setDvcRqstRsnCdCdngVrsn(String dvcRqstRsnCdCdngVrsn) {
-        this.dvcRqstRsnCdCdngVrsn = dvcRqstRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getDvcRqstRsnCdCdngDsplay() {
-        return this.dvcRqstRsnCdCdngDsplay;
-    }
-    
-    public void setDvcRqstRsnCdCdngDsplay(String dvcRqstRsnCdCdngDsplay) {
-        this.dvcRqstRsnCdCdngDsplay = dvcRqstRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getDvcRqstRsnCdCdngSstm() {
-        return this.dvcRqstRsnCdCdngSstm;
-    }
-    
-    public void setDvcRqstRsnCdCdngSstm(String dvcRqstRsnCdCdngSstm) {
-        this.dvcRqstRsnCdCdngSstm = dvcRqstRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getDeviceRequestReasonReference() {
-        return this.deviceRequestReasonReference;
-    }
-    
-    public void setDeviceRequestReasonReference(String deviceRequestReasonReference) {
-        this.deviceRequestReasonReference = deviceRequestReasonReference;
-    }
-    
-    
-    
-    public String getDeviceRequestInsurance() {
-        return this.deviceRequestInsurance;
-    }
-    
-    public void setDeviceRequestInsurance(String deviceRequestInsurance) {
-        this.deviceRequestInsurance = deviceRequestInsurance;
-    }
-    
-    
-    
-    public String getDeviceRequestSupportingInfo() {
-        return this.deviceRequestSupportingInfo;
-    }
-    
-    public void setDeviceRequestSupportingInfo(String deviceRequestSupportingInfo) {
-        this.deviceRequestSupportingInfo = deviceRequestSupportingInfo;
-    }
-    
-    
-    
-    public String getDvcRqstNtCdngSrSlctd() {
-        return this.dvcRqstNtCdngSrSlctd;
-    }
-    
-    public void setDvcRqstNtCdngSrSlctd(String dvcRqstNtCdngSrSlctd) {
-        this.dvcRqstNtCdngSrSlctd = dvcRqstNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getDeviceRequestNoteCodingCode() {
-        return this.deviceRequestNoteCodingCode;
-    }
-    
-    public void setDeviceRequestNoteCodingCode(String deviceRequestNoteCodingCode) {
-        this.deviceRequestNoteCodingCode = deviceRequestNoteCodingCode;
-    }
-    
-    
-    
-    public String getDeviceRequestNoteCodingVersion() {
-        return this.deviceRequestNoteCodingVersion;
-    }
-    
-    public void setDeviceRequestNoteCodingVersion(String deviceRequestNoteCodingVersion) {
-        this.deviceRequestNoteCodingVersion = deviceRequestNoteCodingVersion;
-    }
-    
-    
-    
-    public String getDeviceRequestNoteCodingDisplay() {
-        return this.deviceRequestNoteCodingDisplay;
-    }
-    
-    public void setDeviceRequestNoteCodingDisplay(String deviceRequestNoteCodingDisplay) {
-        this.deviceRequestNoteCodingDisplay = deviceRequestNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getDeviceRequestNoteCodingSystem() {
-        return this.deviceRequestNoteCodingSystem;
-    }
-    
-    public void setDeviceRequestNoteCodingSystem(String deviceRequestNoteCodingSystem) {
-        this.deviceRequestNoteCodingSystem = deviceRequestNoteCodingSystem;
-    }
-    
-    
-    
-    public String getDeviceRequestRelevantHistory() {
-        return this.deviceRequestRelevantHistory;
-    }
-    
-    public void setDeviceRequestRelevantHistory(String deviceRequestRelevantHistory) {
-        this.deviceRequestRelevantHistory = deviceRequestRelevantHistory;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrSe()
+    {
+        return this.dvcRqstDntfrDntfrSe;
+    }
+    
+    public void setDvcRqstDntfrDntfrSe
+        (String dvcRqstDntfrDntfrSe) 
+        {
+      this.dvcRqstDntfrDntfrSe = dvcRqstDntfrDntfrSe;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcCSstm()
+    {
+        return this.dvcRqstDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcCSstm
+        (String dvcRqstDntfrDntfrTpCcCSstm) 
+        {
+      this.dvcRqstDntfrDntfrTpCcCSstm = dvcRqstDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcCVrsn()
+    {
+        return this.dvcRqstDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcCVrsn
+        (String dvcRqstDntfrDntfrTpCcCVrsn) 
+        {
+      this.dvcRqstDntfrDntfrTpCcCVrsn = dvcRqstDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcCCde()
+    {
+        return this.dvcRqstDntfrDntfrTpCcCCde;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcCCde
+        (String dvcRqstDntfrDntfrTpCcCCde) 
+        {
+      this.dvcRqstDntfrDntfrTpCcCCde = dvcRqstDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcCDsplay()
+    {
+        return this.dvcRqstDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcCDsplay
+        (String dvcRqstDntfrDntfrTpCcCDsplay) 
+        {
+      this.dvcRqstDntfrDntfrTpCcCDsplay = dvcRqstDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.dvcRqstDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcCSrSlctd
+        (String dvcRqstDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.dvcRqstDntfrDntfrTpCcCSrSlctd = dvcRqstDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrTpCcTxt()
+    {
+        return this.dvcRqstDntfrDntfrTpCcTxt;
+    }
+    
+    public void setDvcRqstDntfrDntfrTpCcTxt
+        (String dvcRqstDntfrDntfrTpCcTxt) 
+        {
+      this.dvcRqstDntfrDntfrTpCcTxt = dvcRqstDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrPrdPrdStrt()
+    {
+        return this.dvcRqstDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setDvcRqstDntfrDntfrPrdPrdStrt
+        (String dvcRqstDntfrDntfrPrdPrdStrt) 
+        {
+      this.dvcRqstDntfrDntfrPrdPrdStrt = dvcRqstDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrPrdPrdNd()
+    {
+        return this.dvcRqstDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setDvcRqstDntfrDntfrPrdPrdNd
+        (String dvcRqstDntfrDntfrPrdPrdNd) 
+        {
+      this.dvcRqstDntfrDntfrPrdPrdNd = dvcRqstDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrSsgnr()
+    {
+        return this.dvcRqstDntfrDntfrSsgnr;
+    }
+    
+    public void setDvcRqstDntfrDntfrSsgnr
+        (String dvcRqstDntfrDntfrSsgnr) 
+        {
+      this.dvcRqstDntfrDntfrSsgnr = dvcRqstDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrVlue()
+    {
+        return this.dvcRqstDntfrDntfrVlue;
+    }
+    
+    public void setDvcRqstDntfrDntfrVlue
+        (String dvcRqstDntfrDntfrVlue) 
+        {
+      this.dvcRqstDntfrDntfrVlue = dvcRqstDntfrDntfrVlue;
+}
+    public 
+    String 
+    getDvcRqstDntfrDntfrSstm()
+    {
+        return this.dvcRqstDntfrDntfrSstm;
+    }
+    
+    public void setDvcRqstDntfrDntfrSstm
+        (String dvcRqstDntfrDntfrSstm) 
+        {
+      this.dvcRqstDntfrDntfrSstm = dvcRqstDntfrDntfrSstm;
+}
+    public 
+    String 
+    getDvcRqstNstnttsCnnclCnncl()
+    {
+        return this.dvcRqstNstnttsCnnclCnncl;
+    }
+    
+    public void setDvcRqstNstnttsCnnclCnncl
+        (String dvcRqstNstnttsCnnclCnncl) 
+        {
+      this.dvcRqstNstnttsCnnclCnncl = dvcRqstNstnttsCnnclCnncl;
+}
+    public 
+    String 
+    getDeviceRequestInstantiatesUriUri()
+    {
+        return this.deviceRequestInstantiatesUriUri;
+    }
+    
+    public void setDeviceRequestInstantiatesUriUri
+        (String deviceRequestInstantiatesUriUri) 
+        {
+      this.deviceRequestInstantiatesUriUri = deviceRequestInstantiatesUriUri;
+}
+    public 
+    String 
+    getDeviceRequestBasedOnReference()
+    {
+        return this.deviceRequestBasedOnReference;
+    }
+    
+    public void setDeviceRequestBasedOnReference
+        (String deviceRequestBasedOnReference) 
+        {
+      this.deviceRequestBasedOnReference = deviceRequestBasedOnReference;
+}
+    public 
+    String 
+    getDvcRqstPrrRqstRfrnce()
+    {
+        return this.dvcRqstPrrRqstRfrnce;
+    }
+    
+    public void setDvcRqstPrrRqstRfrnce
+        (String dvcRqstPrrRqstRfrnce) 
+        {
+      this.dvcRqstPrrRqstRfrnce = dvcRqstPrrRqstRfrnce;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrSe()
+    {
+        return this.dvcRqstGrpdntfrDntfrSe;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrSe
+        (String dvcRqstGrpdntfrDntfrSe) 
+        {
+      this.dvcRqstGrpdntfrDntfrSe = dvcRqstGrpdntfrDntfrSe;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcCSstm()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcCSstm;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcCSstm
+        (String dvcRqstGrpdntfrDntfrTpCcCSstm) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcCSstm = dvcRqstGrpdntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcCVrsn()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcCVrsn
+        (String dvcRqstGrpdntfrDntfrTpCcCVrsn) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcCVrsn = dvcRqstGrpdntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcCCde()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcCCde;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcCCde
+        (String dvcRqstGrpdntfrDntfrTpCcCCde) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcCCde = dvcRqstGrpdntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcCDsplay()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcCDsplay
+        (String dvcRqstGrpdntfrDntfrTpCcCDsplay) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcCDsplay = dvcRqstGrpdntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcCSrSlctd()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcCSrSlctd
+        (String dvcRqstGrpdntfrDntfrTpCcCSrSlctd) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcCSrSlctd = dvcRqstGrpdntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrTpCcTxt()
+    {
+        return this.dvcRqstGrpdntfrDntfrTpCcTxt;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrTpCcTxt
+        (String dvcRqstGrpdntfrDntfrTpCcTxt) 
+        {
+      this.dvcRqstGrpdntfrDntfrTpCcTxt = dvcRqstGrpdntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrPrdPrdStrt()
+    {
+        return this.dvcRqstGrpdntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrPrdPrdStrt
+        (String dvcRqstGrpdntfrDntfrPrdPrdStrt) 
+        {
+      this.dvcRqstGrpdntfrDntfrPrdPrdStrt = dvcRqstGrpdntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrPrdPrdNd()
+    {
+        return this.dvcRqstGrpdntfrDntfrPrdPrdNd;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrPrdPrdNd
+        (String dvcRqstGrpdntfrDntfrPrdPrdNd) 
+        {
+      this.dvcRqstGrpdntfrDntfrPrdPrdNd = dvcRqstGrpdntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrSsgnr()
+    {
+        return this.dvcRqstGrpdntfrDntfrSsgnr;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrSsgnr
+        (String dvcRqstGrpdntfrDntfrSsgnr) 
+        {
+      this.dvcRqstGrpdntfrDntfrSsgnr = dvcRqstGrpdntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrVlue()
+    {
+        return this.dvcRqstGrpdntfrDntfrVlue;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrVlue
+        (String dvcRqstGrpdntfrDntfrVlue) 
+        {
+      this.dvcRqstGrpdntfrDntfrVlue = dvcRqstGrpdntfrDntfrVlue;
+}
+    public 
+    String 
+    getDvcRqstGrpdntfrDntfrSstm()
+    {
+        return this.dvcRqstGrpdntfrDntfrSstm;
+    }
+    
+    public void setDvcRqstGrpdntfrDntfrSstm
+        (String dvcRqstGrpdntfrDntfrSstm) 
+        {
+      this.dvcRqstGrpdntfrDntfrSstm = dvcRqstGrpdntfrDntfrSstm;
+}
+    public 
+    String 
+    getDeviceRequestStatusCode()
+    {
+        return this.deviceRequestStatusCode;
+    }
+    
+    public void setDeviceRequestStatusCode
+        (String deviceRequestStatusCode) 
+        {
+      this.deviceRequestStatusCode = deviceRequestStatusCode;
+}
+    public 
+    String 
+    getDeviceRequestIntentCode()
+    {
+        return this.deviceRequestIntentCode;
+    }
+    
+    public void setDeviceRequestIntentCode
+        (String deviceRequestIntentCode) 
+        {
+      this.deviceRequestIntentCode = deviceRequestIntentCode;
+}
+    public 
+    String 
+    getDeviceRequestPriorityCode()
+    {
+        return this.deviceRequestPriorityCode;
+    }
+    
+    public void setDeviceRequestPriorityCode
+        (String deviceRequestPriorityCode) 
+        {
+      this.deviceRequestPriorityCode = deviceRequestPriorityCode;
+}
+    public 
+    String 
+    getDvcRqstCdRfrncRfrnce()
+    {
+        return this.dvcRqstCdRfrncRfrnce;
+    }
+    
+    public void setDvcRqstCdRfrncRfrnce
+        (String dvcRqstCdRfrncRfrnce) 
+        {
+      this.dvcRqstCdRfrncRfrnce = dvcRqstCdRfrncRfrnce;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcCdngCSstm()
+    {
+        return this.dvcRqstCdCdblcncptCcCdngCSstm;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcCdngCSstm
+        (String dvcRqstCdCdblcncptCcCdngCSstm) 
+        {
+      this.dvcRqstCdCdblcncptCcCdngCSstm = dvcRqstCdCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcCdngCVrsn()
+    {
+        return this.dvcRqstCdCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcCdngCVrsn
+        (String dvcRqstCdCdblcncptCcCdngCVrsn) 
+        {
+      this.dvcRqstCdCdblcncptCcCdngCVrsn = dvcRqstCdCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcCdngCCde()
+    {
+        return this.dvcRqstCdCdblcncptCcCdngCCde;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcCdngCCde
+        (String dvcRqstCdCdblcncptCcCdngCCde) 
+        {
+      this.dvcRqstCdCdblcncptCcCdngCCde = dvcRqstCdCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcCdngCDsplay()
+    {
+        return this.dvcRqstCdCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcCdngCDsplay
+        (String dvcRqstCdCdblcncptCcCdngCDsplay) 
+        {
+      this.dvcRqstCdCdblcncptCcCdngCDsplay = dvcRqstCdCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcCdngCSrSlctd()
+    {
+        return this.dvcRqstCdCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcCdngCSrSlctd
+        (String dvcRqstCdCdblcncptCcCdngCSrSlctd) 
+        {
+      this.dvcRqstCdCdblcncptCcCdngCSrSlctd = dvcRqstCdCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstCdCdblcncptCcTxt()
+    {
+        return this.dvcRqstCdCdblcncptCcTxt;
+    }
+    
+    public void setDvcRqstCdCdblcncptCcTxt
+        (String dvcRqstCdCdblcncptCcTxt) 
+        {
+      this.dvcRqstCdCdblcncptCcTxt = dvcRqstCdCdblcncptCcTxt;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcCdngCSstm()
+    {
+        return this.dvcRqstPrmtrCdCcCdngCSstm;
+    }
+    
+    public void setDvcRqstPrmtrCdCcCdngCSstm
+        (String dvcRqstPrmtrCdCcCdngCSstm) 
+        {
+      this.dvcRqstPrmtrCdCcCdngCSstm = dvcRqstPrmtrCdCcCdngCSstm;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcCdngCVrsn()
+    {
+        return this.dvcRqstPrmtrCdCcCdngCVrsn;
+    }
+    
+    public void setDvcRqstPrmtrCdCcCdngCVrsn
+        (String dvcRqstPrmtrCdCcCdngCVrsn) 
+        {
+      this.dvcRqstPrmtrCdCcCdngCVrsn = dvcRqstPrmtrCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcCdngCCde()
+    {
+        return this.dvcRqstPrmtrCdCcCdngCCde;
+    }
+    
+    public void setDvcRqstPrmtrCdCcCdngCCde
+        (String dvcRqstPrmtrCdCcCdngCCde) 
+        {
+      this.dvcRqstPrmtrCdCcCdngCCde = dvcRqstPrmtrCdCcCdngCCde;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcCdngCDsplay()
+    {
+        return this.dvcRqstPrmtrCdCcCdngCDsplay;
+    }
+    
+    public void setDvcRqstPrmtrCdCcCdngCDsplay
+        (String dvcRqstPrmtrCdCcCdngCDsplay) 
+        {
+      this.dvcRqstPrmtrCdCcCdngCDsplay = dvcRqstPrmtrCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcCdngCSrSlctd()
+    {
+        return this.dvcRqstPrmtrCdCcCdngCSrSlctd;
+    }
+    
+    public void setDvcRqstPrmtrCdCcCdngCSrSlctd
+        (String dvcRqstPrmtrCdCcCdngCSrSlctd) 
+        {
+      this.dvcRqstPrmtrCdCcCdngCSrSlctd = dvcRqstPrmtrCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstPrmtrCdCcTxt()
+    {
+        return this.dvcRqstPrmtrCdCcTxt;
+    }
+    
+    public void setDvcRqstPrmtrCdCcTxt
+        (String dvcRqstPrmtrCdCcTxt) 
+        {
+      this.dvcRqstPrmtrCdCcTxt = dvcRqstPrmtrCdCcTxt;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcCdngCSstm()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcCdngCSstm;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcCdngCSstm
+        (String dvcRqstPrmtrVlCdblcncptCcCdngCSstm) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcCdngCSstm = dvcRqstPrmtrVlCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcCdngCVrsn()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcCdngCVrsn
+        (String dvcRqstPrmtrVlCdblcncptCcCdngCVrsn) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcCdngCVrsn = dvcRqstPrmtrVlCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcCdngCCde()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcCdngCCde;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcCdngCCde
+        (String dvcRqstPrmtrVlCdblcncptCcCdngCCde) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcCdngCCde = dvcRqstPrmtrVlCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcCdngCDsplay()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcCdngCDsplay
+        (String dvcRqstPrmtrVlCdblcncptCcCdngCDsplay) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcCdngCDsplay = dvcRqstPrmtrVlCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd
+        (String dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd = dvcRqstPrmtrVlCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlCdblcncptCcTxt()
+    {
+        return this.dvcRqstPrmtrVlCdblcncptCcTxt;
+    }
+    
+    public void setDvcRqstPrmtrVlCdblcncptCcTxt
+        (String dvcRqstPrmtrVlCdblcncptCcTxt) 
+        {
+      this.dvcRqstPrmtrVlCdblcncptCcTxt = dvcRqstPrmtrVlCdblcncptCcTxt;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlQnttQnttCmprtr()
+    {
+        return this.dvcRqstPrmtrVlQnttQnttCmprtr;
+    }
+    
+    public void setDvcRqstPrmtrVlQnttQnttCmprtr
+        (String dvcRqstPrmtrVlQnttQnttCmprtr) 
+        {
+      this.dvcRqstPrmtrVlQnttQnttCmprtr = dvcRqstPrmtrVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlQnttQnttCde()
+    {
+        return this.dvcRqstPrmtrVlQnttQnttCde;
+    }
+    
+    public void setDvcRqstPrmtrVlQnttQnttCde
+        (String dvcRqstPrmtrVlQnttQnttCde) 
+        {
+      this.dvcRqstPrmtrVlQnttQnttCde = dvcRqstPrmtrVlQnttQnttCde;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlQnttQnttVlue()
+    {
+        return this.dvcRqstPrmtrVlQnttQnttVlue;
+    }
+    
+    public void setDvcRqstPrmtrVlQnttQnttVlue
+        (String dvcRqstPrmtrVlQnttQnttVlue) 
+        {
+      this.dvcRqstPrmtrVlQnttQnttVlue = dvcRqstPrmtrVlQnttQnttVlue;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlQnttQnttNt()
+    {
+        return this.dvcRqstPrmtrVlQnttQnttNt;
+    }
+    
+    public void setDvcRqstPrmtrVlQnttQnttNt
+        (String dvcRqstPrmtrVlQnttQnttNt) 
+        {
+      this.dvcRqstPrmtrVlQnttQnttNt = dvcRqstPrmtrVlQnttQnttNt;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlQnttQnttSstm()
+    {
+        return this.dvcRqstPrmtrVlQnttQnttSstm;
+    }
+    
+    public void setDvcRqstPrmtrVlQnttQnttSstm
+        (String dvcRqstPrmtrVlQnttQnttSstm) 
+        {
+      this.dvcRqstPrmtrVlQnttQnttSstm = dvcRqstPrmtrVlQnttQnttSstm;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlRngRngLw()
+    {
+        return this.dvcRqstPrmtrVlRngRngLw;
+    }
+    
+    public void setDvcRqstPrmtrVlRngRngLw
+        (String dvcRqstPrmtrVlRngRngLw) 
+        {
+      this.dvcRqstPrmtrVlRngRngLw = dvcRqstPrmtrVlRngRngLw;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlRngRngHgh()
+    {
+        return this.dvcRqstPrmtrVlRngRngHgh;
+    }
+    
+    public void setDvcRqstPrmtrVlRngRngHgh
+        (String dvcRqstPrmtrVlRngRngHgh) 
+        {
+      this.dvcRqstPrmtrVlRngRngHgh = dvcRqstPrmtrVlRngRngHgh;
+}
+    public 
+    String 
+    getDvcRqstPrmtrVlBlnBln()
+    {
+        return this.dvcRqstPrmtrVlBlnBln;
+    }
+    
+    public void setDvcRqstPrmtrVlBlnBln
+        (String dvcRqstPrmtrVlBlnBln) 
+        {
+      this.dvcRqstPrmtrVlBlnBln = dvcRqstPrmtrVlBlnBln;
+}
+    public 
+    String 
+    getDeviceRequestSubjectReference()
+    {
+        return this.deviceRequestSubjectReference;
+    }
+    
+    public void setDeviceRequestSubjectReference
+        (String deviceRequestSubjectReference) 
+        {
+      this.deviceRequestSubjectReference = deviceRequestSubjectReference;
+}
+    public 
+    String 
+    getDeviceRequestEncounterReference()
+    {
+        return this.deviceRequestEncounterReference;
+    }
+    
+    public void setDeviceRequestEncounterReference
+        (String deviceRequestEncounterReference) 
+        {
+      this.deviceRequestEncounterReference = deviceRequestEncounterReference;
+}
+    public 
+    String 
+    getDvcRqstCcrrncDttmDtTme()
+    {
+        return this.dvcRqstCcrrncDttmDtTme;
+    }
+    
+    public void setDvcRqstCcrrncDttmDtTme
+        (String dvcRqstCcrrncDttmDtTme) 
+        {
+      this.dvcRqstCcrrncDttmDtTme = dvcRqstCcrrncDttmDtTme;
+}
+    public 
+    String 
+    getDvcRqstCcrrncPrdPrdStrt()
+    {
+        return this.dvcRqstCcrrncPrdPrdStrt;
+    }
+    
+    public void setDvcRqstCcrrncPrdPrdStrt
+        (String dvcRqstCcrrncPrdPrdStrt) 
+        {
+      this.dvcRqstCcrrncPrdPrdStrt = dvcRqstCcrrncPrdPrdStrt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncPrdPrdNd()
+    {
+        return this.dvcRqstCcrrncPrdPrdNd;
+    }
+    
+    public void setDvcRqstCcrrncPrdPrdNd
+        (String dvcRqstCcrrncPrdPrdNd) 
+        {
+      this.dvcRqstCcrrncPrdPrdNd = dvcRqstCcrrncPrdPrdNd;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcCSstm()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcCSstm;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcCSstm
+        (String dvcRqstCcrrncTmngTmngCdCcCSstm) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcCSstm = dvcRqstCcrrncTmngTmngCdCcCSstm;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcCVrsn()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcCVrsn;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcCVrsn
+        (String dvcRqstCcrrncTmngTmngCdCcCVrsn) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcCVrsn = dvcRqstCcrrncTmngTmngCdCcCVrsn;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcCCde()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcCCde;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcCCde
+        (String dvcRqstCcrrncTmngTmngCdCcCCde) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcCCde = dvcRqstCcrrncTmngTmngCdCcCCde;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcCDsplay()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcCDsplay;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcCDsplay
+        (String dvcRqstCcrrncTmngTmngCdCcCDsplay) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcCDsplay = dvcRqstCcrrncTmngTmngCdCcCDsplay;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcCSrSlctd()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcCSrSlctd
+        (String dvcRqstCcrrncTmngTmngCdCcCSrSlctd) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcCSrSlctd = dvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngCdCcTxt()
+    {
+        return this.dvcRqstCcrrncTmngTmngCdCcTxt;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngCdCcTxt
+        (String dvcRqstCcrrncTmngTmngCdCcTxt) 
+        {
+      this.dvcRqstCcrrncTmngTmngCdCcTxt = dvcRqstCcrrncTmngTmngCdCcTxt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngVnt()
+    {
+        return this.dvcRqstCcrrncTmngTmngVnt;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngVnt
+        (String dvcRqstCcrrncTmngTmngVnt) 
+        {
+      this.dvcRqstCcrrncTmngTmngVnt = dvcRqstCcrrncTmngTmngVnt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptDrtnnt()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptDrtnnt;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptDrtnnt
+        (String dvcRqstCcrrncTmngTmngRptDrtnnt) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptDrtnnt = dvcRqstCcrrncTmngTmngRptDrtnnt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptPrdnt()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptPrdnt;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptPrdnt
+        (String dvcRqstCcrrncTmngTmngRptPrdnt) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptPrdnt = dvcRqstCcrrncTmngTmngRptPrdnt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptDfWk()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptDfWk;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptDfWk
+        (String dvcRqstCcrrncTmngTmngRptDfWk) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptDfWk = dvcRqstCcrrncTmngTmngRptDfWk;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptWhn()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptWhn;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptWhn
+        (String dvcRqstCcrrncTmngTmngRptWhn) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptWhn = dvcRqstCcrrncTmngTmngRptWhn;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptDrtn()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptDrtn;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptDrtn
+        (String dvcRqstCcrrncTmngTmngRptDrtn) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptDrtn = dvcRqstCcrrncTmngTmngRptDrtn;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptDrtnMx()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptDrtnMx;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptDrtnMx
+        (String dvcRqstCcrrncTmngTmngRptDrtnMx) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptDrtnMx = dvcRqstCcrrncTmngTmngRptDrtnMx;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptPrd()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptPrd;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptPrd
+        (String dvcRqstCcrrncTmngTmngRptPrd) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptPrd = dvcRqstCcrrncTmngTmngRptPrd;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptPrdMx()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptPrdMx;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptPrdMx
+        (String dvcRqstCcrrncTmngTmngRptPrdMx) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptPrdMx = dvcRqstCcrrncTmngTmngRptPrdMx;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptBndsDrtn()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptBndsDrtn;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptBndsDrtn
+        (String dvcRqstCcrrncTmngTmngRptBndsDrtn) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptBndsDrtn = dvcRqstCcrrncTmngTmngRptBndsDrtn;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptBndsPrd()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptBndsPrd;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptBndsPrd
+        (String dvcRqstCcrrncTmngTmngRptBndsPrd) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptBndsPrd = dvcRqstCcrrncTmngTmngRptBndsPrd;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptCnt()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptCnt;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptCnt
+        (String dvcRqstCcrrncTmngTmngRptCnt) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptCnt = dvcRqstCcrrncTmngTmngRptCnt;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptCntMx()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptCntMx;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptCntMx
+        (String dvcRqstCcrrncTmngTmngRptCntMx) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptCntMx = dvcRqstCcrrncTmngTmngRptCntMx;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptFrqncy()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptFrqncy;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptFrqncy
+        (String dvcRqstCcrrncTmngTmngRptFrqncy) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptFrqncy = dvcRqstCcrrncTmngTmngRptFrqncy;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptFrqncMx()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptFrqncMx;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptFrqncMx
+        (String dvcRqstCcrrncTmngTmngRptFrqncMx) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptFrqncMx = dvcRqstCcrrncTmngTmngRptFrqncMx;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptBndsRnge()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptBndsRnge;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptBndsRnge
+        (String dvcRqstCcrrncTmngTmngRptBndsRnge) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptBndsRnge = dvcRqstCcrrncTmngTmngRptBndsRnge;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptTmfDay()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptTmfDay;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptTmfDay
+        (String dvcRqstCcrrncTmngTmngRptTmfDay) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptTmfDay = dvcRqstCcrrncTmngTmngRptTmfDay;
+}
+    public 
+    String 
+    getDvcRqstCcrrncTmngTmngRptFfst()
+    {
+        return this.dvcRqstCcrrncTmngTmngRptFfst;
+    }
+    
+    public void setDvcRqstCcrrncTmngTmngRptFfst
+        (String dvcRqstCcrrncTmngTmngRptFfst) 
+        {
+      this.dvcRqstCcrrncTmngTmngRptFfst = dvcRqstCcrrncTmngTmngRptFfst;
+}
+    public 
+    String 
+    getDeviceRequestAuthoredOnDateTime()
+    {
+        return this.deviceRequestAuthoredOnDateTime;
+    }
+    
+    public void setDeviceRequestAuthoredOnDateTime
+        (String deviceRequestAuthoredOnDateTime) 
+        {
+      this.deviceRequestAuthoredOnDateTime = deviceRequestAuthoredOnDateTime;
+}
+    public 
+    String 
+    getDeviceRequestRequesterReference()
+    {
+        return this.deviceRequestRequesterReference;
+    }
+    
+    public void setDeviceRequestRequesterReference
+        (String deviceRequestRequesterReference) 
+        {
+      this.deviceRequestRequesterReference = deviceRequestRequesterReference;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcCdngCSstm()
+    {
+        return this.dvcRqstPrfrmrTpCcCdngCSstm;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcCdngCSstm
+        (String dvcRqstPrfrmrTpCcCdngCSstm) 
+        {
+      this.dvcRqstPrfrmrTpCcCdngCSstm = dvcRqstPrfrmrTpCcCdngCSstm;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcCdngCVrsn()
+    {
+        return this.dvcRqstPrfrmrTpCcCdngCVrsn;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcCdngCVrsn
+        (String dvcRqstPrfrmrTpCcCdngCVrsn) 
+        {
+      this.dvcRqstPrfrmrTpCcCdngCVrsn = dvcRqstPrfrmrTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcCdngCCde()
+    {
+        return this.dvcRqstPrfrmrTpCcCdngCCde;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcCdngCCde
+        (String dvcRqstPrfrmrTpCcCdngCCde) 
+        {
+      this.dvcRqstPrfrmrTpCcCdngCCde = dvcRqstPrfrmrTpCcCdngCCde;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcCdngCDsplay()
+    {
+        return this.dvcRqstPrfrmrTpCcCdngCDsplay;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcCdngCDsplay
+        (String dvcRqstPrfrmrTpCcCdngCDsplay) 
+        {
+      this.dvcRqstPrfrmrTpCcCdngCDsplay = dvcRqstPrfrmrTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcCdngCSrSlctd()
+    {
+        return this.dvcRqstPrfrmrTpCcCdngCSrSlctd;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcCdngCSrSlctd
+        (String dvcRqstPrfrmrTpCcCdngCSrSlctd) 
+        {
+      this.dvcRqstPrfrmrTpCcCdngCSrSlctd = dvcRqstPrfrmrTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getDvcRqstPrfrmrTpCcTxt()
+    {
+        return this.dvcRqstPrfrmrTpCcTxt;
+    }
+    
+    public void setDvcRqstPrfrmrTpCcTxt
+        (String dvcRqstPrfrmrTpCcTxt) 
+        {
+      this.dvcRqstPrfrmrTpCcTxt = dvcRqstPrfrmrTpCcTxt;
+}
+    public 
+    String 
+    getDeviceRequestPerformerReference()
+    {
+        return this.deviceRequestPerformerReference;
+    }
+    
+    public void setDeviceRequestPerformerReference
+        (String deviceRequestPerformerReference) 
+        {
+      this.deviceRequestPerformerReference = deviceRequestPerformerReference;
+}
+    public 
+    String 
+    getDvcRqstRsnCdCcCdngCSstm()
+    {
+        return this.dvcRqstRsnCdCcCdngCSstm;
+    }
+    
+    public void setDvcRqstRsnCdCcCdngCSstm
+        (String dvcRqstRsnCdCcCdngCSstm) 
+        {
+      this.dvcRqstRsnCdCcCdngCSstm = dvcRqstRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getDvcRqstRsnCdCcCdngCVrsn()
+    {
+        return this.dvcRqstRsnCdCcCdngCVrsn;
+    }
+    
+    public void setDvcRqstRsnCdCcCdngCVrsn
+        (String dvcRqstRsnCdCcCdngCVrsn) 
+        {
+      this.dvcRqstRsnCdCcCdngCVrsn = dvcRqstRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getDvcRqstRsnCdCcCdngCCde()
+    {
+        return this.dvcRqstRsnCdCcCdngCCde;
+    }
+    
+    public void setDvcRqstRsnCdCcCdngCCde
+        (String dvcRqstRsnCdCcCdngCCde) 
+        {
+      this.dvcRqstRsnCdCcCdngCCde = dvcRqstRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getDvcRqstRsnCdCcCdngCDsplay()
+    {
+        return this.dvcRqstRsnCdCcCdngCDsplay;
+    }
+    
+    public void setDvcRqstRsnCdCcCdngCDsplay
+        (String dvcRqstRsnCdCcCdngCDsplay) 
+        {
+      this.dvcRqstRsnCdCcCdngCDsplay = dvcRqstRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getDvcRqstRsnCdCcCdngCSrSlctd()
+    {
+        return this.dvcRqstRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setDvcRqstRsnCdCcCdngCSrSlctd
+        (String dvcRqstRsnCdCcCdngCSrSlctd) 
+        {
+      this.dvcRqstRsnCdCcCdngCSrSlctd = dvcRqstRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getDeviceRequestReasonCodeCcText()
+    {
+        return this.deviceRequestReasonCodeCcText;
+    }
+    
+    public void setDeviceRequestReasonCodeCcText
+        (String deviceRequestReasonCodeCcText) 
+        {
+      this.deviceRequestReasonCodeCcText = deviceRequestReasonCodeCcText;
+}
+    public 
+    String 
+    getDvcRqstRsnRfrncRfrnce()
+    {
+        return this.dvcRqstRsnRfrncRfrnce;
+    }
+    
+    public void setDvcRqstRsnRfrncRfrnce
+        (String dvcRqstRsnRfrncRfrnce) 
+        {
+      this.dvcRqstRsnRfrncRfrnce = dvcRqstRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getDeviceRequestInsuranceReference()
+    {
+        return this.deviceRequestInsuranceReference;
+    }
+    
+    public void setDeviceRequestInsuranceReference
+        (String deviceRequestInsuranceReference) 
+        {
+      this.deviceRequestInsuranceReference = deviceRequestInsuranceReference;
+}
+    public 
+    String 
+    getDvcRqstSpprtngnfRfrnce()
+    {
+        return this.dvcRqstSpprtngnfRfrnce;
+    }
+    
+    public void setDvcRqstSpprtngnfRfrnce
+        (String dvcRqstSpprtngnfRfrnce) 
+        {
+      this.dvcRqstSpprtngnfRfrnce = dvcRqstSpprtngnfRfrnce;
+}
+    public 
+    String 
+    getDeviceRequestNoteAnnotationTime()
+    {
+        return this.deviceRequestNoteAnnotationTime;
+    }
+    
+    public void setDeviceRequestNoteAnnotationTime
+        (String deviceRequestNoteAnnotationTime) 
+        {
+      this.deviceRequestNoteAnnotationTime = deviceRequestNoteAnnotationTime;
+}
+    public 
+    String 
+    getDeviceRequestNoteAnnotationText()
+    {
+        return this.deviceRequestNoteAnnotationText;
+    }
+    
+    public void setDeviceRequestNoteAnnotationText
+        (String deviceRequestNoteAnnotationText) 
+        {
+      this.deviceRequestNoteAnnotationText = deviceRequestNoteAnnotationText;
+}
+    public 
+    String 
+    getDvcRqstNtNnttnThrRfrnce()
+    {
+        return this.dvcRqstNtNnttnThrRfrnce;
+    }
+    
+    public void setDvcRqstNtNnttnThrRfrnce
+        (String dvcRqstNtNnttnThrRfrnce) 
+        {
+      this.dvcRqstNtNnttnThrRfrnce = dvcRqstNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getDvcRqstNtNnttnThrStrng()
+    {
+        return this.dvcRqstNtNnttnThrStrng;
+    }
+    
+    public void setDvcRqstNtNnttnThrStrng
+        (String dvcRqstNtNnttnThrStrng) 
+        {
+      this.dvcRqstNtNnttnThrStrng = dvcRqstNtNnttnThrStrng;
+}
+    public 
+    String 
+    getDvcRqstRlvntHstrRfrnce()
+    {
+        return this.dvcRqstRlvntHstrRfrnce;
+    }
+    
+    public void setDvcRqstRlvntHstrRfrnce
+        (String dvcRqstRlvntHstrRfrnce) 
+        {
+      this.dvcRqstRlvntHstrRfrnce = dvcRqstRlvntHstrRfrnce;
+}
 
 
 

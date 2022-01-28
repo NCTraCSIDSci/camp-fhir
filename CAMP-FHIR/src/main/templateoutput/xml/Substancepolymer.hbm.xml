@@ -1,423 +1,471 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Substancepolymer" optimistic-lock="none" table="substancepolymer">
-        <id name="substancePolymerClassCodingCode" type="string">
-            <column length="512" name="SubstancePolymer_class_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="sbstncPlmrClssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SbstncPlmr_clss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrClssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setSystem"}</meta>
+            <column length="512" name="SbstncPlmr_clss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrClssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SbstncPlmr_clss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrClssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setVersion"}</meta>
+            <column length="512" name="SbstncPlmr_clss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrClssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SbstncPlmr_clss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrClssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setCode"}</meta>
+            <column length="512" name="SbstncPlmr_clss_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrClssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SbstncPlmr_clss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrClssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setDisplay"}</meta>
+            <column length="512" name="SbstncPlmr_clss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrGmtrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_gmtr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrClssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SbstncPlmr_clss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrGmtrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_gmtr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="substancePolymerClassCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, setText"}</meta>
+            <column length="512" name="SubstancePolymer_class_CC_text">
+                <comment>{ "tree" :"SubstancePolymer.class", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setClass, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrGmtrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_gmtr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrGmtrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_gmtr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrGmtrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_gmtr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrGmtrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_gmtr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrGmtrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_gmtr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrGmtrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_gmtr_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrCplmrCnnctvtCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrGmtrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_gmtr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrCplmrCnnctvtCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrGmtrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_gmtr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrCplmrCnnctvtCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="substancePolymerGeometryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, setText"}</meta>
+            <column length="65535" name="SubstancePolymer_geometry_CC_text">
+                <comment>{ "tree" :"SubstancePolymer.geometry", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGeometry, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrCplmrCnnctvtCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrCplmrCnnctvtCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="substancePolymerModification" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SubstancePolymer_modification">
-                <comment>string</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="substancePolymerMonomerSet" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstancePolymer_monomerSet">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStRtTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStRtTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrCplmrCnnctvtCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_cplmrCnnctvt_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.copolymerConnectivity", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCopolymerConnectivity, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStRtTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrMdfctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.modification", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModification"}</meta>
+            <column length="65535" name="SbstncPlmr_mdfctn_strng">
+                <comment>{ "tree" :"SubstancePolymer.modification", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addModification"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStRtTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStRtTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrl" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrMnmrStRtTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_rtTp_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.ratioType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet"] , "methodName" : "setRatioType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMtrlCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mtrl_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.material", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setMaterial, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlSDfnng" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_sDfnng">
-                <comment>boolean</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrMnmrStStrtngMtrlMnt" type="string">
-            <meta attribute="resource-type">SubstanceAmount</meta>
-            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mnt">
-                <comment>SubstanceAmount</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="substancePolymerRepeat" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstancePolymer_repeat">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptNmbrfnts" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SbstncPlmr_rpt_nmbrfnts">
-                <comment>integer</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptVrgMlclrFrmla" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncPlmr_rpt_vrgMlclrFrmla">
-                <comment>string</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_tp_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntmntTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlSDfnngBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.isDefining", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setIsDefining"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_sDfnng_bln">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.isDefining", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setIsDefining"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntmntTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrMnmrStStrtngMtrlMntSbstncmnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setAmount"}</meta>
+            <column length="65535" name="SbstncPlmr_mnmrSt_strtngMtrl_mnt_Sbstncmnt">
+                <comment>{ "tree" :"SubstancePolymer.monomerSet.startingMaterial.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addMonomerSet", "addStartingMaterial"] , "methodName" : "setAmount"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntmntTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrRptNmbrfntsNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.numberOfUnits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setNumberOfUnits"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_nmbrfnts_ntgr">
+                <comment>{ "tree" :"SubstancePolymer.repeat.numberOfUnits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setNumberOfUnits"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntmntTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrRptVrgMlclrFrmlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.averageMolecularFormula", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setAverageMolecularFormula"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_vrgMlclrFrml_strng">
+                <comment>{ "tree" :"SubstancePolymer.repeat.averageMolecularFormula", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setAverageMolecularFormula"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntmntTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="substancePolymerRepeatRepeatUnit" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstancePolymer_repeat_repeatUnit">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrRptRptntmntTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptntmntTp_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnitAmountType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat"] , "methodName" : "setRepeatUnitAmountType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntRptnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_rptnt">
-                <comment>string</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntMnt" type="string">
-            <meta attribute="resource-type">SubstanceAmount</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_mnt">
-                <comment>SubstanceAmount</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrRptRptntRnttnfPlmrstnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rnttnfPlmrstn_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setOrientationOfPolymerisation, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrRptRptntRptntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.repeatUnit", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setRepeatUnit"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_rptnt_strng">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.repeatUnit", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setRepeatUnit"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrRptRptntMntSbstncmnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setAmount"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_mnt_Sbstncmnt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit"] , "methodName" : "setAmount"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntDgrfPlmrstnMnt" type="string">
-            <meta attribute="resource-type">SubstanceAmount</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_mnt">
-                <comment>SubstanceAmount</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttn" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnDgrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_dgr_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setDegree, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrRptRptntDgrfPlmrstnMntSbstncmnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setAmount"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_dgrfPlmrstn_mnt_Sbstncmnt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount", "datatype" : "SubstanceAmount", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation"] , "methodName" : "setAmount"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnRprsnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_rprsnttn">
-                <comment>string</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTtchmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_ttchmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTtchmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_ttchmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTtchmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_ttchmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTtchmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_ttchmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPlmrRptRptntSrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tp_CC_txt">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPlmrRptRptntStrctrlRprsnttnTtchmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPlmr_rpt_rptnt_strctrlRprsnttn_ttchmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPlmrRptRptntSrRprsnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setRepresentation"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_rprsnttn_strng">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setRepresentation"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setData"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_dta">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setData"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setHash"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setHash"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setContentType"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setLanguage"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setCreation"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setTitle"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setSize"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_sze">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setSize"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPlmrRptRptntSrTmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setUrl"}</meta>
+            <column length="65535" name="SbstncPlmr_rpt_rptnt_SR_tmnt_ttchmnt_rl">
+                <comment>{ "tree" :"SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addRepeat", "addRepeatUnit", "addDegreeOfPolymerisation", "addStructuralRepresentation"] , "methodName" : "setAttachment, setUrl"}</comment>
             </column>
         </property>
     </class>

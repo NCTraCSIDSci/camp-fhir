@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,413 +10,824 @@ package main.templateoutput.Model;
 public class Graphdefinition  implements java.io.Serializable {
 
 
-     private String graphDefinitionUrl;
-     private String graphDefinitionVersion;
-     private String graphDefinitionName;
-     private String graphDefinitionStatus;
-     private String graphDefinitionExperimental;
-     private String graphDefinitionDate;
-     private String graphDefinitionPublisher;
-     private String graphDefinitionContact;
-     private String graphDefinitionDescription;
-     private String graphDefinitionUseContext;
-     private String grphDfntnJrsdctnCdblCncptCdngSstm;
-     private String grphDfntnJrsdctnCdblCncptCdngVrsn;
-     private String grphDfntnJrsdctnCdblCncptCdngCde;
-     private String grphDfntnJrsdctnCdblCncptCdngDsplay;
-     private String grphDfntnJrsdctnCdblCncptCdngSrSlctd;
-     private String grphDfntnJrsdctnCdblCncptTxtStrng;
-     private String graphDefinitionPurpose;
-     private String graphDefinitionStart;
-     private String graphDefinitionProfile;
-     private String graphDefinitionLinkPath;
-     private String graphDefinitionLinkSliceName;
-     private String graphDefinitionLinkMin;
-     private String graphDefinitionLinkMax;
-     private String graphDefinitionLinkDescription;
-     private String graphDefinitionLinkTargetType;
-     private String graphDefinitionLinkTargetParams;
-     private String grphDfntnLnkTrgtPrfle;
-     private String grphDfntnLnkTrgtCmprtmntSe;
-     private String grphDfntnLnkTrgtCmprtmntCde;
-     private String grphDfntnLnkTrgtCmprtmntRle;
-     private String grphDfntnLnkTrgtCmprtmntXprssn;
-     private String grphDfntnLnkTrgtCmprtmntDscrptn;
-     private String graphDefinitionLinkTargetLink;
+     private Integer id;
+     private String graphDefinitionUrlUri;
+     private String graphDefinitionVersionString;
+     private String graphDefinitionNameString;
+     private String graphDefinitionStatusCode;
+     private String grphDfntnXprmntlBln;
+     private String graphDefinitionDateDateTime;
+     private String graphDefinitionPublisherString;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntSstm;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntVlue;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntSe;
+     private String grphDfntnCntctCntctDtlTlcmCntctPntRnk;
+     private String grphDfntnCntctCntctDtlNme;
+     private String grphDfntnDscrptnMrkdwn;
+     private String grphDfntnSCntxtSgCntxtVlCcCcCSstm;
+     private String grphDfntnSCntxtSgCntxtVlCcCcCVrsn;
+     private String grphDfntnSCntxtSgCntxtVlCcCcCCde;
+     private String grphDfntnSCntxtSgCntxtVlCcCcCDsplay;
+     private String grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String grphDfntnSCntxtSgCntxtVlCcCcTxt;
+     private String grphDfntnSCntxtSgCntxtCdCSstm;
+     private String grphDfntnSCntxtSgCntxtCdCVrsn;
+     private String grphDfntnSCntxtSgCntxtCdCCde;
+     private String grphDfntnSCntxtSgCntxtCdCDsplay;
+     private String grphDfntnSCntxtSgCntxtCdCSrSlctd;
+     private String grphDfntnSCntxtSgCntxtVlQnttQnttVlue;
+     private String grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String grphDfntnSCntxtSgCntxtVlQnttQnttNt;
+     private String grphDfntnSCntxtSgCntxtVlQnttQnttSstm;
+     private String grphDfntnSCntxtSgCntxtVlQnttQnttCde;
+     private String grphDfntnSCntxtSgCntxtVlRngRngLw;
+     private String grphDfntnSCntxtSgCntxtVlRngRngHgh;
+     private String grphDfntnSCntxtSgCntxtVlRfrnce;
+     private String grphDfntnJrsdctnCcCdngCSstm;
+     private String grphDfntnJrsdctnCcCdngCVrsn;
+     private String grphDfntnJrsdctnCcCdngCCde;
+     private String grphDfntnJrsdctnCcCdngCDsplay;
+     private String grphDfntnJrsdctnCcCdngCSrSlctd;
+     private String grphDfntnJrsdctnCcTxt;
+     private String graphDefinitionPurposeMarkdown;
+     private String graphDefinitionStartCode;
+     private String graphDefinitionProfileCanonical;
+     private String graphDefinitionLinkPathString;
+     private String grphDfntnLnkSlcNmStrng;
+     private String graphDefinitionLinkMinInteger;
+     private String graphDefinitionLinkMaxString;
+     private String grphDfntnLnkDscrptnStrng;
+     private String grphDfntnLnkTrgtTpCde;
+     private String grphDfntnLnkTrgtPrmsStrng;
+     private String grphDfntnLnkTrgtPrflCnncl;
+     private String grphDfntnLnkTrgtCmprtmntSCde;
+     private String grphDfntnLnkTrgtCmprtmntCdCde;
+     private String grphDfntnLnkTrgtCmprtmntRlCde;
+     private String grphDfntnLnkTrgtCmprtmntXprssnStrng;
+     private String grphDfntnLnkTrgtCmprtmntDscrptnStrng;
+     private String grphDfntnLnkTrgtLnkLnk;
 
     public Graphdefinition() {
     }
 
-	
-    public Graphdefinition(String graphDefinitionUrl) {
-        this.graphDefinitionUrl = graphDefinitionUrl;
-    }
-    public Graphdefinition(String graphDefinitionUrl, String graphDefinitionVersion, String graphDefinitionName, String graphDefinitionStatus, String graphDefinitionExperimental, String graphDefinitionDate, String graphDefinitionPublisher, String graphDefinitionContact, String graphDefinitionDescription, String graphDefinitionUseContext, String grphDfntnJrsdctnCdblCncptCdngSstm, String grphDfntnJrsdctnCdblCncptCdngVrsn, String grphDfntnJrsdctnCdblCncptCdngCde, String grphDfntnJrsdctnCdblCncptCdngDsplay, String grphDfntnJrsdctnCdblCncptCdngSrSlctd, String grphDfntnJrsdctnCdblCncptTxtStrng, String graphDefinitionPurpose, String graphDefinitionStart, String graphDefinitionProfile, String graphDefinitionLinkPath, String graphDefinitionLinkSliceName, String graphDefinitionLinkMin, String graphDefinitionLinkMax, String graphDefinitionLinkDescription, String graphDefinitionLinkTargetType, String graphDefinitionLinkTargetParams, String grphDfntnLnkTrgtPrfle, String grphDfntnLnkTrgtCmprtmntSe, String grphDfntnLnkTrgtCmprtmntCde, String grphDfntnLnkTrgtCmprtmntRle, String grphDfntnLnkTrgtCmprtmntXprssn, String grphDfntnLnkTrgtCmprtmntDscrptn, String graphDefinitionLinkTargetLink) {
-       this.graphDefinitionUrl = graphDefinitionUrl;
-       this.graphDefinitionVersion = graphDefinitionVersion;
-       this.graphDefinitionName = graphDefinitionName;
-       this.graphDefinitionStatus = graphDefinitionStatus;
-       this.graphDefinitionExperimental = graphDefinitionExperimental;
-       this.graphDefinitionDate = graphDefinitionDate;
-       this.graphDefinitionPublisher = graphDefinitionPublisher;
-       this.graphDefinitionContact = graphDefinitionContact;
-       this.graphDefinitionDescription = graphDefinitionDescription;
-       this.graphDefinitionUseContext = graphDefinitionUseContext;
-       this.grphDfntnJrsdctnCdblCncptCdngSstm = grphDfntnJrsdctnCdblCncptCdngSstm;
-       this.grphDfntnJrsdctnCdblCncptCdngVrsn = grphDfntnJrsdctnCdblCncptCdngVrsn;
-       this.grphDfntnJrsdctnCdblCncptCdngCde = grphDfntnJrsdctnCdblCncptCdngCde;
-       this.grphDfntnJrsdctnCdblCncptCdngDsplay = grphDfntnJrsdctnCdblCncptCdngDsplay;
-       this.grphDfntnJrsdctnCdblCncptCdngSrSlctd = grphDfntnJrsdctnCdblCncptCdngSrSlctd;
-       this.grphDfntnJrsdctnCdblCncptTxtStrng = grphDfntnJrsdctnCdblCncptTxtStrng;
-       this.graphDefinitionPurpose = graphDefinitionPurpose;
-       this.graphDefinitionStart = graphDefinitionStart;
-       this.graphDefinitionProfile = graphDefinitionProfile;
-       this.graphDefinitionLinkPath = graphDefinitionLinkPath;
-       this.graphDefinitionLinkSliceName = graphDefinitionLinkSliceName;
-       this.graphDefinitionLinkMin = graphDefinitionLinkMin;
-       this.graphDefinitionLinkMax = graphDefinitionLinkMax;
-       this.graphDefinitionLinkDescription = graphDefinitionLinkDescription;
-       this.graphDefinitionLinkTargetType = graphDefinitionLinkTargetType;
-       this.graphDefinitionLinkTargetParams = graphDefinitionLinkTargetParams;
-       this.grphDfntnLnkTrgtPrfle = grphDfntnLnkTrgtPrfle;
-       this.grphDfntnLnkTrgtCmprtmntSe = grphDfntnLnkTrgtCmprtmntSe;
-       this.grphDfntnLnkTrgtCmprtmntCde = grphDfntnLnkTrgtCmprtmntCde;
-       this.grphDfntnLnkTrgtCmprtmntRle = grphDfntnLnkTrgtCmprtmntRle;
-       this.grphDfntnLnkTrgtCmprtmntXprssn = grphDfntnLnkTrgtCmprtmntXprssn;
-       this.grphDfntnLnkTrgtCmprtmntDscrptn = grphDfntnLnkTrgtCmprtmntDscrptn;
-       this.graphDefinitionLinkTargetLink = graphDefinitionLinkTargetLink;
+    public Graphdefinition(String graphDefinitionUrlUri, String graphDefinitionVersionString, String graphDefinitionNameString, String graphDefinitionStatusCode, String grphDfntnXprmntlBln, String graphDefinitionDateDateTime, String graphDefinitionPublisherString, String grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt, String grphDfntnCntctCntctDtlTlcmCntctPntPrdNd, String grphDfntnCntctCntctDtlTlcmCntctPntSstm, String grphDfntnCntctCntctDtlTlcmCntctPntVlue, String grphDfntnCntctCntctDtlTlcmCntctPntSe, String grphDfntnCntctCntctDtlTlcmCntctPntRnk, String grphDfntnCntctCntctDtlNme, String grphDfntnDscrptnMrkdwn, String grphDfntnSCntxtSgCntxtVlCcCcCSstm, String grphDfntnSCntxtSgCntxtVlCcCcCVrsn, String grphDfntnSCntxtSgCntxtVlCcCcCCde, String grphDfntnSCntxtSgCntxtVlCcCcCDsplay, String grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd, String grphDfntnSCntxtSgCntxtVlCcCcTxt, String grphDfntnSCntxtSgCntxtCdCSstm, String grphDfntnSCntxtSgCntxtCdCVrsn, String grphDfntnSCntxtSgCntxtCdCCde, String grphDfntnSCntxtSgCntxtCdCDsplay, String grphDfntnSCntxtSgCntxtCdCSrSlctd, String grphDfntnSCntxtSgCntxtVlQnttQnttVlue, String grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr, String grphDfntnSCntxtSgCntxtVlQnttQnttNt, String grphDfntnSCntxtSgCntxtVlQnttQnttSstm, String grphDfntnSCntxtSgCntxtVlQnttQnttCde, String grphDfntnSCntxtSgCntxtVlRngRngLw, String grphDfntnSCntxtSgCntxtVlRngRngHgh, String grphDfntnSCntxtSgCntxtVlRfrnce, String grphDfntnJrsdctnCcCdngCSstm, String grphDfntnJrsdctnCcCdngCVrsn, String grphDfntnJrsdctnCcCdngCCde, String grphDfntnJrsdctnCcCdngCDsplay, String grphDfntnJrsdctnCcCdngCSrSlctd, String grphDfntnJrsdctnCcTxt, String graphDefinitionPurposeMarkdown, String graphDefinitionStartCode, String graphDefinitionProfileCanonical, String graphDefinitionLinkPathString, String grphDfntnLnkSlcNmStrng, String graphDefinitionLinkMinInteger, String graphDefinitionLinkMaxString, String grphDfntnLnkDscrptnStrng, String grphDfntnLnkTrgtTpCde, String grphDfntnLnkTrgtPrmsStrng, String grphDfntnLnkTrgtPrflCnncl, String grphDfntnLnkTrgtCmprtmntSCde, String grphDfntnLnkTrgtCmprtmntCdCde, String grphDfntnLnkTrgtCmprtmntRlCde, String grphDfntnLnkTrgtCmprtmntXprssnStrng, String grphDfntnLnkTrgtCmprtmntDscrptnStrng, String grphDfntnLnkTrgtLnkLnk) {
+       this.graphDefinitionUrlUri = graphDefinitionUrlUri;
+       this.graphDefinitionVersionString = graphDefinitionVersionString;
+       this.graphDefinitionNameString = graphDefinitionNameString;
+       this.graphDefinitionStatusCode = graphDefinitionStatusCode;
+       this.grphDfntnXprmntlBln = grphDfntnXprmntlBln;
+       this.graphDefinitionDateDateTime = graphDefinitionDateDateTime;
+       this.graphDefinitionPublisherString = graphDefinitionPublisherString;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt = grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntPrdNd = grphDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntSstm = grphDfntnCntctCntctDtlTlcmCntctPntSstm;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntVlue = grphDfntnCntctCntctDtlTlcmCntctPntVlue;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntSe = grphDfntnCntctCntctDtlTlcmCntctPntSe;
+       this.grphDfntnCntctCntctDtlTlcmCntctPntRnk = grphDfntnCntctCntctDtlTlcmCntctPntRnk;
+       this.grphDfntnCntctCntctDtlNme = grphDfntnCntctCntctDtlNme;
+       this.grphDfntnDscrptnMrkdwn = grphDfntnDscrptnMrkdwn;
+       this.grphDfntnSCntxtSgCntxtVlCcCcCSstm = grphDfntnSCntxtSgCntxtVlCcCcCSstm;
+       this.grphDfntnSCntxtSgCntxtVlCcCcCVrsn = grphDfntnSCntxtSgCntxtVlCcCcCVrsn;
+       this.grphDfntnSCntxtSgCntxtVlCcCcCCde = grphDfntnSCntxtSgCntxtVlCcCcCCde;
+       this.grphDfntnSCntxtSgCntxtVlCcCcCDsplay = grphDfntnSCntxtSgCntxtVlCcCcCDsplay;
+       this.grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd = grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.grphDfntnSCntxtSgCntxtVlCcCcTxt = grphDfntnSCntxtSgCntxtVlCcCcTxt;
+       this.grphDfntnSCntxtSgCntxtCdCSstm = grphDfntnSCntxtSgCntxtCdCSstm;
+       this.grphDfntnSCntxtSgCntxtCdCVrsn = grphDfntnSCntxtSgCntxtCdCVrsn;
+       this.grphDfntnSCntxtSgCntxtCdCCde = grphDfntnSCntxtSgCntxtCdCCde;
+       this.grphDfntnSCntxtSgCntxtCdCDsplay = grphDfntnSCntxtSgCntxtCdCDsplay;
+       this.grphDfntnSCntxtSgCntxtCdCSrSlctd = grphDfntnSCntxtSgCntxtCdCSrSlctd;
+       this.grphDfntnSCntxtSgCntxtVlQnttQnttVlue = grphDfntnSCntxtSgCntxtVlQnttQnttVlue;
+       this.grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr = grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.grphDfntnSCntxtSgCntxtVlQnttQnttNt = grphDfntnSCntxtSgCntxtVlQnttQnttNt;
+       this.grphDfntnSCntxtSgCntxtVlQnttQnttSstm = grphDfntnSCntxtSgCntxtVlQnttQnttSstm;
+       this.grphDfntnSCntxtSgCntxtVlQnttQnttCde = grphDfntnSCntxtSgCntxtVlQnttQnttCde;
+       this.grphDfntnSCntxtSgCntxtVlRngRngLw = grphDfntnSCntxtSgCntxtVlRngRngLw;
+       this.grphDfntnSCntxtSgCntxtVlRngRngHgh = grphDfntnSCntxtSgCntxtVlRngRngHgh;
+       this.grphDfntnSCntxtSgCntxtVlRfrnce = grphDfntnSCntxtSgCntxtVlRfrnce;
+       this.grphDfntnJrsdctnCcCdngCSstm = grphDfntnJrsdctnCcCdngCSstm;
+       this.grphDfntnJrsdctnCcCdngCVrsn = grphDfntnJrsdctnCcCdngCVrsn;
+       this.grphDfntnJrsdctnCcCdngCCde = grphDfntnJrsdctnCcCdngCCde;
+       this.grphDfntnJrsdctnCcCdngCDsplay = grphDfntnJrsdctnCcCdngCDsplay;
+       this.grphDfntnJrsdctnCcCdngCSrSlctd = grphDfntnJrsdctnCcCdngCSrSlctd;
+       this.grphDfntnJrsdctnCcTxt = grphDfntnJrsdctnCcTxt;
+       this.graphDefinitionPurposeMarkdown = graphDefinitionPurposeMarkdown;
+       this.graphDefinitionStartCode = graphDefinitionStartCode;
+       this.graphDefinitionProfileCanonical = graphDefinitionProfileCanonical;
+       this.graphDefinitionLinkPathString = graphDefinitionLinkPathString;
+       this.grphDfntnLnkSlcNmStrng = grphDfntnLnkSlcNmStrng;
+       this.graphDefinitionLinkMinInteger = graphDefinitionLinkMinInteger;
+       this.graphDefinitionLinkMaxString = graphDefinitionLinkMaxString;
+       this.grphDfntnLnkDscrptnStrng = grphDfntnLnkDscrptnStrng;
+       this.grphDfntnLnkTrgtTpCde = grphDfntnLnkTrgtTpCde;
+       this.grphDfntnLnkTrgtPrmsStrng = grphDfntnLnkTrgtPrmsStrng;
+       this.grphDfntnLnkTrgtPrflCnncl = grphDfntnLnkTrgtPrflCnncl;
+       this.grphDfntnLnkTrgtCmprtmntSCde = grphDfntnLnkTrgtCmprtmntSCde;
+       this.grphDfntnLnkTrgtCmprtmntCdCde = grphDfntnLnkTrgtCmprtmntCdCde;
+       this.grphDfntnLnkTrgtCmprtmntRlCde = grphDfntnLnkTrgtCmprtmntRlCde;
+       this.grphDfntnLnkTrgtCmprtmntXprssnStrng = grphDfntnLnkTrgtCmprtmntXprssnStrng;
+       this.grphDfntnLnkTrgtCmprtmntDscrptnStrng = grphDfntnLnkTrgtCmprtmntDscrptnStrng;
+       this.grphDfntnLnkTrgtLnkLnk = grphDfntnLnkTrgtLnkLnk;
     }
    
-    public String getGraphDefinitionUrl() {
-        return this.graphDefinitionUrl;
-    }
-    
-    public void setGraphDefinitionUrl(String graphDefinitionUrl) {
-        this.graphDefinitionUrl = graphDefinitionUrl;
-    }
-    
-    
-    
-    public String getGraphDefinitionVersion() {
-        return this.graphDefinitionVersion;
-    }
-    
-    public void setGraphDefinitionVersion(String graphDefinitionVersion) {
-        this.graphDefinitionVersion = graphDefinitionVersion;
-    }
-    
-    
-    
-    public String getGraphDefinitionName() {
-        return this.graphDefinitionName;
-    }
-    
-    public void setGraphDefinitionName(String graphDefinitionName) {
-        this.graphDefinitionName = graphDefinitionName;
-    }
-    
-    
-    
-    public String getGraphDefinitionStatus() {
-        return this.graphDefinitionStatus;
-    }
-    
-    public void setGraphDefinitionStatus(String graphDefinitionStatus) {
-        this.graphDefinitionStatus = graphDefinitionStatus;
-    }
-    
-    
-    
-    public String getGraphDefinitionExperimental() {
-        return this.graphDefinitionExperimental;
-    }
-    
-    public void setGraphDefinitionExperimental(String graphDefinitionExperimental) {
-        this.graphDefinitionExperimental = graphDefinitionExperimental;
-    }
-    
-    
-    
-    public String getGraphDefinitionDate() {
-        return this.graphDefinitionDate;
-    }
-    
-    public void setGraphDefinitionDate(String graphDefinitionDate) {
-        this.graphDefinitionDate = graphDefinitionDate;
-    }
-    
-    
-    
-    public String getGraphDefinitionPublisher() {
-        return this.graphDefinitionPublisher;
-    }
-    
-    public void setGraphDefinitionPublisher(String graphDefinitionPublisher) {
-        this.graphDefinitionPublisher = graphDefinitionPublisher;
-    }
-    
-    
-    
-    public String getGraphDefinitionContact() {
-        return this.graphDefinitionContact;
-    }
-    
-    public void setGraphDefinitionContact(String graphDefinitionContact) {
-        this.graphDefinitionContact = graphDefinitionContact;
-    }
-    
-    
-    
-    public String getGraphDefinitionDescription() {
-        return this.graphDefinitionDescription;
-    }
-    
-    public void setGraphDefinitionDescription(String graphDefinitionDescription) {
-        this.graphDefinitionDescription = graphDefinitionDescription;
-    }
-    
-    
-    
-    public String getGraphDefinitionUseContext() {
-        return this.graphDefinitionUseContext;
-    }
-    
-    public void setGraphDefinitionUseContext(String graphDefinitionUseContext) {
-        this.graphDefinitionUseContext = graphDefinitionUseContext;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptCdngSstm() {
-        return this.grphDfntnJrsdctnCdblCncptCdngSstm;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptCdngSstm(String grphDfntnJrsdctnCdblCncptCdngSstm) {
-        this.grphDfntnJrsdctnCdblCncptCdngSstm = grphDfntnJrsdctnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptCdngVrsn() {
-        return this.grphDfntnJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptCdngVrsn(String grphDfntnJrsdctnCdblCncptCdngVrsn) {
-        this.grphDfntnJrsdctnCdblCncptCdngVrsn = grphDfntnJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptCdngCde() {
-        return this.grphDfntnJrsdctnCdblCncptCdngCde;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptCdngCde(String grphDfntnJrsdctnCdblCncptCdngCde) {
-        this.grphDfntnJrsdctnCdblCncptCdngCde = grphDfntnJrsdctnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptCdngDsplay() {
-        return this.grphDfntnJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptCdngDsplay(String grphDfntnJrsdctnCdblCncptCdngDsplay) {
-        this.grphDfntnJrsdctnCdblCncptCdngDsplay = grphDfntnJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptCdngSrSlctd() {
-        return this.grphDfntnJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptCdngSrSlctd(String grphDfntnJrsdctnCdblCncptCdngSrSlctd) {
-        this.grphDfntnJrsdctnCdblCncptCdngSrSlctd = grphDfntnJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGrphDfntnJrsdctnCdblCncptTxtStrng() {
-        return this.grphDfntnJrsdctnCdblCncptTxtStrng;
-    }
-    
-    public void setGrphDfntnJrsdctnCdblCncptTxtStrng(String grphDfntnJrsdctnCdblCncptTxtStrng) {
-        this.grphDfntnJrsdctnCdblCncptTxtStrng = grphDfntnJrsdctnCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getGraphDefinitionPurpose() {
-        return this.graphDefinitionPurpose;
-    }
-    
-    public void setGraphDefinitionPurpose(String graphDefinitionPurpose) {
-        this.graphDefinitionPurpose = graphDefinitionPurpose;
-    }
-    
-    
-    
-    public String getGraphDefinitionStart() {
-        return this.graphDefinitionStart;
-    }
-    
-    public void setGraphDefinitionStart(String graphDefinitionStart) {
-        this.graphDefinitionStart = graphDefinitionStart;
-    }
-    
-    
-    
-    public String getGraphDefinitionProfile() {
-        return this.graphDefinitionProfile;
-    }
-    
-    public void setGraphDefinitionProfile(String graphDefinitionProfile) {
-        this.graphDefinitionProfile = graphDefinitionProfile;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkPath() {
-        return this.graphDefinitionLinkPath;
-    }
-    
-    public void setGraphDefinitionLinkPath(String graphDefinitionLinkPath) {
-        this.graphDefinitionLinkPath = graphDefinitionLinkPath;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkSliceName() {
-        return this.graphDefinitionLinkSliceName;
-    }
-    
-    public void setGraphDefinitionLinkSliceName(String graphDefinitionLinkSliceName) {
-        this.graphDefinitionLinkSliceName = graphDefinitionLinkSliceName;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkMin() {
-        return this.graphDefinitionLinkMin;
-    }
-    
-    public void setGraphDefinitionLinkMin(String graphDefinitionLinkMin) {
-        this.graphDefinitionLinkMin = graphDefinitionLinkMin;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkMax() {
-        return this.graphDefinitionLinkMax;
-    }
-    
-    public void setGraphDefinitionLinkMax(String graphDefinitionLinkMax) {
-        this.graphDefinitionLinkMax = graphDefinitionLinkMax;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkDescription() {
-        return this.graphDefinitionLinkDescription;
-    }
-    
-    public void setGraphDefinitionLinkDescription(String graphDefinitionLinkDescription) {
-        this.graphDefinitionLinkDescription = graphDefinitionLinkDescription;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkTargetType() {
-        return this.graphDefinitionLinkTargetType;
-    }
-    
-    public void setGraphDefinitionLinkTargetType(String graphDefinitionLinkTargetType) {
-        this.graphDefinitionLinkTargetType = graphDefinitionLinkTargetType;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkTargetParams() {
-        return this.graphDefinitionLinkTargetParams;
-    }
-    
-    public void setGraphDefinitionLinkTargetParams(String graphDefinitionLinkTargetParams) {
-        this.graphDefinitionLinkTargetParams = graphDefinitionLinkTargetParams;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtPrfle() {
-        return this.grphDfntnLnkTrgtPrfle;
-    }
-    
-    public void setGrphDfntnLnkTrgtPrfle(String grphDfntnLnkTrgtPrfle) {
-        this.grphDfntnLnkTrgtPrfle = grphDfntnLnkTrgtPrfle;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtCmprtmntSe() {
-        return this.grphDfntnLnkTrgtCmprtmntSe;
-    }
-    
-    public void setGrphDfntnLnkTrgtCmprtmntSe(String grphDfntnLnkTrgtCmprtmntSe) {
-        this.grphDfntnLnkTrgtCmprtmntSe = grphDfntnLnkTrgtCmprtmntSe;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtCmprtmntCde() {
-        return this.grphDfntnLnkTrgtCmprtmntCde;
-    }
-    
-    public void setGrphDfntnLnkTrgtCmprtmntCde(String grphDfntnLnkTrgtCmprtmntCde) {
-        this.grphDfntnLnkTrgtCmprtmntCde = grphDfntnLnkTrgtCmprtmntCde;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtCmprtmntRle() {
-        return this.grphDfntnLnkTrgtCmprtmntRle;
-    }
-    
-    public void setGrphDfntnLnkTrgtCmprtmntRle(String grphDfntnLnkTrgtCmprtmntRle) {
-        this.grphDfntnLnkTrgtCmprtmntRle = grphDfntnLnkTrgtCmprtmntRle;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtCmprtmntXprssn() {
-        return this.grphDfntnLnkTrgtCmprtmntXprssn;
-    }
-    
-    public void setGrphDfntnLnkTrgtCmprtmntXprssn(String grphDfntnLnkTrgtCmprtmntXprssn) {
-        this.grphDfntnLnkTrgtCmprtmntXprssn = grphDfntnLnkTrgtCmprtmntXprssn;
-    }
-    
-    
-    
-    public String getGrphDfntnLnkTrgtCmprtmntDscrptn() {
-        return this.grphDfntnLnkTrgtCmprtmntDscrptn;
-    }
-    
-    public void setGrphDfntnLnkTrgtCmprtmntDscrptn(String grphDfntnLnkTrgtCmprtmntDscrptn) {
-        this.grphDfntnLnkTrgtCmprtmntDscrptn = grphDfntnLnkTrgtCmprtmntDscrptn;
-    }
-    
-    
-    
-    public String getGraphDefinitionLinkTargetLink() {
-        return this.graphDefinitionLinkTargetLink;
-    }
-    
-    public void setGraphDefinitionLinkTargetLink(String graphDefinitionLinkTargetLink) {
-        this.graphDefinitionLinkTargetLink = graphDefinitionLinkTargetLink;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getGraphDefinitionUrlUri()
+    {
+        return this.graphDefinitionUrlUri;
+    }
+    
+    public void setGraphDefinitionUrlUri
+        (String graphDefinitionUrlUri) 
+        {
+      this.graphDefinitionUrlUri = graphDefinitionUrlUri;
+}
+    public 
+    String 
+    getGraphDefinitionVersionString()
+    {
+        return this.graphDefinitionVersionString;
+    }
+    
+    public void setGraphDefinitionVersionString
+        (String graphDefinitionVersionString) 
+        {
+      this.graphDefinitionVersionString = graphDefinitionVersionString;
+}
+    public 
+    String 
+    getGraphDefinitionNameString()
+    {
+        return this.graphDefinitionNameString;
+    }
+    
+    public void setGraphDefinitionNameString
+        (String graphDefinitionNameString) 
+        {
+      this.graphDefinitionNameString = graphDefinitionNameString;
+}
+    public 
+    String 
+    getGraphDefinitionStatusCode()
+    {
+        return this.graphDefinitionStatusCode;
+    }
+    
+    public void setGraphDefinitionStatusCode
+        (String graphDefinitionStatusCode) 
+        {
+      this.graphDefinitionStatusCode = graphDefinitionStatusCode;
+}
+    public 
+    String 
+    getGrphDfntnXprmntlBln()
+    {
+        return this.grphDfntnXprmntlBln;
+    }
+    
+    public void setGrphDfntnXprmntlBln
+        (String grphDfntnXprmntlBln) 
+        {
+      this.grphDfntnXprmntlBln = grphDfntnXprmntlBln;
+}
+    public 
+    String 
+    getGraphDefinitionDateDateTime()
+    {
+        return this.graphDefinitionDateDateTime;
+    }
+    
+    public void setGraphDefinitionDateDateTime
+        (String graphDefinitionDateDateTime) 
+        {
+      this.graphDefinitionDateDateTime = graphDefinitionDateDateTime;
+}
+    public 
+    String 
+    getGraphDefinitionPublisherString()
+    {
+        return this.graphDefinitionPublisherString;
+    }
+    
+    public void setGraphDefinitionPublisherString
+        (String graphDefinitionPublisherString) 
+        {
+      this.graphDefinitionPublisherString = graphDefinitionPublisherString;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntPrdStrt
+        (String grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt = grphDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntPrdNd
+        (String grphDfntnCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntPrdNd = grphDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntSstm
+        (String grphDfntnCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntSstm = grphDfntnCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntVlue
+        (String grphDfntnCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntVlue = grphDfntnCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntSe
+        (String grphDfntnCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntSe = grphDfntnCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.grphDfntnCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlTlcmCntctPntRnk
+        (String grphDfntnCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.grphDfntnCntctCntctDtlTlcmCntctPntRnk = grphDfntnCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getGrphDfntnCntctCntctDtlNme()
+    {
+        return this.grphDfntnCntctCntctDtlNme;
+    }
+    
+    public void setGrphDfntnCntctCntctDtlNme
+        (String grphDfntnCntctCntctDtlNme) 
+        {
+      this.grphDfntnCntctCntctDtlNme = grphDfntnCntctCntctDtlNme;
+}
+    public 
+    String 
+    getGrphDfntnDscrptnMrkdwn()
+    {
+        return this.grphDfntnDscrptnMrkdwn;
+    }
+    
+    public void setGrphDfntnDscrptnMrkdwn
+        (String grphDfntnDscrptnMrkdwn) 
+        {
+      this.grphDfntnDscrptnMrkdwn = grphDfntnDscrptnMrkdwn;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcCSstm
+        (String grphDfntnSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcCSstm = grphDfntnSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcCVrsn
+        (String grphDfntnSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcCVrsn = grphDfntnSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcCCde
+        (String grphDfntnSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcCCde = grphDfntnSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcCDsplay
+        (String grphDfntnSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcCDsplay = grphDfntnSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcCSrSlctd
+        (String grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd = grphDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlCcCcTxt
+        (String grphDfntnSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlCcCcTxt = grphDfntnSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtCdCSstm()
+    {
+        return this.grphDfntnSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtCdCSstm
+        (String grphDfntnSCntxtSgCntxtCdCSstm) 
+        {
+      this.grphDfntnSCntxtSgCntxtCdCSstm = grphDfntnSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtCdCVrsn()
+    {
+        return this.grphDfntnSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtCdCVrsn
+        (String grphDfntnSCntxtSgCntxtCdCVrsn) 
+        {
+      this.grphDfntnSCntxtSgCntxtCdCVrsn = grphDfntnSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtCdCCde()
+    {
+        return this.grphDfntnSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtCdCCde
+        (String grphDfntnSCntxtSgCntxtCdCCde) 
+        {
+      this.grphDfntnSCntxtSgCntxtCdCCde = grphDfntnSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtCdCDsplay()
+    {
+        return this.grphDfntnSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtCdCDsplay
+        (String grphDfntnSCntxtSgCntxtCdCDsplay) 
+        {
+      this.grphDfntnSCntxtSgCntxtCdCDsplay = grphDfntnSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.grphDfntnSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtCdCSrSlctd
+        (String grphDfntnSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.grphDfntnSCntxtSgCntxtCdCSrSlctd = grphDfntnSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlQnttQnttVlue
+        (String grphDfntnSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlQnttQnttVlue = grphDfntnSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlQnttQnttCmprtr
+        (String grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr = grphDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlQnttQnttNt
+        (String grphDfntnSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlQnttQnttNt = grphDfntnSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlQnttQnttSstm
+        (String grphDfntnSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlQnttQnttSstm = grphDfntnSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlQnttQnttCde
+        (String grphDfntnSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlQnttQnttCde = grphDfntnSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlRngRngLw
+        (String grphDfntnSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlRngRngLw = grphDfntnSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlRngRngHgh
+        (String grphDfntnSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlRngRngHgh = grphDfntnSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getGrphDfntnSCntxtSgCntxtVlRfrnce()
+    {
+        return this.grphDfntnSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setGrphDfntnSCntxtSgCntxtVlRfrnce
+        (String grphDfntnSCntxtSgCntxtVlRfrnce) 
+        {
+      this.grphDfntnSCntxtSgCntxtVlRfrnce = grphDfntnSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcCdngCSstm()
+    {
+        return this.grphDfntnJrsdctnCcCdngCSstm;
+    }
+    
+    public void setGrphDfntnJrsdctnCcCdngCSstm
+        (String grphDfntnJrsdctnCcCdngCSstm) 
+        {
+      this.grphDfntnJrsdctnCcCdngCSstm = grphDfntnJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcCdngCVrsn()
+    {
+        return this.grphDfntnJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setGrphDfntnJrsdctnCcCdngCVrsn
+        (String grphDfntnJrsdctnCcCdngCVrsn) 
+        {
+      this.grphDfntnJrsdctnCcCdngCVrsn = grphDfntnJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcCdngCCde()
+    {
+        return this.grphDfntnJrsdctnCcCdngCCde;
+    }
+    
+    public void setGrphDfntnJrsdctnCcCdngCCde
+        (String grphDfntnJrsdctnCcCdngCCde) 
+        {
+      this.grphDfntnJrsdctnCcCdngCCde = grphDfntnJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcCdngCDsplay()
+    {
+        return this.grphDfntnJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setGrphDfntnJrsdctnCcCdngCDsplay
+        (String grphDfntnJrsdctnCcCdngCDsplay) 
+        {
+      this.grphDfntnJrsdctnCcCdngCDsplay = grphDfntnJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcCdngCSrSlctd()
+    {
+        return this.grphDfntnJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setGrphDfntnJrsdctnCcCdngCSrSlctd
+        (String grphDfntnJrsdctnCcCdngCSrSlctd) 
+        {
+      this.grphDfntnJrsdctnCcCdngCSrSlctd = grphDfntnJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGrphDfntnJrsdctnCcTxt()
+    {
+        return this.grphDfntnJrsdctnCcTxt;
+    }
+    
+    public void setGrphDfntnJrsdctnCcTxt
+        (String grphDfntnJrsdctnCcTxt) 
+        {
+      this.grphDfntnJrsdctnCcTxt = grphDfntnJrsdctnCcTxt;
+}
+    public 
+    String 
+    getGraphDefinitionPurposeMarkdown()
+    {
+        return this.graphDefinitionPurposeMarkdown;
+    }
+    
+    public void setGraphDefinitionPurposeMarkdown
+        (String graphDefinitionPurposeMarkdown) 
+        {
+      this.graphDefinitionPurposeMarkdown = graphDefinitionPurposeMarkdown;
+}
+    public 
+    String 
+    getGraphDefinitionStartCode()
+    {
+        return this.graphDefinitionStartCode;
+    }
+    
+    public void setGraphDefinitionStartCode
+        (String graphDefinitionStartCode) 
+        {
+      this.graphDefinitionStartCode = graphDefinitionStartCode;
+}
+    public 
+    String 
+    getGraphDefinitionProfileCanonical()
+    {
+        return this.graphDefinitionProfileCanonical;
+    }
+    
+    public void setGraphDefinitionProfileCanonical
+        (String graphDefinitionProfileCanonical) 
+        {
+      this.graphDefinitionProfileCanonical = graphDefinitionProfileCanonical;
+}
+    public 
+    String 
+    getGraphDefinitionLinkPathString()
+    {
+        return this.graphDefinitionLinkPathString;
+    }
+    
+    public void setGraphDefinitionLinkPathString
+        (String graphDefinitionLinkPathString) 
+        {
+      this.graphDefinitionLinkPathString = graphDefinitionLinkPathString;
+}
+    public 
+    String 
+    getGrphDfntnLnkSlcNmStrng()
+    {
+        return this.grphDfntnLnkSlcNmStrng;
+    }
+    
+    public void setGrphDfntnLnkSlcNmStrng
+        (String grphDfntnLnkSlcNmStrng) 
+        {
+      this.grphDfntnLnkSlcNmStrng = grphDfntnLnkSlcNmStrng;
+}
+    public 
+    String 
+    getGraphDefinitionLinkMinInteger()
+    {
+        return this.graphDefinitionLinkMinInteger;
+    }
+    
+    public void setGraphDefinitionLinkMinInteger
+        (String graphDefinitionLinkMinInteger) 
+        {
+      this.graphDefinitionLinkMinInteger = graphDefinitionLinkMinInteger;
+}
+    public 
+    String 
+    getGraphDefinitionLinkMaxString()
+    {
+        return this.graphDefinitionLinkMaxString;
+    }
+    
+    public void setGraphDefinitionLinkMaxString
+        (String graphDefinitionLinkMaxString) 
+        {
+      this.graphDefinitionLinkMaxString = graphDefinitionLinkMaxString;
+}
+    public 
+    String 
+    getGrphDfntnLnkDscrptnStrng()
+    {
+        return this.grphDfntnLnkDscrptnStrng;
+    }
+    
+    public void setGrphDfntnLnkDscrptnStrng
+        (String grphDfntnLnkDscrptnStrng) 
+        {
+      this.grphDfntnLnkDscrptnStrng = grphDfntnLnkDscrptnStrng;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtTpCde()
+    {
+        return this.grphDfntnLnkTrgtTpCde;
+    }
+    
+    public void setGrphDfntnLnkTrgtTpCde
+        (String grphDfntnLnkTrgtTpCde) 
+        {
+      this.grphDfntnLnkTrgtTpCde = grphDfntnLnkTrgtTpCde;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtPrmsStrng()
+    {
+        return this.grphDfntnLnkTrgtPrmsStrng;
+    }
+    
+    public void setGrphDfntnLnkTrgtPrmsStrng
+        (String grphDfntnLnkTrgtPrmsStrng) 
+        {
+      this.grphDfntnLnkTrgtPrmsStrng = grphDfntnLnkTrgtPrmsStrng;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtPrflCnncl()
+    {
+        return this.grphDfntnLnkTrgtPrflCnncl;
+    }
+    
+    public void setGrphDfntnLnkTrgtPrflCnncl
+        (String grphDfntnLnkTrgtPrflCnncl) 
+        {
+      this.grphDfntnLnkTrgtPrflCnncl = grphDfntnLnkTrgtPrflCnncl;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtCmprtmntSCde()
+    {
+        return this.grphDfntnLnkTrgtCmprtmntSCde;
+    }
+    
+    public void setGrphDfntnLnkTrgtCmprtmntSCde
+        (String grphDfntnLnkTrgtCmprtmntSCde) 
+        {
+      this.grphDfntnLnkTrgtCmprtmntSCde = grphDfntnLnkTrgtCmprtmntSCde;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtCmprtmntCdCde()
+    {
+        return this.grphDfntnLnkTrgtCmprtmntCdCde;
+    }
+    
+    public void setGrphDfntnLnkTrgtCmprtmntCdCde
+        (String grphDfntnLnkTrgtCmprtmntCdCde) 
+        {
+      this.grphDfntnLnkTrgtCmprtmntCdCde = grphDfntnLnkTrgtCmprtmntCdCde;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtCmprtmntRlCde()
+    {
+        return this.grphDfntnLnkTrgtCmprtmntRlCde;
+    }
+    
+    public void setGrphDfntnLnkTrgtCmprtmntRlCde
+        (String grphDfntnLnkTrgtCmprtmntRlCde) 
+        {
+      this.grphDfntnLnkTrgtCmprtmntRlCde = grphDfntnLnkTrgtCmprtmntRlCde;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtCmprtmntXprssnStrng()
+    {
+        return this.grphDfntnLnkTrgtCmprtmntXprssnStrng;
+    }
+    
+    public void setGrphDfntnLnkTrgtCmprtmntXprssnStrng
+        (String grphDfntnLnkTrgtCmprtmntXprssnStrng) 
+        {
+      this.grphDfntnLnkTrgtCmprtmntXprssnStrng = grphDfntnLnkTrgtCmprtmntXprssnStrng;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtCmprtmntDscrptnStrng()
+    {
+        return this.grphDfntnLnkTrgtCmprtmntDscrptnStrng;
+    }
+    
+    public void setGrphDfntnLnkTrgtCmprtmntDscrptnStrng
+        (String grphDfntnLnkTrgtCmprtmntDscrptnStrng) 
+        {
+      this.grphDfntnLnkTrgtCmprtmntDscrptnStrng = grphDfntnLnkTrgtCmprtmntDscrptnStrng;
+}
+    public 
+    String 
+    getGrphDfntnLnkTrgtLnkLnk()
+    {
+        return this.grphDfntnLnkTrgtLnkLnk;
+    }
+    
+    public void setGrphDfntnLnkTrgtLnkLnk
+        (String grphDfntnLnkTrgtLnkLnk) 
+        {
+      this.grphDfntnLnkTrgtLnkLnk = grphDfntnLnkTrgtLnkLnk;
+}
 
 
 

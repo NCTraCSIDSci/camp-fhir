@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,857 +10,978 @@ package main.templateoutput.Model;
 public class Riskassessment  implements java.io.Serializable {
 
 
-     private String rskssssmntDntfrCdngCde;
-     private String rskssssmntDntfrCdngSrSlctd;
-     private String rskssssmntDntfrCdngVrsn;
-     private String rskssssmntDntfrCdngDsplay;
-     private String rskssssmntDntfrCdngSstm;
-     private String riskAssessmentBasedOn;
-     private String riskAssessmentParent;
-     private String riskAssessmentStatus;
-     private String rskssssmntMthdCdngSrSlctd;
-     private String riskAssessmentMethodCodingCode;
-     private String rskssssmntMthdCdngVrsn;
-     private String rskssssmntMthdCdngDsplay;
-     private String rskssssmntMthdCdngSstm;
-     private String rskssssmntCdCdngSrSlctd;
-     private String riskAssessmentCodeCodingCode;
-     private String riskAssessmentCodeCodingVersion;
-     private String riskAssessmentCodeCodingDisplay;
-     private String riskAssessmentCodeCodingSystem;
-     private String riskAssessmentSubject;
-     private String riskAssessmentEncounter;
-     private String riskAssessmentOccurrenceDatetime;
-     private String rskssssmntCcrrncPrdCdngSrSlctd;
-     private String rskssssmntCcrrncPrdCdngCde;
-     private String rskssssmntCcrrncPrdCdngVrsn;
-     private String rskssssmntCcrrncPrdCdngDsplay;
-     private String rskssssmntCcrrncPrdCdngSstm;
-     private String riskAssessmentCondition;
-     private String riskAssessmentPerformer;
-     private String rskssssmntRsnCdCdngSrSlctd;
-     private String rskssssmntRsnCdCdngCde;
-     private String rskssssmntRsnCdCdngVrsn;
-     private String rskssssmntRsnCdCdngDsplay;
-     private String rskssssmntRsnCdCdngSstm;
-     private String riskAssessmentReasonReference;
-     private String riskAssessmentBasis;
-     private String riskAssessmentPrediction;
-     private String rskssssmntPrdctnTcmCdngSrSlctd;
-     private String rskssssmntPrdctnTcmCdngCde;
-     private String rskssssmntPrdctnTcmCdngVrsn;
-     private String rskssssmntPrdctnTcmCdngDsplay;
-     private String rskssssmntPrdctnTcmCdngSstm;
-     private String rskssssmntPrdctnPrbbltDcml;
-     private String rskssssmntPrdctnPrbbltRngCdngSrSlctd;
-     private String rskssssmntPrdctnPrbbltRngCdngCde;
-     private String rskssssmntPrdctnPrbbltRngCdngVrsn;
-     private String rskssssmntPrdctnPrbbltRngCdngDsplay;
-     private String rskssssmntPrdctnPrbbltRngCdngSstm;
-     private String rskssssmntPrdctnQlttvRskCdngSrSlctd;
-     private String rskssssmntPrdctnQlttvRskCdngCde;
-     private String rskssssmntPrdctnQlttvRskCdngVrsn;
-     private String rskssssmntPrdctnQlttvRskCdngDsplay;
-     private String rskssssmntPrdctnQlttvRskCdngSstm;
-     private String rskssssmntPrdctnRltvRsk;
-     private String rskssssmntPrdctnWhnPrdCdngSrSlctd;
-     private String rskssssmntPrdctnWhnPrdCdngCde;
-     private String rskssssmntPrdctnWhnPrdCdngVrsn;
-     private String rskssssmntPrdctnWhnPrdCdngDsplay;
-     private String rskssssmntPrdctnWhnPrdCdngSstm;
-     private String rskssssmntPrdctnWhnRngCdngSrSlctd;
-     private String rskssssmntPrdctnWhnRngCdngCde;
-     private String rskssssmntPrdctnWhnRngCdngVrsn;
-     private String rskssssmntPrdctnWhnRngCdngDsplay;
-     private String rskssssmntPrdctnWhnRngCdngSstm;
-     private String rskssssmntPrdctnRtnle;
-     private String riskAssessmentMitigation;
-     private String rskssssmntNtCdngSrSlctd;
-     private String riskAssessmentNoteCodingCode;
-     private String riskAssessmentNoteCodingVersion;
-     private String riskAssessmentNoteCodingDisplay;
-     private String riskAssessmentNoteCodingSystem;
+     private Integer id;
+     private String rskssssmntDntfrDntfrSe;
+     private String rskssssmntDntfrDntfrTpCcCSstm;
+     private String rskssssmntDntfrDntfrTpCcCVrsn;
+     private String rskssssmntDntfrDntfrTpCcCCde;
+     private String rskssssmntDntfrDntfrTpCcCDsplay;
+     private String rskssssmntDntfrDntfrTpCcCSrSlctd;
+     private String rskssssmntDntfrDntfrTpCcTxt;
+     private String rskssssmntDntfrDntfrPrdPrdStrt;
+     private String rskssssmntDntfrDntfrPrdPrdNd;
+     private String rskssssmntDntfrDntfrSsgnr;
+     private String rskssssmntDntfrDntfrVlue;
+     private String rskssssmntDntfrDntfrSstm;
+     private String riskAssessmentBasedOnReference;
+     private String riskAssessmentParentReference;
+     private String riskAssessmentStatusCode;
+     private String rskssssmntMthdCcCdngCSstm;
+     private String rskssssmntMthdCcCdngCVrsn;
+     private String rskssssmntMthdCcCdngCCde;
+     private String rskssssmntMthdCcCdngCDsplay;
+     private String rskssssmntMthdCcCdngCSrSlctd;
+     private String riskAssessmentMethodCcText;
+     private String rskssssmntCdCcCdngCSstm;
+     private String rskssssmntCdCcCdngCVrsn;
+     private String rskssssmntCdCcCdngCCde;
+     private String rskssssmntCdCcCdngCDsplay;
+     private String rskssssmntCdCcCdngCSrSlctd;
+     private String riskAssessmentCodeCcText;
+     private String riskAssessmentSubjectReference;
+     private String riskAssessmentEncounterReference;
+     private String rskssssmntCcrrncDttmDtTme;
+     private String rskssssmntCcrrncPrdPrdStrt;
+     private String rskssssmntCcrrncPrdPrdNd;
+     private String riskAssessmentConditionReference;
+     private String riskAssessmentPerformerReference;
+     private String rskssssmntRsnCdCcCdngCSstm;
+     private String rskssssmntRsnCdCcCdngCVrsn;
+     private String rskssssmntRsnCdCcCdngCCde;
+     private String rskssssmntRsnCdCcCdngCDsplay;
+     private String rskssssmntRsnCdCcCdngCSrSlctd;
+     private String riskAssessmentReasonCodeCcText;
+     private String rskssssmntRsnRfrncRfrnce;
+     private String riskAssessmentBasisReference;
+     private String rskssssmntPrdctnTcmCcCdngCSstm;
+     private String rskssssmntPrdctnTcmCcCdngCVrsn;
+     private String rskssssmntPrdctnTcmCcCdngCCde;
+     private String rskssssmntPrdctnTcmCcCdngCDsplay;
+     private String rskssssmntPrdctnTcmCcCdngCSrSlctd;
+     private String rskssssmntPrdctnTcmCcTxt;
+     private String rskssssmntPrdctnPrbbltDcmlDcml;
+     private String rskssssmntPrdctnPrbbltRngRngLw;
+     private String rskssssmntPrdctnPrbbltRngRngHgh;
+     private String rskssssmntPrdctnQlttvRskCcCdngCSstm;
+     private String rskssssmntPrdctnQlttvRskCcCdngCVrsn;
+     private String rskssssmntPrdctnQlttvRskCcCdngCCde;
+     private String rskssssmntPrdctnQlttvRskCcCdngCDsplay;
+     private String rskssssmntPrdctnQlttvRskCcCdngCSrSlctd;
+     private String rskssssmntPrdctnQlttvRskCcTxt;
+     private String rskssssmntPrdctnRltvRskDcml;
+     private String rskssssmntPrdctnWhnPrdPrdStrt;
+     private String rskssssmntPrdctnWhnPrdPrdNd;
+     private String rskssssmntPrdctnWhnRngRngLw;
+     private String rskssssmntPrdctnWhnRngRngHgh;
+     private String rskssssmntPrdctnRtnlStrng;
+     private String riskAssessmentMitigationString;
+     private String rskssssmntNtNnttnTme;
+     private String rskssssmntNtNnttnTxt;
+     private String rskssssmntNtNnttnThrRfrnce;
+     private String rskssssmntNtNnttnThrStrng;
 
     public Riskassessment() {
     }
 
-	
-    public Riskassessment(String rskssssmntDntfrCdngCde) {
-        this.rskssssmntDntfrCdngCde = rskssssmntDntfrCdngCde;
-    }
-    public Riskassessment(String rskssssmntDntfrCdngCde, String rskssssmntDntfrCdngSrSlctd, String rskssssmntDntfrCdngVrsn, String rskssssmntDntfrCdngDsplay, String rskssssmntDntfrCdngSstm, String riskAssessmentBasedOn, String riskAssessmentParent, String riskAssessmentStatus, String rskssssmntMthdCdngSrSlctd, String riskAssessmentMethodCodingCode, String rskssssmntMthdCdngVrsn, String rskssssmntMthdCdngDsplay, String rskssssmntMthdCdngSstm, String rskssssmntCdCdngSrSlctd, String riskAssessmentCodeCodingCode, String riskAssessmentCodeCodingVersion, String riskAssessmentCodeCodingDisplay, String riskAssessmentCodeCodingSystem, String riskAssessmentSubject, String riskAssessmentEncounter, String riskAssessmentOccurrenceDatetime, String rskssssmntCcrrncPrdCdngSrSlctd, String rskssssmntCcrrncPrdCdngCde, String rskssssmntCcrrncPrdCdngVrsn, String rskssssmntCcrrncPrdCdngDsplay, String rskssssmntCcrrncPrdCdngSstm, String riskAssessmentCondition, String riskAssessmentPerformer, String rskssssmntRsnCdCdngSrSlctd, String rskssssmntRsnCdCdngCde, String rskssssmntRsnCdCdngVrsn, String rskssssmntRsnCdCdngDsplay, String rskssssmntRsnCdCdngSstm, String riskAssessmentReasonReference, String riskAssessmentBasis, String riskAssessmentPrediction, String rskssssmntPrdctnTcmCdngSrSlctd, String rskssssmntPrdctnTcmCdngCde, String rskssssmntPrdctnTcmCdngVrsn, String rskssssmntPrdctnTcmCdngDsplay, String rskssssmntPrdctnTcmCdngSstm, String rskssssmntPrdctnPrbbltDcml, String rskssssmntPrdctnPrbbltRngCdngSrSlctd, String rskssssmntPrdctnPrbbltRngCdngCde, String rskssssmntPrdctnPrbbltRngCdngVrsn, String rskssssmntPrdctnPrbbltRngCdngDsplay, String rskssssmntPrdctnPrbbltRngCdngSstm, String rskssssmntPrdctnQlttvRskCdngSrSlctd, String rskssssmntPrdctnQlttvRskCdngCde, String rskssssmntPrdctnQlttvRskCdngVrsn, String rskssssmntPrdctnQlttvRskCdngDsplay, String rskssssmntPrdctnQlttvRskCdngSstm, String rskssssmntPrdctnRltvRsk, String rskssssmntPrdctnWhnPrdCdngSrSlctd, String rskssssmntPrdctnWhnPrdCdngCde, String rskssssmntPrdctnWhnPrdCdngVrsn, String rskssssmntPrdctnWhnPrdCdngDsplay, String rskssssmntPrdctnWhnPrdCdngSstm, String rskssssmntPrdctnWhnRngCdngSrSlctd, String rskssssmntPrdctnWhnRngCdngCde, String rskssssmntPrdctnWhnRngCdngVrsn, String rskssssmntPrdctnWhnRngCdngDsplay, String rskssssmntPrdctnWhnRngCdngSstm, String rskssssmntPrdctnRtnle, String riskAssessmentMitigation, String rskssssmntNtCdngSrSlctd, String riskAssessmentNoteCodingCode, String riskAssessmentNoteCodingVersion, String riskAssessmentNoteCodingDisplay, String riskAssessmentNoteCodingSystem) {
-       this.rskssssmntDntfrCdngCde = rskssssmntDntfrCdngCde;
-       this.rskssssmntDntfrCdngSrSlctd = rskssssmntDntfrCdngSrSlctd;
-       this.rskssssmntDntfrCdngVrsn = rskssssmntDntfrCdngVrsn;
-       this.rskssssmntDntfrCdngDsplay = rskssssmntDntfrCdngDsplay;
-       this.rskssssmntDntfrCdngSstm = rskssssmntDntfrCdngSstm;
-       this.riskAssessmentBasedOn = riskAssessmentBasedOn;
-       this.riskAssessmentParent = riskAssessmentParent;
-       this.riskAssessmentStatus = riskAssessmentStatus;
-       this.rskssssmntMthdCdngSrSlctd = rskssssmntMthdCdngSrSlctd;
-       this.riskAssessmentMethodCodingCode = riskAssessmentMethodCodingCode;
-       this.rskssssmntMthdCdngVrsn = rskssssmntMthdCdngVrsn;
-       this.rskssssmntMthdCdngDsplay = rskssssmntMthdCdngDsplay;
-       this.rskssssmntMthdCdngSstm = rskssssmntMthdCdngSstm;
-       this.rskssssmntCdCdngSrSlctd = rskssssmntCdCdngSrSlctd;
-       this.riskAssessmentCodeCodingCode = riskAssessmentCodeCodingCode;
-       this.riskAssessmentCodeCodingVersion = riskAssessmentCodeCodingVersion;
-       this.riskAssessmentCodeCodingDisplay = riskAssessmentCodeCodingDisplay;
-       this.riskAssessmentCodeCodingSystem = riskAssessmentCodeCodingSystem;
-       this.riskAssessmentSubject = riskAssessmentSubject;
-       this.riskAssessmentEncounter = riskAssessmentEncounter;
-       this.riskAssessmentOccurrenceDatetime = riskAssessmentOccurrenceDatetime;
-       this.rskssssmntCcrrncPrdCdngSrSlctd = rskssssmntCcrrncPrdCdngSrSlctd;
-       this.rskssssmntCcrrncPrdCdngCde = rskssssmntCcrrncPrdCdngCde;
-       this.rskssssmntCcrrncPrdCdngVrsn = rskssssmntCcrrncPrdCdngVrsn;
-       this.rskssssmntCcrrncPrdCdngDsplay = rskssssmntCcrrncPrdCdngDsplay;
-       this.rskssssmntCcrrncPrdCdngSstm = rskssssmntCcrrncPrdCdngSstm;
-       this.riskAssessmentCondition = riskAssessmentCondition;
-       this.riskAssessmentPerformer = riskAssessmentPerformer;
-       this.rskssssmntRsnCdCdngSrSlctd = rskssssmntRsnCdCdngSrSlctd;
-       this.rskssssmntRsnCdCdngCde = rskssssmntRsnCdCdngCde;
-       this.rskssssmntRsnCdCdngVrsn = rskssssmntRsnCdCdngVrsn;
-       this.rskssssmntRsnCdCdngDsplay = rskssssmntRsnCdCdngDsplay;
-       this.rskssssmntRsnCdCdngSstm = rskssssmntRsnCdCdngSstm;
-       this.riskAssessmentReasonReference = riskAssessmentReasonReference;
-       this.riskAssessmentBasis = riskAssessmentBasis;
-       this.riskAssessmentPrediction = riskAssessmentPrediction;
-       this.rskssssmntPrdctnTcmCdngSrSlctd = rskssssmntPrdctnTcmCdngSrSlctd;
-       this.rskssssmntPrdctnTcmCdngCde = rskssssmntPrdctnTcmCdngCde;
-       this.rskssssmntPrdctnTcmCdngVrsn = rskssssmntPrdctnTcmCdngVrsn;
-       this.rskssssmntPrdctnTcmCdngDsplay = rskssssmntPrdctnTcmCdngDsplay;
-       this.rskssssmntPrdctnTcmCdngSstm = rskssssmntPrdctnTcmCdngSstm;
-       this.rskssssmntPrdctnPrbbltDcml = rskssssmntPrdctnPrbbltDcml;
-       this.rskssssmntPrdctnPrbbltRngCdngSrSlctd = rskssssmntPrdctnPrbbltRngCdngSrSlctd;
-       this.rskssssmntPrdctnPrbbltRngCdngCde = rskssssmntPrdctnPrbbltRngCdngCde;
-       this.rskssssmntPrdctnPrbbltRngCdngVrsn = rskssssmntPrdctnPrbbltRngCdngVrsn;
-       this.rskssssmntPrdctnPrbbltRngCdngDsplay = rskssssmntPrdctnPrbbltRngCdngDsplay;
-       this.rskssssmntPrdctnPrbbltRngCdngSstm = rskssssmntPrdctnPrbbltRngCdngSstm;
-       this.rskssssmntPrdctnQlttvRskCdngSrSlctd = rskssssmntPrdctnQlttvRskCdngSrSlctd;
-       this.rskssssmntPrdctnQlttvRskCdngCde = rskssssmntPrdctnQlttvRskCdngCde;
-       this.rskssssmntPrdctnQlttvRskCdngVrsn = rskssssmntPrdctnQlttvRskCdngVrsn;
-       this.rskssssmntPrdctnQlttvRskCdngDsplay = rskssssmntPrdctnQlttvRskCdngDsplay;
-       this.rskssssmntPrdctnQlttvRskCdngSstm = rskssssmntPrdctnQlttvRskCdngSstm;
-       this.rskssssmntPrdctnRltvRsk = rskssssmntPrdctnRltvRsk;
-       this.rskssssmntPrdctnWhnPrdCdngSrSlctd = rskssssmntPrdctnWhnPrdCdngSrSlctd;
-       this.rskssssmntPrdctnWhnPrdCdngCde = rskssssmntPrdctnWhnPrdCdngCde;
-       this.rskssssmntPrdctnWhnPrdCdngVrsn = rskssssmntPrdctnWhnPrdCdngVrsn;
-       this.rskssssmntPrdctnWhnPrdCdngDsplay = rskssssmntPrdctnWhnPrdCdngDsplay;
-       this.rskssssmntPrdctnWhnPrdCdngSstm = rskssssmntPrdctnWhnPrdCdngSstm;
-       this.rskssssmntPrdctnWhnRngCdngSrSlctd = rskssssmntPrdctnWhnRngCdngSrSlctd;
-       this.rskssssmntPrdctnWhnRngCdngCde = rskssssmntPrdctnWhnRngCdngCde;
-       this.rskssssmntPrdctnWhnRngCdngVrsn = rskssssmntPrdctnWhnRngCdngVrsn;
-       this.rskssssmntPrdctnWhnRngCdngDsplay = rskssssmntPrdctnWhnRngCdngDsplay;
-       this.rskssssmntPrdctnWhnRngCdngSstm = rskssssmntPrdctnWhnRngCdngSstm;
-       this.rskssssmntPrdctnRtnle = rskssssmntPrdctnRtnle;
-       this.riskAssessmentMitigation = riskAssessmentMitigation;
-       this.rskssssmntNtCdngSrSlctd = rskssssmntNtCdngSrSlctd;
-       this.riskAssessmentNoteCodingCode = riskAssessmentNoteCodingCode;
-       this.riskAssessmentNoteCodingVersion = riskAssessmentNoteCodingVersion;
-       this.riskAssessmentNoteCodingDisplay = riskAssessmentNoteCodingDisplay;
-       this.riskAssessmentNoteCodingSystem = riskAssessmentNoteCodingSystem;
+    public Riskassessment(String rskssssmntDntfrDntfrSe, String rskssssmntDntfrDntfrTpCcCSstm, String rskssssmntDntfrDntfrTpCcCVrsn, String rskssssmntDntfrDntfrTpCcCCde, String rskssssmntDntfrDntfrTpCcCDsplay, String rskssssmntDntfrDntfrTpCcCSrSlctd, String rskssssmntDntfrDntfrTpCcTxt, String rskssssmntDntfrDntfrPrdPrdStrt, String rskssssmntDntfrDntfrPrdPrdNd, String rskssssmntDntfrDntfrSsgnr, String rskssssmntDntfrDntfrVlue, String rskssssmntDntfrDntfrSstm, String riskAssessmentBasedOnReference, String riskAssessmentParentReference, String riskAssessmentStatusCode, String rskssssmntMthdCcCdngCSstm, String rskssssmntMthdCcCdngCVrsn, String rskssssmntMthdCcCdngCCde, String rskssssmntMthdCcCdngCDsplay, String rskssssmntMthdCcCdngCSrSlctd, String riskAssessmentMethodCcText, String rskssssmntCdCcCdngCSstm, String rskssssmntCdCcCdngCVrsn, String rskssssmntCdCcCdngCCde, String rskssssmntCdCcCdngCDsplay, String rskssssmntCdCcCdngCSrSlctd, String riskAssessmentCodeCcText, String riskAssessmentSubjectReference, String riskAssessmentEncounterReference, String rskssssmntCcrrncDttmDtTme, String rskssssmntCcrrncPrdPrdStrt, String rskssssmntCcrrncPrdPrdNd, String riskAssessmentConditionReference, String riskAssessmentPerformerReference, String rskssssmntRsnCdCcCdngCSstm, String rskssssmntRsnCdCcCdngCVrsn, String rskssssmntRsnCdCcCdngCCde, String rskssssmntRsnCdCcCdngCDsplay, String rskssssmntRsnCdCcCdngCSrSlctd, String riskAssessmentReasonCodeCcText, String rskssssmntRsnRfrncRfrnce, String riskAssessmentBasisReference, String rskssssmntPrdctnTcmCcCdngCSstm, String rskssssmntPrdctnTcmCcCdngCVrsn, String rskssssmntPrdctnTcmCcCdngCCde, String rskssssmntPrdctnTcmCcCdngCDsplay, String rskssssmntPrdctnTcmCcCdngCSrSlctd, String rskssssmntPrdctnTcmCcTxt, String rskssssmntPrdctnPrbbltDcmlDcml, String rskssssmntPrdctnPrbbltRngRngLw, String rskssssmntPrdctnPrbbltRngRngHgh, String rskssssmntPrdctnQlttvRskCcCdngCSstm, String rskssssmntPrdctnQlttvRskCcCdngCVrsn, String rskssssmntPrdctnQlttvRskCcCdngCCde, String rskssssmntPrdctnQlttvRskCcCdngCDsplay, String rskssssmntPrdctnQlttvRskCcCdngCSrSlctd, String rskssssmntPrdctnQlttvRskCcTxt, String rskssssmntPrdctnRltvRskDcml, String rskssssmntPrdctnWhnPrdPrdStrt, String rskssssmntPrdctnWhnPrdPrdNd, String rskssssmntPrdctnWhnRngRngLw, String rskssssmntPrdctnWhnRngRngHgh, String rskssssmntPrdctnRtnlStrng, String riskAssessmentMitigationString, String rskssssmntNtNnttnTme, String rskssssmntNtNnttnTxt, String rskssssmntNtNnttnThrRfrnce, String rskssssmntNtNnttnThrStrng) {
+       this.rskssssmntDntfrDntfrSe = rskssssmntDntfrDntfrSe;
+       this.rskssssmntDntfrDntfrTpCcCSstm = rskssssmntDntfrDntfrTpCcCSstm;
+       this.rskssssmntDntfrDntfrTpCcCVrsn = rskssssmntDntfrDntfrTpCcCVrsn;
+       this.rskssssmntDntfrDntfrTpCcCCde = rskssssmntDntfrDntfrTpCcCCde;
+       this.rskssssmntDntfrDntfrTpCcCDsplay = rskssssmntDntfrDntfrTpCcCDsplay;
+       this.rskssssmntDntfrDntfrTpCcCSrSlctd = rskssssmntDntfrDntfrTpCcCSrSlctd;
+       this.rskssssmntDntfrDntfrTpCcTxt = rskssssmntDntfrDntfrTpCcTxt;
+       this.rskssssmntDntfrDntfrPrdPrdStrt = rskssssmntDntfrDntfrPrdPrdStrt;
+       this.rskssssmntDntfrDntfrPrdPrdNd = rskssssmntDntfrDntfrPrdPrdNd;
+       this.rskssssmntDntfrDntfrSsgnr = rskssssmntDntfrDntfrSsgnr;
+       this.rskssssmntDntfrDntfrVlue = rskssssmntDntfrDntfrVlue;
+       this.rskssssmntDntfrDntfrSstm = rskssssmntDntfrDntfrSstm;
+       this.riskAssessmentBasedOnReference = riskAssessmentBasedOnReference;
+       this.riskAssessmentParentReference = riskAssessmentParentReference;
+       this.riskAssessmentStatusCode = riskAssessmentStatusCode;
+       this.rskssssmntMthdCcCdngCSstm = rskssssmntMthdCcCdngCSstm;
+       this.rskssssmntMthdCcCdngCVrsn = rskssssmntMthdCcCdngCVrsn;
+       this.rskssssmntMthdCcCdngCCde = rskssssmntMthdCcCdngCCde;
+       this.rskssssmntMthdCcCdngCDsplay = rskssssmntMthdCcCdngCDsplay;
+       this.rskssssmntMthdCcCdngCSrSlctd = rskssssmntMthdCcCdngCSrSlctd;
+       this.riskAssessmentMethodCcText = riskAssessmentMethodCcText;
+       this.rskssssmntCdCcCdngCSstm = rskssssmntCdCcCdngCSstm;
+       this.rskssssmntCdCcCdngCVrsn = rskssssmntCdCcCdngCVrsn;
+       this.rskssssmntCdCcCdngCCde = rskssssmntCdCcCdngCCde;
+       this.rskssssmntCdCcCdngCDsplay = rskssssmntCdCcCdngCDsplay;
+       this.rskssssmntCdCcCdngCSrSlctd = rskssssmntCdCcCdngCSrSlctd;
+       this.riskAssessmentCodeCcText = riskAssessmentCodeCcText;
+       this.riskAssessmentSubjectReference = riskAssessmentSubjectReference;
+       this.riskAssessmentEncounterReference = riskAssessmentEncounterReference;
+       this.rskssssmntCcrrncDttmDtTme = rskssssmntCcrrncDttmDtTme;
+       this.rskssssmntCcrrncPrdPrdStrt = rskssssmntCcrrncPrdPrdStrt;
+       this.rskssssmntCcrrncPrdPrdNd = rskssssmntCcrrncPrdPrdNd;
+       this.riskAssessmentConditionReference = riskAssessmentConditionReference;
+       this.riskAssessmentPerformerReference = riskAssessmentPerformerReference;
+       this.rskssssmntRsnCdCcCdngCSstm = rskssssmntRsnCdCcCdngCSstm;
+       this.rskssssmntRsnCdCcCdngCVrsn = rskssssmntRsnCdCcCdngCVrsn;
+       this.rskssssmntRsnCdCcCdngCCde = rskssssmntRsnCdCcCdngCCde;
+       this.rskssssmntRsnCdCcCdngCDsplay = rskssssmntRsnCdCcCdngCDsplay;
+       this.rskssssmntRsnCdCcCdngCSrSlctd = rskssssmntRsnCdCcCdngCSrSlctd;
+       this.riskAssessmentReasonCodeCcText = riskAssessmentReasonCodeCcText;
+       this.rskssssmntRsnRfrncRfrnce = rskssssmntRsnRfrncRfrnce;
+       this.riskAssessmentBasisReference = riskAssessmentBasisReference;
+       this.rskssssmntPrdctnTcmCcCdngCSstm = rskssssmntPrdctnTcmCcCdngCSstm;
+       this.rskssssmntPrdctnTcmCcCdngCVrsn = rskssssmntPrdctnTcmCcCdngCVrsn;
+       this.rskssssmntPrdctnTcmCcCdngCCde = rskssssmntPrdctnTcmCcCdngCCde;
+       this.rskssssmntPrdctnTcmCcCdngCDsplay = rskssssmntPrdctnTcmCcCdngCDsplay;
+       this.rskssssmntPrdctnTcmCcCdngCSrSlctd = rskssssmntPrdctnTcmCcCdngCSrSlctd;
+       this.rskssssmntPrdctnTcmCcTxt = rskssssmntPrdctnTcmCcTxt;
+       this.rskssssmntPrdctnPrbbltDcmlDcml = rskssssmntPrdctnPrbbltDcmlDcml;
+       this.rskssssmntPrdctnPrbbltRngRngLw = rskssssmntPrdctnPrbbltRngRngLw;
+       this.rskssssmntPrdctnPrbbltRngRngHgh = rskssssmntPrdctnPrbbltRngRngHgh;
+       this.rskssssmntPrdctnQlttvRskCcCdngCSstm = rskssssmntPrdctnQlttvRskCcCdngCSstm;
+       this.rskssssmntPrdctnQlttvRskCcCdngCVrsn = rskssssmntPrdctnQlttvRskCcCdngCVrsn;
+       this.rskssssmntPrdctnQlttvRskCcCdngCCde = rskssssmntPrdctnQlttvRskCcCdngCCde;
+       this.rskssssmntPrdctnQlttvRskCcCdngCDsplay = rskssssmntPrdctnQlttvRskCcCdngCDsplay;
+       this.rskssssmntPrdctnQlttvRskCcCdngCSrSlctd = rskssssmntPrdctnQlttvRskCcCdngCSrSlctd;
+       this.rskssssmntPrdctnQlttvRskCcTxt = rskssssmntPrdctnQlttvRskCcTxt;
+       this.rskssssmntPrdctnRltvRskDcml = rskssssmntPrdctnRltvRskDcml;
+       this.rskssssmntPrdctnWhnPrdPrdStrt = rskssssmntPrdctnWhnPrdPrdStrt;
+       this.rskssssmntPrdctnWhnPrdPrdNd = rskssssmntPrdctnWhnPrdPrdNd;
+       this.rskssssmntPrdctnWhnRngRngLw = rskssssmntPrdctnWhnRngRngLw;
+       this.rskssssmntPrdctnWhnRngRngHgh = rskssssmntPrdctnWhnRngRngHgh;
+       this.rskssssmntPrdctnRtnlStrng = rskssssmntPrdctnRtnlStrng;
+       this.riskAssessmentMitigationString = riskAssessmentMitigationString;
+       this.rskssssmntNtNnttnTme = rskssssmntNtNnttnTme;
+       this.rskssssmntNtNnttnTxt = rskssssmntNtNnttnTxt;
+       this.rskssssmntNtNnttnThrRfrnce = rskssssmntNtNnttnThrRfrnce;
+       this.rskssssmntNtNnttnThrStrng = rskssssmntNtNnttnThrStrng;
     }
    
-    public String getRskssssmntDntfrCdngCde() {
-        return this.rskssssmntDntfrCdngCde;
-    }
-    
-    public void setRskssssmntDntfrCdngCde(String rskssssmntDntfrCdngCde) {
-        this.rskssssmntDntfrCdngCde = rskssssmntDntfrCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntDntfrCdngSrSlctd() {
-        return this.rskssssmntDntfrCdngSrSlctd;
-    }
-    
-    public void setRskssssmntDntfrCdngSrSlctd(String rskssssmntDntfrCdngSrSlctd) {
-        this.rskssssmntDntfrCdngSrSlctd = rskssssmntDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntDntfrCdngVrsn() {
-        return this.rskssssmntDntfrCdngVrsn;
-    }
-    
-    public void setRskssssmntDntfrCdngVrsn(String rskssssmntDntfrCdngVrsn) {
-        this.rskssssmntDntfrCdngVrsn = rskssssmntDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntDntfrCdngDsplay() {
-        return this.rskssssmntDntfrCdngDsplay;
-    }
-    
-    public void setRskssssmntDntfrCdngDsplay(String rskssssmntDntfrCdngDsplay) {
-        this.rskssssmntDntfrCdngDsplay = rskssssmntDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntDntfrCdngSstm() {
-        return this.rskssssmntDntfrCdngSstm;
-    }
-    
-    public void setRskssssmntDntfrCdngSstm(String rskssssmntDntfrCdngSstm) {
-        this.rskssssmntDntfrCdngSstm = rskssssmntDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getRiskAssessmentBasedOn() {
-        return this.riskAssessmentBasedOn;
-    }
-    
-    public void setRiskAssessmentBasedOn(String riskAssessmentBasedOn) {
-        this.riskAssessmentBasedOn = riskAssessmentBasedOn;
-    }
-    
-    
-    
-    public String getRiskAssessmentParent() {
-        return this.riskAssessmentParent;
-    }
-    
-    public void setRiskAssessmentParent(String riskAssessmentParent) {
-        this.riskAssessmentParent = riskAssessmentParent;
-    }
-    
-    
-    
-    public String getRiskAssessmentStatus() {
-        return this.riskAssessmentStatus;
-    }
-    
-    public void setRiskAssessmentStatus(String riskAssessmentStatus) {
-        this.riskAssessmentStatus = riskAssessmentStatus;
-    }
-    
-    
-    
-    public String getRskssssmntMthdCdngSrSlctd() {
-        return this.rskssssmntMthdCdngSrSlctd;
-    }
-    
-    public void setRskssssmntMthdCdngSrSlctd(String rskssssmntMthdCdngSrSlctd) {
-        this.rskssssmntMthdCdngSrSlctd = rskssssmntMthdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRiskAssessmentMethodCodingCode() {
-        return this.riskAssessmentMethodCodingCode;
-    }
-    
-    public void setRiskAssessmentMethodCodingCode(String riskAssessmentMethodCodingCode) {
-        this.riskAssessmentMethodCodingCode = riskAssessmentMethodCodingCode;
-    }
-    
-    
-    
-    public String getRskssssmntMthdCdngVrsn() {
-        return this.rskssssmntMthdCdngVrsn;
-    }
-    
-    public void setRskssssmntMthdCdngVrsn(String rskssssmntMthdCdngVrsn) {
-        this.rskssssmntMthdCdngVrsn = rskssssmntMthdCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntMthdCdngDsplay() {
-        return this.rskssssmntMthdCdngDsplay;
-    }
-    
-    public void setRskssssmntMthdCdngDsplay(String rskssssmntMthdCdngDsplay) {
-        this.rskssssmntMthdCdngDsplay = rskssssmntMthdCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntMthdCdngSstm() {
-        return this.rskssssmntMthdCdngSstm;
-    }
-    
-    public void setRskssssmntMthdCdngSstm(String rskssssmntMthdCdngSstm) {
-        this.rskssssmntMthdCdngSstm = rskssssmntMthdCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntCdCdngSrSlctd() {
-        return this.rskssssmntCdCdngSrSlctd;
-    }
-    
-    public void setRskssssmntCdCdngSrSlctd(String rskssssmntCdCdngSrSlctd) {
-        this.rskssssmntCdCdngSrSlctd = rskssssmntCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRiskAssessmentCodeCodingCode() {
-        return this.riskAssessmentCodeCodingCode;
-    }
-    
-    public void setRiskAssessmentCodeCodingCode(String riskAssessmentCodeCodingCode) {
-        this.riskAssessmentCodeCodingCode = riskAssessmentCodeCodingCode;
-    }
-    
-    
-    
-    public String getRiskAssessmentCodeCodingVersion() {
-        return this.riskAssessmentCodeCodingVersion;
-    }
-    
-    public void setRiskAssessmentCodeCodingVersion(String riskAssessmentCodeCodingVersion) {
-        this.riskAssessmentCodeCodingVersion = riskAssessmentCodeCodingVersion;
-    }
-    
-    
-    
-    public String getRiskAssessmentCodeCodingDisplay() {
-        return this.riskAssessmentCodeCodingDisplay;
-    }
-    
-    public void setRiskAssessmentCodeCodingDisplay(String riskAssessmentCodeCodingDisplay) {
-        this.riskAssessmentCodeCodingDisplay = riskAssessmentCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getRiskAssessmentCodeCodingSystem() {
-        return this.riskAssessmentCodeCodingSystem;
-    }
-    
-    public void setRiskAssessmentCodeCodingSystem(String riskAssessmentCodeCodingSystem) {
-        this.riskAssessmentCodeCodingSystem = riskAssessmentCodeCodingSystem;
-    }
-    
-    
-    
-    public String getRiskAssessmentSubject() {
-        return this.riskAssessmentSubject;
-    }
-    
-    public void setRiskAssessmentSubject(String riskAssessmentSubject) {
-        this.riskAssessmentSubject = riskAssessmentSubject;
-    }
-    
-    
-    
-    public String getRiskAssessmentEncounter() {
-        return this.riskAssessmentEncounter;
-    }
-    
-    public void setRiskAssessmentEncounter(String riskAssessmentEncounter) {
-        this.riskAssessmentEncounter = riskAssessmentEncounter;
-    }
-    
-    
-    
-    public String getRiskAssessmentOccurrenceDatetime() {
-        return this.riskAssessmentOccurrenceDatetime;
-    }
-    
-    public void setRiskAssessmentOccurrenceDatetime(String riskAssessmentOccurrenceDatetime) {
-        this.riskAssessmentOccurrenceDatetime = riskAssessmentOccurrenceDatetime;
-    }
-    
-    
-    
-    public String getRskssssmntCcrrncPrdCdngSrSlctd() {
-        return this.rskssssmntCcrrncPrdCdngSrSlctd;
-    }
-    
-    public void setRskssssmntCcrrncPrdCdngSrSlctd(String rskssssmntCcrrncPrdCdngSrSlctd) {
-        this.rskssssmntCcrrncPrdCdngSrSlctd = rskssssmntCcrrncPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntCcrrncPrdCdngCde() {
-        return this.rskssssmntCcrrncPrdCdngCde;
-    }
-    
-    public void setRskssssmntCcrrncPrdCdngCde(String rskssssmntCcrrncPrdCdngCde) {
-        this.rskssssmntCcrrncPrdCdngCde = rskssssmntCcrrncPrdCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntCcrrncPrdCdngVrsn() {
-        return this.rskssssmntCcrrncPrdCdngVrsn;
-    }
-    
-    public void setRskssssmntCcrrncPrdCdngVrsn(String rskssssmntCcrrncPrdCdngVrsn) {
-        this.rskssssmntCcrrncPrdCdngVrsn = rskssssmntCcrrncPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntCcrrncPrdCdngDsplay() {
-        return this.rskssssmntCcrrncPrdCdngDsplay;
-    }
-    
-    public void setRskssssmntCcrrncPrdCdngDsplay(String rskssssmntCcrrncPrdCdngDsplay) {
-        this.rskssssmntCcrrncPrdCdngDsplay = rskssssmntCcrrncPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntCcrrncPrdCdngSstm() {
-        return this.rskssssmntCcrrncPrdCdngSstm;
-    }
-    
-    public void setRskssssmntCcrrncPrdCdngSstm(String rskssssmntCcrrncPrdCdngSstm) {
-        this.rskssssmntCcrrncPrdCdngSstm = rskssssmntCcrrncPrdCdngSstm;
-    }
-    
-    
-    
-    public String getRiskAssessmentCondition() {
-        return this.riskAssessmentCondition;
-    }
-    
-    public void setRiskAssessmentCondition(String riskAssessmentCondition) {
-        this.riskAssessmentCondition = riskAssessmentCondition;
-    }
-    
-    
-    
-    public String getRiskAssessmentPerformer() {
-        return this.riskAssessmentPerformer;
-    }
-    
-    public void setRiskAssessmentPerformer(String riskAssessmentPerformer) {
-        this.riskAssessmentPerformer = riskAssessmentPerformer;
-    }
-    
-    
-    
-    public String getRskssssmntRsnCdCdngSrSlctd() {
-        return this.rskssssmntRsnCdCdngSrSlctd;
-    }
-    
-    public void setRskssssmntRsnCdCdngSrSlctd(String rskssssmntRsnCdCdngSrSlctd) {
-        this.rskssssmntRsnCdCdngSrSlctd = rskssssmntRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntRsnCdCdngCde() {
-        return this.rskssssmntRsnCdCdngCde;
-    }
-    
-    public void setRskssssmntRsnCdCdngCde(String rskssssmntRsnCdCdngCde) {
-        this.rskssssmntRsnCdCdngCde = rskssssmntRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntRsnCdCdngVrsn() {
-        return this.rskssssmntRsnCdCdngVrsn;
-    }
-    
-    public void setRskssssmntRsnCdCdngVrsn(String rskssssmntRsnCdCdngVrsn) {
-        this.rskssssmntRsnCdCdngVrsn = rskssssmntRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntRsnCdCdngDsplay() {
-        return this.rskssssmntRsnCdCdngDsplay;
-    }
-    
-    public void setRskssssmntRsnCdCdngDsplay(String rskssssmntRsnCdCdngDsplay) {
-        this.rskssssmntRsnCdCdngDsplay = rskssssmntRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntRsnCdCdngSstm() {
-        return this.rskssssmntRsnCdCdngSstm;
-    }
-    
-    public void setRskssssmntRsnCdCdngSstm(String rskssssmntRsnCdCdngSstm) {
-        this.rskssssmntRsnCdCdngSstm = rskssssmntRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getRiskAssessmentReasonReference() {
-        return this.riskAssessmentReasonReference;
-    }
-    
-    public void setRiskAssessmentReasonReference(String riskAssessmentReasonReference) {
-        this.riskAssessmentReasonReference = riskAssessmentReasonReference;
-    }
-    
-    
-    
-    public String getRiskAssessmentBasis() {
-        return this.riskAssessmentBasis;
-    }
-    
-    public void setRiskAssessmentBasis(String riskAssessmentBasis) {
-        this.riskAssessmentBasis = riskAssessmentBasis;
-    }
-    
-    
-    
-    public String getRiskAssessmentPrediction() {
-        return this.riskAssessmentPrediction;
-    }
-    
-    public void setRiskAssessmentPrediction(String riskAssessmentPrediction) {
-        this.riskAssessmentPrediction = riskAssessmentPrediction;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnTcmCdngSrSlctd() {
-        return this.rskssssmntPrdctnTcmCdngSrSlctd;
-    }
-    
-    public void setRskssssmntPrdctnTcmCdngSrSlctd(String rskssssmntPrdctnTcmCdngSrSlctd) {
-        this.rskssssmntPrdctnTcmCdngSrSlctd = rskssssmntPrdctnTcmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnTcmCdngCde() {
-        return this.rskssssmntPrdctnTcmCdngCde;
-    }
-    
-    public void setRskssssmntPrdctnTcmCdngCde(String rskssssmntPrdctnTcmCdngCde) {
-        this.rskssssmntPrdctnTcmCdngCde = rskssssmntPrdctnTcmCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnTcmCdngVrsn() {
-        return this.rskssssmntPrdctnTcmCdngVrsn;
-    }
-    
-    public void setRskssssmntPrdctnTcmCdngVrsn(String rskssssmntPrdctnTcmCdngVrsn) {
-        this.rskssssmntPrdctnTcmCdngVrsn = rskssssmntPrdctnTcmCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnTcmCdngDsplay() {
-        return this.rskssssmntPrdctnTcmCdngDsplay;
-    }
-    
-    public void setRskssssmntPrdctnTcmCdngDsplay(String rskssssmntPrdctnTcmCdngDsplay) {
-        this.rskssssmntPrdctnTcmCdngDsplay = rskssssmntPrdctnTcmCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnTcmCdngSstm() {
-        return this.rskssssmntPrdctnTcmCdngSstm;
-    }
-    
-    public void setRskssssmntPrdctnTcmCdngSstm(String rskssssmntPrdctnTcmCdngSstm) {
-        this.rskssssmntPrdctnTcmCdngSstm = rskssssmntPrdctnTcmCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltDcml() {
-        return this.rskssssmntPrdctnPrbbltDcml;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltDcml(String rskssssmntPrdctnPrbbltDcml) {
-        this.rskssssmntPrdctnPrbbltDcml = rskssssmntPrdctnPrbbltDcml;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltRngCdngSrSlctd() {
-        return this.rskssssmntPrdctnPrbbltRngCdngSrSlctd;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltRngCdngSrSlctd(String rskssssmntPrdctnPrbbltRngCdngSrSlctd) {
-        this.rskssssmntPrdctnPrbbltRngCdngSrSlctd = rskssssmntPrdctnPrbbltRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltRngCdngCde() {
-        return this.rskssssmntPrdctnPrbbltRngCdngCde;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltRngCdngCde(String rskssssmntPrdctnPrbbltRngCdngCde) {
-        this.rskssssmntPrdctnPrbbltRngCdngCde = rskssssmntPrdctnPrbbltRngCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltRngCdngVrsn() {
-        return this.rskssssmntPrdctnPrbbltRngCdngVrsn;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltRngCdngVrsn(String rskssssmntPrdctnPrbbltRngCdngVrsn) {
-        this.rskssssmntPrdctnPrbbltRngCdngVrsn = rskssssmntPrdctnPrbbltRngCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltRngCdngDsplay() {
-        return this.rskssssmntPrdctnPrbbltRngCdngDsplay;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltRngCdngDsplay(String rskssssmntPrdctnPrbbltRngCdngDsplay) {
-        this.rskssssmntPrdctnPrbbltRngCdngDsplay = rskssssmntPrdctnPrbbltRngCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnPrbbltRngCdngSstm() {
-        return this.rskssssmntPrdctnPrbbltRngCdngSstm;
-    }
-    
-    public void setRskssssmntPrdctnPrbbltRngCdngSstm(String rskssssmntPrdctnPrbbltRngCdngSstm) {
-        this.rskssssmntPrdctnPrbbltRngCdngSstm = rskssssmntPrdctnPrbbltRngCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnQlttvRskCdngSrSlctd() {
-        return this.rskssssmntPrdctnQlttvRskCdngSrSlctd;
-    }
-    
-    public void setRskssssmntPrdctnQlttvRskCdngSrSlctd(String rskssssmntPrdctnQlttvRskCdngSrSlctd) {
-        this.rskssssmntPrdctnQlttvRskCdngSrSlctd = rskssssmntPrdctnQlttvRskCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnQlttvRskCdngCde() {
-        return this.rskssssmntPrdctnQlttvRskCdngCde;
-    }
-    
-    public void setRskssssmntPrdctnQlttvRskCdngCde(String rskssssmntPrdctnQlttvRskCdngCde) {
-        this.rskssssmntPrdctnQlttvRskCdngCde = rskssssmntPrdctnQlttvRskCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnQlttvRskCdngVrsn() {
-        return this.rskssssmntPrdctnQlttvRskCdngVrsn;
-    }
-    
-    public void setRskssssmntPrdctnQlttvRskCdngVrsn(String rskssssmntPrdctnQlttvRskCdngVrsn) {
-        this.rskssssmntPrdctnQlttvRskCdngVrsn = rskssssmntPrdctnQlttvRskCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnQlttvRskCdngDsplay() {
-        return this.rskssssmntPrdctnQlttvRskCdngDsplay;
-    }
-    
-    public void setRskssssmntPrdctnQlttvRskCdngDsplay(String rskssssmntPrdctnQlttvRskCdngDsplay) {
-        this.rskssssmntPrdctnQlttvRskCdngDsplay = rskssssmntPrdctnQlttvRskCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnQlttvRskCdngSstm() {
-        return this.rskssssmntPrdctnQlttvRskCdngSstm;
-    }
-    
-    public void setRskssssmntPrdctnQlttvRskCdngSstm(String rskssssmntPrdctnQlttvRskCdngSstm) {
-        this.rskssssmntPrdctnQlttvRskCdngSstm = rskssssmntPrdctnQlttvRskCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnRltvRsk() {
-        return this.rskssssmntPrdctnRltvRsk;
-    }
-    
-    public void setRskssssmntPrdctnRltvRsk(String rskssssmntPrdctnRltvRsk) {
-        this.rskssssmntPrdctnRltvRsk = rskssssmntPrdctnRltvRsk;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnPrdCdngSrSlctd() {
-        return this.rskssssmntPrdctnWhnPrdCdngSrSlctd;
-    }
-    
-    public void setRskssssmntPrdctnWhnPrdCdngSrSlctd(String rskssssmntPrdctnWhnPrdCdngSrSlctd) {
-        this.rskssssmntPrdctnWhnPrdCdngSrSlctd = rskssssmntPrdctnWhnPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnPrdCdngCde() {
-        return this.rskssssmntPrdctnWhnPrdCdngCde;
-    }
-    
-    public void setRskssssmntPrdctnWhnPrdCdngCde(String rskssssmntPrdctnWhnPrdCdngCde) {
-        this.rskssssmntPrdctnWhnPrdCdngCde = rskssssmntPrdctnWhnPrdCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnPrdCdngVrsn() {
-        return this.rskssssmntPrdctnWhnPrdCdngVrsn;
-    }
-    
-    public void setRskssssmntPrdctnWhnPrdCdngVrsn(String rskssssmntPrdctnWhnPrdCdngVrsn) {
-        this.rskssssmntPrdctnWhnPrdCdngVrsn = rskssssmntPrdctnWhnPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnPrdCdngDsplay() {
-        return this.rskssssmntPrdctnWhnPrdCdngDsplay;
-    }
-    
-    public void setRskssssmntPrdctnWhnPrdCdngDsplay(String rskssssmntPrdctnWhnPrdCdngDsplay) {
-        this.rskssssmntPrdctnWhnPrdCdngDsplay = rskssssmntPrdctnWhnPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnPrdCdngSstm() {
-        return this.rskssssmntPrdctnWhnPrdCdngSstm;
-    }
-    
-    public void setRskssssmntPrdctnWhnPrdCdngSstm(String rskssssmntPrdctnWhnPrdCdngSstm) {
-        this.rskssssmntPrdctnWhnPrdCdngSstm = rskssssmntPrdctnWhnPrdCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnRngCdngSrSlctd() {
-        return this.rskssssmntPrdctnWhnRngCdngSrSlctd;
-    }
-    
-    public void setRskssssmntPrdctnWhnRngCdngSrSlctd(String rskssssmntPrdctnWhnRngCdngSrSlctd) {
-        this.rskssssmntPrdctnWhnRngCdngSrSlctd = rskssssmntPrdctnWhnRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnRngCdngCde() {
-        return this.rskssssmntPrdctnWhnRngCdngCde;
-    }
-    
-    public void setRskssssmntPrdctnWhnRngCdngCde(String rskssssmntPrdctnWhnRngCdngCde) {
-        this.rskssssmntPrdctnWhnRngCdngCde = rskssssmntPrdctnWhnRngCdngCde;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnRngCdngVrsn() {
-        return this.rskssssmntPrdctnWhnRngCdngVrsn;
-    }
-    
-    public void setRskssssmntPrdctnWhnRngCdngVrsn(String rskssssmntPrdctnWhnRngCdngVrsn) {
-        this.rskssssmntPrdctnWhnRngCdngVrsn = rskssssmntPrdctnWhnRngCdngVrsn;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnRngCdngDsplay() {
-        return this.rskssssmntPrdctnWhnRngCdngDsplay;
-    }
-    
-    public void setRskssssmntPrdctnWhnRngCdngDsplay(String rskssssmntPrdctnWhnRngCdngDsplay) {
-        this.rskssssmntPrdctnWhnRngCdngDsplay = rskssssmntPrdctnWhnRngCdngDsplay;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnWhnRngCdngSstm() {
-        return this.rskssssmntPrdctnWhnRngCdngSstm;
-    }
-    
-    public void setRskssssmntPrdctnWhnRngCdngSstm(String rskssssmntPrdctnWhnRngCdngSstm) {
-        this.rskssssmntPrdctnWhnRngCdngSstm = rskssssmntPrdctnWhnRngCdngSstm;
-    }
-    
-    
-    
-    public String getRskssssmntPrdctnRtnle() {
-        return this.rskssssmntPrdctnRtnle;
-    }
-    
-    public void setRskssssmntPrdctnRtnle(String rskssssmntPrdctnRtnle) {
-        this.rskssssmntPrdctnRtnle = rskssssmntPrdctnRtnle;
-    }
-    
-    
-    
-    public String getRiskAssessmentMitigation() {
-        return this.riskAssessmentMitigation;
-    }
-    
-    public void setRiskAssessmentMitigation(String riskAssessmentMitigation) {
-        this.riskAssessmentMitigation = riskAssessmentMitigation;
-    }
-    
-    
-    
-    public String getRskssssmntNtCdngSrSlctd() {
-        return this.rskssssmntNtCdngSrSlctd;
-    }
-    
-    public void setRskssssmntNtCdngSrSlctd(String rskssssmntNtCdngSrSlctd) {
-        this.rskssssmntNtCdngSrSlctd = rskssssmntNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRiskAssessmentNoteCodingCode() {
-        return this.riskAssessmentNoteCodingCode;
-    }
-    
-    public void setRiskAssessmentNoteCodingCode(String riskAssessmentNoteCodingCode) {
-        this.riskAssessmentNoteCodingCode = riskAssessmentNoteCodingCode;
-    }
-    
-    
-    
-    public String getRiskAssessmentNoteCodingVersion() {
-        return this.riskAssessmentNoteCodingVersion;
-    }
-    
-    public void setRiskAssessmentNoteCodingVersion(String riskAssessmentNoteCodingVersion) {
-        this.riskAssessmentNoteCodingVersion = riskAssessmentNoteCodingVersion;
-    }
-    
-    
-    
-    public String getRiskAssessmentNoteCodingDisplay() {
-        return this.riskAssessmentNoteCodingDisplay;
-    }
-    
-    public void setRiskAssessmentNoteCodingDisplay(String riskAssessmentNoteCodingDisplay) {
-        this.riskAssessmentNoteCodingDisplay = riskAssessmentNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getRiskAssessmentNoteCodingSystem() {
-        return this.riskAssessmentNoteCodingSystem;
-    }
-    
-    public void setRiskAssessmentNoteCodingSystem(String riskAssessmentNoteCodingSystem) {
-        this.riskAssessmentNoteCodingSystem = riskAssessmentNoteCodingSystem;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrSe()
+    {
+        return this.rskssssmntDntfrDntfrSe;
+    }
+    
+    public void setRskssssmntDntfrDntfrSe
+        (String rskssssmntDntfrDntfrSe) 
+        {
+      this.rskssssmntDntfrDntfrSe = rskssssmntDntfrDntfrSe;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcCSstm()
+    {
+        return this.rskssssmntDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcCSstm
+        (String rskssssmntDntfrDntfrTpCcCSstm) 
+        {
+      this.rskssssmntDntfrDntfrTpCcCSstm = rskssssmntDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcCVrsn()
+    {
+        return this.rskssssmntDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcCVrsn
+        (String rskssssmntDntfrDntfrTpCcCVrsn) 
+        {
+      this.rskssssmntDntfrDntfrTpCcCVrsn = rskssssmntDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcCCde()
+    {
+        return this.rskssssmntDntfrDntfrTpCcCCde;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcCCde
+        (String rskssssmntDntfrDntfrTpCcCCde) 
+        {
+      this.rskssssmntDntfrDntfrTpCcCCde = rskssssmntDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcCDsplay()
+    {
+        return this.rskssssmntDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcCDsplay
+        (String rskssssmntDntfrDntfrTpCcCDsplay) 
+        {
+      this.rskssssmntDntfrDntfrTpCcCDsplay = rskssssmntDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.rskssssmntDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcCSrSlctd
+        (String rskssssmntDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.rskssssmntDntfrDntfrTpCcCSrSlctd = rskssssmntDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrTpCcTxt()
+    {
+        return this.rskssssmntDntfrDntfrTpCcTxt;
+    }
+    
+    public void setRskssssmntDntfrDntfrTpCcTxt
+        (String rskssssmntDntfrDntfrTpCcTxt) 
+        {
+      this.rskssssmntDntfrDntfrTpCcTxt = rskssssmntDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrPrdPrdStrt()
+    {
+        return this.rskssssmntDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setRskssssmntDntfrDntfrPrdPrdStrt
+        (String rskssssmntDntfrDntfrPrdPrdStrt) 
+        {
+      this.rskssssmntDntfrDntfrPrdPrdStrt = rskssssmntDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrPrdPrdNd()
+    {
+        return this.rskssssmntDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setRskssssmntDntfrDntfrPrdPrdNd
+        (String rskssssmntDntfrDntfrPrdPrdNd) 
+        {
+      this.rskssssmntDntfrDntfrPrdPrdNd = rskssssmntDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrSsgnr()
+    {
+        return this.rskssssmntDntfrDntfrSsgnr;
+    }
+    
+    public void setRskssssmntDntfrDntfrSsgnr
+        (String rskssssmntDntfrDntfrSsgnr) 
+        {
+      this.rskssssmntDntfrDntfrSsgnr = rskssssmntDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrVlue()
+    {
+        return this.rskssssmntDntfrDntfrVlue;
+    }
+    
+    public void setRskssssmntDntfrDntfrVlue
+        (String rskssssmntDntfrDntfrVlue) 
+        {
+      this.rskssssmntDntfrDntfrVlue = rskssssmntDntfrDntfrVlue;
+}
+    public 
+    String 
+    getRskssssmntDntfrDntfrSstm()
+    {
+        return this.rskssssmntDntfrDntfrSstm;
+    }
+    
+    public void setRskssssmntDntfrDntfrSstm
+        (String rskssssmntDntfrDntfrSstm) 
+        {
+      this.rskssssmntDntfrDntfrSstm = rskssssmntDntfrDntfrSstm;
+}
+    public 
+    String 
+    getRiskAssessmentBasedOnReference()
+    {
+        return this.riskAssessmentBasedOnReference;
+    }
+    
+    public void setRiskAssessmentBasedOnReference
+        (String riskAssessmentBasedOnReference) 
+        {
+      this.riskAssessmentBasedOnReference = riskAssessmentBasedOnReference;
+}
+    public 
+    String 
+    getRiskAssessmentParentReference()
+    {
+        return this.riskAssessmentParentReference;
+    }
+    
+    public void setRiskAssessmentParentReference
+        (String riskAssessmentParentReference) 
+        {
+      this.riskAssessmentParentReference = riskAssessmentParentReference;
+}
+    public 
+    String 
+    getRiskAssessmentStatusCode()
+    {
+        return this.riskAssessmentStatusCode;
+    }
+    
+    public void setRiskAssessmentStatusCode
+        (String riskAssessmentStatusCode) 
+        {
+      this.riskAssessmentStatusCode = riskAssessmentStatusCode;
+}
+    public 
+    String 
+    getRskssssmntMthdCcCdngCSstm()
+    {
+        return this.rskssssmntMthdCcCdngCSstm;
+    }
+    
+    public void setRskssssmntMthdCcCdngCSstm
+        (String rskssssmntMthdCcCdngCSstm) 
+        {
+      this.rskssssmntMthdCcCdngCSstm = rskssssmntMthdCcCdngCSstm;
+}
+    public 
+    String 
+    getRskssssmntMthdCcCdngCVrsn()
+    {
+        return this.rskssssmntMthdCcCdngCVrsn;
+    }
+    
+    public void setRskssssmntMthdCcCdngCVrsn
+        (String rskssssmntMthdCcCdngCVrsn) 
+        {
+      this.rskssssmntMthdCcCdngCVrsn = rskssssmntMthdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRskssssmntMthdCcCdngCCde()
+    {
+        return this.rskssssmntMthdCcCdngCCde;
+    }
+    
+    public void setRskssssmntMthdCcCdngCCde
+        (String rskssssmntMthdCcCdngCCde) 
+        {
+      this.rskssssmntMthdCcCdngCCde = rskssssmntMthdCcCdngCCde;
+}
+    public 
+    String 
+    getRskssssmntMthdCcCdngCDsplay()
+    {
+        return this.rskssssmntMthdCcCdngCDsplay;
+    }
+    
+    public void setRskssssmntMthdCcCdngCDsplay
+        (String rskssssmntMthdCcCdngCDsplay) 
+        {
+      this.rskssssmntMthdCcCdngCDsplay = rskssssmntMthdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRskssssmntMthdCcCdngCSrSlctd()
+    {
+        return this.rskssssmntMthdCcCdngCSrSlctd;
+    }
+    
+    public void setRskssssmntMthdCcCdngCSrSlctd
+        (String rskssssmntMthdCcCdngCSrSlctd) 
+        {
+      this.rskssssmntMthdCcCdngCSrSlctd = rskssssmntMthdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRiskAssessmentMethodCcText()
+    {
+        return this.riskAssessmentMethodCcText;
+    }
+    
+    public void setRiskAssessmentMethodCcText
+        (String riskAssessmentMethodCcText) 
+        {
+      this.riskAssessmentMethodCcText = riskAssessmentMethodCcText;
+}
+    public 
+    String 
+    getRskssssmntCdCcCdngCSstm()
+    {
+        return this.rskssssmntCdCcCdngCSstm;
+    }
+    
+    public void setRskssssmntCdCcCdngCSstm
+        (String rskssssmntCdCcCdngCSstm) 
+        {
+      this.rskssssmntCdCcCdngCSstm = rskssssmntCdCcCdngCSstm;
+}
+    public 
+    String 
+    getRskssssmntCdCcCdngCVrsn()
+    {
+        return this.rskssssmntCdCcCdngCVrsn;
+    }
+    
+    public void setRskssssmntCdCcCdngCVrsn
+        (String rskssssmntCdCcCdngCVrsn) 
+        {
+      this.rskssssmntCdCcCdngCVrsn = rskssssmntCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRskssssmntCdCcCdngCCde()
+    {
+        return this.rskssssmntCdCcCdngCCde;
+    }
+    
+    public void setRskssssmntCdCcCdngCCde
+        (String rskssssmntCdCcCdngCCde) 
+        {
+      this.rskssssmntCdCcCdngCCde = rskssssmntCdCcCdngCCde;
+}
+    public 
+    String 
+    getRskssssmntCdCcCdngCDsplay()
+    {
+        return this.rskssssmntCdCcCdngCDsplay;
+    }
+    
+    public void setRskssssmntCdCcCdngCDsplay
+        (String rskssssmntCdCcCdngCDsplay) 
+        {
+      this.rskssssmntCdCcCdngCDsplay = rskssssmntCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRskssssmntCdCcCdngCSrSlctd()
+    {
+        return this.rskssssmntCdCcCdngCSrSlctd;
+    }
+    
+    public void setRskssssmntCdCcCdngCSrSlctd
+        (String rskssssmntCdCcCdngCSrSlctd) 
+        {
+      this.rskssssmntCdCcCdngCSrSlctd = rskssssmntCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRiskAssessmentCodeCcText()
+    {
+        return this.riskAssessmentCodeCcText;
+    }
+    
+    public void setRiskAssessmentCodeCcText
+        (String riskAssessmentCodeCcText) 
+        {
+      this.riskAssessmentCodeCcText = riskAssessmentCodeCcText;
+}
+    public 
+    String 
+    getRiskAssessmentSubjectReference()
+    {
+        return this.riskAssessmentSubjectReference;
+    }
+    
+    public void setRiskAssessmentSubjectReference
+        (String riskAssessmentSubjectReference) 
+        {
+      this.riskAssessmentSubjectReference = riskAssessmentSubjectReference;
+}
+    public 
+    String 
+    getRiskAssessmentEncounterReference()
+    {
+        return this.riskAssessmentEncounterReference;
+    }
+    
+    public void setRiskAssessmentEncounterReference
+        (String riskAssessmentEncounterReference) 
+        {
+      this.riskAssessmentEncounterReference = riskAssessmentEncounterReference;
+}
+    public 
+    String 
+    getRskssssmntCcrrncDttmDtTme()
+    {
+        return this.rskssssmntCcrrncDttmDtTme;
+    }
+    
+    public void setRskssssmntCcrrncDttmDtTme
+        (String rskssssmntCcrrncDttmDtTme) 
+        {
+      this.rskssssmntCcrrncDttmDtTme = rskssssmntCcrrncDttmDtTme;
+}
+    public 
+    String 
+    getRskssssmntCcrrncPrdPrdStrt()
+    {
+        return this.rskssssmntCcrrncPrdPrdStrt;
+    }
+    
+    public void setRskssssmntCcrrncPrdPrdStrt
+        (String rskssssmntCcrrncPrdPrdStrt) 
+        {
+      this.rskssssmntCcrrncPrdPrdStrt = rskssssmntCcrrncPrdPrdStrt;
+}
+    public 
+    String 
+    getRskssssmntCcrrncPrdPrdNd()
+    {
+        return this.rskssssmntCcrrncPrdPrdNd;
+    }
+    
+    public void setRskssssmntCcrrncPrdPrdNd
+        (String rskssssmntCcrrncPrdPrdNd) 
+        {
+      this.rskssssmntCcrrncPrdPrdNd = rskssssmntCcrrncPrdPrdNd;
+}
+    public 
+    String 
+    getRiskAssessmentConditionReference()
+    {
+        return this.riskAssessmentConditionReference;
+    }
+    
+    public void setRiskAssessmentConditionReference
+        (String riskAssessmentConditionReference) 
+        {
+      this.riskAssessmentConditionReference = riskAssessmentConditionReference;
+}
+    public 
+    String 
+    getRiskAssessmentPerformerReference()
+    {
+        return this.riskAssessmentPerformerReference;
+    }
+    
+    public void setRiskAssessmentPerformerReference
+        (String riskAssessmentPerformerReference) 
+        {
+      this.riskAssessmentPerformerReference = riskAssessmentPerformerReference;
+}
+    public 
+    String 
+    getRskssssmntRsnCdCcCdngCSstm()
+    {
+        return this.rskssssmntRsnCdCcCdngCSstm;
+    }
+    
+    public void setRskssssmntRsnCdCcCdngCSstm
+        (String rskssssmntRsnCdCcCdngCSstm) 
+        {
+      this.rskssssmntRsnCdCcCdngCSstm = rskssssmntRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getRskssssmntRsnCdCcCdngCVrsn()
+    {
+        return this.rskssssmntRsnCdCcCdngCVrsn;
+    }
+    
+    public void setRskssssmntRsnCdCcCdngCVrsn
+        (String rskssssmntRsnCdCcCdngCVrsn) 
+        {
+      this.rskssssmntRsnCdCcCdngCVrsn = rskssssmntRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRskssssmntRsnCdCcCdngCCde()
+    {
+        return this.rskssssmntRsnCdCcCdngCCde;
+    }
+    
+    public void setRskssssmntRsnCdCcCdngCCde
+        (String rskssssmntRsnCdCcCdngCCde) 
+        {
+      this.rskssssmntRsnCdCcCdngCCde = rskssssmntRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getRskssssmntRsnCdCcCdngCDsplay()
+    {
+        return this.rskssssmntRsnCdCcCdngCDsplay;
+    }
+    
+    public void setRskssssmntRsnCdCcCdngCDsplay
+        (String rskssssmntRsnCdCcCdngCDsplay) 
+        {
+      this.rskssssmntRsnCdCcCdngCDsplay = rskssssmntRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRskssssmntRsnCdCcCdngCSrSlctd()
+    {
+        return this.rskssssmntRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setRskssssmntRsnCdCcCdngCSrSlctd
+        (String rskssssmntRsnCdCcCdngCSrSlctd) 
+        {
+      this.rskssssmntRsnCdCcCdngCSrSlctd = rskssssmntRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRiskAssessmentReasonCodeCcText()
+    {
+        return this.riskAssessmentReasonCodeCcText;
+    }
+    
+    public void setRiskAssessmentReasonCodeCcText
+        (String riskAssessmentReasonCodeCcText) 
+        {
+      this.riskAssessmentReasonCodeCcText = riskAssessmentReasonCodeCcText;
+}
+    public 
+    String 
+    getRskssssmntRsnRfrncRfrnce()
+    {
+        return this.rskssssmntRsnRfrncRfrnce;
+    }
+    
+    public void setRskssssmntRsnRfrncRfrnce
+        (String rskssssmntRsnRfrncRfrnce) 
+        {
+      this.rskssssmntRsnRfrncRfrnce = rskssssmntRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getRiskAssessmentBasisReference()
+    {
+        return this.riskAssessmentBasisReference;
+    }
+    
+    public void setRiskAssessmentBasisReference
+        (String riskAssessmentBasisReference) 
+        {
+      this.riskAssessmentBasisReference = riskAssessmentBasisReference;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcCdngCSstm()
+    {
+        return this.rskssssmntPrdctnTcmCcCdngCSstm;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcCdngCSstm
+        (String rskssssmntPrdctnTcmCcCdngCSstm) 
+        {
+      this.rskssssmntPrdctnTcmCcCdngCSstm = rskssssmntPrdctnTcmCcCdngCSstm;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcCdngCVrsn()
+    {
+        return this.rskssssmntPrdctnTcmCcCdngCVrsn;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcCdngCVrsn
+        (String rskssssmntPrdctnTcmCcCdngCVrsn) 
+        {
+      this.rskssssmntPrdctnTcmCcCdngCVrsn = rskssssmntPrdctnTcmCcCdngCVrsn;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcCdngCCde()
+    {
+        return this.rskssssmntPrdctnTcmCcCdngCCde;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcCdngCCde
+        (String rskssssmntPrdctnTcmCcCdngCCde) 
+        {
+      this.rskssssmntPrdctnTcmCcCdngCCde = rskssssmntPrdctnTcmCcCdngCCde;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcCdngCDsplay()
+    {
+        return this.rskssssmntPrdctnTcmCcCdngCDsplay;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcCdngCDsplay
+        (String rskssssmntPrdctnTcmCcCdngCDsplay) 
+        {
+      this.rskssssmntPrdctnTcmCcCdngCDsplay = rskssssmntPrdctnTcmCcCdngCDsplay;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcCdngCSrSlctd()
+    {
+        return this.rskssssmntPrdctnTcmCcCdngCSrSlctd;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcCdngCSrSlctd
+        (String rskssssmntPrdctnTcmCcCdngCSrSlctd) 
+        {
+      this.rskssssmntPrdctnTcmCcCdngCSrSlctd = rskssssmntPrdctnTcmCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRskssssmntPrdctnTcmCcTxt()
+    {
+        return this.rskssssmntPrdctnTcmCcTxt;
+    }
+    
+    public void setRskssssmntPrdctnTcmCcTxt
+        (String rskssssmntPrdctnTcmCcTxt) 
+        {
+      this.rskssssmntPrdctnTcmCcTxt = rskssssmntPrdctnTcmCcTxt;
+}
+    public 
+    String 
+    getRskssssmntPrdctnPrbbltDcmlDcml()
+    {
+        return this.rskssssmntPrdctnPrbbltDcmlDcml;
+    }
+    
+    public void setRskssssmntPrdctnPrbbltDcmlDcml
+        (String rskssssmntPrdctnPrbbltDcmlDcml) 
+        {
+      this.rskssssmntPrdctnPrbbltDcmlDcml = rskssssmntPrdctnPrbbltDcmlDcml;
+}
+    public 
+    String 
+    getRskssssmntPrdctnPrbbltRngRngLw()
+    {
+        return this.rskssssmntPrdctnPrbbltRngRngLw;
+    }
+    
+    public void setRskssssmntPrdctnPrbbltRngRngLw
+        (String rskssssmntPrdctnPrbbltRngRngLw) 
+        {
+      this.rskssssmntPrdctnPrbbltRngRngLw = rskssssmntPrdctnPrbbltRngRngLw;
+}
+    public 
+    String 
+    getRskssssmntPrdctnPrbbltRngRngHgh()
+    {
+        return this.rskssssmntPrdctnPrbbltRngRngHgh;
+    }
+    
+    public void setRskssssmntPrdctnPrbbltRngRngHgh
+        (String rskssssmntPrdctnPrbbltRngRngHgh) 
+        {
+      this.rskssssmntPrdctnPrbbltRngRngHgh = rskssssmntPrdctnPrbbltRngRngHgh;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcCdngCSstm()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcCdngCSstm;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcCdngCSstm
+        (String rskssssmntPrdctnQlttvRskCcCdngCSstm) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcCdngCSstm = rskssssmntPrdctnQlttvRskCcCdngCSstm;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcCdngCVrsn()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcCdngCVrsn;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcCdngCVrsn
+        (String rskssssmntPrdctnQlttvRskCcCdngCVrsn) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcCdngCVrsn = rskssssmntPrdctnQlttvRskCcCdngCVrsn;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcCdngCCde()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcCdngCCde;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcCdngCCde
+        (String rskssssmntPrdctnQlttvRskCcCdngCCde) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcCdngCCde = rskssssmntPrdctnQlttvRskCcCdngCCde;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcCdngCDsplay()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcCdngCDsplay;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcCdngCDsplay
+        (String rskssssmntPrdctnQlttvRskCcCdngCDsplay) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcCdngCDsplay = rskssssmntPrdctnQlttvRskCcCdngCDsplay;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcCdngCSrSlctd()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcCdngCSrSlctd;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcCdngCSrSlctd
+        (String rskssssmntPrdctnQlttvRskCcCdngCSrSlctd) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcCdngCSrSlctd = rskssssmntPrdctnQlttvRskCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRskssssmntPrdctnQlttvRskCcTxt()
+    {
+        return this.rskssssmntPrdctnQlttvRskCcTxt;
+    }
+    
+    public void setRskssssmntPrdctnQlttvRskCcTxt
+        (String rskssssmntPrdctnQlttvRskCcTxt) 
+        {
+      this.rskssssmntPrdctnQlttvRskCcTxt = rskssssmntPrdctnQlttvRskCcTxt;
+}
+    public 
+    String 
+    getRskssssmntPrdctnRltvRskDcml()
+    {
+        return this.rskssssmntPrdctnRltvRskDcml;
+    }
+    
+    public void setRskssssmntPrdctnRltvRskDcml
+        (String rskssssmntPrdctnRltvRskDcml) 
+        {
+      this.rskssssmntPrdctnRltvRskDcml = rskssssmntPrdctnRltvRskDcml;
+}
+    public 
+    String 
+    getRskssssmntPrdctnWhnPrdPrdStrt()
+    {
+        return this.rskssssmntPrdctnWhnPrdPrdStrt;
+    }
+    
+    public void setRskssssmntPrdctnWhnPrdPrdStrt
+        (String rskssssmntPrdctnWhnPrdPrdStrt) 
+        {
+      this.rskssssmntPrdctnWhnPrdPrdStrt = rskssssmntPrdctnWhnPrdPrdStrt;
+}
+    public 
+    String 
+    getRskssssmntPrdctnWhnPrdPrdNd()
+    {
+        return this.rskssssmntPrdctnWhnPrdPrdNd;
+    }
+    
+    public void setRskssssmntPrdctnWhnPrdPrdNd
+        (String rskssssmntPrdctnWhnPrdPrdNd) 
+        {
+      this.rskssssmntPrdctnWhnPrdPrdNd = rskssssmntPrdctnWhnPrdPrdNd;
+}
+    public 
+    String 
+    getRskssssmntPrdctnWhnRngRngLw()
+    {
+        return this.rskssssmntPrdctnWhnRngRngLw;
+    }
+    
+    public void setRskssssmntPrdctnWhnRngRngLw
+        (String rskssssmntPrdctnWhnRngRngLw) 
+        {
+      this.rskssssmntPrdctnWhnRngRngLw = rskssssmntPrdctnWhnRngRngLw;
+}
+    public 
+    String 
+    getRskssssmntPrdctnWhnRngRngHgh()
+    {
+        return this.rskssssmntPrdctnWhnRngRngHgh;
+    }
+    
+    public void setRskssssmntPrdctnWhnRngRngHgh
+        (String rskssssmntPrdctnWhnRngRngHgh) 
+        {
+      this.rskssssmntPrdctnWhnRngRngHgh = rskssssmntPrdctnWhnRngRngHgh;
+}
+    public 
+    String 
+    getRskssssmntPrdctnRtnlStrng()
+    {
+        return this.rskssssmntPrdctnRtnlStrng;
+    }
+    
+    public void setRskssssmntPrdctnRtnlStrng
+        (String rskssssmntPrdctnRtnlStrng) 
+        {
+      this.rskssssmntPrdctnRtnlStrng = rskssssmntPrdctnRtnlStrng;
+}
+    public 
+    String 
+    getRiskAssessmentMitigationString()
+    {
+        return this.riskAssessmentMitigationString;
+    }
+    
+    public void setRiskAssessmentMitigationString
+        (String riskAssessmentMitigationString) 
+        {
+      this.riskAssessmentMitigationString = riskAssessmentMitigationString;
+}
+    public 
+    String 
+    getRskssssmntNtNnttnTme()
+    {
+        return this.rskssssmntNtNnttnTme;
+    }
+    
+    public void setRskssssmntNtNnttnTme
+        (String rskssssmntNtNnttnTme) 
+        {
+      this.rskssssmntNtNnttnTme = rskssssmntNtNnttnTme;
+}
+    public 
+    String 
+    getRskssssmntNtNnttnTxt()
+    {
+        return this.rskssssmntNtNnttnTxt;
+    }
+    
+    public void setRskssssmntNtNnttnTxt
+        (String rskssssmntNtNnttnTxt) 
+        {
+      this.rskssssmntNtNnttnTxt = rskssssmntNtNnttnTxt;
+}
+    public 
+    String 
+    getRskssssmntNtNnttnThrRfrnce()
+    {
+        return this.rskssssmntNtNnttnThrRfrnce;
+    }
+    
+    public void setRskssssmntNtNnttnThrRfrnce
+        (String rskssssmntNtNnttnThrRfrnce) 
+        {
+      this.rskssssmntNtNnttnThrRfrnce = rskssssmntNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getRskssssmntNtNnttnThrStrng()
+    {
+        return this.rskssssmntNtNnttnThrStrng;
+    }
+    
+    public void setRskssssmntNtNnttnThrStrng
+        (String rskssssmntNtNnttnThrStrng) 
+        {
+      this.rskssssmntNtNnttnThrStrng = rskssssmntNtNnttnThrStrng;
+}
 
 
 

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,989 +10,1580 @@ package main.templateoutput.Model;
 public class Researchstudy  implements java.io.Serializable {
 
 
-     private String rsrchStdDntfrCdngCde;
-     private String rsrchStdDntfrCdngSrSlctd;
-     private String rsrchStdDntfrCdngDsplay;
-     private String rsrchStdDntfrCdngVrsn;
-     private String rsrchStdDntfrCdngSstm;
-     private String researchStudyTitle;
-     private String researchStudyProtocol;
-     private String researchStudyPartOf;
-     private String researchStudyStatus;
-     private String rsrchStdPrmrPrpsTpCdngSrSlctd;
-     private String rsrchStdPrmrPrpsTpCdngCde;
-     private String rsrchStdPrmrPrpsTpCdngDsplay;
-     private String rsrchStdPrmrPrpsTpCdngVrsn;
-     private String rsrchStdPrmrPrpsTpCdngSstm;
-     private String rsrchStdPhsCdngSrSlctd;
-     private String researchStudyPhaseCodingCode;
-     private String researchStudyPhaseCodingDisplay;
-     private String researchStudyPhaseCodingVersion;
-     private String researchStudyPhaseCodingSystem;
-     private String rsrchStdCtgrCdngSrSlctd;
-     private String researchStudyCategoryCodingCode;
-     private String rsrchStdCtgrCdngDsplay;
-     private String rsrchStdCtgrCdngVrsn;
-     private String rsrchStdCtgrCdngSstm;
-     private String rsrchStdFcsCdngSrSlctd;
-     private String researchStudyFocusCodingCode;
-     private String researchStudyFocusCodingDisplay;
-     private String researchStudyFocusCodingVersion;
-     private String researchStudyFocusCodingSystem;
-     private String rsrchStdCndtnCdngSrSlctd;
-     private String rsrchStdCndtnCdngCde;
-     private String rsrchStdCndtnCdngDsplay;
-     private String rsrchStdCndtnCdngVrsn;
-     private String rsrchStdCndtnCdngSstm;
-     private String researchStudyContact;
-     private String researchStudyRelatedArtifact;
-     private String rsrchStdKwrdCdngSrSlctd;
-     private String researchStudyKeywordCodingCode;
-     private String rsrchStdKwrdCdngDsplay;
-     private String rsrchStdKwrdCdngVrsn;
-     private String rsrchStdKwrdCdngSstm;
-     private String rsrchStdLctnCdngSrSlctd;
-     private String researchStudyLocationCodingCode;
-     private String rsrchStdLctnCdngDsplay;
-     private String rsrchStdLctnCdngVrsn;
-     private String rsrchStdLctnCdngSstm;
-     private String researchStudyDescription;
-     private String researchStudyEnrollment;
-     private String rsrchStdPrdCdngSrSlctd;
-     private String researchStudyPeriodCodingCode;
-     private String rsrchStdPrdCdngDsplay;
-     private String rsrchStdPrdCdngVrsn;
-     private String researchStudyPeriodCodingSystem;
-     private String researchStudySponsor;
-     private String rsrchStdPrncplnvstgtr;
-     private String researchStudySite;
-     private String rsrchStdRsnStppdCdngSrSlctd;
-     private String rsrchStdRsnStppdCdngCde;
-     private String rsrchStdRsnStppdCdngDsplay;
-     private String rsrchStdRsnStppdCdngVrsn;
-     private String rsrchStdRsnStppdCdngSstm;
-     private String rsrchStdNtCdngSrSlctd;
-     private String researchStudyNoteCodingCode;
-     private String researchStudyNoteCodingDisplay;
-     private String researchStudyNoteCodingVersion;
-     private String researchStudyNoteCodingSystem;
-     private String researchStudyArm;
-     private String researchStudyArmName;
-     private String rsrchStdRmTpCdngSrSlctd;
-     private String researchStudyArmTypeCodingCode;
-     private String rsrchStdRmTpCdngDsplay;
-     private String rsrchStdRmTpCdngVrsn;
-     private String rsrchStdRmTpCdngSstm;
-     private String researchStudyArmDescription;
-     private String researchStudyObjective;
-     private String researchStudyObjectiveName;
-     private String rsrchStdBjctvTpCdngSrSlctd;
-     private String rsrchStdBjctvTpCdngCde;
-     private String rsrchStdBjctvTpCdngDsplay;
-     private String rsrchStdBjctvTpCdngVrsn;
-     private String rsrchStdBjctvTpCdngSstm;
+     private Integer id;
+     private String rsrchStdDntfrDntfrSe;
+     private String rsrchStdDntfrDntfrTpCcCSstm;
+     private String rsrchStdDntfrDntfrTpCcCVrsn;
+     private String rsrchStdDntfrDntfrTpCcCCde;
+     private String rsrchStdDntfrDntfrTpCcCDsplay;
+     private String rsrchStdDntfrDntfrTpCcCSrSlctd;
+     private String rsrchStdDntfrDntfrTpCcTxt;
+     private String rsrchStdDntfrDntfrPrdPrdStrt;
+     private String rsrchStdDntfrDntfrPrdPrdNd;
+     private String rsrchStdDntfrDntfrSsgnr;
+     private String rsrchStdDntfrDntfrVlue;
+     private String rsrchStdDntfrDntfrSstm;
+     private String researchStudyTitleString;
+     private String researchStudyProtocolReference;
+     private String researchStudyPartOfReference;
+     private String researchStudyStatusCode;
+     private String rsrchStdPrmrPrpsTpCcCdngCSstm;
+     private String rsrchStdPrmrPrpsTpCcCdngCVrsn;
+     private String rsrchStdPrmrPrpsTpCcCdngCCde;
+     private String rsrchStdPrmrPrpsTpCcCdngCDsplay;
+     private String rsrchStdPrmrPrpsTpCcCdngCSrSlctd;
+     private String rsrchStdPrmrPrpsTpCcTxt;
+     private String rsrchStdPhsCcCdngCSstm;
+     private String rsrchStdPhsCcCdngCVrsn;
+     private String rsrchStdPhsCcCdngCCde;
+     private String rsrchStdPhsCcCdngCDsplay;
+     private String rsrchStdPhsCcCdngCSrSlctd;
+     private String researchStudyPhaseCcText;
+     private String rsrchStdCtgrCcCdngCSstm;
+     private String rsrchStdCtgrCcCdngCVrsn;
+     private String rsrchStdCtgrCcCdngCCde;
+     private String rsrchStdCtgrCcCdngCDsplay;
+     private String rsrchStdCtgrCcCdngCSrSlctd;
+     private String researchStudyCategoryCcText;
+     private String rsrchStdFcsCcCdngCSstm;
+     private String rsrchStdFcsCcCdngCVrsn;
+     private String rsrchStdFcsCcCdngCCde;
+     private String rsrchStdFcsCcCdngCDsplay;
+     private String rsrchStdFcsCcCdngCSrSlctd;
+     private String researchStudyFocusCcText;
+     private String rsrchStdCndtnCcCdngCSstm;
+     private String rsrchStdCndtnCcCdngCVrsn;
+     private String rsrchStdCndtnCcCdngCCde;
+     private String rsrchStdCndtnCcCdngCDsplay;
+     private String rsrchStdCndtnCcCdngCSrSlctd;
+     private String researchStudyConditionCcText;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntPrdNd;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntSstm;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntVlue;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntSe;
+     private String rsrchStdCntctCntctDtlTlcmCntctPntRnk;
+     private String rsrchStdCntctCntctDtlNme;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle;
+     private String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn;
+     private String rsrchStdRltdrtfctRltdrtfctRsrce;
+     private String rsrchStdRltdrtfctRltdrtfctTpe;
+     private String rsrchStdRltdrtfctRltdrtfctCttn;
+     private String rsrchStdRltdrtfctRltdrtfctLbl;
+     private String rsrchStdRltdrtfctRltdrtfctDsplay;
+     private String rsrchStdRltdrtfctRltdrtfctRl;
+     private String rsrchStdKwrdCcCdngCSstm;
+     private String rsrchStdKwrdCcCdngCVrsn;
+     private String rsrchStdKwrdCcCdngCCde;
+     private String rsrchStdKwrdCcCdngCDsplay;
+     private String rsrchStdKwrdCcCdngCSrSlctd;
+     private String researchStudyKeywordCcText;
+     private String rsrchStdLctnCcCdngCSstm;
+     private String rsrchStdLctnCcCdngCVrsn;
+     private String rsrchStdLctnCcCdngCCde;
+     private String rsrchStdLctnCcCdngCDsplay;
+     private String rsrchStdLctnCcCdngCSrSlctd;
+     private String researchStudyLocationCcText;
+     private String researchStudyDescriptionMarkdown;
+     private String researchStudyEnrollmentReference;
+     private String researchStudyPeriodPeriodStart;
+     private String researchStudyPeriodPeriodEnd;
+     private String researchStudySponsorReference;
+     private String rsrchStdPrncplnvstgtrRfrnce;
+     private String researchStudySiteReference;
+     private String rsrchStdRsnStppdCcCdngCSstm;
+     private String rsrchStdRsnStppdCcCdngCVrsn;
+     private String rsrchStdRsnStppdCcCdngCCde;
+     private String rsrchStdRsnStppdCcCdngCDsplay;
+     private String rsrchStdRsnStppdCcCdngCSrSlctd;
+     private String rsrchStdRsnStppdCcTxt;
+     private String researchStudyNoteAnnotationTime;
+     private String researchStudyNoteAnnotationText;
+     private String rsrchStdNtNnttnThrRfrnce;
+     private String rsrchStdNtNnttnThrStrng;
+     private String researchStudyArmNameString;
+     private String rsrchStdRmTpCcCdngCSstm;
+     private String rsrchStdRmTpCcCdngCVrsn;
+     private String rsrchStdRmTpCcCdngCCde;
+     private String rsrchStdRmTpCcCdngCDsplay;
+     private String rsrchStdRmTpCcCdngCSrSlctd;
+     private String researchStudyArmTypeCcText;
+     private String rsrchStdRmDscrptnStrng;
+     private String rsrchStdBjctvNmStrng;
+     private String rsrchStdBjctvTpCcCdngCSstm;
+     private String rsrchStdBjctvTpCcCdngCVrsn;
+     private String rsrchStdBjctvTpCcCdngCCde;
+     private String rsrchStdBjctvTpCcCdngCDsplay;
+     private String rsrchStdBjctvTpCcCdngCSrSlctd;
+     private String rsrchStdBjctvTpCcTxt;
 
     public Researchstudy() {
     }
 
-	
-    public Researchstudy(String rsrchStdDntfrCdngCde) {
-        this.rsrchStdDntfrCdngCde = rsrchStdDntfrCdngCde;
-    }
-    public Researchstudy(String rsrchStdDntfrCdngCde, String rsrchStdDntfrCdngSrSlctd, String rsrchStdDntfrCdngDsplay, String rsrchStdDntfrCdngVrsn, String rsrchStdDntfrCdngSstm, String researchStudyTitle, String researchStudyProtocol, String researchStudyPartOf, String researchStudyStatus, String rsrchStdPrmrPrpsTpCdngSrSlctd, String rsrchStdPrmrPrpsTpCdngCde, String rsrchStdPrmrPrpsTpCdngDsplay, String rsrchStdPrmrPrpsTpCdngVrsn, String rsrchStdPrmrPrpsTpCdngSstm, String rsrchStdPhsCdngSrSlctd, String researchStudyPhaseCodingCode, String researchStudyPhaseCodingDisplay, String researchStudyPhaseCodingVersion, String researchStudyPhaseCodingSystem, String rsrchStdCtgrCdngSrSlctd, String researchStudyCategoryCodingCode, String rsrchStdCtgrCdngDsplay, String rsrchStdCtgrCdngVrsn, String rsrchStdCtgrCdngSstm, String rsrchStdFcsCdngSrSlctd, String researchStudyFocusCodingCode, String researchStudyFocusCodingDisplay, String researchStudyFocusCodingVersion, String researchStudyFocusCodingSystem, String rsrchStdCndtnCdngSrSlctd, String rsrchStdCndtnCdngCde, String rsrchStdCndtnCdngDsplay, String rsrchStdCndtnCdngVrsn, String rsrchStdCndtnCdngSstm, String researchStudyContact, String researchStudyRelatedArtifact, String rsrchStdKwrdCdngSrSlctd, String researchStudyKeywordCodingCode, String rsrchStdKwrdCdngDsplay, String rsrchStdKwrdCdngVrsn, String rsrchStdKwrdCdngSstm, String rsrchStdLctnCdngSrSlctd, String researchStudyLocationCodingCode, String rsrchStdLctnCdngDsplay, String rsrchStdLctnCdngVrsn, String rsrchStdLctnCdngSstm, String researchStudyDescription, String researchStudyEnrollment, String rsrchStdPrdCdngSrSlctd, String researchStudyPeriodCodingCode, String rsrchStdPrdCdngDsplay, String rsrchStdPrdCdngVrsn, String researchStudyPeriodCodingSystem, String researchStudySponsor, String rsrchStdPrncplnvstgtr, String researchStudySite, String rsrchStdRsnStppdCdngSrSlctd, String rsrchStdRsnStppdCdngCde, String rsrchStdRsnStppdCdngDsplay, String rsrchStdRsnStppdCdngVrsn, String rsrchStdRsnStppdCdngSstm, String rsrchStdNtCdngSrSlctd, String researchStudyNoteCodingCode, String researchStudyNoteCodingDisplay, String researchStudyNoteCodingVersion, String researchStudyNoteCodingSystem, String researchStudyArm, String researchStudyArmName, String rsrchStdRmTpCdngSrSlctd, String researchStudyArmTypeCodingCode, String rsrchStdRmTpCdngDsplay, String rsrchStdRmTpCdngVrsn, String rsrchStdRmTpCdngSstm, String researchStudyArmDescription, String researchStudyObjective, String researchStudyObjectiveName, String rsrchStdBjctvTpCdngSrSlctd, String rsrchStdBjctvTpCdngCde, String rsrchStdBjctvTpCdngDsplay, String rsrchStdBjctvTpCdngVrsn, String rsrchStdBjctvTpCdngSstm) {
-       this.rsrchStdDntfrCdngCde = rsrchStdDntfrCdngCde;
-       this.rsrchStdDntfrCdngSrSlctd = rsrchStdDntfrCdngSrSlctd;
-       this.rsrchStdDntfrCdngDsplay = rsrchStdDntfrCdngDsplay;
-       this.rsrchStdDntfrCdngVrsn = rsrchStdDntfrCdngVrsn;
-       this.rsrchStdDntfrCdngSstm = rsrchStdDntfrCdngSstm;
-       this.researchStudyTitle = researchStudyTitle;
-       this.researchStudyProtocol = researchStudyProtocol;
-       this.researchStudyPartOf = researchStudyPartOf;
-       this.researchStudyStatus = researchStudyStatus;
-       this.rsrchStdPrmrPrpsTpCdngSrSlctd = rsrchStdPrmrPrpsTpCdngSrSlctd;
-       this.rsrchStdPrmrPrpsTpCdngCde = rsrchStdPrmrPrpsTpCdngCde;
-       this.rsrchStdPrmrPrpsTpCdngDsplay = rsrchStdPrmrPrpsTpCdngDsplay;
-       this.rsrchStdPrmrPrpsTpCdngVrsn = rsrchStdPrmrPrpsTpCdngVrsn;
-       this.rsrchStdPrmrPrpsTpCdngSstm = rsrchStdPrmrPrpsTpCdngSstm;
-       this.rsrchStdPhsCdngSrSlctd = rsrchStdPhsCdngSrSlctd;
-       this.researchStudyPhaseCodingCode = researchStudyPhaseCodingCode;
-       this.researchStudyPhaseCodingDisplay = researchStudyPhaseCodingDisplay;
-       this.researchStudyPhaseCodingVersion = researchStudyPhaseCodingVersion;
-       this.researchStudyPhaseCodingSystem = researchStudyPhaseCodingSystem;
-       this.rsrchStdCtgrCdngSrSlctd = rsrchStdCtgrCdngSrSlctd;
-       this.researchStudyCategoryCodingCode = researchStudyCategoryCodingCode;
-       this.rsrchStdCtgrCdngDsplay = rsrchStdCtgrCdngDsplay;
-       this.rsrchStdCtgrCdngVrsn = rsrchStdCtgrCdngVrsn;
-       this.rsrchStdCtgrCdngSstm = rsrchStdCtgrCdngSstm;
-       this.rsrchStdFcsCdngSrSlctd = rsrchStdFcsCdngSrSlctd;
-       this.researchStudyFocusCodingCode = researchStudyFocusCodingCode;
-       this.researchStudyFocusCodingDisplay = researchStudyFocusCodingDisplay;
-       this.researchStudyFocusCodingVersion = researchStudyFocusCodingVersion;
-       this.researchStudyFocusCodingSystem = researchStudyFocusCodingSystem;
-       this.rsrchStdCndtnCdngSrSlctd = rsrchStdCndtnCdngSrSlctd;
-       this.rsrchStdCndtnCdngCde = rsrchStdCndtnCdngCde;
-       this.rsrchStdCndtnCdngDsplay = rsrchStdCndtnCdngDsplay;
-       this.rsrchStdCndtnCdngVrsn = rsrchStdCndtnCdngVrsn;
-       this.rsrchStdCndtnCdngSstm = rsrchStdCndtnCdngSstm;
-       this.researchStudyContact = researchStudyContact;
-       this.researchStudyRelatedArtifact = researchStudyRelatedArtifact;
-       this.rsrchStdKwrdCdngSrSlctd = rsrchStdKwrdCdngSrSlctd;
-       this.researchStudyKeywordCodingCode = researchStudyKeywordCodingCode;
-       this.rsrchStdKwrdCdngDsplay = rsrchStdKwrdCdngDsplay;
-       this.rsrchStdKwrdCdngVrsn = rsrchStdKwrdCdngVrsn;
-       this.rsrchStdKwrdCdngSstm = rsrchStdKwrdCdngSstm;
-       this.rsrchStdLctnCdngSrSlctd = rsrchStdLctnCdngSrSlctd;
-       this.researchStudyLocationCodingCode = researchStudyLocationCodingCode;
-       this.rsrchStdLctnCdngDsplay = rsrchStdLctnCdngDsplay;
-       this.rsrchStdLctnCdngVrsn = rsrchStdLctnCdngVrsn;
-       this.rsrchStdLctnCdngSstm = rsrchStdLctnCdngSstm;
-       this.researchStudyDescription = researchStudyDescription;
-       this.researchStudyEnrollment = researchStudyEnrollment;
-       this.rsrchStdPrdCdngSrSlctd = rsrchStdPrdCdngSrSlctd;
-       this.researchStudyPeriodCodingCode = researchStudyPeriodCodingCode;
-       this.rsrchStdPrdCdngDsplay = rsrchStdPrdCdngDsplay;
-       this.rsrchStdPrdCdngVrsn = rsrchStdPrdCdngVrsn;
-       this.researchStudyPeriodCodingSystem = researchStudyPeriodCodingSystem;
-       this.researchStudySponsor = researchStudySponsor;
-       this.rsrchStdPrncplnvstgtr = rsrchStdPrncplnvstgtr;
-       this.researchStudySite = researchStudySite;
-       this.rsrchStdRsnStppdCdngSrSlctd = rsrchStdRsnStppdCdngSrSlctd;
-       this.rsrchStdRsnStppdCdngCde = rsrchStdRsnStppdCdngCde;
-       this.rsrchStdRsnStppdCdngDsplay = rsrchStdRsnStppdCdngDsplay;
-       this.rsrchStdRsnStppdCdngVrsn = rsrchStdRsnStppdCdngVrsn;
-       this.rsrchStdRsnStppdCdngSstm = rsrchStdRsnStppdCdngSstm;
-       this.rsrchStdNtCdngSrSlctd = rsrchStdNtCdngSrSlctd;
-       this.researchStudyNoteCodingCode = researchStudyNoteCodingCode;
-       this.researchStudyNoteCodingDisplay = researchStudyNoteCodingDisplay;
-       this.researchStudyNoteCodingVersion = researchStudyNoteCodingVersion;
-       this.researchStudyNoteCodingSystem = researchStudyNoteCodingSystem;
-       this.researchStudyArm = researchStudyArm;
-       this.researchStudyArmName = researchStudyArmName;
-       this.rsrchStdRmTpCdngSrSlctd = rsrchStdRmTpCdngSrSlctd;
-       this.researchStudyArmTypeCodingCode = researchStudyArmTypeCodingCode;
-       this.rsrchStdRmTpCdngDsplay = rsrchStdRmTpCdngDsplay;
-       this.rsrchStdRmTpCdngVrsn = rsrchStdRmTpCdngVrsn;
-       this.rsrchStdRmTpCdngSstm = rsrchStdRmTpCdngSstm;
-       this.researchStudyArmDescription = researchStudyArmDescription;
-       this.researchStudyObjective = researchStudyObjective;
-       this.researchStudyObjectiveName = researchStudyObjectiveName;
-       this.rsrchStdBjctvTpCdngSrSlctd = rsrchStdBjctvTpCdngSrSlctd;
-       this.rsrchStdBjctvTpCdngCde = rsrchStdBjctvTpCdngCde;
-       this.rsrchStdBjctvTpCdngDsplay = rsrchStdBjctvTpCdngDsplay;
-       this.rsrchStdBjctvTpCdngVrsn = rsrchStdBjctvTpCdngVrsn;
-       this.rsrchStdBjctvTpCdngSstm = rsrchStdBjctvTpCdngSstm;
+    public Researchstudy(String rsrchStdDntfrDntfrSe, String rsrchStdDntfrDntfrTpCcCSstm, String rsrchStdDntfrDntfrTpCcCVrsn, String rsrchStdDntfrDntfrTpCcCCde, String rsrchStdDntfrDntfrTpCcCDsplay, String rsrchStdDntfrDntfrTpCcCSrSlctd, String rsrchStdDntfrDntfrTpCcTxt, String rsrchStdDntfrDntfrPrdPrdStrt, String rsrchStdDntfrDntfrPrdPrdNd, String rsrchStdDntfrDntfrSsgnr, String rsrchStdDntfrDntfrVlue, String rsrchStdDntfrDntfrSstm, String researchStudyTitleString, String researchStudyProtocolReference, String researchStudyPartOfReference, String researchStudyStatusCode, String rsrchStdPrmrPrpsTpCcCdngCSstm, String rsrchStdPrmrPrpsTpCcCdngCVrsn, String rsrchStdPrmrPrpsTpCcCdngCCde, String rsrchStdPrmrPrpsTpCcCdngCDsplay, String rsrchStdPrmrPrpsTpCcCdngCSrSlctd, String rsrchStdPrmrPrpsTpCcTxt, String rsrchStdPhsCcCdngCSstm, String rsrchStdPhsCcCdngCVrsn, String rsrchStdPhsCcCdngCCde, String rsrchStdPhsCcCdngCDsplay, String rsrchStdPhsCcCdngCSrSlctd, String researchStudyPhaseCcText, String rsrchStdCtgrCcCdngCSstm, String rsrchStdCtgrCcCdngCVrsn, String rsrchStdCtgrCcCdngCCde, String rsrchStdCtgrCcCdngCDsplay, String rsrchStdCtgrCcCdngCSrSlctd, String researchStudyCategoryCcText, String rsrchStdFcsCcCdngCSstm, String rsrchStdFcsCcCdngCVrsn, String rsrchStdFcsCcCdngCCde, String rsrchStdFcsCcCdngCDsplay, String rsrchStdFcsCcCdngCSrSlctd, String researchStudyFocusCcText, String rsrchStdCndtnCcCdngCSstm, String rsrchStdCndtnCcCdngCVrsn, String rsrchStdCndtnCcCdngCCde, String rsrchStdCndtnCcCdngCDsplay, String rsrchStdCndtnCcCdngCSrSlctd, String researchStudyConditionCcText, String rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt, String rsrchStdCntctCntctDtlTlcmCntctPntPrdNd, String rsrchStdCntctCntctDtlTlcmCntctPntSstm, String rsrchStdCntctCntctDtlTlcmCntctPntVlue, String rsrchStdCntctCntctDtlTlcmCntctPntSe, String rsrchStdCntctCntctDtlTlcmCntctPntRnk, String rsrchStdCntctCntctDtlNme, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle, String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn, String rsrchStdRltdrtfctRltdrtfctRsrce, String rsrchStdRltdrtfctRltdrtfctTpe, String rsrchStdRltdrtfctRltdrtfctCttn, String rsrchStdRltdrtfctRltdrtfctLbl, String rsrchStdRltdrtfctRltdrtfctDsplay, String rsrchStdRltdrtfctRltdrtfctRl, String rsrchStdKwrdCcCdngCSstm, String rsrchStdKwrdCcCdngCVrsn, String rsrchStdKwrdCcCdngCCde, String rsrchStdKwrdCcCdngCDsplay, String rsrchStdKwrdCcCdngCSrSlctd, String researchStudyKeywordCcText, String rsrchStdLctnCcCdngCSstm, String rsrchStdLctnCcCdngCVrsn, String rsrchStdLctnCcCdngCCde, String rsrchStdLctnCcCdngCDsplay, String rsrchStdLctnCcCdngCSrSlctd, String researchStudyLocationCcText, String researchStudyDescriptionMarkdown, String researchStudyEnrollmentReference, String researchStudyPeriodPeriodStart, String researchStudyPeriodPeriodEnd, String researchStudySponsorReference, String rsrchStdPrncplnvstgtrRfrnce, String researchStudySiteReference, String rsrchStdRsnStppdCcCdngCSstm, String rsrchStdRsnStppdCcCdngCVrsn, String rsrchStdRsnStppdCcCdngCCde, String rsrchStdRsnStppdCcCdngCDsplay, String rsrchStdRsnStppdCcCdngCSrSlctd, String rsrchStdRsnStppdCcTxt, String researchStudyNoteAnnotationTime, String researchStudyNoteAnnotationText, String rsrchStdNtNnttnThrRfrnce, String rsrchStdNtNnttnThrStrng, String researchStudyArmNameString, String rsrchStdRmTpCcCdngCSstm, String rsrchStdRmTpCcCdngCVrsn, String rsrchStdRmTpCcCdngCCde, String rsrchStdRmTpCcCdngCDsplay, String rsrchStdRmTpCcCdngCSrSlctd, String researchStudyArmTypeCcText, String rsrchStdRmDscrptnStrng, String rsrchStdBjctvNmStrng, String rsrchStdBjctvTpCcCdngCSstm, String rsrchStdBjctvTpCcCdngCVrsn, String rsrchStdBjctvTpCcCdngCCde, String rsrchStdBjctvTpCcCdngCDsplay, String rsrchStdBjctvTpCcCdngCSrSlctd, String rsrchStdBjctvTpCcTxt) {
+       this.rsrchStdDntfrDntfrSe = rsrchStdDntfrDntfrSe;
+       this.rsrchStdDntfrDntfrTpCcCSstm = rsrchStdDntfrDntfrTpCcCSstm;
+       this.rsrchStdDntfrDntfrTpCcCVrsn = rsrchStdDntfrDntfrTpCcCVrsn;
+       this.rsrchStdDntfrDntfrTpCcCCde = rsrchStdDntfrDntfrTpCcCCde;
+       this.rsrchStdDntfrDntfrTpCcCDsplay = rsrchStdDntfrDntfrTpCcCDsplay;
+       this.rsrchStdDntfrDntfrTpCcCSrSlctd = rsrchStdDntfrDntfrTpCcCSrSlctd;
+       this.rsrchStdDntfrDntfrTpCcTxt = rsrchStdDntfrDntfrTpCcTxt;
+       this.rsrchStdDntfrDntfrPrdPrdStrt = rsrchStdDntfrDntfrPrdPrdStrt;
+       this.rsrchStdDntfrDntfrPrdPrdNd = rsrchStdDntfrDntfrPrdPrdNd;
+       this.rsrchStdDntfrDntfrSsgnr = rsrchStdDntfrDntfrSsgnr;
+       this.rsrchStdDntfrDntfrVlue = rsrchStdDntfrDntfrVlue;
+       this.rsrchStdDntfrDntfrSstm = rsrchStdDntfrDntfrSstm;
+       this.researchStudyTitleString = researchStudyTitleString;
+       this.researchStudyProtocolReference = researchStudyProtocolReference;
+       this.researchStudyPartOfReference = researchStudyPartOfReference;
+       this.researchStudyStatusCode = researchStudyStatusCode;
+       this.rsrchStdPrmrPrpsTpCcCdngCSstm = rsrchStdPrmrPrpsTpCcCdngCSstm;
+       this.rsrchStdPrmrPrpsTpCcCdngCVrsn = rsrchStdPrmrPrpsTpCcCdngCVrsn;
+       this.rsrchStdPrmrPrpsTpCcCdngCCde = rsrchStdPrmrPrpsTpCcCdngCCde;
+       this.rsrchStdPrmrPrpsTpCcCdngCDsplay = rsrchStdPrmrPrpsTpCcCdngCDsplay;
+       this.rsrchStdPrmrPrpsTpCcCdngCSrSlctd = rsrchStdPrmrPrpsTpCcCdngCSrSlctd;
+       this.rsrchStdPrmrPrpsTpCcTxt = rsrchStdPrmrPrpsTpCcTxt;
+       this.rsrchStdPhsCcCdngCSstm = rsrchStdPhsCcCdngCSstm;
+       this.rsrchStdPhsCcCdngCVrsn = rsrchStdPhsCcCdngCVrsn;
+       this.rsrchStdPhsCcCdngCCde = rsrchStdPhsCcCdngCCde;
+       this.rsrchStdPhsCcCdngCDsplay = rsrchStdPhsCcCdngCDsplay;
+       this.rsrchStdPhsCcCdngCSrSlctd = rsrchStdPhsCcCdngCSrSlctd;
+       this.researchStudyPhaseCcText = researchStudyPhaseCcText;
+       this.rsrchStdCtgrCcCdngCSstm = rsrchStdCtgrCcCdngCSstm;
+       this.rsrchStdCtgrCcCdngCVrsn = rsrchStdCtgrCcCdngCVrsn;
+       this.rsrchStdCtgrCcCdngCCde = rsrchStdCtgrCcCdngCCde;
+       this.rsrchStdCtgrCcCdngCDsplay = rsrchStdCtgrCcCdngCDsplay;
+       this.rsrchStdCtgrCcCdngCSrSlctd = rsrchStdCtgrCcCdngCSrSlctd;
+       this.researchStudyCategoryCcText = researchStudyCategoryCcText;
+       this.rsrchStdFcsCcCdngCSstm = rsrchStdFcsCcCdngCSstm;
+       this.rsrchStdFcsCcCdngCVrsn = rsrchStdFcsCcCdngCVrsn;
+       this.rsrchStdFcsCcCdngCCde = rsrchStdFcsCcCdngCCde;
+       this.rsrchStdFcsCcCdngCDsplay = rsrchStdFcsCcCdngCDsplay;
+       this.rsrchStdFcsCcCdngCSrSlctd = rsrchStdFcsCcCdngCSrSlctd;
+       this.researchStudyFocusCcText = researchStudyFocusCcText;
+       this.rsrchStdCndtnCcCdngCSstm = rsrchStdCndtnCcCdngCSstm;
+       this.rsrchStdCndtnCcCdngCVrsn = rsrchStdCndtnCcCdngCVrsn;
+       this.rsrchStdCndtnCcCdngCCde = rsrchStdCndtnCcCdngCCde;
+       this.rsrchStdCndtnCcCdngCDsplay = rsrchStdCndtnCcCdngCDsplay;
+       this.rsrchStdCndtnCcCdngCSrSlctd = rsrchStdCndtnCcCdngCSrSlctd;
+       this.researchStudyConditionCcText = researchStudyConditionCcText;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt = rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntPrdNd = rsrchStdCntctCntctDtlTlcmCntctPntPrdNd;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntSstm = rsrchStdCntctCntctDtlTlcmCntctPntSstm;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntVlue = rsrchStdCntctCntctDtlTlcmCntctPntVlue;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntSe = rsrchStdCntctCntctDtlTlcmCntctPntSe;
+       this.rsrchStdCntctCntctDtlTlcmCntctPntRnk = rsrchStdCntctCntctDtlTlcmCntctPntRnk;
+       this.rsrchStdCntctCntctDtlNme = rsrchStdCntctCntctDtlNme;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle;
+       this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn;
+       this.rsrchStdRltdrtfctRltdrtfctRsrce = rsrchStdRltdrtfctRltdrtfctRsrce;
+       this.rsrchStdRltdrtfctRltdrtfctTpe = rsrchStdRltdrtfctRltdrtfctTpe;
+       this.rsrchStdRltdrtfctRltdrtfctCttn = rsrchStdRltdrtfctRltdrtfctCttn;
+       this.rsrchStdRltdrtfctRltdrtfctLbl = rsrchStdRltdrtfctRltdrtfctLbl;
+       this.rsrchStdRltdrtfctRltdrtfctDsplay = rsrchStdRltdrtfctRltdrtfctDsplay;
+       this.rsrchStdRltdrtfctRltdrtfctRl = rsrchStdRltdrtfctRltdrtfctRl;
+       this.rsrchStdKwrdCcCdngCSstm = rsrchStdKwrdCcCdngCSstm;
+       this.rsrchStdKwrdCcCdngCVrsn = rsrchStdKwrdCcCdngCVrsn;
+       this.rsrchStdKwrdCcCdngCCde = rsrchStdKwrdCcCdngCCde;
+       this.rsrchStdKwrdCcCdngCDsplay = rsrchStdKwrdCcCdngCDsplay;
+       this.rsrchStdKwrdCcCdngCSrSlctd = rsrchStdKwrdCcCdngCSrSlctd;
+       this.researchStudyKeywordCcText = researchStudyKeywordCcText;
+       this.rsrchStdLctnCcCdngCSstm = rsrchStdLctnCcCdngCSstm;
+       this.rsrchStdLctnCcCdngCVrsn = rsrchStdLctnCcCdngCVrsn;
+       this.rsrchStdLctnCcCdngCCde = rsrchStdLctnCcCdngCCde;
+       this.rsrchStdLctnCcCdngCDsplay = rsrchStdLctnCcCdngCDsplay;
+       this.rsrchStdLctnCcCdngCSrSlctd = rsrchStdLctnCcCdngCSrSlctd;
+       this.researchStudyLocationCcText = researchStudyLocationCcText;
+       this.researchStudyDescriptionMarkdown = researchStudyDescriptionMarkdown;
+       this.researchStudyEnrollmentReference = researchStudyEnrollmentReference;
+       this.researchStudyPeriodPeriodStart = researchStudyPeriodPeriodStart;
+       this.researchStudyPeriodPeriodEnd = researchStudyPeriodPeriodEnd;
+       this.researchStudySponsorReference = researchStudySponsorReference;
+       this.rsrchStdPrncplnvstgtrRfrnce = rsrchStdPrncplnvstgtrRfrnce;
+       this.researchStudySiteReference = researchStudySiteReference;
+       this.rsrchStdRsnStppdCcCdngCSstm = rsrchStdRsnStppdCcCdngCSstm;
+       this.rsrchStdRsnStppdCcCdngCVrsn = rsrchStdRsnStppdCcCdngCVrsn;
+       this.rsrchStdRsnStppdCcCdngCCde = rsrchStdRsnStppdCcCdngCCde;
+       this.rsrchStdRsnStppdCcCdngCDsplay = rsrchStdRsnStppdCcCdngCDsplay;
+       this.rsrchStdRsnStppdCcCdngCSrSlctd = rsrchStdRsnStppdCcCdngCSrSlctd;
+       this.rsrchStdRsnStppdCcTxt = rsrchStdRsnStppdCcTxt;
+       this.researchStudyNoteAnnotationTime = researchStudyNoteAnnotationTime;
+       this.researchStudyNoteAnnotationText = researchStudyNoteAnnotationText;
+       this.rsrchStdNtNnttnThrRfrnce = rsrchStdNtNnttnThrRfrnce;
+       this.rsrchStdNtNnttnThrStrng = rsrchStdNtNnttnThrStrng;
+       this.researchStudyArmNameString = researchStudyArmNameString;
+       this.rsrchStdRmTpCcCdngCSstm = rsrchStdRmTpCcCdngCSstm;
+       this.rsrchStdRmTpCcCdngCVrsn = rsrchStdRmTpCcCdngCVrsn;
+       this.rsrchStdRmTpCcCdngCCde = rsrchStdRmTpCcCdngCCde;
+       this.rsrchStdRmTpCcCdngCDsplay = rsrchStdRmTpCcCdngCDsplay;
+       this.rsrchStdRmTpCcCdngCSrSlctd = rsrchStdRmTpCcCdngCSrSlctd;
+       this.researchStudyArmTypeCcText = researchStudyArmTypeCcText;
+       this.rsrchStdRmDscrptnStrng = rsrchStdRmDscrptnStrng;
+       this.rsrchStdBjctvNmStrng = rsrchStdBjctvNmStrng;
+       this.rsrchStdBjctvTpCcCdngCSstm = rsrchStdBjctvTpCcCdngCSstm;
+       this.rsrchStdBjctvTpCcCdngCVrsn = rsrchStdBjctvTpCcCdngCVrsn;
+       this.rsrchStdBjctvTpCcCdngCCde = rsrchStdBjctvTpCcCdngCCde;
+       this.rsrchStdBjctvTpCcCdngCDsplay = rsrchStdBjctvTpCcCdngCDsplay;
+       this.rsrchStdBjctvTpCcCdngCSrSlctd = rsrchStdBjctvTpCcCdngCSrSlctd;
+       this.rsrchStdBjctvTpCcTxt = rsrchStdBjctvTpCcTxt;
     }
    
-    public String getRsrchStdDntfrCdngCde() {
-        return this.rsrchStdDntfrCdngCde;
-    }
-    
-    public void setRsrchStdDntfrCdngCde(String rsrchStdDntfrCdngCde) {
-        this.rsrchStdDntfrCdngCde = rsrchStdDntfrCdngCde;
-    }
-    
-    
-    
-    public String getRsrchStdDntfrCdngSrSlctd() {
-        return this.rsrchStdDntfrCdngSrSlctd;
-    }
-    
-    public void setRsrchStdDntfrCdngSrSlctd(String rsrchStdDntfrCdngSrSlctd) {
-        this.rsrchStdDntfrCdngSrSlctd = rsrchStdDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRsrchStdDntfrCdngDsplay() {
-        return this.rsrchStdDntfrCdngDsplay;
-    }
-    
-    public void setRsrchStdDntfrCdngDsplay(String rsrchStdDntfrCdngDsplay) {
-        this.rsrchStdDntfrCdngDsplay = rsrchStdDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdDntfrCdngVrsn() {
-        return this.rsrchStdDntfrCdngVrsn;
-    }
-    
-    public void setRsrchStdDntfrCdngVrsn(String rsrchStdDntfrCdngVrsn) {
-        this.rsrchStdDntfrCdngVrsn = rsrchStdDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdDntfrCdngSstm() {
-        return this.rsrchStdDntfrCdngSstm;
-    }
-    
-    public void setRsrchStdDntfrCdngSstm(String rsrchStdDntfrCdngSstm) {
-        this.rsrchStdDntfrCdngSstm = rsrchStdDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getResearchStudyTitle() {
-        return this.researchStudyTitle;
-    }
-    
-    public void setResearchStudyTitle(String researchStudyTitle) {
-        this.researchStudyTitle = researchStudyTitle;
-    }
-    
-    
-    
-    public String getResearchStudyProtocol() {
-        return this.researchStudyProtocol;
-    }
-    
-    public void setResearchStudyProtocol(String researchStudyProtocol) {
-        this.researchStudyProtocol = researchStudyProtocol;
-    }
-    
-    
-    
-    public String getResearchStudyPartOf() {
-        return this.researchStudyPartOf;
-    }
-    
-    public void setResearchStudyPartOf(String researchStudyPartOf) {
-        this.researchStudyPartOf = researchStudyPartOf;
-    }
-    
-    
-    
-    public String getResearchStudyStatus() {
-        return this.researchStudyStatus;
-    }
-    
-    public void setResearchStudyStatus(String researchStudyStatus) {
-        this.researchStudyStatus = researchStudyStatus;
-    }
-    
-    
-    
-    public String getRsrchStdPrmrPrpsTpCdngSrSlctd() {
-        return this.rsrchStdPrmrPrpsTpCdngSrSlctd;
-    }
-    
-    public void setRsrchStdPrmrPrpsTpCdngSrSlctd(String rsrchStdPrmrPrpsTpCdngSrSlctd) {
-        this.rsrchStdPrmrPrpsTpCdngSrSlctd = rsrchStdPrmrPrpsTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRsrchStdPrmrPrpsTpCdngCde() {
-        return this.rsrchStdPrmrPrpsTpCdngCde;
-    }
-    
-    public void setRsrchStdPrmrPrpsTpCdngCde(String rsrchStdPrmrPrpsTpCdngCde) {
-        this.rsrchStdPrmrPrpsTpCdngCde = rsrchStdPrmrPrpsTpCdngCde;
-    }
-    
-    
-    
-    public String getRsrchStdPrmrPrpsTpCdngDsplay() {
-        return this.rsrchStdPrmrPrpsTpCdngDsplay;
-    }
-    
-    public void setRsrchStdPrmrPrpsTpCdngDsplay(String rsrchStdPrmrPrpsTpCdngDsplay) {
-        this.rsrchStdPrmrPrpsTpCdngDsplay = rsrchStdPrmrPrpsTpCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdPrmrPrpsTpCdngVrsn() {
-        return this.rsrchStdPrmrPrpsTpCdngVrsn;
-    }
-    
-    public void setRsrchStdPrmrPrpsTpCdngVrsn(String rsrchStdPrmrPrpsTpCdngVrsn) {
-        this.rsrchStdPrmrPrpsTpCdngVrsn = rsrchStdPrmrPrpsTpCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdPrmrPrpsTpCdngSstm() {
-        return this.rsrchStdPrmrPrpsTpCdngSstm;
-    }
-    
-    public void setRsrchStdPrmrPrpsTpCdngSstm(String rsrchStdPrmrPrpsTpCdngSstm) {
-        this.rsrchStdPrmrPrpsTpCdngSstm = rsrchStdPrmrPrpsTpCdngSstm;
-    }
-    
-    
-    
-    public String getRsrchStdPhsCdngSrSlctd() {
-        return this.rsrchStdPhsCdngSrSlctd;
-    }
-    
-    public void setRsrchStdPhsCdngSrSlctd(String rsrchStdPhsCdngSrSlctd) {
-        this.rsrchStdPhsCdngSrSlctd = rsrchStdPhsCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyPhaseCodingCode() {
-        return this.researchStudyPhaseCodingCode;
-    }
-    
-    public void setResearchStudyPhaseCodingCode(String researchStudyPhaseCodingCode) {
-        this.researchStudyPhaseCodingCode = researchStudyPhaseCodingCode;
-    }
-    
-    
-    
-    public String getResearchStudyPhaseCodingDisplay() {
-        return this.researchStudyPhaseCodingDisplay;
-    }
-    
-    public void setResearchStudyPhaseCodingDisplay(String researchStudyPhaseCodingDisplay) {
-        this.researchStudyPhaseCodingDisplay = researchStudyPhaseCodingDisplay;
-    }
-    
-    
-    
-    public String getResearchStudyPhaseCodingVersion() {
-        return this.researchStudyPhaseCodingVersion;
-    }
-    
-    public void setResearchStudyPhaseCodingVersion(String researchStudyPhaseCodingVersion) {
-        this.researchStudyPhaseCodingVersion = researchStudyPhaseCodingVersion;
-    }
-    
-    
-    
-    public String getResearchStudyPhaseCodingSystem() {
-        return this.researchStudyPhaseCodingSystem;
-    }
-    
-    public void setResearchStudyPhaseCodingSystem(String researchStudyPhaseCodingSystem) {
-        this.researchStudyPhaseCodingSystem = researchStudyPhaseCodingSystem;
-    }
-    
-    
-    
-    public String getRsrchStdCtgrCdngSrSlctd() {
-        return this.rsrchStdCtgrCdngSrSlctd;
-    }
-    
-    public void setRsrchStdCtgrCdngSrSlctd(String rsrchStdCtgrCdngSrSlctd) {
-        this.rsrchStdCtgrCdngSrSlctd = rsrchStdCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyCategoryCodingCode() {
-        return this.researchStudyCategoryCodingCode;
-    }
-    
-    public void setResearchStudyCategoryCodingCode(String researchStudyCategoryCodingCode) {
-        this.researchStudyCategoryCodingCode = researchStudyCategoryCodingCode;
-    }
-    
-    
-    
-    public String getRsrchStdCtgrCdngDsplay() {
-        return this.rsrchStdCtgrCdngDsplay;
-    }
-    
-    public void setRsrchStdCtgrCdngDsplay(String rsrchStdCtgrCdngDsplay) {
-        this.rsrchStdCtgrCdngDsplay = rsrchStdCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdCtgrCdngVrsn() {
-        return this.rsrchStdCtgrCdngVrsn;
-    }
-    
-    public void setRsrchStdCtgrCdngVrsn(String rsrchStdCtgrCdngVrsn) {
-        this.rsrchStdCtgrCdngVrsn = rsrchStdCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdCtgrCdngSstm() {
-        return this.rsrchStdCtgrCdngSstm;
-    }
-    
-    public void setRsrchStdCtgrCdngSstm(String rsrchStdCtgrCdngSstm) {
-        this.rsrchStdCtgrCdngSstm = rsrchStdCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getRsrchStdFcsCdngSrSlctd() {
-        return this.rsrchStdFcsCdngSrSlctd;
-    }
-    
-    public void setRsrchStdFcsCdngSrSlctd(String rsrchStdFcsCdngSrSlctd) {
-        this.rsrchStdFcsCdngSrSlctd = rsrchStdFcsCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyFocusCodingCode() {
-        return this.researchStudyFocusCodingCode;
-    }
-    
-    public void setResearchStudyFocusCodingCode(String researchStudyFocusCodingCode) {
-        this.researchStudyFocusCodingCode = researchStudyFocusCodingCode;
-    }
-    
-    
-    
-    public String getResearchStudyFocusCodingDisplay() {
-        return this.researchStudyFocusCodingDisplay;
-    }
-    
-    public void setResearchStudyFocusCodingDisplay(String researchStudyFocusCodingDisplay) {
-        this.researchStudyFocusCodingDisplay = researchStudyFocusCodingDisplay;
-    }
-    
-    
-    
-    public String getResearchStudyFocusCodingVersion() {
-        return this.researchStudyFocusCodingVersion;
-    }
-    
-    public void setResearchStudyFocusCodingVersion(String researchStudyFocusCodingVersion) {
-        this.researchStudyFocusCodingVersion = researchStudyFocusCodingVersion;
-    }
-    
-    
-    
-    public String getResearchStudyFocusCodingSystem() {
-        return this.researchStudyFocusCodingSystem;
-    }
-    
-    public void setResearchStudyFocusCodingSystem(String researchStudyFocusCodingSystem) {
-        this.researchStudyFocusCodingSystem = researchStudyFocusCodingSystem;
-    }
-    
-    
-    
-    public String getRsrchStdCndtnCdngSrSlctd() {
-        return this.rsrchStdCndtnCdngSrSlctd;
-    }
-    
-    public void setRsrchStdCndtnCdngSrSlctd(String rsrchStdCndtnCdngSrSlctd) {
-        this.rsrchStdCndtnCdngSrSlctd = rsrchStdCndtnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRsrchStdCndtnCdngCde() {
-        return this.rsrchStdCndtnCdngCde;
-    }
-    
-    public void setRsrchStdCndtnCdngCde(String rsrchStdCndtnCdngCde) {
-        this.rsrchStdCndtnCdngCde = rsrchStdCndtnCdngCde;
-    }
-    
-    
-    
-    public String getRsrchStdCndtnCdngDsplay() {
-        return this.rsrchStdCndtnCdngDsplay;
-    }
-    
-    public void setRsrchStdCndtnCdngDsplay(String rsrchStdCndtnCdngDsplay) {
-        this.rsrchStdCndtnCdngDsplay = rsrchStdCndtnCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdCndtnCdngVrsn() {
-        return this.rsrchStdCndtnCdngVrsn;
-    }
-    
-    public void setRsrchStdCndtnCdngVrsn(String rsrchStdCndtnCdngVrsn) {
-        this.rsrchStdCndtnCdngVrsn = rsrchStdCndtnCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdCndtnCdngSstm() {
-        return this.rsrchStdCndtnCdngSstm;
-    }
-    
-    public void setRsrchStdCndtnCdngSstm(String rsrchStdCndtnCdngSstm) {
-        this.rsrchStdCndtnCdngSstm = rsrchStdCndtnCdngSstm;
-    }
-    
-    
-    
-    public String getResearchStudyContact() {
-        return this.researchStudyContact;
-    }
-    
-    public void setResearchStudyContact(String researchStudyContact) {
-        this.researchStudyContact = researchStudyContact;
-    }
-    
-    
-    
-    public String getResearchStudyRelatedArtifact() {
-        return this.researchStudyRelatedArtifact;
-    }
-    
-    public void setResearchStudyRelatedArtifact(String researchStudyRelatedArtifact) {
-        this.researchStudyRelatedArtifact = researchStudyRelatedArtifact;
-    }
-    
-    
-    
-    public String getRsrchStdKwrdCdngSrSlctd() {
-        return this.rsrchStdKwrdCdngSrSlctd;
-    }
-    
-    public void setRsrchStdKwrdCdngSrSlctd(String rsrchStdKwrdCdngSrSlctd) {
-        this.rsrchStdKwrdCdngSrSlctd = rsrchStdKwrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyKeywordCodingCode() {
-        return this.researchStudyKeywordCodingCode;
-    }
-    
-    public void setResearchStudyKeywordCodingCode(String researchStudyKeywordCodingCode) {
-        this.researchStudyKeywordCodingCode = researchStudyKeywordCodingCode;
-    }
-    
-    
-    
-    public String getRsrchStdKwrdCdngDsplay() {
-        return this.rsrchStdKwrdCdngDsplay;
-    }
-    
-    public void setRsrchStdKwrdCdngDsplay(String rsrchStdKwrdCdngDsplay) {
-        this.rsrchStdKwrdCdngDsplay = rsrchStdKwrdCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdKwrdCdngVrsn() {
-        return this.rsrchStdKwrdCdngVrsn;
-    }
-    
-    public void setRsrchStdKwrdCdngVrsn(String rsrchStdKwrdCdngVrsn) {
-        this.rsrchStdKwrdCdngVrsn = rsrchStdKwrdCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdKwrdCdngSstm() {
-        return this.rsrchStdKwrdCdngSstm;
-    }
-    
-    public void setRsrchStdKwrdCdngSstm(String rsrchStdKwrdCdngSstm) {
-        this.rsrchStdKwrdCdngSstm = rsrchStdKwrdCdngSstm;
-    }
-    
-    
-    
-    public String getRsrchStdLctnCdngSrSlctd() {
-        return this.rsrchStdLctnCdngSrSlctd;
-    }
-    
-    public void setRsrchStdLctnCdngSrSlctd(String rsrchStdLctnCdngSrSlctd) {
-        this.rsrchStdLctnCdngSrSlctd = rsrchStdLctnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyLocationCodingCode() {
-        return this.researchStudyLocationCodingCode;
-    }
-    
-    public void setResearchStudyLocationCodingCode(String researchStudyLocationCodingCode) {
-        this.researchStudyLocationCodingCode = researchStudyLocationCodingCode;
-    }
-    
-    
-    
-    public String getRsrchStdLctnCdngDsplay() {
-        return this.rsrchStdLctnCdngDsplay;
-    }
-    
-    public void setRsrchStdLctnCdngDsplay(String rsrchStdLctnCdngDsplay) {
-        this.rsrchStdLctnCdngDsplay = rsrchStdLctnCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdLctnCdngVrsn() {
-        return this.rsrchStdLctnCdngVrsn;
-    }
-    
-    public void setRsrchStdLctnCdngVrsn(String rsrchStdLctnCdngVrsn) {
-        this.rsrchStdLctnCdngVrsn = rsrchStdLctnCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdLctnCdngSstm() {
-        return this.rsrchStdLctnCdngSstm;
-    }
-    
-    public void setRsrchStdLctnCdngSstm(String rsrchStdLctnCdngSstm) {
-        this.rsrchStdLctnCdngSstm = rsrchStdLctnCdngSstm;
-    }
-    
-    
-    
-    public String getResearchStudyDescription() {
-        return this.researchStudyDescription;
-    }
-    
-    public void setResearchStudyDescription(String researchStudyDescription) {
-        this.researchStudyDescription = researchStudyDescription;
-    }
-    
-    
-    
-    public String getResearchStudyEnrollment() {
-        return this.researchStudyEnrollment;
-    }
-    
-    public void setResearchStudyEnrollment(String researchStudyEnrollment) {
-        this.researchStudyEnrollment = researchStudyEnrollment;
-    }
-    
-    
-    
-    public String getRsrchStdPrdCdngSrSlctd() {
-        return this.rsrchStdPrdCdngSrSlctd;
-    }
-    
-    public void setRsrchStdPrdCdngSrSlctd(String rsrchStdPrdCdngSrSlctd) {
-        this.rsrchStdPrdCdngSrSlctd = rsrchStdPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyPeriodCodingCode() {
-        return this.researchStudyPeriodCodingCode;
-    }
-    
-    public void setResearchStudyPeriodCodingCode(String researchStudyPeriodCodingCode) {
-        this.researchStudyPeriodCodingCode = researchStudyPeriodCodingCode;
-    }
-    
-    
-    
-    public String getRsrchStdPrdCdngDsplay() {
-        return this.rsrchStdPrdCdngDsplay;
-    }
-    
-    public void setRsrchStdPrdCdngDsplay(String rsrchStdPrdCdngDsplay) {
-        this.rsrchStdPrdCdngDsplay = rsrchStdPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdPrdCdngVrsn() {
-        return this.rsrchStdPrdCdngVrsn;
-    }
-    
-    public void setRsrchStdPrdCdngVrsn(String rsrchStdPrdCdngVrsn) {
-        this.rsrchStdPrdCdngVrsn = rsrchStdPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getResearchStudyPeriodCodingSystem() {
-        return this.researchStudyPeriodCodingSystem;
-    }
-    
-    public void setResearchStudyPeriodCodingSystem(String researchStudyPeriodCodingSystem) {
-        this.researchStudyPeriodCodingSystem = researchStudyPeriodCodingSystem;
-    }
-    
-    
-    
-    public String getResearchStudySponsor() {
-        return this.researchStudySponsor;
-    }
-    
-    public void setResearchStudySponsor(String researchStudySponsor) {
-        this.researchStudySponsor = researchStudySponsor;
-    }
-    
-    
-    
-    public String getRsrchStdPrncplnvstgtr() {
-        return this.rsrchStdPrncplnvstgtr;
-    }
-    
-    public void setRsrchStdPrncplnvstgtr(String rsrchStdPrncplnvstgtr) {
-        this.rsrchStdPrncplnvstgtr = rsrchStdPrncplnvstgtr;
-    }
-    
-    
-    
-    public String getResearchStudySite() {
-        return this.researchStudySite;
-    }
-    
-    public void setResearchStudySite(String researchStudySite) {
-        this.researchStudySite = researchStudySite;
-    }
-    
-    
-    
-    public String getRsrchStdRsnStppdCdngSrSlctd() {
-        return this.rsrchStdRsnStppdCdngSrSlctd;
-    }
-    
-    public void setRsrchStdRsnStppdCdngSrSlctd(String rsrchStdRsnStppdCdngSrSlctd) {
-        this.rsrchStdRsnStppdCdngSrSlctd = rsrchStdRsnStppdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRsrchStdRsnStppdCdngCde() {
-        return this.rsrchStdRsnStppdCdngCde;
-    }
-    
-    public void setRsrchStdRsnStppdCdngCde(String rsrchStdRsnStppdCdngCde) {
-        this.rsrchStdRsnStppdCdngCde = rsrchStdRsnStppdCdngCde;
-    }
-    
-    
-    
-    public String getRsrchStdRsnStppdCdngDsplay() {
-        return this.rsrchStdRsnStppdCdngDsplay;
-    }
-    
-    public void setRsrchStdRsnStppdCdngDsplay(String rsrchStdRsnStppdCdngDsplay) {
-        this.rsrchStdRsnStppdCdngDsplay = rsrchStdRsnStppdCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdRsnStppdCdngVrsn() {
-        return this.rsrchStdRsnStppdCdngVrsn;
-    }
-    
-    public void setRsrchStdRsnStppdCdngVrsn(String rsrchStdRsnStppdCdngVrsn) {
-        this.rsrchStdRsnStppdCdngVrsn = rsrchStdRsnStppdCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdRsnStppdCdngSstm() {
-        return this.rsrchStdRsnStppdCdngSstm;
-    }
-    
-    public void setRsrchStdRsnStppdCdngSstm(String rsrchStdRsnStppdCdngSstm) {
-        this.rsrchStdRsnStppdCdngSstm = rsrchStdRsnStppdCdngSstm;
-    }
-    
-    
-    
-    public String getRsrchStdNtCdngSrSlctd() {
-        return this.rsrchStdNtCdngSrSlctd;
-    }
-    
-    public void setRsrchStdNtCdngSrSlctd(String rsrchStdNtCdngSrSlctd) {
-        this.rsrchStdNtCdngSrSlctd = rsrchStdNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyNoteCodingCode() {
-        return this.researchStudyNoteCodingCode;
-    }
-    
-    public void setResearchStudyNoteCodingCode(String researchStudyNoteCodingCode) {
-        this.researchStudyNoteCodingCode = researchStudyNoteCodingCode;
-    }
-    
-    
-    
-    public String getResearchStudyNoteCodingDisplay() {
-        return this.researchStudyNoteCodingDisplay;
-    }
-    
-    public void setResearchStudyNoteCodingDisplay(String researchStudyNoteCodingDisplay) {
-        this.researchStudyNoteCodingDisplay = researchStudyNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getResearchStudyNoteCodingVersion() {
-        return this.researchStudyNoteCodingVersion;
-    }
-    
-    public void setResearchStudyNoteCodingVersion(String researchStudyNoteCodingVersion) {
-        this.researchStudyNoteCodingVersion = researchStudyNoteCodingVersion;
-    }
-    
-    
-    
-    public String getResearchStudyNoteCodingSystem() {
-        return this.researchStudyNoteCodingSystem;
-    }
-    
-    public void setResearchStudyNoteCodingSystem(String researchStudyNoteCodingSystem) {
-        this.researchStudyNoteCodingSystem = researchStudyNoteCodingSystem;
-    }
-    
-    
-    
-    public String getResearchStudyArm() {
-        return this.researchStudyArm;
-    }
-    
-    public void setResearchStudyArm(String researchStudyArm) {
-        this.researchStudyArm = researchStudyArm;
-    }
-    
-    
-    
-    public String getResearchStudyArmName() {
-        return this.researchStudyArmName;
-    }
-    
-    public void setResearchStudyArmName(String researchStudyArmName) {
-        this.researchStudyArmName = researchStudyArmName;
-    }
-    
-    
-    
-    public String getRsrchStdRmTpCdngSrSlctd() {
-        return this.rsrchStdRmTpCdngSrSlctd;
-    }
-    
-    public void setRsrchStdRmTpCdngSrSlctd(String rsrchStdRmTpCdngSrSlctd) {
-        this.rsrchStdRmTpCdngSrSlctd = rsrchStdRmTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getResearchStudyArmTypeCodingCode() {
-        return this.researchStudyArmTypeCodingCode;
-    }
-    
-    public void setResearchStudyArmTypeCodingCode(String researchStudyArmTypeCodingCode) {
-        this.researchStudyArmTypeCodingCode = researchStudyArmTypeCodingCode;
-    }
-    
-    
-    
-    public String getRsrchStdRmTpCdngDsplay() {
-        return this.rsrchStdRmTpCdngDsplay;
-    }
-    
-    public void setRsrchStdRmTpCdngDsplay(String rsrchStdRmTpCdngDsplay) {
-        this.rsrchStdRmTpCdngDsplay = rsrchStdRmTpCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdRmTpCdngVrsn() {
-        return this.rsrchStdRmTpCdngVrsn;
-    }
-    
-    public void setRsrchStdRmTpCdngVrsn(String rsrchStdRmTpCdngVrsn) {
-        this.rsrchStdRmTpCdngVrsn = rsrchStdRmTpCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdRmTpCdngSstm() {
-        return this.rsrchStdRmTpCdngSstm;
-    }
-    
-    public void setRsrchStdRmTpCdngSstm(String rsrchStdRmTpCdngSstm) {
-        this.rsrchStdRmTpCdngSstm = rsrchStdRmTpCdngSstm;
-    }
-    
-    
-    
-    public String getResearchStudyArmDescription() {
-        return this.researchStudyArmDescription;
-    }
-    
-    public void setResearchStudyArmDescription(String researchStudyArmDescription) {
-        this.researchStudyArmDescription = researchStudyArmDescription;
-    }
-    
-    
-    
-    public String getResearchStudyObjective() {
-        return this.researchStudyObjective;
-    }
-    
-    public void setResearchStudyObjective(String researchStudyObjective) {
-        this.researchStudyObjective = researchStudyObjective;
-    }
-    
-    
-    
-    public String getResearchStudyObjectiveName() {
-        return this.researchStudyObjectiveName;
-    }
-    
-    public void setResearchStudyObjectiveName(String researchStudyObjectiveName) {
-        this.researchStudyObjectiveName = researchStudyObjectiveName;
-    }
-    
-    
-    
-    public String getRsrchStdBjctvTpCdngSrSlctd() {
-        return this.rsrchStdBjctvTpCdngSrSlctd;
-    }
-    
-    public void setRsrchStdBjctvTpCdngSrSlctd(String rsrchStdBjctvTpCdngSrSlctd) {
-        this.rsrchStdBjctvTpCdngSrSlctd = rsrchStdBjctvTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRsrchStdBjctvTpCdngCde() {
-        return this.rsrchStdBjctvTpCdngCde;
-    }
-    
-    public void setRsrchStdBjctvTpCdngCde(String rsrchStdBjctvTpCdngCde) {
-        this.rsrchStdBjctvTpCdngCde = rsrchStdBjctvTpCdngCde;
-    }
-    
-    
-    
-    public String getRsrchStdBjctvTpCdngDsplay() {
-        return this.rsrchStdBjctvTpCdngDsplay;
-    }
-    
-    public void setRsrchStdBjctvTpCdngDsplay(String rsrchStdBjctvTpCdngDsplay) {
-        this.rsrchStdBjctvTpCdngDsplay = rsrchStdBjctvTpCdngDsplay;
-    }
-    
-    
-    
-    public String getRsrchStdBjctvTpCdngVrsn() {
-        return this.rsrchStdBjctvTpCdngVrsn;
-    }
-    
-    public void setRsrchStdBjctvTpCdngVrsn(String rsrchStdBjctvTpCdngVrsn) {
-        this.rsrchStdBjctvTpCdngVrsn = rsrchStdBjctvTpCdngVrsn;
-    }
-    
-    
-    
-    public String getRsrchStdBjctvTpCdngSstm() {
-        return this.rsrchStdBjctvTpCdngSstm;
-    }
-    
-    public void setRsrchStdBjctvTpCdngSstm(String rsrchStdBjctvTpCdngSstm) {
-        this.rsrchStdBjctvTpCdngSstm = rsrchStdBjctvTpCdngSstm;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrSe()
+    {
+        return this.rsrchStdDntfrDntfrSe;
+    }
+    
+    public void setRsrchStdDntfrDntfrSe
+        (String rsrchStdDntfrDntfrSe) 
+        {
+      this.rsrchStdDntfrDntfrSe = rsrchStdDntfrDntfrSe;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcCSstm()
+    {
+        return this.rsrchStdDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcCSstm
+        (String rsrchStdDntfrDntfrTpCcCSstm) 
+        {
+      this.rsrchStdDntfrDntfrTpCcCSstm = rsrchStdDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcCVrsn()
+    {
+        return this.rsrchStdDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcCVrsn
+        (String rsrchStdDntfrDntfrTpCcCVrsn) 
+        {
+      this.rsrchStdDntfrDntfrTpCcCVrsn = rsrchStdDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcCCde()
+    {
+        return this.rsrchStdDntfrDntfrTpCcCCde;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcCCde
+        (String rsrchStdDntfrDntfrTpCcCCde) 
+        {
+      this.rsrchStdDntfrDntfrTpCcCCde = rsrchStdDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcCDsplay()
+    {
+        return this.rsrchStdDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcCDsplay
+        (String rsrchStdDntfrDntfrTpCcCDsplay) 
+        {
+      this.rsrchStdDntfrDntfrTpCcCDsplay = rsrchStdDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.rsrchStdDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcCSrSlctd
+        (String rsrchStdDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.rsrchStdDntfrDntfrTpCcCSrSlctd = rsrchStdDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrTpCcTxt()
+    {
+        return this.rsrchStdDntfrDntfrTpCcTxt;
+    }
+    
+    public void setRsrchStdDntfrDntfrTpCcTxt
+        (String rsrchStdDntfrDntfrTpCcTxt) 
+        {
+      this.rsrchStdDntfrDntfrTpCcTxt = rsrchStdDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrPrdPrdStrt()
+    {
+        return this.rsrchStdDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setRsrchStdDntfrDntfrPrdPrdStrt
+        (String rsrchStdDntfrDntfrPrdPrdStrt) 
+        {
+      this.rsrchStdDntfrDntfrPrdPrdStrt = rsrchStdDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrPrdPrdNd()
+    {
+        return this.rsrchStdDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setRsrchStdDntfrDntfrPrdPrdNd
+        (String rsrchStdDntfrDntfrPrdPrdNd) 
+        {
+      this.rsrchStdDntfrDntfrPrdPrdNd = rsrchStdDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrSsgnr()
+    {
+        return this.rsrchStdDntfrDntfrSsgnr;
+    }
+    
+    public void setRsrchStdDntfrDntfrSsgnr
+        (String rsrchStdDntfrDntfrSsgnr) 
+        {
+      this.rsrchStdDntfrDntfrSsgnr = rsrchStdDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrVlue()
+    {
+        return this.rsrchStdDntfrDntfrVlue;
+    }
+    
+    public void setRsrchStdDntfrDntfrVlue
+        (String rsrchStdDntfrDntfrVlue) 
+        {
+      this.rsrchStdDntfrDntfrVlue = rsrchStdDntfrDntfrVlue;
+}
+    public 
+    String 
+    getRsrchStdDntfrDntfrSstm()
+    {
+        return this.rsrchStdDntfrDntfrSstm;
+    }
+    
+    public void setRsrchStdDntfrDntfrSstm
+        (String rsrchStdDntfrDntfrSstm) 
+        {
+      this.rsrchStdDntfrDntfrSstm = rsrchStdDntfrDntfrSstm;
+}
+    public 
+    String 
+    getResearchStudyTitleString()
+    {
+        return this.researchStudyTitleString;
+    }
+    
+    public void setResearchStudyTitleString
+        (String researchStudyTitleString) 
+        {
+      this.researchStudyTitleString = researchStudyTitleString;
+}
+    public 
+    String 
+    getResearchStudyProtocolReference()
+    {
+        return this.researchStudyProtocolReference;
+    }
+    
+    public void setResearchStudyProtocolReference
+        (String researchStudyProtocolReference) 
+        {
+      this.researchStudyProtocolReference = researchStudyProtocolReference;
+}
+    public 
+    String 
+    getResearchStudyPartOfReference()
+    {
+        return this.researchStudyPartOfReference;
+    }
+    
+    public void setResearchStudyPartOfReference
+        (String researchStudyPartOfReference) 
+        {
+      this.researchStudyPartOfReference = researchStudyPartOfReference;
+}
+    public 
+    String 
+    getResearchStudyStatusCode()
+    {
+        return this.researchStudyStatusCode;
+    }
+    
+    public void setResearchStudyStatusCode
+        (String researchStudyStatusCode) 
+        {
+      this.researchStudyStatusCode = researchStudyStatusCode;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcCdngCSstm()
+    {
+        return this.rsrchStdPrmrPrpsTpCcCdngCSstm;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcCdngCSstm
+        (String rsrchStdPrmrPrpsTpCcCdngCSstm) 
+        {
+      this.rsrchStdPrmrPrpsTpCcCdngCSstm = rsrchStdPrmrPrpsTpCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcCdngCVrsn()
+    {
+        return this.rsrchStdPrmrPrpsTpCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcCdngCVrsn
+        (String rsrchStdPrmrPrpsTpCcCdngCVrsn) 
+        {
+      this.rsrchStdPrmrPrpsTpCcCdngCVrsn = rsrchStdPrmrPrpsTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcCdngCCde()
+    {
+        return this.rsrchStdPrmrPrpsTpCcCdngCCde;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcCdngCCde
+        (String rsrchStdPrmrPrpsTpCcCdngCCde) 
+        {
+      this.rsrchStdPrmrPrpsTpCcCdngCCde = rsrchStdPrmrPrpsTpCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcCdngCDsplay()
+    {
+        return this.rsrchStdPrmrPrpsTpCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcCdngCDsplay
+        (String rsrchStdPrmrPrpsTpCcCdngCDsplay) 
+        {
+      this.rsrchStdPrmrPrpsTpCcCdngCDsplay = rsrchStdPrmrPrpsTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcCdngCSrSlctd()
+    {
+        return this.rsrchStdPrmrPrpsTpCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcCdngCSrSlctd
+        (String rsrchStdPrmrPrpsTpCcCdngCSrSlctd) 
+        {
+      this.rsrchStdPrmrPrpsTpCcCdngCSrSlctd = rsrchStdPrmrPrpsTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRsrchStdPrmrPrpsTpCcTxt()
+    {
+        return this.rsrchStdPrmrPrpsTpCcTxt;
+    }
+    
+    public void setRsrchStdPrmrPrpsTpCcTxt
+        (String rsrchStdPrmrPrpsTpCcTxt) 
+        {
+      this.rsrchStdPrmrPrpsTpCcTxt = rsrchStdPrmrPrpsTpCcTxt;
+}
+    public 
+    String 
+    getRsrchStdPhsCcCdngCSstm()
+    {
+        return this.rsrchStdPhsCcCdngCSstm;
+    }
+    
+    public void setRsrchStdPhsCcCdngCSstm
+        (String rsrchStdPhsCcCdngCSstm) 
+        {
+      this.rsrchStdPhsCcCdngCSstm = rsrchStdPhsCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdPhsCcCdngCVrsn()
+    {
+        return this.rsrchStdPhsCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdPhsCcCdngCVrsn
+        (String rsrchStdPhsCcCdngCVrsn) 
+        {
+      this.rsrchStdPhsCcCdngCVrsn = rsrchStdPhsCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdPhsCcCdngCCde()
+    {
+        return this.rsrchStdPhsCcCdngCCde;
+    }
+    
+    public void setRsrchStdPhsCcCdngCCde
+        (String rsrchStdPhsCcCdngCCde) 
+        {
+      this.rsrchStdPhsCcCdngCCde = rsrchStdPhsCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdPhsCcCdngCDsplay()
+    {
+        return this.rsrchStdPhsCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdPhsCcCdngCDsplay
+        (String rsrchStdPhsCcCdngCDsplay) 
+        {
+      this.rsrchStdPhsCcCdngCDsplay = rsrchStdPhsCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdPhsCcCdngCSrSlctd()
+    {
+        return this.rsrchStdPhsCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdPhsCcCdngCSrSlctd
+        (String rsrchStdPhsCcCdngCSrSlctd) 
+        {
+      this.rsrchStdPhsCcCdngCSrSlctd = rsrchStdPhsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyPhaseCcText()
+    {
+        return this.researchStudyPhaseCcText;
+    }
+    
+    public void setResearchStudyPhaseCcText
+        (String researchStudyPhaseCcText) 
+        {
+      this.researchStudyPhaseCcText = researchStudyPhaseCcText;
+}
+    public 
+    String 
+    getRsrchStdCtgrCcCdngCSstm()
+    {
+        return this.rsrchStdCtgrCcCdngCSstm;
+    }
+    
+    public void setRsrchStdCtgrCcCdngCSstm
+        (String rsrchStdCtgrCcCdngCSstm) 
+        {
+      this.rsrchStdCtgrCcCdngCSstm = rsrchStdCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdCtgrCcCdngCVrsn()
+    {
+        return this.rsrchStdCtgrCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdCtgrCcCdngCVrsn
+        (String rsrchStdCtgrCcCdngCVrsn) 
+        {
+      this.rsrchStdCtgrCcCdngCVrsn = rsrchStdCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdCtgrCcCdngCCde()
+    {
+        return this.rsrchStdCtgrCcCdngCCde;
+    }
+    
+    public void setRsrchStdCtgrCcCdngCCde
+        (String rsrchStdCtgrCcCdngCCde) 
+        {
+      this.rsrchStdCtgrCcCdngCCde = rsrchStdCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdCtgrCcCdngCDsplay()
+    {
+        return this.rsrchStdCtgrCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdCtgrCcCdngCDsplay
+        (String rsrchStdCtgrCcCdngCDsplay) 
+        {
+      this.rsrchStdCtgrCcCdngCDsplay = rsrchStdCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdCtgrCcCdngCSrSlctd()
+    {
+        return this.rsrchStdCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdCtgrCcCdngCSrSlctd
+        (String rsrchStdCtgrCcCdngCSrSlctd) 
+        {
+      this.rsrchStdCtgrCcCdngCSrSlctd = rsrchStdCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyCategoryCcText()
+    {
+        return this.researchStudyCategoryCcText;
+    }
+    
+    public void setResearchStudyCategoryCcText
+        (String researchStudyCategoryCcText) 
+        {
+      this.researchStudyCategoryCcText = researchStudyCategoryCcText;
+}
+    public 
+    String 
+    getRsrchStdFcsCcCdngCSstm()
+    {
+        return this.rsrchStdFcsCcCdngCSstm;
+    }
+    
+    public void setRsrchStdFcsCcCdngCSstm
+        (String rsrchStdFcsCcCdngCSstm) 
+        {
+      this.rsrchStdFcsCcCdngCSstm = rsrchStdFcsCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdFcsCcCdngCVrsn()
+    {
+        return this.rsrchStdFcsCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdFcsCcCdngCVrsn
+        (String rsrchStdFcsCcCdngCVrsn) 
+        {
+      this.rsrchStdFcsCcCdngCVrsn = rsrchStdFcsCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdFcsCcCdngCCde()
+    {
+        return this.rsrchStdFcsCcCdngCCde;
+    }
+    
+    public void setRsrchStdFcsCcCdngCCde
+        (String rsrchStdFcsCcCdngCCde) 
+        {
+      this.rsrchStdFcsCcCdngCCde = rsrchStdFcsCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdFcsCcCdngCDsplay()
+    {
+        return this.rsrchStdFcsCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdFcsCcCdngCDsplay
+        (String rsrchStdFcsCcCdngCDsplay) 
+        {
+      this.rsrchStdFcsCcCdngCDsplay = rsrchStdFcsCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdFcsCcCdngCSrSlctd()
+    {
+        return this.rsrchStdFcsCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdFcsCcCdngCSrSlctd
+        (String rsrchStdFcsCcCdngCSrSlctd) 
+        {
+      this.rsrchStdFcsCcCdngCSrSlctd = rsrchStdFcsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyFocusCcText()
+    {
+        return this.researchStudyFocusCcText;
+    }
+    
+    public void setResearchStudyFocusCcText
+        (String researchStudyFocusCcText) 
+        {
+      this.researchStudyFocusCcText = researchStudyFocusCcText;
+}
+    public 
+    String 
+    getRsrchStdCndtnCcCdngCSstm()
+    {
+        return this.rsrchStdCndtnCcCdngCSstm;
+    }
+    
+    public void setRsrchStdCndtnCcCdngCSstm
+        (String rsrchStdCndtnCcCdngCSstm) 
+        {
+      this.rsrchStdCndtnCcCdngCSstm = rsrchStdCndtnCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdCndtnCcCdngCVrsn()
+    {
+        return this.rsrchStdCndtnCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdCndtnCcCdngCVrsn
+        (String rsrchStdCndtnCcCdngCVrsn) 
+        {
+      this.rsrchStdCndtnCcCdngCVrsn = rsrchStdCndtnCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdCndtnCcCdngCCde()
+    {
+        return this.rsrchStdCndtnCcCdngCCde;
+    }
+    
+    public void setRsrchStdCndtnCcCdngCCde
+        (String rsrchStdCndtnCcCdngCCde) 
+        {
+      this.rsrchStdCndtnCcCdngCCde = rsrchStdCndtnCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdCndtnCcCdngCDsplay()
+    {
+        return this.rsrchStdCndtnCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdCndtnCcCdngCDsplay
+        (String rsrchStdCndtnCcCdngCDsplay) 
+        {
+      this.rsrchStdCndtnCcCdngCDsplay = rsrchStdCndtnCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdCndtnCcCdngCSrSlctd()
+    {
+        return this.rsrchStdCndtnCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdCndtnCcCdngCSrSlctd
+        (String rsrchStdCndtnCcCdngCSrSlctd) 
+        {
+      this.rsrchStdCndtnCcCdngCSrSlctd = rsrchStdCndtnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyConditionCcText()
+    {
+        return this.researchStudyConditionCcText;
+    }
+    
+    public void setResearchStudyConditionCcText
+        (String researchStudyConditionCcText) 
+        {
+      this.researchStudyConditionCcText = researchStudyConditionCcText;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntPrdStrt
+        (String rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt = rsrchStdCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntPrdNd
+        (String rsrchStdCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntPrdNd = rsrchStdCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntSstm
+        (String rsrchStdCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntSstm = rsrchStdCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntVlue
+        (String rsrchStdCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntVlue = rsrchStdCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntSe
+        (String rsrchStdCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntSe = rsrchStdCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.rsrchStdCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setRsrchStdCntctCntctDtlTlcmCntctPntRnk
+        (String rsrchStdCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.rsrchStdCntctCntctDtlTlcmCntctPntRnk = rsrchStdCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getRsrchStdCntctCntctDtlNme()
+    {
+        return this.rsrchStdCntctCntctDtlNme;
+    }
+    
+    public void setRsrchStdCntctCntctDtlNme
+        (String rsrchStdCntctCntctDtlNme) 
+        {
+      this.rsrchStdCntctCntctDtlNme = rsrchStdCntctCntctDtlNme;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntLngge;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntDta;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntRl;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntSze;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntHsh;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntTtle;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn
+        (String rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn = rsrchStdRltdrtfctRltdrtfctDcmntTtchmntCrtn;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctRsrce()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctRsrce;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctRsrce
+        (String rsrchStdRltdrtfctRltdrtfctRsrce) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctRsrce = rsrchStdRltdrtfctRltdrtfctRsrce;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctTpe()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctTpe;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctTpe
+        (String rsrchStdRltdrtfctRltdrtfctTpe) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctTpe = rsrchStdRltdrtfctRltdrtfctTpe;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctCttn()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctCttn;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctCttn
+        (String rsrchStdRltdrtfctRltdrtfctCttn) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctCttn = rsrchStdRltdrtfctRltdrtfctCttn;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctLbl()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctLbl;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctLbl
+        (String rsrchStdRltdrtfctRltdrtfctLbl) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctLbl = rsrchStdRltdrtfctRltdrtfctLbl;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctDsplay()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctDsplay;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctDsplay
+        (String rsrchStdRltdrtfctRltdrtfctDsplay) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctDsplay = rsrchStdRltdrtfctRltdrtfctDsplay;
+}
+    public 
+    String 
+    getRsrchStdRltdrtfctRltdrtfctRl()
+    {
+        return this.rsrchStdRltdrtfctRltdrtfctRl;
+    }
+    
+    public void setRsrchStdRltdrtfctRltdrtfctRl
+        (String rsrchStdRltdrtfctRltdrtfctRl) 
+        {
+      this.rsrchStdRltdrtfctRltdrtfctRl = rsrchStdRltdrtfctRltdrtfctRl;
+}
+    public 
+    String 
+    getRsrchStdKwrdCcCdngCSstm()
+    {
+        return this.rsrchStdKwrdCcCdngCSstm;
+    }
+    
+    public void setRsrchStdKwrdCcCdngCSstm
+        (String rsrchStdKwrdCcCdngCSstm) 
+        {
+      this.rsrchStdKwrdCcCdngCSstm = rsrchStdKwrdCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdKwrdCcCdngCVrsn()
+    {
+        return this.rsrchStdKwrdCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdKwrdCcCdngCVrsn
+        (String rsrchStdKwrdCcCdngCVrsn) 
+        {
+      this.rsrchStdKwrdCcCdngCVrsn = rsrchStdKwrdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdKwrdCcCdngCCde()
+    {
+        return this.rsrchStdKwrdCcCdngCCde;
+    }
+    
+    public void setRsrchStdKwrdCcCdngCCde
+        (String rsrchStdKwrdCcCdngCCde) 
+        {
+      this.rsrchStdKwrdCcCdngCCde = rsrchStdKwrdCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdKwrdCcCdngCDsplay()
+    {
+        return this.rsrchStdKwrdCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdKwrdCcCdngCDsplay
+        (String rsrchStdKwrdCcCdngCDsplay) 
+        {
+      this.rsrchStdKwrdCcCdngCDsplay = rsrchStdKwrdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdKwrdCcCdngCSrSlctd()
+    {
+        return this.rsrchStdKwrdCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdKwrdCcCdngCSrSlctd
+        (String rsrchStdKwrdCcCdngCSrSlctd) 
+        {
+      this.rsrchStdKwrdCcCdngCSrSlctd = rsrchStdKwrdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyKeywordCcText()
+    {
+        return this.researchStudyKeywordCcText;
+    }
+    
+    public void setResearchStudyKeywordCcText
+        (String researchStudyKeywordCcText) 
+        {
+      this.researchStudyKeywordCcText = researchStudyKeywordCcText;
+}
+    public 
+    String 
+    getRsrchStdLctnCcCdngCSstm()
+    {
+        return this.rsrchStdLctnCcCdngCSstm;
+    }
+    
+    public void setRsrchStdLctnCcCdngCSstm
+        (String rsrchStdLctnCcCdngCSstm) 
+        {
+      this.rsrchStdLctnCcCdngCSstm = rsrchStdLctnCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdLctnCcCdngCVrsn()
+    {
+        return this.rsrchStdLctnCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdLctnCcCdngCVrsn
+        (String rsrchStdLctnCcCdngCVrsn) 
+        {
+      this.rsrchStdLctnCcCdngCVrsn = rsrchStdLctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdLctnCcCdngCCde()
+    {
+        return this.rsrchStdLctnCcCdngCCde;
+    }
+    
+    public void setRsrchStdLctnCcCdngCCde
+        (String rsrchStdLctnCcCdngCCde) 
+        {
+      this.rsrchStdLctnCcCdngCCde = rsrchStdLctnCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdLctnCcCdngCDsplay()
+    {
+        return this.rsrchStdLctnCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdLctnCcCdngCDsplay
+        (String rsrchStdLctnCcCdngCDsplay) 
+        {
+      this.rsrchStdLctnCcCdngCDsplay = rsrchStdLctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdLctnCcCdngCSrSlctd()
+    {
+        return this.rsrchStdLctnCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdLctnCcCdngCSrSlctd
+        (String rsrchStdLctnCcCdngCSrSlctd) 
+        {
+      this.rsrchStdLctnCcCdngCSrSlctd = rsrchStdLctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyLocationCcText()
+    {
+        return this.researchStudyLocationCcText;
+    }
+    
+    public void setResearchStudyLocationCcText
+        (String researchStudyLocationCcText) 
+        {
+      this.researchStudyLocationCcText = researchStudyLocationCcText;
+}
+    public 
+    String 
+    getResearchStudyDescriptionMarkdown()
+    {
+        return this.researchStudyDescriptionMarkdown;
+    }
+    
+    public void setResearchStudyDescriptionMarkdown
+        (String researchStudyDescriptionMarkdown) 
+        {
+      this.researchStudyDescriptionMarkdown = researchStudyDescriptionMarkdown;
+}
+    public 
+    String 
+    getResearchStudyEnrollmentReference()
+    {
+        return this.researchStudyEnrollmentReference;
+    }
+    
+    public void setResearchStudyEnrollmentReference
+        (String researchStudyEnrollmentReference) 
+        {
+      this.researchStudyEnrollmentReference = researchStudyEnrollmentReference;
+}
+    public 
+    String 
+    getResearchStudyPeriodPeriodStart()
+    {
+        return this.researchStudyPeriodPeriodStart;
+    }
+    
+    public void setResearchStudyPeriodPeriodStart
+        (String researchStudyPeriodPeriodStart) 
+        {
+      this.researchStudyPeriodPeriodStart = researchStudyPeriodPeriodStart;
+}
+    public 
+    String 
+    getResearchStudyPeriodPeriodEnd()
+    {
+        return this.researchStudyPeriodPeriodEnd;
+    }
+    
+    public void setResearchStudyPeriodPeriodEnd
+        (String researchStudyPeriodPeriodEnd) 
+        {
+      this.researchStudyPeriodPeriodEnd = researchStudyPeriodPeriodEnd;
+}
+    public 
+    String 
+    getResearchStudySponsorReference()
+    {
+        return this.researchStudySponsorReference;
+    }
+    
+    public void setResearchStudySponsorReference
+        (String researchStudySponsorReference) 
+        {
+      this.researchStudySponsorReference = researchStudySponsorReference;
+}
+    public 
+    String 
+    getRsrchStdPrncplnvstgtrRfrnce()
+    {
+        return this.rsrchStdPrncplnvstgtrRfrnce;
+    }
+    
+    public void setRsrchStdPrncplnvstgtrRfrnce
+        (String rsrchStdPrncplnvstgtrRfrnce) 
+        {
+      this.rsrchStdPrncplnvstgtrRfrnce = rsrchStdPrncplnvstgtrRfrnce;
+}
+    public 
+    String 
+    getResearchStudySiteReference()
+    {
+        return this.researchStudySiteReference;
+    }
+    
+    public void setResearchStudySiteReference
+        (String researchStudySiteReference) 
+        {
+      this.researchStudySiteReference = researchStudySiteReference;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcCdngCSstm()
+    {
+        return this.rsrchStdRsnStppdCcCdngCSstm;
+    }
+    
+    public void setRsrchStdRsnStppdCcCdngCSstm
+        (String rsrchStdRsnStppdCcCdngCSstm) 
+        {
+      this.rsrchStdRsnStppdCcCdngCSstm = rsrchStdRsnStppdCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcCdngCVrsn()
+    {
+        return this.rsrchStdRsnStppdCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdRsnStppdCcCdngCVrsn
+        (String rsrchStdRsnStppdCcCdngCVrsn) 
+        {
+      this.rsrchStdRsnStppdCcCdngCVrsn = rsrchStdRsnStppdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcCdngCCde()
+    {
+        return this.rsrchStdRsnStppdCcCdngCCde;
+    }
+    
+    public void setRsrchStdRsnStppdCcCdngCCde
+        (String rsrchStdRsnStppdCcCdngCCde) 
+        {
+      this.rsrchStdRsnStppdCcCdngCCde = rsrchStdRsnStppdCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcCdngCDsplay()
+    {
+        return this.rsrchStdRsnStppdCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdRsnStppdCcCdngCDsplay
+        (String rsrchStdRsnStppdCcCdngCDsplay) 
+        {
+      this.rsrchStdRsnStppdCcCdngCDsplay = rsrchStdRsnStppdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcCdngCSrSlctd()
+    {
+        return this.rsrchStdRsnStppdCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdRsnStppdCcCdngCSrSlctd
+        (String rsrchStdRsnStppdCcCdngCSrSlctd) 
+        {
+      this.rsrchStdRsnStppdCcCdngCSrSlctd = rsrchStdRsnStppdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRsrchStdRsnStppdCcTxt()
+    {
+        return this.rsrchStdRsnStppdCcTxt;
+    }
+    
+    public void setRsrchStdRsnStppdCcTxt
+        (String rsrchStdRsnStppdCcTxt) 
+        {
+      this.rsrchStdRsnStppdCcTxt = rsrchStdRsnStppdCcTxt;
+}
+    public 
+    String 
+    getResearchStudyNoteAnnotationTime()
+    {
+        return this.researchStudyNoteAnnotationTime;
+    }
+    
+    public void setResearchStudyNoteAnnotationTime
+        (String researchStudyNoteAnnotationTime) 
+        {
+      this.researchStudyNoteAnnotationTime = researchStudyNoteAnnotationTime;
+}
+    public 
+    String 
+    getResearchStudyNoteAnnotationText()
+    {
+        return this.researchStudyNoteAnnotationText;
+    }
+    
+    public void setResearchStudyNoteAnnotationText
+        (String researchStudyNoteAnnotationText) 
+        {
+      this.researchStudyNoteAnnotationText = researchStudyNoteAnnotationText;
+}
+    public 
+    String 
+    getRsrchStdNtNnttnThrRfrnce()
+    {
+        return this.rsrchStdNtNnttnThrRfrnce;
+    }
+    
+    public void setRsrchStdNtNnttnThrRfrnce
+        (String rsrchStdNtNnttnThrRfrnce) 
+        {
+      this.rsrchStdNtNnttnThrRfrnce = rsrchStdNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getRsrchStdNtNnttnThrStrng()
+    {
+        return this.rsrchStdNtNnttnThrStrng;
+    }
+    
+    public void setRsrchStdNtNnttnThrStrng
+        (String rsrchStdNtNnttnThrStrng) 
+        {
+      this.rsrchStdNtNnttnThrStrng = rsrchStdNtNnttnThrStrng;
+}
+    public 
+    String 
+    getResearchStudyArmNameString()
+    {
+        return this.researchStudyArmNameString;
+    }
+    
+    public void setResearchStudyArmNameString
+        (String researchStudyArmNameString) 
+        {
+      this.researchStudyArmNameString = researchStudyArmNameString;
+}
+    public 
+    String 
+    getRsrchStdRmTpCcCdngCSstm()
+    {
+        return this.rsrchStdRmTpCcCdngCSstm;
+    }
+    
+    public void setRsrchStdRmTpCcCdngCSstm
+        (String rsrchStdRmTpCcCdngCSstm) 
+        {
+      this.rsrchStdRmTpCcCdngCSstm = rsrchStdRmTpCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdRmTpCcCdngCVrsn()
+    {
+        return this.rsrchStdRmTpCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdRmTpCcCdngCVrsn
+        (String rsrchStdRmTpCcCdngCVrsn) 
+        {
+      this.rsrchStdRmTpCcCdngCVrsn = rsrchStdRmTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdRmTpCcCdngCCde()
+    {
+        return this.rsrchStdRmTpCcCdngCCde;
+    }
+    
+    public void setRsrchStdRmTpCcCdngCCde
+        (String rsrchStdRmTpCcCdngCCde) 
+        {
+      this.rsrchStdRmTpCcCdngCCde = rsrchStdRmTpCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdRmTpCcCdngCDsplay()
+    {
+        return this.rsrchStdRmTpCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdRmTpCcCdngCDsplay
+        (String rsrchStdRmTpCcCdngCDsplay) 
+        {
+      this.rsrchStdRmTpCcCdngCDsplay = rsrchStdRmTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdRmTpCcCdngCSrSlctd()
+    {
+        return this.rsrchStdRmTpCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdRmTpCcCdngCSrSlctd
+        (String rsrchStdRmTpCcCdngCSrSlctd) 
+        {
+      this.rsrchStdRmTpCcCdngCSrSlctd = rsrchStdRmTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getResearchStudyArmTypeCcText()
+    {
+        return this.researchStudyArmTypeCcText;
+    }
+    
+    public void setResearchStudyArmTypeCcText
+        (String researchStudyArmTypeCcText) 
+        {
+      this.researchStudyArmTypeCcText = researchStudyArmTypeCcText;
+}
+    public 
+    String 
+    getRsrchStdRmDscrptnStrng()
+    {
+        return this.rsrchStdRmDscrptnStrng;
+    }
+    
+    public void setRsrchStdRmDscrptnStrng
+        (String rsrchStdRmDscrptnStrng) 
+        {
+      this.rsrchStdRmDscrptnStrng = rsrchStdRmDscrptnStrng;
+}
+    public 
+    String 
+    getRsrchStdBjctvNmStrng()
+    {
+        return this.rsrchStdBjctvNmStrng;
+    }
+    
+    public void setRsrchStdBjctvNmStrng
+        (String rsrchStdBjctvNmStrng) 
+        {
+      this.rsrchStdBjctvNmStrng = rsrchStdBjctvNmStrng;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcCdngCSstm()
+    {
+        return this.rsrchStdBjctvTpCcCdngCSstm;
+    }
+    
+    public void setRsrchStdBjctvTpCcCdngCSstm
+        (String rsrchStdBjctvTpCcCdngCSstm) 
+        {
+      this.rsrchStdBjctvTpCcCdngCSstm = rsrchStdBjctvTpCcCdngCSstm;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcCdngCVrsn()
+    {
+        return this.rsrchStdBjctvTpCcCdngCVrsn;
+    }
+    
+    public void setRsrchStdBjctvTpCcCdngCVrsn
+        (String rsrchStdBjctvTpCcCdngCVrsn) 
+        {
+      this.rsrchStdBjctvTpCcCdngCVrsn = rsrchStdBjctvTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcCdngCCde()
+    {
+        return this.rsrchStdBjctvTpCcCdngCCde;
+    }
+    
+    public void setRsrchStdBjctvTpCcCdngCCde
+        (String rsrchStdBjctvTpCcCdngCCde) 
+        {
+      this.rsrchStdBjctvTpCcCdngCCde = rsrchStdBjctvTpCcCdngCCde;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcCdngCDsplay()
+    {
+        return this.rsrchStdBjctvTpCcCdngCDsplay;
+    }
+    
+    public void setRsrchStdBjctvTpCcCdngCDsplay
+        (String rsrchStdBjctvTpCcCdngCDsplay) 
+        {
+      this.rsrchStdBjctvTpCcCdngCDsplay = rsrchStdBjctvTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcCdngCSrSlctd()
+    {
+        return this.rsrchStdBjctvTpCcCdngCSrSlctd;
+    }
+    
+    public void setRsrchStdBjctvTpCcCdngCSrSlctd
+        (String rsrchStdBjctvTpCcCdngCSrSlctd) 
+        {
+      this.rsrchStdBjctvTpCcCdngCSrSlctd = rsrchStdBjctvTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRsrchStdBjctvTpCcTxt()
+    {
+        return this.rsrchStdBjctvTpCcTxt;
+    }
+    
+    public void setRsrchStdBjctvTpCcTxt
+        (String rsrchStdBjctvTpCcTxt) 
+        {
+      this.rsrchStdBjctvTpCcTxt = rsrchStdBjctvTpCcTxt;
+}
 
 
 

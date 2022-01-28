@@ -1,309 +1,219 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Schedule" optimistic-lock="none" table="schedule">
-        <id name="schdlDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="schdlDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_use_code</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_s_cde">
-                <comment>Schedule_identifierIdentifier_use_code</comment>
+        <property name="scheduleIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Schedule_identifier_Identifier_use">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="schdlDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="schdlDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="schdlDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Schedule_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="schdlDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Schedule_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="schdlDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Prd_strt">
-                <comment>Schedule_identifierIdentifier_Period_start</comment>
+        <property name="schdlDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Prd_nd">
-                <comment>Schedule_identifierIdentifier_Period_end</comment>
+        <property name="schdlDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Schedule_identifierIdentifier_Reference_reference</comment>
+        <property name="schdlDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Schedule_identifierIdentifier_Reference_type</comment>
+        <property name="schdlDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Schedule_identifierIdentifier_Reference_identifier</comment>
+        <property name="schdlDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Schedule_identifierIdentifier_Reference_display</comment>
+        <property name="schdlDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Schdl_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Schedule.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_value_string</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_vl_strng">
-                <comment>Schedule_identifierIdentifier_value_string</comment>
+        <property name="scheduleActiveBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="Schedule_active_boolean">
+                <comment>{ "tree" :"Schedule.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="schdlDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Schedule_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Schdl_dntfr_dntfr_sstm_ri">
-                <comment>Schedule_identifierIdentifier_system_uri</comment>
+        <property name="schdlSrvcCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="scheduleActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Schedule_active">
-                <comment>boolean</comment>
+        <property name="schdlSrvcCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="schdlSrvcCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="schdlSrvcCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="schdlSrvcCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Schdl_srvcCtgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="scheduleServiceCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</meta>
+            <column length="65535" name="Schedule_serviceCategory_CC_text">
+                <comment>{ "tree" :"Schedule.serviceCategory", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceCategory, setText"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="schdlSrvcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Schdl_srvcTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Schdl_srvcCtgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="schdlSrvcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Schdl_srvcTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="schdlSrvcTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</meta>
+            <column length="65535" name="Schdl_srvcTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="schdlSrvcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Schdl_srvcTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="schdlSrvcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Schdl_srvcTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="scheduleServiceTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</meta>
+            <column length="65535" name="Schedule_serviceType_CC_text">
+                <comment>{ "tree" :"Schedule.serviceType", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addServiceType, setText"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="schdlSpcltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</meta>
+            <column length="65535" name="Schdl_spclt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="schdlSrvcTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Schdl_srvcTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="schdlSpcltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</meta>
+            <column length="65535" name="Schdl_spclt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="schdlSpcltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</meta>
+            <column length="65535" name="Schdl_spclt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="schdlSpcltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Schdl_spclt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="schdlSpcltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Schdl_spclt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="scheduleSpecialtyCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</meta>
+            <column length="65535" name="Schedule_specialty_CC_text">
+                <comment>{ "tree" :"Schedule.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="scheduleActorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.actor", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addActor"}</meta>
+            <column length="65535" name="Schedule_actor_Reference">
+                <comment>{ "tree" :"Schedule.actor", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addActor"}</comment>
             </column>
         </property>
-        <property name="schdlSpcltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Schdl_spclt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="schdlPlnnngHrznPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.planningHorizon", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPlanningHorizon, setStart"}</meta>
+            <column length="65535" name="Schdl_plnnngHrzn_Prd_strt">
+                <comment>{ "tree" :"Schedule.planningHorizon", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPlanningHorizon, setStart"}</comment>
             </column>
         </property>
-        <property name="schdlCtrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="schdlPlnnngHrznPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.planningHorizon", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPlanningHorizon, setEnd"}</meta>
+            <column length="65535" name="Schdl_plnnngHrzn_Prd_nd">
+                <comment>{ "tree" :"Schedule.planningHorizon", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPlanningHorizon, setEnd"}</comment>
             </column>
         </property>
-        <property name="schdlCtrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="schdlCtrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Schdl_ctr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="scheduleActorReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Schedule_actor_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="schdlPlnnngHrznPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Schdl_plnnngHrzn_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="schdlPlnnngHrznPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Schdl_plnnngHrzn_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="scheduleComment" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Schedule_comment">
-                <comment>string</comment>
+        <property name="scheduleCommentString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Schedule.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="Schedule_comment_string">
+                <comment>{ "tree" :"Schedule.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setComment"}</comment>
             </column>
         </property>
     </class>

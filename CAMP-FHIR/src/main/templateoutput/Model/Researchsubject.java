@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,209 +10,306 @@ package main.templateoutput.Model;
 public class Researchsubject  implements java.io.Serializable {
 
 
-     private String rsrchSbjctDntfrCdngCde;
-     private String rsrchSbjctDntfrCdngSrSlctd;
-     private String rsrchSbjctDntfrCdngDsplay;
-     private String rsrchSbjctDntfrCdngVrsn;
-     private String rsrchSbjctDntfrCdngSstm;
-     private String researchSubjectStatus;
-     private String rsrchSbjctPrdCdngSrSlctd;
-     private String researchSubjectPeriodCodingCode;
-     private String rsrchSbjctPrdCdngDsplay;
-     private String rsrchSbjctPrdCdngVrsn;
-     private String rsrchSbjctPrdCdngSstm;
-     private String researchSubjectStudy;
-     private String researchSubjectIndividual;
-     private String researchSubjectAssignedArm;
-     private String researchSubjectActualArm;
-     private String researchSubjectConsent;
+     private Integer id;
+     private String rsrchSbjctDntfrDntfrSe;
+     private String rsrchSbjctDntfrDntfrTpCcCSstm;
+     private String rsrchSbjctDntfrDntfrTpCcCVrsn;
+     private String rsrchSbjctDntfrDntfrTpCcCCde;
+     private String rsrchSbjctDntfrDntfrTpCcCDsplay;
+     private String rsrchSbjctDntfrDntfrTpCcCSrSlctd;
+     private String rsrchSbjctDntfrDntfrTpCcTxt;
+     private String rsrchSbjctDntfrDntfrPrdPrdStrt;
+     private String rsrchSbjctDntfrDntfrPrdPrdNd;
+     private String rsrchSbjctDntfrDntfrSsgnr;
+     private String rsrchSbjctDntfrDntfrVlue;
+     private String rsrchSbjctDntfrDntfrSstm;
+     private String researchSubjectStatusCode;
+     private String rsrchSbjctPrdPrdStrt;
+     private String researchSubjectPeriodPeriodEnd;
+     private String researchSubjectStudyReference;
+     private String rsrchSbjctNdvdlRfrnce;
+     private String researchSubjectAssignedArmString;
+     private String researchSubjectActualArmString;
+     private String researchSubjectConsentReference;
 
     public Researchsubject() {
     }
 
-	
-    public Researchsubject(String rsrchSbjctDntfrCdngCde) {
-        this.rsrchSbjctDntfrCdngCde = rsrchSbjctDntfrCdngCde;
-    }
-    public Researchsubject(String rsrchSbjctDntfrCdngCde, String rsrchSbjctDntfrCdngSrSlctd, String rsrchSbjctDntfrCdngDsplay, String rsrchSbjctDntfrCdngVrsn, String rsrchSbjctDntfrCdngSstm, String researchSubjectStatus, String rsrchSbjctPrdCdngSrSlctd, String researchSubjectPeriodCodingCode, String rsrchSbjctPrdCdngDsplay, String rsrchSbjctPrdCdngVrsn, String rsrchSbjctPrdCdngSstm, String researchSubjectStudy, String researchSubjectIndividual, String researchSubjectAssignedArm, String researchSubjectActualArm, String researchSubjectConsent) {
-       this.rsrchSbjctDntfrCdngCde = rsrchSbjctDntfrCdngCde;
-       this.rsrchSbjctDntfrCdngSrSlctd = rsrchSbjctDntfrCdngSrSlctd;
-       this.rsrchSbjctDntfrCdngDsplay = rsrchSbjctDntfrCdngDsplay;
-       this.rsrchSbjctDntfrCdngVrsn = rsrchSbjctDntfrCdngVrsn;
-       this.rsrchSbjctDntfrCdngSstm = rsrchSbjctDntfrCdngSstm;
-       this.researchSubjectStatus = researchSubjectStatus;
-       this.rsrchSbjctPrdCdngSrSlctd = rsrchSbjctPrdCdngSrSlctd;
-       this.researchSubjectPeriodCodingCode = researchSubjectPeriodCodingCode;
-       this.rsrchSbjctPrdCdngDsplay = rsrchSbjctPrdCdngDsplay;
-       this.rsrchSbjctPrdCdngVrsn = rsrchSbjctPrdCdngVrsn;
-       this.rsrchSbjctPrdCdngSstm = rsrchSbjctPrdCdngSstm;
-       this.researchSubjectStudy = researchSubjectStudy;
-       this.researchSubjectIndividual = researchSubjectIndividual;
-       this.researchSubjectAssignedArm = researchSubjectAssignedArm;
-       this.researchSubjectActualArm = researchSubjectActualArm;
-       this.researchSubjectConsent = researchSubjectConsent;
+    public Researchsubject(String rsrchSbjctDntfrDntfrSe, String rsrchSbjctDntfrDntfrTpCcCSstm, String rsrchSbjctDntfrDntfrTpCcCVrsn, String rsrchSbjctDntfrDntfrTpCcCCde, String rsrchSbjctDntfrDntfrTpCcCDsplay, String rsrchSbjctDntfrDntfrTpCcCSrSlctd, String rsrchSbjctDntfrDntfrTpCcTxt, String rsrchSbjctDntfrDntfrPrdPrdStrt, String rsrchSbjctDntfrDntfrPrdPrdNd, String rsrchSbjctDntfrDntfrSsgnr, String rsrchSbjctDntfrDntfrVlue, String rsrchSbjctDntfrDntfrSstm, String researchSubjectStatusCode, String rsrchSbjctPrdPrdStrt, String researchSubjectPeriodPeriodEnd, String researchSubjectStudyReference, String rsrchSbjctNdvdlRfrnce, String researchSubjectAssignedArmString, String researchSubjectActualArmString, String researchSubjectConsentReference) {
+       this.rsrchSbjctDntfrDntfrSe = rsrchSbjctDntfrDntfrSe;
+       this.rsrchSbjctDntfrDntfrTpCcCSstm = rsrchSbjctDntfrDntfrTpCcCSstm;
+       this.rsrchSbjctDntfrDntfrTpCcCVrsn = rsrchSbjctDntfrDntfrTpCcCVrsn;
+       this.rsrchSbjctDntfrDntfrTpCcCCde = rsrchSbjctDntfrDntfrTpCcCCde;
+       this.rsrchSbjctDntfrDntfrTpCcCDsplay = rsrchSbjctDntfrDntfrTpCcCDsplay;
+       this.rsrchSbjctDntfrDntfrTpCcCSrSlctd = rsrchSbjctDntfrDntfrTpCcCSrSlctd;
+       this.rsrchSbjctDntfrDntfrTpCcTxt = rsrchSbjctDntfrDntfrTpCcTxt;
+       this.rsrchSbjctDntfrDntfrPrdPrdStrt = rsrchSbjctDntfrDntfrPrdPrdStrt;
+       this.rsrchSbjctDntfrDntfrPrdPrdNd = rsrchSbjctDntfrDntfrPrdPrdNd;
+       this.rsrchSbjctDntfrDntfrSsgnr = rsrchSbjctDntfrDntfrSsgnr;
+       this.rsrchSbjctDntfrDntfrVlue = rsrchSbjctDntfrDntfrVlue;
+       this.rsrchSbjctDntfrDntfrSstm = rsrchSbjctDntfrDntfrSstm;
+       this.researchSubjectStatusCode = researchSubjectStatusCode;
+       this.rsrchSbjctPrdPrdStrt = rsrchSbjctPrdPrdStrt;
+       this.researchSubjectPeriodPeriodEnd = researchSubjectPeriodPeriodEnd;
+       this.researchSubjectStudyReference = researchSubjectStudyReference;
+       this.rsrchSbjctNdvdlRfrnce = rsrchSbjctNdvdlRfrnce;
+       this.researchSubjectAssignedArmString = researchSubjectAssignedArmString;
+       this.researchSubjectActualArmString = researchSubjectActualArmString;
+       this.researchSubjectConsentReference = researchSubjectConsentReference;
     }
    
-    public String getRsrchSbjctDntfrCdngCde() {
-        return this.rsrchSbjctDntfrCdngCde;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setRsrchSbjctDntfrCdngCde(String rsrchSbjctDntfrCdngCde) {
-        this.rsrchSbjctDntfrCdngCde = rsrchSbjctDntfrCdngCde;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrSe()
+    {
+        return this.rsrchSbjctDntfrDntfrSe;
     }
     
-    
-    
-    public String getRsrchSbjctDntfrCdngSrSlctd() {
-        return this.rsrchSbjctDntfrCdngSrSlctd;
+    public void setRsrchSbjctDntfrDntfrSe
+        (String rsrchSbjctDntfrDntfrSe) 
+        {
+      this.rsrchSbjctDntfrDntfrSe = rsrchSbjctDntfrDntfrSe;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcCSstm()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcCSstm;
     }
     
-    public void setRsrchSbjctDntfrCdngSrSlctd(String rsrchSbjctDntfrCdngSrSlctd) {
-        this.rsrchSbjctDntfrCdngSrSlctd = rsrchSbjctDntfrCdngSrSlctd;
+    public void setRsrchSbjctDntfrDntfrTpCcCSstm
+        (String rsrchSbjctDntfrDntfrTpCcCSstm) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcCSstm = rsrchSbjctDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcCVrsn()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcCVrsn;
     }
     
-    
-    
-    public String getRsrchSbjctDntfrCdngDsplay() {
-        return this.rsrchSbjctDntfrCdngDsplay;
+    public void setRsrchSbjctDntfrDntfrTpCcCVrsn
+        (String rsrchSbjctDntfrDntfrTpCcCVrsn) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcCVrsn = rsrchSbjctDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcCCde()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcCCde;
     }
     
-    public void setRsrchSbjctDntfrCdngDsplay(String rsrchSbjctDntfrCdngDsplay) {
-        this.rsrchSbjctDntfrCdngDsplay = rsrchSbjctDntfrCdngDsplay;
+    public void setRsrchSbjctDntfrDntfrTpCcCCde
+        (String rsrchSbjctDntfrDntfrTpCcCCde) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcCCde = rsrchSbjctDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcCDsplay()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcCDsplay;
     }
     
-    
-    
-    public String getRsrchSbjctDntfrCdngVrsn() {
-        return this.rsrchSbjctDntfrCdngVrsn;
+    public void setRsrchSbjctDntfrDntfrTpCcCDsplay
+        (String rsrchSbjctDntfrDntfrTpCcCDsplay) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcCDsplay = rsrchSbjctDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcCSrSlctd;
     }
     
-    public void setRsrchSbjctDntfrCdngVrsn(String rsrchSbjctDntfrCdngVrsn) {
-        this.rsrchSbjctDntfrCdngVrsn = rsrchSbjctDntfrCdngVrsn;
+    public void setRsrchSbjctDntfrDntfrTpCcCSrSlctd
+        (String rsrchSbjctDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcCSrSlctd = rsrchSbjctDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrTpCcTxt()
+    {
+        return this.rsrchSbjctDntfrDntfrTpCcTxt;
     }
     
-    
-    
-    public String getRsrchSbjctDntfrCdngSstm() {
-        return this.rsrchSbjctDntfrCdngSstm;
+    public void setRsrchSbjctDntfrDntfrTpCcTxt
+        (String rsrchSbjctDntfrDntfrTpCcTxt) 
+        {
+      this.rsrchSbjctDntfrDntfrTpCcTxt = rsrchSbjctDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrPrdPrdStrt()
+    {
+        return this.rsrchSbjctDntfrDntfrPrdPrdStrt;
     }
     
-    public void setRsrchSbjctDntfrCdngSstm(String rsrchSbjctDntfrCdngSstm) {
-        this.rsrchSbjctDntfrCdngSstm = rsrchSbjctDntfrCdngSstm;
+    public void setRsrchSbjctDntfrDntfrPrdPrdStrt
+        (String rsrchSbjctDntfrDntfrPrdPrdStrt) 
+        {
+      this.rsrchSbjctDntfrDntfrPrdPrdStrt = rsrchSbjctDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrPrdPrdNd()
+    {
+        return this.rsrchSbjctDntfrDntfrPrdPrdNd;
     }
     
-    
-    
-    public String getResearchSubjectStatus() {
-        return this.researchSubjectStatus;
+    public void setRsrchSbjctDntfrDntfrPrdPrdNd
+        (String rsrchSbjctDntfrDntfrPrdPrdNd) 
+        {
+      this.rsrchSbjctDntfrDntfrPrdPrdNd = rsrchSbjctDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrSsgnr()
+    {
+        return this.rsrchSbjctDntfrDntfrSsgnr;
     }
     
-    public void setResearchSubjectStatus(String researchSubjectStatus) {
-        this.researchSubjectStatus = researchSubjectStatus;
+    public void setRsrchSbjctDntfrDntfrSsgnr
+        (String rsrchSbjctDntfrDntfrSsgnr) 
+        {
+      this.rsrchSbjctDntfrDntfrSsgnr = rsrchSbjctDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrVlue()
+    {
+        return this.rsrchSbjctDntfrDntfrVlue;
     }
     
-    
-    
-    public String getRsrchSbjctPrdCdngSrSlctd() {
-        return this.rsrchSbjctPrdCdngSrSlctd;
+    public void setRsrchSbjctDntfrDntfrVlue
+        (String rsrchSbjctDntfrDntfrVlue) 
+        {
+      this.rsrchSbjctDntfrDntfrVlue = rsrchSbjctDntfrDntfrVlue;
+}
+    public 
+    String 
+    getRsrchSbjctDntfrDntfrSstm()
+    {
+        return this.rsrchSbjctDntfrDntfrSstm;
     }
     
-    public void setRsrchSbjctPrdCdngSrSlctd(String rsrchSbjctPrdCdngSrSlctd) {
-        this.rsrchSbjctPrdCdngSrSlctd = rsrchSbjctPrdCdngSrSlctd;
+    public void setRsrchSbjctDntfrDntfrSstm
+        (String rsrchSbjctDntfrDntfrSstm) 
+        {
+      this.rsrchSbjctDntfrDntfrSstm = rsrchSbjctDntfrDntfrSstm;
+}
+    public 
+    String 
+    getResearchSubjectStatusCode()
+    {
+        return this.researchSubjectStatusCode;
     }
     
-    
-    
-    public String getResearchSubjectPeriodCodingCode() {
-        return this.researchSubjectPeriodCodingCode;
+    public void setResearchSubjectStatusCode
+        (String researchSubjectStatusCode) 
+        {
+      this.researchSubjectStatusCode = researchSubjectStatusCode;
+}
+    public 
+    String 
+    getRsrchSbjctPrdPrdStrt()
+    {
+        return this.rsrchSbjctPrdPrdStrt;
     }
     
-    public void setResearchSubjectPeriodCodingCode(String researchSubjectPeriodCodingCode) {
-        this.researchSubjectPeriodCodingCode = researchSubjectPeriodCodingCode;
+    public void setRsrchSbjctPrdPrdStrt
+        (String rsrchSbjctPrdPrdStrt) 
+        {
+      this.rsrchSbjctPrdPrdStrt = rsrchSbjctPrdPrdStrt;
+}
+    public 
+    String 
+    getResearchSubjectPeriodPeriodEnd()
+    {
+        return this.researchSubjectPeriodPeriodEnd;
     }
     
-    
-    
-    public String getRsrchSbjctPrdCdngDsplay() {
-        return this.rsrchSbjctPrdCdngDsplay;
+    public void setResearchSubjectPeriodPeriodEnd
+        (String researchSubjectPeriodPeriodEnd) 
+        {
+      this.researchSubjectPeriodPeriodEnd = researchSubjectPeriodPeriodEnd;
+}
+    public 
+    String 
+    getResearchSubjectStudyReference()
+    {
+        return this.researchSubjectStudyReference;
     }
     
-    public void setRsrchSbjctPrdCdngDsplay(String rsrchSbjctPrdCdngDsplay) {
-        this.rsrchSbjctPrdCdngDsplay = rsrchSbjctPrdCdngDsplay;
+    public void setResearchSubjectStudyReference
+        (String researchSubjectStudyReference) 
+        {
+      this.researchSubjectStudyReference = researchSubjectStudyReference;
+}
+    public 
+    String 
+    getRsrchSbjctNdvdlRfrnce()
+    {
+        return this.rsrchSbjctNdvdlRfrnce;
     }
     
-    
-    
-    public String getRsrchSbjctPrdCdngVrsn() {
-        return this.rsrchSbjctPrdCdngVrsn;
+    public void setRsrchSbjctNdvdlRfrnce
+        (String rsrchSbjctNdvdlRfrnce) 
+        {
+      this.rsrchSbjctNdvdlRfrnce = rsrchSbjctNdvdlRfrnce;
+}
+    public 
+    String 
+    getResearchSubjectAssignedArmString()
+    {
+        return this.researchSubjectAssignedArmString;
     }
     
-    public void setRsrchSbjctPrdCdngVrsn(String rsrchSbjctPrdCdngVrsn) {
-        this.rsrchSbjctPrdCdngVrsn = rsrchSbjctPrdCdngVrsn;
+    public void setResearchSubjectAssignedArmString
+        (String researchSubjectAssignedArmString) 
+        {
+      this.researchSubjectAssignedArmString = researchSubjectAssignedArmString;
+}
+    public 
+    String 
+    getResearchSubjectActualArmString()
+    {
+        return this.researchSubjectActualArmString;
     }
     
-    
-    
-    public String getRsrchSbjctPrdCdngSstm() {
-        return this.rsrchSbjctPrdCdngSstm;
+    public void setResearchSubjectActualArmString
+        (String researchSubjectActualArmString) 
+        {
+      this.researchSubjectActualArmString = researchSubjectActualArmString;
+}
+    public 
+    String 
+    getResearchSubjectConsentReference()
+    {
+        return this.researchSubjectConsentReference;
     }
     
-    public void setRsrchSbjctPrdCdngSstm(String rsrchSbjctPrdCdngSstm) {
-        this.rsrchSbjctPrdCdngSstm = rsrchSbjctPrdCdngSstm;
-    }
-    
-    
-    
-    public String getResearchSubjectStudy() {
-        return this.researchSubjectStudy;
-    }
-    
-    public void setResearchSubjectStudy(String researchSubjectStudy) {
-        this.researchSubjectStudy = researchSubjectStudy;
-    }
-    
-    
-    
-    public String getResearchSubjectIndividual() {
-        return this.researchSubjectIndividual;
-    }
-    
-    public void setResearchSubjectIndividual(String researchSubjectIndividual) {
-        this.researchSubjectIndividual = researchSubjectIndividual;
-    }
-    
-    
-    
-    public String getResearchSubjectAssignedArm() {
-        return this.researchSubjectAssignedArm;
-    }
-    
-    public void setResearchSubjectAssignedArm(String researchSubjectAssignedArm) {
-        this.researchSubjectAssignedArm = researchSubjectAssignedArm;
-    }
-    
-    
-    
-    public String getResearchSubjectActualArm() {
-        return this.researchSubjectActualArm;
-    }
-    
-    public void setResearchSubjectActualArm(String researchSubjectActualArm) {
-        this.researchSubjectActualArm = researchSubjectActualArm;
-    }
-    
-    
-    
-    public String getResearchSubjectConsent() {
-        return this.researchSubjectConsent;
-    }
-    
-    public void setResearchSubjectConsent(String researchSubjectConsent) {
-        this.researchSubjectConsent = researchSubjectConsent;
-    }
-    
-    
-    
+    public void setResearchSubjectConsentReference
+        (String researchSubjectConsentReference) 
+        {
+      this.researchSubjectConsentReference = researchSubjectConsentReference;
+}
 
 
 

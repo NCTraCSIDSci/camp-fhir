@@ -1,69 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Operationoutcome" optimistic-lock="none" table="operationoutcome">
-        <id name="operationOutcomeIssueSeverity" type="string">
-            <column length="512" name="OperationOutcome_issue_severity"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="operationOutcomeIssueCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="OperationOutcome_issue_code">
-                <comment>code</comment>
+        <property name="oprtntcmSsSvrtCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.severity", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["Issue"] , "methodName" : "setSeverity"}</meta>
+            <column length="512" name="Oprtntcm_ss_svrt_cde">
+                <comment>{ "tree" :"OperationOutcome.issue.severity", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["Issue"] , "methodName" : "setSeverity"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="operationOutcomeIssueCodeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["Issue"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="OperationOutcome_issue_code_code">
+                <comment>{ "tree" :"OperationOutcome.issue.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["Issue"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="oprtntcmSsDtlsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setSystem"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_cdng_C_sstm">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="oprtntcmSsDtlsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setVersion"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="oprtntcmSsDtlsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setCode"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_cdng_C_cde">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="oprtntcmSsDtlsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="oprtntcmSsDtlsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Oprtntcm_ss_dtls_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="oprtntcmSsDtlsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="operationOutcomeIssueDiagnostics" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="OperationOutcome_issue_diagnostics">
-                <comment>string</comment>
+        <property name="oprtntcmSsDtlsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, setText"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dtls_CC_txt">
+                <comment>{ "tree" :"OperationOutcome.issue.details", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDetails, setText"}</comment>
             </column>
         </property>
-        <property name="operationOutcomeIssueLocation" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="OperationOutcome_issue_location">
-                <comment>string</comment>
+        <property name="oprtntcmSsDgnstcsStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.diagnostics", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDiagnostics"}</meta>
+            <column length="65535" name="Oprtntcm_ss_dgnstcs_strng">
+                <comment>{ "tree" :"OperationOutcome.issue.diagnostics", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["Issue"] , "methodName" : "setDiagnostics"}</comment>
             </column>
         </property>
-        <property name="operationOutcomeIssueExpression" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="OperationOutcome_issue_expression">
-                <comment>string</comment>
+        <property name="oprtntcmSsLctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.location", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["Issue"] , "methodName" : "addLocation"}</meta>
+            <column length="65535" name="Oprtntcm_ss_lctn_strng">
+                <comment>{ "tree" :"OperationOutcome.issue.location", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["Issue"] , "methodName" : "addLocation"}</comment>
+            </column>
+        </property>
+        <property name="oprtntcmSsXprssnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"OperationOutcome.issue.expression", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["Issue"] , "methodName" : "addExpression"}</meta>
+            <column length="65535" name="Oprtntcm_ss_xprssn_strng">
+                <comment>{ "tree" :"OperationOutcome.issue.expression", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["Issue"] , "methodName" : "addExpression"}</comment>
             </column>
         </property>
     </class>

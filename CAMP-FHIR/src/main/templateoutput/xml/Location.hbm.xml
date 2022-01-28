@@ -1,627 +1,381 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Location" optimistic-lock="none" table="location">
-        <id name="lctnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Lctn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="lctnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_use_code</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_s_cde">
-                <comment>Location_identifierIdentifier_use_code</comment>
+        <property name="locationIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Location_identifier_Identifier_use">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Location_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="lctnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Location_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="lctnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Location_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="lctnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Location_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="lctnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Location_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="lctnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Prd_strt">
-                <comment>Location_identifierIdentifier_Period_start</comment>
+        <property name="lctnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Prd_nd">
-                <comment>Location_identifierIdentifier_Period_end</comment>
+        <property name="lctnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Location_identifierIdentifier_Reference_reference</comment>
+        <property name="lctnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Location_identifierIdentifier_Reference_type</comment>
+        <property name="lctnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Location_identifierIdentifier_Reference_identifier</comment>
+        <property name="lctnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Location_identifierIdentifier_Reference_display</comment>
+        <property name="lctnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Lctn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Location.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_value_string</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_vl_strng">
-                <comment>Location_identifierIdentifier_value_string</comment>
+        <property name="locationStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Location_status_code">
+                <comment>{ "tree" :"Location.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="lctnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Location_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Lctn_dntfr_dntfr_sstm_ri">
-                <comment>Location_identifierIdentifier_system_uri</comment>
+        <property name="lctnPrtnlSttsCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.operationalStatus", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setUserSelected"}</meta>
+            <column length="65535" name="Lctn_prtnlStts_C_srSlctd">
+                <comment>{ "tree" :"Location.operationalStatus", "datatype" : "Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="locationStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Location_status">
-                <comment>code</comment>
+        <property name="locationOperationalStatusCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.operationalStatus", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setCode"}</meta>
+            <column length="65535" name="Location_operationalStatus_C_code">
+                <comment>{ "tree" :"Location.operationalStatus", "datatype" : "Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setCode"}</comment>
             </column>
         </property>
-        <property name="lctnPrtnlSttsCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="Lctn_prtnlStts_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="lctnPrtnlSttsCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.operationalStatus", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setVersion"}</meta>
+            <column length="65535" name="Lctn_prtnlStts_C_vrsn">
+                <comment>{ "tree" :"Location.operationalStatus", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setVersion"}</comment>
             </column>
         </property>
-        <property name="lctnPrtnlSttsCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="Lctn_prtnlStts_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="lctnPrtnlSttsCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.operationalStatus", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setDisplay"}</meta>
+            <column length="65535" name="Lctn_prtnlStts_C_dsplay">
+                <comment>{ "tree" :"Location.operationalStatus", "datatype" : "Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lctnPrtnlSttsCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="Lctn_prtnlStts_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="lctnPrtnlSttsCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.operationalStatus", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setSystem"}</meta>
+            <column length="65535" name="Lctn_prtnlStts_C_sstm">
+                <comment>{ "tree" :"Location.operationalStatus", "datatype" : "Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus, setSystem"}</comment>
             </column>
         </property>
-        <property name="lctnPrtnlSttsCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="Lctn_prtnlStts_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="locationNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Location_name_string">
+                <comment>{ "tree" :"Location.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="lctnPrtnlSttsCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="Lctn_prtnlStts_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="locationAliasString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</meta>
+            <column length="65535" name="Location_alias_string">
+                <comment>{ "tree" :"Location.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</comment>
             </column>
         </property>
-        <property name="locationName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Location_name">
-                <comment>string</comment>
+        <property name="locationDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Location_description_string">
+                <comment>{ "tree" :"Location.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="locationAlias" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Location_alias">
-                <comment>string</comment>
+        <property name="locationModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.mode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="Location_mode_code">
+                <comment>{ "tree" :"Location.mode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="locationDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Location_description">
-                <comment>string</comment>
+        <property name="locationTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Location_type_CC_coding_C_system">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="locationMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Location_mode">
-                <comment>code</comment>
+        <property name="locationTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Location_type_CC_coding_C_version">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="locationTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="Location_type_CC_coding_C_code">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="locationTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Location_type_CC_coding_C_display">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="lctnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lctn_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="locationTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="Location_type_CC_text">
+                <comment>{ "tree" :"Location.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="lctnTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Lctn_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="lctnTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lctn_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="locationTelecomContactPointUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Location_telecom_ContactPoint_use">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
+        <property name="lctnTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lctn_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
+        <property name="lctnTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lctn_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
+        <property name="locationTelecomContactPointRank" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Location_telecom_ContactPoint_rank">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
+        <property name="lctnTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Lctn_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Location.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
+        <property name="locationAddressAddressUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setUse"}</meta>
+            <column length="65535" name="Location_address_Address_use">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="lctnTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Lctn_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
+        <property name="locationAddressAddressType" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setType"}</meta>
+            <column length="65535" name="Location_address_Address_type">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setType"}</comment>
             </column>
         </property>
-        <property name="locationAddressAddressUseCode" type="string">
-            <meta attribute="resource-type">Address_use_code</meta>
-            <column length="65535" name="Location_address_Address_use_code">
-                <comment>Address_use_code</comment>
+        <property name="lctnDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lctn_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="locationAddressAddressTypeCode" type="string">
-            <meta attribute="resource-type">Address_type_code</meta>
-            <column length="65535" name="Location_address_Address_type_code">
-                <comment>Address_type_code</comment>
+        <property name="lctnDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lctn_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssPrdStrt" type="string">
-            <meta attribute="resource-type">Address_Period_start</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_Prd_strt">
-                <comment>Address_Period_start</comment>
+        <property name="locationAddressAddressText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setText"}</meta>
+            <column length="65535" name="Location_address_Address_text">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setText"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssPrdNd" type="string">
-            <meta attribute="resource-type">Address_Period_end</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_Prd_nd">
-                <comment>Address_Period_end</comment>
+        <property name="locationAddressAddressLine" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, addLine"}</meta>
+            <column length="65535" name="Location_address_Address_line">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssTxtStrng" type="string">
-            <meta attribute="resource-type">Address_text_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_txt_strng">
-                <comment>Address_text_string</comment>
+        <property name="locationAddressAddressCity" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setCity"}</meta>
+            <column length="65535" name="Location_address_Address_city">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssLnStrng" type="string">
-            <meta attribute="resource-type">Address_line_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_ln_strng">
-                <comment>Address_line_string</comment>
+        <property name="locationAddressAddressDistrict" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setDistrict"}</meta>
+            <column length="65535" name="Location_address_Address_district">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssCtStrng" type="string">
-            <meta attribute="resource-type">Address_city_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_ct_strng">
-                <comment>Address_city_string</comment>
+        <property name="locationAddressAddressState" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setState"}</meta>
+            <column length="65535" name="Location_address_Address_state">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setState"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssDstrctStrng" type="string">
-            <meta attribute="resource-type">Address_district_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_dstrct_strng">
-                <comment>Address_district_string</comment>
+        <property name="lctnDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPostalCode"}</meta>
+            <column length="65535" name="Lctn_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssSttStrng" type="string">
-            <meta attribute="resource-type">Address_state_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_stt_strng">
-                <comment>Address_state_string</comment>
+        <property name="locationAddressAddressCountry" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setCounty"}</meta>
+            <column length="65535" name="Location_address_Address_country">
+                <comment>{ "tree" :"Location.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssPstlCdStrng" type="string">
-            <meta attribute="resource-type">Address_postalCode_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_pstlCd_strng">
-                <comment>Address_postalCode_string</comment>
+        <property name="lctnPhsclTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lctn_phsclTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lctnDdrssDdrssCntrStrng" type="string">
-            <meta attribute="resource-type">Address_country_string</meta>
-            <column length="65535" name="Lctn_ddrss_ddrss_cntr_strng">
-                <comment>Address_country_string</comment>
+        <property name="lctnPhsclTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lctn_phsclTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="lctnPhsclTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setCode"}</meta>
+            <column length="65535" name="Lctn_phsclTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="lctnPhsclTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lctn_phsclTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="lctnPhsclTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lctn_phsclTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="locationPhysicalTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, setText"}</meta>
+            <column length="65535" name="Location_physicalType_CC_text">
+                <comment>{ "tree" :"Location.physicalType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPhysicalType, setText"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="lctnPstnLngtdDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.position.longitude", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["setPosition"] , "methodName" : "setLongitude"}</meta>
+            <column length="65535" name="Lctn_pstn_lngtd_dcml">
+                <comment>{ "tree" :"Location.position.longitude", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["setPosition"] , "methodName" : "setLongitude"}</comment>
             </column>
         </property>
-        <property name="lctnPhsclTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lctn_phsclTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="locationPositionLatitudeDecimal" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.position.latitude", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["setPosition"] , "methodName" : "setLatitude"}</meta>
+            <column length="65535" name="Location_position_latitude_decimal">
+                <comment>{ "tree" :"Location.position.latitude", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["setPosition"] , "methodName" : "setLatitude"}</comment>
             </column>
         </property>
-        <property name="locationPositionLongitude" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Location_position_longitude">
-                <comment>decimal</comment>
+        <property name="locationPositionAltitudeDecimal" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.position.altitude", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setPosition"] , "methodName" : "setAltitude"}</meta>
+            <column length="65535" name="Location_position_altitude_decimal">
+                <comment>{ "tree" :"Location.position.altitude", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : ["setPosition"] , "methodName" : "setAltitude"}</comment>
             </column>
         </property>
-        <property name="locationPositionLatitude" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Location_position_latitude">
-                <comment>decimal</comment>
+        <property name="lctnMngngrgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</meta>
+            <column length="65535" name="Lctn_mngngrgnztn_Rfrnce">
+                <comment>{ "tree" :"Location.managingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManagingOrganization"}</comment>
             </column>
         </property>
-        <property name="locationPositionAltitude" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="Location_position_altitude">
-                <comment>decimal</comment>
+        <property name="locationPartOfReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</meta>
+            <column length="65535" name="Location_partOf_Reference">
+                <comment>{ "tree" :"Location.partOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPartOf"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="lctnHrsfprtnDsfWkCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.hoursOfOperation.daysOfWeek", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addHoursOfOperation"] , "methodName" : "addDaysOfWeek"}</meta>
+            <column length="65535" name="Lctn_hrsfprtn_dsfWk_cde">
+                <comment>{ "tree" :"Location.hoursOfOperation.daysOfWeek", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addHoursOfOperation"] , "methodName" : "addDaysOfWeek"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="lctnHrsfprtnLlDBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.hoursOfOperation.allDay", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setAllDay"}</meta>
+            <column length="65535" name="Lctn_hrsfprtn_llD_bln">
+                <comment>{ "tree" :"Location.hoursOfOperation.allDay", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setAllDay"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="lctnHrsfprtnPnngTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.hoursOfOperation.openingTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setOpeningTime"}</meta>
+            <column length="65535" name="Lctn_hrsfprtn_pnngTm_tme">
+                <comment>{ "tree" :"Location.hoursOfOperation.openingTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setOpeningTime"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="lctnHrsfprtnClsngTmTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.hoursOfOperation.closingTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setClosingTime"}</meta>
+            <column length="65535" name="Lctn_hrsfprtn_clsngTm_tme">
+                <comment>{ "tree" :"Location.hoursOfOperation.closingTime", "datatype" : "time", "cardinality" : "ZeroOne", "elementtree" : ["addHoursOfOperation"] , "methodName" : "setClosingTime"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="lctnVlbltxcptnsStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.availabilityExceptions", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAvailabilityExceptions"}</meta>
+            <column length="65535" name="Lctn_vlbltxcptns_strng">
+                <comment>{ "tree" :"Location.availabilityExceptions", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAvailabilityExceptions"}</comment>
             </column>
         </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="lctnMngngrgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Lctn_mngngrgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="lctnPrtfRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lctn_prtf_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="locationPartOfReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Location_partOf_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="lctnHrsfprtnDsfWk" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Lctn_hrsfprtn_dsfWk">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="locationHoursOfOperationAllDay" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Location_hoursOfOperation_allDay">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="lctnHrsfprtnPnngTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="Lctn_hrsfprtn_pnngTme">
-                <comment>time</comment>
-            </column>
-        </property>
-        <property name="lctnHrsfprtnClsngTme" type="string">
-            <meta attribute="resource-type">time</meta>
-            <column length="65535" name="Lctn_hrsfprtn_clsngTme">
-                <comment>time</comment>
-            </column>
-        </property>
-        <property name="locationAvailabilityExceptions" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Location_availabilityExceptions">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="lctnNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Lctn_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="locationEndpointReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Location.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="Location_endpoint_Reference">
+                <comment>{ "tree" :"Location.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
     </class>

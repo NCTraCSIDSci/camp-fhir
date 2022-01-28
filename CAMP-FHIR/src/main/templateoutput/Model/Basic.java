@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,617 +10,320 @@ package main.templateoutput.Model;
 public class Basic  implements java.io.Serializable {
 
 
-     private String bscDntfrDntfrTpCdblCncptCdngCde;
-     private String bscDntfrDntfrSCde;
-     private String bscDntfrDntfrTpCdblCncptCdngSstm;
-     private String bscDntfrDntfrTpCdblCncptCdngVrsn;
-     private String bscDntfrDntfrTpCdblCncptCdngDsplay;
-     private String bscDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String bscDntfrDntfrCdblCncptTxt;
-     private String bscDntfrDntfrPrdStrt;
-     private String bscDntfrDntfrPrdNd;
-     private String bscDntfrDntfrRfrncRfrnce;
-     private String bscDntfrDntfrRfrncTpe;
-     private String bscDntfrDntfrRfrncDntfr;
-     private String bscDntfrDntfrRfrncDsplay;
-     private String bscDntfrDntfrVlStrng;
-     private String bscDntfrDntfrSstmRi;
-     private String bscCdCdblCncptCdngSstm;
-     private String bscCdCdblCncptCdngVrsn;
-     private String bscCdCdblCncptCdngCde;
-     private String bscCdCdblCncptCdngDsplay;
-     private String bscCdCdblCncptCdngSrSlctd;
-     private String bscCdCdblCncptTxtStrng;
-     private String bscSbjctRfrncDntfrDntfrCdblCncptCdng;
-     private String bscSbjctRfrncDntfrDntfrCdblCncptTxt;
-     private String bscSbjctRfrncDntfrDntfrPrdStrt;
-     private String bscSbjctRfrncDntfrDntfrPrdNd;
-     private String bscSbjctRfrncDntfrDntfrRfrncRfrnce;
-     private String bscSbjctRfrncDntfrDntfrRfrncTpe;
-     private String bscSbjctRfrncDntfrDntfrRfrncDntfr;
-     private String bscSbjctRfrncDntfrDntfrRfrncDsplay;
-     private String bscSbjctRfrncDntfrSe;
-     private String bscSbjctRfrncDntfrSstm;
-     private String bscSbjctRfrncDntfrVlue;
-     private String bscSbjctRfrncRfrncStrng;
-     private String bscSbjctRfrncDsplStrng;
-     private String basicSubjectReferenceTypeUri;
-     private String basicCreated;
-     private String bscThrRfrncDntfrDntfrCdblCncptCdng;
-     private String bscThrRfrncDntfrDntfrCdblCncptTxt;
-     private String bscThrRfrncDntfrDntfrPrdStrt;
-     private String bscThrRfrncDntfrDntfrPrdNd;
-     private String bscThrRfrncDntfrDntfrRfrncRfrnce;
-     private String bscThrRfrncDntfrDntfrRfrncTpe;
-     private String bscThrRfrncDntfrDntfrRfrncDntfr;
-     private String bscThrRfrncDntfrDntfrRfrncDsplay;
-     private String bscThrRfrncDntfrSe;
-     private String bscThrRfrncDntfrSstm;
-     private String bscThrRfrncDntfrVlue;
-     private String bscThrRfrncRfrncStrng;
-     private String bscThrRfrncDsplStrng;
-     private String basicAuthorReferenceTypeUri;
+     private Integer id;
+     private String basicIdentifierIdentifierUse;
+     private String bscDntfrDntfrTpCcCSstm;
+     private String bscDntfrDntfrTpCcCVrsn;
+     private String bscDntfrDntfrTpCcCCde;
+     private String bscDntfrDntfrTpCcCDsplay;
+     private String bscDntfrDntfrTpCcCSrSlctd;
+     private String bscDntfrDntfrTpCcTxt;
+     private String bscDntfrDntfrPrdPrdStrt;
+     private String bscDntfrDntfrPrdPrdNd;
+     private String bscDntfrDntfrSsgnr;
+     private String basicIdentifierIdentifierValue;
+     private String basicIdentifierIdentifierSystem;
+     private String basicCodeCcCodingCSystem;
+     private String basicCodeCcCodingCVersion;
+     private String basicCodeCcCodingCCode;
+     private String basicCodeCcCodingCDisplay;
+     private String bscCdCcCdngCSrSlctd;
+     private String basicCodeCcText;
+     private String basicSubjectReference;
+     private String basicCreatedDate;
+     private String basicAuthorReference;
 
     public Basic() {
     }
 
-	
-    public Basic(String bscDntfrDntfrTpCdblCncptCdngCde) {
-        this.bscDntfrDntfrTpCdblCncptCdngCde = bscDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Basic(String bscDntfrDntfrTpCdblCncptCdngCde, String bscDntfrDntfrSCde, String bscDntfrDntfrTpCdblCncptCdngSstm, String bscDntfrDntfrTpCdblCncptCdngVrsn, String bscDntfrDntfrTpCdblCncptCdngDsplay, String bscDntfrDntfrTpCdblCncptCdngSrSlctd, String bscDntfrDntfrCdblCncptTxt, String bscDntfrDntfrPrdStrt, String bscDntfrDntfrPrdNd, String bscDntfrDntfrRfrncRfrnce, String bscDntfrDntfrRfrncTpe, String bscDntfrDntfrRfrncDntfr, String bscDntfrDntfrRfrncDsplay, String bscDntfrDntfrVlStrng, String bscDntfrDntfrSstmRi, String bscCdCdblCncptCdngSstm, String bscCdCdblCncptCdngVrsn, String bscCdCdblCncptCdngCde, String bscCdCdblCncptCdngDsplay, String bscCdCdblCncptCdngSrSlctd, String bscCdCdblCncptTxtStrng, String bscSbjctRfrncDntfrDntfrCdblCncptCdng, String bscSbjctRfrncDntfrDntfrCdblCncptTxt, String bscSbjctRfrncDntfrDntfrPrdStrt, String bscSbjctRfrncDntfrDntfrPrdNd, String bscSbjctRfrncDntfrDntfrRfrncRfrnce, String bscSbjctRfrncDntfrDntfrRfrncTpe, String bscSbjctRfrncDntfrDntfrRfrncDntfr, String bscSbjctRfrncDntfrDntfrRfrncDsplay, String bscSbjctRfrncDntfrSe, String bscSbjctRfrncDntfrSstm, String bscSbjctRfrncDntfrVlue, String bscSbjctRfrncRfrncStrng, String bscSbjctRfrncDsplStrng, String basicSubjectReferenceTypeUri, String basicCreated, String bscThrRfrncDntfrDntfrCdblCncptCdng, String bscThrRfrncDntfrDntfrCdblCncptTxt, String bscThrRfrncDntfrDntfrPrdStrt, String bscThrRfrncDntfrDntfrPrdNd, String bscThrRfrncDntfrDntfrRfrncRfrnce, String bscThrRfrncDntfrDntfrRfrncTpe, String bscThrRfrncDntfrDntfrRfrncDntfr, String bscThrRfrncDntfrDntfrRfrncDsplay, String bscThrRfrncDntfrSe, String bscThrRfrncDntfrSstm, String bscThrRfrncDntfrVlue, String bscThrRfrncRfrncStrng, String bscThrRfrncDsplStrng, String basicAuthorReferenceTypeUri) {
-       this.bscDntfrDntfrTpCdblCncptCdngCde = bscDntfrDntfrTpCdblCncptCdngCde;
-       this.bscDntfrDntfrSCde = bscDntfrDntfrSCde;
-       this.bscDntfrDntfrTpCdblCncptCdngSstm = bscDntfrDntfrTpCdblCncptCdngSstm;
-       this.bscDntfrDntfrTpCdblCncptCdngVrsn = bscDntfrDntfrTpCdblCncptCdngVrsn;
-       this.bscDntfrDntfrTpCdblCncptCdngDsplay = bscDntfrDntfrTpCdblCncptCdngDsplay;
-       this.bscDntfrDntfrTpCdblCncptCdngSrSlctd = bscDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.bscDntfrDntfrCdblCncptTxt = bscDntfrDntfrCdblCncptTxt;
-       this.bscDntfrDntfrPrdStrt = bscDntfrDntfrPrdStrt;
-       this.bscDntfrDntfrPrdNd = bscDntfrDntfrPrdNd;
-       this.bscDntfrDntfrRfrncRfrnce = bscDntfrDntfrRfrncRfrnce;
-       this.bscDntfrDntfrRfrncTpe = bscDntfrDntfrRfrncTpe;
-       this.bscDntfrDntfrRfrncDntfr = bscDntfrDntfrRfrncDntfr;
-       this.bscDntfrDntfrRfrncDsplay = bscDntfrDntfrRfrncDsplay;
-       this.bscDntfrDntfrVlStrng = bscDntfrDntfrVlStrng;
-       this.bscDntfrDntfrSstmRi = bscDntfrDntfrSstmRi;
-       this.bscCdCdblCncptCdngSstm = bscCdCdblCncptCdngSstm;
-       this.bscCdCdblCncptCdngVrsn = bscCdCdblCncptCdngVrsn;
-       this.bscCdCdblCncptCdngCde = bscCdCdblCncptCdngCde;
-       this.bscCdCdblCncptCdngDsplay = bscCdCdblCncptCdngDsplay;
-       this.bscCdCdblCncptCdngSrSlctd = bscCdCdblCncptCdngSrSlctd;
-       this.bscCdCdblCncptTxtStrng = bscCdCdblCncptTxtStrng;
-       this.bscSbjctRfrncDntfrDntfrCdblCncptCdng = bscSbjctRfrncDntfrDntfrCdblCncptCdng;
-       this.bscSbjctRfrncDntfrDntfrCdblCncptTxt = bscSbjctRfrncDntfrDntfrCdblCncptTxt;
-       this.bscSbjctRfrncDntfrDntfrPrdStrt = bscSbjctRfrncDntfrDntfrPrdStrt;
-       this.bscSbjctRfrncDntfrDntfrPrdNd = bscSbjctRfrncDntfrDntfrPrdNd;
-       this.bscSbjctRfrncDntfrDntfrRfrncRfrnce = bscSbjctRfrncDntfrDntfrRfrncRfrnce;
-       this.bscSbjctRfrncDntfrDntfrRfrncTpe = bscSbjctRfrncDntfrDntfrRfrncTpe;
-       this.bscSbjctRfrncDntfrDntfrRfrncDntfr = bscSbjctRfrncDntfrDntfrRfrncDntfr;
-       this.bscSbjctRfrncDntfrDntfrRfrncDsplay = bscSbjctRfrncDntfrDntfrRfrncDsplay;
-       this.bscSbjctRfrncDntfrSe = bscSbjctRfrncDntfrSe;
-       this.bscSbjctRfrncDntfrSstm = bscSbjctRfrncDntfrSstm;
-       this.bscSbjctRfrncDntfrVlue = bscSbjctRfrncDntfrVlue;
-       this.bscSbjctRfrncRfrncStrng = bscSbjctRfrncRfrncStrng;
-       this.bscSbjctRfrncDsplStrng = bscSbjctRfrncDsplStrng;
-       this.basicSubjectReferenceTypeUri = basicSubjectReferenceTypeUri;
-       this.basicCreated = basicCreated;
-       this.bscThrRfrncDntfrDntfrCdblCncptCdng = bscThrRfrncDntfrDntfrCdblCncptCdng;
-       this.bscThrRfrncDntfrDntfrCdblCncptTxt = bscThrRfrncDntfrDntfrCdblCncptTxt;
-       this.bscThrRfrncDntfrDntfrPrdStrt = bscThrRfrncDntfrDntfrPrdStrt;
-       this.bscThrRfrncDntfrDntfrPrdNd = bscThrRfrncDntfrDntfrPrdNd;
-       this.bscThrRfrncDntfrDntfrRfrncRfrnce = bscThrRfrncDntfrDntfrRfrncRfrnce;
-       this.bscThrRfrncDntfrDntfrRfrncTpe = bscThrRfrncDntfrDntfrRfrncTpe;
-       this.bscThrRfrncDntfrDntfrRfrncDntfr = bscThrRfrncDntfrDntfrRfrncDntfr;
-       this.bscThrRfrncDntfrDntfrRfrncDsplay = bscThrRfrncDntfrDntfrRfrncDsplay;
-       this.bscThrRfrncDntfrSe = bscThrRfrncDntfrSe;
-       this.bscThrRfrncDntfrSstm = bscThrRfrncDntfrSstm;
-       this.bscThrRfrncDntfrVlue = bscThrRfrncDntfrVlue;
-       this.bscThrRfrncRfrncStrng = bscThrRfrncRfrncStrng;
-       this.bscThrRfrncDsplStrng = bscThrRfrncDsplStrng;
-       this.basicAuthorReferenceTypeUri = basicAuthorReferenceTypeUri;
+    public Basic(String basicIdentifierIdentifierUse, String bscDntfrDntfrTpCcCSstm, String bscDntfrDntfrTpCcCVrsn, String bscDntfrDntfrTpCcCCde, String bscDntfrDntfrTpCcCDsplay, String bscDntfrDntfrTpCcCSrSlctd, String bscDntfrDntfrTpCcTxt, String bscDntfrDntfrPrdPrdStrt, String bscDntfrDntfrPrdPrdNd, String bscDntfrDntfrSsgnr, String basicIdentifierIdentifierValue, String basicIdentifierIdentifierSystem, String basicCodeCcCodingCSystem, String basicCodeCcCodingCVersion, String basicCodeCcCodingCCode, String basicCodeCcCodingCDisplay, String bscCdCcCdngCSrSlctd, String basicCodeCcText, String basicSubjectReference, String basicCreatedDate, String basicAuthorReference) {
+       this.basicIdentifierIdentifierUse = basicIdentifierIdentifierUse;
+       this.bscDntfrDntfrTpCcCSstm = bscDntfrDntfrTpCcCSstm;
+       this.bscDntfrDntfrTpCcCVrsn = bscDntfrDntfrTpCcCVrsn;
+       this.bscDntfrDntfrTpCcCCde = bscDntfrDntfrTpCcCCde;
+       this.bscDntfrDntfrTpCcCDsplay = bscDntfrDntfrTpCcCDsplay;
+       this.bscDntfrDntfrTpCcCSrSlctd = bscDntfrDntfrTpCcCSrSlctd;
+       this.bscDntfrDntfrTpCcTxt = bscDntfrDntfrTpCcTxt;
+       this.bscDntfrDntfrPrdPrdStrt = bscDntfrDntfrPrdPrdStrt;
+       this.bscDntfrDntfrPrdPrdNd = bscDntfrDntfrPrdPrdNd;
+       this.bscDntfrDntfrSsgnr = bscDntfrDntfrSsgnr;
+       this.basicIdentifierIdentifierValue = basicIdentifierIdentifierValue;
+       this.basicIdentifierIdentifierSystem = basicIdentifierIdentifierSystem;
+       this.basicCodeCcCodingCSystem = basicCodeCcCodingCSystem;
+       this.basicCodeCcCodingCVersion = basicCodeCcCodingCVersion;
+       this.basicCodeCcCodingCCode = basicCodeCcCodingCCode;
+       this.basicCodeCcCodingCDisplay = basicCodeCcCodingCDisplay;
+       this.bscCdCcCdngCSrSlctd = bscCdCcCdngCSrSlctd;
+       this.basicCodeCcText = basicCodeCcText;
+       this.basicSubjectReference = basicSubjectReference;
+       this.basicCreatedDate = basicCreatedDate;
+       this.basicAuthorReference = basicAuthorReference;
     }
    
-    public String getBscDntfrDntfrTpCdblCncptCdngCde() {
-        return this.bscDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setBscDntfrDntfrTpCdblCncptCdngCde(String bscDntfrDntfrTpCdblCncptCdngCde) {
-        this.bscDntfrDntfrTpCdblCncptCdngCde = bscDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrSCde() {
-        return this.bscDntfrDntfrSCde;
-    }
-    
-    public void setBscDntfrDntfrSCde(String bscDntfrDntfrSCde) {
-        this.bscDntfrDntfrSCde = bscDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.bscDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setBscDntfrDntfrTpCdblCncptCdngSstm(String bscDntfrDntfrTpCdblCncptCdngSstm) {
-        this.bscDntfrDntfrTpCdblCncptCdngSstm = bscDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.bscDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setBscDntfrDntfrTpCdblCncptCdngVrsn(String bscDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.bscDntfrDntfrTpCdblCncptCdngVrsn = bscDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.bscDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setBscDntfrDntfrTpCdblCncptCdngDsplay(String bscDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.bscDntfrDntfrTpCdblCncptCdngDsplay = bscDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.bscDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setBscDntfrDntfrTpCdblCncptCdngSrSlctd(String bscDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.bscDntfrDntfrTpCdblCncptCdngSrSlctd = bscDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrCdblCncptTxt() {
-        return this.bscDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setBscDntfrDntfrCdblCncptTxt(String bscDntfrDntfrCdblCncptTxt) {
-        this.bscDntfrDntfrCdblCncptTxt = bscDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrPrdStrt() {
-        return this.bscDntfrDntfrPrdStrt;
-    }
-    
-    public void setBscDntfrDntfrPrdStrt(String bscDntfrDntfrPrdStrt) {
-        this.bscDntfrDntfrPrdStrt = bscDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrPrdNd() {
-        return this.bscDntfrDntfrPrdNd;
-    }
-    
-    public void setBscDntfrDntfrPrdNd(String bscDntfrDntfrPrdNd) {
-        this.bscDntfrDntfrPrdNd = bscDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrRfrncRfrnce() {
-        return this.bscDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setBscDntfrDntfrRfrncRfrnce(String bscDntfrDntfrRfrncRfrnce) {
-        this.bscDntfrDntfrRfrncRfrnce = bscDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrRfrncTpe() {
-        return this.bscDntfrDntfrRfrncTpe;
-    }
-    
-    public void setBscDntfrDntfrRfrncTpe(String bscDntfrDntfrRfrncTpe) {
-        this.bscDntfrDntfrRfrncTpe = bscDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrRfrncDntfr() {
-        return this.bscDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setBscDntfrDntfrRfrncDntfr(String bscDntfrDntfrRfrncDntfr) {
-        this.bscDntfrDntfrRfrncDntfr = bscDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrRfrncDsplay() {
-        return this.bscDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setBscDntfrDntfrRfrncDsplay(String bscDntfrDntfrRfrncDsplay) {
-        this.bscDntfrDntfrRfrncDsplay = bscDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrVlStrng() {
-        return this.bscDntfrDntfrVlStrng;
-    }
-    
-    public void setBscDntfrDntfrVlStrng(String bscDntfrDntfrVlStrng) {
-        this.bscDntfrDntfrVlStrng = bscDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getBscDntfrDntfrSstmRi() {
-        return this.bscDntfrDntfrSstmRi;
-    }
-    
-    public void setBscDntfrDntfrSstmRi(String bscDntfrDntfrSstmRi) {
-        this.bscDntfrDntfrSstmRi = bscDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptCdngSstm() {
-        return this.bscCdCdblCncptCdngSstm;
-    }
-    
-    public void setBscCdCdblCncptCdngSstm(String bscCdCdblCncptCdngSstm) {
-        this.bscCdCdblCncptCdngSstm = bscCdCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptCdngVrsn() {
-        return this.bscCdCdblCncptCdngVrsn;
-    }
-    
-    public void setBscCdCdblCncptCdngVrsn(String bscCdCdblCncptCdngVrsn) {
-        this.bscCdCdblCncptCdngVrsn = bscCdCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptCdngCde() {
-        return this.bscCdCdblCncptCdngCde;
-    }
-    
-    public void setBscCdCdblCncptCdngCde(String bscCdCdblCncptCdngCde) {
-        this.bscCdCdblCncptCdngCde = bscCdCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptCdngDsplay() {
-        return this.bscCdCdblCncptCdngDsplay;
-    }
-    
-    public void setBscCdCdblCncptCdngDsplay(String bscCdCdblCncptCdngDsplay) {
-        this.bscCdCdblCncptCdngDsplay = bscCdCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptCdngSrSlctd() {
-        return this.bscCdCdblCncptCdngSrSlctd;
-    }
-    
-    public void setBscCdCdblCncptCdngSrSlctd(String bscCdCdblCncptCdngSrSlctd) {
-        this.bscCdCdblCncptCdngSrSlctd = bscCdCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getBscCdCdblCncptTxtStrng() {
-        return this.bscCdCdblCncptTxtStrng;
-    }
-    
-    public void setBscCdCdblCncptTxtStrng(String bscCdCdblCncptTxtStrng) {
-        this.bscCdCdblCncptTxtStrng = bscCdCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrCdblCncptCdng() {
-        return this.bscSbjctRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrCdblCncptCdng(String bscSbjctRfrncDntfrDntfrCdblCncptCdng) {
-        this.bscSbjctRfrncDntfrDntfrCdblCncptCdng = bscSbjctRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrCdblCncptTxt() {
-        return this.bscSbjctRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrCdblCncptTxt(String bscSbjctRfrncDntfrDntfrCdblCncptTxt) {
-        this.bscSbjctRfrncDntfrDntfrCdblCncptTxt = bscSbjctRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrPrdStrt() {
-        return this.bscSbjctRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrPrdStrt(String bscSbjctRfrncDntfrDntfrPrdStrt) {
-        this.bscSbjctRfrncDntfrDntfrPrdStrt = bscSbjctRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrPrdNd() {
-        return this.bscSbjctRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrPrdNd(String bscSbjctRfrncDntfrDntfrPrdNd) {
-        this.bscSbjctRfrncDntfrDntfrPrdNd = bscSbjctRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrRfrncRfrnce() {
-        return this.bscSbjctRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrRfrncRfrnce(String bscSbjctRfrncDntfrDntfrRfrncRfrnce) {
-        this.bscSbjctRfrncDntfrDntfrRfrncRfrnce = bscSbjctRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrRfrncTpe() {
-        return this.bscSbjctRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrRfrncTpe(String bscSbjctRfrncDntfrDntfrRfrncTpe) {
-        this.bscSbjctRfrncDntfrDntfrRfrncTpe = bscSbjctRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrRfrncDntfr() {
-        return this.bscSbjctRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrRfrncDntfr(String bscSbjctRfrncDntfrDntfrRfrncDntfr) {
-        this.bscSbjctRfrncDntfrDntfrRfrncDntfr = bscSbjctRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrDntfrRfrncDsplay() {
-        return this.bscSbjctRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setBscSbjctRfrncDntfrDntfrRfrncDsplay(String bscSbjctRfrncDntfrDntfrRfrncDsplay) {
-        this.bscSbjctRfrncDntfrDntfrRfrncDsplay = bscSbjctRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrSe() {
-        return this.bscSbjctRfrncDntfrSe;
-    }
-    
-    public void setBscSbjctRfrncDntfrSe(String bscSbjctRfrncDntfrSe) {
-        this.bscSbjctRfrncDntfrSe = bscSbjctRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrSstm() {
-        return this.bscSbjctRfrncDntfrSstm;
-    }
-    
-    public void setBscSbjctRfrncDntfrSstm(String bscSbjctRfrncDntfrSstm) {
-        this.bscSbjctRfrncDntfrSstm = bscSbjctRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDntfrVlue() {
-        return this.bscSbjctRfrncDntfrVlue;
-    }
-    
-    public void setBscSbjctRfrncDntfrVlue(String bscSbjctRfrncDntfrVlue) {
-        this.bscSbjctRfrncDntfrVlue = bscSbjctRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncRfrncStrng() {
-        return this.bscSbjctRfrncRfrncStrng;
-    }
-    
-    public void setBscSbjctRfrncRfrncStrng(String bscSbjctRfrncRfrncStrng) {
-        this.bscSbjctRfrncRfrncStrng = bscSbjctRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getBscSbjctRfrncDsplStrng() {
-        return this.bscSbjctRfrncDsplStrng;
-    }
-    
-    public void setBscSbjctRfrncDsplStrng(String bscSbjctRfrncDsplStrng) {
-        this.bscSbjctRfrncDsplStrng = bscSbjctRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getBasicSubjectReferenceTypeUri() {
-        return this.basicSubjectReferenceTypeUri;
-    }
-    
-    public void setBasicSubjectReferenceTypeUri(String basicSubjectReferenceTypeUri) {
-        this.basicSubjectReferenceTypeUri = basicSubjectReferenceTypeUri;
-    }
-    
-    
-    
-    public String getBasicCreated() {
-        return this.basicCreated;
-    }
-    
-    public void setBasicCreated(String basicCreated) {
-        this.basicCreated = basicCreated;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrCdblCncptCdng() {
-        return this.bscThrRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrCdblCncptCdng(String bscThrRfrncDntfrDntfrCdblCncptCdng) {
-        this.bscThrRfrncDntfrDntfrCdblCncptCdng = bscThrRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrCdblCncptTxt() {
-        return this.bscThrRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrCdblCncptTxt(String bscThrRfrncDntfrDntfrCdblCncptTxt) {
-        this.bscThrRfrncDntfrDntfrCdblCncptTxt = bscThrRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrPrdStrt() {
-        return this.bscThrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrPrdStrt(String bscThrRfrncDntfrDntfrPrdStrt) {
-        this.bscThrRfrncDntfrDntfrPrdStrt = bscThrRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrPrdNd() {
-        return this.bscThrRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrPrdNd(String bscThrRfrncDntfrDntfrPrdNd) {
-        this.bscThrRfrncDntfrDntfrPrdNd = bscThrRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrRfrncRfrnce() {
-        return this.bscThrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrRfrncRfrnce(String bscThrRfrncDntfrDntfrRfrncRfrnce) {
-        this.bscThrRfrncDntfrDntfrRfrncRfrnce = bscThrRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrRfrncTpe() {
-        return this.bscThrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrRfrncTpe(String bscThrRfrncDntfrDntfrRfrncTpe) {
-        this.bscThrRfrncDntfrDntfrRfrncTpe = bscThrRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrRfrncDntfr() {
-        return this.bscThrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrRfrncDntfr(String bscThrRfrncDntfrDntfrRfrncDntfr) {
-        this.bscThrRfrncDntfrDntfrRfrncDntfr = bscThrRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrDntfrRfrncDsplay() {
-        return this.bscThrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setBscThrRfrncDntfrDntfrRfrncDsplay(String bscThrRfrncDntfrDntfrRfrncDsplay) {
-        this.bscThrRfrncDntfrDntfrRfrncDsplay = bscThrRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrSe() {
-        return this.bscThrRfrncDntfrSe;
-    }
-    
-    public void setBscThrRfrncDntfrSe(String bscThrRfrncDntfrSe) {
-        this.bscThrRfrncDntfrSe = bscThrRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrSstm() {
-        return this.bscThrRfrncDntfrSstm;
-    }
-    
-    public void setBscThrRfrncDntfrSstm(String bscThrRfrncDntfrSstm) {
-        this.bscThrRfrncDntfrSstm = bscThrRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getBscThrRfrncDntfrVlue() {
-        return this.bscThrRfrncDntfrVlue;
-    }
-    
-    public void setBscThrRfrncDntfrVlue(String bscThrRfrncDntfrVlue) {
-        this.bscThrRfrncDntfrVlue = bscThrRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getBscThrRfrncRfrncStrng() {
-        return this.bscThrRfrncRfrncStrng;
-    }
-    
-    public void setBscThrRfrncRfrncStrng(String bscThrRfrncRfrncStrng) {
-        this.bscThrRfrncRfrncStrng = bscThrRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getBscThrRfrncDsplStrng() {
-        return this.bscThrRfrncDsplStrng;
-    }
-    
-    public void setBscThrRfrncDsplStrng(String bscThrRfrncDsplStrng) {
-        this.bscThrRfrncDsplStrng = bscThrRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getBasicAuthorReferenceTypeUri() {
-        return this.basicAuthorReferenceTypeUri;
-    }
-    
-    public void setBasicAuthorReferenceTypeUri(String basicAuthorReferenceTypeUri) {
-        this.basicAuthorReferenceTypeUri = basicAuthorReferenceTypeUri;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getBasicIdentifierIdentifierUse()
+    {
+        return this.basicIdentifierIdentifierUse;
+    }
+    
+    public void setBasicIdentifierIdentifierUse
+        (String basicIdentifierIdentifierUse) 
+        {
+      this.basicIdentifierIdentifierUse = basicIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcCSstm()
+    {
+        return this.bscDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setBscDntfrDntfrTpCcCSstm
+        (String bscDntfrDntfrTpCcCSstm) 
+        {
+      this.bscDntfrDntfrTpCcCSstm = bscDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcCVrsn()
+    {
+        return this.bscDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setBscDntfrDntfrTpCcCVrsn
+        (String bscDntfrDntfrTpCcCVrsn) 
+        {
+      this.bscDntfrDntfrTpCcCVrsn = bscDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcCCde()
+    {
+        return this.bscDntfrDntfrTpCcCCde;
+    }
+    
+    public void setBscDntfrDntfrTpCcCCde
+        (String bscDntfrDntfrTpCcCCde) 
+        {
+      this.bscDntfrDntfrTpCcCCde = bscDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcCDsplay()
+    {
+        return this.bscDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setBscDntfrDntfrTpCcCDsplay
+        (String bscDntfrDntfrTpCcCDsplay) 
+        {
+      this.bscDntfrDntfrTpCcCDsplay = bscDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.bscDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setBscDntfrDntfrTpCcCSrSlctd
+        (String bscDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.bscDntfrDntfrTpCcCSrSlctd = bscDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getBscDntfrDntfrTpCcTxt()
+    {
+        return this.bscDntfrDntfrTpCcTxt;
+    }
+    
+    public void setBscDntfrDntfrTpCcTxt
+        (String bscDntfrDntfrTpCcTxt) 
+        {
+      this.bscDntfrDntfrTpCcTxt = bscDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getBscDntfrDntfrPrdPrdStrt()
+    {
+        return this.bscDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setBscDntfrDntfrPrdPrdStrt
+        (String bscDntfrDntfrPrdPrdStrt) 
+        {
+      this.bscDntfrDntfrPrdPrdStrt = bscDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getBscDntfrDntfrPrdPrdNd()
+    {
+        return this.bscDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setBscDntfrDntfrPrdPrdNd
+        (String bscDntfrDntfrPrdPrdNd) 
+        {
+      this.bscDntfrDntfrPrdPrdNd = bscDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getBscDntfrDntfrSsgnr()
+    {
+        return this.bscDntfrDntfrSsgnr;
+    }
+    
+    public void setBscDntfrDntfrSsgnr
+        (String bscDntfrDntfrSsgnr) 
+        {
+      this.bscDntfrDntfrSsgnr = bscDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getBasicIdentifierIdentifierValue()
+    {
+        return this.basicIdentifierIdentifierValue;
+    }
+    
+    public void setBasicIdentifierIdentifierValue
+        (String basicIdentifierIdentifierValue) 
+        {
+      this.basicIdentifierIdentifierValue = basicIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getBasicIdentifierIdentifierSystem()
+    {
+        return this.basicIdentifierIdentifierSystem;
+    }
+    
+    public void setBasicIdentifierIdentifierSystem
+        (String basicIdentifierIdentifierSystem) 
+        {
+      this.basicIdentifierIdentifierSystem = basicIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getBasicCodeCcCodingCSystem()
+    {
+        return this.basicCodeCcCodingCSystem;
+    }
+    
+    public void setBasicCodeCcCodingCSystem
+        (String basicCodeCcCodingCSystem) 
+        {
+      this.basicCodeCcCodingCSystem = basicCodeCcCodingCSystem;
+}
+    public 
+    String 
+    getBasicCodeCcCodingCVersion()
+    {
+        return this.basicCodeCcCodingCVersion;
+    }
+    
+    public void setBasicCodeCcCodingCVersion
+        (String basicCodeCcCodingCVersion) 
+        {
+      this.basicCodeCcCodingCVersion = basicCodeCcCodingCVersion;
+}
+    public 
+    String 
+    getBasicCodeCcCodingCCode()
+    {
+        return this.basicCodeCcCodingCCode;
+    }
+    
+    public void setBasicCodeCcCodingCCode
+        (String basicCodeCcCodingCCode) 
+        {
+      this.basicCodeCcCodingCCode = basicCodeCcCodingCCode;
+}
+    public 
+    String 
+    getBasicCodeCcCodingCDisplay()
+    {
+        return this.basicCodeCcCodingCDisplay;
+    }
+    
+    public void setBasicCodeCcCodingCDisplay
+        (String basicCodeCcCodingCDisplay) 
+        {
+      this.basicCodeCcCodingCDisplay = basicCodeCcCodingCDisplay;
+}
+    public 
+    String 
+    getBscCdCcCdngCSrSlctd()
+    {
+        return this.bscCdCcCdngCSrSlctd;
+    }
+    
+    public void setBscCdCcCdngCSrSlctd
+        (String bscCdCcCdngCSrSlctd) 
+        {
+      this.bscCdCcCdngCSrSlctd = bscCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getBasicCodeCcText()
+    {
+        return this.basicCodeCcText;
+    }
+    
+    public void setBasicCodeCcText
+        (String basicCodeCcText) 
+        {
+      this.basicCodeCcText = basicCodeCcText;
+}
+    public 
+    String 
+    getBasicSubjectReference()
+    {
+        return this.basicSubjectReference;
+    }
+    
+    public void setBasicSubjectReference
+        (String basicSubjectReference) 
+        {
+      this.basicSubjectReference = basicSubjectReference;
+}
+    public 
+    String 
+    getBasicCreatedDate()
+    {
+        return this.basicCreatedDate;
+    }
+    
+    public void setBasicCreatedDate
+        (String basicCreatedDate) 
+        {
+      this.basicCreatedDate = basicCreatedDate;
+}
+    public 
+    String 
+    getBasicAuthorReference()
+    {
+        return this.basicAuthorReference;
+    }
+    
+    public void setBasicAuthorReference
+        (String basicAuthorReference) 
+        {
+      this.basicAuthorReference = basicAuthorReference;
+}
 
 
 

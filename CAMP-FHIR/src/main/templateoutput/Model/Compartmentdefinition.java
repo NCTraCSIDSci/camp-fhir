@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,209 +10,586 @@ package main.templateoutput.Model;
 public class Compartmentdefinition  implements java.io.Serializable {
 
 
-     private String compartmentDefinitionUrl;
-     private String compartmentDefinitionVersion;
-     private String compartmentDefinitionName;
-     private String compartmentDefinitionStatus;
-     private String compartmentDefinitionExperimental;
-     private String compartmentDefinitionDate;
-     private String compartmentDefinitionPublisher;
-     private String compartmentDefinitionContact;
-     private String compartmentDefinitionDescription;
-     private String compartmentDefinitionUseContext;
-     private String compartmentDefinitionPurpose;
-     private String compartmentDefinitionCode;
-     private String compartmentDefinitionSearch;
-     private String cmprtmntDfntnRsrcCde;
-     private String cmprtmntDfntnRsrcPrm;
-     private String cmprtmntDfntnRsrcDcmnttn;
+     private Integer id;
+     private String compartmentDefinitionUrlUri;
+     private String cmprtmntDfntnVrsnStrng;
+     private String compartmentDefinitionNameString;
+     private String compartmentDefinitionStatusCode;
+     private String cmprtmntDfntnXprmntlBln;
+     private String cmprtmntDfntnDtDtTme;
+     private String cmprtmntDfntnPblshrStrng;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe;
+     private String cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk;
+     private String cmprtmntDfntnCntctCntctDtlNme;
+     private String cmprtmntDfntnDscrptnMrkdwn;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt;
+     private String cmprtmntDfntnSCntxtSgCntxtCdCSstm;
+     private String cmprtmntDfntnSCntxtSgCntxtCdCVrsn;
+     private String cmprtmntDfntnSCntxtSgCntxtCdCCde;
+     private String cmprtmntDfntnSCntxtSgCntxtCdCDsplay;
+     private String cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd;
+     private String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue;
+     private String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt;
+     private String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm;
+     private String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde;
+     private String cmprtmntDfntnSCntxtSgCntxtVlRngRngLw;
+     private String cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh;
+     private String cmprtmntDfntnSCntxtSgCntxtVlRfrnce;
+     private String cmprtmntDfntnPrpsMrkdwn;
+     private String compartmentDefinitionCodeCode;
+     private String cmprtmntDfntnSrchBln;
+     private String cmprtmntDfntnRsrcCdCde;
+     private String cmprtmntDfntnRsrcPrmStrng;
+     private String cmprtmntDfntnRsrcDcmnttnStrng;
 
     public Compartmentdefinition() {
     }
 
-	
-    public Compartmentdefinition(String compartmentDefinitionUrl) {
-        this.compartmentDefinitionUrl = compartmentDefinitionUrl;
-    }
-    public Compartmentdefinition(String compartmentDefinitionUrl, String compartmentDefinitionVersion, String compartmentDefinitionName, String compartmentDefinitionStatus, String compartmentDefinitionExperimental, String compartmentDefinitionDate, String compartmentDefinitionPublisher, String compartmentDefinitionContact, String compartmentDefinitionDescription, String compartmentDefinitionUseContext, String compartmentDefinitionPurpose, String compartmentDefinitionCode, String compartmentDefinitionSearch, String cmprtmntDfntnRsrcCde, String cmprtmntDfntnRsrcPrm, String cmprtmntDfntnRsrcDcmnttn) {
-       this.compartmentDefinitionUrl = compartmentDefinitionUrl;
-       this.compartmentDefinitionVersion = compartmentDefinitionVersion;
-       this.compartmentDefinitionName = compartmentDefinitionName;
-       this.compartmentDefinitionStatus = compartmentDefinitionStatus;
-       this.compartmentDefinitionExperimental = compartmentDefinitionExperimental;
-       this.compartmentDefinitionDate = compartmentDefinitionDate;
-       this.compartmentDefinitionPublisher = compartmentDefinitionPublisher;
-       this.compartmentDefinitionContact = compartmentDefinitionContact;
-       this.compartmentDefinitionDescription = compartmentDefinitionDescription;
-       this.compartmentDefinitionUseContext = compartmentDefinitionUseContext;
-       this.compartmentDefinitionPurpose = compartmentDefinitionPurpose;
-       this.compartmentDefinitionCode = compartmentDefinitionCode;
-       this.compartmentDefinitionSearch = compartmentDefinitionSearch;
-       this.cmprtmntDfntnRsrcCde = cmprtmntDfntnRsrcCde;
-       this.cmprtmntDfntnRsrcPrm = cmprtmntDfntnRsrcPrm;
-       this.cmprtmntDfntnRsrcDcmnttn = cmprtmntDfntnRsrcDcmnttn;
+    public Compartmentdefinition(String compartmentDefinitionUrlUri, String cmprtmntDfntnVrsnStrng, String compartmentDefinitionNameString, String compartmentDefinitionStatusCode, String cmprtmntDfntnXprmntlBln, String cmprtmntDfntnDtDtTme, String cmprtmntDfntnPblshrStrng, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe, String cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk, String cmprtmntDfntnCntctCntctDtlNme, String cmprtmntDfntnDscrptnMrkdwn, String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm, String cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn, String cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde, String cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay, String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd, String cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt, String cmprtmntDfntnSCntxtSgCntxtCdCSstm, String cmprtmntDfntnSCntxtSgCntxtCdCVrsn, String cmprtmntDfntnSCntxtSgCntxtCdCCde, String cmprtmntDfntnSCntxtSgCntxtCdCDsplay, String cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd, String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue, String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr, String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt, String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm, String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde, String cmprtmntDfntnSCntxtSgCntxtVlRngRngLw, String cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh, String cmprtmntDfntnSCntxtSgCntxtVlRfrnce, String cmprtmntDfntnPrpsMrkdwn, String compartmentDefinitionCodeCode, String cmprtmntDfntnSrchBln, String cmprtmntDfntnRsrcCdCde, String cmprtmntDfntnRsrcPrmStrng, String cmprtmntDfntnRsrcDcmnttnStrng) {
+       this.compartmentDefinitionUrlUri = compartmentDefinitionUrlUri;
+       this.cmprtmntDfntnVrsnStrng = cmprtmntDfntnVrsnStrng;
+       this.compartmentDefinitionNameString = compartmentDefinitionNameString;
+       this.compartmentDefinitionStatusCode = compartmentDefinitionStatusCode;
+       this.cmprtmntDfntnXprmntlBln = cmprtmntDfntnXprmntlBln;
+       this.cmprtmntDfntnDtDtTme = cmprtmntDfntnDtDtTme;
+       this.cmprtmntDfntnPblshrStrng = cmprtmntDfntnPblshrStrng;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt = cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd = cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm = cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue = cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe = cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe;
+       this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk = cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk;
+       this.cmprtmntDfntnCntctCntctDtlNme = cmprtmntDfntnCntctCntctDtlNme;
+       this.cmprtmntDfntnDscrptnMrkdwn = cmprtmntDfntnDscrptnMrkdwn;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm = cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn = cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde = cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay = cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd = cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt = cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt;
+       this.cmprtmntDfntnSCntxtSgCntxtCdCSstm = cmprtmntDfntnSCntxtSgCntxtCdCSstm;
+       this.cmprtmntDfntnSCntxtSgCntxtCdCVrsn = cmprtmntDfntnSCntxtSgCntxtCdCVrsn;
+       this.cmprtmntDfntnSCntxtSgCntxtCdCCde = cmprtmntDfntnSCntxtSgCntxtCdCCde;
+       this.cmprtmntDfntnSCntxtSgCntxtCdCDsplay = cmprtmntDfntnSCntxtSgCntxtCdCDsplay;
+       this.cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd = cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd;
+       this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue;
+       this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt;
+       this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm;
+       this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde;
+       this.cmprtmntDfntnSCntxtSgCntxtVlRngRngLw = cmprtmntDfntnSCntxtSgCntxtVlRngRngLw;
+       this.cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh = cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh;
+       this.cmprtmntDfntnSCntxtSgCntxtVlRfrnce = cmprtmntDfntnSCntxtSgCntxtVlRfrnce;
+       this.cmprtmntDfntnPrpsMrkdwn = cmprtmntDfntnPrpsMrkdwn;
+       this.compartmentDefinitionCodeCode = compartmentDefinitionCodeCode;
+       this.cmprtmntDfntnSrchBln = cmprtmntDfntnSrchBln;
+       this.cmprtmntDfntnRsrcCdCde = cmprtmntDfntnRsrcCdCde;
+       this.cmprtmntDfntnRsrcPrmStrng = cmprtmntDfntnRsrcPrmStrng;
+       this.cmprtmntDfntnRsrcDcmnttnStrng = cmprtmntDfntnRsrcDcmnttnStrng;
     }
    
-    public String getCompartmentDefinitionUrl() {
-        return this.compartmentDefinitionUrl;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setCompartmentDefinitionUrl(String compartmentDefinitionUrl) {
-        this.compartmentDefinitionUrl = compartmentDefinitionUrl;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCompartmentDefinitionUrlUri()
+    {
+        return this.compartmentDefinitionUrlUri;
     }
     
-    
-    
-    public String getCompartmentDefinitionVersion() {
-        return this.compartmentDefinitionVersion;
+    public void setCompartmentDefinitionUrlUri
+        (String compartmentDefinitionUrlUri) 
+        {
+      this.compartmentDefinitionUrlUri = compartmentDefinitionUrlUri;
+}
+    public 
+    String 
+    getCmprtmntDfntnVrsnStrng()
+    {
+        return this.cmprtmntDfntnVrsnStrng;
     }
     
-    public void setCompartmentDefinitionVersion(String compartmentDefinitionVersion) {
-        this.compartmentDefinitionVersion = compartmentDefinitionVersion;
+    public void setCmprtmntDfntnVrsnStrng
+        (String cmprtmntDfntnVrsnStrng) 
+        {
+      this.cmprtmntDfntnVrsnStrng = cmprtmntDfntnVrsnStrng;
+}
+    public 
+    String 
+    getCompartmentDefinitionNameString()
+    {
+        return this.compartmentDefinitionNameString;
     }
     
-    
-    
-    public String getCompartmentDefinitionName() {
-        return this.compartmentDefinitionName;
+    public void setCompartmentDefinitionNameString
+        (String compartmentDefinitionNameString) 
+        {
+      this.compartmentDefinitionNameString = compartmentDefinitionNameString;
+}
+    public 
+    String 
+    getCompartmentDefinitionStatusCode()
+    {
+        return this.compartmentDefinitionStatusCode;
     }
     
-    public void setCompartmentDefinitionName(String compartmentDefinitionName) {
-        this.compartmentDefinitionName = compartmentDefinitionName;
+    public void setCompartmentDefinitionStatusCode
+        (String compartmentDefinitionStatusCode) 
+        {
+      this.compartmentDefinitionStatusCode = compartmentDefinitionStatusCode;
+}
+    public 
+    String 
+    getCmprtmntDfntnXprmntlBln()
+    {
+        return this.cmprtmntDfntnXprmntlBln;
     }
     
-    
-    
-    public String getCompartmentDefinitionStatus() {
-        return this.compartmentDefinitionStatus;
+    public void setCmprtmntDfntnXprmntlBln
+        (String cmprtmntDfntnXprmntlBln) 
+        {
+      this.cmprtmntDfntnXprmntlBln = cmprtmntDfntnXprmntlBln;
+}
+    public 
+    String 
+    getCmprtmntDfntnDtDtTme()
+    {
+        return this.cmprtmntDfntnDtDtTme;
     }
     
-    public void setCompartmentDefinitionStatus(String compartmentDefinitionStatus) {
-        this.compartmentDefinitionStatus = compartmentDefinitionStatus;
+    public void setCmprtmntDfntnDtDtTme
+        (String cmprtmntDfntnDtDtTme) 
+        {
+      this.cmprtmntDfntnDtDtTme = cmprtmntDfntnDtDtTme;
+}
+    public 
+    String 
+    getCmprtmntDfntnPblshrStrng()
+    {
+        return this.cmprtmntDfntnPblshrStrng;
     }
     
-    
-    
-    public String getCompartmentDefinitionExperimental() {
-        return this.compartmentDefinitionExperimental;
+    public void setCmprtmntDfntnPblshrStrng
+        (String cmprtmntDfntnPblshrStrng) 
+        {
+      this.cmprtmntDfntnPblshrStrng = cmprtmntDfntnPblshrStrng;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
     }
     
-    public void setCompartmentDefinitionExperimental(String compartmentDefinitionExperimental) {
-        this.compartmentDefinitionExperimental = compartmentDefinitionExperimental;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt = cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd;
     }
     
-    
-    
-    public String getCompartmentDefinitionDate() {
-        return this.compartmentDefinitionDate;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd = cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm;
     }
     
-    public void setCompartmentDefinitionDate(String compartmentDefinitionDate) {
-        this.compartmentDefinitionDate = compartmentDefinitionDate;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm = cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue;
     }
     
-    
-    
-    public String getCompartmentDefinitionPublisher() {
-        return this.compartmentDefinitionPublisher;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue = cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe;
     }
     
-    public void setCompartmentDefinitionPublisher(String compartmentDefinitionPublisher) {
-        this.compartmentDefinitionPublisher = compartmentDefinitionPublisher;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntSe
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe = cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk;
     }
     
-    
-    
-    public String getCompartmentDefinitionContact() {
-        return this.compartmentDefinitionContact;
+    public void setCmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk
+        (String cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk = cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getCmprtmntDfntnCntctCntctDtlNme()
+    {
+        return this.cmprtmntDfntnCntctCntctDtlNme;
     }
     
-    public void setCompartmentDefinitionContact(String compartmentDefinitionContact) {
-        this.compartmentDefinitionContact = compartmentDefinitionContact;
+    public void setCmprtmntDfntnCntctCntctDtlNme
+        (String cmprtmntDfntnCntctCntctDtlNme) 
+        {
+      this.cmprtmntDfntnCntctCntctDtlNme = cmprtmntDfntnCntctCntctDtlNme;
+}
+    public 
+    String 
+    getCmprtmntDfntnDscrptnMrkdwn()
+    {
+        return this.cmprtmntDfntnDscrptnMrkdwn;
     }
     
-    
-    
-    public String getCompartmentDefinitionDescription() {
-        return this.compartmentDefinitionDescription;
+    public void setCmprtmntDfntnDscrptnMrkdwn
+        (String cmprtmntDfntnDscrptnMrkdwn) 
+        {
+      this.cmprtmntDfntnDscrptnMrkdwn = cmprtmntDfntnDscrptnMrkdwn;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm;
     }
     
-    public void setCompartmentDefinitionDescription(String compartmentDefinitionDescription) {
-        this.compartmentDefinitionDescription = compartmentDefinitionDescription;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm = cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn;
     }
     
-    
-    
-    public String getCompartmentDefinitionUseContext() {
-        return this.compartmentDefinitionUseContext;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn = cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde;
     }
     
-    public void setCompartmentDefinitionUseContext(String compartmentDefinitionUseContext) {
-        this.compartmentDefinitionUseContext = compartmentDefinitionUseContext;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcCCde
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde = cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay;
     }
     
-    
-    
-    public String getCompartmentDefinitionPurpose() {
-        return this.compartmentDefinitionPurpose;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay = cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
     }
     
-    public void setCompartmentDefinitionPurpose(String compartmentDefinitionPurpose) {
-        this.compartmentDefinitionPurpose = compartmentDefinitionPurpose;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd = cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt;
     }
     
-    
-    
-    public String getCompartmentDefinitionCode() {
-        return this.compartmentDefinitionCode;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlCcCcTxt
+        (String cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt = cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtCdCSstm()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtCdCSstm;
     }
     
-    public void setCompartmentDefinitionCode(String compartmentDefinitionCode) {
-        this.compartmentDefinitionCode = compartmentDefinitionCode;
+    public void setCmprtmntDfntnSCntxtSgCntxtCdCSstm
+        (String cmprtmntDfntnSCntxtSgCntxtCdCSstm) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtCdCSstm = cmprtmntDfntnSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtCdCVrsn()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtCdCVrsn;
     }
     
-    
-    
-    public String getCompartmentDefinitionSearch() {
-        return this.compartmentDefinitionSearch;
+    public void setCmprtmntDfntnSCntxtSgCntxtCdCVrsn
+        (String cmprtmntDfntnSCntxtSgCntxtCdCVrsn) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtCdCVrsn = cmprtmntDfntnSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtCdCCde()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtCdCCde;
     }
     
-    public void setCompartmentDefinitionSearch(String compartmentDefinitionSearch) {
-        this.compartmentDefinitionSearch = compartmentDefinitionSearch;
+    public void setCmprtmntDfntnSCntxtSgCntxtCdCCde
+        (String cmprtmntDfntnSCntxtSgCntxtCdCCde) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtCdCCde = cmprtmntDfntnSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtCdCDsplay()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtCdCDsplay;
     }
     
-    
-    
-    public String getCmprtmntDfntnRsrcCde() {
-        return this.cmprtmntDfntnRsrcCde;
+    public void setCmprtmntDfntnSCntxtSgCntxtCdCDsplay
+        (String cmprtmntDfntnSCntxtSgCntxtCdCDsplay) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtCdCDsplay = cmprtmntDfntnSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd;
     }
     
-    public void setCmprtmntDfntnRsrcCde(String cmprtmntDfntnRsrcCde) {
-        this.cmprtmntDfntnRsrcCde = cmprtmntDfntnRsrcCde;
+    public void setCmprtmntDfntnSCntxtSgCntxtCdCSrSlctd
+        (String cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd = cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue;
     }
     
-    
-    
-    public String getCmprtmntDfntnRsrcPrm() {
-        return this.cmprtmntDfntnRsrcPrm;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue
+        (String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
     }
     
-    public void setCmprtmntDfntnRsrcPrm(String cmprtmntDfntnRsrcPrm) {
-        this.cmprtmntDfntnRsrcPrm = cmprtmntDfntnRsrcPrm;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr
+        (String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt;
     }
     
-    
-    
-    public String getCmprtmntDfntnRsrcDcmnttn() {
-        return this.cmprtmntDfntnRsrcDcmnttn;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt
+        (String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm;
     }
     
-    public void setCmprtmntDfntnRsrcDcmnttn(String cmprtmntDfntnRsrcDcmnttn) {
-        this.cmprtmntDfntnRsrcDcmnttn = cmprtmntDfntnRsrcDcmnttn;
+    public void setCmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm
+        (String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde;
     }
     
+    public void setCmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde
+        (String cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde = cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlRngRngLw;
+    }
     
+    public void setCmprtmntDfntnSCntxtSgCntxtVlRngRngLw
+        (String cmprtmntDfntnSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlRngRngLw = cmprtmntDfntnSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh;
+    }
     
+    public void setCmprtmntDfntnSCntxtSgCntxtVlRngRngHgh
+        (String cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh = cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getCmprtmntDfntnSCntxtSgCntxtVlRfrnce()
+    {
+        return this.cmprtmntDfntnSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setCmprtmntDfntnSCntxtSgCntxtVlRfrnce
+        (String cmprtmntDfntnSCntxtSgCntxtVlRfrnce) 
+        {
+      this.cmprtmntDfntnSCntxtSgCntxtVlRfrnce = cmprtmntDfntnSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getCmprtmntDfntnPrpsMrkdwn()
+    {
+        return this.cmprtmntDfntnPrpsMrkdwn;
+    }
+    
+    public void setCmprtmntDfntnPrpsMrkdwn
+        (String cmprtmntDfntnPrpsMrkdwn) 
+        {
+      this.cmprtmntDfntnPrpsMrkdwn = cmprtmntDfntnPrpsMrkdwn;
+}
+    public 
+    String 
+    getCompartmentDefinitionCodeCode()
+    {
+        return this.compartmentDefinitionCodeCode;
+    }
+    
+    public void setCompartmentDefinitionCodeCode
+        (String compartmentDefinitionCodeCode) 
+        {
+      this.compartmentDefinitionCodeCode = compartmentDefinitionCodeCode;
+}
+    public 
+    String 
+    getCmprtmntDfntnSrchBln()
+    {
+        return this.cmprtmntDfntnSrchBln;
+    }
+    
+    public void setCmprtmntDfntnSrchBln
+        (String cmprtmntDfntnSrchBln) 
+        {
+      this.cmprtmntDfntnSrchBln = cmprtmntDfntnSrchBln;
+}
+    public 
+    String 
+    getCmprtmntDfntnRsrcCdCde()
+    {
+        return this.cmprtmntDfntnRsrcCdCde;
+    }
+    
+    public void setCmprtmntDfntnRsrcCdCde
+        (String cmprtmntDfntnRsrcCdCde) 
+        {
+      this.cmprtmntDfntnRsrcCdCde = cmprtmntDfntnRsrcCdCde;
+}
+    public 
+    String 
+    getCmprtmntDfntnRsrcPrmStrng()
+    {
+        return this.cmprtmntDfntnRsrcPrmStrng;
+    }
+    
+    public void setCmprtmntDfntnRsrcPrmStrng
+        (String cmprtmntDfntnRsrcPrmStrng) 
+        {
+      this.cmprtmntDfntnRsrcPrmStrng = cmprtmntDfntnRsrcPrmStrng;
+}
+    public 
+    String 
+    getCmprtmntDfntnRsrcDcmnttnStrng()
+    {
+        return this.cmprtmntDfntnRsrcDcmnttnStrng;
+    }
+    
+    public void setCmprtmntDfntnRsrcDcmnttnStrng
+        (String cmprtmntDfntnRsrcDcmnttnStrng) 
+        {
+      this.cmprtmntDfntnRsrcDcmnttnStrng = cmprtmntDfntnRsrcDcmnttnStrng;
+}
 
 
 

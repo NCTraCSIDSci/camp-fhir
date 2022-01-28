@@ -1,213 +1,207 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Testreport" optimistic-lock="none" table="testreport">
-        <id name="testReportIdentifierCodingCode" type="string">
-            <column length="512" name="TestReport_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="tstRprtDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="TstRprt_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="tstRprtDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_se">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="tstRprtDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="TstRprt_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="tstRprtDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="tstRprtDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="TstRprt_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="tstRprtDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="tstRprtDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="TstRprt_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="tstRprtDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="testReportName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TestReport_name">
-                <comment>string</comment>
+        <property name="tstRprtDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="testReportStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TestReport_status">
-                <comment>code</comment>
+        <property name="tstRprtDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="testReportTestScript" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="TestReport_testScript">
-                <comment>Reference</comment>
+        <property name="tstRprtDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="testReportResult" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TestReport_result">
-                <comment>code</comment>
+        <property name="tstRprtDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="testReportScore" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="TestReport_score">
-                <comment>decimal</comment>
+        <property name="tstRprtDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="testReportTester" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TestReport_tester">
-                <comment>string</comment>
+        <property name="tstRprtDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="testReportIssued" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="TestReport_issued">
-                <comment>dateTime</comment>
+        <property name="tstRprtDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="testReportParticipant" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_participant">
-                <comment>BackboneElement</comment>
+        <property name="tstRprtDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="512" name="TstRprt_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"TestReport.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="testReportParticipantType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TestReport_participant_type">
-                <comment>code</comment>
+        <property name="testReportNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="TestReport_name_string">
+                <comment>{ "tree" :"TestReport.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="testReportParticipantUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="TestReport_participant_uri">
-                <comment>uri</comment>
+        <property name="testReportStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="TestReport_status_code">
+                <comment>{ "tree" :"TestReport.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="testReportParticipantDisplay" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TestReport_participant_display">
-                <comment>string</comment>
+        <property name="testReportTestScriptReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.testScript", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setTestScript"}</meta>
+            <column length="65535" name="TestReport_testScript_Reference">
+                <comment>{ "tree" :"TestReport.testScript", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setTestScript"}</comment>
             </column>
         </property>
-        <property name="testReportSetup" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_setup">
-                <comment>BackboneElement</comment>
+        <property name="testReportResultCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setResult"}</meta>
+            <column length="65535" name="TestReport_result_code">
+                <comment>{ "tree" :"TestReport.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setResult"}</comment>
             </column>
         </property>
-        <property name="testReportSetupAction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_setup_action">
-                <comment>BackboneElement</comment>
+        <property name="testReportScoreDecimal" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.score", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScore"}</meta>
+            <column length="65535" name="TestReport_score_decimal">
+                <comment>{ "tree" :"TestReport.score", "datatype" : "decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setScore"}</comment>
             </column>
         </property>
-        <property name="testReportSetupActionOperation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_setup_action_operation">
-                <comment>BackboneElement</comment>
+        <property name="testReportTesterString" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.tester", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTester"}</meta>
+            <column length="65535" name="TestReport_tester_string">
+                <comment>{ "tree" :"TestReport.tester", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTester"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnPrtnRslt" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TstRprt_stp_ctn_prtn_rslt">
-                <comment>code</comment>
+        <property name="testReportIssuedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.issued", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssued"}</meta>
+            <column length="65535" name="TestReport_issued_dateTime">
+                <comment>{ "tree" :"TestReport.issued", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIssued"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnPrtnMssge" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TstRprt_stp_ctn_prtn_mssge">
-                <comment>markdown</comment>
+        <property name="testReportParticipantTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.participant.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="TestReport_participant_type_code">
+                <comment>{ "tree" :"TestReport.participant.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnPrtnDtl" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="TstRprt_stp_ctn_prtn_dtl">
-                <comment>uri</comment>
+        <property name="testReportParticipantUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.participant.uri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setUri"}</meta>
+            <column length="65535" name="TestReport_participant_uri_uri">
+                <comment>{ "tree" :"TestReport.participant.uri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : ["addParticipant"] , "methodName" : "setUri"}</comment>
             </column>
         </property>
-        <property name="testReportSetupActionAssert" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_setup_action_assert">
-                <comment>BackboneElement</comment>
+        <property name="tstRprtPrtcpntDsplStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.participant.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setDisplay"}</meta>
+            <column length="65535" name="TstRprt_prtcpnt_dspl_strng">
+                <comment>{ "tree" :"TestReport.participant.display", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setDisplay"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnSsrtRslt" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TstRprt_stp_ctn_ssrt_rslt">
-                <comment>code</comment>
+        <property name="tstRprtStpCtnPrtnRsltCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.operation.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setResult"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_rslt_cde">
+                <comment>{ "tree" :"TestReport.setup.action.operation.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setResult"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnSsrtMssge" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TstRprt_stp_ctn_ssrt_mssge">
-                <comment>markdown</comment>
+        <property name="tstRprtStpCtnPrtnMssgMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.operation.message", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setMessage"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_mssg_mrkdwn">
+                <comment>{ "tree" :"TestReport.setup.action.operation.message", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setMessage"}</comment>
             </column>
         </property>
-        <property name="tstRprtStpCtnSsrtDtl" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TstRprt_stp_ctn_ssrt_dtl">
-                <comment>string</comment>
+        <property name="tstRprtStpCtnPrtnDtlRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.operation.detail", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setDetail"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_prtn_dtl_ri">
+                <comment>{ "tree" :"TestReport.setup.action.operation.detail", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation"] , "methodName" : "setDetail"}</comment>
             </column>
         </property>
-        <property name="testReportTest" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_test">
-                <comment>BackboneElement</comment>
+        <property name="tstRprtStpCtnSsrtRsltCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.assert.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setResult"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_rslt_cde">
+                <comment>{ "tree" :"TestReport.setup.action.assert.result", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setResult"}</comment>
             </column>
         </property>
-        <property name="testReportTestName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TestReport_test_name">
-                <comment>string</comment>
+        <property name="tstRprtStpCtnSsrtMssgMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.assert.message", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setMessage"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_mssg_mrkdwn">
+                <comment>{ "tree" :"TestReport.setup.action.assert.message", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setMessage"}</comment>
             </column>
         </property>
-        <property name="testReportTestDescription" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TestReport_test_description">
-                <comment>string</comment>
+        <property name="tstRprtStpCtnSsrtDtlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.setup.action.assert.detail", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setDetail"}</meta>
+            <column length="65535" name="TstRprt_stp_ctn_ssrt_dtl_strng">
+                <comment>{ "tree" :"TestReport.setup.action.assert.detail", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSetup", "setAction", "setOperation", "setAssert"] , "methodName" : "setDetail"}</comment>
             </column>
         </property>
-        <property name="testReportTestAction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_test_action">
-                <comment>BackboneElement</comment>
+        <property name="testReportTestNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.test.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTest"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="TestReport_test_name_string">
+                <comment>{ "tree" :"TestReport.test.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTest"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="testReportTestActionOperation" type="string">
-            <meta attribute="resource-type">see operation</meta>
-            <column length="65535" name="TestReport_test_action_operation">
-                <comment>see operation</comment>
+        <property name="testReportTestDescriptionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.test.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTest"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="TestReport_test_description_string">
+                <comment>{ "tree" :"TestReport.test.description", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addTest"] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="testReportTestActionAssert" type="string">
-            <meta attribute="resource-type">see assert</meta>
-            <column length="65535" name="TestReport_test_action_assert">
-                <comment>see assert</comment>
+        <property name="tstRprtTstCtnPrtnPrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.test.action.operation", "datatype" : "operation", "cardinality" : "ZeroOne", "elementtree" : ["addTest", "setAction"] , "methodName" : "setOperation"}</meta>
+            <column length="65535" name="TstRprt_tst_ctn_prtn_prtn">
+                <comment>{ "tree" :"TestReport.test.action.operation", "datatype" : "operation", "cardinality" : "ZeroOne", "elementtree" : ["addTest", "setAction"] , "methodName" : "setOperation"}</comment>
             </column>
         </property>
-        <property name="testReportTeardown" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_teardown">
-                <comment>BackboneElement</comment>
+        <property name="tstRprtTstCtnSsrtSsrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.test.action.assert", "datatype" : "assert", "cardinality" : "ZeroOne", "elementtree" : ["addTest", "setAction"] , "methodName" : "setAssert"}</meta>
+            <column length="65535" name="TstRprt_tst_ctn_ssrt_ssrt">
+                <comment>{ "tree" :"TestReport.test.action.assert", "datatype" : "assert", "cardinality" : "ZeroOne", "elementtree" : ["addTest", "setAction"] , "methodName" : "setAssert"}</comment>
             </column>
         </property>
-        <property name="testReportTeardownAction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="TestReport_teardown_action">
-                <comment>BackboneElement</comment>
-            </column>
-        </property>
-        <property name="tstRprtTrdwnCtnPrtn" type="string">
-            <meta attribute="resource-type">see operation</meta>
-            <column length="65535" name="TstRprt_trdwn_ctn_prtn">
-                <comment>see operation</comment>
+        <property name="tstRprtTrdwnCtnPrtnPrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TestReport.teardown.action.operation", "datatype" : "operation", "cardinality" : "Required", "elementtree" : ["setTeardown", "setAction"] , "methodName" : "setOperation"}</meta>
+            <column length="65535" name="TstRprt_trdwn_ctn_prtn_prtn">
+                <comment>{ "tree" :"TestReport.teardown.action.operation", "datatype" : "operation", "cardinality" : "Required", "elementtree" : ["setTeardown", "setAction"] , "methodName" : "setOperation"}</comment>
             </column>
         </property>
     </class>

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,305 +10,432 @@ package main.templateoutput.Model;
 public class Paymentnotice  implements java.io.Serializable {
 
 
-     private String pmntNtcDntfrCdngCde;
-     private String pmntNtcDntfrCdngSrSlctd;
-     private String pmntNtcDntfrCdngDsplay;
-     private String pmntNtcDntfrCdngVrsn;
-     private String pmntNtcDntfrCdngSstm;
-     private String paymentNoticeStatus;
-     private String paymentNoticeRequest;
-     private String paymentNoticeResponse;
-     private String paymentNoticeCreated;
-     private String paymentNoticeProvider;
-     private String paymentNoticePayment;
-     private String paymentNoticePaymentDate;
-     private String paymentNoticePayee;
-     private String paymentNoticeRecipient;
-     private String pmntNtcMntCdngSrSlctd;
-     private String paymentNoticeAmountCodingCode;
-     private String pmntNtcMntCdngDsplay;
-     private String pmntNtcMntCdngVrsn;
-     private String paymentNoticeAmountCodingSystem;
-     private String pmntNtcPmntSttsCdngSrSlctd;
-     private String pmntNtcPmntSttsCdngCde;
-     private String pmntNtcPmntSttsCdngDsplay;
-     private String pmntNtcPmntSttsCdngVrsn;
-     private String pmntNtcPmntSttsCdngSstm;
+     private Integer id;
+     private String pmntNtcDntfrDntfrSe;
+     private String pmntNtcDntfrDntfrTpCcCSstm;
+     private String pmntNtcDntfrDntfrTpCcCVrsn;
+     private String pmntNtcDntfrDntfrTpCcCCde;
+     private String pmntNtcDntfrDntfrTpCcCDsplay;
+     private String pmntNtcDntfrDntfrTpCcCSrSlctd;
+     private String pmntNtcDntfrDntfrTpCcTxt;
+     private String pmntNtcDntfrDntfrPrdPrdStrt;
+     private String pmntNtcDntfrDntfrPrdPrdNd;
+     private String pmntNtcDntfrDntfrSsgnr;
+     private String pmntNtcDntfrDntfrVlue;
+     private String pmntNtcDntfrDntfrSstm;
+     private String paymentNoticeStatusCode;
+     private String paymentNoticeRequestReference;
+     private String paymentNoticeResponseReference;
+     private String paymentNoticeCreatedDateTime;
+     private String paymentNoticeProviderReference;
+     private String paymentNoticePaymentReference;
+     private String paymentNoticePaymentDateDate;
+     private String paymentNoticePayeeReference;
+     private String paymentNoticeRecipientReference;
+     private String pmntNtcMntMnCrrncy;
+     private String paymentNoticeAmountMoneyValue;
+     private String pmntNtcPmntSttsCcCdngCSstm;
+     private String pmntNtcPmntSttsCcCdngCVrsn;
+     private String pmntNtcPmntSttsCcCdngCCde;
+     private String pmntNtcPmntSttsCcCdngCDsplay;
+     private String pmntNtcPmntSttsCcCdngCSrSlctd;
+     private String pmntNtcPmntSttsCcTxt;
 
     public Paymentnotice() {
     }
 
-	
-    public Paymentnotice(String pmntNtcDntfrCdngCde) {
-        this.pmntNtcDntfrCdngCde = pmntNtcDntfrCdngCde;
-    }
-    public Paymentnotice(String pmntNtcDntfrCdngCde, String pmntNtcDntfrCdngSrSlctd, String pmntNtcDntfrCdngDsplay, String pmntNtcDntfrCdngVrsn, String pmntNtcDntfrCdngSstm, String paymentNoticeStatus, String paymentNoticeRequest, String paymentNoticeResponse, String paymentNoticeCreated, String paymentNoticeProvider, String paymentNoticePayment, String paymentNoticePaymentDate, String paymentNoticePayee, String paymentNoticeRecipient, String pmntNtcMntCdngSrSlctd, String paymentNoticeAmountCodingCode, String pmntNtcMntCdngDsplay, String pmntNtcMntCdngVrsn, String paymentNoticeAmountCodingSystem, String pmntNtcPmntSttsCdngSrSlctd, String pmntNtcPmntSttsCdngCde, String pmntNtcPmntSttsCdngDsplay, String pmntNtcPmntSttsCdngVrsn, String pmntNtcPmntSttsCdngSstm) {
-       this.pmntNtcDntfrCdngCde = pmntNtcDntfrCdngCde;
-       this.pmntNtcDntfrCdngSrSlctd = pmntNtcDntfrCdngSrSlctd;
-       this.pmntNtcDntfrCdngDsplay = pmntNtcDntfrCdngDsplay;
-       this.pmntNtcDntfrCdngVrsn = pmntNtcDntfrCdngVrsn;
-       this.pmntNtcDntfrCdngSstm = pmntNtcDntfrCdngSstm;
-       this.paymentNoticeStatus = paymentNoticeStatus;
-       this.paymentNoticeRequest = paymentNoticeRequest;
-       this.paymentNoticeResponse = paymentNoticeResponse;
-       this.paymentNoticeCreated = paymentNoticeCreated;
-       this.paymentNoticeProvider = paymentNoticeProvider;
-       this.paymentNoticePayment = paymentNoticePayment;
-       this.paymentNoticePaymentDate = paymentNoticePaymentDate;
-       this.paymentNoticePayee = paymentNoticePayee;
-       this.paymentNoticeRecipient = paymentNoticeRecipient;
-       this.pmntNtcMntCdngSrSlctd = pmntNtcMntCdngSrSlctd;
-       this.paymentNoticeAmountCodingCode = paymentNoticeAmountCodingCode;
-       this.pmntNtcMntCdngDsplay = pmntNtcMntCdngDsplay;
-       this.pmntNtcMntCdngVrsn = pmntNtcMntCdngVrsn;
-       this.paymentNoticeAmountCodingSystem = paymentNoticeAmountCodingSystem;
-       this.pmntNtcPmntSttsCdngSrSlctd = pmntNtcPmntSttsCdngSrSlctd;
-       this.pmntNtcPmntSttsCdngCde = pmntNtcPmntSttsCdngCde;
-       this.pmntNtcPmntSttsCdngDsplay = pmntNtcPmntSttsCdngDsplay;
-       this.pmntNtcPmntSttsCdngVrsn = pmntNtcPmntSttsCdngVrsn;
-       this.pmntNtcPmntSttsCdngSstm = pmntNtcPmntSttsCdngSstm;
+    public Paymentnotice(String pmntNtcDntfrDntfrSe, String pmntNtcDntfrDntfrTpCcCSstm, String pmntNtcDntfrDntfrTpCcCVrsn, String pmntNtcDntfrDntfrTpCcCCde, String pmntNtcDntfrDntfrTpCcCDsplay, String pmntNtcDntfrDntfrTpCcCSrSlctd, String pmntNtcDntfrDntfrTpCcTxt, String pmntNtcDntfrDntfrPrdPrdStrt, String pmntNtcDntfrDntfrPrdPrdNd, String pmntNtcDntfrDntfrSsgnr, String pmntNtcDntfrDntfrVlue, String pmntNtcDntfrDntfrSstm, String paymentNoticeStatusCode, String paymentNoticeRequestReference, String paymentNoticeResponseReference, String paymentNoticeCreatedDateTime, String paymentNoticeProviderReference, String paymentNoticePaymentReference, String paymentNoticePaymentDateDate, String paymentNoticePayeeReference, String paymentNoticeRecipientReference, String pmntNtcMntMnCrrncy, String paymentNoticeAmountMoneyValue, String pmntNtcPmntSttsCcCdngCSstm, String pmntNtcPmntSttsCcCdngCVrsn, String pmntNtcPmntSttsCcCdngCCde, String pmntNtcPmntSttsCcCdngCDsplay, String pmntNtcPmntSttsCcCdngCSrSlctd, String pmntNtcPmntSttsCcTxt) {
+       this.pmntNtcDntfrDntfrSe = pmntNtcDntfrDntfrSe;
+       this.pmntNtcDntfrDntfrTpCcCSstm = pmntNtcDntfrDntfrTpCcCSstm;
+       this.pmntNtcDntfrDntfrTpCcCVrsn = pmntNtcDntfrDntfrTpCcCVrsn;
+       this.pmntNtcDntfrDntfrTpCcCCde = pmntNtcDntfrDntfrTpCcCCde;
+       this.pmntNtcDntfrDntfrTpCcCDsplay = pmntNtcDntfrDntfrTpCcCDsplay;
+       this.pmntNtcDntfrDntfrTpCcCSrSlctd = pmntNtcDntfrDntfrTpCcCSrSlctd;
+       this.pmntNtcDntfrDntfrTpCcTxt = pmntNtcDntfrDntfrTpCcTxt;
+       this.pmntNtcDntfrDntfrPrdPrdStrt = pmntNtcDntfrDntfrPrdPrdStrt;
+       this.pmntNtcDntfrDntfrPrdPrdNd = pmntNtcDntfrDntfrPrdPrdNd;
+       this.pmntNtcDntfrDntfrSsgnr = pmntNtcDntfrDntfrSsgnr;
+       this.pmntNtcDntfrDntfrVlue = pmntNtcDntfrDntfrVlue;
+       this.pmntNtcDntfrDntfrSstm = pmntNtcDntfrDntfrSstm;
+       this.paymentNoticeStatusCode = paymentNoticeStatusCode;
+       this.paymentNoticeRequestReference = paymentNoticeRequestReference;
+       this.paymentNoticeResponseReference = paymentNoticeResponseReference;
+       this.paymentNoticeCreatedDateTime = paymentNoticeCreatedDateTime;
+       this.paymentNoticeProviderReference = paymentNoticeProviderReference;
+       this.paymentNoticePaymentReference = paymentNoticePaymentReference;
+       this.paymentNoticePaymentDateDate = paymentNoticePaymentDateDate;
+       this.paymentNoticePayeeReference = paymentNoticePayeeReference;
+       this.paymentNoticeRecipientReference = paymentNoticeRecipientReference;
+       this.pmntNtcMntMnCrrncy = pmntNtcMntMnCrrncy;
+       this.paymentNoticeAmountMoneyValue = paymentNoticeAmountMoneyValue;
+       this.pmntNtcPmntSttsCcCdngCSstm = pmntNtcPmntSttsCcCdngCSstm;
+       this.pmntNtcPmntSttsCcCdngCVrsn = pmntNtcPmntSttsCcCdngCVrsn;
+       this.pmntNtcPmntSttsCcCdngCCde = pmntNtcPmntSttsCcCdngCCde;
+       this.pmntNtcPmntSttsCcCdngCDsplay = pmntNtcPmntSttsCcCdngCDsplay;
+       this.pmntNtcPmntSttsCcCdngCSrSlctd = pmntNtcPmntSttsCcCdngCSrSlctd;
+       this.pmntNtcPmntSttsCcTxt = pmntNtcPmntSttsCcTxt;
     }
    
-    public String getPmntNtcDntfrCdngCde() {
-        return this.pmntNtcDntfrCdngCde;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setPmntNtcDntfrCdngCde(String pmntNtcDntfrCdngCde) {
-        this.pmntNtcDntfrCdngCde = pmntNtcDntfrCdngCde;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrSe()
+    {
+        return this.pmntNtcDntfrDntfrSe;
     }
     
-    
-    
-    public String getPmntNtcDntfrCdngSrSlctd() {
-        return this.pmntNtcDntfrCdngSrSlctd;
+    public void setPmntNtcDntfrDntfrSe
+        (String pmntNtcDntfrDntfrSe) 
+        {
+      this.pmntNtcDntfrDntfrSe = pmntNtcDntfrDntfrSe;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcCSstm()
+    {
+        return this.pmntNtcDntfrDntfrTpCcCSstm;
     }
     
-    public void setPmntNtcDntfrCdngSrSlctd(String pmntNtcDntfrCdngSrSlctd) {
-        this.pmntNtcDntfrCdngSrSlctd = pmntNtcDntfrCdngSrSlctd;
+    public void setPmntNtcDntfrDntfrTpCcCSstm
+        (String pmntNtcDntfrDntfrTpCcCSstm) 
+        {
+      this.pmntNtcDntfrDntfrTpCcCSstm = pmntNtcDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcCVrsn()
+    {
+        return this.pmntNtcDntfrDntfrTpCcCVrsn;
     }
     
-    
-    
-    public String getPmntNtcDntfrCdngDsplay() {
-        return this.pmntNtcDntfrCdngDsplay;
+    public void setPmntNtcDntfrDntfrTpCcCVrsn
+        (String pmntNtcDntfrDntfrTpCcCVrsn) 
+        {
+      this.pmntNtcDntfrDntfrTpCcCVrsn = pmntNtcDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcCCde()
+    {
+        return this.pmntNtcDntfrDntfrTpCcCCde;
     }
     
-    public void setPmntNtcDntfrCdngDsplay(String pmntNtcDntfrCdngDsplay) {
-        this.pmntNtcDntfrCdngDsplay = pmntNtcDntfrCdngDsplay;
+    public void setPmntNtcDntfrDntfrTpCcCCde
+        (String pmntNtcDntfrDntfrTpCcCCde) 
+        {
+      this.pmntNtcDntfrDntfrTpCcCCde = pmntNtcDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcCDsplay()
+    {
+        return this.pmntNtcDntfrDntfrTpCcCDsplay;
     }
     
-    
-    
-    public String getPmntNtcDntfrCdngVrsn() {
-        return this.pmntNtcDntfrCdngVrsn;
+    public void setPmntNtcDntfrDntfrTpCcCDsplay
+        (String pmntNtcDntfrDntfrTpCcCDsplay) 
+        {
+      this.pmntNtcDntfrDntfrTpCcCDsplay = pmntNtcDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.pmntNtcDntfrDntfrTpCcCSrSlctd;
     }
     
-    public void setPmntNtcDntfrCdngVrsn(String pmntNtcDntfrCdngVrsn) {
-        this.pmntNtcDntfrCdngVrsn = pmntNtcDntfrCdngVrsn;
+    public void setPmntNtcDntfrDntfrTpCcCSrSlctd
+        (String pmntNtcDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.pmntNtcDntfrDntfrTpCcCSrSlctd = pmntNtcDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrTpCcTxt()
+    {
+        return this.pmntNtcDntfrDntfrTpCcTxt;
     }
     
-    
-    
-    public String getPmntNtcDntfrCdngSstm() {
-        return this.pmntNtcDntfrCdngSstm;
+    public void setPmntNtcDntfrDntfrTpCcTxt
+        (String pmntNtcDntfrDntfrTpCcTxt) 
+        {
+      this.pmntNtcDntfrDntfrTpCcTxt = pmntNtcDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrPrdPrdStrt()
+    {
+        return this.pmntNtcDntfrDntfrPrdPrdStrt;
     }
     
-    public void setPmntNtcDntfrCdngSstm(String pmntNtcDntfrCdngSstm) {
-        this.pmntNtcDntfrCdngSstm = pmntNtcDntfrCdngSstm;
+    public void setPmntNtcDntfrDntfrPrdPrdStrt
+        (String pmntNtcDntfrDntfrPrdPrdStrt) 
+        {
+      this.pmntNtcDntfrDntfrPrdPrdStrt = pmntNtcDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrPrdPrdNd()
+    {
+        return this.pmntNtcDntfrDntfrPrdPrdNd;
     }
     
-    
-    
-    public String getPaymentNoticeStatus() {
-        return this.paymentNoticeStatus;
+    public void setPmntNtcDntfrDntfrPrdPrdNd
+        (String pmntNtcDntfrDntfrPrdPrdNd) 
+        {
+      this.pmntNtcDntfrDntfrPrdPrdNd = pmntNtcDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrSsgnr()
+    {
+        return this.pmntNtcDntfrDntfrSsgnr;
     }
     
-    public void setPaymentNoticeStatus(String paymentNoticeStatus) {
-        this.paymentNoticeStatus = paymentNoticeStatus;
+    public void setPmntNtcDntfrDntfrSsgnr
+        (String pmntNtcDntfrDntfrSsgnr) 
+        {
+      this.pmntNtcDntfrDntfrSsgnr = pmntNtcDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrVlue()
+    {
+        return this.pmntNtcDntfrDntfrVlue;
     }
     
-    
-    
-    public String getPaymentNoticeRequest() {
-        return this.paymentNoticeRequest;
+    public void setPmntNtcDntfrDntfrVlue
+        (String pmntNtcDntfrDntfrVlue) 
+        {
+      this.pmntNtcDntfrDntfrVlue = pmntNtcDntfrDntfrVlue;
+}
+    public 
+    String 
+    getPmntNtcDntfrDntfrSstm()
+    {
+        return this.pmntNtcDntfrDntfrSstm;
     }
     
-    public void setPaymentNoticeRequest(String paymentNoticeRequest) {
-        this.paymentNoticeRequest = paymentNoticeRequest;
+    public void setPmntNtcDntfrDntfrSstm
+        (String pmntNtcDntfrDntfrSstm) 
+        {
+      this.pmntNtcDntfrDntfrSstm = pmntNtcDntfrDntfrSstm;
+}
+    public 
+    String 
+    getPaymentNoticeStatusCode()
+    {
+        return this.paymentNoticeStatusCode;
     }
     
-    
-    
-    public String getPaymentNoticeResponse() {
-        return this.paymentNoticeResponse;
+    public void setPaymentNoticeStatusCode
+        (String paymentNoticeStatusCode) 
+        {
+      this.paymentNoticeStatusCode = paymentNoticeStatusCode;
+}
+    public 
+    String 
+    getPaymentNoticeRequestReference()
+    {
+        return this.paymentNoticeRequestReference;
     }
     
-    public void setPaymentNoticeResponse(String paymentNoticeResponse) {
-        this.paymentNoticeResponse = paymentNoticeResponse;
+    public void setPaymentNoticeRequestReference
+        (String paymentNoticeRequestReference) 
+        {
+      this.paymentNoticeRequestReference = paymentNoticeRequestReference;
+}
+    public 
+    String 
+    getPaymentNoticeResponseReference()
+    {
+        return this.paymentNoticeResponseReference;
     }
     
-    
-    
-    public String getPaymentNoticeCreated() {
-        return this.paymentNoticeCreated;
+    public void setPaymentNoticeResponseReference
+        (String paymentNoticeResponseReference) 
+        {
+      this.paymentNoticeResponseReference = paymentNoticeResponseReference;
+}
+    public 
+    String 
+    getPaymentNoticeCreatedDateTime()
+    {
+        return this.paymentNoticeCreatedDateTime;
     }
     
-    public void setPaymentNoticeCreated(String paymentNoticeCreated) {
-        this.paymentNoticeCreated = paymentNoticeCreated;
+    public void setPaymentNoticeCreatedDateTime
+        (String paymentNoticeCreatedDateTime) 
+        {
+      this.paymentNoticeCreatedDateTime = paymentNoticeCreatedDateTime;
+}
+    public 
+    String 
+    getPaymentNoticeProviderReference()
+    {
+        return this.paymentNoticeProviderReference;
     }
     
-    
-    
-    public String getPaymentNoticeProvider() {
-        return this.paymentNoticeProvider;
+    public void setPaymentNoticeProviderReference
+        (String paymentNoticeProviderReference) 
+        {
+      this.paymentNoticeProviderReference = paymentNoticeProviderReference;
+}
+    public 
+    String 
+    getPaymentNoticePaymentReference()
+    {
+        return this.paymentNoticePaymentReference;
     }
     
-    public void setPaymentNoticeProvider(String paymentNoticeProvider) {
-        this.paymentNoticeProvider = paymentNoticeProvider;
+    public void setPaymentNoticePaymentReference
+        (String paymentNoticePaymentReference) 
+        {
+      this.paymentNoticePaymentReference = paymentNoticePaymentReference;
+}
+    public 
+    String 
+    getPaymentNoticePaymentDateDate()
+    {
+        return this.paymentNoticePaymentDateDate;
     }
     
-    
-    
-    public String getPaymentNoticePayment() {
-        return this.paymentNoticePayment;
+    public void setPaymentNoticePaymentDateDate
+        (String paymentNoticePaymentDateDate) 
+        {
+      this.paymentNoticePaymentDateDate = paymentNoticePaymentDateDate;
+}
+    public 
+    String 
+    getPaymentNoticePayeeReference()
+    {
+        return this.paymentNoticePayeeReference;
     }
     
-    public void setPaymentNoticePayment(String paymentNoticePayment) {
-        this.paymentNoticePayment = paymentNoticePayment;
+    public void setPaymentNoticePayeeReference
+        (String paymentNoticePayeeReference) 
+        {
+      this.paymentNoticePayeeReference = paymentNoticePayeeReference;
+}
+    public 
+    String 
+    getPaymentNoticeRecipientReference()
+    {
+        return this.paymentNoticeRecipientReference;
     }
     
-    
-    
-    public String getPaymentNoticePaymentDate() {
-        return this.paymentNoticePaymentDate;
+    public void setPaymentNoticeRecipientReference
+        (String paymentNoticeRecipientReference) 
+        {
+      this.paymentNoticeRecipientReference = paymentNoticeRecipientReference;
+}
+    public 
+    String 
+    getPmntNtcMntMnCrrncy()
+    {
+        return this.pmntNtcMntMnCrrncy;
     }
     
-    public void setPaymentNoticePaymentDate(String paymentNoticePaymentDate) {
-        this.paymentNoticePaymentDate = paymentNoticePaymentDate;
+    public void setPmntNtcMntMnCrrncy
+        (String pmntNtcMntMnCrrncy) 
+        {
+      this.pmntNtcMntMnCrrncy = pmntNtcMntMnCrrncy;
+}
+    public 
+    String 
+    getPaymentNoticeAmountMoneyValue()
+    {
+        return this.paymentNoticeAmountMoneyValue;
     }
     
-    
-    
-    public String getPaymentNoticePayee() {
-        return this.paymentNoticePayee;
+    public void setPaymentNoticeAmountMoneyValue
+        (String paymentNoticeAmountMoneyValue) 
+        {
+      this.paymentNoticeAmountMoneyValue = paymentNoticeAmountMoneyValue;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcCdngCSstm()
+    {
+        return this.pmntNtcPmntSttsCcCdngCSstm;
     }
     
-    public void setPaymentNoticePayee(String paymentNoticePayee) {
-        this.paymentNoticePayee = paymentNoticePayee;
+    public void setPmntNtcPmntSttsCcCdngCSstm
+        (String pmntNtcPmntSttsCcCdngCSstm) 
+        {
+      this.pmntNtcPmntSttsCcCdngCSstm = pmntNtcPmntSttsCcCdngCSstm;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcCdngCVrsn()
+    {
+        return this.pmntNtcPmntSttsCcCdngCVrsn;
     }
     
-    
-    
-    public String getPaymentNoticeRecipient() {
-        return this.paymentNoticeRecipient;
+    public void setPmntNtcPmntSttsCcCdngCVrsn
+        (String pmntNtcPmntSttsCcCdngCVrsn) 
+        {
+      this.pmntNtcPmntSttsCcCdngCVrsn = pmntNtcPmntSttsCcCdngCVrsn;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcCdngCCde()
+    {
+        return this.pmntNtcPmntSttsCcCdngCCde;
     }
     
-    public void setPaymentNoticeRecipient(String paymentNoticeRecipient) {
-        this.paymentNoticeRecipient = paymentNoticeRecipient;
+    public void setPmntNtcPmntSttsCcCdngCCde
+        (String pmntNtcPmntSttsCcCdngCCde) 
+        {
+      this.pmntNtcPmntSttsCcCdngCCde = pmntNtcPmntSttsCcCdngCCde;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcCdngCDsplay()
+    {
+        return this.pmntNtcPmntSttsCcCdngCDsplay;
     }
     
-    
-    
-    public String getPmntNtcMntCdngSrSlctd() {
-        return this.pmntNtcMntCdngSrSlctd;
+    public void setPmntNtcPmntSttsCcCdngCDsplay
+        (String pmntNtcPmntSttsCcCdngCDsplay) 
+        {
+      this.pmntNtcPmntSttsCcCdngCDsplay = pmntNtcPmntSttsCcCdngCDsplay;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcCdngCSrSlctd()
+    {
+        return this.pmntNtcPmntSttsCcCdngCSrSlctd;
     }
     
-    public void setPmntNtcMntCdngSrSlctd(String pmntNtcMntCdngSrSlctd) {
-        this.pmntNtcMntCdngSrSlctd = pmntNtcMntCdngSrSlctd;
+    public void setPmntNtcPmntSttsCcCdngCSrSlctd
+        (String pmntNtcPmntSttsCcCdngCSrSlctd) 
+        {
+      this.pmntNtcPmntSttsCcCdngCSrSlctd = pmntNtcPmntSttsCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getPmntNtcPmntSttsCcTxt()
+    {
+        return this.pmntNtcPmntSttsCcTxt;
     }
     
-    
-    
-    public String getPaymentNoticeAmountCodingCode() {
-        return this.paymentNoticeAmountCodingCode;
-    }
-    
-    public void setPaymentNoticeAmountCodingCode(String paymentNoticeAmountCodingCode) {
-        this.paymentNoticeAmountCodingCode = paymentNoticeAmountCodingCode;
-    }
-    
-    
-    
-    public String getPmntNtcMntCdngDsplay() {
-        return this.pmntNtcMntCdngDsplay;
-    }
-    
-    public void setPmntNtcMntCdngDsplay(String pmntNtcMntCdngDsplay) {
-        this.pmntNtcMntCdngDsplay = pmntNtcMntCdngDsplay;
-    }
-    
-    
-    
-    public String getPmntNtcMntCdngVrsn() {
-        return this.pmntNtcMntCdngVrsn;
-    }
-    
-    public void setPmntNtcMntCdngVrsn(String pmntNtcMntCdngVrsn) {
-        this.pmntNtcMntCdngVrsn = pmntNtcMntCdngVrsn;
-    }
-    
-    
-    
-    public String getPaymentNoticeAmountCodingSystem() {
-        return this.paymentNoticeAmountCodingSystem;
-    }
-    
-    public void setPaymentNoticeAmountCodingSystem(String paymentNoticeAmountCodingSystem) {
-        this.paymentNoticeAmountCodingSystem = paymentNoticeAmountCodingSystem;
-    }
-    
-    
-    
-    public String getPmntNtcPmntSttsCdngSrSlctd() {
-        return this.pmntNtcPmntSttsCdngSrSlctd;
-    }
-    
-    public void setPmntNtcPmntSttsCdngSrSlctd(String pmntNtcPmntSttsCdngSrSlctd) {
-        this.pmntNtcPmntSttsCdngSrSlctd = pmntNtcPmntSttsCdngSrSlctd;
-    }
-    
-    
-    
-    public String getPmntNtcPmntSttsCdngCde() {
-        return this.pmntNtcPmntSttsCdngCde;
-    }
-    
-    public void setPmntNtcPmntSttsCdngCde(String pmntNtcPmntSttsCdngCde) {
-        this.pmntNtcPmntSttsCdngCde = pmntNtcPmntSttsCdngCde;
-    }
-    
-    
-    
-    public String getPmntNtcPmntSttsCdngDsplay() {
-        return this.pmntNtcPmntSttsCdngDsplay;
-    }
-    
-    public void setPmntNtcPmntSttsCdngDsplay(String pmntNtcPmntSttsCdngDsplay) {
-        this.pmntNtcPmntSttsCdngDsplay = pmntNtcPmntSttsCdngDsplay;
-    }
-    
-    
-    
-    public String getPmntNtcPmntSttsCdngVrsn() {
-        return this.pmntNtcPmntSttsCdngVrsn;
-    }
-    
-    public void setPmntNtcPmntSttsCdngVrsn(String pmntNtcPmntSttsCdngVrsn) {
-        this.pmntNtcPmntSttsCdngVrsn = pmntNtcPmntSttsCdngVrsn;
-    }
-    
-    
-    
-    public String getPmntNtcPmntSttsCdngSstm() {
-        return this.pmntNtcPmntSttsCdngSstm;
-    }
-    
-    public void setPmntNtcPmntSttsCdngSstm(String pmntNtcPmntSttsCdngSstm) {
-        this.pmntNtcPmntSttsCdngSstm = pmntNtcPmntSttsCdngSstm;
-    }
-    
-    
-    
+    public void setPmntNtcPmntSttsCcTxt
+        (String pmntNtcPmntSttsCcTxt) 
+        {
+      this.pmntNtcPmntSttsCcTxt = pmntNtcPmntSttsCcTxt;
+}
 
 
 

@@ -1,99 +1,249 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Compartmentdefinition" optimistic-lock="none" table="compartmentdefinition">
-        <id name="compartmentDefinitionUrl" type="string">
-            <column length="512" name="CompartmentDefinition_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="compartmentDefinitionVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CompartmentDefinition_version">
-                <comment>string</comment>
+        <property name="compartmentDefinitionUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="CompartmentDefinition_url_uri">
+                <comment>{ "tree" :"CompartmentDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CompartmentDefinition_name">
-                <comment>string</comment>
+        <property name="cmprtmntDfntnVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="CmprtmntDfntn_vrsn_strng">
+                <comment>{ "tree" :"CompartmentDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CompartmentDefinition_status">
-                <comment>code</comment>
+        <property name="compartmentDefinitionNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CompartmentDefinition_name_string">
+                <comment>{ "tree" :"CompartmentDefinition.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CompartmentDefinition_experimental">
-                <comment>boolean</comment>
+        <property name="compartmentDefinitionStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="CompartmentDefinition_status_code">
+                <comment>{ "tree" :"CompartmentDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="CompartmentDefinition_date">
-                <comment>dateTime</comment>
+        <property name="cmprtmntDfntnXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="CmprtmntDfntn_xprmntl_bln">
+                <comment>{ "tree" :"CompartmentDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CompartmentDefinition_publisher">
-                <comment>string</comment>
+        <property name="cmprtmntDfntnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="CmprtmntDfntn_dt_dtTme">
+                <comment>{ "tree" :"CompartmentDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="CompartmentDefinition_contact">
-                <comment>ContactDetail</comment>
+        <property name="cmprtmntDfntnPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="CmprtmntDfntn_pblshr_strng">
+                <comment>{ "tree" :"CompartmentDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CompartmentDefinition_description">
-                <comment>markdown</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="CompartmentDefinition_useContext">
-                <comment>UsageContext</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="CompartmentDefinition_purpose">
-                <comment>markdown</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CompartmentDefinition_code">
-                <comment>code</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="compartmentDefinitionSearch" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="CompartmentDefinition_search">
-                <comment>boolean</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="cmprtmntDfntnRsrcCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CmprtmntDfntn_rsrc_cde">
-                <comment>code</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="cmprtmntDfntnRsrcPrm" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CmprtmntDfntn_rsrc_prm">
-                <comment>string</comment>
+        <property name="cmprtmntDfntnCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="CmprtmntDfntn_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"CompartmentDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="cmprtmntDfntnRsrcDcmnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CmprtmntDfntn_rsrc_dcmnttn">
-                <comment>string</comment>
+        <property name="cmprtmntDfntnDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="CmprtmntDfntn_dscrptn_mrkdwn">
+                <comment>{ "tree" :"CompartmentDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="CmprtmntDfntn_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"CompartmentDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnPrpsMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="CmprtmntDfntn_prps_mrkdwn">
+                <comment>{ "tree" :"CompartmentDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
+            </column>
+        </property>
+        <property name="compartmentDefinitionCodeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="CompartmentDefinition_code_code">
+                <comment>{ "tree" :"CompartmentDefinition.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnSrchBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.search", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSearch"}</meta>
+            <column length="65535" name="CmprtmntDfntn_srch_bln">
+                <comment>{ "tree" :"CompartmentDefinition.search", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSearch"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.resource.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addResource"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_cd_cde">
+                <comment>{ "tree" :"CompartmentDefinition.resource.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addResource"] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcPrmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.resource.param", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addResource"] , "methodName" : "addParam"}</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_prm_strng">
+                <comment>{ "tree" :"CompartmentDefinition.resource.param", "datatype" : "string", "cardinality" : "Many", "elementtree" : ["addResource"] , "methodName" : "addParam"}</comment>
+            </column>
+        </property>
+        <property name="cmprtmntDfntnRsrcDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CompartmentDefinition.resource.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addResource"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="CmprtmntDfntn_rsrc_dcmnttn_strng">
+                <comment>{ "tree" :"CompartmentDefinition.resource.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addResource"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
     </class>

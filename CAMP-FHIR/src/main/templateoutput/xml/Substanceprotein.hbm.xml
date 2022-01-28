@@ -1,171 +1,279 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Substanceprotein" optimistic-lock="none" table="substanceprotein">
-        <id name="sbstncPrtnSqncTpCdngCde" type="string">
-            <column length="512" name="SbstncPrtn_sqncTp_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="sbstncPrtnSqncTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SbstncPrtn_sqncTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPrtnSqncTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setSystem"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSqncTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SbstncPrtn_sqncTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPrtnSqncTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setVersion"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSqncTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SbstncPrtn_sqncTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPrtnSqncTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setCode"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSqncTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SbstncPrtn_sqncTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPrtnSqncTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setDisplay"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="substanceProteinNumberOfSubunits" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SubstanceProtein_numberOfSubunits">
-                <comment>integer</comment>
+        <property name="sbstncPrtnSqncTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="substanceProteinDisulfideLinkage" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SubstanceProtein_disulfideLinkage">
-                <comment>string</comment>
+        <property name="sbstncPrtnSqncTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, setText"}</meta>
+            <column length="512" name="SbstncPrtn_sqncTp_CC_txt">
+                <comment>{ "tree" :"SubstanceProtein.sequenceType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, setText"}</comment>
             </column>
         </property>
-        <property name="substanceProteinSubunit" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstanceProtein_subunit">
-                <comment>BackboneElement</comment>
+        <property name="sbstncPrtnNmbrfSbntsNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.numberOfSubunits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSubunits"}</meta>
+            <column length="65535" name="SbstncPrtn_nmbrfSbnts_ntgr">
+                <comment>{ "tree" :"SubstanceProtein.numberOfSubunits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSubunits"}</comment>
             </column>
         </property>
-        <property name="substanceProteinSubunitSubunit" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SubstanceProtein_subunit_subunit">
-                <comment>integer</comment>
+        <property name="sbstncPrtnDslfdLnkgStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.disulfideLinkage", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDisulfideLinkage"}</meta>
+            <column length="65535" name="SbstncPrtn_dslfdLnkg_strng">
+                <comment>{ "tree" :"SubstanceProtein.disulfideLinkage", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDisulfideLinkage"}</comment>
             </column>
         </property>
-        <property name="substanceProteinSubunitSequence" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SubstanceProtein_subunit_sequence">
-                <comment>string</comment>
+        <property name="sbstncPrtnSbntSbntNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.subunit", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSubunit"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sbnt_ntgr">
+                <comment>{ "tree" :"SubstanceProtein.subunit.subunit", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSubunit"}</comment>
             </column>
         </property>
-        <property name="substanceProteinSubunitLength" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SubstanceProtein_subunit_length">
-                <comment>integer</comment>
+        <property name="sbstncPrtnSbntSqncStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequence", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequence"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqnc_strng">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequence", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequence"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntSqncttchmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPrtnSbntLngthNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setLength"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_lngth_ntgr">
+                <comment>{ "tree" :"SubstanceProtein.subunit.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setLength"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntSqncttchmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setData"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_dta">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setData"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntSqncttchmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setHash"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setHash"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntSqncttchmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setContentType"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setContentType"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntSqncttchmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setLanguage"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setLanguage"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctndCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setCreation"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setCreation"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctndCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setTitle"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setTitle"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctndCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setSize"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_sze">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setSize"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctndCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPrtnSbntSqncttchmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setUrl"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_sqncttchmnt_ttchmnt_rl">
+                <comment>{ "tree" :"SubstanceProtein.subunit.sequenceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setUrl"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctndCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setUse"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_se">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setUse"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntNTrmnlMdfctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctn">
-                <comment>string</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctndCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctndCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctndCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctndCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctndCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, setText"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncPrtnSbntCTrmnlMdfctn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctn">
-                <comment>string</comment>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setAssigner"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setValue"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setValue"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntNTrmnlMdfctndDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setSystem"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctnd_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModificationId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModificationId, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntNTrmnlMdfctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.nTerminalModification", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModification"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_nTrmnlMdfctn_strng">
+                <comment>{ "tree" :"SubstanceProtein.subunit.nTerminalModification", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setNTerminalModification"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setUse"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_se">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setUse"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, setText"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setAssigner"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setValue"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setValue"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctndDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setSystem"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctnd_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModificationId", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModificationId, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncPrtnSbntCTrmnlMdfctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceProtein.subunit.cTerminalModification", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModification"}</meta>
+            <column length="65535" name="SbstncPrtn_sbnt_cTrmnlMdfctn_strng">
+                <comment>{ "tree" :"SubstanceProtein.subunit.cTerminalModification", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setCTerminalModification"}</comment>
             </column>
         </property>
     </class>

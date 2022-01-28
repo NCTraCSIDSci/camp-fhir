@@ -1,525 +1,963 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Library" optimistic-lock="none" table="library">
-        <id name="libraryUrl" type="string">
-            <column length="512" name="Library_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="lbrrDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="libraryUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="Library_url_uri">
+                <comment>{ "tree" :"Library.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="libraryIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="Library_identifier_Identifier_use">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="lbrrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="lbrrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="lbrrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="lbrrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="lbrrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="lbrrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="lbrrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="lbrrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="lbrrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="lbrrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="lbrrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="Lbrr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"Library.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="libraryVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="Library_version_string">
+                <comment>{ "tree" :"Library.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="Lbrr_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="libraryNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="Library_name_string">
+                <comment>{ "tree" :"Library.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="libraryVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_version">
-                <comment>string</comment>
+        <property name="libraryTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="Library_title_string">
+                <comment>{ "tree" :"Library.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="libraryName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_name">
-                <comment>string</comment>
+        <property name="librarySubtitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</meta>
+            <column length="65535" name="Library_subtitle_string">
+                <comment>{ "tree" :"Library.subtitle", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubtitle"}</comment>
             </column>
         </property>
-        <property name="libraryTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_title">
-                <comment>string</comment>
+        <property name="libraryStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Library_status_code">
+                <comment>{ "tree" :"Library.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="librarySubtitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_subtitle">
-                <comment>string</comment>
+        <property name="libraryExperimentalBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="Library_experimental_boolean">
+                <comment>{ "tree" :"Library.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="libraryStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Library_status">
-                <comment>code</comment>
+        <property name="libraryTypeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Library_type_CC_coding_C_system">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="libraryExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Library_experimental">
-                <comment>boolean</comment>
+        <property name="libraryTypeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Library_type_CC_coding_C_version">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="libraryTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Library_type_CC_coding_C_code">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="libraryTypeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Library_type_CC_coding_C_display">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="lbrrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="libraryTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Library_type_CC_text">
+                <comment>{ "tree" :"Library.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="lbrrSbjctCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lbrr_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="lbrrSbjctCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="lbrrSbjctCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="lbrrSbjctCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="lbrrSbjctCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="lbrrSbjctCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, setText"}</meta>
+            <column length="65535" name="Lbrr_sbjctCdblcncpt_CC_txt">
+                <comment>{ "tree" :"Library.subjectCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="librarySubjectReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.subjectReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectReference(group)"}</meta>
+            <column length="65535" name="Library_subjectReference_Reference">
+                <comment>{ "tree" :"Library.subjectReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubjectReference(group)"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctcdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lbrr_sbjctcdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="libraryDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Library_date_dateTime">
+                <comment>{ "tree" :"Library.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="libraryPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="Library_publisher_string">
+                <comment>{ "tree" :"Library.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="lbrrCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="Lbrr_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="libraryContactContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="Library_contact_ContactDetail_name">
+                <comment>{ "tree" :"Library.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="libraryDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="Library_description_markdown">
+                <comment>{ "tree" :"Library.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrSbjctRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Lbrr_sbjctRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="libraryDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Library_date">
-                <comment>dateTime</comment>
+        <property name="lbrrSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="libraryPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_publisher">
-                <comment>string</comment>
+        <property name="lbrrSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="libraryContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Library_contact">
-                <comment>ContactDetail</comment>
+        <property name="lbrrSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="libraryDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Library_description">
-                <comment>markdown</comment>
+        <property name="lbrrSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="libraryUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="Library_useContext">
-                <comment>UsageContext</comment>
+        <property name="lbrrSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="lbrrSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="lbrrSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="lbrrSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="lbrrSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="lbrrSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lbrr_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="lbrrSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="libraryPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Library_purpose">
-                <comment>markdown</comment>
+        <property name="lbrrSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="libraryUsage" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Library_usage">
-                <comment>string</comment>
+        <property name="lbrrSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="libraryCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="Library_copyright">
-                <comment>markdown</comment>
+        <property name="lbrrSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="Lbrr_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"Library.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="libraryApprovalDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Library_approvalDate">
-                <comment>date</comment>
+        <property name="lbrrJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lbrr_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="libraryLastReviewDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Library_lastReviewDate">
-                <comment>date</comment>
+        <property name="lbrrJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lbrr_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lbrrFfctvPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Lbrr_ffctvPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="lbrrJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="Lbrr_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lbrrFfctvPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Lbrr_ffctvPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="lbrrJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="lbrrJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="libraryJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="Library_jurisdiction_CC_text">
+                <comment>{ "tree" :"Library.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="libraryPurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="Library_purpose_markdown">
+                <comment>{ "tree" :"Library.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="libraryUsageString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</meta>
+            <column length="65535" name="Library_usage_string">
+                <comment>{ "tree" :"Library.usage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUsage"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="libraryCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="Library_copyright_markdown">
+                <comment>{ "tree" :"Library.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="lbrrTpcCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lbrr_tpc_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="libraryApprovalDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</meta>
+            <column length="65535" name="Library_approvalDate_date">
+                <comment>{ "tree" :"Library.approvalDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setApprovalDate"}</comment>
             </column>
         </property>
-        <property name="libraryAuthor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Library_author">
-                <comment>ContactDetail</comment>
+        <property name="libraryLastReviewDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</meta>
+            <column length="65535" name="Library_lastReviewDate_date">
+                <comment>{ "tree" :"Library.lastReviewDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastReviewDate"}</comment>
             </column>
         </property>
-        <property name="libraryEditor" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Library_editor">
-                <comment>ContactDetail</comment>
+        <property name="lbrrFfctvPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_ffctvPrd_Prd_strt">
+                <comment>{ "tree" :"Library.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="libraryReviewer" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Library_reviewer">
-                <comment>ContactDetail</comment>
+        <property name="libraryEffectivePeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</meta>
+            <column length="65535" name="Library_effectivePeriod_Period_end">
+                <comment>{ "tree" :"Library.effectivePeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEffectivePeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="libraryEndorser" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="Library_endorser">
-                <comment>ContactDetail</comment>
+        <property name="libraryTopicCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</meta>
+            <column length="65535" name="Library_topic_CC_coding_C_system">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="libraryRelatedArtifact" type="string">
-            <meta attribute="resource-type">RelatedArtifact</meta>
-            <column length="65535" name="Library_relatedArtifact">
-                <comment>RelatedArtifact</comment>
+        <property name="libraryTopicCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</meta>
+            <column length="65535" name="Library_topic_CC_coding_C_version">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="libraryParameter" type="string">
-            <meta attribute="resource-type">ParameterDefinition</meta>
-            <column length="65535" name="Library_parameter">
-                <comment>ParameterDefinition</comment>
+        <property name="libraryTopicCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</meta>
+            <column length="65535" name="Library_topic_CC_coding_C_code">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="libraryDataRequirement" type="string">
-            <meta attribute="resource-type">DataRequirement</meta>
-            <column length="65535" name="Library_dataRequirement">
-                <comment>DataRequirement</comment>
+        <property name="libraryTopicCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Library_topic_CC_coding_C_display">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntDtBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_data_base64Binary</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_dt_bs64Bnry">
-                <comment>Attachment_data_base64Binary</comment>
+        <property name="lbrrTpcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_tpc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntHshBs64bnry" type="string">
-            <meta attribute="resource-type">Attachment_hash_base64Binary</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_hsh_bs64Bnry">
-                <comment>Attachment_hash_base64Binary</comment>
+        <property name="libraryTopicCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</meta>
+            <column length="65535" name="Library_topic_CC_text">
+                <comment>{ "tree" :"Library.topic", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTopic, setText"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntCntntTpCde" type="string">
-            <meta attribute="resource-type">Attachment_contentType_code</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_cntntTp_cde">
-                <comment>Attachment_contentType_code</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntLnggCde" type="string">
-            <meta attribute="resource-type">Attachment_language_code</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_lngg_cde">
-                <comment>Attachment_language_code</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntCrtnDtTme" type="string">
-            <meta attribute="resource-type">Attachment_creation_dateTime</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_crtn_dtTme">
-                <comment>Attachment_creation_dateTime</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntTtlStrng" type="string">
-            <meta attribute="resource-type">Attachment_title_string</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_ttl_strng">
-                <comment>Attachment_title_string</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="lbrrCntntTtchmntSzNsgndnt" type="string">
-            <meta attribute="resource-type">Attachment_size_unsignedInt</meta>
-            <column length="65535" name="Lbrr_cntnt_ttchmnt_sz_nsgndnt">
-                <comment>Attachment_size_unsignedInt</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="libraryContentAttachmentUrlUrl" type="string">
-            <meta attribute="resource-type">Attachment_url_url</meta>
-            <column length="65535" name="Library_content_Attachment_url_url">
-                <comment>Attachment_url_url</comment>
+        <property name="lbrrThrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Lbrr_thr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="libraryAuthorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</meta>
+            <column length="65535" name="Library_author_ContactDetail_name">
+                <comment>{ "tree" :"Library.author", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAuthor, addName"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</meta>
+            <column length="65535" name="Lbrr_dtr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="libraryEditorContactDetailName" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</meta>
+            <column length="65535" name="Library_editor_ContactDetail_name">
+                <comment>{ "tree" :"Library.editor", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEditor, addName"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRvwrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</meta>
+            <column length="65535" name="Lbrr_rvwr_CntctDtl_nme">
+                <comment>{ "tree" :"Library.reviewer", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReviewer, addName"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setUse"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, setTelecom, setRank"}</comment>
+            </column>
+        </property>
+        <property name="lbrrNdrsrCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</meta>
+            <column length="65535" name="Lbrr_ndrsr_CntctDtl_nme">
+                <comment>{ "tree" :"Library.endorser", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndorser, addName"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_dta">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setData"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_rl">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_sze">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setSize"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setHash"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDcmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dcmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDocument, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctRsrce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_rsrce">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setResource"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_tpe">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setType"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctCttn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_cttn">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setCitation"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctLbl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_lbl">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setLabel"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_dsplay">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="lbrrRltdrtfctRltdrtfctRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</meta>
+            <column length="65535" name="Lbrr_rltdrtfct_Rltdrtfct_rl">
+                <comment>{ "tree" :"Library.relatedArtifact", "datatype" : "RelatedArtifact, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addRelatedArtifact, setUrl"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnPrfle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setProfile"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_prfle">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setProfile"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setName"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_nme">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setName"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setUse"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_se">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setUse"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setType"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_tpe">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setType"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnMn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, integer", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setMin"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_mn">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, integer", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setMin"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setMax"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_mx">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setMax"}</comment>
+            </column>
+        </property>
+        <property name="lbrrPrmtrPrmtrDfntnDcmnttn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setDocumentation"}</meta>
+            <column length="65535" name="Lbrr_prmtr_PrmtrDfntn_dcmnttn">
+                <comment>{ "tree" :"Library.parameter", "datatype" : "ParameterDefinition, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addParameter, setDocumentation"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntPrfle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addProfile"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_prfle">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addProfile"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setType"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_tpe">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setType"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_C_sstm">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_C_vrsn">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_C_cde">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_C_dsplay">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_C_srSlctd">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, setText"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctCC_CC_txt">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectCodeableConcept, setText"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntCdFltrVlSt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setValueSet"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_cdFltr_vlSt">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setValueSet"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSrtDrctn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addSort, setDirection"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_srt_drctn">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addSort, setDirection"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntCdFltrCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Coding", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, addCode"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_cdFltr_cde">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Coding", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, addCode"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntDtFltrVlDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValueDateTime"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_dtFltr_vlDtTme">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValueDateTime"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntDtFltrVlDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Duration", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValueDuration"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_dtFltr_vlDrtn">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Duration", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValueDuration"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntDtFltrVlPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Period", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValuePeriod"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_dtFltr_vlPrd">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, Period", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setValuePeriod"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntCdFltrPth" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setPath"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_cdFltr_pth">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setPath"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntCdFltrSrchPrm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setSearchParam"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_cdFltr_srchPrm">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addCodeFilter, setSearchParam"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntDtFltrPth" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setPath"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_dtFltr_pth">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setPath"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntDtFltrSrchPrm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setSearchParam"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_dtFltr_srchPrm">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Element, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addDateFilter, setSearchParam"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSrtPth" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addSort, setPath"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_srt_pth">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addSort, setPath"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntLmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setLimit"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_lmt">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setLimit"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntSbjctRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectReference"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_sbjctRfrnce">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, setSubjectReference"}</comment>
+            </column>
+        </property>
+        <property name="lbrrDtRqrmntDtRqrmntMstSpprt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addMustSupport"}</meta>
+            <column length="65535" name="Lbrr_dtRqrmnt_DtRqrmnt_mstSpprt">
+                <comment>{ "tree" :"Library.dataRequirement", "datatype" : "DataRequirement, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDataRequirement, addMustSupport"}</comment>
+            </column>
+        </property>
+        <property name="libraryContentAttachmentData" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setData"}</meta>
+            <column length="65535" name="Library_content_Attachment_data">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setData"}</comment>
+            </column>
+        </property>
+        <property name="libraryContentAttachmentHash" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setHash"}</meta>
+            <column length="65535" name="Library_content_Attachment_hash">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setHash"}</comment>
+            </column>
+        </property>
+        <property name="lbrrCntntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setContentType"}</meta>
+            <column length="65535" name="Lbrr_cntnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setContentType"}</comment>
+            </column>
+        </property>
+        <property name="lbrrCntntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setLanguage"}</meta>
+            <column length="65535" name="Lbrr_cntnt_ttchmnt_lngge">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setLanguage"}</comment>
+            </column>
+        </property>
+        <property name="lbrrCntntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setCreation"}</meta>
+            <column length="65535" name="Lbrr_cntnt_ttchmnt_crtn">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setCreation"}</comment>
+            </column>
+        </property>
+        <property name="libraryContentAttachmentTitle" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setTitle"}</meta>
+            <column length="65535" name="Library_content_Attachment_title">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setTitle"}</comment>
+            </column>
+        </property>
+        <property name="libraryContentAttachmentSize" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setSize"}</meta>
+            <column length="65535" name="Library_content_Attachment_size">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, unsignedInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setSize"}</comment>
+            </column>
+        </property>
+        <property name="libraryContentAttachmentUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"Library.content", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setUrl"}</meta>
+            <column length="65535" name="Library_content_Attachment_url">
+                <comment>{ "tree" :"Library.content", "datatype" : "Attachment, url", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContent, setUrl"}</comment>
             </column>
         </property>
     </class>

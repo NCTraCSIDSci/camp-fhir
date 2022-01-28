@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1121 +10,1888 @@ package main.templateoutput.Model;
 public class Requestgroup  implements java.io.Serializable {
 
 
-     private String rqstGrpDntfrCdngCde;
-     private String rqstGrpDntfrCdngSrSlctd;
-     private String rqstGrpDntfrCdngVrsn;
-     private String rqstGrpDntfrCdngDsplay;
-     private String rqstGrpDntfrCdngSstm;
-     private String requestGroupInstantiatesCanonical;
-     private String requestGroupInstantiatesUri;
-     private String requestGroupBasedOn;
-     private String requestGroupReplaces;
-     private String rqstGrpGrpdntfrCdngSrSlctd;
-     private String rqstGrpGrpdntfrCdngCde;
-     private String rqstGrpGrpdntfrCdngVrsn;
-     private String rqstGrpGrpdntfrCdngDsplay;
-     private String rqstGrpGrpdntfrCdngSstm;
-     private String requestGroupStatus;
-     private String requestGroupIntent;
-     private String requestGroupPriority;
-     private String rqstGrpCdCdngSrSlctd;
-     private String requestGroupCodeCodingCode;
-     private String requestGroupCodeCodingVersion;
-     private String requestGroupCodeCodingDisplay;
-     private String requestGroupCodeCodingSystem;
-     private String requestGroupSubject;
-     private String requestGroupEncounter;
-     private String requestGroupAuthoredOn;
-     private String requestGroupAuthor;
-     private String rqstGrpRsnCdCdngSrSlctd;
-     private String rqstGrpRsnCdCdngCde;
-     private String rqstGrpRsnCdCdngVrsn;
-     private String rqstGrpRsnCdCdngDsplay;
-     private String rqstGrpRsnCdCdngSstm;
-     private String requestGroupReasonReference;
-     private String rqstGrpNtCdngSrSlctd;
-     private String requestGroupNoteCodingCode;
-     private String requestGroupNoteCodingVersion;
-     private String requestGroupNoteCodingDisplay;
-     private String requestGroupNoteCodingSystem;
-     private String requestGroupAction;
-     private String requestGroupActionPrefix;
-     private String requestGroupActionTitle;
-     private String requestGroupActionDescription;
-     private String requestGroupActionTextEquivalent;
-     private String requestGroupActionPriority;
-     private String rqstGrpCtnCdCdngSrSlctd;
-     private String rqstGrpCtnCdCdngCde;
-     private String rqstGrpCtnCdCdngVrsn;
-     private String rqstGrpCtnCdCdngDsplay;
-     private String rqstGrpCtnCdCdngSstm;
-     private String requestGroupActionDocumentation;
-     private String requestGroupActionCondition;
-     private String requestGroupActionConditionKind;
-     private String rqstGrpCtnCndtnXprssn;
-     private String requestGroupActionRelatedAction;
-     private String rqstGrpCtnRltdctnCtnd;
-     private String rqstGrpCtnRltdctnRltnshp;
-     private String rqstGrpCtnRltdctnFfstDrtn;
-     private String rqstGrpCtnRltdctnFfstRngCdngSrSlctd;
-     private String rqstGrpCtnRltdctnFfstRngCdngCde;
-     private String rqstGrpCtnRltdctnFfstRngCdngVrsn;
-     private String rqstGrpCtnRltdctnFfstRngCdngDsplay;
-     private String rqstGrpCtnRltdctnFfstRngCdngSstm;
-     private String requestGroupActionTimingDatetime;
-     private String requestGroupActionTimingAge;
-     private String rqstGrpCtnTmngPrdCdngSrSlctd;
-     private String rqstGrpCtnTmngPrdCdngCde;
-     private String rqstGrpCtnTmngPrdCdngVrsn;
-     private String rqstGrpCtnTmngPrdCdngDsplay;
-     private String rqstGrpCtnTmngPrdCdngSstm;
-     private String requestGroupActionTimingDuration;
-     private String rqstGrpCtnTmngRngCdngSrSlctd;
-     private String rqstGrpCtnTmngRngCdngCde;
-     private String rqstGrpCtnTmngRngCdngVrsn;
-     private String rqstGrpCtnTmngRngCdngDsplay;
-     private String rqstGrpCtnTmngRngCdngSstm;
-     private String rqstGrpCtnTmngTmngCdngSrSlctd;
-     private String rqstGrpCtnTmngTmngCdngCde;
-     private String rqstGrpCtnTmngTmngCdngVrsn;
-     private String rqstGrpCtnTmngTmngCdngDsplay;
-     private String rqstGrpCtnTmngTmngCdngSstm;
-     private String requestGroupActionParticipant;
-     private String rqstGrpCtnTpCdngSrSlctd;
-     private String rqstGrpCtnTpCdngCde;
-     private String rqstGrpCtnTpCdngVrsn;
-     private String rqstGrpCtnTpCdngDsplay;
-     private String rqstGrpCtnTpCdngSstm;
-     private String rqstGrpCtnGrpngBhvr;
-     private String rqstGrpCtnSlctnBhvr;
-     private String rqstGrpCtnRqrdBhvr;
-     private String rqstGrpCtnPrchckBhvr;
-     private String rqstGrpCtnCrdnltBhvr;
-     private String requestGroupActionResource;
-     private String requestGroupActionAction;
+     private Integer id;
+     private String rqstGrpDntfrDntfrSe;
+     private String rqstGrpDntfrDntfrTpCcCSstm;
+     private String rqstGrpDntfrDntfrTpCcCVrsn;
+     private String rqstGrpDntfrDntfrTpCcCCde;
+     private String rqstGrpDntfrDntfrTpCcCDsplay;
+     private String rqstGrpDntfrDntfrTpCcCSrSlctd;
+     private String rqstGrpDntfrDntfrTpCcTxt;
+     private String rqstGrpDntfrDntfrPrdPrdStrt;
+     private String rqstGrpDntfrDntfrPrdPrdNd;
+     private String rqstGrpDntfrDntfrSsgnr;
+     private String rqstGrpDntfrDntfrVlue;
+     private String rqstGrpDntfrDntfrSstm;
+     private String rqstGrpNstnttsCnnclCnncl;
+     private String requestGroupInstantiatesUriUri;
+     private String requestGroupBasedOnReference;
+     private String requestGroupReplacesReference;
+     private String rqstGrpGrpdntfrDntfrSe;
+     private String rqstGrpGrpdntfrDntfrTpCcCSstm;
+     private String rqstGrpGrpdntfrDntfrTpCcCVrsn;
+     private String rqstGrpGrpdntfrDntfrTpCcCCde;
+     private String rqstGrpGrpdntfrDntfrTpCcCDsplay;
+     private String rqstGrpGrpdntfrDntfrTpCcCSrSlctd;
+     private String rqstGrpGrpdntfrDntfrTpCcTxt;
+     private String rqstGrpGrpdntfrDntfrPrdPrdStrt;
+     private String rqstGrpGrpdntfrDntfrPrdPrdNd;
+     private String rqstGrpGrpdntfrDntfrSsgnr;
+     private String rqstGrpGrpdntfrDntfrVlue;
+     private String rqstGrpGrpdntfrDntfrSstm;
+     private String requestGroupStatusCode;
+     private String requestGroupIntentCode;
+     private String requestGroupPriorityCode;
+     private String rqstGrpCdCcCdngCSstm;
+     private String rqstGrpCdCcCdngCVrsn;
+     private String requestGroupCodeCcCodingCCode;
+     private String rqstGrpCdCcCdngCDsplay;
+     private String rqstGrpCdCcCdngCSrSlctd;
+     private String requestGroupCodeCcText;
+     private String requestGroupSubjectReference;
+     private String requestGroupEncounterReference;
+     private String requestGroupAuthoredOnDateTime;
+     private String requestGroupAuthorReference;
+     private String rqstGrpRsnCdCcCdngCSstm;
+     private String rqstGrpRsnCdCcCdngCVrsn;
+     private String rqstGrpRsnCdCcCdngCCde;
+     private String rqstGrpRsnCdCcCdngCDsplay;
+     private String rqstGrpRsnCdCcCdngCSrSlctd;
+     private String requestGroupReasonCodeCcText;
+     private String rqstGrpRsnRfrncRfrnce;
+     private String requestGroupNoteAnnotationTime;
+     private String requestGroupNoteAnnotationText;
+     private String rqstGrpNtNnttnThrRfrnce;
+     private String rqstGrpNtNnttnThrStrng;
+     private String requestGroupActionPrefixString;
+     private String requestGroupActionTitleString;
+     private String rqstGrpCtnDscrptnStrng;
+     private String rqstGrpCtnTxtqvlntStrng;
+     private String requestGroupActionPriorityCode;
+     private String rqstGrpCtnCdCcCdngCSstm;
+     private String rqstGrpCtnCdCcCdngCVrsn;
+     private String rqstGrpCtnCdCcCdngCCde;
+     private String rqstGrpCtnCdCcCdngCDsplay;
+     private String rqstGrpCtnCdCcCdngCSrSlctd;
+     private String requestGroupActionCodeCcText;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle;
+     private String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn;
+     private String rqstGrpCtnDcmnttnRltdrtfctRsrce;
+     private String rqstGrpCtnDcmnttnRltdrtfctTpe;
+     private String rqstGrpCtnDcmnttnRltdrtfctCttn;
+     private String rqstGrpCtnDcmnttnRltdrtfctLbl;
+     private String rqstGrpCtnDcmnttnRltdrtfctDsplay;
+     private String rqstGrpCtnDcmnttnRltdrtfctRl;
+     private String rqstGrpCtnCndtnKndCde;
+     private String rqstGrpCtnCndtnXprssnXprssnLngge;
+     private String rqstGrpCtnCndtnXprssnXprssnNme;
+     private String rqstGrpCtnCndtnXprssnXprssnDscrptn;
+     private String rqstGrpCtnCndtnXprssnXprssnXprssn;
+     private String rqstGrpCtnCndtnXprssnXprssnRfrnce;
+     private String rqstGrpCtnRltdctnCtndD;
+     private String rqstGrpCtnRltdctnRltnshpCde;
+     private String rqstGrpCtnRltdctnFfstDrtnDrtn;
+     private String rqstGrpCtnRltdctnFfstRngRngLw;
+     private String rqstGrpCtnRltdctnFfstRngRngHgh;
+     private String rqstGrpCtnTmngDttmDtTme;
+     private String requestGroupActionTimingAgeAge;
+     private String rqstGrpCtnTmngPrdPrdStrt;
+     private String rqstGrpCtnTmngPrdPrdNd;
+     private String rqstGrpCtnTmngDrtnDrtn;
+     private String rqstGrpCtnTmngRngRngLw;
+     private String rqstGrpCtnTmngRngRngHgh;
+     private String rqstGrpCtnTmngTmngTmngCdCcCSstm;
+     private String rqstGrpCtnTmngTmngTmngCdCcCVrsn;
+     private String rqstGrpCtnTmngTmngTmngCdCcCCde;
+     private String rqstGrpCtnTmngTmngTmngCdCcCDsplay;
+     private String rqstGrpCtnTmngTmngTmngCdCcCSrSlctd;
+     private String rqstGrpCtnTmngTmngTmngCdCcTxt;
+     private String rqstGrpCtnTmngTmngTmngVnt;
+     private String rqstGrpCtnTmngTmngTmngRptDrtnnt;
+     private String rqstGrpCtnTmngTmngTmngRptPrdnt;
+     private String rqstGrpCtnTmngTmngTmngRptDfWk;
+     private String rqstGrpCtnTmngTmngTmngRptWhn;
+     private String rqstGrpCtnTmngTmngTmngRptDrtn;
+     private String rqstGrpCtnTmngTmngTmngRptDrtnMx;
+     private String rqstGrpCtnTmngTmngTmngRptPrd;
+     private String rqstGrpCtnTmngTmngTmngRptPrdMx;
+     private String rqstGrpCtnTmngTmngTmngRptBndsDrtn;
+     private String rqstGrpCtnTmngTmngTmngRptBndsPrd;
+     private String rqstGrpCtnTmngTmngTmngRptCnt;
+     private String rqstGrpCtnTmngTmngTmngRptCntMx;
+     private String rqstGrpCtnTmngTmngTmngRptFrqncy;
+     private String rqstGrpCtnTmngTmngTmngRptFrqncMx;
+     private String rqstGrpCtnTmngTmngTmngRptBndsRnge;
+     private String rqstGrpCtnTmngTmngTmngRptTmfDay;
+     private String rqstGrpCtnTmngTmngTmngRptFfst;
+     private String rqstGrpCtnPrtcpntRfrnce;
+     private String rqstGrpCtnTpCcCdngCSstm;
+     private String rqstGrpCtnTpCcCdngCVrsn;
+     private String rqstGrpCtnTpCcCdngCCde;
+     private String rqstGrpCtnTpCcCdngCDsplay;
+     private String rqstGrpCtnTpCcCdngCSrSlctd;
+     private String requestGroupActionTypeCcText;
+     private String rqstGrpCtnGrpngBhvrCde;
+     private String rqstGrpCtnSlctnBhvrCde;
+     private String rqstGrpCtnRqrdBhvrCde;
+     private String rqstGrpCtnPrchckBhvrCde;
+     private String rqstGrpCtnCrdnltBhvrCde;
+     private String rqstGrpCtnRsrcRfrnce;
+     private String requestGroupActionActionAction;
 
     public Requestgroup() {
     }
 
-	
-    public Requestgroup(String rqstGrpDntfrCdngCde) {
-        this.rqstGrpDntfrCdngCde = rqstGrpDntfrCdngCde;
-    }
-    public Requestgroup(String rqstGrpDntfrCdngCde, String rqstGrpDntfrCdngSrSlctd, String rqstGrpDntfrCdngVrsn, String rqstGrpDntfrCdngDsplay, String rqstGrpDntfrCdngSstm, String requestGroupInstantiatesCanonical, String requestGroupInstantiatesUri, String requestGroupBasedOn, String requestGroupReplaces, String rqstGrpGrpdntfrCdngSrSlctd, String rqstGrpGrpdntfrCdngCde, String rqstGrpGrpdntfrCdngVrsn, String rqstGrpGrpdntfrCdngDsplay, String rqstGrpGrpdntfrCdngSstm, String requestGroupStatus, String requestGroupIntent, String requestGroupPriority, String rqstGrpCdCdngSrSlctd, String requestGroupCodeCodingCode, String requestGroupCodeCodingVersion, String requestGroupCodeCodingDisplay, String requestGroupCodeCodingSystem, String requestGroupSubject, String requestGroupEncounter, String requestGroupAuthoredOn, String requestGroupAuthor, String rqstGrpRsnCdCdngSrSlctd, String rqstGrpRsnCdCdngCde, String rqstGrpRsnCdCdngVrsn, String rqstGrpRsnCdCdngDsplay, String rqstGrpRsnCdCdngSstm, String requestGroupReasonReference, String rqstGrpNtCdngSrSlctd, String requestGroupNoteCodingCode, String requestGroupNoteCodingVersion, String requestGroupNoteCodingDisplay, String requestGroupNoteCodingSystem, String requestGroupAction, String requestGroupActionPrefix, String requestGroupActionTitle, String requestGroupActionDescription, String requestGroupActionTextEquivalent, String requestGroupActionPriority, String rqstGrpCtnCdCdngSrSlctd, String rqstGrpCtnCdCdngCde, String rqstGrpCtnCdCdngVrsn, String rqstGrpCtnCdCdngDsplay, String rqstGrpCtnCdCdngSstm, String requestGroupActionDocumentation, String requestGroupActionCondition, String requestGroupActionConditionKind, String rqstGrpCtnCndtnXprssn, String requestGroupActionRelatedAction, String rqstGrpCtnRltdctnCtnd, String rqstGrpCtnRltdctnRltnshp, String rqstGrpCtnRltdctnFfstDrtn, String rqstGrpCtnRltdctnFfstRngCdngSrSlctd, String rqstGrpCtnRltdctnFfstRngCdngCde, String rqstGrpCtnRltdctnFfstRngCdngVrsn, String rqstGrpCtnRltdctnFfstRngCdngDsplay, String rqstGrpCtnRltdctnFfstRngCdngSstm, String requestGroupActionTimingDatetime, String requestGroupActionTimingAge, String rqstGrpCtnTmngPrdCdngSrSlctd, String rqstGrpCtnTmngPrdCdngCde, String rqstGrpCtnTmngPrdCdngVrsn, String rqstGrpCtnTmngPrdCdngDsplay, String rqstGrpCtnTmngPrdCdngSstm, String requestGroupActionTimingDuration, String rqstGrpCtnTmngRngCdngSrSlctd, String rqstGrpCtnTmngRngCdngCde, String rqstGrpCtnTmngRngCdngVrsn, String rqstGrpCtnTmngRngCdngDsplay, String rqstGrpCtnTmngRngCdngSstm, String rqstGrpCtnTmngTmngCdngSrSlctd, String rqstGrpCtnTmngTmngCdngCde, String rqstGrpCtnTmngTmngCdngVrsn, String rqstGrpCtnTmngTmngCdngDsplay, String rqstGrpCtnTmngTmngCdngSstm, String requestGroupActionParticipant, String rqstGrpCtnTpCdngSrSlctd, String rqstGrpCtnTpCdngCde, String rqstGrpCtnTpCdngVrsn, String rqstGrpCtnTpCdngDsplay, String rqstGrpCtnTpCdngSstm, String rqstGrpCtnGrpngBhvr, String rqstGrpCtnSlctnBhvr, String rqstGrpCtnRqrdBhvr, String rqstGrpCtnPrchckBhvr, String rqstGrpCtnCrdnltBhvr, String requestGroupActionResource, String requestGroupActionAction) {
-       this.rqstGrpDntfrCdngCde = rqstGrpDntfrCdngCde;
-       this.rqstGrpDntfrCdngSrSlctd = rqstGrpDntfrCdngSrSlctd;
-       this.rqstGrpDntfrCdngVrsn = rqstGrpDntfrCdngVrsn;
-       this.rqstGrpDntfrCdngDsplay = rqstGrpDntfrCdngDsplay;
-       this.rqstGrpDntfrCdngSstm = rqstGrpDntfrCdngSstm;
-       this.requestGroupInstantiatesCanonical = requestGroupInstantiatesCanonical;
-       this.requestGroupInstantiatesUri = requestGroupInstantiatesUri;
-       this.requestGroupBasedOn = requestGroupBasedOn;
-       this.requestGroupReplaces = requestGroupReplaces;
-       this.rqstGrpGrpdntfrCdngSrSlctd = rqstGrpGrpdntfrCdngSrSlctd;
-       this.rqstGrpGrpdntfrCdngCde = rqstGrpGrpdntfrCdngCde;
-       this.rqstGrpGrpdntfrCdngVrsn = rqstGrpGrpdntfrCdngVrsn;
-       this.rqstGrpGrpdntfrCdngDsplay = rqstGrpGrpdntfrCdngDsplay;
-       this.rqstGrpGrpdntfrCdngSstm = rqstGrpGrpdntfrCdngSstm;
-       this.requestGroupStatus = requestGroupStatus;
-       this.requestGroupIntent = requestGroupIntent;
-       this.requestGroupPriority = requestGroupPriority;
-       this.rqstGrpCdCdngSrSlctd = rqstGrpCdCdngSrSlctd;
-       this.requestGroupCodeCodingCode = requestGroupCodeCodingCode;
-       this.requestGroupCodeCodingVersion = requestGroupCodeCodingVersion;
-       this.requestGroupCodeCodingDisplay = requestGroupCodeCodingDisplay;
-       this.requestGroupCodeCodingSystem = requestGroupCodeCodingSystem;
-       this.requestGroupSubject = requestGroupSubject;
-       this.requestGroupEncounter = requestGroupEncounter;
-       this.requestGroupAuthoredOn = requestGroupAuthoredOn;
-       this.requestGroupAuthor = requestGroupAuthor;
-       this.rqstGrpRsnCdCdngSrSlctd = rqstGrpRsnCdCdngSrSlctd;
-       this.rqstGrpRsnCdCdngCde = rqstGrpRsnCdCdngCde;
-       this.rqstGrpRsnCdCdngVrsn = rqstGrpRsnCdCdngVrsn;
-       this.rqstGrpRsnCdCdngDsplay = rqstGrpRsnCdCdngDsplay;
-       this.rqstGrpRsnCdCdngSstm = rqstGrpRsnCdCdngSstm;
-       this.requestGroupReasonReference = requestGroupReasonReference;
-       this.rqstGrpNtCdngSrSlctd = rqstGrpNtCdngSrSlctd;
-       this.requestGroupNoteCodingCode = requestGroupNoteCodingCode;
-       this.requestGroupNoteCodingVersion = requestGroupNoteCodingVersion;
-       this.requestGroupNoteCodingDisplay = requestGroupNoteCodingDisplay;
-       this.requestGroupNoteCodingSystem = requestGroupNoteCodingSystem;
-       this.requestGroupAction = requestGroupAction;
-       this.requestGroupActionPrefix = requestGroupActionPrefix;
-       this.requestGroupActionTitle = requestGroupActionTitle;
-       this.requestGroupActionDescription = requestGroupActionDescription;
-       this.requestGroupActionTextEquivalent = requestGroupActionTextEquivalent;
-       this.requestGroupActionPriority = requestGroupActionPriority;
-       this.rqstGrpCtnCdCdngSrSlctd = rqstGrpCtnCdCdngSrSlctd;
-       this.rqstGrpCtnCdCdngCde = rqstGrpCtnCdCdngCde;
-       this.rqstGrpCtnCdCdngVrsn = rqstGrpCtnCdCdngVrsn;
-       this.rqstGrpCtnCdCdngDsplay = rqstGrpCtnCdCdngDsplay;
-       this.rqstGrpCtnCdCdngSstm = rqstGrpCtnCdCdngSstm;
-       this.requestGroupActionDocumentation = requestGroupActionDocumentation;
-       this.requestGroupActionCondition = requestGroupActionCondition;
-       this.requestGroupActionConditionKind = requestGroupActionConditionKind;
-       this.rqstGrpCtnCndtnXprssn = rqstGrpCtnCndtnXprssn;
-       this.requestGroupActionRelatedAction = requestGroupActionRelatedAction;
-       this.rqstGrpCtnRltdctnCtnd = rqstGrpCtnRltdctnCtnd;
-       this.rqstGrpCtnRltdctnRltnshp = rqstGrpCtnRltdctnRltnshp;
-       this.rqstGrpCtnRltdctnFfstDrtn = rqstGrpCtnRltdctnFfstDrtn;
-       this.rqstGrpCtnRltdctnFfstRngCdngSrSlctd = rqstGrpCtnRltdctnFfstRngCdngSrSlctd;
-       this.rqstGrpCtnRltdctnFfstRngCdngCde = rqstGrpCtnRltdctnFfstRngCdngCde;
-       this.rqstGrpCtnRltdctnFfstRngCdngVrsn = rqstGrpCtnRltdctnFfstRngCdngVrsn;
-       this.rqstGrpCtnRltdctnFfstRngCdngDsplay = rqstGrpCtnRltdctnFfstRngCdngDsplay;
-       this.rqstGrpCtnRltdctnFfstRngCdngSstm = rqstGrpCtnRltdctnFfstRngCdngSstm;
-       this.requestGroupActionTimingDatetime = requestGroupActionTimingDatetime;
-       this.requestGroupActionTimingAge = requestGroupActionTimingAge;
-       this.rqstGrpCtnTmngPrdCdngSrSlctd = rqstGrpCtnTmngPrdCdngSrSlctd;
-       this.rqstGrpCtnTmngPrdCdngCde = rqstGrpCtnTmngPrdCdngCde;
-       this.rqstGrpCtnTmngPrdCdngVrsn = rqstGrpCtnTmngPrdCdngVrsn;
-       this.rqstGrpCtnTmngPrdCdngDsplay = rqstGrpCtnTmngPrdCdngDsplay;
-       this.rqstGrpCtnTmngPrdCdngSstm = rqstGrpCtnTmngPrdCdngSstm;
-       this.requestGroupActionTimingDuration = requestGroupActionTimingDuration;
-       this.rqstGrpCtnTmngRngCdngSrSlctd = rqstGrpCtnTmngRngCdngSrSlctd;
-       this.rqstGrpCtnTmngRngCdngCde = rqstGrpCtnTmngRngCdngCde;
-       this.rqstGrpCtnTmngRngCdngVrsn = rqstGrpCtnTmngRngCdngVrsn;
-       this.rqstGrpCtnTmngRngCdngDsplay = rqstGrpCtnTmngRngCdngDsplay;
-       this.rqstGrpCtnTmngRngCdngSstm = rqstGrpCtnTmngRngCdngSstm;
-       this.rqstGrpCtnTmngTmngCdngSrSlctd = rqstGrpCtnTmngTmngCdngSrSlctd;
-       this.rqstGrpCtnTmngTmngCdngCde = rqstGrpCtnTmngTmngCdngCde;
-       this.rqstGrpCtnTmngTmngCdngVrsn = rqstGrpCtnTmngTmngCdngVrsn;
-       this.rqstGrpCtnTmngTmngCdngDsplay = rqstGrpCtnTmngTmngCdngDsplay;
-       this.rqstGrpCtnTmngTmngCdngSstm = rqstGrpCtnTmngTmngCdngSstm;
-       this.requestGroupActionParticipant = requestGroupActionParticipant;
-       this.rqstGrpCtnTpCdngSrSlctd = rqstGrpCtnTpCdngSrSlctd;
-       this.rqstGrpCtnTpCdngCde = rqstGrpCtnTpCdngCde;
-       this.rqstGrpCtnTpCdngVrsn = rqstGrpCtnTpCdngVrsn;
-       this.rqstGrpCtnTpCdngDsplay = rqstGrpCtnTpCdngDsplay;
-       this.rqstGrpCtnTpCdngSstm = rqstGrpCtnTpCdngSstm;
-       this.rqstGrpCtnGrpngBhvr = rqstGrpCtnGrpngBhvr;
-       this.rqstGrpCtnSlctnBhvr = rqstGrpCtnSlctnBhvr;
-       this.rqstGrpCtnRqrdBhvr = rqstGrpCtnRqrdBhvr;
-       this.rqstGrpCtnPrchckBhvr = rqstGrpCtnPrchckBhvr;
-       this.rqstGrpCtnCrdnltBhvr = rqstGrpCtnCrdnltBhvr;
-       this.requestGroupActionResource = requestGroupActionResource;
-       this.requestGroupActionAction = requestGroupActionAction;
+    public Requestgroup(String rqstGrpDntfrDntfrSe, String rqstGrpDntfrDntfrTpCcCSstm, String rqstGrpDntfrDntfrTpCcCVrsn, String rqstGrpDntfrDntfrTpCcCCde, String rqstGrpDntfrDntfrTpCcCDsplay, String rqstGrpDntfrDntfrTpCcCSrSlctd, String rqstGrpDntfrDntfrTpCcTxt, String rqstGrpDntfrDntfrPrdPrdStrt, String rqstGrpDntfrDntfrPrdPrdNd, String rqstGrpDntfrDntfrSsgnr, String rqstGrpDntfrDntfrVlue, String rqstGrpDntfrDntfrSstm, String rqstGrpNstnttsCnnclCnncl, String requestGroupInstantiatesUriUri, String requestGroupBasedOnReference, String requestGroupReplacesReference, String rqstGrpGrpdntfrDntfrSe, String rqstGrpGrpdntfrDntfrTpCcCSstm, String rqstGrpGrpdntfrDntfrTpCcCVrsn, String rqstGrpGrpdntfrDntfrTpCcCCde, String rqstGrpGrpdntfrDntfrTpCcCDsplay, String rqstGrpGrpdntfrDntfrTpCcCSrSlctd, String rqstGrpGrpdntfrDntfrTpCcTxt, String rqstGrpGrpdntfrDntfrPrdPrdStrt, String rqstGrpGrpdntfrDntfrPrdPrdNd, String rqstGrpGrpdntfrDntfrSsgnr, String rqstGrpGrpdntfrDntfrVlue, String rqstGrpGrpdntfrDntfrSstm, String requestGroupStatusCode, String requestGroupIntentCode, String requestGroupPriorityCode, String rqstGrpCdCcCdngCSstm, String rqstGrpCdCcCdngCVrsn, String requestGroupCodeCcCodingCCode, String rqstGrpCdCcCdngCDsplay, String rqstGrpCdCcCdngCSrSlctd, String requestGroupCodeCcText, String requestGroupSubjectReference, String requestGroupEncounterReference, String requestGroupAuthoredOnDateTime, String requestGroupAuthorReference, String rqstGrpRsnCdCcCdngCSstm, String rqstGrpRsnCdCcCdngCVrsn, String rqstGrpRsnCdCcCdngCCde, String rqstGrpRsnCdCcCdngCDsplay, String rqstGrpRsnCdCcCdngCSrSlctd, String requestGroupReasonCodeCcText, String rqstGrpRsnRfrncRfrnce, String requestGroupNoteAnnotationTime, String requestGroupNoteAnnotationText, String rqstGrpNtNnttnThrRfrnce, String rqstGrpNtNnttnThrStrng, String requestGroupActionPrefixString, String requestGroupActionTitleString, String rqstGrpCtnDscrptnStrng, String rqstGrpCtnTxtqvlntStrng, String requestGroupActionPriorityCode, String rqstGrpCtnCdCcCdngCSstm, String rqstGrpCtnCdCcCdngCVrsn, String rqstGrpCtnCdCcCdngCCde, String rqstGrpCtnCdCcCdngCDsplay, String rqstGrpCtnCdCcCdngCSrSlctd, String requestGroupActionCodeCcText, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle, String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn, String rqstGrpCtnDcmnttnRltdrtfctRsrce, String rqstGrpCtnDcmnttnRltdrtfctTpe, String rqstGrpCtnDcmnttnRltdrtfctCttn, String rqstGrpCtnDcmnttnRltdrtfctLbl, String rqstGrpCtnDcmnttnRltdrtfctDsplay, String rqstGrpCtnDcmnttnRltdrtfctRl, String rqstGrpCtnCndtnKndCde, String rqstGrpCtnCndtnXprssnXprssnLngge, String rqstGrpCtnCndtnXprssnXprssnNme, String rqstGrpCtnCndtnXprssnXprssnDscrptn, String rqstGrpCtnCndtnXprssnXprssnXprssn, String rqstGrpCtnCndtnXprssnXprssnRfrnce, String rqstGrpCtnRltdctnCtndD, String rqstGrpCtnRltdctnRltnshpCde, String rqstGrpCtnRltdctnFfstDrtnDrtn, String rqstGrpCtnRltdctnFfstRngRngLw, String rqstGrpCtnRltdctnFfstRngRngHgh, String rqstGrpCtnTmngDttmDtTme, String requestGroupActionTimingAgeAge, String rqstGrpCtnTmngPrdPrdStrt, String rqstGrpCtnTmngPrdPrdNd, String rqstGrpCtnTmngDrtnDrtn, String rqstGrpCtnTmngRngRngLw, String rqstGrpCtnTmngRngRngHgh, String rqstGrpCtnTmngTmngTmngCdCcCSstm, String rqstGrpCtnTmngTmngTmngCdCcCVrsn, String rqstGrpCtnTmngTmngTmngCdCcCCde, String rqstGrpCtnTmngTmngTmngCdCcCDsplay, String rqstGrpCtnTmngTmngTmngCdCcCSrSlctd, String rqstGrpCtnTmngTmngTmngCdCcTxt, String rqstGrpCtnTmngTmngTmngVnt, String rqstGrpCtnTmngTmngTmngRptDrtnnt, String rqstGrpCtnTmngTmngTmngRptPrdnt, String rqstGrpCtnTmngTmngTmngRptDfWk, String rqstGrpCtnTmngTmngTmngRptWhn, String rqstGrpCtnTmngTmngTmngRptDrtn, String rqstGrpCtnTmngTmngTmngRptDrtnMx, String rqstGrpCtnTmngTmngTmngRptPrd, String rqstGrpCtnTmngTmngTmngRptPrdMx, String rqstGrpCtnTmngTmngTmngRptBndsDrtn, String rqstGrpCtnTmngTmngTmngRptBndsPrd, String rqstGrpCtnTmngTmngTmngRptCnt, String rqstGrpCtnTmngTmngTmngRptCntMx, String rqstGrpCtnTmngTmngTmngRptFrqncy, String rqstGrpCtnTmngTmngTmngRptFrqncMx, String rqstGrpCtnTmngTmngTmngRptBndsRnge, String rqstGrpCtnTmngTmngTmngRptTmfDay, String rqstGrpCtnTmngTmngTmngRptFfst, String rqstGrpCtnPrtcpntRfrnce, String rqstGrpCtnTpCcCdngCSstm, String rqstGrpCtnTpCcCdngCVrsn, String rqstGrpCtnTpCcCdngCCde, String rqstGrpCtnTpCcCdngCDsplay, String rqstGrpCtnTpCcCdngCSrSlctd, String requestGroupActionTypeCcText, String rqstGrpCtnGrpngBhvrCde, String rqstGrpCtnSlctnBhvrCde, String rqstGrpCtnRqrdBhvrCde, String rqstGrpCtnPrchckBhvrCde, String rqstGrpCtnCrdnltBhvrCde, String rqstGrpCtnRsrcRfrnce, String requestGroupActionActionAction) {
+       this.rqstGrpDntfrDntfrSe = rqstGrpDntfrDntfrSe;
+       this.rqstGrpDntfrDntfrTpCcCSstm = rqstGrpDntfrDntfrTpCcCSstm;
+       this.rqstGrpDntfrDntfrTpCcCVrsn = rqstGrpDntfrDntfrTpCcCVrsn;
+       this.rqstGrpDntfrDntfrTpCcCCde = rqstGrpDntfrDntfrTpCcCCde;
+       this.rqstGrpDntfrDntfrTpCcCDsplay = rqstGrpDntfrDntfrTpCcCDsplay;
+       this.rqstGrpDntfrDntfrTpCcCSrSlctd = rqstGrpDntfrDntfrTpCcCSrSlctd;
+       this.rqstGrpDntfrDntfrTpCcTxt = rqstGrpDntfrDntfrTpCcTxt;
+       this.rqstGrpDntfrDntfrPrdPrdStrt = rqstGrpDntfrDntfrPrdPrdStrt;
+       this.rqstGrpDntfrDntfrPrdPrdNd = rqstGrpDntfrDntfrPrdPrdNd;
+       this.rqstGrpDntfrDntfrSsgnr = rqstGrpDntfrDntfrSsgnr;
+       this.rqstGrpDntfrDntfrVlue = rqstGrpDntfrDntfrVlue;
+       this.rqstGrpDntfrDntfrSstm = rqstGrpDntfrDntfrSstm;
+       this.rqstGrpNstnttsCnnclCnncl = rqstGrpNstnttsCnnclCnncl;
+       this.requestGroupInstantiatesUriUri = requestGroupInstantiatesUriUri;
+       this.requestGroupBasedOnReference = requestGroupBasedOnReference;
+       this.requestGroupReplacesReference = requestGroupReplacesReference;
+       this.rqstGrpGrpdntfrDntfrSe = rqstGrpGrpdntfrDntfrSe;
+       this.rqstGrpGrpdntfrDntfrTpCcCSstm = rqstGrpGrpdntfrDntfrTpCcCSstm;
+       this.rqstGrpGrpdntfrDntfrTpCcCVrsn = rqstGrpGrpdntfrDntfrTpCcCVrsn;
+       this.rqstGrpGrpdntfrDntfrTpCcCCde = rqstGrpGrpdntfrDntfrTpCcCCde;
+       this.rqstGrpGrpdntfrDntfrTpCcCDsplay = rqstGrpGrpdntfrDntfrTpCcCDsplay;
+       this.rqstGrpGrpdntfrDntfrTpCcCSrSlctd = rqstGrpGrpdntfrDntfrTpCcCSrSlctd;
+       this.rqstGrpGrpdntfrDntfrTpCcTxt = rqstGrpGrpdntfrDntfrTpCcTxt;
+       this.rqstGrpGrpdntfrDntfrPrdPrdStrt = rqstGrpGrpdntfrDntfrPrdPrdStrt;
+       this.rqstGrpGrpdntfrDntfrPrdPrdNd = rqstGrpGrpdntfrDntfrPrdPrdNd;
+       this.rqstGrpGrpdntfrDntfrSsgnr = rqstGrpGrpdntfrDntfrSsgnr;
+       this.rqstGrpGrpdntfrDntfrVlue = rqstGrpGrpdntfrDntfrVlue;
+       this.rqstGrpGrpdntfrDntfrSstm = rqstGrpGrpdntfrDntfrSstm;
+       this.requestGroupStatusCode = requestGroupStatusCode;
+       this.requestGroupIntentCode = requestGroupIntentCode;
+       this.requestGroupPriorityCode = requestGroupPriorityCode;
+       this.rqstGrpCdCcCdngCSstm = rqstGrpCdCcCdngCSstm;
+       this.rqstGrpCdCcCdngCVrsn = rqstGrpCdCcCdngCVrsn;
+       this.requestGroupCodeCcCodingCCode = requestGroupCodeCcCodingCCode;
+       this.rqstGrpCdCcCdngCDsplay = rqstGrpCdCcCdngCDsplay;
+       this.rqstGrpCdCcCdngCSrSlctd = rqstGrpCdCcCdngCSrSlctd;
+       this.requestGroupCodeCcText = requestGroupCodeCcText;
+       this.requestGroupSubjectReference = requestGroupSubjectReference;
+       this.requestGroupEncounterReference = requestGroupEncounterReference;
+       this.requestGroupAuthoredOnDateTime = requestGroupAuthoredOnDateTime;
+       this.requestGroupAuthorReference = requestGroupAuthorReference;
+       this.rqstGrpRsnCdCcCdngCSstm = rqstGrpRsnCdCcCdngCSstm;
+       this.rqstGrpRsnCdCcCdngCVrsn = rqstGrpRsnCdCcCdngCVrsn;
+       this.rqstGrpRsnCdCcCdngCCde = rqstGrpRsnCdCcCdngCCde;
+       this.rqstGrpRsnCdCcCdngCDsplay = rqstGrpRsnCdCcCdngCDsplay;
+       this.rqstGrpRsnCdCcCdngCSrSlctd = rqstGrpRsnCdCcCdngCSrSlctd;
+       this.requestGroupReasonCodeCcText = requestGroupReasonCodeCcText;
+       this.rqstGrpRsnRfrncRfrnce = rqstGrpRsnRfrncRfrnce;
+       this.requestGroupNoteAnnotationTime = requestGroupNoteAnnotationTime;
+       this.requestGroupNoteAnnotationText = requestGroupNoteAnnotationText;
+       this.rqstGrpNtNnttnThrRfrnce = rqstGrpNtNnttnThrRfrnce;
+       this.rqstGrpNtNnttnThrStrng = rqstGrpNtNnttnThrStrng;
+       this.requestGroupActionPrefixString = requestGroupActionPrefixString;
+       this.requestGroupActionTitleString = requestGroupActionTitleString;
+       this.rqstGrpCtnDscrptnStrng = rqstGrpCtnDscrptnStrng;
+       this.rqstGrpCtnTxtqvlntStrng = rqstGrpCtnTxtqvlntStrng;
+       this.requestGroupActionPriorityCode = requestGroupActionPriorityCode;
+       this.rqstGrpCtnCdCcCdngCSstm = rqstGrpCtnCdCcCdngCSstm;
+       this.rqstGrpCtnCdCcCdngCVrsn = rqstGrpCtnCdCcCdngCVrsn;
+       this.rqstGrpCtnCdCcCdngCCde = rqstGrpCtnCdCcCdngCCde;
+       this.rqstGrpCtnCdCcCdngCDsplay = rqstGrpCtnCdCcCdngCDsplay;
+       this.rqstGrpCtnCdCcCdngCSrSlctd = rqstGrpCtnCdCcCdngCSrSlctd;
+       this.requestGroupActionCodeCcText = requestGroupActionCodeCcText;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle;
+       this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn;
+       this.rqstGrpCtnDcmnttnRltdrtfctRsrce = rqstGrpCtnDcmnttnRltdrtfctRsrce;
+       this.rqstGrpCtnDcmnttnRltdrtfctTpe = rqstGrpCtnDcmnttnRltdrtfctTpe;
+       this.rqstGrpCtnDcmnttnRltdrtfctCttn = rqstGrpCtnDcmnttnRltdrtfctCttn;
+       this.rqstGrpCtnDcmnttnRltdrtfctLbl = rqstGrpCtnDcmnttnRltdrtfctLbl;
+       this.rqstGrpCtnDcmnttnRltdrtfctDsplay = rqstGrpCtnDcmnttnRltdrtfctDsplay;
+       this.rqstGrpCtnDcmnttnRltdrtfctRl = rqstGrpCtnDcmnttnRltdrtfctRl;
+       this.rqstGrpCtnCndtnKndCde = rqstGrpCtnCndtnKndCde;
+       this.rqstGrpCtnCndtnXprssnXprssnLngge = rqstGrpCtnCndtnXprssnXprssnLngge;
+       this.rqstGrpCtnCndtnXprssnXprssnNme = rqstGrpCtnCndtnXprssnXprssnNme;
+       this.rqstGrpCtnCndtnXprssnXprssnDscrptn = rqstGrpCtnCndtnXprssnXprssnDscrptn;
+       this.rqstGrpCtnCndtnXprssnXprssnXprssn = rqstGrpCtnCndtnXprssnXprssnXprssn;
+       this.rqstGrpCtnCndtnXprssnXprssnRfrnce = rqstGrpCtnCndtnXprssnXprssnRfrnce;
+       this.rqstGrpCtnRltdctnCtndD = rqstGrpCtnRltdctnCtndD;
+       this.rqstGrpCtnRltdctnRltnshpCde = rqstGrpCtnRltdctnRltnshpCde;
+       this.rqstGrpCtnRltdctnFfstDrtnDrtn = rqstGrpCtnRltdctnFfstDrtnDrtn;
+       this.rqstGrpCtnRltdctnFfstRngRngLw = rqstGrpCtnRltdctnFfstRngRngLw;
+       this.rqstGrpCtnRltdctnFfstRngRngHgh = rqstGrpCtnRltdctnFfstRngRngHgh;
+       this.rqstGrpCtnTmngDttmDtTme = rqstGrpCtnTmngDttmDtTme;
+       this.requestGroupActionTimingAgeAge = requestGroupActionTimingAgeAge;
+       this.rqstGrpCtnTmngPrdPrdStrt = rqstGrpCtnTmngPrdPrdStrt;
+       this.rqstGrpCtnTmngPrdPrdNd = rqstGrpCtnTmngPrdPrdNd;
+       this.rqstGrpCtnTmngDrtnDrtn = rqstGrpCtnTmngDrtnDrtn;
+       this.rqstGrpCtnTmngRngRngLw = rqstGrpCtnTmngRngRngLw;
+       this.rqstGrpCtnTmngRngRngHgh = rqstGrpCtnTmngRngRngHgh;
+       this.rqstGrpCtnTmngTmngTmngCdCcCSstm = rqstGrpCtnTmngTmngTmngCdCcCSstm;
+       this.rqstGrpCtnTmngTmngTmngCdCcCVrsn = rqstGrpCtnTmngTmngTmngCdCcCVrsn;
+       this.rqstGrpCtnTmngTmngTmngCdCcCCde = rqstGrpCtnTmngTmngTmngCdCcCCde;
+       this.rqstGrpCtnTmngTmngTmngCdCcCDsplay = rqstGrpCtnTmngTmngTmngCdCcCDsplay;
+       this.rqstGrpCtnTmngTmngTmngCdCcCSrSlctd = rqstGrpCtnTmngTmngTmngCdCcCSrSlctd;
+       this.rqstGrpCtnTmngTmngTmngCdCcTxt = rqstGrpCtnTmngTmngTmngCdCcTxt;
+       this.rqstGrpCtnTmngTmngTmngVnt = rqstGrpCtnTmngTmngTmngVnt;
+       this.rqstGrpCtnTmngTmngTmngRptDrtnnt = rqstGrpCtnTmngTmngTmngRptDrtnnt;
+       this.rqstGrpCtnTmngTmngTmngRptPrdnt = rqstGrpCtnTmngTmngTmngRptPrdnt;
+       this.rqstGrpCtnTmngTmngTmngRptDfWk = rqstGrpCtnTmngTmngTmngRptDfWk;
+       this.rqstGrpCtnTmngTmngTmngRptWhn = rqstGrpCtnTmngTmngTmngRptWhn;
+       this.rqstGrpCtnTmngTmngTmngRptDrtn = rqstGrpCtnTmngTmngTmngRptDrtn;
+       this.rqstGrpCtnTmngTmngTmngRptDrtnMx = rqstGrpCtnTmngTmngTmngRptDrtnMx;
+       this.rqstGrpCtnTmngTmngTmngRptPrd = rqstGrpCtnTmngTmngTmngRptPrd;
+       this.rqstGrpCtnTmngTmngTmngRptPrdMx = rqstGrpCtnTmngTmngTmngRptPrdMx;
+       this.rqstGrpCtnTmngTmngTmngRptBndsDrtn = rqstGrpCtnTmngTmngTmngRptBndsDrtn;
+       this.rqstGrpCtnTmngTmngTmngRptBndsPrd = rqstGrpCtnTmngTmngTmngRptBndsPrd;
+       this.rqstGrpCtnTmngTmngTmngRptCnt = rqstGrpCtnTmngTmngTmngRptCnt;
+       this.rqstGrpCtnTmngTmngTmngRptCntMx = rqstGrpCtnTmngTmngTmngRptCntMx;
+       this.rqstGrpCtnTmngTmngTmngRptFrqncy = rqstGrpCtnTmngTmngTmngRptFrqncy;
+       this.rqstGrpCtnTmngTmngTmngRptFrqncMx = rqstGrpCtnTmngTmngTmngRptFrqncMx;
+       this.rqstGrpCtnTmngTmngTmngRptBndsRnge = rqstGrpCtnTmngTmngTmngRptBndsRnge;
+       this.rqstGrpCtnTmngTmngTmngRptTmfDay = rqstGrpCtnTmngTmngTmngRptTmfDay;
+       this.rqstGrpCtnTmngTmngTmngRptFfst = rqstGrpCtnTmngTmngTmngRptFfst;
+       this.rqstGrpCtnPrtcpntRfrnce = rqstGrpCtnPrtcpntRfrnce;
+       this.rqstGrpCtnTpCcCdngCSstm = rqstGrpCtnTpCcCdngCSstm;
+       this.rqstGrpCtnTpCcCdngCVrsn = rqstGrpCtnTpCcCdngCVrsn;
+       this.rqstGrpCtnTpCcCdngCCde = rqstGrpCtnTpCcCdngCCde;
+       this.rqstGrpCtnTpCcCdngCDsplay = rqstGrpCtnTpCcCdngCDsplay;
+       this.rqstGrpCtnTpCcCdngCSrSlctd = rqstGrpCtnTpCcCdngCSrSlctd;
+       this.requestGroupActionTypeCcText = requestGroupActionTypeCcText;
+       this.rqstGrpCtnGrpngBhvrCde = rqstGrpCtnGrpngBhvrCde;
+       this.rqstGrpCtnSlctnBhvrCde = rqstGrpCtnSlctnBhvrCde;
+       this.rqstGrpCtnRqrdBhvrCde = rqstGrpCtnRqrdBhvrCde;
+       this.rqstGrpCtnPrchckBhvrCde = rqstGrpCtnPrchckBhvrCde;
+       this.rqstGrpCtnCrdnltBhvrCde = rqstGrpCtnCrdnltBhvrCde;
+       this.rqstGrpCtnRsrcRfrnce = rqstGrpCtnRsrcRfrnce;
+       this.requestGroupActionActionAction = requestGroupActionActionAction;
     }
    
-    public String getRqstGrpDntfrCdngCde() {
-        return this.rqstGrpDntfrCdngCde;
-    }
-    
-    public void setRqstGrpDntfrCdngCde(String rqstGrpDntfrCdngCde) {
-        this.rqstGrpDntfrCdngCde = rqstGrpDntfrCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpDntfrCdngSrSlctd() {
-        return this.rqstGrpDntfrCdngSrSlctd;
-    }
-    
-    public void setRqstGrpDntfrCdngSrSlctd(String rqstGrpDntfrCdngSrSlctd) {
-        this.rqstGrpDntfrCdngSrSlctd = rqstGrpDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpDntfrCdngVrsn() {
-        return this.rqstGrpDntfrCdngVrsn;
-    }
-    
-    public void setRqstGrpDntfrCdngVrsn(String rqstGrpDntfrCdngVrsn) {
-        this.rqstGrpDntfrCdngVrsn = rqstGrpDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpDntfrCdngDsplay() {
-        return this.rqstGrpDntfrCdngDsplay;
-    }
-    
-    public void setRqstGrpDntfrCdngDsplay(String rqstGrpDntfrCdngDsplay) {
-        this.rqstGrpDntfrCdngDsplay = rqstGrpDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpDntfrCdngSstm() {
-        return this.rqstGrpDntfrCdngSstm;
-    }
-    
-    public void setRqstGrpDntfrCdngSstm(String rqstGrpDntfrCdngSstm) {
-        this.rqstGrpDntfrCdngSstm = rqstGrpDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupInstantiatesCanonical() {
-        return this.requestGroupInstantiatesCanonical;
-    }
-    
-    public void setRequestGroupInstantiatesCanonical(String requestGroupInstantiatesCanonical) {
-        this.requestGroupInstantiatesCanonical = requestGroupInstantiatesCanonical;
-    }
-    
-    
-    
-    public String getRequestGroupInstantiatesUri() {
-        return this.requestGroupInstantiatesUri;
-    }
-    
-    public void setRequestGroupInstantiatesUri(String requestGroupInstantiatesUri) {
-        this.requestGroupInstantiatesUri = requestGroupInstantiatesUri;
-    }
-    
-    
-    
-    public String getRequestGroupBasedOn() {
-        return this.requestGroupBasedOn;
-    }
-    
-    public void setRequestGroupBasedOn(String requestGroupBasedOn) {
-        this.requestGroupBasedOn = requestGroupBasedOn;
-    }
-    
-    
-    
-    public String getRequestGroupReplaces() {
-        return this.requestGroupReplaces;
-    }
-    
-    public void setRequestGroupReplaces(String requestGroupReplaces) {
-        this.requestGroupReplaces = requestGroupReplaces;
-    }
-    
-    
-    
-    public String getRqstGrpGrpdntfrCdngSrSlctd() {
-        return this.rqstGrpGrpdntfrCdngSrSlctd;
-    }
-    
-    public void setRqstGrpGrpdntfrCdngSrSlctd(String rqstGrpGrpdntfrCdngSrSlctd) {
-        this.rqstGrpGrpdntfrCdngSrSlctd = rqstGrpGrpdntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpGrpdntfrCdngCde() {
-        return this.rqstGrpGrpdntfrCdngCde;
-    }
-    
-    public void setRqstGrpGrpdntfrCdngCde(String rqstGrpGrpdntfrCdngCde) {
-        this.rqstGrpGrpdntfrCdngCde = rqstGrpGrpdntfrCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpGrpdntfrCdngVrsn() {
-        return this.rqstGrpGrpdntfrCdngVrsn;
-    }
-    
-    public void setRqstGrpGrpdntfrCdngVrsn(String rqstGrpGrpdntfrCdngVrsn) {
-        this.rqstGrpGrpdntfrCdngVrsn = rqstGrpGrpdntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpGrpdntfrCdngDsplay() {
-        return this.rqstGrpGrpdntfrCdngDsplay;
-    }
-    
-    public void setRqstGrpGrpdntfrCdngDsplay(String rqstGrpGrpdntfrCdngDsplay) {
-        this.rqstGrpGrpdntfrCdngDsplay = rqstGrpGrpdntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpGrpdntfrCdngSstm() {
-        return this.rqstGrpGrpdntfrCdngSstm;
-    }
-    
-    public void setRqstGrpGrpdntfrCdngSstm(String rqstGrpGrpdntfrCdngSstm) {
-        this.rqstGrpGrpdntfrCdngSstm = rqstGrpGrpdntfrCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupStatus() {
-        return this.requestGroupStatus;
-    }
-    
-    public void setRequestGroupStatus(String requestGroupStatus) {
-        this.requestGroupStatus = requestGroupStatus;
-    }
-    
-    
-    
-    public String getRequestGroupIntent() {
-        return this.requestGroupIntent;
-    }
-    
-    public void setRequestGroupIntent(String requestGroupIntent) {
-        this.requestGroupIntent = requestGroupIntent;
-    }
-    
-    
-    
-    public String getRequestGroupPriority() {
-        return this.requestGroupPriority;
-    }
-    
-    public void setRequestGroupPriority(String requestGroupPriority) {
-        this.requestGroupPriority = requestGroupPriority;
-    }
-    
-    
-    
-    public String getRqstGrpCdCdngSrSlctd() {
-        return this.rqstGrpCdCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCdCdngSrSlctd(String rqstGrpCdCdngSrSlctd) {
-        this.rqstGrpCdCdngSrSlctd = rqstGrpCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRequestGroupCodeCodingCode() {
-        return this.requestGroupCodeCodingCode;
-    }
-    
-    public void setRequestGroupCodeCodingCode(String requestGroupCodeCodingCode) {
-        this.requestGroupCodeCodingCode = requestGroupCodeCodingCode;
-    }
-    
-    
-    
-    public String getRequestGroupCodeCodingVersion() {
-        return this.requestGroupCodeCodingVersion;
-    }
-    
-    public void setRequestGroupCodeCodingVersion(String requestGroupCodeCodingVersion) {
-        this.requestGroupCodeCodingVersion = requestGroupCodeCodingVersion;
-    }
-    
-    
-    
-    public String getRequestGroupCodeCodingDisplay() {
-        return this.requestGroupCodeCodingDisplay;
-    }
-    
-    public void setRequestGroupCodeCodingDisplay(String requestGroupCodeCodingDisplay) {
-        this.requestGroupCodeCodingDisplay = requestGroupCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getRequestGroupCodeCodingSystem() {
-        return this.requestGroupCodeCodingSystem;
-    }
-    
-    public void setRequestGroupCodeCodingSystem(String requestGroupCodeCodingSystem) {
-        this.requestGroupCodeCodingSystem = requestGroupCodeCodingSystem;
-    }
-    
-    
-    
-    public String getRequestGroupSubject() {
-        return this.requestGroupSubject;
-    }
-    
-    public void setRequestGroupSubject(String requestGroupSubject) {
-        this.requestGroupSubject = requestGroupSubject;
-    }
-    
-    
-    
-    public String getRequestGroupEncounter() {
-        return this.requestGroupEncounter;
-    }
-    
-    public void setRequestGroupEncounter(String requestGroupEncounter) {
-        this.requestGroupEncounter = requestGroupEncounter;
-    }
-    
-    
-    
-    public String getRequestGroupAuthoredOn() {
-        return this.requestGroupAuthoredOn;
-    }
-    
-    public void setRequestGroupAuthoredOn(String requestGroupAuthoredOn) {
-        this.requestGroupAuthoredOn = requestGroupAuthoredOn;
-    }
-    
-    
-    
-    public String getRequestGroupAuthor() {
-        return this.requestGroupAuthor;
-    }
-    
-    public void setRequestGroupAuthor(String requestGroupAuthor) {
-        this.requestGroupAuthor = requestGroupAuthor;
-    }
-    
-    
-    
-    public String getRqstGrpRsnCdCdngSrSlctd() {
-        return this.rqstGrpRsnCdCdngSrSlctd;
-    }
-    
-    public void setRqstGrpRsnCdCdngSrSlctd(String rqstGrpRsnCdCdngSrSlctd) {
-        this.rqstGrpRsnCdCdngSrSlctd = rqstGrpRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpRsnCdCdngCde() {
-        return this.rqstGrpRsnCdCdngCde;
-    }
-    
-    public void setRqstGrpRsnCdCdngCde(String rqstGrpRsnCdCdngCde) {
-        this.rqstGrpRsnCdCdngCde = rqstGrpRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpRsnCdCdngVrsn() {
-        return this.rqstGrpRsnCdCdngVrsn;
-    }
-    
-    public void setRqstGrpRsnCdCdngVrsn(String rqstGrpRsnCdCdngVrsn) {
-        this.rqstGrpRsnCdCdngVrsn = rqstGrpRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpRsnCdCdngDsplay() {
-        return this.rqstGrpRsnCdCdngDsplay;
-    }
-    
-    public void setRqstGrpRsnCdCdngDsplay(String rqstGrpRsnCdCdngDsplay) {
-        this.rqstGrpRsnCdCdngDsplay = rqstGrpRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpRsnCdCdngSstm() {
-        return this.rqstGrpRsnCdCdngSstm;
-    }
-    
-    public void setRqstGrpRsnCdCdngSstm(String rqstGrpRsnCdCdngSstm) {
-        this.rqstGrpRsnCdCdngSstm = rqstGrpRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupReasonReference() {
-        return this.requestGroupReasonReference;
-    }
-    
-    public void setRequestGroupReasonReference(String requestGroupReasonReference) {
-        this.requestGroupReasonReference = requestGroupReasonReference;
-    }
-    
-    
-    
-    public String getRqstGrpNtCdngSrSlctd() {
-        return this.rqstGrpNtCdngSrSlctd;
-    }
-    
-    public void setRqstGrpNtCdngSrSlctd(String rqstGrpNtCdngSrSlctd) {
-        this.rqstGrpNtCdngSrSlctd = rqstGrpNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRequestGroupNoteCodingCode() {
-        return this.requestGroupNoteCodingCode;
-    }
-    
-    public void setRequestGroupNoteCodingCode(String requestGroupNoteCodingCode) {
-        this.requestGroupNoteCodingCode = requestGroupNoteCodingCode;
-    }
-    
-    
-    
-    public String getRequestGroupNoteCodingVersion() {
-        return this.requestGroupNoteCodingVersion;
-    }
-    
-    public void setRequestGroupNoteCodingVersion(String requestGroupNoteCodingVersion) {
-        this.requestGroupNoteCodingVersion = requestGroupNoteCodingVersion;
-    }
-    
-    
-    
-    public String getRequestGroupNoteCodingDisplay() {
-        return this.requestGroupNoteCodingDisplay;
-    }
-    
-    public void setRequestGroupNoteCodingDisplay(String requestGroupNoteCodingDisplay) {
-        this.requestGroupNoteCodingDisplay = requestGroupNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getRequestGroupNoteCodingSystem() {
-        return this.requestGroupNoteCodingSystem;
-    }
-    
-    public void setRequestGroupNoteCodingSystem(String requestGroupNoteCodingSystem) {
-        this.requestGroupNoteCodingSystem = requestGroupNoteCodingSystem;
-    }
-    
-    
-    
-    public String getRequestGroupAction() {
-        return this.requestGroupAction;
-    }
-    
-    public void setRequestGroupAction(String requestGroupAction) {
-        this.requestGroupAction = requestGroupAction;
-    }
-    
-    
-    
-    public String getRequestGroupActionPrefix() {
-        return this.requestGroupActionPrefix;
-    }
-    
-    public void setRequestGroupActionPrefix(String requestGroupActionPrefix) {
-        this.requestGroupActionPrefix = requestGroupActionPrefix;
-    }
-    
-    
-    
-    public String getRequestGroupActionTitle() {
-        return this.requestGroupActionTitle;
-    }
-    
-    public void setRequestGroupActionTitle(String requestGroupActionTitle) {
-        this.requestGroupActionTitle = requestGroupActionTitle;
-    }
-    
-    
-    
-    public String getRequestGroupActionDescription() {
-        return this.requestGroupActionDescription;
-    }
-    
-    public void setRequestGroupActionDescription(String requestGroupActionDescription) {
-        this.requestGroupActionDescription = requestGroupActionDescription;
-    }
-    
-    
-    
-    public String getRequestGroupActionTextEquivalent() {
-        return this.requestGroupActionTextEquivalent;
-    }
-    
-    public void setRequestGroupActionTextEquivalent(String requestGroupActionTextEquivalent) {
-        this.requestGroupActionTextEquivalent = requestGroupActionTextEquivalent;
-    }
-    
-    
-    
-    public String getRequestGroupActionPriority() {
-        return this.requestGroupActionPriority;
-    }
-    
-    public void setRequestGroupActionPriority(String requestGroupActionPriority) {
-        this.requestGroupActionPriority = requestGroupActionPriority;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCdCdngSrSlctd() {
-        return this.rqstGrpCtnCdCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnCdCdngSrSlctd(String rqstGrpCtnCdCdngSrSlctd) {
-        this.rqstGrpCtnCdCdngSrSlctd = rqstGrpCtnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCdCdngCde() {
-        return this.rqstGrpCtnCdCdngCde;
-    }
-    
-    public void setRqstGrpCtnCdCdngCde(String rqstGrpCtnCdCdngCde) {
-        this.rqstGrpCtnCdCdngCde = rqstGrpCtnCdCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCdCdngVrsn() {
-        return this.rqstGrpCtnCdCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnCdCdngVrsn(String rqstGrpCtnCdCdngVrsn) {
-        this.rqstGrpCtnCdCdngVrsn = rqstGrpCtnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCdCdngDsplay() {
-        return this.rqstGrpCtnCdCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnCdCdngDsplay(String rqstGrpCtnCdCdngDsplay) {
-        this.rqstGrpCtnCdCdngDsplay = rqstGrpCtnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCdCdngSstm() {
-        return this.rqstGrpCtnCdCdngSstm;
-    }
-    
-    public void setRqstGrpCtnCdCdngSstm(String rqstGrpCtnCdCdngSstm) {
-        this.rqstGrpCtnCdCdngSstm = rqstGrpCtnCdCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupActionDocumentation() {
-        return this.requestGroupActionDocumentation;
-    }
-    
-    public void setRequestGroupActionDocumentation(String requestGroupActionDocumentation) {
-        this.requestGroupActionDocumentation = requestGroupActionDocumentation;
-    }
-    
-    
-    
-    public String getRequestGroupActionCondition() {
-        return this.requestGroupActionCondition;
-    }
-    
-    public void setRequestGroupActionCondition(String requestGroupActionCondition) {
-        this.requestGroupActionCondition = requestGroupActionCondition;
-    }
-    
-    
-    
-    public String getRequestGroupActionConditionKind() {
-        return this.requestGroupActionConditionKind;
-    }
-    
-    public void setRequestGroupActionConditionKind(String requestGroupActionConditionKind) {
-        this.requestGroupActionConditionKind = requestGroupActionConditionKind;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCndtnXprssn() {
-        return this.rqstGrpCtnCndtnXprssn;
-    }
-    
-    public void setRqstGrpCtnCndtnXprssn(String rqstGrpCtnCndtnXprssn) {
-        this.rqstGrpCtnCndtnXprssn = rqstGrpCtnCndtnXprssn;
-    }
-    
-    
-    
-    public String getRequestGroupActionRelatedAction() {
-        return this.requestGroupActionRelatedAction;
-    }
-    
-    public void setRequestGroupActionRelatedAction(String requestGroupActionRelatedAction) {
-        this.requestGroupActionRelatedAction = requestGroupActionRelatedAction;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnCtnd() {
-        return this.rqstGrpCtnRltdctnCtnd;
-    }
-    
-    public void setRqstGrpCtnRltdctnCtnd(String rqstGrpCtnRltdctnCtnd) {
-        this.rqstGrpCtnRltdctnCtnd = rqstGrpCtnRltdctnCtnd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnRltnshp() {
-        return this.rqstGrpCtnRltdctnRltnshp;
-    }
-    
-    public void setRqstGrpCtnRltdctnRltnshp(String rqstGrpCtnRltdctnRltnshp) {
-        this.rqstGrpCtnRltdctnRltnshp = rqstGrpCtnRltdctnRltnshp;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstDrtn() {
-        return this.rqstGrpCtnRltdctnFfstDrtn;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstDrtn(String rqstGrpCtnRltdctnFfstDrtn) {
-        this.rqstGrpCtnRltdctnFfstDrtn = rqstGrpCtnRltdctnFfstDrtn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstRngCdngSrSlctd() {
-        return this.rqstGrpCtnRltdctnFfstRngCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstRngCdngSrSlctd(String rqstGrpCtnRltdctnFfstRngCdngSrSlctd) {
-        this.rqstGrpCtnRltdctnFfstRngCdngSrSlctd = rqstGrpCtnRltdctnFfstRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstRngCdngCde() {
-        return this.rqstGrpCtnRltdctnFfstRngCdngCde;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstRngCdngCde(String rqstGrpCtnRltdctnFfstRngCdngCde) {
-        this.rqstGrpCtnRltdctnFfstRngCdngCde = rqstGrpCtnRltdctnFfstRngCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstRngCdngVrsn() {
-        return this.rqstGrpCtnRltdctnFfstRngCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstRngCdngVrsn(String rqstGrpCtnRltdctnFfstRngCdngVrsn) {
-        this.rqstGrpCtnRltdctnFfstRngCdngVrsn = rqstGrpCtnRltdctnFfstRngCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstRngCdngDsplay() {
-        return this.rqstGrpCtnRltdctnFfstRngCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstRngCdngDsplay(String rqstGrpCtnRltdctnFfstRngCdngDsplay) {
-        this.rqstGrpCtnRltdctnFfstRngCdngDsplay = rqstGrpCtnRltdctnFfstRngCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRltdctnFfstRngCdngSstm() {
-        return this.rqstGrpCtnRltdctnFfstRngCdngSstm;
-    }
-    
-    public void setRqstGrpCtnRltdctnFfstRngCdngSstm(String rqstGrpCtnRltdctnFfstRngCdngSstm) {
-        this.rqstGrpCtnRltdctnFfstRngCdngSstm = rqstGrpCtnRltdctnFfstRngCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupActionTimingDatetime() {
-        return this.requestGroupActionTimingDatetime;
-    }
-    
-    public void setRequestGroupActionTimingDatetime(String requestGroupActionTimingDatetime) {
-        this.requestGroupActionTimingDatetime = requestGroupActionTimingDatetime;
-    }
-    
-    
-    
-    public String getRequestGroupActionTimingAge() {
-        return this.requestGroupActionTimingAge;
-    }
-    
-    public void setRequestGroupActionTimingAge(String requestGroupActionTimingAge) {
-        this.requestGroupActionTimingAge = requestGroupActionTimingAge;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngPrdCdngSrSlctd() {
-        return this.rqstGrpCtnTmngPrdCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnTmngPrdCdngSrSlctd(String rqstGrpCtnTmngPrdCdngSrSlctd) {
-        this.rqstGrpCtnTmngPrdCdngSrSlctd = rqstGrpCtnTmngPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngPrdCdngCde() {
-        return this.rqstGrpCtnTmngPrdCdngCde;
-    }
-    
-    public void setRqstGrpCtnTmngPrdCdngCde(String rqstGrpCtnTmngPrdCdngCde) {
-        this.rqstGrpCtnTmngPrdCdngCde = rqstGrpCtnTmngPrdCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngPrdCdngVrsn() {
-        return this.rqstGrpCtnTmngPrdCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnTmngPrdCdngVrsn(String rqstGrpCtnTmngPrdCdngVrsn) {
-        this.rqstGrpCtnTmngPrdCdngVrsn = rqstGrpCtnTmngPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngPrdCdngDsplay() {
-        return this.rqstGrpCtnTmngPrdCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnTmngPrdCdngDsplay(String rqstGrpCtnTmngPrdCdngDsplay) {
-        this.rqstGrpCtnTmngPrdCdngDsplay = rqstGrpCtnTmngPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngPrdCdngSstm() {
-        return this.rqstGrpCtnTmngPrdCdngSstm;
-    }
-    
-    public void setRqstGrpCtnTmngPrdCdngSstm(String rqstGrpCtnTmngPrdCdngSstm) {
-        this.rqstGrpCtnTmngPrdCdngSstm = rqstGrpCtnTmngPrdCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupActionTimingDuration() {
-        return this.requestGroupActionTimingDuration;
-    }
-    
-    public void setRequestGroupActionTimingDuration(String requestGroupActionTimingDuration) {
-        this.requestGroupActionTimingDuration = requestGroupActionTimingDuration;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngRngCdngSrSlctd() {
-        return this.rqstGrpCtnTmngRngCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnTmngRngCdngSrSlctd(String rqstGrpCtnTmngRngCdngSrSlctd) {
-        this.rqstGrpCtnTmngRngCdngSrSlctd = rqstGrpCtnTmngRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngRngCdngCde() {
-        return this.rqstGrpCtnTmngRngCdngCde;
-    }
-    
-    public void setRqstGrpCtnTmngRngCdngCde(String rqstGrpCtnTmngRngCdngCde) {
-        this.rqstGrpCtnTmngRngCdngCde = rqstGrpCtnTmngRngCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngRngCdngVrsn() {
-        return this.rqstGrpCtnTmngRngCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnTmngRngCdngVrsn(String rqstGrpCtnTmngRngCdngVrsn) {
-        this.rqstGrpCtnTmngRngCdngVrsn = rqstGrpCtnTmngRngCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngRngCdngDsplay() {
-        return this.rqstGrpCtnTmngRngCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnTmngRngCdngDsplay(String rqstGrpCtnTmngRngCdngDsplay) {
-        this.rqstGrpCtnTmngRngCdngDsplay = rqstGrpCtnTmngRngCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngRngCdngSstm() {
-        return this.rqstGrpCtnTmngRngCdngSstm;
-    }
-    
-    public void setRqstGrpCtnTmngRngCdngSstm(String rqstGrpCtnTmngRngCdngSstm) {
-        this.rqstGrpCtnTmngRngCdngSstm = rqstGrpCtnTmngRngCdngSstm;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngTmngCdngSrSlctd() {
-        return this.rqstGrpCtnTmngTmngCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnTmngTmngCdngSrSlctd(String rqstGrpCtnTmngTmngCdngSrSlctd) {
-        this.rqstGrpCtnTmngTmngCdngSrSlctd = rqstGrpCtnTmngTmngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngTmngCdngCde() {
-        return this.rqstGrpCtnTmngTmngCdngCde;
-    }
-    
-    public void setRqstGrpCtnTmngTmngCdngCde(String rqstGrpCtnTmngTmngCdngCde) {
-        this.rqstGrpCtnTmngTmngCdngCde = rqstGrpCtnTmngTmngCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngTmngCdngVrsn() {
-        return this.rqstGrpCtnTmngTmngCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnTmngTmngCdngVrsn(String rqstGrpCtnTmngTmngCdngVrsn) {
-        this.rqstGrpCtnTmngTmngCdngVrsn = rqstGrpCtnTmngTmngCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngTmngCdngDsplay() {
-        return this.rqstGrpCtnTmngTmngCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnTmngTmngCdngDsplay(String rqstGrpCtnTmngTmngCdngDsplay) {
-        this.rqstGrpCtnTmngTmngCdngDsplay = rqstGrpCtnTmngTmngCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTmngTmngCdngSstm() {
-        return this.rqstGrpCtnTmngTmngCdngSstm;
-    }
-    
-    public void setRqstGrpCtnTmngTmngCdngSstm(String rqstGrpCtnTmngTmngCdngSstm) {
-        this.rqstGrpCtnTmngTmngCdngSstm = rqstGrpCtnTmngTmngCdngSstm;
-    }
-    
-    
-    
-    public String getRequestGroupActionParticipant() {
-        return this.requestGroupActionParticipant;
-    }
-    
-    public void setRequestGroupActionParticipant(String requestGroupActionParticipant) {
-        this.requestGroupActionParticipant = requestGroupActionParticipant;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTpCdngSrSlctd() {
-        return this.rqstGrpCtnTpCdngSrSlctd;
-    }
-    
-    public void setRqstGrpCtnTpCdngSrSlctd(String rqstGrpCtnTpCdngSrSlctd) {
-        this.rqstGrpCtnTpCdngSrSlctd = rqstGrpCtnTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTpCdngCde() {
-        return this.rqstGrpCtnTpCdngCde;
-    }
-    
-    public void setRqstGrpCtnTpCdngCde(String rqstGrpCtnTpCdngCde) {
-        this.rqstGrpCtnTpCdngCde = rqstGrpCtnTpCdngCde;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTpCdngVrsn() {
-        return this.rqstGrpCtnTpCdngVrsn;
-    }
-    
-    public void setRqstGrpCtnTpCdngVrsn(String rqstGrpCtnTpCdngVrsn) {
-        this.rqstGrpCtnTpCdngVrsn = rqstGrpCtnTpCdngVrsn;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTpCdngDsplay() {
-        return this.rqstGrpCtnTpCdngDsplay;
-    }
-    
-    public void setRqstGrpCtnTpCdngDsplay(String rqstGrpCtnTpCdngDsplay) {
-        this.rqstGrpCtnTpCdngDsplay = rqstGrpCtnTpCdngDsplay;
-    }
-    
-    
-    
-    public String getRqstGrpCtnTpCdngSstm() {
-        return this.rqstGrpCtnTpCdngSstm;
-    }
-    
-    public void setRqstGrpCtnTpCdngSstm(String rqstGrpCtnTpCdngSstm) {
-        this.rqstGrpCtnTpCdngSstm = rqstGrpCtnTpCdngSstm;
-    }
-    
-    
-    
-    public String getRqstGrpCtnGrpngBhvr() {
-        return this.rqstGrpCtnGrpngBhvr;
-    }
-    
-    public void setRqstGrpCtnGrpngBhvr(String rqstGrpCtnGrpngBhvr) {
-        this.rqstGrpCtnGrpngBhvr = rqstGrpCtnGrpngBhvr;
-    }
-    
-    
-    
-    public String getRqstGrpCtnSlctnBhvr() {
-        return this.rqstGrpCtnSlctnBhvr;
-    }
-    
-    public void setRqstGrpCtnSlctnBhvr(String rqstGrpCtnSlctnBhvr) {
-        this.rqstGrpCtnSlctnBhvr = rqstGrpCtnSlctnBhvr;
-    }
-    
-    
-    
-    public String getRqstGrpCtnRqrdBhvr() {
-        return this.rqstGrpCtnRqrdBhvr;
-    }
-    
-    public void setRqstGrpCtnRqrdBhvr(String rqstGrpCtnRqrdBhvr) {
-        this.rqstGrpCtnRqrdBhvr = rqstGrpCtnRqrdBhvr;
-    }
-    
-    
-    
-    public String getRqstGrpCtnPrchckBhvr() {
-        return this.rqstGrpCtnPrchckBhvr;
-    }
-    
-    public void setRqstGrpCtnPrchckBhvr(String rqstGrpCtnPrchckBhvr) {
-        this.rqstGrpCtnPrchckBhvr = rqstGrpCtnPrchckBhvr;
-    }
-    
-    
-    
-    public String getRqstGrpCtnCrdnltBhvr() {
-        return this.rqstGrpCtnCrdnltBhvr;
-    }
-    
-    public void setRqstGrpCtnCrdnltBhvr(String rqstGrpCtnCrdnltBhvr) {
-        this.rqstGrpCtnCrdnltBhvr = rqstGrpCtnCrdnltBhvr;
-    }
-    
-    
-    
-    public String getRequestGroupActionResource() {
-        return this.requestGroupActionResource;
-    }
-    
-    public void setRequestGroupActionResource(String requestGroupActionResource) {
-        this.requestGroupActionResource = requestGroupActionResource;
-    }
-    
-    
-    
-    public String getRequestGroupActionAction() {
-        return this.requestGroupActionAction;
-    }
-    
-    public void setRequestGroupActionAction(String requestGroupActionAction) {
-        this.requestGroupActionAction = requestGroupActionAction;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrSe()
+    {
+        return this.rqstGrpDntfrDntfrSe;
+    }
+    
+    public void setRqstGrpDntfrDntfrSe
+        (String rqstGrpDntfrDntfrSe) 
+        {
+      this.rqstGrpDntfrDntfrSe = rqstGrpDntfrDntfrSe;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcCSstm()
+    {
+        return this.rqstGrpDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcCSstm
+        (String rqstGrpDntfrDntfrTpCcCSstm) 
+        {
+      this.rqstGrpDntfrDntfrTpCcCSstm = rqstGrpDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcCVrsn()
+    {
+        return this.rqstGrpDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcCVrsn
+        (String rqstGrpDntfrDntfrTpCcCVrsn) 
+        {
+      this.rqstGrpDntfrDntfrTpCcCVrsn = rqstGrpDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcCCde()
+    {
+        return this.rqstGrpDntfrDntfrTpCcCCde;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcCCde
+        (String rqstGrpDntfrDntfrTpCcCCde) 
+        {
+      this.rqstGrpDntfrDntfrTpCcCCde = rqstGrpDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcCDsplay()
+    {
+        return this.rqstGrpDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcCDsplay
+        (String rqstGrpDntfrDntfrTpCcCDsplay) 
+        {
+      this.rqstGrpDntfrDntfrTpCcCDsplay = rqstGrpDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.rqstGrpDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcCSrSlctd
+        (String rqstGrpDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.rqstGrpDntfrDntfrTpCcCSrSlctd = rqstGrpDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrTpCcTxt()
+    {
+        return this.rqstGrpDntfrDntfrTpCcTxt;
+    }
+    
+    public void setRqstGrpDntfrDntfrTpCcTxt
+        (String rqstGrpDntfrDntfrTpCcTxt) 
+        {
+      this.rqstGrpDntfrDntfrTpCcTxt = rqstGrpDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrPrdPrdStrt()
+    {
+        return this.rqstGrpDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setRqstGrpDntfrDntfrPrdPrdStrt
+        (String rqstGrpDntfrDntfrPrdPrdStrt) 
+        {
+      this.rqstGrpDntfrDntfrPrdPrdStrt = rqstGrpDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrPrdPrdNd()
+    {
+        return this.rqstGrpDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setRqstGrpDntfrDntfrPrdPrdNd
+        (String rqstGrpDntfrDntfrPrdPrdNd) 
+        {
+      this.rqstGrpDntfrDntfrPrdPrdNd = rqstGrpDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrSsgnr()
+    {
+        return this.rqstGrpDntfrDntfrSsgnr;
+    }
+    
+    public void setRqstGrpDntfrDntfrSsgnr
+        (String rqstGrpDntfrDntfrSsgnr) 
+        {
+      this.rqstGrpDntfrDntfrSsgnr = rqstGrpDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrVlue()
+    {
+        return this.rqstGrpDntfrDntfrVlue;
+    }
+    
+    public void setRqstGrpDntfrDntfrVlue
+        (String rqstGrpDntfrDntfrVlue) 
+        {
+      this.rqstGrpDntfrDntfrVlue = rqstGrpDntfrDntfrVlue;
+}
+    public 
+    String 
+    getRqstGrpDntfrDntfrSstm()
+    {
+        return this.rqstGrpDntfrDntfrSstm;
+    }
+    
+    public void setRqstGrpDntfrDntfrSstm
+        (String rqstGrpDntfrDntfrSstm) 
+        {
+      this.rqstGrpDntfrDntfrSstm = rqstGrpDntfrDntfrSstm;
+}
+    public 
+    String 
+    getRqstGrpNstnttsCnnclCnncl()
+    {
+        return this.rqstGrpNstnttsCnnclCnncl;
+    }
+    
+    public void setRqstGrpNstnttsCnnclCnncl
+        (String rqstGrpNstnttsCnnclCnncl) 
+        {
+      this.rqstGrpNstnttsCnnclCnncl = rqstGrpNstnttsCnnclCnncl;
+}
+    public 
+    String 
+    getRequestGroupInstantiatesUriUri()
+    {
+        return this.requestGroupInstantiatesUriUri;
+    }
+    
+    public void setRequestGroupInstantiatesUriUri
+        (String requestGroupInstantiatesUriUri) 
+        {
+      this.requestGroupInstantiatesUriUri = requestGroupInstantiatesUriUri;
+}
+    public 
+    String 
+    getRequestGroupBasedOnReference()
+    {
+        return this.requestGroupBasedOnReference;
+    }
+    
+    public void setRequestGroupBasedOnReference
+        (String requestGroupBasedOnReference) 
+        {
+      this.requestGroupBasedOnReference = requestGroupBasedOnReference;
+}
+    public 
+    String 
+    getRequestGroupReplacesReference()
+    {
+        return this.requestGroupReplacesReference;
+    }
+    
+    public void setRequestGroupReplacesReference
+        (String requestGroupReplacesReference) 
+        {
+      this.requestGroupReplacesReference = requestGroupReplacesReference;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrSe()
+    {
+        return this.rqstGrpGrpdntfrDntfrSe;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrSe
+        (String rqstGrpGrpdntfrDntfrSe) 
+        {
+      this.rqstGrpGrpdntfrDntfrSe = rqstGrpGrpdntfrDntfrSe;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcCSstm()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcCSstm;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcCSstm
+        (String rqstGrpGrpdntfrDntfrTpCcCSstm) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcCSstm = rqstGrpGrpdntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcCVrsn()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcCVrsn
+        (String rqstGrpGrpdntfrDntfrTpCcCVrsn) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcCVrsn = rqstGrpGrpdntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcCCde()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcCCde;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcCCde
+        (String rqstGrpGrpdntfrDntfrTpCcCCde) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcCCde = rqstGrpGrpdntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcCDsplay()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcCDsplay
+        (String rqstGrpGrpdntfrDntfrTpCcCDsplay) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcCDsplay = rqstGrpGrpdntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcCSrSlctd()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcCSrSlctd
+        (String rqstGrpGrpdntfrDntfrTpCcCSrSlctd) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcCSrSlctd = rqstGrpGrpdntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrTpCcTxt()
+    {
+        return this.rqstGrpGrpdntfrDntfrTpCcTxt;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrTpCcTxt
+        (String rqstGrpGrpdntfrDntfrTpCcTxt) 
+        {
+      this.rqstGrpGrpdntfrDntfrTpCcTxt = rqstGrpGrpdntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrPrdPrdStrt()
+    {
+        return this.rqstGrpGrpdntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrPrdPrdStrt
+        (String rqstGrpGrpdntfrDntfrPrdPrdStrt) 
+        {
+      this.rqstGrpGrpdntfrDntfrPrdPrdStrt = rqstGrpGrpdntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrPrdPrdNd()
+    {
+        return this.rqstGrpGrpdntfrDntfrPrdPrdNd;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrPrdPrdNd
+        (String rqstGrpGrpdntfrDntfrPrdPrdNd) 
+        {
+      this.rqstGrpGrpdntfrDntfrPrdPrdNd = rqstGrpGrpdntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrSsgnr()
+    {
+        return this.rqstGrpGrpdntfrDntfrSsgnr;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrSsgnr
+        (String rqstGrpGrpdntfrDntfrSsgnr) 
+        {
+      this.rqstGrpGrpdntfrDntfrSsgnr = rqstGrpGrpdntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrVlue()
+    {
+        return this.rqstGrpGrpdntfrDntfrVlue;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrVlue
+        (String rqstGrpGrpdntfrDntfrVlue) 
+        {
+      this.rqstGrpGrpdntfrDntfrVlue = rqstGrpGrpdntfrDntfrVlue;
+}
+    public 
+    String 
+    getRqstGrpGrpdntfrDntfrSstm()
+    {
+        return this.rqstGrpGrpdntfrDntfrSstm;
+    }
+    
+    public void setRqstGrpGrpdntfrDntfrSstm
+        (String rqstGrpGrpdntfrDntfrSstm) 
+        {
+      this.rqstGrpGrpdntfrDntfrSstm = rqstGrpGrpdntfrDntfrSstm;
+}
+    public 
+    String 
+    getRequestGroupStatusCode()
+    {
+        return this.requestGroupStatusCode;
+    }
+    
+    public void setRequestGroupStatusCode
+        (String requestGroupStatusCode) 
+        {
+      this.requestGroupStatusCode = requestGroupStatusCode;
+}
+    public 
+    String 
+    getRequestGroupIntentCode()
+    {
+        return this.requestGroupIntentCode;
+    }
+    
+    public void setRequestGroupIntentCode
+        (String requestGroupIntentCode) 
+        {
+      this.requestGroupIntentCode = requestGroupIntentCode;
+}
+    public 
+    String 
+    getRequestGroupPriorityCode()
+    {
+        return this.requestGroupPriorityCode;
+    }
+    
+    public void setRequestGroupPriorityCode
+        (String requestGroupPriorityCode) 
+        {
+      this.requestGroupPriorityCode = requestGroupPriorityCode;
+}
+    public 
+    String 
+    getRqstGrpCdCcCdngCSstm()
+    {
+        return this.rqstGrpCdCcCdngCSstm;
+    }
+    
+    public void setRqstGrpCdCcCdngCSstm
+        (String rqstGrpCdCcCdngCSstm) 
+        {
+      this.rqstGrpCdCcCdngCSstm = rqstGrpCdCcCdngCSstm;
+}
+    public 
+    String 
+    getRqstGrpCdCcCdngCVrsn()
+    {
+        return this.rqstGrpCdCcCdngCVrsn;
+    }
+    
+    public void setRqstGrpCdCcCdngCVrsn
+        (String rqstGrpCdCcCdngCVrsn) 
+        {
+      this.rqstGrpCdCcCdngCVrsn = rqstGrpCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRequestGroupCodeCcCodingCCode()
+    {
+        return this.requestGroupCodeCcCodingCCode;
+    }
+    
+    public void setRequestGroupCodeCcCodingCCode
+        (String requestGroupCodeCcCodingCCode) 
+        {
+      this.requestGroupCodeCcCodingCCode = requestGroupCodeCcCodingCCode;
+}
+    public 
+    String 
+    getRqstGrpCdCcCdngCDsplay()
+    {
+        return this.rqstGrpCdCcCdngCDsplay;
+    }
+    
+    public void setRqstGrpCdCcCdngCDsplay
+        (String rqstGrpCdCcCdngCDsplay) 
+        {
+      this.rqstGrpCdCcCdngCDsplay = rqstGrpCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRqstGrpCdCcCdngCSrSlctd()
+    {
+        return this.rqstGrpCdCcCdngCSrSlctd;
+    }
+    
+    public void setRqstGrpCdCcCdngCSrSlctd
+        (String rqstGrpCdCcCdngCSrSlctd) 
+        {
+      this.rqstGrpCdCcCdngCSrSlctd = rqstGrpCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRequestGroupCodeCcText()
+    {
+        return this.requestGroupCodeCcText;
+    }
+    
+    public void setRequestGroupCodeCcText
+        (String requestGroupCodeCcText) 
+        {
+      this.requestGroupCodeCcText = requestGroupCodeCcText;
+}
+    public 
+    String 
+    getRequestGroupSubjectReference()
+    {
+        return this.requestGroupSubjectReference;
+    }
+    
+    public void setRequestGroupSubjectReference
+        (String requestGroupSubjectReference) 
+        {
+      this.requestGroupSubjectReference = requestGroupSubjectReference;
+}
+    public 
+    String 
+    getRequestGroupEncounterReference()
+    {
+        return this.requestGroupEncounterReference;
+    }
+    
+    public void setRequestGroupEncounterReference
+        (String requestGroupEncounterReference) 
+        {
+      this.requestGroupEncounterReference = requestGroupEncounterReference;
+}
+    public 
+    String 
+    getRequestGroupAuthoredOnDateTime()
+    {
+        return this.requestGroupAuthoredOnDateTime;
+    }
+    
+    public void setRequestGroupAuthoredOnDateTime
+        (String requestGroupAuthoredOnDateTime) 
+        {
+      this.requestGroupAuthoredOnDateTime = requestGroupAuthoredOnDateTime;
+}
+    public 
+    String 
+    getRequestGroupAuthorReference()
+    {
+        return this.requestGroupAuthorReference;
+    }
+    
+    public void setRequestGroupAuthorReference
+        (String requestGroupAuthorReference) 
+        {
+      this.requestGroupAuthorReference = requestGroupAuthorReference;
+}
+    public 
+    String 
+    getRqstGrpRsnCdCcCdngCSstm()
+    {
+        return this.rqstGrpRsnCdCcCdngCSstm;
+    }
+    
+    public void setRqstGrpRsnCdCcCdngCSstm
+        (String rqstGrpRsnCdCcCdngCSstm) 
+        {
+      this.rqstGrpRsnCdCcCdngCSstm = rqstGrpRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getRqstGrpRsnCdCcCdngCVrsn()
+    {
+        return this.rqstGrpRsnCdCcCdngCVrsn;
+    }
+    
+    public void setRqstGrpRsnCdCcCdngCVrsn
+        (String rqstGrpRsnCdCcCdngCVrsn) 
+        {
+      this.rqstGrpRsnCdCcCdngCVrsn = rqstGrpRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRqstGrpRsnCdCcCdngCCde()
+    {
+        return this.rqstGrpRsnCdCcCdngCCde;
+    }
+    
+    public void setRqstGrpRsnCdCcCdngCCde
+        (String rqstGrpRsnCdCcCdngCCde) 
+        {
+      this.rqstGrpRsnCdCcCdngCCde = rqstGrpRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getRqstGrpRsnCdCcCdngCDsplay()
+    {
+        return this.rqstGrpRsnCdCcCdngCDsplay;
+    }
+    
+    public void setRqstGrpRsnCdCcCdngCDsplay
+        (String rqstGrpRsnCdCcCdngCDsplay) 
+        {
+      this.rqstGrpRsnCdCcCdngCDsplay = rqstGrpRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRqstGrpRsnCdCcCdngCSrSlctd()
+    {
+        return this.rqstGrpRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setRqstGrpRsnCdCcCdngCSrSlctd
+        (String rqstGrpRsnCdCcCdngCSrSlctd) 
+        {
+      this.rqstGrpRsnCdCcCdngCSrSlctd = rqstGrpRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRequestGroupReasonCodeCcText()
+    {
+        return this.requestGroupReasonCodeCcText;
+    }
+    
+    public void setRequestGroupReasonCodeCcText
+        (String requestGroupReasonCodeCcText) 
+        {
+      this.requestGroupReasonCodeCcText = requestGroupReasonCodeCcText;
+}
+    public 
+    String 
+    getRqstGrpRsnRfrncRfrnce()
+    {
+        return this.rqstGrpRsnRfrncRfrnce;
+    }
+    
+    public void setRqstGrpRsnRfrncRfrnce
+        (String rqstGrpRsnRfrncRfrnce) 
+        {
+      this.rqstGrpRsnRfrncRfrnce = rqstGrpRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getRequestGroupNoteAnnotationTime()
+    {
+        return this.requestGroupNoteAnnotationTime;
+    }
+    
+    public void setRequestGroupNoteAnnotationTime
+        (String requestGroupNoteAnnotationTime) 
+        {
+      this.requestGroupNoteAnnotationTime = requestGroupNoteAnnotationTime;
+}
+    public 
+    String 
+    getRequestGroupNoteAnnotationText()
+    {
+        return this.requestGroupNoteAnnotationText;
+    }
+    
+    public void setRequestGroupNoteAnnotationText
+        (String requestGroupNoteAnnotationText) 
+        {
+      this.requestGroupNoteAnnotationText = requestGroupNoteAnnotationText;
+}
+    public 
+    String 
+    getRqstGrpNtNnttnThrRfrnce()
+    {
+        return this.rqstGrpNtNnttnThrRfrnce;
+    }
+    
+    public void setRqstGrpNtNnttnThrRfrnce
+        (String rqstGrpNtNnttnThrRfrnce) 
+        {
+      this.rqstGrpNtNnttnThrRfrnce = rqstGrpNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getRqstGrpNtNnttnThrStrng()
+    {
+        return this.rqstGrpNtNnttnThrStrng;
+    }
+    
+    public void setRqstGrpNtNnttnThrStrng
+        (String rqstGrpNtNnttnThrStrng) 
+        {
+      this.rqstGrpNtNnttnThrStrng = rqstGrpNtNnttnThrStrng;
+}
+    public 
+    String 
+    getRequestGroupActionPrefixString()
+    {
+        return this.requestGroupActionPrefixString;
+    }
+    
+    public void setRequestGroupActionPrefixString
+        (String requestGroupActionPrefixString) 
+        {
+      this.requestGroupActionPrefixString = requestGroupActionPrefixString;
+}
+    public 
+    String 
+    getRequestGroupActionTitleString()
+    {
+        return this.requestGroupActionTitleString;
+    }
+    
+    public void setRequestGroupActionTitleString
+        (String requestGroupActionTitleString) 
+        {
+      this.requestGroupActionTitleString = requestGroupActionTitleString;
+}
+    public 
+    String 
+    getRqstGrpCtnDscrptnStrng()
+    {
+        return this.rqstGrpCtnDscrptnStrng;
+    }
+    
+    public void setRqstGrpCtnDscrptnStrng
+        (String rqstGrpCtnDscrptnStrng) 
+        {
+      this.rqstGrpCtnDscrptnStrng = rqstGrpCtnDscrptnStrng;
+}
+    public 
+    String 
+    getRqstGrpCtnTxtqvlntStrng()
+    {
+        return this.rqstGrpCtnTxtqvlntStrng;
+    }
+    
+    public void setRqstGrpCtnTxtqvlntStrng
+        (String rqstGrpCtnTxtqvlntStrng) 
+        {
+      this.rqstGrpCtnTxtqvlntStrng = rqstGrpCtnTxtqvlntStrng;
+}
+    public 
+    String 
+    getRequestGroupActionPriorityCode()
+    {
+        return this.requestGroupActionPriorityCode;
+    }
+    
+    public void setRequestGroupActionPriorityCode
+        (String requestGroupActionPriorityCode) 
+        {
+      this.requestGroupActionPriorityCode = requestGroupActionPriorityCode;
+}
+    public 
+    String 
+    getRqstGrpCtnCdCcCdngCSstm()
+    {
+        return this.rqstGrpCtnCdCcCdngCSstm;
+    }
+    
+    public void setRqstGrpCtnCdCcCdngCSstm
+        (String rqstGrpCtnCdCcCdngCSstm) 
+        {
+      this.rqstGrpCtnCdCcCdngCSstm = rqstGrpCtnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getRqstGrpCtnCdCcCdngCVrsn()
+    {
+        return this.rqstGrpCtnCdCcCdngCVrsn;
+    }
+    
+    public void setRqstGrpCtnCdCcCdngCVrsn
+        (String rqstGrpCtnCdCcCdngCVrsn) 
+        {
+      this.rqstGrpCtnCdCcCdngCVrsn = rqstGrpCtnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getRqstGrpCtnCdCcCdngCCde()
+    {
+        return this.rqstGrpCtnCdCcCdngCCde;
+    }
+    
+    public void setRqstGrpCtnCdCcCdngCCde
+        (String rqstGrpCtnCdCcCdngCCde) 
+        {
+      this.rqstGrpCtnCdCcCdngCCde = rqstGrpCtnCdCcCdngCCde;
+}
+    public 
+    String 
+    getRqstGrpCtnCdCcCdngCDsplay()
+    {
+        return this.rqstGrpCtnCdCcCdngCDsplay;
+    }
+    
+    public void setRqstGrpCtnCdCcCdngCDsplay
+        (String rqstGrpCtnCdCcCdngCDsplay) 
+        {
+      this.rqstGrpCtnCdCcCdngCDsplay = rqstGrpCtnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getRqstGrpCtnCdCcCdngCSrSlctd()
+    {
+        return this.rqstGrpCtnCdCcCdngCSrSlctd;
+    }
+    
+    public void setRqstGrpCtnCdCcCdngCSrSlctd
+        (String rqstGrpCtnCdCcCdngCSrSlctd) 
+        {
+      this.rqstGrpCtnCdCcCdngCSrSlctd = rqstGrpCtnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRequestGroupActionCodeCcText()
+    {
+        return this.requestGroupActionCodeCcText;
+    }
+    
+    public void setRequestGroupActionCodeCcText
+        (String requestGroupActionCodeCcText) 
+        {
+      this.requestGroupActionCodeCcText = requestGroupActionCodeCcText;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntLngge;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntDta;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntRl;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntSze;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntHsh;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntTtle;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn
+        (String rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn = rqstGrpCtnDcmnttnRltdrtfctDcmntTtchmntCrtn;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctRsrce()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctRsrce;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctRsrce
+        (String rqstGrpCtnDcmnttnRltdrtfctRsrce) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctRsrce = rqstGrpCtnDcmnttnRltdrtfctRsrce;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctTpe()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctTpe;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctTpe
+        (String rqstGrpCtnDcmnttnRltdrtfctTpe) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctTpe = rqstGrpCtnDcmnttnRltdrtfctTpe;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctCttn()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctCttn;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctCttn
+        (String rqstGrpCtnDcmnttnRltdrtfctCttn) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctCttn = rqstGrpCtnDcmnttnRltdrtfctCttn;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctLbl()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctLbl;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctLbl
+        (String rqstGrpCtnDcmnttnRltdrtfctLbl) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctLbl = rqstGrpCtnDcmnttnRltdrtfctLbl;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctDsplay()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctDsplay;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctDsplay
+        (String rqstGrpCtnDcmnttnRltdrtfctDsplay) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctDsplay = rqstGrpCtnDcmnttnRltdrtfctDsplay;
+}
+    public 
+    String 
+    getRqstGrpCtnDcmnttnRltdrtfctRl()
+    {
+        return this.rqstGrpCtnDcmnttnRltdrtfctRl;
+    }
+    
+    public void setRqstGrpCtnDcmnttnRltdrtfctRl
+        (String rqstGrpCtnDcmnttnRltdrtfctRl) 
+        {
+      this.rqstGrpCtnDcmnttnRltdrtfctRl = rqstGrpCtnDcmnttnRltdrtfctRl;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnKndCde()
+    {
+        return this.rqstGrpCtnCndtnKndCde;
+    }
+    
+    public void setRqstGrpCtnCndtnKndCde
+        (String rqstGrpCtnCndtnKndCde) 
+        {
+      this.rqstGrpCtnCndtnKndCde = rqstGrpCtnCndtnKndCde;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnXprssnXprssnLngge()
+    {
+        return this.rqstGrpCtnCndtnXprssnXprssnLngge;
+    }
+    
+    public void setRqstGrpCtnCndtnXprssnXprssnLngge
+        (String rqstGrpCtnCndtnXprssnXprssnLngge) 
+        {
+      this.rqstGrpCtnCndtnXprssnXprssnLngge = rqstGrpCtnCndtnXprssnXprssnLngge;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnXprssnXprssnNme()
+    {
+        return this.rqstGrpCtnCndtnXprssnXprssnNme;
+    }
+    
+    public void setRqstGrpCtnCndtnXprssnXprssnNme
+        (String rqstGrpCtnCndtnXprssnXprssnNme) 
+        {
+      this.rqstGrpCtnCndtnXprssnXprssnNme = rqstGrpCtnCndtnXprssnXprssnNme;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnXprssnXprssnDscrptn()
+    {
+        return this.rqstGrpCtnCndtnXprssnXprssnDscrptn;
+    }
+    
+    public void setRqstGrpCtnCndtnXprssnXprssnDscrptn
+        (String rqstGrpCtnCndtnXprssnXprssnDscrptn) 
+        {
+      this.rqstGrpCtnCndtnXprssnXprssnDscrptn = rqstGrpCtnCndtnXprssnXprssnDscrptn;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnXprssnXprssnXprssn()
+    {
+        return this.rqstGrpCtnCndtnXprssnXprssnXprssn;
+    }
+    
+    public void setRqstGrpCtnCndtnXprssnXprssnXprssn
+        (String rqstGrpCtnCndtnXprssnXprssnXprssn) 
+        {
+      this.rqstGrpCtnCndtnXprssnXprssnXprssn = rqstGrpCtnCndtnXprssnXprssnXprssn;
+}
+    public 
+    String 
+    getRqstGrpCtnCndtnXprssnXprssnRfrnce()
+    {
+        return this.rqstGrpCtnCndtnXprssnXprssnRfrnce;
+    }
+    
+    public void setRqstGrpCtnCndtnXprssnXprssnRfrnce
+        (String rqstGrpCtnCndtnXprssnXprssnRfrnce) 
+        {
+      this.rqstGrpCtnCndtnXprssnXprssnRfrnce = rqstGrpCtnCndtnXprssnXprssnRfrnce;
+}
+    public 
+    String 
+    getRqstGrpCtnRltdctnCtndD()
+    {
+        return this.rqstGrpCtnRltdctnCtndD;
+    }
+    
+    public void setRqstGrpCtnRltdctnCtndD
+        (String rqstGrpCtnRltdctnCtndD) 
+        {
+      this.rqstGrpCtnRltdctnCtndD = rqstGrpCtnRltdctnCtndD;
+}
+    public 
+    String 
+    getRqstGrpCtnRltdctnRltnshpCde()
+    {
+        return this.rqstGrpCtnRltdctnRltnshpCde;
+    }
+    
+    public void setRqstGrpCtnRltdctnRltnshpCde
+        (String rqstGrpCtnRltdctnRltnshpCde) 
+        {
+      this.rqstGrpCtnRltdctnRltnshpCde = rqstGrpCtnRltdctnRltnshpCde;
+}
+    public 
+    String 
+    getRqstGrpCtnRltdctnFfstDrtnDrtn()
+    {
+        return this.rqstGrpCtnRltdctnFfstDrtnDrtn;
+    }
+    
+    public void setRqstGrpCtnRltdctnFfstDrtnDrtn
+        (String rqstGrpCtnRltdctnFfstDrtnDrtn) 
+        {
+      this.rqstGrpCtnRltdctnFfstDrtnDrtn = rqstGrpCtnRltdctnFfstDrtnDrtn;
+}
+    public 
+    String 
+    getRqstGrpCtnRltdctnFfstRngRngLw()
+    {
+        return this.rqstGrpCtnRltdctnFfstRngRngLw;
+    }
+    
+    public void setRqstGrpCtnRltdctnFfstRngRngLw
+        (String rqstGrpCtnRltdctnFfstRngRngLw) 
+        {
+      this.rqstGrpCtnRltdctnFfstRngRngLw = rqstGrpCtnRltdctnFfstRngRngLw;
+}
+    public 
+    String 
+    getRqstGrpCtnRltdctnFfstRngRngHgh()
+    {
+        return this.rqstGrpCtnRltdctnFfstRngRngHgh;
+    }
+    
+    public void setRqstGrpCtnRltdctnFfstRngRngHgh
+        (String rqstGrpCtnRltdctnFfstRngRngHgh) 
+        {
+      this.rqstGrpCtnRltdctnFfstRngRngHgh = rqstGrpCtnRltdctnFfstRngRngHgh;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngDttmDtTme()
+    {
+        return this.rqstGrpCtnTmngDttmDtTme;
+    }
+    
+    public void setRqstGrpCtnTmngDttmDtTme
+        (String rqstGrpCtnTmngDttmDtTme) 
+        {
+      this.rqstGrpCtnTmngDttmDtTme = rqstGrpCtnTmngDttmDtTme;
+}
+    public 
+    String 
+    getRequestGroupActionTimingAgeAge()
+    {
+        return this.requestGroupActionTimingAgeAge;
+    }
+    
+    public void setRequestGroupActionTimingAgeAge
+        (String requestGroupActionTimingAgeAge) 
+        {
+      this.requestGroupActionTimingAgeAge = requestGroupActionTimingAgeAge;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngPrdPrdStrt()
+    {
+        return this.rqstGrpCtnTmngPrdPrdStrt;
+    }
+    
+    public void setRqstGrpCtnTmngPrdPrdStrt
+        (String rqstGrpCtnTmngPrdPrdStrt) 
+        {
+      this.rqstGrpCtnTmngPrdPrdStrt = rqstGrpCtnTmngPrdPrdStrt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngPrdPrdNd()
+    {
+        return this.rqstGrpCtnTmngPrdPrdNd;
+    }
+    
+    public void setRqstGrpCtnTmngPrdPrdNd
+        (String rqstGrpCtnTmngPrdPrdNd) 
+        {
+      this.rqstGrpCtnTmngPrdPrdNd = rqstGrpCtnTmngPrdPrdNd;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngDrtnDrtn()
+    {
+        return this.rqstGrpCtnTmngDrtnDrtn;
+    }
+    
+    public void setRqstGrpCtnTmngDrtnDrtn
+        (String rqstGrpCtnTmngDrtnDrtn) 
+        {
+      this.rqstGrpCtnTmngDrtnDrtn = rqstGrpCtnTmngDrtnDrtn;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngRngRngLw()
+    {
+        return this.rqstGrpCtnTmngRngRngLw;
+    }
+    
+    public void setRqstGrpCtnTmngRngRngLw
+        (String rqstGrpCtnTmngRngRngLw) 
+        {
+      this.rqstGrpCtnTmngRngRngLw = rqstGrpCtnTmngRngRngLw;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngRngRngHgh()
+    {
+        return this.rqstGrpCtnTmngRngRngHgh;
+    }
+    
+    public void setRqstGrpCtnTmngRngRngHgh
+        (String rqstGrpCtnTmngRngRngHgh) 
+        {
+      this.rqstGrpCtnTmngRngRngHgh = rqstGrpCtnTmngRngRngHgh;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcCSstm()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcCSstm;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcCSstm
+        (String rqstGrpCtnTmngTmngTmngCdCcCSstm) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcCSstm = rqstGrpCtnTmngTmngTmngCdCcCSstm;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcCVrsn()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcCVrsn;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcCVrsn
+        (String rqstGrpCtnTmngTmngTmngCdCcCVrsn) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcCVrsn = rqstGrpCtnTmngTmngTmngCdCcCVrsn;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcCCde()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcCCde;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcCCde
+        (String rqstGrpCtnTmngTmngTmngCdCcCCde) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcCCde = rqstGrpCtnTmngTmngTmngCdCcCCde;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcCDsplay()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcCDsplay;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcCDsplay
+        (String rqstGrpCtnTmngTmngTmngCdCcCDsplay) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcCDsplay = rqstGrpCtnTmngTmngTmngCdCcCDsplay;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcCSrSlctd()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcCSrSlctd;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcCSrSlctd
+        (String rqstGrpCtnTmngTmngTmngCdCcCSrSlctd) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcCSrSlctd = rqstGrpCtnTmngTmngTmngCdCcCSrSlctd;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngCdCcTxt()
+    {
+        return this.rqstGrpCtnTmngTmngTmngCdCcTxt;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngCdCcTxt
+        (String rqstGrpCtnTmngTmngTmngCdCcTxt) 
+        {
+      this.rqstGrpCtnTmngTmngTmngCdCcTxt = rqstGrpCtnTmngTmngTmngCdCcTxt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngVnt()
+    {
+        return this.rqstGrpCtnTmngTmngTmngVnt;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngVnt
+        (String rqstGrpCtnTmngTmngTmngVnt) 
+        {
+      this.rqstGrpCtnTmngTmngTmngVnt = rqstGrpCtnTmngTmngTmngVnt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptDrtnnt()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptDrtnnt;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptDrtnnt
+        (String rqstGrpCtnTmngTmngTmngRptDrtnnt) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptDrtnnt = rqstGrpCtnTmngTmngTmngRptDrtnnt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptPrdnt()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptPrdnt;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptPrdnt
+        (String rqstGrpCtnTmngTmngTmngRptPrdnt) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptPrdnt = rqstGrpCtnTmngTmngTmngRptPrdnt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptDfWk()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptDfWk;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptDfWk
+        (String rqstGrpCtnTmngTmngTmngRptDfWk) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptDfWk = rqstGrpCtnTmngTmngTmngRptDfWk;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptWhn()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptWhn;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptWhn
+        (String rqstGrpCtnTmngTmngTmngRptWhn) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptWhn = rqstGrpCtnTmngTmngTmngRptWhn;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptDrtn()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptDrtn;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptDrtn
+        (String rqstGrpCtnTmngTmngTmngRptDrtn) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptDrtn = rqstGrpCtnTmngTmngTmngRptDrtn;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptDrtnMx()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptDrtnMx;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptDrtnMx
+        (String rqstGrpCtnTmngTmngTmngRptDrtnMx) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptDrtnMx = rqstGrpCtnTmngTmngTmngRptDrtnMx;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptPrd()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptPrd;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptPrd
+        (String rqstGrpCtnTmngTmngTmngRptPrd) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptPrd = rqstGrpCtnTmngTmngTmngRptPrd;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptPrdMx()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptPrdMx;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptPrdMx
+        (String rqstGrpCtnTmngTmngTmngRptPrdMx) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptPrdMx = rqstGrpCtnTmngTmngTmngRptPrdMx;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptBndsDrtn()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptBndsDrtn;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptBndsDrtn
+        (String rqstGrpCtnTmngTmngTmngRptBndsDrtn) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptBndsDrtn = rqstGrpCtnTmngTmngTmngRptBndsDrtn;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptBndsPrd()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptBndsPrd;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptBndsPrd
+        (String rqstGrpCtnTmngTmngTmngRptBndsPrd) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptBndsPrd = rqstGrpCtnTmngTmngTmngRptBndsPrd;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptCnt()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptCnt;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptCnt
+        (String rqstGrpCtnTmngTmngTmngRptCnt) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptCnt = rqstGrpCtnTmngTmngTmngRptCnt;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptCntMx()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptCntMx;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptCntMx
+        (String rqstGrpCtnTmngTmngTmngRptCntMx) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptCntMx = rqstGrpCtnTmngTmngTmngRptCntMx;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptFrqncy()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptFrqncy;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptFrqncy
+        (String rqstGrpCtnTmngTmngTmngRptFrqncy) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptFrqncy = rqstGrpCtnTmngTmngTmngRptFrqncy;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptFrqncMx()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptFrqncMx;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptFrqncMx
+        (String rqstGrpCtnTmngTmngTmngRptFrqncMx) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptFrqncMx = rqstGrpCtnTmngTmngTmngRptFrqncMx;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptBndsRnge()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptBndsRnge;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptBndsRnge
+        (String rqstGrpCtnTmngTmngTmngRptBndsRnge) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptBndsRnge = rqstGrpCtnTmngTmngTmngRptBndsRnge;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptTmfDay()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptTmfDay;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptTmfDay
+        (String rqstGrpCtnTmngTmngTmngRptTmfDay) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptTmfDay = rqstGrpCtnTmngTmngTmngRptTmfDay;
+}
+    public 
+    String 
+    getRqstGrpCtnTmngTmngTmngRptFfst()
+    {
+        return this.rqstGrpCtnTmngTmngTmngRptFfst;
+    }
+    
+    public void setRqstGrpCtnTmngTmngTmngRptFfst
+        (String rqstGrpCtnTmngTmngTmngRptFfst) 
+        {
+      this.rqstGrpCtnTmngTmngTmngRptFfst = rqstGrpCtnTmngTmngTmngRptFfst;
+}
+    public 
+    String 
+    getRqstGrpCtnPrtcpntRfrnce()
+    {
+        return this.rqstGrpCtnPrtcpntRfrnce;
+    }
+    
+    public void setRqstGrpCtnPrtcpntRfrnce
+        (String rqstGrpCtnPrtcpntRfrnce) 
+        {
+      this.rqstGrpCtnPrtcpntRfrnce = rqstGrpCtnPrtcpntRfrnce;
+}
+    public 
+    String 
+    getRqstGrpCtnTpCcCdngCSstm()
+    {
+        return this.rqstGrpCtnTpCcCdngCSstm;
+    }
+    
+    public void setRqstGrpCtnTpCcCdngCSstm
+        (String rqstGrpCtnTpCcCdngCSstm) 
+        {
+      this.rqstGrpCtnTpCcCdngCSstm = rqstGrpCtnTpCcCdngCSstm;
+}
+    public 
+    String 
+    getRqstGrpCtnTpCcCdngCVrsn()
+    {
+        return this.rqstGrpCtnTpCcCdngCVrsn;
+    }
+    
+    public void setRqstGrpCtnTpCcCdngCVrsn
+        (String rqstGrpCtnTpCcCdngCVrsn) 
+        {
+      this.rqstGrpCtnTpCcCdngCVrsn = rqstGrpCtnTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getRqstGrpCtnTpCcCdngCCde()
+    {
+        return this.rqstGrpCtnTpCcCdngCCde;
+    }
+    
+    public void setRqstGrpCtnTpCcCdngCCde
+        (String rqstGrpCtnTpCcCdngCCde) 
+        {
+      this.rqstGrpCtnTpCcCdngCCde = rqstGrpCtnTpCcCdngCCde;
+}
+    public 
+    String 
+    getRqstGrpCtnTpCcCdngCDsplay()
+    {
+        return this.rqstGrpCtnTpCcCdngCDsplay;
+    }
+    
+    public void setRqstGrpCtnTpCcCdngCDsplay
+        (String rqstGrpCtnTpCcCdngCDsplay) 
+        {
+      this.rqstGrpCtnTpCcCdngCDsplay = rqstGrpCtnTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getRqstGrpCtnTpCcCdngCSrSlctd()
+    {
+        return this.rqstGrpCtnTpCcCdngCSrSlctd;
+    }
+    
+    public void setRqstGrpCtnTpCcCdngCSrSlctd
+        (String rqstGrpCtnTpCcCdngCSrSlctd) 
+        {
+      this.rqstGrpCtnTpCcCdngCSrSlctd = rqstGrpCtnTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getRequestGroupActionTypeCcText()
+    {
+        return this.requestGroupActionTypeCcText;
+    }
+    
+    public void setRequestGroupActionTypeCcText
+        (String requestGroupActionTypeCcText) 
+        {
+      this.requestGroupActionTypeCcText = requestGroupActionTypeCcText;
+}
+    public 
+    String 
+    getRqstGrpCtnGrpngBhvrCde()
+    {
+        return this.rqstGrpCtnGrpngBhvrCde;
+    }
+    
+    public void setRqstGrpCtnGrpngBhvrCde
+        (String rqstGrpCtnGrpngBhvrCde) 
+        {
+      this.rqstGrpCtnGrpngBhvrCde = rqstGrpCtnGrpngBhvrCde;
+}
+    public 
+    String 
+    getRqstGrpCtnSlctnBhvrCde()
+    {
+        return this.rqstGrpCtnSlctnBhvrCde;
+    }
+    
+    public void setRqstGrpCtnSlctnBhvrCde
+        (String rqstGrpCtnSlctnBhvrCde) 
+        {
+      this.rqstGrpCtnSlctnBhvrCde = rqstGrpCtnSlctnBhvrCde;
+}
+    public 
+    String 
+    getRqstGrpCtnRqrdBhvrCde()
+    {
+        return this.rqstGrpCtnRqrdBhvrCde;
+    }
+    
+    public void setRqstGrpCtnRqrdBhvrCde
+        (String rqstGrpCtnRqrdBhvrCde) 
+        {
+      this.rqstGrpCtnRqrdBhvrCde = rqstGrpCtnRqrdBhvrCde;
+}
+    public 
+    String 
+    getRqstGrpCtnPrchckBhvrCde()
+    {
+        return this.rqstGrpCtnPrchckBhvrCde;
+    }
+    
+    public void setRqstGrpCtnPrchckBhvrCde
+        (String rqstGrpCtnPrchckBhvrCde) 
+        {
+      this.rqstGrpCtnPrchckBhvrCde = rqstGrpCtnPrchckBhvrCde;
+}
+    public 
+    String 
+    getRqstGrpCtnCrdnltBhvrCde()
+    {
+        return this.rqstGrpCtnCrdnltBhvrCde;
+    }
+    
+    public void setRqstGrpCtnCrdnltBhvrCde
+        (String rqstGrpCtnCrdnltBhvrCde) 
+        {
+      this.rqstGrpCtnCrdnltBhvrCde = rqstGrpCtnCrdnltBhvrCde;
+}
+    public 
+    String 
+    getRqstGrpCtnRsrcRfrnce()
+    {
+        return this.rqstGrpCtnRsrcRfrnce;
+    }
+    
+    public void setRqstGrpCtnRsrcRfrnce
+        (String rqstGrpCtnRsrcRfrnce) 
+        {
+      this.rqstGrpCtnRsrcRfrnce = rqstGrpCtnRsrcRfrnce;
+}
+    public 
+    String 
+    getRequestGroupActionActionAction()
+    {
+        return this.requestGroupActionActionAction;
+    }
+    
+    public void setRequestGroupActionActionAction
+        (String requestGroupActionActionAction) 
+        {
+      this.requestGroupActionActionAction = requestGroupActionActionAction;
+}
 
 
 

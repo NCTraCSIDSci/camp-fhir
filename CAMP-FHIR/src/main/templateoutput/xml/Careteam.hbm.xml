@@ -1,297 +1,321 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Careteam" optimistic-lock="none" table="careteam">
-        <id name="careTeamIdentifierCodingCode" type="string">
-            <column length="512" name="CareTeam_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="crTmDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="CrTm_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="careTeamIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="CareTeam_identifier_Identifier_use">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="careTeamIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="CareTeam_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="crTmDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="CareTeam_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="crTmDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="careTeamIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="CareTeam_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="careTeamStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="CareTeam_status">
-                <comment>code</comment>
+        <property name="crTmDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="crTmCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crTmDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="careTeamCategoryCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CareTeam_category_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="crTmDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="careTeamCategoryCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CareTeam_category_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="crTmDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="careTeamCategoryCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CareTeam_category_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="crTmDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="careTeamCategoryCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CareTeam_category_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="careTeamName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="CareTeam_name">
-                <comment>string</comment>
+        <property name="crTmDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="careTeamSubject" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_subject">
-                <comment>Reference</comment>
+        <property name="crTmDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="CrTm_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"CareTeam.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_encounter">
-                <comment>Reference</comment>
+        <property name="careTeamStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="CareTeam_status_code">
+                <comment>{ "tree" :"CareTeam.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="crTmPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crTmCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="CrTm_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamPeriodCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CareTeam_period_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="crTmCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="CrTm_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="careTeamPeriodCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CareTeam_period_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="careTeamCategoryCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="CareTeam_category_CC_coding_C_code">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="careTeamPeriodCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CareTeam_period_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="crTmCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CrTm_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="careTeamPeriodCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CareTeam_period_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CrTm_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="careTeamParticipant" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="CareTeam_participant">
-                <comment>BackboneElement</comment>
+        <property name="careTeamCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="CareTeam_category_CC_text">
+                <comment>{ "tree" :"CareTeam.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntRlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="careTeamNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="CareTeam_name_string">
+                <comment>{ "tree" :"CareTeam.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntRlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="careTeamSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="CareTeam_subject_Reference">
+                <comment>{ "tree" :"CareTeam.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntRlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="careTeamEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="CareTeam_encounter_Reference">
+                <comment>{ "tree" :"CareTeam.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntRlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="careTeamPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="CareTeam_period_Period_start">
+                <comment>{ "tree" :"CareTeam.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntRlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CrTm_prtcpnt_rl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="careTeamPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="CareTeam_period_Period_end">
+                <comment>{ "tree" :"CareTeam.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="careTeamParticipantMember" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_participant_member">
-                <comment>Reference</comment>
+        <property name="crTmPrtcpntRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setSystem"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamParticipantOnBehalfOf" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_participant_onBehalfOf">
-                <comment>Reference</comment>
+        <property name="crTmPrtcpntRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setVersion"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crTmPrtcpntRlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setCode"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_CC_cdng_C_cde">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="crTmPrtcpntRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="crTmPrtcpntRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_rl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="careTeamParticipantRoleCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, setText"}</meta>
+            <column length="65535" name="CareTeam_participant_role_CC_text">
+                <comment>{ "tree" :"CareTeam.participant.role", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addParticipant"] , "methodName" : "addRole, setText"}</comment>
             </column>
         </property>
-        <property name="crTmPrtcpntPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CrTm_prtcpnt_prd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="crTmPrtcpntMmbrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.member", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setMember"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_mmbr_Rfrnce">
+                <comment>{ "tree" :"CareTeam.participant.member", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setMember"}</comment>
             </column>
         </property>
-        <property name="crTmRsnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_rsnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crTmPrtcpntNBhlffRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setOnBehalfOf"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_nBhlff_Rfrnce">
+                <comment>{ "tree" :"CareTeam.participant.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setOnBehalfOf"}</comment>
             </column>
         </property>
-        <property name="careTeamReasonCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CareTeam_reasonCode_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="crTmPrtcpntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Prd_strt">
+                <comment>{ "tree" :"CareTeam.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="careTeamReasonCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CareTeam_reasonCode_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="crTmPrtcpntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="CrTm_prtcpnt_prd_Prd_nd">
+                <comment>{ "tree" :"CareTeam.participant.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addParticipant"] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="careTeamReasonCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CareTeam_reasonCode_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="crTmRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="CrTm_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamReasonCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CareTeam_reasonCode_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="CrTm_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="careTeamReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_reasonReference">
-                <comment>Reference</comment>
+        <property name="crTmRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="CrTm_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="careTeamManagingOrganization" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="CareTeam_managingOrganization">
-                <comment>Reference</comment>
+        <property name="crTmRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="CrTm_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="crTmTlcmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CrTm_tlcm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="crTmRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="CrTm_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="careTeamTelecomCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CareTeam_telecom_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="careTeamReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="CareTeam_reasonCode_CC_text">
+                <comment>{ "tree" :"CareTeam.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="careTeamTelecomCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CareTeam_telecom_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="careTeamReasonReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="CareTeam_reasonReference_Reference">
+                <comment>{ "tree" :"CareTeam.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="careTeamTelecomCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CareTeam_telecom_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="crTmMngngrgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.managingOrganization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManagingOrganization"}</meta>
+            <column length="65535" name="CrTm_mngngrgnztn_Rfrnce">
+                <comment>{ "tree" :"CareTeam.managingOrganization", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addManagingOrganization"}</comment>
             </column>
         </property>
-        <property name="careTeamTelecomCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CareTeam_telecom_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="CrTm_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="careTeamNoteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="CareTeam_note_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="careTeamTelecomContactPointUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="CareTeam_telecom_ContactPoint_use">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="careTeamNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="CareTeam_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="crTmTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="CrTm_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="careTeamNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="CareTeam_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="crTmTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="CrTm_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="careTeamNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="CareTeam_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="careTeamTelecomContactPointRank" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="CareTeam_telecom_ContactPoint_rank">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="careTeamNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="CareTeam_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="crTmTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="CrTm_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"CareTeam.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="CareTeam_note_Annotation_time">
+                <comment>{ "tree" :"CareTeam.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
+            </column>
+        </property>
+        <property name="careTeamNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="CareTeam_note_Annotation_text">
+                <comment>{ "tree" :"CareTeam.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
+            </column>
+        </property>
+        <property name="crTmNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="CrTm_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"CareTeam.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
+            </column>
+        </property>
+        <property name="crTmNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"CareTeam.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="CrTm_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"CareTeam.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
     </class>

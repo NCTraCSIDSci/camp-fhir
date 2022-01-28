@@ -1,1239 +1,801 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Verificationresult" optimistic-lock="none" table="verificationresult">
-        <id name="vrfctnRsltTrgtRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>VerificationResult_targetReference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="vrfctnRsltTrgtRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.target", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTarget"}</meta>
+            <column length="512" name="VrfctnRslt_trgt_Rfrnce">
+                <comment>{ "tree" :"VerificationResult.target", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTarget"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Period_start</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Period_start</comment>
+        <property name="vrfctnRsltTrgtLctnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.targetLocation", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTargetLocation"}</meta>
+            <column length="65535" name="VrfctnRslt_trgtLctn_strng">
+                <comment>{ "tree" :"VerificationResult.targetLocation", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTargetLocation"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Period_end</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Period_end</comment>
+        <property name="vrfctnRsltNdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_nd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Reference_reference</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Reference_reference</comment>
+        <property name="vrfctnRsltNdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_nd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Reference_type</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Reference_type</comment>
+        <property name="vrfctnRsltNdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_nd_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Reference_identifier</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Reference_identifier</comment>
+        <property name="vrfctnRsltNdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_nd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_identifier_Identifier_Reference_display</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>VerificationResult_targetReference_identifier_Identifier_Reference_display</comment>
+        <property name="vrfctnRsltNdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_nd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_Identifier_use</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_se">
-                <comment>VerificationResult_targetReference_Identifier_use</comment>
+        <property name="verificationResultNeedCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, setText"}</meta>
+            <column length="65535" name="VerificationResult_need_CC_text">
+                <comment>{ "tree" :"VerificationResult.need", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNeed, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_Identifier_system</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_sstm">
-                <comment>VerificationResult_targetReference_Identifier_system</comment>
+        <property name="verificationResultStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="VerificationResult_status_code">
+                <comment>{ "tree" :"VerificationResult.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_Identifier_value</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dntfr_vlue">
-                <comment>VerificationResult_targetReference_Identifier_value</comment>
+        <property name="vrfctnRsltSttsDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.statusDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusDate"}</meta>
+            <column length="65535" name="VrfctnRslt_sttsDt_dtTme">
+                <comment>{ "tree" :"VerificationResult.statusDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusDate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_reference_string</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_rfrnc_strng">
-                <comment>VerificationResult_targetReference_reference_string</comment>
+        <property name="vrfctnRsltVldtnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_display_string</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_dspl_strng">
-                <comment>VerificationResult_targetReference_display_string</comment>
+        <property name="vrfctnRsltVldtnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTrgtRfrncTpRi" type="string">
-            <meta attribute="resource-type">VerificationResult_targetReference_type_uri</meta>
-            <column length="512" name="VrfctnRslt_trgt_Rfrnc_tp_ri">
-                <comment>VerificationResult_targetReference_type_uri</comment>
+        <property name="vrfctnRsltVldtnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="verificationResultTargetLocation" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VerificationResult_targetLocation">
-                <comment>string</comment>
+        <property name="vrfctnRsltVldtnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltVldtnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltVldtnTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnTp_CC_txt">
+                <comment>{ "tree" :"VerificationResult.validationType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setValidationType, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltVldtnPrcssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltVldtnPrcssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltVldtnPrcssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltNdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_nd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltVldtnPrcssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="verificationResultStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="VerificationResult_status">
-                <comment>code</comment>
+        <property name="vrfctnRsltVldtnPrcssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="verificationResultStatusDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="VerificationResult_statusDate">
-                <comment>dateTime</comment>
+        <property name="vrfctnRsltVldtnPrcssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtnPrcss_CC_txt">
+                <comment>{ "tree" :"VerificationResult.validationProcess", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addValidationProcess, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_vldtnTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltFrqncTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltFrqncTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, addEvent"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_vnt">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, addEvent"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltFrqncTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltFrqncTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltFrqncTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addWhen"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_whn">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addWhen"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltVldtnPrcssCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_vldtnPrcss_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltFrqncTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDuration"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtn">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDuration"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptDrtnntCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_durationUnit_code</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtnnt_cde">
-                <comment>Timing_repeat_durationUnit_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setDurationMax"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptPrdntCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_periodUnit_code</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prdnt_cde">
-                <comment>Timing_repeat_periodUnit_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prd">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriod"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptDfWkCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_dayOfWeek_code</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_dfWk_cde">
-                <comment>Timing_repeat_dayOfWeek_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setPeriodMax"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptWhnCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_when_code</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_whn_cde">
-                <comment>Timing_repeat_when_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsDuration"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CdblCncpt_Cdng_sstm">
-                <comment>Timing_code_CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltFrqncTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsPeriod"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CdblCncpt_Cdng_vrsn">
-                <comment>Timing_code_CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltFrqncTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setCount"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_cnt">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setCount"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CdblCncpt_Cdng_cde">
-                <comment>Timing_code_CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltFrqncTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setCountMax"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CdblCncpt_Cdng_dsplay">
-                <comment>Timing_code_CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltFrqncTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setFrequency"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>Timing_code_CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltFrqncTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setFrequencyMax"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Timing_CodeableConcept_text</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_CdblCncpt_txt">
-                <comment>Timing_CodeableConcept_text</comment>
+        <property name="vrfctnRsltFrqncTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setBoundsRange"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngVntDtTme" type="string">
-            <meta attribute="resource-type">Timing_event_dateTime</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_vnt_dtTme">
-                <comment>Timing_event_dateTime</comment>
+        <property name="vrfctnRsltFrqncTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, addTimeOfDay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptDrtnDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_duration_decimal</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtn_dcml">
-                <comment>Timing_repeat_duration_decimal</comment>
+        <property name="vrfctnRsltFrqncTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setOffset"}</meta>
+            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_ffst">
+                <comment>{ "tree" :"VerificationResult.frequency", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFrequency, setRepeat, setOffset"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptDrtnMxDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_durationMax_decimal</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_drtnMx_dcml">
-                <comment>Timing_repeat_durationMax_decimal</comment>
+        <property name="vrfctnRsltLstPrfrmdDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.lastPerformed", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastPerformed"}</meta>
+            <column length="65535" name="VrfctnRslt_lstPrfrmd_dtTme">
+                <comment>{ "tree" :"VerificationResult.lastPerformed", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLastPerformed"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptPrdDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_period_decimal</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prd_dcml">
-                <comment>Timing_repeat_period_decimal</comment>
+        <property name="vrfctnRsltNxtSchdldDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.nextScheduled", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNextScheduled"}</meta>
+            <column length="65535" name="VrfctnRslt_nxtSchdld_dte">
+                <comment>{ "tree" :"VerificationResult.nextScheduled", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNextScheduled"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptPrdMxDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_periodMax_decimal</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_prdMx_dcml">
-                <comment>Timing_repeat_periodMax_decimal</comment>
+        <property name="vrfctnRsltFlrctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptBndsDrtnDrtn" type="string">
-            <meta attribute="resource-type">Timing_repeat_boundsDuration_Duration</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_bndsDrtn_Drtn">
-                <comment>Timing_repeat_boundsDuration_Duration</comment>
+        <property name="vrfctnRsltFlrctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptLmnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_Element</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_lmnt">
-                <comment>Timing_repeat_Element</comment>
+        <property name="vrfctnRsltFlrctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngPrdStrt" type="string">
-            <meta attribute="resource-type">Timing_Period_start</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_Prd_strt">
-                <comment>Timing_Period_start</comment>
+        <property name="vrfctnRsltFlrctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngPrdNd" type="string">
-            <meta attribute="resource-type">Timing_Period_end</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_Prd_nd">
-                <comment>Timing_Period_end</comment>
+        <property name="vrfctnRsltFlrctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptCntPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_count_positiveInt</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_cnt_pstvnt">
-                <comment>Timing_repeat_count_positiveInt</comment>
+        <property name="vrfctnRsltFlrctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_flrctn_CC_txt">
+                <comment>{ "tree" :"VerificationResult.failureAction", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFailureAction, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptCntMxPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_countMax_positiveInt</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_cntMx_pstvnt">
-                <comment>Timing_repeat_countMax_positiveInt</comment>
+        <property name="vrfctnRsltPrmrSrcWhRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.who", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setWho"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnce">
+                <comment>{ "tree" :"VerificationResult.primarySource.who", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setWho"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptFrqncPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_frequency_positiveInt</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_frqnc_pstvnt">
-                <comment>Timing_repeat_frequency_positiveInt</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptFrqncMxPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_frequencyMax_positiveInt</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_frqncMx_pstvnt">
-                <comment>Timing_repeat_frequencyMax_positiveInt</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRngLw" type="string">
-            <meta attribute="resource-type">Timing_Range_low</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_Rng_lw">
-                <comment>Timing_Range_low</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRngHgh" type="string">
-            <meta attribute="resource-type">Timing_Range_high</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_Rng_hgh">
-                <comment>Timing_Range_high</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptTmfDTme" type="string">
-            <meta attribute="resource-type">Timing_repeat_timeOfDay_time</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_tmfD_tme">
-                <comment>Timing_repeat_timeOfDay_time</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFrqncTmngRptFfstNsgndnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_offset_unsignedInt</meta>
-            <column length="65535" name="VrfctnRslt_frqnc_Tmng_rpt_ffst_nsgndnt">
-                <comment>Timing_repeat_offset_unsignedInt</comment>
+        <property name="vrfctnRsltPrmrSrcTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CC_txt">
+                <comment>{ "tree" :"VerificationResult.primarySource.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="verificationResultLastPerformed" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="VerificationResult_lastPerformed">
-                <comment>dateTime</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="verificationResultNextScheduled" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="VerificationResult_nextScheduled">
-                <comment>date</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CC_txt">
+                <comment>{ "tree" :"VerificationResult.primarySource.communicationMethod", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addCommunicationMethod, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltFlrctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_flrctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnSttsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CC_txt">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationStatus", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationStatus, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="vrfctnRsltPrmrSrcVldtnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.validationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationDate"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnDt_dtTme">
+                <comment>{ "tree" :"VerificationResult.primarySource.validationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setValidationDate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="vrfctnRsltPrmrSrcCnPshpdtsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CC_txt">
+                <comment>{ "tree" :"VerificationResult.primarySource.canPushUpdates", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPrimarySource"] , "methodName" : "setCanPushUpdates, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcWhRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_wh_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltPrmrSrcPshTpvlblCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CC_txt">
+                <comment>{ "tree" :"VerificationResult.primarySource.pushTypeAvailable", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPrimarySource"] , "methodName" : "addPushTypeAvailable, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltTtsttnWhRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.who", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setWho"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnce">
+                <comment>{ "tree" :"VerificationResult.attestation.who", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setWho"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltTtsttnNBhlffRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setOnBehalfOf"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnce">
+                <comment>{ "tree" :"VerificationResult.attestation.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setOnBehalfOf"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_cdng_C_cde">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltTtsttnCmmnctnMthdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, setText"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CC_txt">
+                <comment>{ "tree" :"VerificationResult.attestation.communicationMethod", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setCommunicationMethod, setText"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCmmnctnMthdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cmmnctnMthd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltTtsttnDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.date", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_dt_dte">
+                <comment>{ "tree" :"VerificationResult.attestation.date", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltTtsttnSrcdnttCrtfctStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceIdentityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceIdentityCertificate"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcdnttCrtfct_strng">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceIdentityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceIdentityCertificate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltTtsttnPrxdnttCrtfctStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxyIdentityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxyIdentityCertificate"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxdnttCrtfct_strng">
+                <comment>{ "tree" :"VerificationResult.attestation.proxyIdentityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxyIdentityCertificate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setData"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_dta">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setData"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTrgtFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setTargetFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_trgtFrmt">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setTargetFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrSgFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setSigFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_sgFrmt">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setSigFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnSttsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnStts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTpCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_tp_C_sstm">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcVldtnDte" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_vldtnDte">
-                <comment>dateTime</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTpCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_tp_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTpCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_tp_C_cde">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTpCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_tp_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_tp_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, addType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setWhen"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_whn">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setWhen"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrWho" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setWho"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_who">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setWho"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcCnPshpdtsCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_cnPshpdts_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltTtsttnPrxSgntrSgntrNBhlff" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setOnBehalfOf"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_nBhlff">
+                <comment>{ "tree" :"VerificationResult.attestation.proxySignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setProxySignature, setOnBehalfOf"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setData"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_dta">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setData"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTrgtFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setTargetFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_trgtFrmt">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setTargetFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrSgFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setSigFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_sgFrmt">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setSigFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTpCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_tp_C_sstm">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTpCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_tp_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltPrmrSrcPshTpvlblCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_prmrSrc_pshTpvlbl_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTpCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_tp_C_cde">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTpCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_tp_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_tp_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, addType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setWhen"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_whn">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setWhen"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrWho" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setWho"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_who">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setWho"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="vrfctnRsltTtsttnSrcSgntrSgntrNBhlff" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setOnBehalfOf"}</meta>
+            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_nBhlff">
+                <comment>{ "tree" :"VerificationResult.attestation.sourceSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAttestation"] , "methodName" : "setSourceSignature, setOnBehalfOf"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="vrfctnRsltVldtrRgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.organization", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addValidator"] , "methodName" : "setOrganization"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnce">
+                <comment>{ "tree" :"VerificationResult.validator.organization", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addValidator"] , "methodName" : "setOrganization"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="vrfctnRsltVldtrDnttCrtfctStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.identityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setIdentityCertificate"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_dnttCrtfct_strng">
+                <comment>{ "tree" :"VerificationResult.validator.identityCertificate", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setIdentityCertificate"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setData"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_dta">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setData"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTrgtFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setTargetFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_trgtFrmt">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setTargetFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrSgFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setSigFormat"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_sgFrmt">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setSigFormat"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTpCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setSystem"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_tp_C_sstm">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setSystem"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTpCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setVersion"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_tp_C_vrsn">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setVersion"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTpCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setCode"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_tp_C_cde">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setCode"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnWhRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_wh_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTpCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setDisplay"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_tp_C_dsplay">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setUserSelected"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_tp_C_srSlctd">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, addType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setWhen"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_whn">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, instant", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setWhen"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrWho" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setWho"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_who">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setWho"}</comment>
             </column>
         </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnNBhlffRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_nBhlff_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnCmmnctnMthdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_cmmnctnMthd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnDte" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_dte">
-                <comment>date</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcdnttCrtfcte" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcdnttCrtfcte">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxdnttCrtfcte" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxdnttCrtfcte">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrDtBs64bnry" type="string">
-            <meta attribute="resource-type">Signature_data_base64Binary</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_dt_bs64Bnry">
-                <comment>Signature_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrTrgtFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_targetFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_trgtFrmt_cde">
-                <comment>Signature_targetFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrSgFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_sigFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_sgFrmt_cde">
-                <comment>Signature_sigFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrCdngSstm" type="string">
-            <meta attribute="resource-type">Signature_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Cdng_sstm">
-                <comment>Signature_Coding_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Signature_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Cdng_vrsn">
-                <comment>Signature_Coding_version</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrCdngCde" type="string">
-            <meta attribute="resource-type">Signature_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Cdng_cde">
-                <comment>Signature_Coding_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Signature_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Cdng_dsplay">
-                <comment>Signature_Coding_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Cdng_srSlctd">
-                <comment>Signature_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrWhnNstnt" type="string">
-            <meta attribute="resource-type">Signature_when_instant</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_whn_nstnt">
-                <comment>Signature_when_instant</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Signature_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Rfrnc_rfrnce">
-                <comment>Signature_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrRfrncTpe" type="string">
-            <meta attribute="resource-type">Signature_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Rfrnc_tpe">
-                <comment>Signature_Reference_type</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Signature_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Rfrnc_dntfr">
-                <comment>Signature_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnPrxSgntrSgntrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Signature_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_prxSgntr_Sgntr_Rfrnc_dsplay">
-                <comment>Signature_Reference_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrDtBs64bnry" type="string">
-            <meta attribute="resource-type">Signature_data_base64Binary</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_dt_bs64Bnry">
-                <comment>Signature_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrTrgtFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_targetFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_trgtFrmt_cde">
-                <comment>Signature_targetFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrSgFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_sigFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_sgFrmt_cde">
-                <comment>Signature_sigFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrCdngSstm" type="string">
-            <meta attribute="resource-type">Signature_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Cdng_sstm">
-                <comment>Signature_Coding_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Signature_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Cdng_vrsn">
-                <comment>Signature_Coding_version</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrCdngCde" type="string">
-            <meta attribute="resource-type">Signature_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Cdng_cde">
-                <comment>Signature_Coding_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Signature_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Cdng_dsplay">
-                <comment>Signature_Coding_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Cdng_srSlctd">
-                <comment>Signature_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrWhnNstnt" type="string">
-            <meta attribute="resource-type">Signature_when_instant</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_whn_nstnt">
-                <comment>Signature_when_instant</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Signature_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Rfrnc_rfrnce">
-                <comment>Signature_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrRfrncTpe" type="string">
-            <meta attribute="resource-type">Signature_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Rfrnc_tpe">
-                <comment>Signature_Reference_type</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Signature_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Rfrnc_dntfr">
-                <comment>Signature_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltTtsttnSrcSgntrSgntrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Signature_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_ttsttn_srcSgntr_Sgntr_Rfrnc_dsplay">
-                <comment>Signature_Reference_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrRgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_rgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrDnttCrtfcte" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_dnttCrtfcte">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrDtBs64bnry" type="string">
-            <meta attribute="resource-type">Signature_data_base64Binary</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_dt_bs64Bnry">
-                <comment>Signature_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrTrgtFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_targetFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_trgtFrmt_cde">
-                <comment>Signature_targetFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrSgFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_sigFormat_code</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_sgFrmt_cde">
-                <comment>Signature_sigFormat_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrCdngSstm" type="string">
-            <meta attribute="resource-type">Signature_Coding_system</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Cdng_sstm">
-                <comment>Signature_Coding_system</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Signature_Coding_version</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Cdng_vrsn">
-                <comment>Signature_Coding_version</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrCdngCde" type="string">
-            <meta attribute="resource-type">Signature_Coding_code</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Cdng_cde">
-                <comment>Signature_Coding_code</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Signature_Coding_display</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Cdng_dsplay">
-                <comment>Signature_Coding_display</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Cdng_srSlctd">
-                <comment>Signature_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrWhnNstnt" type="string">
-            <meta attribute="resource-type">Signature_when_instant</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_whn_nstnt">
-                <comment>Signature_when_instant</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Signature_Reference_reference</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Rfrnc_rfrnce">
-                <comment>Signature_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrRfrncTpe" type="string">
-            <meta attribute="resource-type">Signature_Reference_type</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Rfrnc_tpe">
-                <comment>Signature_Reference_type</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Signature_Reference_identifier</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Rfrnc_dntfr">
-                <comment>Signature_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Signature_Reference_display</meta>
-            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_Rfrnc_dsplay">
-                <comment>Signature_Reference_display</comment>
+        <property name="vrfctnRsltVldtrTtsttnSgntrSgntrNBhlff" type="string">
+            <meta attribute="resource-type">{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setOnBehalfOf"}</meta>
+            <column length="65535" name="VrfctnRslt_vldtr_ttsttnSgntr_Sgntr_nBhlff">
+                <comment>{ "tree" :"VerificationResult.validator.attestationSignature", "datatype" : "Signature, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addValidator"] , "methodName" : "setAttestationSignature, setOnBehalfOf"}</comment>
             </column>
         </property>
     </class>

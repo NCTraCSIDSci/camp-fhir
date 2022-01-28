@@ -1,687 +1,291 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Provenance" optimistic-lock="none" table="provenance">
-        <id name="prvnncTrgtRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="prvnncTrgtRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Provenance_targetReference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="provenanceTargetReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.target", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "Target"}</meta>
+            <column length="512" name="Provenance_target_Reference">
+                <comment>{ "tree" :"Provenance.target", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "Target"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Period_start</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Provenance_targetReference_identifier_Identifier_Period_start</comment>
+        <property name="prvnncCcrrdPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.occurredPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredPeriod, setStart"}</meta>
+            <column length="65535" name="Prvnnc_ccrrdPrd_Prd_strt">
+                <comment>{ "tree" :"Provenance.occurredPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Period_end</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Provenance_targetReference_identifier_Identifier_Period_end</comment>
+        <property name="prvnncCcrrdPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.occurredPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredPeriod, setEnd"}</meta>
+            <column length="65535" name="Prvnnc_ccrrdPrd_Prd_nd">
+                <comment>{ "tree" :"Provenance.occurredPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Reference_reference</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Provenance_targetReference_identifier_Identifier_Reference_reference</comment>
+        <property name="prvnncCcrrdDttmDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.occurredDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredDatetime"}</meta>
+            <column length="65535" name="Prvnnc_ccrrdDttm_dtTme">
+                <comment>{ "tree" :"Provenance.occurredDatetime", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOccurredDatetime"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Reference_type</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Provenance_targetReference_identifier_Identifier_Reference_type</comment>
+        <property name="provenanceRecordedInstant" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.recorded", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRecorded"}</meta>
+            <column length="65535" name="Provenance_recorded_instant">
+                <comment>{ "tree" :"Provenance.recorded", "datatype" : "instant", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setRecorded"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Reference_identifier</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Provenance_targetReference_identifier_Identifier_Reference_identifier</comment>
+        <property name="provenancePolicyUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.policy", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPolicy"}</meta>
+            <column length="65535" name="Provenance_policy_uri">
+                <comment>{ "tree" :"Provenance.policy", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addPolicy"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_identifier_Identifier_Reference_display</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Provenance_targetReference_identifier_Identifier_Reference_display</comment>
+        <property name="provenanceLocationReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</meta>
+            <column length="65535" name="Provenance_location_Reference">
+                <comment>{ "tree" :"Provenance.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_Identifier_use</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_se">
-                <comment>Provenance_targetReference_Identifier_use</comment>
+        <property name="prvnncRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Prvnnc_rsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_Identifier_system</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_sstm">
-                <comment>Provenance_targetReference_Identifier_system</comment>
+        <property name="prvnncRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Prvnnc_rsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_Identifier_value</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dntfr_vlue">
-                <comment>Provenance_targetReference_Identifier_value</comment>
+        <property name="provenanceReasonCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Provenance_reason_CC_coding_C_code">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_reference_string</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_rfrnc_strng">
-                <comment>Provenance_targetReference_reference_string</comment>
+        <property name="prvnncRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Prvnnc_rsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_display_string</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_dspl_strng">
-                <comment>Provenance_targetReference_display_string</comment>
+        <property name="prvnncRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Prvnnc_rsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prvnncTrgtRfrncTpRi" type="string">
-            <meta attribute="resource-type">Provenance_targetReference_type_uri</meta>
-            <column length="512" name="Prvnnc_trgt_Rfrnc_tp_ri">
-                <comment>Provenance_targetReference_type_uri</comment>
+        <property name="provenanceReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, setText"}</meta>
+            <column length="65535" name="Provenance_reason_CC_text">
+                <comment>{ "tree" :"Provenance.reason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReason, setText"}</comment>
             </column>
         </property>
-        <property name="prvnncCcrrdPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Prvnnc_ccrrdPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="prvnncCtvtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setSystem"}</meta>
+            <column length="65535" name="Prvnnc_ctvt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prvnncCcrrdPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Prvnnc_ccrrdPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="prvnncCtvtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setVersion"}</meta>
+            <column length="65535" name="Prvnnc_ctvt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="provenanceOccurredDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Provenance_occurredDatetime">
-                <comment>dateTime</comment>
+        <property name="prvnncCtvtCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setCode"}</meta>
+            <column length="65535" name="Prvnnc_ctvt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="provenanceRecorded" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="Provenance_recorded">
-                <comment>instant</comment>
+        <property name="prvnncCtvtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Prvnnc_ctvt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="provenancePolicy" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Provenance_policy">
-                <comment>uri</comment>
+        <property name="prvnncCtvtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Prvnnc_ctvt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="provenanceActivityCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, setText"}</meta>
+            <column length="65535" name="Provenance_activity_CC_text">
+                <comment>{ "tree" :"Provenance.activity", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActivity, setText"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="prvnncGntTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="Prvnnc_gnt_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="prvnncGntTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="Prvnnc_gnt_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="prvnncGntTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="Prvnnc_gnt_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="prvnncGntTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Prvnnc_gnt_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="prvnncGntTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Prvnnc_gnt_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="provenanceAgentTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="Provenance_agent_type_CC_text">
+                <comment>{ "tree" :"Provenance.agent.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="prvnncGntRlCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setSystem"}</meta>
+            <column length="65535" name="Prvnnc_gnt_rl_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="prvnncGntRlCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setVersion"}</meta>
+            <column length="65535" name="Prvnnc_gnt_rl_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="prvnncGntRlCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setCode"}</meta>
+            <column length="65535" name="Prvnnc_gnt_rl_CC_cdng_C_cde">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="prvnncGntRlCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Prvnnc_gnt_rl_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="prvnncGntRlCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Prvnnc_gnt_rl_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="provenanceAgentRoleCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, setText"}</meta>
+            <column length="65535" name="Provenance_agent_role_CC_text">
+                <comment>{ "tree" :"Provenance.agent.role", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["setAgent"] , "methodName" : "addRole, setText"}</comment>
             </column>
         </property>
-        <property name="prvnncLctnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Prvnnc_lctn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="provenanceAgentWhoReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.who", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setAgent"] , "methodName" : "setWho"}</meta>
+            <column length="65535" name="Provenance_agent_who_Reference">
+                <comment>{ "tree" :"Provenance.agent.who", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["setAgent"] , "methodName" : "setWho"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="prvnncGntNBhlffRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.agent.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setOnBehalfOf"}</meta>
+            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnce">
+                <comment>{ "tree" :"Provenance.agent.onBehalfOf", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setAgent"] , "methodName" : "setOnBehalfOf"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="provenanceEntityRoleCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.entity.role", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addEntity"] , "methodName" : "setRole"}</meta>
+            <column length="65535" name="Provenance_entity_role_code">
+                <comment>{ "tree" :"Provenance.entity.role", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addEntity"] , "methodName" : "setRole"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="provenanceEntityWhatReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.entity.what", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addEntity"] , "methodName" : "setWhat"}</meta>
+            <column length="65535" name="Provenance_entity_what_Reference">
+                <comment>{ "tree" :"Provenance.entity.what", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addEntity"] , "methodName" : "setWhat"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="provenanceEntityAgentAgent" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.entity.agent", "datatype" : "agent", "cardinality" : "Many", "elementtree" : ["addEntity"] , "methodName" : "addAgent"}</meta>
+            <column length="65535" name="Provenance_entity_agent_agent">
+                <comment>{ "tree" :"Provenance.entity.agent", "datatype" : "agent", "cardinality" : "Many", "elementtree" : ["addEntity"] , "methodName" : "addAgent"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="prvnncSgntrSgntrDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setData"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_dta">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, base64Binary", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setData"}</comment>
             </column>
         </property>
-        <property name="prvnncRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Prvnnc_rsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="prvnncSgntrSgntrTrgtFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setTargetFormat"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_trgtFrmt">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setTargetFormat"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="prvnncSgntrSgntrSgFrmt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setSigFormat"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_sgFrmt">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setSigFormat"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="prvnncSgntrSgntrTpCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setSystem"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_tp_C_sstm">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setSystem"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="prvnncSgntrSgntrTpCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setVersion"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_tp_C_vrsn">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setVersion"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="prvnncSgntrSgntrTpCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setCode"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_tp_C_cde">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setCode"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="prvnncSgntrSgntrTpCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setDisplay"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_tp_C_dsplay">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setDisplay"}</comment>
             </column>
         </property>
-        <property name="prvnncCtvtCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Prvnnc_ctvt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="prvnncSgntrSgntrTpCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setUserSelected"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_tp_C_srSlctd">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, addType, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="prvnncGntTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="prvnncSgntrSgntrWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, instant", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setWhen"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_whn">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, instant", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setWhen"}</comment>
             </column>
         </property>
-        <property name="prvnncGntTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="provenanceSignatureSignatureWho" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setWho"}</meta>
+            <column length="65535" name="Provenance_signature_Signature_who">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setWho"}</comment>
             </column>
         </property>
-        <property name="prvnncGntTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="prvnncGntTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="prvnncGntTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="prvnncGntTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Prvnnc_gnt_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="prvnncGntRlCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Prvnnc_gnt_rl_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntWhRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Prvnnc_gnt_wh_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prvnncGntNBhlffRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Prvnnc_gnt_nBhlff_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="provenanceEntityRole" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Provenance_entity_role">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="prvnncNttWhtRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Prvnnc_ntt_wht_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="provenanceEntityAgent" type="string">
-            <meta attribute="resource-type">see agent</meta>
-            <column length="65535" name="Provenance_entity_agent">
-                <comment>see agent</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrDtBs64bnry" type="string">
-            <meta attribute="resource-type">Signature_data_base64Binary</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_dt_bs64Bnry">
-                <comment>Signature_data_base64Binary</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrTrgtFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_targetFormat_code</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_trgtFrmt_cde">
-                <comment>Signature_targetFormat_code</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrSgFrmtCde" type="string">
-            <meta attribute="resource-type">Signature_sigFormat_code</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_sgFrmt_cde">
-                <comment>Signature_sigFormat_code</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrCdngSstm" type="string">
-            <meta attribute="resource-type">Signature_Coding_system</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Cdng_sstm">
-                <comment>Signature_Coding_system</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrCdngVrsn" type="string">
-            <meta attribute="resource-type">Signature_Coding_version</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Cdng_vrsn">
-                <comment>Signature_Coding_version</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrCdngCde" type="string">
-            <meta attribute="resource-type">Signature_Coding_code</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Cdng_cde">
-                <comment>Signature_Coding_code</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrCdngDsplay" type="string">
-            <meta attribute="resource-type">Signature_Coding_display</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Cdng_dsplay">
-                <comment>Signature_Coding_display</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Signature_Coding_userSelected</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Cdng_srSlctd">
-                <comment>Signature_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrWhnNstnt" type="string">
-            <meta attribute="resource-type">Signature_when_instant</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_whn_nstnt">
-                <comment>Signature_when_instant</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Signature_Reference_reference</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Rfrnc_rfrnce">
-                <comment>Signature_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrRfrncTpe" type="string">
-            <meta attribute="resource-type">Signature_Reference_type</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Rfrnc_tpe">
-                <comment>Signature_Reference_type</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Signature_Reference_identifier</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Rfrnc_dntfr">
-                <comment>Signature_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="prvnncSgntrSgntrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Signature_Reference_display</meta>
-            <column length="65535" name="Prvnnc_sgntr_Sgntr_Rfrnc_dsplay">
-                <comment>Signature_Reference_display</comment>
+        <property name="prvnncSgntrSgntrNBhlff" type="string">
+            <meta attribute="resource-type">{ "tree" :"Provenance.signature", "datatype" : "Signature, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setOnBehalfOf"}</meta>
+            <column length="65535" name="Prvnnc_sgntr_Sgntr_nBhlff">
+                <comment>{ "tree" :"Provenance.signature", "datatype" : "Signature, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSignature, setOnBehalfOf"}</comment>
             </column>
         </property>
     </class>

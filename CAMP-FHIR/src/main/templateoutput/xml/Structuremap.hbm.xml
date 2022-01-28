@@ -1,447 +1,579 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Structuremap" optimistic-lock="none" table="structuremap">
-        <id name="structureMapUrl" type="string">
-            <column length="512" name="StructureMap_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="strctrMpDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="structureMapUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="StructureMap_url_uri">
+                <comment>{ "tree" :"StructureMap.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="strctrMpDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_se">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="strctrMpDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="strctrMpDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="strctrMpDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="strctrMpDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="strctrMpDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="strctrMpDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="strctrMpDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="strctrMpDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="strctrMpDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="strctrMpDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="strctrMpDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"StructureMap.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="structureMapVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="StructureMap_version_string">
+                <comment>{ "tree" :"StructureMap.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrMpDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="StrctrMp_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="structureMapNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StructureMap_name_string">
+                <comment>{ "tree" :"StructureMap.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="structureMapVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_version">
-                <comment>string</comment>
+        <property name="structureMapTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="StructureMap_title_string">
+                <comment>{ "tree" :"StructureMap.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="structureMapName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_name">
-                <comment>string</comment>
+        <property name="structureMapStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="StructureMap_status_code">
+                <comment>{ "tree" :"StructureMap.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="structureMapTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_title">
-                <comment>string</comment>
+        <property name="structureMapExperimentalBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="StructureMap_experimental_boolean">
+                <comment>{ "tree" :"StructureMap.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="structureMapStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureMap_status">
-                <comment>code</comment>
+        <property name="structureMapDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="StructureMap_date_dateTime">
+                <comment>{ "tree" :"StructureMap.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="structureMapExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="StructureMap_experimental">
-                <comment>boolean</comment>
+        <property name="structureMapPublisherString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="StructureMap_publisher_string">
+                <comment>{ "tree" :"StructureMap.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="structureMapDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="StructureMap_date">
-                <comment>dateTime</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="structureMapPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_publisher">
-                <comment>string</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="structureMapContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="StructureMap_contact">
-                <comment>ContactDetail</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureMapDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureMap_description">
-                <comment>markdown</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="structureMapUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="StructureMap_useContext">
-                <comment>UsageContext</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="strctrMpCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="strctrMpCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="StrctrMp_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"StructureMap.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="structureMapDescriptionMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="StructureMap_description_markdown">
+                <comment>{ "tree" :"StructureMap.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrMpJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="StrctrMp_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="structureMapPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureMap_purpose">
-                <comment>markdown</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="structureMapCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureMap_copyright">
-                <comment>markdown</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="structureMapStructureUrl" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="StructureMap_structure_url">
-                <comment>canonical</comment>
+        <property name="strctrMpSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="structureMapStructureMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureMap_structure_mode">
-                <comment>code</comment>
+        <property name="strctrMpSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureMapStructureAlias" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_structure_alias">
-                <comment>string</comment>
+        <property name="strctrMpSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrMpStrctrDcmnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_strctr_dcmnttn">
-                <comment>string</comment>
+        <property name="strctrMpSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="structureMapImport" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="StructureMap_import">
-                <comment>canonical</comment>
+        <property name="strctrMpSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupName" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StructureMap_group_name">
-                <comment>id</comment>
+        <property name="strctrMpSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupExtends" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StructureMap_group_extends">
-                <comment>id</comment>
+        <property name="strctrMpSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupTypeMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureMap_group_typeMode">
-                <comment>code</comment>
+        <property name="strctrMpSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupDocumentation" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_group_documentation">
-                <comment>string</comment>
+        <property name="strctrMpSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupInputName" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StructureMap_group_input_name">
-                <comment>id</comment>
+        <property name="strctrMpSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupInputType" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_group_input_type">
-                <comment>string</comment>
+        <property name="strctrMpSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupInputMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureMap_group_input_mode">
-                <comment>code</comment>
+        <property name="strctrMpSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpNptDcmnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_npt_dcmnttn">
-                <comment>string</comment>
+        <property name="strctrMpSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupRuleName" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StructureMap_group_rule_name">
-                <comment>id</comment>
+        <property name="strctrMpSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="StrctrMp_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"StructureMap.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcCntxt" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_cntxt">
-                <comment>id</comment>
+        <property name="strctrMpJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupRuleSourceMin" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="StructureMap_group_rule_source_min">
-                <comment>integer</comment>
+        <property name="strctrMpJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupRuleSourceMax" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureMap_group_rule_source_max">
-                <comment>string</comment>
+        <property name="strctrMpJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcTpe" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_tpe">
-                <comment>string</comment>
+        <property name="strctrMpJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcLmnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_lmnt">
-                <comment>string</comment>
+        <property name="strctrMpJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrMp_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcLstMde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_lstMde">
-                <comment>code</comment>
+        <property name="structureMapJurisdictionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="StructureMap_jurisdiction_CC_text">
+                <comment>{ "tree" :"StructureMap.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcVrble" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_vrble">
-                <comment>id</comment>
+        <property name="structureMapPurposeMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="StructureMap_purpose_markdown">
+                <comment>{ "tree" :"StructureMap.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcCndtn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_cndtn">
-                <comment>string</comment>
+        <property name="structureMapCopyrightMarkdown" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="StructureMap_copyright_markdown">
+                <comment>{ "tree" :"StructureMap.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcChck" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_chck">
-                <comment>string</comment>
+        <property name="strctrMpStrctrRlCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.structure.url", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addStructure"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="StrctrMp_strctr_rl_cnncl">
+                <comment>{ "tree" :"StructureMap.structure.url", "datatype" : "canonical", "cardinality" : "Required", "elementtree" : ["addStructure"] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlSrcLgMssge" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_src_lgMssge">
-                <comment>string</comment>
+        <property name="structureMapStructureModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.structure.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addStructure"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="StructureMap_structure_mode_code">
+                <comment>{ "tree" :"StructureMap.structure.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addStructure"] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtCntxt" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxt">
-                <comment>id</comment>
+        <property name="strctrMpStrctrLsStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.structure.alias", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addStructure"] , "methodName" : "setAlias"}</meta>
+            <column length="65535" name="StrctrMp_strctr_ls_strng">
+                <comment>{ "tree" :"StructureMap.structure.alias", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addStructure"] , "methodName" : "setAlias"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtCntxtTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxtTpe">
-                <comment>code</comment>
+        <property name="strctrMpStrctrDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.structure.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addStructure"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="StrctrMp_strctr_dcmnttn_strng">
+                <comment>{ "tree" :"StructureMap.structure.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addStructure"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtLmnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_lmnt">
-                <comment>string</comment>
+        <property name="structureMapImportCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.import", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImport"}</meta>
+            <column length="65535" name="StructureMap_import_canonical">
+                <comment>{ "tree" :"StructureMap.import", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addImport"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtVrble" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_vrble">
-                <comment>id</comment>
+        <property name="structureMapGroupNameId" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StructureMap_group_name_id">
+                <comment>{ "tree" :"StructureMap.group.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtLstMde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_lstMde">
-                <comment>code</comment>
+        <property name="structureMapGroupExtendsId" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.extends", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setExtends"}</meta>
+            <column length="65535" name="StructureMap_group_extends_id">
+                <comment>{ "tree" :"StructureMap.group.extends", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setExtends"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtLstRld" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_lstRld">
-                <comment>id</comment>
+        <property name="structureMapGroupTypeModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.typeMode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGroup"] , "methodName" : "setTypeMode"}</meta>
+            <column length="65535" name="StructureMap_group_typeMode_code">
+                <comment>{ "tree" :"StructureMap.group.typeMode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGroup"] , "methodName" : "setTypeMode"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtTrnsfrm" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_trnsfrm">
-                <comment>code</comment>
+        <property name="strctrMpGrpDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="StrctrMp_grp_dcmnttn_strng">
+                <comment>{ "tree" :"StructureMap.group.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtPrmtrVld" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vld">
-                <comment>id</comment>
+        <property name="structureMapGroupInputNameId" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.input.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StructureMap_group_input_name_id">
+                <comment>{ "tree" :"StructureMap.group.input.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtPrmtrVlStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlStrng">
-                <comment>string</comment>
+        <property name="strctrMpGrpNptTpStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.input.type", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="StrctrMp_grp_npt_tp_strng">
+                <comment>{ "tree" :"StructureMap.group.input.type", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtPrmtrVlBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlBln">
-                <comment>boolean</comment>
+        <property name="structureMapGroupInputModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.input.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="StructureMap_group_input_mode_code">
+                <comment>{ "tree" :"StructureMap.group.input.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtPrmtrVlntgr" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlntgr">
-                <comment>integer</comment>
+        <property name="strctrMpGrpNptDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.input.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="StrctrMp_grp_npt_dcmnttn_strng">
+                <comment>{ "tree" :"StructureMap.group.input.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlTrgtPrmtrVlDcml" type="string">
-            <meta attribute="resource-type">decimal</meta>
-            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlDcml">
-                <comment>decimal</comment>
+        <property name="structureMapGroupRuleNameId" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StructureMap_group_rule_name_id">
+                <comment>{ "tree" :"StructureMap.group.rule.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="structureMapGroupRuleRule" type="string">
-            <meta attribute="resource-type">see rule</meta>
-            <column length="65535" name="StructureMap_group_rule_rule">
-                <comment>see rule</comment>
+        <property name="strctrMpGrpRlSrcCntxtD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.context", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setContext"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_cntxt_d">
+                <comment>{ "tree" :"StructureMap.group.rule.source.context", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setContext"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlDpndntNme" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrMp_grp_rl_dpndnt_nme">
-                <comment>id</comment>
+        <property name="strctrMpGrpRlSrcMnNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.min", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setMin"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_mn_ntgr">
+                <comment>{ "tree" :"StructureMap.group.rule.source.min", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setMin"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlDpndntVrble" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_dpndnt_vrble">
-                <comment>string</comment>
+        <property name="strctrMpGrpRlSrcMxStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.max", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setMax"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_mx_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.max", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setMax"}</comment>
             </column>
         </property>
-        <property name="strctrMpGrpRlDcmnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrMp_grp_rl_dcmnttn">
-                <comment>string</comment>
+        <property name="strctrMpGrpRlSrcTpStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.type", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_tp_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.type", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.element", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setElement"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lmnt_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.element", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setElement"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLstMdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.listMode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setListMode"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lstMd_cde">
+                <comment>{ "tree" :"StructureMap.group.rule.source.listMode", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setListMode"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcVrblD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.variable", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setVariable"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_vrbl_d">
+                <comment>{ "tree" :"StructureMap.group.rule.source.variable", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setVariable"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcCndtnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.condition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setCondition"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_cndtn_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.condition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setCondition"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcChckStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.check", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setCheck"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_chck_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.check", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setCheck"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlSrcLgMssgStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.source.logMessage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setLogMessage"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_src_lgMssg_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.source.logMessage", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource"] , "methodName" : "setLogMessage"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtCntxtD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.context", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setContext"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxt_d">
+                <comment>{ "tree" :"StructureMap.group.rule.target.context", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setContext"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtCntxtTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.contextType", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setContextType"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_cntxtTp_cde">
+                <comment>{ "tree" :"StructureMap.group.rule.target.contextType", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setContextType"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.element", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setElement"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lmnt_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.target.element", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setElement"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtVrblD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.variable", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setVariable"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_vrbl_d">
+                <comment>{ "tree" :"StructureMap.group.rule.target.variable", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setVariable"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLstMdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.listMode", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "addListMode"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lstMd_cde">
+                <comment>{ "tree" :"StructureMap.group.rule.target.listMode", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "addListMode"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtLstRldD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.listRuleId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setListRuleId"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_lstRld_d">
+                <comment>{ "tree" :"StructureMap.group.rule.target.listRuleId", "datatype" : "id", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setListRuleId"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtTrnsfrmCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.transform", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setTransform"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_trnsfrm_cde">
+                <comment>{ "tree" :"StructureMap.group.rule.target.transform", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget"] , "methodName" : "setTransform"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVldD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.parameter.valueId", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueId"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vld_d">
+                <comment>{ "tree" :"StructureMap.group.rule.target.parameter.valueId", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueId"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.parameter.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueString"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlStrng_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.target.parameter.valueString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueString"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueBoolean"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlBln_bln">
+                <comment>{ "tree" :"StructureMap.group.rule.target.parameter.valueBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueBoolean"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlntgrNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.parameter.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueInteger"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlntgr_ntgr">
+                <comment>{ "tree" :"StructureMap.group.rule.target.parameter.valueInteger", "datatype" : "integer", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueInteger"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlTrgtPrmtrVlDcmlDcml" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.target.parameter.valueDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueDecimal"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_trgt_prmtr_vlDcml_dcml">
+                <comment>{ "tree" :"StructureMap.group.rule.target.parameter.valueDecimal", "datatype" : "decimal", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "setValueDecimal"}</comment>
+            </column>
+        </property>
+        <property name="structureMapGroupRuleRuleRule" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.rule", "datatype" : "rule", "cardinality" : "Many", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "addRule"}</meta>
+            <column length="65535" name="StructureMap_group_rule_rule_rule">
+                <comment>{ "tree" :"StructureMap.group.rule.rule", "datatype" : "rule", "cardinality" : "Many", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter"] , "methodName" : "addRule"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDpndntNmD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.dependent.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dpndnt_nm_d">
+                <comment>{ "tree" :"StructureMap.group.rule.dependent.name", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDpndntVrblStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.dependent.variable", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setVariable"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dpndnt_vrbl_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.dependent.variable", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setVariable"}</comment>
+            </column>
+        </property>
+        <property name="strctrMpGrpRlDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureMap.group.rule.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="StrctrMp_grp_rl_dcmnttn_strng">
+                <comment>{ "tree" :"StructureMap.group.rule.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addGroup", "setInput", "setRule", "setSource", "addTarget", "addParameter", "addDependent"] , "methodName" : "setDocumentation"}</comment>
             </column>
         </property>
     </class>

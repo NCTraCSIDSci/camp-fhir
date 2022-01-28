@@ -1,771 +1,903 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Insuranceplan" optimistic-lock="none" table="insuranceplan">
-        <id name="insrncPlnDntfrCdngCde" type="string">
-            <column length="512" name="InsrncPln_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="insrncPlnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="InsrncPln_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_se">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="insrncPlnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="InsrncPln_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="InsrncPln_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="InsrncPln_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insurancePlanStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="InsurancePlan_status">
-                <comment>code</comment>
+        <property name="insrncPlnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insurancePlanTypeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsurancePlan_type_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="insurancePlanTypeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsurancePlan_type_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insurancePlanTypeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsurancePlan_type_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insurancePlanTypeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsurancePlan_type_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="insurancePlanName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="InsurancePlan_name">
-                <comment>string</comment>
+        <property name="insrncPlnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="insurancePlanAlias" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="InsurancePlan_alias">
-                <comment>string</comment>
+        <property name="insrncPlnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="InsrncPln_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"InsurancePlan.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insurancePlanStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="InsurancePlan_status_code">
+                <comment>{ "tree" :"InsurancePlan.status", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPeriodCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsurancePlan_period_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_prd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_prd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPeriodCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsurancePlan_period_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insurancePlanOwnedBy" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_ownedBy">
-                <comment>Reference</comment>
+        <property name="insrncPlnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insurancePlanAdministeredBy" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_administeredBy">
-                <comment>Reference</comment>
+        <property name="insurancePlanTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</meta>
+            <column length="65535" name="InsurancePlan_type_CC_text">
+                <comment>{ "tree" :"InsurancePlan.type", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addType, setText"}</comment>
             </column>
         </property>
-        <property name="insurancePlanCoverageArea" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_coverageArea">
-                <comment>Reference</comment>
+        <property name="insurancePlanNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="InsurancePlan_name_string">
+                <comment>{ "tree" :"InsurancePlan.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="insurancePlanContact" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_contact">
-                <comment>BackboneElement</comment>
+        <property name="insurancePlanAliasString" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</meta>
+            <column length="65535" name="InsurancePlan_alias_string">
+                <comment>{ "tree" :"InsurancePlan.alias", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addAlias"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctPrpsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cntct_prps_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insurancePlanPeriodPeriodStart" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="InsurancePlan_period_Period_start">
+                <comment>{ "tree" :"InsurancePlan.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctPrpsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cntct_prps_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insurancePlanPeriodPeriodEnd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="InsurancePlan_period_Period_end">
+                <comment>{ "tree" :"InsurancePlan.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctPrpsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cntct_prps_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insurancePlanOwnedByReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.ownedBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwnedBy"}</meta>
+            <column length="65535" name="InsurancePlan_ownedBy_Reference">
+                <comment>{ "tree" :"InsurancePlan.ownedBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOwnedBy"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctPrpsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cntct_prps_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnDmnstrdBRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.administeredBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdministeredBy"}</meta>
+            <column length="65535" name="InsrncPln_dmnstrdB_Rfrnce">
+                <comment>{ "tree" :"InsurancePlan.administeredBy", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAdministeredBy"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctPrpsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cntct_prps_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCvrgrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverageArea", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCoverageArea"}</meta>
+            <column length="65535" name="InsrncPln_cvrgr_Rfrnce">
+                <comment>{ "tree" :"InsurancePlan.coverageArea", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCoverageArea"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctNmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cntct_nm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCntctPrpsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctNmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cntct_nm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCntctPrpsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctNmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cntct_nm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCntctPrpsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctNmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cntct_nm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCntctPrpsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctNmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cntct_nm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCntctPrpsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctTlcmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCntctPrpsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, setText"}</meta>
+            <column length="65535" name="InsrncPln_cntct_prps_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.contact.purpose", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setPurpose, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctTlcmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCntctNmHmnNmSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_se">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setUse"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctTlcmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCntctNmHmnNmPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_prd_Prd_strt">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctTlcmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCntctNmHmnNmPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_prd_Prd_nd">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctTlcmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cntct_tlcm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCntctNmHmnNmTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_txt">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctDdrssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCntctNmHmnNmFmly" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_fmly">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, setFamily"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctDdrssCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCntctNmHmnNmGvn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_gvn">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addGiven"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctDdrssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCntctNmHmnNmPrfx" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_prfx">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addPrefix"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctDdrssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCntctNmHmnNmSffx" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</meta>
+            <column length="65535" name="InsrncPln_cntct_nm_HmnNm_sffx">
+                <comment>{ "tree" :"InsurancePlan.contact.name", "datatype" : "HumanName, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setName, addSuffix"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCntctDdrssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cntct_ddrss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCntctTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="insurancePlanEndpoint" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_endpoint">
-                <comment>Reference</comment>
+        <property name="insrncPlnCntctTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="insurancePlanNetwork" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_network">
-                <comment>Reference</comment>
+        <property name="insrncPlnCntctTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insurancePlanCoverage" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_coverage">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnCntctTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCntctTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCntctTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="InsrncPln_cntct_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"InsurancePlan.contact.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : ["addContact"] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCntctDdrssDdrssSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_se">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setUse"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCntctDdrssDdrssTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_tpe">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, code", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setType"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cvrg_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCntctDdrssDdrssPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_prd_Prd_strt">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insurancePlanCoverageNetwork" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_coverage_network">
-                <comment>Reference</comment>
+        <property name="insrncPlnCntctDdrssDdrssPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_prd_Prd_nd">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insurancePlanCoverageBenefit" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_coverage_benefit">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnCntctDdrssDdrssTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_txt">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCntctDdrssDdrssLne" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_lne">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, addLine"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCntctDdrssDdrssCty" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_cty">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCity"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCntctDdrssDdrssDstrct" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_dstrct">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setDistrict"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCntctDdrssDdrssStte" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_stte">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setState"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCntctDdrssDdrssPstlCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_pstlCde">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setPostalCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftRqrmnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_rqrmnt">
-                <comment>string</comment>
+        <property name="insrncPlnCntctDdrssDdrssCntry" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</meta>
+            <column length="65535" name="InsrncPln_cntct_ddrss_ddrss_cntry">
+                <comment>{ "tree" :"InsurancePlan.contact.address", "datatype" : "Address, string", "cardinality" : "ZeroOne", "elementtree" : ["addContact"] , "methodName" : "setAddress, setCounty"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmt" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt">
-                <comment>BackboneElement</comment>
+        <property name="insurancePlanEndpointReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="InsurancePlan_endpoint_Reference">
+                <comment>{ "tree" :"InsurancePlan.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtVlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insurancePlanNetworkReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNetwork"}</meta>
+            <column length="65535" name="InsurancePlan_network_Reference">
+                <comment>{ "tree" :"InsurancePlan.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNetwork"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtVlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCvrgTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtVlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCvrgTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtVlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCvrgTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtVlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCvrgTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCvrgTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCvrgTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.coverage.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCoverage"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCvrgNtwrkRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addCoverage"] , "methodName" : "addNetwork"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_ntwrk_Rfrnce">
+                <comment>{ "tree" :"InsurancePlan.coverage.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addCoverage"] , "methodName" : "addNetwork"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCvrgBnftTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnCvrgBnftLmtCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCvrgBnftTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPlan" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_plan">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnCvrgBnftTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCvrgBnftTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCvrgBnftTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCvrgBnftTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCvrgBnftRqrmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.requirement", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setRequirement"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_rqrmnt_strng">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.requirement", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit"] , "methodName" : "setRequirement"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCvrgBnftLmtVlQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setComparator"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Qntt_cmprtr">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setComparator"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCvrgBnftLmtVlQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setCode"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Qntt_cde">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCvrgBnftLmtVlQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setValue"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Qntt_vlue">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setValue"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnCvrgBnftLmtVlQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setUnit"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Qntt_nt">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setUnit"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnCvrgBnftLmtVlQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_vl_Qntt_sstm">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.value", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setValue, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPlanCoverageArea" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_plan_coverageArea">
-                <comment>Reference</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPlanNetwork" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="InsurancePlan_plan_network">
-                <comment>Reference</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPlanGeneralCost" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_plan_generalCost">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnCvrgBnftLmtCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="InsrncPln_cvrg_bnft_lmt_cd_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.coverage.benefit.limit.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addCoverage", "addBenefit", "addLimit"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_se">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstGrpSze" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_grpSze">
-                <comment>positiveInt</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCstCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCstCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCstCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCstCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCstCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnGnrlCstCmmnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="InsrncPln_pln_gnrlCst_cmmnt">
-                <comment>string</comment>
+        <property name="insrncPlnPlnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="insurancePlanPlanSpecificCost" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsurancePlan_plan_specificCost">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnPlnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstCtgrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstCtgrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstCtgrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstCtgrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstCtgrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnft" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnPlnTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insurancePlanPlanTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsurancePlan_plan_type_CC_text">
+                <comment>{ "tree" :"InsurancePlan.plan.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnCvrgrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.coverageArea", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addCoverageArea"}</meta>
+            <column length="65535" name="InsrncPln_pln_cvrgr_Rfrnce">
+                <comment>{ "tree" :"InsurancePlan.plan.coverageArea", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addCoverageArea"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnNtwrkRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addNetwork"}</meta>
+            <column length="65535" name="InsrncPln_pln_ntwrk_Rfrnce">
+                <comment>{ "tree" :"InsurancePlan.plan.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : ["addPlan"] , "methodName" : "addNetwork"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCst" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst">
-                <comment>BackboneElement</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnGnrlCstTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.type", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnGnrlCstGrpSzPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.groupSize", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setGroupSize"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_grpSz_pstvnt">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.groupSize", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setGroupSize"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnGnrlCstCstMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.cost", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setCost, setCurrency"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Mn_crrncy">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.cost", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setCost, setCurrency"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnGnrlCstCstMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.cost", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setCost, setVal"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cst_Mn_vlue">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.cost", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setCost, setVal"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnGnrlCstCmmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.generalCost.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="InsrncPln_pln_gnrlCst_cmmnt_strng">
+                <comment>{ "tree" :"InsurancePlan.plan.generalCost.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost"] , "methodName" : "setComment"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnSpcfcCstCtgrCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_ctgr_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.category", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost"] , "methodName" : "setCategory, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit"] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="insrncPlnPlnSpcfcCstBnftCstVlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_tp_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstPplcbltCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_pplcblt_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.applicability", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setApplicability, setText"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_cdng_C_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setVersion"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_cdng_C_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setDisplay"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstQlfrsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, setText"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_qlfrs_CC_txt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.qualifiers", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "addQualifiers, setText"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setComparator"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Qntt_cmprtr">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setCode"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Qntt_cde">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setCode"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setValue"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Qntt_vlue">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setValue"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setUnit"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Qntt_nt">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="insrncPlnPlnSpcfcCstBnftCstVlQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setSystem"}</meta>
+            <column length="65535" name="InsrncPln_pln_spcfcCst_bnft_cst_vl_Qntt_sstm">
+                <comment>{ "tree" :"InsurancePlan.plan.specificCost.benefit.cost.value", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPlan", "addGeneralCost", "addSpecificCost", "addBenefit", "addCost"] , "methodName" : "setValue, setSystem"}</comment>
             </column>
         </property>
     </class>

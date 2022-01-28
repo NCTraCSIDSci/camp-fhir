@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1241 +10,2000 @@ package main.templateoutput.Model;
 public class Servicerequest  implements java.io.Serializable {
 
 
-     private String srvcRqstDntfrCdngCde;
-     private String srvcRqstDntfrCdngSrSlctd;
-     private String srvcRqstDntfrCdngVrsn;
-     private String srvcRqstDntfrCdngDsplay;
-     private String srvcRqstDntfrCdngSstm;
-     private String srvcRqstNstnttsCnncl;
-     private String serviceRequestInstantiatesUri;
-     private String serviceRequestBasedOn;
-     private String serviceRequestReplaces;
-     private String srvcRqstRqstnCdngSrSlctd;
-     private String srvcRqstRqstnCdngCde;
-     private String srvcRqstRqstnCdngVrsn;
-     private String srvcRqstRqstnCdngDsplay;
-     private String srvcRqstRqstnCdngSstm;
-     private String serviceRequestStatus;
-     private String serviceRequestIntent;
-     private String srvcRqstCtgrCdngSrSlctd;
-     private String srvcRqstCtgrCdngCde;
-     private String srvcRqstCtgrCdngVrsn;
-     private String srvcRqstCtgrCdngDsplay;
-     private String srvcRqstCtgrCdngSstm;
-     private String serviceRequestPriority;
-     private String serviceRequestDoNotPerform;
-     private String srvcRqstCdCdngSrSlctd;
-     private String serviceRequestCodeCodingCode;
-     private String serviceRequestCodeCodingVersion;
-     private String serviceRequestCodeCodingDisplay;
-     private String serviceRequestCodeCodingSystem;
-     private String srvcRqstRdrDtlCdngSrSlctd;
-     private String srvcRqstRdrDtlCdngCde;
-     private String srvcRqstRdrDtlCdngVrsn;
-     private String srvcRqstRdrDtlCdngDsplay;
-     private String srvcRqstRdrDtlCdngSstm;
-     private String srvcRqstQnttQnttCdngSrSlctd;
-     private String srvcRqstQnttQnttCdngCde;
-     private String srvcRqstQnttQnttCdngVrsn;
-     private String srvcRqstQnttQnttCdngDsplay;
-     private String srvcRqstQnttQnttCdngSstm;
-     private String srvcRqstQnttRtCdngSrSlctd;
-     private String srvcRqstQnttRtCdngCde;
-     private String srvcRqstQnttRtCdngVrsn;
-     private String srvcRqstQnttRtCdngDsplay;
-     private String srvcRqstQnttRtCdngSstm;
-     private String srvcRqstQnttRngCdngSrSlctd;
-     private String srvcRqstQnttRngCdngCde;
-     private String srvcRqstQnttRngCdngVrsn;
-     private String srvcRqstQnttRngCdngDsplay;
-     private String srvcRqstQnttRngCdngSstm;
-     private String serviceRequestSubject;
-     private String serviceRequestEncounter;
-     private String serviceRequestOccurrenceDatetime;
-     private String srvcRqstCcrrncPrdCdngSrSlctd;
-     private String srvcRqstCcrrncPrdCdngCde;
-     private String srvcRqstCcrrncPrdCdngVrsn;
-     private String srvcRqstCcrrncPrdCdngDsplay;
-     private String srvcRqstCcrrncPrdCdngSstm;
-     private String srvcRqstCcrrncTmngCdngSrSlctd;
-     private String srvcRqstCcrrncTmngCdngCde;
-     private String srvcRqstCcrrncTmngCdngVrsn;
-     private String srvcRqstCcrrncTmngCdngDsplay;
-     private String srvcRqstCcrrncTmngCdngSstm;
-     private String serviceRequestAsNeededBoolean;
-     private String srvcRqstSNddcdblcptCdngSrSlctd;
-     private String srvcRqstSNddcdblcptCdngCde;
-     private String srvcRqstSNddcdblcptCdngVrsn;
-     private String srvcRqstSNddcdblcptCdngDsplay;
-     private String srvcRqstSNddcdblcptCdngSstm;
-     private String serviceRequestAuthoredOn;
-     private String serviceRequestRequester;
-     private String srvcRqstPrfrmrTpCdngSrSlctd;
-     private String srvcRqstPrfrmrTpCdngCde;
-     private String srvcRqstPrfrmrTpCdngVrsn;
-     private String srvcRqstPrfrmrTpCdngDsplay;
-     private String srvcRqstPrfrmrTpCdngSstm;
-     private String serviceRequestPerformer;
-     private String srvcRqstLctnCdCdngSrSlctd;
-     private String srvcRqstLctnCdCdngCde;
-     private String srvcRqstLctnCdCdngVrsn;
-     private String srvcRqstLctnCdCdngDsplay;
-     private String srvcRqstLctnCdCdngSstm;
-     private String serviceRequestLocationReference;
-     private String srvcRqstRsnCdCdngSrSlctd;
-     private String srvcRqstRsnCdCdngCde;
-     private String srvcRqstRsnCdCdngVrsn;
-     private String srvcRqstRsnCdCdngDsplay;
-     private String srvcRqstRsnCdCdngSstm;
-     private String serviceRequestReasonReference;
-     private String serviceRequestInsurance;
-     private String serviceRequestSupportingInfo;
-     private String serviceRequestSpecimen;
-     private String srvcRqstBdStCdngSrSlctd;
-     private String srvcRqstBdStCdngCde;
-     private String srvcRqstBdStCdngVrsn;
-     private String srvcRqstBdStCdngDsplay;
-     private String srvcRqstBdStCdngSstm;
-     private String srvcRqstNtCdngSrSlctd;
-     private String serviceRequestNoteCodingCode;
-     private String serviceRequestNoteCodingVersion;
-     private String serviceRequestNoteCodingDisplay;
-     private String serviceRequestNoteCodingSystem;
-     private String serviceRequestPntInstruction;
-     private String serviceRequestRelevantHistory;
+     private Integer id;
+     private String srvcRqstDntfrDntfrSe;
+     private String srvcRqstDntfrDntfrTpCcCSstm;
+     private String srvcRqstDntfrDntfrTpCcCVrsn;
+     private String srvcRqstDntfrDntfrTpCcCCde;
+     private String srvcRqstDntfrDntfrTpCcCDsplay;
+     private String srvcRqstDntfrDntfrTpCcCSrSlctd;
+     private String srvcRqstDntfrDntfrTpCcTxt;
+     private String srvcRqstDntfrDntfrPrdPrdStrt;
+     private String srvcRqstDntfrDntfrPrdPrdNd;
+     private String srvcRqstDntfrDntfrSsgnr;
+     private String srvcRqstDntfrDntfrVlue;
+     private String srvcRqstDntfrDntfrSstm;
+     private String srvcRqstNstnttsCnnclCnncl;
+     private String serviceRequestInstantiatesUriUri;
+     private String serviceRequestBasedOnReference;
+     private String serviceRequestReplacesReference;
+     private String srvcRqstRqstnDntfrSe;
+     private String srvcRqstRqstnDntfrTpCcCSstm;
+     private String srvcRqstRqstnDntfrTpCcCVrsn;
+     private String srvcRqstRqstnDntfrTpCcCCde;
+     private String srvcRqstRqstnDntfrTpCcCDsplay;
+     private String srvcRqstRqstnDntfrTpCcCSrSlctd;
+     private String srvcRqstRqstnDntfrTpCcTxt;
+     private String srvcRqstRqstnDntfrPrdPrdStrt;
+     private String srvcRqstRqstnDntfrPrdPrdNd;
+     private String srvcRqstRqstnDntfrSsgnr;
+     private String srvcRqstRqstnDntfrVlue;
+     private String srvcRqstRqstnDntfrSstm;
+     private String serviceRequestStatusCode;
+     private String serviceRequestIntentCode;
+     private String srvcRqstCtgrCcCdngCSstm;
+     private String srvcRqstCtgrCcCdngCVrsn;
+     private String srvcRqstCtgrCcCdngCCde;
+     private String srvcRqstCtgrCcCdngCDsplay;
+     private String srvcRqstCtgrCcCdngCSrSlctd;
+     private String serviceRequestCategoryCcText;
+     private String serviceRequestPriorityCode;
+     private String srvcRqstDNtPrfrmBln;
+     private String srvcRqstCdCcCdngCSstm;
+     private String srvcRqstCdCcCdngCVrsn;
+     private String srvcRqstCdCcCdngCCde;
+     private String srvcRqstCdCcCdngCDsplay;
+     private String srvcRqstCdCcCdngCSrSlctd;
+     private String serviceRequestCodeCcText;
+     private String srvcRqstRdrDtlCcCdngCSstm;
+     private String srvcRqstRdrDtlCcCdngCVrsn;
+     private String srvcRqstRdrDtlCcCdngCCde;
+     private String srvcRqstRdrDtlCcCdngCDsplay;
+     private String srvcRqstRdrDtlCcCdngCSrSlctd;
+     private String serviceRequestOrderDetailCcText;
+     private String srvcRqstQnttQnttQnttCmprtr;
+     private String srvcRqstQnttQnttQnttCde;
+     private String srvcRqstQnttQnttQnttVlue;
+     private String srvcRqstQnttQnttQnttNt;
+     private String srvcRqstQnttQnttQnttSstm;
+     private String srvcRqstQnttRtRtNmrtrQnttVlue;
+     private String srvcRqstQnttRtRtDnmntrQnttVlue;
+     private String srvcRqstQnttRtRtNmrtrQnttCmprtr;
+     private String srvcRqstQnttRtRtDnmntrQnttCmprtr;
+     private String srvcRqstQnttRtRtNmrtrQnttNt;
+     private String srvcRqstQnttRtRtDnmntrQnttNt;
+     private String srvcRqstQnttRtRtNmrtrQnttSstm;
+     private String srvcRqstQnttRtRtDnmntrQnttSstm;
+     private String srvcRqstQnttRtRtNmrtrQnttCde;
+     private String srvcRqstQnttRtRtDnmntrQnttCde;
+     private String srvcRqstQnttRngRngLw;
+     private String srvcRqstQnttRngRngHgh;
+     private String serviceRequestSubjectReference;
+     private String serviceRequestEncounterReference;
+     private String srvcRqstCcrrncDttmDtTme;
+     private String srvcRqstCcrrncPrdPrdStrt;
+     private String srvcRqstCcrrncPrdPrdNd;
+     private String srvcRqstCcrrncTmngTmngCdCcCSstm;
+     private String srvcRqstCcrrncTmngTmngCdCcCVrsn;
+     private String srvcRqstCcrrncTmngTmngCdCcCCde;
+     private String srvcRqstCcrrncTmngTmngCdCcCDsplay;
+     private String srvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+     private String srvcRqstCcrrncTmngTmngCdCcTxt;
+     private String srvcRqstCcrrncTmngTmngVnt;
+     private String srvcRqstCcrrncTmngTmngRptDrtnnt;
+     private String srvcRqstCcrrncTmngTmngRptPrdnt;
+     private String srvcRqstCcrrncTmngTmngRptDfWk;
+     private String srvcRqstCcrrncTmngTmngRptWhn;
+     private String srvcRqstCcrrncTmngTmngRptDrtn;
+     private String srvcRqstCcrrncTmngTmngRptDrtnMx;
+     private String srvcRqstCcrrncTmngTmngRptPrd;
+     private String srvcRqstCcrrncTmngTmngRptPrdMx;
+     private String srvcRqstCcrrncTmngTmngRptBndsDrtn;
+     private String srvcRqstCcrrncTmngTmngRptBndsPrd;
+     private String srvcRqstCcrrncTmngTmngRptCnt;
+     private String srvcRqstCcrrncTmngTmngRptCntMx;
+     private String srvcRqstCcrrncTmngTmngRptFrqncy;
+     private String srvcRqstCcrrncTmngTmngRptFrqncMx;
+     private String srvcRqstCcrrncTmngTmngRptBndsRnge;
+     private String srvcRqstCcrrncTmngTmngRptTmfDay;
+     private String srvcRqstCcrrncTmngTmngRptFfst;
+     private String srvcRqstSNddBlnBln;
+     private String srvcRqstSNddCdblcncptCcCdngCSstm;
+     private String srvcRqstSNddCdblcncptCcCdngCVrsn;
+     private String srvcRqstSNddCdblcncptCcCdngCCde;
+     private String srvcRqstSNddCdblcncptCcCdngCDsplay;
+     private String srvcRqstSNddCdblcncptCcCdngCSrSlctd;
+     private String srvcRqstSNddCdblcncptCcTxt;
+     private String serviceRequestAuthoredOnDateTime;
+     private String serviceRequestRequesterReference;
+     private String srvcRqstPrfrmrTpCcCdngCSstm;
+     private String srvcRqstPrfrmrTpCcCdngCVrsn;
+     private String srvcRqstPrfrmrTpCcCdngCCde;
+     private String srvcRqstPrfrmrTpCcCdngCDsplay;
+     private String srvcRqstPrfrmrTpCcCdngCSrSlctd;
+     private String srvcRqstPrfrmrTpCcTxt;
+     private String serviceRequestPerformerReference;
+     private String srvcRqstLctnCdCcCdngCSstm;
+     private String srvcRqstLctnCdCcCdngCVrsn;
+     private String srvcRqstLctnCdCcCdngCCde;
+     private String srvcRqstLctnCdCcCdngCDsplay;
+     private String srvcRqstLctnCdCcCdngCSrSlctd;
+     private String srvcRqstLctnCdCcTxt;
+     private String srvcRqstLctnRfrncRfrnce;
+     private String srvcRqstRsnCdCcCdngCSstm;
+     private String srvcRqstRsnCdCcCdngCVrsn;
+     private String srvcRqstRsnCdCcCdngCCde;
+     private String srvcRqstRsnCdCcCdngCDsplay;
+     private String srvcRqstRsnCdCcCdngCSrSlctd;
+     private String serviceRequestReasonCodeCcText;
+     private String srvcRqstRsnRfrncRfrnce;
+     private String serviceRequestInsuranceReference;
+     private String srvcRqstSpprtngnfRfrnce;
+     private String serviceRequestSpecimenReference;
+     private String srvcRqstBdStCcCdngCSstm;
+     private String srvcRqstBdStCcCdngCVrsn;
+     private String srvcRqstBdStCcCdngCCde;
+     private String srvcRqstBdStCcCdngCDsplay;
+     private String srvcRqstBdStCcCdngCSrSlctd;
+     private String serviceRequestBodySiteCcText;
+     private String srvcRqstNtNnttnTme;
+     private String srvcRqstNtNnttnTxt;
+     private String srvcRqstNtNnttnThrRfrnce;
+     private String srvcRqstNtNnttnThrStrng;
+     private String srvcRqstPntnstrctnStrng;
+     private String srvcRqstRlvntHstrRfrnce;
 
     public Servicerequest() {
     }
 
-	
-    public Servicerequest(String srvcRqstDntfrCdngCde) {
-        this.srvcRqstDntfrCdngCde = srvcRqstDntfrCdngCde;
-    }
-    public Servicerequest(String srvcRqstDntfrCdngCde, String srvcRqstDntfrCdngSrSlctd, String srvcRqstDntfrCdngVrsn, String srvcRqstDntfrCdngDsplay, String srvcRqstDntfrCdngSstm, String srvcRqstNstnttsCnncl, String serviceRequestInstantiatesUri, String serviceRequestBasedOn, String serviceRequestReplaces, String srvcRqstRqstnCdngSrSlctd, String srvcRqstRqstnCdngCde, String srvcRqstRqstnCdngVrsn, String srvcRqstRqstnCdngDsplay, String srvcRqstRqstnCdngSstm, String serviceRequestStatus, String serviceRequestIntent, String srvcRqstCtgrCdngSrSlctd, String srvcRqstCtgrCdngCde, String srvcRqstCtgrCdngVrsn, String srvcRqstCtgrCdngDsplay, String srvcRqstCtgrCdngSstm, String serviceRequestPriority, String serviceRequestDoNotPerform, String srvcRqstCdCdngSrSlctd, String serviceRequestCodeCodingCode, String serviceRequestCodeCodingVersion, String serviceRequestCodeCodingDisplay, String serviceRequestCodeCodingSystem, String srvcRqstRdrDtlCdngSrSlctd, String srvcRqstRdrDtlCdngCde, String srvcRqstRdrDtlCdngVrsn, String srvcRqstRdrDtlCdngDsplay, String srvcRqstRdrDtlCdngSstm, String srvcRqstQnttQnttCdngSrSlctd, String srvcRqstQnttQnttCdngCde, String srvcRqstQnttQnttCdngVrsn, String srvcRqstQnttQnttCdngDsplay, String srvcRqstQnttQnttCdngSstm, String srvcRqstQnttRtCdngSrSlctd, String srvcRqstQnttRtCdngCde, String srvcRqstQnttRtCdngVrsn, String srvcRqstQnttRtCdngDsplay, String srvcRqstQnttRtCdngSstm, String srvcRqstQnttRngCdngSrSlctd, String srvcRqstQnttRngCdngCde, String srvcRqstQnttRngCdngVrsn, String srvcRqstQnttRngCdngDsplay, String srvcRqstQnttRngCdngSstm, String serviceRequestSubject, String serviceRequestEncounter, String serviceRequestOccurrenceDatetime, String srvcRqstCcrrncPrdCdngSrSlctd, String srvcRqstCcrrncPrdCdngCde, String srvcRqstCcrrncPrdCdngVrsn, String srvcRqstCcrrncPrdCdngDsplay, String srvcRqstCcrrncPrdCdngSstm, String srvcRqstCcrrncTmngCdngSrSlctd, String srvcRqstCcrrncTmngCdngCde, String srvcRqstCcrrncTmngCdngVrsn, String srvcRqstCcrrncTmngCdngDsplay, String srvcRqstCcrrncTmngCdngSstm, String serviceRequestAsNeededBoolean, String srvcRqstSNddcdblcptCdngSrSlctd, String srvcRqstSNddcdblcptCdngCde, String srvcRqstSNddcdblcptCdngVrsn, String srvcRqstSNddcdblcptCdngDsplay, String srvcRqstSNddcdblcptCdngSstm, String serviceRequestAuthoredOn, String serviceRequestRequester, String srvcRqstPrfrmrTpCdngSrSlctd, String srvcRqstPrfrmrTpCdngCde, String srvcRqstPrfrmrTpCdngVrsn, String srvcRqstPrfrmrTpCdngDsplay, String srvcRqstPrfrmrTpCdngSstm, String serviceRequestPerformer, String srvcRqstLctnCdCdngSrSlctd, String srvcRqstLctnCdCdngCde, String srvcRqstLctnCdCdngVrsn, String srvcRqstLctnCdCdngDsplay, String srvcRqstLctnCdCdngSstm, String serviceRequestLocationReference, String srvcRqstRsnCdCdngSrSlctd, String srvcRqstRsnCdCdngCde, String srvcRqstRsnCdCdngVrsn, String srvcRqstRsnCdCdngDsplay, String srvcRqstRsnCdCdngSstm, String serviceRequestReasonReference, String serviceRequestInsurance, String serviceRequestSupportingInfo, String serviceRequestSpecimen, String srvcRqstBdStCdngSrSlctd, String srvcRqstBdStCdngCde, String srvcRqstBdStCdngVrsn, String srvcRqstBdStCdngDsplay, String srvcRqstBdStCdngSstm, String srvcRqstNtCdngSrSlctd, String serviceRequestNoteCodingCode, String serviceRequestNoteCodingVersion, String serviceRequestNoteCodingDisplay, String serviceRequestNoteCodingSystem, String serviceRequestPntInstruction, String serviceRequestRelevantHistory) {
-       this.srvcRqstDntfrCdngCde = srvcRqstDntfrCdngCde;
-       this.srvcRqstDntfrCdngSrSlctd = srvcRqstDntfrCdngSrSlctd;
-       this.srvcRqstDntfrCdngVrsn = srvcRqstDntfrCdngVrsn;
-       this.srvcRqstDntfrCdngDsplay = srvcRqstDntfrCdngDsplay;
-       this.srvcRqstDntfrCdngSstm = srvcRqstDntfrCdngSstm;
-       this.srvcRqstNstnttsCnncl = srvcRqstNstnttsCnncl;
-       this.serviceRequestInstantiatesUri = serviceRequestInstantiatesUri;
-       this.serviceRequestBasedOn = serviceRequestBasedOn;
-       this.serviceRequestReplaces = serviceRequestReplaces;
-       this.srvcRqstRqstnCdngSrSlctd = srvcRqstRqstnCdngSrSlctd;
-       this.srvcRqstRqstnCdngCde = srvcRqstRqstnCdngCde;
-       this.srvcRqstRqstnCdngVrsn = srvcRqstRqstnCdngVrsn;
-       this.srvcRqstRqstnCdngDsplay = srvcRqstRqstnCdngDsplay;
-       this.srvcRqstRqstnCdngSstm = srvcRqstRqstnCdngSstm;
-       this.serviceRequestStatus = serviceRequestStatus;
-       this.serviceRequestIntent = serviceRequestIntent;
-       this.srvcRqstCtgrCdngSrSlctd = srvcRqstCtgrCdngSrSlctd;
-       this.srvcRqstCtgrCdngCde = srvcRqstCtgrCdngCde;
-       this.srvcRqstCtgrCdngVrsn = srvcRqstCtgrCdngVrsn;
-       this.srvcRqstCtgrCdngDsplay = srvcRqstCtgrCdngDsplay;
-       this.srvcRqstCtgrCdngSstm = srvcRqstCtgrCdngSstm;
-       this.serviceRequestPriority = serviceRequestPriority;
-       this.serviceRequestDoNotPerform = serviceRequestDoNotPerform;
-       this.srvcRqstCdCdngSrSlctd = srvcRqstCdCdngSrSlctd;
-       this.serviceRequestCodeCodingCode = serviceRequestCodeCodingCode;
-       this.serviceRequestCodeCodingVersion = serviceRequestCodeCodingVersion;
-       this.serviceRequestCodeCodingDisplay = serviceRequestCodeCodingDisplay;
-       this.serviceRequestCodeCodingSystem = serviceRequestCodeCodingSystem;
-       this.srvcRqstRdrDtlCdngSrSlctd = srvcRqstRdrDtlCdngSrSlctd;
-       this.srvcRqstRdrDtlCdngCde = srvcRqstRdrDtlCdngCde;
-       this.srvcRqstRdrDtlCdngVrsn = srvcRqstRdrDtlCdngVrsn;
-       this.srvcRqstRdrDtlCdngDsplay = srvcRqstRdrDtlCdngDsplay;
-       this.srvcRqstRdrDtlCdngSstm = srvcRqstRdrDtlCdngSstm;
-       this.srvcRqstQnttQnttCdngSrSlctd = srvcRqstQnttQnttCdngSrSlctd;
-       this.srvcRqstQnttQnttCdngCde = srvcRqstQnttQnttCdngCde;
-       this.srvcRqstQnttQnttCdngVrsn = srvcRqstQnttQnttCdngVrsn;
-       this.srvcRqstQnttQnttCdngDsplay = srvcRqstQnttQnttCdngDsplay;
-       this.srvcRqstQnttQnttCdngSstm = srvcRqstQnttQnttCdngSstm;
-       this.srvcRqstQnttRtCdngSrSlctd = srvcRqstQnttRtCdngSrSlctd;
-       this.srvcRqstQnttRtCdngCde = srvcRqstQnttRtCdngCde;
-       this.srvcRqstQnttRtCdngVrsn = srvcRqstQnttRtCdngVrsn;
-       this.srvcRqstQnttRtCdngDsplay = srvcRqstQnttRtCdngDsplay;
-       this.srvcRqstQnttRtCdngSstm = srvcRqstQnttRtCdngSstm;
-       this.srvcRqstQnttRngCdngSrSlctd = srvcRqstQnttRngCdngSrSlctd;
-       this.srvcRqstQnttRngCdngCde = srvcRqstQnttRngCdngCde;
-       this.srvcRqstQnttRngCdngVrsn = srvcRqstQnttRngCdngVrsn;
-       this.srvcRqstQnttRngCdngDsplay = srvcRqstQnttRngCdngDsplay;
-       this.srvcRqstQnttRngCdngSstm = srvcRqstQnttRngCdngSstm;
-       this.serviceRequestSubject = serviceRequestSubject;
-       this.serviceRequestEncounter = serviceRequestEncounter;
-       this.serviceRequestOccurrenceDatetime = serviceRequestOccurrenceDatetime;
-       this.srvcRqstCcrrncPrdCdngSrSlctd = srvcRqstCcrrncPrdCdngSrSlctd;
-       this.srvcRqstCcrrncPrdCdngCde = srvcRqstCcrrncPrdCdngCde;
-       this.srvcRqstCcrrncPrdCdngVrsn = srvcRqstCcrrncPrdCdngVrsn;
-       this.srvcRqstCcrrncPrdCdngDsplay = srvcRqstCcrrncPrdCdngDsplay;
-       this.srvcRqstCcrrncPrdCdngSstm = srvcRqstCcrrncPrdCdngSstm;
-       this.srvcRqstCcrrncTmngCdngSrSlctd = srvcRqstCcrrncTmngCdngSrSlctd;
-       this.srvcRqstCcrrncTmngCdngCde = srvcRqstCcrrncTmngCdngCde;
-       this.srvcRqstCcrrncTmngCdngVrsn = srvcRqstCcrrncTmngCdngVrsn;
-       this.srvcRqstCcrrncTmngCdngDsplay = srvcRqstCcrrncTmngCdngDsplay;
-       this.srvcRqstCcrrncTmngCdngSstm = srvcRqstCcrrncTmngCdngSstm;
-       this.serviceRequestAsNeededBoolean = serviceRequestAsNeededBoolean;
-       this.srvcRqstSNddcdblcptCdngSrSlctd = srvcRqstSNddcdblcptCdngSrSlctd;
-       this.srvcRqstSNddcdblcptCdngCde = srvcRqstSNddcdblcptCdngCde;
-       this.srvcRqstSNddcdblcptCdngVrsn = srvcRqstSNddcdblcptCdngVrsn;
-       this.srvcRqstSNddcdblcptCdngDsplay = srvcRqstSNddcdblcptCdngDsplay;
-       this.srvcRqstSNddcdblcptCdngSstm = srvcRqstSNddcdblcptCdngSstm;
-       this.serviceRequestAuthoredOn = serviceRequestAuthoredOn;
-       this.serviceRequestRequester = serviceRequestRequester;
-       this.srvcRqstPrfrmrTpCdngSrSlctd = srvcRqstPrfrmrTpCdngSrSlctd;
-       this.srvcRqstPrfrmrTpCdngCde = srvcRqstPrfrmrTpCdngCde;
-       this.srvcRqstPrfrmrTpCdngVrsn = srvcRqstPrfrmrTpCdngVrsn;
-       this.srvcRqstPrfrmrTpCdngDsplay = srvcRqstPrfrmrTpCdngDsplay;
-       this.srvcRqstPrfrmrTpCdngSstm = srvcRqstPrfrmrTpCdngSstm;
-       this.serviceRequestPerformer = serviceRequestPerformer;
-       this.srvcRqstLctnCdCdngSrSlctd = srvcRqstLctnCdCdngSrSlctd;
-       this.srvcRqstLctnCdCdngCde = srvcRqstLctnCdCdngCde;
-       this.srvcRqstLctnCdCdngVrsn = srvcRqstLctnCdCdngVrsn;
-       this.srvcRqstLctnCdCdngDsplay = srvcRqstLctnCdCdngDsplay;
-       this.srvcRqstLctnCdCdngSstm = srvcRqstLctnCdCdngSstm;
-       this.serviceRequestLocationReference = serviceRequestLocationReference;
-       this.srvcRqstRsnCdCdngSrSlctd = srvcRqstRsnCdCdngSrSlctd;
-       this.srvcRqstRsnCdCdngCde = srvcRqstRsnCdCdngCde;
-       this.srvcRqstRsnCdCdngVrsn = srvcRqstRsnCdCdngVrsn;
-       this.srvcRqstRsnCdCdngDsplay = srvcRqstRsnCdCdngDsplay;
-       this.srvcRqstRsnCdCdngSstm = srvcRqstRsnCdCdngSstm;
-       this.serviceRequestReasonReference = serviceRequestReasonReference;
-       this.serviceRequestInsurance = serviceRequestInsurance;
-       this.serviceRequestSupportingInfo = serviceRequestSupportingInfo;
-       this.serviceRequestSpecimen = serviceRequestSpecimen;
-       this.srvcRqstBdStCdngSrSlctd = srvcRqstBdStCdngSrSlctd;
-       this.srvcRqstBdStCdngCde = srvcRqstBdStCdngCde;
-       this.srvcRqstBdStCdngVrsn = srvcRqstBdStCdngVrsn;
-       this.srvcRqstBdStCdngDsplay = srvcRqstBdStCdngDsplay;
-       this.srvcRqstBdStCdngSstm = srvcRqstBdStCdngSstm;
-       this.srvcRqstNtCdngSrSlctd = srvcRqstNtCdngSrSlctd;
-       this.serviceRequestNoteCodingCode = serviceRequestNoteCodingCode;
-       this.serviceRequestNoteCodingVersion = serviceRequestNoteCodingVersion;
-       this.serviceRequestNoteCodingDisplay = serviceRequestNoteCodingDisplay;
-       this.serviceRequestNoteCodingSystem = serviceRequestNoteCodingSystem;
-       this.serviceRequestPntInstruction = serviceRequestPntInstruction;
-       this.serviceRequestRelevantHistory = serviceRequestRelevantHistory;
+    public Servicerequest(String srvcRqstDntfrDntfrSe, String srvcRqstDntfrDntfrTpCcCSstm, String srvcRqstDntfrDntfrTpCcCVrsn, String srvcRqstDntfrDntfrTpCcCCde, String srvcRqstDntfrDntfrTpCcCDsplay, String srvcRqstDntfrDntfrTpCcCSrSlctd, String srvcRqstDntfrDntfrTpCcTxt, String srvcRqstDntfrDntfrPrdPrdStrt, String srvcRqstDntfrDntfrPrdPrdNd, String srvcRqstDntfrDntfrSsgnr, String srvcRqstDntfrDntfrVlue, String srvcRqstDntfrDntfrSstm, String srvcRqstNstnttsCnnclCnncl, String serviceRequestInstantiatesUriUri, String serviceRequestBasedOnReference, String serviceRequestReplacesReference, String srvcRqstRqstnDntfrSe, String srvcRqstRqstnDntfrTpCcCSstm, String srvcRqstRqstnDntfrTpCcCVrsn, String srvcRqstRqstnDntfrTpCcCCde, String srvcRqstRqstnDntfrTpCcCDsplay, String srvcRqstRqstnDntfrTpCcCSrSlctd, String srvcRqstRqstnDntfrTpCcTxt, String srvcRqstRqstnDntfrPrdPrdStrt, String srvcRqstRqstnDntfrPrdPrdNd, String srvcRqstRqstnDntfrSsgnr, String srvcRqstRqstnDntfrVlue, String srvcRqstRqstnDntfrSstm, String serviceRequestStatusCode, String serviceRequestIntentCode, String srvcRqstCtgrCcCdngCSstm, String srvcRqstCtgrCcCdngCVrsn, String srvcRqstCtgrCcCdngCCde, String srvcRqstCtgrCcCdngCDsplay, String srvcRqstCtgrCcCdngCSrSlctd, String serviceRequestCategoryCcText, String serviceRequestPriorityCode, String srvcRqstDNtPrfrmBln, String srvcRqstCdCcCdngCSstm, String srvcRqstCdCcCdngCVrsn, String srvcRqstCdCcCdngCCde, String srvcRqstCdCcCdngCDsplay, String srvcRqstCdCcCdngCSrSlctd, String serviceRequestCodeCcText, String srvcRqstRdrDtlCcCdngCSstm, String srvcRqstRdrDtlCcCdngCVrsn, String srvcRqstRdrDtlCcCdngCCde, String srvcRqstRdrDtlCcCdngCDsplay, String srvcRqstRdrDtlCcCdngCSrSlctd, String serviceRequestOrderDetailCcText, String srvcRqstQnttQnttQnttCmprtr, String srvcRqstQnttQnttQnttCde, String srvcRqstQnttQnttQnttVlue, String srvcRqstQnttQnttQnttNt, String srvcRqstQnttQnttQnttSstm, String srvcRqstQnttRtRtNmrtrQnttVlue, String srvcRqstQnttRtRtDnmntrQnttVlue, String srvcRqstQnttRtRtNmrtrQnttCmprtr, String srvcRqstQnttRtRtDnmntrQnttCmprtr, String srvcRqstQnttRtRtNmrtrQnttNt, String srvcRqstQnttRtRtDnmntrQnttNt, String srvcRqstQnttRtRtNmrtrQnttSstm, String srvcRqstQnttRtRtDnmntrQnttSstm, String srvcRqstQnttRtRtNmrtrQnttCde, String srvcRqstQnttRtRtDnmntrQnttCde, String srvcRqstQnttRngRngLw, String srvcRqstQnttRngRngHgh, String serviceRequestSubjectReference, String serviceRequestEncounterReference, String srvcRqstCcrrncDttmDtTme, String srvcRqstCcrrncPrdPrdStrt, String srvcRqstCcrrncPrdPrdNd, String srvcRqstCcrrncTmngTmngCdCcCSstm, String srvcRqstCcrrncTmngTmngCdCcCVrsn, String srvcRqstCcrrncTmngTmngCdCcCCde, String srvcRqstCcrrncTmngTmngCdCcCDsplay, String srvcRqstCcrrncTmngTmngCdCcCSrSlctd, String srvcRqstCcrrncTmngTmngCdCcTxt, String srvcRqstCcrrncTmngTmngVnt, String srvcRqstCcrrncTmngTmngRptDrtnnt, String srvcRqstCcrrncTmngTmngRptPrdnt, String srvcRqstCcrrncTmngTmngRptDfWk, String srvcRqstCcrrncTmngTmngRptWhn, String srvcRqstCcrrncTmngTmngRptDrtn, String srvcRqstCcrrncTmngTmngRptDrtnMx, String srvcRqstCcrrncTmngTmngRptPrd, String srvcRqstCcrrncTmngTmngRptPrdMx, String srvcRqstCcrrncTmngTmngRptBndsDrtn, String srvcRqstCcrrncTmngTmngRptBndsPrd, String srvcRqstCcrrncTmngTmngRptCnt, String srvcRqstCcrrncTmngTmngRptCntMx, String srvcRqstCcrrncTmngTmngRptFrqncy, String srvcRqstCcrrncTmngTmngRptFrqncMx, String srvcRqstCcrrncTmngTmngRptBndsRnge, String srvcRqstCcrrncTmngTmngRptTmfDay, String srvcRqstCcrrncTmngTmngRptFfst, String srvcRqstSNddBlnBln, String srvcRqstSNddCdblcncptCcCdngCSstm, String srvcRqstSNddCdblcncptCcCdngCVrsn, String srvcRqstSNddCdblcncptCcCdngCCde, String srvcRqstSNddCdblcncptCcCdngCDsplay, String srvcRqstSNddCdblcncptCcCdngCSrSlctd, String srvcRqstSNddCdblcncptCcTxt, String serviceRequestAuthoredOnDateTime, String serviceRequestRequesterReference, String srvcRqstPrfrmrTpCcCdngCSstm, String srvcRqstPrfrmrTpCcCdngCVrsn, String srvcRqstPrfrmrTpCcCdngCCde, String srvcRqstPrfrmrTpCcCdngCDsplay, String srvcRqstPrfrmrTpCcCdngCSrSlctd, String srvcRqstPrfrmrTpCcTxt, String serviceRequestPerformerReference, String srvcRqstLctnCdCcCdngCSstm, String srvcRqstLctnCdCcCdngCVrsn, String srvcRqstLctnCdCcCdngCCde, String srvcRqstLctnCdCcCdngCDsplay, String srvcRqstLctnCdCcCdngCSrSlctd, String srvcRqstLctnCdCcTxt, String srvcRqstLctnRfrncRfrnce, String srvcRqstRsnCdCcCdngCSstm, String srvcRqstRsnCdCcCdngCVrsn, String srvcRqstRsnCdCcCdngCCde, String srvcRqstRsnCdCcCdngCDsplay, String srvcRqstRsnCdCcCdngCSrSlctd, String serviceRequestReasonCodeCcText, String srvcRqstRsnRfrncRfrnce, String serviceRequestInsuranceReference, String srvcRqstSpprtngnfRfrnce, String serviceRequestSpecimenReference, String srvcRqstBdStCcCdngCSstm, String srvcRqstBdStCcCdngCVrsn, String srvcRqstBdStCcCdngCCde, String srvcRqstBdStCcCdngCDsplay, String srvcRqstBdStCcCdngCSrSlctd, String serviceRequestBodySiteCcText, String srvcRqstNtNnttnTme, String srvcRqstNtNnttnTxt, String srvcRqstNtNnttnThrRfrnce, String srvcRqstNtNnttnThrStrng, String srvcRqstPntnstrctnStrng, String srvcRqstRlvntHstrRfrnce) {
+       this.srvcRqstDntfrDntfrSe = srvcRqstDntfrDntfrSe;
+       this.srvcRqstDntfrDntfrTpCcCSstm = srvcRqstDntfrDntfrTpCcCSstm;
+       this.srvcRqstDntfrDntfrTpCcCVrsn = srvcRqstDntfrDntfrTpCcCVrsn;
+       this.srvcRqstDntfrDntfrTpCcCCde = srvcRqstDntfrDntfrTpCcCCde;
+       this.srvcRqstDntfrDntfrTpCcCDsplay = srvcRqstDntfrDntfrTpCcCDsplay;
+       this.srvcRqstDntfrDntfrTpCcCSrSlctd = srvcRqstDntfrDntfrTpCcCSrSlctd;
+       this.srvcRqstDntfrDntfrTpCcTxt = srvcRqstDntfrDntfrTpCcTxt;
+       this.srvcRqstDntfrDntfrPrdPrdStrt = srvcRqstDntfrDntfrPrdPrdStrt;
+       this.srvcRqstDntfrDntfrPrdPrdNd = srvcRqstDntfrDntfrPrdPrdNd;
+       this.srvcRqstDntfrDntfrSsgnr = srvcRqstDntfrDntfrSsgnr;
+       this.srvcRqstDntfrDntfrVlue = srvcRqstDntfrDntfrVlue;
+       this.srvcRqstDntfrDntfrSstm = srvcRqstDntfrDntfrSstm;
+       this.srvcRqstNstnttsCnnclCnncl = srvcRqstNstnttsCnnclCnncl;
+       this.serviceRequestInstantiatesUriUri = serviceRequestInstantiatesUriUri;
+       this.serviceRequestBasedOnReference = serviceRequestBasedOnReference;
+       this.serviceRequestReplacesReference = serviceRequestReplacesReference;
+       this.srvcRqstRqstnDntfrSe = srvcRqstRqstnDntfrSe;
+       this.srvcRqstRqstnDntfrTpCcCSstm = srvcRqstRqstnDntfrTpCcCSstm;
+       this.srvcRqstRqstnDntfrTpCcCVrsn = srvcRqstRqstnDntfrTpCcCVrsn;
+       this.srvcRqstRqstnDntfrTpCcCCde = srvcRqstRqstnDntfrTpCcCCde;
+       this.srvcRqstRqstnDntfrTpCcCDsplay = srvcRqstRqstnDntfrTpCcCDsplay;
+       this.srvcRqstRqstnDntfrTpCcCSrSlctd = srvcRqstRqstnDntfrTpCcCSrSlctd;
+       this.srvcRqstRqstnDntfrTpCcTxt = srvcRqstRqstnDntfrTpCcTxt;
+       this.srvcRqstRqstnDntfrPrdPrdStrt = srvcRqstRqstnDntfrPrdPrdStrt;
+       this.srvcRqstRqstnDntfrPrdPrdNd = srvcRqstRqstnDntfrPrdPrdNd;
+       this.srvcRqstRqstnDntfrSsgnr = srvcRqstRqstnDntfrSsgnr;
+       this.srvcRqstRqstnDntfrVlue = srvcRqstRqstnDntfrVlue;
+       this.srvcRqstRqstnDntfrSstm = srvcRqstRqstnDntfrSstm;
+       this.serviceRequestStatusCode = serviceRequestStatusCode;
+       this.serviceRequestIntentCode = serviceRequestIntentCode;
+       this.srvcRqstCtgrCcCdngCSstm = srvcRqstCtgrCcCdngCSstm;
+       this.srvcRqstCtgrCcCdngCVrsn = srvcRqstCtgrCcCdngCVrsn;
+       this.srvcRqstCtgrCcCdngCCde = srvcRqstCtgrCcCdngCCde;
+       this.srvcRqstCtgrCcCdngCDsplay = srvcRqstCtgrCcCdngCDsplay;
+       this.srvcRqstCtgrCcCdngCSrSlctd = srvcRqstCtgrCcCdngCSrSlctd;
+       this.serviceRequestCategoryCcText = serviceRequestCategoryCcText;
+       this.serviceRequestPriorityCode = serviceRequestPriorityCode;
+       this.srvcRqstDNtPrfrmBln = srvcRqstDNtPrfrmBln;
+       this.srvcRqstCdCcCdngCSstm = srvcRqstCdCcCdngCSstm;
+       this.srvcRqstCdCcCdngCVrsn = srvcRqstCdCcCdngCVrsn;
+       this.srvcRqstCdCcCdngCCde = srvcRqstCdCcCdngCCde;
+       this.srvcRqstCdCcCdngCDsplay = srvcRqstCdCcCdngCDsplay;
+       this.srvcRqstCdCcCdngCSrSlctd = srvcRqstCdCcCdngCSrSlctd;
+       this.serviceRequestCodeCcText = serviceRequestCodeCcText;
+       this.srvcRqstRdrDtlCcCdngCSstm = srvcRqstRdrDtlCcCdngCSstm;
+       this.srvcRqstRdrDtlCcCdngCVrsn = srvcRqstRdrDtlCcCdngCVrsn;
+       this.srvcRqstRdrDtlCcCdngCCde = srvcRqstRdrDtlCcCdngCCde;
+       this.srvcRqstRdrDtlCcCdngCDsplay = srvcRqstRdrDtlCcCdngCDsplay;
+       this.srvcRqstRdrDtlCcCdngCSrSlctd = srvcRqstRdrDtlCcCdngCSrSlctd;
+       this.serviceRequestOrderDetailCcText = serviceRequestOrderDetailCcText;
+       this.srvcRqstQnttQnttQnttCmprtr = srvcRqstQnttQnttQnttCmprtr;
+       this.srvcRqstQnttQnttQnttCde = srvcRqstQnttQnttQnttCde;
+       this.srvcRqstQnttQnttQnttVlue = srvcRqstQnttQnttQnttVlue;
+       this.srvcRqstQnttQnttQnttNt = srvcRqstQnttQnttQnttNt;
+       this.srvcRqstQnttQnttQnttSstm = srvcRqstQnttQnttQnttSstm;
+       this.srvcRqstQnttRtRtNmrtrQnttVlue = srvcRqstQnttRtRtNmrtrQnttVlue;
+       this.srvcRqstQnttRtRtDnmntrQnttVlue = srvcRqstQnttRtRtDnmntrQnttVlue;
+       this.srvcRqstQnttRtRtNmrtrQnttCmprtr = srvcRqstQnttRtRtNmrtrQnttCmprtr;
+       this.srvcRqstQnttRtRtDnmntrQnttCmprtr = srvcRqstQnttRtRtDnmntrQnttCmprtr;
+       this.srvcRqstQnttRtRtNmrtrQnttNt = srvcRqstQnttRtRtNmrtrQnttNt;
+       this.srvcRqstQnttRtRtDnmntrQnttNt = srvcRqstQnttRtRtDnmntrQnttNt;
+       this.srvcRqstQnttRtRtNmrtrQnttSstm = srvcRqstQnttRtRtNmrtrQnttSstm;
+       this.srvcRqstQnttRtRtDnmntrQnttSstm = srvcRqstQnttRtRtDnmntrQnttSstm;
+       this.srvcRqstQnttRtRtNmrtrQnttCde = srvcRqstQnttRtRtNmrtrQnttCde;
+       this.srvcRqstQnttRtRtDnmntrQnttCde = srvcRqstQnttRtRtDnmntrQnttCde;
+       this.srvcRqstQnttRngRngLw = srvcRqstQnttRngRngLw;
+       this.srvcRqstQnttRngRngHgh = srvcRqstQnttRngRngHgh;
+       this.serviceRequestSubjectReference = serviceRequestSubjectReference;
+       this.serviceRequestEncounterReference = serviceRequestEncounterReference;
+       this.srvcRqstCcrrncDttmDtTme = srvcRqstCcrrncDttmDtTme;
+       this.srvcRqstCcrrncPrdPrdStrt = srvcRqstCcrrncPrdPrdStrt;
+       this.srvcRqstCcrrncPrdPrdNd = srvcRqstCcrrncPrdPrdNd;
+       this.srvcRqstCcrrncTmngTmngCdCcCSstm = srvcRqstCcrrncTmngTmngCdCcCSstm;
+       this.srvcRqstCcrrncTmngTmngCdCcCVrsn = srvcRqstCcrrncTmngTmngCdCcCVrsn;
+       this.srvcRqstCcrrncTmngTmngCdCcCCde = srvcRqstCcrrncTmngTmngCdCcCCde;
+       this.srvcRqstCcrrncTmngTmngCdCcCDsplay = srvcRqstCcrrncTmngTmngCdCcCDsplay;
+       this.srvcRqstCcrrncTmngTmngCdCcCSrSlctd = srvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+       this.srvcRqstCcrrncTmngTmngCdCcTxt = srvcRqstCcrrncTmngTmngCdCcTxt;
+       this.srvcRqstCcrrncTmngTmngVnt = srvcRqstCcrrncTmngTmngVnt;
+       this.srvcRqstCcrrncTmngTmngRptDrtnnt = srvcRqstCcrrncTmngTmngRptDrtnnt;
+       this.srvcRqstCcrrncTmngTmngRptPrdnt = srvcRqstCcrrncTmngTmngRptPrdnt;
+       this.srvcRqstCcrrncTmngTmngRptDfWk = srvcRqstCcrrncTmngTmngRptDfWk;
+       this.srvcRqstCcrrncTmngTmngRptWhn = srvcRqstCcrrncTmngTmngRptWhn;
+       this.srvcRqstCcrrncTmngTmngRptDrtn = srvcRqstCcrrncTmngTmngRptDrtn;
+       this.srvcRqstCcrrncTmngTmngRptDrtnMx = srvcRqstCcrrncTmngTmngRptDrtnMx;
+       this.srvcRqstCcrrncTmngTmngRptPrd = srvcRqstCcrrncTmngTmngRptPrd;
+       this.srvcRqstCcrrncTmngTmngRptPrdMx = srvcRqstCcrrncTmngTmngRptPrdMx;
+       this.srvcRqstCcrrncTmngTmngRptBndsDrtn = srvcRqstCcrrncTmngTmngRptBndsDrtn;
+       this.srvcRqstCcrrncTmngTmngRptBndsPrd = srvcRqstCcrrncTmngTmngRptBndsPrd;
+       this.srvcRqstCcrrncTmngTmngRptCnt = srvcRqstCcrrncTmngTmngRptCnt;
+       this.srvcRqstCcrrncTmngTmngRptCntMx = srvcRqstCcrrncTmngTmngRptCntMx;
+       this.srvcRqstCcrrncTmngTmngRptFrqncy = srvcRqstCcrrncTmngTmngRptFrqncy;
+       this.srvcRqstCcrrncTmngTmngRptFrqncMx = srvcRqstCcrrncTmngTmngRptFrqncMx;
+       this.srvcRqstCcrrncTmngTmngRptBndsRnge = srvcRqstCcrrncTmngTmngRptBndsRnge;
+       this.srvcRqstCcrrncTmngTmngRptTmfDay = srvcRqstCcrrncTmngTmngRptTmfDay;
+       this.srvcRqstCcrrncTmngTmngRptFfst = srvcRqstCcrrncTmngTmngRptFfst;
+       this.srvcRqstSNddBlnBln = srvcRqstSNddBlnBln;
+       this.srvcRqstSNddCdblcncptCcCdngCSstm = srvcRqstSNddCdblcncptCcCdngCSstm;
+       this.srvcRqstSNddCdblcncptCcCdngCVrsn = srvcRqstSNddCdblcncptCcCdngCVrsn;
+       this.srvcRqstSNddCdblcncptCcCdngCCde = srvcRqstSNddCdblcncptCcCdngCCde;
+       this.srvcRqstSNddCdblcncptCcCdngCDsplay = srvcRqstSNddCdblcncptCcCdngCDsplay;
+       this.srvcRqstSNddCdblcncptCcCdngCSrSlctd = srvcRqstSNddCdblcncptCcCdngCSrSlctd;
+       this.srvcRqstSNddCdblcncptCcTxt = srvcRqstSNddCdblcncptCcTxt;
+       this.serviceRequestAuthoredOnDateTime = serviceRequestAuthoredOnDateTime;
+       this.serviceRequestRequesterReference = serviceRequestRequesterReference;
+       this.srvcRqstPrfrmrTpCcCdngCSstm = srvcRqstPrfrmrTpCcCdngCSstm;
+       this.srvcRqstPrfrmrTpCcCdngCVrsn = srvcRqstPrfrmrTpCcCdngCVrsn;
+       this.srvcRqstPrfrmrTpCcCdngCCde = srvcRqstPrfrmrTpCcCdngCCde;
+       this.srvcRqstPrfrmrTpCcCdngCDsplay = srvcRqstPrfrmrTpCcCdngCDsplay;
+       this.srvcRqstPrfrmrTpCcCdngCSrSlctd = srvcRqstPrfrmrTpCcCdngCSrSlctd;
+       this.srvcRqstPrfrmrTpCcTxt = srvcRqstPrfrmrTpCcTxt;
+       this.serviceRequestPerformerReference = serviceRequestPerformerReference;
+       this.srvcRqstLctnCdCcCdngCSstm = srvcRqstLctnCdCcCdngCSstm;
+       this.srvcRqstLctnCdCcCdngCVrsn = srvcRqstLctnCdCcCdngCVrsn;
+       this.srvcRqstLctnCdCcCdngCCde = srvcRqstLctnCdCcCdngCCde;
+       this.srvcRqstLctnCdCcCdngCDsplay = srvcRqstLctnCdCcCdngCDsplay;
+       this.srvcRqstLctnCdCcCdngCSrSlctd = srvcRqstLctnCdCcCdngCSrSlctd;
+       this.srvcRqstLctnCdCcTxt = srvcRqstLctnCdCcTxt;
+       this.srvcRqstLctnRfrncRfrnce = srvcRqstLctnRfrncRfrnce;
+       this.srvcRqstRsnCdCcCdngCSstm = srvcRqstRsnCdCcCdngCSstm;
+       this.srvcRqstRsnCdCcCdngCVrsn = srvcRqstRsnCdCcCdngCVrsn;
+       this.srvcRqstRsnCdCcCdngCCde = srvcRqstRsnCdCcCdngCCde;
+       this.srvcRqstRsnCdCcCdngCDsplay = srvcRqstRsnCdCcCdngCDsplay;
+       this.srvcRqstRsnCdCcCdngCSrSlctd = srvcRqstRsnCdCcCdngCSrSlctd;
+       this.serviceRequestReasonCodeCcText = serviceRequestReasonCodeCcText;
+       this.srvcRqstRsnRfrncRfrnce = srvcRqstRsnRfrncRfrnce;
+       this.serviceRequestInsuranceReference = serviceRequestInsuranceReference;
+       this.srvcRqstSpprtngnfRfrnce = srvcRqstSpprtngnfRfrnce;
+       this.serviceRequestSpecimenReference = serviceRequestSpecimenReference;
+       this.srvcRqstBdStCcCdngCSstm = srvcRqstBdStCcCdngCSstm;
+       this.srvcRqstBdStCcCdngCVrsn = srvcRqstBdStCcCdngCVrsn;
+       this.srvcRqstBdStCcCdngCCde = srvcRqstBdStCcCdngCCde;
+       this.srvcRqstBdStCcCdngCDsplay = srvcRqstBdStCcCdngCDsplay;
+       this.srvcRqstBdStCcCdngCSrSlctd = srvcRqstBdStCcCdngCSrSlctd;
+       this.serviceRequestBodySiteCcText = serviceRequestBodySiteCcText;
+       this.srvcRqstNtNnttnTme = srvcRqstNtNnttnTme;
+       this.srvcRqstNtNnttnTxt = srvcRqstNtNnttnTxt;
+       this.srvcRqstNtNnttnThrRfrnce = srvcRqstNtNnttnThrRfrnce;
+       this.srvcRqstNtNnttnThrStrng = srvcRqstNtNnttnThrStrng;
+       this.srvcRqstPntnstrctnStrng = srvcRqstPntnstrctnStrng;
+       this.srvcRqstRlvntHstrRfrnce = srvcRqstRlvntHstrRfrnce;
     }
    
-    public String getSrvcRqstDntfrCdngCde() {
-        return this.srvcRqstDntfrCdngCde;
-    }
-    
-    public void setSrvcRqstDntfrCdngCde(String srvcRqstDntfrCdngCde) {
-        this.srvcRqstDntfrCdngCde = srvcRqstDntfrCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstDntfrCdngSrSlctd() {
-        return this.srvcRqstDntfrCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstDntfrCdngSrSlctd(String srvcRqstDntfrCdngSrSlctd) {
-        this.srvcRqstDntfrCdngSrSlctd = srvcRqstDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstDntfrCdngVrsn() {
-        return this.srvcRqstDntfrCdngVrsn;
-    }
-    
-    public void setSrvcRqstDntfrCdngVrsn(String srvcRqstDntfrCdngVrsn) {
-        this.srvcRqstDntfrCdngVrsn = srvcRqstDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstDntfrCdngDsplay() {
-        return this.srvcRqstDntfrCdngDsplay;
-    }
-    
-    public void setSrvcRqstDntfrCdngDsplay(String srvcRqstDntfrCdngDsplay) {
-        this.srvcRqstDntfrCdngDsplay = srvcRqstDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstDntfrCdngSstm() {
-        return this.srvcRqstDntfrCdngSstm;
-    }
-    
-    public void setSrvcRqstDntfrCdngSstm(String srvcRqstDntfrCdngSstm) {
-        this.srvcRqstDntfrCdngSstm = srvcRqstDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstNstnttsCnncl() {
-        return this.srvcRqstNstnttsCnncl;
-    }
-    
-    public void setSrvcRqstNstnttsCnncl(String srvcRqstNstnttsCnncl) {
-        this.srvcRqstNstnttsCnncl = srvcRqstNstnttsCnncl;
-    }
-    
-    
-    
-    public String getServiceRequestInstantiatesUri() {
-        return this.serviceRequestInstantiatesUri;
-    }
-    
-    public void setServiceRequestInstantiatesUri(String serviceRequestInstantiatesUri) {
-        this.serviceRequestInstantiatesUri = serviceRequestInstantiatesUri;
-    }
-    
-    
-    
-    public String getServiceRequestBasedOn() {
-        return this.serviceRequestBasedOn;
-    }
-    
-    public void setServiceRequestBasedOn(String serviceRequestBasedOn) {
-        this.serviceRequestBasedOn = serviceRequestBasedOn;
-    }
-    
-    
-    
-    public String getServiceRequestReplaces() {
-        return this.serviceRequestReplaces;
-    }
-    
-    public void setServiceRequestReplaces(String serviceRequestReplaces) {
-        this.serviceRequestReplaces = serviceRequestReplaces;
-    }
-    
-    
-    
-    public String getSrvcRqstRqstnCdngSrSlctd() {
-        return this.srvcRqstRqstnCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstRqstnCdngSrSlctd(String srvcRqstRqstnCdngSrSlctd) {
-        this.srvcRqstRqstnCdngSrSlctd = srvcRqstRqstnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstRqstnCdngCde() {
-        return this.srvcRqstRqstnCdngCde;
-    }
-    
-    public void setSrvcRqstRqstnCdngCde(String srvcRqstRqstnCdngCde) {
-        this.srvcRqstRqstnCdngCde = srvcRqstRqstnCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstRqstnCdngVrsn() {
-        return this.srvcRqstRqstnCdngVrsn;
-    }
-    
-    public void setSrvcRqstRqstnCdngVrsn(String srvcRqstRqstnCdngVrsn) {
-        this.srvcRqstRqstnCdngVrsn = srvcRqstRqstnCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstRqstnCdngDsplay() {
-        return this.srvcRqstRqstnCdngDsplay;
-    }
-    
-    public void setSrvcRqstRqstnCdngDsplay(String srvcRqstRqstnCdngDsplay) {
-        this.srvcRqstRqstnCdngDsplay = srvcRqstRqstnCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstRqstnCdngSstm() {
-        return this.srvcRqstRqstnCdngSstm;
-    }
-    
-    public void setSrvcRqstRqstnCdngSstm(String srvcRqstRqstnCdngSstm) {
-        this.srvcRqstRqstnCdngSstm = srvcRqstRqstnCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestStatus() {
-        return this.serviceRequestStatus;
-    }
-    
-    public void setServiceRequestStatus(String serviceRequestStatus) {
-        this.serviceRequestStatus = serviceRequestStatus;
-    }
-    
-    
-    
-    public String getServiceRequestIntent() {
-        return this.serviceRequestIntent;
-    }
-    
-    public void setServiceRequestIntent(String serviceRequestIntent) {
-        this.serviceRequestIntent = serviceRequestIntent;
-    }
-    
-    
-    
-    public String getSrvcRqstCtgrCdngSrSlctd() {
-        return this.srvcRqstCtgrCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstCtgrCdngSrSlctd(String srvcRqstCtgrCdngSrSlctd) {
-        this.srvcRqstCtgrCdngSrSlctd = srvcRqstCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstCtgrCdngCde() {
-        return this.srvcRqstCtgrCdngCde;
-    }
-    
-    public void setSrvcRqstCtgrCdngCde(String srvcRqstCtgrCdngCde) {
-        this.srvcRqstCtgrCdngCde = srvcRqstCtgrCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstCtgrCdngVrsn() {
-        return this.srvcRqstCtgrCdngVrsn;
-    }
-    
-    public void setSrvcRqstCtgrCdngVrsn(String srvcRqstCtgrCdngVrsn) {
-        this.srvcRqstCtgrCdngVrsn = srvcRqstCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstCtgrCdngDsplay() {
-        return this.srvcRqstCtgrCdngDsplay;
-    }
-    
-    public void setSrvcRqstCtgrCdngDsplay(String srvcRqstCtgrCdngDsplay) {
-        this.srvcRqstCtgrCdngDsplay = srvcRqstCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstCtgrCdngSstm() {
-        return this.srvcRqstCtgrCdngSstm;
-    }
-    
-    public void setSrvcRqstCtgrCdngSstm(String srvcRqstCtgrCdngSstm) {
-        this.srvcRqstCtgrCdngSstm = srvcRqstCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestPriority() {
-        return this.serviceRequestPriority;
-    }
-    
-    public void setServiceRequestPriority(String serviceRequestPriority) {
-        this.serviceRequestPriority = serviceRequestPriority;
-    }
-    
-    
-    
-    public String getServiceRequestDoNotPerform() {
-        return this.serviceRequestDoNotPerform;
-    }
-    
-    public void setServiceRequestDoNotPerform(String serviceRequestDoNotPerform) {
-        this.serviceRequestDoNotPerform = serviceRequestDoNotPerform;
-    }
-    
-    
-    
-    public String getSrvcRqstCdCdngSrSlctd() {
-        return this.srvcRqstCdCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstCdCdngSrSlctd(String srvcRqstCdCdngSrSlctd) {
-        this.srvcRqstCdCdngSrSlctd = srvcRqstCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getServiceRequestCodeCodingCode() {
-        return this.serviceRequestCodeCodingCode;
-    }
-    
-    public void setServiceRequestCodeCodingCode(String serviceRequestCodeCodingCode) {
-        this.serviceRequestCodeCodingCode = serviceRequestCodeCodingCode;
-    }
-    
-    
-    
-    public String getServiceRequestCodeCodingVersion() {
-        return this.serviceRequestCodeCodingVersion;
-    }
-    
-    public void setServiceRequestCodeCodingVersion(String serviceRequestCodeCodingVersion) {
-        this.serviceRequestCodeCodingVersion = serviceRequestCodeCodingVersion;
-    }
-    
-    
-    
-    public String getServiceRequestCodeCodingDisplay() {
-        return this.serviceRequestCodeCodingDisplay;
-    }
-    
-    public void setServiceRequestCodeCodingDisplay(String serviceRequestCodeCodingDisplay) {
-        this.serviceRequestCodeCodingDisplay = serviceRequestCodeCodingDisplay;
-    }
-    
-    
-    
-    public String getServiceRequestCodeCodingSystem() {
-        return this.serviceRequestCodeCodingSystem;
-    }
-    
-    public void setServiceRequestCodeCodingSystem(String serviceRequestCodeCodingSystem) {
-        this.serviceRequestCodeCodingSystem = serviceRequestCodeCodingSystem;
-    }
-    
-    
-    
-    public String getSrvcRqstRdrDtlCdngSrSlctd() {
-        return this.srvcRqstRdrDtlCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstRdrDtlCdngSrSlctd(String srvcRqstRdrDtlCdngSrSlctd) {
-        this.srvcRqstRdrDtlCdngSrSlctd = srvcRqstRdrDtlCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstRdrDtlCdngCde() {
-        return this.srvcRqstRdrDtlCdngCde;
-    }
-    
-    public void setSrvcRqstRdrDtlCdngCde(String srvcRqstRdrDtlCdngCde) {
-        this.srvcRqstRdrDtlCdngCde = srvcRqstRdrDtlCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstRdrDtlCdngVrsn() {
-        return this.srvcRqstRdrDtlCdngVrsn;
-    }
-    
-    public void setSrvcRqstRdrDtlCdngVrsn(String srvcRqstRdrDtlCdngVrsn) {
-        this.srvcRqstRdrDtlCdngVrsn = srvcRqstRdrDtlCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstRdrDtlCdngDsplay() {
-        return this.srvcRqstRdrDtlCdngDsplay;
-    }
-    
-    public void setSrvcRqstRdrDtlCdngDsplay(String srvcRqstRdrDtlCdngDsplay) {
-        this.srvcRqstRdrDtlCdngDsplay = srvcRqstRdrDtlCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstRdrDtlCdngSstm() {
-        return this.srvcRqstRdrDtlCdngSstm;
-    }
-    
-    public void setSrvcRqstRdrDtlCdngSstm(String srvcRqstRdrDtlCdngSstm) {
-        this.srvcRqstRdrDtlCdngSstm = srvcRqstRdrDtlCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttQnttCdngSrSlctd() {
-        return this.srvcRqstQnttQnttCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstQnttQnttCdngSrSlctd(String srvcRqstQnttQnttCdngSrSlctd) {
-        this.srvcRqstQnttQnttCdngSrSlctd = srvcRqstQnttQnttCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttQnttCdngCde() {
-        return this.srvcRqstQnttQnttCdngCde;
-    }
-    
-    public void setSrvcRqstQnttQnttCdngCde(String srvcRqstQnttQnttCdngCde) {
-        this.srvcRqstQnttQnttCdngCde = srvcRqstQnttQnttCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttQnttCdngVrsn() {
-        return this.srvcRqstQnttQnttCdngVrsn;
-    }
-    
-    public void setSrvcRqstQnttQnttCdngVrsn(String srvcRqstQnttQnttCdngVrsn) {
-        this.srvcRqstQnttQnttCdngVrsn = srvcRqstQnttQnttCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttQnttCdngDsplay() {
-        return this.srvcRqstQnttQnttCdngDsplay;
-    }
-    
-    public void setSrvcRqstQnttQnttCdngDsplay(String srvcRqstQnttQnttCdngDsplay) {
-        this.srvcRqstQnttQnttCdngDsplay = srvcRqstQnttQnttCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttQnttCdngSstm() {
-        return this.srvcRqstQnttQnttCdngSstm;
-    }
-    
-    public void setSrvcRqstQnttQnttCdngSstm(String srvcRqstQnttQnttCdngSstm) {
-        this.srvcRqstQnttQnttCdngSstm = srvcRqstQnttQnttCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRtCdngSrSlctd() {
-        return this.srvcRqstQnttRtCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstQnttRtCdngSrSlctd(String srvcRqstQnttRtCdngSrSlctd) {
-        this.srvcRqstQnttRtCdngSrSlctd = srvcRqstQnttRtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRtCdngCde() {
-        return this.srvcRqstQnttRtCdngCde;
-    }
-    
-    public void setSrvcRqstQnttRtCdngCde(String srvcRqstQnttRtCdngCde) {
-        this.srvcRqstQnttRtCdngCde = srvcRqstQnttRtCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRtCdngVrsn() {
-        return this.srvcRqstQnttRtCdngVrsn;
-    }
-    
-    public void setSrvcRqstQnttRtCdngVrsn(String srvcRqstQnttRtCdngVrsn) {
-        this.srvcRqstQnttRtCdngVrsn = srvcRqstQnttRtCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRtCdngDsplay() {
-        return this.srvcRqstQnttRtCdngDsplay;
-    }
-    
-    public void setSrvcRqstQnttRtCdngDsplay(String srvcRqstQnttRtCdngDsplay) {
-        this.srvcRqstQnttRtCdngDsplay = srvcRqstQnttRtCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRtCdngSstm() {
-        return this.srvcRqstQnttRtCdngSstm;
-    }
-    
-    public void setSrvcRqstQnttRtCdngSstm(String srvcRqstQnttRtCdngSstm) {
-        this.srvcRqstQnttRtCdngSstm = srvcRqstQnttRtCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRngCdngSrSlctd() {
-        return this.srvcRqstQnttRngCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstQnttRngCdngSrSlctd(String srvcRqstQnttRngCdngSrSlctd) {
-        this.srvcRqstQnttRngCdngSrSlctd = srvcRqstQnttRngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRngCdngCde() {
-        return this.srvcRqstQnttRngCdngCde;
-    }
-    
-    public void setSrvcRqstQnttRngCdngCde(String srvcRqstQnttRngCdngCde) {
-        this.srvcRqstQnttRngCdngCde = srvcRqstQnttRngCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRngCdngVrsn() {
-        return this.srvcRqstQnttRngCdngVrsn;
-    }
-    
-    public void setSrvcRqstQnttRngCdngVrsn(String srvcRqstQnttRngCdngVrsn) {
-        this.srvcRqstQnttRngCdngVrsn = srvcRqstQnttRngCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRngCdngDsplay() {
-        return this.srvcRqstQnttRngCdngDsplay;
-    }
-    
-    public void setSrvcRqstQnttRngCdngDsplay(String srvcRqstQnttRngCdngDsplay) {
-        this.srvcRqstQnttRngCdngDsplay = srvcRqstQnttRngCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstQnttRngCdngSstm() {
-        return this.srvcRqstQnttRngCdngSstm;
-    }
-    
-    public void setSrvcRqstQnttRngCdngSstm(String srvcRqstQnttRngCdngSstm) {
-        this.srvcRqstQnttRngCdngSstm = srvcRqstQnttRngCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestSubject() {
-        return this.serviceRequestSubject;
-    }
-    
-    public void setServiceRequestSubject(String serviceRequestSubject) {
-        this.serviceRequestSubject = serviceRequestSubject;
-    }
-    
-    
-    
-    public String getServiceRequestEncounter() {
-        return this.serviceRequestEncounter;
-    }
-    
-    public void setServiceRequestEncounter(String serviceRequestEncounter) {
-        this.serviceRequestEncounter = serviceRequestEncounter;
-    }
-    
-    
-    
-    public String getServiceRequestOccurrenceDatetime() {
-        return this.serviceRequestOccurrenceDatetime;
-    }
-    
-    public void setServiceRequestOccurrenceDatetime(String serviceRequestOccurrenceDatetime) {
-        this.serviceRequestOccurrenceDatetime = serviceRequestOccurrenceDatetime;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncPrdCdngSrSlctd() {
-        return this.srvcRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstCcrrncPrdCdngSrSlctd(String srvcRqstCcrrncPrdCdngSrSlctd) {
-        this.srvcRqstCcrrncPrdCdngSrSlctd = srvcRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncPrdCdngCde() {
-        return this.srvcRqstCcrrncPrdCdngCde;
-    }
-    
-    public void setSrvcRqstCcrrncPrdCdngCde(String srvcRqstCcrrncPrdCdngCde) {
-        this.srvcRqstCcrrncPrdCdngCde = srvcRqstCcrrncPrdCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncPrdCdngVrsn() {
-        return this.srvcRqstCcrrncPrdCdngVrsn;
-    }
-    
-    public void setSrvcRqstCcrrncPrdCdngVrsn(String srvcRqstCcrrncPrdCdngVrsn) {
-        this.srvcRqstCcrrncPrdCdngVrsn = srvcRqstCcrrncPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncPrdCdngDsplay() {
-        return this.srvcRqstCcrrncPrdCdngDsplay;
-    }
-    
-    public void setSrvcRqstCcrrncPrdCdngDsplay(String srvcRqstCcrrncPrdCdngDsplay) {
-        this.srvcRqstCcrrncPrdCdngDsplay = srvcRqstCcrrncPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncPrdCdngSstm() {
-        return this.srvcRqstCcrrncPrdCdngSstm;
-    }
-    
-    public void setSrvcRqstCcrrncPrdCdngSstm(String srvcRqstCcrrncPrdCdngSstm) {
-        this.srvcRqstCcrrncPrdCdngSstm = srvcRqstCcrrncPrdCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncTmngCdngSrSlctd() {
-        return this.srvcRqstCcrrncTmngCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstCcrrncTmngCdngSrSlctd(String srvcRqstCcrrncTmngCdngSrSlctd) {
-        this.srvcRqstCcrrncTmngCdngSrSlctd = srvcRqstCcrrncTmngCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncTmngCdngCde() {
-        return this.srvcRqstCcrrncTmngCdngCde;
-    }
-    
-    public void setSrvcRqstCcrrncTmngCdngCde(String srvcRqstCcrrncTmngCdngCde) {
-        this.srvcRqstCcrrncTmngCdngCde = srvcRqstCcrrncTmngCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncTmngCdngVrsn() {
-        return this.srvcRqstCcrrncTmngCdngVrsn;
-    }
-    
-    public void setSrvcRqstCcrrncTmngCdngVrsn(String srvcRqstCcrrncTmngCdngVrsn) {
-        this.srvcRqstCcrrncTmngCdngVrsn = srvcRqstCcrrncTmngCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncTmngCdngDsplay() {
-        return this.srvcRqstCcrrncTmngCdngDsplay;
-    }
-    
-    public void setSrvcRqstCcrrncTmngCdngDsplay(String srvcRqstCcrrncTmngCdngDsplay) {
-        this.srvcRqstCcrrncTmngCdngDsplay = srvcRqstCcrrncTmngCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstCcrrncTmngCdngSstm() {
-        return this.srvcRqstCcrrncTmngCdngSstm;
-    }
-    
-    public void setSrvcRqstCcrrncTmngCdngSstm(String srvcRqstCcrrncTmngCdngSstm) {
-        this.srvcRqstCcrrncTmngCdngSstm = srvcRqstCcrrncTmngCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestAsNeededBoolean() {
-        return this.serviceRequestAsNeededBoolean;
-    }
-    
-    public void setServiceRequestAsNeededBoolean(String serviceRequestAsNeededBoolean) {
-        this.serviceRequestAsNeededBoolean = serviceRequestAsNeededBoolean;
-    }
-    
-    
-    
-    public String getSrvcRqstSNddcdblcptCdngSrSlctd() {
-        return this.srvcRqstSNddcdblcptCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstSNddcdblcptCdngSrSlctd(String srvcRqstSNddcdblcptCdngSrSlctd) {
-        this.srvcRqstSNddcdblcptCdngSrSlctd = srvcRqstSNddcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstSNddcdblcptCdngCde() {
-        return this.srvcRqstSNddcdblcptCdngCde;
-    }
-    
-    public void setSrvcRqstSNddcdblcptCdngCde(String srvcRqstSNddcdblcptCdngCde) {
-        this.srvcRqstSNddcdblcptCdngCde = srvcRqstSNddcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstSNddcdblcptCdngVrsn() {
-        return this.srvcRqstSNddcdblcptCdngVrsn;
-    }
-    
-    public void setSrvcRqstSNddcdblcptCdngVrsn(String srvcRqstSNddcdblcptCdngVrsn) {
-        this.srvcRqstSNddcdblcptCdngVrsn = srvcRqstSNddcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstSNddcdblcptCdngDsplay() {
-        return this.srvcRqstSNddcdblcptCdngDsplay;
-    }
-    
-    public void setSrvcRqstSNddcdblcptCdngDsplay(String srvcRqstSNddcdblcptCdngDsplay) {
-        this.srvcRqstSNddcdblcptCdngDsplay = srvcRqstSNddcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstSNddcdblcptCdngSstm() {
-        return this.srvcRqstSNddcdblcptCdngSstm;
-    }
-    
-    public void setSrvcRqstSNddcdblcptCdngSstm(String srvcRqstSNddcdblcptCdngSstm) {
-        this.srvcRqstSNddcdblcptCdngSstm = srvcRqstSNddcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestAuthoredOn() {
-        return this.serviceRequestAuthoredOn;
-    }
-    
-    public void setServiceRequestAuthoredOn(String serviceRequestAuthoredOn) {
-        this.serviceRequestAuthoredOn = serviceRequestAuthoredOn;
-    }
-    
-    
-    
-    public String getServiceRequestRequester() {
-        return this.serviceRequestRequester;
-    }
-    
-    public void setServiceRequestRequester(String serviceRequestRequester) {
-        this.serviceRequestRequester = serviceRequestRequester;
-    }
-    
-    
-    
-    public String getSrvcRqstPrfrmrTpCdngSrSlctd() {
-        return this.srvcRqstPrfrmrTpCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstPrfrmrTpCdngSrSlctd(String srvcRqstPrfrmrTpCdngSrSlctd) {
-        this.srvcRqstPrfrmrTpCdngSrSlctd = srvcRqstPrfrmrTpCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstPrfrmrTpCdngCde() {
-        return this.srvcRqstPrfrmrTpCdngCde;
-    }
-    
-    public void setSrvcRqstPrfrmrTpCdngCde(String srvcRqstPrfrmrTpCdngCde) {
-        this.srvcRqstPrfrmrTpCdngCde = srvcRqstPrfrmrTpCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstPrfrmrTpCdngVrsn() {
-        return this.srvcRqstPrfrmrTpCdngVrsn;
-    }
-    
-    public void setSrvcRqstPrfrmrTpCdngVrsn(String srvcRqstPrfrmrTpCdngVrsn) {
-        this.srvcRqstPrfrmrTpCdngVrsn = srvcRqstPrfrmrTpCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstPrfrmrTpCdngDsplay() {
-        return this.srvcRqstPrfrmrTpCdngDsplay;
-    }
-    
-    public void setSrvcRqstPrfrmrTpCdngDsplay(String srvcRqstPrfrmrTpCdngDsplay) {
-        this.srvcRqstPrfrmrTpCdngDsplay = srvcRqstPrfrmrTpCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstPrfrmrTpCdngSstm() {
-        return this.srvcRqstPrfrmrTpCdngSstm;
-    }
-    
-    public void setSrvcRqstPrfrmrTpCdngSstm(String srvcRqstPrfrmrTpCdngSstm) {
-        this.srvcRqstPrfrmrTpCdngSstm = srvcRqstPrfrmrTpCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestPerformer() {
-        return this.serviceRequestPerformer;
-    }
-    
-    public void setServiceRequestPerformer(String serviceRequestPerformer) {
-        this.serviceRequestPerformer = serviceRequestPerformer;
-    }
-    
-    
-    
-    public String getSrvcRqstLctnCdCdngSrSlctd() {
-        return this.srvcRqstLctnCdCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstLctnCdCdngSrSlctd(String srvcRqstLctnCdCdngSrSlctd) {
-        this.srvcRqstLctnCdCdngSrSlctd = srvcRqstLctnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstLctnCdCdngCde() {
-        return this.srvcRqstLctnCdCdngCde;
-    }
-    
-    public void setSrvcRqstLctnCdCdngCde(String srvcRqstLctnCdCdngCde) {
-        this.srvcRqstLctnCdCdngCde = srvcRqstLctnCdCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstLctnCdCdngVrsn() {
-        return this.srvcRqstLctnCdCdngVrsn;
-    }
-    
-    public void setSrvcRqstLctnCdCdngVrsn(String srvcRqstLctnCdCdngVrsn) {
-        this.srvcRqstLctnCdCdngVrsn = srvcRqstLctnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstLctnCdCdngDsplay() {
-        return this.srvcRqstLctnCdCdngDsplay;
-    }
-    
-    public void setSrvcRqstLctnCdCdngDsplay(String srvcRqstLctnCdCdngDsplay) {
-        this.srvcRqstLctnCdCdngDsplay = srvcRqstLctnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstLctnCdCdngSstm() {
-        return this.srvcRqstLctnCdCdngSstm;
-    }
-    
-    public void setSrvcRqstLctnCdCdngSstm(String srvcRqstLctnCdCdngSstm) {
-        this.srvcRqstLctnCdCdngSstm = srvcRqstLctnCdCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestLocationReference() {
-        return this.serviceRequestLocationReference;
-    }
-    
-    public void setServiceRequestLocationReference(String serviceRequestLocationReference) {
-        this.serviceRequestLocationReference = serviceRequestLocationReference;
-    }
-    
-    
-    
-    public String getSrvcRqstRsnCdCdngSrSlctd() {
-        return this.srvcRqstRsnCdCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstRsnCdCdngSrSlctd(String srvcRqstRsnCdCdngSrSlctd) {
-        this.srvcRqstRsnCdCdngSrSlctd = srvcRqstRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstRsnCdCdngCde() {
-        return this.srvcRqstRsnCdCdngCde;
-    }
-    
-    public void setSrvcRqstRsnCdCdngCde(String srvcRqstRsnCdCdngCde) {
-        this.srvcRqstRsnCdCdngCde = srvcRqstRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstRsnCdCdngVrsn() {
-        return this.srvcRqstRsnCdCdngVrsn;
-    }
-    
-    public void setSrvcRqstRsnCdCdngVrsn(String srvcRqstRsnCdCdngVrsn) {
-        this.srvcRqstRsnCdCdngVrsn = srvcRqstRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstRsnCdCdngDsplay() {
-        return this.srvcRqstRsnCdCdngDsplay;
-    }
-    
-    public void setSrvcRqstRsnCdCdngDsplay(String srvcRqstRsnCdCdngDsplay) {
-        this.srvcRqstRsnCdCdngDsplay = srvcRqstRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstRsnCdCdngSstm() {
-        return this.srvcRqstRsnCdCdngSstm;
-    }
-    
-    public void setSrvcRqstRsnCdCdngSstm(String srvcRqstRsnCdCdngSstm) {
-        this.srvcRqstRsnCdCdngSstm = srvcRqstRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getServiceRequestReasonReference() {
-        return this.serviceRequestReasonReference;
-    }
-    
-    public void setServiceRequestReasonReference(String serviceRequestReasonReference) {
-        this.serviceRequestReasonReference = serviceRequestReasonReference;
-    }
-    
-    
-    
-    public String getServiceRequestInsurance() {
-        return this.serviceRequestInsurance;
-    }
-    
-    public void setServiceRequestInsurance(String serviceRequestInsurance) {
-        this.serviceRequestInsurance = serviceRequestInsurance;
-    }
-    
-    
-    
-    public String getServiceRequestSupportingInfo() {
-        return this.serviceRequestSupportingInfo;
-    }
-    
-    public void setServiceRequestSupportingInfo(String serviceRequestSupportingInfo) {
-        this.serviceRequestSupportingInfo = serviceRequestSupportingInfo;
-    }
-    
-    
-    
-    public String getServiceRequestSpecimen() {
-        return this.serviceRequestSpecimen;
-    }
-    
-    public void setServiceRequestSpecimen(String serviceRequestSpecimen) {
-        this.serviceRequestSpecimen = serviceRequestSpecimen;
-    }
-    
-    
-    
-    public String getSrvcRqstBdStCdngSrSlctd() {
-        return this.srvcRqstBdStCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstBdStCdngSrSlctd(String srvcRqstBdStCdngSrSlctd) {
-        this.srvcRqstBdStCdngSrSlctd = srvcRqstBdStCdngSrSlctd;
-    }
-    
-    
-    
-    public String getSrvcRqstBdStCdngCde() {
-        return this.srvcRqstBdStCdngCde;
-    }
-    
-    public void setSrvcRqstBdStCdngCde(String srvcRqstBdStCdngCde) {
-        this.srvcRqstBdStCdngCde = srvcRqstBdStCdngCde;
-    }
-    
-    
-    
-    public String getSrvcRqstBdStCdngVrsn() {
-        return this.srvcRqstBdStCdngVrsn;
-    }
-    
-    public void setSrvcRqstBdStCdngVrsn(String srvcRqstBdStCdngVrsn) {
-        this.srvcRqstBdStCdngVrsn = srvcRqstBdStCdngVrsn;
-    }
-    
-    
-    
-    public String getSrvcRqstBdStCdngDsplay() {
-        return this.srvcRqstBdStCdngDsplay;
-    }
-    
-    public void setSrvcRqstBdStCdngDsplay(String srvcRqstBdStCdngDsplay) {
-        this.srvcRqstBdStCdngDsplay = srvcRqstBdStCdngDsplay;
-    }
-    
-    
-    
-    public String getSrvcRqstBdStCdngSstm() {
-        return this.srvcRqstBdStCdngSstm;
-    }
-    
-    public void setSrvcRqstBdStCdngSstm(String srvcRqstBdStCdngSstm) {
-        this.srvcRqstBdStCdngSstm = srvcRqstBdStCdngSstm;
-    }
-    
-    
-    
-    public String getSrvcRqstNtCdngSrSlctd() {
-        return this.srvcRqstNtCdngSrSlctd;
-    }
-    
-    public void setSrvcRqstNtCdngSrSlctd(String srvcRqstNtCdngSrSlctd) {
-        this.srvcRqstNtCdngSrSlctd = srvcRqstNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getServiceRequestNoteCodingCode() {
-        return this.serviceRequestNoteCodingCode;
-    }
-    
-    public void setServiceRequestNoteCodingCode(String serviceRequestNoteCodingCode) {
-        this.serviceRequestNoteCodingCode = serviceRequestNoteCodingCode;
-    }
-    
-    
-    
-    public String getServiceRequestNoteCodingVersion() {
-        return this.serviceRequestNoteCodingVersion;
-    }
-    
-    public void setServiceRequestNoteCodingVersion(String serviceRequestNoteCodingVersion) {
-        this.serviceRequestNoteCodingVersion = serviceRequestNoteCodingVersion;
-    }
-    
-    
-    
-    public String getServiceRequestNoteCodingDisplay() {
-        return this.serviceRequestNoteCodingDisplay;
-    }
-    
-    public void setServiceRequestNoteCodingDisplay(String serviceRequestNoteCodingDisplay) {
-        this.serviceRequestNoteCodingDisplay = serviceRequestNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getServiceRequestNoteCodingSystem() {
-        return this.serviceRequestNoteCodingSystem;
-    }
-    
-    public void setServiceRequestNoteCodingSystem(String serviceRequestNoteCodingSystem) {
-        this.serviceRequestNoteCodingSystem = serviceRequestNoteCodingSystem;
-    }
-    
-    
-    
-    public String getServiceRequestPntInstruction() {
-        return this.serviceRequestPntInstruction;
-    }
-    
-    public void setServiceRequestPntInstruction(String serviceRequestPntInstruction) {
-        this.serviceRequestPntInstruction = serviceRequestPntInstruction;
-    }
-    
-    
-    
-    public String getServiceRequestRelevantHistory() {
-        return this.serviceRequestRelevantHistory;
-    }
-    
-    public void setServiceRequestRelevantHistory(String serviceRequestRelevantHistory) {
-        this.serviceRequestRelevantHistory = serviceRequestRelevantHistory;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrSe()
+    {
+        return this.srvcRqstDntfrDntfrSe;
+    }
+    
+    public void setSrvcRqstDntfrDntfrSe
+        (String srvcRqstDntfrDntfrSe) 
+        {
+      this.srvcRqstDntfrDntfrSe = srvcRqstDntfrDntfrSe;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcCSstm()
+    {
+        return this.srvcRqstDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcCSstm
+        (String srvcRqstDntfrDntfrTpCcCSstm) 
+        {
+      this.srvcRqstDntfrDntfrTpCcCSstm = srvcRqstDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcCVrsn()
+    {
+        return this.srvcRqstDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcCVrsn
+        (String srvcRqstDntfrDntfrTpCcCVrsn) 
+        {
+      this.srvcRqstDntfrDntfrTpCcCVrsn = srvcRqstDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcCCde()
+    {
+        return this.srvcRqstDntfrDntfrTpCcCCde;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcCCde
+        (String srvcRqstDntfrDntfrTpCcCCde) 
+        {
+      this.srvcRqstDntfrDntfrTpCcCCde = srvcRqstDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcCDsplay()
+    {
+        return this.srvcRqstDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcCDsplay
+        (String srvcRqstDntfrDntfrTpCcCDsplay) 
+        {
+      this.srvcRqstDntfrDntfrTpCcCDsplay = srvcRqstDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.srvcRqstDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcCSrSlctd
+        (String srvcRqstDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.srvcRqstDntfrDntfrTpCcCSrSlctd = srvcRqstDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrTpCcTxt()
+    {
+        return this.srvcRqstDntfrDntfrTpCcTxt;
+    }
+    
+    public void setSrvcRqstDntfrDntfrTpCcTxt
+        (String srvcRqstDntfrDntfrTpCcTxt) 
+        {
+      this.srvcRqstDntfrDntfrTpCcTxt = srvcRqstDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrPrdPrdStrt()
+    {
+        return this.srvcRqstDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setSrvcRqstDntfrDntfrPrdPrdStrt
+        (String srvcRqstDntfrDntfrPrdPrdStrt) 
+        {
+      this.srvcRqstDntfrDntfrPrdPrdStrt = srvcRqstDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrPrdPrdNd()
+    {
+        return this.srvcRqstDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setSrvcRqstDntfrDntfrPrdPrdNd
+        (String srvcRqstDntfrDntfrPrdPrdNd) 
+        {
+      this.srvcRqstDntfrDntfrPrdPrdNd = srvcRqstDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrSsgnr()
+    {
+        return this.srvcRqstDntfrDntfrSsgnr;
+    }
+    
+    public void setSrvcRqstDntfrDntfrSsgnr
+        (String srvcRqstDntfrDntfrSsgnr) 
+        {
+      this.srvcRqstDntfrDntfrSsgnr = srvcRqstDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrVlue()
+    {
+        return this.srvcRqstDntfrDntfrVlue;
+    }
+    
+    public void setSrvcRqstDntfrDntfrVlue
+        (String srvcRqstDntfrDntfrVlue) 
+        {
+      this.srvcRqstDntfrDntfrVlue = srvcRqstDntfrDntfrVlue;
+}
+    public 
+    String 
+    getSrvcRqstDntfrDntfrSstm()
+    {
+        return this.srvcRqstDntfrDntfrSstm;
+    }
+    
+    public void setSrvcRqstDntfrDntfrSstm
+        (String srvcRqstDntfrDntfrSstm) 
+        {
+      this.srvcRqstDntfrDntfrSstm = srvcRqstDntfrDntfrSstm;
+}
+    public 
+    String 
+    getSrvcRqstNstnttsCnnclCnncl()
+    {
+        return this.srvcRqstNstnttsCnnclCnncl;
+    }
+    
+    public void setSrvcRqstNstnttsCnnclCnncl
+        (String srvcRqstNstnttsCnnclCnncl) 
+        {
+      this.srvcRqstNstnttsCnnclCnncl = srvcRqstNstnttsCnnclCnncl;
+}
+    public 
+    String 
+    getServiceRequestInstantiatesUriUri()
+    {
+        return this.serviceRequestInstantiatesUriUri;
+    }
+    
+    public void setServiceRequestInstantiatesUriUri
+        (String serviceRequestInstantiatesUriUri) 
+        {
+      this.serviceRequestInstantiatesUriUri = serviceRequestInstantiatesUriUri;
+}
+    public 
+    String 
+    getServiceRequestBasedOnReference()
+    {
+        return this.serviceRequestBasedOnReference;
+    }
+    
+    public void setServiceRequestBasedOnReference
+        (String serviceRequestBasedOnReference) 
+        {
+      this.serviceRequestBasedOnReference = serviceRequestBasedOnReference;
+}
+    public 
+    String 
+    getServiceRequestReplacesReference()
+    {
+        return this.serviceRequestReplacesReference;
+    }
+    
+    public void setServiceRequestReplacesReference
+        (String serviceRequestReplacesReference) 
+        {
+      this.serviceRequestReplacesReference = serviceRequestReplacesReference;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrSe()
+    {
+        return this.srvcRqstRqstnDntfrSe;
+    }
+    
+    public void setSrvcRqstRqstnDntfrSe
+        (String srvcRqstRqstnDntfrSe) 
+        {
+      this.srvcRqstRqstnDntfrSe = srvcRqstRqstnDntfrSe;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcCSstm()
+    {
+        return this.srvcRqstRqstnDntfrTpCcCSstm;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcCSstm
+        (String srvcRqstRqstnDntfrTpCcCSstm) 
+        {
+      this.srvcRqstRqstnDntfrTpCcCSstm = srvcRqstRqstnDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcCVrsn()
+    {
+        return this.srvcRqstRqstnDntfrTpCcCVrsn;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcCVrsn
+        (String srvcRqstRqstnDntfrTpCcCVrsn) 
+        {
+      this.srvcRqstRqstnDntfrTpCcCVrsn = srvcRqstRqstnDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcCCde()
+    {
+        return this.srvcRqstRqstnDntfrTpCcCCde;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcCCde
+        (String srvcRqstRqstnDntfrTpCcCCde) 
+        {
+      this.srvcRqstRqstnDntfrTpCcCCde = srvcRqstRqstnDntfrTpCcCCde;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcCDsplay()
+    {
+        return this.srvcRqstRqstnDntfrTpCcCDsplay;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcCDsplay
+        (String srvcRqstRqstnDntfrTpCcCDsplay) 
+        {
+      this.srvcRqstRqstnDntfrTpCcCDsplay = srvcRqstRqstnDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcCSrSlctd()
+    {
+        return this.srvcRqstRqstnDntfrTpCcCSrSlctd;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcCSrSlctd
+        (String srvcRqstRqstnDntfrTpCcCSrSlctd) 
+        {
+      this.srvcRqstRqstnDntfrTpCcCSrSlctd = srvcRqstRqstnDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrTpCcTxt()
+    {
+        return this.srvcRqstRqstnDntfrTpCcTxt;
+    }
+    
+    public void setSrvcRqstRqstnDntfrTpCcTxt
+        (String srvcRqstRqstnDntfrTpCcTxt) 
+        {
+      this.srvcRqstRqstnDntfrTpCcTxt = srvcRqstRqstnDntfrTpCcTxt;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrPrdPrdStrt()
+    {
+        return this.srvcRqstRqstnDntfrPrdPrdStrt;
+    }
+    
+    public void setSrvcRqstRqstnDntfrPrdPrdStrt
+        (String srvcRqstRqstnDntfrPrdPrdStrt) 
+        {
+      this.srvcRqstRqstnDntfrPrdPrdStrt = srvcRqstRqstnDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrPrdPrdNd()
+    {
+        return this.srvcRqstRqstnDntfrPrdPrdNd;
+    }
+    
+    public void setSrvcRqstRqstnDntfrPrdPrdNd
+        (String srvcRqstRqstnDntfrPrdPrdNd) 
+        {
+      this.srvcRqstRqstnDntfrPrdPrdNd = srvcRqstRqstnDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrSsgnr()
+    {
+        return this.srvcRqstRqstnDntfrSsgnr;
+    }
+    
+    public void setSrvcRqstRqstnDntfrSsgnr
+        (String srvcRqstRqstnDntfrSsgnr) 
+        {
+      this.srvcRqstRqstnDntfrSsgnr = srvcRqstRqstnDntfrSsgnr;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrVlue()
+    {
+        return this.srvcRqstRqstnDntfrVlue;
+    }
+    
+    public void setSrvcRqstRqstnDntfrVlue
+        (String srvcRqstRqstnDntfrVlue) 
+        {
+      this.srvcRqstRqstnDntfrVlue = srvcRqstRqstnDntfrVlue;
+}
+    public 
+    String 
+    getSrvcRqstRqstnDntfrSstm()
+    {
+        return this.srvcRqstRqstnDntfrSstm;
+    }
+    
+    public void setSrvcRqstRqstnDntfrSstm
+        (String srvcRqstRqstnDntfrSstm) 
+        {
+      this.srvcRqstRqstnDntfrSstm = srvcRqstRqstnDntfrSstm;
+}
+    public 
+    String 
+    getServiceRequestStatusCode()
+    {
+        return this.serviceRequestStatusCode;
+    }
+    
+    public void setServiceRequestStatusCode
+        (String serviceRequestStatusCode) 
+        {
+      this.serviceRequestStatusCode = serviceRequestStatusCode;
+}
+    public 
+    String 
+    getServiceRequestIntentCode()
+    {
+        return this.serviceRequestIntentCode;
+    }
+    
+    public void setServiceRequestIntentCode
+        (String serviceRequestIntentCode) 
+        {
+      this.serviceRequestIntentCode = serviceRequestIntentCode;
+}
+    public 
+    String 
+    getSrvcRqstCtgrCcCdngCSstm()
+    {
+        return this.srvcRqstCtgrCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstCtgrCcCdngCSstm
+        (String srvcRqstCtgrCcCdngCSstm) 
+        {
+      this.srvcRqstCtgrCcCdngCSstm = srvcRqstCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstCtgrCcCdngCVrsn()
+    {
+        return this.srvcRqstCtgrCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstCtgrCcCdngCVrsn
+        (String srvcRqstCtgrCcCdngCVrsn) 
+        {
+      this.srvcRqstCtgrCcCdngCVrsn = srvcRqstCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstCtgrCcCdngCCde()
+    {
+        return this.srvcRqstCtgrCcCdngCCde;
+    }
+    
+    public void setSrvcRqstCtgrCcCdngCCde
+        (String srvcRqstCtgrCcCdngCCde) 
+        {
+      this.srvcRqstCtgrCcCdngCCde = srvcRqstCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstCtgrCcCdngCDsplay()
+    {
+        return this.srvcRqstCtgrCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstCtgrCcCdngCDsplay
+        (String srvcRqstCtgrCcCdngCDsplay) 
+        {
+      this.srvcRqstCtgrCcCdngCDsplay = srvcRqstCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstCtgrCcCdngCSrSlctd()
+    {
+        return this.srvcRqstCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstCtgrCcCdngCSrSlctd
+        (String srvcRqstCtgrCcCdngCSrSlctd) 
+        {
+      this.srvcRqstCtgrCcCdngCSrSlctd = srvcRqstCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getServiceRequestCategoryCcText()
+    {
+        return this.serviceRequestCategoryCcText;
+    }
+    
+    public void setServiceRequestCategoryCcText
+        (String serviceRequestCategoryCcText) 
+        {
+      this.serviceRequestCategoryCcText = serviceRequestCategoryCcText;
+}
+    public 
+    String 
+    getServiceRequestPriorityCode()
+    {
+        return this.serviceRequestPriorityCode;
+    }
+    
+    public void setServiceRequestPriorityCode
+        (String serviceRequestPriorityCode) 
+        {
+      this.serviceRequestPriorityCode = serviceRequestPriorityCode;
+}
+    public 
+    String 
+    getSrvcRqstDNtPrfrmBln()
+    {
+        return this.srvcRqstDNtPrfrmBln;
+    }
+    
+    public void setSrvcRqstDNtPrfrmBln
+        (String srvcRqstDNtPrfrmBln) 
+        {
+      this.srvcRqstDNtPrfrmBln = srvcRqstDNtPrfrmBln;
+}
+    public 
+    String 
+    getSrvcRqstCdCcCdngCSstm()
+    {
+        return this.srvcRqstCdCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstCdCcCdngCSstm
+        (String srvcRqstCdCcCdngCSstm) 
+        {
+      this.srvcRqstCdCcCdngCSstm = srvcRqstCdCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstCdCcCdngCVrsn()
+    {
+        return this.srvcRqstCdCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstCdCcCdngCVrsn
+        (String srvcRqstCdCcCdngCVrsn) 
+        {
+      this.srvcRqstCdCcCdngCVrsn = srvcRqstCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstCdCcCdngCCde()
+    {
+        return this.srvcRqstCdCcCdngCCde;
+    }
+    
+    public void setSrvcRqstCdCcCdngCCde
+        (String srvcRqstCdCcCdngCCde) 
+        {
+      this.srvcRqstCdCcCdngCCde = srvcRqstCdCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstCdCcCdngCDsplay()
+    {
+        return this.srvcRqstCdCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstCdCcCdngCDsplay
+        (String srvcRqstCdCcCdngCDsplay) 
+        {
+      this.srvcRqstCdCcCdngCDsplay = srvcRqstCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstCdCcCdngCSrSlctd()
+    {
+        return this.srvcRqstCdCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstCdCcCdngCSrSlctd
+        (String srvcRqstCdCcCdngCSrSlctd) 
+        {
+      this.srvcRqstCdCcCdngCSrSlctd = srvcRqstCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getServiceRequestCodeCcText()
+    {
+        return this.serviceRequestCodeCcText;
+    }
+    
+    public void setServiceRequestCodeCcText
+        (String serviceRequestCodeCcText) 
+        {
+      this.serviceRequestCodeCcText = serviceRequestCodeCcText;
+}
+    public 
+    String 
+    getSrvcRqstRdrDtlCcCdngCSstm()
+    {
+        return this.srvcRqstRdrDtlCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstRdrDtlCcCdngCSstm
+        (String srvcRqstRdrDtlCcCdngCSstm) 
+        {
+      this.srvcRqstRdrDtlCcCdngCSstm = srvcRqstRdrDtlCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstRdrDtlCcCdngCVrsn()
+    {
+        return this.srvcRqstRdrDtlCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstRdrDtlCcCdngCVrsn
+        (String srvcRqstRdrDtlCcCdngCVrsn) 
+        {
+      this.srvcRqstRdrDtlCcCdngCVrsn = srvcRqstRdrDtlCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstRdrDtlCcCdngCCde()
+    {
+        return this.srvcRqstRdrDtlCcCdngCCde;
+    }
+    
+    public void setSrvcRqstRdrDtlCcCdngCCde
+        (String srvcRqstRdrDtlCcCdngCCde) 
+        {
+      this.srvcRqstRdrDtlCcCdngCCde = srvcRqstRdrDtlCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstRdrDtlCcCdngCDsplay()
+    {
+        return this.srvcRqstRdrDtlCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstRdrDtlCcCdngCDsplay
+        (String srvcRqstRdrDtlCcCdngCDsplay) 
+        {
+      this.srvcRqstRdrDtlCcCdngCDsplay = srvcRqstRdrDtlCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstRdrDtlCcCdngCSrSlctd()
+    {
+        return this.srvcRqstRdrDtlCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstRdrDtlCcCdngCSrSlctd
+        (String srvcRqstRdrDtlCcCdngCSrSlctd) 
+        {
+      this.srvcRqstRdrDtlCcCdngCSrSlctd = srvcRqstRdrDtlCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getServiceRequestOrderDetailCcText()
+    {
+        return this.serviceRequestOrderDetailCcText;
+    }
+    
+    public void setServiceRequestOrderDetailCcText
+        (String serviceRequestOrderDetailCcText) 
+        {
+      this.serviceRequestOrderDetailCcText = serviceRequestOrderDetailCcText;
+}
+    public 
+    String 
+    getSrvcRqstQnttQnttQnttCmprtr()
+    {
+        return this.srvcRqstQnttQnttQnttCmprtr;
+    }
+    
+    public void setSrvcRqstQnttQnttQnttCmprtr
+        (String srvcRqstQnttQnttQnttCmprtr) 
+        {
+      this.srvcRqstQnttQnttQnttCmprtr = srvcRqstQnttQnttQnttCmprtr;
+}
+    public 
+    String 
+    getSrvcRqstQnttQnttQnttCde()
+    {
+        return this.srvcRqstQnttQnttQnttCde;
+    }
+    
+    public void setSrvcRqstQnttQnttQnttCde
+        (String srvcRqstQnttQnttQnttCde) 
+        {
+      this.srvcRqstQnttQnttQnttCde = srvcRqstQnttQnttQnttCde;
+}
+    public 
+    String 
+    getSrvcRqstQnttQnttQnttVlue()
+    {
+        return this.srvcRqstQnttQnttQnttVlue;
+    }
+    
+    public void setSrvcRqstQnttQnttQnttVlue
+        (String srvcRqstQnttQnttQnttVlue) 
+        {
+      this.srvcRqstQnttQnttQnttVlue = srvcRqstQnttQnttQnttVlue;
+}
+    public 
+    String 
+    getSrvcRqstQnttQnttQnttNt()
+    {
+        return this.srvcRqstQnttQnttQnttNt;
+    }
+    
+    public void setSrvcRqstQnttQnttQnttNt
+        (String srvcRqstQnttQnttQnttNt) 
+        {
+      this.srvcRqstQnttQnttQnttNt = srvcRqstQnttQnttQnttNt;
+}
+    public 
+    String 
+    getSrvcRqstQnttQnttQnttSstm()
+    {
+        return this.srvcRqstQnttQnttQnttSstm;
+    }
+    
+    public void setSrvcRqstQnttQnttQnttSstm
+        (String srvcRqstQnttQnttQnttSstm) 
+        {
+      this.srvcRqstQnttQnttQnttSstm = srvcRqstQnttQnttQnttSstm;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtNmrtrQnttVlue()
+    {
+        return this.srvcRqstQnttRtRtNmrtrQnttVlue;
+    }
+    
+    public void setSrvcRqstQnttRtRtNmrtrQnttVlue
+        (String srvcRqstQnttRtRtNmrtrQnttVlue) 
+        {
+      this.srvcRqstQnttRtRtNmrtrQnttVlue = srvcRqstQnttRtRtNmrtrQnttVlue;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtDnmntrQnttVlue()
+    {
+        return this.srvcRqstQnttRtRtDnmntrQnttVlue;
+    }
+    
+    public void setSrvcRqstQnttRtRtDnmntrQnttVlue
+        (String srvcRqstQnttRtRtDnmntrQnttVlue) 
+        {
+      this.srvcRqstQnttRtRtDnmntrQnttVlue = srvcRqstQnttRtRtDnmntrQnttVlue;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtNmrtrQnttCmprtr()
+    {
+        return this.srvcRqstQnttRtRtNmrtrQnttCmprtr;
+    }
+    
+    public void setSrvcRqstQnttRtRtNmrtrQnttCmprtr
+        (String srvcRqstQnttRtRtNmrtrQnttCmprtr) 
+        {
+      this.srvcRqstQnttRtRtNmrtrQnttCmprtr = srvcRqstQnttRtRtNmrtrQnttCmprtr;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtDnmntrQnttCmprtr()
+    {
+        return this.srvcRqstQnttRtRtDnmntrQnttCmprtr;
+    }
+    
+    public void setSrvcRqstQnttRtRtDnmntrQnttCmprtr
+        (String srvcRqstQnttRtRtDnmntrQnttCmprtr) 
+        {
+      this.srvcRqstQnttRtRtDnmntrQnttCmprtr = srvcRqstQnttRtRtDnmntrQnttCmprtr;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtNmrtrQnttNt()
+    {
+        return this.srvcRqstQnttRtRtNmrtrQnttNt;
+    }
+    
+    public void setSrvcRqstQnttRtRtNmrtrQnttNt
+        (String srvcRqstQnttRtRtNmrtrQnttNt) 
+        {
+      this.srvcRqstQnttRtRtNmrtrQnttNt = srvcRqstQnttRtRtNmrtrQnttNt;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtDnmntrQnttNt()
+    {
+        return this.srvcRqstQnttRtRtDnmntrQnttNt;
+    }
+    
+    public void setSrvcRqstQnttRtRtDnmntrQnttNt
+        (String srvcRqstQnttRtRtDnmntrQnttNt) 
+        {
+      this.srvcRqstQnttRtRtDnmntrQnttNt = srvcRqstQnttRtRtDnmntrQnttNt;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtNmrtrQnttSstm()
+    {
+        return this.srvcRqstQnttRtRtNmrtrQnttSstm;
+    }
+    
+    public void setSrvcRqstQnttRtRtNmrtrQnttSstm
+        (String srvcRqstQnttRtRtNmrtrQnttSstm) 
+        {
+      this.srvcRqstQnttRtRtNmrtrQnttSstm = srvcRqstQnttRtRtNmrtrQnttSstm;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtDnmntrQnttSstm()
+    {
+        return this.srvcRqstQnttRtRtDnmntrQnttSstm;
+    }
+    
+    public void setSrvcRqstQnttRtRtDnmntrQnttSstm
+        (String srvcRqstQnttRtRtDnmntrQnttSstm) 
+        {
+      this.srvcRqstQnttRtRtDnmntrQnttSstm = srvcRqstQnttRtRtDnmntrQnttSstm;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtNmrtrQnttCde()
+    {
+        return this.srvcRqstQnttRtRtNmrtrQnttCde;
+    }
+    
+    public void setSrvcRqstQnttRtRtNmrtrQnttCde
+        (String srvcRqstQnttRtRtNmrtrQnttCde) 
+        {
+      this.srvcRqstQnttRtRtNmrtrQnttCde = srvcRqstQnttRtRtNmrtrQnttCde;
+}
+    public 
+    String 
+    getSrvcRqstQnttRtRtDnmntrQnttCde()
+    {
+        return this.srvcRqstQnttRtRtDnmntrQnttCde;
+    }
+    
+    public void setSrvcRqstQnttRtRtDnmntrQnttCde
+        (String srvcRqstQnttRtRtDnmntrQnttCde) 
+        {
+      this.srvcRqstQnttRtRtDnmntrQnttCde = srvcRqstQnttRtRtDnmntrQnttCde;
+}
+    public 
+    String 
+    getSrvcRqstQnttRngRngLw()
+    {
+        return this.srvcRqstQnttRngRngLw;
+    }
+    
+    public void setSrvcRqstQnttRngRngLw
+        (String srvcRqstQnttRngRngLw) 
+        {
+      this.srvcRqstQnttRngRngLw = srvcRqstQnttRngRngLw;
+}
+    public 
+    String 
+    getSrvcRqstQnttRngRngHgh()
+    {
+        return this.srvcRqstQnttRngRngHgh;
+    }
+    
+    public void setSrvcRqstQnttRngRngHgh
+        (String srvcRqstQnttRngRngHgh) 
+        {
+      this.srvcRqstQnttRngRngHgh = srvcRqstQnttRngRngHgh;
+}
+    public 
+    String 
+    getServiceRequestSubjectReference()
+    {
+        return this.serviceRequestSubjectReference;
+    }
+    
+    public void setServiceRequestSubjectReference
+        (String serviceRequestSubjectReference) 
+        {
+      this.serviceRequestSubjectReference = serviceRequestSubjectReference;
+}
+    public 
+    String 
+    getServiceRequestEncounterReference()
+    {
+        return this.serviceRequestEncounterReference;
+    }
+    
+    public void setServiceRequestEncounterReference
+        (String serviceRequestEncounterReference) 
+        {
+      this.serviceRequestEncounterReference = serviceRequestEncounterReference;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncDttmDtTme()
+    {
+        return this.srvcRqstCcrrncDttmDtTme;
+    }
+    
+    public void setSrvcRqstCcrrncDttmDtTme
+        (String srvcRqstCcrrncDttmDtTme) 
+        {
+      this.srvcRqstCcrrncDttmDtTme = srvcRqstCcrrncDttmDtTme;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncPrdPrdStrt()
+    {
+        return this.srvcRqstCcrrncPrdPrdStrt;
+    }
+    
+    public void setSrvcRqstCcrrncPrdPrdStrt
+        (String srvcRqstCcrrncPrdPrdStrt) 
+        {
+      this.srvcRqstCcrrncPrdPrdStrt = srvcRqstCcrrncPrdPrdStrt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncPrdPrdNd()
+    {
+        return this.srvcRqstCcrrncPrdPrdNd;
+    }
+    
+    public void setSrvcRqstCcrrncPrdPrdNd
+        (String srvcRqstCcrrncPrdPrdNd) 
+        {
+      this.srvcRqstCcrrncPrdPrdNd = srvcRqstCcrrncPrdPrdNd;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcCSstm()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcCSstm;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcCSstm
+        (String srvcRqstCcrrncTmngTmngCdCcCSstm) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcCSstm = srvcRqstCcrrncTmngTmngCdCcCSstm;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcCVrsn()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcCVrsn;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcCVrsn
+        (String srvcRqstCcrrncTmngTmngCdCcCVrsn) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcCVrsn = srvcRqstCcrrncTmngTmngCdCcCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcCCde()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcCCde;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcCCde
+        (String srvcRqstCcrrncTmngTmngCdCcCCde) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcCCde = srvcRqstCcrrncTmngTmngCdCcCCde;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcCDsplay()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcCDsplay;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcCDsplay
+        (String srvcRqstCcrrncTmngTmngCdCcCDsplay) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcCDsplay = srvcRqstCcrrncTmngTmngCdCcCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcCSrSlctd()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcCSrSlctd
+        (String srvcRqstCcrrncTmngTmngCdCcCSrSlctd) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcCSrSlctd = srvcRqstCcrrncTmngTmngCdCcCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngCdCcTxt()
+    {
+        return this.srvcRqstCcrrncTmngTmngCdCcTxt;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngCdCcTxt
+        (String srvcRqstCcrrncTmngTmngCdCcTxt) 
+        {
+      this.srvcRqstCcrrncTmngTmngCdCcTxt = srvcRqstCcrrncTmngTmngCdCcTxt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngVnt()
+    {
+        return this.srvcRqstCcrrncTmngTmngVnt;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngVnt
+        (String srvcRqstCcrrncTmngTmngVnt) 
+        {
+      this.srvcRqstCcrrncTmngTmngVnt = srvcRqstCcrrncTmngTmngVnt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptDrtnnt()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptDrtnnt;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptDrtnnt
+        (String srvcRqstCcrrncTmngTmngRptDrtnnt) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptDrtnnt = srvcRqstCcrrncTmngTmngRptDrtnnt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptPrdnt()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptPrdnt;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptPrdnt
+        (String srvcRqstCcrrncTmngTmngRptPrdnt) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptPrdnt = srvcRqstCcrrncTmngTmngRptPrdnt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptDfWk()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptDfWk;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptDfWk
+        (String srvcRqstCcrrncTmngTmngRptDfWk) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptDfWk = srvcRqstCcrrncTmngTmngRptDfWk;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptWhn()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptWhn;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptWhn
+        (String srvcRqstCcrrncTmngTmngRptWhn) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptWhn = srvcRqstCcrrncTmngTmngRptWhn;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptDrtn()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptDrtn;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptDrtn
+        (String srvcRqstCcrrncTmngTmngRptDrtn) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptDrtn = srvcRqstCcrrncTmngTmngRptDrtn;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptDrtnMx()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptDrtnMx;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptDrtnMx
+        (String srvcRqstCcrrncTmngTmngRptDrtnMx) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptDrtnMx = srvcRqstCcrrncTmngTmngRptDrtnMx;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptPrd()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptPrd;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptPrd
+        (String srvcRqstCcrrncTmngTmngRptPrd) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptPrd = srvcRqstCcrrncTmngTmngRptPrd;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptPrdMx()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptPrdMx;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptPrdMx
+        (String srvcRqstCcrrncTmngTmngRptPrdMx) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptPrdMx = srvcRqstCcrrncTmngTmngRptPrdMx;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptBndsDrtn()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptBndsDrtn;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptBndsDrtn
+        (String srvcRqstCcrrncTmngTmngRptBndsDrtn) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptBndsDrtn = srvcRqstCcrrncTmngTmngRptBndsDrtn;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptBndsPrd()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptBndsPrd;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptBndsPrd
+        (String srvcRqstCcrrncTmngTmngRptBndsPrd) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptBndsPrd = srvcRqstCcrrncTmngTmngRptBndsPrd;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptCnt()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptCnt;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptCnt
+        (String srvcRqstCcrrncTmngTmngRptCnt) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptCnt = srvcRqstCcrrncTmngTmngRptCnt;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptCntMx()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptCntMx;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptCntMx
+        (String srvcRqstCcrrncTmngTmngRptCntMx) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptCntMx = srvcRqstCcrrncTmngTmngRptCntMx;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptFrqncy()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptFrqncy;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptFrqncy
+        (String srvcRqstCcrrncTmngTmngRptFrqncy) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptFrqncy = srvcRqstCcrrncTmngTmngRptFrqncy;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptFrqncMx()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptFrqncMx;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptFrqncMx
+        (String srvcRqstCcrrncTmngTmngRptFrqncMx) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptFrqncMx = srvcRqstCcrrncTmngTmngRptFrqncMx;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptBndsRnge()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptBndsRnge;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptBndsRnge
+        (String srvcRqstCcrrncTmngTmngRptBndsRnge) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptBndsRnge = srvcRqstCcrrncTmngTmngRptBndsRnge;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptTmfDay()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptTmfDay;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptTmfDay
+        (String srvcRqstCcrrncTmngTmngRptTmfDay) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptTmfDay = srvcRqstCcrrncTmngTmngRptTmfDay;
+}
+    public 
+    String 
+    getSrvcRqstCcrrncTmngTmngRptFfst()
+    {
+        return this.srvcRqstCcrrncTmngTmngRptFfst;
+    }
+    
+    public void setSrvcRqstCcrrncTmngTmngRptFfst
+        (String srvcRqstCcrrncTmngTmngRptFfst) 
+        {
+      this.srvcRqstCcrrncTmngTmngRptFfst = srvcRqstCcrrncTmngTmngRptFfst;
+}
+    public 
+    String 
+    getSrvcRqstSNddBlnBln()
+    {
+        return this.srvcRqstSNddBlnBln;
+    }
+    
+    public void setSrvcRqstSNddBlnBln
+        (String srvcRqstSNddBlnBln) 
+        {
+      this.srvcRqstSNddBlnBln = srvcRqstSNddBlnBln;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcCdngCSstm()
+    {
+        return this.srvcRqstSNddCdblcncptCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcCdngCSstm
+        (String srvcRqstSNddCdblcncptCcCdngCSstm) 
+        {
+      this.srvcRqstSNddCdblcncptCcCdngCSstm = srvcRqstSNddCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcCdngCVrsn()
+    {
+        return this.srvcRqstSNddCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcCdngCVrsn
+        (String srvcRqstSNddCdblcncptCcCdngCVrsn) 
+        {
+      this.srvcRqstSNddCdblcncptCcCdngCVrsn = srvcRqstSNddCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcCdngCCde()
+    {
+        return this.srvcRqstSNddCdblcncptCcCdngCCde;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcCdngCCde
+        (String srvcRqstSNddCdblcncptCcCdngCCde) 
+        {
+      this.srvcRqstSNddCdblcncptCcCdngCCde = srvcRqstSNddCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcCdngCDsplay()
+    {
+        return this.srvcRqstSNddCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcCdngCDsplay
+        (String srvcRqstSNddCdblcncptCcCdngCDsplay) 
+        {
+      this.srvcRqstSNddCdblcncptCcCdngCDsplay = srvcRqstSNddCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcCdngCSrSlctd()
+    {
+        return this.srvcRqstSNddCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcCdngCSrSlctd
+        (String srvcRqstSNddCdblcncptCcCdngCSrSlctd) 
+        {
+      this.srvcRqstSNddCdblcncptCcCdngCSrSlctd = srvcRqstSNddCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstSNddCdblcncptCcTxt()
+    {
+        return this.srvcRqstSNddCdblcncptCcTxt;
+    }
+    
+    public void setSrvcRqstSNddCdblcncptCcTxt
+        (String srvcRqstSNddCdblcncptCcTxt) 
+        {
+      this.srvcRqstSNddCdblcncptCcTxt = srvcRqstSNddCdblcncptCcTxt;
+}
+    public 
+    String 
+    getServiceRequestAuthoredOnDateTime()
+    {
+        return this.serviceRequestAuthoredOnDateTime;
+    }
+    
+    public void setServiceRequestAuthoredOnDateTime
+        (String serviceRequestAuthoredOnDateTime) 
+        {
+      this.serviceRequestAuthoredOnDateTime = serviceRequestAuthoredOnDateTime;
+}
+    public 
+    String 
+    getServiceRequestRequesterReference()
+    {
+        return this.serviceRequestRequesterReference;
+    }
+    
+    public void setServiceRequestRequesterReference
+        (String serviceRequestRequesterReference) 
+        {
+      this.serviceRequestRequesterReference = serviceRequestRequesterReference;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcCdngCSstm()
+    {
+        return this.srvcRqstPrfrmrTpCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcCdngCSstm
+        (String srvcRqstPrfrmrTpCcCdngCSstm) 
+        {
+      this.srvcRqstPrfrmrTpCcCdngCSstm = srvcRqstPrfrmrTpCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcCdngCVrsn()
+    {
+        return this.srvcRqstPrfrmrTpCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcCdngCVrsn
+        (String srvcRqstPrfrmrTpCcCdngCVrsn) 
+        {
+      this.srvcRqstPrfrmrTpCcCdngCVrsn = srvcRqstPrfrmrTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcCdngCCde()
+    {
+        return this.srvcRqstPrfrmrTpCcCdngCCde;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcCdngCCde
+        (String srvcRqstPrfrmrTpCcCdngCCde) 
+        {
+      this.srvcRqstPrfrmrTpCcCdngCCde = srvcRqstPrfrmrTpCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcCdngCDsplay()
+    {
+        return this.srvcRqstPrfrmrTpCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcCdngCDsplay
+        (String srvcRqstPrfrmrTpCcCdngCDsplay) 
+        {
+      this.srvcRqstPrfrmrTpCcCdngCDsplay = srvcRqstPrfrmrTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcCdngCSrSlctd()
+    {
+        return this.srvcRqstPrfrmrTpCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcCdngCSrSlctd
+        (String srvcRqstPrfrmrTpCcCdngCSrSlctd) 
+        {
+      this.srvcRqstPrfrmrTpCcCdngCSrSlctd = srvcRqstPrfrmrTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstPrfrmrTpCcTxt()
+    {
+        return this.srvcRqstPrfrmrTpCcTxt;
+    }
+    
+    public void setSrvcRqstPrfrmrTpCcTxt
+        (String srvcRqstPrfrmrTpCcTxt) 
+        {
+      this.srvcRqstPrfrmrTpCcTxt = srvcRqstPrfrmrTpCcTxt;
+}
+    public 
+    String 
+    getServiceRequestPerformerReference()
+    {
+        return this.serviceRequestPerformerReference;
+    }
+    
+    public void setServiceRequestPerformerReference
+        (String serviceRequestPerformerReference) 
+        {
+      this.serviceRequestPerformerReference = serviceRequestPerformerReference;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcCdngCSstm()
+    {
+        return this.srvcRqstLctnCdCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstLctnCdCcCdngCSstm
+        (String srvcRqstLctnCdCcCdngCSstm) 
+        {
+      this.srvcRqstLctnCdCcCdngCSstm = srvcRqstLctnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcCdngCVrsn()
+    {
+        return this.srvcRqstLctnCdCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstLctnCdCcCdngCVrsn
+        (String srvcRqstLctnCdCcCdngCVrsn) 
+        {
+      this.srvcRqstLctnCdCcCdngCVrsn = srvcRqstLctnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcCdngCCde()
+    {
+        return this.srvcRqstLctnCdCcCdngCCde;
+    }
+    
+    public void setSrvcRqstLctnCdCcCdngCCde
+        (String srvcRqstLctnCdCcCdngCCde) 
+        {
+      this.srvcRqstLctnCdCcCdngCCde = srvcRqstLctnCdCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcCdngCDsplay()
+    {
+        return this.srvcRqstLctnCdCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstLctnCdCcCdngCDsplay
+        (String srvcRqstLctnCdCcCdngCDsplay) 
+        {
+      this.srvcRqstLctnCdCcCdngCDsplay = srvcRqstLctnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcCdngCSrSlctd()
+    {
+        return this.srvcRqstLctnCdCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstLctnCdCcCdngCSrSlctd
+        (String srvcRqstLctnCdCcCdngCSrSlctd) 
+        {
+      this.srvcRqstLctnCdCcCdngCSrSlctd = srvcRqstLctnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getSrvcRqstLctnCdCcTxt()
+    {
+        return this.srvcRqstLctnCdCcTxt;
+    }
+    
+    public void setSrvcRqstLctnCdCcTxt
+        (String srvcRqstLctnCdCcTxt) 
+        {
+      this.srvcRqstLctnCdCcTxt = srvcRqstLctnCdCcTxt;
+}
+    public 
+    String 
+    getSrvcRqstLctnRfrncRfrnce()
+    {
+        return this.srvcRqstLctnRfrncRfrnce;
+    }
+    
+    public void setSrvcRqstLctnRfrncRfrnce
+        (String srvcRqstLctnRfrncRfrnce) 
+        {
+      this.srvcRqstLctnRfrncRfrnce = srvcRqstLctnRfrncRfrnce;
+}
+    public 
+    String 
+    getSrvcRqstRsnCdCcCdngCSstm()
+    {
+        return this.srvcRqstRsnCdCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstRsnCdCcCdngCSstm
+        (String srvcRqstRsnCdCcCdngCSstm) 
+        {
+      this.srvcRqstRsnCdCcCdngCSstm = srvcRqstRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstRsnCdCcCdngCVrsn()
+    {
+        return this.srvcRqstRsnCdCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstRsnCdCcCdngCVrsn
+        (String srvcRqstRsnCdCcCdngCVrsn) 
+        {
+      this.srvcRqstRsnCdCcCdngCVrsn = srvcRqstRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstRsnCdCcCdngCCde()
+    {
+        return this.srvcRqstRsnCdCcCdngCCde;
+    }
+    
+    public void setSrvcRqstRsnCdCcCdngCCde
+        (String srvcRqstRsnCdCcCdngCCde) 
+        {
+      this.srvcRqstRsnCdCcCdngCCde = srvcRqstRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstRsnCdCcCdngCDsplay()
+    {
+        return this.srvcRqstRsnCdCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstRsnCdCcCdngCDsplay
+        (String srvcRqstRsnCdCcCdngCDsplay) 
+        {
+      this.srvcRqstRsnCdCcCdngCDsplay = srvcRqstRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstRsnCdCcCdngCSrSlctd()
+    {
+        return this.srvcRqstRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstRsnCdCcCdngCSrSlctd
+        (String srvcRqstRsnCdCcCdngCSrSlctd) 
+        {
+      this.srvcRqstRsnCdCcCdngCSrSlctd = srvcRqstRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getServiceRequestReasonCodeCcText()
+    {
+        return this.serviceRequestReasonCodeCcText;
+    }
+    
+    public void setServiceRequestReasonCodeCcText
+        (String serviceRequestReasonCodeCcText) 
+        {
+      this.serviceRequestReasonCodeCcText = serviceRequestReasonCodeCcText;
+}
+    public 
+    String 
+    getSrvcRqstRsnRfrncRfrnce()
+    {
+        return this.srvcRqstRsnRfrncRfrnce;
+    }
+    
+    public void setSrvcRqstRsnRfrncRfrnce
+        (String srvcRqstRsnRfrncRfrnce) 
+        {
+      this.srvcRqstRsnRfrncRfrnce = srvcRqstRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getServiceRequestInsuranceReference()
+    {
+        return this.serviceRequestInsuranceReference;
+    }
+    
+    public void setServiceRequestInsuranceReference
+        (String serviceRequestInsuranceReference) 
+        {
+      this.serviceRequestInsuranceReference = serviceRequestInsuranceReference;
+}
+    public 
+    String 
+    getSrvcRqstSpprtngnfRfrnce()
+    {
+        return this.srvcRqstSpprtngnfRfrnce;
+    }
+    
+    public void setSrvcRqstSpprtngnfRfrnce
+        (String srvcRqstSpprtngnfRfrnce) 
+        {
+      this.srvcRqstSpprtngnfRfrnce = srvcRqstSpprtngnfRfrnce;
+}
+    public 
+    String 
+    getServiceRequestSpecimenReference()
+    {
+        return this.serviceRequestSpecimenReference;
+    }
+    
+    public void setServiceRequestSpecimenReference
+        (String serviceRequestSpecimenReference) 
+        {
+      this.serviceRequestSpecimenReference = serviceRequestSpecimenReference;
+}
+    public 
+    String 
+    getSrvcRqstBdStCcCdngCSstm()
+    {
+        return this.srvcRqstBdStCcCdngCSstm;
+    }
+    
+    public void setSrvcRqstBdStCcCdngCSstm
+        (String srvcRqstBdStCcCdngCSstm) 
+        {
+      this.srvcRqstBdStCcCdngCSstm = srvcRqstBdStCcCdngCSstm;
+}
+    public 
+    String 
+    getSrvcRqstBdStCcCdngCVrsn()
+    {
+        return this.srvcRqstBdStCcCdngCVrsn;
+    }
+    
+    public void setSrvcRqstBdStCcCdngCVrsn
+        (String srvcRqstBdStCcCdngCVrsn) 
+        {
+      this.srvcRqstBdStCcCdngCVrsn = srvcRqstBdStCcCdngCVrsn;
+}
+    public 
+    String 
+    getSrvcRqstBdStCcCdngCCde()
+    {
+        return this.srvcRqstBdStCcCdngCCde;
+    }
+    
+    public void setSrvcRqstBdStCcCdngCCde
+        (String srvcRqstBdStCcCdngCCde) 
+        {
+      this.srvcRqstBdStCcCdngCCde = srvcRqstBdStCcCdngCCde;
+}
+    public 
+    String 
+    getSrvcRqstBdStCcCdngCDsplay()
+    {
+        return this.srvcRqstBdStCcCdngCDsplay;
+    }
+    
+    public void setSrvcRqstBdStCcCdngCDsplay
+        (String srvcRqstBdStCcCdngCDsplay) 
+        {
+      this.srvcRqstBdStCcCdngCDsplay = srvcRqstBdStCcCdngCDsplay;
+}
+    public 
+    String 
+    getSrvcRqstBdStCcCdngCSrSlctd()
+    {
+        return this.srvcRqstBdStCcCdngCSrSlctd;
+    }
+    
+    public void setSrvcRqstBdStCcCdngCSrSlctd
+        (String srvcRqstBdStCcCdngCSrSlctd) 
+        {
+      this.srvcRqstBdStCcCdngCSrSlctd = srvcRqstBdStCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getServiceRequestBodySiteCcText()
+    {
+        return this.serviceRequestBodySiteCcText;
+    }
+    
+    public void setServiceRequestBodySiteCcText
+        (String serviceRequestBodySiteCcText) 
+        {
+      this.serviceRequestBodySiteCcText = serviceRequestBodySiteCcText;
+}
+    public 
+    String 
+    getSrvcRqstNtNnttnTme()
+    {
+        return this.srvcRqstNtNnttnTme;
+    }
+    
+    public void setSrvcRqstNtNnttnTme
+        (String srvcRqstNtNnttnTme) 
+        {
+      this.srvcRqstNtNnttnTme = srvcRqstNtNnttnTme;
+}
+    public 
+    String 
+    getSrvcRqstNtNnttnTxt()
+    {
+        return this.srvcRqstNtNnttnTxt;
+    }
+    
+    public void setSrvcRqstNtNnttnTxt
+        (String srvcRqstNtNnttnTxt) 
+        {
+      this.srvcRqstNtNnttnTxt = srvcRqstNtNnttnTxt;
+}
+    public 
+    String 
+    getSrvcRqstNtNnttnThrRfrnce()
+    {
+        return this.srvcRqstNtNnttnThrRfrnce;
+    }
+    
+    public void setSrvcRqstNtNnttnThrRfrnce
+        (String srvcRqstNtNnttnThrRfrnce) 
+        {
+      this.srvcRqstNtNnttnThrRfrnce = srvcRqstNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getSrvcRqstNtNnttnThrStrng()
+    {
+        return this.srvcRqstNtNnttnThrStrng;
+    }
+    
+    public void setSrvcRqstNtNnttnThrStrng
+        (String srvcRqstNtNnttnThrStrng) 
+        {
+      this.srvcRqstNtNnttnThrStrng = srvcRqstNtNnttnThrStrng;
+}
+    public 
+    String 
+    getSrvcRqstPntnstrctnStrng()
+    {
+        return this.srvcRqstPntnstrctnStrng;
+    }
+    
+    public void setSrvcRqstPntnstrctnStrng
+        (String srvcRqstPntnstrctnStrng) 
+        {
+      this.srvcRqstPntnstrctnStrng = srvcRqstPntnstrctnStrng;
+}
+    public 
+    String 
+    getSrvcRqstRlvntHstrRfrnce()
+    {
+        return this.srvcRqstRlvntHstrRfrnce;
+    }
+    
+    public void setSrvcRqstRlvntHstrRfrnce
+        (String srvcRqstRlvntHstrRfrnce) 
+        {
+      this.srvcRqstRlvntHstrRfrnce = srvcRqstRlvntHstrRfrnce;
+}
 
 
 

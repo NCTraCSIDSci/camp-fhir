@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,761 +10,866 @@ package main.templateoutput.Model;
 public class Invoice  implements java.io.Serializable {
 
 
-     private String invoiceIdentifierCodingCode;
-     private String invcDntfrCdngSrSlctd;
-     private String invoiceIdentifierCodingDisplay;
-     private String invoiceIdentifierCodingVersion;
-     private String invoiceIdentifierCodingSystem;
-     private String invoiceStatus;
-     private String invoiceCancelledReason;
-     private String invoiceTypeCodingUserSelected;
-     private String invoiceTypeCodingCode;
-     private String invoiceTypeCodingDisplay;
-     private String invoiceTypeCodingVersion;
-     private String invoiceTypeCodingSystem;
-     private String invoiceSubject;
-     private String invoiceRecipient;
-     private String invoiceDate;
-     private String invoiceParticipant;
-     private String invcPrtcpntRlCdngSrSlctd;
-     private String invcPrtcpntRlCdngCde;
-     private String invcPrtcpntRlCdngDsplay;
-     private String invcPrtcpntRlCdngVrsn;
-     private String invcPrtcpntRlCdngSstm;
-     private String invoiceParticipantActor;
-     private String invoiceIssuer;
-     private String invoiceAccount;
-     private String invoiceLineItem;
-     private String invoiceLineItemSequence;
-     private String invcLntmChrgtmRfrnce;
-     private String invcLntmChrgtmcdblcptCdngSrSlctd;
-     private String invcLntmChrgtmcdblcptCdngCde;
-     private String invcLntmChrgtmcdblcptCdngDsplay;
-     private String invcLntmChrgtmcdblcptCdngVrsn;
-     private String invcLntmChrgtmcdblcptCdngSstm;
-     private String invoiceLineItemPriceComponent;
-     private String invcLntmPrcCmpnntTpe;
-     private String invcLntmPrcCmpnntCdCdngSrSlctd;
-     private String invcLntmPrcCmpnntCdCdngCde;
-     private String invcLntmPrcCmpnntCdCdngDsplay;
-     private String invcLntmPrcCmpnntCdCdngVrsn;
-     private String invcLntmPrcCmpnntCdCdngSstm;
-     private String invcLntmPrcCmpnntFctr;
-     private String invcLntmPrcCmpnntMntCdngSrSlctd;
-     private String invcLntmPrcCmpnntMntCdngCde;
-     private String invcLntmPrcCmpnntMntCdngDsplay;
-     private String invcLntmPrcCmpnntMntCdngVrsn;
-     private String invcLntmPrcCmpnntMntCdngSstm;
-     private String invoiceTotalPriceComponent;
-     private String invcTtlNtCdngSrSlctd;
-     private String invoiceTotalNetCodingCode;
-     private String invoiceTotalNetCodingDisplay;
-     private String invoiceTotalNetCodingVersion;
-     private String invoiceTotalNetCodingSystem;
-     private String invcTtlGrssCdngSrSlctd;
-     private String invoiceTotalGrossCodingCode;
-     private String invoiceTotalGrossCodingDisplay;
-     private String invoiceTotalGrossCodingVersion;
-     private String invoiceTotalGrossCodingSystem;
-     private String invoicePaymentTerms;
-     private String invoiceNoteCodingUserSelected;
-     private String invoiceNoteCodingCode;
-     private String invoiceNoteCodingDisplay;
-     private String invoiceNoteCodingVersion;
-     private String invoiceNoteCodingSystem;
+     private Integer id;
+     private String invoiceIdentifierIdentifierUse;
+     private String invcDntfrDntfrTpCcCSstm;
+     private String invcDntfrDntfrTpCcCVrsn;
+     private String invcDntfrDntfrTpCcCCde;
+     private String invcDntfrDntfrTpCcCDsplay;
+     private String invcDntfrDntfrTpCcCSrSlctd;
+     private String invcDntfrDntfrTpCcTxt;
+     private String invcDntfrDntfrPrdPrdStrt;
+     private String invcDntfrDntfrPrdPrdNd;
+     private String invcDntfrDntfrSsgnr;
+     private String invcDntfrDntfrVlue;
+     private String invcDntfrDntfrSstm;
+     private String invoiceStatusCode;
+     private String invoiceCancelledReasonString;
+     private String invoiceTypeCcCodingCSystem;
+     private String invoiceTypeCcCodingCVersion;
+     private String invoiceTypeCcCodingCCode;
+     private String invoiceTypeCcCodingCDisplay;
+     private String invcTpCcCdngCSrSlctd;
+     private String invoiceTypeCcText;
+     private String invoiceSubjectReference;
+     private String invoiceRecipientReference;
+     private String invoiceDateDateTime;
+     private String invcPrtcpntRlCcCdngCSstm;
+     private String invcPrtcpntRlCcCdngCVrsn;
+     private String invcPrtcpntRlCcCdngCCde;
+     private String invcPrtcpntRlCcCdngCDsplay;
+     private String invcPrtcpntRlCcCdngCSrSlctd;
+     private String invoiceParticipantRoleCcText;
+     private String invcPrtcpntCtrRfrnce;
+     private String invoiceIssuerReference;
+     private String invoiceAccountReference;
+     private String invcLntmSqncPstvnt;
+     private String invcLntmChrgtmRfrncRfrnce;
+     private String invcLntmChrgtmCdblcncptCcCdngCSstm;
+     private String invcLntmChrgtmCdblcncptCcCdngCVrsn;
+     private String invcLntmChrgtmCdblcncptCcCdngCCde;
+     private String invcLntmChrgtmCdblcncptCcCdngCDsplay;
+     private String invcLntmChrgtmCdblcncptCcCdngCSrSlctd;
+     private String invcLntmChrgtmCdblcncptCcTxt;
+     private String invcLntmPrcCmpnntTpCde;
+     private String invcLntmPrcCmpnntCdCcCdngCSstm;
+     private String invcLntmPrcCmpnntCdCcCdngCVrsn;
+     private String invcLntmPrcCmpnntCdCcCdngCCde;
+     private String invcLntmPrcCmpnntCdCcCdngCDsplay;
+     private String invcLntmPrcCmpnntCdCcCdngCSrSlctd;
+     private String invcLntmPrcCmpnntCdCcTxt;
+     private String invcLntmPrcCmpnntFctrDcml;
+     private String invcLntmPrcCmpnntMntMnCrrncy;
+     private String invcLntmPrcCmpnntMntMnVlue;
+     private String invcTtlPrcCmpnntPrcCmpnnt;
+     private String invoiceTotalNetMoneyCurrency;
+     private String invoiceTotalNetMoneyValue;
+     private String invoiceTotalGrossMoneyCurrency;
+     private String invoiceTotalGrossMoneyValue;
+     private String invoicePaymentTermsMarkdown;
+     private String invoiceNoteAnnotationTime;
+     private String invoiceNoteAnnotationText;
+     private String invcNtNnttnThrRfrnce;
+     private String invcNtNnttnThrStrng;
 
     public Invoice() {
     }
 
-	
-    public Invoice(String invoiceIdentifierCodingCode) {
-        this.invoiceIdentifierCodingCode = invoiceIdentifierCodingCode;
-    }
-    public Invoice(String invoiceIdentifierCodingCode, String invcDntfrCdngSrSlctd, String invoiceIdentifierCodingDisplay, String invoiceIdentifierCodingVersion, String invoiceIdentifierCodingSystem, String invoiceStatus, String invoiceCancelledReason, String invoiceTypeCodingUserSelected, String invoiceTypeCodingCode, String invoiceTypeCodingDisplay, String invoiceTypeCodingVersion, String invoiceTypeCodingSystem, String invoiceSubject, String invoiceRecipient, String invoiceDate, String invoiceParticipant, String invcPrtcpntRlCdngSrSlctd, String invcPrtcpntRlCdngCde, String invcPrtcpntRlCdngDsplay, String invcPrtcpntRlCdngVrsn, String invcPrtcpntRlCdngSstm, String invoiceParticipantActor, String invoiceIssuer, String invoiceAccount, String invoiceLineItem, String invoiceLineItemSequence, String invcLntmChrgtmRfrnce, String invcLntmChrgtmcdblcptCdngSrSlctd, String invcLntmChrgtmcdblcptCdngCde, String invcLntmChrgtmcdblcptCdngDsplay, String invcLntmChrgtmcdblcptCdngVrsn, String invcLntmChrgtmcdblcptCdngSstm, String invoiceLineItemPriceComponent, String invcLntmPrcCmpnntTpe, String invcLntmPrcCmpnntCdCdngSrSlctd, String invcLntmPrcCmpnntCdCdngCde, String invcLntmPrcCmpnntCdCdngDsplay, String invcLntmPrcCmpnntCdCdngVrsn, String invcLntmPrcCmpnntCdCdngSstm, String invcLntmPrcCmpnntFctr, String invcLntmPrcCmpnntMntCdngSrSlctd, String invcLntmPrcCmpnntMntCdngCde, String invcLntmPrcCmpnntMntCdngDsplay, String invcLntmPrcCmpnntMntCdngVrsn, String invcLntmPrcCmpnntMntCdngSstm, String invoiceTotalPriceComponent, String invcTtlNtCdngSrSlctd, String invoiceTotalNetCodingCode, String invoiceTotalNetCodingDisplay, String invoiceTotalNetCodingVersion, String invoiceTotalNetCodingSystem, String invcTtlGrssCdngSrSlctd, String invoiceTotalGrossCodingCode, String invoiceTotalGrossCodingDisplay, String invoiceTotalGrossCodingVersion, String invoiceTotalGrossCodingSystem, String invoicePaymentTerms, String invoiceNoteCodingUserSelected, String invoiceNoteCodingCode, String invoiceNoteCodingDisplay, String invoiceNoteCodingVersion, String invoiceNoteCodingSystem) {
-       this.invoiceIdentifierCodingCode = invoiceIdentifierCodingCode;
-       this.invcDntfrCdngSrSlctd = invcDntfrCdngSrSlctd;
-       this.invoiceIdentifierCodingDisplay = invoiceIdentifierCodingDisplay;
-       this.invoiceIdentifierCodingVersion = invoiceIdentifierCodingVersion;
-       this.invoiceIdentifierCodingSystem = invoiceIdentifierCodingSystem;
-       this.invoiceStatus = invoiceStatus;
-       this.invoiceCancelledReason = invoiceCancelledReason;
-       this.invoiceTypeCodingUserSelected = invoiceTypeCodingUserSelected;
-       this.invoiceTypeCodingCode = invoiceTypeCodingCode;
-       this.invoiceTypeCodingDisplay = invoiceTypeCodingDisplay;
-       this.invoiceTypeCodingVersion = invoiceTypeCodingVersion;
-       this.invoiceTypeCodingSystem = invoiceTypeCodingSystem;
-       this.invoiceSubject = invoiceSubject;
-       this.invoiceRecipient = invoiceRecipient;
-       this.invoiceDate = invoiceDate;
-       this.invoiceParticipant = invoiceParticipant;
-       this.invcPrtcpntRlCdngSrSlctd = invcPrtcpntRlCdngSrSlctd;
-       this.invcPrtcpntRlCdngCde = invcPrtcpntRlCdngCde;
-       this.invcPrtcpntRlCdngDsplay = invcPrtcpntRlCdngDsplay;
-       this.invcPrtcpntRlCdngVrsn = invcPrtcpntRlCdngVrsn;
-       this.invcPrtcpntRlCdngSstm = invcPrtcpntRlCdngSstm;
-       this.invoiceParticipantActor = invoiceParticipantActor;
-       this.invoiceIssuer = invoiceIssuer;
-       this.invoiceAccount = invoiceAccount;
-       this.invoiceLineItem = invoiceLineItem;
-       this.invoiceLineItemSequence = invoiceLineItemSequence;
-       this.invcLntmChrgtmRfrnce = invcLntmChrgtmRfrnce;
-       this.invcLntmChrgtmcdblcptCdngSrSlctd = invcLntmChrgtmcdblcptCdngSrSlctd;
-       this.invcLntmChrgtmcdblcptCdngCde = invcLntmChrgtmcdblcptCdngCde;
-       this.invcLntmChrgtmcdblcptCdngDsplay = invcLntmChrgtmcdblcptCdngDsplay;
-       this.invcLntmChrgtmcdblcptCdngVrsn = invcLntmChrgtmcdblcptCdngVrsn;
-       this.invcLntmChrgtmcdblcptCdngSstm = invcLntmChrgtmcdblcptCdngSstm;
-       this.invoiceLineItemPriceComponent = invoiceLineItemPriceComponent;
-       this.invcLntmPrcCmpnntTpe = invcLntmPrcCmpnntTpe;
-       this.invcLntmPrcCmpnntCdCdngSrSlctd = invcLntmPrcCmpnntCdCdngSrSlctd;
-       this.invcLntmPrcCmpnntCdCdngCde = invcLntmPrcCmpnntCdCdngCde;
-       this.invcLntmPrcCmpnntCdCdngDsplay = invcLntmPrcCmpnntCdCdngDsplay;
-       this.invcLntmPrcCmpnntCdCdngVrsn = invcLntmPrcCmpnntCdCdngVrsn;
-       this.invcLntmPrcCmpnntCdCdngSstm = invcLntmPrcCmpnntCdCdngSstm;
-       this.invcLntmPrcCmpnntFctr = invcLntmPrcCmpnntFctr;
-       this.invcLntmPrcCmpnntMntCdngSrSlctd = invcLntmPrcCmpnntMntCdngSrSlctd;
-       this.invcLntmPrcCmpnntMntCdngCde = invcLntmPrcCmpnntMntCdngCde;
-       this.invcLntmPrcCmpnntMntCdngDsplay = invcLntmPrcCmpnntMntCdngDsplay;
-       this.invcLntmPrcCmpnntMntCdngVrsn = invcLntmPrcCmpnntMntCdngVrsn;
-       this.invcLntmPrcCmpnntMntCdngSstm = invcLntmPrcCmpnntMntCdngSstm;
-       this.invoiceTotalPriceComponent = invoiceTotalPriceComponent;
-       this.invcTtlNtCdngSrSlctd = invcTtlNtCdngSrSlctd;
-       this.invoiceTotalNetCodingCode = invoiceTotalNetCodingCode;
-       this.invoiceTotalNetCodingDisplay = invoiceTotalNetCodingDisplay;
-       this.invoiceTotalNetCodingVersion = invoiceTotalNetCodingVersion;
-       this.invoiceTotalNetCodingSystem = invoiceTotalNetCodingSystem;
-       this.invcTtlGrssCdngSrSlctd = invcTtlGrssCdngSrSlctd;
-       this.invoiceTotalGrossCodingCode = invoiceTotalGrossCodingCode;
-       this.invoiceTotalGrossCodingDisplay = invoiceTotalGrossCodingDisplay;
-       this.invoiceTotalGrossCodingVersion = invoiceTotalGrossCodingVersion;
-       this.invoiceTotalGrossCodingSystem = invoiceTotalGrossCodingSystem;
-       this.invoicePaymentTerms = invoicePaymentTerms;
-       this.invoiceNoteCodingUserSelected = invoiceNoteCodingUserSelected;
-       this.invoiceNoteCodingCode = invoiceNoteCodingCode;
-       this.invoiceNoteCodingDisplay = invoiceNoteCodingDisplay;
-       this.invoiceNoteCodingVersion = invoiceNoteCodingVersion;
-       this.invoiceNoteCodingSystem = invoiceNoteCodingSystem;
+    public Invoice(String invoiceIdentifierIdentifierUse, String invcDntfrDntfrTpCcCSstm, String invcDntfrDntfrTpCcCVrsn, String invcDntfrDntfrTpCcCCde, String invcDntfrDntfrTpCcCDsplay, String invcDntfrDntfrTpCcCSrSlctd, String invcDntfrDntfrTpCcTxt, String invcDntfrDntfrPrdPrdStrt, String invcDntfrDntfrPrdPrdNd, String invcDntfrDntfrSsgnr, String invcDntfrDntfrVlue, String invcDntfrDntfrSstm, String invoiceStatusCode, String invoiceCancelledReasonString, String invoiceTypeCcCodingCSystem, String invoiceTypeCcCodingCVersion, String invoiceTypeCcCodingCCode, String invoiceTypeCcCodingCDisplay, String invcTpCcCdngCSrSlctd, String invoiceTypeCcText, String invoiceSubjectReference, String invoiceRecipientReference, String invoiceDateDateTime, String invcPrtcpntRlCcCdngCSstm, String invcPrtcpntRlCcCdngCVrsn, String invcPrtcpntRlCcCdngCCde, String invcPrtcpntRlCcCdngCDsplay, String invcPrtcpntRlCcCdngCSrSlctd, String invoiceParticipantRoleCcText, String invcPrtcpntCtrRfrnce, String invoiceIssuerReference, String invoiceAccountReference, String invcLntmSqncPstvnt, String invcLntmChrgtmRfrncRfrnce, String invcLntmChrgtmCdblcncptCcCdngCSstm, String invcLntmChrgtmCdblcncptCcCdngCVrsn, String invcLntmChrgtmCdblcncptCcCdngCCde, String invcLntmChrgtmCdblcncptCcCdngCDsplay, String invcLntmChrgtmCdblcncptCcCdngCSrSlctd, String invcLntmChrgtmCdblcncptCcTxt, String invcLntmPrcCmpnntTpCde, String invcLntmPrcCmpnntCdCcCdngCSstm, String invcLntmPrcCmpnntCdCcCdngCVrsn, String invcLntmPrcCmpnntCdCcCdngCCde, String invcLntmPrcCmpnntCdCcCdngCDsplay, String invcLntmPrcCmpnntCdCcCdngCSrSlctd, String invcLntmPrcCmpnntCdCcTxt, String invcLntmPrcCmpnntFctrDcml, String invcLntmPrcCmpnntMntMnCrrncy, String invcLntmPrcCmpnntMntMnVlue, String invcTtlPrcCmpnntPrcCmpnnt, String invoiceTotalNetMoneyCurrency, String invoiceTotalNetMoneyValue, String invoiceTotalGrossMoneyCurrency, String invoiceTotalGrossMoneyValue, String invoicePaymentTermsMarkdown, String invoiceNoteAnnotationTime, String invoiceNoteAnnotationText, String invcNtNnttnThrRfrnce, String invcNtNnttnThrStrng) {
+       this.invoiceIdentifierIdentifierUse = invoiceIdentifierIdentifierUse;
+       this.invcDntfrDntfrTpCcCSstm = invcDntfrDntfrTpCcCSstm;
+       this.invcDntfrDntfrTpCcCVrsn = invcDntfrDntfrTpCcCVrsn;
+       this.invcDntfrDntfrTpCcCCde = invcDntfrDntfrTpCcCCde;
+       this.invcDntfrDntfrTpCcCDsplay = invcDntfrDntfrTpCcCDsplay;
+       this.invcDntfrDntfrTpCcCSrSlctd = invcDntfrDntfrTpCcCSrSlctd;
+       this.invcDntfrDntfrTpCcTxt = invcDntfrDntfrTpCcTxt;
+       this.invcDntfrDntfrPrdPrdStrt = invcDntfrDntfrPrdPrdStrt;
+       this.invcDntfrDntfrPrdPrdNd = invcDntfrDntfrPrdPrdNd;
+       this.invcDntfrDntfrSsgnr = invcDntfrDntfrSsgnr;
+       this.invcDntfrDntfrVlue = invcDntfrDntfrVlue;
+       this.invcDntfrDntfrSstm = invcDntfrDntfrSstm;
+       this.invoiceStatusCode = invoiceStatusCode;
+       this.invoiceCancelledReasonString = invoiceCancelledReasonString;
+       this.invoiceTypeCcCodingCSystem = invoiceTypeCcCodingCSystem;
+       this.invoiceTypeCcCodingCVersion = invoiceTypeCcCodingCVersion;
+       this.invoiceTypeCcCodingCCode = invoiceTypeCcCodingCCode;
+       this.invoiceTypeCcCodingCDisplay = invoiceTypeCcCodingCDisplay;
+       this.invcTpCcCdngCSrSlctd = invcTpCcCdngCSrSlctd;
+       this.invoiceTypeCcText = invoiceTypeCcText;
+       this.invoiceSubjectReference = invoiceSubjectReference;
+       this.invoiceRecipientReference = invoiceRecipientReference;
+       this.invoiceDateDateTime = invoiceDateDateTime;
+       this.invcPrtcpntRlCcCdngCSstm = invcPrtcpntRlCcCdngCSstm;
+       this.invcPrtcpntRlCcCdngCVrsn = invcPrtcpntRlCcCdngCVrsn;
+       this.invcPrtcpntRlCcCdngCCde = invcPrtcpntRlCcCdngCCde;
+       this.invcPrtcpntRlCcCdngCDsplay = invcPrtcpntRlCcCdngCDsplay;
+       this.invcPrtcpntRlCcCdngCSrSlctd = invcPrtcpntRlCcCdngCSrSlctd;
+       this.invoiceParticipantRoleCcText = invoiceParticipantRoleCcText;
+       this.invcPrtcpntCtrRfrnce = invcPrtcpntCtrRfrnce;
+       this.invoiceIssuerReference = invoiceIssuerReference;
+       this.invoiceAccountReference = invoiceAccountReference;
+       this.invcLntmSqncPstvnt = invcLntmSqncPstvnt;
+       this.invcLntmChrgtmRfrncRfrnce = invcLntmChrgtmRfrncRfrnce;
+       this.invcLntmChrgtmCdblcncptCcCdngCSstm = invcLntmChrgtmCdblcncptCcCdngCSstm;
+       this.invcLntmChrgtmCdblcncptCcCdngCVrsn = invcLntmChrgtmCdblcncptCcCdngCVrsn;
+       this.invcLntmChrgtmCdblcncptCcCdngCCde = invcLntmChrgtmCdblcncptCcCdngCCde;
+       this.invcLntmChrgtmCdblcncptCcCdngCDsplay = invcLntmChrgtmCdblcncptCcCdngCDsplay;
+       this.invcLntmChrgtmCdblcncptCcCdngCSrSlctd = invcLntmChrgtmCdblcncptCcCdngCSrSlctd;
+       this.invcLntmChrgtmCdblcncptCcTxt = invcLntmChrgtmCdblcncptCcTxt;
+       this.invcLntmPrcCmpnntTpCde = invcLntmPrcCmpnntTpCde;
+       this.invcLntmPrcCmpnntCdCcCdngCSstm = invcLntmPrcCmpnntCdCcCdngCSstm;
+       this.invcLntmPrcCmpnntCdCcCdngCVrsn = invcLntmPrcCmpnntCdCcCdngCVrsn;
+       this.invcLntmPrcCmpnntCdCcCdngCCde = invcLntmPrcCmpnntCdCcCdngCCde;
+       this.invcLntmPrcCmpnntCdCcCdngCDsplay = invcLntmPrcCmpnntCdCcCdngCDsplay;
+       this.invcLntmPrcCmpnntCdCcCdngCSrSlctd = invcLntmPrcCmpnntCdCcCdngCSrSlctd;
+       this.invcLntmPrcCmpnntCdCcTxt = invcLntmPrcCmpnntCdCcTxt;
+       this.invcLntmPrcCmpnntFctrDcml = invcLntmPrcCmpnntFctrDcml;
+       this.invcLntmPrcCmpnntMntMnCrrncy = invcLntmPrcCmpnntMntMnCrrncy;
+       this.invcLntmPrcCmpnntMntMnVlue = invcLntmPrcCmpnntMntMnVlue;
+       this.invcTtlPrcCmpnntPrcCmpnnt = invcTtlPrcCmpnntPrcCmpnnt;
+       this.invoiceTotalNetMoneyCurrency = invoiceTotalNetMoneyCurrency;
+       this.invoiceTotalNetMoneyValue = invoiceTotalNetMoneyValue;
+       this.invoiceTotalGrossMoneyCurrency = invoiceTotalGrossMoneyCurrency;
+       this.invoiceTotalGrossMoneyValue = invoiceTotalGrossMoneyValue;
+       this.invoicePaymentTermsMarkdown = invoicePaymentTermsMarkdown;
+       this.invoiceNoteAnnotationTime = invoiceNoteAnnotationTime;
+       this.invoiceNoteAnnotationText = invoiceNoteAnnotationText;
+       this.invcNtNnttnThrRfrnce = invcNtNnttnThrRfrnce;
+       this.invcNtNnttnThrStrng = invcNtNnttnThrStrng;
     }
    
-    public String getInvoiceIdentifierCodingCode() {
-        return this.invoiceIdentifierCodingCode;
-    }
-    
-    public void setInvoiceIdentifierCodingCode(String invoiceIdentifierCodingCode) {
-        this.invoiceIdentifierCodingCode = invoiceIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getInvcDntfrCdngSrSlctd() {
-        return this.invcDntfrCdngSrSlctd;
-    }
-    
-    public void setInvcDntfrCdngSrSlctd(String invcDntfrCdngSrSlctd) {
-        this.invcDntfrCdngSrSlctd = invcDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvoiceIdentifierCodingDisplay() {
-        return this.invoiceIdentifierCodingDisplay;
-    }
-    
-    public void setInvoiceIdentifierCodingDisplay(String invoiceIdentifierCodingDisplay) {
-        this.invoiceIdentifierCodingDisplay = invoiceIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getInvoiceIdentifierCodingVersion() {
-        return this.invoiceIdentifierCodingVersion;
-    }
-    
-    public void setInvoiceIdentifierCodingVersion(String invoiceIdentifierCodingVersion) {
-        this.invoiceIdentifierCodingVersion = invoiceIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getInvoiceIdentifierCodingSystem() {
-        return this.invoiceIdentifierCodingSystem;
-    }
-    
-    public void setInvoiceIdentifierCodingSystem(String invoiceIdentifierCodingSystem) {
-        this.invoiceIdentifierCodingSystem = invoiceIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getInvoiceStatus() {
-        return this.invoiceStatus;
-    }
-    
-    public void setInvoiceStatus(String invoiceStatus) {
-        this.invoiceStatus = invoiceStatus;
-    }
-    
-    
-    
-    public String getInvoiceCancelledReason() {
-        return this.invoiceCancelledReason;
-    }
-    
-    public void setInvoiceCancelledReason(String invoiceCancelledReason) {
-        this.invoiceCancelledReason = invoiceCancelledReason;
-    }
-    
-    
-    
-    public String getInvoiceTypeCodingUserSelected() {
-        return this.invoiceTypeCodingUserSelected;
-    }
-    
-    public void setInvoiceTypeCodingUserSelected(String invoiceTypeCodingUserSelected) {
-        this.invoiceTypeCodingUserSelected = invoiceTypeCodingUserSelected;
-    }
-    
-    
-    
-    public String getInvoiceTypeCodingCode() {
-        return this.invoiceTypeCodingCode;
-    }
-    
-    public void setInvoiceTypeCodingCode(String invoiceTypeCodingCode) {
-        this.invoiceTypeCodingCode = invoiceTypeCodingCode;
-    }
-    
-    
-    
-    public String getInvoiceTypeCodingDisplay() {
-        return this.invoiceTypeCodingDisplay;
-    }
-    
-    public void setInvoiceTypeCodingDisplay(String invoiceTypeCodingDisplay) {
-        this.invoiceTypeCodingDisplay = invoiceTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getInvoiceTypeCodingVersion() {
-        return this.invoiceTypeCodingVersion;
-    }
-    
-    public void setInvoiceTypeCodingVersion(String invoiceTypeCodingVersion) {
-        this.invoiceTypeCodingVersion = invoiceTypeCodingVersion;
-    }
-    
-    
-    
-    public String getInvoiceTypeCodingSystem() {
-        return this.invoiceTypeCodingSystem;
-    }
-    
-    public void setInvoiceTypeCodingSystem(String invoiceTypeCodingSystem) {
-        this.invoiceTypeCodingSystem = invoiceTypeCodingSystem;
-    }
-    
-    
-    
-    public String getInvoiceSubject() {
-        return this.invoiceSubject;
-    }
-    
-    public void setInvoiceSubject(String invoiceSubject) {
-        this.invoiceSubject = invoiceSubject;
-    }
-    
-    
-    
-    public String getInvoiceRecipient() {
-        return this.invoiceRecipient;
-    }
-    
-    public void setInvoiceRecipient(String invoiceRecipient) {
-        this.invoiceRecipient = invoiceRecipient;
-    }
-    
-    
-    
-    public String getInvoiceDate() {
-        return this.invoiceDate;
-    }
-    
-    public void setInvoiceDate(String invoiceDate) {
-        this.invoiceDate = invoiceDate;
-    }
-    
-    
-    
-    public String getInvoiceParticipant() {
-        return this.invoiceParticipant;
-    }
-    
-    public void setInvoiceParticipant(String invoiceParticipant) {
-        this.invoiceParticipant = invoiceParticipant;
-    }
-    
-    
-    
-    public String getInvcPrtcpntRlCdngSrSlctd() {
-        return this.invcPrtcpntRlCdngSrSlctd;
-    }
-    
-    public void setInvcPrtcpntRlCdngSrSlctd(String invcPrtcpntRlCdngSrSlctd) {
-        this.invcPrtcpntRlCdngSrSlctd = invcPrtcpntRlCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvcPrtcpntRlCdngCde() {
-        return this.invcPrtcpntRlCdngCde;
-    }
-    
-    public void setInvcPrtcpntRlCdngCde(String invcPrtcpntRlCdngCde) {
-        this.invcPrtcpntRlCdngCde = invcPrtcpntRlCdngCde;
-    }
-    
-    
-    
-    public String getInvcPrtcpntRlCdngDsplay() {
-        return this.invcPrtcpntRlCdngDsplay;
-    }
-    
-    public void setInvcPrtcpntRlCdngDsplay(String invcPrtcpntRlCdngDsplay) {
-        this.invcPrtcpntRlCdngDsplay = invcPrtcpntRlCdngDsplay;
-    }
-    
-    
-    
-    public String getInvcPrtcpntRlCdngVrsn() {
-        return this.invcPrtcpntRlCdngVrsn;
-    }
-    
-    public void setInvcPrtcpntRlCdngVrsn(String invcPrtcpntRlCdngVrsn) {
-        this.invcPrtcpntRlCdngVrsn = invcPrtcpntRlCdngVrsn;
-    }
-    
-    
-    
-    public String getInvcPrtcpntRlCdngSstm() {
-        return this.invcPrtcpntRlCdngSstm;
-    }
-    
-    public void setInvcPrtcpntRlCdngSstm(String invcPrtcpntRlCdngSstm) {
-        this.invcPrtcpntRlCdngSstm = invcPrtcpntRlCdngSstm;
-    }
-    
-    
-    
-    public String getInvoiceParticipantActor() {
-        return this.invoiceParticipantActor;
-    }
-    
-    public void setInvoiceParticipantActor(String invoiceParticipantActor) {
-        this.invoiceParticipantActor = invoiceParticipantActor;
-    }
-    
-    
-    
-    public String getInvoiceIssuer() {
-        return this.invoiceIssuer;
-    }
-    
-    public void setInvoiceIssuer(String invoiceIssuer) {
-        this.invoiceIssuer = invoiceIssuer;
-    }
-    
-    
-    
-    public String getInvoiceAccount() {
-        return this.invoiceAccount;
-    }
-    
-    public void setInvoiceAccount(String invoiceAccount) {
-        this.invoiceAccount = invoiceAccount;
-    }
-    
-    
-    
-    public String getInvoiceLineItem() {
-        return this.invoiceLineItem;
-    }
-    
-    public void setInvoiceLineItem(String invoiceLineItem) {
-        this.invoiceLineItem = invoiceLineItem;
-    }
-    
-    
-    
-    public String getInvoiceLineItemSequence() {
-        return this.invoiceLineItemSequence;
-    }
-    
-    public void setInvoiceLineItemSequence(String invoiceLineItemSequence) {
-        this.invoiceLineItemSequence = invoiceLineItemSequence;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmRfrnce() {
-        return this.invcLntmChrgtmRfrnce;
-    }
-    
-    public void setInvcLntmChrgtmRfrnce(String invcLntmChrgtmRfrnce) {
-        this.invcLntmChrgtmRfrnce = invcLntmChrgtmRfrnce;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmcdblcptCdngSrSlctd() {
-        return this.invcLntmChrgtmcdblcptCdngSrSlctd;
-    }
-    
-    public void setInvcLntmChrgtmcdblcptCdngSrSlctd(String invcLntmChrgtmcdblcptCdngSrSlctd) {
-        this.invcLntmChrgtmcdblcptCdngSrSlctd = invcLntmChrgtmcdblcptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmcdblcptCdngCde() {
-        return this.invcLntmChrgtmcdblcptCdngCde;
-    }
-    
-    public void setInvcLntmChrgtmcdblcptCdngCde(String invcLntmChrgtmcdblcptCdngCde) {
-        this.invcLntmChrgtmcdblcptCdngCde = invcLntmChrgtmcdblcptCdngCde;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmcdblcptCdngDsplay() {
-        return this.invcLntmChrgtmcdblcptCdngDsplay;
-    }
-    
-    public void setInvcLntmChrgtmcdblcptCdngDsplay(String invcLntmChrgtmcdblcptCdngDsplay) {
-        this.invcLntmChrgtmcdblcptCdngDsplay = invcLntmChrgtmcdblcptCdngDsplay;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmcdblcptCdngVrsn() {
-        return this.invcLntmChrgtmcdblcptCdngVrsn;
-    }
-    
-    public void setInvcLntmChrgtmcdblcptCdngVrsn(String invcLntmChrgtmcdblcptCdngVrsn) {
-        this.invcLntmChrgtmcdblcptCdngVrsn = invcLntmChrgtmcdblcptCdngVrsn;
-    }
-    
-    
-    
-    public String getInvcLntmChrgtmcdblcptCdngSstm() {
-        return this.invcLntmChrgtmcdblcptCdngSstm;
-    }
-    
-    public void setInvcLntmChrgtmcdblcptCdngSstm(String invcLntmChrgtmcdblcptCdngSstm) {
-        this.invcLntmChrgtmcdblcptCdngSstm = invcLntmChrgtmcdblcptCdngSstm;
-    }
-    
-    
-    
-    public String getInvoiceLineItemPriceComponent() {
-        return this.invoiceLineItemPriceComponent;
-    }
-    
-    public void setInvoiceLineItemPriceComponent(String invoiceLineItemPriceComponent) {
-        this.invoiceLineItemPriceComponent = invoiceLineItemPriceComponent;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntTpe() {
-        return this.invcLntmPrcCmpnntTpe;
-    }
-    
-    public void setInvcLntmPrcCmpnntTpe(String invcLntmPrcCmpnntTpe) {
-        this.invcLntmPrcCmpnntTpe = invcLntmPrcCmpnntTpe;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntCdCdngSrSlctd() {
-        return this.invcLntmPrcCmpnntCdCdngSrSlctd;
-    }
-    
-    public void setInvcLntmPrcCmpnntCdCdngSrSlctd(String invcLntmPrcCmpnntCdCdngSrSlctd) {
-        this.invcLntmPrcCmpnntCdCdngSrSlctd = invcLntmPrcCmpnntCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntCdCdngCde() {
-        return this.invcLntmPrcCmpnntCdCdngCde;
-    }
-    
-    public void setInvcLntmPrcCmpnntCdCdngCde(String invcLntmPrcCmpnntCdCdngCde) {
-        this.invcLntmPrcCmpnntCdCdngCde = invcLntmPrcCmpnntCdCdngCde;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntCdCdngDsplay() {
-        return this.invcLntmPrcCmpnntCdCdngDsplay;
-    }
-    
-    public void setInvcLntmPrcCmpnntCdCdngDsplay(String invcLntmPrcCmpnntCdCdngDsplay) {
-        this.invcLntmPrcCmpnntCdCdngDsplay = invcLntmPrcCmpnntCdCdngDsplay;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntCdCdngVrsn() {
-        return this.invcLntmPrcCmpnntCdCdngVrsn;
-    }
-    
-    public void setInvcLntmPrcCmpnntCdCdngVrsn(String invcLntmPrcCmpnntCdCdngVrsn) {
-        this.invcLntmPrcCmpnntCdCdngVrsn = invcLntmPrcCmpnntCdCdngVrsn;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntCdCdngSstm() {
-        return this.invcLntmPrcCmpnntCdCdngSstm;
-    }
-    
-    public void setInvcLntmPrcCmpnntCdCdngSstm(String invcLntmPrcCmpnntCdCdngSstm) {
-        this.invcLntmPrcCmpnntCdCdngSstm = invcLntmPrcCmpnntCdCdngSstm;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntFctr() {
-        return this.invcLntmPrcCmpnntFctr;
-    }
-    
-    public void setInvcLntmPrcCmpnntFctr(String invcLntmPrcCmpnntFctr) {
-        this.invcLntmPrcCmpnntFctr = invcLntmPrcCmpnntFctr;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntMntCdngSrSlctd() {
-        return this.invcLntmPrcCmpnntMntCdngSrSlctd;
-    }
-    
-    public void setInvcLntmPrcCmpnntMntCdngSrSlctd(String invcLntmPrcCmpnntMntCdngSrSlctd) {
-        this.invcLntmPrcCmpnntMntCdngSrSlctd = invcLntmPrcCmpnntMntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntMntCdngCde() {
-        return this.invcLntmPrcCmpnntMntCdngCde;
-    }
-    
-    public void setInvcLntmPrcCmpnntMntCdngCde(String invcLntmPrcCmpnntMntCdngCde) {
-        this.invcLntmPrcCmpnntMntCdngCde = invcLntmPrcCmpnntMntCdngCde;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntMntCdngDsplay() {
-        return this.invcLntmPrcCmpnntMntCdngDsplay;
-    }
-    
-    public void setInvcLntmPrcCmpnntMntCdngDsplay(String invcLntmPrcCmpnntMntCdngDsplay) {
-        this.invcLntmPrcCmpnntMntCdngDsplay = invcLntmPrcCmpnntMntCdngDsplay;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntMntCdngVrsn() {
-        return this.invcLntmPrcCmpnntMntCdngVrsn;
-    }
-    
-    public void setInvcLntmPrcCmpnntMntCdngVrsn(String invcLntmPrcCmpnntMntCdngVrsn) {
-        this.invcLntmPrcCmpnntMntCdngVrsn = invcLntmPrcCmpnntMntCdngVrsn;
-    }
-    
-    
-    
-    public String getInvcLntmPrcCmpnntMntCdngSstm() {
-        return this.invcLntmPrcCmpnntMntCdngSstm;
-    }
-    
-    public void setInvcLntmPrcCmpnntMntCdngSstm(String invcLntmPrcCmpnntMntCdngSstm) {
-        this.invcLntmPrcCmpnntMntCdngSstm = invcLntmPrcCmpnntMntCdngSstm;
-    }
-    
-    
-    
-    public String getInvoiceTotalPriceComponent() {
-        return this.invoiceTotalPriceComponent;
-    }
-    
-    public void setInvoiceTotalPriceComponent(String invoiceTotalPriceComponent) {
-        this.invoiceTotalPriceComponent = invoiceTotalPriceComponent;
-    }
-    
-    
-    
-    public String getInvcTtlNtCdngSrSlctd() {
-        return this.invcTtlNtCdngSrSlctd;
-    }
-    
-    public void setInvcTtlNtCdngSrSlctd(String invcTtlNtCdngSrSlctd) {
-        this.invcTtlNtCdngSrSlctd = invcTtlNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvoiceTotalNetCodingCode() {
-        return this.invoiceTotalNetCodingCode;
-    }
-    
-    public void setInvoiceTotalNetCodingCode(String invoiceTotalNetCodingCode) {
-        this.invoiceTotalNetCodingCode = invoiceTotalNetCodingCode;
-    }
-    
-    
-    
-    public String getInvoiceTotalNetCodingDisplay() {
-        return this.invoiceTotalNetCodingDisplay;
-    }
-    
-    public void setInvoiceTotalNetCodingDisplay(String invoiceTotalNetCodingDisplay) {
-        this.invoiceTotalNetCodingDisplay = invoiceTotalNetCodingDisplay;
-    }
-    
-    
-    
-    public String getInvoiceTotalNetCodingVersion() {
-        return this.invoiceTotalNetCodingVersion;
-    }
-    
-    public void setInvoiceTotalNetCodingVersion(String invoiceTotalNetCodingVersion) {
-        this.invoiceTotalNetCodingVersion = invoiceTotalNetCodingVersion;
-    }
-    
-    
-    
-    public String getInvoiceTotalNetCodingSystem() {
-        return this.invoiceTotalNetCodingSystem;
-    }
-    
-    public void setInvoiceTotalNetCodingSystem(String invoiceTotalNetCodingSystem) {
-        this.invoiceTotalNetCodingSystem = invoiceTotalNetCodingSystem;
-    }
-    
-    
-    
-    public String getInvcTtlGrssCdngSrSlctd() {
-        return this.invcTtlGrssCdngSrSlctd;
-    }
-    
-    public void setInvcTtlGrssCdngSrSlctd(String invcTtlGrssCdngSrSlctd) {
-        this.invcTtlGrssCdngSrSlctd = invcTtlGrssCdngSrSlctd;
-    }
-    
-    
-    
-    public String getInvoiceTotalGrossCodingCode() {
-        return this.invoiceTotalGrossCodingCode;
-    }
-    
-    public void setInvoiceTotalGrossCodingCode(String invoiceTotalGrossCodingCode) {
-        this.invoiceTotalGrossCodingCode = invoiceTotalGrossCodingCode;
-    }
-    
-    
-    
-    public String getInvoiceTotalGrossCodingDisplay() {
-        return this.invoiceTotalGrossCodingDisplay;
-    }
-    
-    public void setInvoiceTotalGrossCodingDisplay(String invoiceTotalGrossCodingDisplay) {
-        this.invoiceTotalGrossCodingDisplay = invoiceTotalGrossCodingDisplay;
-    }
-    
-    
-    
-    public String getInvoiceTotalGrossCodingVersion() {
-        return this.invoiceTotalGrossCodingVersion;
-    }
-    
-    public void setInvoiceTotalGrossCodingVersion(String invoiceTotalGrossCodingVersion) {
-        this.invoiceTotalGrossCodingVersion = invoiceTotalGrossCodingVersion;
-    }
-    
-    
-    
-    public String getInvoiceTotalGrossCodingSystem() {
-        return this.invoiceTotalGrossCodingSystem;
-    }
-    
-    public void setInvoiceTotalGrossCodingSystem(String invoiceTotalGrossCodingSystem) {
-        this.invoiceTotalGrossCodingSystem = invoiceTotalGrossCodingSystem;
-    }
-    
-    
-    
-    public String getInvoicePaymentTerms() {
-        return this.invoicePaymentTerms;
-    }
-    
-    public void setInvoicePaymentTerms(String invoicePaymentTerms) {
-        this.invoicePaymentTerms = invoicePaymentTerms;
-    }
-    
-    
-    
-    public String getInvoiceNoteCodingUserSelected() {
-        return this.invoiceNoteCodingUserSelected;
-    }
-    
-    public void setInvoiceNoteCodingUserSelected(String invoiceNoteCodingUserSelected) {
-        this.invoiceNoteCodingUserSelected = invoiceNoteCodingUserSelected;
-    }
-    
-    
-    
-    public String getInvoiceNoteCodingCode() {
-        return this.invoiceNoteCodingCode;
-    }
-    
-    public void setInvoiceNoteCodingCode(String invoiceNoteCodingCode) {
-        this.invoiceNoteCodingCode = invoiceNoteCodingCode;
-    }
-    
-    
-    
-    public String getInvoiceNoteCodingDisplay() {
-        return this.invoiceNoteCodingDisplay;
-    }
-    
-    public void setInvoiceNoteCodingDisplay(String invoiceNoteCodingDisplay) {
-        this.invoiceNoteCodingDisplay = invoiceNoteCodingDisplay;
-    }
-    
-    
-    
-    public String getInvoiceNoteCodingVersion() {
-        return this.invoiceNoteCodingVersion;
-    }
-    
-    public void setInvoiceNoteCodingVersion(String invoiceNoteCodingVersion) {
-        this.invoiceNoteCodingVersion = invoiceNoteCodingVersion;
-    }
-    
-    
-    
-    public String getInvoiceNoteCodingSystem() {
-        return this.invoiceNoteCodingSystem;
-    }
-    
-    public void setInvoiceNoteCodingSystem(String invoiceNoteCodingSystem) {
-        this.invoiceNoteCodingSystem = invoiceNoteCodingSystem;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getInvoiceIdentifierIdentifierUse()
+    {
+        return this.invoiceIdentifierIdentifierUse;
+    }
+    
+    public void setInvoiceIdentifierIdentifierUse
+        (String invoiceIdentifierIdentifierUse) 
+        {
+      this.invoiceIdentifierIdentifierUse = invoiceIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcCSstm()
+    {
+        return this.invcDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setInvcDntfrDntfrTpCcCSstm
+        (String invcDntfrDntfrTpCcCSstm) 
+        {
+      this.invcDntfrDntfrTpCcCSstm = invcDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcCVrsn()
+    {
+        return this.invcDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setInvcDntfrDntfrTpCcCVrsn
+        (String invcDntfrDntfrTpCcCVrsn) 
+        {
+      this.invcDntfrDntfrTpCcCVrsn = invcDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcCCde()
+    {
+        return this.invcDntfrDntfrTpCcCCde;
+    }
+    
+    public void setInvcDntfrDntfrTpCcCCde
+        (String invcDntfrDntfrTpCcCCde) 
+        {
+      this.invcDntfrDntfrTpCcCCde = invcDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcCDsplay()
+    {
+        return this.invcDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setInvcDntfrDntfrTpCcCDsplay
+        (String invcDntfrDntfrTpCcCDsplay) 
+        {
+      this.invcDntfrDntfrTpCcCDsplay = invcDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.invcDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setInvcDntfrDntfrTpCcCSrSlctd
+        (String invcDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.invcDntfrDntfrTpCcCSrSlctd = invcDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getInvcDntfrDntfrTpCcTxt()
+    {
+        return this.invcDntfrDntfrTpCcTxt;
+    }
+    
+    public void setInvcDntfrDntfrTpCcTxt
+        (String invcDntfrDntfrTpCcTxt) 
+        {
+      this.invcDntfrDntfrTpCcTxt = invcDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getInvcDntfrDntfrPrdPrdStrt()
+    {
+        return this.invcDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setInvcDntfrDntfrPrdPrdStrt
+        (String invcDntfrDntfrPrdPrdStrt) 
+        {
+      this.invcDntfrDntfrPrdPrdStrt = invcDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getInvcDntfrDntfrPrdPrdNd()
+    {
+        return this.invcDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setInvcDntfrDntfrPrdPrdNd
+        (String invcDntfrDntfrPrdPrdNd) 
+        {
+      this.invcDntfrDntfrPrdPrdNd = invcDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getInvcDntfrDntfrSsgnr()
+    {
+        return this.invcDntfrDntfrSsgnr;
+    }
+    
+    public void setInvcDntfrDntfrSsgnr
+        (String invcDntfrDntfrSsgnr) 
+        {
+      this.invcDntfrDntfrSsgnr = invcDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getInvcDntfrDntfrVlue()
+    {
+        return this.invcDntfrDntfrVlue;
+    }
+    
+    public void setInvcDntfrDntfrVlue
+        (String invcDntfrDntfrVlue) 
+        {
+      this.invcDntfrDntfrVlue = invcDntfrDntfrVlue;
+}
+    public 
+    String 
+    getInvcDntfrDntfrSstm()
+    {
+        return this.invcDntfrDntfrSstm;
+    }
+    
+    public void setInvcDntfrDntfrSstm
+        (String invcDntfrDntfrSstm) 
+        {
+      this.invcDntfrDntfrSstm = invcDntfrDntfrSstm;
+}
+    public 
+    String 
+    getInvoiceStatusCode()
+    {
+        return this.invoiceStatusCode;
+    }
+    
+    public void setInvoiceStatusCode
+        (String invoiceStatusCode) 
+        {
+      this.invoiceStatusCode = invoiceStatusCode;
+}
+    public 
+    String 
+    getInvoiceCancelledReasonString()
+    {
+        return this.invoiceCancelledReasonString;
+    }
+    
+    public void setInvoiceCancelledReasonString
+        (String invoiceCancelledReasonString) 
+        {
+      this.invoiceCancelledReasonString = invoiceCancelledReasonString;
+}
+    public 
+    String 
+    getInvoiceTypeCcCodingCSystem()
+    {
+        return this.invoiceTypeCcCodingCSystem;
+    }
+    
+    public void setInvoiceTypeCcCodingCSystem
+        (String invoiceTypeCcCodingCSystem) 
+        {
+      this.invoiceTypeCcCodingCSystem = invoiceTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getInvoiceTypeCcCodingCVersion()
+    {
+        return this.invoiceTypeCcCodingCVersion;
+    }
+    
+    public void setInvoiceTypeCcCodingCVersion
+        (String invoiceTypeCcCodingCVersion) 
+        {
+      this.invoiceTypeCcCodingCVersion = invoiceTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getInvoiceTypeCcCodingCCode()
+    {
+        return this.invoiceTypeCcCodingCCode;
+    }
+    
+    public void setInvoiceTypeCcCodingCCode
+        (String invoiceTypeCcCodingCCode) 
+        {
+      this.invoiceTypeCcCodingCCode = invoiceTypeCcCodingCCode;
+}
+    public 
+    String 
+    getInvoiceTypeCcCodingCDisplay()
+    {
+        return this.invoiceTypeCcCodingCDisplay;
+    }
+    
+    public void setInvoiceTypeCcCodingCDisplay
+        (String invoiceTypeCcCodingCDisplay) 
+        {
+      this.invoiceTypeCcCodingCDisplay = invoiceTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getInvcTpCcCdngCSrSlctd()
+    {
+        return this.invcTpCcCdngCSrSlctd;
+    }
+    
+    public void setInvcTpCcCdngCSrSlctd
+        (String invcTpCcCdngCSrSlctd) 
+        {
+      this.invcTpCcCdngCSrSlctd = invcTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getInvoiceTypeCcText()
+    {
+        return this.invoiceTypeCcText;
+    }
+    
+    public void setInvoiceTypeCcText
+        (String invoiceTypeCcText) 
+        {
+      this.invoiceTypeCcText = invoiceTypeCcText;
+}
+    public 
+    String 
+    getInvoiceSubjectReference()
+    {
+        return this.invoiceSubjectReference;
+    }
+    
+    public void setInvoiceSubjectReference
+        (String invoiceSubjectReference) 
+        {
+      this.invoiceSubjectReference = invoiceSubjectReference;
+}
+    public 
+    String 
+    getInvoiceRecipientReference()
+    {
+        return this.invoiceRecipientReference;
+    }
+    
+    public void setInvoiceRecipientReference
+        (String invoiceRecipientReference) 
+        {
+      this.invoiceRecipientReference = invoiceRecipientReference;
+}
+    public 
+    String 
+    getInvoiceDateDateTime()
+    {
+        return this.invoiceDateDateTime;
+    }
+    
+    public void setInvoiceDateDateTime
+        (String invoiceDateDateTime) 
+        {
+      this.invoiceDateDateTime = invoiceDateDateTime;
+}
+    public 
+    String 
+    getInvcPrtcpntRlCcCdngCSstm()
+    {
+        return this.invcPrtcpntRlCcCdngCSstm;
+    }
+    
+    public void setInvcPrtcpntRlCcCdngCSstm
+        (String invcPrtcpntRlCcCdngCSstm) 
+        {
+      this.invcPrtcpntRlCcCdngCSstm = invcPrtcpntRlCcCdngCSstm;
+}
+    public 
+    String 
+    getInvcPrtcpntRlCcCdngCVrsn()
+    {
+        return this.invcPrtcpntRlCcCdngCVrsn;
+    }
+    
+    public void setInvcPrtcpntRlCcCdngCVrsn
+        (String invcPrtcpntRlCcCdngCVrsn) 
+        {
+      this.invcPrtcpntRlCcCdngCVrsn = invcPrtcpntRlCcCdngCVrsn;
+}
+    public 
+    String 
+    getInvcPrtcpntRlCcCdngCCde()
+    {
+        return this.invcPrtcpntRlCcCdngCCde;
+    }
+    
+    public void setInvcPrtcpntRlCcCdngCCde
+        (String invcPrtcpntRlCcCdngCCde) 
+        {
+      this.invcPrtcpntRlCcCdngCCde = invcPrtcpntRlCcCdngCCde;
+}
+    public 
+    String 
+    getInvcPrtcpntRlCcCdngCDsplay()
+    {
+        return this.invcPrtcpntRlCcCdngCDsplay;
+    }
+    
+    public void setInvcPrtcpntRlCcCdngCDsplay
+        (String invcPrtcpntRlCcCdngCDsplay) 
+        {
+      this.invcPrtcpntRlCcCdngCDsplay = invcPrtcpntRlCcCdngCDsplay;
+}
+    public 
+    String 
+    getInvcPrtcpntRlCcCdngCSrSlctd()
+    {
+        return this.invcPrtcpntRlCcCdngCSrSlctd;
+    }
+    
+    public void setInvcPrtcpntRlCcCdngCSrSlctd
+        (String invcPrtcpntRlCcCdngCSrSlctd) 
+        {
+      this.invcPrtcpntRlCcCdngCSrSlctd = invcPrtcpntRlCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getInvoiceParticipantRoleCcText()
+    {
+        return this.invoiceParticipantRoleCcText;
+    }
+    
+    public void setInvoiceParticipantRoleCcText
+        (String invoiceParticipantRoleCcText) 
+        {
+      this.invoiceParticipantRoleCcText = invoiceParticipantRoleCcText;
+}
+    public 
+    String 
+    getInvcPrtcpntCtrRfrnce()
+    {
+        return this.invcPrtcpntCtrRfrnce;
+    }
+    
+    public void setInvcPrtcpntCtrRfrnce
+        (String invcPrtcpntCtrRfrnce) 
+        {
+      this.invcPrtcpntCtrRfrnce = invcPrtcpntCtrRfrnce;
+}
+    public 
+    String 
+    getInvoiceIssuerReference()
+    {
+        return this.invoiceIssuerReference;
+    }
+    
+    public void setInvoiceIssuerReference
+        (String invoiceIssuerReference) 
+        {
+      this.invoiceIssuerReference = invoiceIssuerReference;
+}
+    public 
+    String 
+    getInvoiceAccountReference()
+    {
+        return this.invoiceAccountReference;
+    }
+    
+    public void setInvoiceAccountReference
+        (String invoiceAccountReference) 
+        {
+      this.invoiceAccountReference = invoiceAccountReference;
+}
+    public 
+    String 
+    getInvcLntmSqncPstvnt()
+    {
+        return this.invcLntmSqncPstvnt;
+    }
+    
+    public void setInvcLntmSqncPstvnt
+        (String invcLntmSqncPstvnt) 
+        {
+      this.invcLntmSqncPstvnt = invcLntmSqncPstvnt;
+}
+    public 
+    String 
+    getInvcLntmChrgtmRfrncRfrnce()
+    {
+        return this.invcLntmChrgtmRfrncRfrnce;
+    }
+    
+    public void setInvcLntmChrgtmRfrncRfrnce
+        (String invcLntmChrgtmRfrncRfrnce) 
+        {
+      this.invcLntmChrgtmRfrncRfrnce = invcLntmChrgtmRfrncRfrnce;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcCdngCSstm()
+    {
+        return this.invcLntmChrgtmCdblcncptCcCdngCSstm;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcCdngCSstm
+        (String invcLntmChrgtmCdblcncptCcCdngCSstm) 
+        {
+      this.invcLntmChrgtmCdblcncptCcCdngCSstm = invcLntmChrgtmCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcCdngCVrsn()
+    {
+        return this.invcLntmChrgtmCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcCdngCVrsn
+        (String invcLntmChrgtmCdblcncptCcCdngCVrsn) 
+        {
+      this.invcLntmChrgtmCdblcncptCcCdngCVrsn = invcLntmChrgtmCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcCdngCCde()
+    {
+        return this.invcLntmChrgtmCdblcncptCcCdngCCde;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcCdngCCde
+        (String invcLntmChrgtmCdblcncptCcCdngCCde) 
+        {
+      this.invcLntmChrgtmCdblcncptCcCdngCCde = invcLntmChrgtmCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcCdngCDsplay()
+    {
+        return this.invcLntmChrgtmCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcCdngCDsplay
+        (String invcLntmChrgtmCdblcncptCcCdngCDsplay) 
+        {
+      this.invcLntmChrgtmCdblcncptCcCdngCDsplay = invcLntmChrgtmCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcCdngCSrSlctd()
+    {
+        return this.invcLntmChrgtmCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcCdngCSrSlctd
+        (String invcLntmChrgtmCdblcncptCcCdngCSrSlctd) 
+        {
+      this.invcLntmChrgtmCdblcncptCcCdngCSrSlctd = invcLntmChrgtmCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getInvcLntmChrgtmCdblcncptCcTxt()
+    {
+        return this.invcLntmChrgtmCdblcncptCcTxt;
+    }
+    
+    public void setInvcLntmChrgtmCdblcncptCcTxt
+        (String invcLntmChrgtmCdblcncptCcTxt) 
+        {
+      this.invcLntmChrgtmCdblcncptCcTxt = invcLntmChrgtmCdblcncptCcTxt;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntTpCde()
+    {
+        return this.invcLntmPrcCmpnntTpCde;
+    }
+    
+    public void setInvcLntmPrcCmpnntTpCde
+        (String invcLntmPrcCmpnntTpCde) 
+        {
+      this.invcLntmPrcCmpnntTpCde = invcLntmPrcCmpnntTpCde;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcCdngCSstm()
+    {
+        return this.invcLntmPrcCmpnntCdCcCdngCSstm;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcCdngCSstm
+        (String invcLntmPrcCmpnntCdCcCdngCSstm) 
+        {
+      this.invcLntmPrcCmpnntCdCcCdngCSstm = invcLntmPrcCmpnntCdCcCdngCSstm;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcCdngCVrsn()
+    {
+        return this.invcLntmPrcCmpnntCdCcCdngCVrsn;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcCdngCVrsn
+        (String invcLntmPrcCmpnntCdCcCdngCVrsn) 
+        {
+      this.invcLntmPrcCmpnntCdCcCdngCVrsn = invcLntmPrcCmpnntCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcCdngCCde()
+    {
+        return this.invcLntmPrcCmpnntCdCcCdngCCde;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcCdngCCde
+        (String invcLntmPrcCmpnntCdCcCdngCCde) 
+        {
+      this.invcLntmPrcCmpnntCdCcCdngCCde = invcLntmPrcCmpnntCdCcCdngCCde;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcCdngCDsplay()
+    {
+        return this.invcLntmPrcCmpnntCdCcCdngCDsplay;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcCdngCDsplay
+        (String invcLntmPrcCmpnntCdCcCdngCDsplay) 
+        {
+      this.invcLntmPrcCmpnntCdCcCdngCDsplay = invcLntmPrcCmpnntCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcCdngCSrSlctd()
+    {
+        return this.invcLntmPrcCmpnntCdCcCdngCSrSlctd;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcCdngCSrSlctd
+        (String invcLntmPrcCmpnntCdCcCdngCSrSlctd) 
+        {
+      this.invcLntmPrcCmpnntCdCcCdngCSrSlctd = invcLntmPrcCmpnntCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntCdCcTxt()
+    {
+        return this.invcLntmPrcCmpnntCdCcTxt;
+    }
+    
+    public void setInvcLntmPrcCmpnntCdCcTxt
+        (String invcLntmPrcCmpnntCdCcTxt) 
+        {
+      this.invcLntmPrcCmpnntCdCcTxt = invcLntmPrcCmpnntCdCcTxt;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntFctrDcml()
+    {
+        return this.invcLntmPrcCmpnntFctrDcml;
+    }
+    
+    public void setInvcLntmPrcCmpnntFctrDcml
+        (String invcLntmPrcCmpnntFctrDcml) 
+        {
+      this.invcLntmPrcCmpnntFctrDcml = invcLntmPrcCmpnntFctrDcml;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntMntMnCrrncy()
+    {
+        return this.invcLntmPrcCmpnntMntMnCrrncy;
+    }
+    
+    public void setInvcLntmPrcCmpnntMntMnCrrncy
+        (String invcLntmPrcCmpnntMntMnCrrncy) 
+        {
+      this.invcLntmPrcCmpnntMntMnCrrncy = invcLntmPrcCmpnntMntMnCrrncy;
+}
+    public 
+    String 
+    getInvcLntmPrcCmpnntMntMnVlue()
+    {
+        return this.invcLntmPrcCmpnntMntMnVlue;
+    }
+    
+    public void setInvcLntmPrcCmpnntMntMnVlue
+        (String invcLntmPrcCmpnntMntMnVlue) 
+        {
+      this.invcLntmPrcCmpnntMntMnVlue = invcLntmPrcCmpnntMntMnVlue;
+}
+    public 
+    String 
+    getInvcTtlPrcCmpnntPrcCmpnnt()
+    {
+        return this.invcTtlPrcCmpnntPrcCmpnnt;
+    }
+    
+    public void setInvcTtlPrcCmpnntPrcCmpnnt
+        (String invcTtlPrcCmpnntPrcCmpnnt) 
+        {
+      this.invcTtlPrcCmpnntPrcCmpnnt = invcTtlPrcCmpnntPrcCmpnnt;
+}
+    public 
+    String 
+    getInvoiceTotalNetMoneyCurrency()
+    {
+        return this.invoiceTotalNetMoneyCurrency;
+    }
+    
+    public void setInvoiceTotalNetMoneyCurrency
+        (String invoiceTotalNetMoneyCurrency) 
+        {
+      this.invoiceTotalNetMoneyCurrency = invoiceTotalNetMoneyCurrency;
+}
+    public 
+    String 
+    getInvoiceTotalNetMoneyValue()
+    {
+        return this.invoiceTotalNetMoneyValue;
+    }
+    
+    public void setInvoiceTotalNetMoneyValue
+        (String invoiceTotalNetMoneyValue) 
+        {
+      this.invoiceTotalNetMoneyValue = invoiceTotalNetMoneyValue;
+}
+    public 
+    String 
+    getInvoiceTotalGrossMoneyCurrency()
+    {
+        return this.invoiceTotalGrossMoneyCurrency;
+    }
+    
+    public void setInvoiceTotalGrossMoneyCurrency
+        (String invoiceTotalGrossMoneyCurrency) 
+        {
+      this.invoiceTotalGrossMoneyCurrency = invoiceTotalGrossMoneyCurrency;
+}
+    public 
+    String 
+    getInvoiceTotalGrossMoneyValue()
+    {
+        return this.invoiceTotalGrossMoneyValue;
+    }
+    
+    public void setInvoiceTotalGrossMoneyValue
+        (String invoiceTotalGrossMoneyValue) 
+        {
+      this.invoiceTotalGrossMoneyValue = invoiceTotalGrossMoneyValue;
+}
+    public 
+    String 
+    getInvoicePaymentTermsMarkdown()
+    {
+        return this.invoicePaymentTermsMarkdown;
+    }
+    
+    public void setInvoicePaymentTermsMarkdown
+        (String invoicePaymentTermsMarkdown) 
+        {
+      this.invoicePaymentTermsMarkdown = invoicePaymentTermsMarkdown;
+}
+    public 
+    String 
+    getInvoiceNoteAnnotationTime()
+    {
+        return this.invoiceNoteAnnotationTime;
+    }
+    
+    public void setInvoiceNoteAnnotationTime
+        (String invoiceNoteAnnotationTime) 
+        {
+      this.invoiceNoteAnnotationTime = invoiceNoteAnnotationTime;
+}
+    public 
+    String 
+    getInvoiceNoteAnnotationText()
+    {
+        return this.invoiceNoteAnnotationText;
+    }
+    
+    public void setInvoiceNoteAnnotationText
+        (String invoiceNoteAnnotationText) 
+        {
+      this.invoiceNoteAnnotationText = invoiceNoteAnnotationText;
+}
+    public 
+    String 
+    getInvcNtNnttnThrRfrnce()
+    {
+        return this.invcNtNnttnThrRfrnce;
+    }
+    
+    public void setInvcNtNnttnThrRfrnce
+        (String invcNtNnttnThrRfrnce) 
+        {
+      this.invcNtNnttnThrRfrnce = invcNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getInvcNtNnttnThrStrng()
+    {
+        return this.invcNtNnttnThrStrng;
+    }
+    
+    public void setInvcNtNnttnThrStrng
+        (String invcNtNnttnThrStrng) 
+        {
+      this.invcNtNnttnThrStrng = invcNtNnttnThrStrng;
+}
 
 
 

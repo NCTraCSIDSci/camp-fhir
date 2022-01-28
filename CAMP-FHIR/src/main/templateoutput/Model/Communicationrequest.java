@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,761 +10,1118 @@ package main.templateoutput.Model;
 public class Communicationrequest  implements java.io.Serializable {
 
 
-     private String cmmnctnRqstDntfrCdngCde;
-     private String cmmnctnRqstDntfrCdngSrSlctd;
-     private String cmmnctnRqstDntfrCdngVrsn;
-     private String cmmnctnRqstDntfrCdngDsplay;
-     private String cmmnctnRqstDntfrCdngSstm;
-     private String communicationRequestBasedOn;
-     private String communicationRequestReplaces;
-     private String cmmnctnRqstGrpdntfrCdngSrSlctd;
-     private String cmmnctnRqstGrpdntfrCdngCde;
-     private String cmmnctnRqstGrpdntfrCdngVrsn;
-     private String cmmnctnRqstGrpdntfrCdngDsplay;
-     private String cmmnctnRqstGrpdntfrCdngSstm;
-     private String communicationRequestStatus;
-     private String cmmnctnRqstSttsRsnCdngSrSlctd;
-     private String cmmnctnRqstSttsRsnCdngCde;
-     private String cmmnctnRqstSttsRsnCdngVrsn;
-     private String cmmnctnRqstSttsRsnCdngDsplay;
-     private String cmmnctnRqstSttsRsnCdngSstm;
-     private String cmmnctnRqstCtgrCdngSrSlctd;
-     private String cmmnctnRqstCtgrCdngCde;
-     private String cmmnctnRqstCtgrCdngVrsn;
-     private String cmmnctnRqstCtgrCdngDsplay;
-     private String cmmnctnRqstCtgrCdngSstm;
-     private String communicationRequestPriority;
-     private String communicationRequestDoNotPerform;
-     private String cmmnctnRqstMdmCdngSrSlctd;
-     private String cmmnctnRqstMdmCdngCde;
-     private String cmmnctnRqstMdmCdngVrsn;
-     private String cmmnctnRqstMdmCdngDsplay;
-     private String cmmnctnRqstMdmCdngSstm;
-     private String communicationRequestSubject;
-     private String communicationRequestAbout;
-     private String communicationRequestEncounter;
-     private String communicationRequestPayload;
-     private String cmmnctnRqstPldCntntStrng;
-     private String cmmnctnRqstPldCntntttchmntCdngSrSlctd;
-     private String cmmnctnRqstPldCntntttchmntCdngCde;
-     private String cmmnctnRqstPldCntntttchmntCdngVrsn;
-     private String cmmnctnRqstPldCntntttchmntCdngDsplay;
-     private String cmmnctnRqstPldCntntttchmntCdngSstm;
-     private String cmmnctnRqstPldCntntRfrnce;
-     private String cmmnctnRqstCcrrncDttme;
-     private String cmmnctnRqstCcrrncPrdCdngSrSlctd;
-     private String cmmnctnRqstCcrrncPrdCdngCde;
-     private String cmmnctnRqstCcrrncPrdCdngVrsn;
-     private String cmmnctnRqstCcrrncPrdCdngDsplay;
-     private String cmmnctnRqstCcrrncPrdCdngSstm;
-     private String communicationRequestAuthoredOn;
-     private String communicationRequestRequester;
-     private String communicationRequestRecipient;
-     private String communicationRequestSender;
-     private String cmmnctnRqstRsnCdCdngSrSlctd;
-     private String cmmnctnRqstRsnCdCdngCde;
-     private String cmmnctnRqstRsnCdCdngVrsn;
-     private String cmmnctnRqstRsnCdCdngDsplay;
-     private String cmmnctnRqstRsnCdCdngSstm;
-     private String cmmnctnRqstRsnRfrnce;
-     private String cmmnctnRqstNtCdngSrSlctd;
-     private String cmmnctnRqstNtCdngCde;
-     private String cmmnctnRqstNtCdngVrsn;
-     private String cmmnctnRqstNtCdngDsplay;
-     private String cmmnctnRqstNtCdngSstm;
+     private Integer id;
+     private String cmmnctnRqstDntfrDntfrSe;
+     private String cmmnctnRqstDntfrDntfrTpCcCSstm;
+     private String cmmnctnRqstDntfrDntfrTpCcCVrsn;
+     private String cmmnctnRqstDntfrDntfrTpCcCCde;
+     private String cmmnctnRqstDntfrDntfrTpCcCDsplay;
+     private String cmmnctnRqstDntfrDntfrTpCcCSrSlctd;
+     private String cmmnctnRqstDntfrDntfrTpCcTxt;
+     private String cmmnctnRqstDntfrDntfrPrdPrdStrt;
+     private String cmmnctnRqstDntfrDntfrPrdPrdNd;
+     private String cmmnctnRqstDntfrDntfrSsgnr;
+     private String cmmnctnRqstDntfrDntfrVlue;
+     private String cmmnctnRqstDntfrDntfrSstm;
+     private String cmmnctnRqstBsdnRfrnce;
+     private String cmmnctnRqstRplcsRfrnce;
+     private String cmmnctnRqstGrpdntfrDntfrSe;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcCSstm;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcCVrsn;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcCCde;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcCDsplay;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd;
+     private String cmmnctnRqstGrpdntfrDntfrTpCcTxt;
+     private String cmmnctnRqstGrpdntfrDntfrPrdPrdStrt;
+     private String cmmnctnRqstGrpdntfrDntfrPrdPrdNd;
+     private String cmmnctnRqstGrpdntfrDntfrSsgnr;
+     private String cmmnctnRqstGrpdntfrDntfrVlue;
+     private String cmmnctnRqstGrpdntfrDntfrSstm;
+     private String communicationRequestStatusCode;
+     private String cmmnctnRqstSttsRsnCcCdngCSstm;
+     private String cmmnctnRqstSttsRsnCcCdngCVrsn;
+     private String cmmnctnRqstSttsRsnCcCdngCCde;
+     private String cmmnctnRqstSttsRsnCcCdngCDsplay;
+     private String cmmnctnRqstSttsRsnCcCdngCSrSlctd;
+     private String cmmnctnRqstSttsRsnCcTxt;
+     private String cmmnctnRqstCtgrCcCdngCSstm;
+     private String cmmnctnRqstCtgrCcCdngCVrsn;
+     private String cmmnctnRqstCtgrCcCdngCCde;
+     private String cmmnctnRqstCtgrCcCdngCDsplay;
+     private String cmmnctnRqstCtgrCcCdngCSrSlctd;
+     private String cmmnctnRqstCtgrCcTxt;
+     private String communicationRequestPriorityCode;
+     private String cmmnctnRqstDNtPrfrmBln;
+     private String cmmnctnRqstMdmCcCdngCSstm;
+     private String cmmnctnRqstMdmCcCdngCVrsn;
+     private String cmmnctnRqstMdmCcCdngCCde;
+     private String cmmnctnRqstMdmCcCdngCDsplay;
+     private String cmmnctnRqstMdmCcCdngCSrSlctd;
+     private String cmmnctnRqstMdmCcTxt;
+     private String cmmnctnRqstSbjctRfrnce;
+     private String cmmnctnRqstBtRfrnce;
+     private String cmmnctnRqstNcntrRfrnce;
+     private String cmmnctnRqstPldCntntStrngStrng;
+     private String cmmnctnRqstPldCntntttchmntTtchmntDta;
+     private String cmmnctnRqstPldCntntttchmntTtchmntHsh;
+     private String cmmnctnRqstPldCntntttchmntTtchmntCntntTpe;
+     private String cmmnctnRqstPldCntntttchmntTtchmntLngge;
+     private String cmmnctnRqstPldCntntttchmntTtchmntCrtn;
+     private String cmmnctnRqstPldCntntttchmntTtchmntTtle;
+     private String cmmnctnRqstPldCntntttchmntTtchmntSze;
+     private String cmmnctnRqstPldCntntttchmntTtchmntRl;
+     private String cmmnctnRqstPldCntntRfrncRfrnce;
+     private String cmmnctnRqstCcrrncDttmDtTme;
+     private String cmmnctnRqstCcrrncPrdPrdStrt;
+     private String cmmnctnRqstCcrrncPrdPrdNd;
+     private String cmmnctnRqstThrdnDtTme;
+     private String cmmnctnRqstRqstrRfrnce;
+     private String cmmnctnRqstRcpntRfrnce;
+     private String cmmnctnRqstSndrRfrnce;
+     private String cmmnctnRqstRsnCdCcCdngCSstm;
+     private String cmmnctnRqstRsnCdCcCdngCVrsn;
+     private String cmmnctnRqstRsnCdCcCdngCCde;
+     private String cmmnctnRqstRsnCdCcCdngCDsplay;
+     private String cmmnctnRqstRsnCdCcCdngCSrSlctd;
+     private String cmmnctnRqstRsnCdCcTxt;
+     private String cmmnctnRqstRsnRfrncRfrnce;
+     private String cmmnctnRqstNtNnttnTme;
+     private String cmmnctnRqstNtNnttnTxt;
+     private String cmmnctnRqstNtNnttnThrRfrnce;
+     private String cmmnctnRqstNtNnttnThrStrng;
 
     public Communicationrequest() {
     }
 
-	
-    public Communicationrequest(String cmmnctnRqstDntfrCdngCde) {
-        this.cmmnctnRqstDntfrCdngCde = cmmnctnRqstDntfrCdngCde;
-    }
-    public Communicationrequest(String cmmnctnRqstDntfrCdngCde, String cmmnctnRqstDntfrCdngSrSlctd, String cmmnctnRqstDntfrCdngVrsn, String cmmnctnRqstDntfrCdngDsplay, String cmmnctnRqstDntfrCdngSstm, String communicationRequestBasedOn, String communicationRequestReplaces, String cmmnctnRqstGrpdntfrCdngSrSlctd, String cmmnctnRqstGrpdntfrCdngCde, String cmmnctnRqstGrpdntfrCdngVrsn, String cmmnctnRqstGrpdntfrCdngDsplay, String cmmnctnRqstGrpdntfrCdngSstm, String communicationRequestStatus, String cmmnctnRqstSttsRsnCdngSrSlctd, String cmmnctnRqstSttsRsnCdngCde, String cmmnctnRqstSttsRsnCdngVrsn, String cmmnctnRqstSttsRsnCdngDsplay, String cmmnctnRqstSttsRsnCdngSstm, String cmmnctnRqstCtgrCdngSrSlctd, String cmmnctnRqstCtgrCdngCde, String cmmnctnRqstCtgrCdngVrsn, String cmmnctnRqstCtgrCdngDsplay, String cmmnctnRqstCtgrCdngSstm, String communicationRequestPriority, String communicationRequestDoNotPerform, String cmmnctnRqstMdmCdngSrSlctd, String cmmnctnRqstMdmCdngCde, String cmmnctnRqstMdmCdngVrsn, String cmmnctnRqstMdmCdngDsplay, String cmmnctnRqstMdmCdngSstm, String communicationRequestSubject, String communicationRequestAbout, String communicationRequestEncounter, String communicationRequestPayload, String cmmnctnRqstPldCntntStrng, String cmmnctnRqstPldCntntttchmntCdngSrSlctd, String cmmnctnRqstPldCntntttchmntCdngCde, String cmmnctnRqstPldCntntttchmntCdngVrsn, String cmmnctnRqstPldCntntttchmntCdngDsplay, String cmmnctnRqstPldCntntttchmntCdngSstm, String cmmnctnRqstPldCntntRfrnce, String cmmnctnRqstCcrrncDttme, String cmmnctnRqstCcrrncPrdCdngSrSlctd, String cmmnctnRqstCcrrncPrdCdngCde, String cmmnctnRqstCcrrncPrdCdngVrsn, String cmmnctnRqstCcrrncPrdCdngDsplay, String cmmnctnRqstCcrrncPrdCdngSstm, String communicationRequestAuthoredOn, String communicationRequestRequester, String communicationRequestRecipient, String communicationRequestSender, String cmmnctnRqstRsnCdCdngSrSlctd, String cmmnctnRqstRsnCdCdngCde, String cmmnctnRqstRsnCdCdngVrsn, String cmmnctnRqstRsnCdCdngDsplay, String cmmnctnRqstRsnCdCdngSstm, String cmmnctnRqstRsnRfrnce, String cmmnctnRqstNtCdngSrSlctd, String cmmnctnRqstNtCdngCde, String cmmnctnRqstNtCdngVrsn, String cmmnctnRqstNtCdngDsplay, String cmmnctnRqstNtCdngSstm) {
-       this.cmmnctnRqstDntfrCdngCde = cmmnctnRqstDntfrCdngCde;
-       this.cmmnctnRqstDntfrCdngSrSlctd = cmmnctnRqstDntfrCdngSrSlctd;
-       this.cmmnctnRqstDntfrCdngVrsn = cmmnctnRqstDntfrCdngVrsn;
-       this.cmmnctnRqstDntfrCdngDsplay = cmmnctnRqstDntfrCdngDsplay;
-       this.cmmnctnRqstDntfrCdngSstm = cmmnctnRqstDntfrCdngSstm;
-       this.communicationRequestBasedOn = communicationRequestBasedOn;
-       this.communicationRequestReplaces = communicationRequestReplaces;
-       this.cmmnctnRqstGrpdntfrCdngSrSlctd = cmmnctnRqstGrpdntfrCdngSrSlctd;
-       this.cmmnctnRqstGrpdntfrCdngCde = cmmnctnRqstGrpdntfrCdngCde;
-       this.cmmnctnRqstGrpdntfrCdngVrsn = cmmnctnRqstGrpdntfrCdngVrsn;
-       this.cmmnctnRqstGrpdntfrCdngDsplay = cmmnctnRqstGrpdntfrCdngDsplay;
-       this.cmmnctnRqstGrpdntfrCdngSstm = cmmnctnRqstGrpdntfrCdngSstm;
-       this.communicationRequestStatus = communicationRequestStatus;
-       this.cmmnctnRqstSttsRsnCdngSrSlctd = cmmnctnRqstSttsRsnCdngSrSlctd;
-       this.cmmnctnRqstSttsRsnCdngCde = cmmnctnRqstSttsRsnCdngCde;
-       this.cmmnctnRqstSttsRsnCdngVrsn = cmmnctnRqstSttsRsnCdngVrsn;
-       this.cmmnctnRqstSttsRsnCdngDsplay = cmmnctnRqstSttsRsnCdngDsplay;
-       this.cmmnctnRqstSttsRsnCdngSstm = cmmnctnRqstSttsRsnCdngSstm;
-       this.cmmnctnRqstCtgrCdngSrSlctd = cmmnctnRqstCtgrCdngSrSlctd;
-       this.cmmnctnRqstCtgrCdngCde = cmmnctnRqstCtgrCdngCde;
-       this.cmmnctnRqstCtgrCdngVrsn = cmmnctnRqstCtgrCdngVrsn;
-       this.cmmnctnRqstCtgrCdngDsplay = cmmnctnRqstCtgrCdngDsplay;
-       this.cmmnctnRqstCtgrCdngSstm = cmmnctnRqstCtgrCdngSstm;
-       this.communicationRequestPriority = communicationRequestPriority;
-       this.communicationRequestDoNotPerform = communicationRequestDoNotPerform;
-       this.cmmnctnRqstMdmCdngSrSlctd = cmmnctnRqstMdmCdngSrSlctd;
-       this.cmmnctnRqstMdmCdngCde = cmmnctnRqstMdmCdngCde;
-       this.cmmnctnRqstMdmCdngVrsn = cmmnctnRqstMdmCdngVrsn;
-       this.cmmnctnRqstMdmCdngDsplay = cmmnctnRqstMdmCdngDsplay;
-       this.cmmnctnRqstMdmCdngSstm = cmmnctnRqstMdmCdngSstm;
-       this.communicationRequestSubject = communicationRequestSubject;
-       this.communicationRequestAbout = communicationRequestAbout;
-       this.communicationRequestEncounter = communicationRequestEncounter;
-       this.communicationRequestPayload = communicationRequestPayload;
-       this.cmmnctnRqstPldCntntStrng = cmmnctnRqstPldCntntStrng;
-       this.cmmnctnRqstPldCntntttchmntCdngSrSlctd = cmmnctnRqstPldCntntttchmntCdngSrSlctd;
-       this.cmmnctnRqstPldCntntttchmntCdngCde = cmmnctnRqstPldCntntttchmntCdngCde;
-       this.cmmnctnRqstPldCntntttchmntCdngVrsn = cmmnctnRqstPldCntntttchmntCdngVrsn;
-       this.cmmnctnRqstPldCntntttchmntCdngDsplay = cmmnctnRqstPldCntntttchmntCdngDsplay;
-       this.cmmnctnRqstPldCntntttchmntCdngSstm = cmmnctnRqstPldCntntttchmntCdngSstm;
-       this.cmmnctnRqstPldCntntRfrnce = cmmnctnRqstPldCntntRfrnce;
-       this.cmmnctnRqstCcrrncDttme = cmmnctnRqstCcrrncDttme;
-       this.cmmnctnRqstCcrrncPrdCdngSrSlctd = cmmnctnRqstCcrrncPrdCdngSrSlctd;
-       this.cmmnctnRqstCcrrncPrdCdngCde = cmmnctnRqstCcrrncPrdCdngCde;
-       this.cmmnctnRqstCcrrncPrdCdngVrsn = cmmnctnRqstCcrrncPrdCdngVrsn;
-       this.cmmnctnRqstCcrrncPrdCdngDsplay = cmmnctnRqstCcrrncPrdCdngDsplay;
-       this.cmmnctnRqstCcrrncPrdCdngSstm = cmmnctnRqstCcrrncPrdCdngSstm;
-       this.communicationRequestAuthoredOn = communicationRequestAuthoredOn;
-       this.communicationRequestRequester = communicationRequestRequester;
-       this.communicationRequestRecipient = communicationRequestRecipient;
-       this.communicationRequestSender = communicationRequestSender;
-       this.cmmnctnRqstRsnCdCdngSrSlctd = cmmnctnRqstRsnCdCdngSrSlctd;
-       this.cmmnctnRqstRsnCdCdngCde = cmmnctnRqstRsnCdCdngCde;
-       this.cmmnctnRqstRsnCdCdngVrsn = cmmnctnRqstRsnCdCdngVrsn;
-       this.cmmnctnRqstRsnCdCdngDsplay = cmmnctnRqstRsnCdCdngDsplay;
-       this.cmmnctnRqstRsnCdCdngSstm = cmmnctnRqstRsnCdCdngSstm;
-       this.cmmnctnRqstRsnRfrnce = cmmnctnRqstRsnRfrnce;
-       this.cmmnctnRqstNtCdngSrSlctd = cmmnctnRqstNtCdngSrSlctd;
-       this.cmmnctnRqstNtCdngCde = cmmnctnRqstNtCdngCde;
-       this.cmmnctnRqstNtCdngVrsn = cmmnctnRqstNtCdngVrsn;
-       this.cmmnctnRqstNtCdngDsplay = cmmnctnRqstNtCdngDsplay;
-       this.cmmnctnRqstNtCdngSstm = cmmnctnRqstNtCdngSstm;
+    public Communicationrequest(String cmmnctnRqstDntfrDntfrSe, String cmmnctnRqstDntfrDntfrTpCcCSstm, String cmmnctnRqstDntfrDntfrTpCcCVrsn, String cmmnctnRqstDntfrDntfrTpCcCCde, String cmmnctnRqstDntfrDntfrTpCcCDsplay, String cmmnctnRqstDntfrDntfrTpCcCSrSlctd, String cmmnctnRqstDntfrDntfrTpCcTxt, String cmmnctnRqstDntfrDntfrPrdPrdStrt, String cmmnctnRqstDntfrDntfrPrdPrdNd, String cmmnctnRqstDntfrDntfrSsgnr, String cmmnctnRqstDntfrDntfrVlue, String cmmnctnRqstDntfrDntfrSstm, String cmmnctnRqstBsdnRfrnce, String cmmnctnRqstRplcsRfrnce, String cmmnctnRqstGrpdntfrDntfrSe, String cmmnctnRqstGrpdntfrDntfrTpCcCSstm, String cmmnctnRqstGrpdntfrDntfrTpCcCVrsn, String cmmnctnRqstGrpdntfrDntfrTpCcCCde, String cmmnctnRqstGrpdntfrDntfrTpCcCDsplay, String cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd, String cmmnctnRqstGrpdntfrDntfrTpCcTxt, String cmmnctnRqstGrpdntfrDntfrPrdPrdStrt, String cmmnctnRqstGrpdntfrDntfrPrdPrdNd, String cmmnctnRqstGrpdntfrDntfrSsgnr, String cmmnctnRqstGrpdntfrDntfrVlue, String cmmnctnRqstGrpdntfrDntfrSstm, String communicationRequestStatusCode, String cmmnctnRqstSttsRsnCcCdngCSstm, String cmmnctnRqstSttsRsnCcCdngCVrsn, String cmmnctnRqstSttsRsnCcCdngCCde, String cmmnctnRqstSttsRsnCcCdngCDsplay, String cmmnctnRqstSttsRsnCcCdngCSrSlctd, String cmmnctnRqstSttsRsnCcTxt, String cmmnctnRqstCtgrCcCdngCSstm, String cmmnctnRqstCtgrCcCdngCVrsn, String cmmnctnRqstCtgrCcCdngCCde, String cmmnctnRqstCtgrCcCdngCDsplay, String cmmnctnRqstCtgrCcCdngCSrSlctd, String cmmnctnRqstCtgrCcTxt, String communicationRequestPriorityCode, String cmmnctnRqstDNtPrfrmBln, String cmmnctnRqstMdmCcCdngCSstm, String cmmnctnRqstMdmCcCdngCVrsn, String cmmnctnRqstMdmCcCdngCCde, String cmmnctnRqstMdmCcCdngCDsplay, String cmmnctnRqstMdmCcCdngCSrSlctd, String cmmnctnRqstMdmCcTxt, String cmmnctnRqstSbjctRfrnce, String cmmnctnRqstBtRfrnce, String cmmnctnRqstNcntrRfrnce, String cmmnctnRqstPldCntntStrngStrng, String cmmnctnRqstPldCntntttchmntTtchmntDta, String cmmnctnRqstPldCntntttchmntTtchmntHsh, String cmmnctnRqstPldCntntttchmntTtchmntCntntTpe, String cmmnctnRqstPldCntntttchmntTtchmntLngge, String cmmnctnRqstPldCntntttchmntTtchmntCrtn, String cmmnctnRqstPldCntntttchmntTtchmntTtle, String cmmnctnRqstPldCntntttchmntTtchmntSze, String cmmnctnRqstPldCntntttchmntTtchmntRl, String cmmnctnRqstPldCntntRfrncRfrnce, String cmmnctnRqstCcrrncDttmDtTme, String cmmnctnRqstCcrrncPrdPrdStrt, String cmmnctnRqstCcrrncPrdPrdNd, String cmmnctnRqstThrdnDtTme, String cmmnctnRqstRqstrRfrnce, String cmmnctnRqstRcpntRfrnce, String cmmnctnRqstSndrRfrnce, String cmmnctnRqstRsnCdCcCdngCSstm, String cmmnctnRqstRsnCdCcCdngCVrsn, String cmmnctnRqstRsnCdCcCdngCCde, String cmmnctnRqstRsnCdCcCdngCDsplay, String cmmnctnRqstRsnCdCcCdngCSrSlctd, String cmmnctnRqstRsnCdCcTxt, String cmmnctnRqstRsnRfrncRfrnce, String cmmnctnRqstNtNnttnTme, String cmmnctnRqstNtNnttnTxt, String cmmnctnRqstNtNnttnThrRfrnce, String cmmnctnRqstNtNnttnThrStrng) {
+       this.cmmnctnRqstDntfrDntfrSe = cmmnctnRqstDntfrDntfrSe;
+       this.cmmnctnRqstDntfrDntfrTpCcCSstm = cmmnctnRqstDntfrDntfrTpCcCSstm;
+       this.cmmnctnRqstDntfrDntfrTpCcCVrsn = cmmnctnRqstDntfrDntfrTpCcCVrsn;
+       this.cmmnctnRqstDntfrDntfrTpCcCCde = cmmnctnRqstDntfrDntfrTpCcCCde;
+       this.cmmnctnRqstDntfrDntfrTpCcCDsplay = cmmnctnRqstDntfrDntfrTpCcCDsplay;
+       this.cmmnctnRqstDntfrDntfrTpCcCSrSlctd = cmmnctnRqstDntfrDntfrTpCcCSrSlctd;
+       this.cmmnctnRqstDntfrDntfrTpCcTxt = cmmnctnRqstDntfrDntfrTpCcTxt;
+       this.cmmnctnRqstDntfrDntfrPrdPrdStrt = cmmnctnRqstDntfrDntfrPrdPrdStrt;
+       this.cmmnctnRqstDntfrDntfrPrdPrdNd = cmmnctnRqstDntfrDntfrPrdPrdNd;
+       this.cmmnctnRqstDntfrDntfrSsgnr = cmmnctnRqstDntfrDntfrSsgnr;
+       this.cmmnctnRqstDntfrDntfrVlue = cmmnctnRqstDntfrDntfrVlue;
+       this.cmmnctnRqstDntfrDntfrSstm = cmmnctnRqstDntfrDntfrSstm;
+       this.cmmnctnRqstBsdnRfrnce = cmmnctnRqstBsdnRfrnce;
+       this.cmmnctnRqstRplcsRfrnce = cmmnctnRqstRplcsRfrnce;
+       this.cmmnctnRqstGrpdntfrDntfrSe = cmmnctnRqstGrpdntfrDntfrSe;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcCSstm = cmmnctnRqstGrpdntfrDntfrTpCcCSstm;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcCVrsn = cmmnctnRqstGrpdntfrDntfrTpCcCVrsn;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcCCde = cmmnctnRqstGrpdntfrDntfrTpCcCCde;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcCDsplay = cmmnctnRqstGrpdntfrDntfrTpCcCDsplay;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd = cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd;
+       this.cmmnctnRqstGrpdntfrDntfrTpCcTxt = cmmnctnRqstGrpdntfrDntfrTpCcTxt;
+       this.cmmnctnRqstGrpdntfrDntfrPrdPrdStrt = cmmnctnRqstGrpdntfrDntfrPrdPrdStrt;
+       this.cmmnctnRqstGrpdntfrDntfrPrdPrdNd = cmmnctnRqstGrpdntfrDntfrPrdPrdNd;
+       this.cmmnctnRqstGrpdntfrDntfrSsgnr = cmmnctnRqstGrpdntfrDntfrSsgnr;
+       this.cmmnctnRqstGrpdntfrDntfrVlue = cmmnctnRqstGrpdntfrDntfrVlue;
+       this.cmmnctnRqstGrpdntfrDntfrSstm = cmmnctnRqstGrpdntfrDntfrSstm;
+       this.communicationRequestStatusCode = communicationRequestStatusCode;
+       this.cmmnctnRqstSttsRsnCcCdngCSstm = cmmnctnRqstSttsRsnCcCdngCSstm;
+       this.cmmnctnRqstSttsRsnCcCdngCVrsn = cmmnctnRqstSttsRsnCcCdngCVrsn;
+       this.cmmnctnRqstSttsRsnCcCdngCCde = cmmnctnRqstSttsRsnCcCdngCCde;
+       this.cmmnctnRqstSttsRsnCcCdngCDsplay = cmmnctnRqstSttsRsnCcCdngCDsplay;
+       this.cmmnctnRqstSttsRsnCcCdngCSrSlctd = cmmnctnRqstSttsRsnCcCdngCSrSlctd;
+       this.cmmnctnRqstSttsRsnCcTxt = cmmnctnRqstSttsRsnCcTxt;
+       this.cmmnctnRqstCtgrCcCdngCSstm = cmmnctnRqstCtgrCcCdngCSstm;
+       this.cmmnctnRqstCtgrCcCdngCVrsn = cmmnctnRqstCtgrCcCdngCVrsn;
+       this.cmmnctnRqstCtgrCcCdngCCde = cmmnctnRqstCtgrCcCdngCCde;
+       this.cmmnctnRqstCtgrCcCdngCDsplay = cmmnctnRqstCtgrCcCdngCDsplay;
+       this.cmmnctnRqstCtgrCcCdngCSrSlctd = cmmnctnRqstCtgrCcCdngCSrSlctd;
+       this.cmmnctnRqstCtgrCcTxt = cmmnctnRqstCtgrCcTxt;
+       this.communicationRequestPriorityCode = communicationRequestPriorityCode;
+       this.cmmnctnRqstDNtPrfrmBln = cmmnctnRqstDNtPrfrmBln;
+       this.cmmnctnRqstMdmCcCdngCSstm = cmmnctnRqstMdmCcCdngCSstm;
+       this.cmmnctnRqstMdmCcCdngCVrsn = cmmnctnRqstMdmCcCdngCVrsn;
+       this.cmmnctnRqstMdmCcCdngCCde = cmmnctnRqstMdmCcCdngCCde;
+       this.cmmnctnRqstMdmCcCdngCDsplay = cmmnctnRqstMdmCcCdngCDsplay;
+       this.cmmnctnRqstMdmCcCdngCSrSlctd = cmmnctnRqstMdmCcCdngCSrSlctd;
+       this.cmmnctnRqstMdmCcTxt = cmmnctnRqstMdmCcTxt;
+       this.cmmnctnRqstSbjctRfrnce = cmmnctnRqstSbjctRfrnce;
+       this.cmmnctnRqstBtRfrnce = cmmnctnRqstBtRfrnce;
+       this.cmmnctnRqstNcntrRfrnce = cmmnctnRqstNcntrRfrnce;
+       this.cmmnctnRqstPldCntntStrngStrng = cmmnctnRqstPldCntntStrngStrng;
+       this.cmmnctnRqstPldCntntttchmntTtchmntDta = cmmnctnRqstPldCntntttchmntTtchmntDta;
+       this.cmmnctnRqstPldCntntttchmntTtchmntHsh = cmmnctnRqstPldCntntttchmntTtchmntHsh;
+       this.cmmnctnRqstPldCntntttchmntTtchmntCntntTpe = cmmnctnRqstPldCntntttchmntTtchmntCntntTpe;
+       this.cmmnctnRqstPldCntntttchmntTtchmntLngge = cmmnctnRqstPldCntntttchmntTtchmntLngge;
+       this.cmmnctnRqstPldCntntttchmntTtchmntCrtn = cmmnctnRqstPldCntntttchmntTtchmntCrtn;
+       this.cmmnctnRqstPldCntntttchmntTtchmntTtle = cmmnctnRqstPldCntntttchmntTtchmntTtle;
+       this.cmmnctnRqstPldCntntttchmntTtchmntSze = cmmnctnRqstPldCntntttchmntTtchmntSze;
+       this.cmmnctnRqstPldCntntttchmntTtchmntRl = cmmnctnRqstPldCntntttchmntTtchmntRl;
+       this.cmmnctnRqstPldCntntRfrncRfrnce = cmmnctnRqstPldCntntRfrncRfrnce;
+       this.cmmnctnRqstCcrrncDttmDtTme = cmmnctnRqstCcrrncDttmDtTme;
+       this.cmmnctnRqstCcrrncPrdPrdStrt = cmmnctnRqstCcrrncPrdPrdStrt;
+       this.cmmnctnRqstCcrrncPrdPrdNd = cmmnctnRqstCcrrncPrdPrdNd;
+       this.cmmnctnRqstThrdnDtTme = cmmnctnRqstThrdnDtTme;
+       this.cmmnctnRqstRqstrRfrnce = cmmnctnRqstRqstrRfrnce;
+       this.cmmnctnRqstRcpntRfrnce = cmmnctnRqstRcpntRfrnce;
+       this.cmmnctnRqstSndrRfrnce = cmmnctnRqstSndrRfrnce;
+       this.cmmnctnRqstRsnCdCcCdngCSstm = cmmnctnRqstRsnCdCcCdngCSstm;
+       this.cmmnctnRqstRsnCdCcCdngCVrsn = cmmnctnRqstRsnCdCcCdngCVrsn;
+       this.cmmnctnRqstRsnCdCcCdngCCde = cmmnctnRqstRsnCdCcCdngCCde;
+       this.cmmnctnRqstRsnCdCcCdngCDsplay = cmmnctnRqstRsnCdCcCdngCDsplay;
+       this.cmmnctnRqstRsnCdCcCdngCSrSlctd = cmmnctnRqstRsnCdCcCdngCSrSlctd;
+       this.cmmnctnRqstRsnCdCcTxt = cmmnctnRqstRsnCdCcTxt;
+       this.cmmnctnRqstRsnRfrncRfrnce = cmmnctnRqstRsnRfrncRfrnce;
+       this.cmmnctnRqstNtNnttnTme = cmmnctnRqstNtNnttnTme;
+       this.cmmnctnRqstNtNnttnTxt = cmmnctnRqstNtNnttnTxt;
+       this.cmmnctnRqstNtNnttnThrRfrnce = cmmnctnRqstNtNnttnThrRfrnce;
+       this.cmmnctnRqstNtNnttnThrStrng = cmmnctnRqstNtNnttnThrStrng;
     }
    
-    public String getCmmnctnRqstDntfrCdngCde() {
-        return this.cmmnctnRqstDntfrCdngCde;
-    }
-    
-    public void setCmmnctnRqstDntfrCdngCde(String cmmnctnRqstDntfrCdngCde) {
-        this.cmmnctnRqstDntfrCdngCde = cmmnctnRqstDntfrCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstDntfrCdngSrSlctd() {
-        return this.cmmnctnRqstDntfrCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstDntfrCdngSrSlctd(String cmmnctnRqstDntfrCdngSrSlctd) {
-        this.cmmnctnRqstDntfrCdngSrSlctd = cmmnctnRqstDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstDntfrCdngVrsn() {
-        return this.cmmnctnRqstDntfrCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstDntfrCdngVrsn(String cmmnctnRqstDntfrCdngVrsn) {
-        this.cmmnctnRqstDntfrCdngVrsn = cmmnctnRqstDntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstDntfrCdngDsplay() {
-        return this.cmmnctnRqstDntfrCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstDntfrCdngDsplay(String cmmnctnRqstDntfrCdngDsplay) {
-        this.cmmnctnRqstDntfrCdngDsplay = cmmnctnRqstDntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstDntfrCdngSstm() {
-        return this.cmmnctnRqstDntfrCdngSstm;
-    }
-    
-    public void setCmmnctnRqstDntfrCdngSstm(String cmmnctnRqstDntfrCdngSstm) {
-        this.cmmnctnRqstDntfrCdngSstm = cmmnctnRqstDntfrCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationRequestBasedOn() {
-        return this.communicationRequestBasedOn;
-    }
-    
-    public void setCommunicationRequestBasedOn(String communicationRequestBasedOn) {
-        this.communicationRequestBasedOn = communicationRequestBasedOn;
-    }
-    
-    
-    
-    public String getCommunicationRequestReplaces() {
-        return this.communicationRequestReplaces;
-    }
-    
-    public void setCommunicationRequestReplaces(String communicationRequestReplaces) {
-        this.communicationRequestReplaces = communicationRequestReplaces;
-    }
-    
-    
-    
-    public String getCmmnctnRqstGrpdntfrCdngSrSlctd() {
-        return this.cmmnctnRqstGrpdntfrCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstGrpdntfrCdngSrSlctd(String cmmnctnRqstGrpdntfrCdngSrSlctd) {
-        this.cmmnctnRqstGrpdntfrCdngSrSlctd = cmmnctnRqstGrpdntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstGrpdntfrCdngCde() {
-        return this.cmmnctnRqstGrpdntfrCdngCde;
-    }
-    
-    public void setCmmnctnRqstGrpdntfrCdngCde(String cmmnctnRqstGrpdntfrCdngCde) {
-        this.cmmnctnRqstGrpdntfrCdngCde = cmmnctnRqstGrpdntfrCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstGrpdntfrCdngVrsn() {
-        return this.cmmnctnRqstGrpdntfrCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstGrpdntfrCdngVrsn(String cmmnctnRqstGrpdntfrCdngVrsn) {
-        this.cmmnctnRqstGrpdntfrCdngVrsn = cmmnctnRqstGrpdntfrCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstGrpdntfrCdngDsplay() {
-        return this.cmmnctnRqstGrpdntfrCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstGrpdntfrCdngDsplay(String cmmnctnRqstGrpdntfrCdngDsplay) {
-        this.cmmnctnRqstGrpdntfrCdngDsplay = cmmnctnRqstGrpdntfrCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstGrpdntfrCdngSstm() {
-        return this.cmmnctnRqstGrpdntfrCdngSstm;
-    }
-    
-    public void setCmmnctnRqstGrpdntfrCdngSstm(String cmmnctnRqstGrpdntfrCdngSstm) {
-        this.cmmnctnRqstGrpdntfrCdngSstm = cmmnctnRqstGrpdntfrCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationRequestStatus() {
-        return this.communicationRequestStatus;
-    }
-    
-    public void setCommunicationRequestStatus(String communicationRequestStatus) {
-        this.communicationRequestStatus = communicationRequestStatus;
-    }
-    
-    
-    
-    public String getCmmnctnRqstSttsRsnCdngSrSlctd() {
-        return this.cmmnctnRqstSttsRsnCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstSttsRsnCdngSrSlctd(String cmmnctnRqstSttsRsnCdngSrSlctd) {
-        this.cmmnctnRqstSttsRsnCdngSrSlctd = cmmnctnRqstSttsRsnCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstSttsRsnCdngCde() {
-        return this.cmmnctnRqstSttsRsnCdngCde;
-    }
-    
-    public void setCmmnctnRqstSttsRsnCdngCde(String cmmnctnRqstSttsRsnCdngCde) {
-        this.cmmnctnRqstSttsRsnCdngCde = cmmnctnRqstSttsRsnCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstSttsRsnCdngVrsn() {
-        return this.cmmnctnRqstSttsRsnCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstSttsRsnCdngVrsn(String cmmnctnRqstSttsRsnCdngVrsn) {
-        this.cmmnctnRqstSttsRsnCdngVrsn = cmmnctnRqstSttsRsnCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstSttsRsnCdngDsplay() {
-        return this.cmmnctnRqstSttsRsnCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstSttsRsnCdngDsplay(String cmmnctnRqstSttsRsnCdngDsplay) {
-        this.cmmnctnRqstSttsRsnCdngDsplay = cmmnctnRqstSttsRsnCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstSttsRsnCdngSstm() {
-        return this.cmmnctnRqstSttsRsnCdngSstm;
-    }
-    
-    public void setCmmnctnRqstSttsRsnCdngSstm(String cmmnctnRqstSttsRsnCdngSstm) {
-        this.cmmnctnRqstSttsRsnCdngSstm = cmmnctnRqstSttsRsnCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCtgrCdngSrSlctd() {
-        return this.cmmnctnRqstCtgrCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstCtgrCdngSrSlctd(String cmmnctnRqstCtgrCdngSrSlctd) {
-        this.cmmnctnRqstCtgrCdngSrSlctd = cmmnctnRqstCtgrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCtgrCdngCde() {
-        return this.cmmnctnRqstCtgrCdngCde;
-    }
-    
-    public void setCmmnctnRqstCtgrCdngCde(String cmmnctnRqstCtgrCdngCde) {
-        this.cmmnctnRqstCtgrCdngCde = cmmnctnRqstCtgrCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCtgrCdngVrsn() {
-        return this.cmmnctnRqstCtgrCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstCtgrCdngVrsn(String cmmnctnRqstCtgrCdngVrsn) {
-        this.cmmnctnRqstCtgrCdngVrsn = cmmnctnRqstCtgrCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCtgrCdngDsplay() {
-        return this.cmmnctnRqstCtgrCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstCtgrCdngDsplay(String cmmnctnRqstCtgrCdngDsplay) {
-        this.cmmnctnRqstCtgrCdngDsplay = cmmnctnRqstCtgrCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCtgrCdngSstm() {
-        return this.cmmnctnRqstCtgrCdngSstm;
-    }
-    
-    public void setCmmnctnRqstCtgrCdngSstm(String cmmnctnRqstCtgrCdngSstm) {
-        this.cmmnctnRqstCtgrCdngSstm = cmmnctnRqstCtgrCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationRequestPriority() {
-        return this.communicationRequestPriority;
-    }
-    
-    public void setCommunicationRequestPriority(String communicationRequestPriority) {
-        this.communicationRequestPriority = communicationRequestPriority;
-    }
-    
-    
-    
-    public String getCommunicationRequestDoNotPerform() {
-        return this.communicationRequestDoNotPerform;
-    }
-    
-    public void setCommunicationRequestDoNotPerform(String communicationRequestDoNotPerform) {
-        this.communicationRequestDoNotPerform = communicationRequestDoNotPerform;
-    }
-    
-    
-    
-    public String getCmmnctnRqstMdmCdngSrSlctd() {
-        return this.cmmnctnRqstMdmCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstMdmCdngSrSlctd(String cmmnctnRqstMdmCdngSrSlctd) {
-        this.cmmnctnRqstMdmCdngSrSlctd = cmmnctnRqstMdmCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstMdmCdngCde() {
-        return this.cmmnctnRqstMdmCdngCde;
-    }
-    
-    public void setCmmnctnRqstMdmCdngCde(String cmmnctnRqstMdmCdngCde) {
-        this.cmmnctnRqstMdmCdngCde = cmmnctnRqstMdmCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstMdmCdngVrsn() {
-        return this.cmmnctnRqstMdmCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstMdmCdngVrsn(String cmmnctnRqstMdmCdngVrsn) {
-        this.cmmnctnRqstMdmCdngVrsn = cmmnctnRqstMdmCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstMdmCdngDsplay() {
-        return this.cmmnctnRqstMdmCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstMdmCdngDsplay(String cmmnctnRqstMdmCdngDsplay) {
-        this.cmmnctnRqstMdmCdngDsplay = cmmnctnRqstMdmCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstMdmCdngSstm() {
-        return this.cmmnctnRqstMdmCdngSstm;
-    }
-    
-    public void setCmmnctnRqstMdmCdngSstm(String cmmnctnRqstMdmCdngSstm) {
-        this.cmmnctnRqstMdmCdngSstm = cmmnctnRqstMdmCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationRequestSubject() {
-        return this.communicationRequestSubject;
-    }
-    
-    public void setCommunicationRequestSubject(String communicationRequestSubject) {
-        this.communicationRequestSubject = communicationRequestSubject;
-    }
-    
-    
-    
-    public String getCommunicationRequestAbout() {
-        return this.communicationRequestAbout;
-    }
-    
-    public void setCommunicationRequestAbout(String communicationRequestAbout) {
-        this.communicationRequestAbout = communicationRequestAbout;
-    }
-    
-    
-    
-    public String getCommunicationRequestEncounter() {
-        return this.communicationRequestEncounter;
-    }
-    
-    public void setCommunicationRequestEncounter(String communicationRequestEncounter) {
-        this.communicationRequestEncounter = communicationRequestEncounter;
-    }
-    
-    
-    
-    public String getCommunicationRequestPayload() {
-        return this.communicationRequestPayload;
-    }
-    
-    public void setCommunicationRequestPayload(String communicationRequestPayload) {
-        this.communicationRequestPayload = communicationRequestPayload;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntStrng() {
-        return this.cmmnctnRqstPldCntntStrng;
-    }
-    
-    public void setCmmnctnRqstPldCntntStrng(String cmmnctnRqstPldCntntStrng) {
-        this.cmmnctnRqstPldCntntStrng = cmmnctnRqstPldCntntStrng;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntttchmntCdngSrSlctd() {
-        return this.cmmnctnRqstPldCntntttchmntCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstPldCntntttchmntCdngSrSlctd(String cmmnctnRqstPldCntntttchmntCdngSrSlctd) {
-        this.cmmnctnRqstPldCntntttchmntCdngSrSlctd = cmmnctnRqstPldCntntttchmntCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntttchmntCdngCde() {
-        return this.cmmnctnRqstPldCntntttchmntCdngCde;
-    }
-    
-    public void setCmmnctnRqstPldCntntttchmntCdngCde(String cmmnctnRqstPldCntntttchmntCdngCde) {
-        this.cmmnctnRqstPldCntntttchmntCdngCde = cmmnctnRqstPldCntntttchmntCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntttchmntCdngVrsn() {
-        return this.cmmnctnRqstPldCntntttchmntCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstPldCntntttchmntCdngVrsn(String cmmnctnRqstPldCntntttchmntCdngVrsn) {
-        this.cmmnctnRqstPldCntntttchmntCdngVrsn = cmmnctnRqstPldCntntttchmntCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntttchmntCdngDsplay() {
-        return this.cmmnctnRqstPldCntntttchmntCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstPldCntntttchmntCdngDsplay(String cmmnctnRqstPldCntntttchmntCdngDsplay) {
-        this.cmmnctnRqstPldCntntttchmntCdngDsplay = cmmnctnRqstPldCntntttchmntCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntttchmntCdngSstm() {
-        return this.cmmnctnRqstPldCntntttchmntCdngSstm;
-    }
-    
-    public void setCmmnctnRqstPldCntntttchmntCdngSstm(String cmmnctnRqstPldCntntttchmntCdngSstm) {
-        this.cmmnctnRqstPldCntntttchmntCdngSstm = cmmnctnRqstPldCntntttchmntCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnRqstPldCntntRfrnce() {
-        return this.cmmnctnRqstPldCntntRfrnce;
-    }
-    
-    public void setCmmnctnRqstPldCntntRfrnce(String cmmnctnRqstPldCntntRfrnce) {
-        this.cmmnctnRqstPldCntntRfrnce = cmmnctnRqstPldCntntRfrnce;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncDttme() {
-        return this.cmmnctnRqstCcrrncDttme;
-    }
-    
-    public void setCmmnctnRqstCcrrncDttme(String cmmnctnRqstCcrrncDttme) {
-        this.cmmnctnRqstCcrrncDttme = cmmnctnRqstCcrrncDttme;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncPrdCdngSrSlctd() {
-        return this.cmmnctnRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstCcrrncPrdCdngSrSlctd(String cmmnctnRqstCcrrncPrdCdngSrSlctd) {
-        this.cmmnctnRqstCcrrncPrdCdngSrSlctd = cmmnctnRqstCcrrncPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncPrdCdngCde() {
-        return this.cmmnctnRqstCcrrncPrdCdngCde;
-    }
-    
-    public void setCmmnctnRqstCcrrncPrdCdngCde(String cmmnctnRqstCcrrncPrdCdngCde) {
-        this.cmmnctnRqstCcrrncPrdCdngCde = cmmnctnRqstCcrrncPrdCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncPrdCdngVrsn() {
-        return this.cmmnctnRqstCcrrncPrdCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstCcrrncPrdCdngVrsn(String cmmnctnRqstCcrrncPrdCdngVrsn) {
-        this.cmmnctnRqstCcrrncPrdCdngVrsn = cmmnctnRqstCcrrncPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncPrdCdngDsplay() {
-        return this.cmmnctnRqstCcrrncPrdCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstCcrrncPrdCdngDsplay(String cmmnctnRqstCcrrncPrdCdngDsplay) {
-        this.cmmnctnRqstCcrrncPrdCdngDsplay = cmmnctnRqstCcrrncPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstCcrrncPrdCdngSstm() {
-        return this.cmmnctnRqstCcrrncPrdCdngSstm;
-    }
-    
-    public void setCmmnctnRqstCcrrncPrdCdngSstm(String cmmnctnRqstCcrrncPrdCdngSstm) {
-        this.cmmnctnRqstCcrrncPrdCdngSstm = cmmnctnRqstCcrrncPrdCdngSstm;
-    }
-    
-    
-    
-    public String getCommunicationRequestAuthoredOn() {
-        return this.communicationRequestAuthoredOn;
-    }
-    
-    public void setCommunicationRequestAuthoredOn(String communicationRequestAuthoredOn) {
-        this.communicationRequestAuthoredOn = communicationRequestAuthoredOn;
-    }
-    
-    
-    
-    public String getCommunicationRequestRequester() {
-        return this.communicationRequestRequester;
-    }
-    
-    public void setCommunicationRequestRequester(String communicationRequestRequester) {
-        this.communicationRequestRequester = communicationRequestRequester;
-    }
-    
-    
-    
-    public String getCommunicationRequestRecipient() {
-        return this.communicationRequestRecipient;
-    }
-    
-    public void setCommunicationRequestRecipient(String communicationRequestRecipient) {
-        this.communicationRequestRecipient = communicationRequestRecipient;
-    }
-    
-    
-    
-    public String getCommunicationRequestSender() {
-        return this.communicationRequestSender;
-    }
-    
-    public void setCommunicationRequestSender(String communicationRequestSender) {
-        this.communicationRequestSender = communicationRequestSender;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnCdCdngSrSlctd() {
-        return this.cmmnctnRqstRsnCdCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstRsnCdCdngSrSlctd(String cmmnctnRqstRsnCdCdngSrSlctd) {
-        this.cmmnctnRqstRsnCdCdngSrSlctd = cmmnctnRqstRsnCdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnCdCdngCde() {
-        return this.cmmnctnRqstRsnCdCdngCde;
-    }
-    
-    public void setCmmnctnRqstRsnCdCdngCde(String cmmnctnRqstRsnCdCdngCde) {
-        this.cmmnctnRqstRsnCdCdngCde = cmmnctnRqstRsnCdCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnCdCdngVrsn() {
-        return this.cmmnctnRqstRsnCdCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstRsnCdCdngVrsn(String cmmnctnRqstRsnCdCdngVrsn) {
-        this.cmmnctnRqstRsnCdCdngVrsn = cmmnctnRqstRsnCdCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnCdCdngDsplay() {
-        return this.cmmnctnRqstRsnCdCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstRsnCdCdngDsplay(String cmmnctnRqstRsnCdCdngDsplay) {
-        this.cmmnctnRqstRsnCdCdngDsplay = cmmnctnRqstRsnCdCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnCdCdngSstm() {
-        return this.cmmnctnRqstRsnCdCdngSstm;
-    }
-    
-    public void setCmmnctnRqstRsnCdCdngSstm(String cmmnctnRqstRsnCdCdngSstm) {
-        this.cmmnctnRqstRsnCdCdngSstm = cmmnctnRqstRsnCdCdngSstm;
-    }
-    
-    
-    
-    public String getCmmnctnRqstRsnRfrnce() {
-        return this.cmmnctnRqstRsnRfrnce;
-    }
-    
-    public void setCmmnctnRqstRsnRfrnce(String cmmnctnRqstRsnRfrnce) {
-        this.cmmnctnRqstRsnRfrnce = cmmnctnRqstRsnRfrnce;
-    }
-    
-    
-    
-    public String getCmmnctnRqstNtCdngSrSlctd() {
-        return this.cmmnctnRqstNtCdngSrSlctd;
-    }
-    
-    public void setCmmnctnRqstNtCdngSrSlctd(String cmmnctnRqstNtCdngSrSlctd) {
-        this.cmmnctnRqstNtCdngSrSlctd = cmmnctnRqstNtCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCmmnctnRqstNtCdngCde() {
-        return this.cmmnctnRqstNtCdngCde;
-    }
-    
-    public void setCmmnctnRqstNtCdngCde(String cmmnctnRqstNtCdngCde) {
-        this.cmmnctnRqstNtCdngCde = cmmnctnRqstNtCdngCde;
-    }
-    
-    
-    
-    public String getCmmnctnRqstNtCdngVrsn() {
-        return this.cmmnctnRqstNtCdngVrsn;
-    }
-    
-    public void setCmmnctnRqstNtCdngVrsn(String cmmnctnRqstNtCdngVrsn) {
-        this.cmmnctnRqstNtCdngVrsn = cmmnctnRqstNtCdngVrsn;
-    }
-    
-    
-    
-    public String getCmmnctnRqstNtCdngDsplay() {
-        return this.cmmnctnRqstNtCdngDsplay;
-    }
-    
-    public void setCmmnctnRqstNtCdngDsplay(String cmmnctnRqstNtCdngDsplay) {
-        this.cmmnctnRqstNtCdngDsplay = cmmnctnRqstNtCdngDsplay;
-    }
-    
-    
-    
-    public String getCmmnctnRqstNtCdngSstm() {
-        return this.cmmnctnRqstNtCdngSstm;
-    }
-    
-    public void setCmmnctnRqstNtCdngSstm(String cmmnctnRqstNtCdngSstm) {
-        this.cmmnctnRqstNtCdngSstm = cmmnctnRqstNtCdngSstm;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrSe()
+    {
+        return this.cmmnctnRqstDntfrDntfrSe;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrSe
+        (String cmmnctnRqstDntfrDntfrSe) 
+        {
+      this.cmmnctnRqstDntfrDntfrSe = cmmnctnRqstDntfrDntfrSe;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcCSstm()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcCSstm
+        (String cmmnctnRqstDntfrDntfrTpCcCSstm) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcCSstm = cmmnctnRqstDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcCVrsn()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcCVrsn
+        (String cmmnctnRqstDntfrDntfrTpCcCVrsn) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcCVrsn = cmmnctnRqstDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcCCde()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcCCde
+        (String cmmnctnRqstDntfrDntfrTpCcCCde) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcCCde = cmmnctnRqstDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcCDsplay()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcCDsplay
+        (String cmmnctnRqstDntfrDntfrTpCcCDsplay) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcCDsplay = cmmnctnRqstDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcCSrSlctd
+        (String cmmnctnRqstDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcCSrSlctd = cmmnctnRqstDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrTpCcTxt()
+    {
+        return this.cmmnctnRqstDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrTpCcTxt
+        (String cmmnctnRqstDntfrDntfrTpCcTxt) 
+        {
+      this.cmmnctnRqstDntfrDntfrTpCcTxt = cmmnctnRqstDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrPrdPrdStrt()
+    {
+        return this.cmmnctnRqstDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrPrdPrdStrt
+        (String cmmnctnRqstDntfrDntfrPrdPrdStrt) 
+        {
+      this.cmmnctnRqstDntfrDntfrPrdPrdStrt = cmmnctnRqstDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrPrdPrdNd()
+    {
+        return this.cmmnctnRqstDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrPrdPrdNd
+        (String cmmnctnRqstDntfrDntfrPrdPrdNd) 
+        {
+      this.cmmnctnRqstDntfrDntfrPrdPrdNd = cmmnctnRqstDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrSsgnr()
+    {
+        return this.cmmnctnRqstDntfrDntfrSsgnr;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrSsgnr
+        (String cmmnctnRqstDntfrDntfrSsgnr) 
+        {
+      this.cmmnctnRqstDntfrDntfrSsgnr = cmmnctnRqstDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrVlue()
+    {
+        return this.cmmnctnRqstDntfrDntfrVlue;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrVlue
+        (String cmmnctnRqstDntfrDntfrVlue) 
+        {
+      this.cmmnctnRqstDntfrDntfrVlue = cmmnctnRqstDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCmmnctnRqstDntfrDntfrSstm()
+    {
+        return this.cmmnctnRqstDntfrDntfrSstm;
+    }
+    
+    public void setCmmnctnRqstDntfrDntfrSstm
+        (String cmmnctnRqstDntfrDntfrSstm) 
+        {
+      this.cmmnctnRqstDntfrDntfrSstm = cmmnctnRqstDntfrDntfrSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstBsdnRfrnce()
+    {
+        return this.cmmnctnRqstBsdnRfrnce;
+    }
+    
+    public void setCmmnctnRqstBsdnRfrnce
+        (String cmmnctnRqstBsdnRfrnce) 
+        {
+      this.cmmnctnRqstBsdnRfrnce = cmmnctnRqstBsdnRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstRplcsRfrnce()
+    {
+        return this.cmmnctnRqstRplcsRfrnce;
+    }
+    
+    public void setCmmnctnRqstRplcsRfrnce
+        (String cmmnctnRqstRplcsRfrnce) 
+        {
+      this.cmmnctnRqstRplcsRfrnce = cmmnctnRqstRplcsRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrSe()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrSe;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrSe
+        (String cmmnctnRqstGrpdntfrDntfrSe) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrSe = cmmnctnRqstGrpdntfrDntfrSe;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcCSstm()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcCSstm
+        (String cmmnctnRqstGrpdntfrDntfrTpCcCSstm) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcCSstm = cmmnctnRqstGrpdntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcCVrsn()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcCVrsn
+        (String cmmnctnRqstGrpdntfrDntfrTpCcCVrsn) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcCVrsn = cmmnctnRqstGrpdntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcCCde()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcCCde;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcCCde
+        (String cmmnctnRqstGrpdntfrDntfrTpCcCCde) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcCCde = cmmnctnRqstGrpdntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcCDsplay()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcCDsplay
+        (String cmmnctnRqstGrpdntfrDntfrTpCcCDsplay) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcCDsplay = cmmnctnRqstGrpdntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd
+        (String cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd = cmmnctnRqstGrpdntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrTpCcTxt()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrTpCcTxt;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrTpCcTxt
+        (String cmmnctnRqstGrpdntfrDntfrTpCcTxt) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrTpCcTxt = cmmnctnRqstGrpdntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrPrdPrdStrt()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrPrdPrdStrt
+        (String cmmnctnRqstGrpdntfrDntfrPrdPrdStrt) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrPrdPrdStrt = cmmnctnRqstGrpdntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrPrdPrdNd()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrPrdPrdNd
+        (String cmmnctnRqstGrpdntfrDntfrPrdPrdNd) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrPrdPrdNd = cmmnctnRqstGrpdntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrSsgnr()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrSsgnr;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrSsgnr
+        (String cmmnctnRqstGrpdntfrDntfrSsgnr) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrSsgnr = cmmnctnRqstGrpdntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrVlue()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrVlue;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrVlue
+        (String cmmnctnRqstGrpdntfrDntfrVlue) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrVlue = cmmnctnRqstGrpdntfrDntfrVlue;
+}
+    public 
+    String 
+    getCmmnctnRqstGrpdntfrDntfrSstm()
+    {
+        return this.cmmnctnRqstGrpdntfrDntfrSstm;
+    }
+    
+    public void setCmmnctnRqstGrpdntfrDntfrSstm
+        (String cmmnctnRqstGrpdntfrDntfrSstm) 
+        {
+      this.cmmnctnRqstGrpdntfrDntfrSstm = cmmnctnRqstGrpdntfrDntfrSstm;
+}
+    public 
+    String 
+    getCommunicationRequestStatusCode()
+    {
+        return this.communicationRequestStatusCode;
+    }
+    
+    public void setCommunicationRequestStatusCode
+        (String communicationRequestStatusCode) 
+        {
+      this.communicationRequestStatusCode = communicationRequestStatusCode;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcCdngCSstm()
+    {
+        return this.cmmnctnRqstSttsRsnCcCdngCSstm;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcCdngCSstm
+        (String cmmnctnRqstSttsRsnCcCdngCSstm) 
+        {
+      this.cmmnctnRqstSttsRsnCcCdngCSstm = cmmnctnRqstSttsRsnCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcCdngCVrsn()
+    {
+        return this.cmmnctnRqstSttsRsnCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcCdngCVrsn
+        (String cmmnctnRqstSttsRsnCcCdngCVrsn) 
+        {
+      this.cmmnctnRqstSttsRsnCcCdngCVrsn = cmmnctnRqstSttsRsnCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcCdngCCde()
+    {
+        return this.cmmnctnRqstSttsRsnCcCdngCCde;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcCdngCCde
+        (String cmmnctnRqstSttsRsnCcCdngCCde) 
+        {
+      this.cmmnctnRqstSttsRsnCcCdngCCde = cmmnctnRqstSttsRsnCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcCdngCDsplay()
+    {
+        return this.cmmnctnRqstSttsRsnCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcCdngCDsplay
+        (String cmmnctnRqstSttsRsnCcCdngCDsplay) 
+        {
+      this.cmmnctnRqstSttsRsnCcCdngCDsplay = cmmnctnRqstSttsRsnCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcCdngCSrSlctd()
+    {
+        return this.cmmnctnRqstSttsRsnCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcCdngCSrSlctd
+        (String cmmnctnRqstSttsRsnCcCdngCSrSlctd) 
+        {
+      this.cmmnctnRqstSttsRsnCcCdngCSrSlctd = cmmnctnRqstSttsRsnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstSttsRsnCcTxt()
+    {
+        return this.cmmnctnRqstSttsRsnCcTxt;
+    }
+    
+    public void setCmmnctnRqstSttsRsnCcTxt
+        (String cmmnctnRqstSttsRsnCcTxt) 
+        {
+      this.cmmnctnRqstSttsRsnCcTxt = cmmnctnRqstSttsRsnCcTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcCdngCSstm()
+    {
+        return this.cmmnctnRqstCtgrCcCdngCSstm;
+    }
+    
+    public void setCmmnctnRqstCtgrCcCdngCSstm
+        (String cmmnctnRqstCtgrCcCdngCSstm) 
+        {
+      this.cmmnctnRqstCtgrCcCdngCSstm = cmmnctnRqstCtgrCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcCdngCVrsn()
+    {
+        return this.cmmnctnRqstCtgrCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnRqstCtgrCcCdngCVrsn
+        (String cmmnctnRqstCtgrCcCdngCVrsn) 
+        {
+      this.cmmnctnRqstCtgrCcCdngCVrsn = cmmnctnRqstCtgrCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcCdngCCde()
+    {
+        return this.cmmnctnRqstCtgrCcCdngCCde;
+    }
+    
+    public void setCmmnctnRqstCtgrCcCdngCCde
+        (String cmmnctnRqstCtgrCcCdngCCde) 
+        {
+      this.cmmnctnRqstCtgrCcCdngCCde = cmmnctnRqstCtgrCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcCdngCDsplay()
+    {
+        return this.cmmnctnRqstCtgrCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnRqstCtgrCcCdngCDsplay
+        (String cmmnctnRqstCtgrCcCdngCDsplay) 
+        {
+      this.cmmnctnRqstCtgrCcCdngCDsplay = cmmnctnRqstCtgrCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcCdngCSrSlctd()
+    {
+        return this.cmmnctnRqstCtgrCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstCtgrCcCdngCSrSlctd
+        (String cmmnctnRqstCtgrCcCdngCSrSlctd) 
+        {
+      this.cmmnctnRqstCtgrCcCdngCSrSlctd = cmmnctnRqstCtgrCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstCtgrCcTxt()
+    {
+        return this.cmmnctnRqstCtgrCcTxt;
+    }
+    
+    public void setCmmnctnRqstCtgrCcTxt
+        (String cmmnctnRqstCtgrCcTxt) 
+        {
+      this.cmmnctnRqstCtgrCcTxt = cmmnctnRqstCtgrCcTxt;
+}
+    public 
+    String 
+    getCommunicationRequestPriorityCode()
+    {
+        return this.communicationRequestPriorityCode;
+    }
+    
+    public void setCommunicationRequestPriorityCode
+        (String communicationRequestPriorityCode) 
+        {
+      this.communicationRequestPriorityCode = communicationRequestPriorityCode;
+}
+    public 
+    String 
+    getCmmnctnRqstDNtPrfrmBln()
+    {
+        return this.cmmnctnRqstDNtPrfrmBln;
+    }
+    
+    public void setCmmnctnRqstDNtPrfrmBln
+        (String cmmnctnRqstDNtPrfrmBln) 
+        {
+      this.cmmnctnRqstDNtPrfrmBln = cmmnctnRqstDNtPrfrmBln;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcCdngCSstm()
+    {
+        return this.cmmnctnRqstMdmCcCdngCSstm;
+    }
+    
+    public void setCmmnctnRqstMdmCcCdngCSstm
+        (String cmmnctnRqstMdmCcCdngCSstm) 
+        {
+      this.cmmnctnRqstMdmCcCdngCSstm = cmmnctnRqstMdmCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcCdngCVrsn()
+    {
+        return this.cmmnctnRqstMdmCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnRqstMdmCcCdngCVrsn
+        (String cmmnctnRqstMdmCcCdngCVrsn) 
+        {
+      this.cmmnctnRqstMdmCcCdngCVrsn = cmmnctnRqstMdmCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcCdngCCde()
+    {
+        return this.cmmnctnRqstMdmCcCdngCCde;
+    }
+    
+    public void setCmmnctnRqstMdmCcCdngCCde
+        (String cmmnctnRqstMdmCcCdngCCde) 
+        {
+      this.cmmnctnRqstMdmCcCdngCCde = cmmnctnRqstMdmCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcCdngCDsplay()
+    {
+        return this.cmmnctnRqstMdmCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnRqstMdmCcCdngCDsplay
+        (String cmmnctnRqstMdmCcCdngCDsplay) 
+        {
+      this.cmmnctnRqstMdmCcCdngCDsplay = cmmnctnRqstMdmCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcCdngCSrSlctd()
+    {
+        return this.cmmnctnRqstMdmCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstMdmCcCdngCSrSlctd
+        (String cmmnctnRqstMdmCcCdngCSrSlctd) 
+        {
+      this.cmmnctnRqstMdmCcCdngCSrSlctd = cmmnctnRqstMdmCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstMdmCcTxt()
+    {
+        return this.cmmnctnRqstMdmCcTxt;
+    }
+    
+    public void setCmmnctnRqstMdmCcTxt
+        (String cmmnctnRqstMdmCcTxt) 
+        {
+      this.cmmnctnRqstMdmCcTxt = cmmnctnRqstMdmCcTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstSbjctRfrnce()
+    {
+        return this.cmmnctnRqstSbjctRfrnce;
+    }
+    
+    public void setCmmnctnRqstSbjctRfrnce
+        (String cmmnctnRqstSbjctRfrnce) 
+        {
+      this.cmmnctnRqstSbjctRfrnce = cmmnctnRqstSbjctRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstBtRfrnce()
+    {
+        return this.cmmnctnRqstBtRfrnce;
+    }
+    
+    public void setCmmnctnRqstBtRfrnce
+        (String cmmnctnRqstBtRfrnce) 
+        {
+      this.cmmnctnRqstBtRfrnce = cmmnctnRqstBtRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstNcntrRfrnce()
+    {
+        return this.cmmnctnRqstNcntrRfrnce;
+    }
+    
+    public void setCmmnctnRqstNcntrRfrnce
+        (String cmmnctnRqstNcntrRfrnce) 
+        {
+      this.cmmnctnRqstNcntrRfrnce = cmmnctnRqstNcntrRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntStrngStrng()
+    {
+        return this.cmmnctnRqstPldCntntStrngStrng;
+    }
+    
+    public void setCmmnctnRqstPldCntntStrngStrng
+        (String cmmnctnRqstPldCntntStrngStrng) 
+        {
+      this.cmmnctnRqstPldCntntStrngStrng = cmmnctnRqstPldCntntStrngStrng;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntDta()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntDta;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntDta
+        (String cmmnctnRqstPldCntntttchmntTtchmntDta) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntDta = cmmnctnRqstPldCntntttchmntTtchmntDta;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntHsh()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntHsh;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntHsh
+        (String cmmnctnRqstPldCntntttchmntTtchmntHsh) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntHsh = cmmnctnRqstPldCntntttchmntTtchmntHsh;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntCntntTpe()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntCntntTpe;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntCntntTpe
+        (String cmmnctnRqstPldCntntttchmntTtchmntCntntTpe) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntCntntTpe = cmmnctnRqstPldCntntttchmntTtchmntCntntTpe;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntLngge()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntLngge;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntLngge
+        (String cmmnctnRqstPldCntntttchmntTtchmntLngge) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntLngge = cmmnctnRqstPldCntntttchmntTtchmntLngge;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntCrtn()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntCrtn;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntCrtn
+        (String cmmnctnRqstPldCntntttchmntTtchmntCrtn) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntCrtn = cmmnctnRqstPldCntntttchmntTtchmntCrtn;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntTtle()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntTtle;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntTtle
+        (String cmmnctnRqstPldCntntttchmntTtchmntTtle) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntTtle = cmmnctnRqstPldCntntttchmntTtchmntTtle;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntSze()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntSze;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntSze
+        (String cmmnctnRqstPldCntntttchmntTtchmntSze) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntSze = cmmnctnRqstPldCntntttchmntTtchmntSze;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntttchmntTtchmntRl()
+    {
+        return this.cmmnctnRqstPldCntntttchmntTtchmntRl;
+    }
+    
+    public void setCmmnctnRqstPldCntntttchmntTtchmntRl
+        (String cmmnctnRqstPldCntntttchmntTtchmntRl) 
+        {
+      this.cmmnctnRqstPldCntntttchmntTtchmntRl = cmmnctnRqstPldCntntttchmntTtchmntRl;
+}
+    public 
+    String 
+    getCmmnctnRqstPldCntntRfrncRfrnce()
+    {
+        return this.cmmnctnRqstPldCntntRfrncRfrnce;
+    }
+    
+    public void setCmmnctnRqstPldCntntRfrncRfrnce
+        (String cmmnctnRqstPldCntntRfrncRfrnce) 
+        {
+      this.cmmnctnRqstPldCntntRfrncRfrnce = cmmnctnRqstPldCntntRfrncRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstCcrrncDttmDtTme()
+    {
+        return this.cmmnctnRqstCcrrncDttmDtTme;
+    }
+    
+    public void setCmmnctnRqstCcrrncDttmDtTme
+        (String cmmnctnRqstCcrrncDttmDtTme) 
+        {
+      this.cmmnctnRqstCcrrncDttmDtTme = cmmnctnRqstCcrrncDttmDtTme;
+}
+    public 
+    String 
+    getCmmnctnRqstCcrrncPrdPrdStrt()
+    {
+        return this.cmmnctnRqstCcrrncPrdPrdStrt;
+    }
+    
+    public void setCmmnctnRqstCcrrncPrdPrdStrt
+        (String cmmnctnRqstCcrrncPrdPrdStrt) 
+        {
+      this.cmmnctnRqstCcrrncPrdPrdStrt = cmmnctnRqstCcrrncPrdPrdStrt;
+}
+    public 
+    String 
+    getCmmnctnRqstCcrrncPrdPrdNd()
+    {
+        return this.cmmnctnRqstCcrrncPrdPrdNd;
+    }
+    
+    public void setCmmnctnRqstCcrrncPrdPrdNd
+        (String cmmnctnRqstCcrrncPrdPrdNd) 
+        {
+      this.cmmnctnRqstCcrrncPrdPrdNd = cmmnctnRqstCcrrncPrdPrdNd;
+}
+    public 
+    String 
+    getCmmnctnRqstThrdnDtTme()
+    {
+        return this.cmmnctnRqstThrdnDtTme;
+    }
+    
+    public void setCmmnctnRqstThrdnDtTme
+        (String cmmnctnRqstThrdnDtTme) 
+        {
+      this.cmmnctnRqstThrdnDtTme = cmmnctnRqstThrdnDtTme;
+}
+    public 
+    String 
+    getCmmnctnRqstRqstrRfrnce()
+    {
+        return this.cmmnctnRqstRqstrRfrnce;
+    }
+    
+    public void setCmmnctnRqstRqstrRfrnce
+        (String cmmnctnRqstRqstrRfrnce) 
+        {
+      this.cmmnctnRqstRqstrRfrnce = cmmnctnRqstRqstrRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstRcpntRfrnce()
+    {
+        return this.cmmnctnRqstRcpntRfrnce;
+    }
+    
+    public void setCmmnctnRqstRcpntRfrnce
+        (String cmmnctnRqstRcpntRfrnce) 
+        {
+      this.cmmnctnRqstRcpntRfrnce = cmmnctnRqstRcpntRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstSndrRfrnce()
+    {
+        return this.cmmnctnRqstSndrRfrnce;
+    }
+    
+    public void setCmmnctnRqstSndrRfrnce
+        (String cmmnctnRqstSndrRfrnce) 
+        {
+      this.cmmnctnRqstSndrRfrnce = cmmnctnRqstSndrRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcCdngCSstm()
+    {
+        return this.cmmnctnRqstRsnCdCcCdngCSstm;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcCdngCSstm
+        (String cmmnctnRqstRsnCdCcCdngCSstm) 
+        {
+      this.cmmnctnRqstRsnCdCcCdngCSstm = cmmnctnRqstRsnCdCcCdngCSstm;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcCdngCVrsn()
+    {
+        return this.cmmnctnRqstRsnCdCcCdngCVrsn;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcCdngCVrsn
+        (String cmmnctnRqstRsnCdCcCdngCVrsn) 
+        {
+      this.cmmnctnRqstRsnCdCcCdngCVrsn = cmmnctnRqstRsnCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcCdngCCde()
+    {
+        return this.cmmnctnRqstRsnCdCcCdngCCde;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcCdngCCde
+        (String cmmnctnRqstRsnCdCcCdngCCde) 
+        {
+      this.cmmnctnRqstRsnCdCcCdngCCde = cmmnctnRqstRsnCdCcCdngCCde;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcCdngCDsplay()
+    {
+        return this.cmmnctnRqstRsnCdCcCdngCDsplay;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcCdngCDsplay
+        (String cmmnctnRqstRsnCdCcCdngCDsplay) 
+        {
+      this.cmmnctnRqstRsnCdCcCdngCDsplay = cmmnctnRqstRsnCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcCdngCSrSlctd()
+    {
+        return this.cmmnctnRqstRsnCdCcCdngCSrSlctd;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcCdngCSrSlctd
+        (String cmmnctnRqstRsnCdCcCdngCSrSlctd) 
+        {
+      this.cmmnctnRqstRsnCdCcCdngCSrSlctd = cmmnctnRqstRsnCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnCdCcTxt()
+    {
+        return this.cmmnctnRqstRsnCdCcTxt;
+    }
+    
+    public void setCmmnctnRqstRsnCdCcTxt
+        (String cmmnctnRqstRsnCdCcTxt) 
+        {
+      this.cmmnctnRqstRsnCdCcTxt = cmmnctnRqstRsnCdCcTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstRsnRfrncRfrnce()
+    {
+        return this.cmmnctnRqstRsnRfrncRfrnce;
+    }
+    
+    public void setCmmnctnRqstRsnRfrncRfrnce
+        (String cmmnctnRqstRsnRfrncRfrnce) 
+        {
+      this.cmmnctnRqstRsnRfrncRfrnce = cmmnctnRqstRsnRfrncRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstNtNnttnTme()
+    {
+        return this.cmmnctnRqstNtNnttnTme;
+    }
+    
+    public void setCmmnctnRqstNtNnttnTme
+        (String cmmnctnRqstNtNnttnTme) 
+        {
+      this.cmmnctnRqstNtNnttnTme = cmmnctnRqstNtNnttnTme;
+}
+    public 
+    String 
+    getCmmnctnRqstNtNnttnTxt()
+    {
+        return this.cmmnctnRqstNtNnttnTxt;
+    }
+    
+    public void setCmmnctnRqstNtNnttnTxt
+        (String cmmnctnRqstNtNnttnTxt) 
+        {
+      this.cmmnctnRqstNtNnttnTxt = cmmnctnRqstNtNnttnTxt;
+}
+    public 
+    String 
+    getCmmnctnRqstNtNnttnThrRfrnce()
+    {
+        return this.cmmnctnRqstNtNnttnThrRfrnce;
+    }
+    
+    public void setCmmnctnRqstNtNnttnThrRfrnce
+        (String cmmnctnRqstNtNnttnThrRfrnce) 
+        {
+      this.cmmnctnRqstNtNnttnThrRfrnce = cmmnctnRqstNtNnttnThrRfrnce;
+}
+    public 
+    String 
+    getCmmnctnRqstNtNnttnThrStrng()
+    {
+        return this.cmmnctnRqstNtNnttnThrStrng;
+    }
+    
+    public void setCmmnctnRqstNtNnttnThrStrng
+        (String cmmnctnRqstNtNnttnThrStrng) 
+        {
+      this.cmmnctnRqstNtNnttnThrStrng = cmmnctnRqstNtNnttnThrStrng;
+}
 
 
 

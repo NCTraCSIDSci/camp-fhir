@@ -1,441 +1,537 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicinalproductpharmaceutical" optimistic-lock="none" table="medicinalproductpharmaceutical">
-        <id name="mpphrmctclDntfrCdngCde" type="string">
-            <column length="512" name="MPPhrmctcl_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mpphrmctclDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="MPPhrmctcl_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="MPPhrmctcl_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="MPPhrmctcl_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="MPPhrmctcl_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDmnstrblDsFrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDmnstrblDsFrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDmnstrblDsFrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDmnstrblDsFrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclDmnstrblDsFrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclNtfPrsnttnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclNtfPrsnttnCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclNtfPrsnttnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="MPPhrmctcl_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclNtfPrsnttnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclNtfPrsnttnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mppharmaceuticalIngredient" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPharmaceutical_ingredient">
-                <comment>Reference</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mppharmaceuticalDevice" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="MPPharmaceutical_device">
-                <comment>Reference</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mppharmaceuticalChrctrs" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPharmaceutical_chrctrs">
-                <comment>BackboneElement</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclDmnstrblDsFrmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_dmnstrblDsFrm_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.administrableDoseForm", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAdministrableDoseForm, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclNtfPrsnttnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclNtfPrsnttnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclNtfPrsnttnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclNtfPrsnttnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsSttsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_stts_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclNtfPrsnttnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsSttsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_stts_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclNtfPrsnttnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_ntfPrsnttn_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.unitOfPresentation", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnitOfPresentation, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsSttsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_stts_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclNgrdntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.ingredient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIngredient"}</meta>
+            <column length="65535" name="MPPhrmctcl_ngrdnt_Rfrnce">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.ingredient", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIngredient"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsSttsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_stts_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mppharmaceuticalDeviceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.device", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDevice"}</meta>
+            <column length="65535" name="MPPharmaceutical_device_Reference">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.device", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDevice"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclChrctrsSttsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_chrctrs_stts_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclChrctrsCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mppharmaceuticalRouteOfadmin" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPharmaceutical_routeOfadmin">
-                <comment>BackboneElement</comment>
+        <property name="mpphrmctclChrctrsCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclChrctrsCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclChrctrsCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclChrctrsCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclChrctrsCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_cd_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addCharacteristics"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclChrctrsSttsCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnFrstDsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclChrctrsSttsCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnFrstDsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclChrctrsSttsCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnFrstDsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclChrctrsSttsCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnFrstDsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclChrctrsSttsCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnFrstDsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclChrctrsSttsCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_chrctrs_stts_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.characteristics.status", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addCharacteristics"] , "methodName" : "setStatus, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxSnglDsCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxSnglDsCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxSnglDsCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxSnglDsCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxSnglDsCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrDCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_cd_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrDCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnFrstDsQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrDCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnFrstDsQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrDCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnFrstDsQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrDCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnFrstDsQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnFrstDsQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_frstDs_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.firstDose", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setFirstDose, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnMxSnglDsQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnMxSnglDsQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnMxSnglDsQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnMxSnglDsQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnMxTrtmntPrd" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_mxTrtmntPrd">
-                <comment>Duration</comment>
+        <property name="mpphrmctclRtfdmnMxSnglDsQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxSnglDs_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxSingleDose, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcs" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs">
-                <comment>BackboneElement</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrDQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrDQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrDQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrDQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrDQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrD_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay", "datatype" : "Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerDay, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtNmrtrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_nmrtr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrd" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd">
-                <comment>BackboneElement</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtDnmntrQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_dnmntr_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, decimal", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setValue"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtNmrtrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_nmrtr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtDnmntrQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_dnmntr_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setComparator"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtNmrtrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_nmrtr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtDnmntrQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_dnmntr_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setUnit"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtNmrtrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_nmrtr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtDnmntrQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_dnmntr_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, uri", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtNmrtrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_nmrtr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setNumerator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="mpphrmctclRtfdmnMxDsPrTrtmntPrdRtDnmntrQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxDsPrTrtmntPrd_Rt_dnmntr_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod", "datatype" : "Ratio, Quantity, code", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxDosePerTreatmentPeriod, setDenominator, setCode"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="mpphrmctclRtfdmnMxTrtmntPrdDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxTreatmentPeriod"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_mxTrtmntPrd_Drtn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration"] , "methodName" : "setMaxTreatmentPeriod"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdSpprtngnfrmtn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_spprtngnfrmtn">
-                <comment>string</comment>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_cd_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies"] , "methodName" : "setCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setVersion"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdTssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, setText"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_tss_CC_txt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setTissue, setText"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setComparator"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Qntt_cmprtr">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setComparator"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setCode"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Qntt_cde">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, code", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setCode"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setValue"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Qntt_vlue">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, decimal", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setValue"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setUnit"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Qntt_nt">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, string", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setUnit"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdVlQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setSystem"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_vl_Qntt_sstm">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value", "datatype" : "Quantity, uri", "cardinality" : "Required", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setValue, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="mpphrmctclRtfdmnTrgtSpcsWthdrwlPrdSpprtngnfrmtnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setSupportingInformation"}</meta>
+            <column length="65535" name="MPPhrmctcl_rtfdmn_trgtSpcs_wthdrwlPrd_spprtngnfrmtn_strng">
+                <comment>{ "tree" :"MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setRouteOfAdministration", "addTargetSpecies", "addWithdrawalPeriod"] , "methodName" : "setSupportingInformation"}</comment>
             </column>
         </property>
     </class>

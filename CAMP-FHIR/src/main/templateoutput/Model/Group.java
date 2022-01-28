@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1145 +10,754 @@ package main.templateoutput.Model;
 public class Group  implements java.io.Serializable {
 
 
-     private String grpDntfrDntfrTpCdblCncptCdngCde;
-     private String grpDntfrDntfrSCde;
-     private String grpDntfrDntfrTpCdblCncptCdngSstm;
-     private String grpDntfrDntfrTpCdblCncptCdngVrsn;
-     private String grpDntfrDntfrTpCdblCncptCdngDsplay;
-     private String grpDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String grpDntfrDntfrCdblCncptTxt;
-     private String grpDntfrDntfrPrdStrt;
-     private String grpDntfrDntfrPrdNd;
-     private String grpDntfrDntfrRfrncRfrnce;
-     private String grpDntfrDntfrRfrncTpe;
-     private String grpDntfrDntfrRfrncDntfr;
-     private String grpDntfrDntfrRfrncDsplay;
-     private String grpDntfrDntfrVlStrng;
-     private String grpDntfrDntfrSstmRi;
-     private String groupActive;
-     private String groupType;
-     private String groupActual;
-     private String grpCdCdblCncptCdngSstm;
-     private String grpCdCdblCncptCdngVrsn;
-     private String grpCdCdblCncptCdngCde;
-     private String grpCdCdblCncptCdngDsplay;
-     private String grpCdCdblCncptCdngSrSlctd;
-     private String grpCdCdblCncptTxtStrng;
-     private String groupName;
-     private String groupQuantity;
-     private String grpMngngnttRfrncDntfrDntfrCdblCncptCdng;
-     private String grpMngngnttRfrncDntfrDntfrCdblCncptTxt;
-     private String grpMngngnttRfrncDntfrDntfrPrdStrt;
-     private String grpMngngnttRfrncDntfrDntfrPrdNd;
-     private String grpMngngnttRfrncDntfrDntfrRfrncRfrnce;
-     private String grpMngngnttRfrncDntfrDntfrRfrncTpe;
-     private String grpMngngnttRfrncDntfrDntfrRfrncDntfr;
-     private String grpMngngnttRfrncDntfrDntfrRfrncDsplay;
-     private String grpMngngnttRfrncDntfrSe;
-     private String grpMngngnttRfrncDntfrSstm;
-     private String grpMngngnttRfrncDntfrVlue;
-     private String grpMngngnttRfrncRfrncStrng;
-     private String grpMngngnttRfrncDsplStrng;
-     private String grpMngngnttRfrncTpRi;
-     private String grpChrctrCdCdblCncptCdngSstm;
-     private String grpChrctrCdCdblCncptCdngVrsn;
-     private String grpChrctrCdCdblCncptCdngCde;
-     private String grpChrctrCdCdblCncptCdngDsplay;
-     private String grpChrctrCdCdblCncptCdngSrSlctd;
-     private String grpChrctrCdCdblCncptTxtStrng;
-     private String grpChrctrVlcdblcptCdblCncptCdngSstm;
-     private String grpChrctrVlcdblcptCdblCncptCdngVrsn;
-     private String grpChrctrVlcdblcptCdblCncptCdngCde;
-     private String grpChrctrVlcdblcptCdblCncptCdngDsplay;
-     private String grpChrctrVlcdblcptCdblCncptCdngSrSlctd;
-     private String grpChrctrVlcdblcptCdblCncptTxtStrng;
-     private String groupChrctrValueBoolean;
-     private String grpChrctrVlQnttQnttCmprtrCde;
-     private String grpChrctrVlQnttQnttCdCde;
-     private String grpChrctrVlQnttQnttVlDcml;
-     private String grpChrctrVlQnttQnttNtStrng;
-     private String grpChrctrVlQnttQnttSstmRi;
-     private String grpChrctrVlRngRngLwSmplQntty;
-     private String grpChrctrVlRngRngHghSmplQntty;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrPrdNd;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr;
-     private String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay;
-     private String grpChrctrVlRfrncRfrncDntfrSe;
-     private String grpChrctrVlRfrncRfrncDntfrSstm;
-     private String grpChrctrVlRfrncRfrncDntfrVlue;
-     private String grpChrctrVlRfrncRfrncRfrncStrng;
-     private String grpChrctrVlRfrncRfrncDsplStrng;
-     private String grpChrctrVlRfrncRfrncTpRi;
-     private String groupChrctrExclude;
-     private String grpChrctrPrdPrdStrtDtTme;
-     private String grpChrctrPrdPrdNdDtTme;
-     private String grpMmbrNttRfrncDntfrDntfrCdblCncptCdng;
-     private String grpMmbrNttRfrncDntfrDntfrCdblCncptTxt;
-     private String grpMmbrNttRfrncDntfrDntfrPrdStrt;
-     private String grpMmbrNttRfrncDntfrDntfrPrdNd;
-     private String grpMmbrNttRfrncDntfrDntfrRfrncRfrnce;
-     private String grpMmbrNttRfrncDntfrDntfrRfrncTpe;
-     private String grpMmbrNttRfrncDntfrDntfrRfrncDntfr;
-     private String grpMmbrNttRfrncDntfrDntfrRfrncDsplay;
-     private String grpMmbrNttRfrncDntfrSe;
-     private String grpMmbrNttRfrncDntfrSstm;
-     private String grpMmbrNttRfrncDntfrVlue;
-     private String grpMmbrNttRfrncRfrncStrng;
-     private String grpMmbrNttRfrncDsplStrng;
-     private String grpMmbrNttRfrncTpRi;
-     private String grpMmbrPrdPrdStrtDtTme;
-     private String grpMmbrPrdPrdNdDtTme;
-     private String groupMemberInactive;
+     private Integer id;
+     private String groupIdentifierIdentifierUse;
+     private String grpDntfrDntfrTpCcCSstm;
+     private String grpDntfrDntfrTpCcCVrsn;
+     private String grpDntfrDntfrTpCcCCde;
+     private String grpDntfrDntfrTpCcCDsplay;
+     private String grpDntfrDntfrTpCcCSrSlctd;
+     private String grpDntfrDntfrTpCcTxt;
+     private String grpDntfrDntfrPrdPrdStrt;
+     private String grpDntfrDntfrPrdPrdNd;
+     private String grpDntfrDntfrSsgnr;
+     private String groupIdentifierIdentifierValue;
+     private String groupIdentifierIdentifierSystem;
+     private String groupActiveBoolean;
+     private String groupTypeCode;
+     private String groupActualBoolean;
+     private String groupCodeCcCodingCSystem;
+     private String groupCodeCcCodingCVersion;
+     private String groupCodeCcCodingCCode;
+     private String groupCodeCcCodingCDisplay;
+     private String grpCdCcCdngCSrSlctd;
+     private String groupCodeCcText;
+     private String groupNameString;
+     private String groupQuantityUnsignedInt;
+     private String groupManagingEntityReference;
+     private String grpChrctrCdCcCdngCSstm;
+     private String grpChrctrCdCcCdngCVrsn;
+     private String groupChrctrCodeCcCodingCCode;
+     private String grpChrctrCdCcCdngCDsplay;
+     private String grpChrctrCdCcCdngCSrSlctd;
+     private String groupChrctrCodeCcText;
+     private String grpChrctrVlCdblcncptCcCdngCSstm;
+     private String grpChrctrVlCdblcncptCcCdngCVrsn;
+     private String grpChrctrVlCdblcncptCcCdngCCde;
+     private String grpChrctrVlCdblcncptCcCdngCDsplay;
+     private String grpChrctrVlCdblcncptCcCdngCSrSlctd;
+     private String grpChrctrVlCdblcncptCcTxt;
+     private String groupChrctrValueBooleanBoolean;
+     private String grpChrctrVlQnttQnttCmprtr;
+     private String grpChrctrVlQnttQnttCde;
+     private String grpChrctrVlQnttQnttVlue;
+     private String grpChrctrVlQnttQnttNt;
+     private String grpChrctrVlQnttQnttSstm;
+     private String groupChrctrValueRangeRangeLow;
+     private String groupChrctrValueRangeRangeHigh;
+     private String grpChrctrVlRfrncRfrnce;
+     private String groupChrctrExcludeBoolean;
+     private String groupChrctrPeriodPeriodStart;
+     private String groupChrctrPeriodPeriodEnd;
+     private String groupMemberEntityReference;
+     private String groupMemberPeriodPeriodStart;
+     private String groupMemberPeriodPeriodEnd;
+     private String groupMemberInactiveBoolean;
 
     public Group() {
     }
 
-	
-    public Group(String grpDntfrDntfrTpCdblCncptCdngCde) {
-        this.grpDntfrDntfrTpCdblCncptCdngCde = grpDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Group(String grpDntfrDntfrTpCdblCncptCdngCde, String grpDntfrDntfrSCde, String grpDntfrDntfrTpCdblCncptCdngSstm, String grpDntfrDntfrTpCdblCncptCdngVrsn, String grpDntfrDntfrTpCdblCncptCdngDsplay, String grpDntfrDntfrTpCdblCncptCdngSrSlctd, String grpDntfrDntfrCdblCncptTxt, String grpDntfrDntfrPrdStrt, String grpDntfrDntfrPrdNd, String grpDntfrDntfrRfrncRfrnce, String grpDntfrDntfrRfrncTpe, String grpDntfrDntfrRfrncDntfr, String grpDntfrDntfrRfrncDsplay, String grpDntfrDntfrVlStrng, String grpDntfrDntfrSstmRi, String groupActive, String groupType, String groupActual, String grpCdCdblCncptCdngSstm, String grpCdCdblCncptCdngVrsn, String grpCdCdblCncptCdngCde, String grpCdCdblCncptCdngDsplay, String grpCdCdblCncptCdngSrSlctd, String grpCdCdblCncptTxtStrng, String groupName, String groupQuantity, String grpMngngnttRfrncDntfrDntfrCdblCncptCdng, String grpMngngnttRfrncDntfrDntfrCdblCncptTxt, String grpMngngnttRfrncDntfrDntfrPrdStrt, String grpMngngnttRfrncDntfrDntfrPrdNd, String grpMngngnttRfrncDntfrDntfrRfrncRfrnce, String grpMngngnttRfrncDntfrDntfrRfrncTpe, String grpMngngnttRfrncDntfrDntfrRfrncDntfr, String grpMngngnttRfrncDntfrDntfrRfrncDsplay, String grpMngngnttRfrncDntfrSe, String grpMngngnttRfrncDntfrSstm, String grpMngngnttRfrncDntfrVlue, String grpMngngnttRfrncRfrncStrng, String grpMngngnttRfrncDsplStrng, String grpMngngnttRfrncTpRi, String grpChrctrCdCdblCncptCdngSstm, String grpChrctrCdCdblCncptCdngVrsn, String grpChrctrCdCdblCncptCdngCde, String grpChrctrCdCdblCncptCdngDsplay, String grpChrctrCdCdblCncptCdngSrSlctd, String grpChrctrCdCdblCncptTxtStrng, String grpChrctrVlcdblcptCdblCncptCdngSstm, String grpChrctrVlcdblcptCdblCncptCdngVrsn, String grpChrctrVlcdblcptCdblCncptCdngCde, String grpChrctrVlcdblcptCdblCncptCdngDsplay, String grpChrctrVlcdblcptCdblCncptCdngSrSlctd, String grpChrctrVlcdblcptCdblCncptTxtStrng, String groupChrctrValueBoolean, String grpChrctrVlQnttQnttCmprtrCde, String grpChrctrVlQnttQnttCdCde, String grpChrctrVlQnttQnttVlDcml, String grpChrctrVlQnttQnttNtStrng, String grpChrctrVlQnttQnttSstmRi, String grpChrctrVlRngRngLwSmplQntty, String grpChrctrVlRngRngHghSmplQntty, String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng, String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt, String grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt, String grpChrctrVlRfrncRfrncDntfrDntfrPrdNd, String grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce, String grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe, String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr, String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay, String grpChrctrVlRfrncRfrncDntfrSe, String grpChrctrVlRfrncRfrncDntfrSstm, String grpChrctrVlRfrncRfrncDntfrVlue, String grpChrctrVlRfrncRfrncRfrncStrng, String grpChrctrVlRfrncRfrncDsplStrng, String grpChrctrVlRfrncRfrncTpRi, String groupChrctrExclude, String grpChrctrPrdPrdStrtDtTme, String grpChrctrPrdPrdNdDtTme, String grpMmbrNttRfrncDntfrDntfrCdblCncptCdng, String grpMmbrNttRfrncDntfrDntfrCdblCncptTxt, String grpMmbrNttRfrncDntfrDntfrPrdStrt, String grpMmbrNttRfrncDntfrDntfrPrdNd, String grpMmbrNttRfrncDntfrDntfrRfrncRfrnce, String grpMmbrNttRfrncDntfrDntfrRfrncTpe, String grpMmbrNttRfrncDntfrDntfrRfrncDntfr, String grpMmbrNttRfrncDntfrDntfrRfrncDsplay, String grpMmbrNttRfrncDntfrSe, String grpMmbrNttRfrncDntfrSstm, String grpMmbrNttRfrncDntfrVlue, String grpMmbrNttRfrncRfrncStrng, String grpMmbrNttRfrncDsplStrng, String grpMmbrNttRfrncTpRi, String grpMmbrPrdPrdStrtDtTme, String grpMmbrPrdPrdNdDtTme, String groupMemberInactive) {
-       this.grpDntfrDntfrTpCdblCncptCdngCde = grpDntfrDntfrTpCdblCncptCdngCde;
-       this.grpDntfrDntfrSCde = grpDntfrDntfrSCde;
-       this.grpDntfrDntfrTpCdblCncptCdngSstm = grpDntfrDntfrTpCdblCncptCdngSstm;
-       this.grpDntfrDntfrTpCdblCncptCdngVrsn = grpDntfrDntfrTpCdblCncptCdngVrsn;
-       this.grpDntfrDntfrTpCdblCncptCdngDsplay = grpDntfrDntfrTpCdblCncptCdngDsplay;
-       this.grpDntfrDntfrTpCdblCncptCdngSrSlctd = grpDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.grpDntfrDntfrCdblCncptTxt = grpDntfrDntfrCdblCncptTxt;
-       this.grpDntfrDntfrPrdStrt = grpDntfrDntfrPrdStrt;
-       this.grpDntfrDntfrPrdNd = grpDntfrDntfrPrdNd;
-       this.grpDntfrDntfrRfrncRfrnce = grpDntfrDntfrRfrncRfrnce;
-       this.grpDntfrDntfrRfrncTpe = grpDntfrDntfrRfrncTpe;
-       this.grpDntfrDntfrRfrncDntfr = grpDntfrDntfrRfrncDntfr;
-       this.grpDntfrDntfrRfrncDsplay = grpDntfrDntfrRfrncDsplay;
-       this.grpDntfrDntfrVlStrng = grpDntfrDntfrVlStrng;
-       this.grpDntfrDntfrSstmRi = grpDntfrDntfrSstmRi;
-       this.groupActive = groupActive;
-       this.groupType = groupType;
-       this.groupActual = groupActual;
-       this.grpCdCdblCncptCdngSstm = grpCdCdblCncptCdngSstm;
-       this.grpCdCdblCncptCdngVrsn = grpCdCdblCncptCdngVrsn;
-       this.grpCdCdblCncptCdngCde = grpCdCdblCncptCdngCde;
-       this.grpCdCdblCncptCdngDsplay = grpCdCdblCncptCdngDsplay;
-       this.grpCdCdblCncptCdngSrSlctd = grpCdCdblCncptCdngSrSlctd;
-       this.grpCdCdblCncptTxtStrng = grpCdCdblCncptTxtStrng;
-       this.groupName = groupName;
-       this.groupQuantity = groupQuantity;
-       this.grpMngngnttRfrncDntfrDntfrCdblCncptCdng = grpMngngnttRfrncDntfrDntfrCdblCncptCdng;
-       this.grpMngngnttRfrncDntfrDntfrCdblCncptTxt = grpMngngnttRfrncDntfrDntfrCdblCncptTxt;
-       this.grpMngngnttRfrncDntfrDntfrPrdStrt = grpMngngnttRfrncDntfrDntfrPrdStrt;
-       this.grpMngngnttRfrncDntfrDntfrPrdNd = grpMngngnttRfrncDntfrDntfrPrdNd;
-       this.grpMngngnttRfrncDntfrDntfrRfrncRfrnce = grpMngngnttRfrncDntfrDntfrRfrncRfrnce;
-       this.grpMngngnttRfrncDntfrDntfrRfrncTpe = grpMngngnttRfrncDntfrDntfrRfrncTpe;
-       this.grpMngngnttRfrncDntfrDntfrRfrncDntfr = grpMngngnttRfrncDntfrDntfrRfrncDntfr;
-       this.grpMngngnttRfrncDntfrDntfrRfrncDsplay = grpMngngnttRfrncDntfrDntfrRfrncDsplay;
-       this.grpMngngnttRfrncDntfrSe = grpMngngnttRfrncDntfrSe;
-       this.grpMngngnttRfrncDntfrSstm = grpMngngnttRfrncDntfrSstm;
-       this.grpMngngnttRfrncDntfrVlue = grpMngngnttRfrncDntfrVlue;
-       this.grpMngngnttRfrncRfrncStrng = grpMngngnttRfrncRfrncStrng;
-       this.grpMngngnttRfrncDsplStrng = grpMngngnttRfrncDsplStrng;
-       this.grpMngngnttRfrncTpRi = grpMngngnttRfrncTpRi;
-       this.grpChrctrCdCdblCncptCdngSstm = grpChrctrCdCdblCncptCdngSstm;
-       this.grpChrctrCdCdblCncptCdngVrsn = grpChrctrCdCdblCncptCdngVrsn;
-       this.grpChrctrCdCdblCncptCdngCde = grpChrctrCdCdblCncptCdngCde;
-       this.grpChrctrCdCdblCncptCdngDsplay = grpChrctrCdCdblCncptCdngDsplay;
-       this.grpChrctrCdCdblCncptCdngSrSlctd = grpChrctrCdCdblCncptCdngSrSlctd;
-       this.grpChrctrCdCdblCncptTxtStrng = grpChrctrCdCdblCncptTxtStrng;
-       this.grpChrctrVlcdblcptCdblCncptCdngSstm = grpChrctrVlcdblcptCdblCncptCdngSstm;
-       this.grpChrctrVlcdblcptCdblCncptCdngVrsn = grpChrctrVlcdblcptCdblCncptCdngVrsn;
-       this.grpChrctrVlcdblcptCdblCncptCdngCde = grpChrctrVlcdblcptCdblCncptCdngCde;
-       this.grpChrctrVlcdblcptCdblCncptCdngDsplay = grpChrctrVlcdblcptCdblCncptCdngDsplay;
-       this.grpChrctrVlcdblcptCdblCncptCdngSrSlctd = grpChrctrVlcdblcptCdblCncptCdngSrSlctd;
-       this.grpChrctrVlcdblcptCdblCncptTxtStrng = grpChrctrVlcdblcptCdblCncptTxtStrng;
-       this.groupChrctrValueBoolean = groupChrctrValueBoolean;
-       this.grpChrctrVlQnttQnttCmprtrCde = grpChrctrVlQnttQnttCmprtrCde;
-       this.grpChrctrVlQnttQnttCdCde = grpChrctrVlQnttQnttCdCde;
-       this.grpChrctrVlQnttQnttVlDcml = grpChrctrVlQnttQnttVlDcml;
-       this.grpChrctrVlQnttQnttNtStrng = grpChrctrVlQnttQnttNtStrng;
-       this.grpChrctrVlQnttQnttSstmRi = grpChrctrVlQnttQnttSstmRi;
-       this.grpChrctrVlRngRngLwSmplQntty = grpChrctrVlRngRngLwSmplQntty;
-       this.grpChrctrVlRngRngHghSmplQntty = grpChrctrVlRngRngHghSmplQntty;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng = grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt = grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt = grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrPrdNd = grpChrctrVlRfrncRfrncDntfrDntfrPrdNd;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce = grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe = grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr = grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr;
-       this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay = grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay;
-       this.grpChrctrVlRfrncRfrncDntfrSe = grpChrctrVlRfrncRfrncDntfrSe;
-       this.grpChrctrVlRfrncRfrncDntfrSstm = grpChrctrVlRfrncRfrncDntfrSstm;
-       this.grpChrctrVlRfrncRfrncDntfrVlue = grpChrctrVlRfrncRfrncDntfrVlue;
-       this.grpChrctrVlRfrncRfrncRfrncStrng = grpChrctrVlRfrncRfrncRfrncStrng;
-       this.grpChrctrVlRfrncRfrncDsplStrng = grpChrctrVlRfrncRfrncDsplStrng;
-       this.grpChrctrVlRfrncRfrncTpRi = grpChrctrVlRfrncRfrncTpRi;
-       this.groupChrctrExclude = groupChrctrExclude;
-       this.grpChrctrPrdPrdStrtDtTme = grpChrctrPrdPrdStrtDtTme;
-       this.grpChrctrPrdPrdNdDtTme = grpChrctrPrdPrdNdDtTme;
-       this.grpMmbrNttRfrncDntfrDntfrCdblCncptCdng = grpMmbrNttRfrncDntfrDntfrCdblCncptCdng;
-       this.grpMmbrNttRfrncDntfrDntfrCdblCncptTxt = grpMmbrNttRfrncDntfrDntfrCdblCncptTxt;
-       this.grpMmbrNttRfrncDntfrDntfrPrdStrt = grpMmbrNttRfrncDntfrDntfrPrdStrt;
-       this.grpMmbrNttRfrncDntfrDntfrPrdNd = grpMmbrNttRfrncDntfrDntfrPrdNd;
-       this.grpMmbrNttRfrncDntfrDntfrRfrncRfrnce = grpMmbrNttRfrncDntfrDntfrRfrncRfrnce;
-       this.grpMmbrNttRfrncDntfrDntfrRfrncTpe = grpMmbrNttRfrncDntfrDntfrRfrncTpe;
-       this.grpMmbrNttRfrncDntfrDntfrRfrncDntfr = grpMmbrNttRfrncDntfrDntfrRfrncDntfr;
-       this.grpMmbrNttRfrncDntfrDntfrRfrncDsplay = grpMmbrNttRfrncDntfrDntfrRfrncDsplay;
-       this.grpMmbrNttRfrncDntfrSe = grpMmbrNttRfrncDntfrSe;
-       this.grpMmbrNttRfrncDntfrSstm = grpMmbrNttRfrncDntfrSstm;
-       this.grpMmbrNttRfrncDntfrVlue = grpMmbrNttRfrncDntfrVlue;
-       this.grpMmbrNttRfrncRfrncStrng = grpMmbrNttRfrncRfrncStrng;
-       this.grpMmbrNttRfrncDsplStrng = grpMmbrNttRfrncDsplStrng;
-       this.grpMmbrNttRfrncTpRi = grpMmbrNttRfrncTpRi;
-       this.grpMmbrPrdPrdStrtDtTme = grpMmbrPrdPrdStrtDtTme;
-       this.grpMmbrPrdPrdNdDtTme = grpMmbrPrdPrdNdDtTme;
-       this.groupMemberInactive = groupMemberInactive;
+    public Group(String groupIdentifierIdentifierUse, String grpDntfrDntfrTpCcCSstm, String grpDntfrDntfrTpCcCVrsn, String grpDntfrDntfrTpCcCCde, String grpDntfrDntfrTpCcCDsplay, String grpDntfrDntfrTpCcCSrSlctd, String grpDntfrDntfrTpCcTxt, String grpDntfrDntfrPrdPrdStrt, String grpDntfrDntfrPrdPrdNd, String grpDntfrDntfrSsgnr, String groupIdentifierIdentifierValue, String groupIdentifierIdentifierSystem, String groupActiveBoolean, String groupTypeCode, String groupActualBoolean, String groupCodeCcCodingCSystem, String groupCodeCcCodingCVersion, String groupCodeCcCodingCCode, String groupCodeCcCodingCDisplay, String grpCdCcCdngCSrSlctd, String groupCodeCcText, String groupNameString, String groupQuantityUnsignedInt, String groupManagingEntityReference, String grpChrctrCdCcCdngCSstm, String grpChrctrCdCcCdngCVrsn, String groupChrctrCodeCcCodingCCode, String grpChrctrCdCcCdngCDsplay, String grpChrctrCdCcCdngCSrSlctd, String groupChrctrCodeCcText, String grpChrctrVlCdblcncptCcCdngCSstm, String grpChrctrVlCdblcncptCcCdngCVrsn, String grpChrctrVlCdblcncptCcCdngCCde, String grpChrctrVlCdblcncptCcCdngCDsplay, String grpChrctrVlCdblcncptCcCdngCSrSlctd, String grpChrctrVlCdblcncptCcTxt, String groupChrctrValueBooleanBoolean, String grpChrctrVlQnttQnttCmprtr, String grpChrctrVlQnttQnttCde, String grpChrctrVlQnttQnttVlue, String grpChrctrVlQnttQnttNt, String grpChrctrVlQnttQnttSstm, String groupChrctrValueRangeRangeLow, String groupChrctrValueRangeRangeHigh, String grpChrctrVlRfrncRfrnce, String groupChrctrExcludeBoolean, String groupChrctrPeriodPeriodStart, String groupChrctrPeriodPeriodEnd, String groupMemberEntityReference, String groupMemberPeriodPeriodStart, String groupMemberPeriodPeriodEnd, String groupMemberInactiveBoolean) {
+       this.groupIdentifierIdentifierUse = groupIdentifierIdentifierUse;
+       this.grpDntfrDntfrTpCcCSstm = grpDntfrDntfrTpCcCSstm;
+       this.grpDntfrDntfrTpCcCVrsn = grpDntfrDntfrTpCcCVrsn;
+       this.grpDntfrDntfrTpCcCCde = grpDntfrDntfrTpCcCCde;
+       this.grpDntfrDntfrTpCcCDsplay = grpDntfrDntfrTpCcCDsplay;
+       this.grpDntfrDntfrTpCcCSrSlctd = grpDntfrDntfrTpCcCSrSlctd;
+       this.grpDntfrDntfrTpCcTxt = grpDntfrDntfrTpCcTxt;
+       this.grpDntfrDntfrPrdPrdStrt = grpDntfrDntfrPrdPrdStrt;
+       this.grpDntfrDntfrPrdPrdNd = grpDntfrDntfrPrdPrdNd;
+       this.grpDntfrDntfrSsgnr = grpDntfrDntfrSsgnr;
+       this.groupIdentifierIdentifierValue = groupIdentifierIdentifierValue;
+       this.groupIdentifierIdentifierSystem = groupIdentifierIdentifierSystem;
+       this.groupActiveBoolean = groupActiveBoolean;
+       this.groupTypeCode = groupTypeCode;
+       this.groupActualBoolean = groupActualBoolean;
+       this.groupCodeCcCodingCSystem = groupCodeCcCodingCSystem;
+       this.groupCodeCcCodingCVersion = groupCodeCcCodingCVersion;
+       this.groupCodeCcCodingCCode = groupCodeCcCodingCCode;
+       this.groupCodeCcCodingCDisplay = groupCodeCcCodingCDisplay;
+       this.grpCdCcCdngCSrSlctd = grpCdCcCdngCSrSlctd;
+       this.groupCodeCcText = groupCodeCcText;
+       this.groupNameString = groupNameString;
+       this.groupQuantityUnsignedInt = groupQuantityUnsignedInt;
+       this.groupManagingEntityReference = groupManagingEntityReference;
+       this.grpChrctrCdCcCdngCSstm = grpChrctrCdCcCdngCSstm;
+       this.grpChrctrCdCcCdngCVrsn = grpChrctrCdCcCdngCVrsn;
+       this.groupChrctrCodeCcCodingCCode = groupChrctrCodeCcCodingCCode;
+       this.grpChrctrCdCcCdngCDsplay = grpChrctrCdCcCdngCDsplay;
+       this.grpChrctrCdCcCdngCSrSlctd = grpChrctrCdCcCdngCSrSlctd;
+       this.groupChrctrCodeCcText = groupChrctrCodeCcText;
+       this.grpChrctrVlCdblcncptCcCdngCSstm = grpChrctrVlCdblcncptCcCdngCSstm;
+       this.grpChrctrVlCdblcncptCcCdngCVrsn = grpChrctrVlCdblcncptCcCdngCVrsn;
+       this.grpChrctrVlCdblcncptCcCdngCCde = grpChrctrVlCdblcncptCcCdngCCde;
+       this.grpChrctrVlCdblcncptCcCdngCDsplay = grpChrctrVlCdblcncptCcCdngCDsplay;
+       this.grpChrctrVlCdblcncptCcCdngCSrSlctd = grpChrctrVlCdblcncptCcCdngCSrSlctd;
+       this.grpChrctrVlCdblcncptCcTxt = grpChrctrVlCdblcncptCcTxt;
+       this.groupChrctrValueBooleanBoolean = groupChrctrValueBooleanBoolean;
+       this.grpChrctrVlQnttQnttCmprtr = grpChrctrVlQnttQnttCmprtr;
+       this.grpChrctrVlQnttQnttCde = grpChrctrVlQnttQnttCde;
+       this.grpChrctrVlQnttQnttVlue = grpChrctrVlQnttQnttVlue;
+       this.grpChrctrVlQnttQnttNt = grpChrctrVlQnttQnttNt;
+       this.grpChrctrVlQnttQnttSstm = grpChrctrVlQnttQnttSstm;
+       this.groupChrctrValueRangeRangeLow = groupChrctrValueRangeRangeLow;
+       this.groupChrctrValueRangeRangeHigh = groupChrctrValueRangeRangeHigh;
+       this.grpChrctrVlRfrncRfrnce = grpChrctrVlRfrncRfrnce;
+       this.groupChrctrExcludeBoolean = groupChrctrExcludeBoolean;
+       this.groupChrctrPeriodPeriodStart = groupChrctrPeriodPeriodStart;
+       this.groupChrctrPeriodPeriodEnd = groupChrctrPeriodPeriodEnd;
+       this.groupMemberEntityReference = groupMemberEntityReference;
+       this.groupMemberPeriodPeriodStart = groupMemberPeriodPeriodStart;
+       this.groupMemberPeriodPeriodEnd = groupMemberPeriodPeriodEnd;
+       this.groupMemberInactiveBoolean = groupMemberInactiveBoolean;
     }
    
-    public String getGrpDntfrDntfrTpCdblCncptCdngCde() {
-        return this.grpDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setGrpDntfrDntfrTpCdblCncptCdngCde(String grpDntfrDntfrTpCdblCncptCdngCde) {
-        this.grpDntfrDntfrTpCdblCncptCdngCde = grpDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrSCde() {
-        return this.grpDntfrDntfrSCde;
-    }
-    
-    public void setGrpDntfrDntfrSCde(String grpDntfrDntfrSCde) {
-        this.grpDntfrDntfrSCde = grpDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.grpDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setGrpDntfrDntfrTpCdblCncptCdngSstm(String grpDntfrDntfrTpCdblCncptCdngSstm) {
-        this.grpDntfrDntfrTpCdblCncptCdngSstm = grpDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.grpDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setGrpDntfrDntfrTpCdblCncptCdngVrsn(String grpDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.grpDntfrDntfrTpCdblCncptCdngVrsn = grpDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.grpDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setGrpDntfrDntfrTpCdblCncptCdngDsplay(String grpDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.grpDntfrDntfrTpCdblCncptCdngDsplay = grpDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.grpDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setGrpDntfrDntfrTpCdblCncptCdngSrSlctd(String grpDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.grpDntfrDntfrTpCdblCncptCdngSrSlctd = grpDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrCdblCncptTxt() {
-        return this.grpDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setGrpDntfrDntfrCdblCncptTxt(String grpDntfrDntfrCdblCncptTxt) {
-        this.grpDntfrDntfrCdblCncptTxt = grpDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrPrdStrt() {
-        return this.grpDntfrDntfrPrdStrt;
-    }
-    
-    public void setGrpDntfrDntfrPrdStrt(String grpDntfrDntfrPrdStrt) {
-        this.grpDntfrDntfrPrdStrt = grpDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrPrdNd() {
-        return this.grpDntfrDntfrPrdNd;
-    }
-    
-    public void setGrpDntfrDntfrPrdNd(String grpDntfrDntfrPrdNd) {
-        this.grpDntfrDntfrPrdNd = grpDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrRfrncRfrnce() {
-        return this.grpDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setGrpDntfrDntfrRfrncRfrnce(String grpDntfrDntfrRfrncRfrnce) {
-        this.grpDntfrDntfrRfrncRfrnce = grpDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrRfrncTpe() {
-        return this.grpDntfrDntfrRfrncTpe;
-    }
-    
-    public void setGrpDntfrDntfrRfrncTpe(String grpDntfrDntfrRfrncTpe) {
-        this.grpDntfrDntfrRfrncTpe = grpDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrRfrncDntfr() {
-        return this.grpDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setGrpDntfrDntfrRfrncDntfr(String grpDntfrDntfrRfrncDntfr) {
-        this.grpDntfrDntfrRfrncDntfr = grpDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrRfrncDsplay() {
-        return this.grpDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setGrpDntfrDntfrRfrncDsplay(String grpDntfrDntfrRfrncDsplay) {
-        this.grpDntfrDntfrRfrncDsplay = grpDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrVlStrng() {
-        return this.grpDntfrDntfrVlStrng;
-    }
-    
-    public void setGrpDntfrDntfrVlStrng(String grpDntfrDntfrVlStrng) {
-        this.grpDntfrDntfrVlStrng = grpDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getGrpDntfrDntfrSstmRi() {
-        return this.grpDntfrDntfrSstmRi;
-    }
-    
-    public void setGrpDntfrDntfrSstmRi(String grpDntfrDntfrSstmRi) {
-        this.grpDntfrDntfrSstmRi = grpDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getGroupActive() {
-        return this.groupActive;
-    }
-    
-    public void setGroupActive(String groupActive) {
-        this.groupActive = groupActive;
-    }
-    
-    
-    
-    public String getGroupType() {
-        return this.groupType;
-    }
-    
-    public void setGroupType(String groupType) {
-        this.groupType = groupType;
-    }
-    
-    
-    
-    public String getGroupActual() {
-        return this.groupActual;
-    }
-    
-    public void setGroupActual(String groupActual) {
-        this.groupActual = groupActual;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptCdngSstm() {
-        return this.grpCdCdblCncptCdngSstm;
-    }
-    
-    public void setGrpCdCdblCncptCdngSstm(String grpCdCdblCncptCdngSstm) {
-        this.grpCdCdblCncptCdngSstm = grpCdCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptCdngVrsn() {
-        return this.grpCdCdblCncptCdngVrsn;
-    }
-    
-    public void setGrpCdCdblCncptCdngVrsn(String grpCdCdblCncptCdngVrsn) {
-        this.grpCdCdblCncptCdngVrsn = grpCdCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptCdngCde() {
-        return this.grpCdCdblCncptCdngCde;
-    }
-    
-    public void setGrpCdCdblCncptCdngCde(String grpCdCdblCncptCdngCde) {
-        this.grpCdCdblCncptCdngCde = grpCdCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptCdngDsplay() {
-        return this.grpCdCdblCncptCdngDsplay;
-    }
-    
-    public void setGrpCdCdblCncptCdngDsplay(String grpCdCdblCncptCdngDsplay) {
-        this.grpCdCdblCncptCdngDsplay = grpCdCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptCdngSrSlctd() {
-        return this.grpCdCdblCncptCdngSrSlctd;
-    }
-    
-    public void setGrpCdCdblCncptCdngSrSlctd(String grpCdCdblCncptCdngSrSlctd) {
-        this.grpCdCdblCncptCdngSrSlctd = grpCdCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGrpCdCdblCncptTxtStrng() {
-        return this.grpCdCdblCncptTxtStrng;
-    }
-    
-    public void setGrpCdCdblCncptTxtStrng(String grpCdCdblCncptTxtStrng) {
-        this.grpCdCdblCncptTxtStrng = grpCdCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getGroupName() {
-        return this.groupName;
-    }
-    
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
-    
-    
-    
-    public String getGroupQuantity() {
-        return this.groupQuantity;
-    }
-    
-    public void setGroupQuantity(String groupQuantity) {
-        this.groupQuantity = groupQuantity;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrCdblCncptCdng() {
-        return this.grpMngngnttRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrCdblCncptCdng(String grpMngngnttRfrncDntfrDntfrCdblCncptCdng) {
-        this.grpMngngnttRfrncDntfrDntfrCdblCncptCdng = grpMngngnttRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrCdblCncptTxt() {
-        return this.grpMngngnttRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrCdblCncptTxt(String grpMngngnttRfrncDntfrDntfrCdblCncptTxt) {
-        this.grpMngngnttRfrncDntfrDntfrCdblCncptTxt = grpMngngnttRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrPrdStrt() {
-        return this.grpMngngnttRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrPrdStrt(String grpMngngnttRfrncDntfrDntfrPrdStrt) {
-        this.grpMngngnttRfrncDntfrDntfrPrdStrt = grpMngngnttRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrPrdNd() {
-        return this.grpMngngnttRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrPrdNd(String grpMngngnttRfrncDntfrDntfrPrdNd) {
-        this.grpMngngnttRfrncDntfrDntfrPrdNd = grpMngngnttRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrRfrncRfrnce() {
-        return this.grpMngngnttRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrRfrncRfrnce(String grpMngngnttRfrncDntfrDntfrRfrncRfrnce) {
-        this.grpMngngnttRfrncDntfrDntfrRfrncRfrnce = grpMngngnttRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrRfrncTpe() {
-        return this.grpMngngnttRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrRfrncTpe(String grpMngngnttRfrncDntfrDntfrRfrncTpe) {
-        this.grpMngngnttRfrncDntfrDntfrRfrncTpe = grpMngngnttRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrRfrncDntfr() {
-        return this.grpMngngnttRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrRfrncDntfr(String grpMngngnttRfrncDntfrDntfrRfrncDntfr) {
-        this.grpMngngnttRfrncDntfrDntfrRfrncDntfr = grpMngngnttRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrDntfrRfrncDsplay() {
-        return this.grpMngngnttRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrDntfrRfrncDsplay(String grpMngngnttRfrncDntfrDntfrRfrncDsplay) {
-        this.grpMngngnttRfrncDntfrDntfrRfrncDsplay = grpMngngnttRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrSe() {
-        return this.grpMngngnttRfrncDntfrSe;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrSe(String grpMngngnttRfrncDntfrSe) {
-        this.grpMngngnttRfrncDntfrSe = grpMngngnttRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrSstm() {
-        return this.grpMngngnttRfrncDntfrSstm;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrSstm(String grpMngngnttRfrncDntfrSstm) {
-        this.grpMngngnttRfrncDntfrSstm = grpMngngnttRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDntfrVlue() {
-        return this.grpMngngnttRfrncDntfrVlue;
-    }
-    
-    public void setGrpMngngnttRfrncDntfrVlue(String grpMngngnttRfrncDntfrVlue) {
-        this.grpMngngnttRfrncDntfrVlue = grpMngngnttRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncRfrncStrng() {
-        return this.grpMngngnttRfrncRfrncStrng;
-    }
-    
-    public void setGrpMngngnttRfrncRfrncStrng(String grpMngngnttRfrncRfrncStrng) {
-        this.grpMngngnttRfrncRfrncStrng = grpMngngnttRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncDsplStrng() {
-        return this.grpMngngnttRfrncDsplStrng;
-    }
-    
-    public void setGrpMngngnttRfrncDsplStrng(String grpMngngnttRfrncDsplStrng) {
-        this.grpMngngnttRfrncDsplStrng = grpMngngnttRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getGrpMngngnttRfrncTpRi() {
-        return this.grpMngngnttRfrncTpRi;
-    }
-    
-    public void setGrpMngngnttRfrncTpRi(String grpMngngnttRfrncTpRi) {
-        this.grpMngngnttRfrncTpRi = grpMngngnttRfrncTpRi;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptCdngSstm() {
-        return this.grpChrctrCdCdblCncptCdngSstm;
-    }
-    
-    public void setGrpChrctrCdCdblCncptCdngSstm(String grpChrctrCdCdblCncptCdngSstm) {
-        this.grpChrctrCdCdblCncptCdngSstm = grpChrctrCdCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptCdngVrsn() {
-        return this.grpChrctrCdCdblCncptCdngVrsn;
-    }
-    
-    public void setGrpChrctrCdCdblCncptCdngVrsn(String grpChrctrCdCdblCncptCdngVrsn) {
-        this.grpChrctrCdCdblCncptCdngVrsn = grpChrctrCdCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptCdngCde() {
-        return this.grpChrctrCdCdblCncptCdngCde;
-    }
-    
-    public void setGrpChrctrCdCdblCncptCdngCde(String grpChrctrCdCdblCncptCdngCde) {
-        this.grpChrctrCdCdblCncptCdngCde = grpChrctrCdCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptCdngDsplay() {
-        return this.grpChrctrCdCdblCncptCdngDsplay;
-    }
-    
-    public void setGrpChrctrCdCdblCncptCdngDsplay(String grpChrctrCdCdblCncptCdngDsplay) {
-        this.grpChrctrCdCdblCncptCdngDsplay = grpChrctrCdCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptCdngSrSlctd() {
-        return this.grpChrctrCdCdblCncptCdngSrSlctd;
-    }
-    
-    public void setGrpChrctrCdCdblCncptCdngSrSlctd(String grpChrctrCdCdblCncptCdngSrSlctd) {
-        this.grpChrctrCdCdblCncptCdngSrSlctd = grpChrctrCdCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGrpChrctrCdCdblCncptTxtStrng() {
-        return this.grpChrctrCdCdblCncptTxtStrng;
-    }
-    
-    public void setGrpChrctrCdCdblCncptTxtStrng(String grpChrctrCdCdblCncptTxtStrng) {
-        this.grpChrctrCdCdblCncptTxtStrng = grpChrctrCdCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptCdngSstm() {
-        return this.grpChrctrVlcdblcptCdblCncptCdngSstm;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptCdngSstm(String grpChrctrVlcdblcptCdblCncptCdngSstm) {
-        this.grpChrctrVlcdblcptCdblCncptCdngSstm = grpChrctrVlcdblcptCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptCdngVrsn() {
-        return this.grpChrctrVlcdblcptCdblCncptCdngVrsn;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptCdngVrsn(String grpChrctrVlcdblcptCdblCncptCdngVrsn) {
-        this.grpChrctrVlcdblcptCdblCncptCdngVrsn = grpChrctrVlcdblcptCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptCdngCde() {
-        return this.grpChrctrVlcdblcptCdblCncptCdngCde;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptCdngCde(String grpChrctrVlcdblcptCdblCncptCdngCde) {
-        this.grpChrctrVlcdblcptCdblCncptCdngCde = grpChrctrVlcdblcptCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptCdngDsplay() {
-        return this.grpChrctrVlcdblcptCdblCncptCdngDsplay;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptCdngDsplay(String grpChrctrVlcdblcptCdblCncptCdngDsplay) {
-        this.grpChrctrVlcdblcptCdblCncptCdngDsplay = grpChrctrVlcdblcptCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptCdngSrSlctd() {
-        return this.grpChrctrVlcdblcptCdblCncptCdngSrSlctd;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptCdngSrSlctd(String grpChrctrVlcdblcptCdblCncptCdngSrSlctd) {
-        this.grpChrctrVlcdblcptCdblCncptCdngSrSlctd = grpChrctrVlcdblcptCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getGrpChrctrVlcdblcptCdblCncptTxtStrng() {
-        return this.grpChrctrVlcdblcptCdblCncptTxtStrng;
-    }
-    
-    public void setGrpChrctrVlcdblcptCdblCncptTxtStrng(String grpChrctrVlcdblcptCdblCncptTxtStrng) {
-        this.grpChrctrVlcdblcptCdblCncptTxtStrng = grpChrctrVlcdblcptCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getGroupChrctrValueBoolean() {
-        return this.groupChrctrValueBoolean;
-    }
-    
-    public void setGroupChrctrValueBoolean(String groupChrctrValueBoolean) {
-        this.groupChrctrValueBoolean = groupChrctrValueBoolean;
-    }
-    
-    
-    
-    public String getGrpChrctrVlQnttQnttCmprtrCde() {
-        return this.grpChrctrVlQnttQnttCmprtrCde;
-    }
-    
-    public void setGrpChrctrVlQnttQnttCmprtrCde(String grpChrctrVlQnttQnttCmprtrCde) {
-        this.grpChrctrVlQnttQnttCmprtrCde = grpChrctrVlQnttQnttCmprtrCde;
-    }
-    
-    
-    
-    public String getGrpChrctrVlQnttQnttCdCde() {
-        return this.grpChrctrVlQnttQnttCdCde;
-    }
-    
-    public void setGrpChrctrVlQnttQnttCdCde(String grpChrctrVlQnttQnttCdCde) {
-        this.grpChrctrVlQnttQnttCdCde = grpChrctrVlQnttQnttCdCde;
-    }
-    
-    
-    
-    public String getGrpChrctrVlQnttQnttVlDcml() {
-        return this.grpChrctrVlQnttQnttVlDcml;
-    }
-    
-    public void setGrpChrctrVlQnttQnttVlDcml(String grpChrctrVlQnttQnttVlDcml) {
-        this.grpChrctrVlQnttQnttVlDcml = grpChrctrVlQnttQnttVlDcml;
-    }
-    
-    
-    
-    public String getGrpChrctrVlQnttQnttNtStrng() {
-        return this.grpChrctrVlQnttQnttNtStrng;
-    }
-    
-    public void setGrpChrctrVlQnttQnttNtStrng(String grpChrctrVlQnttQnttNtStrng) {
-        this.grpChrctrVlQnttQnttNtStrng = grpChrctrVlQnttQnttNtStrng;
-    }
-    
-    
-    
-    public String getGrpChrctrVlQnttQnttSstmRi() {
-        return this.grpChrctrVlQnttQnttSstmRi;
-    }
-    
-    public void setGrpChrctrVlQnttQnttSstmRi(String grpChrctrVlQnttQnttSstmRi) {
-        this.grpChrctrVlQnttQnttSstmRi = grpChrctrVlQnttQnttSstmRi;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRngRngLwSmplQntty() {
-        return this.grpChrctrVlRngRngLwSmplQntty;
-    }
-    
-    public void setGrpChrctrVlRngRngLwSmplQntty(String grpChrctrVlRngRngLwSmplQntty) {
-        this.grpChrctrVlRngRngLwSmplQntty = grpChrctrVlRngRngLwSmplQntty;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRngRngHghSmplQntty() {
-        return this.grpChrctrVlRngRngHghSmplQntty;
-    }
-    
-    public void setGrpChrctrVlRngRngHghSmplQntty(String grpChrctrVlRngRngHghSmplQntty) {
-        this.grpChrctrVlRngRngHghSmplQntty = grpChrctrVlRngRngHghSmplQntty;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng(String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng = grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt(String grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt = grpChrctrVlRfrncRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrPrdStrt() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrPrdStrt(String grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt = grpChrctrVlRfrncRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrPrdNd() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrPrdNd(String grpChrctrVlRfrncRfrncDntfrDntfrPrdNd) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrPrdNd = grpChrctrVlRfrncRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce(String grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce = grpChrctrVlRfrncRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe(String grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe = grpChrctrVlRfrncRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr(String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr = grpChrctrVlRfrncRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay() {
-        return this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay(String grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay) {
-        this.grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay = grpChrctrVlRfrncRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrSe() {
-        return this.grpChrctrVlRfrncRfrncDntfrSe;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrSe(String grpChrctrVlRfrncRfrncDntfrSe) {
-        this.grpChrctrVlRfrncRfrncDntfrSe = grpChrctrVlRfrncRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrSstm() {
-        return this.grpChrctrVlRfrncRfrncDntfrSstm;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrSstm(String grpChrctrVlRfrncRfrncDntfrSstm) {
-        this.grpChrctrVlRfrncRfrncDntfrSstm = grpChrctrVlRfrncRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDntfrVlue() {
-        return this.grpChrctrVlRfrncRfrncDntfrVlue;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDntfrVlue(String grpChrctrVlRfrncRfrncDntfrVlue) {
-        this.grpChrctrVlRfrncRfrncDntfrVlue = grpChrctrVlRfrncRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncRfrncStrng() {
-        return this.grpChrctrVlRfrncRfrncRfrncStrng;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncRfrncStrng(String grpChrctrVlRfrncRfrncRfrncStrng) {
-        this.grpChrctrVlRfrncRfrncRfrncStrng = grpChrctrVlRfrncRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncDsplStrng() {
-        return this.grpChrctrVlRfrncRfrncDsplStrng;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncDsplStrng(String grpChrctrVlRfrncRfrncDsplStrng) {
-        this.grpChrctrVlRfrncRfrncDsplStrng = grpChrctrVlRfrncRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getGrpChrctrVlRfrncRfrncTpRi() {
-        return this.grpChrctrVlRfrncRfrncTpRi;
-    }
-    
-    public void setGrpChrctrVlRfrncRfrncTpRi(String grpChrctrVlRfrncRfrncTpRi) {
-        this.grpChrctrVlRfrncRfrncTpRi = grpChrctrVlRfrncRfrncTpRi;
-    }
-    
-    
-    
-    public String getGroupChrctrExclude() {
-        return this.groupChrctrExclude;
-    }
-    
-    public void setGroupChrctrExclude(String groupChrctrExclude) {
-        this.groupChrctrExclude = groupChrctrExclude;
-    }
-    
-    
-    
-    public String getGrpChrctrPrdPrdStrtDtTme() {
-        return this.grpChrctrPrdPrdStrtDtTme;
-    }
-    
-    public void setGrpChrctrPrdPrdStrtDtTme(String grpChrctrPrdPrdStrtDtTme) {
-        this.grpChrctrPrdPrdStrtDtTme = grpChrctrPrdPrdStrtDtTme;
-    }
-    
-    
-    
-    public String getGrpChrctrPrdPrdNdDtTme() {
-        return this.grpChrctrPrdPrdNdDtTme;
-    }
-    
-    public void setGrpChrctrPrdPrdNdDtTme(String grpChrctrPrdPrdNdDtTme) {
-        this.grpChrctrPrdPrdNdDtTme = grpChrctrPrdPrdNdDtTme;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrCdblCncptCdng() {
-        return this.grpMmbrNttRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrCdblCncptCdng(String grpMmbrNttRfrncDntfrDntfrCdblCncptCdng) {
-        this.grpMmbrNttRfrncDntfrDntfrCdblCncptCdng = grpMmbrNttRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrCdblCncptTxt() {
-        return this.grpMmbrNttRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrCdblCncptTxt(String grpMmbrNttRfrncDntfrDntfrCdblCncptTxt) {
-        this.grpMmbrNttRfrncDntfrDntfrCdblCncptTxt = grpMmbrNttRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrPrdStrt() {
-        return this.grpMmbrNttRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrPrdStrt(String grpMmbrNttRfrncDntfrDntfrPrdStrt) {
-        this.grpMmbrNttRfrncDntfrDntfrPrdStrt = grpMmbrNttRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrPrdNd() {
-        return this.grpMmbrNttRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrPrdNd(String grpMmbrNttRfrncDntfrDntfrPrdNd) {
-        this.grpMmbrNttRfrncDntfrDntfrPrdNd = grpMmbrNttRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrRfrncRfrnce() {
-        return this.grpMmbrNttRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrRfrncRfrnce(String grpMmbrNttRfrncDntfrDntfrRfrncRfrnce) {
-        this.grpMmbrNttRfrncDntfrDntfrRfrncRfrnce = grpMmbrNttRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrRfrncTpe() {
-        return this.grpMmbrNttRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrRfrncTpe(String grpMmbrNttRfrncDntfrDntfrRfrncTpe) {
-        this.grpMmbrNttRfrncDntfrDntfrRfrncTpe = grpMmbrNttRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrRfrncDntfr() {
-        return this.grpMmbrNttRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrRfrncDntfr(String grpMmbrNttRfrncDntfrDntfrRfrncDntfr) {
-        this.grpMmbrNttRfrncDntfrDntfrRfrncDntfr = grpMmbrNttRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrDntfrRfrncDsplay() {
-        return this.grpMmbrNttRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrDntfrRfrncDsplay(String grpMmbrNttRfrncDntfrDntfrRfrncDsplay) {
-        this.grpMmbrNttRfrncDntfrDntfrRfrncDsplay = grpMmbrNttRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrSe() {
-        return this.grpMmbrNttRfrncDntfrSe;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrSe(String grpMmbrNttRfrncDntfrSe) {
-        this.grpMmbrNttRfrncDntfrSe = grpMmbrNttRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrSstm() {
-        return this.grpMmbrNttRfrncDntfrSstm;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrSstm(String grpMmbrNttRfrncDntfrSstm) {
-        this.grpMmbrNttRfrncDntfrSstm = grpMmbrNttRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDntfrVlue() {
-        return this.grpMmbrNttRfrncDntfrVlue;
-    }
-    
-    public void setGrpMmbrNttRfrncDntfrVlue(String grpMmbrNttRfrncDntfrVlue) {
-        this.grpMmbrNttRfrncDntfrVlue = grpMmbrNttRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncRfrncStrng() {
-        return this.grpMmbrNttRfrncRfrncStrng;
-    }
-    
-    public void setGrpMmbrNttRfrncRfrncStrng(String grpMmbrNttRfrncRfrncStrng) {
-        this.grpMmbrNttRfrncRfrncStrng = grpMmbrNttRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncDsplStrng() {
-        return this.grpMmbrNttRfrncDsplStrng;
-    }
-    
-    public void setGrpMmbrNttRfrncDsplStrng(String grpMmbrNttRfrncDsplStrng) {
-        this.grpMmbrNttRfrncDsplStrng = grpMmbrNttRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getGrpMmbrNttRfrncTpRi() {
-        return this.grpMmbrNttRfrncTpRi;
-    }
-    
-    public void setGrpMmbrNttRfrncTpRi(String grpMmbrNttRfrncTpRi) {
-        this.grpMmbrNttRfrncTpRi = grpMmbrNttRfrncTpRi;
-    }
-    
-    
-    
-    public String getGrpMmbrPrdPrdStrtDtTme() {
-        return this.grpMmbrPrdPrdStrtDtTme;
-    }
-    
-    public void setGrpMmbrPrdPrdStrtDtTme(String grpMmbrPrdPrdStrtDtTme) {
-        this.grpMmbrPrdPrdStrtDtTme = grpMmbrPrdPrdStrtDtTme;
-    }
-    
-    
-    
-    public String getGrpMmbrPrdPrdNdDtTme() {
-        return this.grpMmbrPrdPrdNdDtTme;
-    }
-    
-    public void setGrpMmbrPrdPrdNdDtTme(String grpMmbrPrdPrdNdDtTme) {
-        this.grpMmbrPrdPrdNdDtTme = grpMmbrPrdPrdNdDtTme;
-    }
-    
-    
-    
-    public String getGroupMemberInactive() {
-        return this.groupMemberInactive;
-    }
-    
-    public void setGroupMemberInactive(String groupMemberInactive) {
-        this.groupMemberInactive = groupMemberInactive;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getGroupIdentifierIdentifierUse()
+    {
+        return this.groupIdentifierIdentifierUse;
+    }
+    
+    public void setGroupIdentifierIdentifierUse
+        (String groupIdentifierIdentifierUse) 
+        {
+      this.groupIdentifierIdentifierUse = groupIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcCSstm()
+    {
+        return this.grpDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setGrpDntfrDntfrTpCcCSstm
+        (String grpDntfrDntfrTpCcCSstm) 
+        {
+      this.grpDntfrDntfrTpCcCSstm = grpDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcCVrsn()
+    {
+        return this.grpDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setGrpDntfrDntfrTpCcCVrsn
+        (String grpDntfrDntfrTpCcCVrsn) 
+        {
+      this.grpDntfrDntfrTpCcCVrsn = grpDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcCCde()
+    {
+        return this.grpDntfrDntfrTpCcCCde;
+    }
+    
+    public void setGrpDntfrDntfrTpCcCCde
+        (String grpDntfrDntfrTpCcCCde) 
+        {
+      this.grpDntfrDntfrTpCcCCde = grpDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcCDsplay()
+    {
+        return this.grpDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setGrpDntfrDntfrTpCcCDsplay
+        (String grpDntfrDntfrTpCcCDsplay) 
+        {
+      this.grpDntfrDntfrTpCcCDsplay = grpDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.grpDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setGrpDntfrDntfrTpCcCSrSlctd
+        (String grpDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.grpDntfrDntfrTpCcCSrSlctd = grpDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getGrpDntfrDntfrTpCcTxt()
+    {
+        return this.grpDntfrDntfrTpCcTxt;
+    }
+    
+    public void setGrpDntfrDntfrTpCcTxt
+        (String grpDntfrDntfrTpCcTxt) 
+        {
+      this.grpDntfrDntfrTpCcTxt = grpDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getGrpDntfrDntfrPrdPrdStrt()
+    {
+        return this.grpDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setGrpDntfrDntfrPrdPrdStrt
+        (String grpDntfrDntfrPrdPrdStrt) 
+        {
+      this.grpDntfrDntfrPrdPrdStrt = grpDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getGrpDntfrDntfrPrdPrdNd()
+    {
+        return this.grpDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setGrpDntfrDntfrPrdPrdNd
+        (String grpDntfrDntfrPrdPrdNd) 
+        {
+      this.grpDntfrDntfrPrdPrdNd = grpDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getGrpDntfrDntfrSsgnr()
+    {
+        return this.grpDntfrDntfrSsgnr;
+    }
+    
+    public void setGrpDntfrDntfrSsgnr
+        (String grpDntfrDntfrSsgnr) 
+        {
+      this.grpDntfrDntfrSsgnr = grpDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getGroupIdentifierIdentifierValue()
+    {
+        return this.groupIdentifierIdentifierValue;
+    }
+    
+    public void setGroupIdentifierIdentifierValue
+        (String groupIdentifierIdentifierValue) 
+        {
+      this.groupIdentifierIdentifierValue = groupIdentifierIdentifierValue;
+}
+    public 
+    String 
+    getGroupIdentifierIdentifierSystem()
+    {
+        return this.groupIdentifierIdentifierSystem;
+    }
+    
+    public void setGroupIdentifierIdentifierSystem
+        (String groupIdentifierIdentifierSystem) 
+        {
+      this.groupIdentifierIdentifierSystem = groupIdentifierIdentifierSystem;
+}
+    public 
+    String 
+    getGroupActiveBoolean()
+    {
+        return this.groupActiveBoolean;
+    }
+    
+    public void setGroupActiveBoolean
+        (String groupActiveBoolean) 
+        {
+      this.groupActiveBoolean = groupActiveBoolean;
+}
+    public 
+    String 
+    getGroupTypeCode()
+    {
+        return this.groupTypeCode;
+    }
+    
+    public void setGroupTypeCode
+        (String groupTypeCode) 
+        {
+      this.groupTypeCode = groupTypeCode;
+}
+    public 
+    String 
+    getGroupActualBoolean()
+    {
+        return this.groupActualBoolean;
+    }
+    
+    public void setGroupActualBoolean
+        (String groupActualBoolean) 
+        {
+      this.groupActualBoolean = groupActualBoolean;
+}
+    public 
+    String 
+    getGroupCodeCcCodingCSystem()
+    {
+        return this.groupCodeCcCodingCSystem;
+    }
+    
+    public void setGroupCodeCcCodingCSystem
+        (String groupCodeCcCodingCSystem) 
+        {
+      this.groupCodeCcCodingCSystem = groupCodeCcCodingCSystem;
+}
+    public 
+    String 
+    getGroupCodeCcCodingCVersion()
+    {
+        return this.groupCodeCcCodingCVersion;
+    }
+    
+    public void setGroupCodeCcCodingCVersion
+        (String groupCodeCcCodingCVersion) 
+        {
+      this.groupCodeCcCodingCVersion = groupCodeCcCodingCVersion;
+}
+    public 
+    String 
+    getGroupCodeCcCodingCCode()
+    {
+        return this.groupCodeCcCodingCCode;
+    }
+    
+    public void setGroupCodeCcCodingCCode
+        (String groupCodeCcCodingCCode) 
+        {
+      this.groupCodeCcCodingCCode = groupCodeCcCodingCCode;
+}
+    public 
+    String 
+    getGroupCodeCcCodingCDisplay()
+    {
+        return this.groupCodeCcCodingCDisplay;
+    }
+    
+    public void setGroupCodeCcCodingCDisplay
+        (String groupCodeCcCodingCDisplay) 
+        {
+      this.groupCodeCcCodingCDisplay = groupCodeCcCodingCDisplay;
+}
+    public 
+    String 
+    getGrpCdCcCdngCSrSlctd()
+    {
+        return this.grpCdCcCdngCSrSlctd;
+    }
+    
+    public void setGrpCdCcCdngCSrSlctd
+        (String grpCdCcCdngCSrSlctd) 
+        {
+      this.grpCdCcCdngCSrSlctd = grpCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGroupCodeCcText()
+    {
+        return this.groupCodeCcText;
+    }
+    
+    public void setGroupCodeCcText
+        (String groupCodeCcText) 
+        {
+      this.groupCodeCcText = groupCodeCcText;
+}
+    public 
+    String 
+    getGroupNameString()
+    {
+        return this.groupNameString;
+    }
+    
+    public void setGroupNameString
+        (String groupNameString) 
+        {
+      this.groupNameString = groupNameString;
+}
+    public 
+    String 
+    getGroupQuantityUnsignedInt()
+    {
+        return this.groupQuantityUnsignedInt;
+    }
+    
+    public void setGroupQuantityUnsignedInt
+        (String groupQuantityUnsignedInt) 
+        {
+      this.groupQuantityUnsignedInt = groupQuantityUnsignedInt;
+}
+    public 
+    String 
+    getGroupManagingEntityReference()
+    {
+        return this.groupManagingEntityReference;
+    }
+    
+    public void setGroupManagingEntityReference
+        (String groupManagingEntityReference) 
+        {
+      this.groupManagingEntityReference = groupManagingEntityReference;
+}
+    public 
+    String 
+    getGrpChrctrCdCcCdngCSstm()
+    {
+        return this.grpChrctrCdCcCdngCSstm;
+    }
+    
+    public void setGrpChrctrCdCcCdngCSstm
+        (String grpChrctrCdCcCdngCSstm) 
+        {
+      this.grpChrctrCdCcCdngCSstm = grpChrctrCdCcCdngCSstm;
+}
+    public 
+    String 
+    getGrpChrctrCdCcCdngCVrsn()
+    {
+        return this.grpChrctrCdCcCdngCVrsn;
+    }
+    
+    public void setGrpChrctrCdCcCdngCVrsn
+        (String grpChrctrCdCcCdngCVrsn) 
+        {
+      this.grpChrctrCdCcCdngCVrsn = grpChrctrCdCcCdngCVrsn;
+}
+    public 
+    String 
+    getGroupChrctrCodeCcCodingCCode()
+    {
+        return this.groupChrctrCodeCcCodingCCode;
+    }
+    
+    public void setGroupChrctrCodeCcCodingCCode
+        (String groupChrctrCodeCcCodingCCode) 
+        {
+      this.groupChrctrCodeCcCodingCCode = groupChrctrCodeCcCodingCCode;
+}
+    public 
+    String 
+    getGrpChrctrCdCcCdngCDsplay()
+    {
+        return this.grpChrctrCdCcCdngCDsplay;
+    }
+    
+    public void setGrpChrctrCdCcCdngCDsplay
+        (String grpChrctrCdCcCdngCDsplay) 
+        {
+      this.grpChrctrCdCcCdngCDsplay = grpChrctrCdCcCdngCDsplay;
+}
+    public 
+    String 
+    getGrpChrctrCdCcCdngCSrSlctd()
+    {
+        return this.grpChrctrCdCcCdngCSrSlctd;
+    }
+    
+    public void setGrpChrctrCdCcCdngCSrSlctd
+        (String grpChrctrCdCcCdngCSrSlctd) 
+        {
+      this.grpChrctrCdCcCdngCSrSlctd = grpChrctrCdCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGroupChrctrCodeCcText()
+    {
+        return this.groupChrctrCodeCcText;
+    }
+    
+    public void setGroupChrctrCodeCcText
+        (String groupChrctrCodeCcText) 
+        {
+      this.groupChrctrCodeCcText = groupChrctrCodeCcText;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcCdngCSstm()
+    {
+        return this.grpChrctrVlCdblcncptCcCdngCSstm;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcCdngCSstm
+        (String grpChrctrVlCdblcncptCcCdngCSstm) 
+        {
+      this.grpChrctrVlCdblcncptCcCdngCSstm = grpChrctrVlCdblcncptCcCdngCSstm;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcCdngCVrsn()
+    {
+        return this.grpChrctrVlCdblcncptCcCdngCVrsn;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcCdngCVrsn
+        (String grpChrctrVlCdblcncptCcCdngCVrsn) 
+        {
+      this.grpChrctrVlCdblcncptCcCdngCVrsn = grpChrctrVlCdblcncptCcCdngCVrsn;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcCdngCCde()
+    {
+        return this.grpChrctrVlCdblcncptCcCdngCCde;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcCdngCCde
+        (String grpChrctrVlCdblcncptCcCdngCCde) 
+        {
+      this.grpChrctrVlCdblcncptCcCdngCCde = grpChrctrVlCdblcncptCcCdngCCde;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcCdngCDsplay()
+    {
+        return this.grpChrctrVlCdblcncptCcCdngCDsplay;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcCdngCDsplay
+        (String grpChrctrVlCdblcncptCcCdngCDsplay) 
+        {
+      this.grpChrctrVlCdblcncptCcCdngCDsplay = grpChrctrVlCdblcncptCcCdngCDsplay;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcCdngCSrSlctd()
+    {
+        return this.grpChrctrVlCdblcncptCcCdngCSrSlctd;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcCdngCSrSlctd
+        (String grpChrctrVlCdblcncptCcCdngCSrSlctd) 
+        {
+      this.grpChrctrVlCdblcncptCcCdngCSrSlctd = grpChrctrVlCdblcncptCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getGrpChrctrVlCdblcncptCcTxt()
+    {
+        return this.grpChrctrVlCdblcncptCcTxt;
+    }
+    
+    public void setGrpChrctrVlCdblcncptCcTxt
+        (String grpChrctrVlCdblcncptCcTxt) 
+        {
+      this.grpChrctrVlCdblcncptCcTxt = grpChrctrVlCdblcncptCcTxt;
+}
+    public 
+    String 
+    getGroupChrctrValueBooleanBoolean()
+    {
+        return this.groupChrctrValueBooleanBoolean;
+    }
+    
+    public void setGroupChrctrValueBooleanBoolean
+        (String groupChrctrValueBooleanBoolean) 
+        {
+      this.groupChrctrValueBooleanBoolean = groupChrctrValueBooleanBoolean;
+}
+    public 
+    String 
+    getGrpChrctrVlQnttQnttCmprtr()
+    {
+        return this.grpChrctrVlQnttQnttCmprtr;
+    }
+    
+    public void setGrpChrctrVlQnttQnttCmprtr
+        (String grpChrctrVlQnttQnttCmprtr) 
+        {
+      this.grpChrctrVlQnttQnttCmprtr = grpChrctrVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getGrpChrctrVlQnttQnttCde()
+    {
+        return this.grpChrctrVlQnttQnttCde;
+    }
+    
+    public void setGrpChrctrVlQnttQnttCde
+        (String grpChrctrVlQnttQnttCde) 
+        {
+      this.grpChrctrVlQnttQnttCde = grpChrctrVlQnttQnttCde;
+}
+    public 
+    String 
+    getGrpChrctrVlQnttQnttVlue()
+    {
+        return this.grpChrctrVlQnttQnttVlue;
+    }
+    
+    public void setGrpChrctrVlQnttQnttVlue
+        (String grpChrctrVlQnttQnttVlue) 
+        {
+      this.grpChrctrVlQnttQnttVlue = grpChrctrVlQnttQnttVlue;
+}
+    public 
+    String 
+    getGrpChrctrVlQnttQnttNt()
+    {
+        return this.grpChrctrVlQnttQnttNt;
+    }
+    
+    public void setGrpChrctrVlQnttQnttNt
+        (String grpChrctrVlQnttQnttNt) 
+        {
+      this.grpChrctrVlQnttQnttNt = grpChrctrVlQnttQnttNt;
+}
+    public 
+    String 
+    getGrpChrctrVlQnttQnttSstm()
+    {
+        return this.grpChrctrVlQnttQnttSstm;
+    }
+    
+    public void setGrpChrctrVlQnttQnttSstm
+        (String grpChrctrVlQnttQnttSstm) 
+        {
+      this.grpChrctrVlQnttQnttSstm = grpChrctrVlQnttQnttSstm;
+}
+    public 
+    String 
+    getGroupChrctrValueRangeRangeLow()
+    {
+        return this.groupChrctrValueRangeRangeLow;
+    }
+    
+    public void setGroupChrctrValueRangeRangeLow
+        (String groupChrctrValueRangeRangeLow) 
+        {
+      this.groupChrctrValueRangeRangeLow = groupChrctrValueRangeRangeLow;
+}
+    public 
+    String 
+    getGroupChrctrValueRangeRangeHigh()
+    {
+        return this.groupChrctrValueRangeRangeHigh;
+    }
+    
+    public void setGroupChrctrValueRangeRangeHigh
+        (String groupChrctrValueRangeRangeHigh) 
+        {
+      this.groupChrctrValueRangeRangeHigh = groupChrctrValueRangeRangeHigh;
+}
+    public 
+    String 
+    getGrpChrctrVlRfrncRfrnce()
+    {
+        return this.grpChrctrVlRfrncRfrnce;
+    }
+    
+    public void setGrpChrctrVlRfrncRfrnce
+        (String grpChrctrVlRfrncRfrnce) 
+        {
+      this.grpChrctrVlRfrncRfrnce = grpChrctrVlRfrncRfrnce;
+}
+    public 
+    String 
+    getGroupChrctrExcludeBoolean()
+    {
+        return this.groupChrctrExcludeBoolean;
+    }
+    
+    public void setGroupChrctrExcludeBoolean
+        (String groupChrctrExcludeBoolean) 
+        {
+      this.groupChrctrExcludeBoolean = groupChrctrExcludeBoolean;
+}
+    public 
+    String 
+    getGroupChrctrPeriodPeriodStart()
+    {
+        return this.groupChrctrPeriodPeriodStart;
+    }
+    
+    public void setGroupChrctrPeriodPeriodStart
+        (String groupChrctrPeriodPeriodStart) 
+        {
+      this.groupChrctrPeriodPeriodStart = groupChrctrPeriodPeriodStart;
+}
+    public 
+    String 
+    getGroupChrctrPeriodPeriodEnd()
+    {
+        return this.groupChrctrPeriodPeriodEnd;
+    }
+    
+    public void setGroupChrctrPeriodPeriodEnd
+        (String groupChrctrPeriodPeriodEnd) 
+        {
+      this.groupChrctrPeriodPeriodEnd = groupChrctrPeriodPeriodEnd;
+}
+    public 
+    String 
+    getGroupMemberEntityReference()
+    {
+        return this.groupMemberEntityReference;
+    }
+    
+    public void setGroupMemberEntityReference
+        (String groupMemberEntityReference) 
+        {
+      this.groupMemberEntityReference = groupMemberEntityReference;
+}
+    public 
+    String 
+    getGroupMemberPeriodPeriodStart()
+    {
+        return this.groupMemberPeriodPeriodStart;
+    }
+    
+    public void setGroupMemberPeriodPeriodStart
+        (String groupMemberPeriodPeriodStart) 
+        {
+      this.groupMemberPeriodPeriodStart = groupMemberPeriodPeriodStart;
+}
+    public 
+    String 
+    getGroupMemberPeriodPeriodEnd()
+    {
+        return this.groupMemberPeriodPeriodEnd;
+    }
+    
+    public void setGroupMemberPeriodPeriodEnd
+        (String groupMemberPeriodPeriodEnd) 
+        {
+      this.groupMemberPeriodPeriodEnd = groupMemberPeriodPeriodEnd;
+}
+    public 
+    String 
+    getGroupMemberInactiveBoolean()
+    {
+        return this.groupMemberInactiveBoolean;
+    }
+    
+    public void setGroupMemberInactiveBoolean
+        (String groupMemberInactiveBoolean) 
+        {
+      this.groupMemberInactiveBoolean = groupMemberInactiveBoolean;
+}
 
 
 

@@ -1,291 +1,405 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Substancenucleicacid" optimistic-lock="none" table="substancenucleicacid">
-        <id name="sbstncNclccdSqncTpCdngCde" type="string">
-            <column length="512" name="SbstncNclccd_sqncTp_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="sbstncNclccdSqncTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="SbstncNclccd_sqncTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSqncTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setSystem"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSqncTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="SbstncNclccd_sqncTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSqncTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setVersion"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSqncTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="SbstncNclccd_sqncTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSqncTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setCode"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSqncTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="SbstncNclccd_sqncTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSqncTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setDisplay"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdNmbrfSbnts" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SbstncNclccd_nmbrfSbnts">
-                <comment>integer</comment>
+        <property name="sbstncNclccdSqncTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdRfHbrdstn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_rfHbrdstn">
-                <comment>string</comment>
+        <property name="sbstncNclccdSqncTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, setText"}</meta>
+            <column length="512" name="SbstncNclccd_sqncTp_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.sequenceType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSequenceType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdLgNcltdTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdNmbrfSbntsNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.numberOfSubunits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSubunits"}</meta>
+            <column length="65535" name="SbstncNclccd_nmbrfSbnts_ntgr">
+                <comment>{ "tree" :"SubstanceNucleicAcid.numberOfSubunits", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setNumberOfSubunits"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdLgNcltdTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdRfHbrdstnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.areaOfHybridisation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAreaOfHybridisation"}</meta>
+            <column length="65535" name="SbstncNclccd_rfHbrdstn_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.areaOfHybridisation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAreaOfHybridisation"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdLgNcltdTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdLgNcltdTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdLgNcltdTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdLgNcltdTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdLgNcltdTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_lgNcltdTp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdLgNcltdTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="substanceNucleicAcidSubunit" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstanceNucleicAcid_subunit">
-                <comment>BackboneElement</comment>
+        <property name="sbstncNclccdLgNcltdTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSbnt" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sbnt">
-                <comment>integer</comment>
+        <property name="sbstncNclccdLgNcltdTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqnce" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqnce">
-                <comment>string</comment>
+        <property name="sbstncNclccdLgNcltdTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, setText"}</meta>
+            <column length="65535" name="SbstncNclccd_lgNcltdTp_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.oligoNucleotideType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOligoNucleotideType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLngth" type="string">
-            <meta attribute="resource-type">integer</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lngth">
-                <comment>integer</comment>
+        <property name="sbstncNclccdSbntSbntNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.subunit", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSubunit"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sbnt_ntgr">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.subunit", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSubunit"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqncttchmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSbntSqncStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequence", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequence"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqnc_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequence", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequence"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqncttchmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdSbntLngthNtgr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setLength"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lngth_ntgr">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.length", "datatype" : "integer", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setLength"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqncttchmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntDta" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setData"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_dta">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setData"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqncttchmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntHsh" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setHash"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_hsh">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, base64Binary", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setHash"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSqncttchmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntCntntTpe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setContentType"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_cntntTpe">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setContentType"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntFvPrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntLngge" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setLanguage"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_lngge">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setLanguage"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntFvPrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntCrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setCreation"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_crtn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setCreation"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntFvPrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntTtle" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setTitle"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_ttle">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setTitle"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntFvPrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntSze" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setSize"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_sze">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setSize"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntFvPrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSbntSqncttchmntTtchmntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setUrl"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sqncttchmnt_ttchmnt_rl">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sequenceAttachment", "datatype" : "Attachment, url", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setSequenceAttachment, setUrl"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntThrPrmCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSbntFvPrmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntThrPrmCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdSbntFvPrmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntThrPrmCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSbntFvPrmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntThrPrmCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSbntFvPrmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntThrPrmCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSbntFvPrmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkge" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkge">
-                <comment>BackboneElement</comment>
+        <property name="sbstncNclccdSbntFvPrmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, setText"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_fvPrm_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.fivePrime", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setFivePrime, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgCnnctvty" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_cnnctvty">
-                <comment>string</comment>
+        <property name="sbstncNclccdSbntThrPrmCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_cdng_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSbntThrPrmCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdSbntThrPrmCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_cdng_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSbntThrPrmCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSbntThrPrmCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSbntThrPrmCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, setText"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_thrPrm_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.threePrime", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit"] , "methodName" : "setThreePrime, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_nme">
-                <comment>string</comment>
+        <property name="sbstncNclccdSbntLnkgCnnctvtStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.connectivity", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setConnectivity"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_cnnctvt_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.connectivity", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setConnectivity"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntLnkgRsdSte" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_lnkg_rsdSte">
-                <comment>string</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_se">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="substanceNucleicAcidSubunitSugar" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="SubstanceNucleicAcid_subunit_sugar">
-                <comment>BackboneElement</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_nme">
-                <comment>string</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="sbstncNclccdSbntSgrRsdSte" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="SbstncNclccd_sbnt_sgr_rsdSte">
-                <comment>string</comment>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setValue"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setIdentifier, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_nm_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntLnkgRsdStStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.linkage.residueSite", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setResidueSite"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_lnkg_rsdSt_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.linkage.residueSite", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage"] , "methodName" : "setResidueSite"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_se">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setUse"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setAssigner"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setValue"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setIdentifier, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_nm_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="sbstncNclccdSbntSgrRsdStStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"SubstanceNucleicAcid.subunit.sugar.residueSite", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setResidueSite"}</meta>
+            <column length="65535" name="SbstncNclccd_sbnt_sgr_rsdSt_strng">
+                <comment>{ "tree" :"SubstanceNucleicAcid.subunit.sugar.residueSite", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addSubunit", "addLinkage", "addSugar"] , "methodName" : "setResidueSite"}</comment>
             </column>
         </property>
     </class>

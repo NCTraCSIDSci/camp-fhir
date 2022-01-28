@@ -1,1881 +1,663 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Medicationrequest" optimistic-lock="none" table="medicationrequest">
-        <id name="mdRqstDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="MdRqst_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mdRqstDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_use_code</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_s_cde">
-                <comment>MedRequest_identifierIdentifier_use_code</comment>
+        <property name="mdRqstDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_se">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>MedRequest_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="mdRqstDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>MedRequest_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="mdRqstDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>MedRequest_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="mdRqstDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>MedRequest_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="mdRqstDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_CdblCncpt_txt">
-                <comment>MedRequest_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="mdRqstDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Period_start</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Prd_strt">
-                <comment>MedRequest_identifierIdentifier_Period_start</comment>
+        <property name="mdRqstDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Period_end</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Prd_nd">
-                <comment>MedRequest_identifierIdentifier_Period_end</comment>
+        <property name="mdRqstDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>MedRequest_identifierIdentifier_Reference_reference</comment>
+        <property name="mdRqstDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Rfrnc_tpe">
-                <comment>MedRequest_identifierIdentifier_Reference_type</comment>
+        <property name="mdRqstDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>MedRequest_identifierIdentifier_Reference_identifier</comment>
+        <property name="mdRqstDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>MedRequest_identifierIdentifier_Reference_display</comment>
+        <property name="mdRqstDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="MdRqst_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicationRequest.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_value_string</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_vl_strng">
-                <comment>MedRequest_identifierIdentifier_value_string</comment>
+        <property name="medRequestStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="MedRequest_status_code">
+                <comment>{ "tree" :"MedicationRequest.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="mdRqstDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">MedRequest_identifierIdentifier_system_uri</meta>
-            <column length="512" name="MdRqst_dntfr_dntfr_sstm_ri">
-                <comment>MedRequest_identifierIdentifier_system_uri</comment>
+        <property name="mdRqstSttsRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_sttsRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="medRequestStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MedRequest_status">
-                <comment>code</comment>
+        <property name="mdRqstSttsRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_sttsRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mdRqstSttsRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_sttsRsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mdRqstSttsRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_sttsRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mdRqstSttsRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_sttsRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="medRequestStatusReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</meta>
+            <column length="65535" name="MedRequest_statusReason_CC_text">
+                <comment>{ "tree" :"MedicationRequest.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="medRequestIntentCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</meta>
+            <column length="65535" name="MedRequest_intent_code">
+                <comment>{ "tree" :"MedicationRequest.intent", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setIntent"}</comment>
             </column>
         </property>
-        <property name="mdRqstSttsRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_sttsRsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mdRqstCtgrCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_ctgr_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="medRequestIntent" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MedRequest_intent">
-                <comment>code</comment>
+        <property name="mdRqstCtgrCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_ctgr_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mdRqstCtgrCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_ctgr_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mdRqstCtgrCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_ctgr_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mdRqstCtgrCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_ctgr_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="medRequestCategoryCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</meta>
+            <column length="65535" name="MedRequest_category_CC_text">
+                <comment>{ "tree" :"MedicationRequest.category", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCategory, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="medRequestPriorityCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</meta>
+            <column length="65535" name="MedRequest_priority_code">
+                <comment>{ "tree" :"MedicationRequest.priority", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriority"}</comment>
             </column>
         </property>
-        <property name="mdRqstCtgrCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_ctgr_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="medRequestDoNotPerformBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.doNotPerform", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoNotPerform"}</meta>
+            <column length="65535" name="MedRequest_doNotPerform_boolean">
+                <comment>{ "tree" :"MedicationRequest.doNotPerform", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoNotPerform"}</comment>
             </column>
         </property>
-        <property name="medRequestPriority" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MedRequest_priority">
-                <comment>code</comment>
+        <property name="medRequestReportedBooleanBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reportedBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportedBoolean"}</meta>
+            <column length="65535" name="MedRequest_reportedBoolean_boolean">
+                <comment>{ "tree" :"MedicationRequest.reportedBoolean", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportedBoolean"}</comment>
             </column>
         </property>
-        <property name="medRequestDoNotPerform" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MedRequest_doNotPerform">
-                <comment>boolean</comment>
+        <property name="mdRqstRprtdRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reportedReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportedReference(patient | practitioner | practitionerrole | relatedperson | organization)"}</meta>
+            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnce">
+                <comment>{ "tree" :"MedicationRequest.reportedReference", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportedReference(patient | practitioner | practitionerrole | relatedperson | organization)"}</comment>
             </column>
         </property>
-        <property name="medRequestReportedBoolean" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MedRequest_reportedBoolean">
-                <comment>boolean</comment>
+        <property name="mdRqstMdCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mdRqstMdCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mdRqstMdCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mdRqstMdCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdRqstMdCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mdRqstMdCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, setText"}</meta>
+            <column length="65535" name="MdRqst_mdCdblcncpt_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.medicationCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="medRequestMedReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.medicationReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationReference(medication)"}</meta>
+            <column length="65535" name="MedRequest_medReference_Reference">
+                <comment>{ "tree" :"MedicationRequest.medicationReference", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMedicationReference(medication)"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="medRequestSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="MedRequest_subject_Reference">
+                <comment>{ "tree" :"MedicationRequest.subject", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="medRequestEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="MedRequest_encounter_Reference">
+                <comment>{ "tree" :"MedicationRequest.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mdRqstSpprtngnfrmtnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.supportingInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInformation"}</meta>
+            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnce">
+                <comment>{ "tree" :"MedicationRequest.supportingInformation", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSupportingInformation"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="medRequestAuthoredOnDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</meta>
+            <column length="65535" name="MedRequest_authoredOn_dateTime">
+                <comment>{ "tree" :"MedicationRequest.authoredOn", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthoredOn"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="medRequestRequesterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</meta>
+            <column length="65535" name="MedRequest_requester_Reference">
+                <comment>{ "tree" :"MedicationRequest.requester", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequester"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="medRequestPerformerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformer"}</meta>
+            <column length="65535" name="MedRequest_performer_Reference">
+                <comment>{ "tree" :"MedicationRequest.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformer"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRqstPrfrmrTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_prfrmrTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstRprtdRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_rprtdRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mdRqstPrfrmrTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_prfrmrTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="mdRqstPrfrmrTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_prfrmrTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="mdRqstPrfrmrTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_prfrmrTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="mdRqstPrfrmrTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_prfrmrTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="medRequestPerformerTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, setText"}</meta>
+            <column length="65535" name="MedRequest_performerType_CC_text">
+                <comment>{ "tree" :"MedicationRequest.performerType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPerformerType, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="medRequestRecorderReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.recorder", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorder"}</meta>
+            <column length="65535" name="MedRequest_recorder_Reference">
+                <comment>{ "tree" :"MedicationRequest.recorder", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorder"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdcdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_mdcdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="mdRqstRsnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_rsnCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mdRqstRsnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_rsnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mdRqstRsnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_rsnCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mdRqstRsnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_rsnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdRqstRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="medRequestReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="MedRequest_reasonCode_CC_text">
+                <comment>{ "tree" :"MedicationRequest.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mdRqstRsnRfrncRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnce">
+                <comment>{ "tree" :"MedicationRequest.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mdRqstNstnttsCnnclCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</meta>
+            <column length="65535" name="MdRqst_nstnttsCnncl_cnncl">
+                <comment>{ "tree" :"MedicationRequest.instantiatesCanonical", "datatype" : "canonical", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesCanonical"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="medRequestInstantiatesUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</meta>
+            <column length="65535" name="MedRequest_instantiatesUri_uri">
+                <comment>{ "tree" :"MedicationRequest.instantiatesUri", "datatype" : "uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInstantiatesUri"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="medRequestBasedOnReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</meta>
+            <column length="65535" name="MedRequest_basedOn_Reference">
+                <comment>{ "tree" :"MedicationRequest.basedOn", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addBasedOn"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mdRqstGrpdntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_se">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstMdRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_mdRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mdRqstGrpdntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mdRqstGrpdntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdRqstGrpdntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mdRqstGrpdntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mdRqstGrpdntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_vlue">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mdRqstGrpdntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</meta>
+            <column length="65535" name="MdRqst_grpdntfr_dntfr_sstm">
+                <comment>{ "tree" :"MedicationRequest.groupIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setGroupIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mdRqstCrsfThrpTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mdRqstCrsfThrpTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mdRqstCrsfThrpTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mdRqstCrsfThrpTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mdRqstCrsfThrpTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRqstCrsfThrpTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, setText"}</meta>
+            <column length="65535" name="MdRqst_crsfThrpTp_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.courseOfTherapyType", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCourseOfTherapyType, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstSbjctRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_sbjct_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="medRequestInsuranceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</meta>
+            <column length="65535" name="MedRequest_insurance_Reference">
+                <comment>{ "tree" :"MedicationRequest.insurance", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addInsurance"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="medRequestNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="MedRequest_note_Annotation_time">
+                <comment>{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="medRequestNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="MedRequest_note_Annotation_text">
+                <comment>{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mdRqstNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="MdRqst_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdRqstNtNnttnThrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="MdRqst_nt_nnttn_thrStrng">
+                <comment>{ "tree" :"MedicationRequest.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mdRqstDsgnstrctnDsge" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dosageInstruction", "datatype" : "Dosage", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDosageInstruction"}</meta>
+            <column length="65535" name="MdRqst_dsgnstrctn_Dsge">
+                <comment>{ "tree" :"MedicationRequest.dosageInstruction", "datatype" : "Dosage", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDosageInstruction"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mdRqstDspnsRqstNtlFllQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.initialFill.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_ntlFll_qntt_SmplQntty">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.initialFill.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setQuantity"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mdRqstDspnsRqstNtlFllDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.initialFill.duration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setDuration"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_ntlFll_drtn_Drtn">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.initialFill.duration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setDuration"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mdRqstDspnsRqstDspnsntrvlDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.dispenseInterval", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setDispenseInterval"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_dspnsntrvl_Drtn">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.dispenseInterval", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setDispenseInterval"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mdRqstDspnsRqstVldtPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.validityPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setValidityPeriod, setStart"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_vldtPrd_Prd_strt">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.validityPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setValidityPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mdRqstDspnsRqstVldtPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.validityPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setValidityPeriod, setEnd"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_vldtPrd_Prd_nd">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.validityPeriod", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setValidityPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mdRqstDspnsRqstNmbrfRptsllwdNsgndnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.numberOfRepeatsAllowed", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setNumberOfRepeatsAllowed"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_nmbrfRptsllwd_nsgndnt">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.numberOfRepeatsAllowed", "datatype" : "unsignedInt", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setNumberOfRepeatsAllowed"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mdRqstDspnsRqstQnttSmplQntty" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setQuantity"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_qntt_SmplQntty">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.quantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setQuantity"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRqstDspnsRqstXpctdSpplDrtnDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.expectedSupplyDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setExpectedSupplyDuration"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_xpctdSpplDrtn_Drtn">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.expectedSupplyDuration", "datatype" : "Duration", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setExpectedSupplyDuration"}</comment>
             </column>
         </property>
-        <property name="mdRqstNcntrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_ncntr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mdRqstDspnsRqstPrfrmrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.dispenseRequest.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setPerformer"}</meta>
+            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnce">
+                <comment>{ "tree" :"MedicationRequest.dispenseRequest.performer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setDispenseRequest", "setInitialFill"] , "methodName" : "setPerformer"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mdRqstSbstttnLlwdBlnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedBoolean"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdBln_bln">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedBoolean", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedBoolean"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mdRqstSbstttnLlwdCdblcncptCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, setText"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_llwdCdblcncpt_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.substitution.allowedCodeableconcept", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["setSubstitution"] , "methodName" : "setAllowedCodeableconcept, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mdRqstSbstttnRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mdRqstSbstttnRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mdRqstSbstttnRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setCode"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mdRqstSbstttnRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mdRqstSbstttnRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mdRqstSbstttnRsnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, setText"}</meta>
+            <column length="65535" name="MdRqst_sbstttn_rsn_CC_txt">
+                <comment>{ "tree" :"MedicationRequest.substitution.reason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["setSubstitution"] , "methodName" : "setReason, setText"}</comment>
             </column>
         </property>
-        <property name="mdRqstSpprtngnfrmtnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_spprtngnfrmtn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mdRqstPrrPrscrptnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.priorPrescription", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriorPrescription"}</meta>
+            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnce">
+                <comment>{ "tree" :"MedicationRequest.priorPrescription", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPriorPrescription"}</comment>
             </column>
         </property>
-        <property name="medRequestAuthoredOn" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="MedRequest_authoredOn">
-                <comment>dateTime</comment>
+        <property name="medRequestDetectedIssueReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.detectedIssue", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDetectedIssue"}</meta>
+            <column length="65535" name="MedRequest_detectedIssue_Reference">
+                <comment>{ "tree" :"MedicationRequest.detectedIssue", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addDetectedIssue"}</comment>
             </column>
         </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRqstrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_rqstr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_prfrmr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrfrmrTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_prfrmrTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRcrdrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_rcrdr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_rsnCd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstRsnRfrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_rsnRfrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="medRequestInstantiatesCanonical" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MedRequest_instantiatesCanonical">
-                <comment>canonical</comment>
-            </column>
-        </property>
-        <property name="medRequestInstantiatesUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="MedRequest_instantiatesUri">
-                <comment>uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstBsdnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_bsdn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstGrpdntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="MdRqst_grpdntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstCrsfThrpTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_crsfThrpTp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstNsrncRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_nsrnc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnTmDtTme" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_tm_dtTme">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnTxtMrkdwn" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_txt_mrkdwn">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="MdRqst_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
-            </column>
-        </property>
-        <property name="medRequestDosageInstruction" type="string">
-            <meta attribute="resource-type">Dosage</meta>
-            <column length="65535" name="MedRequest_dosageInstruction">
-                <comment>Dosage</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstNtlFllQntty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_ntlFll_qntty">
-                <comment>SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstNtlFllDrtn" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_ntlFll_drtn">
-                <comment>Duration</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstDspnsntrvl" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_dspnsntrvl">
-                <comment>Duration</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstVldtPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_vldtPrd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstVldtPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_vldtPrd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstNmbrfRptsllwd" type="string">
-            <meta attribute="resource-type">unsignedInt</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_nmbrfRptsllwd">
-                <comment>unsignedInt</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstQntty" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_qntty">
-                <comment>SimpleQuantity</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstXpctdSpplDrtn" type="string">
-            <meta attribute="resource-type">Duration</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_xpctdSpplDrtn">
-                <comment>Duration</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstDspnsRqstPrfrmrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_dspnsRqst_prfrmr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdBln" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdBln">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnLlwdcdblcptCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_sbstttn_llwdcdblcpt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mdRqstSbstttnRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MdRqst_sbstttn_rsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstPrrPrscrptnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_prrPrscrptn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstDtctdssRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_dtctdss_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mdRqstVntHstrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MdRqst_vntHstr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="medRequestEventHistoryReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MedicationRequest.eventHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEventHistory"}</meta>
+            <column length="65535" name="MedRequest_eventHistory_Reference">
+                <comment>{ "tree" :"MedicationRequest.eventHistory", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEventHistory"}</comment>
             </column>
         </property>
     </class>

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,701 +10,1118 @@ package main.templateoutput.Model;
 public class Conceptmap  implements java.io.Serializable {
 
 
-     private String conceptMapUrl;
-     private String cncptMpDntfrDntfrSCde;
-     private String cncptMpDntfrDntfrTpCdblCncptCdngSstm;
-     private String cncptMpDntfrDntfrTpCdblCncptCdngVrsn;
-     private String cncptMpDntfrDntfrTpCdblCncptCdngCde;
-     private String cncptMpDntfrDntfrTpCdblCncptCdngDsplay;
-     private String cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String cncptMpDntfrDntfrCdblCncptTxt;
-     private String cncptMpDntfrDntfrPrdStrt;
-     private String cncptMpDntfrDntfrPrdNd;
-     private String cncptMpDntfrDntfrRfrncRfrnce;
-     private String cncptMpDntfrDntfrRfrncTpe;
-     private String cncptMpDntfrDntfrRfrncDntfr;
-     private String cncptMpDntfrDntfrRfrncDsplay;
-     private String cncptMpDntfrDntfrVlStrng;
-     private String cncptMpDntfrDntfrSstmRi;
-     private String conceptMapVersion;
-     private String conceptMapName;
-     private String conceptMapTitle;
-     private String conceptMapStatus;
-     private String conceptMapExperimental;
-     private String conceptMapDate;
-     private String conceptMapPublisher;
-     private String conceptMapContact;
-     private String conceptMapDescription;
-     private String conceptMapUseContext;
-     private String cncptMpJrsdctnCdblCncptCdngSstm;
-     private String cncptMpJrsdctnCdblCncptCdngVrsn;
-     private String cncptMpJrsdctnCdblCncptCdngCde;
-     private String cncptMpJrsdctnCdblCncptCdngDsplay;
-     private String cncptMpJrsdctnCdblCncptCdngSrSlctd;
-     private String cncptMpJrsdctnCdblCncptTxtStrng;
-     private String conceptMapPurpose;
-     private String conceptMapCopyright;
-     private String conceptMapSourceUri;
-     private String conceptMapSourceCanonical;
-     private String conceptMapTargetUri;
-     private String conceptMapTargetCanonical;
-     private String conceptMapGroupSource;
-     private String conceptMapGroupSourceVersion;
-     private String conceptMapGroupTarget;
-     private String conceptMapGroupTargetVersion;
-     private String conceptMapGroupElementCode;
-     private String conceptMapGroupElementDisplay;
-     private String cncptMpGrpLmntTrgtCde;
-     private String cncptMpGrpLmntTrgtDsplay;
-     private String cncptMpGrpLmntTrgtQvlnce;
-     private String cncptMpGrpLmntTrgtCmmnt;
-     private String cncptMpGrpLmntTrgtDpndsnPrprty;
-     private String cncptMpGrpLmntTrgtDpndsnSstm;
-     private String cncptMpGrpLmntTrgtDpndsnVlue;
-     private String cncptMpGrpLmntTrgtDpndsnDsplay;
-     private String cncptMpGrpLmntTrgtPrdct;
-     private String conceptMapGroupUnmappedMode;
-     private String conceptMapGroupUnmappedCode;
-     private String conceptMapGroupUnmappedDisplay;
-     private String conceptMapGroupUnmappedUrl;
+     private Integer id;
+     private String conceptMapUrlUri;
+     private String cncptMpDntfrDntfrSe;
+     private String cncptMpDntfrDntfrTpCcCSstm;
+     private String cncptMpDntfrDntfrTpCcCVrsn;
+     private String cncptMpDntfrDntfrTpCcCCde;
+     private String cncptMpDntfrDntfrTpCcCDsplay;
+     private String cncptMpDntfrDntfrTpCcCSrSlctd;
+     private String cncptMpDntfrDntfrTpCcTxt;
+     private String cncptMpDntfrDntfrPrdPrdStrt;
+     private String cncptMpDntfrDntfrPrdPrdNd;
+     private String cncptMpDntfrDntfrSsgnr;
+     private String cncptMpDntfrDntfrVlue;
+     private String cncptMpDntfrDntfrSstm;
+     private String conceptMapVersionString;
+     private String conceptMapNameString;
+     private String conceptMapTitleString;
+     private String conceptMapStatusCode;
+     private String conceptMapExperimentalBoolean;
+     private String conceptMapDateDateTime;
+     private String conceptMapPublisherString;
+     private String cncptMpCntctCntctDtlTlcmCntctPntPrdStrt;
+     private String cncptMpCntctCntctDtlTlcmCntctPntPrdNd;
+     private String cncptMpCntctCntctDtlTlcmCntctPntSstm;
+     private String cncptMpCntctCntctDtlTlcmCntctPntVlue;
+     private String cncptMpCntctCntctDtlTlcmCntctPntSe;
+     private String cncptMpCntctCntctDtlTlcmCntctPntRnk;
+     private String cncptMpCntctCntctDtlNme;
+     private String conceptMapDescriptionMarkdown;
+     private String cncptMpSCntxtSgCntxtVlCcCcCSstm;
+     private String cncptMpSCntxtSgCntxtVlCcCcCVrsn;
+     private String cncptMpSCntxtSgCntxtVlCcCcCCde;
+     private String cncptMpSCntxtSgCntxtVlCcCcCDsplay;
+     private String cncptMpSCntxtSgCntxtVlCcCcCSrSlctd;
+     private String cncptMpSCntxtSgCntxtVlCcCcTxt;
+     private String cncptMpSCntxtSgCntxtCdCSstm;
+     private String cncptMpSCntxtSgCntxtCdCVrsn;
+     private String cncptMpSCntxtSgCntxtCdCCde;
+     private String cncptMpSCntxtSgCntxtCdCDsplay;
+     private String cncptMpSCntxtSgCntxtCdCSrSlctd;
+     private String cncptMpSCntxtSgCntxtVlQnttQnttVlue;
+     private String cncptMpSCntxtSgCntxtVlQnttQnttCmprtr;
+     private String cncptMpSCntxtSgCntxtVlQnttQnttNt;
+     private String cncptMpSCntxtSgCntxtVlQnttQnttSstm;
+     private String cncptMpSCntxtSgCntxtVlQnttQnttCde;
+     private String cncptMpSCntxtSgCntxtVlRngRngLw;
+     private String cncptMpSCntxtSgCntxtVlRngRngHgh;
+     private String cncptMpSCntxtSgCntxtVlRfrnce;
+     private String cncptMpJrsdctnCcCdngCSstm;
+     private String cncptMpJrsdctnCcCdngCVrsn;
+     private String cncptMpJrsdctnCcCdngCCde;
+     private String cncptMpJrsdctnCcCdngCDsplay;
+     private String cncptMpJrsdctnCcCdngCSrSlctd;
+     private String conceptMapJurisdictionCcText;
+     private String conceptMapPurposeMarkdown;
+     private String conceptMapCopyrightMarkdown;
+     private String conceptMapSourceUriUri;
+     private String cncptMpSrcCnnclCnncl;
+     private String conceptMapTargetUriUri;
+     private String cncptMpTrgtCnnclCnncl;
+     private String conceptMapGroupSourceUri;
+     private String cncptMpGrpSrcVrsnStrng;
+     private String conceptMapGroupTargetUri;
+     private String cncptMpGrpTrgtVrsnStrng;
+     private String conceptMapGroupElementCodeCode;
+     private String cncptMpGrpLmntDsplStrng;
+     private String cncptMpGrpLmntTrgtCdCde;
+     private String cncptMpGrpLmntTrgtDsplStrng;
+     private String cncptMpGrpLmntTrgtQvlncCde;
+     private String cncptMpGrpLmntTrgtCmmntStrng;
+     private String cncptMpGrpLmntTrgtDpndsnPrprtRi;
+     private String cncptMpGrpLmntTrgtDpndsnSstmCnncl;
+     private String cncptMpGrpLmntTrgtDpndsnVlStrng;
+     private String cncptMpGrpLmntTrgtDpndsnDsplStrng;
+     private String cncptMpGrpLmntTrgtPrdctDpndsn;
+     private String cncptMpGrpNmppdMdCde;
+     private String cncptMpGrpNmppdCdCde;
+     private String cncptMpGrpNmppdDsplStrng;
+     private String cncptMpGrpNmppdRlCnncl;
 
     public Conceptmap() {
     }
 
-	
-    public Conceptmap(String conceptMapUrl) {
-        this.conceptMapUrl = conceptMapUrl;
-    }
-    public Conceptmap(String conceptMapUrl, String cncptMpDntfrDntfrSCde, String cncptMpDntfrDntfrTpCdblCncptCdngSstm, String cncptMpDntfrDntfrTpCdblCncptCdngVrsn, String cncptMpDntfrDntfrTpCdblCncptCdngCde, String cncptMpDntfrDntfrTpCdblCncptCdngDsplay, String cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd, String cncptMpDntfrDntfrCdblCncptTxt, String cncptMpDntfrDntfrPrdStrt, String cncptMpDntfrDntfrPrdNd, String cncptMpDntfrDntfrRfrncRfrnce, String cncptMpDntfrDntfrRfrncTpe, String cncptMpDntfrDntfrRfrncDntfr, String cncptMpDntfrDntfrRfrncDsplay, String cncptMpDntfrDntfrVlStrng, String cncptMpDntfrDntfrSstmRi, String conceptMapVersion, String conceptMapName, String conceptMapTitle, String conceptMapStatus, String conceptMapExperimental, String conceptMapDate, String conceptMapPublisher, String conceptMapContact, String conceptMapDescription, String conceptMapUseContext, String cncptMpJrsdctnCdblCncptCdngSstm, String cncptMpJrsdctnCdblCncptCdngVrsn, String cncptMpJrsdctnCdblCncptCdngCde, String cncptMpJrsdctnCdblCncptCdngDsplay, String cncptMpJrsdctnCdblCncptCdngSrSlctd, String cncptMpJrsdctnCdblCncptTxtStrng, String conceptMapPurpose, String conceptMapCopyright, String conceptMapSourceUri, String conceptMapSourceCanonical, String conceptMapTargetUri, String conceptMapTargetCanonical, String conceptMapGroupSource, String conceptMapGroupSourceVersion, String conceptMapGroupTarget, String conceptMapGroupTargetVersion, String conceptMapGroupElementCode, String conceptMapGroupElementDisplay, String cncptMpGrpLmntTrgtCde, String cncptMpGrpLmntTrgtDsplay, String cncptMpGrpLmntTrgtQvlnce, String cncptMpGrpLmntTrgtCmmnt, String cncptMpGrpLmntTrgtDpndsnPrprty, String cncptMpGrpLmntTrgtDpndsnSstm, String cncptMpGrpLmntTrgtDpndsnVlue, String cncptMpGrpLmntTrgtDpndsnDsplay, String cncptMpGrpLmntTrgtPrdct, String conceptMapGroupUnmappedMode, String conceptMapGroupUnmappedCode, String conceptMapGroupUnmappedDisplay, String conceptMapGroupUnmappedUrl) {
-       this.conceptMapUrl = conceptMapUrl;
-       this.cncptMpDntfrDntfrSCde = cncptMpDntfrDntfrSCde;
-       this.cncptMpDntfrDntfrTpCdblCncptCdngSstm = cncptMpDntfrDntfrTpCdblCncptCdngSstm;
-       this.cncptMpDntfrDntfrTpCdblCncptCdngVrsn = cncptMpDntfrDntfrTpCdblCncptCdngVrsn;
-       this.cncptMpDntfrDntfrTpCdblCncptCdngCde = cncptMpDntfrDntfrTpCdblCncptCdngCde;
-       this.cncptMpDntfrDntfrTpCdblCncptCdngDsplay = cncptMpDntfrDntfrTpCdblCncptCdngDsplay;
-       this.cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd = cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.cncptMpDntfrDntfrCdblCncptTxt = cncptMpDntfrDntfrCdblCncptTxt;
-       this.cncptMpDntfrDntfrPrdStrt = cncptMpDntfrDntfrPrdStrt;
-       this.cncptMpDntfrDntfrPrdNd = cncptMpDntfrDntfrPrdNd;
-       this.cncptMpDntfrDntfrRfrncRfrnce = cncptMpDntfrDntfrRfrncRfrnce;
-       this.cncptMpDntfrDntfrRfrncTpe = cncptMpDntfrDntfrRfrncTpe;
-       this.cncptMpDntfrDntfrRfrncDntfr = cncptMpDntfrDntfrRfrncDntfr;
-       this.cncptMpDntfrDntfrRfrncDsplay = cncptMpDntfrDntfrRfrncDsplay;
-       this.cncptMpDntfrDntfrVlStrng = cncptMpDntfrDntfrVlStrng;
-       this.cncptMpDntfrDntfrSstmRi = cncptMpDntfrDntfrSstmRi;
-       this.conceptMapVersion = conceptMapVersion;
-       this.conceptMapName = conceptMapName;
-       this.conceptMapTitle = conceptMapTitle;
-       this.conceptMapStatus = conceptMapStatus;
-       this.conceptMapExperimental = conceptMapExperimental;
-       this.conceptMapDate = conceptMapDate;
-       this.conceptMapPublisher = conceptMapPublisher;
-       this.conceptMapContact = conceptMapContact;
-       this.conceptMapDescription = conceptMapDescription;
-       this.conceptMapUseContext = conceptMapUseContext;
-       this.cncptMpJrsdctnCdblCncptCdngSstm = cncptMpJrsdctnCdblCncptCdngSstm;
-       this.cncptMpJrsdctnCdblCncptCdngVrsn = cncptMpJrsdctnCdblCncptCdngVrsn;
-       this.cncptMpJrsdctnCdblCncptCdngCde = cncptMpJrsdctnCdblCncptCdngCde;
-       this.cncptMpJrsdctnCdblCncptCdngDsplay = cncptMpJrsdctnCdblCncptCdngDsplay;
-       this.cncptMpJrsdctnCdblCncptCdngSrSlctd = cncptMpJrsdctnCdblCncptCdngSrSlctd;
-       this.cncptMpJrsdctnCdblCncptTxtStrng = cncptMpJrsdctnCdblCncptTxtStrng;
-       this.conceptMapPurpose = conceptMapPurpose;
-       this.conceptMapCopyright = conceptMapCopyright;
-       this.conceptMapSourceUri = conceptMapSourceUri;
-       this.conceptMapSourceCanonical = conceptMapSourceCanonical;
-       this.conceptMapTargetUri = conceptMapTargetUri;
-       this.conceptMapTargetCanonical = conceptMapTargetCanonical;
-       this.conceptMapGroupSource = conceptMapGroupSource;
-       this.conceptMapGroupSourceVersion = conceptMapGroupSourceVersion;
-       this.conceptMapGroupTarget = conceptMapGroupTarget;
-       this.conceptMapGroupTargetVersion = conceptMapGroupTargetVersion;
-       this.conceptMapGroupElementCode = conceptMapGroupElementCode;
-       this.conceptMapGroupElementDisplay = conceptMapGroupElementDisplay;
-       this.cncptMpGrpLmntTrgtCde = cncptMpGrpLmntTrgtCde;
-       this.cncptMpGrpLmntTrgtDsplay = cncptMpGrpLmntTrgtDsplay;
-       this.cncptMpGrpLmntTrgtQvlnce = cncptMpGrpLmntTrgtQvlnce;
-       this.cncptMpGrpLmntTrgtCmmnt = cncptMpGrpLmntTrgtCmmnt;
-       this.cncptMpGrpLmntTrgtDpndsnPrprty = cncptMpGrpLmntTrgtDpndsnPrprty;
-       this.cncptMpGrpLmntTrgtDpndsnSstm = cncptMpGrpLmntTrgtDpndsnSstm;
-       this.cncptMpGrpLmntTrgtDpndsnVlue = cncptMpGrpLmntTrgtDpndsnVlue;
-       this.cncptMpGrpLmntTrgtDpndsnDsplay = cncptMpGrpLmntTrgtDpndsnDsplay;
-       this.cncptMpGrpLmntTrgtPrdct = cncptMpGrpLmntTrgtPrdct;
-       this.conceptMapGroupUnmappedMode = conceptMapGroupUnmappedMode;
-       this.conceptMapGroupUnmappedCode = conceptMapGroupUnmappedCode;
-       this.conceptMapGroupUnmappedDisplay = conceptMapGroupUnmappedDisplay;
-       this.conceptMapGroupUnmappedUrl = conceptMapGroupUnmappedUrl;
+    public Conceptmap(String conceptMapUrlUri, String cncptMpDntfrDntfrSe, String cncptMpDntfrDntfrTpCcCSstm, String cncptMpDntfrDntfrTpCcCVrsn, String cncptMpDntfrDntfrTpCcCCde, String cncptMpDntfrDntfrTpCcCDsplay, String cncptMpDntfrDntfrTpCcCSrSlctd, String cncptMpDntfrDntfrTpCcTxt, String cncptMpDntfrDntfrPrdPrdStrt, String cncptMpDntfrDntfrPrdPrdNd, String cncptMpDntfrDntfrSsgnr, String cncptMpDntfrDntfrVlue, String cncptMpDntfrDntfrSstm, String conceptMapVersionString, String conceptMapNameString, String conceptMapTitleString, String conceptMapStatusCode, String conceptMapExperimentalBoolean, String conceptMapDateDateTime, String conceptMapPublisherString, String cncptMpCntctCntctDtlTlcmCntctPntPrdStrt, String cncptMpCntctCntctDtlTlcmCntctPntPrdNd, String cncptMpCntctCntctDtlTlcmCntctPntSstm, String cncptMpCntctCntctDtlTlcmCntctPntVlue, String cncptMpCntctCntctDtlTlcmCntctPntSe, String cncptMpCntctCntctDtlTlcmCntctPntRnk, String cncptMpCntctCntctDtlNme, String conceptMapDescriptionMarkdown, String cncptMpSCntxtSgCntxtVlCcCcCSstm, String cncptMpSCntxtSgCntxtVlCcCcCVrsn, String cncptMpSCntxtSgCntxtVlCcCcCCde, String cncptMpSCntxtSgCntxtVlCcCcCDsplay, String cncptMpSCntxtSgCntxtVlCcCcCSrSlctd, String cncptMpSCntxtSgCntxtVlCcCcTxt, String cncptMpSCntxtSgCntxtCdCSstm, String cncptMpSCntxtSgCntxtCdCVrsn, String cncptMpSCntxtSgCntxtCdCCde, String cncptMpSCntxtSgCntxtCdCDsplay, String cncptMpSCntxtSgCntxtCdCSrSlctd, String cncptMpSCntxtSgCntxtVlQnttQnttVlue, String cncptMpSCntxtSgCntxtVlQnttQnttCmprtr, String cncptMpSCntxtSgCntxtVlQnttQnttNt, String cncptMpSCntxtSgCntxtVlQnttQnttSstm, String cncptMpSCntxtSgCntxtVlQnttQnttCde, String cncptMpSCntxtSgCntxtVlRngRngLw, String cncptMpSCntxtSgCntxtVlRngRngHgh, String cncptMpSCntxtSgCntxtVlRfrnce, String cncptMpJrsdctnCcCdngCSstm, String cncptMpJrsdctnCcCdngCVrsn, String cncptMpJrsdctnCcCdngCCde, String cncptMpJrsdctnCcCdngCDsplay, String cncptMpJrsdctnCcCdngCSrSlctd, String conceptMapJurisdictionCcText, String conceptMapPurposeMarkdown, String conceptMapCopyrightMarkdown, String conceptMapSourceUriUri, String cncptMpSrcCnnclCnncl, String conceptMapTargetUriUri, String cncptMpTrgtCnnclCnncl, String conceptMapGroupSourceUri, String cncptMpGrpSrcVrsnStrng, String conceptMapGroupTargetUri, String cncptMpGrpTrgtVrsnStrng, String conceptMapGroupElementCodeCode, String cncptMpGrpLmntDsplStrng, String cncptMpGrpLmntTrgtCdCde, String cncptMpGrpLmntTrgtDsplStrng, String cncptMpGrpLmntTrgtQvlncCde, String cncptMpGrpLmntTrgtCmmntStrng, String cncptMpGrpLmntTrgtDpndsnPrprtRi, String cncptMpGrpLmntTrgtDpndsnSstmCnncl, String cncptMpGrpLmntTrgtDpndsnVlStrng, String cncptMpGrpLmntTrgtDpndsnDsplStrng, String cncptMpGrpLmntTrgtPrdctDpndsn, String cncptMpGrpNmppdMdCde, String cncptMpGrpNmppdCdCde, String cncptMpGrpNmppdDsplStrng, String cncptMpGrpNmppdRlCnncl) {
+       this.conceptMapUrlUri = conceptMapUrlUri;
+       this.cncptMpDntfrDntfrSe = cncptMpDntfrDntfrSe;
+       this.cncptMpDntfrDntfrTpCcCSstm = cncptMpDntfrDntfrTpCcCSstm;
+       this.cncptMpDntfrDntfrTpCcCVrsn = cncptMpDntfrDntfrTpCcCVrsn;
+       this.cncptMpDntfrDntfrTpCcCCde = cncptMpDntfrDntfrTpCcCCde;
+       this.cncptMpDntfrDntfrTpCcCDsplay = cncptMpDntfrDntfrTpCcCDsplay;
+       this.cncptMpDntfrDntfrTpCcCSrSlctd = cncptMpDntfrDntfrTpCcCSrSlctd;
+       this.cncptMpDntfrDntfrTpCcTxt = cncptMpDntfrDntfrTpCcTxt;
+       this.cncptMpDntfrDntfrPrdPrdStrt = cncptMpDntfrDntfrPrdPrdStrt;
+       this.cncptMpDntfrDntfrPrdPrdNd = cncptMpDntfrDntfrPrdPrdNd;
+       this.cncptMpDntfrDntfrSsgnr = cncptMpDntfrDntfrSsgnr;
+       this.cncptMpDntfrDntfrVlue = cncptMpDntfrDntfrVlue;
+       this.cncptMpDntfrDntfrSstm = cncptMpDntfrDntfrSstm;
+       this.conceptMapVersionString = conceptMapVersionString;
+       this.conceptMapNameString = conceptMapNameString;
+       this.conceptMapTitleString = conceptMapTitleString;
+       this.conceptMapStatusCode = conceptMapStatusCode;
+       this.conceptMapExperimentalBoolean = conceptMapExperimentalBoolean;
+       this.conceptMapDateDateTime = conceptMapDateDateTime;
+       this.conceptMapPublisherString = conceptMapPublisherString;
+       this.cncptMpCntctCntctDtlTlcmCntctPntPrdStrt = cncptMpCntctCntctDtlTlcmCntctPntPrdStrt;
+       this.cncptMpCntctCntctDtlTlcmCntctPntPrdNd = cncptMpCntctCntctDtlTlcmCntctPntPrdNd;
+       this.cncptMpCntctCntctDtlTlcmCntctPntSstm = cncptMpCntctCntctDtlTlcmCntctPntSstm;
+       this.cncptMpCntctCntctDtlTlcmCntctPntVlue = cncptMpCntctCntctDtlTlcmCntctPntVlue;
+       this.cncptMpCntctCntctDtlTlcmCntctPntSe = cncptMpCntctCntctDtlTlcmCntctPntSe;
+       this.cncptMpCntctCntctDtlTlcmCntctPntRnk = cncptMpCntctCntctDtlTlcmCntctPntRnk;
+       this.cncptMpCntctCntctDtlNme = cncptMpCntctCntctDtlNme;
+       this.conceptMapDescriptionMarkdown = conceptMapDescriptionMarkdown;
+       this.cncptMpSCntxtSgCntxtVlCcCcCSstm = cncptMpSCntxtSgCntxtVlCcCcCSstm;
+       this.cncptMpSCntxtSgCntxtVlCcCcCVrsn = cncptMpSCntxtSgCntxtVlCcCcCVrsn;
+       this.cncptMpSCntxtSgCntxtVlCcCcCCde = cncptMpSCntxtSgCntxtVlCcCcCCde;
+       this.cncptMpSCntxtSgCntxtVlCcCcCDsplay = cncptMpSCntxtSgCntxtVlCcCcCDsplay;
+       this.cncptMpSCntxtSgCntxtVlCcCcCSrSlctd = cncptMpSCntxtSgCntxtVlCcCcCSrSlctd;
+       this.cncptMpSCntxtSgCntxtVlCcCcTxt = cncptMpSCntxtSgCntxtVlCcCcTxt;
+       this.cncptMpSCntxtSgCntxtCdCSstm = cncptMpSCntxtSgCntxtCdCSstm;
+       this.cncptMpSCntxtSgCntxtCdCVrsn = cncptMpSCntxtSgCntxtCdCVrsn;
+       this.cncptMpSCntxtSgCntxtCdCCde = cncptMpSCntxtSgCntxtCdCCde;
+       this.cncptMpSCntxtSgCntxtCdCDsplay = cncptMpSCntxtSgCntxtCdCDsplay;
+       this.cncptMpSCntxtSgCntxtCdCSrSlctd = cncptMpSCntxtSgCntxtCdCSrSlctd;
+       this.cncptMpSCntxtSgCntxtVlQnttQnttVlue = cncptMpSCntxtSgCntxtVlQnttQnttVlue;
+       this.cncptMpSCntxtSgCntxtVlQnttQnttCmprtr = cncptMpSCntxtSgCntxtVlQnttQnttCmprtr;
+       this.cncptMpSCntxtSgCntxtVlQnttQnttNt = cncptMpSCntxtSgCntxtVlQnttQnttNt;
+       this.cncptMpSCntxtSgCntxtVlQnttQnttSstm = cncptMpSCntxtSgCntxtVlQnttQnttSstm;
+       this.cncptMpSCntxtSgCntxtVlQnttQnttCde = cncptMpSCntxtSgCntxtVlQnttQnttCde;
+       this.cncptMpSCntxtSgCntxtVlRngRngLw = cncptMpSCntxtSgCntxtVlRngRngLw;
+       this.cncptMpSCntxtSgCntxtVlRngRngHgh = cncptMpSCntxtSgCntxtVlRngRngHgh;
+       this.cncptMpSCntxtSgCntxtVlRfrnce = cncptMpSCntxtSgCntxtVlRfrnce;
+       this.cncptMpJrsdctnCcCdngCSstm = cncptMpJrsdctnCcCdngCSstm;
+       this.cncptMpJrsdctnCcCdngCVrsn = cncptMpJrsdctnCcCdngCVrsn;
+       this.cncptMpJrsdctnCcCdngCCde = cncptMpJrsdctnCcCdngCCde;
+       this.cncptMpJrsdctnCcCdngCDsplay = cncptMpJrsdctnCcCdngCDsplay;
+       this.cncptMpJrsdctnCcCdngCSrSlctd = cncptMpJrsdctnCcCdngCSrSlctd;
+       this.conceptMapJurisdictionCcText = conceptMapJurisdictionCcText;
+       this.conceptMapPurposeMarkdown = conceptMapPurposeMarkdown;
+       this.conceptMapCopyrightMarkdown = conceptMapCopyrightMarkdown;
+       this.conceptMapSourceUriUri = conceptMapSourceUriUri;
+       this.cncptMpSrcCnnclCnncl = cncptMpSrcCnnclCnncl;
+       this.conceptMapTargetUriUri = conceptMapTargetUriUri;
+       this.cncptMpTrgtCnnclCnncl = cncptMpTrgtCnnclCnncl;
+       this.conceptMapGroupSourceUri = conceptMapGroupSourceUri;
+       this.cncptMpGrpSrcVrsnStrng = cncptMpGrpSrcVrsnStrng;
+       this.conceptMapGroupTargetUri = conceptMapGroupTargetUri;
+       this.cncptMpGrpTrgtVrsnStrng = cncptMpGrpTrgtVrsnStrng;
+       this.conceptMapGroupElementCodeCode = conceptMapGroupElementCodeCode;
+       this.cncptMpGrpLmntDsplStrng = cncptMpGrpLmntDsplStrng;
+       this.cncptMpGrpLmntTrgtCdCde = cncptMpGrpLmntTrgtCdCde;
+       this.cncptMpGrpLmntTrgtDsplStrng = cncptMpGrpLmntTrgtDsplStrng;
+       this.cncptMpGrpLmntTrgtQvlncCde = cncptMpGrpLmntTrgtQvlncCde;
+       this.cncptMpGrpLmntTrgtCmmntStrng = cncptMpGrpLmntTrgtCmmntStrng;
+       this.cncptMpGrpLmntTrgtDpndsnPrprtRi = cncptMpGrpLmntTrgtDpndsnPrprtRi;
+       this.cncptMpGrpLmntTrgtDpndsnSstmCnncl = cncptMpGrpLmntTrgtDpndsnSstmCnncl;
+       this.cncptMpGrpLmntTrgtDpndsnVlStrng = cncptMpGrpLmntTrgtDpndsnVlStrng;
+       this.cncptMpGrpLmntTrgtDpndsnDsplStrng = cncptMpGrpLmntTrgtDpndsnDsplStrng;
+       this.cncptMpGrpLmntTrgtPrdctDpndsn = cncptMpGrpLmntTrgtPrdctDpndsn;
+       this.cncptMpGrpNmppdMdCde = cncptMpGrpNmppdMdCde;
+       this.cncptMpGrpNmppdCdCde = cncptMpGrpNmppdCdCde;
+       this.cncptMpGrpNmppdDsplStrng = cncptMpGrpNmppdDsplStrng;
+       this.cncptMpGrpNmppdRlCnncl = cncptMpGrpNmppdRlCnncl;
     }
    
-    public String getConceptMapUrl() {
-        return this.conceptMapUrl;
-    }
-    
-    public void setConceptMapUrl(String conceptMapUrl) {
-        this.conceptMapUrl = conceptMapUrl;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrSCde() {
-        return this.cncptMpDntfrDntfrSCde;
-    }
-    
-    public void setCncptMpDntfrDntfrSCde(String cncptMpDntfrDntfrSCde) {
-        this.cncptMpDntfrDntfrSCde = cncptMpDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.cncptMpDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setCncptMpDntfrDntfrTpCdblCncptCdngSstm(String cncptMpDntfrDntfrTpCdblCncptCdngSstm) {
-        this.cncptMpDntfrDntfrTpCdblCncptCdngSstm = cncptMpDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.cncptMpDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setCncptMpDntfrDntfrTpCdblCncptCdngVrsn(String cncptMpDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.cncptMpDntfrDntfrTpCdblCncptCdngVrsn = cncptMpDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrTpCdblCncptCdngCde() {
-        return this.cncptMpDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setCncptMpDntfrDntfrTpCdblCncptCdngCde(String cncptMpDntfrDntfrTpCdblCncptCdngCde) {
-        this.cncptMpDntfrDntfrTpCdblCncptCdngCde = cncptMpDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.cncptMpDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setCncptMpDntfrDntfrTpCdblCncptCdngDsplay(String cncptMpDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.cncptMpDntfrDntfrTpCdblCncptCdngDsplay = cncptMpDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setCncptMpDntfrDntfrTpCdblCncptCdngSrSlctd(String cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd = cncptMpDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrCdblCncptTxt() {
-        return this.cncptMpDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setCncptMpDntfrDntfrCdblCncptTxt(String cncptMpDntfrDntfrCdblCncptTxt) {
-        this.cncptMpDntfrDntfrCdblCncptTxt = cncptMpDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrPrdStrt() {
-        return this.cncptMpDntfrDntfrPrdStrt;
-    }
-    
-    public void setCncptMpDntfrDntfrPrdStrt(String cncptMpDntfrDntfrPrdStrt) {
-        this.cncptMpDntfrDntfrPrdStrt = cncptMpDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrPrdNd() {
-        return this.cncptMpDntfrDntfrPrdNd;
-    }
-    
-    public void setCncptMpDntfrDntfrPrdNd(String cncptMpDntfrDntfrPrdNd) {
-        this.cncptMpDntfrDntfrPrdNd = cncptMpDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrRfrncRfrnce() {
-        return this.cncptMpDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setCncptMpDntfrDntfrRfrncRfrnce(String cncptMpDntfrDntfrRfrncRfrnce) {
-        this.cncptMpDntfrDntfrRfrncRfrnce = cncptMpDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrRfrncTpe() {
-        return this.cncptMpDntfrDntfrRfrncTpe;
-    }
-    
-    public void setCncptMpDntfrDntfrRfrncTpe(String cncptMpDntfrDntfrRfrncTpe) {
-        this.cncptMpDntfrDntfrRfrncTpe = cncptMpDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrRfrncDntfr() {
-        return this.cncptMpDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setCncptMpDntfrDntfrRfrncDntfr(String cncptMpDntfrDntfrRfrncDntfr) {
-        this.cncptMpDntfrDntfrRfrncDntfr = cncptMpDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrRfrncDsplay() {
-        return this.cncptMpDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setCncptMpDntfrDntfrRfrncDsplay(String cncptMpDntfrDntfrRfrncDsplay) {
-        this.cncptMpDntfrDntfrRfrncDsplay = cncptMpDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrVlStrng() {
-        return this.cncptMpDntfrDntfrVlStrng;
-    }
-    
-    public void setCncptMpDntfrDntfrVlStrng(String cncptMpDntfrDntfrVlStrng) {
-        this.cncptMpDntfrDntfrVlStrng = cncptMpDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getCncptMpDntfrDntfrSstmRi() {
-        return this.cncptMpDntfrDntfrSstmRi;
-    }
-    
-    public void setCncptMpDntfrDntfrSstmRi(String cncptMpDntfrDntfrSstmRi) {
-        this.cncptMpDntfrDntfrSstmRi = cncptMpDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getConceptMapVersion() {
-        return this.conceptMapVersion;
-    }
-    
-    public void setConceptMapVersion(String conceptMapVersion) {
-        this.conceptMapVersion = conceptMapVersion;
-    }
-    
-    
-    
-    public String getConceptMapName() {
-        return this.conceptMapName;
-    }
-    
-    public void setConceptMapName(String conceptMapName) {
-        this.conceptMapName = conceptMapName;
-    }
-    
-    
-    
-    public String getConceptMapTitle() {
-        return this.conceptMapTitle;
-    }
-    
-    public void setConceptMapTitle(String conceptMapTitle) {
-        this.conceptMapTitle = conceptMapTitle;
-    }
-    
-    
-    
-    public String getConceptMapStatus() {
-        return this.conceptMapStatus;
-    }
-    
-    public void setConceptMapStatus(String conceptMapStatus) {
-        this.conceptMapStatus = conceptMapStatus;
-    }
-    
-    
-    
-    public String getConceptMapExperimental() {
-        return this.conceptMapExperimental;
-    }
-    
-    public void setConceptMapExperimental(String conceptMapExperimental) {
-        this.conceptMapExperimental = conceptMapExperimental;
-    }
-    
-    
-    
-    public String getConceptMapDate() {
-        return this.conceptMapDate;
-    }
-    
-    public void setConceptMapDate(String conceptMapDate) {
-        this.conceptMapDate = conceptMapDate;
-    }
-    
-    
-    
-    public String getConceptMapPublisher() {
-        return this.conceptMapPublisher;
-    }
-    
-    public void setConceptMapPublisher(String conceptMapPublisher) {
-        this.conceptMapPublisher = conceptMapPublisher;
-    }
-    
-    
-    
-    public String getConceptMapContact() {
-        return this.conceptMapContact;
-    }
-    
-    public void setConceptMapContact(String conceptMapContact) {
-        this.conceptMapContact = conceptMapContact;
-    }
-    
-    
-    
-    public String getConceptMapDescription() {
-        return this.conceptMapDescription;
-    }
-    
-    public void setConceptMapDescription(String conceptMapDescription) {
-        this.conceptMapDescription = conceptMapDescription;
-    }
-    
-    
-    
-    public String getConceptMapUseContext() {
-        return this.conceptMapUseContext;
-    }
-    
-    public void setConceptMapUseContext(String conceptMapUseContext) {
-        this.conceptMapUseContext = conceptMapUseContext;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptCdngSstm() {
-        return this.cncptMpJrsdctnCdblCncptCdngSstm;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptCdngSstm(String cncptMpJrsdctnCdblCncptCdngSstm) {
-        this.cncptMpJrsdctnCdblCncptCdngSstm = cncptMpJrsdctnCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptCdngVrsn() {
-        return this.cncptMpJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptCdngVrsn(String cncptMpJrsdctnCdblCncptCdngVrsn) {
-        this.cncptMpJrsdctnCdblCncptCdngVrsn = cncptMpJrsdctnCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptCdngCde() {
-        return this.cncptMpJrsdctnCdblCncptCdngCde;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptCdngCde(String cncptMpJrsdctnCdblCncptCdngCde) {
-        this.cncptMpJrsdctnCdblCncptCdngCde = cncptMpJrsdctnCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptCdngDsplay() {
-        return this.cncptMpJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptCdngDsplay(String cncptMpJrsdctnCdblCncptCdngDsplay) {
-        this.cncptMpJrsdctnCdblCncptCdngDsplay = cncptMpJrsdctnCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptCdngSrSlctd() {
-        return this.cncptMpJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptCdngSrSlctd(String cncptMpJrsdctnCdblCncptCdngSrSlctd) {
-        this.cncptMpJrsdctnCdblCncptCdngSrSlctd = cncptMpJrsdctnCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getCncptMpJrsdctnCdblCncptTxtStrng() {
-        return this.cncptMpJrsdctnCdblCncptTxtStrng;
-    }
-    
-    public void setCncptMpJrsdctnCdblCncptTxtStrng(String cncptMpJrsdctnCdblCncptTxtStrng) {
-        this.cncptMpJrsdctnCdblCncptTxtStrng = cncptMpJrsdctnCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getConceptMapPurpose() {
-        return this.conceptMapPurpose;
-    }
-    
-    public void setConceptMapPurpose(String conceptMapPurpose) {
-        this.conceptMapPurpose = conceptMapPurpose;
-    }
-    
-    
-    
-    public String getConceptMapCopyright() {
-        return this.conceptMapCopyright;
-    }
-    
-    public void setConceptMapCopyright(String conceptMapCopyright) {
-        this.conceptMapCopyright = conceptMapCopyright;
-    }
-    
-    
-    
-    public String getConceptMapSourceUri() {
-        return this.conceptMapSourceUri;
-    }
-    
-    public void setConceptMapSourceUri(String conceptMapSourceUri) {
-        this.conceptMapSourceUri = conceptMapSourceUri;
-    }
-    
-    
-    
-    public String getConceptMapSourceCanonical() {
-        return this.conceptMapSourceCanonical;
-    }
-    
-    public void setConceptMapSourceCanonical(String conceptMapSourceCanonical) {
-        this.conceptMapSourceCanonical = conceptMapSourceCanonical;
-    }
-    
-    
-    
-    public String getConceptMapTargetUri() {
-        return this.conceptMapTargetUri;
-    }
-    
-    public void setConceptMapTargetUri(String conceptMapTargetUri) {
-        this.conceptMapTargetUri = conceptMapTargetUri;
-    }
-    
-    
-    
-    public String getConceptMapTargetCanonical() {
-        return this.conceptMapTargetCanonical;
-    }
-    
-    public void setConceptMapTargetCanonical(String conceptMapTargetCanonical) {
-        this.conceptMapTargetCanonical = conceptMapTargetCanonical;
-    }
-    
-    
-    
-    public String getConceptMapGroupSource() {
-        return this.conceptMapGroupSource;
-    }
-    
-    public void setConceptMapGroupSource(String conceptMapGroupSource) {
-        this.conceptMapGroupSource = conceptMapGroupSource;
-    }
-    
-    
-    
-    public String getConceptMapGroupSourceVersion() {
-        return this.conceptMapGroupSourceVersion;
-    }
-    
-    public void setConceptMapGroupSourceVersion(String conceptMapGroupSourceVersion) {
-        this.conceptMapGroupSourceVersion = conceptMapGroupSourceVersion;
-    }
-    
-    
-    
-    public String getConceptMapGroupTarget() {
-        return this.conceptMapGroupTarget;
-    }
-    
-    public void setConceptMapGroupTarget(String conceptMapGroupTarget) {
-        this.conceptMapGroupTarget = conceptMapGroupTarget;
-    }
-    
-    
-    
-    public String getConceptMapGroupTargetVersion() {
-        return this.conceptMapGroupTargetVersion;
-    }
-    
-    public void setConceptMapGroupTargetVersion(String conceptMapGroupTargetVersion) {
-        this.conceptMapGroupTargetVersion = conceptMapGroupTargetVersion;
-    }
-    
-    
-    
-    public String getConceptMapGroupElementCode() {
-        return this.conceptMapGroupElementCode;
-    }
-    
-    public void setConceptMapGroupElementCode(String conceptMapGroupElementCode) {
-        this.conceptMapGroupElementCode = conceptMapGroupElementCode;
-    }
-    
-    
-    
-    public String getConceptMapGroupElementDisplay() {
-        return this.conceptMapGroupElementDisplay;
-    }
-    
-    public void setConceptMapGroupElementDisplay(String conceptMapGroupElementDisplay) {
-        this.conceptMapGroupElementDisplay = conceptMapGroupElementDisplay;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtCde() {
-        return this.cncptMpGrpLmntTrgtCde;
-    }
-    
-    public void setCncptMpGrpLmntTrgtCde(String cncptMpGrpLmntTrgtCde) {
-        this.cncptMpGrpLmntTrgtCde = cncptMpGrpLmntTrgtCde;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtDsplay() {
-        return this.cncptMpGrpLmntTrgtDsplay;
-    }
-    
-    public void setCncptMpGrpLmntTrgtDsplay(String cncptMpGrpLmntTrgtDsplay) {
-        this.cncptMpGrpLmntTrgtDsplay = cncptMpGrpLmntTrgtDsplay;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtQvlnce() {
-        return this.cncptMpGrpLmntTrgtQvlnce;
-    }
-    
-    public void setCncptMpGrpLmntTrgtQvlnce(String cncptMpGrpLmntTrgtQvlnce) {
-        this.cncptMpGrpLmntTrgtQvlnce = cncptMpGrpLmntTrgtQvlnce;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtCmmnt() {
-        return this.cncptMpGrpLmntTrgtCmmnt;
-    }
-    
-    public void setCncptMpGrpLmntTrgtCmmnt(String cncptMpGrpLmntTrgtCmmnt) {
-        this.cncptMpGrpLmntTrgtCmmnt = cncptMpGrpLmntTrgtCmmnt;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtDpndsnPrprty() {
-        return this.cncptMpGrpLmntTrgtDpndsnPrprty;
-    }
-    
-    public void setCncptMpGrpLmntTrgtDpndsnPrprty(String cncptMpGrpLmntTrgtDpndsnPrprty) {
-        this.cncptMpGrpLmntTrgtDpndsnPrprty = cncptMpGrpLmntTrgtDpndsnPrprty;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtDpndsnSstm() {
-        return this.cncptMpGrpLmntTrgtDpndsnSstm;
-    }
-    
-    public void setCncptMpGrpLmntTrgtDpndsnSstm(String cncptMpGrpLmntTrgtDpndsnSstm) {
-        this.cncptMpGrpLmntTrgtDpndsnSstm = cncptMpGrpLmntTrgtDpndsnSstm;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtDpndsnVlue() {
-        return this.cncptMpGrpLmntTrgtDpndsnVlue;
-    }
-    
-    public void setCncptMpGrpLmntTrgtDpndsnVlue(String cncptMpGrpLmntTrgtDpndsnVlue) {
-        this.cncptMpGrpLmntTrgtDpndsnVlue = cncptMpGrpLmntTrgtDpndsnVlue;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtDpndsnDsplay() {
-        return this.cncptMpGrpLmntTrgtDpndsnDsplay;
-    }
-    
-    public void setCncptMpGrpLmntTrgtDpndsnDsplay(String cncptMpGrpLmntTrgtDpndsnDsplay) {
-        this.cncptMpGrpLmntTrgtDpndsnDsplay = cncptMpGrpLmntTrgtDpndsnDsplay;
-    }
-    
-    
-    
-    public String getCncptMpGrpLmntTrgtPrdct() {
-        return this.cncptMpGrpLmntTrgtPrdct;
-    }
-    
-    public void setCncptMpGrpLmntTrgtPrdct(String cncptMpGrpLmntTrgtPrdct) {
-        this.cncptMpGrpLmntTrgtPrdct = cncptMpGrpLmntTrgtPrdct;
-    }
-    
-    
-    
-    public String getConceptMapGroupUnmappedMode() {
-        return this.conceptMapGroupUnmappedMode;
-    }
-    
-    public void setConceptMapGroupUnmappedMode(String conceptMapGroupUnmappedMode) {
-        this.conceptMapGroupUnmappedMode = conceptMapGroupUnmappedMode;
-    }
-    
-    
-    
-    public String getConceptMapGroupUnmappedCode() {
-        return this.conceptMapGroupUnmappedCode;
-    }
-    
-    public void setConceptMapGroupUnmappedCode(String conceptMapGroupUnmappedCode) {
-        this.conceptMapGroupUnmappedCode = conceptMapGroupUnmappedCode;
-    }
-    
-    
-    
-    public String getConceptMapGroupUnmappedDisplay() {
-        return this.conceptMapGroupUnmappedDisplay;
-    }
-    
-    public void setConceptMapGroupUnmappedDisplay(String conceptMapGroupUnmappedDisplay) {
-        this.conceptMapGroupUnmappedDisplay = conceptMapGroupUnmappedDisplay;
-    }
-    
-    
-    
-    public String getConceptMapGroupUnmappedUrl() {
-        return this.conceptMapGroupUnmappedUrl;
-    }
-    
-    public void setConceptMapGroupUnmappedUrl(String conceptMapGroupUnmappedUrl) {
-        this.conceptMapGroupUnmappedUrl = conceptMapGroupUnmappedUrl;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getConceptMapUrlUri()
+    {
+        return this.conceptMapUrlUri;
+    }
+    
+    public void setConceptMapUrlUri
+        (String conceptMapUrlUri) 
+        {
+      this.conceptMapUrlUri = conceptMapUrlUri;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrSe()
+    {
+        return this.cncptMpDntfrDntfrSe;
+    }
+    
+    public void setCncptMpDntfrDntfrSe
+        (String cncptMpDntfrDntfrSe) 
+        {
+      this.cncptMpDntfrDntfrSe = cncptMpDntfrDntfrSe;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcCSstm()
+    {
+        return this.cncptMpDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcCSstm
+        (String cncptMpDntfrDntfrTpCcCSstm) 
+        {
+      this.cncptMpDntfrDntfrTpCcCSstm = cncptMpDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcCVrsn()
+    {
+        return this.cncptMpDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcCVrsn
+        (String cncptMpDntfrDntfrTpCcCVrsn) 
+        {
+      this.cncptMpDntfrDntfrTpCcCVrsn = cncptMpDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcCCde()
+    {
+        return this.cncptMpDntfrDntfrTpCcCCde;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcCCde
+        (String cncptMpDntfrDntfrTpCcCCde) 
+        {
+      this.cncptMpDntfrDntfrTpCcCCde = cncptMpDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcCDsplay()
+    {
+        return this.cncptMpDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcCDsplay
+        (String cncptMpDntfrDntfrTpCcCDsplay) 
+        {
+      this.cncptMpDntfrDntfrTpCcCDsplay = cncptMpDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.cncptMpDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcCSrSlctd
+        (String cncptMpDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.cncptMpDntfrDntfrTpCcCSrSlctd = cncptMpDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrTpCcTxt()
+    {
+        return this.cncptMpDntfrDntfrTpCcTxt;
+    }
+    
+    public void setCncptMpDntfrDntfrTpCcTxt
+        (String cncptMpDntfrDntfrTpCcTxt) 
+        {
+      this.cncptMpDntfrDntfrTpCcTxt = cncptMpDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrPrdPrdStrt()
+    {
+        return this.cncptMpDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setCncptMpDntfrDntfrPrdPrdStrt
+        (String cncptMpDntfrDntfrPrdPrdStrt) 
+        {
+      this.cncptMpDntfrDntfrPrdPrdStrt = cncptMpDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrPrdPrdNd()
+    {
+        return this.cncptMpDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setCncptMpDntfrDntfrPrdPrdNd
+        (String cncptMpDntfrDntfrPrdPrdNd) 
+        {
+      this.cncptMpDntfrDntfrPrdPrdNd = cncptMpDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrSsgnr()
+    {
+        return this.cncptMpDntfrDntfrSsgnr;
+    }
+    
+    public void setCncptMpDntfrDntfrSsgnr
+        (String cncptMpDntfrDntfrSsgnr) 
+        {
+      this.cncptMpDntfrDntfrSsgnr = cncptMpDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrVlue()
+    {
+        return this.cncptMpDntfrDntfrVlue;
+    }
+    
+    public void setCncptMpDntfrDntfrVlue
+        (String cncptMpDntfrDntfrVlue) 
+        {
+      this.cncptMpDntfrDntfrVlue = cncptMpDntfrDntfrVlue;
+}
+    public 
+    String 
+    getCncptMpDntfrDntfrSstm()
+    {
+        return this.cncptMpDntfrDntfrSstm;
+    }
+    
+    public void setCncptMpDntfrDntfrSstm
+        (String cncptMpDntfrDntfrSstm) 
+        {
+      this.cncptMpDntfrDntfrSstm = cncptMpDntfrDntfrSstm;
+}
+    public 
+    String 
+    getConceptMapVersionString()
+    {
+        return this.conceptMapVersionString;
+    }
+    
+    public void setConceptMapVersionString
+        (String conceptMapVersionString) 
+        {
+      this.conceptMapVersionString = conceptMapVersionString;
+}
+    public 
+    String 
+    getConceptMapNameString()
+    {
+        return this.conceptMapNameString;
+    }
+    
+    public void setConceptMapNameString
+        (String conceptMapNameString) 
+        {
+      this.conceptMapNameString = conceptMapNameString;
+}
+    public 
+    String 
+    getConceptMapTitleString()
+    {
+        return this.conceptMapTitleString;
+    }
+    
+    public void setConceptMapTitleString
+        (String conceptMapTitleString) 
+        {
+      this.conceptMapTitleString = conceptMapTitleString;
+}
+    public 
+    String 
+    getConceptMapStatusCode()
+    {
+        return this.conceptMapStatusCode;
+    }
+    
+    public void setConceptMapStatusCode
+        (String conceptMapStatusCode) 
+        {
+      this.conceptMapStatusCode = conceptMapStatusCode;
+}
+    public 
+    String 
+    getConceptMapExperimentalBoolean()
+    {
+        return this.conceptMapExperimentalBoolean;
+    }
+    
+    public void setConceptMapExperimentalBoolean
+        (String conceptMapExperimentalBoolean) 
+        {
+      this.conceptMapExperimentalBoolean = conceptMapExperimentalBoolean;
+}
+    public 
+    String 
+    getConceptMapDateDateTime()
+    {
+        return this.conceptMapDateDateTime;
+    }
+    
+    public void setConceptMapDateDateTime
+        (String conceptMapDateDateTime) 
+        {
+      this.conceptMapDateDateTime = conceptMapDateDateTime;
+}
+    public 
+    String 
+    getConceptMapPublisherString()
+    {
+        return this.conceptMapPublisherString;
+    }
+    
+    public void setConceptMapPublisherString
+        (String conceptMapPublisherString) 
+        {
+      this.conceptMapPublisherString = conceptMapPublisherString;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntPrdStrt()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntPrdStrt;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntPrdStrt
+        (String cncptMpCntctCntctDtlTlcmCntctPntPrdStrt) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntPrdStrt = cncptMpCntctCntctDtlTlcmCntctPntPrdStrt;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntPrdNd()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntPrdNd;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntPrdNd
+        (String cncptMpCntctCntctDtlTlcmCntctPntPrdNd) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntPrdNd = cncptMpCntctCntctDtlTlcmCntctPntPrdNd;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntSstm()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntSstm;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntSstm
+        (String cncptMpCntctCntctDtlTlcmCntctPntSstm) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntSstm = cncptMpCntctCntctDtlTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntVlue()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntVlue;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntVlue
+        (String cncptMpCntctCntctDtlTlcmCntctPntVlue) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntVlue = cncptMpCntctCntctDtlTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntSe()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntSe;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntSe
+        (String cncptMpCntctCntctDtlTlcmCntctPntSe) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntSe = cncptMpCntctCntctDtlTlcmCntctPntSe;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlTlcmCntctPntRnk()
+    {
+        return this.cncptMpCntctCntctDtlTlcmCntctPntRnk;
+    }
+    
+    public void setCncptMpCntctCntctDtlTlcmCntctPntRnk
+        (String cncptMpCntctCntctDtlTlcmCntctPntRnk) 
+        {
+      this.cncptMpCntctCntctDtlTlcmCntctPntRnk = cncptMpCntctCntctDtlTlcmCntctPntRnk;
+}
+    public 
+    String 
+    getCncptMpCntctCntctDtlNme()
+    {
+        return this.cncptMpCntctCntctDtlNme;
+    }
+    
+    public void setCncptMpCntctCntctDtlNme
+        (String cncptMpCntctCntctDtlNme) 
+        {
+      this.cncptMpCntctCntctDtlNme = cncptMpCntctCntctDtlNme;
+}
+    public 
+    String 
+    getConceptMapDescriptionMarkdown()
+    {
+        return this.conceptMapDescriptionMarkdown;
+    }
+    
+    public void setConceptMapDescriptionMarkdown
+        (String conceptMapDescriptionMarkdown) 
+        {
+      this.conceptMapDescriptionMarkdown = conceptMapDescriptionMarkdown;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcCSstm()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcCSstm;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcCSstm
+        (String cncptMpSCntxtSgCntxtVlCcCcCSstm) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcCSstm = cncptMpSCntxtSgCntxtVlCcCcCSstm;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcCVrsn()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcCVrsn;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcCVrsn
+        (String cncptMpSCntxtSgCntxtVlCcCcCVrsn) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcCVrsn = cncptMpSCntxtSgCntxtVlCcCcCVrsn;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcCCde()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcCCde;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcCCde
+        (String cncptMpSCntxtSgCntxtVlCcCcCCde) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcCCde = cncptMpSCntxtSgCntxtVlCcCcCCde;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcCDsplay()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcCDsplay;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcCDsplay
+        (String cncptMpSCntxtSgCntxtVlCcCcCDsplay) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcCDsplay = cncptMpSCntxtSgCntxtVlCcCcCDsplay;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcCSrSlctd()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcCSrSlctd;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcCSrSlctd
+        (String cncptMpSCntxtSgCntxtVlCcCcCSrSlctd) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcCSrSlctd = cncptMpSCntxtSgCntxtVlCcCcCSrSlctd;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlCcCcTxt()
+    {
+        return this.cncptMpSCntxtSgCntxtVlCcCcTxt;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlCcCcTxt
+        (String cncptMpSCntxtSgCntxtVlCcCcTxt) 
+        {
+      this.cncptMpSCntxtSgCntxtVlCcCcTxt = cncptMpSCntxtSgCntxtVlCcCcTxt;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtCdCSstm()
+    {
+        return this.cncptMpSCntxtSgCntxtCdCSstm;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtCdCSstm
+        (String cncptMpSCntxtSgCntxtCdCSstm) 
+        {
+      this.cncptMpSCntxtSgCntxtCdCSstm = cncptMpSCntxtSgCntxtCdCSstm;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtCdCVrsn()
+    {
+        return this.cncptMpSCntxtSgCntxtCdCVrsn;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtCdCVrsn
+        (String cncptMpSCntxtSgCntxtCdCVrsn) 
+        {
+      this.cncptMpSCntxtSgCntxtCdCVrsn = cncptMpSCntxtSgCntxtCdCVrsn;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtCdCCde()
+    {
+        return this.cncptMpSCntxtSgCntxtCdCCde;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtCdCCde
+        (String cncptMpSCntxtSgCntxtCdCCde) 
+        {
+      this.cncptMpSCntxtSgCntxtCdCCde = cncptMpSCntxtSgCntxtCdCCde;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtCdCDsplay()
+    {
+        return this.cncptMpSCntxtSgCntxtCdCDsplay;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtCdCDsplay
+        (String cncptMpSCntxtSgCntxtCdCDsplay) 
+        {
+      this.cncptMpSCntxtSgCntxtCdCDsplay = cncptMpSCntxtSgCntxtCdCDsplay;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtCdCSrSlctd()
+    {
+        return this.cncptMpSCntxtSgCntxtCdCSrSlctd;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtCdCSrSlctd
+        (String cncptMpSCntxtSgCntxtCdCSrSlctd) 
+        {
+      this.cncptMpSCntxtSgCntxtCdCSrSlctd = cncptMpSCntxtSgCntxtCdCSrSlctd;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlQnttQnttVlue()
+    {
+        return this.cncptMpSCntxtSgCntxtVlQnttQnttVlue;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlQnttQnttVlue
+        (String cncptMpSCntxtSgCntxtVlQnttQnttVlue) 
+        {
+      this.cncptMpSCntxtSgCntxtVlQnttQnttVlue = cncptMpSCntxtSgCntxtVlQnttQnttVlue;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlQnttQnttCmprtr()
+    {
+        return this.cncptMpSCntxtSgCntxtVlQnttQnttCmprtr;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlQnttQnttCmprtr
+        (String cncptMpSCntxtSgCntxtVlQnttQnttCmprtr) 
+        {
+      this.cncptMpSCntxtSgCntxtVlQnttQnttCmprtr = cncptMpSCntxtSgCntxtVlQnttQnttCmprtr;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlQnttQnttNt()
+    {
+        return this.cncptMpSCntxtSgCntxtVlQnttQnttNt;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlQnttQnttNt
+        (String cncptMpSCntxtSgCntxtVlQnttQnttNt) 
+        {
+      this.cncptMpSCntxtSgCntxtVlQnttQnttNt = cncptMpSCntxtSgCntxtVlQnttQnttNt;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlQnttQnttSstm()
+    {
+        return this.cncptMpSCntxtSgCntxtVlQnttQnttSstm;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlQnttQnttSstm
+        (String cncptMpSCntxtSgCntxtVlQnttQnttSstm) 
+        {
+      this.cncptMpSCntxtSgCntxtVlQnttQnttSstm = cncptMpSCntxtSgCntxtVlQnttQnttSstm;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlQnttQnttCde()
+    {
+        return this.cncptMpSCntxtSgCntxtVlQnttQnttCde;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlQnttQnttCde
+        (String cncptMpSCntxtSgCntxtVlQnttQnttCde) 
+        {
+      this.cncptMpSCntxtSgCntxtVlQnttQnttCde = cncptMpSCntxtSgCntxtVlQnttQnttCde;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlRngRngLw()
+    {
+        return this.cncptMpSCntxtSgCntxtVlRngRngLw;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlRngRngLw
+        (String cncptMpSCntxtSgCntxtVlRngRngLw) 
+        {
+      this.cncptMpSCntxtSgCntxtVlRngRngLw = cncptMpSCntxtSgCntxtVlRngRngLw;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlRngRngHgh()
+    {
+        return this.cncptMpSCntxtSgCntxtVlRngRngHgh;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlRngRngHgh
+        (String cncptMpSCntxtSgCntxtVlRngRngHgh) 
+        {
+      this.cncptMpSCntxtSgCntxtVlRngRngHgh = cncptMpSCntxtSgCntxtVlRngRngHgh;
+}
+    public 
+    String 
+    getCncptMpSCntxtSgCntxtVlRfrnce()
+    {
+        return this.cncptMpSCntxtSgCntxtVlRfrnce;
+    }
+    
+    public void setCncptMpSCntxtSgCntxtVlRfrnce
+        (String cncptMpSCntxtSgCntxtVlRfrnce) 
+        {
+      this.cncptMpSCntxtSgCntxtVlRfrnce = cncptMpSCntxtSgCntxtVlRfrnce;
+}
+    public 
+    String 
+    getCncptMpJrsdctnCcCdngCSstm()
+    {
+        return this.cncptMpJrsdctnCcCdngCSstm;
+    }
+    
+    public void setCncptMpJrsdctnCcCdngCSstm
+        (String cncptMpJrsdctnCcCdngCSstm) 
+        {
+      this.cncptMpJrsdctnCcCdngCSstm = cncptMpJrsdctnCcCdngCSstm;
+}
+    public 
+    String 
+    getCncptMpJrsdctnCcCdngCVrsn()
+    {
+        return this.cncptMpJrsdctnCcCdngCVrsn;
+    }
+    
+    public void setCncptMpJrsdctnCcCdngCVrsn
+        (String cncptMpJrsdctnCcCdngCVrsn) 
+        {
+      this.cncptMpJrsdctnCcCdngCVrsn = cncptMpJrsdctnCcCdngCVrsn;
+}
+    public 
+    String 
+    getCncptMpJrsdctnCcCdngCCde()
+    {
+        return this.cncptMpJrsdctnCcCdngCCde;
+    }
+    
+    public void setCncptMpJrsdctnCcCdngCCde
+        (String cncptMpJrsdctnCcCdngCCde) 
+        {
+      this.cncptMpJrsdctnCcCdngCCde = cncptMpJrsdctnCcCdngCCde;
+}
+    public 
+    String 
+    getCncptMpJrsdctnCcCdngCDsplay()
+    {
+        return this.cncptMpJrsdctnCcCdngCDsplay;
+    }
+    
+    public void setCncptMpJrsdctnCcCdngCDsplay
+        (String cncptMpJrsdctnCcCdngCDsplay) 
+        {
+      this.cncptMpJrsdctnCcCdngCDsplay = cncptMpJrsdctnCcCdngCDsplay;
+}
+    public 
+    String 
+    getCncptMpJrsdctnCcCdngCSrSlctd()
+    {
+        return this.cncptMpJrsdctnCcCdngCSrSlctd;
+    }
+    
+    public void setCncptMpJrsdctnCcCdngCSrSlctd
+        (String cncptMpJrsdctnCcCdngCSrSlctd) 
+        {
+      this.cncptMpJrsdctnCcCdngCSrSlctd = cncptMpJrsdctnCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getConceptMapJurisdictionCcText()
+    {
+        return this.conceptMapJurisdictionCcText;
+    }
+    
+    public void setConceptMapJurisdictionCcText
+        (String conceptMapJurisdictionCcText) 
+        {
+      this.conceptMapJurisdictionCcText = conceptMapJurisdictionCcText;
+}
+    public 
+    String 
+    getConceptMapPurposeMarkdown()
+    {
+        return this.conceptMapPurposeMarkdown;
+    }
+    
+    public void setConceptMapPurposeMarkdown
+        (String conceptMapPurposeMarkdown) 
+        {
+      this.conceptMapPurposeMarkdown = conceptMapPurposeMarkdown;
+}
+    public 
+    String 
+    getConceptMapCopyrightMarkdown()
+    {
+        return this.conceptMapCopyrightMarkdown;
+    }
+    
+    public void setConceptMapCopyrightMarkdown
+        (String conceptMapCopyrightMarkdown) 
+        {
+      this.conceptMapCopyrightMarkdown = conceptMapCopyrightMarkdown;
+}
+    public 
+    String 
+    getConceptMapSourceUriUri()
+    {
+        return this.conceptMapSourceUriUri;
+    }
+    
+    public void setConceptMapSourceUriUri
+        (String conceptMapSourceUriUri) 
+        {
+      this.conceptMapSourceUriUri = conceptMapSourceUriUri;
+}
+    public 
+    String 
+    getCncptMpSrcCnnclCnncl()
+    {
+        return this.cncptMpSrcCnnclCnncl;
+    }
+    
+    public void setCncptMpSrcCnnclCnncl
+        (String cncptMpSrcCnnclCnncl) 
+        {
+      this.cncptMpSrcCnnclCnncl = cncptMpSrcCnnclCnncl;
+}
+    public 
+    String 
+    getConceptMapTargetUriUri()
+    {
+        return this.conceptMapTargetUriUri;
+    }
+    
+    public void setConceptMapTargetUriUri
+        (String conceptMapTargetUriUri) 
+        {
+      this.conceptMapTargetUriUri = conceptMapTargetUriUri;
+}
+    public 
+    String 
+    getCncptMpTrgtCnnclCnncl()
+    {
+        return this.cncptMpTrgtCnnclCnncl;
+    }
+    
+    public void setCncptMpTrgtCnnclCnncl
+        (String cncptMpTrgtCnnclCnncl) 
+        {
+      this.cncptMpTrgtCnnclCnncl = cncptMpTrgtCnnclCnncl;
+}
+    public 
+    String 
+    getConceptMapGroupSourceUri()
+    {
+        return this.conceptMapGroupSourceUri;
+    }
+    
+    public void setConceptMapGroupSourceUri
+        (String conceptMapGroupSourceUri) 
+        {
+      this.conceptMapGroupSourceUri = conceptMapGroupSourceUri;
+}
+    public 
+    String 
+    getCncptMpGrpSrcVrsnStrng()
+    {
+        return this.cncptMpGrpSrcVrsnStrng;
+    }
+    
+    public void setCncptMpGrpSrcVrsnStrng
+        (String cncptMpGrpSrcVrsnStrng) 
+        {
+      this.cncptMpGrpSrcVrsnStrng = cncptMpGrpSrcVrsnStrng;
+}
+    public 
+    String 
+    getConceptMapGroupTargetUri()
+    {
+        return this.conceptMapGroupTargetUri;
+    }
+    
+    public void setConceptMapGroupTargetUri
+        (String conceptMapGroupTargetUri) 
+        {
+      this.conceptMapGroupTargetUri = conceptMapGroupTargetUri;
+}
+    public 
+    String 
+    getCncptMpGrpTrgtVrsnStrng()
+    {
+        return this.cncptMpGrpTrgtVrsnStrng;
+    }
+    
+    public void setCncptMpGrpTrgtVrsnStrng
+        (String cncptMpGrpTrgtVrsnStrng) 
+        {
+      this.cncptMpGrpTrgtVrsnStrng = cncptMpGrpTrgtVrsnStrng;
+}
+    public 
+    String 
+    getConceptMapGroupElementCodeCode()
+    {
+        return this.conceptMapGroupElementCodeCode;
+    }
+    
+    public void setConceptMapGroupElementCodeCode
+        (String conceptMapGroupElementCodeCode) 
+        {
+      this.conceptMapGroupElementCodeCode = conceptMapGroupElementCodeCode;
+}
+    public 
+    String 
+    getCncptMpGrpLmntDsplStrng()
+    {
+        return this.cncptMpGrpLmntDsplStrng;
+    }
+    
+    public void setCncptMpGrpLmntDsplStrng
+        (String cncptMpGrpLmntDsplStrng) 
+        {
+      this.cncptMpGrpLmntDsplStrng = cncptMpGrpLmntDsplStrng;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtCdCde()
+    {
+        return this.cncptMpGrpLmntTrgtCdCde;
+    }
+    
+    public void setCncptMpGrpLmntTrgtCdCde
+        (String cncptMpGrpLmntTrgtCdCde) 
+        {
+      this.cncptMpGrpLmntTrgtCdCde = cncptMpGrpLmntTrgtCdCde;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtDsplStrng()
+    {
+        return this.cncptMpGrpLmntTrgtDsplStrng;
+    }
+    
+    public void setCncptMpGrpLmntTrgtDsplStrng
+        (String cncptMpGrpLmntTrgtDsplStrng) 
+        {
+      this.cncptMpGrpLmntTrgtDsplStrng = cncptMpGrpLmntTrgtDsplStrng;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtQvlncCde()
+    {
+        return this.cncptMpGrpLmntTrgtQvlncCde;
+    }
+    
+    public void setCncptMpGrpLmntTrgtQvlncCde
+        (String cncptMpGrpLmntTrgtQvlncCde) 
+        {
+      this.cncptMpGrpLmntTrgtQvlncCde = cncptMpGrpLmntTrgtQvlncCde;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtCmmntStrng()
+    {
+        return this.cncptMpGrpLmntTrgtCmmntStrng;
+    }
+    
+    public void setCncptMpGrpLmntTrgtCmmntStrng
+        (String cncptMpGrpLmntTrgtCmmntStrng) 
+        {
+      this.cncptMpGrpLmntTrgtCmmntStrng = cncptMpGrpLmntTrgtCmmntStrng;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtDpndsnPrprtRi()
+    {
+        return this.cncptMpGrpLmntTrgtDpndsnPrprtRi;
+    }
+    
+    public void setCncptMpGrpLmntTrgtDpndsnPrprtRi
+        (String cncptMpGrpLmntTrgtDpndsnPrprtRi) 
+        {
+      this.cncptMpGrpLmntTrgtDpndsnPrprtRi = cncptMpGrpLmntTrgtDpndsnPrprtRi;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtDpndsnSstmCnncl()
+    {
+        return this.cncptMpGrpLmntTrgtDpndsnSstmCnncl;
+    }
+    
+    public void setCncptMpGrpLmntTrgtDpndsnSstmCnncl
+        (String cncptMpGrpLmntTrgtDpndsnSstmCnncl) 
+        {
+      this.cncptMpGrpLmntTrgtDpndsnSstmCnncl = cncptMpGrpLmntTrgtDpndsnSstmCnncl;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtDpndsnVlStrng()
+    {
+        return this.cncptMpGrpLmntTrgtDpndsnVlStrng;
+    }
+    
+    public void setCncptMpGrpLmntTrgtDpndsnVlStrng
+        (String cncptMpGrpLmntTrgtDpndsnVlStrng) 
+        {
+      this.cncptMpGrpLmntTrgtDpndsnVlStrng = cncptMpGrpLmntTrgtDpndsnVlStrng;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtDpndsnDsplStrng()
+    {
+        return this.cncptMpGrpLmntTrgtDpndsnDsplStrng;
+    }
+    
+    public void setCncptMpGrpLmntTrgtDpndsnDsplStrng
+        (String cncptMpGrpLmntTrgtDpndsnDsplStrng) 
+        {
+      this.cncptMpGrpLmntTrgtDpndsnDsplStrng = cncptMpGrpLmntTrgtDpndsnDsplStrng;
+}
+    public 
+    String 
+    getCncptMpGrpLmntTrgtPrdctDpndsn()
+    {
+        return this.cncptMpGrpLmntTrgtPrdctDpndsn;
+    }
+    
+    public void setCncptMpGrpLmntTrgtPrdctDpndsn
+        (String cncptMpGrpLmntTrgtPrdctDpndsn) 
+        {
+      this.cncptMpGrpLmntTrgtPrdctDpndsn = cncptMpGrpLmntTrgtPrdctDpndsn;
+}
+    public 
+    String 
+    getCncptMpGrpNmppdMdCde()
+    {
+        return this.cncptMpGrpNmppdMdCde;
+    }
+    
+    public void setCncptMpGrpNmppdMdCde
+        (String cncptMpGrpNmppdMdCde) 
+        {
+      this.cncptMpGrpNmppdMdCde = cncptMpGrpNmppdMdCde;
+}
+    public 
+    String 
+    getCncptMpGrpNmppdCdCde()
+    {
+        return this.cncptMpGrpNmppdCdCde;
+    }
+    
+    public void setCncptMpGrpNmppdCdCde
+        (String cncptMpGrpNmppdCdCde) 
+        {
+      this.cncptMpGrpNmppdCdCde = cncptMpGrpNmppdCdCde;
+}
+    public 
+    String 
+    getCncptMpGrpNmppdDsplStrng()
+    {
+        return this.cncptMpGrpNmppdDsplStrng;
+    }
+    
+    public void setCncptMpGrpNmppdDsplStrng
+        (String cncptMpGrpNmppdDsplStrng) 
+        {
+      this.cncptMpGrpNmppdDsplStrng = cncptMpGrpNmppdDsplStrng;
+}
+    public 
+    String 
+    getCncptMpGrpNmppdRlCnncl()
+    {
+        return this.cncptMpGrpNmppdRlCnncl;
+    }
+    
+    public void setCncptMpGrpNmppdRlCnncl
+        (String cncptMpGrpNmppdRlCnncl) 
+        {
+      this.cncptMpGrpNmppdRlCnncl = cncptMpGrpNmppdRlCnncl;
+}
 
 
 

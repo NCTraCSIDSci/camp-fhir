@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1265 +10,894 @@ package main.templateoutput.Model;
 public class Location  implements java.io.Serializable {
 
 
-     private String lctnDntfrDntfrTpCdblCncptCdngCde;
-     private String lctnDntfrDntfrSCde;
-     private String lctnDntfrDntfrTpCdblCncptCdngSstm;
-     private String lctnDntfrDntfrTpCdblCncptCdngVrsn;
-     private String lctnDntfrDntfrTpCdblCncptCdngDsplay;
-     private String lctnDntfrDntfrTpCdblCncptCdngSrSlctd;
-     private String lctnDntfrDntfrCdblCncptTxt;
-     private String lctnDntfrDntfrPrdStrt;
-     private String lctnDntfrDntfrPrdNd;
-     private String lctnDntfrDntfrRfrncRfrnce;
-     private String lctnDntfrDntfrRfrncTpe;
-     private String lctnDntfrDntfrRfrncDntfr;
-     private String lctnDntfrDntfrRfrncDsplay;
-     private String lctnDntfrDntfrVlStrng;
-     private String lctnDntfrDntfrSstmRi;
-     private String locationStatus;
-     private String lctnPrtnlSttsCdngSrSlctdBln;
-     private String lctnPrtnlSttsCdngCdCde;
-     private String lctnPrtnlSttsCdngVrsnStrng;
-     private String lctnPrtnlSttsCdngDsplStrng;
-     private String lctnPrtnlSttsCdngSstmRi;
-     private String locationName;
-     private String locationAlias;
-     private String locationDescription;
-     private String locationMode;
-     private String lctnTpCdblCncptCdngSstm;
-     private String lctnTpCdblCncptCdngVrsn;
-     private String lctnTpCdblCncptCdngCde;
-     private String lctnTpCdblCncptCdngDsplay;
-     private String lctnTpCdblCncptCdngSrSlctd;
-     private String lctnTpCdblCncptTxtStrng;
-     private String lctnTlcmCntctPntSstmCde;
-     private String lctnTlcmCntctPntSCde;
-     private String lctnTlcmCntctPntPrdStrt;
-     private String lctnTlcmCntctPntPrdNd;
-     private String lctnTlcmCntctPntRnkPstvnt;
-     private String lctnTlcmCntctPntVlStrng;
-     private String locationAddressAddressUseCode;
-     private String locationAddressAddressTypeCode;
-     private String lctnDdrssDdrssPrdStrt;
-     private String lctnDdrssDdrssPrdNd;
-     private String lctnDdrssDdrssTxtStrng;
-     private String lctnDdrssDdrssLnStrng;
-     private String lctnDdrssDdrssCtStrng;
-     private String lctnDdrssDdrssDstrctStrng;
-     private String lctnDdrssDdrssSttStrng;
-     private String lctnDdrssDdrssPstlCdStrng;
-     private String lctnDdrssDdrssCntrStrng;
-     private String lctnPhsclTpCdblCncptCdngSstm;
-     private String lctnPhsclTpCdblCncptCdngVrsn;
-     private String lctnPhsclTpCdblCncptCdngCde;
-     private String lctnPhsclTpCdblCncptCdngDsplay;
-     private String lctnPhsclTpCdblCncptCdngSrSlctd;
-     private String lctnPhsclTpCdblCncptTxtStrng;
-     private String locationPositionLongitude;
-     private String locationPositionLatitude;
-     private String locationPositionAltitude;
-     private String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-     private String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-     private String lctnMngngrgnztnRfrncDntfrDntfrPrdStrt;
-     private String lctnMngngrgnztnRfrncDntfrDntfrPrdNd;
-     private String lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-     private String lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-     private String lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-     private String lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-     private String lctnMngngrgnztnRfrncDntfrSe;
-     private String lctnMngngrgnztnRfrncDntfrSstm;
-     private String lctnMngngrgnztnRfrncDntfrVlue;
-     private String lctnMngngrgnztnRfrncRfrncStrng;
-     private String lctnMngngrgnztnRfrncDsplStrng;
-     private String lctnMngngrgnztnRfrncTpRi;
-     private String lctnPrtfRfrncDntfrDntfrCdblCncptCdng;
-     private String lctnPrtfRfrncDntfrDntfrCdblCncptTxt;
-     private String lctnPrtfRfrncDntfrDntfrPrdStrt;
-     private String lctnPrtfRfrncDntfrDntfrPrdNd;
-     private String lctnPrtfRfrncDntfrDntfrRfrncRfrnce;
-     private String lctnPrtfRfrncDntfrDntfrRfrncTpe;
-     private String lctnPrtfRfrncDntfrDntfrRfrncDntfr;
-     private String lctnPrtfRfrncDntfrDntfrRfrncDsplay;
-     private String lctnPrtfRfrncDntfrSe;
-     private String lctnPrtfRfrncDntfrSstm;
-     private String lctnPrtfRfrncDntfrVlue;
-     private String lctnPrtfRfrncRfrncStrng;
-     private String lctnPrtfRfrncDsplStrng;
-     private String locationPartOfReferenceTypeUri;
-     private String lctnHrsfprtnDsfWk;
-     private String locationHoursOfOperationAllDay;
-     private String lctnHrsfprtnPnngTme;
-     private String lctnHrsfprtnClsngTme;
-     private String locationAvailabilityExceptions;
-     private String lctnNdpntRfrncDntfrDntfrCdblCncptCdng;
-     private String lctnNdpntRfrncDntfrDntfrCdblCncptTxt;
-     private String lctnNdpntRfrncDntfrDntfrPrdStrt;
-     private String lctnNdpntRfrncDntfrDntfrPrdNd;
-     private String lctnNdpntRfrncDntfrDntfrRfrncRfrnce;
-     private String lctnNdpntRfrncDntfrDntfrRfrncTpe;
-     private String lctnNdpntRfrncDntfrDntfrRfrncDntfr;
-     private String lctnNdpntRfrncDntfrDntfrRfrncDsplay;
-     private String lctnNdpntRfrncDntfrSe;
-     private String lctnNdpntRfrncDntfrSstm;
-     private String lctnNdpntRfrncDntfrVlue;
-     private String lctnNdpntRfrncRfrncStrng;
-     private String lctnNdpntRfrncDsplStrng;
-     private String lctnNdpntRfrncTpRi;
+     private Integer id;
+     private String locationIdentifierIdentifierUse;
+     private String lctnDntfrDntfrTpCcCSstm;
+     private String lctnDntfrDntfrTpCcCVrsn;
+     private String lctnDntfrDntfrTpCcCCde;
+     private String lctnDntfrDntfrTpCcCDsplay;
+     private String lctnDntfrDntfrTpCcCSrSlctd;
+     private String lctnDntfrDntfrTpCcTxt;
+     private String lctnDntfrDntfrPrdPrdStrt;
+     private String lctnDntfrDntfrPrdPrdNd;
+     private String lctnDntfrDntfrSsgnr;
+     private String lctnDntfrDntfrVlue;
+     private String lctnDntfrDntfrSstm;
+     private String locationStatusCode;
+     private String lctnPrtnlSttsCSrSlctd;
+     private String locationOperationalStatusCCode;
+     private String lctnPrtnlSttsCVrsn;
+     private String lctnPrtnlSttsCDsplay;
+     private String lctnPrtnlSttsCSstm;
+     private String locationNameString;
+     private String locationAliasString;
+     private String locationDescriptionString;
+     private String locationModeCode;
+     private String locationTypeCcCodingCSystem;
+     private String locationTypeCcCodingCVersion;
+     private String locationTypeCcCodingCCode;
+     private String locationTypeCcCodingCDisplay;
+     private String lctnTpCcCdngCSrSlctd;
+     private String locationTypeCcText;
+     private String lctnTlcmCntctPntSstm;
+     private String locationTelecomContactPointUse;
+     private String lctnTlcmCntctPntPrdPrdStrt;
+     private String lctnTlcmCntctPntPrdPrdNd;
+     private String locationTelecomContactPointRank;
+     private String lctnTlcmCntctPntVlue;
+     private String locationAddressAddressUse;
+     private String locationAddressAddressType;
+     private String lctnDdrssDdrssPrdPrdStrt;
+     private String lctnDdrssDdrssPrdPrdNd;
+     private String locationAddressAddressText;
+     private String locationAddressAddressLine;
+     private String locationAddressAddressCity;
+     private String locationAddressAddressDistrict;
+     private String locationAddressAddressState;
+     private String lctnDdrssDdrssPstlCde;
+     private String locationAddressAddressCountry;
+     private String lctnPhsclTpCcCdngCSstm;
+     private String lctnPhsclTpCcCdngCVrsn;
+     private String lctnPhsclTpCcCdngCCde;
+     private String lctnPhsclTpCcCdngCDsplay;
+     private String lctnPhsclTpCcCdngCSrSlctd;
+     private String locationPhysicalTypeCcText;
+     private String lctnPstnLngtdDcml;
+     private String locationPositionLatitudeDecimal;
+     private String locationPositionAltitudeDecimal;
+     private String lctnMngngrgnztnRfrnce;
+     private String locationPartOfReference;
+     private String lctnHrsfprtnDsfWkCde;
+     private String lctnHrsfprtnLlDBln;
+     private String lctnHrsfprtnPnngTmTme;
+     private String lctnHrsfprtnClsngTmTme;
+     private String lctnVlbltxcptnsStrng;
+     private String locationEndpointReference;
 
     public Location() {
     }
 
-	
-    public Location(String lctnDntfrDntfrTpCdblCncptCdngCde) {
-        this.lctnDntfrDntfrTpCdblCncptCdngCde = lctnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    public Location(String lctnDntfrDntfrTpCdblCncptCdngCde, String lctnDntfrDntfrSCde, String lctnDntfrDntfrTpCdblCncptCdngSstm, String lctnDntfrDntfrTpCdblCncptCdngVrsn, String lctnDntfrDntfrTpCdblCncptCdngDsplay, String lctnDntfrDntfrTpCdblCncptCdngSrSlctd, String lctnDntfrDntfrCdblCncptTxt, String lctnDntfrDntfrPrdStrt, String lctnDntfrDntfrPrdNd, String lctnDntfrDntfrRfrncRfrnce, String lctnDntfrDntfrRfrncTpe, String lctnDntfrDntfrRfrncDntfr, String lctnDntfrDntfrRfrncDsplay, String lctnDntfrDntfrVlStrng, String lctnDntfrDntfrSstmRi, String locationStatus, String lctnPrtnlSttsCdngSrSlctdBln, String lctnPrtnlSttsCdngCdCde, String lctnPrtnlSttsCdngVrsnStrng, String lctnPrtnlSttsCdngDsplStrng, String lctnPrtnlSttsCdngSstmRi, String locationName, String locationAlias, String locationDescription, String locationMode, String lctnTpCdblCncptCdngSstm, String lctnTpCdblCncptCdngVrsn, String lctnTpCdblCncptCdngCde, String lctnTpCdblCncptCdngDsplay, String lctnTpCdblCncptCdngSrSlctd, String lctnTpCdblCncptTxtStrng, String lctnTlcmCntctPntSstmCde, String lctnTlcmCntctPntSCde, String lctnTlcmCntctPntPrdStrt, String lctnTlcmCntctPntPrdNd, String lctnTlcmCntctPntRnkPstvnt, String lctnTlcmCntctPntVlStrng, String locationAddressAddressUseCode, String locationAddressAddressTypeCode, String lctnDdrssDdrssPrdStrt, String lctnDdrssDdrssPrdNd, String lctnDdrssDdrssTxtStrng, String lctnDdrssDdrssLnStrng, String lctnDdrssDdrssCtStrng, String lctnDdrssDdrssDstrctStrng, String lctnDdrssDdrssSttStrng, String lctnDdrssDdrssPstlCdStrng, String lctnDdrssDdrssCntrStrng, String lctnPhsclTpCdblCncptCdngSstm, String lctnPhsclTpCdblCncptCdngVrsn, String lctnPhsclTpCdblCncptCdngCde, String lctnPhsclTpCdblCncptCdngDsplay, String lctnPhsclTpCdblCncptCdngSrSlctd, String lctnPhsclTpCdblCncptTxtStrng, String locationPositionLongitude, String locationPositionLatitude, String locationPositionAltitude, String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng, String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt, String lctnMngngrgnztnRfrncDntfrDntfrPrdStrt, String lctnMngngrgnztnRfrncDntfrDntfrPrdNd, String lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce, String lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe, String lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr, String lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay, String lctnMngngrgnztnRfrncDntfrSe, String lctnMngngrgnztnRfrncDntfrSstm, String lctnMngngrgnztnRfrncDntfrVlue, String lctnMngngrgnztnRfrncRfrncStrng, String lctnMngngrgnztnRfrncDsplStrng, String lctnMngngrgnztnRfrncTpRi, String lctnPrtfRfrncDntfrDntfrCdblCncptCdng, String lctnPrtfRfrncDntfrDntfrCdblCncptTxt, String lctnPrtfRfrncDntfrDntfrPrdStrt, String lctnPrtfRfrncDntfrDntfrPrdNd, String lctnPrtfRfrncDntfrDntfrRfrncRfrnce, String lctnPrtfRfrncDntfrDntfrRfrncTpe, String lctnPrtfRfrncDntfrDntfrRfrncDntfr, String lctnPrtfRfrncDntfrDntfrRfrncDsplay, String lctnPrtfRfrncDntfrSe, String lctnPrtfRfrncDntfrSstm, String lctnPrtfRfrncDntfrVlue, String lctnPrtfRfrncRfrncStrng, String lctnPrtfRfrncDsplStrng, String locationPartOfReferenceTypeUri, String lctnHrsfprtnDsfWk, String locationHoursOfOperationAllDay, String lctnHrsfprtnPnngTme, String lctnHrsfprtnClsngTme, String locationAvailabilityExceptions, String lctnNdpntRfrncDntfrDntfrCdblCncptCdng, String lctnNdpntRfrncDntfrDntfrCdblCncptTxt, String lctnNdpntRfrncDntfrDntfrPrdStrt, String lctnNdpntRfrncDntfrDntfrPrdNd, String lctnNdpntRfrncDntfrDntfrRfrncRfrnce, String lctnNdpntRfrncDntfrDntfrRfrncTpe, String lctnNdpntRfrncDntfrDntfrRfrncDntfr, String lctnNdpntRfrncDntfrDntfrRfrncDsplay, String lctnNdpntRfrncDntfrSe, String lctnNdpntRfrncDntfrSstm, String lctnNdpntRfrncDntfrVlue, String lctnNdpntRfrncRfrncStrng, String lctnNdpntRfrncDsplStrng, String lctnNdpntRfrncTpRi) {
-       this.lctnDntfrDntfrTpCdblCncptCdngCde = lctnDntfrDntfrTpCdblCncptCdngCde;
-       this.lctnDntfrDntfrSCde = lctnDntfrDntfrSCde;
-       this.lctnDntfrDntfrTpCdblCncptCdngSstm = lctnDntfrDntfrTpCdblCncptCdngSstm;
-       this.lctnDntfrDntfrTpCdblCncptCdngVrsn = lctnDntfrDntfrTpCdblCncptCdngVrsn;
-       this.lctnDntfrDntfrTpCdblCncptCdngDsplay = lctnDntfrDntfrTpCdblCncptCdngDsplay;
-       this.lctnDntfrDntfrTpCdblCncptCdngSrSlctd = lctnDntfrDntfrTpCdblCncptCdngSrSlctd;
-       this.lctnDntfrDntfrCdblCncptTxt = lctnDntfrDntfrCdblCncptTxt;
-       this.lctnDntfrDntfrPrdStrt = lctnDntfrDntfrPrdStrt;
-       this.lctnDntfrDntfrPrdNd = lctnDntfrDntfrPrdNd;
-       this.lctnDntfrDntfrRfrncRfrnce = lctnDntfrDntfrRfrncRfrnce;
-       this.lctnDntfrDntfrRfrncTpe = lctnDntfrDntfrRfrncTpe;
-       this.lctnDntfrDntfrRfrncDntfr = lctnDntfrDntfrRfrncDntfr;
-       this.lctnDntfrDntfrRfrncDsplay = lctnDntfrDntfrRfrncDsplay;
-       this.lctnDntfrDntfrVlStrng = lctnDntfrDntfrVlStrng;
-       this.lctnDntfrDntfrSstmRi = lctnDntfrDntfrSstmRi;
-       this.locationStatus = locationStatus;
-       this.lctnPrtnlSttsCdngSrSlctdBln = lctnPrtnlSttsCdngSrSlctdBln;
-       this.lctnPrtnlSttsCdngCdCde = lctnPrtnlSttsCdngCdCde;
-       this.lctnPrtnlSttsCdngVrsnStrng = lctnPrtnlSttsCdngVrsnStrng;
-       this.lctnPrtnlSttsCdngDsplStrng = lctnPrtnlSttsCdngDsplStrng;
-       this.lctnPrtnlSttsCdngSstmRi = lctnPrtnlSttsCdngSstmRi;
-       this.locationName = locationName;
-       this.locationAlias = locationAlias;
-       this.locationDescription = locationDescription;
-       this.locationMode = locationMode;
-       this.lctnTpCdblCncptCdngSstm = lctnTpCdblCncptCdngSstm;
-       this.lctnTpCdblCncptCdngVrsn = lctnTpCdblCncptCdngVrsn;
-       this.lctnTpCdblCncptCdngCde = lctnTpCdblCncptCdngCde;
-       this.lctnTpCdblCncptCdngDsplay = lctnTpCdblCncptCdngDsplay;
-       this.lctnTpCdblCncptCdngSrSlctd = lctnTpCdblCncptCdngSrSlctd;
-       this.lctnTpCdblCncptTxtStrng = lctnTpCdblCncptTxtStrng;
-       this.lctnTlcmCntctPntSstmCde = lctnTlcmCntctPntSstmCde;
-       this.lctnTlcmCntctPntSCde = lctnTlcmCntctPntSCde;
-       this.lctnTlcmCntctPntPrdStrt = lctnTlcmCntctPntPrdStrt;
-       this.lctnTlcmCntctPntPrdNd = lctnTlcmCntctPntPrdNd;
-       this.lctnTlcmCntctPntRnkPstvnt = lctnTlcmCntctPntRnkPstvnt;
-       this.lctnTlcmCntctPntVlStrng = lctnTlcmCntctPntVlStrng;
-       this.locationAddressAddressUseCode = locationAddressAddressUseCode;
-       this.locationAddressAddressTypeCode = locationAddressAddressTypeCode;
-       this.lctnDdrssDdrssPrdStrt = lctnDdrssDdrssPrdStrt;
-       this.lctnDdrssDdrssPrdNd = lctnDdrssDdrssPrdNd;
-       this.lctnDdrssDdrssTxtStrng = lctnDdrssDdrssTxtStrng;
-       this.lctnDdrssDdrssLnStrng = lctnDdrssDdrssLnStrng;
-       this.lctnDdrssDdrssCtStrng = lctnDdrssDdrssCtStrng;
-       this.lctnDdrssDdrssDstrctStrng = lctnDdrssDdrssDstrctStrng;
-       this.lctnDdrssDdrssSttStrng = lctnDdrssDdrssSttStrng;
-       this.lctnDdrssDdrssPstlCdStrng = lctnDdrssDdrssPstlCdStrng;
-       this.lctnDdrssDdrssCntrStrng = lctnDdrssDdrssCntrStrng;
-       this.lctnPhsclTpCdblCncptCdngSstm = lctnPhsclTpCdblCncptCdngSstm;
-       this.lctnPhsclTpCdblCncptCdngVrsn = lctnPhsclTpCdblCncptCdngVrsn;
-       this.lctnPhsclTpCdblCncptCdngCde = lctnPhsclTpCdblCncptCdngCde;
-       this.lctnPhsclTpCdblCncptCdngDsplay = lctnPhsclTpCdblCncptCdngDsplay;
-       this.lctnPhsclTpCdblCncptCdngSrSlctd = lctnPhsclTpCdblCncptCdngSrSlctd;
-       this.lctnPhsclTpCdblCncptTxtStrng = lctnPhsclTpCdblCncptTxtStrng;
-       this.locationPositionLongitude = locationPositionLongitude;
-       this.locationPositionLatitude = locationPositionLatitude;
-       this.locationPositionAltitude = locationPositionAltitude;
-       this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng = lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-       this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt = lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-       this.lctnMngngrgnztnRfrncDntfrDntfrPrdStrt = lctnMngngrgnztnRfrncDntfrDntfrPrdStrt;
-       this.lctnMngngrgnztnRfrncDntfrDntfrPrdNd = lctnMngngrgnztnRfrncDntfrDntfrPrdNd;
-       this.lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce = lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-       this.lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe = lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-       this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr = lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-       this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay = lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-       this.lctnMngngrgnztnRfrncDntfrSe = lctnMngngrgnztnRfrncDntfrSe;
-       this.lctnMngngrgnztnRfrncDntfrSstm = lctnMngngrgnztnRfrncDntfrSstm;
-       this.lctnMngngrgnztnRfrncDntfrVlue = lctnMngngrgnztnRfrncDntfrVlue;
-       this.lctnMngngrgnztnRfrncRfrncStrng = lctnMngngrgnztnRfrncRfrncStrng;
-       this.lctnMngngrgnztnRfrncDsplStrng = lctnMngngrgnztnRfrncDsplStrng;
-       this.lctnMngngrgnztnRfrncTpRi = lctnMngngrgnztnRfrncTpRi;
-       this.lctnPrtfRfrncDntfrDntfrCdblCncptCdng = lctnPrtfRfrncDntfrDntfrCdblCncptCdng;
-       this.lctnPrtfRfrncDntfrDntfrCdblCncptTxt = lctnPrtfRfrncDntfrDntfrCdblCncptTxt;
-       this.lctnPrtfRfrncDntfrDntfrPrdStrt = lctnPrtfRfrncDntfrDntfrPrdStrt;
-       this.lctnPrtfRfrncDntfrDntfrPrdNd = lctnPrtfRfrncDntfrDntfrPrdNd;
-       this.lctnPrtfRfrncDntfrDntfrRfrncRfrnce = lctnPrtfRfrncDntfrDntfrRfrncRfrnce;
-       this.lctnPrtfRfrncDntfrDntfrRfrncTpe = lctnPrtfRfrncDntfrDntfrRfrncTpe;
-       this.lctnPrtfRfrncDntfrDntfrRfrncDntfr = lctnPrtfRfrncDntfrDntfrRfrncDntfr;
-       this.lctnPrtfRfrncDntfrDntfrRfrncDsplay = lctnPrtfRfrncDntfrDntfrRfrncDsplay;
-       this.lctnPrtfRfrncDntfrSe = lctnPrtfRfrncDntfrSe;
-       this.lctnPrtfRfrncDntfrSstm = lctnPrtfRfrncDntfrSstm;
-       this.lctnPrtfRfrncDntfrVlue = lctnPrtfRfrncDntfrVlue;
-       this.lctnPrtfRfrncRfrncStrng = lctnPrtfRfrncRfrncStrng;
-       this.lctnPrtfRfrncDsplStrng = lctnPrtfRfrncDsplStrng;
-       this.locationPartOfReferenceTypeUri = locationPartOfReferenceTypeUri;
-       this.lctnHrsfprtnDsfWk = lctnHrsfprtnDsfWk;
-       this.locationHoursOfOperationAllDay = locationHoursOfOperationAllDay;
-       this.lctnHrsfprtnPnngTme = lctnHrsfprtnPnngTme;
-       this.lctnHrsfprtnClsngTme = lctnHrsfprtnClsngTme;
-       this.locationAvailabilityExceptions = locationAvailabilityExceptions;
-       this.lctnNdpntRfrncDntfrDntfrCdblCncptCdng = lctnNdpntRfrncDntfrDntfrCdblCncptCdng;
-       this.lctnNdpntRfrncDntfrDntfrCdblCncptTxt = lctnNdpntRfrncDntfrDntfrCdblCncptTxt;
-       this.lctnNdpntRfrncDntfrDntfrPrdStrt = lctnNdpntRfrncDntfrDntfrPrdStrt;
-       this.lctnNdpntRfrncDntfrDntfrPrdNd = lctnNdpntRfrncDntfrDntfrPrdNd;
-       this.lctnNdpntRfrncDntfrDntfrRfrncRfrnce = lctnNdpntRfrncDntfrDntfrRfrncRfrnce;
-       this.lctnNdpntRfrncDntfrDntfrRfrncTpe = lctnNdpntRfrncDntfrDntfrRfrncTpe;
-       this.lctnNdpntRfrncDntfrDntfrRfrncDntfr = lctnNdpntRfrncDntfrDntfrRfrncDntfr;
-       this.lctnNdpntRfrncDntfrDntfrRfrncDsplay = lctnNdpntRfrncDntfrDntfrRfrncDsplay;
-       this.lctnNdpntRfrncDntfrSe = lctnNdpntRfrncDntfrSe;
-       this.lctnNdpntRfrncDntfrSstm = lctnNdpntRfrncDntfrSstm;
-       this.lctnNdpntRfrncDntfrVlue = lctnNdpntRfrncDntfrVlue;
-       this.lctnNdpntRfrncRfrncStrng = lctnNdpntRfrncRfrncStrng;
-       this.lctnNdpntRfrncDsplStrng = lctnNdpntRfrncDsplStrng;
-       this.lctnNdpntRfrncTpRi = lctnNdpntRfrncTpRi;
+    public Location(String locationIdentifierIdentifierUse, String lctnDntfrDntfrTpCcCSstm, String lctnDntfrDntfrTpCcCVrsn, String lctnDntfrDntfrTpCcCCde, String lctnDntfrDntfrTpCcCDsplay, String lctnDntfrDntfrTpCcCSrSlctd, String lctnDntfrDntfrTpCcTxt, String lctnDntfrDntfrPrdPrdStrt, String lctnDntfrDntfrPrdPrdNd, String lctnDntfrDntfrSsgnr, String lctnDntfrDntfrVlue, String lctnDntfrDntfrSstm, String locationStatusCode, String lctnPrtnlSttsCSrSlctd, String locationOperationalStatusCCode, String lctnPrtnlSttsCVrsn, String lctnPrtnlSttsCDsplay, String lctnPrtnlSttsCSstm, String locationNameString, String locationAliasString, String locationDescriptionString, String locationModeCode, String locationTypeCcCodingCSystem, String locationTypeCcCodingCVersion, String locationTypeCcCodingCCode, String locationTypeCcCodingCDisplay, String lctnTpCcCdngCSrSlctd, String locationTypeCcText, String lctnTlcmCntctPntSstm, String locationTelecomContactPointUse, String lctnTlcmCntctPntPrdPrdStrt, String lctnTlcmCntctPntPrdPrdNd, String locationTelecomContactPointRank, String lctnTlcmCntctPntVlue, String locationAddressAddressUse, String locationAddressAddressType, String lctnDdrssDdrssPrdPrdStrt, String lctnDdrssDdrssPrdPrdNd, String locationAddressAddressText, String locationAddressAddressLine, String locationAddressAddressCity, String locationAddressAddressDistrict, String locationAddressAddressState, String lctnDdrssDdrssPstlCde, String locationAddressAddressCountry, String lctnPhsclTpCcCdngCSstm, String lctnPhsclTpCcCdngCVrsn, String lctnPhsclTpCcCdngCCde, String lctnPhsclTpCcCdngCDsplay, String lctnPhsclTpCcCdngCSrSlctd, String locationPhysicalTypeCcText, String lctnPstnLngtdDcml, String locationPositionLatitudeDecimal, String locationPositionAltitudeDecimal, String lctnMngngrgnztnRfrnce, String locationPartOfReference, String lctnHrsfprtnDsfWkCde, String lctnHrsfprtnLlDBln, String lctnHrsfprtnPnngTmTme, String lctnHrsfprtnClsngTmTme, String lctnVlbltxcptnsStrng, String locationEndpointReference) {
+       this.locationIdentifierIdentifierUse = locationIdentifierIdentifierUse;
+       this.lctnDntfrDntfrTpCcCSstm = lctnDntfrDntfrTpCcCSstm;
+       this.lctnDntfrDntfrTpCcCVrsn = lctnDntfrDntfrTpCcCVrsn;
+       this.lctnDntfrDntfrTpCcCCde = lctnDntfrDntfrTpCcCCde;
+       this.lctnDntfrDntfrTpCcCDsplay = lctnDntfrDntfrTpCcCDsplay;
+       this.lctnDntfrDntfrTpCcCSrSlctd = lctnDntfrDntfrTpCcCSrSlctd;
+       this.lctnDntfrDntfrTpCcTxt = lctnDntfrDntfrTpCcTxt;
+       this.lctnDntfrDntfrPrdPrdStrt = lctnDntfrDntfrPrdPrdStrt;
+       this.lctnDntfrDntfrPrdPrdNd = lctnDntfrDntfrPrdPrdNd;
+       this.lctnDntfrDntfrSsgnr = lctnDntfrDntfrSsgnr;
+       this.lctnDntfrDntfrVlue = lctnDntfrDntfrVlue;
+       this.lctnDntfrDntfrSstm = lctnDntfrDntfrSstm;
+       this.locationStatusCode = locationStatusCode;
+       this.lctnPrtnlSttsCSrSlctd = lctnPrtnlSttsCSrSlctd;
+       this.locationOperationalStatusCCode = locationOperationalStatusCCode;
+       this.lctnPrtnlSttsCVrsn = lctnPrtnlSttsCVrsn;
+       this.lctnPrtnlSttsCDsplay = lctnPrtnlSttsCDsplay;
+       this.lctnPrtnlSttsCSstm = lctnPrtnlSttsCSstm;
+       this.locationNameString = locationNameString;
+       this.locationAliasString = locationAliasString;
+       this.locationDescriptionString = locationDescriptionString;
+       this.locationModeCode = locationModeCode;
+       this.locationTypeCcCodingCSystem = locationTypeCcCodingCSystem;
+       this.locationTypeCcCodingCVersion = locationTypeCcCodingCVersion;
+       this.locationTypeCcCodingCCode = locationTypeCcCodingCCode;
+       this.locationTypeCcCodingCDisplay = locationTypeCcCodingCDisplay;
+       this.lctnTpCcCdngCSrSlctd = lctnTpCcCdngCSrSlctd;
+       this.locationTypeCcText = locationTypeCcText;
+       this.lctnTlcmCntctPntSstm = lctnTlcmCntctPntSstm;
+       this.locationTelecomContactPointUse = locationTelecomContactPointUse;
+       this.lctnTlcmCntctPntPrdPrdStrt = lctnTlcmCntctPntPrdPrdStrt;
+       this.lctnTlcmCntctPntPrdPrdNd = lctnTlcmCntctPntPrdPrdNd;
+       this.locationTelecomContactPointRank = locationTelecomContactPointRank;
+       this.lctnTlcmCntctPntVlue = lctnTlcmCntctPntVlue;
+       this.locationAddressAddressUse = locationAddressAddressUse;
+       this.locationAddressAddressType = locationAddressAddressType;
+       this.lctnDdrssDdrssPrdPrdStrt = lctnDdrssDdrssPrdPrdStrt;
+       this.lctnDdrssDdrssPrdPrdNd = lctnDdrssDdrssPrdPrdNd;
+       this.locationAddressAddressText = locationAddressAddressText;
+       this.locationAddressAddressLine = locationAddressAddressLine;
+       this.locationAddressAddressCity = locationAddressAddressCity;
+       this.locationAddressAddressDistrict = locationAddressAddressDistrict;
+       this.locationAddressAddressState = locationAddressAddressState;
+       this.lctnDdrssDdrssPstlCde = lctnDdrssDdrssPstlCde;
+       this.locationAddressAddressCountry = locationAddressAddressCountry;
+       this.lctnPhsclTpCcCdngCSstm = lctnPhsclTpCcCdngCSstm;
+       this.lctnPhsclTpCcCdngCVrsn = lctnPhsclTpCcCdngCVrsn;
+       this.lctnPhsclTpCcCdngCCde = lctnPhsclTpCcCdngCCde;
+       this.lctnPhsclTpCcCdngCDsplay = lctnPhsclTpCcCdngCDsplay;
+       this.lctnPhsclTpCcCdngCSrSlctd = lctnPhsclTpCcCdngCSrSlctd;
+       this.locationPhysicalTypeCcText = locationPhysicalTypeCcText;
+       this.lctnPstnLngtdDcml = lctnPstnLngtdDcml;
+       this.locationPositionLatitudeDecimal = locationPositionLatitudeDecimal;
+       this.locationPositionAltitudeDecimal = locationPositionAltitudeDecimal;
+       this.lctnMngngrgnztnRfrnce = lctnMngngrgnztnRfrnce;
+       this.locationPartOfReference = locationPartOfReference;
+       this.lctnHrsfprtnDsfWkCde = lctnHrsfprtnDsfWkCde;
+       this.lctnHrsfprtnLlDBln = lctnHrsfprtnLlDBln;
+       this.lctnHrsfprtnPnngTmTme = lctnHrsfprtnPnngTmTme;
+       this.lctnHrsfprtnClsngTmTme = lctnHrsfprtnClsngTmTme;
+       this.lctnVlbltxcptnsStrng = lctnVlbltxcptnsStrng;
+       this.locationEndpointReference = locationEndpointReference;
     }
    
-    public String getLctnDntfrDntfrTpCdblCncptCdngCde() {
-        return this.lctnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    public void setLctnDntfrDntfrTpCdblCncptCdngCde(String lctnDntfrDntfrTpCdblCncptCdngCde) {
-        this.lctnDntfrDntfrTpCdblCncptCdngCde = lctnDntfrDntfrTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrSCde() {
-        return this.lctnDntfrDntfrSCde;
-    }
-    
-    public void setLctnDntfrDntfrSCde(String lctnDntfrDntfrSCde) {
-        this.lctnDntfrDntfrSCde = lctnDntfrDntfrSCde;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrTpCdblCncptCdngSstm() {
-        return this.lctnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    public void setLctnDntfrDntfrTpCdblCncptCdngSstm(String lctnDntfrDntfrTpCdblCncptCdngSstm) {
-        this.lctnDntfrDntfrTpCdblCncptCdngSstm = lctnDntfrDntfrTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrTpCdblCncptCdngVrsn() {
-        return this.lctnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    public void setLctnDntfrDntfrTpCdblCncptCdngVrsn(String lctnDntfrDntfrTpCdblCncptCdngVrsn) {
-        this.lctnDntfrDntfrTpCdblCncptCdngVrsn = lctnDntfrDntfrTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrTpCdblCncptCdngDsplay() {
-        return this.lctnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    public void setLctnDntfrDntfrTpCdblCncptCdngDsplay(String lctnDntfrDntfrTpCdblCncptCdngDsplay) {
-        this.lctnDntfrDntfrTpCdblCncptCdngDsplay = lctnDntfrDntfrTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrTpCdblCncptCdngSrSlctd() {
-        return this.lctnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLctnDntfrDntfrTpCdblCncptCdngSrSlctd(String lctnDntfrDntfrTpCdblCncptCdngSrSlctd) {
-        this.lctnDntfrDntfrTpCdblCncptCdngSrSlctd = lctnDntfrDntfrTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrCdblCncptTxt() {
-        return this.lctnDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLctnDntfrDntfrCdblCncptTxt(String lctnDntfrDntfrCdblCncptTxt) {
-        this.lctnDntfrDntfrCdblCncptTxt = lctnDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrPrdStrt() {
-        return this.lctnDntfrDntfrPrdStrt;
-    }
-    
-    public void setLctnDntfrDntfrPrdStrt(String lctnDntfrDntfrPrdStrt) {
-        this.lctnDntfrDntfrPrdStrt = lctnDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrPrdNd() {
-        return this.lctnDntfrDntfrPrdNd;
-    }
-    
-    public void setLctnDntfrDntfrPrdNd(String lctnDntfrDntfrPrdNd) {
-        this.lctnDntfrDntfrPrdNd = lctnDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrRfrncRfrnce() {
-        return this.lctnDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLctnDntfrDntfrRfrncRfrnce(String lctnDntfrDntfrRfrncRfrnce) {
-        this.lctnDntfrDntfrRfrncRfrnce = lctnDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrRfrncTpe() {
-        return this.lctnDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLctnDntfrDntfrRfrncTpe(String lctnDntfrDntfrRfrncTpe) {
-        this.lctnDntfrDntfrRfrncTpe = lctnDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrRfrncDntfr() {
-        return this.lctnDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLctnDntfrDntfrRfrncDntfr(String lctnDntfrDntfrRfrncDntfr) {
-        this.lctnDntfrDntfrRfrncDntfr = lctnDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrRfrncDsplay() {
-        return this.lctnDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLctnDntfrDntfrRfrncDsplay(String lctnDntfrDntfrRfrncDsplay) {
-        this.lctnDntfrDntfrRfrncDsplay = lctnDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrVlStrng() {
-        return this.lctnDntfrDntfrVlStrng;
-    }
-    
-    public void setLctnDntfrDntfrVlStrng(String lctnDntfrDntfrVlStrng) {
-        this.lctnDntfrDntfrVlStrng = lctnDntfrDntfrVlStrng;
-    }
-    
-    
-    
-    public String getLctnDntfrDntfrSstmRi() {
-        return this.lctnDntfrDntfrSstmRi;
-    }
-    
-    public void setLctnDntfrDntfrSstmRi(String lctnDntfrDntfrSstmRi) {
-        this.lctnDntfrDntfrSstmRi = lctnDntfrDntfrSstmRi;
-    }
-    
-    
-    
-    public String getLocationStatus() {
-        return this.locationStatus;
-    }
-    
-    public void setLocationStatus(String locationStatus) {
-        this.locationStatus = locationStatus;
-    }
-    
-    
-    
-    public String getLctnPrtnlSttsCdngSrSlctdBln() {
-        return this.lctnPrtnlSttsCdngSrSlctdBln;
-    }
-    
-    public void setLctnPrtnlSttsCdngSrSlctdBln(String lctnPrtnlSttsCdngSrSlctdBln) {
-        this.lctnPrtnlSttsCdngSrSlctdBln = lctnPrtnlSttsCdngSrSlctdBln;
-    }
-    
-    
-    
-    public String getLctnPrtnlSttsCdngCdCde() {
-        return this.lctnPrtnlSttsCdngCdCde;
-    }
-    
-    public void setLctnPrtnlSttsCdngCdCde(String lctnPrtnlSttsCdngCdCde) {
-        this.lctnPrtnlSttsCdngCdCde = lctnPrtnlSttsCdngCdCde;
-    }
-    
-    
-    
-    public String getLctnPrtnlSttsCdngVrsnStrng() {
-        return this.lctnPrtnlSttsCdngVrsnStrng;
-    }
-    
-    public void setLctnPrtnlSttsCdngVrsnStrng(String lctnPrtnlSttsCdngVrsnStrng) {
-        this.lctnPrtnlSttsCdngVrsnStrng = lctnPrtnlSttsCdngVrsnStrng;
-    }
-    
-    
-    
-    public String getLctnPrtnlSttsCdngDsplStrng() {
-        return this.lctnPrtnlSttsCdngDsplStrng;
-    }
-    
-    public void setLctnPrtnlSttsCdngDsplStrng(String lctnPrtnlSttsCdngDsplStrng) {
-        this.lctnPrtnlSttsCdngDsplStrng = lctnPrtnlSttsCdngDsplStrng;
-    }
-    
-    
-    
-    public String getLctnPrtnlSttsCdngSstmRi() {
-        return this.lctnPrtnlSttsCdngSstmRi;
-    }
-    
-    public void setLctnPrtnlSttsCdngSstmRi(String lctnPrtnlSttsCdngSstmRi) {
-        this.lctnPrtnlSttsCdngSstmRi = lctnPrtnlSttsCdngSstmRi;
-    }
-    
-    
-    
-    public String getLocationName() {
-        return this.locationName;
-    }
-    
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
-    }
-    
-    
-    
-    public String getLocationAlias() {
-        return this.locationAlias;
-    }
-    
-    public void setLocationAlias(String locationAlias) {
-        this.locationAlias = locationAlias;
-    }
-    
-    
-    
-    public String getLocationDescription() {
-        return this.locationDescription;
-    }
-    
-    public void setLocationDescription(String locationDescription) {
-        this.locationDescription = locationDescription;
-    }
-    
-    
-    
-    public String getLocationMode() {
-        return this.locationMode;
-    }
-    
-    public void setLocationMode(String locationMode) {
-        this.locationMode = locationMode;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptCdngSstm() {
-        return this.lctnTpCdblCncptCdngSstm;
-    }
-    
-    public void setLctnTpCdblCncptCdngSstm(String lctnTpCdblCncptCdngSstm) {
-        this.lctnTpCdblCncptCdngSstm = lctnTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptCdngVrsn() {
-        return this.lctnTpCdblCncptCdngVrsn;
-    }
-    
-    public void setLctnTpCdblCncptCdngVrsn(String lctnTpCdblCncptCdngVrsn) {
-        this.lctnTpCdblCncptCdngVrsn = lctnTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptCdngCde() {
-        return this.lctnTpCdblCncptCdngCde;
-    }
-    
-    public void setLctnTpCdblCncptCdngCde(String lctnTpCdblCncptCdngCde) {
-        this.lctnTpCdblCncptCdngCde = lctnTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptCdngDsplay() {
-        return this.lctnTpCdblCncptCdngDsplay;
-    }
-    
-    public void setLctnTpCdblCncptCdngDsplay(String lctnTpCdblCncptCdngDsplay) {
-        this.lctnTpCdblCncptCdngDsplay = lctnTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptCdngSrSlctd() {
-        return this.lctnTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLctnTpCdblCncptCdngSrSlctd(String lctnTpCdblCncptCdngSrSlctd) {
-        this.lctnTpCdblCncptCdngSrSlctd = lctnTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLctnTpCdblCncptTxtStrng() {
-        return this.lctnTpCdblCncptTxtStrng;
-    }
-    
-    public void setLctnTpCdblCncptTxtStrng(String lctnTpCdblCncptTxtStrng) {
-        this.lctnTpCdblCncptTxtStrng = lctnTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntSstmCde() {
-        return this.lctnTlcmCntctPntSstmCde;
-    }
-    
-    public void setLctnTlcmCntctPntSstmCde(String lctnTlcmCntctPntSstmCde) {
-        this.lctnTlcmCntctPntSstmCde = lctnTlcmCntctPntSstmCde;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntSCde() {
-        return this.lctnTlcmCntctPntSCde;
-    }
-    
-    public void setLctnTlcmCntctPntSCde(String lctnTlcmCntctPntSCde) {
-        this.lctnTlcmCntctPntSCde = lctnTlcmCntctPntSCde;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntPrdStrt() {
-        return this.lctnTlcmCntctPntPrdStrt;
-    }
-    
-    public void setLctnTlcmCntctPntPrdStrt(String lctnTlcmCntctPntPrdStrt) {
-        this.lctnTlcmCntctPntPrdStrt = lctnTlcmCntctPntPrdStrt;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntPrdNd() {
-        return this.lctnTlcmCntctPntPrdNd;
-    }
-    
-    public void setLctnTlcmCntctPntPrdNd(String lctnTlcmCntctPntPrdNd) {
-        this.lctnTlcmCntctPntPrdNd = lctnTlcmCntctPntPrdNd;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntRnkPstvnt() {
-        return this.lctnTlcmCntctPntRnkPstvnt;
-    }
-    
-    public void setLctnTlcmCntctPntRnkPstvnt(String lctnTlcmCntctPntRnkPstvnt) {
-        this.lctnTlcmCntctPntRnkPstvnt = lctnTlcmCntctPntRnkPstvnt;
-    }
-    
-    
-    
-    public String getLctnTlcmCntctPntVlStrng() {
-        return this.lctnTlcmCntctPntVlStrng;
-    }
-    
-    public void setLctnTlcmCntctPntVlStrng(String lctnTlcmCntctPntVlStrng) {
-        this.lctnTlcmCntctPntVlStrng = lctnTlcmCntctPntVlStrng;
-    }
-    
-    
-    
-    public String getLocationAddressAddressUseCode() {
-        return this.locationAddressAddressUseCode;
-    }
-    
-    public void setLocationAddressAddressUseCode(String locationAddressAddressUseCode) {
-        this.locationAddressAddressUseCode = locationAddressAddressUseCode;
-    }
-    
-    
-    
-    public String getLocationAddressAddressTypeCode() {
-        return this.locationAddressAddressTypeCode;
-    }
-    
-    public void setLocationAddressAddressTypeCode(String locationAddressAddressTypeCode) {
-        this.locationAddressAddressTypeCode = locationAddressAddressTypeCode;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssPrdStrt() {
-        return this.lctnDdrssDdrssPrdStrt;
-    }
-    
-    public void setLctnDdrssDdrssPrdStrt(String lctnDdrssDdrssPrdStrt) {
-        this.lctnDdrssDdrssPrdStrt = lctnDdrssDdrssPrdStrt;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssPrdNd() {
-        return this.lctnDdrssDdrssPrdNd;
-    }
-    
-    public void setLctnDdrssDdrssPrdNd(String lctnDdrssDdrssPrdNd) {
-        this.lctnDdrssDdrssPrdNd = lctnDdrssDdrssPrdNd;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssTxtStrng() {
-        return this.lctnDdrssDdrssTxtStrng;
-    }
-    
-    public void setLctnDdrssDdrssTxtStrng(String lctnDdrssDdrssTxtStrng) {
-        this.lctnDdrssDdrssTxtStrng = lctnDdrssDdrssTxtStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssLnStrng() {
-        return this.lctnDdrssDdrssLnStrng;
-    }
-    
-    public void setLctnDdrssDdrssLnStrng(String lctnDdrssDdrssLnStrng) {
-        this.lctnDdrssDdrssLnStrng = lctnDdrssDdrssLnStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssCtStrng() {
-        return this.lctnDdrssDdrssCtStrng;
-    }
-    
-    public void setLctnDdrssDdrssCtStrng(String lctnDdrssDdrssCtStrng) {
-        this.lctnDdrssDdrssCtStrng = lctnDdrssDdrssCtStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssDstrctStrng() {
-        return this.lctnDdrssDdrssDstrctStrng;
-    }
-    
-    public void setLctnDdrssDdrssDstrctStrng(String lctnDdrssDdrssDstrctStrng) {
-        this.lctnDdrssDdrssDstrctStrng = lctnDdrssDdrssDstrctStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssSttStrng() {
-        return this.lctnDdrssDdrssSttStrng;
-    }
-    
-    public void setLctnDdrssDdrssSttStrng(String lctnDdrssDdrssSttStrng) {
-        this.lctnDdrssDdrssSttStrng = lctnDdrssDdrssSttStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssPstlCdStrng() {
-        return this.lctnDdrssDdrssPstlCdStrng;
-    }
-    
-    public void setLctnDdrssDdrssPstlCdStrng(String lctnDdrssDdrssPstlCdStrng) {
-        this.lctnDdrssDdrssPstlCdStrng = lctnDdrssDdrssPstlCdStrng;
-    }
-    
-    
-    
-    public String getLctnDdrssDdrssCntrStrng() {
-        return this.lctnDdrssDdrssCntrStrng;
-    }
-    
-    public void setLctnDdrssDdrssCntrStrng(String lctnDdrssDdrssCntrStrng) {
-        this.lctnDdrssDdrssCntrStrng = lctnDdrssDdrssCntrStrng;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptCdngSstm() {
-        return this.lctnPhsclTpCdblCncptCdngSstm;
-    }
-    
-    public void setLctnPhsclTpCdblCncptCdngSstm(String lctnPhsclTpCdblCncptCdngSstm) {
-        this.lctnPhsclTpCdblCncptCdngSstm = lctnPhsclTpCdblCncptCdngSstm;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptCdngVrsn() {
-        return this.lctnPhsclTpCdblCncptCdngVrsn;
-    }
-    
-    public void setLctnPhsclTpCdblCncptCdngVrsn(String lctnPhsclTpCdblCncptCdngVrsn) {
-        this.lctnPhsclTpCdblCncptCdngVrsn = lctnPhsclTpCdblCncptCdngVrsn;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptCdngCde() {
-        return this.lctnPhsclTpCdblCncptCdngCde;
-    }
-    
-    public void setLctnPhsclTpCdblCncptCdngCde(String lctnPhsclTpCdblCncptCdngCde) {
-        this.lctnPhsclTpCdblCncptCdngCde = lctnPhsclTpCdblCncptCdngCde;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptCdngDsplay() {
-        return this.lctnPhsclTpCdblCncptCdngDsplay;
-    }
-    
-    public void setLctnPhsclTpCdblCncptCdngDsplay(String lctnPhsclTpCdblCncptCdngDsplay) {
-        this.lctnPhsclTpCdblCncptCdngDsplay = lctnPhsclTpCdblCncptCdngDsplay;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptCdngSrSlctd() {
-        return this.lctnPhsclTpCdblCncptCdngSrSlctd;
-    }
-    
-    public void setLctnPhsclTpCdblCncptCdngSrSlctd(String lctnPhsclTpCdblCncptCdngSrSlctd) {
-        this.lctnPhsclTpCdblCncptCdngSrSlctd = lctnPhsclTpCdblCncptCdngSrSlctd;
-    }
-    
-    
-    
-    public String getLctnPhsclTpCdblCncptTxtStrng() {
-        return this.lctnPhsclTpCdblCncptTxtStrng;
-    }
-    
-    public void setLctnPhsclTpCdblCncptTxtStrng(String lctnPhsclTpCdblCncptTxtStrng) {
-        this.lctnPhsclTpCdblCncptTxtStrng = lctnPhsclTpCdblCncptTxtStrng;
-    }
-    
-    
-    
-    public String getLocationPositionLongitude() {
-        return this.locationPositionLongitude;
-    }
-    
-    public void setLocationPositionLongitude(String locationPositionLongitude) {
-        this.locationPositionLongitude = locationPositionLongitude;
-    }
-    
-    
-    
-    public String getLocationPositionLatitude() {
-        return this.locationPositionLatitude;
-    }
-    
-    public void setLocationPositionLatitude(String locationPositionLatitude) {
-        this.locationPositionLatitude = locationPositionLatitude;
-    }
-    
-    
-    
-    public String getLocationPositionAltitude() {
-        return this.locationPositionAltitude;
-    }
-    
-    public void setLocationPositionAltitude(String locationPositionAltitude) {
-        this.locationPositionAltitude = locationPositionAltitude;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng(String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng = lctnMngngrgnztnRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt(String lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt = lctnMngngrgnztnRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrPrdStrt() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrPrdStrt(String lctnMngngrgnztnRfrncDntfrDntfrPrdStrt) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrPrdStrt = lctnMngngrgnztnRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrPrdNd() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrPrdNd(String lctnMngngrgnztnRfrncDntfrDntfrPrdNd) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrPrdNd = lctnMngngrgnztnRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce(String lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce = lctnMngngrgnztnRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrRfrncTpe() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrRfrncTpe(String lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe = lctnMngngrgnztnRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr(String lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr = lctnMngngrgnztnRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay() {
-        return this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay(String lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay) {
-        this.lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay = lctnMngngrgnztnRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrSe() {
-        return this.lctnMngngrgnztnRfrncDntfrSe;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrSe(String lctnMngngrgnztnRfrncDntfrSe) {
-        this.lctnMngngrgnztnRfrncDntfrSe = lctnMngngrgnztnRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrSstm() {
-        return this.lctnMngngrgnztnRfrncDntfrSstm;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrSstm(String lctnMngngrgnztnRfrncDntfrSstm) {
-        this.lctnMngngrgnztnRfrncDntfrSstm = lctnMngngrgnztnRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDntfrVlue() {
-        return this.lctnMngngrgnztnRfrncDntfrVlue;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDntfrVlue(String lctnMngngrgnztnRfrncDntfrVlue) {
-        this.lctnMngngrgnztnRfrncDntfrVlue = lctnMngngrgnztnRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncRfrncStrng() {
-        return this.lctnMngngrgnztnRfrncRfrncStrng;
-    }
-    
-    public void setLctnMngngrgnztnRfrncRfrncStrng(String lctnMngngrgnztnRfrncRfrncStrng) {
-        this.lctnMngngrgnztnRfrncRfrncStrng = lctnMngngrgnztnRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncDsplStrng() {
-        return this.lctnMngngrgnztnRfrncDsplStrng;
-    }
-    
-    public void setLctnMngngrgnztnRfrncDsplStrng(String lctnMngngrgnztnRfrncDsplStrng) {
-        this.lctnMngngrgnztnRfrncDsplStrng = lctnMngngrgnztnRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getLctnMngngrgnztnRfrncTpRi() {
-        return this.lctnMngngrgnztnRfrncTpRi;
-    }
-    
-    public void setLctnMngngrgnztnRfrncTpRi(String lctnMngngrgnztnRfrncTpRi) {
-        this.lctnMngngrgnztnRfrncTpRi = lctnMngngrgnztnRfrncTpRi;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lctnPrtfRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrCdblCncptCdng(String lctnPrtfRfrncDntfrDntfrCdblCncptCdng) {
-        this.lctnPrtfRfrncDntfrDntfrCdblCncptCdng = lctnPrtfRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lctnPrtfRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrCdblCncptTxt(String lctnPrtfRfrncDntfrDntfrCdblCncptTxt) {
-        this.lctnPrtfRfrncDntfrDntfrCdblCncptTxt = lctnPrtfRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrPrdStrt() {
-        return this.lctnPrtfRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrPrdStrt(String lctnPrtfRfrncDntfrDntfrPrdStrt) {
-        this.lctnPrtfRfrncDntfrDntfrPrdStrt = lctnPrtfRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrPrdNd() {
-        return this.lctnPrtfRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrPrdNd(String lctnPrtfRfrncDntfrDntfrPrdNd) {
-        this.lctnPrtfRfrncDntfrDntfrPrdNd = lctnPrtfRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lctnPrtfRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrRfrncRfrnce(String lctnPrtfRfrncDntfrDntfrRfrncRfrnce) {
-        this.lctnPrtfRfrncDntfrDntfrRfrncRfrnce = lctnPrtfRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrRfrncTpe() {
-        return this.lctnPrtfRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrRfrncTpe(String lctnPrtfRfrncDntfrDntfrRfrncTpe) {
-        this.lctnPrtfRfrncDntfrDntfrRfrncTpe = lctnPrtfRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrRfrncDntfr() {
-        return this.lctnPrtfRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrRfrncDntfr(String lctnPrtfRfrncDntfrDntfrRfrncDntfr) {
-        this.lctnPrtfRfrncDntfrDntfrRfrncDntfr = lctnPrtfRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrDntfrRfrncDsplay() {
-        return this.lctnPrtfRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLctnPrtfRfrncDntfrDntfrRfrncDsplay(String lctnPrtfRfrncDntfrDntfrRfrncDsplay) {
-        this.lctnPrtfRfrncDntfrDntfrRfrncDsplay = lctnPrtfRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrSe() {
-        return this.lctnPrtfRfrncDntfrSe;
-    }
-    
-    public void setLctnPrtfRfrncDntfrSe(String lctnPrtfRfrncDntfrSe) {
-        this.lctnPrtfRfrncDntfrSe = lctnPrtfRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrSstm() {
-        return this.lctnPrtfRfrncDntfrSstm;
-    }
-    
-    public void setLctnPrtfRfrncDntfrSstm(String lctnPrtfRfrncDntfrSstm) {
-        this.lctnPrtfRfrncDntfrSstm = lctnPrtfRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDntfrVlue() {
-        return this.lctnPrtfRfrncDntfrVlue;
-    }
-    
-    public void setLctnPrtfRfrncDntfrVlue(String lctnPrtfRfrncDntfrVlue) {
-        this.lctnPrtfRfrncDntfrVlue = lctnPrtfRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncRfrncStrng() {
-        return this.lctnPrtfRfrncRfrncStrng;
-    }
-    
-    public void setLctnPrtfRfrncRfrncStrng(String lctnPrtfRfrncRfrncStrng) {
-        this.lctnPrtfRfrncRfrncStrng = lctnPrtfRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLctnPrtfRfrncDsplStrng() {
-        return this.lctnPrtfRfrncDsplStrng;
-    }
-    
-    public void setLctnPrtfRfrncDsplStrng(String lctnPrtfRfrncDsplStrng) {
-        this.lctnPrtfRfrncDsplStrng = lctnPrtfRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getLocationPartOfReferenceTypeUri() {
-        return this.locationPartOfReferenceTypeUri;
-    }
-    
-    public void setLocationPartOfReferenceTypeUri(String locationPartOfReferenceTypeUri) {
-        this.locationPartOfReferenceTypeUri = locationPartOfReferenceTypeUri;
-    }
-    
-    
-    
-    public String getLctnHrsfprtnDsfWk() {
-        return this.lctnHrsfprtnDsfWk;
-    }
-    
-    public void setLctnHrsfprtnDsfWk(String lctnHrsfprtnDsfWk) {
-        this.lctnHrsfprtnDsfWk = lctnHrsfprtnDsfWk;
-    }
-    
-    
-    
-    public String getLocationHoursOfOperationAllDay() {
-        return this.locationHoursOfOperationAllDay;
-    }
-    
-    public void setLocationHoursOfOperationAllDay(String locationHoursOfOperationAllDay) {
-        this.locationHoursOfOperationAllDay = locationHoursOfOperationAllDay;
-    }
-    
-    
-    
-    public String getLctnHrsfprtnPnngTme() {
-        return this.lctnHrsfprtnPnngTme;
-    }
-    
-    public void setLctnHrsfprtnPnngTme(String lctnHrsfprtnPnngTme) {
-        this.lctnHrsfprtnPnngTme = lctnHrsfprtnPnngTme;
-    }
-    
-    
-    
-    public String getLctnHrsfprtnClsngTme() {
-        return this.lctnHrsfprtnClsngTme;
-    }
-    
-    public void setLctnHrsfprtnClsngTme(String lctnHrsfprtnClsngTme) {
-        this.lctnHrsfprtnClsngTme = lctnHrsfprtnClsngTme;
-    }
-    
-    
-    
-    public String getLocationAvailabilityExceptions() {
-        return this.locationAvailabilityExceptions;
-    }
-    
-    public void setLocationAvailabilityExceptions(String locationAvailabilityExceptions) {
-        this.locationAvailabilityExceptions = locationAvailabilityExceptions;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrCdblCncptCdng() {
-        return this.lctnNdpntRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrCdblCncptCdng(String lctnNdpntRfrncDntfrDntfrCdblCncptCdng) {
-        this.lctnNdpntRfrncDntfrDntfrCdblCncptCdng = lctnNdpntRfrncDntfrDntfrCdblCncptCdng;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrCdblCncptTxt() {
-        return this.lctnNdpntRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrCdblCncptTxt(String lctnNdpntRfrncDntfrDntfrCdblCncptTxt) {
-        this.lctnNdpntRfrncDntfrDntfrCdblCncptTxt = lctnNdpntRfrncDntfrDntfrCdblCncptTxt;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrPrdStrt() {
-        return this.lctnNdpntRfrncDntfrDntfrPrdStrt;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrPrdStrt(String lctnNdpntRfrncDntfrDntfrPrdStrt) {
-        this.lctnNdpntRfrncDntfrDntfrPrdStrt = lctnNdpntRfrncDntfrDntfrPrdStrt;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrPrdNd() {
-        return this.lctnNdpntRfrncDntfrDntfrPrdNd;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrPrdNd(String lctnNdpntRfrncDntfrDntfrPrdNd) {
-        this.lctnNdpntRfrncDntfrDntfrPrdNd = lctnNdpntRfrncDntfrDntfrPrdNd;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrRfrncRfrnce() {
-        return this.lctnNdpntRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrRfrncRfrnce(String lctnNdpntRfrncDntfrDntfrRfrncRfrnce) {
-        this.lctnNdpntRfrncDntfrDntfrRfrncRfrnce = lctnNdpntRfrncDntfrDntfrRfrncRfrnce;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrRfrncTpe() {
-        return this.lctnNdpntRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrRfrncTpe(String lctnNdpntRfrncDntfrDntfrRfrncTpe) {
-        this.lctnNdpntRfrncDntfrDntfrRfrncTpe = lctnNdpntRfrncDntfrDntfrRfrncTpe;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrRfrncDntfr() {
-        return this.lctnNdpntRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrRfrncDntfr(String lctnNdpntRfrncDntfrDntfrRfrncDntfr) {
-        this.lctnNdpntRfrncDntfrDntfrRfrncDntfr = lctnNdpntRfrncDntfrDntfrRfrncDntfr;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrDntfrRfrncDsplay() {
-        return this.lctnNdpntRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    public void setLctnNdpntRfrncDntfrDntfrRfrncDsplay(String lctnNdpntRfrncDntfrDntfrRfrncDsplay) {
-        this.lctnNdpntRfrncDntfrDntfrRfrncDsplay = lctnNdpntRfrncDntfrDntfrRfrncDsplay;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrSe() {
-        return this.lctnNdpntRfrncDntfrSe;
-    }
-    
-    public void setLctnNdpntRfrncDntfrSe(String lctnNdpntRfrncDntfrSe) {
-        this.lctnNdpntRfrncDntfrSe = lctnNdpntRfrncDntfrSe;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrSstm() {
-        return this.lctnNdpntRfrncDntfrSstm;
-    }
-    
-    public void setLctnNdpntRfrncDntfrSstm(String lctnNdpntRfrncDntfrSstm) {
-        this.lctnNdpntRfrncDntfrSstm = lctnNdpntRfrncDntfrSstm;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDntfrVlue() {
-        return this.lctnNdpntRfrncDntfrVlue;
-    }
-    
-    public void setLctnNdpntRfrncDntfrVlue(String lctnNdpntRfrncDntfrVlue) {
-        this.lctnNdpntRfrncDntfrVlue = lctnNdpntRfrncDntfrVlue;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncRfrncStrng() {
-        return this.lctnNdpntRfrncRfrncStrng;
-    }
-    
-    public void setLctnNdpntRfrncRfrncStrng(String lctnNdpntRfrncRfrncStrng) {
-        this.lctnNdpntRfrncRfrncStrng = lctnNdpntRfrncRfrncStrng;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncDsplStrng() {
-        return this.lctnNdpntRfrncDsplStrng;
-    }
-    
-    public void setLctnNdpntRfrncDsplStrng(String lctnNdpntRfrncDsplStrng) {
-        this.lctnNdpntRfrncDsplStrng = lctnNdpntRfrncDsplStrng;
-    }
-    
-    
-    
-    public String getLctnNdpntRfrncTpRi() {
-        return this.lctnNdpntRfrncTpRi;
-    }
-    
-    public void setLctnNdpntRfrncTpRi(String lctnNdpntRfrncTpRi) {
-        this.lctnNdpntRfrncTpRi = lctnNdpntRfrncTpRi;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getLocationIdentifierIdentifierUse()
+    {
+        return this.locationIdentifierIdentifierUse;
+    }
+    
+    public void setLocationIdentifierIdentifierUse
+        (String locationIdentifierIdentifierUse) 
+        {
+      this.locationIdentifierIdentifierUse = locationIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcCSstm()
+    {
+        return this.lctnDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setLctnDntfrDntfrTpCcCSstm
+        (String lctnDntfrDntfrTpCcCSstm) 
+        {
+      this.lctnDntfrDntfrTpCcCSstm = lctnDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcCVrsn()
+    {
+        return this.lctnDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setLctnDntfrDntfrTpCcCVrsn
+        (String lctnDntfrDntfrTpCcCVrsn) 
+        {
+      this.lctnDntfrDntfrTpCcCVrsn = lctnDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcCCde()
+    {
+        return this.lctnDntfrDntfrTpCcCCde;
+    }
+    
+    public void setLctnDntfrDntfrTpCcCCde
+        (String lctnDntfrDntfrTpCcCCde) 
+        {
+      this.lctnDntfrDntfrTpCcCCde = lctnDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcCDsplay()
+    {
+        return this.lctnDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setLctnDntfrDntfrTpCcCDsplay
+        (String lctnDntfrDntfrTpCcCDsplay) 
+        {
+      this.lctnDntfrDntfrTpCcCDsplay = lctnDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.lctnDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setLctnDntfrDntfrTpCcCSrSlctd
+        (String lctnDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.lctnDntfrDntfrTpCcCSrSlctd = lctnDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getLctnDntfrDntfrTpCcTxt()
+    {
+        return this.lctnDntfrDntfrTpCcTxt;
+    }
+    
+    public void setLctnDntfrDntfrTpCcTxt
+        (String lctnDntfrDntfrTpCcTxt) 
+        {
+      this.lctnDntfrDntfrTpCcTxt = lctnDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getLctnDntfrDntfrPrdPrdStrt()
+    {
+        return this.lctnDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setLctnDntfrDntfrPrdPrdStrt
+        (String lctnDntfrDntfrPrdPrdStrt) 
+        {
+      this.lctnDntfrDntfrPrdPrdStrt = lctnDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getLctnDntfrDntfrPrdPrdNd()
+    {
+        return this.lctnDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setLctnDntfrDntfrPrdPrdNd
+        (String lctnDntfrDntfrPrdPrdNd) 
+        {
+      this.lctnDntfrDntfrPrdPrdNd = lctnDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getLctnDntfrDntfrSsgnr()
+    {
+        return this.lctnDntfrDntfrSsgnr;
+    }
+    
+    public void setLctnDntfrDntfrSsgnr
+        (String lctnDntfrDntfrSsgnr) 
+        {
+      this.lctnDntfrDntfrSsgnr = lctnDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getLctnDntfrDntfrVlue()
+    {
+        return this.lctnDntfrDntfrVlue;
+    }
+    
+    public void setLctnDntfrDntfrVlue
+        (String lctnDntfrDntfrVlue) 
+        {
+      this.lctnDntfrDntfrVlue = lctnDntfrDntfrVlue;
+}
+    public 
+    String 
+    getLctnDntfrDntfrSstm()
+    {
+        return this.lctnDntfrDntfrSstm;
+    }
+    
+    public void setLctnDntfrDntfrSstm
+        (String lctnDntfrDntfrSstm) 
+        {
+      this.lctnDntfrDntfrSstm = lctnDntfrDntfrSstm;
+}
+    public 
+    String 
+    getLocationStatusCode()
+    {
+        return this.locationStatusCode;
+    }
+    
+    public void setLocationStatusCode
+        (String locationStatusCode) 
+        {
+      this.locationStatusCode = locationStatusCode;
+}
+    public 
+    String 
+    getLctnPrtnlSttsCSrSlctd()
+    {
+        return this.lctnPrtnlSttsCSrSlctd;
+    }
+    
+    public void setLctnPrtnlSttsCSrSlctd
+        (String lctnPrtnlSttsCSrSlctd) 
+        {
+      this.lctnPrtnlSttsCSrSlctd = lctnPrtnlSttsCSrSlctd;
+}
+    public 
+    String 
+    getLocationOperationalStatusCCode()
+    {
+        return this.locationOperationalStatusCCode;
+    }
+    
+    public void setLocationOperationalStatusCCode
+        (String locationOperationalStatusCCode) 
+        {
+      this.locationOperationalStatusCCode = locationOperationalStatusCCode;
+}
+    public 
+    String 
+    getLctnPrtnlSttsCVrsn()
+    {
+        return this.lctnPrtnlSttsCVrsn;
+    }
+    
+    public void setLctnPrtnlSttsCVrsn
+        (String lctnPrtnlSttsCVrsn) 
+        {
+      this.lctnPrtnlSttsCVrsn = lctnPrtnlSttsCVrsn;
+}
+    public 
+    String 
+    getLctnPrtnlSttsCDsplay()
+    {
+        return this.lctnPrtnlSttsCDsplay;
+    }
+    
+    public void setLctnPrtnlSttsCDsplay
+        (String lctnPrtnlSttsCDsplay) 
+        {
+      this.lctnPrtnlSttsCDsplay = lctnPrtnlSttsCDsplay;
+}
+    public 
+    String 
+    getLctnPrtnlSttsCSstm()
+    {
+        return this.lctnPrtnlSttsCSstm;
+    }
+    
+    public void setLctnPrtnlSttsCSstm
+        (String lctnPrtnlSttsCSstm) 
+        {
+      this.lctnPrtnlSttsCSstm = lctnPrtnlSttsCSstm;
+}
+    public 
+    String 
+    getLocationNameString()
+    {
+        return this.locationNameString;
+    }
+    
+    public void setLocationNameString
+        (String locationNameString) 
+        {
+      this.locationNameString = locationNameString;
+}
+    public 
+    String 
+    getLocationAliasString()
+    {
+        return this.locationAliasString;
+    }
+    
+    public void setLocationAliasString
+        (String locationAliasString) 
+        {
+      this.locationAliasString = locationAliasString;
+}
+    public 
+    String 
+    getLocationDescriptionString()
+    {
+        return this.locationDescriptionString;
+    }
+    
+    public void setLocationDescriptionString
+        (String locationDescriptionString) 
+        {
+      this.locationDescriptionString = locationDescriptionString;
+}
+    public 
+    String 
+    getLocationModeCode()
+    {
+        return this.locationModeCode;
+    }
+    
+    public void setLocationModeCode
+        (String locationModeCode) 
+        {
+      this.locationModeCode = locationModeCode;
+}
+    public 
+    String 
+    getLocationTypeCcCodingCSystem()
+    {
+        return this.locationTypeCcCodingCSystem;
+    }
+    
+    public void setLocationTypeCcCodingCSystem
+        (String locationTypeCcCodingCSystem) 
+        {
+      this.locationTypeCcCodingCSystem = locationTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getLocationTypeCcCodingCVersion()
+    {
+        return this.locationTypeCcCodingCVersion;
+    }
+    
+    public void setLocationTypeCcCodingCVersion
+        (String locationTypeCcCodingCVersion) 
+        {
+      this.locationTypeCcCodingCVersion = locationTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getLocationTypeCcCodingCCode()
+    {
+        return this.locationTypeCcCodingCCode;
+    }
+    
+    public void setLocationTypeCcCodingCCode
+        (String locationTypeCcCodingCCode) 
+        {
+      this.locationTypeCcCodingCCode = locationTypeCcCodingCCode;
+}
+    public 
+    String 
+    getLocationTypeCcCodingCDisplay()
+    {
+        return this.locationTypeCcCodingCDisplay;
+    }
+    
+    public void setLocationTypeCcCodingCDisplay
+        (String locationTypeCcCodingCDisplay) 
+        {
+      this.locationTypeCcCodingCDisplay = locationTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getLctnTpCcCdngCSrSlctd()
+    {
+        return this.lctnTpCcCdngCSrSlctd;
+    }
+    
+    public void setLctnTpCcCdngCSrSlctd
+        (String lctnTpCcCdngCSrSlctd) 
+        {
+      this.lctnTpCcCdngCSrSlctd = lctnTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getLocationTypeCcText()
+    {
+        return this.locationTypeCcText;
+    }
+    
+    public void setLocationTypeCcText
+        (String locationTypeCcText) 
+        {
+      this.locationTypeCcText = locationTypeCcText;
+}
+    public 
+    String 
+    getLctnTlcmCntctPntSstm()
+    {
+        return this.lctnTlcmCntctPntSstm;
+    }
+    
+    public void setLctnTlcmCntctPntSstm
+        (String lctnTlcmCntctPntSstm) 
+        {
+      this.lctnTlcmCntctPntSstm = lctnTlcmCntctPntSstm;
+}
+    public 
+    String 
+    getLocationTelecomContactPointUse()
+    {
+        return this.locationTelecomContactPointUse;
+    }
+    
+    public void setLocationTelecomContactPointUse
+        (String locationTelecomContactPointUse) 
+        {
+      this.locationTelecomContactPointUse = locationTelecomContactPointUse;
+}
+    public 
+    String 
+    getLctnTlcmCntctPntPrdPrdStrt()
+    {
+        return this.lctnTlcmCntctPntPrdPrdStrt;
+    }
+    
+    public void setLctnTlcmCntctPntPrdPrdStrt
+        (String lctnTlcmCntctPntPrdPrdStrt) 
+        {
+      this.lctnTlcmCntctPntPrdPrdStrt = lctnTlcmCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getLctnTlcmCntctPntPrdPrdNd()
+    {
+        return this.lctnTlcmCntctPntPrdPrdNd;
+    }
+    
+    public void setLctnTlcmCntctPntPrdPrdNd
+        (String lctnTlcmCntctPntPrdPrdNd) 
+        {
+      this.lctnTlcmCntctPntPrdPrdNd = lctnTlcmCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getLocationTelecomContactPointRank()
+    {
+        return this.locationTelecomContactPointRank;
+    }
+    
+    public void setLocationTelecomContactPointRank
+        (String locationTelecomContactPointRank) 
+        {
+      this.locationTelecomContactPointRank = locationTelecomContactPointRank;
+}
+    public 
+    String 
+    getLctnTlcmCntctPntVlue()
+    {
+        return this.lctnTlcmCntctPntVlue;
+    }
+    
+    public void setLctnTlcmCntctPntVlue
+        (String lctnTlcmCntctPntVlue) 
+        {
+      this.lctnTlcmCntctPntVlue = lctnTlcmCntctPntVlue;
+}
+    public 
+    String 
+    getLocationAddressAddressUse()
+    {
+        return this.locationAddressAddressUse;
+    }
+    
+    public void setLocationAddressAddressUse
+        (String locationAddressAddressUse) 
+        {
+      this.locationAddressAddressUse = locationAddressAddressUse;
+}
+    public 
+    String 
+    getLocationAddressAddressType()
+    {
+        return this.locationAddressAddressType;
+    }
+    
+    public void setLocationAddressAddressType
+        (String locationAddressAddressType) 
+        {
+      this.locationAddressAddressType = locationAddressAddressType;
+}
+    public 
+    String 
+    getLctnDdrssDdrssPrdPrdStrt()
+    {
+        return this.lctnDdrssDdrssPrdPrdStrt;
+    }
+    
+    public void setLctnDdrssDdrssPrdPrdStrt
+        (String lctnDdrssDdrssPrdPrdStrt) 
+        {
+      this.lctnDdrssDdrssPrdPrdStrt = lctnDdrssDdrssPrdPrdStrt;
+}
+    public 
+    String 
+    getLctnDdrssDdrssPrdPrdNd()
+    {
+        return this.lctnDdrssDdrssPrdPrdNd;
+    }
+    
+    public void setLctnDdrssDdrssPrdPrdNd
+        (String lctnDdrssDdrssPrdPrdNd) 
+        {
+      this.lctnDdrssDdrssPrdPrdNd = lctnDdrssDdrssPrdPrdNd;
+}
+    public 
+    String 
+    getLocationAddressAddressText()
+    {
+        return this.locationAddressAddressText;
+    }
+    
+    public void setLocationAddressAddressText
+        (String locationAddressAddressText) 
+        {
+      this.locationAddressAddressText = locationAddressAddressText;
+}
+    public 
+    String 
+    getLocationAddressAddressLine()
+    {
+        return this.locationAddressAddressLine;
+    }
+    
+    public void setLocationAddressAddressLine
+        (String locationAddressAddressLine) 
+        {
+      this.locationAddressAddressLine = locationAddressAddressLine;
+}
+    public 
+    String 
+    getLocationAddressAddressCity()
+    {
+        return this.locationAddressAddressCity;
+    }
+    
+    public void setLocationAddressAddressCity
+        (String locationAddressAddressCity) 
+        {
+      this.locationAddressAddressCity = locationAddressAddressCity;
+}
+    public 
+    String 
+    getLocationAddressAddressDistrict()
+    {
+        return this.locationAddressAddressDistrict;
+    }
+    
+    public void setLocationAddressAddressDistrict
+        (String locationAddressAddressDistrict) 
+        {
+      this.locationAddressAddressDistrict = locationAddressAddressDistrict;
+}
+    public 
+    String 
+    getLocationAddressAddressState()
+    {
+        return this.locationAddressAddressState;
+    }
+    
+    public void setLocationAddressAddressState
+        (String locationAddressAddressState) 
+        {
+      this.locationAddressAddressState = locationAddressAddressState;
+}
+    public 
+    String 
+    getLctnDdrssDdrssPstlCde()
+    {
+        return this.lctnDdrssDdrssPstlCde;
+    }
+    
+    public void setLctnDdrssDdrssPstlCde
+        (String lctnDdrssDdrssPstlCde) 
+        {
+      this.lctnDdrssDdrssPstlCde = lctnDdrssDdrssPstlCde;
+}
+    public 
+    String 
+    getLocationAddressAddressCountry()
+    {
+        return this.locationAddressAddressCountry;
+    }
+    
+    public void setLocationAddressAddressCountry
+        (String locationAddressAddressCountry) 
+        {
+      this.locationAddressAddressCountry = locationAddressAddressCountry;
+}
+    public 
+    String 
+    getLctnPhsclTpCcCdngCSstm()
+    {
+        return this.lctnPhsclTpCcCdngCSstm;
+    }
+    
+    public void setLctnPhsclTpCcCdngCSstm
+        (String lctnPhsclTpCcCdngCSstm) 
+        {
+      this.lctnPhsclTpCcCdngCSstm = lctnPhsclTpCcCdngCSstm;
+}
+    public 
+    String 
+    getLctnPhsclTpCcCdngCVrsn()
+    {
+        return this.lctnPhsclTpCcCdngCVrsn;
+    }
+    
+    public void setLctnPhsclTpCcCdngCVrsn
+        (String lctnPhsclTpCcCdngCVrsn) 
+        {
+      this.lctnPhsclTpCcCdngCVrsn = lctnPhsclTpCcCdngCVrsn;
+}
+    public 
+    String 
+    getLctnPhsclTpCcCdngCCde()
+    {
+        return this.lctnPhsclTpCcCdngCCde;
+    }
+    
+    public void setLctnPhsclTpCcCdngCCde
+        (String lctnPhsclTpCcCdngCCde) 
+        {
+      this.lctnPhsclTpCcCdngCCde = lctnPhsclTpCcCdngCCde;
+}
+    public 
+    String 
+    getLctnPhsclTpCcCdngCDsplay()
+    {
+        return this.lctnPhsclTpCcCdngCDsplay;
+    }
+    
+    public void setLctnPhsclTpCcCdngCDsplay
+        (String lctnPhsclTpCcCdngCDsplay) 
+        {
+      this.lctnPhsclTpCcCdngCDsplay = lctnPhsclTpCcCdngCDsplay;
+}
+    public 
+    String 
+    getLctnPhsclTpCcCdngCSrSlctd()
+    {
+        return this.lctnPhsclTpCcCdngCSrSlctd;
+    }
+    
+    public void setLctnPhsclTpCcCdngCSrSlctd
+        (String lctnPhsclTpCcCdngCSrSlctd) 
+        {
+      this.lctnPhsclTpCcCdngCSrSlctd = lctnPhsclTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getLocationPhysicalTypeCcText()
+    {
+        return this.locationPhysicalTypeCcText;
+    }
+    
+    public void setLocationPhysicalTypeCcText
+        (String locationPhysicalTypeCcText) 
+        {
+      this.locationPhysicalTypeCcText = locationPhysicalTypeCcText;
+}
+    public 
+    String 
+    getLctnPstnLngtdDcml()
+    {
+        return this.lctnPstnLngtdDcml;
+    }
+    
+    public void setLctnPstnLngtdDcml
+        (String lctnPstnLngtdDcml) 
+        {
+      this.lctnPstnLngtdDcml = lctnPstnLngtdDcml;
+}
+    public 
+    String 
+    getLocationPositionLatitudeDecimal()
+    {
+        return this.locationPositionLatitudeDecimal;
+    }
+    
+    public void setLocationPositionLatitudeDecimal
+        (String locationPositionLatitudeDecimal) 
+        {
+      this.locationPositionLatitudeDecimal = locationPositionLatitudeDecimal;
+}
+    public 
+    String 
+    getLocationPositionAltitudeDecimal()
+    {
+        return this.locationPositionAltitudeDecimal;
+    }
+    
+    public void setLocationPositionAltitudeDecimal
+        (String locationPositionAltitudeDecimal) 
+        {
+      this.locationPositionAltitudeDecimal = locationPositionAltitudeDecimal;
+}
+    public 
+    String 
+    getLctnMngngrgnztnRfrnce()
+    {
+        return this.lctnMngngrgnztnRfrnce;
+    }
+    
+    public void setLctnMngngrgnztnRfrnce
+        (String lctnMngngrgnztnRfrnce) 
+        {
+      this.lctnMngngrgnztnRfrnce = lctnMngngrgnztnRfrnce;
+}
+    public 
+    String 
+    getLocationPartOfReference()
+    {
+        return this.locationPartOfReference;
+    }
+    
+    public void setLocationPartOfReference
+        (String locationPartOfReference) 
+        {
+      this.locationPartOfReference = locationPartOfReference;
+}
+    public 
+    String 
+    getLctnHrsfprtnDsfWkCde()
+    {
+        return this.lctnHrsfprtnDsfWkCde;
+    }
+    
+    public void setLctnHrsfprtnDsfWkCde
+        (String lctnHrsfprtnDsfWkCde) 
+        {
+      this.lctnHrsfprtnDsfWkCde = lctnHrsfprtnDsfWkCde;
+}
+    public 
+    String 
+    getLctnHrsfprtnLlDBln()
+    {
+        return this.lctnHrsfprtnLlDBln;
+    }
+    
+    public void setLctnHrsfprtnLlDBln
+        (String lctnHrsfprtnLlDBln) 
+        {
+      this.lctnHrsfprtnLlDBln = lctnHrsfprtnLlDBln;
+}
+    public 
+    String 
+    getLctnHrsfprtnPnngTmTme()
+    {
+        return this.lctnHrsfprtnPnngTmTme;
+    }
+    
+    public void setLctnHrsfprtnPnngTmTme
+        (String lctnHrsfprtnPnngTmTme) 
+        {
+      this.lctnHrsfprtnPnngTmTme = lctnHrsfprtnPnngTmTme;
+}
+    public 
+    String 
+    getLctnHrsfprtnClsngTmTme()
+    {
+        return this.lctnHrsfprtnClsngTmTme;
+    }
+    
+    public void setLctnHrsfprtnClsngTmTme
+        (String lctnHrsfprtnClsngTmTme) 
+        {
+      this.lctnHrsfprtnClsngTmTme = lctnHrsfprtnClsngTmTme;
+}
+    public 
+    String 
+    getLctnVlbltxcptnsStrng()
+    {
+        return this.lctnVlbltxcptnsStrng;
+    }
+    
+    public void setLctnVlbltxcptnsStrng
+        (String lctnVlbltxcptnsStrng) 
+        {
+      this.lctnVlbltxcptnsStrng = lctnVlbltxcptnsStrng;
+}
+    public 
+    String 
+    getLocationEndpointReference()
+    {
+        return this.locationEndpointReference;
+    }
+    
+    public void setLocationEndpointReference
+        (String locationEndpointReference) 
+        {
+      this.locationEndpointReference = locationEndpointReference;
+}
 
 
 

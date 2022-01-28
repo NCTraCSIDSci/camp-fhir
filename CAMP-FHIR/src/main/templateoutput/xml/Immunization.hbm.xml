@@ -1,585 +1,669 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Immunization" optimistic-lock="none" table="immunization">
-        <id name="immIdentifierCodingCode" type="string">
-            <column length="512" name="Imm_identifier_Coding_code"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="immIdentifierCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="Imm_identifier_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="immIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Imm_identifier_Identifier_use">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="immIdentifierCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="Imm_identifier_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immIdentifierCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="Imm_identifier_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immIdentifierCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="Imm_identifier_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="Imm_status">
-                <comment>code</comment>
+        <property name="immDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immSttsRsnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_sttsRsn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immStatusReasonCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_statusReason_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="immStatusReasonCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_statusReason_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="immStatusReasonCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_statusReason_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Imm_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="immStatusReasonCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_statusReason_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immIdentifierIdentifierAssigner" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Imm_identifier_Identifier_assigner">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="immVccnCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_vccnCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Imm_identifier_Identifier_value">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="immVaccineCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_vaccineCode_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Imm_identifier_Identifier_system">
+                <comment>{ "tree" :"Immunization.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="immVaccineCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_vaccineCode_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="Imm_status_code">
+                <comment>{ "tree" :"Immunization.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="immVaccineCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_vaccineCode_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immSttsRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_sttsRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immVaccineCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_vaccineCode_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immSttsRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_sttsRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immPnt" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_pnt">
-                <comment>Reference</comment>
+        <property name="immStatusReasonCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_statusReason_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immEncounter" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_encounter">
-                <comment>Reference</comment>
+        <property name="immSttsRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_sttsRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immOccurrenceDatetime" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Imm_occurrenceDatetime">
-                <comment>dateTime</comment>
+        <property name="immSttsRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_sttsRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immOccurrenceString" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_occurrenceString">
-                <comment>string</comment>
+        <property name="immStatusReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</meta>
+            <column length="65535" name="Imm_statusReason_CC_text">
+                <comment>{ "tree" :"Immunization.statusReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setStatusReason, setText"}</comment>
             </column>
         </property>
-        <property name="immRecorded" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Imm_recorded">
-                <comment>dateTime</comment>
+        <property name="immVaccineCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_vaccineCode_CC_coding_C_system">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immPrimarySource" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Imm_primarySource">
-                <comment>boolean</comment>
+        <property name="immVccnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_vccnCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immRprtrgnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_rprtrgn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immVaccineCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_vaccineCode_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immReportOriginCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_reportOrigin_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immVccnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_vccnCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immReportOriginCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_reportOrigin_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immVccnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_vccnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immReportOriginCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_reportOrigin_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immVaccineCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, setText"}</meta>
+            <column length="65535" name="Imm_vaccineCode_CC_text">
+                <comment>{ "tree" :"Immunization.vaccineCode", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setVaccineCode, setText"}</comment>
             </column>
         </property>
-        <property name="immReportOriginCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_reportOrigin_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immPntReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</meta>
+            <column length="65535" name="Imm_pnt_Reference">
+                <comment>{ "tree" :"Immunization.patient", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPatient"}</comment>
             </column>
         </property>
-        <property name="immLocation" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_location">
-                <comment>Reference</comment>
+        <property name="immEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="Imm_encounter_Reference">
+                <comment>{ "tree" :"Immunization.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="immManufacturer" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_manufacturer">
-                <comment>Reference</comment>
+        <property name="immOccurrenceDatetimeDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</meta>
+            <column length="65535" name="Imm_occurrenceDatetime_dateTime">
+                <comment>{ "tree" :"Immunization.occurrenceDatetime", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOccurrenceDatetime"}</comment>
             </column>
         </property>
-        <property name="immLotNumber" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_lotNumber">
-                <comment>string</comment>
+        <property name="immOccurrenceStringString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.occurrenceString", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOccurrenceString"}</meta>
+            <column length="65535" name="Imm_occurrenceString_string">
+                <comment>{ "tree" :"Immunization.occurrenceString", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setOccurrenceString"}</comment>
             </column>
         </property>
-        <property name="immExpirationDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="Imm_expirationDate">
-                <comment>date</comment>
+        <property name="immRecordedDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.recorded", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorded"}</meta>
+            <column length="65535" name="Imm_recorded_dateTime">
+                <comment>{ "tree" :"Immunization.recorded", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRecorded"}</comment>
             </column>
         </property>
-        <property name="immSiteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_site_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="immPrimarySourceBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.primarySource", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPrimarySource"}</meta>
+            <column length="65535" name="Imm_primarySource_boolean">
+                <comment>{ "tree" :"Immunization.primarySource", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPrimarySource"}</comment>
             </column>
         </property>
-        <property name="immSiteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_site_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immRprtrgnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_rprtrgn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immSiteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_site_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immRprtrgnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_rprtrgn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immSiteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_site_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immReportOriginCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_reportOrigin_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immSiteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_site_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immRprtrgnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_rprtrgn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immRouteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_route_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="immRprtrgnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_rprtrgn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immRouteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_route_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immReportOriginCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, setText"}</meta>
+            <column length="65535" name="Imm_reportOrigin_CC_text">
+                <comment>{ "tree" :"Immunization.reportOrigin", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReportOrigin, setText"}</comment>
             </column>
         </property>
-        <property name="immRouteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_route_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immLocationReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</meta>
+            <column length="65535" name="Imm_location_Reference">
+                <comment>{ "tree" :"Immunization.location", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLocation"}</comment>
             </column>
         </property>
-        <property name="immRouteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_route_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immManufacturerReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.manufacturer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturer"}</meta>
+            <column length="65535" name="Imm_manufacturer_Reference">
+                <comment>{ "tree" :"Immunization.manufacturer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setManufacturer"}</comment>
             </column>
         </property>
-        <property name="immRouteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_route_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immLotNumberString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.lotNumber", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLotNumber"}</meta>
+            <column length="65535" name="Imm_lotNumber_string">
+                <comment>{ "tree" :"Immunization.lotNumber", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLotNumber"}</comment>
             </column>
         </property>
-        <property name="immDoseQuantity" type="string">
-            <meta attribute="resource-type">SimpleQuantity</meta>
-            <column length="65535" name="Imm_doseQuantity">
-                <comment>SimpleQuantity</comment>
+        <property name="immExpirationDateDate" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.expirationDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpirationDate"}</meta>
+            <column length="65535" name="Imm_expirationDate_date">
+                <comment>{ "tree" :"Immunization.expirationDate", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExpirationDate"}</comment>
             </column>
         </property>
-        <property name="immPerformer" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Imm_performer">
-                <comment>BackboneElement</comment>
+        <property name="immSiteCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_site_CC_coding_C_system">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immPrfrmrFnctnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_prfrmr_fnctn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immSiteCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_site_CC_coding_C_version">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immPerformerFunctionCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_performer_function_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immSiteCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_site_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immPrfrmrFnctnCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_prfrmr_fnctn_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="immSiteCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_site_CC_coding_C_display">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immPrfrmrFnctnCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_prfrmr_fnctn_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="immSiteCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_site_CC_coding_C_userSelected">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immPrfrmrFnctnCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_prfrmr_fnctn_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="immSiteCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, setText"}</meta>
+            <column length="65535" name="Imm_site_CC_text">
+                <comment>{ "tree" :"Immunization.site", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSite, setText"}</comment>
             </column>
         </property>
-        <property name="immPerformerActor" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_performer_actor">
-                <comment>Reference</comment>
+        <property name="immRouteCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_route_CC_coding_C_system">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immNoteCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_note_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="immRouteCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_route_CC_coding_C_version">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immNoteCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_note_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immRouteCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_route_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immNoteCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_note_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immRouteCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_route_CC_coding_C_display">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immNoteCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_note_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immRouteCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_route_CC_coding_C_userSelected">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immNoteCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_note_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immRouteCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, setText"}</meta>
+            <column length="65535" name="Imm_route_CC_text">
+                <comment>{ "tree" :"Immunization.route", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRoute, setText"}</comment>
             </column>
         </property>
-        <property name="immReasonCodeCodingUserSelected" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_reasonCode_Coding_userSelected">
-                <comment>Coding_userSelected</comment>
+        <property name="immDoseQuantitySimpleQuantity" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.doseQuantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoseQuantity"}</meta>
+            <column length="65535" name="Imm_doseQuantity_SimpleQuantity">
+                <comment>{ "tree" :"Immunization.doseQuantity", "datatype" : "SimpleQuantity", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDoseQuantity"}</comment>
             </column>
         </property>
-        <property name="immReasonCodeCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_reasonCode_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immPrfrmrFnctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_prfrmr_fnctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immReasonCodeCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_reasonCode_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immPrfrmrFnctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_prfrmr_fnctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immReasonCodeCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_reasonCode_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immPrfrmrFnctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_prfrmr_fnctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immReasonCodeCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_reasonCode_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immPrfrmrFnctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_prfrmr_fnctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immReasonReference" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_reasonReference">
-                <comment>Reference</comment>
+        <property name="immPrfrmrFnctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_prfrmr_fnctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immIsSubpotent" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Imm_isSubpotent">
-                <comment>boolean</comment>
+        <property name="immPerformerFunctionCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, setText"}</meta>
+            <column length="65535" name="Imm_performer_function_CC_text">
+                <comment>{ "tree" :"Immunization.performer.function", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addPerformer"] , "methodName" : "setFunction, setText"}</comment>
             </column>
         </property>
-        <property name="immSbptntRsnCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_sbptntRsn_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immPerformerActorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.performer.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addPerformer"] , "methodName" : "setActor"}</meta>
+            <column length="65535" name="Imm_performer_actor_Reference">
+                <comment>{ "tree" :"Immunization.performer.actor", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addPerformer"] , "methodName" : "setActor"}</comment>
             </column>
         </property>
-        <property name="immSubpotentReasonCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_subpotentReason_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="Imm_note_Annotation_time">
+                <comment>{ "tree" :"Immunization.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="immSubpotentReasonCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_subpotentReason_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="Imm_note_Annotation_text">
+                <comment>{ "tree" :"Immunization.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="immSubpotentReasonCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_subpotentReason_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Imm_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"Immunization.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="immSubpotentReasonCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_subpotentReason_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immNoteAnnotationAuthorString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="Imm_note_Annotation_authorString">
+                <comment>{ "tree" :"Immunization.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="immEducation" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Imm_education">
-                <comment>BackboneElement</comment>
+        <property name="immReasonCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_reasonCode_CC_coding_C_system">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immEducationDocumentType" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_education_documentType">
-                <comment>string</comment>
+        <property name="immReasonCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_reasonCode_CC_coding_C_version">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immEducationReference" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="Imm_education_reference">
-                <comment>uri</comment>
+        <property name="immReasonCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_reasonCode_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immEducationPublicationDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Imm_education_publicationDate">
-                <comment>dateTime</comment>
+        <property name="immReasonCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_reasonCode_CC_coding_C_display">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immEducationPresentationDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Imm_education_presentationDate">
-                <comment>dateTime</comment>
+        <property name="immRsnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_rsnCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immPrgrmlgbltCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_prgrmlgblt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immReasonCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</meta>
+            <column length="65535" name="Imm_reasonCode_CC_text">
+                <comment>{ "tree" :"Immunization.reasonCode", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonCode, setText"}</comment>
             </column>
         </property>
-        <property name="immProgramEligibilityCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_programEligibility_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immReasonReferenceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</meta>
+            <column length="65535" name="Imm_reasonReference_Reference">
+                <comment>{ "tree" :"Immunization.reasonReference", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addReasonReference"}</comment>
             </column>
         </property>
-        <property name="immPrgrmlgbltCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_prgrmlgblt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="immIsSubpotentBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.isSubpotent", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIsSubpotent"}</meta>
+            <column length="65535" name="Imm_isSubpotent_boolean">
+                <comment>{ "tree" :"Immunization.isSubpotent", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setIsSubpotent"}</comment>
             </column>
         </property>
-        <property name="immPrgrmlgbltCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_prgrmlgblt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="immSbptntRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_sbptntRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immPrgrmlgbltCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_prgrmlgblt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="immSbptntRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_sbptntRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immFndngSrcCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_fndngSrc_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immSbptntRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_sbptntRsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immFundingSourceCodingCode" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_fundingSource_Coding_code">
-                <comment>Coding_code</comment>
+        <property name="immSbptntRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_sbptntRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immFundingSourceCodingVersion" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_fundingSource_Coding_version">
-                <comment>Coding_version</comment>
+        <property name="immSbptntRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_sbptntRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immFundingSourceCodingDisplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_fundingSource_Coding_display">
-                <comment>Coding_display</comment>
+        <property name="immSubpotentReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, setText"}</meta>
+            <column length="65535" name="Imm_subpotentReason_CC_text">
+                <comment>{ "tree" :"Immunization.subpotentReason", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSubpotentReason, setText"}</comment>
             </column>
         </property>
-        <property name="immFundingSourceCodingSystem" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_fundingSource_Coding_system">
-                <comment>Coding_system</comment>
+        <property name="immEducationDocumentTypeString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.education.documentType", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setDocumentType"}</meta>
+            <column length="65535" name="Imm_education_documentType_string">
+                <comment>{ "tree" :"Immunization.education.documentType", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setDocumentType"}</comment>
             </column>
         </property>
-        <property name="immReaction" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Imm_reaction">
-                <comment>BackboneElement</comment>
+        <property name="immEducationReferenceUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.education.reference", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setReference"}</meta>
+            <column length="65535" name="Imm_education_reference_uri">
+                <comment>{ "tree" :"Immunization.education.reference", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setReference"}</comment>
             </column>
         </property>
-        <property name="immReactionDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="Imm_reaction_date">
-                <comment>dateTime</comment>
+        <property name="immDctnPblctnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.education.publicationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setPublicationDate"}</meta>
+            <column length="65535" name="Imm_dctn_pblctnDt_dtTme">
+                <comment>{ "tree" :"Immunization.education.publicationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setPublicationDate"}</comment>
             </column>
         </property>
-        <property name="immReactionDetail" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_reaction_detail">
-                <comment>Reference</comment>
+        <property name="immDctnPrsnttnDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.education.presentationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setPresentationDate"}</meta>
+            <column length="65535" name="Imm_dctn_prsnttnDt_dtTme">
+                <comment>{ "tree" :"Immunization.education.presentationDate", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEducation"] , "methodName" : "setPresentationDate"}</comment>
             </column>
         </property>
-        <property name="immReactionReported" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="Imm_reaction_reported">
-                <comment>boolean</comment>
+        <property name="immPrgrmlgbltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_prgrmlgblt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immProtocolApplied" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="Imm_protocolApplied">
-                <comment>BackboneElement</comment>
+        <property name="immPrgrmlgbltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_prgrmlgblt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immProtocolAppliedSeries" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_protocolApplied_series">
-                <comment>string</comment>
+        <property name="immPrgrmlgbltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_prgrmlgblt_CC_cdng_C_cde">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immProtocolAppliedAuthority" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="Imm_protocolApplied_authority">
-                <comment>Reference</comment>
+        <property name="immPrgrmlgbltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_prgrmlgblt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldTrgtDssCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="Imm_prtclppld_trgtDss_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="immPrgrmlgbltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_prgrmlgblt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldTrgtDssCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="Imm_prtclppld_trgtDss_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="immProgramEligibilityCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, setText"}</meta>
+            <column length="65535" name="Imm_programEligibility_CC_text">
+                <comment>{ "tree" :"Immunization.programEligibility", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addProgramEligibility, setText"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldTrgtDssCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="Imm_prtclppld_trgtDss_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="immFndngSrcCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_fndngSrc_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldTrgtDssCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="Imm_prtclppld_trgtDss_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="immFndngSrcCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_fndngSrc_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldTrgtDssCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="Imm_prtclppld_trgtDss_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="immFundingSourceCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_fundingSource_CC_coding_C_code">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldDsNmbrPstvnt" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Imm_prtclppld_dsNmbrPstvnt">
-                <comment>positiveInt</comment>
+        <property name="immFndngSrcCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_fndngSrc_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldDsNmbrStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_prtclppld_dsNmbrStrng">
-                <comment>string</comment>
+        <property name="immFndngSrcCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_fndngSrc_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldSrsDssPstvnt" type="string">
-            <meta attribute="resource-type">positiveInt</meta>
-            <column length="65535" name="Imm_prtclppld_srsDssPstvnt">
-                <comment>positiveInt</comment>
+        <property name="immFundingSourceCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, setText"}</meta>
+            <column length="65535" name="Imm_fundingSource_CC_text">
+                <comment>{ "tree" :"Immunization.fundingSource", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFundingSource, setText"}</comment>
             </column>
         </property>
-        <property name="immPrtclppldSrsDssStrng" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="Imm_prtclppld_srsDssStrng">
-                <comment>string</comment>
+        <property name="immReactionDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reaction.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="Imm_reaction_date_dateTime">
+                <comment>{ "tree" :"Immunization.reaction.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setDate"}</comment>
+            </column>
+        </property>
+        <property name="immReactionDetailReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reaction.detail", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setDetail"}</meta>
+            <column length="65535" name="Imm_reaction_detail_Reference">
+                <comment>{ "tree" :"Immunization.reaction.detail", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setDetail"}</comment>
+            </column>
+        </property>
+        <property name="immReactionReportedBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.reaction.reported", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setReported"}</meta>
+            <column length="65535" name="Imm_reaction_reported_boolean">
+                <comment>{ "tree" :"Immunization.reaction.reported", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addReaction"] , "methodName" : "setReported"}</comment>
+            </column>
+        </property>
+        <property name="immProtocolAppliedSeriesString" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.series", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeries"}</meta>
+            <column length="65535" name="Imm_protocolApplied_series_string">
+                <comment>{ "tree" :"Immunization.protocolApplied.series", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeries"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldThrtRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.authority", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setAuthority"}</meta>
+            <column length="65535" name="Imm_prtclppld_thrt_Rfrnce">
+                <comment>{ "tree" :"Immunization.protocolApplied.authority", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setAuthority"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setSystem"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_cdng_C_sstm">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setVersion"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setCode"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_cdng_C_cde">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldTrgtDssCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, setText"}</meta>
+            <column length="65535" name="Imm_prtclppld_trgtDss_CC_txt">
+                <comment>{ "tree" :"Immunization.protocolApplied.targetDisease", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : ["addProtocolApplied"] , "methodName" : "addTargetDisease, setText"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldDsNmbrPstvntPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.doseNumberPositiveint", "datatype" : "positiveInt", "cardinality" : "Required", "elementtree" : ["addProtocolApplied"] , "methodName" : "setDoseNumberPositiveint"}</meta>
+            <column length="65535" name="Imm_prtclppld_dsNmbrPstvnt_pstvnt">
+                <comment>{ "tree" :"Immunization.protocolApplied.doseNumberPositiveint", "datatype" : "positiveInt", "cardinality" : "Required", "elementtree" : ["addProtocolApplied"] , "methodName" : "setDoseNumberPositiveint"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldDsNmbrStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.doseNumberString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addProtocolApplied"] , "methodName" : "setDoseNumberString"}</meta>
+            <column length="65535" name="Imm_prtclppld_dsNmbrStrng_strng">
+                <comment>{ "tree" :"Immunization.protocolApplied.doseNumberString", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addProtocolApplied"] , "methodName" : "setDoseNumberString"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldSrsDssPstvntPstvnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.seriesDosesPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeriesDosesPositiveint"}</meta>
+            <column length="65535" name="Imm_prtclppld_srsDssPstvnt_pstvnt">
+                <comment>{ "tree" :"Immunization.protocolApplied.seriesDosesPositiveint", "datatype" : "positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeriesDosesPositiveint"}</comment>
+            </column>
+        </property>
+        <property name="immPrtclppldSrsDssStrngStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"Immunization.protocolApplied.seriesDosesString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeriesDosesString"}</meta>
+            <column length="65535" name="Imm_prtclppld_srsDssStrng_strng">
+                <comment>{ "tree" :"Immunization.protocolApplied.seriesDosesString", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProtocolApplied"] , "methodName" : "setSeriesDosesString"}</comment>
             </column>
         </property>
     </class>

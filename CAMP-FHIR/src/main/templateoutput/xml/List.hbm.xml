@@ -1,651 +1,309 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="List" optimistic-lock="none" table="list">
-        <id name="lstDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Lst_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="lstDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_use_code</meta>
-            <column length="512" name="Lst_dntfr_dntfr_s_cde">
-                <comment>List_identifierIdentifier_use_code</comment>
+        <property name="listIdentifierIdentifierUse" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="List_identifier_Identifier_use">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Lst_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>List_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="lstDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Lst_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>List_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="lstDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Lst_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>List_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="lstDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Lst_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>List_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="lstDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Lst_dntfr_dntfr_CdblCncpt_txt">
-                <comment>List_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="lstDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Prd_strt">
-                <comment>List_identifierIdentifier_Period_start</comment>
+        <property name="lstDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Prd_nd">
-                <comment>List_identifierIdentifier_Period_end</comment>
+        <property name="lstDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>List_identifierIdentifier_Reference_reference</comment>
+        <property name="lstDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Rfrnc_tpe">
-                <comment>List_identifierIdentifier_Reference_type</comment>
+        <property name="lstDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Lst_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>List_identifierIdentifier_Reference_identifier</comment>
+        <property name="listIdentifierIdentifierValue" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="List_identifier_Identifier_value">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Lst_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>List_identifierIdentifier_Reference_display</comment>
+        <property name="listIdentifierIdentifierSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="List_identifier_Identifier_system">
+                <comment>{ "tree" :"List.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_value_string</meta>
-            <column length="512" name="Lst_dntfr_dntfr_vl_strng">
-                <comment>List_identifierIdentifier_value_string</comment>
+        <property name="listStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="List_status_code">
+                <comment>{ "tree" :"List.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="lstDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">List_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Lst_dntfr_dntfr_sstm_ri">
-                <comment>List_identifierIdentifier_system_uri</comment>
+        <property name="listModeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMode"}</meta>
+            <column length="65535" name="List_mode_code">
+                <comment>{ "tree" :"List.mode", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setMode"}</comment>
             </column>
         </property>
-        <property name="listStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="List_status">
-                <comment>code</comment>
+        <property name="listTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="List_title_string">
+                <comment>{ "tree" :"List.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="listMode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="List_mode">
-                <comment>code</comment>
+        <property name="listCodeCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="List_code_CC_coding_C_system">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="listTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="List_title">
-                <comment>string</comment>
+        <property name="listCodeCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="List_code_CC_coding_C_version">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="listCodeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="List_code_CC_coding_C_code">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="listCodeCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="List_code_CC_coding_C_display">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="listCodeCcCodingCUserSelected" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="List_code_CC_coding_C_userSelected">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="listCodeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</meta>
+            <column length="65535" name="List_code_CC_text">
+                <comment>{ "tree" :"List.code", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCode, setText"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="listSubjectReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</meta>
+            <column length="65535" name="List_subject_Reference">
+                <comment>{ "tree" :"List.subject", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSubject"}</comment>
             </column>
         </property>
-        <property name="lstCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lst_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="listEncounterReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</meta>
+            <column length="65535" name="List_encounter_Reference">
+                <comment>{ "tree" :"List.encounter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEncounter"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="listDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="List_date_dateTime">
+                <comment>{ "tree" :"List.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="listSourceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.source", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSource"}</meta>
+            <column length="65535" name="List_source_Reference">
+                <comment>{ "tree" :"List.source", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSource"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="listOrderedByCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setSystem"}</meta>
+            <column length="65535" name="List_orderedBy_CC_coding_C_system">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="listOrderedByCcCodingCVersion" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setVersion"}</meta>
+            <column length="65535" name="List_orderedBy_CC_coding_C_version">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="listOrderedByCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setCode"}</meta>
+            <column length="65535" name="List_orderedBy_CC_coding_C_code">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="listOrderedByCcCodingCDisplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setDisplay"}</meta>
+            <column length="65535" name="List_orderedBy_CC_coding_C_display">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="lstRdrdBCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lst_rdrdB_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="listOrderedByCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, setText"}</meta>
+            <column length="65535" name="List_orderedBy_CC_text">
+                <comment>{ "tree" :"List.orderedBy", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrderedBy, setText"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="listNoteAnnotationTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</meta>
+            <column length="65535" name="List_note_Annotation_time">
+                <comment>{ "tree" :"List.note", "datatype" : "Annotation, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setTime"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="listNoteAnnotationText" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</meta>
+            <column length="65535" name="List_note_Annotation_text">
+                <comment>{ "tree" :"List.note", "datatype" : "Annotation, markdown", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setText"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="lstNtNnttnThrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</meta>
+            <column length="65535" name="Lst_nt_nnttn_thrRfrnce">
+                <comment>{ "tree" :"List.note", "datatype" : "Annotation, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorReference"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="listNoteAnnotationAuthorString" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</meta>
+            <column length="65535" name="List_note_Annotation_authorString">
+                <comment>{ "tree" :"List.note", "datatype" : "Annotation, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNote, setAuthorString"}</comment>
             </column>
         </property>
-        <property name="lstSbjctRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lst_sbjct_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="listEntryFlagCcCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setSystem"}</meta>
+            <column length="65535" name="List_entry_flag_CC_coding_C_system">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="listSubjectReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="List_subject_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
+        <property name="lstNtrFlgCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lst_ntr_flg_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="listEntryFlagCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setCode"}</meta>
+            <column length="65535" name="List_entry_flag_CC_coding_C_code">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="lstNtrFlgCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lst_ntr_flg_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="lstNtrFlgCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lst_ntr_flg_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="listEntryFlagCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, setText"}</meta>
+            <column length="65535" name="List_entry_flag_CC_text">
+                <comment>{ "tree" :"List.entry.flag", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setFlag, setText"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="listEntryDeletedBoolean" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.deleted", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setDeleted"}</meta>
+            <column length="65535" name="List_entry_deleted_boolean">
+                <comment>{ "tree" :"List.entry.deleted", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setDeleted"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="listEntryDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="List_entry_date_dateTime">
+                <comment>{ "tree" :"List.entry.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addEntry"] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="listEntryItemReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.entry.item", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addEntry"] , "methodName" : "setItem"}</meta>
+            <column length="65535" name="List_entry_item_Reference">
+                <comment>{ "tree" :"List.entry.item", "datatype" : "Reference", "cardinality" : "Required", "elementtree" : ["addEntry"] , "methodName" : "setItem"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="lstMptRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="Lst_mptRsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="lstMptRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="Lst_mptRsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="listEmptyReasonCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setCode"}</meta>
+            <column length="65535" name="List_emptyReason_CC_coding_C_code">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="lstMptRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Lst_mptRsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="lstMptRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Lst_mptRsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="lstNcntrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lst_ncntr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="listEncounterReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="List_encounter_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="listDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="List_date">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lst_src_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="lstSrcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lst_src_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="listSourceReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="List_source_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="lstRdrdBCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lst_rdrdB_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="listNoteAnnotationTimeDateTime" type="string">
-            <meta attribute="resource-type">Annotation_time_dateTime</meta>
-            <column length="65535" name="List_note_Annotation_time_dateTime">
-                <comment>Annotation_time_dateTime</comment>
-            </column>
-        </property>
-        <property name="listNoteAnnotationTextMarkdown" type="string">
-            <meta attribute="resource-type">Annotation_text_markdown</meta>
-            <column length="65535" name="List_note_Annotation_text_markdown">
-                <comment>Annotation_text_markdown</comment>
-            </column>
-        </property>
-        <property name="lstNtNnttnRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Annotation_Reference_reference</meta>
-            <column length="65535" name="Lst_nt_nnttn_Rfrnc_rfrnce">
-                <comment>Annotation_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="lstNtNnttnRfrncTpe" type="string">
-            <meta attribute="resource-type">Annotation_Reference_type</meta>
-            <column length="65535" name="Lst_nt_nnttn_Rfrnc_tpe">
-                <comment>Annotation_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lstNtNnttnRfrncDntfr" type="string">
-            <meta attribute="resource-type">Annotation_Reference_identifier</meta>
-            <column length="65535" name="Lst_nt_nnttn_Rfrnc_dntfr">
-                <comment>Annotation_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lstNtNnttnRfrncDsplay" type="string">
-            <meta attribute="resource-type">Annotation_Reference_display</meta>
-            <column length="65535" name="Lst_nt_nnttn_Rfrnc_dsplay">
-                <comment>Annotation_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lstNtNnttnThrStrngStrng" type="string">
-            <meta attribute="resource-type">Annotation_authorString_string</meta>
-            <column length="65535" name="Lst_nt_nnttn_thrStrng_strng">
-                <comment>Annotation_authorString_string</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="lstNtrFlgCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lst_ntr_flg_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="listEntryDeleted" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="List_entry_deleted">
-                <comment>boolean</comment>
-            </column>
-        </property>
-        <property name="listEntryDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="List_entry_date">
-                <comment>dateTime</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="lstNtrTmRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Lst_ntr_tm_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="listEntryItemReferenceTypeUri" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="List_entry_item_Reference_type_uri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="lstMptRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Lst_mptRsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="listEmptyReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, setText"}</meta>
+            <column length="65535" name="List_emptyReason_CC_text">
+                <comment>{ "tree" :"List.emptyReason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEmptyReason, setText"}</comment>
             </column>
         </property>
     </class>

@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,401 +10,474 @@ package main.templateoutput.Model;
 public class Account  implements java.io.Serializable {
 
 
-     private String accountIdentifierCodingCode;
-     private String accntDntfrCdngSrSlctd;
-     private String accountIdentifierCodingDisplay;
-     private String accountIdentifierCodingVersion;
-     private String accountIdentifierCodingSystem;
-     private String accountStatus;
-     private String accountTypeCodingUserSelected;
-     private String accountTypeCodingCode;
-     private String accountTypeCodingDisplay;
-     private String accountTypeCodingVersion;
-     private String accountTypeCodingSystem;
-     private String accountName;
-     private String accountSubject;
-     private String accntSrvcPrdCdngSrSlctd;
-     private String accountServicePeriodCodingCode;
-     private String accntSrvcPrdCdngDsplay;
-     private String accntSrvcPrdCdngVrsn;
-     private String accntSrvcPrdCdngSstm;
-     private String accountCoverage;
-     private String accountCoverageCoverage;
-     private String accountCoveragePriority;
-     private String accountOwner;
-     private String accountDescription;
-     private String accountGuarantor;
-     private String accountGuarantorParty;
-     private String accountGuarantorOnHold;
-     private String accntGrntrPrdCdngSrSlctd;
-     private String accntGrntrPrdCdngCde;
-     private String accntGrntrPrdCdngDsplay;
-     private String accntGrntrPrdCdngVrsn;
-     private String accntGrntrPrdCdngSstm;
-     private String accountPartOf;
+     private Integer id;
+     private String accountIdentifierIdentifierUse;
+     private String accntDntfrDntfrTpCcCSstm;
+     private String accntDntfrDntfrTpCcCVrsn;
+     private String accntDntfrDntfrTpCcCCde;
+     private String accntDntfrDntfrTpCcCDsplay;
+     private String accntDntfrDntfrTpCcCSrSlctd;
+     private String accntDntfrDntfrTpCcTxt;
+     private String accntDntfrDntfrPrdPrdStrt;
+     private String accntDntfrDntfrPrdPrdNd;
+     private String accntDntfrDntfrSsgnr;
+     private String accntDntfrDntfrVlue;
+     private String accntDntfrDntfrSstm;
+     private String accountStatusCode;
+     private String accountTypeCcCodingCSystem;
+     private String accountTypeCcCodingCVersion;
+     private String accountTypeCcCodingCCode;
+     private String accountTypeCcCodingCDisplay;
+     private String accntTpCcCdngCSrSlctd;
+     private String accountTypeCcText;
+     private String accountNameString;
+     private String accountSubjectReference;
+     private String accountServicePeriodPeriodStart;
+     private String accountServicePeriodPeriodEnd;
+     private String accntCvrgCvrgRfrnce;
+     private String accntCvrgPrrtPstvnt;
+     private String accountOwnerReference;
+     private String accountDescriptionString;
+     private String accountGuarantorPartyReference;
+     private String accountGuarantorOnHoldBoolean;
+     private String accntGrntrPrdPrdStrt;
+     private String accntGrntrPrdPrdNd;
+     private String accountPartOfReference;
 
     public Account() {
     }
 
-	
-    public Account(String accountIdentifierCodingCode) {
-        this.accountIdentifierCodingCode = accountIdentifierCodingCode;
-    }
-    public Account(String accountIdentifierCodingCode, String accntDntfrCdngSrSlctd, String accountIdentifierCodingDisplay, String accountIdentifierCodingVersion, String accountIdentifierCodingSystem, String accountStatus, String accountTypeCodingUserSelected, String accountTypeCodingCode, String accountTypeCodingDisplay, String accountTypeCodingVersion, String accountTypeCodingSystem, String accountName, String accountSubject, String accntSrvcPrdCdngSrSlctd, String accountServicePeriodCodingCode, String accntSrvcPrdCdngDsplay, String accntSrvcPrdCdngVrsn, String accntSrvcPrdCdngSstm, String accountCoverage, String accountCoverageCoverage, String accountCoveragePriority, String accountOwner, String accountDescription, String accountGuarantor, String accountGuarantorParty, String accountGuarantorOnHold, String accntGrntrPrdCdngSrSlctd, String accntGrntrPrdCdngCde, String accntGrntrPrdCdngDsplay, String accntGrntrPrdCdngVrsn, String accntGrntrPrdCdngSstm, String accountPartOf) {
-       this.accountIdentifierCodingCode = accountIdentifierCodingCode;
-       this.accntDntfrCdngSrSlctd = accntDntfrCdngSrSlctd;
-       this.accountIdentifierCodingDisplay = accountIdentifierCodingDisplay;
-       this.accountIdentifierCodingVersion = accountIdentifierCodingVersion;
-       this.accountIdentifierCodingSystem = accountIdentifierCodingSystem;
-       this.accountStatus = accountStatus;
-       this.accountTypeCodingUserSelected = accountTypeCodingUserSelected;
-       this.accountTypeCodingCode = accountTypeCodingCode;
-       this.accountTypeCodingDisplay = accountTypeCodingDisplay;
-       this.accountTypeCodingVersion = accountTypeCodingVersion;
-       this.accountTypeCodingSystem = accountTypeCodingSystem;
-       this.accountName = accountName;
-       this.accountSubject = accountSubject;
-       this.accntSrvcPrdCdngSrSlctd = accntSrvcPrdCdngSrSlctd;
-       this.accountServicePeriodCodingCode = accountServicePeriodCodingCode;
-       this.accntSrvcPrdCdngDsplay = accntSrvcPrdCdngDsplay;
-       this.accntSrvcPrdCdngVrsn = accntSrvcPrdCdngVrsn;
-       this.accntSrvcPrdCdngSstm = accntSrvcPrdCdngSstm;
-       this.accountCoverage = accountCoverage;
-       this.accountCoverageCoverage = accountCoverageCoverage;
-       this.accountCoveragePriority = accountCoveragePriority;
-       this.accountOwner = accountOwner;
-       this.accountDescription = accountDescription;
-       this.accountGuarantor = accountGuarantor;
-       this.accountGuarantorParty = accountGuarantorParty;
-       this.accountGuarantorOnHold = accountGuarantorOnHold;
-       this.accntGrntrPrdCdngSrSlctd = accntGrntrPrdCdngSrSlctd;
-       this.accntGrntrPrdCdngCde = accntGrntrPrdCdngCde;
-       this.accntGrntrPrdCdngDsplay = accntGrntrPrdCdngDsplay;
-       this.accntGrntrPrdCdngVrsn = accntGrntrPrdCdngVrsn;
-       this.accntGrntrPrdCdngSstm = accntGrntrPrdCdngSstm;
-       this.accountPartOf = accountPartOf;
+    public Account(String accountIdentifierIdentifierUse, String accntDntfrDntfrTpCcCSstm, String accntDntfrDntfrTpCcCVrsn, String accntDntfrDntfrTpCcCCde, String accntDntfrDntfrTpCcCDsplay, String accntDntfrDntfrTpCcCSrSlctd, String accntDntfrDntfrTpCcTxt, String accntDntfrDntfrPrdPrdStrt, String accntDntfrDntfrPrdPrdNd, String accntDntfrDntfrSsgnr, String accntDntfrDntfrVlue, String accntDntfrDntfrSstm, String accountStatusCode, String accountTypeCcCodingCSystem, String accountTypeCcCodingCVersion, String accountTypeCcCodingCCode, String accountTypeCcCodingCDisplay, String accntTpCcCdngCSrSlctd, String accountTypeCcText, String accountNameString, String accountSubjectReference, String accountServicePeriodPeriodStart, String accountServicePeriodPeriodEnd, String accntCvrgCvrgRfrnce, String accntCvrgPrrtPstvnt, String accountOwnerReference, String accountDescriptionString, String accountGuarantorPartyReference, String accountGuarantorOnHoldBoolean, String accntGrntrPrdPrdStrt, String accntGrntrPrdPrdNd, String accountPartOfReference) {
+       this.accountIdentifierIdentifierUse = accountIdentifierIdentifierUse;
+       this.accntDntfrDntfrTpCcCSstm = accntDntfrDntfrTpCcCSstm;
+       this.accntDntfrDntfrTpCcCVrsn = accntDntfrDntfrTpCcCVrsn;
+       this.accntDntfrDntfrTpCcCCde = accntDntfrDntfrTpCcCCde;
+       this.accntDntfrDntfrTpCcCDsplay = accntDntfrDntfrTpCcCDsplay;
+       this.accntDntfrDntfrTpCcCSrSlctd = accntDntfrDntfrTpCcCSrSlctd;
+       this.accntDntfrDntfrTpCcTxt = accntDntfrDntfrTpCcTxt;
+       this.accntDntfrDntfrPrdPrdStrt = accntDntfrDntfrPrdPrdStrt;
+       this.accntDntfrDntfrPrdPrdNd = accntDntfrDntfrPrdPrdNd;
+       this.accntDntfrDntfrSsgnr = accntDntfrDntfrSsgnr;
+       this.accntDntfrDntfrVlue = accntDntfrDntfrVlue;
+       this.accntDntfrDntfrSstm = accntDntfrDntfrSstm;
+       this.accountStatusCode = accountStatusCode;
+       this.accountTypeCcCodingCSystem = accountTypeCcCodingCSystem;
+       this.accountTypeCcCodingCVersion = accountTypeCcCodingCVersion;
+       this.accountTypeCcCodingCCode = accountTypeCcCodingCCode;
+       this.accountTypeCcCodingCDisplay = accountTypeCcCodingCDisplay;
+       this.accntTpCcCdngCSrSlctd = accntTpCcCdngCSrSlctd;
+       this.accountTypeCcText = accountTypeCcText;
+       this.accountNameString = accountNameString;
+       this.accountSubjectReference = accountSubjectReference;
+       this.accountServicePeriodPeriodStart = accountServicePeriodPeriodStart;
+       this.accountServicePeriodPeriodEnd = accountServicePeriodPeriodEnd;
+       this.accntCvrgCvrgRfrnce = accntCvrgCvrgRfrnce;
+       this.accntCvrgPrrtPstvnt = accntCvrgPrrtPstvnt;
+       this.accountOwnerReference = accountOwnerReference;
+       this.accountDescriptionString = accountDescriptionString;
+       this.accountGuarantorPartyReference = accountGuarantorPartyReference;
+       this.accountGuarantorOnHoldBoolean = accountGuarantorOnHoldBoolean;
+       this.accntGrntrPrdPrdStrt = accntGrntrPrdPrdStrt;
+       this.accntGrntrPrdPrdNd = accntGrntrPrdPrdNd;
+       this.accountPartOfReference = accountPartOfReference;
     }
    
-    public String getAccountIdentifierCodingCode() {
-        return this.accountIdentifierCodingCode;
-    }
-    
-    public void setAccountIdentifierCodingCode(String accountIdentifierCodingCode) {
-        this.accountIdentifierCodingCode = accountIdentifierCodingCode;
-    }
-    
-    
-    
-    public String getAccntDntfrCdngSrSlctd() {
-        return this.accntDntfrCdngSrSlctd;
-    }
-    
-    public void setAccntDntfrCdngSrSlctd(String accntDntfrCdngSrSlctd) {
-        this.accntDntfrCdngSrSlctd = accntDntfrCdngSrSlctd;
-    }
-    
-    
-    
-    public String getAccountIdentifierCodingDisplay() {
-        return this.accountIdentifierCodingDisplay;
-    }
-    
-    public void setAccountIdentifierCodingDisplay(String accountIdentifierCodingDisplay) {
-        this.accountIdentifierCodingDisplay = accountIdentifierCodingDisplay;
-    }
-    
-    
-    
-    public String getAccountIdentifierCodingVersion() {
-        return this.accountIdentifierCodingVersion;
-    }
-    
-    public void setAccountIdentifierCodingVersion(String accountIdentifierCodingVersion) {
-        this.accountIdentifierCodingVersion = accountIdentifierCodingVersion;
-    }
-    
-    
-    
-    public String getAccountIdentifierCodingSystem() {
-        return this.accountIdentifierCodingSystem;
-    }
-    
-    public void setAccountIdentifierCodingSystem(String accountIdentifierCodingSystem) {
-        this.accountIdentifierCodingSystem = accountIdentifierCodingSystem;
-    }
-    
-    
-    
-    public String getAccountStatus() {
-        return this.accountStatus;
-    }
-    
-    public void setAccountStatus(String accountStatus) {
-        this.accountStatus = accountStatus;
-    }
-    
-    
-    
-    public String getAccountTypeCodingUserSelected() {
-        return this.accountTypeCodingUserSelected;
-    }
-    
-    public void setAccountTypeCodingUserSelected(String accountTypeCodingUserSelected) {
-        this.accountTypeCodingUserSelected = accountTypeCodingUserSelected;
-    }
-    
-    
-    
-    public String getAccountTypeCodingCode() {
-        return this.accountTypeCodingCode;
-    }
-    
-    public void setAccountTypeCodingCode(String accountTypeCodingCode) {
-        this.accountTypeCodingCode = accountTypeCodingCode;
-    }
-    
-    
-    
-    public String getAccountTypeCodingDisplay() {
-        return this.accountTypeCodingDisplay;
-    }
-    
-    public void setAccountTypeCodingDisplay(String accountTypeCodingDisplay) {
-        this.accountTypeCodingDisplay = accountTypeCodingDisplay;
-    }
-    
-    
-    
-    public String getAccountTypeCodingVersion() {
-        return this.accountTypeCodingVersion;
-    }
-    
-    public void setAccountTypeCodingVersion(String accountTypeCodingVersion) {
-        this.accountTypeCodingVersion = accountTypeCodingVersion;
-    }
-    
-    
-    
-    public String getAccountTypeCodingSystem() {
-        return this.accountTypeCodingSystem;
-    }
-    
-    public void setAccountTypeCodingSystem(String accountTypeCodingSystem) {
-        this.accountTypeCodingSystem = accountTypeCodingSystem;
-    }
-    
-    
-    
-    public String getAccountName() {
-        return this.accountName;
-    }
-    
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-    
-    
-    
-    public String getAccountSubject() {
-        return this.accountSubject;
-    }
-    
-    public void setAccountSubject(String accountSubject) {
-        this.accountSubject = accountSubject;
-    }
-    
-    
-    
-    public String getAccntSrvcPrdCdngSrSlctd() {
-        return this.accntSrvcPrdCdngSrSlctd;
-    }
-    
-    public void setAccntSrvcPrdCdngSrSlctd(String accntSrvcPrdCdngSrSlctd) {
-        this.accntSrvcPrdCdngSrSlctd = accntSrvcPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getAccountServicePeriodCodingCode() {
-        return this.accountServicePeriodCodingCode;
-    }
-    
-    public void setAccountServicePeriodCodingCode(String accountServicePeriodCodingCode) {
-        this.accountServicePeriodCodingCode = accountServicePeriodCodingCode;
-    }
-    
-    
-    
-    public String getAccntSrvcPrdCdngDsplay() {
-        return this.accntSrvcPrdCdngDsplay;
-    }
-    
-    public void setAccntSrvcPrdCdngDsplay(String accntSrvcPrdCdngDsplay) {
-        this.accntSrvcPrdCdngDsplay = accntSrvcPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getAccntSrvcPrdCdngVrsn() {
-        return this.accntSrvcPrdCdngVrsn;
-    }
-    
-    public void setAccntSrvcPrdCdngVrsn(String accntSrvcPrdCdngVrsn) {
-        this.accntSrvcPrdCdngVrsn = accntSrvcPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getAccntSrvcPrdCdngSstm() {
-        return this.accntSrvcPrdCdngSstm;
-    }
-    
-    public void setAccntSrvcPrdCdngSstm(String accntSrvcPrdCdngSstm) {
-        this.accntSrvcPrdCdngSstm = accntSrvcPrdCdngSstm;
-    }
-    
-    
-    
-    public String getAccountCoverage() {
-        return this.accountCoverage;
-    }
-    
-    public void setAccountCoverage(String accountCoverage) {
-        this.accountCoverage = accountCoverage;
-    }
-    
-    
-    
-    public String getAccountCoverageCoverage() {
-        return this.accountCoverageCoverage;
-    }
-    
-    public void setAccountCoverageCoverage(String accountCoverageCoverage) {
-        this.accountCoverageCoverage = accountCoverageCoverage;
-    }
-    
-    
-    
-    public String getAccountCoveragePriority() {
-        return this.accountCoveragePriority;
-    }
-    
-    public void setAccountCoveragePriority(String accountCoveragePriority) {
-        this.accountCoveragePriority = accountCoveragePriority;
-    }
-    
-    
-    
-    public String getAccountOwner() {
-        return this.accountOwner;
-    }
-    
-    public void setAccountOwner(String accountOwner) {
-        this.accountOwner = accountOwner;
-    }
-    
-    
-    
-    public String getAccountDescription() {
-        return this.accountDescription;
-    }
-    
-    public void setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
-    }
-    
-    
-    
-    public String getAccountGuarantor() {
-        return this.accountGuarantor;
-    }
-    
-    public void setAccountGuarantor(String accountGuarantor) {
-        this.accountGuarantor = accountGuarantor;
-    }
-    
-    
-    
-    public String getAccountGuarantorParty() {
-        return this.accountGuarantorParty;
-    }
-    
-    public void setAccountGuarantorParty(String accountGuarantorParty) {
-        this.accountGuarantorParty = accountGuarantorParty;
-    }
-    
-    
-    
-    public String getAccountGuarantorOnHold() {
-        return this.accountGuarantorOnHold;
-    }
-    
-    public void setAccountGuarantorOnHold(String accountGuarantorOnHold) {
-        this.accountGuarantorOnHold = accountGuarantorOnHold;
-    }
-    
-    
-    
-    public String getAccntGrntrPrdCdngSrSlctd() {
-        return this.accntGrntrPrdCdngSrSlctd;
-    }
-    
-    public void setAccntGrntrPrdCdngSrSlctd(String accntGrntrPrdCdngSrSlctd) {
-        this.accntGrntrPrdCdngSrSlctd = accntGrntrPrdCdngSrSlctd;
-    }
-    
-    
-    
-    public String getAccntGrntrPrdCdngCde() {
-        return this.accntGrntrPrdCdngCde;
-    }
-    
-    public void setAccntGrntrPrdCdngCde(String accntGrntrPrdCdngCde) {
-        this.accntGrntrPrdCdngCde = accntGrntrPrdCdngCde;
-    }
-    
-    
-    
-    public String getAccntGrntrPrdCdngDsplay() {
-        return this.accntGrntrPrdCdngDsplay;
-    }
-    
-    public void setAccntGrntrPrdCdngDsplay(String accntGrntrPrdCdngDsplay) {
-        this.accntGrntrPrdCdngDsplay = accntGrntrPrdCdngDsplay;
-    }
-    
-    
-    
-    public String getAccntGrntrPrdCdngVrsn() {
-        return this.accntGrntrPrdCdngVrsn;
-    }
-    
-    public void setAccntGrntrPrdCdngVrsn(String accntGrntrPrdCdngVrsn) {
-        this.accntGrntrPrdCdngVrsn = accntGrntrPrdCdngVrsn;
-    }
-    
-    
-    
-    public String getAccntGrntrPrdCdngSstm() {
-        return this.accntGrntrPrdCdngSstm;
-    }
-    
-    public void setAccntGrntrPrdCdngSstm(String accntGrntrPrdCdngSstm) {
-        this.accntGrntrPrdCdngSstm = accntGrntrPrdCdngSstm;
-    }
-    
-    
-    
-    public String getAccountPartOf() {
-        return this.accountPartOf;
-    }
-    
-    public void setAccountPartOf(String accountPartOf) {
-        this.accountPartOf = accountPartOf;
-    }
-    
-    
-    
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
+    }
+    
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getAccountIdentifierIdentifierUse()
+    {
+        return this.accountIdentifierIdentifierUse;
+    }
+    
+    public void setAccountIdentifierIdentifierUse
+        (String accountIdentifierIdentifierUse) 
+        {
+      this.accountIdentifierIdentifierUse = accountIdentifierIdentifierUse;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcCSstm()
+    {
+        return this.accntDntfrDntfrTpCcCSstm;
+    }
+    
+    public void setAccntDntfrDntfrTpCcCSstm
+        (String accntDntfrDntfrTpCcCSstm) 
+        {
+      this.accntDntfrDntfrTpCcCSstm = accntDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcCVrsn()
+    {
+        return this.accntDntfrDntfrTpCcCVrsn;
+    }
+    
+    public void setAccntDntfrDntfrTpCcCVrsn
+        (String accntDntfrDntfrTpCcCVrsn) 
+        {
+      this.accntDntfrDntfrTpCcCVrsn = accntDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcCCde()
+    {
+        return this.accntDntfrDntfrTpCcCCde;
+    }
+    
+    public void setAccntDntfrDntfrTpCcCCde
+        (String accntDntfrDntfrTpCcCCde) 
+        {
+      this.accntDntfrDntfrTpCcCCde = accntDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcCDsplay()
+    {
+        return this.accntDntfrDntfrTpCcCDsplay;
+    }
+    
+    public void setAccntDntfrDntfrTpCcCDsplay
+        (String accntDntfrDntfrTpCcCDsplay) 
+        {
+      this.accntDntfrDntfrTpCcCDsplay = accntDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.accntDntfrDntfrTpCcCSrSlctd;
+    }
+    
+    public void setAccntDntfrDntfrTpCcCSrSlctd
+        (String accntDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.accntDntfrDntfrTpCcCSrSlctd = accntDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getAccntDntfrDntfrTpCcTxt()
+    {
+        return this.accntDntfrDntfrTpCcTxt;
+    }
+    
+    public void setAccntDntfrDntfrTpCcTxt
+        (String accntDntfrDntfrTpCcTxt) 
+        {
+      this.accntDntfrDntfrTpCcTxt = accntDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getAccntDntfrDntfrPrdPrdStrt()
+    {
+        return this.accntDntfrDntfrPrdPrdStrt;
+    }
+    
+    public void setAccntDntfrDntfrPrdPrdStrt
+        (String accntDntfrDntfrPrdPrdStrt) 
+        {
+      this.accntDntfrDntfrPrdPrdStrt = accntDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getAccntDntfrDntfrPrdPrdNd()
+    {
+        return this.accntDntfrDntfrPrdPrdNd;
+    }
+    
+    public void setAccntDntfrDntfrPrdPrdNd
+        (String accntDntfrDntfrPrdPrdNd) 
+        {
+      this.accntDntfrDntfrPrdPrdNd = accntDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getAccntDntfrDntfrSsgnr()
+    {
+        return this.accntDntfrDntfrSsgnr;
+    }
+    
+    public void setAccntDntfrDntfrSsgnr
+        (String accntDntfrDntfrSsgnr) 
+        {
+      this.accntDntfrDntfrSsgnr = accntDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getAccntDntfrDntfrVlue()
+    {
+        return this.accntDntfrDntfrVlue;
+    }
+    
+    public void setAccntDntfrDntfrVlue
+        (String accntDntfrDntfrVlue) 
+        {
+      this.accntDntfrDntfrVlue = accntDntfrDntfrVlue;
+}
+    public 
+    String 
+    getAccntDntfrDntfrSstm()
+    {
+        return this.accntDntfrDntfrSstm;
+    }
+    
+    public void setAccntDntfrDntfrSstm
+        (String accntDntfrDntfrSstm) 
+        {
+      this.accntDntfrDntfrSstm = accntDntfrDntfrSstm;
+}
+    public 
+    String 
+    getAccountStatusCode()
+    {
+        return this.accountStatusCode;
+    }
+    
+    public void setAccountStatusCode
+        (String accountStatusCode) 
+        {
+      this.accountStatusCode = accountStatusCode;
+}
+    public 
+    String 
+    getAccountTypeCcCodingCSystem()
+    {
+        return this.accountTypeCcCodingCSystem;
+    }
+    
+    public void setAccountTypeCcCodingCSystem
+        (String accountTypeCcCodingCSystem) 
+        {
+      this.accountTypeCcCodingCSystem = accountTypeCcCodingCSystem;
+}
+    public 
+    String 
+    getAccountTypeCcCodingCVersion()
+    {
+        return this.accountTypeCcCodingCVersion;
+    }
+    
+    public void setAccountTypeCcCodingCVersion
+        (String accountTypeCcCodingCVersion) 
+        {
+      this.accountTypeCcCodingCVersion = accountTypeCcCodingCVersion;
+}
+    public 
+    String 
+    getAccountTypeCcCodingCCode()
+    {
+        return this.accountTypeCcCodingCCode;
+    }
+    
+    public void setAccountTypeCcCodingCCode
+        (String accountTypeCcCodingCCode) 
+        {
+      this.accountTypeCcCodingCCode = accountTypeCcCodingCCode;
+}
+    public 
+    String 
+    getAccountTypeCcCodingCDisplay()
+    {
+        return this.accountTypeCcCodingCDisplay;
+    }
+    
+    public void setAccountTypeCcCodingCDisplay
+        (String accountTypeCcCodingCDisplay) 
+        {
+      this.accountTypeCcCodingCDisplay = accountTypeCcCodingCDisplay;
+}
+    public 
+    String 
+    getAccntTpCcCdngCSrSlctd()
+    {
+        return this.accntTpCcCdngCSrSlctd;
+    }
+    
+    public void setAccntTpCcCdngCSrSlctd
+        (String accntTpCcCdngCSrSlctd) 
+        {
+      this.accntTpCcCdngCSrSlctd = accntTpCcCdngCSrSlctd;
+}
+    public 
+    String 
+    getAccountTypeCcText()
+    {
+        return this.accountTypeCcText;
+    }
+    
+    public void setAccountTypeCcText
+        (String accountTypeCcText) 
+        {
+      this.accountTypeCcText = accountTypeCcText;
+}
+    public 
+    String 
+    getAccountNameString()
+    {
+        return this.accountNameString;
+    }
+    
+    public void setAccountNameString
+        (String accountNameString) 
+        {
+      this.accountNameString = accountNameString;
+}
+    public 
+    String 
+    getAccountSubjectReference()
+    {
+        return this.accountSubjectReference;
+    }
+    
+    public void setAccountSubjectReference
+        (String accountSubjectReference) 
+        {
+      this.accountSubjectReference = accountSubjectReference;
+}
+    public 
+    String 
+    getAccountServicePeriodPeriodStart()
+    {
+        return this.accountServicePeriodPeriodStart;
+    }
+    
+    public void setAccountServicePeriodPeriodStart
+        (String accountServicePeriodPeriodStart) 
+        {
+      this.accountServicePeriodPeriodStart = accountServicePeriodPeriodStart;
+}
+    public 
+    String 
+    getAccountServicePeriodPeriodEnd()
+    {
+        return this.accountServicePeriodPeriodEnd;
+    }
+    
+    public void setAccountServicePeriodPeriodEnd
+        (String accountServicePeriodPeriodEnd) 
+        {
+      this.accountServicePeriodPeriodEnd = accountServicePeriodPeriodEnd;
+}
+    public 
+    String 
+    getAccntCvrgCvrgRfrnce()
+    {
+        return this.accntCvrgCvrgRfrnce;
+    }
+    
+    public void setAccntCvrgCvrgRfrnce
+        (String accntCvrgCvrgRfrnce) 
+        {
+      this.accntCvrgCvrgRfrnce = accntCvrgCvrgRfrnce;
+}
+    public 
+    String 
+    getAccntCvrgPrrtPstvnt()
+    {
+        return this.accntCvrgPrrtPstvnt;
+    }
+    
+    public void setAccntCvrgPrrtPstvnt
+        (String accntCvrgPrrtPstvnt) 
+        {
+      this.accntCvrgPrrtPstvnt = accntCvrgPrrtPstvnt;
+}
+    public 
+    String 
+    getAccountOwnerReference()
+    {
+        return this.accountOwnerReference;
+    }
+    
+    public void setAccountOwnerReference
+        (String accountOwnerReference) 
+        {
+      this.accountOwnerReference = accountOwnerReference;
+}
+    public 
+    String 
+    getAccountDescriptionString()
+    {
+        return this.accountDescriptionString;
+    }
+    
+    public void setAccountDescriptionString
+        (String accountDescriptionString) 
+        {
+      this.accountDescriptionString = accountDescriptionString;
+}
+    public 
+    String 
+    getAccountGuarantorPartyReference()
+    {
+        return this.accountGuarantorPartyReference;
+    }
+    
+    public void setAccountGuarantorPartyReference
+        (String accountGuarantorPartyReference) 
+        {
+      this.accountGuarantorPartyReference = accountGuarantorPartyReference;
+}
+    public 
+    String 
+    getAccountGuarantorOnHoldBoolean()
+    {
+        return this.accountGuarantorOnHoldBoolean;
+    }
+    
+    public void setAccountGuarantorOnHoldBoolean
+        (String accountGuarantorOnHoldBoolean) 
+        {
+      this.accountGuarantorOnHoldBoolean = accountGuarantorOnHoldBoolean;
+}
+    public 
+    String 
+    getAccntGrntrPrdPrdStrt()
+    {
+        return this.accntGrntrPrdPrdStrt;
+    }
+    
+    public void setAccntGrntrPrdPrdStrt
+        (String accntGrntrPrdPrdStrt) 
+        {
+      this.accntGrntrPrdPrdStrt = accntGrntrPrdPrdStrt;
+}
+    public 
+    String 
+    getAccntGrntrPrdPrdNd()
+    {
+        return this.accntGrntrPrdPrdNd;
+    }
+    
+    public void setAccntGrntrPrdPrdNd
+        (String accntGrntrPrdPrdNd) 
+        {
+      this.accntGrntrPrdPrdNd = accntGrntrPrdPrdNd;
+}
+    public 
+    String 
+    getAccountPartOfReference()
+    {
+        return this.accountPartOfReference;
+    }
+    
+    public void setAccountPartOfReference
+        (String accountPartOfReference) 
+        {
+      this.accountPartOfReference = accountPartOfReference;
+}
 
 
 

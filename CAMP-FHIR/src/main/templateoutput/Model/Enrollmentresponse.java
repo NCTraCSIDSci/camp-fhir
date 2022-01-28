@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,161 +10,292 @@ package main.templateoutput.Model;
 public class Enrollmentresponse  implements java.io.Serializable {
 
 
-     private String enrllmntRspnsDntfrCdngCde;
-     private String enrllmntRspnsDntfrCdngSrSlctd;
-     private String enrllmntRspnsDntfrCdngVrsn;
-     private String enrllmntRspnsDntfrCdngDsplay;
-     private String enrllmntRspnsDntfrCdngSstm;
-     private String enrollmentResponseStatus;
-     private String enrollmentResponseRequest;
-     private String enrollmentResponseOutcome;
-     private String enrollmentResponseDisposition;
-     private String enrollmentResponseCreated;
-     private String enrollmentResponseOrganization;
-     private String enrollmentResponseRequestProvider;
+     private Integer id;
+     private String enrllmntRspnsDntfrDntfrSe;
+     private String enrllmntRspnsDntfrDntfrTpCcCSstm;
+     private String enrllmntRspnsDntfrDntfrTpCcCVrsn;
+     private String enrllmntRspnsDntfrDntfrTpCcCCde;
+     private String enrllmntRspnsDntfrDntfrTpCcCDsplay;
+     private String enrllmntRspnsDntfrDntfrTpCcCSrSlctd;
+     private String enrllmntRspnsDntfrDntfrTpCcTxt;
+     private String enrllmntRspnsDntfrDntfrPrdPrdStrt;
+     private String enrllmntRspnsDntfrDntfrPrdPrdNd;
+     private String enrllmntRspnsDntfrDntfrSsgnr;
+     private String enrllmntRspnsDntfrDntfrVlue;
+     private String enrllmntRspnsDntfrDntfrSstm;
+     private String enrollmentResponseStatusCode;
+     private String enrllmntRspnsRqstRfrnce;
+     private String enrollmentResponseOutcomeCode;
+     private String enrllmntRspnsDspstnStrng;
+     private String enrllmntRspnsCrtdDtTme;
+     private String enrllmntRspnsRgnztnRfrnce;
+     private String enrllmntRspnsRqstPrvdrRfrnce;
 
     public Enrollmentresponse() {
     }
 
-	
-    public Enrollmentresponse(String enrllmntRspnsDntfrCdngCde) {
-        this.enrllmntRspnsDntfrCdngCde = enrllmntRspnsDntfrCdngCde;
-    }
-    public Enrollmentresponse(String enrllmntRspnsDntfrCdngCde, String enrllmntRspnsDntfrCdngSrSlctd, String enrllmntRspnsDntfrCdngVrsn, String enrllmntRspnsDntfrCdngDsplay, String enrllmntRspnsDntfrCdngSstm, String enrollmentResponseStatus, String enrollmentResponseRequest, String enrollmentResponseOutcome, String enrollmentResponseDisposition, String enrollmentResponseCreated, String enrollmentResponseOrganization, String enrollmentResponseRequestProvider) {
-       this.enrllmntRspnsDntfrCdngCde = enrllmntRspnsDntfrCdngCde;
-       this.enrllmntRspnsDntfrCdngSrSlctd = enrllmntRspnsDntfrCdngSrSlctd;
-       this.enrllmntRspnsDntfrCdngVrsn = enrllmntRspnsDntfrCdngVrsn;
-       this.enrllmntRspnsDntfrCdngDsplay = enrllmntRspnsDntfrCdngDsplay;
-       this.enrllmntRspnsDntfrCdngSstm = enrllmntRspnsDntfrCdngSstm;
-       this.enrollmentResponseStatus = enrollmentResponseStatus;
-       this.enrollmentResponseRequest = enrollmentResponseRequest;
-       this.enrollmentResponseOutcome = enrollmentResponseOutcome;
-       this.enrollmentResponseDisposition = enrollmentResponseDisposition;
-       this.enrollmentResponseCreated = enrollmentResponseCreated;
-       this.enrollmentResponseOrganization = enrollmentResponseOrganization;
-       this.enrollmentResponseRequestProvider = enrollmentResponseRequestProvider;
+    public Enrollmentresponse(String enrllmntRspnsDntfrDntfrSe, String enrllmntRspnsDntfrDntfrTpCcCSstm, String enrllmntRspnsDntfrDntfrTpCcCVrsn, String enrllmntRspnsDntfrDntfrTpCcCCde, String enrllmntRspnsDntfrDntfrTpCcCDsplay, String enrllmntRspnsDntfrDntfrTpCcCSrSlctd, String enrllmntRspnsDntfrDntfrTpCcTxt, String enrllmntRspnsDntfrDntfrPrdPrdStrt, String enrllmntRspnsDntfrDntfrPrdPrdNd, String enrllmntRspnsDntfrDntfrSsgnr, String enrllmntRspnsDntfrDntfrVlue, String enrllmntRspnsDntfrDntfrSstm, String enrollmentResponseStatusCode, String enrllmntRspnsRqstRfrnce, String enrollmentResponseOutcomeCode, String enrllmntRspnsDspstnStrng, String enrllmntRspnsCrtdDtTme, String enrllmntRspnsRgnztnRfrnce, String enrllmntRspnsRqstPrvdrRfrnce) {
+       this.enrllmntRspnsDntfrDntfrSe = enrllmntRspnsDntfrDntfrSe;
+       this.enrllmntRspnsDntfrDntfrTpCcCSstm = enrllmntRspnsDntfrDntfrTpCcCSstm;
+       this.enrllmntRspnsDntfrDntfrTpCcCVrsn = enrllmntRspnsDntfrDntfrTpCcCVrsn;
+       this.enrllmntRspnsDntfrDntfrTpCcCCde = enrllmntRspnsDntfrDntfrTpCcCCde;
+       this.enrllmntRspnsDntfrDntfrTpCcCDsplay = enrllmntRspnsDntfrDntfrTpCcCDsplay;
+       this.enrllmntRspnsDntfrDntfrTpCcCSrSlctd = enrllmntRspnsDntfrDntfrTpCcCSrSlctd;
+       this.enrllmntRspnsDntfrDntfrTpCcTxt = enrllmntRspnsDntfrDntfrTpCcTxt;
+       this.enrllmntRspnsDntfrDntfrPrdPrdStrt = enrllmntRspnsDntfrDntfrPrdPrdStrt;
+       this.enrllmntRspnsDntfrDntfrPrdPrdNd = enrllmntRspnsDntfrDntfrPrdPrdNd;
+       this.enrllmntRspnsDntfrDntfrSsgnr = enrllmntRspnsDntfrDntfrSsgnr;
+       this.enrllmntRspnsDntfrDntfrVlue = enrllmntRspnsDntfrDntfrVlue;
+       this.enrllmntRspnsDntfrDntfrSstm = enrllmntRspnsDntfrDntfrSstm;
+       this.enrollmentResponseStatusCode = enrollmentResponseStatusCode;
+       this.enrllmntRspnsRqstRfrnce = enrllmntRspnsRqstRfrnce;
+       this.enrollmentResponseOutcomeCode = enrollmentResponseOutcomeCode;
+       this.enrllmntRspnsDspstnStrng = enrllmntRspnsDspstnStrng;
+       this.enrllmntRspnsCrtdDtTme = enrllmntRspnsCrtdDtTme;
+       this.enrllmntRspnsRgnztnRfrnce = enrllmntRspnsRgnztnRfrnce;
+       this.enrllmntRspnsRqstPrvdrRfrnce = enrllmntRspnsRqstPrvdrRfrnce;
     }
    
-    public String getEnrllmntRspnsDntfrCdngCde() {
-        return this.enrllmntRspnsDntfrCdngCde;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setEnrllmntRspnsDntfrCdngCde(String enrllmntRspnsDntfrCdngCde) {
-        this.enrllmntRspnsDntfrCdngCde = enrllmntRspnsDntfrCdngCde;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrSe()
+    {
+        return this.enrllmntRspnsDntfrDntfrSe;
     }
     
-    
-    
-    public String getEnrllmntRspnsDntfrCdngSrSlctd() {
-        return this.enrllmntRspnsDntfrCdngSrSlctd;
+    public void setEnrllmntRspnsDntfrDntfrSe
+        (String enrllmntRspnsDntfrDntfrSe) 
+        {
+      this.enrllmntRspnsDntfrDntfrSe = enrllmntRspnsDntfrDntfrSe;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcCSstm()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcCSstm;
     }
     
-    public void setEnrllmntRspnsDntfrCdngSrSlctd(String enrllmntRspnsDntfrCdngSrSlctd) {
-        this.enrllmntRspnsDntfrCdngSrSlctd = enrllmntRspnsDntfrCdngSrSlctd;
+    public void setEnrllmntRspnsDntfrDntfrTpCcCSstm
+        (String enrllmntRspnsDntfrDntfrTpCcCSstm) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcCSstm = enrllmntRspnsDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcCVrsn()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcCVrsn;
     }
     
-    
-    
-    public String getEnrllmntRspnsDntfrCdngVrsn() {
-        return this.enrllmntRspnsDntfrCdngVrsn;
+    public void setEnrllmntRspnsDntfrDntfrTpCcCVrsn
+        (String enrllmntRspnsDntfrDntfrTpCcCVrsn) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcCVrsn = enrllmntRspnsDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcCCde()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcCCde;
     }
     
-    public void setEnrllmntRspnsDntfrCdngVrsn(String enrllmntRspnsDntfrCdngVrsn) {
-        this.enrllmntRspnsDntfrCdngVrsn = enrllmntRspnsDntfrCdngVrsn;
+    public void setEnrllmntRspnsDntfrDntfrTpCcCCde
+        (String enrllmntRspnsDntfrDntfrTpCcCCde) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcCCde = enrllmntRspnsDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcCDsplay()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcCDsplay;
     }
     
-    
-    
-    public String getEnrllmntRspnsDntfrCdngDsplay() {
-        return this.enrllmntRspnsDntfrCdngDsplay;
+    public void setEnrllmntRspnsDntfrDntfrTpCcCDsplay
+        (String enrllmntRspnsDntfrDntfrTpCcCDsplay) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcCDsplay = enrllmntRspnsDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcCSrSlctd;
     }
     
-    public void setEnrllmntRspnsDntfrCdngDsplay(String enrllmntRspnsDntfrCdngDsplay) {
-        this.enrllmntRspnsDntfrCdngDsplay = enrllmntRspnsDntfrCdngDsplay;
+    public void setEnrllmntRspnsDntfrDntfrTpCcCSrSlctd
+        (String enrllmntRspnsDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcCSrSlctd = enrllmntRspnsDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrTpCcTxt()
+    {
+        return this.enrllmntRspnsDntfrDntfrTpCcTxt;
     }
     
-    
-    
-    public String getEnrllmntRspnsDntfrCdngSstm() {
-        return this.enrllmntRspnsDntfrCdngSstm;
+    public void setEnrllmntRspnsDntfrDntfrTpCcTxt
+        (String enrllmntRspnsDntfrDntfrTpCcTxt) 
+        {
+      this.enrllmntRspnsDntfrDntfrTpCcTxt = enrllmntRspnsDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrPrdPrdStrt()
+    {
+        return this.enrllmntRspnsDntfrDntfrPrdPrdStrt;
     }
     
-    public void setEnrllmntRspnsDntfrCdngSstm(String enrllmntRspnsDntfrCdngSstm) {
-        this.enrllmntRspnsDntfrCdngSstm = enrllmntRspnsDntfrCdngSstm;
+    public void setEnrllmntRspnsDntfrDntfrPrdPrdStrt
+        (String enrllmntRspnsDntfrDntfrPrdPrdStrt) 
+        {
+      this.enrllmntRspnsDntfrDntfrPrdPrdStrt = enrllmntRspnsDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrPrdPrdNd()
+    {
+        return this.enrllmntRspnsDntfrDntfrPrdPrdNd;
     }
     
-    
-    
-    public String getEnrollmentResponseStatus() {
-        return this.enrollmentResponseStatus;
+    public void setEnrllmntRspnsDntfrDntfrPrdPrdNd
+        (String enrllmntRspnsDntfrDntfrPrdPrdNd) 
+        {
+      this.enrllmntRspnsDntfrDntfrPrdPrdNd = enrllmntRspnsDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrSsgnr()
+    {
+        return this.enrllmntRspnsDntfrDntfrSsgnr;
     }
     
-    public void setEnrollmentResponseStatus(String enrollmentResponseStatus) {
-        this.enrollmentResponseStatus = enrollmentResponseStatus;
+    public void setEnrllmntRspnsDntfrDntfrSsgnr
+        (String enrllmntRspnsDntfrDntfrSsgnr) 
+        {
+      this.enrllmntRspnsDntfrDntfrSsgnr = enrllmntRspnsDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrVlue()
+    {
+        return this.enrllmntRspnsDntfrDntfrVlue;
     }
     
-    
-    
-    public String getEnrollmentResponseRequest() {
-        return this.enrollmentResponseRequest;
+    public void setEnrllmntRspnsDntfrDntfrVlue
+        (String enrllmntRspnsDntfrDntfrVlue) 
+        {
+      this.enrllmntRspnsDntfrDntfrVlue = enrllmntRspnsDntfrDntfrVlue;
+}
+    public 
+    String 
+    getEnrllmntRspnsDntfrDntfrSstm()
+    {
+        return this.enrllmntRspnsDntfrDntfrSstm;
     }
     
-    public void setEnrollmentResponseRequest(String enrollmentResponseRequest) {
-        this.enrollmentResponseRequest = enrollmentResponseRequest;
+    public void setEnrllmntRspnsDntfrDntfrSstm
+        (String enrllmntRspnsDntfrDntfrSstm) 
+        {
+      this.enrllmntRspnsDntfrDntfrSstm = enrllmntRspnsDntfrDntfrSstm;
+}
+    public 
+    String 
+    getEnrollmentResponseStatusCode()
+    {
+        return this.enrollmentResponseStatusCode;
     }
     
-    
-    
-    public String getEnrollmentResponseOutcome() {
-        return this.enrollmentResponseOutcome;
+    public void setEnrollmentResponseStatusCode
+        (String enrollmentResponseStatusCode) 
+        {
+      this.enrollmentResponseStatusCode = enrollmentResponseStatusCode;
+}
+    public 
+    String 
+    getEnrllmntRspnsRqstRfrnce()
+    {
+        return this.enrllmntRspnsRqstRfrnce;
     }
     
-    public void setEnrollmentResponseOutcome(String enrollmentResponseOutcome) {
-        this.enrollmentResponseOutcome = enrollmentResponseOutcome;
+    public void setEnrllmntRspnsRqstRfrnce
+        (String enrllmntRspnsRqstRfrnce) 
+        {
+      this.enrllmntRspnsRqstRfrnce = enrllmntRspnsRqstRfrnce;
+}
+    public 
+    String 
+    getEnrollmentResponseOutcomeCode()
+    {
+        return this.enrollmentResponseOutcomeCode;
     }
     
-    
-    
-    public String getEnrollmentResponseDisposition() {
-        return this.enrollmentResponseDisposition;
+    public void setEnrollmentResponseOutcomeCode
+        (String enrollmentResponseOutcomeCode) 
+        {
+      this.enrollmentResponseOutcomeCode = enrollmentResponseOutcomeCode;
+}
+    public 
+    String 
+    getEnrllmntRspnsDspstnStrng()
+    {
+        return this.enrllmntRspnsDspstnStrng;
     }
     
-    public void setEnrollmentResponseDisposition(String enrollmentResponseDisposition) {
-        this.enrollmentResponseDisposition = enrollmentResponseDisposition;
+    public void setEnrllmntRspnsDspstnStrng
+        (String enrllmntRspnsDspstnStrng) 
+        {
+      this.enrllmntRspnsDspstnStrng = enrllmntRspnsDspstnStrng;
+}
+    public 
+    String 
+    getEnrllmntRspnsCrtdDtTme()
+    {
+        return this.enrllmntRspnsCrtdDtTme;
     }
     
-    
-    
-    public String getEnrollmentResponseCreated() {
-        return this.enrollmentResponseCreated;
+    public void setEnrllmntRspnsCrtdDtTme
+        (String enrllmntRspnsCrtdDtTme) 
+        {
+      this.enrllmntRspnsCrtdDtTme = enrllmntRspnsCrtdDtTme;
+}
+    public 
+    String 
+    getEnrllmntRspnsRgnztnRfrnce()
+    {
+        return this.enrllmntRspnsRgnztnRfrnce;
     }
     
-    public void setEnrollmentResponseCreated(String enrollmentResponseCreated) {
-        this.enrollmentResponseCreated = enrollmentResponseCreated;
+    public void setEnrllmntRspnsRgnztnRfrnce
+        (String enrllmntRspnsRgnztnRfrnce) 
+        {
+      this.enrllmntRspnsRgnztnRfrnce = enrllmntRspnsRgnztnRfrnce;
+}
+    public 
+    String 
+    getEnrllmntRspnsRqstPrvdrRfrnce()
+    {
+        return this.enrllmntRspnsRqstPrvdrRfrnce;
     }
     
-    
-    
-    public String getEnrollmentResponseOrganization() {
-        return this.enrollmentResponseOrganization;
-    }
-    
-    public void setEnrollmentResponseOrganization(String enrollmentResponseOrganization) {
-        this.enrollmentResponseOrganization = enrollmentResponseOrganization;
-    }
-    
-    
-    
-    public String getEnrollmentResponseRequestProvider() {
-        return this.enrollmentResponseRequestProvider;
-    }
-    
-    public void setEnrollmentResponseRequestProvider(String enrollmentResponseRequestProvider) {
-        this.enrollmentResponseRequestProvider = enrollmentResponseRequestProvider;
-    }
-    
-    
-    
+    public void setEnrllmntRspnsRqstPrvdrRfrnce
+        (String enrllmntRspnsRqstPrvdrRfrnce) 
+        {
+      this.enrllmntRspnsRqstPrvdrRfrnce = enrllmntRspnsRqstPrvdrRfrnce;
+}
 
 
 

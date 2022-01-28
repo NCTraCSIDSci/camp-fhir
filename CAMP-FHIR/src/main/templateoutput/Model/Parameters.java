@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,53 +10,68 @@ package main.templateoutput.Model;
 public class Parameters  implements java.io.Serializable {
 
 
-     private String parametersParameterName;
-     private String parametersParameterResource;
-     private String parametersParameterPart;
+     private Integer id;
+     private String parametersParameterNameString;
+     private String prmtrsPrmtrRsrcRsrce;
+     private String prmtrsPrmtrPrtPrmtr;
 
     public Parameters() {
     }
 
-	
-    public Parameters(String parametersParameterName) {
-        this.parametersParameterName = parametersParameterName;
-    }
-    public Parameters(String parametersParameterName, String parametersParameterResource, String parametersParameterPart) {
-       this.parametersParameterName = parametersParameterName;
-       this.parametersParameterResource = parametersParameterResource;
-       this.parametersParameterPart = parametersParameterPart;
+    public Parameters(String parametersParameterNameString, String prmtrsPrmtrRsrcRsrce, String prmtrsPrmtrPrtPrmtr) {
+       this.parametersParameterNameString = parametersParameterNameString;
+       this.prmtrsPrmtrRsrcRsrce = prmtrsPrmtrRsrcRsrce;
+       this.prmtrsPrmtrPrtPrmtr = prmtrsPrmtrPrtPrmtr;
     }
    
-    public String getParametersParameterName() {
-        return this.parametersParameterName;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setParametersParameterName(String parametersParameterName) {
-        this.parametersParameterName = parametersParameterName;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getParametersParameterNameString()
+    {
+        return this.parametersParameterNameString;
     }
     
-    
-    
-    public String getParametersParameterResource() {
-        return this.parametersParameterResource;
+    public void setParametersParameterNameString
+        (String parametersParameterNameString) 
+        {
+      this.parametersParameterNameString = parametersParameterNameString;
+}
+    public 
+    String 
+    getPrmtrsPrmtrRsrcRsrce()
+    {
+        return this.prmtrsPrmtrRsrcRsrce;
     }
     
-    public void setParametersParameterResource(String parametersParameterResource) {
-        this.parametersParameterResource = parametersParameterResource;
+    public void setPrmtrsPrmtrRsrcRsrce
+        (String prmtrsPrmtrRsrcRsrce) 
+        {
+      this.prmtrsPrmtrRsrcRsrce = prmtrsPrmtrRsrcRsrce;
+}
+    public 
+    String 
+    getPrmtrsPrmtrPrtPrmtr()
+    {
+        return this.prmtrsPrmtrPrtPrmtr;
     }
     
-    
-    
-    public String getParametersParameterPart() {
-        return this.parametersParameterPart;
-    }
-    
-    public void setParametersParameterPart(String parametersParameterPart) {
-        this.parametersParameterPart = parametersParameterPart;
-    }
-    
-    
-    
+    public void setPrmtrsPrmtrPrtPrmtr
+        (String prmtrsPrmtrPrtPrmtr) 
+        {
+      this.prmtrsPrmtrPrtPrmtr = prmtrsPrmtrPrtPrmtr;
+}
 
 
 

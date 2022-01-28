@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,149 +10,278 @@ package main.templateoutput.Model;
 public class Enrollmentrequest  implements java.io.Serializable {
 
 
-     private String enrllmntRqstDntfrCdngCde;
-     private String enrllmntRqstDntfrCdngSrSlctd;
-     private String enrllmntRqstDntfrCdngVrsn;
-     private String enrllmntRqstDntfrCdngDsplay;
-     private String enrllmntRqstDntfrCdngSstm;
-     private String enrollmentRequestStatus;
-     private String enrollmentRequestCreated;
-     private String enrollmentRequestInsurer;
-     private String enrollmentRequestProvider;
-     private String enrollmentRequestCandidate;
-     private String enrollmentRequestCoverage;
+     private Integer id;
+     private String enrllmntRqstDntfrDntfrSe;
+     private String enrllmntRqstDntfrDntfrTpCcCSstm;
+     private String enrllmntRqstDntfrDntfrTpCcCVrsn;
+     private String enrllmntRqstDntfrDntfrTpCcCCde;
+     private String enrllmntRqstDntfrDntfrTpCcCDsplay;
+     private String enrllmntRqstDntfrDntfrTpCcCSrSlctd;
+     private String enrllmntRqstDntfrDntfrTpCcTxt;
+     private String enrllmntRqstDntfrDntfrPrdPrdStrt;
+     private String enrllmntRqstDntfrDntfrPrdPrdNd;
+     private String enrllmntRqstDntfrDntfrSsgnr;
+     private String enrllmntRqstDntfrDntfrVlue;
+     private String enrllmntRqstDntfrDntfrSstm;
+     private String enrollmentRequestStatusCode;
+     private String enrollmentRequestCreatedDateTime;
+     private String enrllmntRqstNsrrRfrnce;
+     private String enrllmntRqstPrvdrRfrnce;
+     private String enrllmntRqstCnddtRfrnce;
+     private String enrllmntRqstCvrgRfrnce;
 
     public Enrollmentrequest() {
     }
 
-	
-    public Enrollmentrequest(String enrllmntRqstDntfrCdngCde) {
-        this.enrllmntRqstDntfrCdngCde = enrllmntRqstDntfrCdngCde;
-    }
-    public Enrollmentrequest(String enrllmntRqstDntfrCdngCde, String enrllmntRqstDntfrCdngSrSlctd, String enrllmntRqstDntfrCdngVrsn, String enrllmntRqstDntfrCdngDsplay, String enrllmntRqstDntfrCdngSstm, String enrollmentRequestStatus, String enrollmentRequestCreated, String enrollmentRequestInsurer, String enrollmentRequestProvider, String enrollmentRequestCandidate, String enrollmentRequestCoverage) {
-       this.enrllmntRqstDntfrCdngCde = enrllmntRqstDntfrCdngCde;
-       this.enrllmntRqstDntfrCdngSrSlctd = enrllmntRqstDntfrCdngSrSlctd;
-       this.enrllmntRqstDntfrCdngVrsn = enrllmntRqstDntfrCdngVrsn;
-       this.enrllmntRqstDntfrCdngDsplay = enrllmntRqstDntfrCdngDsplay;
-       this.enrllmntRqstDntfrCdngSstm = enrllmntRqstDntfrCdngSstm;
-       this.enrollmentRequestStatus = enrollmentRequestStatus;
-       this.enrollmentRequestCreated = enrollmentRequestCreated;
-       this.enrollmentRequestInsurer = enrollmentRequestInsurer;
-       this.enrollmentRequestProvider = enrollmentRequestProvider;
-       this.enrollmentRequestCandidate = enrollmentRequestCandidate;
-       this.enrollmentRequestCoverage = enrollmentRequestCoverage;
+    public Enrollmentrequest(String enrllmntRqstDntfrDntfrSe, String enrllmntRqstDntfrDntfrTpCcCSstm, String enrllmntRqstDntfrDntfrTpCcCVrsn, String enrllmntRqstDntfrDntfrTpCcCCde, String enrllmntRqstDntfrDntfrTpCcCDsplay, String enrllmntRqstDntfrDntfrTpCcCSrSlctd, String enrllmntRqstDntfrDntfrTpCcTxt, String enrllmntRqstDntfrDntfrPrdPrdStrt, String enrllmntRqstDntfrDntfrPrdPrdNd, String enrllmntRqstDntfrDntfrSsgnr, String enrllmntRqstDntfrDntfrVlue, String enrllmntRqstDntfrDntfrSstm, String enrollmentRequestStatusCode, String enrollmentRequestCreatedDateTime, String enrllmntRqstNsrrRfrnce, String enrllmntRqstPrvdrRfrnce, String enrllmntRqstCnddtRfrnce, String enrllmntRqstCvrgRfrnce) {
+       this.enrllmntRqstDntfrDntfrSe = enrllmntRqstDntfrDntfrSe;
+       this.enrllmntRqstDntfrDntfrTpCcCSstm = enrllmntRqstDntfrDntfrTpCcCSstm;
+       this.enrllmntRqstDntfrDntfrTpCcCVrsn = enrllmntRqstDntfrDntfrTpCcCVrsn;
+       this.enrllmntRqstDntfrDntfrTpCcCCde = enrllmntRqstDntfrDntfrTpCcCCde;
+       this.enrllmntRqstDntfrDntfrTpCcCDsplay = enrllmntRqstDntfrDntfrTpCcCDsplay;
+       this.enrllmntRqstDntfrDntfrTpCcCSrSlctd = enrllmntRqstDntfrDntfrTpCcCSrSlctd;
+       this.enrllmntRqstDntfrDntfrTpCcTxt = enrllmntRqstDntfrDntfrTpCcTxt;
+       this.enrllmntRqstDntfrDntfrPrdPrdStrt = enrllmntRqstDntfrDntfrPrdPrdStrt;
+       this.enrllmntRqstDntfrDntfrPrdPrdNd = enrllmntRqstDntfrDntfrPrdPrdNd;
+       this.enrllmntRqstDntfrDntfrSsgnr = enrllmntRqstDntfrDntfrSsgnr;
+       this.enrllmntRqstDntfrDntfrVlue = enrllmntRqstDntfrDntfrVlue;
+       this.enrllmntRqstDntfrDntfrSstm = enrllmntRqstDntfrDntfrSstm;
+       this.enrollmentRequestStatusCode = enrollmentRequestStatusCode;
+       this.enrollmentRequestCreatedDateTime = enrollmentRequestCreatedDateTime;
+       this.enrllmntRqstNsrrRfrnce = enrllmntRqstNsrrRfrnce;
+       this.enrllmntRqstPrvdrRfrnce = enrllmntRqstPrvdrRfrnce;
+       this.enrllmntRqstCnddtRfrnce = enrllmntRqstCnddtRfrnce;
+       this.enrllmntRqstCvrgRfrnce = enrllmntRqstCvrgRfrnce;
     }
    
-    public String getEnrllmntRqstDntfrCdngCde() {
-        return this.enrllmntRqstDntfrCdngCde;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setEnrllmntRqstDntfrCdngCde(String enrllmntRqstDntfrCdngCde) {
-        this.enrllmntRqstDntfrCdngCde = enrllmntRqstDntfrCdngCde;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrSe()
+    {
+        return this.enrllmntRqstDntfrDntfrSe;
     }
     
-    
-    
-    public String getEnrllmntRqstDntfrCdngSrSlctd() {
-        return this.enrllmntRqstDntfrCdngSrSlctd;
+    public void setEnrllmntRqstDntfrDntfrSe
+        (String enrllmntRqstDntfrDntfrSe) 
+        {
+      this.enrllmntRqstDntfrDntfrSe = enrllmntRqstDntfrDntfrSe;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcCSstm()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcCSstm;
     }
     
-    public void setEnrllmntRqstDntfrCdngSrSlctd(String enrllmntRqstDntfrCdngSrSlctd) {
-        this.enrllmntRqstDntfrCdngSrSlctd = enrllmntRqstDntfrCdngSrSlctd;
+    public void setEnrllmntRqstDntfrDntfrTpCcCSstm
+        (String enrllmntRqstDntfrDntfrTpCcCSstm) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcCSstm = enrllmntRqstDntfrDntfrTpCcCSstm;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcCVrsn()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcCVrsn;
     }
     
-    
-    
-    public String getEnrllmntRqstDntfrCdngVrsn() {
-        return this.enrllmntRqstDntfrCdngVrsn;
+    public void setEnrllmntRqstDntfrDntfrTpCcCVrsn
+        (String enrllmntRqstDntfrDntfrTpCcCVrsn) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcCVrsn = enrllmntRqstDntfrDntfrTpCcCVrsn;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcCCde()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcCCde;
     }
     
-    public void setEnrllmntRqstDntfrCdngVrsn(String enrllmntRqstDntfrCdngVrsn) {
-        this.enrllmntRqstDntfrCdngVrsn = enrllmntRqstDntfrCdngVrsn;
+    public void setEnrllmntRqstDntfrDntfrTpCcCCde
+        (String enrllmntRqstDntfrDntfrTpCcCCde) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcCCde = enrllmntRqstDntfrDntfrTpCcCCde;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcCDsplay()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcCDsplay;
     }
     
-    
-    
-    public String getEnrllmntRqstDntfrCdngDsplay() {
-        return this.enrllmntRqstDntfrCdngDsplay;
+    public void setEnrllmntRqstDntfrDntfrTpCcCDsplay
+        (String enrllmntRqstDntfrDntfrTpCcCDsplay) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcCDsplay = enrllmntRqstDntfrDntfrTpCcCDsplay;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcCSrSlctd()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcCSrSlctd;
     }
     
-    public void setEnrllmntRqstDntfrCdngDsplay(String enrllmntRqstDntfrCdngDsplay) {
-        this.enrllmntRqstDntfrCdngDsplay = enrllmntRqstDntfrCdngDsplay;
+    public void setEnrllmntRqstDntfrDntfrTpCcCSrSlctd
+        (String enrllmntRqstDntfrDntfrTpCcCSrSlctd) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcCSrSlctd = enrllmntRqstDntfrDntfrTpCcCSrSlctd;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrTpCcTxt()
+    {
+        return this.enrllmntRqstDntfrDntfrTpCcTxt;
     }
     
-    
-    
-    public String getEnrllmntRqstDntfrCdngSstm() {
-        return this.enrllmntRqstDntfrCdngSstm;
+    public void setEnrllmntRqstDntfrDntfrTpCcTxt
+        (String enrllmntRqstDntfrDntfrTpCcTxt) 
+        {
+      this.enrllmntRqstDntfrDntfrTpCcTxt = enrllmntRqstDntfrDntfrTpCcTxt;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrPrdPrdStrt()
+    {
+        return this.enrllmntRqstDntfrDntfrPrdPrdStrt;
     }
     
-    public void setEnrllmntRqstDntfrCdngSstm(String enrllmntRqstDntfrCdngSstm) {
-        this.enrllmntRqstDntfrCdngSstm = enrllmntRqstDntfrCdngSstm;
+    public void setEnrllmntRqstDntfrDntfrPrdPrdStrt
+        (String enrllmntRqstDntfrDntfrPrdPrdStrt) 
+        {
+      this.enrllmntRqstDntfrDntfrPrdPrdStrt = enrllmntRqstDntfrDntfrPrdPrdStrt;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrPrdPrdNd()
+    {
+        return this.enrllmntRqstDntfrDntfrPrdPrdNd;
     }
     
-    
-    
-    public String getEnrollmentRequestStatus() {
-        return this.enrollmentRequestStatus;
+    public void setEnrllmntRqstDntfrDntfrPrdPrdNd
+        (String enrllmntRqstDntfrDntfrPrdPrdNd) 
+        {
+      this.enrllmntRqstDntfrDntfrPrdPrdNd = enrllmntRqstDntfrDntfrPrdPrdNd;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrSsgnr()
+    {
+        return this.enrllmntRqstDntfrDntfrSsgnr;
     }
     
-    public void setEnrollmentRequestStatus(String enrollmentRequestStatus) {
-        this.enrollmentRequestStatus = enrollmentRequestStatus;
+    public void setEnrllmntRqstDntfrDntfrSsgnr
+        (String enrllmntRqstDntfrDntfrSsgnr) 
+        {
+      this.enrllmntRqstDntfrDntfrSsgnr = enrllmntRqstDntfrDntfrSsgnr;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrVlue()
+    {
+        return this.enrllmntRqstDntfrDntfrVlue;
     }
     
-    
-    
-    public String getEnrollmentRequestCreated() {
-        return this.enrollmentRequestCreated;
+    public void setEnrllmntRqstDntfrDntfrVlue
+        (String enrllmntRqstDntfrDntfrVlue) 
+        {
+      this.enrllmntRqstDntfrDntfrVlue = enrllmntRqstDntfrDntfrVlue;
+}
+    public 
+    String 
+    getEnrllmntRqstDntfrDntfrSstm()
+    {
+        return this.enrllmntRqstDntfrDntfrSstm;
     }
     
-    public void setEnrollmentRequestCreated(String enrollmentRequestCreated) {
-        this.enrollmentRequestCreated = enrollmentRequestCreated;
+    public void setEnrllmntRqstDntfrDntfrSstm
+        (String enrllmntRqstDntfrDntfrSstm) 
+        {
+      this.enrllmntRqstDntfrDntfrSstm = enrllmntRqstDntfrDntfrSstm;
+}
+    public 
+    String 
+    getEnrollmentRequestStatusCode()
+    {
+        return this.enrollmentRequestStatusCode;
     }
     
-    
-    
-    public String getEnrollmentRequestInsurer() {
-        return this.enrollmentRequestInsurer;
+    public void setEnrollmentRequestStatusCode
+        (String enrollmentRequestStatusCode) 
+        {
+      this.enrollmentRequestStatusCode = enrollmentRequestStatusCode;
+}
+    public 
+    String 
+    getEnrollmentRequestCreatedDateTime()
+    {
+        return this.enrollmentRequestCreatedDateTime;
     }
     
-    public void setEnrollmentRequestInsurer(String enrollmentRequestInsurer) {
-        this.enrollmentRequestInsurer = enrollmentRequestInsurer;
+    public void setEnrollmentRequestCreatedDateTime
+        (String enrollmentRequestCreatedDateTime) 
+        {
+      this.enrollmentRequestCreatedDateTime = enrollmentRequestCreatedDateTime;
+}
+    public 
+    String 
+    getEnrllmntRqstNsrrRfrnce()
+    {
+        return this.enrllmntRqstNsrrRfrnce;
     }
     
-    
-    
-    public String getEnrollmentRequestProvider() {
-        return this.enrollmentRequestProvider;
+    public void setEnrllmntRqstNsrrRfrnce
+        (String enrllmntRqstNsrrRfrnce) 
+        {
+      this.enrllmntRqstNsrrRfrnce = enrllmntRqstNsrrRfrnce;
+}
+    public 
+    String 
+    getEnrllmntRqstPrvdrRfrnce()
+    {
+        return this.enrllmntRqstPrvdrRfrnce;
     }
     
-    public void setEnrollmentRequestProvider(String enrollmentRequestProvider) {
-        this.enrollmentRequestProvider = enrollmentRequestProvider;
+    public void setEnrllmntRqstPrvdrRfrnce
+        (String enrllmntRqstPrvdrRfrnce) 
+        {
+      this.enrllmntRqstPrvdrRfrnce = enrllmntRqstPrvdrRfrnce;
+}
+    public 
+    String 
+    getEnrllmntRqstCnddtRfrnce()
+    {
+        return this.enrllmntRqstCnddtRfrnce;
     }
     
-    
-    
-    public String getEnrollmentRequestCandidate() {
-        return this.enrollmentRequestCandidate;
+    public void setEnrllmntRqstCnddtRfrnce
+        (String enrllmntRqstCnddtRfrnce) 
+        {
+      this.enrllmntRqstCnddtRfrnce = enrllmntRqstCnddtRfrnce;
+}
+    public 
+    String 
+    getEnrllmntRqstCvrgRfrnce()
+    {
+        return this.enrllmntRqstCvrgRfrnce;
     }
     
-    public void setEnrollmentRequestCandidate(String enrollmentRequestCandidate) {
-        this.enrollmentRequestCandidate = enrollmentRequestCandidate;
-    }
-    
-    
-    
-    public String getEnrollmentRequestCoverage() {
-        return this.enrollmentRequestCoverage;
-    }
-    
-    public void setEnrollmentRequestCoverage(String enrollmentRequestCoverage) {
-        this.enrollmentRequestCoverage = enrollmentRequestCoverage;
-    }
-    
-    
-    
+    public void setEnrllmntRqstCvrgRfrnce
+        (String enrllmntRqstCvrgRfrnce) 
+        {
+      this.enrllmntRqstCvrgRfrnce = enrllmntRqstCvrgRfrnce;
+}
 
 
 

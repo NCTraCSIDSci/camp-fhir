@@ -1,723 +1,243 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Organizationaffiliation" optimistic-lock="none" table="organizationaffiliation">
-        <id name="orgnztnffltnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="orgnztnffltnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_use_code</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_s_cde">
-                <comment>OrganizationAffiliation_identifierIdentifier_use_code</comment>
+        <property name="orgnztnffltnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_se">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>OrganizationAffiliation_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>OrganizationAffiliation_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Period_start</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Prd_strt">
-                <comment>OrganizationAffiliation_identifierIdentifier_Period_start</comment>
+        <property name="orgnztnffltnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Period_end</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Prd_nd">
-                <comment>OrganizationAffiliation_identifierIdentifier_Period_end</comment>
+        <property name="orgnztnffltnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>OrganizationAffiliation_identifierIdentifier_Reference_reference</comment>
+        <property name="orgnztnffltnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>OrganizationAffiliation_identifierIdentifier_Reference_type</comment>
+        <property name="orgnztnffltnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>OrganizationAffiliation_identifierIdentifier_Reference_identifier</comment>
+        <property name="orgnztnffltnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>OrganizationAffiliation_identifierIdentifier_Reference_display</comment>
+        <property name="orgnztnffltnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="Orgnztnffltn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"OrganizationAffiliation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_value_string</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_vl_strng">
-                <comment>OrganizationAffiliation_identifierIdentifier_value_string</comment>
+        <property name="orgnztnffltnCtvBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</meta>
+            <column length="65535" name="Orgnztnffltn_ctv_bln">
+                <comment>{ "tree" :"OrganizationAffiliation.active", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setActive"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">OrganizationAffiliation_identifierIdentifier_system_uri</meta>
-            <column length="512" name="Orgnztnffltn_dntfr_dntfr_sstm_ri">
-                <comment>OrganizationAffiliation_identifierIdentifier_system_uri</comment>
+        <property name="orgnztnffltnPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztnffltn_prd_Prd_strt">
+                <comment>{ "tree" :"OrganizationAffiliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="organizationAffiliationActive" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="OrganizationAffiliation_active">
-                <comment>boolean</comment>
+        <property name="orgnztnffltnPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztnffltn_prd_Prd_nd">
+                <comment>{ "tree" :"OrganizationAffiliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrdPrdStrtDtTme" type="string">
-            <meta attribute="resource-type">Period_start_dateTime</meta>
-            <column length="65535" name="Orgnztnffltn_prd_Prd_strt_dtTme">
-                <comment>Period_start_dateTime</comment>
+        <property name="orgnztnffltnRgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganization"}</meta>
+            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.organization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOrganization"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrdPrdNdDtTme" type="string">
-            <meta attribute="resource-type">Period_end_dateTime</meta>
-            <column length="65535" name="Orgnztnffltn_prd_Prd_nd_dtTme">
-                <comment>Period_end_dateTime</comment>
+        <property name="orgnztnffltnPrtcptngrgnztnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.participatingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParticipatingOrganization"}</meta>
+            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.participatingOrganization", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParticipatingOrganization"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="orgnztnffltnNtwrkRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNetwork"}</meta>
+            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.network", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addNetwork"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="orgnztnffltnCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="orgnztnffltnCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="orgnztnffltnCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setCode"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_cdng_C_cde">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="orgnztnffltnCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="orgnztnffltnCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="orgnztnffltnCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setText"}</meta>
+            <column length="65535" name="Orgnztnffltn_cd_CC_txt">
+                <comment>{ "tree" :"OrganizationAffiliation.code", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addCode, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="orgnztnffltnSpcltCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="orgnztnffltnSpcltCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="orgnztnffltnSpcltCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_cdng_C_cde">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="orgnztnffltnSpcltCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="orgnztnffltnSpcltCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="orgnztnffltnSpcltCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</meta>
+            <column length="65535" name="Orgnztnffltn_spclt_CC_txt">
+                <comment>{ "tree" :"OrganizationAffiliation.specialty", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addSpecialty, setText"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnRgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_rgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="orgnztnffltnLctnRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.location", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocation"}</meta>
+            <column length="65535" name="Orgnztnffltn_lctn_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.location", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addLocation"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="orgnztnffltnHlthcrSrvcRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.healthcareService", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHealthcareService"}</meta>
+            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.healthcareService", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addHealthcareService"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="orgnztnffltnTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="orgnztnffltnTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="orgnztnffltnTlcmCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="orgnztnffltnTlcmCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="orgnztnffltnTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="orgnztnffltnTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</meta>
+            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"OrganizationAffiliation.telecom", "datatype" : "ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnPrtcptngrgnztnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_prtcptngrgnztn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNtwrkRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_ntwrk_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnCdCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Orgnztnffltn_cd_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnSpcltCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="Orgnztnffltn_spclt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnLctnRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_lctn_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnHlthcrSrvcRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_hlthcrSrvc_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnTlcmCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="Orgnztnffltn_tlcm_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="orgnztnffltnNdpntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="orgnztnffltnNdpntRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"OrganizationAffiliation.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</meta>
+            <column length="65535" name="Orgnztnffltn_ndpnt_Rfrnce">
+                <comment>{ "tree" :"OrganizationAffiliation.endpoint", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addEndpoint"}</comment>
             </column>
         </property>
     </class>

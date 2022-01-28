@@ -1,837 +1,219 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Messageheader" optimistic-lock="none" table="messageheader">
-        <id name="mssgHdrVntCdngCdngCdCde" type="string">
-            <column length="512" name="MssgHdr_vntCdng_Cdng_cd_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="mssgHdrVntCdngCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">MessageHeader_eventCodingCoding_userSelected_boolean</meta>
-            <column length="512" name="MssgHdr_vntCdng_Cdng_srSlctd_bln">
-                <comment>MessageHeader_eventCodingCoding_userSelected_boolean</comment>
+        <property name="mssgHdrVntCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setUserSelected"}</meta>
+            <column length="512" name="MssgHdr_vntCdng_C_srSlctd">
+                <comment>{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mssgHdrVntCdngCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">MessageHeader_eventCodingCoding_version_string</meta>
-            <column length="512" name="MssgHdr_vntCdng_Cdng_vrsn_strng">
-                <comment>MessageHeader_eventCodingCoding_version_string</comment>
+        <property name="messageHeaderEventCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setCode"}</meta>
+            <column length="512" name="MessageHeader_eventCoding_C_code">
+                <comment>{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mssgHdrVntCdngCdngDsplStrng" type="string">
-            <meta attribute="resource-type">MessageHeader_eventCodingCoding_display_string</meta>
-            <column length="512" name="MssgHdr_vntCdng_Cdng_dspl_strng">
-                <comment>MessageHeader_eventCodingCoding_display_string</comment>
+        <property name="mssgHdrVntCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setVersion"}</meta>
+            <column length="512" name="MssgHdr_vntCdng_C_vrsn">
+                <comment>{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgHdrVntCdngCdngSstmRi" type="string">
-            <meta attribute="resource-type">MessageHeader_eventCodingCoding_system_uri</meta>
-            <column length="512" name="MssgHdr_vntCdng_Cdng_sstm_ri">
-                <comment>MessageHeader_eventCodingCoding_system_uri</comment>
+        <property name="mssgHdrVntCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setDisplay"}</meta>
+            <column length="512" name="MssgHdr_vntCdng_C_dsplay">
+                <comment>{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="messageHeaderEventUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="MessageHeader_eventUri">
-                <comment>uri</comment>
+        <property name="messageHeaderEventCodingCSystem" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setSystem"}</meta>
+            <column length="512" name="MessageHeader_eventCoding_C_system">
+                <comment>{ "tree" :"MessageHeader.eventCoding", "datatype" : "Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="messageHeaderDestinationName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageHeader_destination_name">
-                <comment>string</comment>
+        <property name="messageHeaderEventUriUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.eventUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventUri"}</meta>
+            <column length="65535" name="MessageHeader_eventUri_uri">
+                <comment>{ "tree" :"MessageHeader.eventUri", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setEventUri"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mssgHdrDstntnNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.destination.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="MssgHdr_dstntn_nm_strng">
+                <comment>{ "tree" :"MessageHeader.destination.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="mssgHdrDstntnTrgtRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.destination.target", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setTarget"}</meta>
+            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnce">
+                <comment>{ "tree" :"MessageHeader.destination.target", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setTarget"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mssgHdrDstntnNdpntRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.destination.endpoint", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["addDestination"] , "methodName" : "setEndpoint"}</meta>
+            <column length="65535" name="MssgHdr_dstntn_ndpnt_rl">
+                <comment>{ "tree" :"MessageHeader.destination.endpoint", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["addDestination"] , "methodName" : "setEndpoint"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mssgHdrDstntnRcvrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.destination.receiver", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setReceiver"}</meta>
+            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnce">
+                <comment>{ "tree" :"MessageHeader.destination.receiver", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDestination"] , "methodName" : "setReceiver"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="messageHeaderSenderReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.sender", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSender"}</meta>
+            <column length="65535" name="MessageHeader_sender_Reference">
+                <comment>{ "tree" :"MessageHeader.sender", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSender"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="messageHeaderEntererReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.enterer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEnterer"}</meta>
+            <column length="65535" name="MessageHeader_enterer_Reference">
+                <comment>{ "tree" :"MessageHeader.enterer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setEnterer"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="messageHeaderAuthorReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.author", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthor"}</meta>
+            <column length="65535" name="MessageHeader_author_Reference">
+                <comment>{ "tree" :"MessageHeader.author", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setAuthor"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="messageHeaderSourceNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="MessageHeader_source_name_string">
+                <comment>{ "tree" :"MessageHeader.source.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="mssgHdrSrcSftwrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.software", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setSoftware"}</meta>
+            <column length="65535" name="MssgHdr_src_sftwr_strng">
+                <comment>{ "tree" :"MessageHeader.source.software", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setSoftware"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mssgHdrSrcVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="MssgHdr_src_vrsn_strng">
+                <comment>{ "tree" :"MessageHeader.source.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="mssgHdrSrcCntctCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, code", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setSystem"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_sstm">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, code", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mssgHdrSrcCntctCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, code", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setUse"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_se">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, code", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setUse"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="mssgHdrSrcCntctCntctPntPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setPeriod, setStart"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_prd_Prd_strt">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnTrgtRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_dstntn_trgt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="mssgHdrSrcCntctCntctPntPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setPeriod, setEnd"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_prd_Prd_nd">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="messageHeaderDestinationEndpoint" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="MessageHeader_destination_endpoint">
-                <comment>url</comment>
+        <property name="mssgHdrSrcCntctCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setRank"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_rnk">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, positiveInt", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setRank"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="mssgHdrSrcCntctCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setValue"}</meta>
+            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_vlue">
+                <comment>{ "tree" :"MessageHeader.source.contact", "datatype" : "ContactPoint, string", "cardinality" : "ZeroOne", "elementtree" : ["setSource"] , "methodName" : "setContact, setValue"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="messageHeaderSourceEndpointUrl" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.source.endpoint", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["setSource"] , "methodName" : "setEndpoint"}</meta>
+            <column length="65535" name="MessageHeader_source_endpoint_url">
+                <comment>{ "tree" :"MessageHeader.source.endpoint", "datatype" : "url", "cardinality" : "Required", "elementtree" : ["setSource"] , "methodName" : "setEndpoint"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="mssgHdrRspnsblRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.responsible", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponsible"}</meta>
+            <column length="65535" name="MssgHdr_rspnsbl_Rfrnce">
+                <comment>{ "tree" :"MessageHeader.responsible", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setResponsible"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="mssgHdrRsnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setSystem"}</meta>
+            <column length="65535" name="MssgHdr_rsn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="mssgHdrRsnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setVersion"}</meta>
+            <column length="65535" name="MssgHdr_rsn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="mssgHdrRsnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setCode"}</meta>
+            <column length="65535" name="MssgHdr_rsn_CC_cdng_C_cde">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="mssgHdrRsnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setDisplay"}</meta>
+            <column length="65535" name="MssgHdr_rsn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="mssgHdrRsnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="MssgHdr_rsn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="messageHeaderReasonCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, setText"}</meta>
+            <column length="65535" name="MessageHeader_reason_CC_text">
+                <comment>{ "tree" :"MessageHeader.reason", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setReason, setText"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="mssgHdrRspnsDntfrD" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.response.identifier", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["setResponse"] , "methodName" : "setIdentifier"}</meta>
+            <column length="65535" name="MssgHdr_rspns_dntfr_d">
+                <comment>{ "tree" :"MessageHeader.response.identifier", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["setResponse"] , "methodName" : "setIdentifier"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="messageHeaderResponseCodeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.response.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setResponse"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="MessageHeader_response_code_code">
+                <comment>{ "tree" :"MessageHeader.response.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setResponse"] , "methodName" : "setCode"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="mssgHdrRspnsDtlsRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.response.details", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setResponse"] , "methodName" : "setDetails"}</meta>
+            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnce">
+                <comment>{ "tree" :"MessageHeader.response.details", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["setResponse"] , "methodName" : "setDetails"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="messageHeaderFocusReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.focus", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFocus"}</meta>
+            <column length="65535" name="MessageHeader_focus_Reference">
+                <comment>{ "tree" :"MessageHeader.focus", "datatype" : "Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addFocus"}</comment>
             </column>
         </property>
-        <property name="mssgHdrDstntnRcvrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_dstntn_rcvr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSndrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_sndr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrNtrrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_ntrr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrThrRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_thr_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="messageHeaderSourceName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageHeader_source_name">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="messageHeaderSourceSoftware" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageHeader_source_software">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="messageHeaderSourceVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="MessageHeader_source_version">
-                <comment>string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntSstmCde" type="string">
-            <meta attribute="resource-type">ContactPoint_system_code</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_sstm_cde">
-                <comment>ContactPoint_system_code</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntSCde" type="string">
-            <meta attribute="resource-type">ContactPoint_use_code</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_s_cde">
-                <comment>ContactPoint_use_code</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntPrdStrt" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_start</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_Prd_strt">
-                <comment>ContactPoint_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntPrdNd" type="string">
-            <meta attribute="resource-type">ContactPoint_Period_end</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_Prd_nd">
-                <comment>ContactPoint_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntRnkPstvnt" type="string">
-            <meta attribute="resource-type">ContactPoint_rank_positiveInt</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_rnk_pstvnt">
-                <comment>ContactPoint_rank_positiveInt</comment>
-            </column>
-        </property>
-        <property name="mssgHdrSrcCntctCntctPntVlStrng" type="string">
-            <meta attribute="resource-type">ContactPoint_value_string</meta>
-            <column length="65535" name="MssgHdr_src_cntct_CntctPnt_vl_strng">
-                <comment>ContactPoint_value_string</comment>
-            </column>
-        </property>
-        <property name="messageHeaderSourceEndpoint" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="MessageHeader_source_endpoint">
-                <comment>url</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsblRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_rspnsbl_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRsnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="MssgHdr_rsn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
-            </column>
-        </property>
-        <property name="messageHeaderResponseIdentifier" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="MessageHeader_response_identifier">
-                <comment>id</comment>
-            </column>
-        </property>
-        <property name="messageHeaderResponseCode" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="MessageHeader_response_code">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrRspnsDtlsRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_rspns_dtls_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
-            </column>
-        </property>
-        <property name="mssgHdrFcsRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="MssgHdr_fcs_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
-            </column>
-        </property>
-        <property name="messageHeaderDefinition" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="MessageHeader_definition">
-                <comment>canonical</comment>
+        <property name="messageHeaderDefinitionCanonical" type="string">
+            <meta attribute="resource-type">{ "tree" :"MessageHeader.definition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDefinition"}</meta>
+            <column length="65535" name="MessageHeader_definition_canonical">
+                <comment>{ "tree" :"MessageHeader.definition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDefinition"}</comment>
             </column>
         </property>
     </class>

@@ -1,267 +1,417 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Terminologycapabilities" optimistic-lock="none" table="terminologycapabilities">
-        <id name="terminologyCapabilitiesUrl" type="string">
-            <column length="512" name="TerminologyCapabilities_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="terminologyCapabilitiesVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TerminologyCapabilities_version">
-                <comment>string</comment>
+        <property name="terminologyCapabilitiesUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="TerminologyCapabilities_url_uri">
+                <comment>{ "tree" :"TerminologyCapabilities.url", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TerminologyCapabilities_name">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="TrmnlgCpblts_vrsn_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TerminologyCapabilities_title">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="TrmnlgCpblts_nm_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TerminologyCapabilities_status">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsTtlStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="TrmnlgCpblts_ttl_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXprmntl" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_xprmntl">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSttsCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="TrmnlgCpblts_stts_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="TerminologyCapabilities_date">
-                <comment>dateTime</comment>
+        <property name="trmnlgCpbltsXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xprmntl_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TerminologyCapabilities_publisher">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsDtDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="TrmnlgCpblts_dt_dtTme">
+                <comment>{ "tree" :"TerminologyCapabilities.date", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="TerminologyCapabilities_contact">
-                <comment>ContactDetail</comment>
+        <property name="trmnlgCpbltsPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="TrmnlgCpblts_pblshr_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsDscrptn" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TrmnlgCpblts_dscrptn">
-                <comment>markdown</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="TerminologyCapabilities_useContext">
-                <comment>UsageContext</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="trmnlgCpbltsCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"TerminologyCapabilities.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="TrmnlgCpblts_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="trmnlgCpbltsDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="TrmnlgCpblts_dscrptn_mrkdwn">
+                <comment>{ "tree" :"TerminologyCapabilities.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TerminologyCapabilities_purpose">
-                <comment>markdown</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TerminologyCapabilities_copyright">
-                <comment>markdown</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesKind" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TerminologyCapabilities_kind">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsSftwrNme" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TrmnlgCpblts_sftwr_nme">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsSftwrVrsn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TrmnlgCpblts_sftwr_vrsn">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsMplmnttnDscrptn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TrmnlgCpblts_mplmnttn_dscrptn">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsMplmnttnRl" type="string">
-            <meta attribute="resource-type">url</meta>
-            <column length="65535" name="TrmnlgCpblts_mplmnttn_rl">
-                <comment>url</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesLockedDate" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TerminologyCapabilities_lockedDate">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmRi" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_ri">
-                <comment>canonical</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnCde" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cde">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnSDflt" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_sDflt">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnCmpstnl" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cmpstnl">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnLngge" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_lngge">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnFltrCde" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_cde">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnFltrP" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_p">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmVrsnPrprty" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_prprty">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsCdSstmSbsmptn" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_cdSstm_sbsmptn">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnHrrchcl" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_hrrchcl">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnPgng" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_pgng">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"TerminologyCapabilities.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnNcmplte" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_ncmplte">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnPrmtrNme" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_nme">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnPrmtrDcmnttn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_dcmnttn">
-                <comment>string</comment>
+        <property name="trmnlgCpbltsJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsXpnsnTxtFltr" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="TrmnlgCpblts_xpnsn_txtFltr">
-                <comment>markdown</comment>
+        <property name="trmnlgCpbltsJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="terminologyCapabilitiesCodeSearch" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="TerminologyCapabilities_codeSearch">
-                <comment>code</comment>
+        <property name="trmnlgCpbltsJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsVldtCdTrnsltns" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_vldtCd_trnsltns">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="TrmnlgCpblts_jrsdctn_CC_txt">
+                <comment>{ "tree" :"TerminologyCapabilities.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsTrnsltnNdsMp" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_trnsltn_ndsMp">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsPrpsMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="TrmnlgCpblts_prps_mrkdwn">
+                <comment>{ "tree" :"TerminologyCapabilities.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
             </column>
         </property>
-        <property name="trmnlgCpbltsClsrTrnsltn" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="TrmnlgCpblts_clsr_trnsltn">
-                <comment>boolean</comment>
+        <property name="trmnlgCpbltsCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cprght_mrkdwn">
+                <comment>{ "tree" :"TerminologyCapabilities.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
+            </column>
+        </property>
+        <property name="terminologyCapabilitiesKindCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</meta>
+            <column length="65535" name="TerminologyCapabilities_kind_code">
+                <comment>{ "tree" :"TerminologyCapabilities.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsSftwrNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.software.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setSoftware"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sftwr_nm_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.software.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setSoftware"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsSftwrVrsnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.software.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="TrmnlgCpblts_sftwr_vrsn_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.software.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setSoftware"] , "methodName" : "setVersion"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsMplmnttnDscrptnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.implementation.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setImplementation"] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="TrmnlgCpblts_mplmnttn_dscrptn_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.implementation.description", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["setImplementation"] , "methodName" : "setDescription"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsMplmnttnRlRl" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.implementation.url", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setUrl"}</meta>
+            <column length="65535" name="TrmnlgCpblts_mplmnttn_rl_rl">
+                <comment>{ "tree" :"TerminologyCapabilities.implementation.url", "datatype" : "url", "cardinality" : "ZeroOne", "elementtree" : ["setImplementation"] , "methodName" : "setUrl"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsLckdDtBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.lockedDate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLockedDate"}</meta>
+            <column length="65535" name="TrmnlgCpblts_lckdDt_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.lockedDate", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setLockedDate"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmRCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.uri", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem"] , "methodName" : "setUri"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_r_cnncl">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.uri", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem"] , "methodName" : "setUri"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnCdStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.code", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cd_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.code", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnSDfltBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.isDefault", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setIsDefault"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_sDflt_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.isDefault", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setIsDefault"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnCmpstnlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.compositional", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setCompositional"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_cmpstnl_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.compositional", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "setCompositional"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnLnggCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.language", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "addLanguage"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_lngg_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.language", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addCodeSystem", "addVersion"] , "methodName" : "addLanguage"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnFltrCdCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.filter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setCode"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_cd_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.filter.code", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setCode"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnFltrPCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.filter.op", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setOp"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_fltr_p_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.filter.op", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setOp"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmVrsnPrprtCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.version.property", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "addProperty"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_vrsn_prprt_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.version.property", "datatype" : "code", "cardinality" : "Many", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "addProperty"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSstmSbsmptnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSystem.subsumption", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setSubsumption"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSstm_sbsmptn_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSystem.subsumption", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["addCodeSystem", "addVersion", "addFilter"] , "methodName" : "setSubsumption"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnHrrchclBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.hierarchical", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setHierarchical"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_hrrchcl_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.hierarchical", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setHierarchical"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPgngBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.paging", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setPaging"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_pgng_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.paging", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setPaging"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnNcmpltBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.incomplete", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setIncomplete"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_ncmplt_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.incomplete", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion"] , "methodName" : "setIncomplete"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPrmtrNmCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.parameter.name", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_nm_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.parameter.name", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnPrmtrDcmnttnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.parameter.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setDocumentation"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_prmtr_dcmnttn_strng">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.parameter.documentation", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setDocumentation"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsXpnsnTxtFltrMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.expansion.textFilter", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setTextFilter"}</meta>
+            <column length="65535" name="TrmnlgCpblts_xpnsn_txtFltr_mrkdwn">
+                <comment>{ "tree" :"TerminologyCapabilities.expansion.textFilter", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : ["setExpansion", "addParameter"] , "methodName" : "setTextFilter"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsCdSrchCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.codeSearch", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCodeSearch"}</meta>
+            <column length="65535" name="TrmnlgCpblts_cdSrch_cde">
+                <comment>{ "tree" :"TerminologyCapabilities.codeSearch", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCodeSearch"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsVldtCdTrnsltnsBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.validateCode.translations", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setValidateCode"] , "methodName" : "setTranslations"}</meta>
+            <column length="65535" name="TrmnlgCpblts_vldtCd_trnsltns_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.validateCode.translations", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setValidateCode"] , "methodName" : "setTranslations"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsTrnsltnNdsMpBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.translation.needsMap", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setTranslation"] , "methodName" : "setNeedsMap"}</meta>
+            <column length="65535" name="TrmnlgCpblts_trnsltn_ndsMp_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.translation.needsMap", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : ["setTranslation"] , "methodName" : "setNeedsMap"}</comment>
+            </column>
+        </property>
+        <property name="trmnlgCpbltsClsrTrnsltnBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"TerminologyCapabilities.closure.translation", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setClosure"] , "methodName" : "setTranslation"}</meta>
+            <column length="65535" name="TrmnlgCpblts_clsr_trnsltn_bln">
+                <comment>{ "tree" :"TerminologyCapabilities.closure.translation", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : ["setClosure"] , "methodName" : "setTranslation"}</comment>
             </column>
         </property>
     </class>

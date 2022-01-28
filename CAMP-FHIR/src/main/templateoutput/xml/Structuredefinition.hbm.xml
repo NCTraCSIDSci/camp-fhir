@@ -1,327 +1,459 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Structuredefinition" optimistic-lock="none" table="structuredefinition">
-        <id name="structureDefinitionUrl" type="string">
-            <column length="512" name="StructureDefinition_url"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="strctrDfntnDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">Identifier_use_code</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_s_cde">
-                <comment>Identifier_use_code</comment>
+        <property name="structureDefinitionUrlUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</meta>
+            <column length="512" name="StructureDefinition_url_uri">
+                <comment>{ "tree" :"StructureDefinition.url", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setUrl"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>Identifier_type_CodeableConcept_Coding_system</comment>
+        <property name="strctrDfntnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_se">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>Identifier_type_CodeableConcept_Coding_version</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_cde">
-                <comment>Identifier_type_CodeableConcept_Coding_code</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>Identifier_type_CodeableConcept_Coding_display</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Identifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>Identifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Identifier_CodeableConcept_text</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Identifier_Period_start</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Prd_strt">
-                <comment>Identifier_Period_start</comment>
+        <property name="strctrDfntnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Identifier_Period_end</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Prd_nd">
-                <comment>Identifier_Period_end</comment>
+        <property name="strctrDfntnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Identifier_Reference_reference</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Identifier_Reference_reference</comment>
+        <property name="strctrDfntnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Identifier_Reference_type</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Identifier_Reference_type</comment>
+        <property name="strctrDfntnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Identifier_Reference_identifier</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Identifier_Reference_identifier</comment>
+        <property name="strctrDfntnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Identifier_Reference_display</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Identifier_Reference_display</comment>
+        <property name="strctrDfntnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"StructureDefinition.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">Identifier_value_string</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_vl_strng">
-                <comment>Identifier_value_string</comment>
+        <property name="structureDefinitionVersionString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</meta>
+            <column length="65535" name="StructureDefinition_version_string">
+                <comment>{ "tree" :"StructureDefinition.version", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">Identifier_system_uri</meta>
-            <column length="65535" name="StrctrDfntn_dntfr_dntfr_sstm_ri">
-                <comment>Identifier_system_uri</comment>
+        <property name="structureDefinitionNameString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StructureDefinition_name_string">
+                <comment>{ "tree" :"StructureDefinition.name", "datatype" : "string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setName"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionVersion" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureDefinition_version">
-                <comment>string</comment>
+        <property name="structureDefinitionTitleString" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</meta>
+            <column length="65535" name="StructureDefinition_title_string">
+                <comment>{ "tree" :"StructureDefinition.title", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setTitle"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureDefinition_name">
-                <comment>string</comment>
+        <property name="structureDefinitionStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="StructureDefinition_status_code">
+                <comment>{ "tree" :"StructureDefinition.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionTitle" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureDefinition_title">
-                <comment>string</comment>
+        <property name="strctrDfntnXprmntlBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</meta>
+            <column length="65535" name="StrctrDfntn_xprmntl_bln">
+                <comment>{ "tree" :"StructureDefinition.experimental", "datatype" : "boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setExperimental"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureDefinition_status">
-                <comment>code</comment>
+        <property name="structureDefinitionDateDateTime" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="StructureDefinition_date_dateTime">
+                <comment>{ "tree" :"StructureDefinition.date", "datatype" : "dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDate"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionExperimental" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="StructureDefinition_experimental">
-                <comment>boolean</comment>
+        <property name="strctrDfntnPblshrStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</meta>
+            <column length="65535" name="StrctrDfntn_pblshr_strng">
+                <comment>{ "tree" :"StructureDefinition.publisher", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPublisher"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionDate" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="StructureDefinition_date">
-                <comment>dateTime</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_strt">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionPublisher" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureDefinition_publisher">
-                <comment>string</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_Prd_nd">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionContact" type="string">
-            <meta attribute="resource-type">ContactDetail</meta>
-            <column length="65535" name="StructureDefinition_contact">
-                <comment>ContactDetail</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_sstm">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionDescription" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureDefinition_description">
-                <comment>markdown</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_vlue">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setValue"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionUseContext" type="string">
-            <meta attribute="resource-type">UsageContext</meta>
-            <column length="65535" name="StructureDefinition_useContext">
-                <comment>UsageContext</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_se">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setUse"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="strctrDfntnCntctCntctDtlTlcmCntctPntRnk" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_tlcm_CntctPnt_rnk">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, ContactPoint, positiveInt", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, setTelecom, setRank"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="strctrDfntnCntctCntctDtlNme" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</meta>
+            <column length="65535" name="StrctrDfntn_cntct_CntctDtl_nme">
+                <comment>{ "tree" :"StructureDefinition.contact", "datatype" : "ContactDetail, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContact, addName"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="strctrDfntnDscrptnMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</meta>
+            <column length="65535" name="StrctrDfntn_dscrptn_mrkdwn">
+                <comment>{ "tree" :"StructureDefinition.description", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDescription"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_C_sstm">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_C_vrsn">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnJrsdctnCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="StrctrDfntn_jrsdctn_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_C_cde">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionPurpose" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureDefinition_purpose">
-                <comment>markdown</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_C_dsplay">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionCopyright" type="string">
-            <meta attribute="resource-type">markdown</meta>
-            <column length="65535" name="StructureDefinition_copyright">
-                <comment>markdown</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_C_srSlctd">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnKwrdCdngSrSlctdBln" type="string">
-            <meta attribute="resource-type">Coding_userSelected_boolean</meta>
-            <column length="65535" name="StrctrDfntn_kwrd_Cdng_srSlctd_bln">
-                <comment>Coding_userSelected_boolean</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlCcCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlCC_CC_txt">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueCodeableConcept, setText"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnKwrdCdngCdCde" type="string">
-            <meta attribute="resource-type">Coding_code_code</meta>
-            <column length="65535" name="StrctrDfntn_kwrd_Cdng_cd_cde">
-                <comment>Coding_code_code</comment>
+        <property name="strctrDfntnSCntxtSgCntxtCdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_cd_C_sstm">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setSystem"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnKwrdCdngVrsnStrng" type="string">
-            <meta attribute="resource-type">Coding_version_string</meta>
-            <column length="65535" name="StrctrDfntn_kwrd_Cdng_vrsn_strng">
-                <comment>Coding_version_string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtCdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_cd_C_vrsn">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setVersion"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnKwrdCdngDsplStrng" type="string">
-            <meta attribute="resource-type">Coding_display_string</meta>
-            <column length="65535" name="StrctrDfntn_kwrd_Cdng_dspl_strng">
-                <comment>Coding_display_string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtCdCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_cd_C_cde">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setCode"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnKwrdCdngSstmRi" type="string">
-            <meta attribute="resource-type">Coding_system_uri</meta>
-            <column length="65535" name="StrctrDfntn_kwrd_Cdng_sstm_ri">
-                <comment>Coding_system_uri</comment>
+        <property name="strctrDfntnSCntxtSgCntxtCdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_cd_C_dsplay">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setDisplay"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionFhirVersion" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureDefinition_fhirVersion">
-                <comment>code</comment>
+        <property name="strctrDfntnSCntxtSgCntxtCdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_cd_C_srSlctd">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addCode, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnMppngDntty" type="string">
-            <meta attribute="resource-type">id</meta>
-            <column length="65535" name="StrctrDfntn_mppng_dntty">
-                <comment>id</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlQnttQnttVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlQntt_Qntt_vlue">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, decimal", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setValue"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionMappingUri" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="StructureDefinition_mapping_uri">
-                <comment>uri</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlQnttQnttCmprtr" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cmprtr">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setComparator"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionMappingName" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StructureDefinition_mapping_name">
-                <comment>string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlQnttQnttNt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlQntt_Qntt_nt">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setUnit"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnMppngCmmnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrDfntn_mppng_cmmnt">
-                <comment>string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlQnttQnttSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlQntt_Qntt_sstm">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionKind" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureDefinition_kind">
-                <comment>code</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlQnttQnttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlQntt_Qntt_cde">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Quantity, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueQuantity, setCode"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionAbstract" type="string">
-            <meta attribute="resource-type">boolean</meta>
-            <column length="65535" name="StructureDefinition_abstract">
-                <comment>boolean</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlRngRngLw" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlRng_Rng_lw">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setLow"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionContextType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureDefinition_context_type">
-                <comment>code</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlRngRngHgh" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlRng_Rng_hgh">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Range, SimpleQuantity", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueRange, setHigh"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnCntxtXprssn" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrDfntn_cntxt_xprssn">
-                <comment>string</comment>
+        <property name="strctrDfntnSCntxtSgCntxtVlRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</meta>
+            <column length="65535" name="StrctrDfntn_sCntxt_sgCntxt_vlRfrnce">
+                <comment>{ "tree" :"StructureDefinition.useContext", "datatype" : "UsageContext, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addUseContext, addValueReference"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnCntxtnvrnt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="StrctrDfntn_cntxtnvrnt">
-                <comment>string</comment>
+        <property name="strctrDfntnJrsdctnCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_cdng_C_sstm">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionType" type="string">
-            <meta attribute="resource-type">uri</meta>
-            <column length="65535" name="StructureDefinition_type">
-                <comment>uri</comment>
+        <property name="strctrDfntnJrsdctnCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionBaseDefinition" type="string">
-            <meta attribute="resource-type">canonical</meta>
-            <column length="65535" name="StructureDefinition_baseDefinition">
-                <comment>canonical</comment>
+        <property name="strctrDfntnJrsdctnCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_cdng_C_cde">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="structureDefinitionDerivation" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="StructureDefinition_derivation">
-                <comment>code</comment>
+        <property name="strctrDfntnJrsdctnCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnSnpshtLmnt" type="string">
-            <meta attribute="resource-type">ElementDefinition</meta>
-            <column length="65535" name="StrctrDfntn_snpsht_lmnt">
-                <comment>ElementDefinition</comment>
+        <property name="strctrDfntnJrsdctnCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="strctrDfntnDffrntlLmnt" type="string">
-            <meta attribute="resource-type">ElementDefinition</meta>
-            <column length="65535" name="StrctrDfntn_dffrntl_lmnt">
-                <comment>ElementDefinition</comment>
+        <property name="strctrDfntnJrsdctnCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</meta>
+            <column length="65535" name="StrctrDfntn_jrsdctn_CC_txt">
+                <comment>{ "tree" :"StructureDefinition.jurisdiction", "datatype" : "CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addJurisdiction, setText"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnPrpsMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</meta>
+            <column length="65535" name="StrctrDfntn_prps_mrkdwn">
+                <comment>{ "tree" :"StructureDefinition.purpose", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPurpose"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCprghtMrkdwn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</meta>
+            <column length="65535" name="StrctrDfntn_cprght_mrkdwn">
+                <comment>{ "tree" :"StructureDefinition.copyright", "datatype" : "markdown", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setCopyright"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setUserSelected"}</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_C_srSlctd">
+                <comment>{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionKeywordCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setCode"}</meta>
+            <column length="65535" name="StructureDefinition_keyword_C_code">
+                <comment>{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setCode"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_C_vrsn">
+                <comment>{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setDisplay"}</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_C_dsplay">
+                <comment>{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnKwrdCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setSystem"}</meta>
+            <column length="65535" name="StrctrDfntn_kwrd_C_sstm">
+                <comment>{ "tree" :"StructureDefinition.keyword", "datatype" : "Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addKeyword, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnFhrVrsnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.fhirVersion", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFhirVersion"}</meta>
+            <column length="65535" name="StrctrDfntn_fhrVrsn_cde">
+                <comment>{ "tree" :"StructureDefinition.fhirVersion", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFhirVersion"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngDnttD" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.mapping.identity", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addMapping"] , "methodName" : "setIdentity"}</meta>
+            <column length="65535" name="StrctrDfntn_mppng_dntt_d">
+                <comment>{ "tree" :"StructureDefinition.mapping.identity", "datatype" : "id", "cardinality" : "Required", "elementtree" : ["addMapping"] , "methodName" : "setIdentity"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngRRi" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.mapping.uri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setUri"}</meta>
+            <column length="65535" name="StrctrDfntn_mppng_r_ri">
+                <comment>{ "tree" :"StructureDefinition.mapping.uri", "datatype" : "uri", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setUri"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngNmStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.mapping.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setName"}</meta>
+            <column length="65535" name="StrctrDfntn_mppng_nm_strng">
+                <comment>{ "tree" :"StructureDefinition.mapping.name", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setName"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnMppngCmmntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.mapping.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setComment"}</meta>
+            <column length="65535" name="StrctrDfntn_mppng_cmmnt_strng">
+                <comment>{ "tree" :"StructureDefinition.mapping.comment", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addMapping"] , "methodName" : "setComment"}</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionKindCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</meta>
+            <column length="65535" name="StructureDefinition_kind_code">
+                <comment>{ "tree" :"StructureDefinition.kind", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setKind"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnBstrctBln" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.abstract", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAbstract"}</meta>
+            <column length="65535" name="StrctrDfntn_bstrct_bln">
+                <comment>{ "tree" :"StructureDefinition.abstract", "datatype" : "boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setAbstract"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCntxtTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.context.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addContext"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="StrctrDfntn_cntxt_tp_cde">
+                <comment>{ "tree" :"StructureDefinition.context.type", "datatype" : "code", "cardinality" : "Required", "elementtree" : ["addContext"] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCntxtXprssnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.context.expression", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addContext"] , "methodName" : "setExpression"}</meta>
+            <column length="65535" name="StrctrDfntn_cntxt_xprssn_strng">
+                <comment>{ "tree" :"StructureDefinition.context.expression", "datatype" : "string", "cardinality" : "Required", "elementtree" : ["addContext"] , "methodName" : "setExpression"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnCntxtnvrntStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.contextInvariant", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContextInvariant"}</meta>
+            <column length="65535" name="StrctrDfntn_cntxtnvrnt_strng">
+                <comment>{ "tree" :"StructureDefinition.contextInvariant", "datatype" : "string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addContextInvariant"}</comment>
+            </column>
+        </property>
+        <property name="structureDefinitionTypeUri" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.type", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</meta>
+            <column length="65535" name="StructureDefinition_type_uri">
+                <comment>{ "tree" :"StructureDefinition.type", "datatype" : "uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnBsDfntnCnncl" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.baseDefinition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBaseDefinition"}</meta>
+            <column length="65535" name="StrctrDfntn_bsDfntn_cnncl">
+                <comment>{ "tree" :"StructureDefinition.baseDefinition", "datatype" : "canonical", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setBaseDefinition"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDrvtnCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.derivation", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDerivation"}</meta>
+            <column length="65535" name="StrctrDfntn_drvtn_cde">
+                <comment>{ "tree" :"StructureDefinition.derivation", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDerivation"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnSnpshtLmntLmntDfntn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.snapshot.element", "datatype" : "ElementDefinition", "cardinality" : "ZeroOne", "elementtree" : ["setSnapshot"] , "methodName" : "setElement"}</meta>
+            <column length="65535" name="StrctrDfntn_snpsht_lmnt_lmntDfntn">
+                <comment>{ "tree" :"StructureDefinition.snapshot.element", "datatype" : "ElementDefinition", "cardinality" : "ZeroOne", "elementtree" : ["setSnapshot"] , "methodName" : "setElement"}</comment>
+            </column>
+        </property>
+        <property name="strctrDfntnDffrntlLmntLmntDfntn" type="string">
+            <meta attribute="resource-type">{ "tree" :"StructureDefinition.differential.element", "datatype" : "ElementDefinition", "cardinality" : "ZeroOne", "elementtree" : ["setDifferential"] , "methodName" : "setElement"}</meta>
+            <column length="65535" name="StrctrDfntn_dffrntl_lmnt_lmntDfntn">
+                <comment>{ "tree" :"StructureDefinition.differential.element", "datatype" : "ElementDefinition", "cardinality" : "ZeroOne", "elementtree" : ["setDifferential"] , "methodName" : "setElement"}</comment>
             </column>
         </property>
     </class>

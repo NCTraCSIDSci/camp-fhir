@@ -1,531 +1,345 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Devicemetric" optimistic-lock="none" table="devicemetric">
-        <id name="dvcMtrcDntfrDntfrTpCdblCncptCdngCde" type="string">
-            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CdblCncpt_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="dvcMtrcDntfrDntfrSCde" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_use_code</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_s_cde">
-                <comment>DeviceMetric_identifierIdentifier_use_code</comment>
+        <property name="dvcMtrcDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_se">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_system</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CdblCncpt_Cdng_sstm">
-                <comment>DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_system</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_version</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CdblCncpt_Cdng_vrsn">
-                <comment>DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_version</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_display</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CdblCncpt_Cdng_dsplay">
-                <comment>DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_display</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_userSelected</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>DeviceMetric_identifierIdentifier_type_CodeableConcept_Coding_userSelected</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_CodeableConcept_text</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>DeviceMetric_identifierIdentifier_CodeableConcept_text</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Period_start</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Prd_strt">
-                <comment>DeviceMetric_identifierIdentifier_Period_start</comment>
+        <property name="dvcMtrcDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Period_end</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Prd_nd">
-                <comment>DeviceMetric_identifierIdentifier_Period_end</comment>
+        <property name="dvcMtrcDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Reference_reference</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>DeviceMetric_identifierIdentifier_Reference_reference</comment>
+        <property name="dvcMtrcDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Reference_type</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>DeviceMetric_identifierIdentifier_Reference_type</comment>
+        <property name="dvcMtrcDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Reference_identifier</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>DeviceMetric_identifierIdentifier_Reference_identifier</comment>
+        <property name="dvcMtrcDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_Reference_display</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>DeviceMetric_identifierIdentifier_Reference_display</comment>
+        <property name="dvcMtrcDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="DvcMtrc_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"DeviceMetric.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrVlStrng" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_value_string</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_vl_strng">
-                <comment>DeviceMetric_identifierIdentifier_value_string</comment>
+        <property name="dvcMtrcTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcMtrc_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcDntfrDntfrSstmRi" type="string">
-            <meta attribute="resource-type">DeviceMetric_identifierIdentifier_system_uri</meta>
-            <column length="512" name="DvcMtrc_dntfr_dntfr_sstm_ri">
-                <comment>DeviceMetric_identifierIdentifier_system_uri</comment>
+        <property name="dvcMtrcTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcMtrc_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="deviceMetricTypeCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="DeviceMetric_type_CC_coding_C_code">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="dvcMtrcTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcMtrc_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="dvcMtrcTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcMtrc_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="deviceMetricTypeCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="DeviceMetric_type_CC_text">
+                <comment>{ "tree" :"DeviceMetric.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setType, setText"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="dvcMtrcNtCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcMtrc_nt_CC_cdng_C_sstm">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcTpCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DvcMtrc_tp_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="dvcMtrcNtCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcMtrc_nt_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_Cdng_sstm">
-                <comment>CodeableConcept_Coding_system</comment>
+        <property name="deviceMetricUnitCcCodingCCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setCode"}</meta>
+            <column length="65535" name="DeviceMetric_unit_CC_coding_C_code">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_Cdng_vrsn">
-                <comment>CodeableConcept_Coding_version</comment>
+        <property name="dvcMtrcNtCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcMtrc_nt_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_Cdng_cde">
-                <comment>CodeableConcept_Coding_code</comment>
+        <property name="dvcMtrcNtCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcMtrc_nt_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_Cdng_dsplay">
-                <comment>CodeableConcept_Coding_display</comment>
+        <property name="deviceMetricUnitCcText" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, setText"}</meta>
+            <column length="65535" name="DeviceMetric_unit_CC_text">
+                <comment>{ "tree" :"DeviceMetric.unit", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setUnit, setText"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_Cdng_srSlctd">
-                <comment>CodeableConcept_Coding_userSelected</comment>
+        <property name="deviceMetricSourceReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.source", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSource"}</meta>
+            <column length="65535" name="DeviceMetric_source_Reference">
+                <comment>{ "tree" :"DeviceMetric.source", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setSource"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcNtCdblCncptTxtStrng" type="string">
-            <meta attribute="resource-type">CodeableConcept_text_string</meta>
-            <column length="65535" name="DvcMtrc_nt_CdblCncpt_txt_strng">
-                <comment>CodeableConcept_text_string</comment>
+        <property name="deviceMetricParentReference" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.parent", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParent"}</meta>
+            <column length="65535" name="DeviceMetric_parent_Reference">
+                <comment>{ "tree" :"DeviceMetric.parent", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setParent"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dvcMtrcPrtnlSttsCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.operationalStatus", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus"}</meta>
+            <column length="65535" name="DvcMtrc_prtnlStts_cde">
+                <comment>{ "tree" :"DeviceMetric.operationalStatus", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOperationalStatus"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="deviceMetricColorCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.color", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setColor"}</meta>
+            <column length="65535" name="DeviceMetric_color_code">
+                <comment>{ "tree" :"DeviceMetric.color", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setColor"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="deviceMetricCategoryCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.category", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory"}</meta>
+            <column length="65535" name="DeviceMetric_category_code">
+                <comment>{ "tree" :"DeviceMetric.category", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCategory"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_C_sstm">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_C_vrsn">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setCode"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_C_cde">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_C_dsplay">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_C_srSlctd">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="dvcMtrcMsrmntPrdTmngCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, setText"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CC_txt">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setCode, setText"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="dvcMtrcMsrmntPrdTmngVnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, addEvent"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_vnt">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, addEvent"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptDrtnnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDurationUnit"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtnnt">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDurationUnit"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptPrdnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriodUnit"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prdnt">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriodUnit"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptDfWk" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addDayOfWeek"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_dfWk">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addDayOfWeek"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcSrcRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DvcMtrc_src_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptWhn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addWhen"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_whn">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addWhen"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrCdblCncptCdng" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_coding</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_CdblCncpt_cdng">
-                <comment>Reference_identifier_Identifier_CodeableConcept_coding</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDuration"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtn">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDuration"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_CodeableConcept_text</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_CdblCncpt_txt">
-                <comment>Reference_identifier_Identifier_CodeableConcept_text</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptDrtnMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDurationMax"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtnMx">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setDurationMax"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrPrdStrt" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_start</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Prd_strt">
-                <comment>Reference_identifier_Identifier_Period_start</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriod"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prd">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriod"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrPrdNd" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Period_end</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Prd_nd">
-                <comment>Reference_identifier_Identifier_Period_end</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptPrdMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriodMax"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prdMx">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, decimal", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setPeriodMax"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrRfrncRfrnce" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_reference</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Rfrnc_rfrnce">
-                <comment>Reference_identifier_Identifier_Reference_reference</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptBndsDrtn" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsDuration"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_bndsDrtn">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Duration", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsDuration"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrRfrncTpe" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_type</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Rfrnc_tpe">
-                <comment>Reference_identifier_Identifier_Reference_type</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptBndsPrd" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsPeriod"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_bndsPrd">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Period", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsPeriod"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrRfrncDntfr" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_identifier</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Rfrnc_dntfr">
-                <comment>Reference_identifier_Identifier_Reference_identifier</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptCnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setCount"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_cnt">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setCount"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrDntfrRfrncDsplay" type="string">
-            <meta attribute="resource-type">Reference_identifier_Identifier_Reference_display</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_dntfr_Rfrnc_dsplay">
-                <comment>Reference_identifier_Identifier_Reference_display</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptCntMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setCountMax"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_cntMx">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setCountMax"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrSe" type="string">
-            <meta attribute="resource-type">Reference_Identifier_use</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_se">
-                <comment>Reference_Identifier_use</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptFrqncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setFrequency"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_frqncy">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setFrequency"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrSstm" type="string">
-            <meta attribute="resource-type">Reference_Identifier_system</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_sstm">
-                <comment>Reference_Identifier_system</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptFrqncMx" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setFrequencyMax"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_frqncMx">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, positiveInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setFrequencyMax"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDntfrVlue" type="string">
-            <meta attribute="resource-type">Reference_Identifier_value</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dntfr_vlue">
-                <comment>Reference_Identifier_value</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptBndsRnge" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsRange"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_bndsRnge">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, Range", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setBoundsRange"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncRfrncStrng" type="string">
-            <meta attribute="resource-type">Reference_reference_string</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_rfrnc_strng">
-                <comment>Reference_reference_string</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptTmfDay" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addTimeOfDay"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_tmfDay">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, time", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, addTimeOfDay"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncDsplStrng" type="string">
-            <meta attribute="resource-type">Reference_display_string</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_dspl_strng">
-                <comment>Reference_display_string</comment>
+        <property name="dvcMtrcMsrmntPrdTmngRptFfst" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setOffset"}</meta>
+            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_ffst">
+                <comment>{ "tree" :"DeviceMetric.measurementPeriod", "datatype" : "Timing, Element, unsignedInt", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setMeasurementPeriod, setRepeat, setOffset"}</comment>
             </column>
         </property>
-        <property name="dvcMtrcPrntRfrncTpRi" type="string">
-            <meta attribute="resource-type">Reference_type_uri</meta>
-            <column length="65535" name="DvcMtrc_prnt_Rfrnc_tp_ri">
-                <comment>Reference_type_uri</comment>
+        <property name="deviceMetricCalibrationTypeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.calibration.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="DeviceMetric_calibration_type_code">
+                <comment>{ "tree" :"DeviceMetric.calibration.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setType"}</comment>
             </column>
         </property>
-        <property name="deviceMetricOperationalStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceMetric_operationalStatus">
-                <comment>code</comment>
+        <property name="dvcMtrcClbrtnSttCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.calibration.state", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setState"}</meta>
+            <column length="65535" name="DvcMtrc_clbrtn_stt_cde">
+                <comment>{ "tree" :"DeviceMetric.calibration.state", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setState"}</comment>
             </column>
         </property>
-        <property name="deviceMetricColor" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceMetric_color">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="deviceMetricCategory" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceMetric_category">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptDrtnntCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_durationUnit_code</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtnnt_cde">
-                <comment>Timing_repeat_durationUnit_code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptPrdntCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_periodUnit_code</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prdnt_cde">
-                <comment>Timing_repeat_periodUnit_code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptDfWkCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_dayOfWeek_code</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_dfWk_cde">
-                <comment>Timing_repeat_dayOfWeek_code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptWhnCde" type="string">
-            <meta attribute="resource-type">Timing_repeat_when_code</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_whn_cde">
-                <comment>Timing_repeat_when_code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdCdblCncptCdngSstm" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_system</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CdblCncpt_Cdng_sstm">
-                <comment>Timing_code_CodeableConcept_Coding_system</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdCdblCncptCdngVrsn" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_version</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CdblCncpt_Cdng_vrsn">
-                <comment>Timing_code_CodeableConcept_Coding_version</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdCdblCncptCdngCde" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_code</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CdblCncpt_Cdng_cde">
-                <comment>Timing_code_CodeableConcept_Coding_code</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdCdblCncptCdngDsplay" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_display</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CdblCncpt_Cdng_dsplay">
-                <comment>Timing_code_CodeableConcept_Coding_display</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdCdblCncptCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Timing_code_CodeableConcept_Coding_userSelected</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_cd_CdblCncpt_Cdng_srSlctd">
-                <comment>Timing_code_CodeableConcept_Coding_userSelected</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngCdblCncptTxt" type="string">
-            <meta attribute="resource-type">Timing_CodeableConcept_text</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_CdblCncpt_txt">
-                <comment>Timing_CodeableConcept_text</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngVntDtTme" type="string">
-            <meta attribute="resource-type">Timing_event_dateTime</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_vnt_dtTme">
-                <comment>Timing_event_dateTime</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptDrtnDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_duration_decimal</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtn_dcml">
-                <comment>Timing_repeat_duration_decimal</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptDrtnMxDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_durationMax_decimal</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_drtnMx_dcml">
-                <comment>Timing_repeat_durationMax_decimal</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptPrdDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_period_decimal</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prd_dcml">
-                <comment>Timing_repeat_period_decimal</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptPrdMxDcml" type="string">
-            <meta attribute="resource-type">Timing_repeat_periodMax_decimal</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_prdMx_dcml">
-                <comment>Timing_repeat_periodMax_decimal</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptBndsDrtnDrtn" type="string">
-            <meta attribute="resource-type">Timing_repeat_boundsDuration_Duration</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_bndsDrtn_Drtn">
-                <comment>Timing_repeat_boundsDuration_Duration</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptLmnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_Element</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_lmnt">
-                <comment>Timing_repeat_Element</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngPrdStrt" type="string">
-            <meta attribute="resource-type">Timing_Period_start</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_Prd_strt">
-                <comment>Timing_Period_start</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngPrdNd" type="string">
-            <meta attribute="resource-type">Timing_Period_end</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_Prd_nd">
-                <comment>Timing_Period_end</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptCntPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_count_positiveInt</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_cnt_pstvnt">
-                <comment>Timing_repeat_count_positiveInt</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptCntMxPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_countMax_positiveInt</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_cntMx_pstvnt">
-                <comment>Timing_repeat_countMax_positiveInt</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptFrqncPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_frequency_positiveInt</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_frqnc_pstvnt">
-                <comment>Timing_repeat_frequency_positiveInt</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptFrqncMxPstvnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_frequencyMax_positiveInt</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_frqncMx_pstvnt">
-                <comment>Timing_repeat_frequencyMax_positiveInt</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRngLw" type="string">
-            <meta attribute="resource-type">Timing_Range_low</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_Rng_lw">
-                <comment>Timing_Range_low</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRngHgh" type="string">
-            <meta attribute="resource-type">Timing_Range_high</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_Rng_hgh">
-                <comment>Timing_Range_high</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptTmfDTme" type="string">
-            <meta attribute="resource-type">Timing_repeat_timeOfDay_time</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_tmfD_tme">
-                <comment>Timing_repeat_timeOfDay_time</comment>
-            </column>
-        </property>
-        <property name="dvcMtrcMsrmntPrdTmngRptFfstNsgndnt" type="string">
-            <meta attribute="resource-type">Timing_repeat_offset_unsignedInt</meta>
-            <column length="65535" name="DvcMtrc_msrmntPrd_Tmng_rpt_ffst_nsgndnt">
-                <comment>Timing_repeat_offset_unsignedInt</comment>
-            </column>
-        </property>
-        <property name="deviceMetricCalibrationType" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceMetric_calibration_type">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="deviceMetricCalibrationState" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="DeviceMetric_calibration_state">
-                <comment>code</comment>
-            </column>
-        </property>
-        <property name="deviceMetricCalibrationTime" type="string">
-            <meta attribute="resource-type">instant</meta>
-            <column length="65535" name="DeviceMetric_calibration_time">
-                <comment>instant</comment>
+        <property name="dvcMtrcClbrtnTmNstnt" type="string">
+            <meta attribute="resource-type">{ "tree" :"DeviceMetric.calibration.time", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setTime"}</meta>
+            <column length="65535" name="DvcMtrc_clbrtn_tm_nstnt">
+                <comment>{ "tree" :"DeviceMetric.calibration.time", "datatype" : "instant", "cardinality" : "ZeroOne", "elementtree" : ["addCalibration"] , "methodName" : "setTime"}</comment>
             </column>
         </property>
     </class>

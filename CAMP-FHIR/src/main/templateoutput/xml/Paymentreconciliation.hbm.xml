@@ -1,381 +1,501 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Nov 18, 2021, 1:46:16 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2022, 7:59:39 AM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Paymentreconciliation" optimistic-lock="none" table="paymentreconciliation">
-        <id name="pmntRcncltnDntfrCdngCde" type="string">
-            <column length="512" name="PmntRcncltn_dntfr_Cdng_cde"/>
-            <generator class="assigned"/>
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="pmntRcncltnDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="512" name="PmntRcncltn_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_se">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="512" name="PmntRcncltn_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="512" name="PmntRcncltn_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="512" name="PmntRcncltn_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationStatus" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="PaymentReconciliation_status">
-                <comment>code</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_prd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_prd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_prd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_prd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_prd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, Reference", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationCreated" type="string">
-            <meta attribute="resource-type">dateTime</meta>
-            <column length="65535" name="PaymentReconciliation_created">
-                <comment>dateTime</comment>
+        <property name="pmntRcncltnDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, string", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntssr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PmntRcncltn_pmntssr">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</meta>
+            <column length="512" name="PmntRcncltn_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.identifier", "datatype" : "Identifier, uri", "cardinality" : "Many", "elementtree" : [] , "methodName" : "addIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationRequest" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PaymentReconciliation_request">
-                <comment>Reference</comment>
+        <property name="paymentReconciliationStatusCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</meta>
+            <column length="65535" name="PaymentReconciliation_status_code">
+                <comment>{ "tree" :"PaymentReconciliation.status", "datatype" : "code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setStatus"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationRequestor" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PaymentReconciliation_requestor">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</meta>
+            <column length="65535" name="PmntRcncltn_prd_Prd_strt">
+                <comment>{ "tree" :"PaymentReconciliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationOutcome" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="PaymentReconciliation_outcome">
-                <comment>code</comment>
+        <property name="pmntRcncltnPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</meta>
+            <column length="65535" name="PmntRcncltn_prd_Prd_nd">
+                <comment>{ "tree" :"PaymentReconciliation.period", "datatype" : "Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationDisposition" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="PaymentReconciliation_disposition">
-                <comment>string</comment>
+        <property name="pmntRcncltnCrtdDtTme" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.created", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCreated"}</meta>
+            <column length="65535" name="PmntRcncltn_crtd_dtTme">
+                <comment>{ "tree" :"PaymentReconciliation.created", "datatype" : "dateTime", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setCreated"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationPaymentDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="PaymentReconciliation_paymentDate">
-                <comment>date</comment>
+        <property name="pmntRcncltnPmntssrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIssuer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIssuer"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntssr_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIssuer", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIssuer"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntmntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnRqstRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.request", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequest"}</meta>
+            <column length="65535" name="PmntRcncltn_rqst_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.request", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequest"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntmntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnRqstrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.requestor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequestor"}</meta>
+            <column length="65535" name="PmntRcncltn_rqstr_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.requestor", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setRequestor"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntmntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="paymentReconciliationOutcomeCode" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.outcome", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOutcome"}</meta>
+            <column length="65535" name="PaymentReconciliation_outcome_code">
+                <comment>{ "tree" :"PaymentReconciliation.outcome", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setOutcome"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntmntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDspstnStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.disposition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisposition"}</meta>
+            <column length="65535" name="PmntRcncltn_dspstn_strng">
+                <comment>{ "tree" :"PaymentReconciliation.disposition", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setDisposition"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntmntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_pmntmnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnPmntDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentDate"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntDt_dte">
+                <comment>{ "tree" :"PaymentReconciliation.paymentDate", "datatype" : "date", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentDate"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntdntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnPmntmntMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentAmount", "datatype" : "Money, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentAmount, setCurrency"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Mn_crrncy">
+                <comment>{ "tree" :"PaymentReconciliation.paymentAmount", "datatype" : "Money, code", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentAmount, setCurrency"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntdntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnPmntmntMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentAmount", "datatype" : "Money, decimal", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentAmount, setVal"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntmnt_Mn_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.paymentAmount", "datatype" : "Money, decimal", "cardinality" : "Required", "elementtree" : [] , "methodName" : "setPaymentAmount, setVal"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntdntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setUse"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_se">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntdntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPmntdntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_pmntdntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationDetail" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="PaymentReconciliation_detail">
-                <comment>BackboneElement</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlDntfrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlDntfrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlDntfrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, setText"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlDntfrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlDntfrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_dtl_dntfr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlPrdcssrCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setAssigner"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlPrdcssrCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setValue"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlPrdcssrCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnPmntdntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_pmntdntfr_dntfr_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.paymentIdentifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setPaymentIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlPrdcssrCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setUse"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_se">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setUse"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlPrdcssrCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_dtl_prdcssr_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlTpCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlTpCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlTpCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlTpCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlTpCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_dtl_tp_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, setText"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setType, setText"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlRqst" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PmntRcncltn_dtl_rqst">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setPeriod, setStart"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlSbmttr" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PmntRcncltn_dtl_sbmttr">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlRspnse" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PmntRcncltn_dtl_rspnse">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setAssigner"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_ssgnr">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setAssigner"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationDetailDate" type="string">
-            <meta attribute="resource-type">date</meta>
-            <column length="65535" name="PaymentReconciliation_detail_date">
-                <comment>date</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setValue"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setValue"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlRspnsble" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PmntRcncltn_dtl_rspnsble">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDtlDntfrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dntfr_dntfr_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.detail.identifier", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setIdentifier, setSystem"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationDetailPayee" type="string">
-            <meta attribute="resource-type">Reference</meta>
-            <column length="65535" name="PaymentReconciliation_detail_payee">
-                <comment>Reference</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrSe" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setUse"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_se">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setUse"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlMntCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlMntCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setVersion"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlMntCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setCode"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setCode"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlMntCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setDisplay"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnDtlMntCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_dtl_mnt_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, addCoding, setUserSelected"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnFrmCdCdngSrSlctd" type="string">
-            <meta attribute="resource-type">Coding_userSelected</meta>
-            <column length="65535" name="PmntRcncltn_frmCd_Cdng_srSlctd">
-                <comment>Coding_userSelected</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, setText"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_tp_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setType, setText"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnFrmCdCdngCde" type="string">
-            <meta attribute="resource-type">Coding_code</meta>
-            <column length="65535" name="PmntRcncltn_frmCd_Cdng_cde">
-                <comment>Coding_code</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrPrdPrdStrt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setPeriod, setStart"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_prd_Prd_strt">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setPeriod, setStart"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnFrmCdCdngDsplay" type="string">
-            <meta attribute="resource-type">Coding_display</meta>
-            <column length="65535" name="PmntRcncltn_frmCd_Cdng_dsplay">
-                <comment>Coding_display</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrPrdPrdNd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setPeriod, setEnd"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_prd_Prd_nd">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Period, dateTime", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setPeriod, setEnd"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnFrmCdCdngVrsn" type="string">
-            <meta attribute="resource-type">Coding_version</meta>
-            <column length="65535" name="PmntRcncltn_frmCd_Cdng_vrsn">
-                <comment>Coding_version</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrSsgnr" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setAssigner"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_ssgnr">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setAssigner"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnFrmCdCdngSstm" type="string">
-            <meta attribute="resource-type">Coding_system</meta>
-            <column length="65535" name="PmntRcncltn_frmCd_Cdng_sstm">
-                <comment>Coding_system</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setValue"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, string", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setValue"}</comment>
             </column>
         </property>
-        <property name="paymentReconciliationProcessNote" type="string">
-            <meta attribute="resource-type">BackboneElement</meta>
-            <column length="65535" name="PaymentReconciliation_processNote">
-                <comment>BackboneElement</comment>
+        <property name="pmntRcncltnDtlPrdcssrDntfrSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_prdcssr_dntfr_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.detail.predecessor", "datatype" : "Identifier, uri", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPredecessor, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrcssNtTpe" type="string">
-            <meta attribute="resource-type">code</meta>
-            <column length="65535" name="PmntRcncltn_prcssNt_tpe">
-                <comment>code</comment>
+        <property name="pmntRcncltnDtlTpCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_cdng_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setSystem"}</comment>
             </column>
         </property>
-        <property name="pmntRcncltnPrcssNtTxt" type="string">
-            <meta attribute="resource-type">string</meta>
-            <column length="65535" name="PmntRcncltn_prcssNt_txt">
-                <comment>string</comment>
+        <property name="pmntRcncltnDtlTpCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setVersion"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setCode"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_cdng_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlTpCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, setText"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_tp_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.detail.type", "datatype" : "CodeableConcept, string", "cardinality" : "Required", "elementtree" : ["addDetail"] , "methodName" : "setType, setText"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRqstRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.request", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setRequest"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rqst_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.detail.request", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setRequest"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlSbmttrRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.submitter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setSubmitter"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_sbmttr_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.detail.submitter", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setSubmitter"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRspnsRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.response", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setResponse"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rspns_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.detail.response", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setResponse"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlDtDte" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.date", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setDate"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_dt_dte">
+                <comment>{ "tree" :"PaymentReconciliation.detail.date", "datatype" : "date", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setDate"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlRspnsblRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.responsible", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setResponsible"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_rspnsbl_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.detail.responsible", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setResponsible"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlPRfrnce" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.payee", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPayee"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_p_Rfrnce">
+                <comment>{ "tree" :"PaymentReconciliation.detail.payee", "datatype" : "Reference", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setPayee"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntMnCrrncy" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setAmount, setCurrency"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Mn_crrncy">
+                <comment>{ "tree" :"PaymentReconciliation.detail.amount", "datatype" : "Money, code", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setAmount, setCurrency"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnDtlMntMnVlue" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.detail.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setAmount, setVal"}</meta>
+            <column length="65535" name="PmntRcncltn_dtl_mnt_Mn_vlue">
+                <comment>{ "tree" :"PaymentReconciliation.detail.amount", "datatype" : "Money, decimal", "cardinality" : "ZeroOne", "elementtree" : ["addDetail"] , "methodName" : "setAmount, setVal"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcCdngCSstm" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setSystem"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_cdng_C_sstm">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, uri", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setSystem"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcCdngCVrsn" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setVersion"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_cdng_C_vrsn">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setVersion"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcCdngCCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setCode"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_cdng_C_cde">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, code", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setCode"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcCdngCDsplay" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setDisplay"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_cdng_C_dsplay">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setDisplay"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcCdngCSrSlctd" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setUserSelected"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_cdng_C_srSlctd">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, Coding, boolean", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, addCoding, setUserSelected"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnFrmCdCcTxt" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, setText"}</meta>
+            <column length="65535" name="PmntRcncltn_frmCd_CC_txt">
+                <comment>{ "tree" :"PaymentReconciliation.formCode", "datatype" : "CodeableConcept, string", "cardinality" : "ZeroOne", "elementtree" : [] , "methodName" : "setFormCode, setText"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrcssNtTpCde" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.processNote.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addProcessNote"] , "methodName" : "setType"}</meta>
+            <column length="65535" name="PmntRcncltn_prcssNt_tp_cde">
+                <comment>{ "tree" :"PaymentReconciliation.processNote.type", "datatype" : "code", "cardinality" : "ZeroOne", "elementtree" : ["addProcessNote"] , "methodName" : "setType"}</comment>
+            </column>
+        </property>
+        <property name="pmntRcncltnPrcssNtTxtStrng" type="string">
+            <meta attribute="resource-type">{ "tree" :"PaymentReconciliation.processNote.text", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessNote"] , "methodName" : "setText"}</meta>
+            <column length="65535" name="PmntRcncltn_prcssNt_txt_strng">
+                <comment>{ "tree" :"PaymentReconciliation.processNote.text", "datatype" : "string", "cardinality" : "ZeroOne", "elementtree" : ["addProcessNote"] , "methodName" : "setText"}</comment>
             </column>
         </property>
     </class>

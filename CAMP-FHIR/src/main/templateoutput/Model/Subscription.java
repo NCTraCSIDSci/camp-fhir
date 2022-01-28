@@ -1,6 +1,6 @@
 // // default package
 package main.templateoutput.Model;
-// Generated Nov 18, 2021, 1:47:20 PM by Hibernate Tools 5.6.1.Final
+// Generated Jan 28, 2022, 7:59:45 AM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,197 +10,236 @@ package main.templateoutput.Model;
 public class Subscription  implements java.io.Serializable {
 
 
-     private String subscriptionStatus;
-     private String sbscrptnCntctCntctPntSstmCde;
-     private String sbscrptnCntctCntctPntSCde;
-     private String sbscrptnCntctCntctPntPrdStrt;
-     private String sbscrptnCntctCntctPntPrdNd;
-     private String sbscrptnCntctCntctPntRnkPstvnt;
-     private String sbscrptnCntctCntctPntVlStrng;
-     private String subscriptionEnd;
-     private String subscriptionReason;
-     private String subscriptionCriteria;
-     private String subscriptionError;
-     private String subscriptionChannelType;
-     private String subscriptionChannelEndpoint;
-     private String subscriptionChannelPayload;
-     private String subscriptionChannelHeader;
+     private Integer id;
+     private String subscriptionStatusCode;
+     private String sbscrptnCntctCntctPntSstm;
+     private String sbscrptnCntctCntctPntSe;
+     private String sbscrptnCntctCntctPntPrdPrdStrt;
+     private String sbscrptnCntctCntctPntPrdPrdNd;
+     private String sbscrptnCntctCntctPntRnk;
+     private String sbscrptnCntctCntctPntVlue;
+     private String subscriptionEndInstant;
+     private String subscriptionReasonString;
+     private String subscriptionCriteriaString;
+     private String subscriptionErrorString;
+     private String subscriptionChannelTypeCode;
+     private String subscriptionChannelEndpointUrl;
+     private String subscriptionChannelPayloadCode;
+     private String subscriptionChannelHeaderString;
 
     public Subscription() {
     }
 
-	
-    public Subscription(String subscriptionStatus) {
-        this.subscriptionStatus = subscriptionStatus;
-    }
-    public Subscription(String subscriptionStatus, String sbscrptnCntctCntctPntSstmCde, String sbscrptnCntctCntctPntSCde, String sbscrptnCntctCntctPntPrdStrt, String sbscrptnCntctCntctPntPrdNd, String sbscrptnCntctCntctPntRnkPstvnt, String sbscrptnCntctCntctPntVlStrng, String subscriptionEnd, String subscriptionReason, String subscriptionCriteria, String subscriptionError, String subscriptionChannelType, String subscriptionChannelEndpoint, String subscriptionChannelPayload, String subscriptionChannelHeader) {
-       this.subscriptionStatus = subscriptionStatus;
-       this.sbscrptnCntctCntctPntSstmCde = sbscrptnCntctCntctPntSstmCde;
-       this.sbscrptnCntctCntctPntSCde = sbscrptnCntctCntctPntSCde;
-       this.sbscrptnCntctCntctPntPrdStrt = sbscrptnCntctCntctPntPrdStrt;
-       this.sbscrptnCntctCntctPntPrdNd = sbscrptnCntctCntctPntPrdNd;
-       this.sbscrptnCntctCntctPntRnkPstvnt = sbscrptnCntctCntctPntRnkPstvnt;
-       this.sbscrptnCntctCntctPntVlStrng = sbscrptnCntctCntctPntVlStrng;
-       this.subscriptionEnd = subscriptionEnd;
-       this.subscriptionReason = subscriptionReason;
-       this.subscriptionCriteria = subscriptionCriteria;
-       this.subscriptionError = subscriptionError;
-       this.subscriptionChannelType = subscriptionChannelType;
-       this.subscriptionChannelEndpoint = subscriptionChannelEndpoint;
-       this.subscriptionChannelPayload = subscriptionChannelPayload;
-       this.subscriptionChannelHeader = subscriptionChannelHeader;
+    public Subscription(String subscriptionStatusCode, String sbscrptnCntctCntctPntSstm, String sbscrptnCntctCntctPntSe, String sbscrptnCntctCntctPntPrdPrdStrt, String sbscrptnCntctCntctPntPrdPrdNd, String sbscrptnCntctCntctPntRnk, String sbscrptnCntctCntctPntVlue, String subscriptionEndInstant, String subscriptionReasonString, String subscriptionCriteriaString, String subscriptionErrorString, String subscriptionChannelTypeCode, String subscriptionChannelEndpointUrl, String subscriptionChannelPayloadCode, String subscriptionChannelHeaderString) {
+       this.subscriptionStatusCode = subscriptionStatusCode;
+       this.sbscrptnCntctCntctPntSstm = sbscrptnCntctCntctPntSstm;
+       this.sbscrptnCntctCntctPntSe = sbscrptnCntctCntctPntSe;
+       this.sbscrptnCntctCntctPntPrdPrdStrt = sbscrptnCntctCntctPntPrdPrdStrt;
+       this.sbscrptnCntctCntctPntPrdPrdNd = sbscrptnCntctCntctPntPrdPrdNd;
+       this.sbscrptnCntctCntctPntRnk = sbscrptnCntctCntctPntRnk;
+       this.sbscrptnCntctCntctPntVlue = sbscrptnCntctCntctPntVlue;
+       this.subscriptionEndInstant = subscriptionEndInstant;
+       this.subscriptionReasonString = subscriptionReasonString;
+       this.subscriptionCriteriaString = subscriptionCriteriaString;
+       this.subscriptionErrorString = subscriptionErrorString;
+       this.subscriptionChannelTypeCode = subscriptionChannelTypeCode;
+       this.subscriptionChannelEndpointUrl = subscriptionChannelEndpointUrl;
+       this.subscriptionChannelPayloadCode = subscriptionChannelPayloadCode;
+       this.subscriptionChannelHeaderString = subscriptionChannelHeaderString;
     }
    
-    public String getSubscriptionStatus() {
-        return this.subscriptionStatus;
+    public 
+    Integer 
+    getId()
+    {
+        return this.id;
     }
     
-    public void setSubscriptionStatus(String subscriptionStatus) {
-        this.subscriptionStatus = subscriptionStatus;
+    public void setId
+        (Integer id) 
+        {
+      this.id = id;
+}
+    public 
+    String 
+    getSubscriptionStatusCode()
+    {
+        return this.subscriptionStatusCode;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntSstmCde() {
-        return this.sbscrptnCntctCntctPntSstmCde;
+    public void setSubscriptionStatusCode
+        (String subscriptionStatusCode) 
+        {
+      this.subscriptionStatusCode = subscriptionStatusCode;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntSstm()
+    {
+        return this.sbscrptnCntctCntctPntSstm;
     }
     
-    public void setSbscrptnCntctCntctPntSstmCde(String sbscrptnCntctCntctPntSstmCde) {
-        this.sbscrptnCntctCntctPntSstmCde = sbscrptnCntctCntctPntSstmCde;
+    public void setSbscrptnCntctCntctPntSstm
+        (String sbscrptnCntctCntctPntSstm) 
+        {
+      this.sbscrptnCntctCntctPntSstm = sbscrptnCntctCntctPntSstm;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntSe()
+    {
+        return this.sbscrptnCntctCntctPntSe;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntSCde() {
-        return this.sbscrptnCntctCntctPntSCde;
+    public void setSbscrptnCntctCntctPntSe
+        (String sbscrptnCntctCntctPntSe) 
+        {
+      this.sbscrptnCntctCntctPntSe = sbscrptnCntctCntctPntSe;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntPrdPrdStrt()
+    {
+        return this.sbscrptnCntctCntctPntPrdPrdStrt;
     }
     
-    public void setSbscrptnCntctCntctPntSCde(String sbscrptnCntctCntctPntSCde) {
-        this.sbscrptnCntctCntctPntSCde = sbscrptnCntctCntctPntSCde;
+    public void setSbscrptnCntctCntctPntPrdPrdStrt
+        (String sbscrptnCntctCntctPntPrdPrdStrt) 
+        {
+      this.sbscrptnCntctCntctPntPrdPrdStrt = sbscrptnCntctCntctPntPrdPrdStrt;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntPrdPrdNd()
+    {
+        return this.sbscrptnCntctCntctPntPrdPrdNd;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntPrdStrt() {
-        return this.sbscrptnCntctCntctPntPrdStrt;
+    public void setSbscrptnCntctCntctPntPrdPrdNd
+        (String sbscrptnCntctCntctPntPrdPrdNd) 
+        {
+      this.sbscrptnCntctCntctPntPrdPrdNd = sbscrptnCntctCntctPntPrdPrdNd;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntRnk()
+    {
+        return this.sbscrptnCntctCntctPntRnk;
     }
     
-    public void setSbscrptnCntctCntctPntPrdStrt(String sbscrptnCntctCntctPntPrdStrt) {
-        this.sbscrptnCntctCntctPntPrdStrt = sbscrptnCntctCntctPntPrdStrt;
+    public void setSbscrptnCntctCntctPntRnk
+        (String sbscrptnCntctCntctPntRnk) 
+        {
+      this.sbscrptnCntctCntctPntRnk = sbscrptnCntctCntctPntRnk;
+}
+    public 
+    String 
+    getSbscrptnCntctCntctPntVlue()
+    {
+        return this.sbscrptnCntctCntctPntVlue;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntPrdNd() {
-        return this.sbscrptnCntctCntctPntPrdNd;
+    public void setSbscrptnCntctCntctPntVlue
+        (String sbscrptnCntctCntctPntVlue) 
+        {
+      this.sbscrptnCntctCntctPntVlue = sbscrptnCntctCntctPntVlue;
+}
+    public 
+    String 
+    getSubscriptionEndInstant()
+    {
+        return this.subscriptionEndInstant;
     }
     
-    public void setSbscrptnCntctCntctPntPrdNd(String sbscrptnCntctCntctPntPrdNd) {
-        this.sbscrptnCntctCntctPntPrdNd = sbscrptnCntctCntctPntPrdNd;
+    public void setSubscriptionEndInstant
+        (String subscriptionEndInstant) 
+        {
+      this.subscriptionEndInstant = subscriptionEndInstant;
+}
+    public 
+    String 
+    getSubscriptionReasonString()
+    {
+        return this.subscriptionReasonString;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntRnkPstvnt() {
-        return this.sbscrptnCntctCntctPntRnkPstvnt;
+    public void setSubscriptionReasonString
+        (String subscriptionReasonString) 
+        {
+      this.subscriptionReasonString = subscriptionReasonString;
+}
+    public 
+    String 
+    getSubscriptionCriteriaString()
+    {
+        return this.subscriptionCriteriaString;
     }
     
-    public void setSbscrptnCntctCntctPntRnkPstvnt(String sbscrptnCntctCntctPntRnkPstvnt) {
-        this.sbscrptnCntctCntctPntRnkPstvnt = sbscrptnCntctCntctPntRnkPstvnt;
+    public void setSubscriptionCriteriaString
+        (String subscriptionCriteriaString) 
+        {
+      this.subscriptionCriteriaString = subscriptionCriteriaString;
+}
+    public 
+    String 
+    getSubscriptionErrorString()
+    {
+        return this.subscriptionErrorString;
     }
     
-    
-    
-    public String getSbscrptnCntctCntctPntVlStrng() {
-        return this.sbscrptnCntctCntctPntVlStrng;
+    public void setSubscriptionErrorString
+        (String subscriptionErrorString) 
+        {
+      this.subscriptionErrorString = subscriptionErrorString;
+}
+    public 
+    String 
+    getSubscriptionChannelTypeCode()
+    {
+        return this.subscriptionChannelTypeCode;
     }
     
-    public void setSbscrptnCntctCntctPntVlStrng(String sbscrptnCntctCntctPntVlStrng) {
-        this.sbscrptnCntctCntctPntVlStrng = sbscrptnCntctCntctPntVlStrng;
+    public void setSubscriptionChannelTypeCode
+        (String subscriptionChannelTypeCode) 
+        {
+      this.subscriptionChannelTypeCode = subscriptionChannelTypeCode;
+}
+    public 
+    String 
+    getSubscriptionChannelEndpointUrl()
+    {
+        return this.subscriptionChannelEndpointUrl;
     }
     
-    
-    
-    public String getSubscriptionEnd() {
-        return this.subscriptionEnd;
+    public void setSubscriptionChannelEndpointUrl
+        (String subscriptionChannelEndpointUrl) 
+        {
+      this.subscriptionChannelEndpointUrl = subscriptionChannelEndpointUrl;
+}
+    public 
+    String 
+    getSubscriptionChannelPayloadCode()
+    {
+        return this.subscriptionChannelPayloadCode;
     }
     
-    public void setSubscriptionEnd(String subscriptionEnd) {
-        this.subscriptionEnd = subscriptionEnd;
+    public void setSubscriptionChannelPayloadCode
+        (String subscriptionChannelPayloadCode) 
+        {
+      this.subscriptionChannelPayloadCode = subscriptionChannelPayloadCode;
+}
+    public 
+    String 
+    getSubscriptionChannelHeaderString()
+    {
+        return this.subscriptionChannelHeaderString;
     }
     
-    
-    
-    public String getSubscriptionReason() {
-        return this.subscriptionReason;
-    }
-    
-    public void setSubscriptionReason(String subscriptionReason) {
-        this.subscriptionReason = subscriptionReason;
-    }
-    
-    
-    
-    public String getSubscriptionCriteria() {
-        return this.subscriptionCriteria;
-    }
-    
-    public void setSubscriptionCriteria(String subscriptionCriteria) {
-        this.subscriptionCriteria = subscriptionCriteria;
-    }
-    
-    
-    
-    public String getSubscriptionError() {
-        return this.subscriptionError;
-    }
-    
-    public void setSubscriptionError(String subscriptionError) {
-        this.subscriptionError = subscriptionError;
-    }
-    
-    
-    
-    public String getSubscriptionChannelType() {
-        return this.subscriptionChannelType;
-    }
-    
-    public void setSubscriptionChannelType(String subscriptionChannelType) {
-        this.subscriptionChannelType = subscriptionChannelType;
-    }
-    
-    
-    
-    public String getSubscriptionChannelEndpoint() {
-        return this.subscriptionChannelEndpoint;
-    }
-    
-    public void setSubscriptionChannelEndpoint(String subscriptionChannelEndpoint) {
-        this.subscriptionChannelEndpoint = subscriptionChannelEndpoint;
-    }
-    
-    
-    
-    public String getSubscriptionChannelPayload() {
-        return this.subscriptionChannelPayload;
-    }
-    
-    public void setSubscriptionChannelPayload(String subscriptionChannelPayload) {
-        this.subscriptionChannelPayload = subscriptionChannelPayload;
-    }
-    
-    
-    
-    public String getSubscriptionChannelHeader() {
-        return this.subscriptionChannelHeader;
-    }
-    
-    public void setSubscriptionChannelHeader(String subscriptionChannelHeader) {
-        this.subscriptionChannelHeader = subscriptionChannelHeader;
-    }
-    
-    
-    
+    public void setSubscriptionChannelHeaderString
+        (String subscriptionChannelHeaderString) 
+        {
+      this.subscriptionChannelHeaderString = subscriptionChannelHeaderString;
+}
 
 
 
