@@ -55,384 +55,431 @@
             <label for="db_resource">FHIR Resource (R4)</label>
             <div class="resouce-content" >
                 <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">
-                    <table width="50%">
-                     <tbody><tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate"><div>Foundation</div></td>
-                      <td class="frm-category">Conformance</td>
-                      <td class="frm-category">Terminology</td>
-                      <td class="frm-category">Security</td>
-                      <td class="frm-category">Documents</td>
-                      <td class="frm-category">Other</td>
+                    <table width="105%" style="border: 0.5px solid gray; border-collapse: collapse;">
+                     <tbody><tr class="frm-group" >
+                      <td  rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Foundation</div></td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Conformance</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Terminology</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Security</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Documents</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Other</td>
                      </tr>
-                     <tr class="frm-contents">
-                      <td class="frm-set"><ul class="frm-set">
+                     <tr class="frm-contents" style="font-size: 12px;">
+                      <td class="frm-set" style="width:fit-content"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="CapabilityStatement" name="resource">
-                        <label for="checkbox1"> Capability Statement</label> <p></p>
+                        <label for="checkbox1" > Capability Statement</label> <br>
                         <input type="checkbox" id="checkbox2" value="StructureDefinition" name="resource">
-                        <label for="checkbox2"> StructureDefinition</label><p></p>
+                        <label for="checkbox2"> StructureDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="ImplementationGuide" name="resource">
-                        <label for="checkbox1"> ImplementationGuide</label><p></p>
+                        <label for="checkbox1"> ImplementationGuide</label><br>
                         <input type="checkbox" id="checkbox1" value="SearchParameter" name="resource">
-                        <label for="checkbox1"> SearchParameter</label><p></p>
+                        <label for="checkbox1"> SearchParameter</label><br>
                         <input type="checkbox" id="checkbox1" value="MessageDefinition" name="resource">
-                        <label for="checkbox1"> MessageDefinition</label><p></p>
+                        <label for="checkbox1"> MessageDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="OperationDefinition" name="resource">
-                        <label for="checkbox1"> OperationDefinition</label><p></p>
+                        <label for="checkbox1"> OperationDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="CompartmentDefinition" name="resource">
-                        <label for="checkbox1"> CompartmentDefinition</label><p></p>
+                        <label for="checkbox1"> CompartmentDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="GraphDefinition" name="resource">
-                        <label for="checkbox1"> GraphDefinition</label><p></p>
+                        <label for="checkbox1"> GraphDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="ExampleScenario" name="resource">
-                        <label for="checkbox1"> ExampleScenario</label><p></p>
+                        <label for="checkbox1"> ExampleScenario</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
-                        <p></p><input type="checkbox" id="checkbox1" value="CodeSystem" name="resource">
-                        <label for="checkbox1">CodeSystem</label><p></p>
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
+                        <input type="checkbox" id="checkbox1" value="CodeSystem" name="resource">
+                        <label for="checkbox1">CodeSystem</label><br>
                         <input type="checkbox" id="checkbox1" value="ValueSet" name="resource">
-                        <label for="checkbox1">ValueSet</label><p></p>
+                        <label for="checkbox1">ValueSet</label><br>
                         <input type="checkbox" id="checkbox1" value="ConceptMap" name="resource">
-                        <label for="checkbox1">ConceptMap</label><p></p>
+                        <label for="checkbox1">ConceptMap</label><br>
                         <input type="checkbox" id="checkbox1" value="NamingSystem" name="resource">
-                        <label for="checkbox1">NamingSystem</label>
+                        <label for="checkbox1">NamingSystem</label> <br>
                         <input type="checkbox" id="checkbox1" value="TerminologyCapabilities" name="resource">
-                       <p></p> <label for="checkbox1">TerminologyCapabilities</label>
+                        <label for="checkbox1">Terminology Capabilities</label> <br> 
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Provenance" name="resource">
-                        <label for="checkbox1">Provenance</label><p></p>
+                        <label for="checkbox1">Provenance</label><br>
                         <input type="checkbox" id="checkbox1" value="AuditEventvel" name="resource">
-                        <label for="checkbox1">AuditEventvel</label><p></p>
+                        <label for="checkbox1">AuditEventvel</label><br>
                         <input type="checkbox" id="checkbox1" value="Consent" name="resource">
-                        <label for="checkbox1">Consent</label><p></p>
+                        <label for="checkbox1">Consent</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Composition" name="resource">
-                        <label for="checkbox1">Composition</label>
+                        <label for="checkbox1">Composition</label><br>
                         <input type="checkbox" id="checkbox1" value="DocumentManifest" name="resource">
-                        <label for="checkbox1"> DocumentManifest</label><p></p>
+                        <label for="checkbox1"> DocumentManifest</label><br>
                         <input type="checkbox" id="checkbox1" value="DocumentReference" name="resource">
-                        <label for="checkbox1">DocumentReference</label><p></p>
+                        <label for="checkbox1">DocumentReference</label><br>
                         <input type="checkbox" id="checkbox1" value="CatalogEntry" name="resource">
-                        <label for="checkbox1">CatalogEntry</label><p></p>
+                        <label for="checkbox1">CatalogEntry</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Basic" name="resource">
-                        <label for="checkbox1">Basic</label><p></p>
+                        <label for="checkbox1">Basic</label><br>
                         <input type="checkbox" id="checkbox1" value="Binary" name="resource">
-                        <label for="checkbox1">Binary</label><p></p>
+                        <label for="checkbox1">Binary</label><br>
                         <input type="checkbox" id="checkbox1" value="Bundle" name="resource">
-                        <label for="checkbox1">Bundle</label><p></p>
+                        <label for="checkbox1">Bundle</label><br>
                         <input type="checkbox" id="checkbox1" value="Linkage" name="resource">
-                        <label for="checkbox1">Linkage</label><p></p>
+                        <label for="checkbox1">Linkage</label><br>
                         <input type="checkbox" id="checkbox1" value="MessageHeader" name="resource">
-                        <label for="checkbox1">MessageHeader</label><p></p>
+                        <label for="checkbox1">MessageHeader</label><br>
                         <input type="checkbox" id="checkbox1" value="OperationOutcome" name="resource">
-                        <label for="checkbox1">OperationOutcome</label><p></p>
+                        <label for="checkbox1">OperationOutcome</label><br>
                         <input type="checkbox" id="checkbox1" value="Parameters" name="resource">
-                        <label for="checkbox1">Parameters</label><p></p>
+                        <label for="checkbox1">Parameters</label><br>
                         <input type="checkbox" id="checkbox1" value="Subscription" name="resource">
-                        <label for="checkbox1">Subscription</label><p></p>
+                        <label for="checkbox1">Subscription</label><br>
                       </ul></td>
                      </tr>
                      <tr class="frm-break"><td colspan="6"></td></tr>
                      <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate"><div>Base</div></td>
-                      <td class="frm-category">Individuals</td>
-                      <td class="frm-category">Entities #1</td>
-                      <td class="frm-category">Entities #2</td>
-                      <td class="frm-category">Workflow</td>
-                      <td class="frm-category">Management</td>
+                      <td  rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Base</div></td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Individuals</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Entities #1</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Entities #2</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Workflow</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Management</td>
                      </tr>
                      <tr class="frm-contents">
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Patient" name="resource">
-                        <label for="checkbox1">Patient</label><p></p>
+                        <label for="checkbox1">Patient</label><br>
                         <input type="checkbox" id="checkbox1" value="PractitionerRole" name="resource">
-                        <label for="checkbox1">PractitionerRole</label><p></p>
+                        <label for="checkbox1">PractitionerRole</label><br>
                         <input type="checkbox" id="checkbox1" value="RelatedPerson" name="resource">
-                        <label for="checkbox1">RelatedPerson</label><p></p>
+                        <label for="checkbox1">RelatedPerson</label><br>
                         <input type="checkbox" id="checkbox1" value="Person" name="resource">
-                        <label for="checkbox1">Person</label><p></p>
+                        <label for="checkbox1">Person</label><br>
                         <input type="checkbox" id="checkbox1" value="Group" name="resource">
-                        <label for="checkbox1">Group</label><p></p>
+                        <label for="checkbox1">Group</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Organization" name="resource">
-                        <label for="checkbox1">Organization</label><p></p>
+                        <label for="checkbox1">Organization</label><br>
                         <input type="checkbox" id="checkbox1" value="OrganizationAffiliation" name="resource">
-                        <label for="checkbox1">OrganizationAffiliation</label><p></p>
+                        <label for="checkbox1">OrganizationAffiliation</label><br>
                         <input type="checkbox" id="checkbox1" value="HealthcareService" name="resource">
-                        <label for="checkbox1">HealthcareService</label><p></p>
+                        <label for="checkbox1">HealthcareService</label><br>
                         <input type="checkbox" id="checkbox1" value="Endpoint" name="resource">
-                        <label for="checkbox1">Endpoint</label><p></p>
+                        <label for="checkbox1">Endpoint</label><br>
                         <input type="checkbox" id="checkbox1" value="Location" name="resource">
-                        <label for="checkbox1">Location</label><p></p>
+                        <label for="checkbox1">Location</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Substance" name="resource">
-                        <label for="checkbox1">Substance</label><p></p>
+                        <label for="checkbox1">Substance</label><br>
                         <input type="checkbox" id="checkbox1" value="BiologicallyDerivedProduct" name="resource">
-                        <label for="checkbox1">BiologicallyDerivedProduct</label><p></p>
+                        <label for="checkbox1">BiologicallyDerivedProduct</label><br>
                         <input type="checkbox" id="checkbox1" value="Device" name="resource">
-                        <label for="checkbox1">Device</label><p></p>
+                        <label for="checkbox1">Device</label><br>
                         <input type="checkbox" id="checkbox1" value="DeviceMetric" name="resource">
-                        <label for="checkbox1">DeviceMetric</label><p></p>
+                        <label for="checkbox1">DeviceMetric</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td  class="frm-set" style="font-size: 12px; width: fit-content;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Task" name="resource">
-                        <label for="checkbox1">Task</label><p></p>
+                        <label for="checkbox1">Task</label><br>
                         <input type="checkbox" id="checkbox1" value="Appointment" name="resource">
-                        <label for="checkbox1">Appointment</label><p></p>
+                        <label for="checkbox1">Appointment</label><br>
                         <input type="checkbox" id="checkbox1" value="AppointmentResponse" name="resource">
-                        <label for="checkbox1">AppointmentResponse</label><p></p>
+                        <label for="checkbox1">AppointmentResponse</label><br>
                         <input type="checkbox" id="checkbox1" value="Schedule" name="resource">
-                        <label for="checkbox1">Schedule</label><p></p>
+                        <label for="checkbox1">Schedule</label><br>
                         <input type="checkbox" id="checkbox1" value="Slot" name="resource">
-                        <label for="checkbox1">Slot</label><p></p>
+                        <label for="checkbox1">Slot</label><br>
                         <input type="checkbox" id="checkbox1" value="VerificationResult" name="resource">
-                        <label for="checkbox1">VerificationResult</label><p></p>
+                        <label for="checkbox1">VerificationResult</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Encounter" name="resource">
-                        <label for="checkbox1">Encounter</label><p></p>
+                        <label for="checkbox1">Encounter</label><br>
                         <input type="checkbox" id="checkbox1" value="EpisodeOfCare" name="resource">
-                        <label for="checkbox1">EpisodeOfCare</label><p></p>
+                        <label for="checkbox1">EpisodeOfCare</label><br>
                         <input type="checkbox" id="checkbox1" value="Flag" name="resource">
-                        <label for="checkbox1">Flag</label><p></p>
+                        <label for="checkbox1">Flag</label><br>
                         <input type="checkbox" id="checkbox1" value="List" name="resource">
-                        <label for="checkbox1">List</label><p></p>
+                        <label for="checkbox1">List</label><br>
                         <input type="checkbox" id="checkbox1" value="Library" name="resource">
-                        <label for="checkbox1">Library</label><p></p>
+                        <label for="checkbox1">Library</label><br>
                       </ul></td>
                      </tr>
                      <tr class="frm-break"><td colspan="6"></td></tr>
                      <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate"><div>Clinical</div></td>
-                      <td class="frm-category">Summary</td>
-                      <td class="frm-category">Diagnostics</td>
-                      <td class="frm-category">Medications</td>
-                      <td class="frm-category">Care Provision</td>
-                      <td class="frm-category">Request &amp; Response</td>
+                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Clinical</div></td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Summary</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Diagnostics</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;" >Medications</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Care Provision</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Request &amp; Response</td>
                      </tr>
                      <tr class="frm-contents">
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="AdverseEvent" name="resource">
-                        <label for="checkbox1">AdverseEvent</label><p></p>
+                        <label for="checkbox1">AdverseEvent</label><br>
                         <input type="checkbox" id="checkbox1" value="Condition" name="resource">
-                        <label for="checkbox1">Condition</label><p></p>
+                        <label for="checkbox1">Condition</label><br>
                         <input type="checkbox" id="checkbox1" value="Procedure" name="resource">
-                        <label for="checkbox1">Procedure</label><p></p>
+                        <label for="checkbox1">Procedure</label><br>
                         <input type="checkbox" id="checkbox1" value="FamilyMemberHistory" name="resource">
-                        <label for="checkbox1">FamilyMemberHistory</label><p></p>
+                        <label for="checkbox1">FamilyMemberHistory</label><br>
                         <input type="checkbox" id="checkbox1" value="ClinicalImpression" name="resource">
-                        <label for="checkbox1">ClinicalImpression</label><p></p>
+                        <label for="checkbox1">ClinicalImpression</label><br>
                         <input type="checkbox" id="checkbox1" value="DetectedIssue" name="resource">
-                        <label for="checkbox1">DetectedIssue</label><p></p>
+                        <label for="checkbox1">DetectedIssue</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Observation" name="resource">
-                        <label for="checkbox1">Observation</label><p></p>
+                        <label for="checkbox1">Observation</label><br>
                         <input type="checkbox" id="checkbox1" value="Media" name="resource">
-                        <label for="checkbox1">Media</label><p></p>
+                        <label for="checkbox1">Media</label><br>
                         <input type="checkbox" id="checkbox1" value="DiagnosticReport" name="resource">
-                        <label for="checkbox1">DiagnosticReport</label><p></p>
+                        <label for="checkbox1">DiagnosticReport</label><br>
                         <input type="checkbox" id="checkbox1" value="Specimen" name="resource">
-                        <label for="checkbox1">Specimen</label><p></p>
+                        <label for="checkbox1">Specimen</label><br>
                         <input type="checkbox" id="checkbox1" value="ImagingStudy" name="resource">
-                        <label for="checkbox1">ImagingStudy</label><p></p>
+                        <label for="checkbox1">ImagingStudy</label><br>
                         <input type="checkbox" id="checkbox1" value="QuestionnaireResponse" name="resource">
-                        <label for="checkbox1">QuestionnaireResponse</label><p></p>
+                        <label for="checkbox1">Questionnaire Response</label><br>
                         <input type="checkbox" id="checkbox1" value="MolecularSequence" name="resource">
-                        <label for="checkbox1">MolecularSequence</label><p></p>
+                        <label for="checkbox1">MolecularSequence</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td  class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="MedicationRequest" name="resource">
-                        <label for="checkbox1">MedicationRequest</label><p></p>
+                        <label for="checkbox1">MedicationRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicationAdministration" name="resource">
-                        <label for="checkbox1">MedicationAdministration</label><p></p>
+                        <label for="checkbox1">MedicationAdministration</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicationDispense" name="resource">
-                        <label for="checkbox1">MedicationDispense</label><p></p>
+                        <label for="checkbox1">MedicationDispense</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicationStatement" name="resource">
-                        <label for="checkbox1">MedicationStatement</label><p></p>
+                        <label for="checkbox1">MedicationStatement</label><br>
                         <input type="checkbox" id="checkbox1" value="Medication" name="resource">
-                        <label for="checkbox1">Medication</label><p></p>
+                        <label for="checkbox1">Medication</label><br>
                         <input type="checkbox" id="checkbox1" value="Immunization" name="resource">
-                        <label for="checkbox1">Immunization</label><p></p>
+                        <label for="checkbox1">Immunization</label><br>
                         <input type="checkbox" id="checkbox1" value="ImmunizationEvaluation" name="resource">
-                        <label for="checkbox1">ImmunizationEvaluation</label><p></p>
+                        <label for="checkbox1">ImmunizationEvaluation</label><br>
                         <input type="checkbox" id="checkbox1" value="ImmunizationRecommendation" name="resource">
-                        <label for="checkbox1">ImmunizationRecommendation</label><p></p>
+                        <label for="checkbox1">ImmunizationRecommendation</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="CarePlan" name="resource">
-                        <label for="checkbox1">CarePlan</label><p></p>
+                        <label for="checkbox1">CarePlan</label><br>
                         <input type="checkbox" id="checkbox1" value="Goal" name="resource">
-                        <label for="checkbox1">Goal</label><p></p>
+                        <label for="checkbox1">Goal</label><br>
                         <input type="checkbox" id="checkbox1" value="ServiceRequest" name="resource">
-                        <label for="checkbox1">ServiceRequest</label><p></p>
+                        <label for="checkbox1">ServiceRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="NutritionOrder" name="resource">
-                        <label for="checkbox1">NutritionOrder</label><p></p>
+                        <label for="checkbox1">NutritionOrder</label><br>
                         <input type="checkbox" id="checkbox1" value="VisionPrescription" name="resource">
-                        <label for="checkbox1">VisionPrescription</label><p></p>
+                        <label for="checkbox1">VisionPrescription</label><br>
                         <input type="checkbox" id="checkbox1" value="RiskAssessment" name="resource">
-                        <label for="checkbox1">RiskAssessment</label><p></p>
+                        <label for="checkbox1">RiskAssessment</label><br>
                         <input type="checkbox" id="checkbox1" value="RequestGroup" name="resource">
-                        <label for="checkbox1">RequestGroup<input type="checkbox" id="checkbox1" value="CapabilityStatement" name="resource">
-                        <label for="checkbox1">>
+                        <label for="checkbox1">RequestGroup</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Communication" name="resource">
-                        <label for="checkbox1">Communication</label><p></p>
+                        <label for="checkbox1">Communication</label><br>
                         <input type="checkbox" id="checkbox1" value="CommunicationRequest" name="resource">
-                        <label for="checkbox1">CommunicationRequest</label><p></p>
+                        <label for="checkbox1">CommunicationRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="DeviceRequest" name="resource">
-                        <label for="checkbox1">DeviceRequest</label><p></p>
+                        <label for="checkbox1">DeviceRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="DeviceUseStatement" name="resource">
-                        <label for="checkbox1">DeviceUseStatement</label><p></p>
+                        <label for="checkbox1">DeviceUseStatement</label><br>
                         <input type="checkbox" id="checkbox1" value="SupplyRequest" name="resource">
-                        <label for="checkbox1">SupplyRequest</label><p></p>
+                        <label for="checkbox1">SupplyRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="SupplyDelivery" name="resource">
-                        <label for="checkbox1">SupplyDelivery</label><p></p>
+                        <label for="checkbox1">SupplyDelivery</label><br>
                       </ul></td>
                      </tr>
                      <tr class="frm-break"><td colspan="6"></td></tr>
                      <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate"><div>Financial</div></td>
-                      <td class="frm-category">Support</td>
-                      <td class="frm-category">Billing</td>
-                      <td class="frm-category">Payment</td>
-                      <td class="frm-category">General</td>
-                      <td class="frm-null"></td>
+                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Financial</div></td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Support</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Billing</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Payment</td>
+                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">General</td>
+                      <td  class="frm-null"></td>
                      </tr>
                      <tr class="frm-contents">
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Coverage" name="resource">
-                        <label for="checkbox1">Coverage</label><p></p>
+                        <label for="checkbox1">Coverage</label><br>
                         <input type="checkbox" id="checkbox1" value="CoverageEligibilityResponse" name="resource">
-                        <label for="checkbox1">CoverageEligibilityResponse</label><p></p>
+                        <label for="checkbox1">Coverage Eligibility Response</label><br>
                         <input type="checkbox" id="checkbox1" value="EnrollmentRequest" name="resource">
-                        <label for="checkbox1">EnrollmentRequest</label><p></p>
+                        <label for="checkbox1">EnrollmentRequest</label><br>
                         <input type="checkbox" id="checkbox1" value="EnrollmentResponse" name="resource">
-                        <label for="checkbox1">EnrollmentResponse</label><p></p>
+                        <label for="checkbox1">EnrollmentResponse</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Claim<" name="resource">
-                        <label for="checkbox1">Claim</label><p></p>
+                        <label for="checkbox1">Claim</label><br>
                         <input type="checkbox" id="checkbox1" value="ClaimResponse" name="resource">
-                        <label for="checkbox1">ClaimResponse</label><p></p>
+                        <label for="checkbox1">ClaimResponse</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="PaymentNotice" name="resource">
-                        <label for="checkbox1">PaymentNotice</label><p></p>
+                        <label for="checkbox1">PaymentNotice</label><br>
                         <input type="checkbox" id="checkbox1" value="PaymentReconciliation" name="resource">
-                        <label for="checkbox1">PaymentReconciliation</label><p></p>
+                        <label for="checkbox1">PaymentReconciliation</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Account" name="resource">
-                        <label for="checkbox1">Account</label><p></p>
+                        <label for="checkbox1">Account</label><br>
                         <input type="checkbox" id="checkbox1" value="ChargeItem" name="resource">
-                        <label for="checkbox1">ChargeItem</label><p></p>
+                        <label for="checkbox1">ChargeItem</label><br>
                         <input type="checkbox" id="checkbox1" value="ChargeItemDefinition" name="resource">
-                        <label for="checkbox1">ChargeItemDefinition</label><p></p>
+                        <label for="checkbox1">ChargeItemDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="Contract" name="resource">
-                        <label for="checkbox1">Contract</label><p></p>
+                        <label for="checkbox1">Contract</label><br>
                         <input type="checkbox" id="checkbox1" value="ExplanationOfBenefit" name="resource">
-                        <label for="checkbox1">ExplanationOfBenefit</label><p></p>
+                        <label for="checkbox1">ExplanationOfBenefit</label><br>
                         <input type="checkbox" id="checkbox1" value="InsurancePlan" name="resource">
-                        <label for="checkbox1">InsurancePlan</label><p></p>
+                        <label for="checkbox1">InsurancePlan</label><br>
                       </ul></td>
-                      <td class="frm-null"></td>
+                      <td   style="width: fit-content;" class="frm-null"></td>
                      </tr>
-                     <tr class="frm-break"><td colspan="6"></td></tr>
+                     <tr class="frm-break"><td   style="width: fit-content;" colspan="6"></td></tr>
                      <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate"><div>Specialized</div></td>
-                      <td class="frm-category">Public Health &amp; Research</td>
-                      <td class="frm-category">Definitional Artifacts</td>
-                      <td class="frm-category">Evidence-Based Medicine</td>
-                      <td class="frm-category">Quality Reporting &amp; Testing</td>
-                      <td class="frm-category">Medication Definition</td>
+                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Specialized</div></td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Public Health &amp; Research</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Definitional Artifacts</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Evidence-Based Medicine</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Quality Reporting &amp; Testing</td>
+                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      font-weight: bold;
+                      text-align: center;">Medication Definition</td>
                      </tr>
                      <tr class="frm-contents">
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="ResearchStudy" name="resource">
-                        <label for="checkbox1">ResearchStudy</label><p></p>
+                        <label for="checkbox1">ResearchStudy</label><br>
                         <input type="checkbox" id="checkbox1" value="ResearchSubject" name="resource">
-                        <label for="checkbox1">ResearchSubject</label><p></p>
+                        <label for="checkbox1">ResearchSubject</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         
                         <input type="checkbox" id="checkbox1" value="ActivityDefinition" name="resource">
-                        <label for="checkbox1">ActivityDefinition</label><p></p>
+                        <label for="checkbox1">ActivityDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="DeviceDefinition" name="resource">
-                        <label for="checkbox1">DeviceDefinition</label><p></p>
+                        <label for="checkbox1">DeviceDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="EventDefinition" name="resource">
-                        <label for="checkbox1">EventDefinition</label><p></p>
+                        <label for="checkbox1">EventDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="ObservationDefinition" name="resource">
-                        <label for="checkbox1">ObservationDefinition</label><p></p>
+                        <label for="checkbox1">ObservationDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="PlanDefinition" name="resource">
-                        <label for="checkbox1">PlanDefinition</label><p></p>
+                        <label for="checkbox1">PlanDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="Questionnaire" name="resource">
-                        <label for="checkbox1">Questionnaire</label><p></p>
+                        <label for="checkbox1">Questionnaire</label><br>
                         <input type="checkbox" id="checkbox1" value="SpecimenDefinition" name="resource">
-                        <label for="checkbox1">SpecimenDefinition</label><p></p>
+                        <label for="checkbox1">SpecimenDefinition</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="ResearchDefinition" name="resource">
-                        <label for="checkbox1">ResearchDefinition</label><p></p>
+                        <label for="checkbox1">ResearchDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="ResearchElementDefinition" name="resource">
-                        <label for="checkbox1">ResearchElementDefinition</label><p></p>
+                        <label for="checkbox1">ResearchElementDefinition</label><br>
                         <input type="checkbox" id="checkbox1" value="Evidence" name="resource">
-                        <label for="checkbox1">Evidence</label><p></p>
+                        <label for="checkbox1">Evidence</label><br>
                         <input type="checkbox" id="checkbox1" value="EvidenceVariable" name="resource">
-                        <label for="checkbox1">EvidenceVariable</label><p></p>
+                        <label for="checkbox1">EvidenceVariable</label><br>
                         <input type="checkbox" id="checkbox1" value="EffectEvidenceSynthesis" name="resource">
-                        <label for="checkbox1">EffectEvidenceSynthesis</label><p></p>
+                        <label for="checkbox1">EffectEvidenceSynthesis</label><br>
                         <input type="checkbox" id="checkbox1" value="RiskEvidenceSynthesis" name="resource">
-                        <label for="checkbox1">RiskEvidenceSynthesis</label><p></p>
+                        <label for="checkbox1">RiskEvidenceSynthesis</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="Measure" name="resource">
-                        <label for="checkbox1">Measure</label><p></p>
+                        <label for="checkbox1">Measure</label><br>
                         <input type="checkbox" id="checkbox1" value="MeasureReport" name="resource">
-                        <label for="checkbox1">MeasureReport</label><p></p>
+                        <label for="checkbox1">MeasureReport</label><br>
                         <input type="checkbox" id="checkbox1" value="TestScript" name="resource">
-                        <label for="checkbox1">TestScript</label><p></p>
+                        <label for="checkbox1">TestScript</label><br>
                         <input type="checkbox" id="checkbox1" value="TestReport" name="resource">
-                        <label for="checkbox1">TestReport</label><p></p>
+                        <label for="checkbox1">TestReport</label><br>
                       </ul></td>
-                      <td class="frm-set"><ul class="frm-set">
+                      <td  class="frm-set" style="font-size: 12px;"><ul class="frm-set">
                         <input type="checkbox" id="checkbox1" value="MedicinalProducions" name="resource">
-                        <label for="checkbox1">MedicinalProducions</label><p></p>
+                        <label for="checkbox1">MedicinalProducions</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductAuthorization" name="resource">
-                        <label for="checkbox1">MedicinalProductAuthorization</label><p></p>
+                        <label for="checkbox1">MedicinalProductAuthorization</label><br>
                         <input type="checkbox" id="checkbox1" value="capabilitystatement" name="resource">
-                        <label for="checkbox1"></label><p></p>
+                        <label for="checkbox1">MedicinalProductContraindication</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductIndication" name="resource">
-                        <label for="checkbox1">MedicinalProductIndication</label><p></p>
+                        <label for="checkbox1">MedicinalProductIndication</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductIngredient" name="resource">
-                        <label for="checkbox1">MedicinalProductIngredient</label><p></p>
+                        <label for="checkbox1">MedicinalProductIngredient</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductInteraction" name="resource">
-                        <label for="checkbox1">MedicinalProductInteraction</label><p></p>
+                        <label for="checkbox1">MedicinalProductInteraction</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductManufactured" name="resource">
-                        <label for="checkbox1">MedicinalProductManufactured</label><p></p>
+                        <label for="checkbox1">MedicinalProductManufactured</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductPackaged" name="resource">
-                        <label for="checkbox1">MedicinalProductPackaged</label><p></p>
+                        <label for="checkbox1">MedicinalProductPackaged</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductPharmaceutical" name="resource">
-                        <label for="checkbox1">MedicinalProductPharmaceutical</label><p></p>
+                        <label for="checkbox1">MedicinalProductPharmaceutical</label><br>
                         <input type="checkbox" id="checkbox1" value="MedicinalProductUndesirableEffect" name="resource">
-                        <label for="checkbox1">MedicinalProductUndesirableEffect</label><p></p>
+                        <label for="checkbox1">MedicinalProductUndesirableEffect</label><br>
                         <input type="checkbox" id="checkbox1" value="SubstanceNucleicAcid" name="resource">
-                        <label for="checkbox1">SubstanceNucleicAcid</label><p></p>
+                        <label for="checkbox1">SubstanceNucleicAcid</label><br>
                         <input type="checkbox" id="checkbox1" value="SubstancePolymer" name="resource">
-                        <label for="checkbox1">SubstancePolymer</label><p></p>
+                        <label for="checkbox1">SubstancePolymer</label><br>
                         <input type="checkbox" id="checkbox1" value="SubstanceReferenceInformation" name="resource">
-                        <label for="checkbox1">SubstanceReferenceInformation</label><p></p>
+                        <label for="checkbox1">SubstanceReferenceInformation</label><br>
                         <input type="checkbox" id="checkbox1" value="SubstanceSourceMaterial" name="resource">
-                        <label for="checkbox1">SubstanceSourceMaterial</label><p></p>
+                        <label for="checkbox1">SubstanceSourceMaterial</label><br>
                         
                       </ul></td>
                      </tr>
-                     <tr class="frm-break"><td colspan="6"></td></tr>
+                     <tr class="frm-break"><td   style="width: fit-content;" colspan="6"></td></tr>
                     </tbody></table>
                 
                     </div>

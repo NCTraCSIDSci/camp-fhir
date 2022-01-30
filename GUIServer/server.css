@@ -1,5 +1,8 @@
-resource-content {
-    font-size: 12px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
+body {
+    background-color: lightblue !important;
+  }
+  
+ul.frm-set {
+    color: red !important;
+    margin-left: 20px;
+  }
