@@ -742,15 +742,15 @@
 <!--         <property generated="never" lazy="false" name="pntNameHumannamePeriodEnd" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_NAME_HUMANNAME_PERIOD_END"/> -->
 <!--         </property> -->
-        <property generated="never" lazy="false" name="pntTelecom" optimistic-lock="true" type="string" unique="false">
-            <column name="PAT_TELECOM"/>
-        </property>
+<!--         <property generated="never" lazy="false" name="pntTelecom" optimistic-lock="true" type="string" unique="false"> -->
+<!--             <column name="PAT_TELECOM"/> -->
+<!--         </property> -->
 <!--         <property generated="never" lazy="false" name="pntTelecomContactpointSystem" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_TELECOM_CONTACTPOINT_SYSTEM"/> -->
 <!--         </property> -->
-<!--         <property generated="never" lazy="false" name="pntTelecomContactpointValue" optimistic-lock="true" type="string" unique="false"> -->
-<!--             <column name="PAT_TELECOM_CONTACTPOINT_VALUE"/> -->
-<!--         </property> -->
+        <property generated="never" lazy="false" name="pntTelecomContactpointValue" optimistic-lock="true" type="string" unique="false">
+            <column name="PAT_TELECOM"/>
+        </property>
 <!--         <property generated="never" lazy="false" name="pntTelecomContactpointUse" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_TELECOM_CONTACTPOINT_USE"/> -->
 <!--         </property> -->
@@ -775,18 +775,18 @@
         <property generated="never" lazy="false" name="pntDeceaseddatetime" optimistic-lock="true" type="string" unique="false">
             <column name="PAT_DECEASEDDATETIME"/>
         </property>
-        <property generated="never" lazy="false" name="pntAddress" optimistic-lock="true" type="string" unique="false">
-            <column name="PAT_ADDRESS"/>
-        </property>
+<!--         <property generated="never" lazy="false" name="pntAddress" optimistic-lock="true" type="string" unique="false"> -->
+<!--             <column name="PAT_ADDRESS"/> -->
+<!--         </property> -->
 <!--         <property generated="never" lazy="false" name="pntAddressUse" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_ADDRESS_USE"/> -->
 <!--         </property> -->
 <!--         <property generated="never" lazy="false" name="pntAddressType" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_ADDRESS_TYPE"/> -->
 <!--         </property> -->
-<!--         <property generated="never" lazy="false" name="pntAddressText" optimistic-lock="true" type="string" unique="false"> -->
-<!--             <column name="PAT_ADDRESS_TEXT"/> -->
-<!--         </property> -->
+        <property generated="never" lazy="false" name="pntAddressText" optimistic-lock="true" type="string" unique="false">
+            <column name="PAT_ADDRESS"/>
+        </property>
 <!--         <property generated="never" lazy="false" name="pntAddressLine" optimistic-lock="true" type="string" unique="false"> -->
 <!--             <column name="PAT_ADDRESS_LINE"/> -->
 <!--         </property> -->
