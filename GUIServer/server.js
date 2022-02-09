@@ -2,6 +2,7 @@ const express = require('express');
 var bodyParser = require('body-parser')
 const app = express();
 var fs = require('fs');
+const { exec } = require("child_process");
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
@@ -10,14 +11,29 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', urlencodedParser, (req, res) => {
-    res.sendStatus(200);
-   
     fs.writeFile('config.json', JSON.stringify(req.body), err => {
         if (err) {
          console.error(err)
          return
         }
-    })
+        else{
+
+        }
+        })
+
+        exec("java -jar CAMPFHIR.jar", (error, stdout, stderr) => {
+            res.send('<p>Process Complete!</p>');            
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+
+            console.log(`stdout: ${stdout}`);
+         });
 });
 
 app.listen(3000);
