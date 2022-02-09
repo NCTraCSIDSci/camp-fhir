@@ -1,5 +1,6 @@
 package main.java.utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.Level;
@@ -13,6 +14,9 @@ import org.apache.commons.cli.Options;
 import org.hl7.fhir.exceptions.FHIRException; 
 import org.xml.sax.SAXException;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import main.java.com.campfhir.model.Campfhir;
 import main.java.com.campfhir.service.ConditionService;
 import main.java.com.campfhir.service.DocumentReferenceService;
 import main.java.com.campfhir.service.EncounterService;
@@ -39,78 +43,63 @@ public class CAMPFHIR
 			InterruptedException, 
 			ClassNotFoundException, org.apache.commons.cli.ParseException 
 	{
-
-        Options options = new Options();
-        Option domain = new Option("d", "domain", true, "Domain");
-        domain.setRequired(true);
-        options.addOption(domain);
-        Option fpath = new Option("f", "folderpath", true, "Folder Path");
-        fpath.setRequired(true);
-        options.addOption(fpath);
-        Option partition = new Option("p", "partition", true, "Partition");
-        partition.setRequired(true);
-        options.addOption(partition);
-        Option configpath = new Option("c", "configpath", true, "Config Path");
-        configpath.setRequired(false);
-        options.addOption(configpath);
-        
-        
-        CommandLine cmd = new DefaultParser().parse(options, args);
- 
-		int p = Integer.parseInt(cmd.getOptionValue("partition"));
-		System.setProperty("CONFIG", cmd.getOptionValue("c"));
 		
-		java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
+		File directory = new File("config.json");
+		ObjectMapper mapper = new ObjectMapper();
+        Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
 
-		System.out.println("Processing...");	
+		int p = Integer.parseInt(cf.getPartition());
+		//System.setProperty("CONFIG", cmd.getOptionValue("c"));
 		
-		if(cmd.getOptionValue("domain").equals("Condition"))
+
+		
+		if(cf.getResource().equals("Condition"))
 		{
-		     new ConditionService().findAll(p, cmd.getOptionValue("folderpath"));			
+		     new ConditionService().findAll(p, cf.getOutputfolder());			
 		}
 		
-		else if(cmd.getOptionValue("domain").equals("DocumentReference"))
+		else if(cf.getResource().equals("DocumentReference"))
 		{			
-		    new DocumentReferenceService().findAll(p, cmd.getOptionValue("folderpath"));			
+		    new DocumentReferenceService().findAll(p, cf.getOutputfolder());			
 		}	
 		
-		else if(cmd.getOptionValue("domain").equals("Encounter"))
+		else if(cf.getResource().equals("Encounter"))
 		{			
-		    new EncounterService().findAll(p, cmd.getOptionValue("folderpath"));			
+		    new EncounterService().findAll(p, cf.getOutputfolder());			
 		}	
 		
-		else if(cmd.getOptionValue("domain").equals("Observation_Labs"))
+		else if(cf.getResource().equals("Observation_Labs"))
 		{
-			new ObservationService().findAllLab(p, cmd.getOptionValue("folderpath"));
+			new ObservationService().findAllLab(p, cf.getOutputfolder());
 		}	
 
-		else if(cmd.getOptionValue("domain").equals("MedicationRequest"))
+		else if(cf.getResource().equals("MedicationRequest"))
 		{
-		    new MedicationRequestService().findAll(p, cmd.getOptionValue("folderpath"));
+		    new MedicationRequestService().findAll(p, cf.getOutputfolder());
 		}	
 		
-		else if(cmd.getOptionValue("domain").equals("Patient"))
+		else if(cf.getResource().equals("Patient"))
 		{
-		    new PatientService().findAll(p, cmd.getOptionValue("folderpath"));
+		    new PatientService().findAll(p, cf.getOutputfolder());
 		}
 		
-		else if(cmd.getOptionValue("domain").equals("Practitioner"))
+		else if(cf.getResource().equals("Practitioner"))
 		{
-			new PractitionerService().findAll(p, cmd.getOptionValue("folderpath"));
+			new PractitionerService().findAll(p, cf.getOutputfolder());
 		}
 		
-		else if(cmd.getOptionValue("domain").equals("Procedure"))
+		else if(cf.getResource().equals("Procedure"))
 		{
-		    new ProcedureService().findAll(p, cmd.getOptionValue("folderpath"));
+		    new ProcedureService().findAll(p, cf.getOutputfolder());
 		}	
 		
-		else if(cmd.getOptionValue("domain").equals("Observation_VitalsSmoking"))
+		else if(cf.getResource().equals("Observation_VitalsSmoking"))
 		{
-		    new ObservationService().findAllVital(p, cmd.getOptionValue("folderpath"));
+		    new ObservationService().findAllVital(p, cf.getOutputfolder());
 		}
-		
-		System.out.println("Finished...");
+		System.out.println("Finished");
 	}
+	
 }
 
 
