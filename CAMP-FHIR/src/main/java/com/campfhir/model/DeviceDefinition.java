@@ -3,6 +3,47 @@ package main.java.com.campfhir.model;
 
 public class  DeviceDefinition implements java.io.Serializable 
 {
+
+	private String devdef_id;
+	 private String devdef_udideviceidentifier;
+	 private String devdef_udiid_deviceidentifier;
+	 private String devdef_udiid_issuer;
+	 private String devdef_udiid_jurisdiction;
+	 private String devdef_manufacturer_x;
+	 private String devdef_manufacturerString;
+	 private String devdef_manufacturerreference;
+	 private String devdef_devicename;
+	 private String devdef_devicename_name;
+	 private String devdef_devicename_type;
+	 private String devdef_modelnumber;
+	 private String devdef_type;
+	 private String devdef_specialization;
+	 private String devdef_specialization_systemtp;
+	 private String devdef_specialization_version;
+	 private String devdef_version;
+	 private String devdef_safety;
+	 private String devdef_shelflifestorage;
+	 private String devdef_physicalcharacteristics;
+	 private String devdef_languagecode;
+	 private String devdef_capability;
+	 private String devdef_capability_type;
+	 private String devdef_capability_description;
+	 private String devdef_property;
+	 private String devdef_property_type;
+	 private String devdef_property_valuequantity;
+	 private String devdef_property_valuecode;
+	 private String devdef_owner_ref;
+	 private String devdef_contact;
+	 private String devdef_url;
+	 private String devdef_onlineinformation;
+	 private String devdef_note;
+	 private String devdef_quantity;
+	 private String devdef_parentdevice;
+	 private String devdef_material;
+	 private String devdef_material_substance;
+	 private String devdef_material_alternate;
+	 private String devdef_material_allerginindic;
+
 	 public String getDevdef_id() {
 		return devdef_id;
 	}
@@ -237,43 +278,5 @@ public class  DeviceDefinition implements java.io.Serializable
 	public void setDevdef_material_allerginindic(String devdef_material_allerginindic) {
 		this.devdef_material_allerginindic = devdef_material_allerginindic;
 	}
-	private String devdef_id;
-	 private String devdef_udideviceidentifier;
-	 private String devdef_udiid_deviceidentifier;
-	 private String devdef_udiid_issuer;
-	 private String devdef_udiid_jurisdiction;
-	 private String devdef_manufacturer_x;
-	 private String devdef_manufacturerString;
-	 private String devdef_manufacturerreference;
-	 private String devdef_devicename;
-	 private String devdef_devicename_name;
-	 private String devdef_devicename_type;
-	 private String devdef_modelnumber;
-	 private String devdef_type;
-	 private String devdef_specialization;
-	 private String devdef_specialization_systemtp;
-	 private String devdef_specialization_version;
-	 private String devdef_version;
-	 private String devdef_safety;
-	 private String devdef_shelflifestorage;
-	 private String devdef_physicalcharacteristics;
-	 private String devdef_languagecode;
-	 private String devdef_capability;
-	 private String devdef_capability_type;
-	 private String devdef_capability_description;
-	 private String devdef_property;
-	 private String devdef_property_type;
-	 private String devdef_property_valuequantity;
-	 private String devdef_property_valuecode;
-	 private String devdef_owner_ref;
-	 private String devdef_contact;
-	 private String devdef_url;
-	 private String devdef_onlineinformation;
-	 private String devdef_note;
-	 private String devdef_quantity;
-	 private String devdef_parentdevice;
-	 private String devdef_material;
-	 private String devdef_material_substance;
-	 private String devdef_material_alternate;
-	 private String devdef_material_allerginindic;
+
 }
