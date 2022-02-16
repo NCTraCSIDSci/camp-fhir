@@ -30,7 +30,7 @@ import main.java.com.campfhir.service.ProcedureService;
 *
 * @author  James Champion	
 * @version 1.0
-* @since   2019-08-20
+* @since   2022-02-16
 */
 public class CAMPFHIR 
 {
@@ -49,10 +49,7 @@ public class CAMPFHIR
         Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
 
 		int p = Integer.parseInt(cf.getPartition());
-		//System.setProperty("CONFIG", cmd.getOptionValue("c"));
-		
-
-		
+				
 		if(cf.getResource().equals("Condition"))
 		{
 		     new ConditionService().findAll(p, cf.getOutputfolder());			
