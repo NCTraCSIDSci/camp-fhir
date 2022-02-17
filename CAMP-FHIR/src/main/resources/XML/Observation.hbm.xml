@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 17, 2022, 12:10:59 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Observation" optimistic-lock="none" table="observation">
+        <id name="observationIdentifierValue" type="string">
+            <column name="Observation_Identifier_Value"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="observationBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BasedOn"/>
+        </property>
+        <property name="observationBodySiteCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Coding_Code"/>
+        </property>
+        <property name="observationBodySiteCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Coding_Display"/>
+        </property>
+        <property name="observationBodySiteCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Coding_System"/>
+        </property>
+        <property name="observationBodySiteCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Coding_UserSelected"/>
+        </property>
+        <property name="observationBodySiteCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Coding_Version"/>
+        </property>
+        <property name="observationBodySiteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_BodySite_Text"/>
+        </property>
+        <property name="observationCategoryCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Coding_Code"/>
+        </property>
+        <property name="observationCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Coding_Display"/>
+        </property>
+        <property name="observationCategoryCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Coding_System"/>
+        </property>
+        <property name="observationCategoryCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Coding_UserSelected"/>
+        </property>
+        <property name="observationCategoryCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Coding_Version"/>
+        </property>
+        <property name="observationCategoryText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Category_Text"/>
+        </property>
+        <property name="observationCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Coding_Code"/>
+        </property>
+        <property name="observationCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Coding_Display"/>
+        </property>
+        <property name="observationCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Coding_System"/>
+        </property>
+        <property name="observationCodeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Coding_UserSelected"/>
+        </property>
+        <property name="observationCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Coding_Version"/>
+        </property>
+        <property name="observationCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Code_Text"/>
+        </property>
+        <property name="observationComponentCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Coding_Code"/>
+        </property>
+        <property name="observationComponentCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Coding_Display"/>
+        </property>
+        <property name="observationComponentCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Coding_System"/>
+        </property>
+        <property name="observationComponentCodeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Coding_UserSelected"/>
+        </property>
+        <property name="observationComponentCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Coding_Version"/>
+        </property>
+        <property name="observationComponentCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Code_Text"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Coding_Code"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Coding_Display"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Coding_System"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Coding_UserSelected"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Coding_Version"/>
+        </property>
+        <property name="observationComponentDataAbsentReasonText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_DataAbsentReason_Text"/>
+        </property>
+        <property name="observationComponentInterpretationCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Coding_Code"/>
+        </property>
+        <property name="observationComponentInterpretationCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Coding_Display"/>
+        </property>
+        <property name="observationComponentInterpretationCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Coding_System"/>
+        </property>
+        <property name="observationComponentInterpretationCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Coding_UserSelected"/>
+        </property>
+        <property name="observationComponentInterpretationCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Coding_Version"/>
+        </property>
+        <property name="observationComponentInterpretationText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Interpretation_Text"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_High_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeHighComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_High_Comparator_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_High_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_High_Unit"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_High_Value"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_Low_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeLowComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_Low_Comparator_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_Low_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_Low_Unit"/>
+        </property>
+        <property name="observationComponentReferenceRangeAgeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Age_Low_Value"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Coding_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Coding_Display"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Coding_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToCodingUs" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Coding_US"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Coding_Version"/>
+        </property>
+        <property name="observationComponentReferenceRangeAppliesToText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_AppliesTo_Text"/>
+        </property>
+        <property name="observationComponentReferenceRangeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_High_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeHighComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_High_Comparator_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_High_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_High_Unit"/>
+        </property>
+        <property name="observationComponentReferenceRangeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_High_Value"/>
+        </property>
+        <property name="observationComponentReferenceRangeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Low_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeLowComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Low_Comparator_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Low_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Low_Unit"/>
+        </property>
+        <property name="observationComponentReferenceRangeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Low_Value"/>
+        </property>
+        <property name="observationComponentReferenceRangeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Text"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Coding_Code"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Coding_Display"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Coding_System"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Coding_UserSelected"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Coding_Version"/>
+        </property>
+        <property name="observationComponentReferenceRangeTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_ReferenceRange_Type_Text"/>
+        </property>
+        <property name="observationComponentValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Component_Value"/>
+        </property>
+        <property name="observationDataAbsentReasonCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Coding_Code"/>
+        </property>
+        <property name="observationDataAbsentReasonCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Coding_Display"/>
+        </property>
+        <property name="observationDataAbsentReasonCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Coding_System"/>
+        </property>
+        <property name="observationDataAbsentReasonCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Coding_UserSelected"/>
+        </property>
+        <property name="observationDataAbsentReasonCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Coding_Version"/>
+        </property>
+        <property name="observationDataAbsentReasonText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DataAbsentReason_Text"/>
+        </property>
+        <property name="observationDerivedFrom" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_DerivedFrom"/>
+        </property>
+        <property name="observationDevice" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Device"/>
+        </property>
+        <property name="observationEffective" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Effective"/>
+        </property>
+        <property name="observationEncounter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Encounter"/>
+        </property>
+        <property name="observationFocus" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Focus"/>
+        </property>
+        <property name="observationHasMember" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_HasMember"/>
+        </property>
+        <property name="observationIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Assigner"/>
+        </property>
+        <property name="observationIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Period_End"/>
+        </property>
+        <property name="observationIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Period_Start"/>
+        </property>
+        <property name="observationIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_System"/>
+        </property>
+        <property name="observationIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Coding_Code"/>
+        </property>
+        <property name="observationIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Coding_Display"/>
+        </property>
+        <property name="observationIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Coding_System"/>
+        </property>
+        <property name="observationIdentifierTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Coding_UserSelected"/>
+        </property>
+        <property name="observationIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Coding_Version"/>
+        </property>
+        <property name="observationIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Type_Text"/>
+        </property>
+        <property name="observationIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Identifier_Use_Code"/>
+        </property>
+        <property name="observationInterpretationCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Coding_Code"/>
+        </property>
+        <property name="observationInterpretationCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Coding_Display"/>
+        </property>
+        <property name="observationInterpretationCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Coding_System"/>
+        </property>
+        <property name="observationInterpretationCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Coding_UserSelected"/>
+        </property>
+        <property name="observationInterpretationCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Coding_Version"/>
+        </property>
+        <property name="observationInterpretationText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Interpretation_Text"/>
+        </property>
+        <property name="observationIssued" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Issued"/>
+        </property>
+        <property name="observationMethodCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Coding_Code"/>
+        </property>
+        <property name="observationMethodCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Coding_Display"/>
+        </property>
+        <property name="observationMethodCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Coding_System"/>
+        </property>
+        <property name="observationMethodCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Coding_UserSelected"/>
+        </property>
+        <property name="observationMethodCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Coding_Version"/>
+        </property>
+        <property name="observationMethodText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Method_Text"/>
+        </property>
+        <property name="observationNoteAuthor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Note_Author"/>
+        </property>
+        <property name="observationNoteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Note_Text"/>
+        </property>
+        <property name="observationNoteTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Note_Time"/>
+        </property>
+        <property name="observationPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_PartOf"/>
+        </property>
+        <property name="observationPerformer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Performer"/>
+        </property>
+        <property name="observationReferenceRangeAgeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_High_Code"/>
+        </property>
+        <property name="observationReferenceRangeAgeHighComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_High_Comparator_Code"/>
+        </property>
+        <property name="observationReferenceRangeAgeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_High_System"/>
+        </property>
+        <property name="observationReferenceRangeAgeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_High_Unit"/>
+        </property>
+        <property name="observationReferenceRangeAgeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_High_Value"/>
+        </property>
+        <property name="observationReferenceRangeAgeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_Low_Code"/>
+        </property>
+        <property name="observationReferenceRangeAgeLowComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_Low_Comparator_Code"/>
+        </property>
+        <property name="observationReferenceRangeAgeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_Low_System"/>
+        </property>
+        <property name="observationReferenceRangeAgeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_Low_Unit"/>
+        </property>
+        <property name="observationReferenceRangeAgeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Age_Low_Value"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Coding_Code"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Coding_Display"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Coding_System"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Coding_UserSelected"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Coding_Version"/>
+        </property>
+        <property name="observationReferenceRangeAppliesToText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_AppliesTo_Text"/>
+        </property>
+        <property name="observationReferenceRangeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_High_Code"/>
+        </property>
+        <property name="observationReferenceRangeHighComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_High_Comparator_Code"/>
+        </property>
+        <property name="observationReferenceRangeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_High_System"/>
+        </property>
+        <property name="observationReferenceRangeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_High_Unit"/>
+        </property>
+        <property name="observationReferenceRangeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_High_Value"/>
+        </property>
+        <property name="observationReferenceRangeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Low_Code"/>
+        </property>
+        <property name="observationReferenceRangeLowComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Low_Comparator_Code"/>
+        </property>
+        <property name="observationReferenceRangeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Low_System"/>
+        </property>
+        <property name="observationReferenceRangeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Low_Unit"/>
+        </property>
+        <property name="observationReferenceRangeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Low_Value"/>
+        </property>
+        <property name="observationReferenceRangeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Text"/>
+        </property>
+        <property name="observationReferenceRangeTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Coding_Code"/>
+        </property>
+        <property name="observationReferenceRangeTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Coding_Display"/>
+        </property>
+        <property name="observationReferenceRangeTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Coding_System"/>
+        </property>
+        <property name="observationReferenceRangeTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Coding_UserSelected"/>
+        </property>
+        <property name="observationReferenceRangeTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Coding_Version"/>
+        </property>
+        <property name="observationReferenceRangeTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_ReferenceRange_Type_Text"/>
+        </property>
+        <property name="observationSpecimen" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Specimen"/>
+        </property>
+        <property name="observationStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Status_Code"/>
+        </property>
+        <property name="observationSubject" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Observation_Subject"/>
+        </property>
+    </class>
+</hibernate-mapping>

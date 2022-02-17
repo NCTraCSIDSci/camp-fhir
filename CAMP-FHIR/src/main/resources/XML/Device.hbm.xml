@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 17, 2022, 12:10:59 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Device" optimistic-lock="none" table="device">
+        <id name="deviceDistinctIdentifier" type="string">
+            <column length="256" name="Device_DistinctIdentifier"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="deviceContactPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_Period_End"/>
+        </property>
+        <property name="deviceContactPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_Period_Start"/>
+        </property>
+        <property name="deviceContactRank" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_Rank"/>
+        </property>
+        <property name="deviceContactSystemCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_System_Code"/>
+        </property>
+        <property name="deviceContactUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_Use_Code"/>
+        </property>
+        <property name="deviceContactValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Contact_Value"/>
+        </property>
+        <property name="deviceDefinition" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Definition"/>
+        </property>
+        <property name="deviceDeviceNameName" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_DeviceName_Name"/>
+        </property>
+        <property name="deviceDeviceNameTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_DeviceName_Type_Code"/>
+        </property>
+        <property name="deviceExpirationDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_ExpirationDate"/>
+        </property>
+        <property name="deviceIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Assigner"/>
+        </property>
+        <property name="deviceIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Period_End"/>
+        </property>
+        <property name="deviceIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Period_Start"/>
+        </property>
+        <property name="deviceIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_System"/>
+        </property>
+        <property name="deviceIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Coding_Code"/>
+        </property>
+        <property name="deviceIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Coding_Display"/>
+        </property>
+        <property name="deviceIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Coding_System"/>
+        </property>
+        <property name="deviceIdentifierTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Coding_UserSelected"/>
+        </property>
+        <property name="deviceIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Coding_Version"/>
+        </property>
+        <property name="deviceIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Type_Text"/>
+        </property>
+        <property name="deviceIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Use_Code"/>
+        </property>
+        <property name="deviceIdentifierValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Identifier_Value"/>
+        </property>
+        <property name="deviceLocation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Location"/>
+        </property>
+        <property name="deviceLotNumber" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_LotNumber"/>
+        </property>
+        <property name="deviceManufactureDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_ManufactureDate"/>
+        </property>
+        <property name="deviceManufacturer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Manufacturer"/>
+        </property>
+        <property name="deviceModelNumber" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_ModelNumber"/>
+        </property>
+        <property name="deviceNoteAuthor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Note_Author"/>
+        </property>
+        <property name="deviceNoteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Note_Text"/>
+        </property>
+        <property name="deviceNoteTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Note_Time"/>
+        </property>
+        <property name="deviceOwner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Owner"/>
+        </property>
+        <property name="deviceParent" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Parent"/>
+        </property>
+        <property name="devicePartNumber" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_PartNumber"/>
+        </property>
+        <property name="devicePatient" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Patient"/>
+        </property>
+        <property name="devicePropertyTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Coding_Code"/>
+        </property>
+        <property name="devicePropertyTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Coding_Display"/>
+        </property>
+        <property name="devicePropertyTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Coding_System"/>
+        </property>
+        <property name="devicePropertyTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Coding_UserSelected"/>
+        </property>
+        <property name="devicePropertyTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Coding_Version"/>
+        </property>
+        <property name="devicePropertyTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_Type_Text"/>
+        </property>
+        <property name="devicePropertyValueCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Coding_Code"/>
+        </property>
+        <property name="devicePropertyValueCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Coding_Display"/>
+        </property>
+        <property name="devicePropertyValueCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Coding_System"/>
+        </property>
+        <property name="devicePropertyValueCodeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Coding_UserSelected"/>
+        </property>
+        <property name="devicePropertyValueCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Coding_Version"/>
+        </property>
+        <property name="devicePropertyValueCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueCode_Text"/>
+        </property>
+        <property name="devicePropertyValueQuantityCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueQuantity_Code"/>
+        </property>
+        <property name="devicePropertyValueQuantityComparatorCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueQuantity_Comparator_Code"/>
+        </property>
+        <property name="devicePropertyValueQuantitySystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueQuantity_System"/>
+        </property>
+        <property name="devicePropertyValueQuantityUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueQuantity_Unit"/>
+        </property>
+        <property name="devicePropertyValueQuantityValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Property_ValueQuantity_Value"/>
+        </property>
+        <property name="deviceSafetyCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Coding_Code"/>
+        </property>
+        <property name="deviceSafetyCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Coding_Display"/>
+        </property>
+        <property name="deviceSafetyCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Coding_System"/>
+        </property>
+        <property name="deviceSafetyCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Coding_UserSelected"/>
+        </property>
+        <property name="deviceSafetyCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Coding_Version"/>
+        </property>
+        <property name="deviceSafetyText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Safety_Text"/>
+        </property>
+        <property name="deviceSerialNumber" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_SerialNumber"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Coding_Code"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Coding_Display"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Coding_System"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Coding_UserSelected"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Coding_Version"/>
+        </property>
+        <property name="deviceSpecializationSystemTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_SystemType_Text"/>
+        </property>
+        <property name="deviceSpecializationVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Specialization_Version"/>
+        </property>
+        <property name="deviceStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Status_Code"/>
+        </property>
+        <property name="deviceStatusReasonCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Coding_Code"/>
+        </property>
+        <property name="deviceStatusReasonCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Coding_Display"/>
+        </property>
+        <property name="deviceStatusReasonCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Coding_System"/>
+        </property>
+        <property name="deviceStatusReasonCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Coding_UserSelected"/>
+        </property>
+        <property name="deviceStatusReasonCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Coding_Version"/>
+        </property>
+        <property name="deviceStatusReasonText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_StatusReason_Text"/>
+        </property>
+        <property name="deviceTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Coding_Code"/>
+        </property>
+        <property name="deviceTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Coding_Display"/>
+        </property>
+        <property name="deviceTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Coding_System"/>
+        </property>
+        <property name="deviceTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Coding_UserSelected"/>
+        </property>
+        <property name="deviceTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Coding_Version"/>
+        </property>
+        <property name="deviceTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Type_Text"/>
+        </property>
+        <property name="deviceUdiCarrierCarrierAidc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_CarrierAIDC"/>
+        </property>
+        <property name="deviceUdiCarrierCarrierHrf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_CarrierHRF"/>
+        </property>
+        <property name="deviceUdiCarrierDeviceIdentifier" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_DeviceIdentifier"/>
+        </property>
+        <property name="deviceUdiCarrierEntryTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_EntryType_Code"/>
+        </property>
+        <property name="deviceUdiCarrierIssuer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_Issuer"/>
+        </property>
+        <property name="deviceUdiCarrierJurisdiction" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_UdiCarrier_Jurisdiction"/>
+        </property>
+        <property name="deviceUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Url"/>
+        </property>
+        <property name="deviceVersionComponentAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Assigner"/>
+        </property>
+        <property name="deviceVersionComponentPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Period_End"/>
+        </property>
+        <property name="deviceVersionComponentPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Period_Start"/>
+        </property>
+        <property name="deviceVersionComponentSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_System"/>
+        </property>
+        <property name="deviceVersionComponentTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Coding_Code"/>
+        </property>
+        <property name="deviceVersionComponentTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Coding_Display"/>
+        </property>
+        <property name="deviceVersionComponentTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Coding_System"/>
+        </property>
+        <property name="deviceVersionComponentTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Coding_UserSelected"/>
+        </property>
+        <property name="deviceVersionComponentTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Coding_Version"/>
+        </property>
+        <property name="deviceVersionComponentTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Type_Text"/>
+        </property>
+        <property name="deviceVersionComponentUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Use_Code"/>
+        </property>
+        <property name="deviceVersionComponentValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Component_Value"/>
+        </property>
+        <property name="deviceVersionTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Coding_Code"/>
+        </property>
+        <property name="deviceVersionTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Coding_Display"/>
+        </property>
+        <property name="deviceVersionTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Coding_System"/>
+        </property>
+        <property name="deviceVersionTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Coding_UserSelected"/>
+        </property>
+        <property name="deviceVersionTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Coding_Version"/>
+        </property>
+        <property name="deviceVersionTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Device_Version_Type_Text"/>
+        </property>
+    </class>
+</hibernate-mapping>

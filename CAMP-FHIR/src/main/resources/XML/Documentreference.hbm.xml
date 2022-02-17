@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 17, 2022, 12:10:59 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Documentreference" optimistic-lock="none" table="documentreference">
+        <id name="documentreferenceIdentifierValue" type="string">
+            <column name="Documentreference_Identifier_Value"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="documentreferenceAuthenticator" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Authenticator"/>
+        </property>
+        <property name="documentreferenceAuthor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Author"/>
+        </property>
+        <property name="documentreferenceCategoryCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Coding_Code"/>
+        </property>
+        <property name="documentreferenceCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Coding_Display"/>
+        </property>
+        <property name="documentreferenceCategoryCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Coding_System"/>
+        </property>
+        <property name="documentreferenceCategoryCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceCategoryCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Coding_Version"/>
+        </property>
+        <property name="documentreferenceCategoryText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Category_Text"/>
+        </property>
+        <property name="documentreferenceContentAttachmentContentType" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_ContentType"/>
+        </property>
+        <property name="documentreferenceContentAttachmentCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Creation"/>
+        </property>
+        <property name="documentreferenceContentAttachmentData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Data"/>
+        </property>
+        <property name="documentreferenceContentAttachmentHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Hash"/>
+        </property>
+        <property name="documentreferenceContentAttachmentLanguage" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Language"/>
+        </property>
+        <property name="documentreferenceContentAttachmentSize" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Size"/>
+        </property>
+        <property name="documentreferenceContentAttachmentTitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Title"/>
+        </property>
+        <property name="documentreferenceContentAttachmentUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Attachment_Url"/>
+        </property>
+        <property name="documentreferenceContentFormatCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Format_Code"/>
+        </property>
+        <property name="documentreferenceContentFormatDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Format_Display"/>
+        </property>
+        <property name="documentreferenceContentFormatSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Format_System"/>
+        </property>
+        <property name="documentreferenceContentFormatUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Format_UserSelected"/>
+        </property>
+        <property name="documentreferenceContentFormatVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Content_Format_Version"/>
+        </property>
+        <property name="documentreferenceContextEncounter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Encounter"/>
+        </property>
+        <property name="documentreferenceContextEventCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Coding_Code"/>
+        </property>
+        <property name="documentreferenceContextEventCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Coding_Display"/>
+        </property>
+        <property name="documentreferenceContextEventCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Coding_System"/>
+        </property>
+        <property name="documentreferenceContextEventCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceContextEventCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Coding_Version"/>
+        </property>
+        <property name="documentreferenceContextEventText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Event_Text"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Coding_Code"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Coding_Display"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Coding_System"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Coding_Version"/>
+        </property>
+        <property name="documentreferenceContextFacilityTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_FacilityType_Text"/>
+        </property>
+        <property name="documentreferenceContextPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Period_End"/>
+        </property>
+        <property name="documentreferenceContextPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Period_Start"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Coding_Code"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Coding_Display"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Coding_System"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Coding_Version"/>
+        </property>
+        <property name="documentreferenceContextPracticeSettingText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_PracticeSetting_Text"/>
+        </property>
+        <property name="documentreferenceContextRelated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_Related"/>
+        </property>
+        <property name="documentreferenceContextSourcePatientInfo" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Context_SourcePatientInfo"/>
+        </property>
+        <property name="documentreferenceCustodian" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Custodian"/>
+        </property>
+        <property name="documentreferenceDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Date"/>
+        </property>
+        <property name="documentreferenceDescription" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Description"/>
+        </property>
+        <property name="documentreferenceDocStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_DocStatus_Code"/>
+        </property>
+        <property name="documentreferenceIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Assigner"/>
+        </property>
+        <property name="documentreferenceIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Period_End"/>
+        </property>
+        <property name="documentreferenceIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Period_Start"/>
+        </property>
+        <property name="documentreferenceIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_System"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Coding_Code"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Coding_Display"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Coding_System"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Coding_Version"/>
+        </property>
+        <property name="documentreferenceIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Type_Text"/>
+        </property>
+        <property name="documentreferenceIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Identifier_Use_Code"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Assigner"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Period_End"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Period_Start"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_System"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Coding_Code"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Coding_Display"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Coding_System"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Coding_Version"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Type_Text"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Use_Code"/>
+        </property>
+        <property name="documentreferenceMasterIdentifierValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_MasterIdentifier_Value"/>
+        </property>
+        <property name="documentreferenceRelatesToCodeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_RelatesTo_Code_Code"/>
+        </property>
+        <property name="documentreferenceRelatesTo" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_RelatesTo_"/>
+        </property>
+        <property name="documentreferenceSecurityLabelCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Coding_Code"/>
+        </property>
+        <property name="documentreferenceSecurityLabelCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Coding_Display"/>
+        </property>
+        <property name="documentreferenceSecurityLabelCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Coding_System"/>
+        </property>
+        <property name="documentreferenceSecurityLabelCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceSecurityLabelCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Coding_Version"/>
+        </property>
+        <property name="documentreferenceSecurityLabelText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_SecurityLabel_Text"/>
+        </property>
+        <property name="documentreferenceStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Status_Code"/>
+        </property>
+        <property name="documentreferenceSubject" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Subject"/>
+        </property>
+        <property name="documentreferenceTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Type_Coding_Code"/>
+        </property>
+        <property name="documentreferenceTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Type_Coding_Display"/>
+        </property>
+        <property name="documentreferenceTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Type_Coding_System"/>
+        </property>
+        <property name="documentreferenceTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Type_Coding_UserSelected"/>
+        </property>
+        <property name="documentreferenceTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Documentreference_Type_Coding_Version"/>
+        </property>
+    </class>
+</hibernate-mapping>

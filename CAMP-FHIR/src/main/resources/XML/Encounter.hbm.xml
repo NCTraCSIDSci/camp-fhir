@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 17, 2022, 12:10:59 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Encounter" optimistic-lock="none" table="encounter">
+        <id name="encounterIdentifierValue" type="string">
+            <column length="256" name="Encounter_Identifier_Value"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="encounterAccount" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Account"/>
+        </property>
+        <property name="encounterAppointment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Appointment"/>
+        </property>
+        <property name="encounterBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_BasedOn"/>
+        </property>
+        <property name="encounterClassHistoryClassCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Class__Code"/>
+        </property>
+        <property name="encounterClassHistoryClassDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Class__Display"/>
+        </property>
+        <property name="encounterClassHistoryClassSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Class__System"/>
+        </property>
+        <property name="encounterClassHistoryClassUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Class__UserSelected"/>
+        </property>
+        <property name="encounterClassHistoryClassVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Class__Version"/>
+        </property>
+        <property name="encounterClassHistoryPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Period_End"/>
+        </property>
+        <property name="encounterClassHistoryPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ClassHistory_Period_Start"/>
+        </property>
+        <property name="encounterClassCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Class__Code"/>
+        </property>
+        <property name="encounterClassDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Class__Display"/>
+        </property>
+        <property name="encounterClassSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Class__System"/>
+        </property>
+        <property name="encounterClassUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Class__UserSelected"/>
+        </property>
+        <property name="encounterClassVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Class__Version"/>
+        </property>
+        <property name="encounterDiagnosisCondition" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Condition"/>
+        </property>
+        <property name="encounterDiagnosisRank" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Rank"/>
+        </property>
+        <property name="encounterDiagnosisUseCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Coding_Code"/>
+        </property>
+        <property name="encounterDiagnosisUseCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Coding_Display"/>
+        </property>
+        <property name="encounterDiagnosisUseCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Coding_System"/>
+        </property>
+        <property name="encounterDiagnosisUseCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Coding_UserSelected"/>
+        </property>
+        <property name="encounterDiagnosisUseCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Coding_Version"/>
+        </property>
+        <property name="encounterDiagnosisUseText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Diagnosis_Use_Text"/>
+        </property>
+        <property name="encounterEpisodeOfCare" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_EpisodeOfCare"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Coding_System"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Coding_UserSelected"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationAdmitSourceText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_AdmitSource_Text"/>
+        </property>
+        <property name="encounterHospitalizationDestination" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_Destination"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Coding_System"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Coding_UserSelected"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationDietPreferenceText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DietPreference_Text"/>
+        </property>
+        <property name="encounterHospitalizationDischargeDispositionCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DischargeDisposition_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationDischargeDispositionCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DischargeDisposition_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationDischargeDispositionCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DischargeDisposition_Coding_System"/>
+        </property>
+        <property name="encHospitalizationDischargeDispositionCodingUs" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_DischargeDisposition_Coding_US"/>
+        </property>
+        <property name="encounterHospitalizationDischargeDispositionCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DischargeDisposition_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationDischargeDispositionText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_DischargeDisposition_Text"/>
+        </property>
+        <property name="encounterHospitalizationOrigin" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_Origin"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Assigner"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Period_End"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Period_Start"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_System"/>
+        </property>
+        <property name="encHospitalizationPreAdmissionIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_PreAdmissionIdentifier_Type_Coding_Code"/>
+        </property>
+        <property name="encHospitalizationPreAdmissionIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_PreAdmissionIdentifier_Type_Coding_Display"/>
+        </property>
+        <property name="encHospitalizationPreAdmissionIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_PreAdmissionIdentifier_Type_Coding_System"/>
+        </property>
+        <property name="encHospitalizationPreAdmissionIdentifierTypeCodingUs" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_PreAdmissionIdentifier_Type_Coding_US"/>
+        </property>
+        <property name="encHospitalizationPreAdmissionIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_PreAdmissionIdentifier_Type_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Type_Text"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Use_Code"/>
+        </property>
+        <property name="encounterHospitalizationPreAdmissionIdentifierValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_PreAdmissionIdentifier_Value"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Coding_System"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Coding_UserSelected"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationReAdmissionText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_ReAdmission_Text"/>
+        </property>
+        <property name="encounterHospitalizationSpecialArrangementCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialArrangement_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationSpecialArrangementCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialArrangement_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationSpecialArrangementCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialArrangement_Coding_System"/>
+        </property>
+        <property name="encHospitalizationSpecialArrangementCodingUs" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Enc_Hospitalization_SpecialArrangement_Coding_US"/>
+        </property>
+        <property name="encounterHospitalizationSpecialArrangementCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialArrangement_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationSpecialArrangementText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialArrangement_Text"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Coding_Code"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Coding_Display"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Coding_System"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Coding_UserSelected"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Coding_Version"/>
+        </property>
+        <property name="encounterHospitalizationSpecialCourtesyText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Hospitalization_SpecialCourtesy_Text"/>
+        </property>
+        <property name="encounterIdentifierAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Assigner"/>
+        </property>
+        <property name="encounterIdentifierPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Period_End"/>
+        </property>
+        <property name="encounterIdentifierPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Period_Start"/>
+        </property>
+        <property name="encounterIdentifierSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_System"/>
+        </property>
+        <property name="encounterIdentifierTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Coding_Code"/>
+        </property>
+        <property name="encounterIdentifierTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Coding_Display"/>
+        </property>
+        <property name="encounterIdentifierTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Coding_System"/>
+        </property>
+        <property name="encounterIdentifierTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Coding_UserSelected"/>
+        </property>
+        <property name="encounterIdentifierTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Coding_Version"/>
+        </property>
+        <property name="encounterIdentifierTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Type_Text"/>
+        </property>
+        <property name="encounterIdentifierUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Identifier_Use_Code"/>
+        </property>
+        <property name="encounterLength" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Length"/>
+        </property>
+        <property name="encounterLocationLocation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_Location"/>
+        </property>
+        <property name="encounterLocationPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_Period_End"/>
+        </property>
+        <property name="encounterLocationPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_Period_Start"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Coding_Code"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Coding_Display"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Coding_System"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Coding_UserSelected"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Coding_Version"/>
+        </property>
+        <property name="encounterLocationPhysicalTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_PhysicalType_Text"/>
+        </property>
+        <property name="encounterLocationStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Location_Status_Code"/>
+        </property>
+        <property name="encounterPartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_PartOf"/>
+        </property>
+        <property name="encounterParticipantIndividual" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Individual"/>
+        </property>
+        <property name="encounterParticipantPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Period_End"/>
+        </property>
+        <property name="encounterParticipantPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Period_Start"/>
+        </property>
+        <property name="encounterParticipantTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Coding_Code"/>
+        </property>
+        <property name="encounterParticipantTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Coding_Display"/>
+        </property>
+        <property name="encounterParticipantTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Coding_System"/>
+        </property>
+        <property name="encounterParticipantTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Coding_UserSelected"/>
+        </property>
+        <property name="encounterParticipantTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Coding_Version"/>
+        </property>
+        <property name="encounterParticipantTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Participant_Type_Text"/>
+        </property>
+        <property name="encounterPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Period_End"/>
+        </property>
+        <property name="encounterPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Period_Start"/>
+        </property>
+        <property name="encounterPriorityCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Coding_Code"/>
+        </property>
+        <property name="encounterPriorityCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Coding_Display"/>
+        </property>
+        <property name="encounterPriorityCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Coding_System"/>
+        </property>
+        <property name="encounterPriorityCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Coding_UserSelected"/>
+        </property>
+        <property name="encounterPriorityCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Coding_Version"/>
+        </property>
+        <property name="encounterPriorityText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Priority_Text"/>
+        </property>
+        <property name="encounterReasonCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Coding_Code"/>
+        </property>
+        <property name="encounterReasonCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Coding_Display"/>
+        </property>
+        <property name="encounterReasonCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Coding_System"/>
+        </property>
+        <property name="encounterReasonCodeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Coding_UserSelected"/>
+        </property>
+        <property name="encounterReasonCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Coding_Version"/>
+        </property>
+        <property name="encounterReasonCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonCode_Text"/>
+        </property>
+        <property name="encounterReasonReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ReasonReference"/>
+        </property>
+        <property name="encounterServiceProvider" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceProvider"/>
+        </property>
+        <property name="encounterServiceTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Coding_Code"/>
+        </property>
+        <property name="encounterServiceTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Coding_Display"/>
+        </property>
+        <property name="encounterServiceTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Coding_System"/>
+        </property>
+        <property name="encounterServiceTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Coding_UserSelected"/>
+        </property>
+        <property name="encounterServiceTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Coding_Version"/>
+        </property>
+        <property name="encounterServiceTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_ServiceType_Text"/>
+        </property>
+        <property name="encounterStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Status_Code"/>
+        </property>
+        <property name="encounterStatusHistoryPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_StatusHistory_Period_End"/>
+        </property>
+        <property name="encounterStatusHistoryPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_StatusHistory_Period_Start"/>
+        </property>
+        <property name="encounterStatusHistoryStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_StatusHistory_Status_Code"/>
+        </property>
+        <property name="encounterSubject" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Subject"/>
+        </property>
+        <property name="encounterTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Type_Coding_Code"/>
+        </property>
+        <property name="encounterTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Type_Coding_Display"/>
+        </property>
+        <property name="encounterTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Type_Coding_System"/>
+        </property>
+        <property name="encounterTypeCodingUserSelected" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Type_Coding_UserSelected"/>
+        </property>
+        <property name="encounterTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Encounter_Type_Coding_Version"/>
+        </property>
+    </class>
+</hibernate-mapping>
