@@ -18,7 +18,7 @@
       <form action="/" method="POST">
         <div class="form-group">
           <label for="sqldialects">Dialects of SQL</label>
-            <input list="sqldialects" name="sqldialects" class="form-control"  aria-describedby="sqldialects" placeholder="Select SQL Dialect">
+            <input list="sqldialects" name="sqldialects" class="form-control"  aria-describedby="sqldialects" placeholder="Select SQL Dialect" required>
             <datalist id="sqldialects" placeholder="Select Dialect">
                 <option value="Oracle (any version)">Oracle (any version) </option>
                 <option value="Oracle9i">Oracle9i</option>
@@ -46,29 +46,29 @@
         </div>
         <div class="form-group">
           <label for="dburl">Database Connection URL</label>
-          <input type="text" class="form-control" id="dburl" aria-describedby="dburl" placeholder="Enter Database Url" name="dburl">
+          <input type="text" class="form-control" id="dburl" aria-describedby="dburl" placeholder="Enter Database Url" name="dburl" required>
         </div>
         <div class="form-group">
           <label for="dbusername">Database Username</label>
-          <input type="text" class="form-control" id="dbusername" aria-describedby="dbusername" placeholder="Enter Database Username" name="dbusername">
+          <input type="text" class="form-control" id="dbusername" aria-describedby="dbusername" placeholder="Enter Database Username" name="dbusername" required>
         </div>
         <div class="form-group">
           <label for="db_passsword">Database Password</label>
-          <input type="password" class="form-control" id="dbpassword" aria-describedby="dbpassword" placeholder="Enter Database Password" name="dbpassword">
+          <input type="password" class="form-control" id="dbpassword" aria-describedby="dbpassword" placeholder="Enter Database Password" name="dbpassword" required> 
         </div>
         <div class="form-group">
           <label for="source">Source (Table/View)</label>
-          <input type="text" class="form-control" id="source" aria-describedby="source" placeholder="Enter Source" name="source">
+          <input type="text" class="form-control" id="source" aria-describedby="source" placeholder="Enter Source" name="source" required>
         </div>
         <div class="form-group">
             <label for="outputfolder">Output folder</label>
-            <input type="text" id="outputfolder" class="form-control" name="outputfolder" placeholder="Enter Output Folder Name" />
+            <input type="text" id="outputfolder" class="form-control" name="outputfolder" placeholder="Enter Output Folder Name" required/>
         </div>
 
 
         <div class="form-group">
             <label for="partition">Partition (number of records per file)</label>
-            <input type="text" class="form-control" id="partition" aria-describedby="partition" placeholder="Partition Number" name="partition">
+            <input type="text" class="form-control" id="partition" aria-describedby="partition" placeholder="Partition Number" name="partition" required>
         </div>
 
         <div class="form-group">
