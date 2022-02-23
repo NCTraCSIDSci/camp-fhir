@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 17, 2022, 12:11:05 PM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,1052 +10,1075 @@ package main.java.com.campfhir.model;
 public class Practitioner  implements java.io.Serializable {
 
 
-     private String practitionerIdentifierValue;
-     private String practitionerActive;
-     private String practitionerAddressCity;
-     private String practitionerAddressCountry;
-     private String practitionerAddressDistrict;
-     private String practitionerAddressLine;
-     private String practitionerAddressPeriodEnd;
-     private String practitionerAddressPeriodStart;
-     private String practitionerAddressPostalCode;
-     private String practitionerAddressState;
-     private String practitionerAddressText;
-     private String practitionerAddressTypeCode;
-     private String practitionerAddressUseCode;
-     private String practitionerBirthDate;
-     private String practitionerCommunicationCodingCode;
-     private String practitionerCommunicationCodingDisplay;
-     private String practitionerCommunicationCodingSystem;
-     private String practitionerCommunicationCodingUserSelected;
-     private String practitionerCommunicationCodingVersion;
-     private String practitionerCommunicationText;
-     private String practitionerGenderCode;
-     private String practitionerIdentifierAssigner;
-     private String practitionerIdentifierPeriodEnd;
-     private String practitionerIdentifierPeriodStart;
-     private String practitionerIdentifierSystem;
-     private String practitionerIdentifierTypeCodingCode;
-     private String practitionerIdentifierTypeCodingDisplay;
-     private String practitionerIdentifierTypeCodingSystem;
-     private String practitionerIdentifierTypeCodingUserSelected;
-     private String practitionerIdentifierTypeCodingVersion;
-     private String practitionerIdentifierTypeText;
-     private String practitionerIdentifierUseCode;
-     private String practitionerNameFamily;
-     private String practitionerNameGiven;
-     private String practitionerNamePeriodEnd;
-     private String practitionerNamePeriodStart;
-     private String practitionerNamePrefix;
-     private String practitionerNameSuffix;
-     private String practitionerNameText;
-     private String practitionerNameUseCode;
-     private String practitionerPhotoContentType;
-     private String practitionerPhotoCreation;
-     private String practitionerPhotoData;
-     private String practitionerPhotoHash;
-     private String practitionerPhotoLanguage;
-     private String practitionerPhotoSize;
-     private String practitionerPhotoTitle;
-     private String practitionerPhotoUrl;
-     private String practitionerQualificationCodeCodingCode;
-     private String practitionerQualificationCodeCodingDisplay;
-     private String practitionerQualificationCodeCodingSystem;
-     private String practitionerQualificationCodeCodingUserSelected;
-     private String practitionerQualificationCodeCodingVersion;
-     private String practitionerQualificationCodeText;
-     private String practitionerQualificationIdentifierAssigner;
-     private String practitionerQualificationIdentifierPeriodEnd;
-     private String practitionerQualificationIdentifierPeriodStart;
-     private String practitionerQualificationIdentifierSystem;
-     private String practitionerQualificationIdentifierTypeCodingCode;
-     private String practitionerQualificationIdentifierTypeCodingDisplay;
-     private String practitionerQualificationIdentifierTypeCodingSystem;
-     private String practitionerQualificationIdentifierTypeCodingUserSelected;
-     private String practitionerQualificationIdentifierTypeCodingVersion;
-     private String practitionerQualificationIdentifierTypeText;
-     private String practitionerQualificationIdentifierUseCode;
-     private String practitionerQualificationIdentifierValue;
-     private String practitionerQualificationIssuer;
-     private String practitionerQualificationPeriodEnd;
-     private String practitionerQualificationPeriodStart;
-     private String practitionerTelecomPeriodEnd;
-     private String practitionerTelecomPeriodStart;
-     private String practitionerTelecomRank;
-     private String practitionerTelecomSystemCode;
-     private String practitionerTelecomUseCode;
+     private String id;
+     private String practActive;
+     private String practAddressCity;
+     private String practAddressCountry;
+     private String practAddressDistrict;
+     private String practAddressLine;
+     private String practAddressPeriodEnd;
+     private String practAddressPeriodStart;
+     private String practAddressPostalCode;
+     private String practAddressState;
+     private String practAddressText;
+     private String practAddressTypeCode;
+     private String practAddressUseCode;
+     private String practBirthDate;
+     private String practCommnCodingCode;
+     private String practCommnCodingDisplay;
+     private String practCommnCodingSystem;
+     private String practCommnCodingUsrslt;
+     private String practCommnCodingVersion;
+     private String practCommnText;
+     private String practGenderCode;
+     private String practIdAssigner;
+     private String practIdPeriodEnd;
+     private String practIdPeriodStart;
+     private String practIdSystem;
+     private String practIdTypeCodingCode;
+     private String practIdTypeCodingDisplay;
+     private String practIdTypeCodingSystem;
+     private String practIdTypeCodingUsrslt;
+     private String practIdTypeCodingVersion;
+     private String practIdTypeText;
+     private String practIdUseCode;
+     private String practIdValue;
+     private String practNameFamily;
+     private String practNameGiven;
+     private String practNamePeriodEnd;
+     private String practNamePeriodStart;
+     private String practNamePrefix;
+     private String practNameSuffix;
+     private String practNameText;
+     private String practNameUseCode;
+     private String practPhotoContentType;
+     private String practPhotoCreation;
+     private String practPhotoData;
+     private String practPhotoHash;
+     private String practPhotoLang;
+     private String practPhotoSize;
+     private String practPhotoTitle;
+     private String practPhotoUrl;
+     private String practQualificationCodeCodingCode;
+     private String practQualificationCodeCodingDisplay;
+     private String practQualificationCodeCodingSystem;
+     private String practQualificationCodeCodingUsrslt;
+     private String practQualificationCodeCodingVersion;
+     private String practQualificationCodeText;
+     private String practQualificationIdAssigner;
+     private String practQualificationIdPeriodEnd;
+     private String practQualificationIdPeriodStart;
+     private String practQualificationIdSystem;
+     private String practQualificationIdTypeCodingCode;
+     private String practQualificationIdTypeCodingDisplay;
+     private String practQualificationIdTypeCodingSystem;
+     private String practQualificationIdTypeCodingUsrslt;
+     private String practQualificationIdTypeCodingVersion;
+     private String practQualificationIdTypeText;
+     private String practQualificationIdUseCode;
+     private String practQualificationIdValue;
+     private String practQualificationIssuer;
+     private String practQualificationPeriodEnd;
+     private String practQualificationPeriodStart;
+     private String practTelecomPeriodEnd;
+     private String practTelecomPeriodStart;
+     private String practTelecomRank;
+     private String practTelecomSystemCode;
+     private String practTelecomUseCode;
+     private String practTelecomValue;
 
     public Practitioner() {
     }
 
-	
-    public Practitioner(String practitionerIdentifierValue) {
-        this.practitionerIdentifierValue = practitionerIdentifierValue;
-    }
-    public Practitioner(String practitionerIdentifierValue, String practitionerActive, String practitionerAddressCity, String practitionerAddressCountry, String practitionerAddressDistrict, String practitionerAddressLine, String practitionerAddressPeriodEnd, String practitionerAddressPeriodStart, String practitionerAddressPostalCode, String practitionerAddressState, String practitionerAddressText, String practitionerAddressTypeCode, String practitionerAddressUseCode, String practitionerBirthDate, String practitionerCommunicationCodingCode, String practitionerCommunicationCodingDisplay, String practitionerCommunicationCodingSystem, String practitionerCommunicationCodingUserSelected, String practitionerCommunicationCodingVersion, String practitionerCommunicationText, String practitionerGenderCode, String practitionerIdentifierAssigner, String practitionerIdentifierPeriodEnd, String practitionerIdentifierPeriodStart, String practitionerIdentifierSystem, String practitionerIdentifierTypeCodingCode, String practitionerIdentifierTypeCodingDisplay, String practitionerIdentifierTypeCodingSystem, String practitionerIdentifierTypeCodingUserSelected, String practitionerIdentifierTypeCodingVersion, String practitionerIdentifierTypeText, String practitionerIdentifierUseCode, String practitionerNameFamily, String practitionerNameGiven, String practitionerNamePeriodEnd, String practitionerNamePeriodStart, String practitionerNamePrefix, String practitionerNameSuffix, String practitionerNameText, String practitionerNameUseCode, String practitionerPhotoContentType, String practitionerPhotoCreation, String practitionerPhotoData, String practitionerPhotoHash, String practitionerPhotoLanguage, String practitionerPhotoSize, String practitionerPhotoTitle, String practitionerPhotoUrl, String practitionerQualificationCodeCodingCode, String practitionerQualificationCodeCodingDisplay, String practitionerQualificationCodeCodingSystem, String practitionerQualificationCodeCodingUserSelected, String practitionerQualificationCodeCodingVersion, String practitionerQualificationCodeText, String practitionerQualificationIdentifierAssigner, String practitionerQualificationIdentifierPeriodEnd, String practitionerQualificationIdentifierPeriodStart, String practitionerQualificationIdentifierSystem, String practitionerQualificationIdentifierTypeCodingCode, String practitionerQualificationIdentifierTypeCodingDisplay, String practitionerQualificationIdentifierTypeCodingSystem, String practitionerQualificationIdentifierTypeCodingUserSelected, String practitionerQualificationIdentifierTypeCodingVersion, String practitionerQualificationIdentifierTypeText, String practitionerQualificationIdentifierUseCode, String practitionerQualificationIdentifierValue, String practitionerQualificationIssuer, String practitionerQualificationPeriodEnd, String practitionerQualificationPeriodStart, String practitionerTelecomPeriodEnd, String practitionerTelecomPeriodStart, String practitionerTelecomRank, String practitionerTelecomSystemCode, String practitionerTelecomUseCode) {
-       this.practitionerIdentifierValue = practitionerIdentifierValue;
-       this.practitionerActive = practitionerActive;
-       this.practitionerAddressCity = practitionerAddressCity;
-       this.practitionerAddressCountry = practitionerAddressCountry;
-       this.practitionerAddressDistrict = practitionerAddressDistrict;
-       this.practitionerAddressLine = practitionerAddressLine;
-       this.practitionerAddressPeriodEnd = practitionerAddressPeriodEnd;
-       this.practitionerAddressPeriodStart = practitionerAddressPeriodStart;
-       this.practitionerAddressPostalCode = practitionerAddressPostalCode;
-       this.practitionerAddressState = practitionerAddressState;
-       this.practitionerAddressText = practitionerAddressText;
-       this.practitionerAddressTypeCode = practitionerAddressTypeCode;
-       this.practitionerAddressUseCode = practitionerAddressUseCode;
-       this.practitionerBirthDate = practitionerBirthDate;
-       this.practitionerCommunicationCodingCode = practitionerCommunicationCodingCode;
-       this.practitionerCommunicationCodingDisplay = practitionerCommunicationCodingDisplay;
-       this.practitionerCommunicationCodingSystem = practitionerCommunicationCodingSystem;
-       this.practitionerCommunicationCodingUserSelected = practitionerCommunicationCodingUserSelected;
-       this.practitionerCommunicationCodingVersion = practitionerCommunicationCodingVersion;
-       this.practitionerCommunicationText = practitionerCommunicationText;
-       this.practitionerGenderCode = practitionerGenderCode;
-       this.practitionerIdentifierAssigner = practitionerIdentifierAssigner;
-       this.practitionerIdentifierPeriodEnd = practitionerIdentifierPeriodEnd;
-       this.practitionerIdentifierPeriodStart = practitionerIdentifierPeriodStart;
-       this.practitionerIdentifierSystem = practitionerIdentifierSystem;
-       this.practitionerIdentifierTypeCodingCode = practitionerIdentifierTypeCodingCode;
-       this.practitionerIdentifierTypeCodingDisplay = practitionerIdentifierTypeCodingDisplay;
-       this.practitionerIdentifierTypeCodingSystem = practitionerIdentifierTypeCodingSystem;
-       this.practitionerIdentifierTypeCodingUserSelected = practitionerIdentifierTypeCodingUserSelected;
-       this.practitionerIdentifierTypeCodingVersion = practitionerIdentifierTypeCodingVersion;
-       this.practitionerIdentifierTypeText = practitionerIdentifierTypeText;
-       this.practitionerIdentifierUseCode = practitionerIdentifierUseCode;
-       this.practitionerNameFamily = practitionerNameFamily;
-       this.practitionerNameGiven = practitionerNameGiven;
-       this.practitionerNamePeriodEnd = practitionerNamePeriodEnd;
-       this.practitionerNamePeriodStart = practitionerNamePeriodStart;
-       this.practitionerNamePrefix = practitionerNamePrefix;
-       this.practitionerNameSuffix = practitionerNameSuffix;
-       this.practitionerNameText = practitionerNameText;
-       this.practitionerNameUseCode = practitionerNameUseCode;
-       this.practitionerPhotoContentType = practitionerPhotoContentType;
-       this.practitionerPhotoCreation = practitionerPhotoCreation;
-       this.practitionerPhotoData = practitionerPhotoData;
-       this.practitionerPhotoHash = practitionerPhotoHash;
-       this.practitionerPhotoLanguage = practitionerPhotoLanguage;
-       this.practitionerPhotoSize = practitionerPhotoSize;
-       this.practitionerPhotoTitle = practitionerPhotoTitle;
-       this.practitionerPhotoUrl = practitionerPhotoUrl;
-       this.practitionerQualificationCodeCodingCode = practitionerQualificationCodeCodingCode;
-       this.practitionerQualificationCodeCodingDisplay = practitionerQualificationCodeCodingDisplay;
-       this.practitionerQualificationCodeCodingSystem = practitionerQualificationCodeCodingSystem;
-       this.practitionerQualificationCodeCodingUserSelected = practitionerQualificationCodeCodingUserSelected;
-       this.practitionerQualificationCodeCodingVersion = practitionerQualificationCodeCodingVersion;
-       this.practitionerQualificationCodeText = practitionerQualificationCodeText;
-       this.practitionerQualificationIdentifierAssigner = practitionerQualificationIdentifierAssigner;
-       this.practitionerQualificationIdentifierPeriodEnd = practitionerQualificationIdentifierPeriodEnd;
-       this.practitionerQualificationIdentifierPeriodStart = practitionerQualificationIdentifierPeriodStart;
-       this.practitionerQualificationIdentifierSystem = practitionerQualificationIdentifierSystem;
-       this.practitionerQualificationIdentifierTypeCodingCode = practitionerQualificationIdentifierTypeCodingCode;
-       this.practitionerQualificationIdentifierTypeCodingDisplay = practitionerQualificationIdentifierTypeCodingDisplay;
-       this.practitionerQualificationIdentifierTypeCodingSystem = practitionerQualificationIdentifierTypeCodingSystem;
-       this.practitionerQualificationIdentifierTypeCodingUserSelected = practitionerQualificationIdentifierTypeCodingUserSelected;
-       this.practitionerQualificationIdentifierTypeCodingVersion = practitionerQualificationIdentifierTypeCodingVersion;
-       this.practitionerQualificationIdentifierTypeText = practitionerQualificationIdentifierTypeText;
-       this.practitionerQualificationIdentifierUseCode = practitionerQualificationIdentifierUseCode;
-       this.practitionerQualificationIdentifierValue = practitionerQualificationIdentifierValue;
-       this.practitionerQualificationIssuer = practitionerQualificationIssuer;
-       this.practitionerQualificationPeriodEnd = practitionerQualificationPeriodEnd;
-       this.practitionerQualificationPeriodStart = practitionerQualificationPeriodStart;
-       this.practitionerTelecomPeriodEnd = practitionerTelecomPeriodEnd;
-       this.practitionerTelecomPeriodStart = practitionerTelecomPeriodStart;
-       this.practitionerTelecomRank = practitionerTelecomRank;
-       this.practitionerTelecomSystemCode = practitionerTelecomSystemCode;
-       this.practitionerTelecomUseCode = practitionerTelecomUseCode;
+    public Practitioner(String practActive, String practAddressCity, String practAddressCountry, String practAddressDistrict, String practAddressLine, String practAddressPeriodEnd, String practAddressPeriodStart, String practAddressPostalCode, String practAddressState, String practAddressText, String practAddressTypeCode, String practAddressUseCode, String practBirthDate, String practCommnCodingCode, String practCommnCodingDisplay, String practCommnCodingSystem, String practCommnCodingUsrslt, String practCommnCodingVersion, String practCommnText, String practGenderCode, String practIdAssigner, String practIdPeriodEnd, String practIdPeriodStart, String practIdSystem, String practIdTypeCodingCode, String practIdTypeCodingDisplay, String practIdTypeCodingSystem, String practIdTypeCodingUsrslt, String practIdTypeCodingVersion, String practIdTypeText, String practIdUseCode, String practIdValue, String practNameFamily, String practNameGiven, String practNamePeriodEnd, String practNamePeriodStart, String practNamePrefix, String practNameSuffix, String practNameText, String practNameUseCode, String practPhotoContentType, String practPhotoCreation, String practPhotoData, String practPhotoHash, String practPhotoLang, String practPhotoSize, String practPhotoTitle, String practPhotoUrl, String practQualificationCodeCodingCode, String practQualificationCodeCodingDisplay, String practQualificationCodeCodingSystem, String practQualificationCodeCodingUsrslt, String practQualificationCodeCodingVersion, String practQualificationCodeText, String practQualificationIdAssigner, String practQualificationIdPeriodEnd, String practQualificationIdPeriodStart, String practQualificationIdSystem, String practQualificationIdTypeCodingCode, String practQualificationIdTypeCodingDisplay, String practQualificationIdTypeCodingSystem, String practQualificationIdTypeCodingUsrslt, String practQualificationIdTypeCodingVersion, String practQualificationIdTypeText, String practQualificationIdUseCode, String practQualificationIdValue, String practQualificationIssuer, String practQualificationPeriodEnd, String practQualificationPeriodStart, String practTelecomPeriodEnd, String practTelecomPeriodStart, String practTelecomRank, String practTelecomSystemCode, String practTelecomUseCode, String practTelecomValue) {
+       this.practActive = practActive;
+       this.practAddressCity = practAddressCity;
+       this.practAddressCountry = practAddressCountry;
+       this.practAddressDistrict = practAddressDistrict;
+       this.practAddressLine = practAddressLine;
+       this.practAddressPeriodEnd = practAddressPeriodEnd;
+       this.practAddressPeriodStart = practAddressPeriodStart;
+       this.practAddressPostalCode = practAddressPostalCode;
+       this.practAddressState = practAddressState;
+       this.practAddressText = practAddressText;
+       this.practAddressTypeCode = practAddressTypeCode;
+       this.practAddressUseCode = practAddressUseCode;
+       this.practBirthDate = practBirthDate;
+       this.practCommnCodingCode = practCommnCodingCode;
+       this.practCommnCodingDisplay = practCommnCodingDisplay;
+       this.practCommnCodingSystem = practCommnCodingSystem;
+       this.practCommnCodingUsrslt = practCommnCodingUsrslt;
+       this.practCommnCodingVersion = practCommnCodingVersion;
+       this.practCommnText = practCommnText;
+       this.practGenderCode = practGenderCode;
+       this.practIdAssigner = practIdAssigner;
+       this.practIdPeriodEnd = practIdPeriodEnd;
+       this.practIdPeriodStart = practIdPeriodStart;
+       this.practIdSystem = practIdSystem;
+       this.practIdTypeCodingCode = practIdTypeCodingCode;
+       this.practIdTypeCodingDisplay = practIdTypeCodingDisplay;
+       this.practIdTypeCodingSystem = practIdTypeCodingSystem;
+       this.practIdTypeCodingUsrslt = practIdTypeCodingUsrslt;
+       this.practIdTypeCodingVersion = practIdTypeCodingVersion;
+       this.practIdTypeText = practIdTypeText;
+       this.practIdUseCode = practIdUseCode;
+       this.practIdValue = practIdValue;
+       this.practNameFamily = practNameFamily;
+       this.practNameGiven = practNameGiven;
+       this.practNamePeriodEnd = practNamePeriodEnd;
+       this.practNamePeriodStart = practNamePeriodStart;
+       this.practNamePrefix = practNamePrefix;
+       this.practNameSuffix = practNameSuffix;
+       this.practNameText = practNameText;
+       this.practNameUseCode = practNameUseCode;
+       this.practPhotoContentType = practPhotoContentType;
+       this.practPhotoCreation = practPhotoCreation;
+       this.practPhotoData = practPhotoData;
+       this.practPhotoHash = practPhotoHash;
+       this.practPhotoLang = practPhotoLang;
+       this.practPhotoSize = practPhotoSize;
+       this.practPhotoTitle = practPhotoTitle;
+       this.practPhotoUrl = practPhotoUrl;
+       this.practQualificationCodeCodingCode = practQualificationCodeCodingCode;
+       this.practQualificationCodeCodingDisplay = practQualificationCodeCodingDisplay;
+       this.practQualificationCodeCodingSystem = practQualificationCodeCodingSystem;
+       this.practQualificationCodeCodingUsrslt = practQualificationCodeCodingUsrslt;
+       this.practQualificationCodeCodingVersion = practQualificationCodeCodingVersion;
+       this.practQualificationCodeText = practQualificationCodeText;
+       this.practQualificationIdAssigner = practQualificationIdAssigner;
+       this.practQualificationIdPeriodEnd = practQualificationIdPeriodEnd;
+       this.practQualificationIdPeriodStart = practQualificationIdPeriodStart;
+       this.practQualificationIdSystem = practQualificationIdSystem;
+       this.practQualificationIdTypeCodingCode = practQualificationIdTypeCodingCode;
+       this.practQualificationIdTypeCodingDisplay = practQualificationIdTypeCodingDisplay;
+       this.practQualificationIdTypeCodingSystem = practQualificationIdTypeCodingSystem;
+       this.practQualificationIdTypeCodingUsrslt = practQualificationIdTypeCodingUsrslt;
+       this.practQualificationIdTypeCodingVersion = practQualificationIdTypeCodingVersion;
+       this.practQualificationIdTypeText = practQualificationIdTypeText;
+       this.practQualificationIdUseCode = practQualificationIdUseCode;
+       this.practQualificationIdValue = practQualificationIdValue;
+       this.practQualificationIssuer = practQualificationIssuer;
+       this.practQualificationPeriodEnd = practQualificationPeriodEnd;
+       this.practQualificationPeriodStart = practQualificationPeriodStart;
+       this.practTelecomPeriodEnd = practTelecomPeriodEnd;
+       this.practTelecomPeriodStart = practTelecomPeriodStart;
+       this.practTelecomRank = practTelecomRank;
+       this.practTelecomSystemCode = practTelecomSystemCode;
+       this.practTelecomUseCode = practTelecomUseCode;
+       this.practTelecomValue = practTelecomValue;
     }
    
     public 
     String 
-    getPractitionerIdentifierValue()
+    getId()
     {
-        return this.practitionerIdentifierValue;
+        return this.id;
     }
     
-    public void setPractitionerIdentifierValue
-        (String practitionerIdentifierValue) 
+    public void setId
+        (String id) 
         {
-      this.practitionerIdentifierValue = practitionerIdentifierValue;
+      this.id = id;
 }
     public 
     String 
-    getPractitionerActive()
+    getPractActive()
     {
-        return this.practitionerActive;
+        return this.practActive;
     }
     
-    public void setPractitionerActive
-        (String practitionerActive) 
+    public void setPractActive
+        (String practActive) 
         {
-      this.practitionerActive = practitionerActive;
+      this.practActive = practActive;
 }
     public 
     String 
-    getPractitionerAddressCity()
+    getPractAddressCity()
     {
-        return this.practitionerAddressCity;
+        return this.practAddressCity;
     }
     
-    public void setPractitionerAddressCity
-        (String practitionerAddressCity) 
+    public void setPractAddressCity
+        (String practAddressCity) 
         {
-      this.practitionerAddressCity = practitionerAddressCity;
+      this.practAddressCity = practAddressCity;
 }
     public 
     String 
-    getPractitionerAddressCountry()
+    getPractAddressCountry()
     {
-        return this.practitionerAddressCountry;
+        return this.practAddressCountry;
     }
     
-    public void setPractitionerAddressCountry
-        (String practitionerAddressCountry) 
+    public void setPractAddressCountry
+        (String practAddressCountry) 
         {
-      this.practitionerAddressCountry = practitionerAddressCountry;
+      this.practAddressCountry = practAddressCountry;
 }
     public 
     String 
-    getPractitionerAddressDistrict()
+    getPractAddressDistrict()
     {
-        return this.practitionerAddressDistrict;
+        return this.practAddressDistrict;
     }
     
-    public void setPractitionerAddressDistrict
-        (String practitionerAddressDistrict) 
+    public void setPractAddressDistrict
+        (String practAddressDistrict) 
         {
-      this.practitionerAddressDistrict = practitionerAddressDistrict;
+      this.practAddressDistrict = practAddressDistrict;
 }
     public 
     String 
-    getPractitionerAddressLine()
+    getPractAddressLine()
     {
-        return this.practitionerAddressLine;
+        return this.practAddressLine;
     }
     
-    public void setPractitionerAddressLine
-        (String practitionerAddressLine) 
+    public void setPractAddressLine
+        (String practAddressLine) 
         {
-      this.practitionerAddressLine = practitionerAddressLine;
+      this.practAddressLine = practAddressLine;
 }
     public 
     String 
-    getPractitionerAddressPeriodEnd()
+    getPractAddressPeriodEnd()
     {
-        return this.practitionerAddressPeriodEnd;
+        return this.practAddressPeriodEnd;
     }
     
-    public void setPractitionerAddressPeriodEnd
-        (String practitionerAddressPeriodEnd) 
+    public void setPractAddressPeriodEnd
+        (String practAddressPeriodEnd) 
         {
-      this.practitionerAddressPeriodEnd = practitionerAddressPeriodEnd;
+      this.practAddressPeriodEnd = practAddressPeriodEnd;
 }
     public 
     String 
-    getPractitionerAddressPeriodStart()
+    getPractAddressPeriodStart()
     {
-        return this.practitionerAddressPeriodStart;
+        return this.practAddressPeriodStart;
     }
     
-    public void setPractitionerAddressPeriodStart
-        (String practitionerAddressPeriodStart) 
+    public void setPractAddressPeriodStart
+        (String practAddressPeriodStart) 
         {
-      this.practitionerAddressPeriodStart = practitionerAddressPeriodStart;
+      this.practAddressPeriodStart = practAddressPeriodStart;
 }
     public 
     String 
-    getPractitionerAddressPostalCode()
+    getPractAddressPostalCode()
     {
-        return this.practitionerAddressPostalCode;
+        return this.practAddressPostalCode;
     }
     
-    public void setPractitionerAddressPostalCode
-        (String practitionerAddressPostalCode) 
+    public void setPractAddressPostalCode
+        (String practAddressPostalCode) 
         {
-      this.practitionerAddressPostalCode = practitionerAddressPostalCode;
+      this.practAddressPostalCode = practAddressPostalCode;
 }
     public 
     String 
-    getPractitionerAddressState()
+    getPractAddressState()
     {
-        return this.practitionerAddressState;
+        return this.practAddressState;
     }
     
-    public void setPractitionerAddressState
-        (String practitionerAddressState) 
+    public void setPractAddressState
+        (String practAddressState) 
         {
-      this.practitionerAddressState = practitionerAddressState;
+      this.practAddressState = practAddressState;
 }
     public 
     String 
-    getPractitionerAddressText()
+    getPractAddressText()
     {
-        return this.practitionerAddressText;
+        return this.practAddressText;
     }
     
-    public void setPractitionerAddressText
-        (String practitionerAddressText) 
+    public void setPractAddressText
+        (String practAddressText) 
         {
-      this.practitionerAddressText = practitionerAddressText;
+      this.practAddressText = practAddressText;
 }
     public 
     String 
-    getPractitionerAddressTypeCode()
+    getPractAddressTypeCode()
     {
-        return this.practitionerAddressTypeCode;
+        return this.practAddressTypeCode;
     }
     
-    public void setPractitionerAddressTypeCode
-        (String practitionerAddressTypeCode) 
+    public void setPractAddressTypeCode
+        (String practAddressTypeCode) 
         {
-      this.practitionerAddressTypeCode = practitionerAddressTypeCode;
+      this.practAddressTypeCode = practAddressTypeCode;
 }
     public 
     String 
-    getPractitionerAddressUseCode()
+    getPractAddressUseCode()
     {
-        return this.practitionerAddressUseCode;
+        return this.practAddressUseCode;
     }
     
-    public void setPractitionerAddressUseCode
-        (String practitionerAddressUseCode) 
+    public void setPractAddressUseCode
+        (String practAddressUseCode) 
         {
-      this.practitionerAddressUseCode = practitionerAddressUseCode;
+      this.practAddressUseCode = practAddressUseCode;
 }
     public 
     String 
-    getPractitionerBirthDate()
+    getPractBirthDate()
     {
-        return this.practitionerBirthDate;
+        return this.practBirthDate;
     }
     
-    public void setPractitionerBirthDate
-        (String practitionerBirthDate) 
+    public void setPractBirthDate
+        (String practBirthDate) 
         {
-      this.practitionerBirthDate = practitionerBirthDate;
+      this.practBirthDate = practBirthDate;
 }
     public 
     String 
-    getPractitionerCommunicationCodingCode()
+    getPractCommnCodingCode()
     {
-        return this.practitionerCommunicationCodingCode;
+        return this.practCommnCodingCode;
     }
     
-    public void setPractitionerCommunicationCodingCode
-        (String practitionerCommunicationCodingCode) 
+    public void setPractCommnCodingCode
+        (String practCommnCodingCode) 
         {
-      this.practitionerCommunicationCodingCode = practitionerCommunicationCodingCode;
+      this.practCommnCodingCode = practCommnCodingCode;
 }
     public 
     String 
-    getPractitionerCommunicationCodingDisplay()
+    getPractCommnCodingDisplay()
     {
-        return this.practitionerCommunicationCodingDisplay;
+        return this.practCommnCodingDisplay;
     }
     
-    public void setPractitionerCommunicationCodingDisplay
-        (String practitionerCommunicationCodingDisplay) 
+    public void setPractCommnCodingDisplay
+        (String practCommnCodingDisplay) 
         {
-      this.practitionerCommunicationCodingDisplay = practitionerCommunicationCodingDisplay;
+      this.practCommnCodingDisplay = practCommnCodingDisplay;
 }
     public 
     String 
-    getPractitionerCommunicationCodingSystem()
+    getPractCommnCodingSystem()
     {
-        return this.practitionerCommunicationCodingSystem;
+        return this.practCommnCodingSystem;
     }
     
-    public void setPractitionerCommunicationCodingSystem
-        (String practitionerCommunicationCodingSystem) 
+    public void setPractCommnCodingSystem
+        (String practCommnCodingSystem) 
         {
-      this.practitionerCommunicationCodingSystem = practitionerCommunicationCodingSystem;
+      this.practCommnCodingSystem = practCommnCodingSystem;
 }
     public 
     String 
-    getPractitionerCommunicationCodingUserSelected()
+    getPractCommnCodingUsrslt()
     {
-        return this.practitionerCommunicationCodingUserSelected;
+        return this.practCommnCodingUsrslt;
     }
     
-    public void setPractitionerCommunicationCodingUserSelected
-        (String practitionerCommunicationCodingUserSelected) 
+    public void setPractCommnCodingUsrslt
+        (String practCommnCodingUsrslt) 
         {
-      this.practitionerCommunicationCodingUserSelected = practitionerCommunicationCodingUserSelected;
+      this.practCommnCodingUsrslt = practCommnCodingUsrslt;
 }
     public 
     String 
-    getPractitionerCommunicationCodingVersion()
+    getPractCommnCodingVersion()
     {
-        return this.practitionerCommunicationCodingVersion;
+        return this.practCommnCodingVersion;
     }
     
-    public void setPractitionerCommunicationCodingVersion
-        (String practitionerCommunicationCodingVersion) 
+    public void setPractCommnCodingVersion
+        (String practCommnCodingVersion) 
         {
-      this.practitionerCommunicationCodingVersion = practitionerCommunicationCodingVersion;
+      this.practCommnCodingVersion = practCommnCodingVersion;
 }
     public 
     String 
-    getPractitionerCommunicationText()
+    getPractCommnText()
     {
-        return this.practitionerCommunicationText;
+        return this.practCommnText;
     }
     
-    public void setPractitionerCommunicationText
-        (String practitionerCommunicationText) 
+    public void setPractCommnText
+        (String practCommnText) 
         {
-      this.practitionerCommunicationText = practitionerCommunicationText;
+      this.practCommnText = practCommnText;
 }
     public 
     String 
-    getPractitionerGenderCode()
+    getPractGenderCode()
     {
-        return this.practitionerGenderCode;
+        return this.practGenderCode;
     }
     
-    public void setPractitionerGenderCode
-        (String practitionerGenderCode) 
+    public void setPractGenderCode
+        (String practGenderCode) 
         {
-      this.practitionerGenderCode = practitionerGenderCode;
+      this.practGenderCode = practGenderCode;
 }
     public 
     String 
-    getPractitionerIdentifierAssigner()
+    getPractIdAssigner()
     {
-        return this.practitionerIdentifierAssigner;
+        return this.practIdAssigner;
     }
     
-    public void setPractitionerIdentifierAssigner
-        (String practitionerIdentifierAssigner) 
+    public void setPractIdAssigner
+        (String practIdAssigner) 
         {
-      this.practitionerIdentifierAssigner = practitionerIdentifierAssigner;
+      this.practIdAssigner = practIdAssigner;
 }
     public 
     String 
-    getPractitionerIdentifierPeriodEnd()
+    getPractIdPeriodEnd()
     {
-        return this.practitionerIdentifierPeriodEnd;
+        return this.practIdPeriodEnd;
     }
     
-    public void setPractitionerIdentifierPeriodEnd
-        (String practitionerIdentifierPeriodEnd) 
+    public void setPractIdPeriodEnd
+        (String practIdPeriodEnd) 
         {
-      this.practitionerIdentifierPeriodEnd = practitionerIdentifierPeriodEnd;
+      this.practIdPeriodEnd = practIdPeriodEnd;
 }
     public 
     String 
-    getPractitionerIdentifierPeriodStart()
+    getPractIdPeriodStart()
     {
-        return this.practitionerIdentifierPeriodStart;
+        return this.practIdPeriodStart;
     }
     
-    public void setPractitionerIdentifierPeriodStart
-        (String practitionerIdentifierPeriodStart) 
+    public void setPractIdPeriodStart
+        (String practIdPeriodStart) 
         {
-      this.practitionerIdentifierPeriodStart = practitionerIdentifierPeriodStart;
+      this.practIdPeriodStart = practIdPeriodStart;
 }
     public 
     String 
-    getPractitionerIdentifierSystem()
+    getPractIdSystem()
     {
-        return this.practitionerIdentifierSystem;
+        return this.practIdSystem;
     }
     
-    public void setPractitionerIdentifierSystem
-        (String practitionerIdentifierSystem) 
+    public void setPractIdSystem
+        (String practIdSystem) 
         {
-      this.practitionerIdentifierSystem = practitionerIdentifierSystem;
+      this.practIdSystem = practIdSystem;
 }
     public 
     String 
-    getPractitionerIdentifierTypeCodingCode()
+    getPractIdTypeCodingCode()
     {
-        return this.practitionerIdentifierTypeCodingCode;
+        return this.practIdTypeCodingCode;
     }
     
-    public void setPractitionerIdentifierTypeCodingCode
-        (String practitionerIdentifierTypeCodingCode) 
+    public void setPractIdTypeCodingCode
+        (String practIdTypeCodingCode) 
         {
-      this.practitionerIdentifierTypeCodingCode = practitionerIdentifierTypeCodingCode;
+      this.practIdTypeCodingCode = practIdTypeCodingCode;
 }
     public 
     String 
-    getPractitionerIdentifierTypeCodingDisplay()
+    getPractIdTypeCodingDisplay()
     {
-        return this.practitionerIdentifierTypeCodingDisplay;
+        return this.practIdTypeCodingDisplay;
     }
     
-    public void setPractitionerIdentifierTypeCodingDisplay
-        (String practitionerIdentifierTypeCodingDisplay) 
+    public void setPractIdTypeCodingDisplay
+        (String practIdTypeCodingDisplay) 
         {
-      this.practitionerIdentifierTypeCodingDisplay = practitionerIdentifierTypeCodingDisplay;
+      this.practIdTypeCodingDisplay = practIdTypeCodingDisplay;
 }
     public 
     String 
-    getPractitionerIdentifierTypeCodingSystem()
+    getPractIdTypeCodingSystem()
     {
-        return this.practitionerIdentifierTypeCodingSystem;
+        return this.practIdTypeCodingSystem;
     }
     
-    public void setPractitionerIdentifierTypeCodingSystem
-        (String practitionerIdentifierTypeCodingSystem) 
+    public void setPractIdTypeCodingSystem
+        (String practIdTypeCodingSystem) 
         {
-      this.practitionerIdentifierTypeCodingSystem = practitionerIdentifierTypeCodingSystem;
+      this.practIdTypeCodingSystem = practIdTypeCodingSystem;
 }
     public 
     String 
-    getPractitionerIdentifierTypeCodingUserSelected()
+    getPractIdTypeCodingUsrslt()
     {
-        return this.practitionerIdentifierTypeCodingUserSelected;
+        return this.practIdTypeCodingUsrslt;
     }
     
-    public void setPractitionerIdentifierTypeCodingUserSelected
-        (String practitionerIdentifierTypeCodingUserSelected) 
+    public void setPractIdTypeCodingUsrslt
+        (String practIdTypeCodingUsrslt) 
         {
-      this.practitionerIdentifierTypeCodingUserSelected = practitionerIdentifierTypeCodingUserSelected;
+      this.practIdTypeCodingUsrslt = practIdTypeCodingUsrslt;
 }
     public 
     String 
-    getPractitionerIdentifierTypeCodingVersion()
+    getPractIdTypeCodingVersion()
     {
-        return this.practitionerIdentifierTypeCodingVersion;
+        return this.practIdTypeCodingVersion;
     }
     
-    public void setPractitionerIdentifierTypeCodingVersion
-        (String practitionerIdentifierTypeCodingVersion) 
+    public void setPractIdTypeCodingVersion
+        (String practIdTypeCodingVersion) 
         {
-      this.practitionerIdentifierTypeCodingVersion = practitionerIdentifierTypeCodingVersion;
+      this.practIdTypeCodingVersion = practIdTypeCodingVersion;
 }
     public 
     String 
-    getPractitionerIdentifierTypeText()
+    getPractIdTypeText()
     {
-        return this.practitionerIdentifierTypeText;
+        return this.practIdTypeText;
     }
     
-    public void setPractitionerIdentifierTypeText
-        (String practitionerIdentifierTypeText) 
+    public void setPractIdTypeText
+        (String practIdTypeText) 
         {
-      this.practitionerIdentifierTypeText = practitionerIdentifierTypeText;
+      this.practIdTypeText = practIdTypeText;
 }
     public 
     String 
-    getPractitionerIdentifierUseCode()
+    getPractIdUseCode()
     {
-        return this.practitionerIdentifierUseCode;
+        return this.practIdUseCode;
     }
     
-    public void setPractitionerIdentifierUseCode
-        (String practitionerIdentifierUseCode) 
+    public void setPractIdUseCode
+        (String practIdUseCode) 
         {
-      this.practitionerIdentifierUseCode = practitionerIdentifierUseCode;
+      this.practIdUseCode = practIdUseCode;
 }
     public 
     String 
-    getPractitionerNameFamily()
+    getPractIdValue()
     {
-        return this.practitionerNameFamily;
+        return this.practIdValue;
     }
     
-    public void setPractitionerNameFamily
-        (String practitionerNameFamily) 
+    public void setPractIdValue
+        (String practIdValue) 
         {
-      this.practitionerNameFamily = practitionerNameFamily;
+      this.practIdValue = practIdValue;
 }
     public 
     String 
-    getPractitionerNameGiven()
+    getPractNameFamily()
     {
-        return this.practitionerNameGiven;
+        return this.practNameFamily;
     }
     
-    public void setPractitionerNameGiven
-        (String practitionerNameGiven) 
+    public void setPractNameFamily
+        (String practNameFamily) 
         {
-      this.practitionerNameGiven = practitionerNameGiven;
+      this.practNameFamily = practNameFamily;
 }
     public 
     String 
-    getPractitionerNamePeriodEnd()
+    getPractNameGiven()
     {
-        return this.practitionerNamePeriodEnd;
+        return this.practNameGiven;
     }
     
-    public void setPractitionerNamePeriodEnd
-        (String practitionerNamePeriodEnd) 
+    public void setPractNameGiven
+        (String practNameGiven) 
         {
-      this.practitionerNamePeriodEnd = practitionerNamePeriodEnd;
+      this.practNameGiven = practNameGiven;
 }
     public 
     String 
-    getPractitionerNamePeriodStart()
+    getPractNamePeriodEnd()
     {
-        return this.practitionerNamePeriodStart;
+        return this.practNamePeriodEnd;
     }
     
-    public void setPractitionerNamePeriodStart
-        (String practitionerNamePeriodStart) 
+    public void setPractNamePeriodEnd
+        (String practNamePeriodEnd) 
         {
-      this.practitionerNamePeriodStart = practitionerNamePeriodStart;
+      this.practNamePeriodEnd = practNamePeriodEnd;
 }
     public 
     String 
-    getPractitionerNamePrefix()
+    getPractNamePeriodStart()
     {
-        return this.practitionerNamePrefix;
+        return this.practNamePeriodStart;
     }
     
-    public void setPractitionerNamePrefix
-        (String practitionerNamePrefix) 
+    public void setPractNamePeriodStart
+        (String practNamePeriodStart) 
         {
-      this.practitionerNamePrefix = practitionerNamePrefix;
+      this.practNamePeriodStart = practNamePeriodStart;
 }
     public 
     String 
-    getPractitionerNameSuffix()
+    getPractNamePrefix()
     {
-        return this.practitionerNameSuffix;
+        return this.practNamePrefix;
     }
     
-    public void setPractitionerNameSuffix
-        (String practitionerNameSuffix) 
+    public void setPractNamePrefix
+        (String practNamePrefix) 
         {
-      this.practitionerNameSuffix = practitionerNameSuffix;
+      this.practNamePrefix = practNamePrefix;
 }
     public 
     String 
-    getPractitionerNameText()
+    getPractNameSuffix()
     {
-        return this.practitionerNameText;
+        return this.practNameSuffix;
     }
     
-    public void setPractitionerNameText
-        (String practitionerNameText) 
+    public void setPractNameSuffix
+        (String practNameSuffix) 
         {
-      this.practitionerNameText = practitionerNameText;
+      this.practNameSuffix = practNameSuffix;
 }
     public 
     String 
-    getPractitionerNameUseCode()
+    getPractNameText()
     {
-        return this.practitionerNameUseCode;
+        return this.practNameText;
     }
     
-    public void setPractitionerNameUseCode
-        (String practitionerNameUseCode) 
+    public void setPractNameText
+        (String practNameText) 
         {
-      this.practitionerNameUseCode = practitionerNameUseCode;
+      this.practNameText = practNameText;
 }
     public 
     String 
-    getPractitionerPhotoContentType()
+    getPractNameUseCode()
     {
-        return this.practitionerPhotoContentType;
+        return this.practNameUseCode;
     }
     
-    public void setPractitionerPhotoContentType
-        (String practitionerPhotoContentType) 
+    public void setPractNameUseCode
+        (String practNameUseCode) 
         {
-      this.practitionerPhotoContentType = practitionerPhotoContentType;
+      this.practNameUseCode = practNameUseCode;
 }
     public 
     String 
-    getPractitionerPhotoCreation()
+    getPractPhotoContentType()
     {
-        return this.practitionerPhotoCreation;
+        return this.practPhotoContentType;
     }
     
-    public void setPractitionerPhotoCreation
-        (String practitionerPhotoCreation) 
+    public void setPractPhotoContentType
+        (String practPhotoContentType) 
         {
-      this.practitionerPhotoCreation = practitionerPhotoCreation;
+      this.practPhotoContentType = practPhotoContentType;
 }
     public 
     String 
-    getPractitionerPhotoData()
+    getPractPhotoCreation()
     {
-        return this.practitionerPhotoData;
+        return this.practPhotoCreation;
     }
     
-    public void setPractitionerPhotoData
-        (String practitionerPhotoData) 
+    public void setPractPhotoCreation
+        (String practPhotoCreation) 
         {
-      this.practitionerPhotoData = practitionerPhotoData;
+      this.practPhotoCreation = practPhotoCreation;
 }
     public 
     String 
-    getPractitionerPhotoHash()
+    getPractPhotoData()
     {
-        return this.practitionerPhotoHash;
+        return this.practPhotoData;
     }
     
-    public void setPractitionerPhotoHash
-        (String practitionerPhotoHash) 
+    public void setPractPhotoData
+        (String practPhotoData) 
         {
-      this.practitionerPhotoHash = practitionerPhotoHash;
+      this.practPhotoData = practPhotoData;
 }
     public 
     String 
-    getPractitionerPhotoLanguage()
+    getPractPhotoHash()
     {
-        return this.practitionerPhotoLanguage;
+        return this.practPhotoHash;
     }
     
-    public void setPractitionerPhotoLanguage
-        (String practitionerPhotoLanguage) 
+    public void setPractPhotoHash
+        (String practPhotoHash) 
         {
-      this.practitionerPhotoLanguage = practitionerPhotoLanguage;
+      this.practPhotoHash = practPhotoHash;
 }
     public 
     String 
-    getPractitionerPhotoSize()
+    getPractPhotoLang()
     {
-        return this.practitionerPhotoSize;
+        return this.practPhotoLang;
     }
     
-    public void setPractitionerPhotoSize
-        (String practitionerPhotoSize) 
+    public void setPractPhotoLang
+        (String practPhotoLang) 
         {
-      this.practitionerPhotoSize = practitionerPhotoSize;
+      this.practPhotoLang = practPhotoLang;
 }
     public 
     String 
-    getPractitionerPhotoTitle()
+    getPractPhotoSize()
     {
-        return this.practitionerPhotoTitle;
+        return this.practPhotoSize;
     }
     
-    public void setPractitionerPhotoTitle
-        (String practitionerPhotoTitle) 
+    public void setPractPhotoSize
+        (String practPhotoSize) 
         {
-      this.practitionerPhotoTitle = practitionerPhotoTitle;
+      this.practPhotoSize = practPhotoSize;
 }
     public 
     String 
-    getPractitionerPhotoUrl()
+    getPractPhotoTitle()
     {
-        return this.practitionerPhotoUrl;
+        return this.practPhotoTitle;
     }
     
-    public void setPractitionerPhotoUrl
-        (String practitionerPhotoUrl) 
+    public void setPractPhotoTitle
+        (String practPhotoTitle) 
         {
-      this.practitionerPhotoUrl = practitionerPhotoUrl;
+      this.practPhotoTitle = practPhotoTitle;
 }
     public 
     String 
-    getPractitionerQualificationCodeCodingCode()
+    getPractPhotoUrl()
     {
-        return this.practitionerQualificationCodeCodingCode;
+        return this.practPhotoUrl;
     }
     
-    public void setPractitionerQualificationCodeCodingCode
-        (String practitionerQualificationCodeCodingCode) 
+    public void setPractPhotoUrl
+        (String practPhotoUrl) 
         {
-      this.practitionerQualificationCodeCodingCode = practitionerQualificationCodeCodingCode;
+      this.practPhotoUrl = practPhotoUrl;
 }
     public 
     String 
-    getPractitionerQualificationCodeCodingDisplay()
+    getPractQualificationCodeCodingCode()
     {
-        return this.practitionerQualificationCodeCodingDisplay;
+        return this.practQualificationCodeCodingCode;
     }
     
-    public void setPractitionerQualificationCodeCodingDisplay
-        (String practitionerQualificationCodeCodingDisplay) 
+    public void setPractQualificationCodeCodingCode
+        (String practQualificationCodeCodingCode) 
         {
-      this.practitionerQualificationCodeCodingDisplay = practitionerQualificationCodeCodingDisplay;
+      this.practQualificationCodeCodingCode = practQualificationCodeCodingCode;
 }
     public 
     String 
-    getPractitionerQualificationCodeCodingSystem()
+    getPractQualificationCodeCodingDisplay()
     {
-        return this.practitionerQualificationCodeCodingSystem;
+        return this.practQualificationCodeCodingDisplay;
     }
     
-    public void setPractitionerQualificationCodeCodingSystem
-        (String practitionerQualificationCodeCodingSystem) 
+    public void setPractQualificationCodeCodingDisplay
+        (String practQualificationCodeCodingDisplay) 
         {
-      this.practitionerQualificationCodeCodingSystem = practitionerQualificationCodeCodingSystem;
+      this.practQualificationCodeCodingDisplay = practQualificationCodeCodingDisplay;
 }
     public 
     String 
-    getPractitionerQualificationCodeCodingUserSelected()
+    getPractQualificationCodeCodingSystem()
     {
-        return this.practitionerQualificationCodeCodingUserSelected;
+        return this.practQualificationCodeCodingSystem;
     }
     
-    public void setPractitionerQualificationCodeCodingUserSelected
-        (String practitionerQualificationCodeCodingUserSelected) 
+    public void setPractQualificationCodeCodingSystem
+        (String practQualificationCodeCodingSystem) 
         {
-      this.practitionerQualificationCodeCodingUserSelected = practitionerQualificationCodeCodingUserSelected;
+      this.practQualificationCodeCodingSystem = practQualificationCodeCodingSystem;
 }
     public 
     String 
-    getPractitionerQualificationCodeCodingVersion()
+    getPractQualificationCodeCodingUsrslt()
     {
-        return this.practitionerQualificationCodeCodingVersion;
+        return this.practQualificationCodeCodingUsrslt;
     }
     
-    public void setPractitionerQualificationCodeCodingVersion
-        (String practitionerQualificationCodeCodingVersion) 
+    public void setPractQualificationCodeCodingUsrslt
+        (String practQualificationCodeCodingUsrslt) 
         {
-      this.practitionerQualificationCodeCodingVersion = practitionerQualificationCodeCodingVersion;
+      this.practQualificationCodeCodingUsrslt = practQualificationCodeCodingUsrslt;
 }
     public 
     String 
-    getPractitionerQualificationCodeText()
+    getPractQualificationCodeCodingVersion()
     {
-        return this.practitionerQualificationCodeText;
+        return this.practQualificationCodeCodingVersion;
     }
     
-    public void setPractitionerQualificationCodeText
-        (String practitionerQualificationCodeText) 
+    public void setPractQualificationCodeCodingVersion
+        (String practQualificationCodeCodingVersion) 
         {
-      this.practitionerQualificationCodeText = practitionerQualificationCodeText;
+      this.practQualificationCodeCodingVersion = practQualificationCodeCodingVersion;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierAssigner()
+    getPractQualificationCodeText()
     {
-        return this.practitionerQualificationIdentifierAssigner;
+        return this.practQualificationCodeText;
     }
     
-    public void setPractitionerQualificationIdentifierAssigner
-        (String practitionerQualificationIdentifierAssigner) 
+    public void setPractQualificationCodeText
+        (String practQualificationCodeText) 
         {
-      this.practitionerQualificationIdentifierAssigner = practitionerQualificationIdentifierAssigner;
+      this.practQualificationCodeText = practQualificationCodeText;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierPeriodEnd()
+    getPractQualificationIdAssigner()
     {
-        return this.practitionerQualificationIdentifierPeriodEnd;
+        return this.practQualificationIdAssigner;
     }
     
-    public void setPractitionerQualificationIdentifierPeriodEnd
-        (String practitionerQualificationIdentifierPeriodEnd) 
+    public void setPractQualificationIdAssigner
+        (String practQualificationIdAssigner) 
         {
-      this.practitionerQualificationIdentifierPeriodEnd = practitionerQualificationIdentifierPeriodEnd;
+      this.practQualificationIdAssigner = practQualificationIdAssigner;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierPeriodStart()
+    getPractQualificationIdPeriodEnd()
     {
-        return this.practitionerQualificationIdentifierPeriodStart;
+        return this.practQualificationIdPeriodEnd;
     }
     
-    public void setPractitionerQualificationIdentifierPeriodStart
-        (String practitionerQualificationIdentifierPeriodStart) 
+    public void setPractQualificationIdPeriodEnd
+        (String practQualificationIdPeriodEnd) 
         {
-      this.practitionerQualificationIdentifierPeriodStart = practitionerQualificationIdentifierPeriodStart;
+      this.practQualificationIdPeriodEnd = practQualificationIdPeriodEnd;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierSystem()
+    getPractQualificationIdPeriodStart()
     {
-        return this.practitionerQualificationIdentifierSystem;
+        return this.practQualificationIdPeriodStart;
     }
     
-    public void setPractitionerQualificationIdentifierSystem
-        (String practitionerQualificationIdentifierSystem) 
+    public void setPractQualificationIdPeriodStart
+        (String practQualificationIdPeriodStart) 
         {
-      this.practitionerQualificationIdentifierSystem = practitionerQualificationIdentifierSystem;
+      this.practQualificationIdPeriodStart = practQualificationIdPeriodStart;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeCodingCode()
+    getPractQualificationIdSystem()
     {
-        return this.practitionerQualificationIdentifierTypeCodingCode;
+        return this.practQualificationIdSystem;
     }
     
-    public void setPractitionerQualificationIdentifierTypeCodingCode
-        (String practitionerQualificationIdentifierTypeCodingCode) 
+    public void setPractQualificationIdSystem
+        (String practQualificationIdSystem) 
         {
-      this.practitionerQualificationIdentifierTypeCodingCode = practitionerQualificationIdentifierTypeCodingCode;
+      this.practQualificationIdSystem = practQualificationIdSystem;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeCodingDisplay()
+    getPractQualificationIdTypeCodingCode()
     {
-        return this.practitionerQualificationIdentifierTypeCodingDisplay;
+        return this.practQualificationIdTypeCodingCode;
     }
     
-    public void setPractitionerQualificationIdentifierTypeCodingDisplay
-        (String practitionerQualificationIdentifierTypeCodingDisplay) 
+    public void setPractQualificationIdTypeCodingCode
+        (String practQualificationIdTypeCodingCode) 
         {
-      this.practitionerQualificationIdentifierTypeCodingDisplay = practitionerQualificationIdentifierTypeCodingDisplay;
+      this.practQualificationIdTypeCodingCode = practQualificationIdTypeCodingCode;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeCodingSystem()
+    getPractQualificationIdTypeCodingDisplay()
     {
-        return this.practitionerQualificationIdentifierTypeCodingSystem;
+        return this.practQualificationIdTypeCodingDisplay;
     }
     
-    public void setPractitionerQualificationIdentifierTypeCodingSystem
-        (String practitionerQualificationIdentifierTypeCodingSystem) 
+    public void setPractQualificationIdTypeCodingDisplay
+        (String practQualificationIdTypeCodingDisplay) 
         {
-      this.practitionerQualificationIdentifierTypeCodingSystem = practitionerQualificationIdentifierTypeCodingSystem;
+      this.practQualificationIdTypeCodingDisplay = practQualificationIdTypeCodingDisplay;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeCodingUserSelected()
+    getPractQualificationIdTypeCodingSystem()
     {
-        return this.practitionerQualificationIdentifierTypeCodingUserSelected;
+        return this.practQualificationIdTypeCodingSystem;
     }
     
-    public void setPractitionerQualificationIdentifierTypeCodingUserSelected
-        (String practitionerQualificationIdentifierTypeCodingUserSelected) 
+    public void setPractQualificationIdTypeCodingSystem
+        (String practQualificationIdTypeCodingSystem) 
         {
-      this.practitionerQualificationIdentifierTypeCodingUserSelected = practitionerQualificationIdentifierTypeCodingUserSelected;
+      this.practQualificationIdTypeCodingSystem = practQualificationIdTypeCodingSystem;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeCodingVersion()
+    getPractQualificationIdTypeCodingUsrslt()
     {
-        return this.practitionerQualificationIdentifierTypeCodingVersion;
+        return this.practQualificationIdTypeCodingUsrslt;
     }
     
-    public void setPractitionerQualificationIdentifierTypeCodingVersion
-        (String practitionerQualificationIdentifierTypeCodingVersion) 
+    public void setPractQualificationIdTypeCodingUsrslt
+        (String practQualificationIdTypeCodingUsrslt) 
         {
-      this.practitionerQualificationIdentifierTypeCodingVersion = practitionerQualificationIdentifierTypeCodingVersion;
+      this.practQualificationIdTypeCodingUsrslt = practQualificationIdTypeCodingUsrslt;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierTypeText()
+    getPractQualificationIdTypeCodingVersion()
     {
-        return this.practitionerQualificationIdentifierTypeText;
+        return this.practQualificationIdTypeCodingVersion;
     }
     
-    public void setPractitionerQualificationIdentifierTypeText
-        (String practitionerQualificationIdentifierTypeText) 
+    public void setPractQualificationIdTypeCodingVersion
+        (String practQualificationIdTypeCodingVersion) 
         {
-      this.practitionerQualificationIdentifierTypeText = practitionerQualificationIdentifierTypeText;
+      this.practQualificationIdTypeCodingVersion = practQualificationIdTypeCodingVersion;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierUseCode()
+    getPractQualificationIdTypeText()
     {
-        return this.practitionerQualificationIdentifierUseCode;
+        return this.practQualificationIdTypeText;
     }
     
-    public void setPractitionerQualificationIdentifierUseCode
-        (String practitionerQualificationIdentifierUseCode) 
+    public void setPractQualificationIdTypeText
+        (String practQualificationIdTypeText) 
         {
-      this.practitionerQualificationIdentifierUseCode = practitionerQualificationIdentifierUseCode;
+      this.practQualificationIdTypeText = practQualificationIdTypeText;
 }
     public 
     String 
-    getPractitionerQualificationIdentifierValue()
+    getPractQualificationIdUseCode()
     {
-        return this.practitionerQualificationIdentifierValue;
+        return this.practQualificationIdUseCode;
     }
     
-    public void setPractitionerQualificationIdentifierValue
-        (String practitionerQualificationIdentifierValue) 
+    public void setPractQualificationIdUseCode
+        (String practQualificationIdUseCode) 
         {
-      this.practitionerQualificationIdentifierValue = practitionerQualificationIdentifierValue;
+      this.practQualificationIdUseCode = practQualificationIdUseCode;
 }
     public 
     String 
-    getPractitionerQualificationIssuer()
+    getPractQualificationIdValue()
     {
-        return this.practitionerQualificationIssuer;
+        return this.practQualificationIdValue;
     }
     
-    public void setPractitionerQualificationIssuer
-        (String practitionerQualificationIssuer) 
+    public void setPractQualificationIdValue
+        (String practQualificationIdValue) 
         {
-      this.practitionerQualificationIssuer = practitionerQualificationIssuer;
+      this.practQualificationIdValue = practQualificationIdValue;
 }
     public 
     String 
-    getPractitionerQualificationPeriodEnd()
+    getPractQualificationIssuer()
     {
-        return this.practitionerQualificationPeriodEnd;
+        return this.practQualificationIssuer;
     }
     
-    public void setPractitionerQualificationPeriodEnd
-        (String practitionerQualificationPeriodEnd) 
+    public void setPractQualificationIssuer
+        (String practQualificationIssuer) 
         {
-      this.practitionerQualificationPeriodEnd = practitionerQualificationPeriodEnd;
+      this.practQualificationIssuer = practQualificationIssuer;
 }
     public 
     String 
-    getPractitionerQualificationPeriodStart()
+    getPractQualificationPeriodEnd()
     {
-        return this.practitionerQualificationPeriodStart;
+        return this.practQualificationPeriodEnd;
     }
     
-    public void setPractitionerQualificationPeriodStart
-        (String practitionerQualificationPeriodStart) 
+    public void setPractQualificationPeriodEnd
+        (String practQualificationPeriodEnd) 
         {
-      this.practitionerQualificationPeriodStart = practitionerQualificationPeriodStart;
+      this.practQualificationPeriodEnd = practQualificationPeriodEnd;
 }
     public 
     String 
-    getPractitionerTelecomPeriodEnd()
+    getPractQualificationPeriodStart()
     {
-        return this.practitionerTelecomPeriodEnd;
+        return this.practQualificationPeriodStart;
     }
     
-    public void setPractitionerTelecomPeriodEnd
-        (String practitionerTelecomPeriodEnd) 
+    public void setPractQualificationPeriodStart
+        (String practQualificationPeriodStart) 
         {
-      this.practitionerTelecomPeriodEnd = practitionerTelecomPeriodEnd;
+      this.practQualificationPeriodStart = practQualificationPeriodStart;
 }
     public 
     String 
-    getPractitionerTelecomPeriodStart()
+    getPractTelecomPeriodEnd()
     {
-        return this.practitionerTelecomPeriodStart;
+        return this.practTelecomPeriodEnd;
     }
     
-    public void setPractitionerTelecomPeriodStart
-        (String practitionerTelecomPeriodStart) 
+    public void setPractTelecomPeriodEnd
+        (String practTelecomPeriodEnd) 
         {
-      this.practitionerTelecomPeriodStart = practitionerTelecomPeriodStart;
+      this.practTelecomPeriodEnd = practTelecomPeriodEnd;
 }
     public 
     String 
-    getPractitionerTelecomRank()
+    getPractTelecomPeriodStart()
     {
-        return this.practitionerTelecomRank;
+        return this.practTelecomPeriodStart;
     }
     
-    public void setPractitionerTelecomRank
-        (String practitionerTelecomRank) 
+    public void setPractTelecomPeriodStart
+        (String practTelecomPeriodStart) 
         {
-      this.practitionerTelecomRank = practitionerTelecomRank;
+      this.practTelecomPeriodStart = practTelecomPeriodStart;
 }
     public 
     String 
-    getPractitionerTelecomSystemCode()
+    getPractTelecomRank()
     {
-        return this.practitionerTelecomSystemCode;
+        return this.practTelecomRank;
     }
     
-    public void setPractitionerTelecomSystemCode
-        (String practitionerTelecomSystemCode) 
+    public void setPractTelecomRank
+        (String practTelecomRank) 
         {
-      this.practitionerTelecomSystemCode = practitionerTelecomSystemCode;
+      this.practTelecomRank = practTelecomRank;
 }
     public 
     String 
-    getPractitionerTelecomUseCode()
+    getPractTelecomSystemCode()
     {
-        return this.practitionerTelecomUseCode;
+        return this.practTelecomSystemCode;
     }
     
-    public void setPractitionerTelecomUseCode
-        (String practitionerTelecomUseCode) 
+    public void setPractTelecomSystemCode
+        (String practTelecomSystemCode) 
         {
-      this.practitionerTelecomUseCode = practitionerTelecomUseCode;
+      this.practTelecomSystemCode = practTelecomSystemCode;
+}
+    public 
+    String 
+    getPractTelecomUseCode()
+    {
+        return this.practTelecomUseCode;
+    }
+    
+    public void setPractTelecomUseCode
+        (String practTelecomUseCode) 
+        {
+      this.practTelecomUseCode = practTelecomUseCode;
+}
+    public 
+    String 
+    getPractTelecomValue()
+    {
+        return this.practTelecomValue;
+    }
+    
+    public void setPractTelecomValue
+        (String practTelecomValue) 
+        {
+      this.practTelecomValue = practTelecomValue;
 }
 
 

@@ -7,6 +7,10 @@ public class DeviceConversion
 	{
 		org.hl7.fhir.r4.model.Device device = new org.hl7.fhir.r4.model.Device();
 
+		/******************** id ********************************************************************************/
+		device.setId(d.getId());
+
+
 		org.hl7.fhir.r4.model.ContactPoint deviceaddcontact = device.addContact();
 
 
@@ -69,9 +73,9 @@ public class DeviceConversion
 			deviceadddevicename.setType(deviceadddevicenamesettypeEnumFactory.fromCode(d.getDeviceDeviceNameTypeCode()));
 
 		}
-		/******************** Device_DistinctIdentifier ********************************************************************************/
-		if(d.getDeviceDistinctIdentifier() != null) {
-			device.setDistinctIdentifier(d.getDeviceDistinctIdentifier());
+		/******************** Device_DistinctId ********************************************************************************/
+		if(d.getDeviceDistinctId() != null) {
+			device.setDistinctIdentifier(d.getDeviceDistinctId());
 		}
 		/******************** Device_ExpirationDate ********************************************************************************/
 		if(d.getDeviceExpirationDate() != null) {
@@ -82,30 +86,30 @@ public class DeviceConversion
 
 		org.hl7.fhir.r4.model.Identifier deviceaddidentifier = device.addIdentifier();
 
-		/******************** Device_Identifier_Assigner ********************************************************************************/
-		if(d.getDeviceIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference DeviceIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			deviceaddidentifier.setAssigner(DeviceIdentifierAssignerref.setReference(d.getDeviceIdentifierAssigner()));
+		/******************** Device_Id_Assigner ********************************************************************************/
+		if(d.getDeviceIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference DeviceIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			deviceaddidentifier.setAssigner(DeviceIdAssignerref.setReference(d.getDeviceIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period deviceaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		deviceaddidentifier.setPeriod(deviceaddidentifiersetperiod);
 
-		/******************** Device_Identifier_Period_End ********************************************************************************/
-		if(d.getDeviceIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat DeviceIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DeviceIdentifierPeriodEnddate = DeviceIdentifierPeriodEndsdf.parse(d.getDeviceIdentifierPeriodEnd());
-			deviceaddidentifiersetperiod.setEnd(DeviceIdentifierPeriodEnddate);
+		/******************** Device_Id_Period_End ********************************************************************************/
+		if(d.getDeviceIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat DeviceIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DeviceIdPeriodEnddate = DeviceIdPeriodEndsdf.parse(d.getDeviceIdPeriodEnd());
+			deviceaddidentifiersetperiod.setEnd(DeviceIdPeriodEnddate);
 		}
-		/******************** Device_Identifier_Period_Start ********************************************************************************/
-		if(d.getDeviceIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat DeviceIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DeviceIdentifierPeriodStartdate = DeviceIdentifierPeriodStartsdf.parse(d.getDeviceIdentifierPeriodStart());
-			deviceaddidentifiersetperiod.setStart(DeviceIdentifierPeriodStartdate);
+		/******************** Device_Id_Period_Start ********************************************************************************/
+		if(d.getDeviceIdPeriodStart() != null) {
+			java.text.SimpleDateFormat DeviceIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DeviceIdPeriodStartdate = DeviceIdPeriodStartsdf.parse(d.getDeviceIdPeriodStart());
+			deviceaddidentifiersetperiod.setStart(DeviceIdPeriodStartdate);
 		}
-		/******************** Device_Identifier_System ********************************************************************************/
-		if(d.getDeviceIdentifierSystem() != null) {
-			deviceaddidentifier.setSystem(d.getDeviceIdentifierSystem());
+		/******************** Device_Id_System ********************************************************************************/
+		if(d.getDeviceIdSystem() != null) {
+			deviceaddidentifier.setSystem(d.getDeviceIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept deviceaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -114,41 +118,41 @@ public class DeviceConversion
 
 		org.hl7.fhir.r4.model.Coding deviceaddidentifiersettypeaddcoding = deviceaddidentifiersettype.addCoding();
 
-		/******************** Device_Identifier_Type_Coding_Code ********************************************************************************/
-		if(d.getDeviceIdentifierTypeCodingCode() != null) {
-			deviceaddidentifiersettypeaddcoding.setCode(d.getDeviceIdentifierTypeCodingCode());
+		/******************** Device_Id_Type_Coding_Code ********************************************************************************/
+		if(d.getDeviceIdTypeCodingCode() != null) {
+			deviceaddidentifiersettypeaddcoding.setCode(d.getDeviceIdTypeCodingCode());
 		}
-		/******************** Device_Identifier_Type_Coding_Display ********************************************************************************/
-		if(d.getDeviceIdentifierTypeCodingDisplay() != null) {
-			deviceaddidentifiersettypeaddcoding.setDisplay(d.getDeviceIdentifierTypeCodingDisplay());
+		/******************** Device_Id_Type_Coding_Display ********************************************************************************/
+		if(d.getDeviceIdTypeCodingDisplay() != null) {
+			deviceaddidentifiersettypeaddcoding.setDisplay(d.getDeviceIdTypeCodingDisplay());
 		}
-		/******************** Device_Identifier_Type_Coding_System ********************************************************************************/
-		if(d.getDeviceIdentifierTypeCodingSystem() != null) {
-			deviceaddidentifiersettypeaddcoding.setSystem(d.getDeviceIdentifierTypeCodingSystem());
+		/******************** Device_Id_Type_Coding_System ********************************************************************************/
+		if(d.getDeviceIdTypeCodingSystem() != null) {
+			deviceaddidentifiersettypeaddcoding.setSystem(d.getDeviceIdTypeCodingSystem());
 		}
-		/******************** Device_Identifier_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceIdentifierTypeCodingUserSelected() != null) {
-			deviceaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceIdentifierTypeCodingUserSelected()));
+		/******************** Device_Id_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceIdTypeCodingUsrslt() != null) {
+			deviceaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceIdTypeCodingUsrslt()));
 		}
-		/******************** Device_Identifier_Type_Coding_Version ********************************************************************************/
-		if(d.getDeviceIdentifierTypeCodingVersion() != null) {
-			deviceaddidentifiersettypeaddcoding.setVersion(d.getDeviceIdentifierTypeCodingVersion());
+		/******************** Device_Id_Type_Coding_Version ********************************************************************************/
+		if(d.getDeviceIdTypeCodingVersion() != null) {
+			deviceaddidentifiersettypeaddcoding.setVersion(d.getDeviceIdTypeCodingVersion());
 		}
-		/******************** Device_Identifier_Type_Text ********************************************************************************/
-		if(d.getDeviceIdentifierTypeText() != null) {
-			deviceaddidentifiersettype.setText(d.getDeviceIdentifierTypeText());
+		/******************** Device_Id_Type_Text ********************************************************************************/
+		if(d.getDeviceIdTypeText() != null) {
+			deviceaddidentifiersettype.setText(d.getDeviceIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory deviceaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Device_Identifier_Use_Code ********************************************************************************/
-		if(d.getDeviceIdentifierUseCode() != null) {
-			deviceaddidentifier.setUse(deviceaddidentifiersetuseEnumFactory.fromCode(d.getDeviceIdentifierUseCode()));
+		/******************** Device_Id_Use_Code ********************************************************************************/
+		if(d.getDeviceIdUseCode() != null) {
+			deviceaddidentifier.setUse(deviceaddidentifiersetuseEnumFactory.fromCode(d.getDeviceIdUseCode()));
 
 		}
-		/******************** Device_Identifier_Value ********************************************************************************/
-		if(d.getDeviceIdentifierValue() != null) {
-			deviceaddidentifier.setValue(d.getDeviceIdentifierValue());
+		/******************** Device_Id_Value ********************************************************************************/
+		if(d.getDeviceIdValue() != null) {
+			deviceaddidentifier.setValue(d.getDeviceIdValue());
 		}
 		/******************** Device_Location ********************************************************************************/
 		if(d.getDeviceLocation() != null) {
@@ -176,9 +180,14 @@ public class DeviceConversion
 
 		org.hl7.fhir.r4.model.Annotation deviceaddnote = device.addNote();
 
-		/******************** Device_Note_Author ********************************************************************************/
-		if(d.getDeviceNoteAuthor() != null) {
-			deviceaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(d.getDeviceNoteAuthor()));
+		/******************** Device_Note_AuthorReference ********************************************************************************/
+		if(d.getDeviceNoteAuthorReference() != null) {
+			org.hl7.fhir.r4.model.Reference DeviceNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
+			deviceaddnote.setAuthor(DeviceNoteAuthorReferenceref.setReference(d.getDeviceNoteAuthorReference()));
+		}
+		/******************** Device_Note_AuthorString ********************************************************************************/
+		if(d.getDeviceNoteAuthorString() != null) {
+			deviceaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(d.getDeviceNoteAuthorString()));
 		}
 		/******************** Device_Note_Text ********************************************************************************/
 		if(d.getDeviceNoteText() != null) {
@@ -231,9 +240,9 @@ public class DeviceConversion
 		if(d.getDevicePropertyTypeCodingSystem() != null) {
 			deviceaddpropertysettypeaddcoding.setSystem(d.getDevicePropertyTypeCodingSystem());
 		}
-		/******************** Device_Property_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDevicePropertyTypeCodingUserSelected() != null) {
-			deviceaddpropertysettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDevicePropertyTypeCodingUserSelected()));
+		/******************** Device_Property_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDevicePropertyTypeCodingUsrslt() != null) {
+			deviceaddpropertysettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDevicePropertyTypeCodingUsrslt()));
 		}
 		/******************** Device_Property_Type_Coding_Version ********************************************************************************/
 		if(d.getDevicePropertyTypeCodingVersion() != null) {
@@ -261,9 +270,9 @@ public class DeviceConversion
 		if(d.getDevicePropertyValueCodeCodingSystem() != null) {
 			deviceaddpropertyaddvaluecodeaddcoding.setSystem(d.getDevicePropertyValueCodeCodingSystem());
 		}
-		/******************** Device_Property_ValueCode_Coding_UserSelected ********************************************************************************/
-		if(d.getDevicePropertyValueCodeCodingUserSelected() != null) {
-			deviceaddpropertyaddvaluecodeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDevicePropertyValueCodeCodingUserSelected()));
+		/******************** Device_Property_ValueCode_Coding_Usrslt ********************************************************************************/
+		if(d.getDevicePropertyValueCodeCodingUsrslt() != null) {
+			deviceaddpropertyaddvaluecodeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDevicePropertyValueCodeCodingUsrslt()));
 		}
 		/******************** Device_Property_ValueCode_Coding_Version ********************************************************************************/
 		if(d.getDevicePropertyValueCodeCodingVersion() != null) {
@@ -283,9 +292,9 @@ public class DeviceConversion
 
 		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory deviceaddpropertyaddvaluequantitysetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
 
-		/******************** Device_Property_ValueQuantity_Comparator_Code ********************************************************************************/
-		if(d.getDevicePropertyValueQuantityComparatorCode() != null) {
-			deviceaddpropertyaddvaluequantity.setComparator(deviceaddpropertyaddvaluequantitysetcomparatorEnumFactory.fromCode(d.getDevicePropertyValueQuantityComparatorCode()));
+		/******************** Device_Property_ValueQuantity_Compartr_Code ********************************************************************************/
+		if(d.getDevicePropertyValueQuantityCompartrCode() != null) {
+			deviceaddpropertyaddvaluequantity.setComparator(deviceaddpropertyaddvaluequantitysetcomparatorEnumFactory.fromCode(d.getDevicePropertyValueQuantityCompartrCode()));
 
 		}
 		/******************** Device_Property_ValueQuantity_System ********************************************************************************/
@@ -318,9 +327,9 @@ public class DeviceConversion
 		if(d.getDeviceSafetyCodingSystem() != null) {
 			deviceaddsafetyaddcoding.setSystem(d.getDeviceSafetyCodingSystem());
 		}
-		/******************** Device_Safety_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceSafetyCodingUserSelected() != null) {
-			deviceaddsafetyaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceSafetyCodingUserSelected()));
+		/******************** Device_Safety_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceSafetyCodingUsrslt() != null) {
+			deviceaddsafetyaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceSafetyCodingUsrslt()));
 		}
 		/******************** Device_Safety_Coding_Version ********************************************************************************/
 		if(d.getDeviceSafetyCodingVersion() != null) {
@@ -356,9 +365,9 @@ public class DeviceConversion
 		if(d.getDeviceSpecializationSystemTypeCodingSystem() != null) {
 			deviceaddspecializationsetsystemtypeaddcoding.setSystem(d.getDeviceSpecializationSystemTypeCodingSystem());
 		}
-		/******************** Device_Specialization_SystemType_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceSpecializationSystemTypeCodingUserSelected() != null) {
-			deviceaddspecializationsetsystemtypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceSpecializationSystemTypeCodingUserSelected()));
+		/******************** Device_Specialization_SystemType_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceSpecializationSystemTypeCodingUsrslt() != null) {
+			deviceaddspecializationsetsystemtypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceSpecializationSystemTypeCodingUsrslt()));
 		}
 		/******************** Device_Specialization_SystemType_Coding_Version ********************************************************************************/
 		if(d.getDeviceSpecializationSystemTypeCodingVersion() != null) {
@@ -398,9 +407,9 @@ public class DeviceConversion
 		if(d.getDeviceStatusReasonCodingSystem() != null) {
 			deviceaddstatusreasonaddcoding.setSystem(d.getDeviceStatusReasonCodingSystem());
 		}
-		/******************** Device_StatusReason_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceStatusReasonCodingUserSelected() != null) {
-			deviceaddstatusreasonaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceStatusReasonCodingUserSelected()));
+		/******************** Device_StatusReason_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceStatusReasonCodingUsrslt() != null) {
+			deviceaddstatusreasonaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceStatusReasonCodingUsrslt()));
 		}
 		/******************** Device_StatusReason_Coding_Version ********************************************************************************/
 		if(d.getDeviceStatusReasonCodingVersion() != null) {
@@ -429,9 +438,9 @@ public class DeviceConversion
 		if(d.getDeviceTypeCodingSystem() != null) {
 			devicesettypeaddcoding.setSystem(d.getDeviceTypeCodingSystem());
 		}
-		/******************** Device_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceTypeCodingUserSelected() != null) {
-			devicesettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceTypeCodingUserSelected()));
+		/******************** Device_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceTypeCodingUsrslt() != null) {
+			devicesettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceTypeCodingUsrslt()));
 		}
 		/******************** Device_Type_Coding_Version ********************************************************************************/
 		if(d.getDeviceTypeCodingVersion() != null) {
@@ -452,9 +461,9 @@ public class DeviceConversion
 		if(d.getDeviceUdiCarrierCarrierHrf() != null) {
 			deviceaddudicarrier.setCarrierHRF(d.getDeviceUdiCarrierCarrierHrf());
 		}
-		/******************** Device_UdiCarrier_DeviceIdentifier ********************************************************************************/
-		if(d.getDeviceUdiCarrierDeviceIdentifier() != null) {
-			deviceaddudicarrier.setDeviceIdentifier(d.getDeviceUdiCarrierDeviceIdentifier());
+		/******************** Device_UdiCarrier_DeviceId ********************************************************************************/
+		if(d.getDeviceUdiCarrierDeviceId() != null) {
+			deviceaddudicarrier.setDeviceIdentifier(d.getDeviceUdiCarrierDeviceId());
 		}
 
 		org.hl7.fhir.r4.model.Device.UDIEntryTypeEnumFactory deviceaddudicarriersetentrytypeEnumFactory = new org.hl7.fhir.r4.model.Device.UDIEntryTypeEnumFactory();
@@ -527,9 +536,9 @@ public class DeviceConversion
 		if(d.getDeviceVersionComponentTypeCodingSystem() != null) {
 			deviceaddversionsetcomponentsettypeaddcoding.setSystem(d.getDeviceVersionComponentTypeCodingSystem());
 		}
-		/******************** Device_Version_Component_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceVersionComponentTypeCodingUserSelected() != null) {
-			deviceaddversionsetcomponentsettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceVersionComponentTypeCodingUserSelected()));
+		/******************** Device_Version_Component_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceVersionComponentTypeCodingUsrslt() != null) {
+			deviceaddversionsetcomponentsettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceVersionComponentTypeCodingUsrslt()));
 		}
 		/******************** Device_Version_Component_Type_Coding_Version ********************************************************************************/
 		if(d.getDeviceVersionComponentTypeCodingVersion() != null) {
@@ -570,9 +579,9 @@ public class DeviceConversion
 		if(d.getDeviceVersionTypeCodingSystem() != null) {
 			deviceaddversionsettypeaddcoding.setSystem(d.getDeviceVersionTypeCodingSystem());
 		}
-		/******************** Device_Version_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDeviceVersionTypeCodingUserSelected() != null) {
-			deviceaddversionsettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceVersionTypeCodingUserSelected()));
+		/******************** Device_Version_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDeviceVersionTypeCodingUsrslt() != null) {
+			deviceaddversionsettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDeviceVersionTypeCodingUsrslt()));
 		}
 		/******************** Device_Version_Type_Coding_Version ********************************************************************************/
 		if(d.getDeviceVersionTypeCodingVersion() != null) {
@@ -581,6 +590,10 @@ public class DeviceConversion
 		/******************** Device_Version_Type_Text ********************************************************************************/
 		if(d.getDeviceVersionTypeText() != null) {
 			deviceaddversionsettype.setText(d.getDeviceVersionTypeText());
+		}
+		/******************** Device_Version_Value ********************************************************************************/
+		if(d.getDeviceVersionValue() != null) {
+			deviceaddversion.setValue(d.getDeviceVersionValue());
 		}
 		return device;
 	}

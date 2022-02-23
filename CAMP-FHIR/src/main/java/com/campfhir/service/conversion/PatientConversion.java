@@ -6,6 +6,10 @@ public class PatientConversion
 	public org.hl7.fhir.r4.model.Patient Patients(Patient p) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Patient patient = new org.hl7.fhir.r4.model.Patient();
+
+		/******************** id ********************************************************************************/
+		patient.setId(p.getId());
+
 		/******************** Patient_Active ********************************************************************************/
 		if(p.getPatientActive() != null) {
 			patient.setActive(Boolean.parseBoolean(p.getPatientActive()));
@@ -89,33 +93,33 @@ public class PatientConversion
 
 		org.hl7.fhir.r4.model.Coding patientaddcommunicationsetlanguageaddcoding = patientaddcommunicationsetlanguage.addCoding();
 
-		/******************** Patient_Communication_Language_Coding_Code ********************************************************************************/
-		if(p.getPatientCommunicationLanguageCodingCode() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setCode(p.getPatientCommunicationLanguageCodingCode());
+		/******************** Patient_Commn_Lang_Coding_Code ********************************************************************************/
+		if(p.getPatientCommnLangCodingCode() != null) {
+			patientaddcommunicationsetlanguageaddcoding.setCode(p.getPatientCommnLangCodingCode());
 		}
-		/******************** Patient_Communication_Language_Coding_Display ********************************************************************************/
-		if(p.getPatientCommunicationLanguageCodingDisplay() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setDisplay(p.getPatientCommunicationLanguageCodingDisplay());
+		/******************** Patient_Commn_Lang_Coding_Display ********************************************************************************/
+		if(p.getPatientCommnLangCodingDisplay() != null) {
+			patientaddcommunicationsetlanguageaddcoding.setDisplay(p.getPatientCommnLangCodingDisplay());
 		}
-		/******************** Patient_Communication_Language_Coding_System ********************************************************************************/
-		if(p.getPatientCommunicationLanguageCodingSystem() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setSystem(p.getPatientCommunicationLanguageCodingSystem());
+		/******************** Patient_Commn_Lang_Coding_System ********************************************************************************/
+		if(p.getPatientCommnLangCodingSystem() != null) {
+			patientaddcommunicationsetlanguageaddcoding.setSystem(p.getPatientCommnLangCodingSystem());
 		}
-		/******************** Patient_Communication_Language_Coding_UserSelected ********************************************************************************/
-		if(p.getPatientCommunicationLanguageCodingUserSelected() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientCommunicationLanguageCodingUserSelected()));
+		/******************** Patient_Commn_Lang_Coding_Usrslt ********************************************************************************/
+		if(p.getPatientCommnLangCodingUsrslt() != null) {
+			patientaddcommunicationsetlanguageaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientCommnLangCodingUsrslt()));
 		}
-		/******************** Patient_Communication_Language_Coding_Version ********************************************************************************/
-		if(p.getPatientCommunicationLanguageCodingVersion() != null) {
-			patientaddcommunicationsetlanguageaddcoding.setVersion(p.getPatientCommunicationLanguageCodingVersion());
+		/******************** Patient_Commn_Lang_Coding_Version ********************************************************************************/
+		if(p.getPatientCommnLangCodingVersion() != null) {
+			patientaddcommunicationsetlanguageaddcoding.setVersion(p.getPatientCommnLangCodingVersion());
 		}
-		/******************** Patient_Communication_Language_Text ********************************************************************************/
-		if(p.getPatientCommunicationLanguageText() != null) {
-			patientaddcommunicationsetlanguage.setText(p.getPatientCommunicationLanguageText());
+		/******************** Patient_Commn_Lang_Text ********************************************************************************/
+		if(p.getPatientCommnLangText() != null) {
+			patientaddcommunicationsetlanguage.setText(p.getPatientCommnLangText());
 		}
-		/******************** Patient_Communication_Preferred ********************************************************************************/
-		if(p.getPatientCommunicationPreferred() != null) {
-			patientaddcommunication.setPreferred(Boolean.parseBoolean(p.getPatientCommunicationPreferred()));
+		/******************** Patient_Commn_Preferred ********************************************************************************/
+		if(p.getPatientCommnPreferred() != null) {
+			patientaddcommunication.setPreferred(Boolean.parseBoolean(p.getPatientCommnPreferred()));
 		}
 
 		org.hl7.fhir.r4.model.Patient.ContactComponent patientaddcontact = patient.addContact();
@@ -279,9 +283,9 @@ public class PatientConversion
 		if(p.getPatientContactRelationshipCodingSystem() != null) {
 			patientaddcontactaddrelationshipaddcoding.setSystem(p.getPatientContactRelationshipCodingSystem());
 		}
-		/******************** Patient_Contact_Relationship_Coding_UserSelected ********************************************************************************/
-		if(p.getPatientContactRelationshipCodingUserSelected() != null) {
-			patientaddcontactaddrelationshipaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientContactRelationshipCodingUserSelected()));
+		/******************** Patient_Contact_Relationship_Coding_Usrslt ********************************************************************************/
+		if(p.getPatientContactRelationshipCodingUsrslt() != null) {
+			patientaddcontactaddrelationshipaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientContactRelationshipCodingUsrslt()));
 		}
 		/******************** Patient_Contact_Relationship_Coding_Version ********************************************************************************/
 		if(p.getPatientContactRelationshipCodingVersion() != null) {
@@ -334,9 +338,13 @@ public class PatientConversion
 		if(p.getPatientContactTelecomValue() != null) {
 			patientaddcontactaddtelecom.setValue(p.getPatientContactTelecomValue());
 		}
-		/******************** Patient_Deceased ********************************************************************************/
-		if(p.getPatientDeceased() != null) {
-			patient.setDeceased(new org.hl7.fhir.r4.model.StringType(p.getPatientDeceased()));
+		/******************** Patient_DeceasedBoolean ********************************************************************************/
+		if(p.getPatientDeceasedBoolean() != null) {
+			patient.setDeceased(new org.hl7.fhir.r4.model.BooleanType(p.getPatientDeceasedBoolean()));
+		}
+		/******************** Patient_DeceasedDateTime ********************************************************************************/
+		if(p.getPatientDeceasedDateTime() != null) {
+			patient.setDeceased(new org.hl7.fhir.r4.model.DateTimeType(p.getPatientDeceasedDateTime()));
 		}
 
 		org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory patientsetgenderEnumFactory = new org.hl7.fhir.r4.model.Enumerations.AdministrativeGenderEnumFactory();
@@ -346,38 +354,38 @@ public class PatientConversion
 			patient.setGender(patientsetgenderEnumFactory.fromCode(p.getPatientGenderCode()));
 
 		}
-		/******************** Patient_GeneralPractitioner ********************************************************************************/
-		if(p.getPatientGeneralPractitioner() != null) {
-			org.hl7.fhir.r4.model.Reference PatientGeneralPractitionerref = new org.hl7.fhir.r4.model.Reference();
-			patient.addGeneralPractitioner(PatientGeneralPractitionerref.setReference(p.getPatientGeneralPractitioner()));
+		/******************** Patient_GeneralPract ********************************************************************************/
+		if(p.getPatientGeneralPract() != null) {
+			org.hl7.fhir.r4.model.Reference PatientGeneralPractref = new org.hl7.fhir.r4.model.Reference();
+			patient.addGeneralPractitioner(PatientGeneralPractref.setReference(p.getPatientGeneralPract()));
 		}
 
 		org.hl7.fhir.r4.model.Identifier patientaddidentifier = patient.addIdentifier();
 
-		/******************** Patient_Identifier_Assigner ********************************************************************************/
-		if(p.getPatientIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference PatientIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			patientaddidentifier.setAssigner(PatientIdentifierAssignerref.setReference(p.getPatientIdentifierAssigner()));
+		/******************** Patient_Id_Assigner ********************************************************************************/
+		if(p.getPatientIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference PatientIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			patientaddidentifier.setAssigner(PatientIdAssignerref.setReference(p.getPatientIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period patientaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		patientaddidentifier.setPeriod(patientaddidentifiersetperiod);
 
-		/******************** Patient_Identifier_Period_End ********************************************************************************/
-		if(p.getPatientIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat PatientIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientIdentifierPeriodEnddate = PatientIdentifierPeriodEndsdf.parse(p.getPatientIdentifierPeriodEnd());
-			patientaddidentifiersetperiod.setEnd(PatientIdentifierPeriodEnddate);
+		/******************** Patient_Id_Period_End ********************************************************************************/
+		if(p.getPatientIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat PatientIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date PatientIdPeriodEnddate = PatientIdPeriodEndsdf.parse(p.getPatientIdPeriodEnd());
+			patientaddidentifiersetperiod.setEnd(PatientIdPeriodEnddate);
 		}
-		/******************** Patient_Identifier_Period_Start ********************************************************************************/
-		if(p.getPatientIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat PatientIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date PatientIdentifierPeriodStartdate = PatientIdentifierPeriodStartsdf.parse(p.getPatientIdentifierPeriodStart());
-			patientaddidentifiersetperiod.setStart(PatientIdentifierPeriodStartdate);
+		/******************** Patient_Id_Period_Start ********************************************************************************/
+		if(p.getPatientIdPeriodStart() != null) {
+			java.text.SimpleDateFormat PatientIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date PatientIdPeriodStartdate = PatientIdPeriodStartsdf.parse(p.getPatientIdPeriodStart());
+			patientaddidentifiersetperiod.setStart(PatientIdPeriodStartdate);
 		}
-		/******************** Patient_Identifier_System ********************************************************************************/
-		if(p.getPatientIdentifierSystem() != null) {
-			patientaddidentifier.setSystem(p.getPatientIdentifierSystem());
+		/******************** Patient_Id_System ********************************************************************************/
+		if(p.getPatientIdSystem() != null) {
+			patientaddidentifier.setSystem(p.getPatientIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept patientaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -386,41 +394,41 @@ public class PatientConversion
 
 		org.hl7.fhir.r4.model.Coding patientaddidentifiersettypeaddcoding = patientaddidentifiersettype.addCoding();
 
-		/******************** Patient_Identifier_Type_Coding_Code ********************************************************************************/
-		if(p.getPatientIdentifierTypeCodingCode() != null) {
-			patientaddidentifiersettypeaddcoding.setCode(p.getPatientIdentifierTypeCodingCode());
+		/******************** Patient_Id_Type_Coding_Code ********************************************************************************/
+		if(p.getPatientIdTypeCodingCode() != null) {
+			patientaddidentifiersettypeaddcoding.setCode(p.getPatientIdTypeCodingCode());
 		}
-		/******************** Patient_Identifier_Type_Coding_Display ********************************************************************************/
-		if(p.getPatientIdentifierTypeCodingDisplay() != null) {
-			patientaddidentifiersettypeaddcoding.setDisplay(p.getPatientIdentifierTypeCodingDisplay());
+		/******************** Patient_Id_Type_Coding_Display ********************************************************************************/
+		if(p.getPatientIdTypeCodingDisplay() != null) {
+			patientaddidentifiersettypeaddcoding.setDisplay(p.getPatientIdTypeCodingDisplay());
 		}
-		/******************** Patient_Identifier_Type_Coding_System ********************************************************************************/
-		if(p.getPatientIdentifierTypeCodingSystem() != null) {
-			patientaddidentifiersettypeaddcoding.setSystem(p.getPatientIdentifierTypeCodingSystem());
+		/******************** Patient_Id_Type_Coding_System ********************************************************************************/
+		if(p.getPatientIdTypeCodingSystem() != null) {
+			patientaddidentifiersettypeaddcoding.setSystem(p.getPatientIdTypeCodingSystem());
 		}
-		/******************** Patient_Identifier_Type_Coding_UserSelected ********************************************************************************/
-		if(p.getPatientIdentifierTypeCodingUserSelected() != null) {
-			patientaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientIdentifierTypeCodingUserSelected()));
+		/******************** Patient_Id_Type_Coding_Usrslt ********************************************************************************/
+		if(p.getPatientIdTypeCodingUsrslt() != null) {
+			patientaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientIdTypeCodingUsrslt()));
 		}
-		/******************** Patient_Identifier_Type_Coding_Version ********************************************************************************/
-		if(p.getPatientIdentifierTypeCodingVersion() != null) {
-			patientaddidentifiersettypeaddcoding.setVersion(p.getPatientIdentifierTypeCodingVersion());
+		/******************** Patient_Id_Type_Coding_Version ********************************************************************************/
+		if(p.getPatientIdTypeCodingVersion() != null) {
+			patientaddidentifiersettypeaddcoding.setVersion(p.getPatientIdTypeCodingVersion());
 		}
-		/******************** Patient_Identifier_Type_Text ********************************************************************************/
-		if(p.getPatientIdentifierTypeText() != null) {
-			patientaddidentifiersettype.setText(p.getPatientIdentifierTypeText());
+		/******************** Patient_Id_Type_Text ********************************************************************************/
+		if(p.getPatientIdTypeText() != null) {
+			patientaddidentifiersettype.setText(p.getPatientIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory patientaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Patient_Identifier_Use_Code ********************************************************************************/
-		if(p.getPatientIdentifierUseCode() != null) {
-			patientaddidentifier.setUse(patientaddidentifiersetuseEnumFactory.fromCode(p.getPatientIdentifierUseCode()));
+		/******************** Patient_Id_Use_Code ********************************************************************************/
+		if(p.getPatientIdUseCode() != null) {
+			patientaddidentifier.setUse(patientaddidentifiersetuseEnumFactory.fromCode(p.getPatientIdUseCode()));
 
 		}
-		/******************** Patient_Identifier_Value ********************************************************************************/
-		if(p.getPatientIdentifierValue() != null) {
-			patientaddidentifier.setValue(p.getPatientIdentifierValue());
+		/******************** Patient_Id_Value ********************************************************************************/
+		if(p.getPatientIdValue() != null) {
+			patientaddidentifier.setValue(p.getPatientIdValue());
 		}
 
 		org.hl7.fhir.r4.model.Patient.PatientLinkComponent patientaddlink = patient.addLink();
@@ -462,9 +470,9 @@ public class PatientConversion
 		if(p.getPatientMaritalStatusCodingSystem() != null) {
 			patientsetmaritalstatusaddcoding.setSystem(p.getPatientMaritalStatusCodingSystem());
 		}
-		/******************** Patient_MaritalStatus_Coding_UserSelected ********************************************************************************/
-		if(p.getPatientMaritalStatusCodingUserSelected() != null) {
-			patientsetmaritalstatusaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientMaritalStatusCodingUserSelected()));
+		/******************** Patient_MaritalStatus_Coding_Usrslt ********************************************************************************/
+		if(p.getPatientMaritalStatusCodingUsrslt() != null) {
+			patientsetmaritalstatusaddcoding.setUserSelected(Boolean.parseBoolean(p.getPatientMaritalStatusCodingUsrslt()));
 		}
 		/******************** Patient_MaritalStatus_Coding_Version ********************************************************************************/
 		if(p.getPatientMaritalStatusCodingVersion() != null) {
@@ -474,9 +482,13 @@ public class PatientConversion
 		if(p.getPatientMaritalStatusText() != null) {
 			patientsetmaritalstatus.setText(p.getPatientMaritalStatusText());
 		}
-		/******************** Patient_MultipleBirth ********************************************************************************/
-		if(p.getPatientMultipleBirth() != null) {
-			patient.setMultipleBirth(new org.hl7.fhir.r4.model.StringType(p.getPatientMultipleBirth()));
+		/******************** Patient_MultipleBirthBoolean ********************************************************************************/
+		if(p.getPatientMultipleBirthBoolean() != null) {
+			patient.setMultipleBirth(new org.hl7.fhir.r4.model.BooleanType(p.getPatientMultipleBirthBoolean()));
+		}
+		/******************** Patient_MultipleBirthInteger ********************************************************************************/
+		if(p.getPatientMultipleBirthInteger() != null) {
+			patient.setMultipleBirth(new org.hl7.fhir.r4.model.IntegerType(p.getPatientMultipleBirthInteger()));
 		}
 
 		org.hl7.fhir.r4.model.HumanName patientaddname = patient.addName();
@@ -546,9 +558,9 @@ public class PatientConversion
 		if(p.getPatientPhotoHash() != null) {
 			patientaddphoto.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(p.getPatientPhotoHash()));
 		}
-		/******************** Patient_Photo_Language ********************************************************************************/
-		if(p.getPatientPhotoLanguage() != null) {
-			patientaddphoto.setLanguage(p.getPatientPhotoLanguage());
+		/******************** Patient_Photo_Lang ********************************************************************************/
+		if(p.getPatientPhotoLang() != null) {
+			patientaddphoto.setLanguage(p.getPatientPhotoLang());
 		}
 		/******************** Patient_Photo_Size ********************************************************************************/
 		if(p.getPatientPhotoSize() != null) {
@@ -600,6 +612,10 @@ public class PatientConversion
 		if(p.getPatientTelecomUseCode() != null) {
 			patientaddtelecom.setUse(patientaddtelecomsetuseEnumFactory.fromCode(p.getPatientTelecomUseCode()));
 
+		}
+		/******************** Patient_Telecom_Value ********************************************************************************/
+		if(p.getPatientTelecomValue() != null) {
+			patientaddtelecom.setValue(p.getPatientTelecomValue());
 		}
 		return patient;
 	}

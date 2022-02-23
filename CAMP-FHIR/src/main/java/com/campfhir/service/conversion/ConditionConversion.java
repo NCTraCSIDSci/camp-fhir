@@ -6,9 +6,101 @@ public class ConditionConversion
 	public org.hl7.fhir.r4.model.Condition Conditions(Condition c) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Condition condition = new org.hl7.fhir.r4.model.Condition();
+
+		/******************** id ********************************************************************************/
+		condition.setId(c.getId());
+
 		/******************** Condition_Abatement ********************************************************************************/
 		if(c.getConditionAbatement() != null) {
 			condition.setAbatement(new org.hl7.fhir.r4.model.StringType(c.getConditionAbatement()));
+		}
+		/******************** Condition_AbatementDateTime ********************************************************************************/
+		if(c.getConditionAbatementDateTime() != null) {
+			condition.setAbatement(new org.hl7.fhir.r4.model.DateTimeType(c.getConditionAbatementDateTime()));
+		}
+
+		if( c.getConditionAbatementPeriodEnd() != null || c.getConditionAbatementPeriodStart() != null ) {
+			org.hl7.fhir.r4.model.Period conditionsetabatementPeriod = new org.hl7.fhir.r4.model.Period();
+			condition.setAbatement(conditionsetabatementPeriod); 
+
+		/******************** Condition_Abatement_Period_End ********************************************************************************/
+		if(c.getConditionAbatementPeriodEnd() != null) {
+			java.text.SimpleDateFormat ConditionAbatementPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionAbatementPeriodEnddate = ConditionAbatementPeriodEndsdf.parse(c.getConditionAbatementPeriodEnd());
+			conditionsetabatementPeriod.setEnd(ConditionAbatementPeriodEnddate);
+		}
+		/******************** Condition_Abatement_Period_Start ********************************************************************************/
+		if(c.getConditionAbatementPeriodStart() != null) {
+			java.text.SimpleDateFormat ConditionAbatementPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionAbatementPeriodStartdate = ConditionAbatementPeriodStartsdf.parse(c.getConditionAbatementPeriodStart());
+			conditionsetabatementPeriod.setStart(ConditionAbatementPeriodStartdate);
+		}
+		}
+
+		if( c.getConditionAbatementRangeHighCode() != null || c.getConditionAbatementRangeHighCompartrCode() != null || c.getConditionAbatementRangeHighSystem() != null || c.getConditionAbatementRangeHighUnit() != null || c.getConditionAbatementRangeHighValue() != null || c.getConditionAbatementRangeLowCode() != null || c.getConditionAbatementRangeLowCompartrCode() != null || c.getConditionAbatementRangeLowSystem() != null || c.getConditionAbatementRangeLowUnit() != null || c.getConditionAbatementRangeLowValue() != null ) {
+			org.hl7.fhir.r4.model.Range conditionsetabatementRange = new org.hl7.fhir.r4.model.Range();
+			condition.setAbatement(conditionsetabatementRange);
+
+
+		org.hl7.fhir.r4.model.Quantity conditionsetabatementRangesethigh = new org.hl7.fhir.r4.model.Quantity();
+		conditionsetabatementRange.setHigh(conditionsetabatementRangesethigh);
+
+		/******************** Condition_Abatement_Range_High_Code ********************************************************************************/
+		if(c.getConditionAbatementRangeHighCode() != null) {
+			conditionsetabatementRangesethigh.setCode(c.getConditionAbatementRangeHighCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetabatementRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Condition_Abatement_Range_High_Compartr_Code ********************************************************************************/
+		if(c.getConditionAbatementRangeHighCompartrCode() != null) {
+			conditionsetabatementRangesethigh.setComparator(conditionsetabatementRangesethighsetcomparatorEnumFactory.fromCode(c.getConditionAbatementRangeHighCompartrCode()));
+
+		}
+		/******************** Condition_Abatement_Range_High_System ********************************************************************************/
+		if(c.getConditionAbatementRangeHighSystem() != null) {
+			conditionsetabatementRangesethigh.setSystem(c.getConditionAbatementRangeHighSystem());
+		}
+		/******************** Condition_Abatement_Range_High_Unit ********************************************************************************/
+		if(c.getConditionAbatementRangeHighUnit() != null) {
+			conditionsetabatementRangesethigh.setUnit(c.getConditionAbatementRangeHighUnit());
+		}
+		/******************** Condition_Abatement_Range_High_Value ********************************************************************************/
+		if(c.getConditionAbatementRangeHighValue() != null) {
+			conditionsetabatementRangesethigh.setValue(Double.parseDouble((c.getConditionAbatementRangeHighValue())));
+		}
+
+		org.hl7.fhir.r4.model.Quantity conditionsetabatementRangesetlow = new org.hl7.fhir.r4.model.Quantity();
+		conditionsetabatementRange.setLow(conditionsetabatementRangesetlow);
+
+		/******************** Condition_Abatement_Range_Low_Code ********************************************************************************/
+		if(c.getConditionAbatementRangeLowCode() != null) {
+			conditionsetabatementRangesetlow.setCode(c.getConditionAbatementRangeLowCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetabatementRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Condition_Abatement_Range_Low_Compartr_Code ********************************************************************************/
+		if(c.getConditionAbatementRangeLowCompartrCode() != null) {
+			conditionsetabatementRangesetlow.setComparator(conditionsetabatementRangesetlowsetcomparatorEnumFactory.fromCode(c.getConditionAbatementRangeLowCompartrCode()));
+
+		}
+		/******************** Condition_Abatement_Range_Low_System ********************************************************************************/
+		if(c.getConditionAbatementRangeLowSystem() != null) {
+			conditionsetabatementRangesetlow.setSystem(c.getConditionAbatementRangeLowSystem());
+		}
+		/******************** Condition_Abatement_Range_Low_Unit ********************************************************************************/
+		if(c.getConditionAbatementRangeLowUnit() != null) {
+			conditionsetabatementRangesetlow.setUnit(c.getConditionAbatementRangeLowUnit());
+		}
+		/******************** Condition_Abatement_Range_Low_Value ********************************************************************************/
+		if(c.getConditionAbatementRangeLowValue() != null) {
+			conditionsetabatementRangesetlow.setValue(Double.parseDouble((c.getConditionAbatementRangeLowValue())));
+		}
+		}
+		/******************** Condition_AbatementString ********************************************************************************/
+		if(c.getConditionAbatementString() != null) {
+			condition.setAbatement(new org.hl7.fhir.r4.model.StringType(c.getConditionAbatementString()));
 		}
 		/******************** Condition_Asserter ********************************************************************************/
 		if(c.getConditionAsserter() != null) {
@@ -33,9 +125,9 @@ public class ConditionConversion
 		if(c.getConditionBodySiteCodingSystem() != null) {
 			conditionaddbodysiteaddcoding.setSystem(c.getConditionBodySiteCodingSystem());
 		}
-		/******************** Condition_BodySite_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionBodySiteCodingUserSelected() != null) {
-			conditionaddbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionBodySiteCodingUserSelected()));
+		/******************** Condition_BodySite_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionBodySiteCodingUsrslt() != null) {
+			conditionaddbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionBodySiteCodingUsrslt()));
 		}
 		/******************** Condition_BodySite_Coding_Version ********************************************************************************/
 		if(c.getConditionBodySiteCodingVersion() != null) {
@@ -63,9 +155,9 @@ public class ConditionConversion
 		if(c.getConditionCategoryCodingSystem() != null) {
 			conditionaddcategoryaddcoding.setSystem(c.getConditionCategoryCodingSystem());
 		}
-		/******************** Condition_Category_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionCategoryCodingUserSelected() != null) {
-			conditionaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCategoryCodingUserSelected()));
+		/******************** Condition_Category_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionCategoryCodingUsrslt() != null) {
+			conditionaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCategoryCodingUsrslt()));
 		}
 		/******************** Condition_Category_Coding_Version ********************************************************************************/
 		if(c.getConditionCategoryCodingVersion() != null) {
@@ -94,9 +186,9 @@ public class ConditionConversion
 		if(c.getConditionClinicalStatusCodingSystem() != null) {
 			conditionsetclinicalstatusaddcoding.setSystem(c.getConditionClinicalStatusCodingSystem());
 		}
-		/******************** Condition_ClinicalStatus_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionClinicalStatusCodingUserSelected() != null) {
-			conditionsetclinicalstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionClinicalStatusCodingUserSelected()));
+		/******************** Condition_ClinicalStatus_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionClinicalStatusCodingUsrslt() != null) {
+			conditionsetclinicalstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionClinicalStatusCodingUsrslt()));
 		}
 		/******************** Condition_ClinicalStatus_Coding_Version ********************************************************************************/
 		if(c.getConditionClinicalStatusCodingVersion() != null) {
@@ -125,9 +217,9 @@ public class ConditionConversion
 		if(c.getConditionCodeCodingSystem() != null) {
 			conditionsetcodeaddcoding.setSystem(c.getConditionCodeCodingSystem());
 		}
-		/******************** Condition_Code_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionCodeCodingUserSelected() != null) {
-			conditionsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCodeCodingUserSelected()));
+		/******************** Condition_Code_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionCodeCodingUsrslt() != null) {
+			conditionsetcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionCodeCodingUsrslt()));
 		}
 		/******************** Condition_Code_Coding_Version ********************************************************************************/
 		if(c.getConditionCodeCodingVersion() != null) {
@@ -137,10 +229,10 @@ public class ConditionConversion
 		if(c.getConditionCodeText() != null) {
 			conditionsetcode.setText(c.getConditionCodeText());
 		}
-		/******************** Condition_Encounter ********************************************************************************/
-		if(c.getConditionEncounter() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionEncounterref = new org.hl7.fhir.r4.model.Reference();
-			condition.setEncounter(ConditionEncounterref.setReference(c.getConditionEncounter()));
+		/******************** Condition_Enc ********************************************************************************/
+		if(c.getConditionEnc() != null) {
+			org.hl7.fhir.r4.model.Reference ConditionEncref = new org.hl7.fhir.r4.model.Reference();
+			condition.setEncounter(ConditionEncref.setReference(c.getConditionEnc()));
 		}
 
 		org.hl7.fhir.r4.model.Condition.ConditionEvidenceComponent conditionaddevidence = condition.addEvidence();
@@ -163,9 +255,9 @@ public class ConditionConversion
 		if(c.getConditionEvidenceCodeCodingSystem() != null) {
 			conditionaddevidenceaddcodeaddcoding.setSystem(c.getConditionEvidenceCodeCodingSystem());
 		}
-		/******************** Condition_Evidence_Code_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionEvidenceCodeCodingUserSelected() != null) {
-			conditionaddevidenceaddcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionEvidenceCodeCodingUserSelected()));
+		/******************** Condition_Evidence_Code_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionEvidenceCodeCodingUsrslt() != null) {
+			conditionaddevidenceaddcodeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionEvidenceCodeCodingUsrslt()));
 		}
 		/******************** Condition_Evidence_Code_Coding_Version ********************************************************************************/
 		if(c.getConditionEvidenceCodeCodingVersion() != null) {
@@ -183,30 +275,30 @@ public class ConditionConversion
 
 		org.hl7.fhir.r4.model.Identifier conditionaddidentifier = condition.addIdentifier();
 
-		/******************** Condition_Identifier_Assigner ********************************************************************************/
-		if(c.getConditionIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference ConditionIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			conditionaddidentifier.setAssigner(ConditionIdentifierAssignerref.setReference(c.getConditionIdentifierAssigner()));
+		/******************** Condition_Id_Assigner ********************************************************************************/
+		if(c.getConditionIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference ConditionIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			conditionaddidentifier.setAssigner(ConditionIdAssignerref.setReference(c.getConditionIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period conditionaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		conditionaddidentifier.setPeriod(conditionaddidentifiersetperiod);
 
-		/******************** Condition_Identifier_Period_End ********************************************************************************/
-		if(c.getConditionIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat ConditionIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionIdentifierPeriodEnddate = ConditionIdentifierPeriodEndsdf.parse(c.getConditionIdentifierPeriodEnd());
-			conditionaddidentifiersetperiod.setEnd(ConditionIdentifierPeriodEnddate);
+		/******************** Condition_Id_Period_End ********************************************************************************/
+		if(c.getConditionIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat ConditionIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionIdPeriodEnddate = ConditionIdPeriodEndsdf.parse(c.getConditionIdPeriodEnd());
+			conditionaddidentifiersetperiod.setEnd(ConditionIdPeriodEnddate);
 		}
-		/******************** Condition_Identifier_Period_Start ********************************************************************************/
-		if(c.getConditionIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat ConditionIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ConditionIdentifierPeriodStartdate = ConditionIdentifierPeriodStartsdf.parse(c.getConditionIdentifierPeriodStart());
-			conditionaddidentifiersetperiod.setStart(ConditionIdentifierPeriodStartdate);
+		/******************** Condition_Id_Period_Start ********************************************************************************/
+		if(c.getConditionIdPeriodStart() != null) {
+			java.text.SimpleDateFormat ConditionIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionIdPeriodStartdate = ConditionIdPeriodStartsdf.parse(c.getConditionIdPeriodStart());
+			conditionaddidentifiersetperiod.setStart(ConditionIdPeriodStartdate);
 		}
-		/******************** Condition_Identifier_System ********************************************************************************/
-		if(c.getConditionIdentifierSystem() != null) {
-			conditionaddidentifier.setSystem(c.getConditionIdentifierSystem());
+		/******************** Condition_Id_System ********************************************************************************/
+		if(c.getConditionIdSystem() != null) {
+			conditionaddidentifier.setSystem(c.getConditionIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept conditionaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -215,48 +307,53 @@ public class ConditionConversion
 
 		org.hl7.fhir.r4.model.Coding conditionaddidentifiersettypeaddcoding = conditionaddidentifiersettype.addCoding();
 
-		/******************** Condition_Identifier_Type_Coding_Code ********************************************************************************/
-		if(c.getConditionIdentifierTypeCodingCode() != null) {
-			conditionaddidentifiersettypeaddcoding.setCode(c.getConditionIdentifierTypeCodingCode());
+		/******************** Condition_Id_Type_Coding_Code ********************************************************************************/
+		if(c.getConditionIdTypeCodingCode() != null) {
+			conditionaddidentifiersettypeaddcoding.setCode(c.getConditionIdTypeCodingCode());
 		}
-		/******************** Condition_Identifier_Type_Coding_Display ********************************************************************************/
-		if(c.getConditionIdentifierTypeCodingDisplay() != null) {
-			conditionaddidentifiersettypeaddcoding.setDisplay(c.getConditionIdentifierTypeCodingDisplay());
+		/******************** Condition_Id_Type_Coding_Display ********************************************************************************/
+		if(c.getConditionIdTypeCodingDisplay() != null) {
+			conditionaddidentifiersettypeaddcoding.setDisplay(c.getConditionIdTypeCodingDisplay());
 		}
-		/******************** Condition_Identifier_Type_Coding_System ********************************************************************************/
-		if(c.getConditionIdentifierTypeCodingSystem() != null) {
-			conditionaddidentifiersettypeaddcoding.setSystem(c.getConditionIdentifierTypeCodingSystem());
+		/******************** Condition_Id_Type_Coding_System ********************************************************************************/
+		if(c.getConditionIdTypeCodingSystem() != null) {
+			conditionaddidentifiersettypeaddcoding.setSystem(c.getConditionIdTypeCodingSystem());
 		}
-		/******************** Condition_Identifier_Type_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionIdentifierTypeCodingUserSelected() != null) {
-			conditionaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionIdentifierTypeCodingUserSelected()));
+		/******************** Condition_Id_Type_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionIdTypeCodingUsrslt() != null) {
+			conditionaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionIdTypeCodingUsrslt()));
 		}
-		/******************** Condition_Identifier_Type_Coding_Version ********************************************************************************/
-		if(c.getConditionIdentifierTypeCodingVersion() != null) {
-			conditionaddidentifiersettypeaddcoding.setVersion(c.getConditionIdentifierTypeCodingVersion());
+		/******************** Condition_Id_Type_Coding_Version ********************************************************************************/
+		if(c.getConditionIdTypeCodingVersion() != null) {
+			conditionaddidentifiersettypeaddcoding.setVersion(c.getConditionIdTypeCodingVersion());
 		}
-		/******************** Condition_Identifier_Type_Text ********************************************************************************/
-		if(c.getConditionIdentifierTypeText() != null) {
-			conditionaddidentifiersettype.setText(c.getConditionIdentifierTypeText());
+		/******************** Condition_Id_Type_Text ********************************************************************************/
+		if(c.getConditionIdTypeText() != null) {
+			conditionaddidentifiersettype.setText(c.getConditionIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory conditionaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Condition_Identifier_Use_Code ********************************************************************************/
-		if(c.getConditionIdentifierUseCode() != null) {
-			conditionaddidentifier.setUse(conditionaddidentifiersetuseEnumFactory.fromCode(c.getConditionIdentifierUseCode()));
+		/******************** Condition_Id_Use_Code ********************************************************************************/
+		if(c.getConditionIdUseCode() != null) {
+			conditionaddidentifier.setUse(conditionaddidentifiersetuseEnumFactory.fromCode(c.getConditionIdUseCode()));
 
 		}
-		/******************** Condition_Identifier_Value ********************************************************************************/
-		if(c.getConditionIdentifierValue() != null) {
-			conditionaddidentifier.setValue(c.getConditionIdentifierValue());
+		/******************** Condition_Id_Value ********************************************************************************/
+		if(c.getConditionIdValue() != null) {
+			conditionaddidentifier.setValue(c.getConditionIdValue());
 		}
 
 		org.hl7.fhir.r4.model.Annotation conditionaddnote = condition.addNote();
 
-		/******************** Condition_Note_Author ********************************************************************************/
-		if(c.getConditionNoteAuthor() != null) {
-			conditionaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(c.getConditionNoteAuthor()));
+		/******************** Condition_Note_AuthorReference ********************************************************************************/
+		if(c.getConditionNoteAuthorReference() != null) {
+			org.hl7.fhir.r4.model.Reference ConditionNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
+			conditionaddnote.setAuthor(ConditionNoteAuthorReferenceref.setReference(c.getConditionNoteAuthorReference()));
+		}
+		/******************** Condition_Note_AuthorString ********************************************************************************/
+		if(c.getConditionNoteAuthorString() != null) {
+			conditionaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(c.getConditionNoteAuthorString()));
 		}
 		/******************** Condition_Note_Text ********************************************************************************/
 		if(c.getConditionNoteText() != null) {
@@ -271,6 +368,94 @@ public class ConditionConversion
 		/******************** Condition_On ********************************************************************************/
 		if(c.getConditionOn() != null) {
 			condition.setOnset(new org.hl7.fhir.r4.model.StringType(c.getConditionOn()));
+		}
+		/******************** Condition_OnDateTime ********************************************************************************/
+		if(c.getConditionOnDateTime() != null) {
+			condition.setOnset(new org.hl7.fhir.r4.model.DateTimeType(c.getConditionOnDateTime()));
+		}
+
+		if( c.getConditionOnPeriodEnd() != null || c.getConditionOnPeriodStart() != null ) {
+			org.hl7.fhir.r4.model.Period conditionsetonsetPeriod = new org.hl7.fhir.r4.model.Period();
+			condition.setOnset(conditionsetonsetPeriod);
+
+		/******************** Condition_On_Period_End ********************************************************************************/
+		if(c.getConditionOnPeriodEnd() != null) {
+			java.text.SimpleDateFormat ConditionOnPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionOnPeriodEnddate = ConditionOnPeriodEndsdf.parse(c.getConditionOnPeriodEnd());
+			conditionsetonsetPeriod.setEnd(ConditionOnPeriodEnddate);
+		}
+		/******************** Condition_On_Period_Start ********************************************************************************/
+		if(c.getConditionOnPeriodStart() != null) {
+			java.text.SimpleDateFormat ConditionOnPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ConditionOnPeriodStartdate = ConditionOnPeriodStartsdf.parse(c.getConditionOnPeriodStart());
+			conditionsetonsetPeriod.setStart(ConditionOnPeriodStartdate);
+		}
+		}
+
+		if( c.getConditionOnRangeHighCode() != null || c.getConditionOnRangeHighCompartrCode() != null || c.getConditionOnRangeHighSystem() != null || c.getConditionOnRangeHighUnit() != null || c.getConditionOnRangeHighValue() != null || c.getConditionOnRangeLowCode() != null || c.getConditionOnRangeLowCompartrCode() != null || c.getConditionOnRangeLowSystem() != null || c.getConditionOnRangeLowUnit() != null || c.getConditionOnRangeLowValue() != null ) {
+			org.hl7.fhir.r4.model.Range conditionsetonsetRange = new org.hl7.fhir.r4.model.Range();
+			condition.setOnset(conditionsetonsetRange);
+
+
+		org.hl7.fhir.r4.model.Quantity conditionsetonsetRangesethigh = new org.hl7.fhir.r4.model.Quantity();
+		conditionsetonsetRange.setHigh(conditionsetonsetRangesethigh);
+
+		/******************** Condition_On_Range_High_Code ********************************************************************************/
+		if(c.getConditionOnRangeHighCode() != null) {
+			conditionsetonsetRangesethigh.setCode(c.getConditionOnRangeHighCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetonsetRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Condition_On_Range_High_Compartr_Code ********************************************************************************/
+		if(c.getConditionOnRangeHighCompartrCode() != null) {
+			conditionsetonsetRangesethigh.setComparator(conditionsetonsetRangesethighsetcomparatorEnumFactory.fromCode(c.getConditionOnRangeHighCompartrCode()));
+
+		}
+		/******************** Condition_On_Range_High_System ********************************************************************************/
+		if(c.getConditionOnRangeHighSystem() != null) {
+			conditionsetonsetRangesethigh.setSystem(c.getConditionOnRangeHighSystem());
+		}
+		/******************** Condition_On_Range_High_Unit ********************************************************************************/
+		if(c.getConditionOnRangeHighUnit() != null) {
+			conditionsetonsetRangesethigh.setUnit(c.getConditionOnRangeHighUnit());
+		}
+		/******************** Condition_On_Range_High_Value ********************************************************************************/
+		if(c.getConditionOnRangeHighValue() != null) {
+			conditionsetonsetRangesethigh.setValue(Double.parseDouble((c.getConditionOnRangeHighValue())));
+		}
+
+		org.hl7.fhir.r4.model.Quantity conditionsetonsetRangesetlow = new org.hl7.fhir.r4.model.Quantity();
+		conditionsetonsetRange.setLow(conditionsetonsetRangesetlow);
+
+		/******************** Condition_On_Range_Low_Code ********************************************************************************/
+		if(c.getConditionOnRangeLowCode() != null) {
+			conditionsetonsetRangesetlow.setCode(c.getConditionOnRangeLowCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory conditionsetonsetRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Condition_On_Range_Low_Compartr_Code ********************************************************************************/
+		if(c.getConditionOnRangeLowCompartrCode() != null) {
+			conditionsetonsetRangesetlow.setComparator(conditionsetonsetRangesetlowsetcomparatorEnumFactory.fromCode(c.getConditionOnRangeLowCompartrCode()));
+
+		}
+		/******************** Condition_On_Range_Low_System ********************************************************************************/
+		if(c.getConditionOnRangeLowSystem() != null) {
+			conditionsetonsetRangesetlow.setSystem(c.getConditionOnRangeLowSystem());
+		}
+		/******************** Condition_On_Range_Low_Unit ********************************************************************************/
+		if(c.getConditionOnRangeLowUnit() != null) {
+			conditionsetonsetRangesetlow.setUnit(c.getConditionOnRangeLowUnit());
+		}
+		/******************** Condition_On_Range_Low_Value ********************************************************************************/
+		if(c.getConditionOnRangeLowValue() != null) {
+			conditionsetonsetRangesetlow.setValue(Double.parseDouble((c.getConditionOnRangeLowValue())));
+		}
+		}
+		/******************** Condition_OnString ********************************************************************************/
+		if(c.getConditionOnString() != null) {
+			condition.setOnset(new org.hl7.fhir.r4.model.StringType(c.getConditionOnString()));
 		}
 		/******************** Condition_RecordedDate ********************************************************************************/
 		if(c.getConditionRecordedDate() != null) {
@@ -291,7 +476,7 @@ public class ConditionConversion
 		org.hl7.fhir.r4.model.Coding conditionsetseverityaddcoding = conditionsetseverity.addCoding();
 
 		/******************** Condition_Severity_Coding_Code ********************************************************************************/
-		if(c.getConditionSeverityCodingCode() != null) { 
+		if(c.getConditionSeverityCodingCode() != null) {
 			conditionsetseverityaddcoding.setCode(c.getConditionSeverityCodingCode());
 		}
 		/******************** Condition_Severity_Coding_Display ********************************************************************************/
@@ -302,9 +487,9 @@ public class ConditionConversion
 		if(c.getConditionSeverityCodingSystem() != null) {
 			conditionsetseverityaddcoding.setSystem(c.getConditionSeverityCodingSystem());
 		}
-		/******************** Condition_Severity_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionSeverityCodingUserSelected() != null) {
-			conditionsetseverityaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionSeverityCodingUserSelected()));
+		/******************** Condition_Severity_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionSeverityCodingUsrslt() != null) {
+			conditionsetseverityaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionSeverityCodingUsrslt()));
 		}
 		/******************** Condition_Severity_Coding_Version ********************************************************************************/
 		if(c.getConditionSeverityCodingVersion() != null) {
@@ -341,9 +526,9 @@ public class ConditionConversion
 		if(c.getConditionStageSummaryCodingSystem() != null) {
 			conditionaddstagesetsummaryaddcoding.setSystem(c.getConditionStageSummaryCodingSystem());
 		}
-		/******************** Condition_Stage_Summary_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionStageSummaryCodingUserSelected() != null) {
-			conditionaddstagesetsummaryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageSummaryCodingUserSelected()));
+		/******************** Condition_Stage_Summary_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionStageSummaryCodingUsrslt() != null) {
+			conditionaddstagesetsummaryaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageSummaryCodingUsrslt()));
 		}
 		/******************** Condition_Stage_Summary_Coding_Version ********************************************************************************/
 		if(c.getConditionStageSummaryCodingVersion() != null) {
@@ -372,9 +557,9 @@ public class ConditionConversion
 		if(c.getConditionStageTypeCodingSystem() != null) {
 			conditionaddstagesettypeaddcoding.setSystem(c.getConditionStageTypeCodingSystem());
 		}
-		/******************** Condition_Stage_Type_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionStageTypeCodingUserSelected() != null) {
-			conditionaddstagesettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageTypeCodingUserSelected()));
+		/******************** Condition_Stage_Type_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionStageTypeCodingUsrslt() != null) {
+			conditionaddstagesettypeaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionStageTypeCodingUsrslt()));
 		}
 		/******************** Condition_Stage_Type_Coding_Version ********************************************************************************/
 		if(c.getConditionStageTypeCodingVersion() != null) {
@@ -408,13 +593,17 @@ public class ConditionConversion
 		if(c.getConditionVerificationStatusCodingSystem() != null) {
 			conditionsetverificationstatusaddcoding.setSystem(c.getConditionVerificationStatusCodingSystem());
 		}
-		/******************** Condition_VerificationStatus_Coding_UserSelected ********************************************************************************/
-		if(c.getConditionVerificationStatusCodingUserSelected() != null) {
-			conditionsetverificationstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionVerificationStatusCodingUserSelected()));
+		/******************** Condition_VerificationStatus_Coding_Usrslt ********************************************************************************/
+		if(c.getConditionVerificationStatusCodingUsrslt() != null) {
+			conditionsetverificationstatusaddcoding.setUserSelected(Boolean.parseBoolean(c.getConditionVerificationStatusCodingUsrslt()));
 		}
 		/******************** Condition_VerificationStatus_Coding_Version ********************************************************************************/
 		if(c.getConditionVerificationStatusCodingVersion() != null) {
 			conditionsetverificationstatusaddcoding.setVersion(c.getConditionVerificationStatusCodingVersion());
+		}
+		/******************** Condition_VerificationStatus_Text ********************************************************************************/
+		if(c.getConditionVerificationStatusText() != null) {
+			conditionsetverificationstatus.setText(c.getConditionVerificationStatusText());
 		}
 		return condition;
 	}

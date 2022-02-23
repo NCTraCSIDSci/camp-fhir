@@ -8,13 +8,34 @@ public class FHIRobject {
 	String Param = null;
 	String ReturnType = null;
 	String MethodDeclaringClass = null;
+	String xType = null;
+	public FHIRobject(FHIRobject that) {
+	 	this(that.Level ,
+			    that.Name ,
+			    that.HibernateName ,
+			    that.MethodName ,
+			    that.Param ,
+			    that.ReturnType,
+			    that.MethodDeclaringClass ,
+			    that.xType );
+	}
+	public FHIRobject(int level, String name, String hibernateName, String methodName, String param,
+		String returnType, String methodDeclaringClass, String xType) {
+		this.Level = level;
+		this.Name = name;
+		this.HibernateName = hibernateName;
+		this.MethodName = methodName;
+		this.Param = param;
+		this.ReturnType = returnType;
+		this.MethodDeclaringClass = methodDeclaringClass;
+		this.xType = xType;
+}
 	
+	public FHIRobject() {
+		
+	}
 	public void printClass() {
-//		System.out.println("Level: "+ level );
-//		System.out.println( "Name: " +currentMethodName);
-//		System.out.println("MethodName: " +method.getName());
-//      System.out.println("      ReturnType:" + method.getReturnType().getName().replace("$", "."));
-//		System.out.println("      MethodDeclaringClass:" + method.getDeclaringClass().getName());
+
 		System.out.println("Level: "+ Level );
 		System.out.println("HibernateName: "+ HibernateName );
 		System.out.println( "Name: " +Name);
@@ -22,6 +43,7 @@ public class FHIRobject {
 		System.out.println("      Param:" + Param);
         System.out.println("      ReturnType:" + ReturnType);
 		System.out.println("      MethodDeclaringClass:" + MethodDeclaringClass);
+		System.out.println("      xType:" + xType);
 	  }
 
 }

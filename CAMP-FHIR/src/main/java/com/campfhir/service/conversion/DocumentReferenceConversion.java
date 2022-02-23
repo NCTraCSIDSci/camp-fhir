@@ -6,6 +6,10 @@ public class DocumentReferenceConversion
 	public org.hl7.fhir.r4.model.DocumentReference DocumentReferences(DocumentReference d) throws ParseException
 	{
 		org.hl7.fhir.r4.model.DocumentReference documentreference = new org.hl7.fhir.r4.model.DocumentReference();
+
+		/******************** id ********************************************************************************/
+		documentreference.setId(d.getId());
+
 		/******************** Documentreference_Authenticator ********************************************************************************/
 		if(d.getDocumentreferenceAuthenticator() != null) {
 			org.hl7.fhir.r4.model.Reference DocumentreferenceAuthenticatorref = new org.hl7.fhir.r4.model.Reference();
@@ -34,9 +38,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceCategoryCodingSystem() != null) {
 			documentreferenceaddcategoryaddcoding.setSystem(d.getDocumentreferenceCategoryCodingSystem());
 		}
-		/******************** Documentreference_Category_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceCategoryCodingUserSelected() != null) {
-			documentreferenceaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceCategoryCodingUserSelected()));
+		/******************** Documentreference_Category_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceCategoryCodingUsrslt() != null) {
+			documentreferenceaddcategoryaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceCategoryCodingUsrslt()));
 		}
 		/******************** Documentreference_Category_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceCategoryCodingVersion() != null) {
@@ -71,9 +75,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceContentAttachmentHash() != null) {
 			documentreferenceaddcontentsetattachment.setHashElement(new org.hl7.fhir.r4.model.Base64BinaryType(d.getDocumentreferenceContentAttachmentHash()));
 		}
-		/******************** Documentreference_Content_Attachment_Language ********************************************************************************/
-		if(d.getDocumentreferenceContentAttachmentLanguage() != null) {
-			documentreferenceaddcontentsetattachment.setLanguage(d.getDocumentreferenceContentAttachmentLanguage());
+		/******************** Documentreference_Content_Attachment_Lang ********************************************************************************/
+		if(d.getDocumentreferenceContentAttachmentLang() != null) {
+			documentreferenceaddcontentsetattachment.setLanguage(d.getDocumentreferenceContentAttachmentLang());
 		}
 		/******************** Documentreference_Content_Attachment_Size ********************************************************************************/
 		if(d.getDocumentreferenceContentAttachmentSize() != null) {
@@ -103,9 +107,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceContentFormatSystem() != null) {
 			documentreferenceaddcontentsetformat.setSystem(d.getDocumentreferenceContentFormatSystem());
 		}
-		/******************** Documentreference_Content_Format_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceContentFormatUserSelected() != null) {
-			documentreferenceaddcontentsetformat.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContentFormatUserSelected()));
+		/******************** Documentreference_Content_Format_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceContentFormatUsrslt() != null) {
+			documentreferenceaddcontentsetformat.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContentFormatUsrslt()));
 		}
 		/******************** Documentreference_Content_Format_Version ********************************************************************************/
 		if(d.getDocumentreferenceContentFormatVersion() != null) {
@@ -115,10 +119,10 @@ public class DocumentReferenceConversion
 		org.hl7.fhir.r4.model.DocumentReference.DocumentReferenceContextComponent documentreferencesetcontext = new org.hl7.fhir.r4.model.DocumentReference.DocumentReferenceContextComponent();
 		documentreference.setContext(documentreferencesetcontext);
 
-		/******************** Documentreference_Context_Encounter ********************************************************************************/
-		if(d.getDocumentreferenceContextEncounter() != null) {
-			org.hl7.fhir.r4.model.Reference DocumentreferenceContextEncounterref = new org.hl7.fhir.r4.model.Reference();
-			documentreferencesetcontext.addEncounter(DocumentreferenceContextEncounterref.setReference(d.getDocumentreferenceContextEncounter()));
+		/******************** Documentreference_Context_Enc ********************************************************************************/
+		if(d.getDocumentreferenceContextEnc() != null) {
+			org.hl7.fhir.r4.model.Reference DocumentreferenceContextEncref = new org.hl7.fhir.r4.model.Reference();
+			documentreferencesetcontext.addEncounter(DocumentreferenceContextEncref.setReference(d.getDocumentreferenceContextEnc()));
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept documentreferencesetcontextaddevent = documentreferencesetcontext.addEvent();
@@ -138,9 +142,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceContextEventCodingSystem() != null) {
 			documentreferencesetcontextaddeventaddcoding.setSystem(d.getDocumentreferenceContextEventCodingSystem());
 		}
-		/******************** Documentreference_Context_Event_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceContextEventCodingUserSelected() != null) {
-			documentreferencesetcontextaddeventaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextEventCodingUserSelected()));
+		/******************** Documentreference_Context_Event_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceContextEventCodingUsrslt() != null) {
+			documentreferencesetcontextaddeventaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextEventCodingUsrslt()));
 		}
 		/******************** Documentreference_Context_Event_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceContextEventCodingVersion() != null) {
@@ -169,9 +173,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceContextFacilityTypeCodingSystem() != null) {
 			documentreferencesetcontextsetfacilitytypeaddcoding.setSystem(d.getDocumentreferenceContextFacilityTypeCodingSystem());
 		}
-		/******************** Documentreference_Context_FacilityType_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceContextFacilityTypeCodingUserSelected() != null) {
-			documentreferencesetcontextsetfacilitytypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextFacilityTypeCodingUserSelected()));
+		/******************** Documentreference_Context_FacilityType_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceContextFacilityTypeCodingUsrslt() != null) {
+			documentreferencesetcontextsetfacilitytypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextFacilityTypeCodingUsrslt()));
 		}
 		/******************** Documentreference_Context_FacilityType_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceContextFacilityTypeCodingVersion() != null) {
@@ -216,9 +220,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceContextPracticeSettingCodingSystem() != null) {
 			documentreferencesetcontextsetpracticesettingaddcoding.setSystem(d.getDocumentreferenceContextPracticeSettingCodingSystem());
 		}
-		/******************** Documentreference_Context_PracticeSetting_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceContextPracticeSettingCodingUserSelected() != null) {
-			documentreferencesetcontextsetpracticesettingaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextPracticeSettingCodingUserSelected()));
+		/******************** Documentreference_Context_PracticeSetting_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceContextPracticeSettingCodingUsrslt() != null) {
+			documentreferencesetcontextsetpracticesettingaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceContextPracticeSettingCodingUsrslt()));
 		}
 		/******************** Documentreference_Context_PracticeSetting_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceContextPracticeSettingCodingVersion() != null) {
@@ -264,30 +268,30 @@ public class DocumentReferenceConversion
 
 		org.hl7.fhir.r4.model.Identifier documentreferenceaddidentifier = documentreference.addIdentifier();
 
-		/******************** Documentreference_Identifier_Assigner ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference DocumentreferenceIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			documentreferenceaddidentifier.setAssigner(DocumentreferenceIdentifierAssignerref.setReference(d.getDocumentreferenceIdentifierAssigner()));
+		/******************** Documentreference_Id_Assigner ********************************************************************************/
+		if(d.getDocumentreferenceIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference DocumentreferenceIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			documentreferenceaddidentifier.setAssigner(DocumentreferenceIdAssignerref.setReference(d.getDocumentreferenceIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period documentreferenceaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		documentreferenceaddidentifier.setPeriod(documentreferenceaddidentifiersetperiod);
 
-		/******************** Documentreference_Identifier_Period_End ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat DocumentreferenceIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DocumentreferenceIdentifierPeriodEnddate = DocumentreferenceIdentifierPeriodEndsdf.parse(d.getDocumentreferenceIdentifierPeriodEnd());
-			documentreferenceaddidentifiersetperiod.setEnd(DocumentreferenceIdentifierPeriodEnddate);
+		/******************** Documentreference_Id_Period_End ********************************************************************************/
+		if(d.getDocumentreferenceIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat DocumentreferenceIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DocumentreferenceIdPeriodEnddate = DocumentreferenceIdPeriodEndsdf.parse(d.getDocumentreferenceIdPeriodEnd());
+			documentreferenceaddidentifiersetperiod.setEnd(DocumentreferenceIdPeriodEnddate);
 		}
-		/******************** Documentreference_Identifier_Period_Start ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat DocumentreferenceIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DocumentreferenceIdentifierPeriodStartdate = DocumentreferenceIdentifierPeriodStartsdf.parse(d.getDocumentreferenceIdentifierPeriodStart());
-			documentreferenceaddidentifiersetperiod.setStart(DocumentreferenceIdentifierPeriodStartdate);
+		/******************** Documentreference_Id_Period_Start ********************************************************************************/
+		if(d.getDocumentreferenceIdPeriodStart() != null) {
+			java.text.SimpleDateFormat DocumentreferenceIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DocumentreferenceIdPeriodStartdate = DocumentreferenceIdPeriodStartsdf.parse(d.getDocumentreferenceIdPeriodStart());
+			documentreferenceaddidentifiersetperiod.setStart(DocumentreferenceIdPeriodStartdate);
 		}
-		/******************** Documentreference_Identifier_System ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierSystem() != null) {
-			documentreferenceaddidentifier.setSystem(d.getDocumentreferenceIdentifierSystem());
+		/******************** Documentreference_Id_System ********************************************************************************/
+		if(d.getDocumentreferenceIdSystem() != null) {
+			documentreferenceaddidentifier.setSystem(d.getDocumentreferenceIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept documentreferenceaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -296,70 +300,70 @@ public class DocumentReferenceConversion
 
 		org.hl7.fhir.r4.model.Coding documentreferenceaddidentifiersettypeaddcoding = documentreferenceaddidentifiersettype.addCoding();
 
-		/******************** Documentreference_Identifier_Type_Coding_Code ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeCodingCode() != null) {
-			documentreferenceaddidentifiersettypeaddcoding.setCode(d.getDocumentreferenceIdentifierTypeCodingCode());
+		/******************** Documentreference_Id_Type_Coding_Code ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeCodingCode() != null) {
+			documentreferenceaddidentifiersettypeaddcoding.setCode(d.getDocumentreferenceIdTypeCodingCode());
 		}
-		/******************** Documentreference_Identifier_Type_Coding_Display ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeCodingDisplay() != null) {
-			documentreferenceaddidentifiersettypeaddcoding.setDisplay(d.getDocumentreferenceIdentifierTypeCodingDisplay());
+		/******************** Documentreference_Id_Type_Coding_Display ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeCodingDisplay() != null) {
+			documentreferenceaddidentifiersettypeaddcoding.setDisplay(d.getDocumentreferenceIdTypeCodingDisplay());
 		}
-		/******************** Documentreference_Identifier_Type_Coding_System ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeCodingSystem() != null) {
-			documentreferenceaddidentifiersettypeaddcoding.setSystem(d.getDocumentreferenceIdentifierTypeCodingSystem());
+		/******************** Documentreference_Id_Type_Coding_System ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeCodingSystem() != null) {
+			documentreferenceaddidentifiersettypeaddcoding.setSystem(d.getDocumentreferenceIdTypeCodingSystem());
 		}
-		/******************** Documentreference_Identifier_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeCodingUserSelected() != null) {
-			documentreferenceaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceIdentifierTypeCodingUserSelected()));
+		/******************** Documentreference_Id_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeCodingUsrslt() != null) {
+			documentreferenceaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceIdTypeCodingUsrslt()));
 		}
-		/******************** Documentreference_Identifier_Type_Coding_Version ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeCodingVersion() != null) {
-			documentreferenceaddidentifiersettypeaddcoding.setVersion(d.getDocumentreferenceIdentifierTypeCodingVersion());
+		/******************** Documentreference_Id_Type_Coding_Version ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeCodingVersion() != null) {
+			documentreferenceaddidentifiersettypeaddcoding.setVersion(d.getDocumentreferenceIdTypeCodingVersion());
 		}
-		/******************** Documentreference_Identifier_Type_Text ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierTypeText() != null) {
-			documentreferenceaddidentifiersettype.setText(d.getDocumentreferenceIdentifierTypeText());
+		/******************** Documentreference_Id_Type_Text ********************************************************************************/
+		if(d.getDocumentreferenceIdTypeText() != null) {
+			documentreferenceaddidentifiersettype.setText(d.getDocumentreferenceIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory documentreferenceaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Documentreference_Identifier_Use_Code ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierUseCode() != null) {
-			documentreferenceaddidentifier.setUse(documentreferenceaddidentifiersetuseEnumFactory.fromCode(d.getDocumentreferenceIdentifierUseCode()));
+		/******************** Documentreference_Id_Use_Code ********************************************************************************/
+		if(d.getDocumentreferenceIdUseCode() != null) {
+			documentreferenceaddidentifier.setUse(documentreferenceaddidentifiersetuseEnumFactory.fromCode(d.getDocumentreferenceIdUseCode()));
 
 		}
-		/******************** Documentreference_Identifier_Value ********************************************************************************/
-		if(d.getDocumentreferenceIdentifierValue() != null) {
-			documentreferenceaddidentifier.setValue(d.getDocumentreferenceIdentifierValue());
+		/******************** Documentreference_Id_Value ********************************************************************************/
+		if(d.getDocumentreferenceIdValue() != null) {
+			documentreferenceaddidentifier.setValue(d.getDocumentreferenceIdValue());
 		}
 
 		org.hl7.fhir.r4.model.Identifier documentreferencesetmasteridentifier = new org.hl7.fhir.r4.model.Identifier();
 		documentreference.setMasterIdentifier(documentreferencesetmasteridentifier);
 
-		/******************** Documentreference_MasterIdentifier_Assigner ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference DocumentreferenceMasterIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			documentreferencesetmasteridentifier.setAssigner(DocumentreferenceMasterIdentifierAssignerref.setReference(d.getDocumentreferenceMasterIdentifierAssigner()));
+		/******************** Documentreference_MasterId_Assigner ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference DocumentreferenceMasterIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			documentreferencesetmasteridentifier.setAssigner(DocumentreferenceMasterIdAssignerref.setReference(d.getDocumentreferenceMasterIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period documentreferencesetmasteridentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		documentreferencesetmasteridentifier.setPeriod(documentreferencesetmasteridentifiersetperiod);
 
-		/******************** Documentreference_MasterIdentifier_Period_End ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat DocumentreferenceMasterIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DocumentreferenceMasterIdentifierPeriodEnddate = DocumentreferenceMasterIdentifierPeriodEndsdf.parse(d.getDocumentreferenceMasterIdentifierPeriodEnd());
-			documentreferencesetmasteridentifiersetperiod.setEnd(DocumentreferenceMasterIdentifierPeriodEnddate);
+		/******************** Documentreference_MasterId_Period_End ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat DocumentreferenceMasterIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DocumentreferenceMasterIdPeriodEnddate = DocumentreferenceMasterIdPeriodEndsdf.parse(d.getDocumentreferenceMasterIdPeriodEnd());
+			documentreferencesetmasteridentifiersetperiod.setEnd(DocumentreferenceMasterIdPeriodEnddate);
 		}
-		/******************** Documentreference_MasterIdentifier_Period_Start ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat DocumentreferenceMasterIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date DocumentreferenceMasterIdentifierPeriodStartdate = DocumentreferenceMasterIdentifierPeriodStartsdf.parse(d.getDocumentreferenceMasterIdentifierPeriodStart());
-			documentreferencesetmasteridentifiersetperiod.setStart(DocumentreferenceMasterIdentifierPeriodStartdate);
+		/******************** Documentreference_MasterId_Period_Start ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdPeriodStart() != null) {
+			java.text.SimpleDateFormat DocumentreferenceMasterIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date DocumentreferenceMasterIdPeriodStartdate = DocumentreferenceMasterIdPeriodStartsdf.parse(d.getDocumentreferenceMasterIdPeriodStart());
+			documentreferencesetmasteridentifiersetperiod.setStart(DocumentreferenceMasterIdPeriodStartdate);
 		}
-		/******************** Documentreference_MasterIdentifier_System ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierSystem() != null) {
-			documentreferencesetmasteridentifier.setSystem(d.getDocumentreferenceMasterIdentifierSystem());
+		/******************** Documentreference_MasterId_System ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdSystem() != null) {
+			documentreferencesetmasteridentifier.setSystem(d.getDocumentreferenceMasterIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept documentreferencesetmasteridentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -368,41 +372,41 @@ public class DocumentReferenceConversion
 
 		org.hl7.fhir.r4.model.Coding documentreferencesetmasteridentifiersettypeaddcoding = documentreferencesetmasteridentifiersettype.addCoding();
 
-		/******************** Documentreference_MasterIdentifier_Type_Coding_Code ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeCodingCode() != null) {
-			documentreferencesetmasteridentifiersettypeaddcoding.setCode(d.getDocumentreferenceMasterIdentifierTypeCodingCode());
+		/******************** Documentreference_MasterId_Type_Coding_Code ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeCodingCode() != null) {
+			documentreferencesetmasteridentifiersettypeaddcoding.setCode(d.getDocumentreferenceMasterIdTypeCodingCode());
 		}
-		/******************** Documentreference_MasterIdentifier_Type_Coding_Display ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeCodingDisplay() != null) {
-			documentreferencesetmasteridentifiersettypeaddcoding.setDisplay(d.getDocumentreferenceMasterIdentifierTypeCodingDisplay());
+		/******************** Documentreference_MasterId_Type_Coding_Display ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeCodingDisplay() != null) {
+			documentreferencesetmasteridentifiersettypeaddcoding.setDisplay(d.getDocumentreferenceMasterIdTypeCodingDisplay());
 		}
-		/******************** Documentreference_MasterIdentifier_Type_Coding_System ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeCodingSystem() != null) {
-			documentreferencesetmasteridentifiersettypeaddcoding.setSystem(d.getDocumentreferenceMasterIdentifierTypeCodingSystem());
+		/******************** Documentreference_MasterId_Type_Coding_System ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeCodingSystem() != null) {
+			documentreferencesetmasteridentifiersettypeaddcoding.setSystem(d.getDocumentreferenceMasterIdTypeCodingSystem());
 		}
-		/******************** Documentreference_MasterIdentifier_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeCodingUserSelected() != null) {
-			documentreferencesetmasteridentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceMasterIdentifierTypeCodingUserSelected()));
+		/******************** Documentreference_MasterId_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeCodingUsrslt() != null) {
+			documentreferencesetmasteridentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceMasterIdTypeCodingUsrslt()));
 		}
-		/******************** Documentreference_MasterIdentifier_Type_Coding_Version ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeCodingVersion() != null) {
-			documentreferencesetmasteridentifiersettypeaddcoding.setVersion(d.getDocumentreferenceMasterIdentifierTypeCodingVersion());
+		/******************** Documentreference_MasterId_Type_Coding_Version ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeCodingVersion() != null) {
+			documentreferencesetmasteridentifiersettypeaddcoding.setVersion(d.getDocumentreferenceMasterIdTypeCodingVersion());
 		}
-		/******************** Documentreference_MasterIdentifier_Type_Text ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierTypeText() != null) {
-			documentreferencesetmasteridentifiersettype.setText(d.getDocumentreferenceMasterIdentifierTypeText());
+		/******************** Documentreference_MasterId_Type_Text ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdTypeText() != null) {
+			documentreferencesetmasteridentifiersettype.setText(d.getDocumentreferenceMasterIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory documentreferencesetmasteridentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Documentreference_MasterIdentifier_Use_Code ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierUseCode() != null) {
-			documentreferencesetmasteridentifier.setUse(documentreferencesetmasteridentifiersetuseEnumFactory.fromCode(d.getDocumentreferenceMasterIdentifierUseCode()));
+		/******************** Documentreference_MasterId_Use_Code ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdUseCode() != null) {
+			documentreferencesetmasteridentifier.setUse(documentreferencesetmasteridentifiersetuseEnumFactory.fromCode(d.getDocumentreferenceMasterIdUseCode()));
 
 		}
-		/******************** Documentreference_MasterIdentifier_Value ********************************************************************************/
-		if(d.getDocumentreferenceMasterIdentifierValue() != null) {
-			documentreferencesetmasteridentifier.setValue(d.getDocumentreferenceMasterIdentifierValue());
+		/******************** Documentreference_MasterId_Value ********************************************************************************/
+		if(d.getDocumentreferenceMasterIdValue() != null) {
+			documentreferencesetmasteridentifier.setValue(d.getDocumentreferenceMasterIdValue());
 		}
 
 		org.hl7.fhir.r4.model.DocumentReference.DocumentReferenceRelatesToComponent documentreferenceaddrelatesto = documentreference.addRelatesTo();
@@ -438,9 +442,9 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceSecurityLabelCodingSystem() != null) {
 			documentreferenceaddsecuritylabeladdcoding.setSystem(d.getDocumentreferenceSecurityLabelCodingSystem());
 		}
-		/******************** Documentreference_SecurityLabel_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceSecurityLabelCodingUserSelected() != null) {
-			documentreferenceaddsecuritylabeladdcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceSecurityLabelCodingUserSelected()));
+		/******************** Documentreference_SecurityLabel_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceSecurityLabelCodingUsrslt() != null) {
+			documentreferenceaddsecuritylabeladdcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceSecurityLabelCodingUsrslt()));
 		}
 		/******************** Documentreference_SecurityLabel_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceSecurityLabelCodingVersion() != null) {
@@ -482,13 +486,17 @@ public class DocumentReferenceConversion
 		if(d.getDocumentreferenceTypeCodingSystem() != null) {
 			documentreferencesettypeaddcoding.setSystem(d.getDocumentreferenceTypeCodingSystem());
 		}
-		/******************** Documentreference_Type_Coding_UserSelected ********************************************************************************/
-		if(d.getDocumentreferenceTypeCodingUserSelected() != null) {
-			documentreferencesettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceTypeCodingUserSelected()));
+		/******************** Documentreference_Type_Coding_Usrslt ********************************************************************************/
+		if(d.getDocumentreferenceTypeCodingUsrslt() != null) {
+			documentreferencesettypeaddcoding.setUserSelected(Boolean.parseBoolean(d.getDocumentreferenceTypeCodingUsrslt()));
 		}
 		/******************** Documentreference_Type_Coding_Version ********************************************************************************/
 		if(d.getDocumentreferenceTypeCodingVersion() != null) {
 			documentreferencesettypeaddcoding.setVersion(d.getDocumentreferenceTypeCodingVersion());
+		}
+		/******************** Documentreference_Type_Text ********************************************************************************/
+		if(d.getDocumentreferenceTypeText() != null) {
+			documentreferencesettype.setText(d.getDocumentreferenceTypeText());
 		}
 		return documentreference;
 	}

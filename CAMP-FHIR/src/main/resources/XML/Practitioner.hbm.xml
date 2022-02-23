@@ -1,302 +1,310 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated Feb 17, 2022, 12:10:59 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 22, 2022, 7:23:13 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="campfhir" name="Practitioner" optimistic-lock="none" table="practitioner">
-        <id name="practitionerIdentifierValue" type="string">
-            <column name="Practitioner_Identifier_Value"/>
-            <generator class="assigned"/>
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
         </id>
-        <property name="practitionerActive" type="string">
+        <property name="practActive" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Active"/>
+            <column length="65535" name="Pract_Active"/>
         </property>
-        <property name="practitionerAddressCity" type="string">
+        <property name="practAddressCity" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_City"/>
+            <column length="65535" name="Pract_Address_City"/>
         </property>
-        <property name="practitionerAddressCountry" type="string">
+        <property name="practAddressCountry" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Country"/>
+            <column length="65535" name="Pract_Address_Country"/>
         </property>
-        <property name="practitionerAddressDistrict" type="string">
+        <property name="practAddressDistrict" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_District"/>
+            <column length="65535" name="Pract_Address_District"/>
         </property>
-        <property name="practitionerAddressLine" type="string">
+        <property name="practAddressLine" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Line"/>
+            <column length="65535" name="Pract_Address_Line"/>
         </property>
-        <property name="practitionerAddressPeriodEnd" type="string">
+        <property name="practAddressPeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Period_End"/>
+            <column length="65535" name="Pract_Address_Period_End"/>
         </property>
-        <property name="practitionerAddressPeriodStart" type="string">
+        <property name="practAddressPeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Period_Start"/>
+            <column length="65535" name="Pract_Address_Period_Start"/>
         </property>
-        <property name="practitionerAddressPostalCode" type="string">
+        <property name="practAddressPostalCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_PostalCode"/>
+            <column length="65535" name="Pract_Address_PostalCode"/>
         </property>
-        <property name="practitionerAddressState" type="string">
+        <property name="practAddressState" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_State"/>
+            <column length="65535" name="Pract_Address_State"/>
         </property>
-        <property name="practitionerAddressText" type="string">
+        <property name="practAddressText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Text"/>
+            <column length="65535" name="Pract_Address_Text"/>
         </property>
-        <property name="practitionerAddressTypeCode" type="string">
+        <property name="practAddressTypeCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Type_Code"/>
+            <column length="65535" name="Pract_Address_Type_Code"/>
         </property>
-        <property name="practitionerAddressUseCode" type="string">
+        <property name="practAddressUseCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Address_Use_Code"/>
+            <column length="65535" name="Pract_Address_Use_Code"/>
         </property>
-        <property name="practitionerBirthDate" type="string">
+        <property name="practBirthDate" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_BirthDate"/>
+            <column length="65535" name="Pract_BirthDate"/>
         </property>
-        <property name="practitionerCommunicationCodingCode" type="string">
+        <property name="practCommnCodingCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Coding_Code"/>
+            <column length="65535" name="Pract_Commn_Coding_Code"/>
         </property>
-        <property name="practitionerCommunicationCodingDisplay" type="string">
+        <property name="practCommnCodingDisplay" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Coding_Display"/>
+            <column length="65535" name="Pract_Commn_Coding_Display"/>
         </property>
-        <property name="practitionerCommunicationCodingSystem" type="string">
+        <property name="practCommnCodingSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Coding_System"/>
+            <column length="65535" name="Pract_Commn_Coding_System"/>
         </property>
-        <property name="practitionerCommunicationCodingUserSelected" type="string">
+        <property name="practCommnCodingUsrslt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Coding_UserSelected"/>
+            <column length="65535" name="Pract_Commn_Coding_Usrslt"/>
         </property>
-        <property name="practitionerCommunicationCodingVersion" type="string">
+        <property name="practCommnCodingVersion" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Coding_Version"/>
+            <column length="65535" name="Pract_Commn_Coding_Version"/>
         </property>
-        <property name="practitionerCommunicationText" type="string">
+        <property name="practCommnText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Communication_Text"/>
+            <column length="65535" name="Pract_Commn_Text"/>
         </property>
-        <property name="practitionerGenderCode" type="string">
+        <property name="practGenderCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Gender_Code"/>
+            <column length="65535" name="Pract_Gender_Code"/>
         </property>
-        <property name="practitionerIdentifierAssigner" type="string">
+        <property name="practIdAssigner" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Assigner"/>
+            <column length="65535" name="Pract_Id_Assigner"/>
         </property>
-        <property name="practitionerIdentifierPeriodEnd" type="string">
+        <property name="practIdPeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Period_End"/>
+            <column length="65535" name="Pract_Id_Period_End"/>
         </property>
-        <property name="practitionerIdentifierPeriodStart" type="string">
+        <property name="practIdPeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Period_Start"/>
+            <column length="65535" name="Pract_Id_Period_Start"/>
         </property>
-        <property name="practitionerIdentifierSystem" type="string">
+        <property name="practIdSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_System"/>
+            <column length="65535" name="Pract_Id_System"/>
         </property>
-        <property name="practitionerIdentifierTypeCodingCode" type="string">
+        <property name="practIdTypeCodingCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Coding_Code"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Code"/>
         </property>
-        <property name="practitionerIdentifierTypeCodingDisplay" type="string">
+        <property name="practIdTypeCodingDisplay" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Coding_Display"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Display"/>
         </property>
-        <property name="practitionerIdentifierTypeCodingSystem" type="string">
+        <property name="practIdTypeCodingSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Coding_System"/>
+            <column length="65535" name="Pract_Id_Type_Coding_System"/>
         </property>
-        <property name="practitionerIdentifierTypeCodingUserSelected" type="string">
+        <property name="practIdTypeCodingUsrslt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Coding_UserSelected"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Usrslt"/>
         </property>
-        <property name="practitionerIdentifierTypeCodingVersion" type="string">
+        <property name="practIdTypeCodingVersion" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Coding_Version"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Version"/>
         </property>
-        <property name="practitionerIdentifierTypeText" type="string">
+        <property name="practIdTypeText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Type_Text"/>
+            <column length="65535" name="Pract_Id_Type_Text"/>
         </property>
-        <property name="practitionerIdentifierUseCode" type="string">
+        <property name="practIdUseCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Identifier_Use_Code"/>
+            <column length="65535" name="Pract_Id_Use_Code"/>
         </property>
-        <property name="practitionerNameFamily" type="string">
+        <property name="practIdValue" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Family"/>
+            <column length="65535" name="Pract_Id_Value"/>
         </property>
-        <property name="practitionerNameGiven" type="string">
+        <property name="practNameFamily" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Given"/>
+            <column length="65535" name="Pract_Name_Family"/>
         </property>
-        <property name="practitionerNamePeriodEnd" type="string">
+        <property name="practNameGiven" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Period_End"/>
+            <column length="65535" name="Pract_Name_Given"/>
         </property>
-        <property name="practitionerNamePeriodStart" type="string">
+        <property name="practNamePeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Period_Start"/>
+            <column length="65535" name="Pract_Name_Period_End"/>
         </property>
-        <property name="practitionerNamePrefix" type="string">
+        <property name="practNamePeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Prefix"/>
+            <column length="65535" name="Pract_Name_Period_Start"/>
         </property>
-        <property name="practitionerNameSuffix" type="string">
+        <property name="practNamePrefix" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Suffix"/>
+            <column length="65535" name="Pract_Name_Prefix"/>
         </property>
-        <property name="practitionerNameText" type="string">
+        <property name="practNameSuffix" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Text"/>
+            <column length="65535" name="Pract_Name_Suffix"/>
         </property>
-        <property name="practitionerNameUseCode" type="string">
+        <property name="practNameText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Name_Use_Code"/>
+            <column length="65535" name="Pract_Name_Text"/>
         </property>
-        <property name="practitionerPhotoContentType" type="string">
+        <property name="practNameUseCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_ContentType"/>
+            <column length="65535" name="Pract_Name_Use_Code"/>
         </property>
-        <property name="practitionerPhotoCreation" type="string">
+        <property name="practPhotoContentType" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Creation"/>
+            <column length="65535" name="Pract_Photo_ContentType"/>
         </property>
-        <property name="practitionerPhotoData" type="string">
+        <property name="practPhotoCreation" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Data"/>
+            <column length="65535" name="Pract_Photo_Creation"/>
         </property>
-        <property name="practitionerPhotoHash" type="string">
+        <property name="practPhotoData" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Hash"/>
+            <column length="65535" name="Pract_Photo_Data"/>
         </property>
-        <property name="practitionerPhotoLanguage" type="string">
+        <property name="practPhotoHash" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Language"/>
+            <column length="65535" name="Pract_Photo_Hash"/>
         </property>
-        <property name="practitionerPhotoSize" type="string">
+        <property name="practPhotoLang" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Size"/>
+            <column length="65535" name="Pract_Photo_Lang"/>
         </property>
-        <property name="practitionerPhotoTitle" type="string">
+        <property name="practPhotoSize" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Title"/>
+            <column length="65535" name="Pract_Photo_Size"/>
         </property>
-        <property name="practitionerPhotoUrl" type="string">
+        <property name="practPhotoTitle" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Photo_Url"/>
+            <column length="65535" name="Pract_Photo_Title"/>
         </property>
-        <property name="practitionerQualificationCodeCodingCode" type="string">
+        <property name="practPhotoUrl" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Coding_Code"/>
+            <column length="65535" name="Pract_Photo_Url"/>
         </property>
-        <property name="practitionerQualificationCodeCodingDisplay" type="string">
+        <property name="practQualificationCodeCodingCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Coding_Display"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Code"/>
         </property>
-        <property name="practitionerQualificationCodeCodingSystem" type="string">
+        <property name="practQualificationCodeCodingDisplay" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Coding_System"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Display"/>
         </property>
-        <property name="practitionerQualificationCodeCodingUserSelected" type="string">
+        <property name="practQualificationCodeCodingSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Coding_UserSelected"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_System"/>
         </property>
-        <property name="practitionerQualificationCodeCodingVersion" type="string">
+        <property name="practQualificationCodeCodingUsrslt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Coding_Version"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Usrslt"/>
         </property>
-        <property name="practitionerQualificationCodeText" type="string">
+        <property name="practQualificationCodeCodingVersion" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Code_Text"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Version"/>
         </property>
-        <property name="practitionerQualificationIdentifierAssigner" type="string">
+        <property name="practQualificationCodeText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Assigner"/>
+            <column length="65535" name="Pract_Qualification_Code_Text"/>
         </property>
-        <property name="practitionerQualificationIdentifierPeriodEnd" type="string">
+        <property name="practQualificationIdAssigner" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Period_End"/>
+            <column length="65535" name="Pract_Qualification_Id_Assigner"/>
         </property>
-        <property name="practitionerQualificationIdentifierPeriodStart" type="string">
+        <property name="practQualificationIdPeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Period_Start"/>
+            <column length="65535" name="Pract_Qualification_Id_Period_End"/>
         </property>
-        <property name="practitionerQualificationIdentifierSystem" type="string">
+        <property name="practQualificationIdPeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_System"/>
+            <column length="65535" name="Pract_Qualification_Id_Period_Start"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeCodingCode" type="string">
+        <property name="practQualificationIdSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Coding_Code"/>
+            <column length="65535" name="Pract_Qualification_Id_System"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeCodingDisplay" type="string">
+        <property name="practQualificationIdTypeCodingCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Coding_Display"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Code"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeCodingSystem" type="string">
+        <property name="practQualificationIdTypeCodingDisplay" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Coding_System"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Display"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeCodingUserSelected" type="string">
+        <property name="practQualificationIdTypeCodingSystem" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Coding_UserSelected"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_System"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeCodingVersion" type="string">
+        <property name="practQualificationIdTypeCodingUsrslt" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Coding_Version"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Usrslt"/>
         </property>
-        <property name="practitionerQualificationIdentifierTypeText" type="string">
+        <property name="practQualificationIdTypeCodingVersion" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Type_Text"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Version"/>
         </property>
-        <property name="practitionerQualificationIdentifierUseCode" type="string">
+        <property name="practQualificationIdTypeText" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Use_Code"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Text"/>
         </property>
-        <property name="practitionerQualificationIdentifierValue" type="string">
+        <property name="practQualificationIdUseCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Identifier_Value"/>
+            <column length="65535" name="Pract_Qualification_Id_Use_Code"/>
         </property>
-        <property name="practitionerQualificationIssuer" type="string">
+        <property name="practQualificationIdValue" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Issuer"/>
+            <column length="65535" name="Pract_Qualification_Id_Value"/>
         </property>
-        <property name="practitionerQualificationPeriodEnd" type="string">
+        <property name="practQualificationIssuer" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Period_End"/>
+            <column length="65535" name="Pract_Qualification_Issuer"/>
         </property>
-        <property name="practitionerQualificationPeriodStart" type="string">
+        <property name="practQualificationPeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Qualification_Period_Start"/>
+            <column length="65535" name="Pract_Qualification_Period_End"/>
         </property>
-        <property name="practitionerTelecomPeriodEnd" type="string">
+        <property name="practQualificationPeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Telecom_Period_End"/>
+            <column length="65535" name="Pract_Qualification_Period_Start"/>
         </property>
-        <property name="practitionerTelecomPeriodStart" type="string">
+        <property name="practTelecomPeriodEnd" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Telecom_Period_Start"/>
+            <column length="65535" name="Pract_Telecom_Period_End"/>
         </property>
-        <property name="practitionerTelecomRank" type="string">
+        <property name="practTelecomPeriodStart" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Telecom_Rank"/>
+            <column length="65535" name="Pract_Telecom_Period_Start"/>
         </property>
-        <property name="practitionerTelecomSystemCode" type="string">
+        <property name="practTelecomRank" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Telecom_System_Code"/>
+            <column length="65535" name="Pract_Telecom_Rank"/>
         </property>
-        <property name="practitionerTelecomUseCode" type="string">
+        <property name="practTelecomSystemCode" type="string">
             <meta attribute="resource-type"/>
-            <column length="65535" name="Practitioner_Telecom_Use_Code"/>
+            <column length="65535" name="Pract_Telecom_System_Code"/>
+        </property>
+        <property name="practTelecomUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Use_Code"/>
+        </property>
+        <property name="practTelecomValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Value"/>
         </property>
     </class>
 </hibernate-mapping>

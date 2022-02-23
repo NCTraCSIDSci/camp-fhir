@@ -6,6 +6,10 @@ public class ProcedureConversion
 	public org.hl7.fhir.r4.model.Procedure Procedures(Procedure p) throws ParseException
 	{
 		org.hl7.fhir.r4.model.Procedure procedure = new org.hl7.fhir.r4.model.Procedure();
+
+		/******************** id ********************************************************************************/
+		procedure.setId(p.getId());
+
 		/******************** Procedure_Asserter ********************************************************************************/
 		if(p.getProcedureAsserter() != null) {
 			org.hl7.fhir.r4.model.Reference ProcedureAsserterref = new org.hl7.fhir.r4.model.Reference();
@@ -34,9 +38,9 @@ public class ProcedureConversion
 		if(p.getProcedureBodySiteCodingSystem() != null) {
 			procedureaddbodysiteaddcoding.setSystem(p.getProcedureBodySiteCodingSystem());
 		}
-		/******************** Procedure_BodySite_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureBodySiteCodingUserSelected() != null) {
-			procedureaddbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureBodySiteCodingUserSelected()));
+		/******************** Procedure_BodySite_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureBodySiteCodingUsrslt() != null) {
+			procedureaddbodysiteaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureBodySiteCodingUsrslt()));
 		}
 		/******************** Procedure_BodySite_Coding_Version ********************************************************************************/
 		if(p.getProcedureBodySiteCodingVersion() != null) {
@@ -65,9 +69,9 @@ public class ProcedureConversion
 		if(p.getProcedureCategoryCodingSystem() != null) {
 			proceduresetcategoryaddcoding.setSystem(p.getProcedureCategoryCodingSystem());
 		}
-		/******************** Procedure_Category_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureCategoryCodingUserSelected() != null) {
-			proceduresetcategoryaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureCategoryCodingUserSelected()));
+		/******************** Procedure_Category_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureCategoryCodingUsrslt() != null) {
+			proceduresetcategoryaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureCategoryCodingUsrslt()));
 		}
 		/******************** Procedure_Category_Coding_Version ********************************************************************************/
 		if(p.getProcedureCategoryCodingVersion() != null) {
@@ -96,9 +100,9 @@ public class ProcedureConversion
 		if(p.getProcedureCodeCodingSystem() != null) {
 			proceduresetcodeaddcoding.setSystem(p.getProcedureCodeCodingSystem());
 		}
-		/******************** Procedure_Code_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureCodeCodingUserSelected() != null) {
-			proceduresetcodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureCodeCodingUserSelected()));
+		/******************** Procedure_Code_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureCodeCodingUsrslt() != null) {
+			proceduresetcodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureCodeCodingUsrslt()));
 		}
 		/******************** Procedure_Code_Coding_Version ********************************************************************************/
 		if(p.getProcedureCodeCodingVersion() != null) {
@@ -126,9 +130,9 @@ public class ProcedureConversion
 		if(p.getProcedureComplicationCodingSystem() != null) {
 			procedureaddcomplicationaddcoding.setSystem(p.getProcedureComplicationCodingSystem());
 		}
-		/******************** Procedure_Complication_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureComplicationCodingUserSelected() != null) {
-			procedureaddcomplicationaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureComplicationCodingUserSelected()));
+		/******************** Procedure_Complication_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureComplicationCodingUsrslt() != null) {
+			procedureaddcomplicationaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureComplicationCodingUsrslt()));
 		}
 		/******************** Procedure_Complication_Coding_Version ********************************************************************************/
 		if(p.getProcedureComplicationCodingVersion() != null) {
@@ -143,10 +147,10 @@ public class ProcedureConversion
 			org.hl7.fhir.r4.model.Reference ProcedureComplicationDetailref = new org.hl7.fhir.r4.model.Reference();
 			procedure.addComplicationDetail(ProcedureComplicationDetailref.setReference(p.getProcedureComplicationDetail()));
 		}
-		/******************** Procedure_Encounter ********************************************************************************/
-		if(p.getProcedureEncounter() != null) {
-			org.hl7.fhir.r4.model.Reference ProcedureEncounterref = new org.hl7.fhir.r4.model.Reference();
-			procedure.setEncounter(ProcedureEncounterref.setReference(p.getProcedureEncounter()));
+		/******************** Procedure_Enc ********************************************************************************/
+		if(p.getProcedureEnc() != null) {
+			org.hl7.fhir.r4.model.Reference ProcedureEncref = new org.hl7.fhir.r4.model.Reference();
+			procedure.setEncounter(ProcedureEncref.setReference(p.getProcedureEnc()));
 		}
 
 		org.hl7.fhir.r4.model.Procedure.ProcedureFocalDeviceComponent procedureaddfocaldevice = procedure.addFocalDevice();
@@ -170,9 +174,9 @@ public class ProcedureConversion
 		if(p.getProcedureFocalDeviceActionCodingSystem() != null) {
 			procedureaddfocaldevicesetactionaddcoding.setSystem(p.getProcedureFocalDeviceActionCodingSystem());
 		}
-		/******************** Procedure_FocalDevice_Action_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureFocalDeviceActionCodingUserSelected() != null) {
-			procedureaddfocaldevicesetactionaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureFocalDeviceActionCodingUserSelected()));
+		/******************** Procedure_FocalDevice_Action_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureFocalDeviceActionCodingUsrslt() != null) {
+			procedureaddfocaldevicesetactionaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureFocalDeviceActionCodingUsrslt()));
 		}
 		/******************** Procedure_FocalDevice_Action_Coding_Version ********************************************************************************/
 		if(p.getProcedureFocalDeviceActionCodingVersion() != null) {
@@ -205,9 +209,9 @@ public class ProcedureConversion
 		if(p.getProcedureFollowUpCodingSystem() != null) {
 			procedureaddfollowupaddcoding.setSystem(p.getProcedureFollowUpCodingSystem());
 		}
-		/******************** Procedure_FollowUp_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureFollowUpCodingUserSelected() != null) {
-			procedureaddfollowupaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureFollowUpCodingUserSelected()));
+		/******************** Procedure_FollowUp_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureFollowUpCodingUsrslt() != null) {
+			procedureaddfollowupaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureFollowUpCodingUsrslt()));
 		}
 		/******************** Procedure_FollowUp_Coding_Version ********************************************************************************/
 		if(p.getProcedureFollowUpCodingVersion() != null) {
@@ -220,30 +224,30 @@ public class ProcedureConversion
 
 		org.hl7.fhir.r4.model.Identifier procedureaddidentifier = procedure.addIdentifier();
 
-		/******************** Procedure_Identifier_Assigner ********************************************************************************/
-		if(p.getProcedureIdentifierAssigner() != null) {
-			org.hl7.fhir.r4.model.Reference ProcedureIdentifierAssignerref = new org.hl7.fhir.r4.model.Reference();
-			procedureaddidentifier.setAssigner(ProcedureIdentifierAssignerref.setReference(p.getProcedureIdentifierAssigner()));
+		/******************** Procedure_Id_Assigner ********************************************************************************/
+		if(p.getProcedureIdAssigner() != null) {
+			org.hl7.fhir.r4.model.Reference ProcedureIdAssignerref = new org.hl7.fhir.r4.model.Reference();
+			procedureaddidentifier.setAssigner(ProcedureIdAssignerref.setReference(p.getProcedureIdAssigner()));
 		}
 
 		org.hl7.fhir.r4.model.Period procedureaddidentifiersetperiod = new org.hl7.fhir.r4.model.Period();
 		procedureaddidentifier.setPeriod(procedureaddidentifiersetperiod);
 
-		/******************** Procedure_Identifier_Period_End ********************************************************************************/
-		if(p.getProcedureIdentifierPeriodEnd() != null) {
-			java.text.SimpleDateFormat ProcedureIdentifierPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ProcedureIdentifierPeriodEnddate = ProcedureIdentifierPeriodEndsdf.parse(p.getProcedureIdentifierPeriodEnd());
-			procedureaddidentifiersetperiod.setEnd(ProcedureIdentifierPeriodEnddate);
+		/******************** Procedure_Id_Period_End ********************************************************************************/
+		if(p.getProcedureIdPeriodEnd() != null) {
+			java.text.SimpleDateFormat ProcedureIdPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ProcedureIdPeriodEnddate = ProcedureIdPeriodEndsdf.parse(p.getProcedureIdPeriodEnd());
+			procedureaddidentifiersetperiod.setEnd(ProcedureIdPeriodEnddate);
 		}
-		/******************** Procedure_Identifier_Period_Start ********************************************************************************/
-		if(p.getProcedureIdentifierPeriodStart() != null) {
-			java.text.SimpleDateFormat ProcedureIdentifierPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
-			java.util.Date ProcedureIdentifierPeriodStartdate = ProcedureIdentifierPeriodStartsdf.parse(p.getProcedureIdentifierPeriodStart());
-			procedureaddidentifiersetperiod.setStart(ProcedureIdentifierPeriodStartdate);
+		/******************** Procedure_Id_Period_Start ********************************************************************************/
+		if(p.getProcedureIdPeriodStart() != null) {
+			java.text.SimpleDateFormat ProcedureIdPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ProcedureIdPeriodStartdate = ProcedureIdPeriodStartsdf.parse(p.getProcedureIdPeriodStart());
+			procedureaddidentifiersetperiod.setStart(ProcedureIdPeriodStartdate);
 		}
-		/******************** Procedure_Identifier_System ********************************************************************************/
-		if(p.getProcedureIdentifierSystem() != null) {
-			procedureaddidentifier.setSystem(p.getProcedureIdentifierSystem());
+		/******************** Procedure_Id_System ********************************************************************************/
+		if(p.getProcedureIdSystem() != null) {
+			procedureaddidentifier.setSystem(p.getProcedureIdSystem());
 		}
 
 		org.hl7.fhir.r4.model.CodeableConcept procedureaddidentifiersettype = new org.hl7.fhir.r4.model.CodeableConcept();
@@ -252,41 +256,41 @@ public class ProcedureConversion
 
 		org.hl7.fhir.r4.model.Coding procedureaddidentifiersettypeaddcoding = procedureaddidentifiersettype.addCoding();
 
-		/******************** Procedure_Identifier_Type_Coding_Code ********************************************************************************/
-		if(p.getProcedureIdentifierTypeCodingCode() != null) {
-			procedureaddidentifiersettypeaddcoding.setCode(p.getProcedureIdentifierTypeCodingCode());
+		/******************** Procedure_Id_Type_Coding_Code ********************************************************************************/
+		if(p.getProcedureIdTypeCodingCode() != null) {
+			procedureaddidentifiersettypeaddcoding.setCode(p.getProcedureIdTypeCodingCode());
 		}
-		/******************** Procedure_Identifier_Type_Coding_Display ********************************************************************************/
-		if(p.getProcedureIdentifierTypeCodingDisplay() != null) {
-			procedureaddidentifiersettypeaddcoding.setDisplay(p.getProcedureIdentifierTypeCodingDisplay());
+		/******************** Procedure_Id_Type_Coding_Display ********************************************************************************/
+		if(p.getProcedureIdTypeCodingDisplay() != null) {
+			procedureaddidentifiersettypeaddcoding.setDisplay(p.getProcedureIdTypeCodingDisplay());
 		}
-		/******************** Procedure_Identifier_Type_Coding_System ********************************************************************************/
-		if(p.getProcedureIdentifierTypeCodingSystem() != null) {
-			procedureaddidentifiersettypeaddcoding.setSystem(p.getProcedureIdentifierTypeCodingSystem());
+		/******************** Procedure_Id_Type_Coding_System ********************************************************************************/
+		if(p.getProcedureIdTypeCodingSystem() != null) {
+			procedureaddidentifiersettypeaddcoding.setSystem(p.getProcedureIdTypeCodingSystem());
 		}
-		/******************** Procedure_Identifier_Type_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureIdentifierTypeCodingUserSelected() != null) {
-			procedureaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureIdentifierTypeCodingUserSelected()));
+		/******************** Procedure_Id_Type_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureIdTypeCodingUsrslt() != null) {
+			procedureaddidentifiersettypeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureIdTypeCodingUsrslt()));
 		}
-		/******************** Procedure_Identifier_Type_Coding_Version ********************************************************************************/
-		if(p.getProcedureIdentifierTypeCodingVersion() != null) {
-			procedureaddidentifiersettypeaddcoding.setVersion(p.getProcedureIdentifierTypeCodingVersion());
+		/******************** Procedure_Id_Type_Coding_Version ********************************************************************************/
+		if(p.getProcedureIdTypeCodingVersion() != null) {
+			procedureaddidentifiersettypeaddcoding.setVersion(p.getProcedureIdTypeCodingVersion());
 		}
-		/******************** Procedure_Identifier_Type_Text ********************************************************************************/
-		if(p.getProcedureIdentifierTypeText() != null) {
-			procedureaddidentifiersettype.setText(p.getProcedureIdentifierTypeText());
+		/******************** Procedure_Id_Type_Text ********************************************************************************/
+		if(p.getProcedureIdTypeText() != null) {
+			procedureaddidentifiersettype.setText(p.getProcedureIdTypeText());
 		}
 
 		org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory procedureaddidentifiersetuseEnumFactory = new org.hl7.fhir.r4.model.Identifier.IdentifierUseEnumFactory();
 
-		/******************** Procedure_Identifier_Use_Code ********************************************************************************/
-		if(p.getProcedureIdentifierUseCode() != null) {
-			procedureaddidentifier.setUse(procedureaddidentifiersetuseEnumFactory.fromCode(p.getProcedureIdentifierUseCode()));
+		/******************** Procedure_Id_Use_Code ********************************************************************************/
+		if(p.getProcedureIdUseCode() != null) {
+			procedureaddidentifier.setUse(procedureaddidentifiersetuseEnumFactory.fromCode(p.getProcedureIdUseCode()));
 
 		}
-		/******************** Procedure_Identifier_Value ********************************************************************************/
-		if(p.getProcedureIdentifierValue() != null) {
-			procedureaddidentifier.setValue(p.getProcedureIdentifierValue());
+		/******************** Procedure_Id_Value ********************************************************************************/
+		if(p.getProcedureIdValue() != null) {
+			procedureaddidentifier.setValue(p.getProcedureIdValue());
 		}
 		/******************** Procedure_InstantiatesCanonical ********************************************************************************/
 		if(p.getProcedureInstantiatesCanonical() != null) {
@@ -304,9 +308,14 @@ public class ProcedureConversion
 
 		org.hl7.fhir.r4.model.Annotation procedureaddnote = procedure.addNote();
 
-		/******************** Procedure_Note_Author ********************************************************************************/
-		if(p.getProcedureNoteAuthor() != null) {
-			procedureaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(p.getProcedureNoteAuthor()));
+		/******************** Procedure_Note_AuthorReference ********************************************************************************/
+		if(p.getProcedureNoteAuthorReference() != null) {
+			org.hl7.fhir.r4.model.Reference ProcedureNoteAuthorReferenceref = new org.hl7.fhir.r4.model.Reference();
+			procedureaddnote.setAuthor(ProcedureNoteAuthorReferenceref.setReference(p.getProcedureNoteAuthorReference()));
+		}
+		/******************** Procedure_Note_AuthorString ********************************************************************************/
+		if(p.getProcedureNoteAuthorString() != null) {
+			procedureaddnote.setAuthor(new org.hl7.fhir.r4.model.StringType(p.getProcedureNoteAuthorString()));
 		}
 		/******************** Procedure_Note_Text ********************************************************************************/
 		if(p.getProcedureNoteText() != null) {
@@ -337,9 +346,9 @@ public class ProcedureConversion
 		if(p.getProcedureOutcomeCodingSystem() != null) {
 			proceduresetoutcomeaddcoding.setSystem(p.getProcedureOutcomeCodingSystem());
 		}
-		/******************** Procedure_Outcome_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureOutcomeCodingUserSelected() != null) {
-			proceduresetoutcomeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureOutcomeCodingUserSelected()));
+		/******************** Procedure_Outcome_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureOutcomeCodingUsrslt() != null) {
+			proceduresetoutcomeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureOutcomeCodingUsrslt()));
 		}
 		/******************** Procedure_Outcome_Coding_Version ********************************************************************************/
 		if(p.getProcedureOutcomeCodingVersion() != null) {
@@ -357,6 +366,94 @@ public class ProcedureConversion
 		/******************** Procedure_Performed ********************************************************************************/
 		if(p.getProcedurePerformed() != null) {
 			procedure.setPerformed(new org.hl7.fhir.r4.model.StringType(p.getProcedurePerformed()));
+		}
+		/******************** Procedure_PerformedDateTime ********************************************************************************/
+		if(p.getProcedurePerformedDateTime() != null) {
+			procedure.setPerformed(new org.hl7.fhir.r4.model.DateTimeType(p.getProcedurePerformedDateTime()));
+		}
+
+		if( p.getProcedurePerformedPeriodEnd() != null || p.getProcedurePerformedPeriodStart() != null ) {
+			org.hl7.fhir.r4.model.Period proceduresetperformedPeriod = new org.hl7.fhir.r4.model.Period();
+			procedure.setPerformed(proceduresetperformedPeriod);
+
+		/******************** Procedure_Performed_Period_End ********************************************************************************/
+		if(p.getProcedurePerformedPeriodEnd() != null) {
+			java.text.SimpleDateFormat ProcedurePerformedPeriodEndsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ProcedurePerformedPeriodEnddate = ProcedurePerformedPeriodEndsdf.parse(p.getProcedurePerformedPeriodEnd());
+			proceduresetperformedPeriod.setEnd(ProcedurePerformedPeriodEnddate);
+		}
+		/******************** Procedure_Performed_Period_Start ********************************************************************************/
+		if(p.getProcedurePerformedPeriodStart() != null) {
+			java.text.SimpleDateFormat ProcedurePerformedPeriodStartsdf = new java.text.SimpleDateFormat("yyyy-M-dd");
+			java.util.Date ProcedurePerformedPeriodStartdate = ProcedurePerformedPeriodStartsdf.parse(p.getProcedurePerformedPeriodStart());
+			proceduresetperformedPeriod.setStart(ProcedurePerformedPeriodStartdate);
+		}
+		}
+
+		if( p.getProcedurePerformedRangeHighCode() != null || p.getProcedurePerformedRangeHighCompartrCode() != null || p.getProcedurePerformedRangeHighSystem() != null || p.getProcedurePerformedRangeHighUnit() != null || p.getProcedurePerformedRangeHighValue() != null || p.getProcedurePerformedRangeLowCode() != null || p.getProcedurePerformedRangeLowCompartrCode() != null || p.getProcedurePerformedRangeLowSystem() != null || p.getProcedurePerformedRangeLowUnit() != null || p.getProcedurePerformedRangeLowValue() != null ) {
+			org.hl7.fhir.r4.model.Range proceduresetperformedRange = new org.hl7.fhir.r4.model.Range();
+			procedure.setPerformed(proceduresetperformedRange);
+
+
+		org.hl7.fhir.r4.model.Quantity proceduresetperformedRangesethigh = new org.hl7.fhir.r4.model.Quantity();
+		proceduresetperformedRange.setHigh(proceduresetperformedRangesethigh);
+
+		/******************** Procedure_Performed_Range_High_Code ********************************************************************************/
+		if(p.getProcedurePerformedRangeHighCode() != null) {
+			proceduresetperformedRangesethigh.setCode(p.getProcedurePerformedRangeHighCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory proceduresetperformedRangesethighsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Procedure_Performed_Range_High_Compartr_Code ********************************************************************************/
+		if(p.getProcedurePerformedRangeHighCompartrCode() != null) {
+			proceduresetperformedRangesethigh.setComparator(proceduresetperformedRangesethighsetcomparatorEnumFactory.fromCode(p.getProcedurePerformedRangeHighCompartrCode()));
+
+		}
+		/******************** Procedure_Performed_Range_High_System ********************************************************************************/
+		if(p.getProcedurePerformedRangeHighSystem() != null) {
+			proceduresetperformedRangesethigh.setSystem(p.getProcedurePerformedRangeHighSystem());
+		}
+		/******************** Procedure_Performed_Range_High_Unit ********************************************************************************/
+		if(p.getProcedurePerformedRangeHighUnit() != null) {
+			proceduresetperformedRangesethigh.setUnit(p.getProcedurePerformedRangeHighUnit());
+		}
+		/******************** Procedure_Performed_Range_High_Value ********************************************************************************/
+		if(p.getProcedurePerformedRangeHighValue() != null) {
+			proceduresetperformedRangesethigh.setValue(Double.parseDouble((p.getProcedurePerformedRangeHighValue())));
+		}
+
+		org.hl7.fhir.r4.model.Quantity proceduresetperformedRangesetlow = new org.hl7.fhir.r4.model.Quantity();
+		proceduresetperformedRange.setLow(proceduresetperformedRangesetlow);
+
+		/******************** Procedure_Performed_Range_Low_Code ********************************************************************************/
+		if(p.getProcedurePerformedRangeLowCode() != null) {
+			proceduresetperformedRangesetlow.setCode(p.getProcedurePerformedRangeLowCode());
+		}
+
+		org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory proceduresetperformedRangesetlowsetcomparatorEnumFactory = new org.hl7.fhir.r4.model.Quantity.QuantityComparatorEnumFactory();
+
+		/******************** Procedure_Performed_Range_Low_Compartr_Code ********************************************************************************/
+		if(p.getProcedurePerformedRangeLowCompartrCode() != null) {
+			proceduresetperformedRangesetlow.setComparator(proceduresetperformedRangesetlowsetcomparatorEnumFactory.fromCode(p.getProcedurePerformedRangeLowCompartrCode()));
+
+		}
+		/******************** Procedure_Performed_Range_Low_System ********************************************************************************/
+		if(p.getProcedurePerformedRangeLowSystem() != null) {
+			proceduresetperformedRangesetlow.setSystem(p.getProcedurePerformedRangeLowSystem());
+		}
+		/******************** Procedure_Performed_Range_Low_Unit ********************************************************************************/
+		if(p.getProcedurePerformedRangeLowUnit() != null) {
+			proceduresetperformedRangesetlow.setUnit(p.getProcedurePerformedRangeLowUnit());
+		}
+		/******************** Procedure_Performed_Range_Low_Value ********************************************************************************/
+		if(p.getProcedurePerformedRangeLowValue() != null) {
+			proceduresetperformedRangesetlow.setValue(Double.parseDouble((p.getProcedurePerformedRangeLowValue())));
+		}
+		}
+		/******************** Procedure_PerformedString ********************************************************************************/
+		if(p.getProcedurePerformedString() != null) {
+			procedure.setPerformed(new org.hl7.fhir.r4.model.StringType(p.getProcedurePerformedString()));
 		}
 
 		org.hl7.fhir.r4.model.Procedure.ProcedurePerformerComponent procedureaddperformer = procedure.addPerformer();
@@ -385,9 +482,9 @@ public class ProcedureConversion
 		if(p.getProcedurePerformerFunctionCodingSystem() != null) {
 			procedureaddperformersetfunctionaddcoding.setSystem(p.getProcedurePerformerFunctionCodingSystem());
 		}
-		/******************** Procedure_Performer_Function_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedurePerformerFunctionCodingUserSelected() != null) {
-			procedureaddperformersetfunctionaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedurePerformerFunctionCodingUserSelected()));
+		/******************** Procedure_Performer_Function_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedurePerformerFunctionCodingUsrslt() != null) {
+			procedureaddperformersetfunctionaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedurePerformerFunctionCodingUsrslt()));
 		}
 		/******************** Procedure_Performer_Function_Coding_Version ********************************************************************************/
 		if(p.getProcedurePerformerFunctionCodingVersion() != null) {
@@ -420,9 +517,9 @@ public class ProcedureConversion
 		if(p.getProcedureReasonCodeCodingSystem() != null) {
 			procedureaddreasoncodeaddcoding.setSystem(p.getProcedureReasonCodeCodingSystem());
 		}
-		/******************** Procedure_ReasonCode_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureReasonCodeCodingUserSelected() != null) {
-			procedureaddreasoncodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureReasonCodeCodingUserSelected()));
+		/******************** Procedure_ReasonCode_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureReasonCodeCodingUsrslt() != null) {
+			procedureaddreasoncodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureReasonCodeCodingUsrslt()));
 		}
 		/******************** Procedure_ReasonCode_Coding_Version ********************************************************************************/
 		if(p.getProcedureReasonCodeCodingVersion() != null) {
@@ -474,9 +571,9 @@ public class ProcedureConversion
 		if(p.getProcedureStatusReasonCodingSystem() != null) {
 			proceduresetstatusreasonaddcoding.setSystem(p.getProcedureStatusReasonCodingSystem());
 		}
-		/******************** Procedure_StatusReason_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureStatusReasonCodingUserSelected() != null) {
-			proceduresetstatusreasonaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureStatusReasonCodingUserSelected()));
+		/******************** Procedure_StatusReason_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureStatusReasonCodingUsrslt() != null) {
+			proceduresetstatusreasonaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureStatusReasonCodingUsrslt()));
 		}
 		/******************** Procedure_StatusReason_Coding_Version ********************************************************************************/
 		if(p.getProcedureStatusReasonCodingVersion() != null) {
@@ -509,9 +606,9 @@ public class ProcedureConversion
 		if(p.getProcedureUsedCodeCodingSystem() != null) {
 			procedureaddusedcodeaddcoding.setSystem(p.getProcedureUsedCodeCodingSystem());
 		}
-		/******************** Procedure_UsedCode_Coding_UserSelected ********************************************************************************/
-		if(p.getProcedureUsedCodeCodingUserSelected() != null) {
-			procedureaddusedcodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureUsedCodeCodingUserSelected()));
+		/******************** Procedure_UsedCode_Coding_Usrslt ********************************************************************************/
+		if(p.getProcedureUsedCodeCodingUsrslt() != null) {
+			procedureaddusedcodeaddcoding.setUserSelected(Boolean.parseBoolean(p.getProcedureUsedCodeCodingUsrslt()));
 		}
 		/******************** Procedure_UsedCode_Coding_Version ********************************************************************************/
 		if(p.getProcedureUsedCodeCodingVersion() != null) {
@@ -520,6 +617,11 @@ public class ProcedureConversion
 		/******************** Procedure_UsedCode_Text ********************************************************************************/
 		if(p.getProcedureUsedCodeText() != null) {
 			procedureaddusedcode.setText(p.getProcedureUsedCodeText());
+		}
+		/******************** Procedure_UsedReference ********************************************************************************/
+		if(p.getProcedureUsedReference() != null) {
+			org.hl7.fhir.r4.model.Reference ProcedureUsedReferenceref = new org.hl7.fhir.r4.model.Reference();
+			procedure.addUsedReference(ProcedureUsedReferenceref.setReference(p.getProcedureUsedReference()));
 		}
 		return procedure;
 	}

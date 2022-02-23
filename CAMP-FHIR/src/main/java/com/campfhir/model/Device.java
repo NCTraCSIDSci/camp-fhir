@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 16, 2022, 4:20:51 PM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,7 +10,7 @@ package main.java.com.campfhir.model;
 public class Device  implements java.io.Serializable {
 
 
-     private String deviceDistinctIdentifier;
+     private String id;
      private String deviceContactPeriodEnd;
      private String deviceContactPeriodStart;
      private String deviceContactRank;
@@ -20,25 +20,27 @@ public class Device  implements java.io.Serializable {
      private String deviceDefinition;
      private String deviceDeviceNameName;
      private String deviceDeviceNameTypeCode;
+     private String deviceDistinctId;
      private String deviceExpirationDate;
-     private String deviceIdentifierAssigner;
-     private String deviceIdentifierPeriodEnd;
-     private String deviceIdentifierPeriodStart;
-     private String deviceIdentifierSystem;
-     private String deviceIdentifierTypeCodingCode;
-     private String deviceIdentifierTypeCodingDisplay;
-     private String deviceIdentifierTypeCodingSystem;
-     private String deviceIdentifierTypeCodingUserSelected;
-     private String deviceIdentifierTypeCodingVersion;
-     private String deviceIdentifierTypeText;
-     private String deviceIdentifierUseCode;
-     private String deviceIdentifierValue;
+     private String deviceIdAssigner;
+     private String deviceIdPeriodEnd;
+     private String deviceIdPeriodStart;
+     private String deviceIdSystem;
+     private String deviceIdTypeCodingCode;
+     private String deviceIdTypeCodingDisplay;
+     private String deviceIdTypeCodingSystem;
+     private String deviceIdTypeCodingUsrslt;
+     private String deviceIdTypeCodingVersion;
+     private String deviceIdTypeText;
+     private String deviceIdUseCode;
+     private String deviceIdValue;
      private String deviceLocation;
      private String deviceLotNumber;
      private String deviceManufactureDate;
      private String deviceManufacturer;
      private String deviceModelNumber;
-     private String deviceNoteAuthor;
+     private String deviceNoteAuthorReference;
+     private String deviceNoteAuthorString;
      private String deviceNoteText;
      private String deviceNoteTime;
      private String deviceOwner;
@@ -48,31 +50,31 @@ public class Device  implements java.io.Serializable {
      private String devicePropertyTypeCodingCode;
      private String devicePropertyTypeCodingDisplay;
      private String devicePropertyTypeCodingSystem;
-     private String devicePropertyTypeCodingUserSelected;
+     private String devicePropertyTypeCodingUsrslt;
      private String devicePropertyTypeCodingVersion;
      private String devicePropertyTypeText;
      private String devicePropertyValueCodeCodingCode;
      private String devicePropertyValueCodeCodingDisplay;
      private String devicePropertyValueCodeCodingSystem;
-     private String devicePropertyValueCodeCodingUserSelected;
+     private String devicePropertyValueCodeCodingUsrslt;
      private String devicePropertyValueCodeCodingVersion;
      private String devicePropertyValueCodeText;
      private String devicePropertyValueQuantityCode;
-     private String devicePropertyValueQuantityComparatorCode;
+     private String devicePropertyValueQuantityCompartrCode;
      private String devicePropertyValueQuantitySystem;
      private String devicePropertyValueQuantityUnit;
      private String devicePropertyValueQuantityValue;
      private String deviceSafetyCodingCode;
      private String deviceSafetyCodingDisplay;
      private String deviceSafetyCodingSystem;
-     private String deviceSafetyCodingUserSelected;
+     private String deviceSafetyCodingUsrslt;
      private String deviceSafetyCodingVersion;
      private String deviceSafetyText;
      private String deviceSerialNumber;
      private String deviceSpecializationSystemTypeCodingCode;
      private String deviceSpecializationSystemTypeCodingDisplay;
      private String deviceSpecializationSystemTypeCodingSystem;
-     private String deviceSpecializationSystemTypeCodingUserSelected;
+     private String deviceSpecializationSystemTypeCodingUsrslt;
      private String deviceSpecializationSystemTypeCodingVersion;
      private String deviceSpecializationSystemTypeText;
      private String deviceSpecializationVersion;
@@ -80,18 +82,18 @@ public class Device  implements java.io.Serializable {
      private String deviceStatusReasonCodingCode;
      private String deviceStatusReasonCodingDisplay;
      private String deviceStatusReasonCodingSystem;
-     private String deviceStatusReasonCodingUserSelected;
+     private String deviceStatusReasonCodingUsrslt;
      private String deviceStatusReasonCodingVersion;
      private String deviceStatusReasonText;
      private String deviceTypeCodingCode;
      private String deviceTypeCodingDisplay;
      private String deviceTypeCodingSystem;
-     private String deviceTypeCodingUserSelected;
+     private String deviceTypeCodingUsrslt;
      private String deviceTypeCodingVersion;
      private String deviceTypeText;
      private String deviceUdiCarrierCarrierAidc;
      private String deviceUdiCarrierCarrierHrf;
-     private String deviceUdiCarrierDeviceIdentifier;
+     private String deviceUdiCarrierDeviceId;
      private String deviceUdiCarrierEntryTypeCode;
      private String deviceUdiCarrierIssuer;
      private String deviceUdiCarrierJurisdiction;
@@ -103,7 +105,7 @@ public class Device  implements java.io.Serializable {
      private String deviceVersionComponentTypeCodingCode;
      private String deviceVersionComponentTypeCodingDisplay;
      private String deviceVersionComponentTypeCodingSystem;
-     private String deviceVersionComponentTypeCodingUserSelected;
+     private String deviceVersionComponentTypeCodingUsrslt;
      private String deviceVersionComponentTypeCodingVersion;
      private String deviceVersionComponentTypeText;
      private String deviceVersionComponentUseCode;
@@ -111,19 +113,15 @@ public class Device  implements java.io.Serializable {
      private String deviceVersionTypeCodingCode;
      private String deviceVersionTypeCodingDisplay;
      private String deviceVersionTypeCodingSystem;
-     private String deviceVersionTypeCodingUserSelected;
+     private String deviceVersionTypeCodingUsrslt;
      private String deviceVersionTypeCodingVersion;
      private String deviceVersionTypeText;
+     private String deviceVersionValue;
 
     public Device() {
     }
 
-	
-    public Device(String deviceDistinctIdentifier) {
-        this.deviceDistinctIdentifier = deviceDistinctIdentifier;
-    }
-    public Device(String deviceDistinctIdentifier, String deviceContactPeriodEnd, String deviceContactPeriodStart, String deviceContactRank, String deviceContactSystemCode, String deviceContactUseCode, String deviceContactValue, String deviceDefinition, String deviceDeviceNameName, String deviceDeviceNameTypeCode, String deviceExpirationDate, String deviceIdentifierAssigner, String deviceIdentifierPeriodEnd, String deviceIdentifierPeriodStart, String deviceIdentifierSystem, String deviceIdentifierTypeCodingCode, String deviceIdentifierTypeCodingDisplay, String deviceIdentifierTypeCodingSystem, String deviceIdentifierTypeCodingUserSelected, String deviceIdentifierTypeCodingVersion, String deviceIdentifierTypeText, String deviceIdentifierUseCode, String deviceIdentifierValue, String deviceLocation, String deviceLotNumber, String deviceManufactureDate, String deviceManufacturer, String deviceModelNumber, String deviceNoteAuthor, String deviceNoteText, String deviceNoteTime, String deviceOwner, String deviceParent, String devicePartNumber, String devicePatient, String devicePropertyTypeCodingCode, String devicePropertyTypeCodingDisplay, String devicePropertyTypeCodingSystem, String devicePropertyTypeCodingUserSelected, String devicePropertyTypeCodingVersion, String devicePropertyTypeText, String devicePropertyValueCodeCodingCode, String devicePropertyValueCodeCodingDisplay, String devicePropertyValueCodeCodingSystem, String devicePropertyValueCodeCodingUserSelected, String devicePropertyValueCodeCodingVersion, String devicePropertyValueCodeText, String devicePropertyValueQuantityCode, String devicePropertyValueQuantityComparatorCode, String devicePropertyValueQuantitySystem, String devicePropertyValueQuantityUnit, String devicePropertyValueQuantityValue, String deviceSafetyCodingCode, String deviceSafetyCodingDisplay, String deviceSafetyCodingSystem, String deviceSafetyCodingUserSelected, String deviceSafetyCodingVersion, String deviceSafetyText, String deviceSerialNumber, String deviceSpecializationSystemTypeCodingCode, String deviceSpecializationSystemTypeCodingDisplay, String deviceSpecializationSystemTypeCodingSystem, String deviceSpecializationSystemTypeCodingUserSelected, String deviceSpecializationSystemTypeCodingVersion, String deviceSpecializationSystemTypeText, String deviceSpecializationVersion, String deviceStatusCode, String deviceStatusReasonCodingCode, String deviceStatusReasonCodingDisplay, String deviceStatusReasonCodingSystem, String deviceStatusReasonCodingUserSelected, String deviceStatusReasonCodingVersion, String deviceStatusReasonText, String deviceTypeCodingCode, String deviceTypeCodingDisplay, String deviceTypeCodingSystem, String deviceTypeCodingUserSelected, String deviceTypeCodingVersion, String deviceTypeText, String deviceUdiCarrierCarrierAidc, String deviceUdiCarrierCarrierHrf, String deviceUdiCarrierDeviceIdentifier, String deviceUdiCarrierEntryTypeCode, String deviceUdiCarrierIssuer, String deviceUdiCarrierJurisdiction, String deviceUrl, String deviceVersionComponentAssigner, String deviceVersionComponentPeriodEnd, String deviceVersionComponentPeriodStart, String deviceVersionComponentSystem, String deviceVersionComponentTypeCodingCode, String deviceVersionComponentTypeCodingDisplay, String deviceVersionComponentTypeCodingSystem, String deviceVersionComponentTypeCodingUserSelected, String deviceVersionComponentTypeCodingVersion, String deviceVersionComponentTypeText, String deviceVersionComponentUseCode, String deviceVersionComponentValue, String deviceVersionTypeCodingCode, String deviceVersionTypeCodingDisplay, String deviceVersionTypeCodingSystem, String deviceVersionTypeCodingUserSelected, String deviceVersionTypeCodingVersion, String deviceVersionTypeText) {
-       this.deviceDistinctIdentifier = deviceDistinctIdentifier;
+    public Device(String deviceContactPeriodEnd, String deviceContactPeriodStart, String deviceContactRank, String deviceContactSystemCode, String deviceContactUseCode, String deviceContactValue, String deviceDefinition, String deviceDeviceNameName, String deviceDeviceNameTypeCode, String deviceDistinctId, String deviceExpirationDate, String deviceIdAssigner, String deviceIdPeriodEnd, String deviceIdPeriodStart, String deviceIdSystem, String deviceIdTypeCodingCode, String deviceIdTypeCodingDisplay, String deviceIdTypeCodingSystem, String deviceIdTypeCodingUsrslt, String deviceIdTypeCodingVersion, String deviceIdTypeText, String deviceIdUseCode, String deviceIdValue, String deviceLocation, String deviceLotNumber, String deviceManufactureDate, String deviceManufacturer, String deviceModelNumber, String deviceNoteAuthorReference, String deviceNoteAuthorString, String deviceNoteText, String deviceNoteTime, String deviceOwner, String deviceParent, String devicePartNumber, String devicePatient, String devicePropertyTypeCodingCode, String devicePropertyTypeCodingDisplay, String devicePropertyTypeCodingSystem, String devicePropertyTypeCodingUsrslt, String devicePropertyTypeCodingVersion, String devicePropertyTypeText, String devicePropertyValueCodeCodingCode, String devicePropertyValueCodeCodingDisplay, String devicePropertyValueCodeCodingSystem, String devicePropertyValueCodeCodingUsrslt, String devicePropertyValueCodeCodingVersion, String devicePropertyValueCodeText, String devicePropertyValueQuantityCode, String devicePropertyValueQuantityCompartrCode, String devicePropertyValueQuantitySystem, String devicePropertyValueQuantityUnit, String devicePropertyValueQuantityValue, String deviceSafetyCodingCode, String deviceSafetyCodingDisplay, String deviceSafetyCodingSystem, String deviceSafetyCodingUsrslt, String deviceSafetyCodingVersion, String deviceSafetyText, String deviceSerialNumber, String deviceSpecializationSystemTypeCodingCode, String deviceSpecializationSystemTypeCodingDisplay, String deviceSpecializationSystemTypeCodingSystem, String deviceSpecializationSystemTypeCodingUsrslt, String deviceSpecializationSystemTypeCodingVersion, String deviceSpecializationSystemTypeText, String deviceSpecializationVersion, String deviceStatusCode, String deviceStatusReasonCodingCode, String deviceStatusReasonCodingDisplay, String deviceStatusReasonCodingSystem, String deviceStatusReasonCodingUsrslt, String deviceStatusReasonCodingVersion, String deviceStatusReasonText, String deviceTypeCodingCode, String deviceTypeCodingDisplay, String deviceTypeCodingSystem, String deviceTypeCodingUsrslt, String deviceTypeCodingVersion, String deviceTypeText, String deviceUdiCarrierCarrierAidc, String deviceUdiCarrierCarrierHrf, String deviceUdiCarrierDeviceId, String deviceUdiCarrierEntryTypeCode, String deviceUdiCarrierIssuer, String deviceUdiCarrierJurisdiction, String deviceUrl, String deviceVersionComponentAssigner, String deviceVersionComponentPeriodEnd, String deviceVersionComponentPeriodStart, String deviceVersionComponentSystem, String deviceVersionComponentTypeCodingCode, String deviceVersionComponentTypeCodingDisplay, String deviceVersionComponentTypeCodingSystem, String deviceVersionComponentTypeCodingUsrslt, String deviceVersionComponentTypeCodingVersion, String deviceVersionComponentTypeText, String deviceVersionComponentUseCode, String deviceVersionComponentValue, String deviceVersionTypeCodingCode, String deviceVersionTypeCodingDisplay, String deviceVersionTypeCodingSystem, String deviceVersionTypeCodingUsrslt, String deviceVersionTypeCodingVersion, String deviceVersionTypeText, String deviceVersionValue) {
        this.deviceContactPeriodEnd = deviceContactPeriodEnd;
        this.deviceContactPeriodStart = deviceContactPeriodStart;
        this.deviceContactRank = deviceContactRank;
@@ -133,25 +131,27 @@ public class Device  implements java.io.Serializable {
        this.deviceDefinition = deviceDefinition;
        this.deviceDeviceNameName = deviceDeviceNameName;
        this.deviceDeviceNameTypeCode = deviceDeviceNameTypeCode;
+       this.deviceDistinctId = deviceDistinctId;
        this.deviceExpirationDate = deviceExpirationDate;
-       this.deviceIdentifierAssigner = deviceIdentifierAssigner;
-       this.deviceIdentifierPeriodEnd = deviceIdentifierPeriodEnd;
-       this.deviceIdentifierPeriodStart = deviceIdentifierPeriodStart;
-       this.deviceIdentifierSystem = deviceIdentifierSystem;
-       this.deviceIdentifierTypeCodingCode = deviceIdentifierTypeCodingCode;
-       this.deviceIdentifierTypeCodingDisplay = deviceIdentifierTypeCodingDisplay;
-       this.deviceIdentifierTypeCodingSystem = deviceIdentifierTypeCodingSystem;
-       this.deviceIdentifierTypeCodingUserSelected = deviceIdentifierTypeCodingUserSelected;
-       this.deviceIdentifierTypeCodingVersion = deviceIdentifierTypeCodingVersion;
-       this.deviceIdentifierTypeText = deviceIdentifierTypeText;
-       this.deviceIdentifierUseCode = deviceIdentifierUseCode;
-       this.deviceIdentifierValue = deviceIdentifierValue;
+       this.deviceIdAssigner = deviceIdAssigner;
+       this.deviceIdPeriodEnd = deviceIdPeriodEnd;
+       this.deviceIdPeriodStart = deviceIdPeriodStart;
+       this.deviceIdSystem = deviceIdSystem;
+       this.deviceIdTypeCodingCode = deviceIdTypeCodingCode;
+       this.deviceIdTypeCodingDisplay = deviceIdTypeCodingDisplay;
+       this.deviceIdTypeCodingSystem = deviceIdTypeCodingSystem;
+       this.deviceIdTypeCodingUsrslt = deviceIdTypeCodingUsrslt;
+       this.deviceIdTypeCodingVersion = deviceIdTypeCodingVersion;
+       this.deviceIdTypeText = deviceIdTypeText;
+       this.deviceIdUseCode = deviceIdUseCode;
+       this.deviceIdValue = deviceIdValue;
        this.deviceLocation = deviceLocation;
        this.deviceLotNumber = deviceLotNumber;
        this.deviceManufactureDate = deviceManufactureDate;
        this.deviceManufacturer = deviceManufacturer;
        this.deviceModelNumber = deviceModelNumber;
-       this.deviceNoteAuthor = deviceNoteAuthor;
+       this.deviceNoteAuthorReference = deviceNoteAuthorReference;
+       this.deviceNoteAuthorString = deviceNoteAuthorString;
        this.deviceNoteText = deviceNoteText;
        this.deviceNoteTime = deviceNoteTime;
        this.deviceOwner = deviceOwner;
@@ -161,31 +161,31 @@ public class Device  implements java.io.Serializable {
        this.devicePropertyTypeCodingCode = devicePropertyTypeCodingCode;
        this.devicePropertyTypeCodingDisplay = devicePropertyTypeCodingDisplay;
        this.devicePropertyTypeCodingSystem = devicePropertyTypeCodingSystem;
-       this.devicePropertyTypeCodingUserSelected = devicePropertyTypeCodingUserSelected;
+       this.devicePropertyTypeCodingUsrslt = devicePropertyTypeCodingUsrslt;
        this.devicePropertyTypeCodingVersion = devicePropertyTypeCodingVersion;
        this.devicePropertyTypeText = devicePropertyTypeText;
        this.devicePropertyValueCodeCodingCode = devicePropertyValueCodeCodingCode;
        this.devicePropertyValueCodeCodingDisplay = devicePropertyValueCodeCodingDisplay;
        this.devicePropertyValueCodeCodingSystem = devicePropertyValueCodeCodingSystem;
-       this.devicePropertyValueCodeCodingUserSelected = devicePropertyValueCodeCodingUserSelected;
+       this.devicePropertyValueCodeCodingUsrslt = devicePropertyValueCodeCodingUsrslt;
        this.devicePropertyValueCodeCodingVersion = devicePropertyValueCodeCodingVersion;
        this.devicePropertyValueCodeText = devicePropertyValueCodeText;
        this.devicePropertyValueQuantityCode = devicePropertyValueQuantityCode;
-       this.devicePropertyValueQuantityComparatorCode = devicePropertyValueQuantityComparatorCode;
+       this.devicePropertyValueQuantityCompartrCode = devicePropertyValueQuantityCompartrCode;
        this.devicePropertyValueQuantitySystem = devicePropertyValueQuantitySystem;
        this.devicePropertyValueQuantityUnit = devicePropertyValueQuantityUnit;
        this.devicePropertyValueQuantityValue = devicePropertyValueQuantityValue;
        this.deviceSafetyCodingCode = deviceSafetyCodingCode;
        this.deviceSafetyCodingDisplay = deviceSafetyCodingDisplay;
        this.deviceSafetyCodingSystem = deviceSafetyCodingSystem;
-       this.deviceSafetyCodingUserSelected = deviceSafetyCodingUserSelected;
+       this.deviceSafetyCodingUsrslt = deviceSafetyCodingUsrslt;
        this.deviceSafetyCodingVersion = deviceSafetyCodingVersion;
        this.deviceSafetyText = deviceSafetyText;
        this.deviceSerialNumber = deviceSerialNumber;
        this.deviceSpecializationSystemTypeCodingCode = deviceSpecializationSystemTypeCodingCode;
        this.deviceSpecializationSystemTypeCodingDisplay = deviceSpecializationSystemTypeCodingDisplay;
        this.deviceSpecializationSystemTypeCodingSystem = deviceSpecializationSystemTypeCodingSystem;
-       this.deviceSpecializationSystemTypeCodingUserSelected = deviceSpecializationSystemTypeCodingUserSelected;
+       this.deviceSpecializationSystemTypeCodingUsrslt = deviceSpecializationSystemTypeCodingUsrslt;
        this.deviceSpecializationSystemTypeCodingVersion = deviceSpecializationSystemTypeCodingVersion;
        this.deviceSpecializationSystemTypeText = deviceSpecializationSystemTypeText;
        this.deviceSpecializationVersion = deviceSpecializationVersion;
@@ -193,18 +193,18 @@ public class Device  implements java.io.Serializable {
        this.deviceStatusReasonCodingCode = deviceStatusReasonCodingCode;
        this.deviceStatusReasonCodingDisplay = deviceStatusReasonCodingDisplay;
        this.deviceStatusReasonCodingSystem = deviceStatusReasonCodingSystem;
-       this.deviceStatusReasonCodingUserSelected = deviceStatusReasonCodingUserSelected;
+       this.deviceStatusReasonCodingUsrslt = deviceStatusReasonCodingUsrslt;
        this.deviceStatusReasonCodingVersion = deviceStatusReasonCodingVersion;
        this.deviceStatusReasonText = deviceStatusReasonText;
        this.deviceTypeCodingCode = deviceTypeCodingCode;
        this.deviceTypeCodingDisplay = deviceTypeCodingDisplay;
        this.deviceTypeCodingSystem = deviceTypeCodingSystem;
-       this.deviceTypeCodingUserSelected = deviceTypeCodingUserSelected;
+       this.deviceTypeCodingUsrslt = deviceTypeCodingUsrslt;
        this.deviceTypeCodingVersion = deviceTypeCodingVersion;
        this.deviceTypeText = deviceTypeText;
        this.deviceUdiCarrierCarrierAidc = deviceUdiCarrierCarrierAidc;
        this.deviceUdiCarrierCarrierHrf = deviceUdiCarrierCarrierHrf;
-       this.deviceUdiCarrierDeviceIdentifier = deviceUdiCarrierDeviceIdentifier;
+       this.deviceUdiCarrierDeviceId = deviceUdiCarrierDeviceId;
        this.deviceUdiCarrierEntryTypeCode = deviceUdiCarrierEntryTypeCode;
        this.deviceUdiCarrierIssuer = deviceUdiCarrierIssuer;
        this.deviceUdiCarrierJurisdiction = deviceUdiCarrierJurisdiction;
@@ -216,7 +216,7 @@ public class Device  implements java.io.Serializable {
        this.deviceVersionComponentTypeCodingCode = deviceVersionComponentTypeCodingCode;
        this.deviceVersionComponentTypeCodingDisplay = deviceVersionComponentTypeCodingDisplay;
        this.deviceVersionComponentTypeCodingSystem = deviceVersionComponentTypeCodingSystem;
-       this.deviceVersionComponentTypeCodingUserSelected = deviceVersionComponentTypeCodingUserSelected;
+       this.deviceVersionComponentTypeCodingUsrslt = deviceVersionComponentTypeCodingUsrslt;
        this.deviceVersionComponentTypeCodingVersion = deviceVersionComponentTypeCodingVersion;
        this.deviceVersionComponentTypeText = deviceVersionComponentTypeText;
        this.deviceVersionComponentUseCode = deviceVersionComponentUseCode;
@@ -224,22 +224,23 @@ public class Device  implements java.io.Serializable {
        this.deviceVersionTypeCodingCode = deviceVersionTypeCodingCode;
        this.deviceVersionTypeCodingDisplay = deviceVersionTypeCodingDisplay;
        this.deviceVersionTypeCodingSystem = deviceVersionTypeCodingSystem;
-       this.deviceVersionTypeCodingUserSelected = deviceVersionTypeCodingUserSelected;
+       this.deviceVersionTypeCodingUsrslt = deviceVersionTypeCodingUsrslt;
        this.deviceVersionTypeCodingVersion = deviceVersionTypeCodingVersion;
        this.deviceVersionTypeText = deviceVersionTypeText;
+       this.deviceVersionValue = deviceVersionValue;
     }
    
     public 
     String 
-    getDeviceDistinctIdentifier()
+    getId()
     {
-        return this.deviceDistinctIdentifier;
+        return this.id;
     }
     
-    public void setDeviceDistinctIdentifier
-        (String deviceDistinctIdentifier) 
+    public void setId
+        (String id) 
         {
-      this.deviceDistinctIdentifier = deviceDistinctIdentifier;
+      this.id = id;
 }
     public 
     String 
@@ -351,6 +352,18 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
+    getDeviceDistinctId()
+    {
+        return this.deviceDistinctId;
+    }
+    
+    public void setDeviceDistinctId
+        (String deviceDistinctId) 
+        {
+      this.deviceDistinctId = deviceDistinctId;
+}
+    public 
+    String 
     getDeviceExpirationDate()
     {
         return this.deviceExpirationDate;
@@ -363,147 +376,147 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceIdentifierAssigner()
+    getDeviceIdAssigner()
     {
-        return this.deviceIdentifierAssigner;
+        return this.deviceIdAssigner;
     }
     
-    public void setDeviceIdentifierAssigner
-        (String deviceIdentifierAssigner) 
+    public void setDeviceIdAssigner
+        (String deviceIdAssigner) 
         {
-      this.deviceIdentifierAssigner = deviceIdentifierAssigner;
+      this.deviceIdAssigner = deviceIdAssigner;
 }
     public 
     String 
-    getDeviceIdentifierPeriodEnd()
+    getDeviceIdPeriodEnd()
     {
-        return this.deviceIdentifierPeriodEnd;
+        return this.deviceIdPeriodEnd;
     }
     
-    public void setDeviceIdentifierPeriodEnd
-        (String deviceIdentifierPeriodEnd) 
+    public void setDeviceIdPeriodEnd
+        (String deviceIdPeriodEnd) 
         {
-      this.deviceIdentifierPeriodEnd = deviceIdentifierPeriodEnd;
+      this.deviceIdPeriodEnd = deviceIdPeriodEnd;
 }
     public 
     String 
-    getDeviceIdentifierPeriodStart()
+    getDeviceIdPeriodStart()
     {
-        return this.deviceIdentifierPeriodStart;
+        return this.deviceIdPeriodStart;
     }
     
-    public void setDeviceIdentifierPeriodStart
-        (String deviceIdentifierPeriodStart) 
+    public void setDeviceIdPeriodStart
+        (String deviceIdPeriodStart) 
         {
-      this.deviceIdentifierPeriodStart = deviceIdentifierPeriodStart;
+      this.deviceIdPeriodStart = deviceIdPeriodStart;
 }
     public 
     String 
-    getDeviceIdentifierSystem()
+    getDeviceIdSystem()
     {
-        return this.deviceIdentifierSystem;
+        return this.deviceIdSystem;
     }
     
-    public void setDeviceIdentifierSystem
-        (String deviceIdentifierSystem) 
+    public void setDeviceIdSystem
+        (String deviceIdSystem) 
         {
-      this.deviceIdentifierSystem = deviceIdentifierSystem;
+      this.deviceIdSystem = deviceIdSystem;
 }
     public 
     String 
-    getDeviceIdentifierTypeCodingCode()
+    getDeviceIdTypeCodingCode()
     {
-        return this.deviceIdentifierTypeCodingCode;
+        return this.deviceIdTypeCodingCode;
     }
     
-    public void setDeviceIdentifierTypeCodingCode
-        (String deviceIdentifierTypeCodingCode) 
+    public void setDeviceIdTypeCodingCode
+        (String deviceIdTypeCodingCode) 
         {
-      this.deviceIdentifierTypeCodingCode = deviceIdentifierTypeCodingCode;
+      this.deviceIdTypeCodingCode = deviceIdTypeCodingCode;
 }
     public 
     String 
-    getDeviceIdentifierTypeCodingDisplay()
+    getDeviceIdTypeCodingDisplay()
     {
-        return this.deviceIdentifierTypeCodingDisplay;
+        return this.deviceIdTypeCodingDisplay;
     }
     
-    public void setDeviceIdentifierTypeCodingDisplay
-        (String deviceIdentifierTypeCodingDisplay) 
+    public void setDeviceIdTypeCodingDisplay
+        (String deviceIdTypeCodingDisplay) 
         {
-      this.deviceIdentifierTypeCodingDisplay = deviceIdentifierTypeCodingDisplay;
+      this.deviceIdTypeCodingDisplay = deviceIdTypeCodingDisplay;
 }
     public 
     String 
-    getDeviceIdentifierTypeCodingSystem()
+    getDeviceIdTypeCodingSystem()
     {
-        return this.deviceIdentifierTypeCodingSystem;
+        return this.deviceIdTypeCodingSystem;
     }
     
-    public void setDeviceIdentifierTypeCodingSystem
-        (String deviceIdentifierTypeCodingSystem) 
+    public void setDeviceIdTypeCodingSystem
+        (String deviceIdTypeCodingSystem) 
         {
-      this.deviceIdentifierTypeCodingSystem = deviceIdentifierTypeCodingSystem;
+      this.deviceIdTypeCodingSystem = deviceIdTypeCodingSystem;
 }
     public 
     String 
-    getDeviceIdentifierTypeCodingUserSelected()
+    getDeviceIdTypeCodingUsrslt()
     {
-        return this.deviceIdentifierTypeCodingUserSelected;
+        return this.deviceIdTypeCodingUsrslt;
     }
     
-    public void setDeviceIdentifierTypeCodingUserSelected
-        (String deviceIdentifierTypeCodingUserSelected) 
+    public void setDeviceIdTypeCodingUsrslt
+        (String deviceIdTypeCodingUsrslt) 
         {
-      this.deviceIdentifierTypeCodingUserSelected = deviceIdentifierTypeCodingUserSelected;
+      this.deviceIdTypeCodingUsrslt = deviceIdTypeCodingUsrslt;
 }
     public 
     String 
-    getDeviceIdentifierTypeCodingVersion()
+    getDeviceIdTypeCodingVersion()
     {
-        return this.deviceIdentifierTypeCodingVersion;
+        return this.deviceIdTypeCodingVersion;
     }
     
-    public void setDeviceIdentifierTypeCodingVersion
-        (String deviceIdentifierTypeCodingVersion) 
+    public void setDeviceIdTypeCodingVersion
+        (String deviceIdTypeCodingVersion) 
         {
-      this.deviceIdentifierTypeCodingVersion = deviceIdentifierTypeCodingVersion;
+      this.deviceIdTypeCodingVersion = deviceIdTypeCodingVersion;
 }
     public 
     String 
-    getDeviceIdentifierTypeText()
+    getDeviceIdTypeText()
     {
-        return this.deviceIdentifierTypeText;
+        return this.deviceIdTypeText;
     }
     
-    public void setDeviceIdentifierTypeText
-        (String deviceIdentifierTypeText) 
+    public void setDeviceIdTypeText
+        (String deviceIdTypeText) 
         {
-      this.deviceIdentifierTypeText = deviceIdentifierTypeText;
+      this.deviceIdTypeText = deviceIdTypeText;
 }
     public 
     String 
-    getDeviceIdentifierUseCode()
+    getDeviceIdUseCode()
     {
-        return this.deviceIdentifierUseCode;
+        return this.deviceIdUseCode;
     }
     
-    public void setDeviceIdentifierUseCode
-        (String deviceIdentifierUseCode) 
+    public void setDeviceIdUseCode
+        (String deviceIdUseCode) 
         {
-      this.deviceIdentifierUseCode = deviceIdentifierUseCode;
+      this.deviceIdUseCode = deviceIdUseCode;
 }
     public 
     String 
-    getDeviceIdentifierValue()
+    getDeviceIdValue()
     {
-        return this.deviceIdentifierValue;
+        return this.deviceIdValue;
     }
     
-    public void setDeviceIdentifierValue
-        (String deviceIdentifierValue) 
+    public void setDeviceIdValue
+        (String deviceIdValue) 
         {
-      this.deviceIdentifierValue = deviceIdentifierValue;
+      this.deviceIdValue = deviceIdValue;
 }
     public 
     String 
@@ -567,15 +580,27 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceNoteAuthor()
+    getDeviceNoteAuthorReference()
     {
-        return this.deviceNoteAuthor;
+        return this.deviceNoteAuthorReference;
     }
     
-    public void setDeviceNoteAuthor
-        (String deviceNoteAuthor) 
+    public void setDeviceNoteAuthorReference
+        (String deviceNoteAuthorReference) 
         {
-      this.deviceNoteAuthor = deviceNoteAuthor;
+      this.deviceNoteAuthorReference = deviceNoteAuthorReference;
+}
+    public 
+    String 
+    getDeviceNoteAuthorString()
+    {
+        return this.deviceNoteAuthorString;
+    }
+    
+    public void setDeviceNoteAuthorString
+        (String deviceNoteAuthorString) 
+        {
+      this.deviceNoteAuthorString = deviceNoteAuthorString;
 }
     public 
     String 
@@ -687,15 +712,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDevicePropertyTypeCodingUserSelected()
+    getDevicePropertyTypeCodingUsrslt()
     {
-        return this.devicePropertyTypeCodingUserSelected;
+        return this.devicePropertyTypeCodingUsrslt;
     }
     
-    public void setDevicePropertyTypeCodingUserSelected
-        (String devicePropertyTypeCodingUserSelected) 
+    public void setDevicePropertyTypeCodingUsrslt
+        (String devicePropertyTypeCodingUsrslt) 
         {
-      this.devicePropertyTypeCodingUserSelected = devicePropertyTypeCodingUserSelected;
+      this.devicePropertyTypeCodingUsrslt = devicePropertyTypeCodingUsrslt;
 }
     public 
     String 
@@ -759,15 +784,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDevicePropertyValueCodeCodingUserSelected()
+    getDevicePropertyValueCodeCodingUsrslt()
     {
-        return this.devicePropertyValueCodeCodingUserSelected;
+        return this.devicePropertyValueCodeCodingUsrslt;
     }
     
-    public void setDevicePropertyValueCodeCodingUserSelected
-        (String devicePropertyValueCodeCodingUserSelected) 
+    public void setDevicePropertyValueCodeCodingUsrslt
+        (String devicePropertyValueCodeCodingUsrslt) 
         {
-      this.devicePropertyValueCodeCodingUserSelected = devicePropertyValueCodeCodingUserSelected;
+      this.devicePropertyValueCodeCodingUsrslt = devicePropertyValueCodeCodingUsrslt;
 }
     public 
     String 
@@ -807,15 +832,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDevicePropertyValueQuantityComparatorCode()
+    getDevicePropertyValueQuantityCompartrCode()
     {
-        return this.devicePropertyValueQuantityComparatorCode;
+        return this.devicePropertyValueQuantityCompartrCode;
     }
     
-    public void setDevicePropertyValueQuantityComparatorCode
-        (String devicePropertyValueQuantityComparatorCode) 
+    public void setDevicePropertyValueQuantityCompartrCode
+        (String devicePropertyValueQuantityCompartrCode) 
         {
-      this.devicePropertyValueQuantityComparatorCode = devicePropertyValueQuantityComparatorCode;
+      this.devicePropertyValueQuantityCompartrCode = devicePropertyValueQuantityCompartrCode;
 }
     public 
     String 
@@ -891,15 +916,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceSafetyCodingUserSelected()
+    getDeviceSafetyCodingUsrslt()
     {
-        return this.deviceSafetyCodingUserSelected;
+        return this.deviceSafetyCodingUsrslt;
     }
     
-    public void setDeviceSafetyCodingUserSelected
-        (String deviceSafetyCodingUserSelected) 
+    public void setDeviceSafetyCodingUsrslt
+        (String deviceSafetyCodingUsrslt) 
         {
-      this.deviceSafetyCodingUserSelected = deviceSafetyCodingUserSelected;
+      this.deviceSafetyCodingUsrslt = deviceSafetyCodingUsrslt;
 }
     public 
     String 
@@ -975,15 +1000,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceSpecializationSystemTypeCodingUserSelected()
+    getDeviceSpecializationSystemTypeCodingUsrslt()
     {
-        return this.deviceSpecializationSystemTypeCodingUserSelected;
+        return this.deviceSpecializationSystemTypeCodingUsrslt;
     }
     
-    public void setDeviceSpecializationSystemTypeCodingUserSelected
-        (String deviceSpecializationSystemTypeCodingUserSelected) 
+    public void setDeviceSpecializationSystemTypeCodingUsrslt
+        (String deviceSpecializationSystemTypeCodingUsrslt) 
         {
-      this.deviceSpecializationSystemTypeCodingUserSelected = deviceSpecializationSystemTypeCodingUserSelected;
+      this.deviceSpecializationSystemTypeCodingUsrslt = deviceSpecializationSystemTypeCodingUsrslt;
 }
     public 
     String 
@@ -1071,15 +1096,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceStatusReasonCodingUserSelected()
+    getDeviceStatusReasonCodingUsrslt()
     {
-        return this.deviceStatusReasonCodingUserSelected;
+        return this.deviceStatusReasonCodingUsrslt;
     }
     
-    public void setDeviceStatusReasonCodingUserSelected
-        (String deviceStatusReasonCodingUserSelected) 
+    public void setDeviceStatusReasonCodingUsrslt
+        (String deviceStatusReasonCodingUsrslt) 
         {
-      this.deviceStatusReasonCodingUserSelected = deviceStatusReasonCodingUserSelected;
+      this.deviceStatusReasonCodingUsrslt = deviceStatusReasonCodingUsrslt;
 }
     public 
     String 
@@ -1143,15 +1168,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceTypeCodingUserSelected()
+    getDeviceTypeCodingUsrslt()
     {
-        return this.deviceTypeCodingUserSelected;
+        return this.deviceTypeCodingUsrslt;
     }
     
-    public void setDeviceTypeCodingUserSelected
-        (String deviceTypeCodingUserSelected) 
+    public void setDeviceTypeCodingUsrslt
+        (String deviceTypeCodingUsrslt) 
         {
-      this.deviceTypeCodingUserSelected = deviceTypeCodingUserSelected;
+      this.deviceTypeCodingUsrslt = deviceTypeCodingUsrslt;
 }
     public 
     String 
@@ -1203,15 +1228,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceUdiCarrierDeviceIdentifier()
+    getDeviceUdiCarrierDeviceId()
     {
-        return this.deviceUdiCarrierDeviceIdentifier;
+        return this.deviceUdiCarrierDeviceId;
     }
     
-    public void setDeviceUdiCarrierDeviceIdentifier
-        (String deviceUdiCarrierDeviceIdentifier) 
+    public void setDeviceUdiCarrierDeviceId
+        (String deviceUdiCarrierDeviceId) 
         {
-      this.deviceUdiCarrierDeviceIdentifier = deviceUdiCarrierDeviceIdentifier;
+      this.deviceUdiCarrierDeviceId = deviceUdiCarrierDeviceId;
 }
     public 
     String 
@@ -1347,15 +1372,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceVersionComponentTypeCodingUserSelected()
+    getDeviceVersionComponentTypeCodingUsrslt()
     {
-        return this.deviceVersionComponentTypeCodingUserSelected;
+        return this.deviceVersionComponentTypeCodingUsrslt;
     }
     
-    public void setDeviceVersionComponentTypeCodingUserSelected
-        (String deviceVersionComponentTypeCodingUserSelected) 
+    public void setDeviceVersionComponentTypeCodingUsrslt
+        (String deviceVersionComponentTypeCodingUsrslt) 
         {
-      this.deviceVersionComponentTypeCodingUserSelected = deviceVersionComponentTypeCodingUserSelected;
+      this.deviceVersionComponentTypeCodingUsrslt = deviceVersionComponentTypeCodingUsrslt;
 }
     public 
     String 
@@ -1443,15 +1468,15 @@ public class Device  implements java.io.Serializable {
 }
     public 
     String 
-    getDeviceVersionTypeCodingUserSelected()
+    getDeviceVersionTypeCodingUsrslt()
     {
-        return this.deviceVersionTypeCodingUserSelected;
+        return this.deviceVersionTypeCodingUsrslt;
     }
     
-    public void setDeviceVersionTypeCodingUserSelected
-        (String deviceVersionTypeCodingUserSelected) 
+    public void setDeviceVersionTypeCodingUsrslt
+        (String deviceVersionTypeCodingUsrslt) 
         {
-      this.deviceVersionTypeCodingUserSelected = deviceVersionTypeCodingUserSelected;
+      this.deviceVersionTypeCodingUsrslt = deviceVersionTypeCodingUsrslt;
 }
     public 
     String 
@@ -1476,6 +1501,18 @@ public class Device  implements java.io.Serializable {
         (String deviceVersionTypeText) 
         {
       this.deviceVersionTypeText = deviceVersionTypeText;
+}
+    public 
+    String 
+    getDeviceVersionValue()
+    {
+        return this.deviceVersionValue;
+    }
+    
+    public void setDeviceVersionValue
+        (String deviceVersionValue) 
+        {
+      this.deviceVersionValue = deviceVersionValue;
 }
 
 

@@ -17,9 +17,15 @@ import java.util.Arrays;
 import org.hl7.fhir.r4.model.Patient;
 import org.hl7.fhir.r4.model.Practitioner;
 import org.hl7.fhir.r4.model.Procedure;
+import org.hl7.fhir.r4.model.Quantity;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.StringType;
+
+import ca.uhn.fhir.model.api.IElement;
+import ca.uhn.fhir.model.api.annotation.Child;
+
 import org.hl7.fhir.r4.model.Address.AddressUseEnumFactory;
+import org.hl7.fhir.r4.model.Annotation;
 import org.hl7.fhir.r4.model.Address;
 import  org.hl7.fhir.r4.model.Base;
 import org.hl7.fhir.r4.model.Base64BinaryType;
@@ -36,7 +42,7 @@ class test
     public static void main(String args[]) throws Exception
     {
         // Creating object whose property is to be checked
-    	Observation obj = new Observation();
+    	Condition obj = new Condition();
     	//Patient obj = new Patient();
         // Creating class object from the object using
         // getclass method  org.hl7.fhir.r4.model.Address$AddressType
@@ -111,34 +117,47 @@ class test
         
 //        AddressUseEnumFactory addressusefactory = new Address.AddressUseEnumFactory(); 
 //		address.setUse(addressusefactory.fromCode(addressUseString));
-        sqlWriter.write("CREATE TABLE `" + className + "` (\r\n" );
-           
-		
+        sqlWriter.write("drop table if exists `" + className+ "`;\r\nCREATE TABLE `" + className + "` (\r\n id varchar(64),\r\n" );
+       
         ArrayList<FHIRobject> list=new ArrayList<FHIRobject>();      
         writeMethod(cls, className, list, 1);
-        ArrayList<String> methodStack =new ArrayList<String>();   
+        ArrayList<String> methodStack =new ArrayList<String>();  
+        ArrayList<String>  endXIfStatementHibName  =new ArrayList<String>();  
         String currentObjectToChainOff = "";
+        FHIRobject nextfhirobj = null;
         methodStack.add(className);
-        for(int i=0;i<list.size()-1;i++) {
+       
+        for(int i=0;i<list.size();i++) {
+        	
         	FHIRobject currentfhirobj = list.get(i);
-        	FHIRobject nextfhirobj = list.get(i+1);
+        	
+        	if(i+1 < list.size()) {
+        		nextfhirobj = list.get(i+1);
+        	} 
         	FHIRobject prevfhirobj = null;
         	if(i!=0 ) {
         		prevfhirobj = list.get(i-1);
         	}
-//        	methodStack.forEach(name ->{
-//                System.out.println(name);
-//            });
+
+
     		currentObjectToChainOff = methodStack.get(currentfhirobj.Level -1);
 
         	if(i==0) {
+        		
+
         		conversionWriter.write("\t\t"+cls.getName() + " " + className + " = new " + cls.getName()+ "();");
     			conversionWriter.write(System.lineSeparator());
+    			conversionWriter.write(System.lineSeparator());
+    			conversionWriter.write("\t\t/******************** "+ "id" +" ********************************************************************************/");
+    			conversionWriter.write(System.lineSeparator());
+		        conversionWriter.write("\t\t" + className + ".setId("+className.charAt(0) + ".getId()" +");");
+    			conversionWriter.write(System.lineSeparator());
+
+		        conversionWriter.write(System.lineSeparator());
 
         	}
+
         	
-    		//currentfhirobj.printClass();
-       
         	if(nextfhirobj.Level > currentfhirobj.Level ) {
         		//conversionWriter.write("SKIP THIS ONE BELOW");
 
@@ -151,25 +170,58 @@ class test
         			methodStack.add(currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase());
         		} else {
         			if(currentfhirobj.Param.contains("$") && !(currentfhirobj.Param.endsWith("Component"))) {
-            		//	currentfhirobj.printClass();
             			conversionWriter.write(System.lineSeparator());
             			conversionWriter.write("\t\t"+currentfhirobj.Param.replace("$",".") + "EnumFactory " + currentObjectToChainOff +  currentfhirobj.MethodName.toLowerCase() + "EnumFactory" +" = new " + currentfhirobj.Param.replace("$",".") +"EnumFactory();");
             			conversionWriter.write(System.lineSeparator());
             			conversionWriter.write(System.lineSeparator());
             			methodStack.add(currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase() + "EnumFactory");     			
         			} else {
-            			
-            			conversionWriter.write(System.lineSeparator());
-            			conversionWriter.write("\t\t"+ currentfhirobj.Param.replace("$",".") + " " + currentObjectToChainOff +  currentfhirobj.MethodName.toLowerCase() + " = new " + currentfhirobj.Param.replace("$",".") +"();");
-            			conversionWriter.write(System.lineSeparator());
-            			conversionWriter.write("\t\t"+ currentObjectToChainOff +"." + currentfhirobj.MethodName+ "("+ currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase() +");");
-	        			conversionWriter.write(System.lineSeparator());
-	        			conversionWriter.write(System.lineSeparator());
-	        			methodStack.add(currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase()  );
+            			if(currentfhirobj.xType != null) {
+            				conversionWriter.write(System.lineSeparator());
+            				int currentFhirLevel = currentfhirobj.Level+1;
+            				String ifString = "";
+            				int newincrement = i+1;
+            				FHIRobject tempFhirObj = new FHIRobject();
+            				FHIRobject tempnextfhirobj = new FHIRobject();
+            				endXIfStatementHibName.add(currentfhirobj.HibernateName);
+            				while(newincrement < list.size() & currentFhirLevel > currentfhirobj.Level ) {
+            					tempFhirObj = list.get(newincrement);
+            					currentFhirLevel = tempFhirObj.Level;
+            					if(newincrement+1 < list.size()) {
+            		        		tempnextfhirobj = list.get(newincrement+1);
+            		        	} 
+            					if(tempnextfhirobj.Level <= currentFhirLevel) {
+	            					if( tempFhirObj.Level != currentfhirobj.Level ) {
+		            					ifString +=" "+ className.charAt(0) + ".get" + tempFhirObj.HibernateName.replace("_", "") + "() != null ||";
+		            					endXIfStatementHibName.remove(endXIfStatementHibName.size()-1);
+		                				endXIfStatementHibName.add(tempFhirObj.HibernateName);
+
+	            					}
+            					}
+            					newincrement = newincrement+1;
+            				}
+//            				System.out.println(endXIfStatementHibName);
+            				conversionWriter.write("\t\tif("+ifString.substring(0, ifString.length() - 2)+") {");
+            				conversionWriter.write(System.lineSeparator());
+	            			conversionWriter.write("\t\t\t"+ currentfhirobj.xType.replace("$",".") + " " + currentObjectToChainOff +  currentfhirobj.MethodName.toLowerCase() + currentfhirobj.xType.split("\\.")[currentfhirobj.xType.split("\\.").length -1].replace("Type", "") + " = new " + currentfhirobj.xType.replace("$",".") +"();");
+	            			conversionWriter.write(System.lineSeparator());
+	            			conversionWriter.write("\t\t\t"+ currentObjectToChainOff +"." + currentfhirobj.MethodName+ "("+ currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase() + currentfhirobj.xType.split("\\.")[currentfhirobj.xType.split("\\.").length -1].replace("Type", "") + ");");
+		        			conversionWriter.write(System.lineSeparator());
+            				conversionWriter.write(System.lineSeparator());
+
+		        			methodStack.add(currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase()  + currentfhirobj.xType.split("\\.")[currentfhirobj.xType.split("\\.").length -1].replace("Type", "") );
+            			} else {
+	            			conversionWriter.write(System.lineSeparator());
+	            			conversionWriter.write("\t\t"+ currentfhirobj.Param.replace("$",".") + " " + currentObjectToChainOff +  currentfhirobj.MethodName.toLowerCase() + " = new " + currentfhirobj.Param.replace("$",".") +"();");
+	            			conversionWriter.write(System.lineSeparator());
+	            			conversionWriter.write("\t\t"+ currentObjectToChainOff +"." + currentfhirobj.MethodName+ "("+ currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase() +");");
+		        			conversionWriter.write(System.lineSeparator());
+		        			conversionWriter.write(System.lineSeparator());
+		        			methodStack.add(currentObjectToChainOff + currentfhirobj.MethodName.toLowerCase()  );
+            			}
         			}
         		}
         		//currentObjectToChainOff = currentfhirobj.MethodName.toLowerCase();
-        		//currentfhirobj.printClass();
         	} else if (nextfhirobj.Level < currentfhirobj.Level)	{
         		conversionWriter.write("\t\t/******************** "+ currentfhirobj.HibernateName +" ********************************************************************************/");
         		conversionWriter.write(System.lineSeparator());
@@ -223,7 +275,9 @@ class test
         		conversionWriter.write(System.lineSeparator());
         		conversionWriter.write("\t\t}");
 				conversionWriter.write(System.lineSeparator());
+				
         		sqlWriter.write(currentfhirobj.HibernateName + " TEXT,\r\n");
+        		
         		while(methodStack.size() > nextfhirobj.Level) {
         			methodStack.remove(methodStack.size() -1) ;
         		}
@@ -271,22 +325,28 @@ class test
 //    				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "(Double.parseDouble(("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "())));" );
 //    			} else {
 //    				//conversionWriter.write(currentfhirobj.Param);
-//    				//currentfhirobj.printClass()
 //    				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "());" );
 //    			}
 				conversionWriter.write(System.lineSeparator());
         		conversionWriter.write("\t\t}");
 				conversionWriter.write(System.lineSeparator());
-
+//				System.out.println(currentfhirobj.HibernateName);
         		sqlWriter.write(currentfhirobj.HibernateName + " TEXT,\r\n");
-        		//currentfhirobj.printClass();
         		
         		
+        	}
+        	//System.out.println(endXIfStatementHibName.toString());
+        	if(endXIfStatementHibName.size() > 0 && endXIfStatementHibName.get(endXIfStatementHibName.size()-1).equals(currentfhirobj.HibernateName)) {
+        		conversionWriter.write("\t\t}");
+	 			conversionWriter.write(System.lineSeparator());
+	 			endXIfStatementHibName.remove(endXIfStatementHibName.size()-1);
         	}
         	
         
         }
-        sqlWriter.write(");");
+        sqlWriter.write("PRIMARY KEY(id)) ENGINE=MyISAM\r\n"
+        		+ "    ROW_FORMAT=COMPRESSED \r\n"
+        		+ "    KEY_BLOCK_SIZE=8;");
         sqlWriter.close();
         conversionWriter.write("\t\treturn " +className+";");
 		conversionWriter.write(System.lineSeparator());
@@ -379,14 +439,14 @@ class test
     }
     
     private static void writeToFile(String returnOrParamString, FHIRobject currentfhirobj, String currentObjectToChainOff, String className, FileWriter conversionWriter) throws IOException {
-	    	if(returnOrParamString == "java.util.Date") {
+    		if(returnOrParamString == "java.util.Date") {
 				
 				conversionWriter.write("\t\t\tjava.text.SimpleDateFormat "+ currentfhirobj.HibernateName.replace("_", "")+ "sdf = new java.text.SimpleDateFormat(\"yyyy-M-dd\");");
 				conversionWriter.write(System.lineSeparator());
 				conversionWriter.write("\t\t\tjava.util.Date "+ currentfhirobj.HibernateName.replace("_", "")+"date = "+ currentfhirobj.HibernateName.replace("_", "")+"sdf.parse("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "());");
 				conversionWriter.write(System.lineSeparator());
 				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "("+ currentfhirobj.HibernateName.replace("_", "")+"date);" );
-			} else if(returnOrParamString == "boolean") {
+			} else if(returnOrParamString == "boolean" ) {
 				
 				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "(Boolean.parseBoolean("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "()));" );
 			} else if(returnOrParamString == "org.hl7.fhir.r4.model.Reference") {
@@ -394,7 +454,7 @@ class test
 				conversionWriter.write("\t\t\torg.hl7.fhir.r4.model.Reference " + currentfhirobj.HibernateName.replace("_", "")+"ref = new org.hl7.fhir.r4.model.Reference();");
 				conversionWriter.write(System.lineSeparator());
 				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "("+ currentfhirobj.HibernateName.replace("_", "")+"ref.setReference(" +""+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "()));" );
-			} else if(returnOrParamString == "int") {
+			} else if(returnOrParamString == "int" ) {
 				
 				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "(Integer.parseInt("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "()));" );
 			} else if(returnOrParamString != null && returnOrParamString.contains("byte")) {
@@ -406,6 +466,10 @@ class test
 			} else if(returnOrParamString == "java.math.BigDecimal" | returnOrParamString == "double" | returnOrParamString == "long") {
 				
 				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "(Double.parseDouble(("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "())));" );
+			} else if(returnOrParamString == "org.hl7.fhir.r4.model.TimeType" | returnOrParamString == "org.hl7.fhir.r4.model.StringType" | returnOrParamString == "org.hl7.fhir.r4.model.BooleanType" | returnOrParamString == "org.hl7.fhir.r4.model.IntegerType" | returnOrParamString == "org.hl7.fhir.r4.model.DateTimeType" | returnOrParamString == "org.hl7.fhir.r4.model.InstantType") {
+				
+				conversionWriter.write("\t\t\t"+currentObjectToChainOff + "." + currentfhirobj.MethodName + "(new "+ returnOrParamString+ "("+className.charAt(0) + ".get" + currentfhirobj.HibernateName.replace("_", "") + "()));" );
+			
 			} else if(returnOrParamString == "org.hl7.fhir.r4.model.Duration" ) {
 				conversionWriter.write("\t\t\torg.hl7.fhir.r4.model.Duration " + currentfhirobj.HibernateName.replace("_", "")+"dur = new org.hl7.fhir.r4.model.Duration();");
 				conversionWriter.write(System.lineSeparator());
@@ -436,6 +500,7 @@ class test
         
         for(int i=0;i<methods.length-1;i++) {
 	    	Method method = methods[i];
+
 	    	currentMethodName = method.getName().replace("set","").replace("add", "").replace("Element", "").replace("Target", "").replace("from", "");
 	    	//if the current method is the same as the prvious one (without the add,set,etc.) then skip over it
 //	    	if(currentMethodName == "Property") {
@@ -453,12 +518,12 @@ class test
 		    		{	
 		    			FHIRobject fhirObj = new FHIRobject();
 		    			fhirObj.Level = Level;
-		    			if((className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName).length() > 62) {
-		    				fhirObj.HibernateName = (className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName).replace("Encounter", "Enc").replace("UserSelected", "US").replace("Medicationrequest", "MR").replace("DosageInstruction", "DR");
+//		    			if((className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName).length() > 62) {
+		    				fhirObj.HibernateName = (className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName).replace("Denominator", "Denom").replace("Comparator", "Compartr").replace("Language", "Lang").replace("Encounter", "Enc").replace("UserSelected", "Usrslt").replace("Medicationrequest", "Medreq").replace("DosageInstruction", "Doseins").replace("Observation", "Obs").replace("Identifier", "Id").replace("Practitioner", "Pract").replace("Communication", "Commn");
 
-		    			} else {
-		    				fhirObj.HibernateName = className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName;
-		    			}
+//		    			} else {
+//		    				fhirObj.HibernateName = className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName;
+//		    			}
 		    			fhirObj.Name = currentMethodName;
 		    			fhirObj.MethodName = method.getName();
 		    			
@@ -467,6 +532,7 @@ class test
 			            //loop through and print out all the parameters in the method
 			            Type elementType = null;
 			            boolean skipPropertyFunciton = false;
+			         	
 			            for (int j = 0; j < pvec.length; j++) {
 			            	if( pvec[j].getTypeName().contains("Base")) {
 			            		skipPropertyFunciton = true;
@@ -485,9 +551,97 @@ class test
 			            fhirObj.ReturnType = method.getReturnType().getName().replace("$", ".");
 		    			fhirObj.MethodDeclaringClass = method.getReturnType().getName().replace("$", ".");	
 		    			if(!skipPropertyFunciton) {
-		    				list.add(fhirObj);
+//				            	System.out.println( method.getName());
+//				            	System.out.println(method.getReturnType().getName().replace("$", "."));
+//				            	System.out.println(method.getReturnType().getName().replace("$", "."));
+//				            	method.getGenericParameterTypes();
+//				            	 for (int j = 0; j < pvec.length; j++) {
+//				            		 System.out.println("      " +"Param" + j + ": " + pvec[j]);
+//				            	 }
+	    					if(fhirObj.Param == "org.hl7.fhir.r4.model.Type") {
+	    						for(int j=0;j<methods.length-1;j++) {
+	    							Method localmethod = methods[j];
+	    							if(localmethod.getName().startsWith(("get" + currentMethodName))) {
+	    								if(localmethod.getReturnType().getName() != "org.hl7.fhir.r4.model.Type") {
+	    								   Class c = localmethod.getReturnType();
+	    								   FHIRobject newfhirobj = new FHIRobject();
+    									   FHIRobject copyoffhirobj = new FHIRobject(fhirObj);
+    									  if(c.getName().endsWith("Type") | c == org.hl7.fhir.r4.model.Reference.class) {
+    										  newfhirobj.Level = Level;
+    										  newfhirobj.HibernateName = className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", "");
+    										  newfhirobj.Name = currentMethodName;
+    										  newfhirobj.MethodName = method.getName();
+    										  newfhirobj.Param = c.getName();
+    										  newfhirobj.ReturnType = method.getReturnType().getName().replace("$", ".");
+    										  newfhirobj.MethodDeclaringClass = method.getReturnType().getName().replace("$", ".");				  
+    										  list.add(newfhirobj);
+    									  } else  {
+    										  copyoffhirobj.xType = c.getName();
+    										  list.add(copyoffhirobj);
+    										  //need this because duration is a specialization of Quantity 
+    											  
+	    										  if(c.getName() == "org.hl7.fhir.r4.model.Duration") {
+	    											  Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+	    											  
+		    										  writeMethod(quant.getClass(),  className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + "_" + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", ""), list, Level+1);
+	
+	    										  } else  {
+		    										  writeMethod(c,  className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + "_" + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", ""), list, Level+1);
+	
+	    										  }
+    										  
+    										  
+    									  }
+	    								}
+	    							}
+	    							
+	    						}
+	    						//this is annotation code that i replaced with the above
+//		    					for (Field f: cls.getDeclaredFields()) {
+//
+//		    						   Child column = f.getAnnotation(Child.class);
+//		    						   if (column != null) {
+//			    			
+//		    							   if(currentMethodName.toLowerCase().trim().equals(f.getName().toLowerCase().trim())) {
+//			    								
+//		    								   Class<? extends IElement>[] arr =  column.type();
+//
+//		    								   for (Class c: arr) {
+//		    									   FHIRobject newfhirobj = new FHIRobject();
+//		    									   FHIRobject copyoffhirobj = new FHIRobject(fhirObj);
+//		    									  if(c.getName().endsWith("Type")) {
+//		    										  newfhirobj.Level = Level;
+//		    										  newfhirobj.HibernateName = className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", "");
+//		    										  newfhirobj.Name = currentMethodName;
+//		    										  newfhirobj.MethodName = method.getName();
+//		    										  newfhirobj.Param = c.getName();
+//		    										  newfhirobj.ReturnType = method.getReturnType().getName().replace("$", ".");
+//		    										  newfhirobj.MethodDeclaringClass = method.getReturnType().getName().replace("$", ".");				  
+//		    										  list.add(newfhirobj);
+//		    									  } else  {
+//		    										  copyoffhirobj.xType = c.getName();
+//		    										  list.add(copyoffhirobj);
+//		    										  //need this because duration is a specialization of Quantity 
+//		    										  if(c.getName() == "org.hl7.fhir.r4.model.Duration") {
+//		    											  Quantity quant = new org.hl7.fhir.r4.model.Quantity();
+//		    											  
+//			    										  writeMethod(quant.getClass(),  className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + "_" + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", ""), list, Level+1);
+//
+//		    										  } else  {
+//			    										  writeMethod(c,  className.substring(0, 1).toUpperCase() + className.substring(1) +"_" + currentMethodName + "_" + c.getName().split("\\.")[c.getName().split("\\.").length -1].replace("Type", ""), list, Level+1);
+//
+//		    										  }
+//		    										  
+//		    									  }
+//		    								   }
+//		    							   }
+//		    							}
+//		    					}
+		    					
+				    	    } else {
+				    	    	list.add(fhirObj);
+				    	    }
 		    			}
-		    			//fhirObj.printClass();
 						//if the return type is base or reference or it has target in the name, print out the method information (done above) but dont recurse since it leads to an infinite loop
 			            if( method.getReturnType() != Base.class && method.getReturnType() != org.hl7.fhir.r4.model.Reference.class && !(method.getName().contains("Target"))) 
 			            {

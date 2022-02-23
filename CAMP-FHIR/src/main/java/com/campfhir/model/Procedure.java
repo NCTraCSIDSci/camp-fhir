@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 17, 2022, 12:11:05 PM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,85 +10,101 @@ package main.java.com.campfhir.model;
 public class Procedure  implements java.io.Serializable {
 
 
-     private String procedureIdentifierValue;
+     private String id;
      private String procedureAsserter;
      private String procedureBasedOn;
      private String procedureBodySiteCodingCode;
      private String procedureBodySiteCodingDisplay;
      private String procedureBodySiteCodingSystem;
-     private String procedureBodySiteCodingUserSelected;
+     private String procedureBodySiteCodingUsrslt;
      private String procedureBodySiteCodingVersion;
      private String procedureBodySiteText;
      private String procedureCategoryCodingCode;
      private String procedureCategoryCodingDisplay;
      private String procedureCategoryCodingSystem;
-     private String procedureCategoryCodingUserSelected;
+     private String procedureCategoryCodingUsrslt;
      private String procedureCategoryCodingVersion;
      private String procedureCategoryText;
      private String procedureCodeCodingCode;
      private String procedureCodeCodingDisplay;
      private String procedureCodeCodingSystem;
-     private String procedureCodeCodingUserSelected;
+     private String procedureCodeCodingUsrslt;
      private String procedureCodeCodingVersion;
      private String procedureCodeText;
      private String procedureComplicationCodingCode;
      private String procedureComplicationCodingDisplay;
      private String procedureComplicationCodingSystem;
-     private String procedureComplicationCodingUserSelected;
+     private String procedureComplicationCodingUsrslt;
      private String procedureComplicationCodingVersion;
      private String procedureComplicationText;
      private String procedureComplicationDetail;
-     private String procedureEncounter;
+     private String procedureEnc;
      private String procedureFocalDeviceActionCodingCode;
      private String procedureFocalDeviceActionCodingDisplay;
      private String procedureFocalDeviceActionCodingSystem;
-     private String procedureFocalDeviceActionCodingUserSelected;
+     private String procedureFocalDeviceActionCodingUsrslt;
      private String procedureFocalDeviceActionCodingVersion;
      private String procedureFocalDeviceActionText;
      private String procedureFocalDeviceManipulated;
      private String procedureFollowUpCodingCode;
      private String procedureFollowUpCodingDisplay;
      private String procedureFollowUpCodingSystem;
-     private String procedureFollowUpCodingUserSelected;
+     private String procedureFollowUpCodingUsrslt;
      private String procedureFollowUpCodingVersion;
      private String procedureFollowUpText;
-     private String procedureIdentifierAssigner;
-     private String procedureIdentifierPeriodEnd;
-     private String procedureIdentifierPeriodStart;
-     private String procedureIdentifierSystem;
-     private String procedureIdentifierTypeCodingCode;
-     private String procedureIdentifierTypeCodingDisplay;
-     private String procedureIdentifierTypeCodingSystem;
-     private String procedureIdentifierTypeCodingUserSelected;
-     private String procedureIdentifierTypeCodingVersion;
-     private String procedureIdentifierTypeText;
-     private String procedureIdentifierUseCode;
+     private String procedureIdAssigner;
+     private String procedureIdPeriodEnd;
+     private String procedureIdPeriodStart;
+     private String procedureIdSystem;
+     private String procedureIdTypeCodingCode;
+     private String procedureIdTypeCodingDisplay;
+     private String procedureIdTypeCodingSystem;
+     private String procedureIdTypeCodingUsrslt;
+     private String procedureIdTypeCodingVersion;
+     private String procedureIdTypeText;
+     private String procedureIdUseCode;
+     private String procedureIdValue;
      private String procedureInstantiatesCanonical;
      private String procedureInstantiatesUri;
      private String procedureLocation;
-     private String procedureNoteAuthor;
+     private String procedureNoteAuthorReference;
+     private String procedureNoteAuthorString;
      private String procedureNoteText;
      private String procedureNoteTime;
      private String procedureOutcomeCodingCode;
      private String procedureOutcomeCodingDisplay;
      private String procedureOutcomeCodingSystem;
-     private String procedureOutcomeCodingUserSelected;
+     private String procedureOutcomeCodingUsrslt;
      private String procedureOutcomeCodingVersion;
      private String procedureOutcomeText;
      private String procedurePartOf;
      private String procedurePerformed;
+     private String procedurePerformedDateTime;
+     private String procedurePerformedPeriodEnd;
+     private String procedurePerformedPeriodStart;
+     private String procedurePerformedRangeHighCode;
+     private String procedurePerformedRangeHighCompartrCode;
+     private String procedurePerformedRangeHighSystem;
+     private String procedurePerformedRangeHighUnit;
+     private String procedurePerformedRangeHighValue;
+     private String procedurePerformedRangeLowCode;
+     private String procedurePerformedRangeLowCompartrCode;
+     private String procedurePerformedRangeLowSystem;
+     private String procedurePerformedRangeLowUnit;
+     private String procedurePerformedRangeLowValue;
+     private String procedurePerformedString;
      private String procedurePerformerActor;
      private String procedurePerformerFunctionCodingCode;
      private String procedurePerformerFunctionCodingDisplay;
      private String procedurePerformerFunctionCodingSystem;
-     private String procedurePerformerFunctionCodingUserSelected;
+     private String procedurePerformerFunctionCodingUsrslt;
      private String procedurePerformerFunctionCodingVersion;
      private String procedurePerformerFunctionText;
      private String procedurePerformerOnBehalfOf;
      private String procedureReasonCodeCodingCode;
      private String procedureReasonCodeCodingDisplay;
      private String procedureReasonCodeCodingSystem;
-     private String procedureReasonCodeCodingUserSelected;
+     private String procedureReasonCodeCodingUsrslt;
      private String procedureReasonCodeCodingVersion;
      private String procedureReasonCodeText;
      private String procedureReasonReference;
@@ -98,104 +114,116 @@ public class Procedure  implements java.io.Serializable {
      private String procedureStatusReasonCodingCode;
      private String procedureStatusReasonCodingDisplay;
      private String procedureStatusReasonCodingSystem;
-     private String procedureStatusReasonCodingUserSelected;
+     private String procedureStatusReasonCodingUsrslt;
      private String procedureStatusReasonCodingVersion;
      private String procedureStatusReasonText;
      private String procedureSubject;
      private String procedureUsedCodeCodingCode;
      private String procedureUsedCodeCodingDisplay;
      private String procedureUsedCodeCodingSystem;
-     private String procedureUsedCodeCodingUserSelected;
+     private String procedureUsedCodeCodingUsrslt;
      private String procedureUsedCodeCodingVersion;
      private String procedureUsedCodeText;
+     private String procedureUsedReference;
 
     public Procedure() {
     }
 
-	
-    public Procedure(String procedureIdentifierValue) {
-        this.procedureIdentifierValue = procedureIdentifierValue;
-    }
-    public Procedure(String procedureIdentifierValue, String procedureAsserter, String procedureBasedOn, String procedureBodySiteCodingCode, String procedureBodySiteCodingDisplay, String procedureBodySiteCodingSystem, String procedureBodySiteCodingUserSelected, String procedureBodySiteCodingVersion, String procedureBodySiteText, String procedureCategoryCodingCode, String procedureCategoryCodingDisplay, String procedureCategoryCodingSystem, String procedureCategoryCodingUserSelected, String procedureCategoryCodingVersion, String procedureCategoryText, String procedureCodeCodingCode, String procedureCodeCodingDisplay, String procedureCodeCodingSystem, String procedureCodeCodingUserSelected, String procedureCodeCodingVersion, String procedureCodeText, String procedureComplicationCodingCode, String procedureComplicationCodingDisplay, String procedureComplicationCodingSystem, String procedureComplicationCodingUserSelected, String procedureComplicationCodingVersion, String procedureComplicationText, String procedureComplicationDetail, String procedureEncounter, String procedureFocalDeviceActionCodingCode, String procedureFocalDeviceActionCodingDisplay, String procedureFocalDeviceActionCodingSystem, String procedureFocalDeviceActionCodingUserSelected, String procedureFocalDeviceActionCodingVersion, String procedureFocalDeviceActionText, String procedureFocalDeviceManipulated, String procedureFollowUpCodingCode, String procedureFollowUpCodingDisplay, String procedureFollowUpCodingSystem, String procedureFollowUpCodingUserSelected, String procedureFollowUpCodingVersion, String procedureFollowUpText, String procedureIdentifierAssigner, String procedureIdentifierPeriodEnd, String procedureIdentifierPeriodStart, String procedureIdentifierSystem, String procedureIdentifierTypeCodingCode, String procedureIdentifierTypeCodingDisplay, String procedureIdentifierTypeCodingSystem, String procedureIdentifierTypeCodingUserSelected, String procedureIdentifierTypeCodingVersion, String procedureIdentifierTypeText, String procedureIdentifierUseCode, String procedureInstantiatesCanonical, String procedureInstantiatesUri, String procedureLocation, String procedureNoteAuthor, String procedureNoteText, String procedureNoteTime, String procedureOutcomeCodingCode, String procedureOutcomeCodingDisplay, String procedureOutcomeCodingSystem, String procedureOutcomeCodingUserSelected, String procedureOutcomeCodingVersion, String procedureOutcomeText, String procedurePartOf, String procedurePerformed, String procedurePerformerActor, String procedurePerformerFunctionCodingCode, String procedurePerformerFunctionCodingDisplay, String procedurePerformerFunctionCodingSystem, String procedurePerformerFunctionCodingUserSelected, String procedurePerformerFunctionCodingVersion, String procedurePerformerFunctionText, String procedurePerformerOnBehalfOf, String procedureReasonCodeCodingCode, String procedureReasonCodeCodingDisplay, String procedureReasonCodeCodingSystem, String procedureReasonCodeCodingUserSelected, String procedureReasonCodeCodingVersion, String procedureReasonCodeText, String procedureReasonReference, String procedureRecorder, String procedureReport, String procedureStatusCode, String procedureStatusReasonCodingCode, String procedureStatusReasonCodingDisplay, String procedureStatusReasonCodingSystem, String procedureStatusReasonCodingUserSelected, String procedureStatusReasonCodingVersion, String procedureStatusReasonText, String procedureSubject, String procedureUsedCodeCodingCode, String procedureUsedCodeCodingDisplay, String procedureUsedCodeCodingSystem, String procedureUsedCodeCodingUserSelected, String procedureUsedCodeCodingVersion, String procedureUsedCodeText) {
-       this.procedureIdentifierValue = procedureIdentifierValue;
+    public Procedure(String procedureAsserter, String procedureBasedOn, String procedureBodySiteCodingCode, String procedureBodySiteCodingDisplay, String procedureBodySiteCodingSystem, String procedureBodySiteCodingUsrslt, String procedureBodySiteCodingVersion, String procedureBodySiteText, String procedureCategoryCodingCode, String procedureCategoryCodingDisplay, String procedureCategoryCodingSystem, String procedureCategoryCodingUsrslt, String procedureCategoryCodingVersion, String procedureCategoryText, String procedureCodeCodingCode, String procedureCodeCodingDisplay, String procedureCodeCodingSystem, String procedureCodeCodingUsrslt, String procedureCodeCodingVersion, String procedureCodeText, String procedureComplicationCodingCode, String procedureComplicationCodingDisplay, String procedureComplicationCodingSystem, String procedureComplicationCodingUsrslt, String procedureComplicationCodingVersion, String procedureComplicationText, String procedureComplicationDetail, String procedureEnc, String procedureFocalDeviceActionCodingCode, String procedureFocalDeviceActionCodingDisplay, String procedureFocalDeviceActionCodingSystem, String procedureFocalDeviceActionCodingUsrslt, String procedureFocalDeviceActionCodingVersion, String procedureFocalDeviceActionText, String procedureFocalDeviceManipulated, String procedureFollowUpCodingCode, String procedureFollowUpCodingDisplay, String procedureFollowUpCodingSystem, String procedureFollowUpCodingUsrslt, String procedureFollowUpCodingVersion, String procedureFollowUpText, String procedureIdAssigner, String procedureIdPeriodEnd, String procedureIdPeriodStart, String procedureIdSystem, String procedureIdTypeCodingCode, String procedureIdTypeCodingDisplay, String procedureIdTypeCodingSystem, String procedureIdTypeCodingUsrslt, String procedureIdTypeCodingVersion, String procedureIdTypeText, String procedureIdUseCode, String procedureIdValue, String procedureInstantiatesCanonical, String procedureInstantiatesUri, String procedureLocation, String procedureNoteAuthorReference, String procedureNoteAuthorString, String procedureNoteText, String procedureNoteTime, String procedureOutcomeCodingCode, String procedureOutcomeCodingDisplay, String procedureOutcomeCodingSystem, String procedureOutcomeCodingUsrslt, String procedureOutcomeCodingVersion, String procedureOutcomeText, String procedurePartOf, String procedurePerformed, String procedurePerformedDateTime, String procedurePerformedPeriodEnd, String procedurePerformedPeriodStart, String procedurePerformedRangeHighCode, String procedurePerformedRangeHighCompartrCode, String procedurePerformedRangeHighSystem, String procedurePerformedRangeHighUnit, String procedurePerformedRangeHighValue, String procedurePerformedRangeLowCode, String procedurePerformedRangeLowCompartrCode, String procedurePerformedRangeLowSystem, String procedurePerformedRangeLowUnit, String procedurePerformedRangeLowValue, String procedurePerformedString, String procedurePerformerActor, String procedurePerformerFunctionCodingCode, String procedurePerformerFunctionCodingDisplay, String procedurePerformerFunctionCodingSystem, String procedurePerformerFunctionCodingUsrslt, String procedurePerformerFunctionCodingVersion, String procedurePerformerFunctionText, String procedurePerformerOnBehalfOf, String procedureReasonCodeCodingCode, String procedureReasonCodeCodingDisplay, String procedureReasonCodeCodingSystem, String procedureReasonCodeCodingUsrslt, String procedureReasonCodeCodingVersion, String procedureReasonCodeText, String procedureReasonReference, String procedureRecorder, String procedureReport, String procedureStatusCode, String procedureStatusReasonCodingCode, String procedureStatusReasonCodingDisplay, String procedureStatusReasonCodingSystem, String procedureStatusReasonCodingUsrslt, String procedureStatusReasonCodingVersion, String procedureStatusReasonText, String procedureSubject, String procedureUsedCodeCodingCode, String procedureUsedCodeCodingDisplay, String procedureUsedCodeCodingSystem, String procedureUsedCodeCodingUsrslt, String procedureUsedCodeCodingVersion, String procedureUsedCodeText, String procedureUsedReference) {
        this.procedureAsserter = procedureAsserter;
        this.procedureBasedOn = procedureBasedOn;
        this.procedureBodySiteCodingCode = procedureBodySiteCodingCode;
        this.procedureBodySiteCodingDisplay = procedureBodySiteCodingDisplay;
        this.procedureBodySiteCodingSystem = procedureBodySiteCodingSystem;
-       this.procedureBodySiteCodingUserSelected = procedureBodySiteCodingUserSelected;
+       this.procedureBodySiteCodingUsrslt = procedureBodySiteCodingUsrslt;
        this.procedureBodySiteCodingVersion = procedureBodySiteCodingVersion;
        this.procedureBodySiteText = procedureBodySiteText;
        this.procedureCategoryCodingCode = procedureCategoryCodingCode;
        this.procedureCategoryCodingDisplay = procedureCategoryCodingDisplay;
        this.procedureCategoryCodingSystem = procedureCategoryCodingSystem;
-       this.procedureCategoryCodingUserSelected = procedureCategoryCodingUserSelected;
+       this.procedureCategoryCodingUsrslt = procedureCategoryCodingUsrslt;
        this.procedureCategoryCodingVersion = procedureCategoryCodingVersion;
        this.procedureCategoryText = procedureCategoryText;
        this.procedureCodeCodingCode = procedureCodeCodingCode;
        this.procedureCodeCodingDisplay = procedureCodeCodingDisplay;
        this.procedureCodeCodingSystem = procedureCodeCodingSystem;
-       this.procedureCodeCodingUserSelected = procedureCodeCodingUserSelected;
+       this.procedureCodeCodingUsrslt = procedureCodeCodingUsrslt;
        this.procedureCodeCodingVersion = procedureCodeCodingVersion;
        this.procedureCodeText = procedureCodeText;
        this.procedureComplicationCodingCode = procedureComplicationCodingCode;
        this.procedureComplicationCodingDisplay = procedureComplicationCodingDisplay;
        this.procedureComplicationCodingSystem = procedureComplicationCodingSystem;
-       this.procedureComplicationCodingUserSelected = procedureComplicationCodingUserSelected;
+       this.procedureComplicationCodingUsrslt = procedureComplicationCodingUsrslt;
        this.procedureComplicationCodingVersion = procedureComplicationCodingVersion;
        this.procedureComplicationText = procedureComplicationText;
        this.procedureComplicationDetail = procedureComplicationDetail;
-       this.procedureEncounter = procedureEncounter;
+       this.procedureEnc = procedureEnc;
        this.procedureFocalDeviceActionCodingCode = procedureFocalDeviceActionCodingCode;
        this.procedureFocalDeviceActionCodingDisplay = procedureFocalDeviceActionCodingDisplay;
        this.procedureFocalDeviceActionCodingSystem = procedureFocalDeviceActionCodingSystem;
-       this.procedureFocalDeviceActionCodingUserSelected = procedureFocalDeviceActionCodingUserSelected;
+       this.procedureFocalDeviceActionCodingUsrslt = procedureFocalDeviceActionCodingUsrslt;
        this.procedureFocalDeviceActionCodingVersion = procedureFocalDeviceActionCodingVersion;
        this.procedureFocalDeviceActionText = procedureFocalDeviceActionText;
        this.procedureFocalDeviceManipulated = procedureFocalDeviceManipulated;
        this.procedureFollowUpCodingCode = procedureFollowUpCodingCode;
        this.procedureFollowUpCodingDisplay = procedureFollowUpCodingDisplay;
        this.procedureFollowUpCodingSystem = procedureFollowUpCodingSystem;
-       this.procedureFollowUpCodingUserSelected = procedureFollowUpCodingUserSelected;
+       this.procedureFollowUpCodingUsrslt = procedureFollowUpCodingUsrslt;
        this.procedureFollowUpCodingVersion = procedureFollowUpCodingVersion;
        this.procedureFollowUpText = procedureFollowUpText;
-       this.procedureIdentifierAssigner = procedureIdentifierAssigner;
-       this.procedureIdentifierPeriodEnd = procedureIdentifierPeriodEnd;
-       this.procedureIdentifierPeriodStart = procedureIdentifierPeriodStart;
-       this.procedureIdentifierSystem = procedureIdentifierSystem;
-       this.procedureIdentifierTypeCodingCode = procedureIdentifierTypeCodingCode;
-       this.procedureIdentifierTypeCodingDisplay = procedureIdentifierTypeCodingDisplay;
-       this.procedureIdentifierTypeCodingSystem = procedureIdentifierTypeCodingSystem;
-       this.procedureIdentifierTypeCodingUserSelected = procedureIdentifierTypeCodingUserSelected;
-       this.procedureIdentifierTypeCodingVersion = procedureIdentifierTypeCodingVersion;
-       this.procedureIdentifierTypeText = procedureIdentifierTypeText;
-       this.procedureIdentifierUseCode = procedureIdentifierUseCode;
+       this.procedureIdAssigner = procedureIdAssigner;
+       this.procedureIdPeriodEnd = procedureIdPeriodEnd;
+       this.procedureIdPeriodStart = procedureIdPeriodStart;
+       this.procedureIdSystem = procedureIdSystem;
+       this.procedureIdTypeCodingCode = procedureIdTypeCodingCode;
+       this.procedureIdTypeCodingDisplay = procedureIdTypeCodingDisplay;
+       this.procedureIdTypeCodingSystem = procedureIdTypeCodingSystem;
+       this.procedureIdTypeCodingUsrslt = procedureIdTypeCodingUsrslt;
+       this.procedureIdTypeCodingVersion = procedureIdTypeCodingVersion;
+       this.procedureIdTypeText = procedureIdTypeText;
+       this.procedureIdUseCode = procedureIdUseCode;
+       this.procedureIdValue = procedureIdValue;
        this.procedureInstantiatesCanonical = procedureInstantiatesCanonical;
        this.procedureInstantiatesUri = procedureInstantiatesUri;
        this.procedureLocation = procedureLocation;
-       this.procedureNoteAuthor = procedureNoteAuthor;
+       this.procedureNoteAuthorReference = procedureNoteAuthorReference;
+       this.procedureNoteAuthorString = procedureNoteAuthorString;
        this.procedureNoteText = procedureNoteText;
        this.procedureNoteTime = procedureNoteTime;
        this.procedureOutcomeCodingCode = procedureOutcomeCodingCode;
        this.procedureOutcomeCodingDisplay = procedureOutcomeCodingDisplay;
        this.procedureOutcomeCodingSystem = procedureOutcomeCodingSystem;
-       this.procedureOutcomeCodingUserSelected = procedureOutcomeCodingUserSelected;
+       this.procedureOutcomeCodingUsrslt = procedureOutcomeCodingUsrslt;
        this.procedureOutcomeCodingVersion = procedureOutcomeCodingVersion;
        this.procedureOutcomeText = procedureOutcomeText;
        this.procedurePartOf = procedurePartOf;
        this.procedurePerformed = procedurePerformed;
+       this.procedurePerformedDateTime = procedurePerformedDateTime;
+       this.procedurePerformedPeriodEnd = procedurePerformedPeriodEnd;
+       this.procedurePerformedPeriodStart = procedurePerformedPeriodStart;
+       this.procedurePerformedRangeHighCode = procedurePerformedRangeHighCode;
+       this.procedurePerformedRangeHighCompartrCode = procedurePerformedRangeHighCompartrCode;
+       this.procedurePerformedRangeHighSystem = procedurePerformedRangeHighSystem;
+       this.procedurePerformedRangeHighUnit = procedurePerformedRangeHighUnit;
+       this.procedurePerformedRangeHighValue = procedurePerformedRangeHighValue;
+       this.procedurePerformedRangeLowCode = procedurePerformedRangeLowCode;
+       this.procedurePerformedRangeLowCompartrCode = procedurePerformedRangeLowCompartrCode;
+       this.procedurePerformedRangeLowSystem = procedurePerformedRangeLowSystem;
+       this.procedurePerformedRangeLowUnit = procedurePerformedRangeLowUnit;
+       this.procedurePerformedRangeLowValue = procedurePerformedRangeLowValue;
+       this.procedurePerformedString = procedurePerformedString;
        this.procedurePerformerActor = procedurePerformerActor;
        this.procedurePerformerFunctionCodingCode = procedurePerformerFunctionCodingCode;
        this.procedurePerformerFunctionCodingDisplay = procedurePerformerFunctionCodingDisplay;
        this.procedurePerformerFunctionCodingSystem = procedurePerformerFunctionCodingSystem;
-       this.procedurePerformerFunctionCodingUserSelected = procedurePerformerFunctionCodingUserSelected;
+       this.procedurePerformerFunctionCodingUsrslt = procedurePerformerFunctionCodingUsrslt;
        this.procedurePerformerFunctionCodingVersion = procedurePerformerFunctionCodingVersion;
        this.procedurePerformerFunctionText = procedurePerformerFunctionText;
        this.procedurePerformerOnBehalfOf = procedurePerformerOnBehalfOf;
        this.procedureReasonCodeCodingCode = procedureReasonCodeCodingCode;
        this.procedureReasonCodeCodingDisplay = procedureReasonCodeCodingDisplay;
        this.procedureReasonCodeCodingSystem = procedureReasonCodeCodingSystem;
-       this.procedureReasonCodeCodingUserSelected = procedureReasonCodeCodingUserSelected;
+       this.procedureReasonCodeCodingUsrslt = procedureReasonCodeCodingUsrslt;
        this.procedureReasonCodeCodingVersion = procedureReasonCodeCodingVersion;
        this.procedureReasonCodeText = procedureReasonCodeText;
        this.procedureReasonReference = procedureReasonReference;
@@ -205,29 +233,30 @@ public class Procedure  implements java.io.Serializable {
        this.procedureStatusReasonCodingCode = procedureStatusReasonCodingCode;
        this.procedureStatusReasonCodingDisplay = procedureStatusReasonCodingDisplay;
        this.procedureStatusReasonCodingSystem = procedureStatusReasonCodingSystem;
-       this.procedureStatusReasonCodingUserSelected = procedureStatusReasonCodingUserSelected;
+       this.procedureStatusReasonCodingUsrslt = procedureStatusReasonCodingUsrslt;
        this.procedureStatusReasonCodingVersion = procedureStatusReasonCodingVersion;
        this.procedureStatusReasonText = procedureStatusReasonText;
        this.procedureSubject = procedureSubject;
        this.procedureUsedCodeCodingCode = procedureUsedCodeCodingCode;
        this.procedureUsedCodeCodingDisplay = procedureUsedCodeCodingDisplay;
        this.procedureUsedCodeCodingSystem = procedureUsedCodeCodingSystem;
-       this.procedureUsedCodeCodingUserSelected = procedureUsedCodeCodingUserSelected;
+       this.procedureUsedCodeCodingUsrslt = procedureUsedCodeCodingUsrslt;
        this.procedureUsedCodeCodingVersion = procedureUsedCodeCodingVersion;
        this.procedureUsedCodeText = procedureUsedCodeText;
+       this.procedureUsedReference = procedureUsedReference;
     }
    
     public 
     String 
-    getProcedureIdentifierValue()
+    getId()
     {
-        return this.procedureIdentifierValue;
+        return this.id;
     }
     
-    public void setProcedureIdentifierValue
-        (String procedureIdentifierValue) 
+    public void setId
+        (String id) 
         {
-      this.procedureIdentifierValue = procedureIdentifierValue;
+      this.id = id;
 }
     public 
     String 
@@ -291,15 +320,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureBodySiteCodingUserSelected()
+    getProcedureBodySiteCodingUsrslt()
     {
-        return this.procedureBodySiteCodingUserSelected;
+        return this.procedureBodySiteCodingUsrslt;
     }
     
-    public void setProcedureBodySiteCodingUserSelected
-        (String procedureBodySiteCodingUserSelected) 
+    public void setProcedureBodySiteCodingUsrslt
+        (String procedureBodySiteCodingUsrslt) 
         {
-      this.procedureBodySiteCodingUserSelected = procedureBodySiteCodingUserSelected;
+      this.procedureBodySiteCodingUsrslt = procedureBodySiteCodingUsrslt;
 }
     public 
     String 
@@ -363,15 +392,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureCategoryCodingUserSelected()
+    getProcedureCategoryCodingUsrslt()
     {
-        return this.procedureCategoryCodingUserSelected;
+        return this.procedureCategoryCodingUsrslt;
     }
     
-    public void setProcedureCategoryCodingUserSelected
-        (String procedureCategoryCodingUserSelected) 
+    public void setProcedureCategoryCodingUsrslt
+        (String procedureCategoryCodingUsrslt) 
         {
-      this.procedureCategoryCodingUserSelected = procedureCategoryCodingUserSelected;
+      this.procedureCategoryCodingUsrslt = procedureCategoryCodingUsrslt;
 }
     public 
     String 
@@ -435,15 +464,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureCodeCodingUserSelected()
+    getProcedureCodeCodingUsrslt()
     {
-        return this.procedureCodeCodingUserSelected;
+        return this.procedureCodeCodingUsrslt;
     }
     
-    public void setProcedureCodeCodingUserSelected
-        (String procedureCodeCodingUserSelected) 
+    public void setProcedureCodeCodingUsrslt
+        (String procedureCodeCodingUsrslt) 
         {
-      this.procedureCodeCodingUserSelected = procedureCodeCodingUserSelected;
+      this.procedureCodeCodingUsrslt = procedureCodeCodingUsrslt;
 }
     public 
     String 
@@ -507,15 +536,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureComplicationCodingUserSelected()
+    getProcedureComplicationCodingUsrslt()
     {
-        return this.procedureComplicationCodingUserSelected;
+        return this.procedureComplicationCodingUsrslt;
     }
     
-    public void setProcedureComplicationCodingUserSelected
-        (String procedureComplicationCodingUserSelected) 
+    public void setProcedureComplicationCodingUsrslt
+        (String procedureComplicationCodingUsrslt) 
         {
-      this.procedureComplicationCodingUserSelected = procedureComplicationCodingUserSelected;
+      this.procedureComplicationCodingUsrslt = procedureComplicationCodingUsrslt;
 }
     public 
     String 
@@ -555,15 +584,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureEncounter()
+    getProcedureEnc()
     {
-        return this.procedureEncounter;
+        return this.procedureEnc;
     }
     
-    public void setProcedureEncounter
-        (String procedureEncounter) 
+    public void setProcedureEnc
+        (String procedureEnc) 
         {
-      this.procedureEncounter = procedureEncounter;
+      this.procedureEnc = procedureEnc;
 }
     public 
     String 
@@ -603,15 +632,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureFocalDeviceActionCodingUserSelected()
+    getProcedureFocalDeviceActionCodingUsrslt()
     {
-        return this.procedureFocalDeviceActionCodingUserSelected;
+        return this.procedureFocalDeviceActionCodingUsrslt;
     }
     
-    public void setProcedureFocalDeviceActionCodingUserSelected
-        (String procedureFocalDeviceActionCodingUserSelected) 
+    public void setProcedureFocalDeviceActionCodingUsrslt
+        (String procedureFocalDeviceActionCodingUsrslt) 
         {
-      this.procedureFocalDeviceActionCodingUserSelected = procedureFocalDeviceActionCodingUserSelected;
+      this.procedureFocalDeviceActionCodingUsrslt = procedureFocalDeviceActionCodingUsrslt;
 }
     public 
     String 
@@ -687,15 +716,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureFollowUpCodingUserSelected()
+    getProcedureFollowUpCodingUsrslt()
     {
-        return this.procedureFollowUpCodingUserSelected;
+        return this.procedureFollowUpCodingUsrslt;
     }
     
-    public void setProcedureFollowUpCodingUserSelected
-        (String procedureFollowUpCodingUserSelected) 
+    public void setProcedureFollowUpCodingUsrslt
+        (String procedureFollowUpCodingUsrslt) 
         {
-      this.procedureFollowUpCodingUserSelected = procedureFollowUpCodingUserSelected;
+      this.procedureFollowUpCodingUsrslt = procedureFollowUpCodingUsrslt;
 }
     public 
     String 
@@ -723,135 +752,147 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureIdentifierAssigner()
+    getProcedureIdAssigner()
     {
-        return this.procedureIdentifierAssigner;
+        return this.procedureIdAssigner;
     }
     
-    public void setProcedureIdentifierAssigner
-        (String procedureIdentifierAssigner) 
+    public void setProcedureIdAssigner
+        (String procedureIdAssigner) 
         {
-      this.procedureIdentifierAssigner = procedureIdentifierAssigner;
+      this.procedureIdAssigner = procedureIdAssigner;
 }
     public 
     String 
-    getProcedureIdentifierPeriodEnd()
+    getProcedureIdPeriodEnd()
     {
-        return this.procedureIdentifierPeriodEnd;
+        return this.procedureIdPeriodEnd;
     }
     
-    public void setProcedureIdentifierPeriodEnd
-        (String procedureIdentifierPeriodEnd) 
+    public void setProcedureIdPeriodEnd
+        (String procedureIdPeriodEnd) 
         {
-      this.procedureIdentifierPeriodEnd = procedureIdentifierPeriodEnd;
+      this.procedureIdPeriodEnd = procedureIdPeriodEnd;
 }
     public 
     String 
-    getProcedureIdentifierPeriodStart()
+    getProcedureIdPeriodStart()
     {
-        return this.procedureIdentifierPeriodStart;
+        return this.procedureIdPeriodStart;
     }
     
-    public void setProcedureIdentifierPeriodStart
-        (String procedureIdentifierPeriodStart) 
+    public void setProcedureIdPeriodStart
+        (String procedureIdPeriodStart) 
         {
-      this.procedureIdentifierPeriodStart = procedureIdentifierPeriodStart;
+      this.procedureIdPeriodStart = procedureIdPeriodStart;
 }
     public 
     String 
-    getProcedureIdentifierSystem()
+    getProcedureIdSystem()
     {
-        return this.procedureIdentifierSystem;
+        return this.procedureIdSystem;
     }
     
-    public void setProcedureIdentifierSystem
-        (String procedureIdentifierSystem) 
+    public void setProcedureIdSystem
+        (String procedureIdSystem) 
         {
-      this.procedureIdentifierSystem = procedureIdentifierSystem;
+      this.procedureIdSystem = procedureIdSystem;
 }
     public 
     String 
-    getProcedureIdentifierTypeCodingCode()
+    getProcedureIdTypeCodingCode()
     {
-        return this.procedureIdentifierTypeCodingCode;
+        return this.procedureIdTypeCodingCode;
     }
     
-    public void setProcedureIdentifierTypeCodingCode
-        (String procedureIdentifierTypeCodingCode) 
+    public void setProcedureIdTypeCodingCode
+        (String procedureIdTypeCodingCode) 
         {
-      this.procedureIdentifierTypeCodingCode = procedureIdentifierTypeCodingCode;
+      this.procedureIdTypeCodingCode = procedureIdTypeCodingCode;
 }
     public 
     String 
-    getProcedureIdentifierTypeCodingDisplay()
+    getProcedureIdTypeCodingDisplay()
     {
-        return this.procedureIdentifierTypeCodingDisplay;
+        return this.procedureIdTypeCodingDisplay;
     }
     
-    public void setProcedureIdentifierTypeCodingDisplay
-        (String procedureIdentifierTypeCodingDisplay) 
+    public void setProcedureIdTypeCodingDisplay
+        (String procedureIdTypeCodingDisplay) 
         {
-      this.procedureIdentifierTypeCodingDisplay = procedureIdentifierTypeCodingDisplay;
+      this.procedureIdTypeCodingDisplay = procedureIdTypeCodingDisplay;
 }
     public 
     String 
-    getProcedureIdentifierTypeCodingSystem()
+    getProcedureIdTypeCodingSystem()
     {
-        return this.procedureIdentifierTypeCodingSystem;
+        return this.procedureIdTypeCodingSystem;
     }
     
-    public void setProcedureIdentifierTypeCodingSystem
-        (String procedureIdentifierTypeCodingSystem) 
+    public void setProcedureIdTypeCodingSystem
+        (String procedureIdTypeCodingSystem) 
         {
-      this.procedureIdentifierTypeCodingSystem = procedureIdentifierTypeCodingSystem;
+      this.procedureIdTypeCodingSystem = procedureIdTypeCodingSystem;
 }
     public 
     String 
-    getProcedureIdentifierTypeCodingUserSelected()
+    getProcedureIdTypeCodingUsrslt()
     {
-        return this.procedureIdentifierTypeCodingUserSelected;
+        return this.procedureIdTypeCodingUsrslt;
     }
     
-    public void setProcedureIdentifierTypeCodingUserSelected
-        (String procedureIdentifierTypeCodingUserSelected) 
+    public void setProcedureIdTypeCodingUsrslt
+        (String procedureIdTypeCodingUsrslt) 
         {
-      this.procedureIdentifierTypeCodingUserSelected = procedureIdentifierTypeCodingUserSelected;
+      this.procedureIdTypeCodingUsrslt = procedureIdTypeCodingUsrslt;
 }
     public 
     String 
-    getProcedureIdentifierTypeCodingVersion()
+    getProcedureIdTypeCodingVersion()
     {
-        return this.procedureIdentifierTypeCodingVersion;
+        return this.procedureIdTypeCodingVersion;
     }
     
-    public void setProcedureIdentifierTypeCodingVersion
-        (String procedureIdentifierTypeCodingVersion) 
+    public void setProcedureIdTypeCodingVersion
+        (String procedureIdTypeCodingVersion) 
         {
-      this.procedureIdentifierTypeCodingVersion = procedureIdentifierTypeCodingVersion;
+      this.procedureIdTypeCodingVersion = procedureIdTypeCodingVersion;
 }
     public 
     String 
-    getProcedureIdentifierTypeText()
+    getProcedureIdTypeText()
     {
-        return this.procedureIdentifierTypeText;
+        return this.procedureIdTypeText;
     }
     
-    public void setProcedureIdentifierTypeText
-        (String procedureIdentifierTypeText) 
+    public void setProcedureIdTypeText
+        (String procedureIdTypeText) 
         {
-      this.procedureIdentifierTypeText = procedureIdentifierTypeText;
+      this.procedureIdTypeText = procedureIdTypeText;
 }
     public 
     String 
-    getProcedureIdentifierUseCode()
+    getProcedureIdUseCode()
     {
-        return this.procedureIdentifierUseCode;
+        return this.procedureIdUseCode;
     }
     
-    public void setProcedureIdentifierUseCode
-        (String procedureIdentifierUseCode) 
+    public void setProcedureIdUseCode
+        (String procedureIdUseCode) 
         {
-      this.procedureIdentifierUseCode = procedureIdentifierUseCode;
+      this.procedureIdUseCode = procedureIdUseCode;
+}
+    public 
+    String 
+    getProcedureIdValue()
+    {
+        return this.procedureIdValue;
+    }
+    
+    public void setProcedureIdValue
+        (String procedureIdValue) 
+        {
+      this.procedureIdValue = procedureIdValue;
 }
     public 
     String 
@@ -891,15 +932,27 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureNoteAuthor()
+    getProcedureNoteAuthorReference()
     {
-        return this.procedureNoteAuthor;
+        return this.procedureNoteAuthorReference;
     }
     
-    public void setProcedureNoteAuthor
-        (String procedureNoteAuthor) 
+    public void setProcedureNoteAuthorReference
+        (String procedureNoteAuthorReference) 
         {
-      this.procedureNoteAuthor = procedureNoteAuthor;
+      this.procedureNoteAuthorReference = procedureNoteAuthorReference;
+}
+    public 
+    String 
+    getProcedureNoteAuthorString()
+    {
+        return this.procedureNoteAuthorString;
+    }
+    
+    public void setProcedureNoteAuthorString
+        (String procedureNoteAuthorString) 
+        {
+      this.procedureNoteAuthorString = procedureNoteAuthorString;
 }
     public 
     String 
@@ -963,15 +1016,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureOutcomeCodingUserSelected()
+    getProcedureOutcomeCodingUsrslt()
     {
-        return this.procedureOutcomeCodingUserSelected;
+        return this.procedureOutcomeCodingUsrslt;
     }
     
-    public void setProcedureOutcomeCodingUserSelected
-        (String procedureOutcomeCodingUserSelected) 
+    public void setProcedureOutcomeCodingUsrslt
+        (String procedureOutcomeCodingUsrslt) 
         {
-      this.procedureOutcomeCodingUserSelected = procedureOutcomeCodingUserSelected;
+      this.procedureOutcomeCodingUsrslt = procedureOutcomeCodingUsrslt;
 }
     public 
     String 
@@ -1023,6 +1076,174 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
+    getProcedurePerformedDateTime()
+    {
+        return this.procedurePerformedDateTime;
+    }
+    
+    public void setProcedurePerformedDateTime
+        (String procedurePerformedDateTime) 
+        {
+      this.procedurePerformedDateTime = procedurePerformedDateTime;
+}
+    public 
+    String 
+    getProcedurePerformedPeriodEnd()
+    {
+        return this.procedurePerformedPeriodEnd;
+    }
+    
+    public void setProcedurePerformedPeriodEnd
+        (String procedurePerformedPeriodEnd) 
+        {
+      this.procedurePerformedPeriodEnd = procedurePerformedPeriodEnd;
+}
+    public 
+    String 
+    getProcedurePerformedPeriodStart()
+    {
+        return this.procedurePerformedPeriodStart;
+    }
+    
+    public void setProcedurePerformedPeriodStart
+        (String procedurePerformedPeriodStart) 
+        {
+      this.procedurePerformedPeriodStart = procedurePerformedPeriodStart;
+}
+    public 
+    String 
+    getProcedurePerformedRangeHighCode()
+    {
+        return this.procedurePerformedRangeHighCode;
+    }
+    
+    public void setProcedurePerformedRangeHighCode
+        (String procedurePerformedRangeHighCode) 
+        {
+      this.procedurePerformedRangeHighCode = procedurePerformedRangeHighCode;
+}
+    public 
+    String 
+    getProcedurePerformedRangeHighCompartrCode()
+    {
+        return this.procedurePerformedRangeHighCompartrCode;
+    }
+    
+    public void setProcedurePerformedRangeHighCompartrCode
+        (String procedurePerformedRangeHighCompartrCode) 
+        {
+      this.procedurePerformedRangeHighCompartrCode = procedurePerformedRangeHighCompartrCode;
+}
+    public 
+    String 
+    getProcedurePerformedRangeHighSystem()
+    {
+        return this.procedurePerformedRangeHighSystem;
+    }
+    
+    public void setProcedurePerformedRangeHighSystem
+        (String procedurePerformedRangeHighSystem) 
+        {
+      this.procedurePerformedRangeHighSystem = procedurePerformedRangeHighSystem;
+}
+    public 
+    String 
+    getProcedurePerformedRangeHighUnit()
+    {
+        return this.procedurePerformedRangeHighUnit;
+    }
+    
+    public void setProcedurePerformedRangeHighUnit
+        (String procedurePerformedRangeHighUnit) 
+        {
+      this.procedurePerformedRangeHighUnit = procedurePerformedRangeHighUnit;
+}
+    public 
+    String 
+    getProcedurePerformedRangeHighValue()
+    {
+        return this.procedurePerformedRangeHighValue;
+    }
+    
+    public void setProcedurePerformedRangeHighValue
+        (String procedurePerformedRangeHighValue) 
+        {
+      this.procedurePerformedRangeHighValue = procedurePerformedRangeHighValue;
+}
+    public 
+    String 
+    getProcedurePerformedRangeLowCode()
+    {
+        return this.procedurePerformedRangeLowCode;
+    }
+    
+    public void setProcedurePerformedRangeLowCode
+        (String procedurePerformedRangeLowCode) 
+        {
+      this.procedurePerformedRangeLowCode = procedurePerformedRangeLowCode;
+}
+    public 
+    String 
+    getProcedurePerformedRangeLowCompartrCode()
+    {
+        return this.procedurePerformedRangeLowCompartrCode;
+    }
+    
+    public void setProcedurePerformedRangeLowCompartrCode
+        (String procedurePerformedRangeLowCompartrCode) 
+        {
+      this.procedurePerformedRangeLowCompartrCode = procedurePerformedRangeLowCompartrCode;
+}
+    public 
+    String 
+    getProcedurePerformedRangeLowSystem()
+    {
+        return this.procedurePerformedRangeLowSystem;
+    }
+    
+    public void setProcedurePerformedRangeLowSystem
+        (String procedurePerformedRangeLowSystem) 
+        {
+      this.procedurePerformedRangeLowSystem = procedurePerformedRangeLowSystem;
+}
+    public 
+    String 
+    getProcedurePerformedRangeLowUnit()
+    {
+        return this.procedurePerformedRangeLowUnit;
+    }
+    
+    public void setProcedurePerformedRangeLowUnit
+        (String procedurePerformedRangeLowUnit) 
+        {
+      this.procedurePerformedRangeLowUnit = procedurePerformedRangeLowUnit;
+}
+    public 
+    String 
+    getProcedurePerformedRangeLowValue()
+    {
+        return this.procedurePerformedRangeLowValue;
+    }
+    
+    public void setProcedurePerformedRangeLowValue
+        (String procedurePerformedRangeLowValue) 
+        {
+      this.procedurePerformedRangeLowValue = procedurePerformedRangeLowValue;
+}
+    public 
+    String 
+    getProcedurePerformedString()
+    {
+        return this.procedurePerformedString;
+    }
+    
+    public void setProcedurePerformedString
+        (String procedurePerformedString) 
+        {
+      this.procedurePerformedString = procedurePerformedString;
+}
+    public 
+    String 
     getProcedurePerformerActor()
     {
         return this.procedurePerformerActor;
@@ -1071,15 +1292,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedurePerformerFunctionCodingUserSelected()
+    getProcedurePerformerFunctionCodingUsrslt()
     {
-        return this.procedurePerformerFunctionCodingUserSelected;
+        return this.procedurePerformerFunctionCodingUsrslt;
     }
     
-    public void setProcedurePerformerFunctionCodingUserSelected
-        (String procedurePerformerFunctionCodingUserSelected) 
+    public void setProcedurePerformerFunctionCodingUsrslt
+        (String procedurePerformerFunctionCodingUsrslt) 
         {
-      this.procedurePerformerFunctionCodingUserSelected = procedurePerformerFunctionCodingUserSelected;
+      this.procedurePerformerFunctionCodingUsrslt = procedurePerformerFunctionCodingUsrslt;
 }
     public 
     String 
@@ -1155,15 +1376,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureReasonCodeCodingUserSelected()
+    getProcedureReasonCodeCodingUsrslt()
     {
-        return this.procedureReasonCodeCodingUserSelected;
+        return this.procedureReasonCodeCodingUsrslt;
     }
     
-    public void setProcedureReasonCodeCodingUserSelected
-        (String procedureReasonCodeCodingUserSelected) 
+    public void setProcedureReasonCodeCodingUsrslt
+        (String procedureReasonCodeCodingUsrslt) 
         {
-      this.procedureReasonCodeCodingUserSelected = procedureReasonCodeCodingUserSelected;
+      this.procedureReasonCodeCodingUsrslt = procedureReasonCodeCodingUsrslt;
 }
     public 
     String 
@@ -1275,15 +1496,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureStatusReasonCodingUserSelected()
+    getProcedureStatusReasonCodingUsrslt()
     {
-        return this.procedureStatusReasonCodingUserSelected;
+        return this.procedureStatusReasonCodingUsrslt;
     }
     
-    public void setProcedureStatusReasonCodingUserSelected
-        (String procedureStatusReasonCodingUserSelected) 
+    public void setProcedureStatusReasonCodingUsrslt
+        (String procedureStatusReasonCodingUsrslt) 
         {
-      this.procedureStatusReasonCodingUserSelected = procedureStatusReasonCodingUserSelected;
+      this.procedureStatusReasonCodingUsrslt = procedureStatusReasonCodingUsrslt;
 }
     public 
     String 
@@ -1359,15 +1580,15 @@ public class Procedure  implements java.io.Serializable {
 }
     public 
     String 
-    getProcedureUsedCodeCodingUserSelected()
+    getProcedureUsedCodeCodingUsrslt()
     {
-        return this.procedureUsedCodeCodingUserSelected;
+        return this.procedureUsedCodeCodingUsrslt;
     }
     
-    public void setProcedureUsedCodeCodingUserSelected
-        (String procedureUsedCodeCodingUserSelected) 
+    public void setProcedureUsedCodeCodingUsrslt
+        (String procedureUsedCodeCodingUsrslt) 
         {
-      this.procedureUsedCodeCodingUserSelected = procedureUsedCodeCodingUserSelected;
+      this.procedureUsedCodeCodingUsrslt = procedureUsedCodeCodingUsrslt;
 }
     public 
     String 
@@ -1392,6 +1613,18 @@ public class Procedure  implements java.io.Serializable {
         (String procedureUsedCodeText) 
         {
       this.procedureUsedCodeText = procedureUsedCodeText;
+}
+    public 
+    String 
+    getProcedureUsedReference()
+    {
+        return this.procedureUsedReference;
+    }
+    
+    public void setProcedureUsedReference
+        (String procedureUsedReference) 
+        {
+      this.procedureUsedReference = procedureUsedReference;
 }
 
 

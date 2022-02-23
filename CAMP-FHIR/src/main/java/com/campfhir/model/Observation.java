@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 17, 2022, 12:11:05 PM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:23:19 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,2102 +10,3767 @@ package main.java.com.campfhir.model;
 public class Observation  implements java.io.Serializable {
 
 
-     private String observationIdentifierValue;
-     private String observationBasedOn;
-     private String observationBodySiteCodingCode;
-     private String observationBodySiteCodingDisplay;
-     private String observationBodySiteCodingSystem;
-     private String observationBodySiteCodingUserSelected;
-     private String observationBodySiteCodingVersion;
-     private String observationBodySiteText;
-     private String observationCategoryCodingCode;
-     private String observationCategoryCodingDisplay;
-     private String observationCategoryCodingSystem;
-     private String observationCategoryCodingUserSelected;
-     private String observationCategoryCodingVersion;
-     private String observationCategoryText;
-     private String observationCodeCodingCode;
-     private String observationCodeCodingDisplay;
-     private String observationCodeCodingSystem;
-     private String observationCodeCodingUserSelected;
-     private String observationCodeCodingVersion;
-     private String observationCodeText;
-     private String observationComponentCodeCodingCode;
-     private String observationComponentCodeCodingDisplay;
-     private String observationComponentCodeCodingSystem;
-     private String observationComponentCodeCodingUserSelected;
-     private String observationComponentCodeCodingVersion;
-     private String observationComponentCodeText;
-     private String observationComponentDataAbsentReasonCodingCode;
-     private String observationComponentDataAbsentReasonCodingDisplay;
-     private String observationComponentDataAbsentReasonCodingSystem;
-     private String observationComponentDataAbsentReasonCodingUserSelected;
-     private String observationComponentDataAbsentReasonCodingVersion;
-     private String observationComponentDataAbsentReasonText;
-     private String observationComponentInterpretationCodingCode;
-     private String observationComponentInterpretationCodingDisplay;
-     private String observationComponentInterpretationCodingSystem;
-     private String observationComponentInterpretationCodingUserSelected;
-     private String observationComponentInterpretationCodingVersion;
-     private String observationComponentInterpretationText;
-     private String observationComponentReferenceRangeAgeHighCode;
-     private String observationComponentReferenceRangeAgeHighComparatorCode;
-     private String observationComponentReferenceRangeAgeHighSystem;
-     private String observationComponentReferenceRangeAgeHighUnit;
-     private String observationComponentReferenceRangeAgeHighValue;
-     private String observationComponentReferenceRangeAgeLowCode;
-     private String observationComponentReferenceRangeAgeLowComparatorCode;
-     private String observationComponentReferenceRangeAgeLowSystem;
-     private String observationComponentReferenceRangeAgeLowUnit;
-     private String observationComponentReferenceRangeAgeLowValue;
-     private String observationComponentReferenceRangeAppliesToCodingCode;
-     private String observationComponentReferenceRangeAppliesToCodingDisplay;
-     private String observationComponentReferenceRangeAppliesToCodingSystem;
-     private String observationComponentReferenceRangeAppliesToCodingUs;
-     private String observationComponentReferenceRangeAppliesToCodingVersion;
-     private String observationComponentReferenceRangeAppliesToText;
-     private String observationComponentReferenceRangeHighCode;
-     private String observationComponentReferenceRangeHighComparatorCode;
-     private String observationComponentReferenceRangeHighSystem;
-     private String observationComponentReferenceRangeHighUnit;
-     private String observationComponentReferenceRangeHighValue;
-     private String observationComponentReferenceRangeLowCode;
-     private String observationComponentReferenceRangeLowComparatorCode;
-     private String observationComponentReferenceRangeLowSystem;
-     private String observationComponentReferenceRangeLowUnit;
-     private String observationComponentReferenceRangeLowValue;
-     private String observationComponentReferenceRangeText;
-     private String observationComponentReferenceRangeTypeCodingCode;
-     private String observationComponentReferenceRangeTypeCodingDisplay;
-     private String observationComponentReferenceRangeTypeCodingSystem;
-     private String observationComponentReferenceRangeTypeCodingUserSelected;
-     private String observationComponentReferenceRangeTypeCodingVersion;
-     private String observationComponentReferenceRangeTypeText;
-     private String observationComponentValue;
-     private String observationDataAbsentReasonCodingCode;
-     private String observationDataAbsentReasonCodingDisplay;
-     private String observationDataAbsentReasonCodingSystem;
-     private String observationDataAbsentReasonCodingUserSelected;
-     private String observationDataAbsentReasonCodingVersion;
-     private String observationDataAbsentReasonText;
-     private String observationDerivedFrom;
-     private String observationDevice;
-     private String observationEffective;
-     private String observationEncounter;
-     private String observationFocus;
-     private String observationHasMember;
-     private String observationIdentifierAssigner;
-     private String observationIdentifierPeriodEnd;
-     private String observationIdentifierPeriodStart;
-     private String observationIdentifierSystem;
-     private String observationIdentifierTypeCodingCode;
-     private String observationIdentifierTypeCodingDisplay;
-     private String observationIdentifierTypeCodingSystem;
-     private String observationIdentifierTypeCodingUserSelected;
-     private String observationIdentifierTypeCodingVersion;
-     private String observationIdentifierTypeText;
-     private String observationIdentifierUseCode;
-     private String observationInterpretationCodingCode;
-     private String observationInterpretationCodingDisplay;
-     private String observationInterpretationCodingSystem;
-     private String observationInterpretationCodingUserSelected;
-     private String observationInterpretationCodingVersion;
-     private String observationInterpretationText;
-     private String observationIssued;
-     private String observationMethodCodingCode;
-     private String observationMethodCodingDisplay;
-     private String observationMethodCodingSystem;
-     private String observationMethodCodingUserSelected;
-     private String observationMethodCodingVersion;
-     private String observationMethodText;
-     private String observationNoteAuthor;
-     private String observationNoteText;
-     private String observationNoteTime;
-     private String observationPartOf;
-     private String observationPerformer;
-     private String observationReferenceRangeAgeHighCode;
-     private String observationReferenceRangeAgeHighComparatorCode;
-     private String observationReferenceRangeAgeHighSystem;
-     private String observationReferenceRangeAgeHighUnit;
-     private String observationReferenceRangeAgeHighValue;
-     private String observationReferenceRangeAgeLowCode;
-     private String observationReferenceRangeAgeLowComparatorCode;
-     private String observationReferenceRangeAgeLowSystem;
-     private String observationReferenceRangeAgeLowUnit;
-     private String observationReferenceRangeAgeLowValue;
-     private String observationReferenceRangeAppliesToCodingCode;
-     private String observationReferenceRangeAppliesToCodingDisplay;
-     private String observationReferenceRangeAppliesToCodingSystem;
-     private String observationReferenceRangeAppliesToCodingUserSelected;
-     private String observationReferenceRangeAppliesToCodingVersion;
-     private String observationReferenceRangeAppliesToText;
-     private String observationReferenceRangeHighCode;
-     private String observationReferenceRangeHighComparatorCode;
-     private String observationReferenceRangeHighSystem;
-     private String observationReferenceRangeHighUnit;
-     private String observationReferenceRangeHighValue;
-     private String observationReferenceRangeLowCode;
-     private String observationReferenceRangeLowComparatorCode;
-     private String observationReferenceRangeLowSystem;
-     private String observationReferenceRangeLowUnit;
-     private String observationReferenceRangeLowValue;
-     private String observationReferenceRangeText;
-     private String observationReferenceRangeTypeCodingCode;
-     private String observationReferenceRangeTypeCodingDisplay;
-     private String observationReferenceRangeTypeCodingSystem;
-     private String observationReferenceRangeTypeCodingUserSelected;
-     private String observationReferenceRangeTypeCodingVersion;
-     private String observationReferenceRangeTypeText;
-     private String observationSpecimen;
-     private String observationStatusCode;
-     private String observationSubject;
+     private String id;
+     private String obsBasedOn;
+     private String obsBodySiteCodingCode;
+     private String obsBodySiteCodingDisplay;
+     private String obsBodySiteCodingSystem;
+     private String obsBodySiteCodingUsrslt;
+     private String obsBodySiteCodingVersion;
+     private String obsBodySiteText;
+     private String obsCategoryCodingCode;
+     private String obsCategoryCodingDisplay;
+     private String obsCategoryCodingSystem;
+     private String obsCategoryCodingUsrslt;
+     private String obsCategoryCodingVersion;
+     private String obsCategoryText;
+     private String obsCodeCodingCode;
+     private String obsCodeCodingDisplay;
+     private String obsCodeCodingSystem;
+     private String obsCodeCodingUsrslt;
+     private String obsCodeCodingVersion;
+     private String obsCodeText;
+     private String obsComponentCodeCodingCode;
+     private String obsComponentCodeCodingDisplay;
+     private String obsComponentCodeCodingSystem;
+     private String obsComponentCodeCodingUsrslt;
+     private String obsComponentCodeCodingVersion;
+     private String obsComponentCodeText;
+     private String obsComponentDataAbsentReasonCodingCode;
+     private String obsComponentDataAbsentReasonCodingDisplay;
+     private String obsComponentDataAbsentReasonCodingSystem;
+     private String obsComponentDataAbsentReasonCodingUsrslt;
+     private String obsComponentDataAbsentReasonCodingVersion;
+     private String obsComponentDataAbsentReasonText;
+     private String obsComponentInterpretationCodingCode;
+     private String obsComponentInterpretationCodingDisplay;
+     private String obsComponentInterpretationCodingSystem;
+     private String obsComponentInterpretationCodingUsrslt;
+     private String obsComponentInterpretationCodingVersion;
+     private String obsComponentInterpretationText;
+     private String obsComponentReferenceRangeAgeHighCode;
+     private String obsComponentReferenceRangeAgeHighCompartrCode;
+     private String obsComponentReferenceRangeAgeHighSystem;
+     private String obsComponentReferenceRangeAgeHighUnit;
+     private String obsComponentReferenceRangeAgeHighValue;
+     private String obsComponentReferenceRangeAgeLowCode;
+     private String obsComponentReferenceRangeAgeLowCompartrCode;
+     private String obsComponentReferenceRangeAgeLowSystem;
+     private String obsComponentReferenceRangeAgeLowUnit;
+     private String obsComponentReferenceRangeAgeLowValue;
+     private String obsComponentReferenceRangeAppliesToCodingCode;
+     private String obsComponentReferenceRangeAppliesToCodingDisplay;
+     private String obsComponentReferenceRangeAppliesToCodingSystem;
+     private String obsComponentReferenceRangeAppliesToCodingUsrslt;
+     private String obsComponentReferenceRangeAppliesToCodingVersion;
+     private String obsComponentReferenceRangeAppliesToText;
+     private String obsComponentReferenceRangeHighCode;
+     private String obsComponentReferenceRangeHighCompartrCode;
+     private String obsComponentReferenceRangeHighSystem;
+     private String obsComponentReferenceRangeHighUnit;
+     private String obsComponentReferenceRangeHighValue;
+     private String obsComponentReferenceRangeLowCode;
+     private String obsComponentReferenceRangeLowCompartrCode;
+     private String obsComponentReferenceRangeLowSystem;
+     private String obsComponentReferenceRangeLowUnit;
+     private String obsComponentReferenceRangeLowValue;
+     private String obsComponentReferenceRangeText;
+     private String obsComponentReferenceRangeTypeCodingCode;
+     private String obsComponentReferenceRangeTypeCodingDisplay;
+     private String obsComponentReferenceRangeTypeCodingSystem;
+     private String obsComponentReferenceRangeTypeCodingUsrslt;
+     private String obsComponentReferenceRangeTypeCodingVersion;
+     private String obsComponentReferenceRangeTypeText;
+     private String observationComponentValueBoolean;
+     private String obsComponentValueCodeableConceptCodingCode;
+     private String obsComponentValueCodeableConceptCodingDisplay;
+     private String obsComponentValueCodeableConceptCodingSystem;
+     private String obsComponentValueCodeableConceptCodingUsrslt;
+     private String obsComponentValueCodeableConceptCodingVersion;
+     private String obsComponentValueCodeableConceptText;
+     private String observationComponentValueDateTime;
+     private String observationComponentValueInteger;
+     private String obsComponentValuePeriodEnd;
+     private String obsComponentValuePeriodStart;
+     private String obsComponentValueQuantityCode;
+     private String obsComponentValueQuantityCompartrCode;
+     private String obsComponentValueQuantitySystem;
+     private String obsComponentValueQuantityUnit;
+     private String obsComponentValueQuantityValue;
+     private String obsComponentValueRangeHighCode;
+     private String obsComponentValueRangeHighCompartrCode;
+     private String obsComponentValueRangeHighSystem;
+     private String obsComponentValueRangeHighUnit;
+     private String obsComponentValueRangeHighValue;
+     private String obsComponentValueRangeLowCode;
+     private String obsComponentValueRangeLowCompartrCode;
+     private String obsComponentValueRangeLowSystem;
+     private String obsComponentValueRangeLowUnit;
+     private String obsComponentValueRangeLowValue;
+     private String obsComponentValueRatioDenomCode;
+     private String obsComponentValueRatioDenomCompartrCode;
+     private String obsComponentValueRatioDenomSystem;
+     private String obsComponentValueRatioDenomUnit;
+     private String obsComponentValueRatioDenomValue;
+     private String obsComponentValueRatioNumeratorCode;
+     private String obsComponentValueRatioNumeratorCompartrCode;
+     private String obsComponentValueRatioNumeratorSystem;
+     private String obsComponentValueRatioNumeratorUnit;
+     private String obsComponentValueRatioNumeratorValue;
+     private String obsComponentValueSampledDataData;
+     private String obsComponentValueSampledDataDimensions;
+     private String obsComponentValueSampledDataFactor;
+     private String obsComponentValueSampledDataLowerLimit;
+     private String obsComponentValueSampledDataOriginCode;
+     private String obsComponentValueSampledDataOriginCompartrCode;
+     private String obsComponentValueSampledDataOriginSystem;
+     private String obsComponentValueSampledDataOriginUnit;
+     private String obsComponentValueSampledDataOriginValue;
+     private String obsComponentValueSampledDataPeriod;
+     private String obsComponentValueSampledDataUpperLimit;
+     private String observationComponentValueString;
+     private String observationComponentValueTime;
+     private String obsDataAbsentReasonCodingCode;
+     private String obsDataAbsentReasonCodingDisplay;
+     private String obsDataAbsentReasonCodingSystem;
+     private String obsDataAbsentReasonCodingUsrslt;
+     private String obsDataAbsentReasonCodingVersion;
+     private String obsDataAbsentReasonText;
+     private String obsDerivedFrom;
+     private String obsDevice;
+     private String observationEffectiveDateTime;
+     private String observationEffectiveInstant;
+     private String obsEffectivePeriodEnd;
+     private String obsEffectivePeriodStart;
+     private String obsEffectiveTimingCodeCodingCode;
+     private String obsEffectiveTimingCodeCodingDisplay;
+     private String obsEffectiveTimingCodeCodingSystem;
+     private String obsEffectiveTimingCodeCodingUsrslt;
+     private String obsEffectiveTimingCodeCodingVersion;
+     private String obsEffectiveTimingCodeText;
+     private String obsEffectiveTimingEvent;
+     private String obsEffectiveTimingRepeatBoundsDurationCode;
+     private String obsEffectiveTimingRepeatBoundsDurationCompartrCode;
+     private String obsEffectiveTimingRepeatBoundsDurationSystem;
+     private String obsEffectiveTimingRepeatBoundsDurationUnit;
+     private String obsEffectiveTimingRepeatBoundsDurationValue;
+     private String obsEffectiveTimingRepeatBoundsPeriodEnd;
+     private String obsEffectiveTimingRepeatBoundsPeriodStart;
+     private String obsEffectiveTimingRepeatBoundsRangeHighCode;
+     private String obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
+     private String obsEffectiveTimingRepeatBoundsRangeHighSystem;
+     private String obsEffectiveTimingRepeatBoundsRangeHighUnit;
+     private String obsEffectiveTimingRepeatBoundsRangeHighValue;
+     private String obsEffectiveTimingRepeatBoundsRangeLowCode;
+     private String obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
+     private String obsEffectiveTimingRepeatBoundsRangeLowSystem;
+     private String obsEffectiveTimingRepeatBoundsRangeLowUnit;
+     private String obsEffectiveTimingRepeatBoundsRangeLowValue;
+     private String obsEffectiveTimingRepeatCount;
+     private String obsEffectiveTimingRepeatCountMax;
+     private String obsEffectiveTimingRepeatDayOfWeekCode;
+     private String obsEffectiveTimingRepeatDuration;
+     private String obsEffectiveTimingRepeatDurationMax;
+     private String obsEffectiveTimingRepeatDurationUnitCode;
+     private String obsEffectiveTimingRepeatFrequency;
+     private String obsEffectiveTimingRepeatFrequencyMax;
+     private String obsEffectiveTimingRepeatOff;
+     private String obsEffectiveTimingRepeatPeriod;
+     private String obsEffectiveTimingRepeatPeriodMax;
+     private String obsEffectiveTimingRepeatPeriodUnitCode;
+     private String obsEffectiveTimingRepeatTimeOfDay;
+     private String obsEffectiveTimingRepeatWhenCode;
+     private String obsEnc;
+     private String obsFocus;
+     private String obsHasMember;
+     private String obsIdAssigner;
+     private String obsIdPeriodEnd;
+     private String obsIdPeriodStart;
+     private String obsIdSystem;
+     private String obsIdTypeCodingCode;
+     private String obsIdTypeCodingDisplay;
+     private String obsIdTypeCodingSystem;
+     private String obsIdTypeCodingUsrslt;
+     private String obsIdTypeCodingVersion;
+     private String obsIdTypeText;
+     private String obsIdUseCode;
+     private String obsIdValue;
+     private String obsInterpretationCodingCode;
+     private String obsInterpretationCodingDisplay;
+     private String obsInterpretationCodingSystem;
+     private String obsInterpretationCodingUsrslt;
+     private String obsInterpretationCodingVersion;
+     private String obsInterpretationText;
+     private String obsIssued;
+     private String obsMethodCodingCode;
+     private String obsMethodCodingDisplay;
+     private String obsMethodCodingSystem;
+     private String obsMethodCodingUsrslt;
+     private String obsMethodCodingVersion;
+     private String obsMethodText;
+     private String observationNoteAuthorReference;
+     private String observationNoteAuthorString;
+     private String obsNoteText;
+     private String obsNoteTime;
+     private String obsPartOf;
+     private String obsPerformer;
+     private String obsReferenceRangeAgeHighCode;
+     private String obsReferenceRangeAgeHighCompartrCode;
+     private String obsReferenceRangeAgeHighSystem;
+     private String obsReferenceRangeAgeHighUnit;
+     private String obsReferenceRangeAgeHighValue;
+     private String obsReferenceRangeAgeLowCode;
+     private String obsReferenceRangeAgeLowCompartrCode;
+     private String obsReferenceRangeAgeLowSystem;
+     private String obsReferenceRangeAgeLowUnit;
+     private String obsReferenceRangeAgeLowValue;
+     private String obsReferenceRangeAppliesToCodingCode;
+     private String obsReferenceRangeAppliesToCodingDisplay;
+     private String obsReferenceRangeAppliesToCodingSystem;
+     private String obsReferenceRangeAppliesToCodingUsrslt;
+     private String obsReferenceRangeAppliesToCodingVersion;
+     private String obsReferenceRangeAppliesToText;
+     private String obsReferenceRangeHighCode;
+     private String obsReferenceRangeHighCompartrCode;
+     private String obsReferenceRangeHighSystem;
+     private String obsReferenceRangeHighUnit;
+     private String obsReferenceRangeHighValue;
+     private String obsReferenceRangeLowCode;
+     private String obsReferenceRangeLowCompartrCode;
+     private String obsReferenceRangeLowSystem;
+     private String obsReferenceRangeLowUnit;
+     private String obsReferenceRangeLowValue;
+     private String obsReferenceRangeText;
+     private String obsReferenceRangeTypeCodingCode;
+     private String obsReferenceRangeTypeCodingDisplay;
+     private String obsReferenceRangeTypeCodingSystem;
+     private String obsReferenceRangeTypeCodingUsrslt;
+     private String obsReferenceRangeTypeCodingVersion;
+     private String obsReferenceRangeTypeText;
+     private String obsSpecimen;
+     private String obsStatusCode;
+     private String obsSubject;
+     private String observationValueBoolean;
+     private String obsValueCodeableConceptCodingCode;
+     private String obsValueCodeableConceptCodingDisplay;
+     private String obsValueCodeableConceptCodingSystem;
+     private String obsValueCodeableConceptCodingUsrslt;
+     private String obsValueCodeableConceptCodingVersion;
+     private String obsValueCodeableConceptText;
+     private String observationValueDateTime;
+     private String observationValueInteger;
+     private String obsValuePeriodEnd;
+     private String obsValuePeriodStart;
+     private String obsValueQuantityCode;
+     private String obsValueQuantityCompartrCode;
+     private String obsValueQuantitySystem;
+     private String obsValueQuantityUnit;
+     private String obsValueQuantityValue;
+     private String obsValueRangeHighCode;
+     private String obsValueRangeHighCompartrCode;
+     private String obsValueRangeHighSystem;
+     private String obsValueRangeHighUnit;
+     private String obsValueRangeHighValue;
+     private String obsValueRangeLowCode;
+     private String obsValueRangeLowCompartrCode;
+     private String obsValueRangeLowSystem;
+     private String obsValueRangeLowUnit;
+     private String obsValueRangeLowValue;
+     private String obsValueRatioDenomCode;
+     private String obsValueRatioDenomCompartrCode;
+     private String obsValueRatioDenomSystem;
+     private String obsValueRatioDenomUnit;
+     private String obsValueRatioDenomValue;
+     private String obsValueRatioNumeratorCode;
+     private String obsValueRatioNumeratorCompartrCode;
+     private String obsValueRatioNumeratorSystem;
+     private String obsValueRatioNumeratorUnit;
+     private String obsValueRatioNumeratorValue;
+     private String obsValueSampledDataData;
+     private String obsValueSampledDataDimensions;
+     private String obsValueSampledDataFactor;
+     private String obsValueSampledDataLowerLimit;
+     private String obsValueSampledDataOriginCode;
+     private String obsValueSampledDataOriginCompartrCode;
+     private String obsValueSampledDataOriginSystem;
+     private String obsValueSampledDataOriginUnit;
+     private String obsValueSampledDataOriginValue;
+     private String obsValueSampledDataPeriod;
+     private String obsValueSampledDataUpperLimit;
+     private String observationValueString;
+     private String observationValueTime;
 
     public Observation() {
     }
 
-	
-    public Observation(String observationIdentifierValue) {
-        this.observationIdentifierValue = observationIdentifierValue;
-    }
-    public Observation(String observationIdentifierValue, String observationBasedOn, String observationBodySiteCodingCode, String observationBodySiteCodingDisplay, String observationBodySiteCodingSystem, String observationBodySiteCodingUserSelected, String observationBodySiteCodingVersion, String observationBodySiteText, String observationCategoryCodingCode, String observationCategoryCodingDisplay, String observationCategoryCodingSystem, String observationCategoryCodingUserSelected, String observationCategoryCodingVersion, String observationCategoryText, String observationCodeCodingCode, String observationCodeCodingDisplay, String observationCodeCodingSystem, String observationCodeCodingUserSelected, String observationCodeCodingVersion, String observationCodeText, String observationComponentCodeCodingCode, String observationComponentCodeCodingDisplay, String observationComponentCodeCodingSystem, String observationComponentCodeCodingUserSelected, String observationComponentCodeCodingVersion, String observationComponentCodeText, String observationComponentDataAbsentReasonCodingCode, String observationComponentDataAbsentReasonCodingDisplay, String observationComponentDataAbsentReasonCodingSystem, String observationComponentDataAbsentReasonCodingUserSelected, String observationComponentDataAbsentReasonCodingVersion, String observationComponentDataAbsentReasonText, String observationComponentInterpretationCodingCode, String observationComponentInterpretationCodingDisplay, String observationComponentInterpretationCodingSystem, String observationComponentInterpretationCodingUserSelected, String observationComponentInterpretationCodingVersion, String observationComponentInterpretationText, String observationComponentReferenceRangeAgeHighCode, String observationComponentReferenceRangeAgeHighComparatorCode, String observationComponentReferenceRangeAgeHighSystem, String observationComponentReferenceRangeAgeHighUnit, String observationComponentReferenceRangeAgeHighValue, String observationComponentReferenceRangeAgeLowCode, String observationComponentReferenceRangeAgeLowComparatorCode, String observationComponentReferenceRangeAgeLowSystem, String observationComponentReferenceRangeAgeLowUnit, String observationComponentReferenceRangeAgeLowValue, String observationComponentReferenceRangeAppliesToCodingCode, String observationComponentReferenceRangeAppliesToCodingDisplay, String observationComponentReferenceRangeAppliesToCodingSystem, String observationComponentReferenceRangeAppliesToCodingUs, String observationComponentReferenceRangeAppliesToCodingVersion, String observationComponentReferenceRangeAppliesToText, String observationComponentReferenceRangeHighCode, String observationComponentReferenceRangeHighComparatorCode, String observationComponentReferenceRangeHighSystem, String observationComponentReferenceRangeHighUnit, String observationComponentReferenceRangeHighValue, String observationComponentReferenceRangeLowCode, String observationComponentReferenceRangeLowComparatorCode, String observationComponentReferenceRangeLowSystem, String observationComponentReferenceRangeLowUnit, String observationComponentReferenceRangeLowValue, String observationComponentReferenceRangeText, String observationComponentReferenceRangeTypeCodingCode, String observationComponentReferenceRangeTypeCodingDisplay, String observationComponentReferenceRangeTypeCodingSystem, String observationComponentReferenceRangeTypeCodingUserSelected, String observationComponentReferenceRangeTypeCodingVersion, String observationComponentReferenceRangeTypeText, String observationComponentValue, String observationDataAbsentReasonCodingCode, String observationDataAbsentReasonCodingDisplay, String observationDataAbsentReasonCodingSystem, String observationDataAbsentReasonCodingUserSelected, String observationDataAbsentReasonCodingVersion, String observationDataAbsentReasonText, String observationDerivedFrom, String observationDevice, String observationEffective, String observationEncounter, String observationFocus, String observationHasMember, String observationIdentifierAssigner, String observationIdentifierPeriodEnd, String observationIdentifierPeriodStart, String observationIdentifierSystem, String observationIdentifierTypeCodingCode, String observationIdentifierTypeCodingDisplay, String observationIdentifierTypeCodingSystem, String observationIdentifierTypeCodingUserSelected, String observationIdentifierTypeCodingVersion, String observationIdentifierTypeText, String observationIdentifierUseCode, String observationInterpretationCodingCode, String observationInterpretationCodingDisplay, String observationInterpretationCodingSystem, String observationInterpretationCodingUserSelected, String observationInterpretationCodingVersion, String observationInterpretationText, String observationIssued, String observationMethodCodingCode, String observationMethodCodingDisplay, String observationMethodCodingSystem, String observationMethodCodingUserSelected, String observationMethodCodingVersion, String observationMethodText, String observationNoteAuthor, String observationNoteText, String observationNoteTime, String observationPartOf, String observationPerformer, String observationReferenceRangeAgeHighCode, String observationReferenceRangeAgeHighComparatorCode, String observationReferenceRangeAgeHighSystem, String observationReferenceRangeAgeHighUnit, String observationReferenceRangeAgeHighValue, String observationReferenceRangeAgeLowCode, String observationReferenceRangeAgeLowComparatorCode, String observationReferenceRangeAgeLowSystem, String observationReferenceRangeAgeLowUnit, String observationReferenceRangeAgeLowValue, String observationReferenceRangeAppliesToCodingCode, String observationReferenceRangeAppliesToCodingDisplay, String observationReferenceRangeAppliesToCodingSystem, String observationReferenceRangeAppliesToCodingUserSelected, String observationReferenceRangeAppliesToCodingVersion, String observationReferenceRangeAppliesToText, String observationReferenceRangeHighCode, String observationReferenceRangeHighComparatorCode, String observationReferenceRangeHighSystem, String observationReferenceRangeHighUnit, String observationReferenceRangeHighValue, String observationReferenceRangeLowCode, String observationReferenceRangeLowComparatorCode, String observationReferenceRangeLowSystem, String observationReferenceRangeLowUnit, String observationReferenceRangeLowValue, String observationReferenceRangeText, String observationReferenceRangeTypeCodingCode, String observationReferenceRangeTypeCodingDisplay, String observationReferenceRangeTypeCodingSystem, String observationReferenceRangeTypeCodingUserSelected, String observationReferenceRangeTypeCodingVersion, String observationReferenceRangeTypeText, String observationSpecimen, String observationStatusCode, String observationSubject) {
-       this.observationIdentifierValue = observationIdentifierValue;
-       this.observationBasedOn = observationBasedOn;
-       this.observationBodySiteCodingCode = observationBodySiteCodingCode;
-       this.observationBodySiteCodingDisplay = observationBodySiteCodingDisplay;
-       this.observationBodySiteCodingSystem = observationBodySiteCodingSystem;
-       this.observationBodySiteCodingUserSelected = observationBodySiteCodingUserSelected;
-       this.observationBodySiteCodingVersion = observationBodySiteCodingVersion;
-       this.observationBodySiteText = observationBodySiteText;
-       this.observationCategoryCodingCode = observationCategoryCodingCode;
-       this.observationCategoryCodingDisplay = observationCategoryCodingDisplay;
-       this.observationCategoryCodingSystem = observationCategoryCodingSystem;
-       this.observationCategoryCodingUserSelected = observationCategoryCodingUserSelected;
-       this.observationCategoryCodingVersion = observationCategoryCodingVersion;
-       this.observationCategoryText = observationCategoryText;
-       this.observationCodeCodingCode = observationCodeCodingCode;
-       this.observationCodeCodingDisplay = observationCodeCodingDisplay;
-       this.observationCodeCodingSystem = observationCodeCodingSystem;
-       this.observationCodeCodingUserSelected = observationCodeCodingUserSelected;
-       this.observationCodeCodingVersion = observationCodeCodingVersion;
-       this.observationCodeText = observationCodeText;
-       this.observationComponentCodeCodingCode = observationComponentCodeCodingCode;
-       this.observationComponentCodeCodingDisplay = observationComponentCodeCodingDisplay;
-       this.observationComponentCodeCodingSystem = observationComponentCodeCodingSystem;
-       this.observationComponentCodeCodingUserSelected = observationComponentCodeCodingUserSelected;
-       this.observationComponentCodeCodingVersion = observationComponentCodeCodingVersion;
-       this.observationComponentCodeText = observationComponentCodeText;
-       this.observationComponentDataAbsentReasonCodingCode = observationComponentDataAbsentReasonCodingCode;
-       this.observationComponentDataAbsentReasonCodingDisplay = observationComponentDataAbsentReasonCodingDisplay;
-       this.observationComponentDataAbsentReasonCodingSystem = observationComponentDataAbsentReasonCodingSystem;
-       this.observationComponentDataAbsentReasonCodingUserSelected = observationComponentDataAbsentReasonCodingUserSelected;
-       this.observationComponentDataAbsentReasonCodingVersion = observationComponentDataAbsentReasonCodingVersion;
-       this.observationComponentDataAbsentReasonText = observationComponentDataAbsentReasonText;
-       this.observationComponentInterpretationCodingCode = observationComponentInterpretationCodingCode;
-       this.observationComponentInterpretationCodingDisplay = observationComponentInterpretationCodingDisplay;
-       this.observationComponentInterpretationCodingSystem = observationComponentInterpretationCodingSystem;
-       this.observationComponentInterpretationCodingUserSelected = observationComponentInterpretationCodingUserSelected;
-       this.observationComponentInterpretationCodingVersion = observationComponentInterpretationCodingVersion;
-       this.observationComponentInterpretationText = observationComponentInterpretationText;
-       this.observationComponentReferenceRangeAgeHighCode = observationComponentReferenceRangeAgeHighCode;
-       this.observationComponentReferenceRangeAgeHighComparatorCode = observationComponentReferenceRangeAgeHighComparatorCode;
-       this.observationComponentReferenceRangeAgeHighSystem = observationComponentReferenceRangeAgeHighSystem;
-       this.observationComponentReferenceRangeAgeHighUnit = observationComponentReferenceRangeAgeHighUnit;
-       this.observationComponentReferenceRangeAgeHighValue = observationComponentReferenceRangeAgeHighValue;
-       this.observationComponentReferenceRangeAgeLowCode = observationComponentReferenceRangeAgeLowCode;
-       this.observationComponentReferenceRangeAgeLowComparatorCode = observationComponentReferenceRangeAgeLowComparatorCode;
-       this.observationComponentReferenceRangeAgeLowSystem = observationComponentReferenceRangeAgeLowSystem;
-       this.observationComponentReferenceRangeAgeLowUnit = observationComponentReferenceRangeAgeLowUnit;
-       this.observationComponentReferenceRangeAgeLowValue = observationComponentReferenceRangeAgeLowValue;
-       this.observationComponentReferenceRangeAppliesToCodingCode = observationComponentReferenceRangeAppliesToCodingCode;
-       this.observationComponentReferenceRangeAppliesToCodingDisplay = observationComponentReferenceRangeAppliesToCodingDisplay;
-       this.observationComponentReferenceRangeAppliesToCodingSystem = observationComponentReferenceRangeAppliesToCodingSystem;
-       this.observationComponentReferenceRangeAppliesToCodingUs = observationComponentReferenceRangeAppliesToCodingUs;
-       this.observationComponentReferenceRangeAppliesToCodingVersion = observationComponentReferenceRangeAppliesToCodingVersion;
-       this.observationComponentReferenceRangeAppliesToText = observationComponentReferenceRangeAppliesToText;
-       this.observationComponentReferenceRangeHighCode = observationComponentReferenceRangeHighCode;
-       this.observationComponentReferenceRangeHighComparatorCode = observationComponentReferenceRangeHighComparatorCode;
-       this.observationComponentReferenceRangeHighSystem = observationComponentReferenceRangeHighSystem;
-       this.observationComponentReferenceRangeHighUnit = observationComponentReferenceRangeHighUnit;
-       this.observationComponentReferenceRangeHighValue = observationComponentReferenceRangeHighValue;
-       this.observationComponentReferenceRangeLowCode = observationComponentReferenceRangeLowCode;
-       this.observationComponentReferenceRangeLowComparatorCode = observationComponentReferenceRangeLowComparatorCode;
-       this.observationComponentReferenceRangeLowSystem = observationComponentReferenceRangeLowSystem;
-       this.observationComponentReferenceRangeLowUnit = observationComponentReferenceRangeLowUnit;
-       this.observationComponentReferenceRangeLowValue = observationComponentReferenceRangeLowValue;
-       this.observationComponentReferenceRangeText = observationComponentReferenceRangeText;
-       this.observationComponentReferenceRangeTypeCodingCode = observationComponentReferenceRangeTypeCodingCode;
-       this.observationComponentReferenceRangeTypeCodingDisplay = observationComponentReferenceRangeTypeCodingDisplay;
-       this.observationComponentReferenceRangeTypeCodingSystem = observationComponentReferenceRangeTypeCodingSystem;
-       this.observationComponentReferenceRangeTypeCodingUserSelected = observationComponentReferenceRangeTypeCodingUserSelected;
-       this.observationComponentReferenceRangeTypeCodingVersion = observationComponentReferenceRangeTypeCodingVersion;
-       this.observationComponentReferenceRangeTypeText = observationComponentReferenceRangeTypeText;
-       this.observationComponentValue = observationComponentValue;
-       this.observationDataAbsentReasonCodingCode = observationDataAbsentReasonCodingCode;
-       this.observationDataAbsentReasonCodingDisplay = observationDataAbsentReasonCodingDisplay;
-       this.observationDataAbsentReasonCodingSystem = observationDataAbsentReasonCodingSystem;
-       this.observationDataAbsentReasonCodingUserSelected = observationDataAbsentReasonCodingUserSelected;
-       this.observationDataAbsentReasonCodingVersion = observationDataAbsentReasonCodingVersion;
-       this.observationDataAbsentReasonText = observationDataAbsentReasonText;
-       this.observationDerivedFrom = observationDerivedFrom;
-       this.observationDevice = observationDevice;
-       this.observationEffective = observationEffective;
-       this.observationEncounter = observationEncounter;
-       this.observationFocus = observationFocus;
-       this.observationHasMember = observationHasMember;
-       this.observationIdentifierAssigner = observationIdentifierAssigner;
-       this.observationIdentifierPeriodEnd = observationIdentifierPeriodEnd;
-       this.observationIdentifierPeriodStart = observationIdentifierPeriodStart;
-       this.observationIdentifierSystem = observationIdentifierSystem;
-       this.observationIdentifierTypeCodingCode = observationIdentifierTypeCodingCode;
-       this.observationIdentifierTypeCodingDisplay = observationIdentifierTypeCodingDisplay;
-       this.observationIdentifierTypeCodingSystem = observationIdentifierTypeCodingSystem;
-       this.observationIdentifierTypeCodingUserSelected = observationIdentifierTypeCodingUserSelected;
-       this.observationIdentifierTypeCodingVersion = observationIdentifierTypeCodingVersion;
-       this.observationIdentifierTypeText = observationIdentifierTypeText;
-       this.observationIdentifierUseCode = observationIdentifierUseCode;
-       this.observationInterpretationCodingCode = observationInterpretationCodingCode;
-       this.observationInterpretationCodingDisplay = observationInterpretationCodingDisplay;
-       this.observationInterpretationCodingSystem = observationInterpretationCodingSystem;
-       this.observationInterpretationCodingUserSelected = observationInterpretationCodingUserSelected;
-       this.observationInterpretationCodingVersion = observationInterpretationCodingVersion;
-       this.observationInterpretationText = observationInterpretationText;
-       this.observationIssued = observationIssued;
-       this.observationMethodCodingCode = observationMethodCodingCode;
-       this.observationMethodCodingDisplay = observationMethodCodingDisplay;
-       this.observationMethodCodingSystem = observationMethodCodingSystem;
-       this.observationMethodCodingUserSelected = observationMethodCodingUserSelected;
-       this.observationMethodCodingVersion = observationMethodCodingVersion;
-       this.observationMethodText = observationMethodText;
-       this.observationNoteAuthor = observationNoteAuthor;
-       this.observationNoteText = observationNoteText;
-       this.observationNoteTime = observationNoteTime;
-       this.observationPartOf = observationPartOf;
-       this.observationPerformer = observationPerformer;
-       this.observationReferenceRangeAgeHighCode = observationReferenceRangeAgeHighCode;
-       this.observationReferenceRangeAgeHighComparatorCode = observationReferenceRangeAgeHighComparatorCode;
-       this.observationReferenceRangeAgeHighSystem = observationReferenceRangeAgeHighSystem;
-       this.observationReferenceRangeAgeHighUnit = observationReferenceRangeAgeHighUnit;
-       this.observationReferenceRangeAgeHighValue = observationReferenceRangeAgeHighValue;
-       this.observationReferenceRangeAgeLowCode = observationReferenceRangeAgeLowCode;
-       this.observationReferenceRangeAgeLowComparatorCode = observationReferenceRangeAgeLowComparatorCode;
-       this.observationReferenceRangeAgeLowSystem = observationReferenceRangeAgeLowSystem;
-       this.observationReferenceRangeAgeLowUnit = observationReferenceRangeAgeLowUnit;
-       this.observationReferenceRangeAgeLowValue = observationReferenceRangeAgeLowValue;
-       this.observationReferenceRangeAppliesToCodingCode = observationReferenceRangeAppliesToCodingCode;
-       this.observationReferenceRangeAppliesToCodingDisplay = observationReferenceRangeAppliesToCodingDisplay;
-       this.observationReferenceRangeAppliesToCodingSystem = observationReferenceRangeAppliesToCodingSystem;
-       this.observationReferenceRangeAppliesToCodingUserSelected = observationReferenceRangeAppliesToCodingUserSelected;
-       this.observationReferenceRangeAppliesToCodingVersion = observationReferenceRangeAppliesToCodingVersion;
-       this.observationReferenceRangeAppliesToText = observationReferenceRangeAppliesToText;
-       this.observationReferenceRangeHighCode = observationReferenceRangeHighCode;
-       this.observationReferenceRangeHighComparatorCode = observationReferenceRangeHighComparatorCode;
-       this.observationReferenceRangeHighSystem = observationReferenceRangeHighSystem;
-       this.observationReferenceRangeHighUnit = observationReferenceRangeHighUnit;
-       this.observationReferenceRangeHighValue = observationReferenceRangeHighValue;
-       this.observationReferenceRangeLowCode = observationReferenceRangeLowCode;
-       this.observationReferenceRangeLowComparatorCode = observationReferenceRangeLowComparatorCode;
-       this.observationReferenceRangeLowSystem = observationReferenceRangeLowSystem;
-       this.observationReferenceRangeLowUnit = observationReferenceRangeLowUnit;
-       this.observationReferenceRangeLowValue = observationReferenceRangeLowValue;
-       this.observationReferenceRangeText = observationReferenceRangeText;
-       this.observationReferenceRangeTypeCodingCode = observationReferenceRangeTypeCodingCode;
-       this.observationReferenceRangeTypeCodingDisplay = observationReferenceRangeTypeCodingDisplay;
-       this.observationReferenceRangeTypeCodingSystem = observationReferenceRangeTypeCodingSystem;
-       this.observationReferenceRangeTypeCodingUserSelected = observationReferenceRangeTypeCodingUserSelected;
-       this.observationReferenceRangeTypeCodingVersion = observationReferenceRangeTypeCodingVersion;
-       this.observationReferenceRangeTypeText = observationReferenceRangeTypeText;
-       this.observationSpecimen = observationSpecimen;
-       this.observationStatusCode = observationStatusCode;
-       this.observationSubject = observationSubject;
-    }
    
     public 
     String 
-    getObservationIdentifierValue()
+    getId()
     {
-        return this.observationIdentifierValue;
+        return this.id;
     }
     
-    public void setObservationIdentifierValue
-        (String observationIdentifierValue) 
+    public void setId
+        (String id) 
         {
-      this.observationIdentifierValue = observationIdentifierValue;
+      this.id = id;
 }
     public 
     String 
-    getObservationBasedOn()
+    getObsBasedOn()
     {
-        return this.observationBasedOn;
+        return this.obsBasedOn;
     }
     
-    public void setObservationBasedOn
-        (String observationBasedOn) 
+    public void setObsBasedOn
+        (String obsBasedOn) 
         {
-      this.observationBasedOn = observationBasedOn;
+      this.obsBasedOn = obsBasedOn;
 }
     public 
     String 
-    getObservationBodySiteCodingCode()
+    getObsBodySiteCodingCode()
     {
-        return this.observationBodySiteCodingCode;
+        return this.obsBodySiteCodingCode;
     }
     
-    public void setObservationBodySiteCodingCode
-        (String observationBodySiteCodingCode) 
+    public void setObsBodySiteCodingCode
+        (String obsBodySiteCodingCode) 
         {
-      this.observationBodySiteCodingCode = observationBodySiteCodingCode;
+      this.obsBodySiteCodingCode = obsBodySiteCodingCode;
 }
     public 
     String 
-    getObservationBodySiteCodingDisplay()
+    getObsBodySiteCodingDisplay()
     {
-        return this.observationBodySiteCodingDisplay;
+        return this.obsBodySiteCodingDisplay;
     }
     
-    public void setObservationBodySiteCodingDisplay
-        (String observationBodySiteCodingDisplay) 
+    public void setObsBodySiteCodingDisplay
+        (String obsBodySiteCodingDisplay) 
         {
-      this.observationBodySiteCodingDisplay = observationBodySiteCodingDisplay;
+      this.obsBodySiteCodingDisplay = obsBodySiteCodingDisplay;
 }
     public 
     String 
-    getObservationBodySiteCodingSystem()
+    getObsBodySiteCodingSystem()
     {
-        return this.observationBodySiteCodingSystem;
+        return this.obsBodySiteCodingSystem;
     }
     
-    public void setObservationBodySiteCodingSystem
-        (String observationBodySiteCodingSystem) 
+    public void setObsBodySiteCodingSystem
+        (String obsBodySiteCodingSystem) 
         {
-      this.observationBodySiteCodingSystem = observationBodySiteCodingSystem;
+      this.obsBodySiteCodingSystem = obsBodySiteCodingSystem;
 }
     public 
     String 
-    getObservationBodySiteCodingUserSelected()
+    getObsBodySiteCodingUsrslt()
     {
-        return this.observationBodySiteCodingUserSelected;
+        return this.obsBodySiteCodingUsrslt;
     }
     
-    public void setObservationBodySiteCodingUserSelected
-        (String observationBodySiteCodingUserSelected) 
+    public void setObsBodySiteCodingUsrslt
+        (String obsBodySiteCodingUsrslt) 
         {
-      this.observationBodySiteCodingUserSelected = observationBodySiteCodingUserSelected;
+      this.obsBodySiteCodingUsrslt = obsBodySiteCodingUsrslt;
 }
     public 
     String 
-    getObservationBodySiteCodingVersion()
+    getObsBodySiteCodingVersion()
     {
-        return this.observationBodySiteCodingVersion;
+        return this.obsBodySiteCodingVersion;
     }
     
-    public void setObservationBodySiteCodingVersion
-        (String observationBodySiteCodingVersion) 
+    public void setObsBodySiteCodingVersion
+        (String obsBodySiteCodingVersion) 
         {
-      this.observationBodySiteCodingVersion = observationBodySiteCodingVersion;
+      this.obsBodySiteCodingVersion = obsBodySiteCodingVersion;
 }
     public 
     String 
-    getObservationBodySiteText()
+    getObsBodySiteText()
     {
-        return this.observationBodySiteText;
+        return this.obsBodySiteText;
     }
     
-    public void setObservationBodySiteText
-        (String observationBodySiteText) 
+    public void setObsBodySiteText
+        (String obsBodySiteText) 
         {
-      this.observationBodySiteText = observationBodySiteText;
+      this.obsBodySiteText = obsBodySiteText;
 }
     public 
     String 
-    getObservationCategoryCodingCode()
+    getObsCategoryCodingCode()
     {
-        return this.observationCategoryCodingCode;
+        return this.obsCategoryCodingCode;
     }
     
-    public void setObservationCategoryCodingCode
-        (String observationCategoryCodingCode) 
+    public void setObsCategoryCodingCode
+        (String obsCategoryCodingCode) 
         {
-      this.observationCategoryCodingCode = observationCategoryCodingCode;
+      this.obsCategoryCodingCode = obsCategoryCodingCode;
 }
     public 
     String 
-    getObservationCategoryCodingDisplay()
+    getObsCategoryCodingDisplay()
     {
-        return this.observationCategoryCodingDisplay;
+        return this.obsCategoryCodingDisplay;
     }
     
-    public void setObservationCategoryCodingDisplay
-        (String observationCategoryCodingDisplay) 
+    public void setObsCategoryCodingDisplay
+        (String obsCategoryCodingDisplay) 
         {
-      this.observationCategoryCodingDisplay = observationCategoryCodingDisplay;
+      this.obsCategoryCodingDisplay = obsCategoryCodingDisplay;
 }
     public 
     String 
-    getObservationCategoryCodingSystem()
+    getObsCategoryCodingSystem()
     {
-        return this.observationCategoryCodingSystem;
+        return this.obsCategoryCodingSystem;
     }
     
-    public void setObservationCategoryCodingSystem
-        (String observationCategoryCodingSystem) 
+    public void setObsCategoryCodingSystem
+        (String obsCategoryCodingSystem) 
         {
-      this.observationCategoryCodingSystem = observationCategoryCodingSystem;
+      this.obsCategoryCodingSystem = obsCategoryCodingSystem;
 }
     public 
     String 
-    getObservationCategoryCodingUserSelected()
+    getObsCategoryCodingUsrslt()
     {
-        return this.observationCategoryCodingUserSelected;
+        return this.obsCategoryCodingUsrslt;
     }
     
-    public void setObservationCategoryCodingUserSelected
-        (String observationCategoryCodingUserSelected) 
+    public void setObsCategoryCodingUsrslt
+        (String obsCategoryCodingUsrslt) 
         {
-      this.observationCategoryCodingUserSelected = observationCategoryCodingUserSelected;
+      this.obsCategoryCodingUsrslt = obsCategoryCodingUsrslt;
 }
     public 
     String 
-    getObservationCategoryCodingVersion()
+    getObsCategoryCodingVersion()
     {
-        return this.observationCategoryCodingVersion;
+        return this.obsCategoryCodingVersion;
     }
     
-    public void setObservationCategoryCodingVersion
-        (String observationCategoryCodingVersion) 
+    public void setObsCategoryCodingVersion
+        (String obsCategoryCodingVersion) 
         {
-      this.observationCategoryCodingVersion = observationCategoryCodingVersion;
+      this.obsCategoryCodingVersion = obsCategoryCodingVersion;
 }
     public 
     String 
-    getObservationCategoryText()
+    getObsCategoryText()
     {
-        return this.observationCategoryText;
+        return this.obsCategoryText;
     }
     
-    public void setObservationCategoryText
-        (String observationCategoryText) 
+    public void setObsCategoryText
+        (String obsCategoryText) 
         {
-      this.observationCategoryText = observationCategoryText;
+      this.obsCategoryText = obsCategoryText;
 }
     public 
     String 
-    getObservationCodeCodingCode()
+    getObsCodeCodingCode()
     {
-        return this.observationCodeCodingCode;
+        return this.obsCodeCodingCode;
     }
     
-    public void setObservationCodeCodingCode
-        (String observationCodeCodingCode) 
+    public void setObsCodeCodingCode
+        (String obsCodeCodingCode) 
         {
-      this.observationCodeCodingCode = observationCodeCodingCode;
+      this.obsCodeCodingCode = obsCodeCodingCode;
 }
     public 
     String 
-    getObservationCodeCodingDisplay()
+    getObsCodeCodingDisplay()
     {
-        return this.observationCodeCodingDisplay;
+        return this.obsCodeCodingDisplay;
     }
     
-    public void setObservationCodeCodingDisplay
-        (String observationCodeCodingDisplay) 
+    public void setObsCodeCodingDisplay
+        (String obsCodeCodingDisplay) 
         {
-      this.observationCodeCodingDisplay = observationCodeCodingDisplay;
+      this.obsCodeCodingDisplay = obsCodeCodingDisplay;
 }
     public 
     String 
-    getObservationCodeCodingSystem()
+    getObsCodeCodingSystem()
     {
-        return this.observationCodeCodingSystem;
+        return this.obsCodeCodingSystem;
     }
     
-    public void setObservationCodeCodingSystem
-        (String observationCodeCodingSystem) 
+    public void setObsCodeCodingSystem
+        (String obsCodeCodingSystem) 
         {
-      this.observationCodeCodingSystem = observationCodeCodingSystem;
+      this.obsCodeCodingSystem = obsCodeCodingSystem;
 }
     public 
     String 
-    getObservationCodeCodingUserSelected()
+    getObsCodeCodingUsrslt()
     {
-        return this.observationCodeCodingUserSelected;
+        return this.obsCodeCodingUsrslt;
     }
     
-    public void setObservationCodeCodingUserSelected
-        (String observationCodeCodingUserSelected) 
+    public void setObsCodeCodingUsrslt
+        (String obsCodeCodingUsrslt) 
         {
-      this.observationCodeCodingUserSelected = observationCodeCodingUserSelected;
+      this.obsCodeCodingUsrslt = obsCodeCodingUsrslt;
 }
     public 
     String 
-    getObservationCodeCodingVersion()
+    getObsCodeCodingVersion()
     {
-        return this.observationCodeCodingVersion;
+        return this.obsCodeCodingVersion;
     }
     
-    public void setObservationCodeCodingVersion
-        (String observationCodeCodingVersion) 
+    public void setObsCodeCodingVersion
+        (String obsCodeCodingVersion) 
         {
-      this.observationCodeCodingVersion = observationCodeCodingVersion;
+      this.obsCodeCodingVersion = obsCodeCodingVersion;
 }
     public 
     String 
-    getObservationCodeText()
+    getObsCodeText()
     {
-        return this.observationCodeText;
+        return this.obsCodeText;
     }
     
-    public void setObservationCodeText
-        (String observationCodeText) 
+    public void setObsCodeText
+        (String obsCodeText) 
         {
-      this.observationCodeText = observationCodeText;
+      this.obsCodeText = obsCodeText;
 }
     public 
     String 
-    getObservationComponentCodeCodingCode()
+    getObsComponentCodeCodingCode()
     {
-        return this.observationComponentCodeCodingCode;
+        return this.obsComponentCodeCodingCode;
     }
     
-    public void setObservationComponentCodeCodingCode
-        (String observationComponentCodeCodingCode) 
+    public void setObsComponentCodeCodingCode
+        (String obsComponentCodeCodingCode) 
         {
-      this.observationComponentCodeCodingCode = observationComponentCodeCodingCode;
+      this.obsComponentCodeCodingCode = obsComponentCodeCodingCode;
 }
     public 
     String 
-    getObservationComponentCodeCodingDisplay()
+    getObsComponentCodeCodingDisplay()
     {
-        return this.observationComponentCodeCodingDisplay;
+        return this.obsComponentCodeCodingDisplay;
     }
     
-    public void setObservationComponentCodeCodingDisplay
-        (String observationComponentCodeCodingDisplay) 
+    public void setObsComponentCodeCodingDisplay
+        (String obsComponentCodeCodingDisplay) 
         {
-      this.observationComponentCodeCodingDisplay = observationComponentCodeCodingDisplay;
+      this.obsComponentCodeCodingDisplay = obsComponentCodeCodingDisplay;
 }
     public 
     String 
-    getObservationComponentCodeCodingSystem()
+    getObsComponentCodeCodingSystem()
     {
-        return this.observationComponentCodeCodingSystem;
+        return this.obsComponentCodeCodingSystem;
     }
     
-    public void setObservationComponentCodeCodingSystem
-        (String observationComponentCodeCodingSystem) 
+    public void setObsComponentCodeCodingSystem
+        (String obsComponentCodeCodingSystem) 
         {
-      this.observationComponentCodeCodingSystem = observationComponentCodeCodingSystem;
+      this.obsComponentCodeCodingSystem = obsComponentCodeCodingSystem;
 }
     public 
     String 
-    getObservationComponentCodeCodingUserSelected()
+    getObsComponentCodeCodingUsrslt()
     {
-        return this.observationComponentCodeCodingUserSelected;
+        return this.obsComponentCodeCodingUsrslt;
     }
     
-    public void setObservationComponentCodeCodingUserSelected
-        (String observationComponentCodeCodingUserSelected) 
+    public void setObsComponentCodeCodingUsrslt
+        (String obsComponentCodeCodingUsrslt) 
         {
-      this.observationComponentCodeCodingUserSelected = observationComponentCodeCodingUserSelected;
+      this.obsComponentCodeCodingUsrslt = obsComponentCodeCodingUsrslt;
 }
     public 
     String 
-    getObservationComponentCodeCodingVersion()
+    getObsComponentCodeCodingVersion()
     {
-        return this.observationComponentCodeCodingVersion;
+        return this.obsComponentCodeCodingVersion;
     }
     
-    public void setObservationComponentCodeCodingVersion
-        (String observationComponentCodeCodingVersion) 
+    public void setObsComponentCodeCodingVersion
+        (String obsComponentCodeCodingVersion) 
         {
-      this.observationComponentCodeCodingVersion = observationComponentCodeCodingVersion;
+      this.obsComponentCodeCodingVersion = obsComponentCodeCodingVersion;
 }
     public 
     String 
-    getObservationComponentCodeText()
+    getObsComponentCodeText()
     {
-        return this.observationComponentCodeText;
+        return this.obsComponentCodeText;
     }
     
-    public void setObservationComponentCodeText
-        (String observationComponentCodeText) 
+    public void setObsComponentCodeText
+        (String obsComponentCodeText) 
         {
-      this.observationComponentCodeText = observationComponentCodeText;
+      this.obsComponentCodeText = obsComponentCodeText;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonCodingCode()
+    getObsComponentDataAbsentReasonCodingCode()
     {
-        return this.observationComponentDataAbsentReasonCodingCode;
+        return this.obsComponentDataAbsentReasonCodingCode;
     }
     
-    public void setObservationComponentDataAbsentReasonCodingCode
-        (String observationComponentDataAbsentReasonCodingCode) 
+    public void setObsComponentDataAbsentReasonCodingCode
+        (String obsComponentDataAbsentReasonCodingCode) 
         {
-      this.observationComponentDataAbsentReasonCodingCode = observationComponentDataAbsentReasonCodingCode;
+      this.obsComponentDataAbsentReasonCodingCode = obsComponentDataAbsentReasonCodingCode;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonCodingDisplay()
+    getObsComponentDataAbsentReasonCodingDisplay()
     {
-        return this.observationComponentDataAbsentReasonCodingDisplay;
+        return this.obsComponentDataAbsentReasonCodingDisplay;
     }
     
-    public void setObservationComponentDataAbsentReasonCodingDisplay
-        (String observationComponentDataAbsentReasonCodingDisplay) 
+    public void setObsComponentDataAbsentReasonCodingDisplay
+        (String obsComponentDataAbsentReasonCodingDisplay) 
         {
-      this.observationComponentDataAbsentReasonCodingDisplay = observationComponentDataAbsentReasonCodingDisplay;
+      this.obsComponentDataAbsentReasonCodingDisplay = obsComponentDataAbsentReasonCodingDisplay;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonCodingSystem()
+    getObsComponentDataAbsentReasonCodingSystem()
     {
-        return this.observationComponentDataAbsentReasonCodingSystem;
+        return this.obsComponentDataAbsentReasonCodingSystem;
     }
     
-    public void setObservationComponentDataAbsentReasonCodingSystem
-        (String observationComponentDataAbsentReasonCodingSystem) 
+    public void setObsComponentDataAbsentReasonCodingSystem
+        (String obsComponentDataAbsentReasonCodingSystem) 
         {
-      this.observationComponentDataAbsentReasonCodingSystem = observationComponentDataAbsentReasonCodingSystem;
+      this.obsComponentDataAbsentReasonCodingSystem = obsComponentDataAbsentReasonCodingSystem;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonCodingUserSelected()
+    getObsComponentDataAbsentReasonCodingUsrslt()
     {
-        return this.observationComponentDataAbsentReasonCodingUserSelected;
+        return this.obsComponentDataAbsentReasonCodingUsrslt;
     }
     
-    public void setObservationComponentDataAbsentReasonCodingUserSelected
-        (String observationComponentDataAbsentReasonCodingUserSelected) 
+    public void setObsComponentDataAbsentReasonCodingUsrslt
+        (String obsComponentDataAbsentReasonCodingUsrslt) 
         {
-      this.observationComponentDataAbsentReasonCodingUserSelected = observationComponentDataAbsentReasonCodingUserSelected;
+      this.obsComponentDataAbsentReasonCodingUsrslt = obsComponentDataAbsentReasonCodingUsrslt;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonCodingVersion()
+    getObsComponentDataAbsentReasonCodingVersion()
     {
-        return this.observationComponentDataAbsentReasonCodingVersion;
+        return this.obsComponentDataAbsentReasonCodingVersion;
     }
     
-    public void setObservationComponentDataAbsentReasonCodingVersion
-        (String observationComponentDataAbsentReasonCodingVersion) 
+    public void setObsComponentDataAbsentReasonCodingVersion
+        (String obsComponentDataAbsentReasonCodingVersion) 
         {
-      this.observationComponentDataAbsentReasonCodingVersion = observationComponentDataAbsentReasonCodingVersion;
+      this.obsComponentDataAbsentReasonCodingVersion = obsComponentDataAbsentReasonCodingVersion;
 }
     public 
     String 
-    getObservationComponentDataAbsentReasonText()
+    getObsComponentDataAbsentReasonText()
     {
-        return this.observationComponentDataAbsentReasonText;
+        return this.obsComponentDataAbsentReasonText;
     }
     
-    public void setObservationComponentDataAbsentReasonText
-        (String observationComponentDataAbsentReasonText) 
+    public void setObsComponentDataAbsentReasonText
+        (String obsComponentDataAbsentReasonText) 
         {
-      this.observationComponentDataAbsentReasonText = observationComponentDataAbsentReasonText;
+      this.obsComponentDataAbsentReasonText = obsComponentDataAbsentReasonText;
 }
     public 
     String 
-    getObservationComponentInterpretationCodingCode()
+    getObsComponentInterpretationCodingCode()
     {
-        return this.observationComponentInterpretationCodingCode;
+        return this.obsComponentInterpretationCodingCode;
     }
     
-    public void setObservationComponentInterpretationCodingCode
-        (String observationComponentInterpretationCodingCode) 
+    public void setObsComponentInterpretationCodingCode
+        (String obsComponentInterpretationCodingCode) 
         {
-      this.observationComponentInterpretationCodingCode = observationComponentInterpretationCodingCode;
+      this.obsComponentInterpretationCodingCode = obsComponentInterpretationCodingCode;
 }
     public 
     String 
-    getObservationComponentInterpretationCodingDisplay()
+    getObsComponentInterpretationCodingDisplay()
     {
-        return this.observationComponentInterpretationCodingDisplay;
+        return this.obsComponentInterpretationCodingDisplay;
     }
     
-    public void setObservationComponentInterpretationCodingDisplay
-        (String observationComponentInterpretationCodingDisplay) 
+    public void setObsComponentInterpretationCodingDisplay
+        (String obsComponentInterpretationCodingDisplay) 
         {
-      this.observationComponentInterpretationCodingDisplay = observationComponentInterpretationCodingDisplay;
+      this.obsComponentInterpretationCodingDisplay = obsComponentInterpretationCodingDisplay;
 }
     public 
     String 
-    getObservationComponentInterpretationCodingSystem()
+    getObsComponentInterpretationCodingSystem()
     {
-        return this.observationComponentInterpretationCodingSystem;
+        return this.obsComponentInterpretationCodingSystem;
     }
     
-    public void setObservationComponentInterpretationCodingSystem
-        (String observationComponentInterpretationCodingSystem) 
+    public void setObsComponentInterpretationCodingSystem
+        (String obsComponentInterpretationCodingSystem) 
         {
-      this.observationComponentInterpretationCodingSystem = observationComponentInterpretationCodingSystem;
+      this.obsComponentInterpretationCodingSystem = obsComponentInterpretationCodingSystem;
 }
     public 
     String 
-    getObservationComponentInterpretationCodingUserSelected()
+    getObsComponentInterpretationCodingUsrslt()
     {
-        return this.observationComponentInterpretationCodingUserSelected;
+        return this.obsComponentInterpretationCodingUsrslt;
     }
     
-    public void setObservationComponentInterpretationCodingUserSelected
-        (String observationComponentInterpretationCodingUserSelected) 
+    public void setObsComponentInterpretationCodingUsrslt
+        (String obsComponentInterpretationCodingUsrslt) 
         {
-      this.observationComponentInterpretationCodingUserSelected = observationComponentInterpretationCodingUserSelected;
+      this.obsComponentInterpretationCodingUsrslt = obsComponentInterpretationCodingUsrslt;
 }
     public 
     String 
-    getObservationComponentInterpretationCodingVersion()
+    getObsComponentInterpretationCodingVersion()
     {
-        return this.observationComponentInterpretationCodingVersion;
+        return this.obsComponentInterpretationCodingVersion;
     }
     
-    public void setObservationComponentInterpretationCodingVersion
-        (String observationComponentInterpretationCodingVersion) 
+    public void setObsComponentInterpretationCodingVersion
+        (String obsComponentInterpretationCodingVersion) 
         {
-      this.observationComponentInterpretationCodingVersion = observationComponentInterpretationCodingVersion;
+      this.obsComponentInterpretationCodingVersion = obsComponentInterpretationCodingVersion;
 }
     public 
     String 
-    getObservationComponentInterpretationText()
+    getObsComponentInterpretationText()
     {
-        return this.observationComponentInterpretationText;
+        return this.obsComponentInterpretationText;
     }
     
-    public void setObservationComponentInterpretationText
-        (String observationComponentInterpretationText) 
+    public void setObsComponentInterpretationText
+        (String obsComponentInterpretationText) 
         {
-      this.observationComponentInterpretationText = observationComponentInterpretationText;
+      this.obsComponentInterpretationText = obsComponentInterpretationText;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeHighCode()
+    getObsComponentReferenceRangeAgeHighCode()
     {
-        return this.observationComponentReferenceRangeAgeHighCode;
+        return this.obsComponentReferenceRangeAgeHighCode;
     }
     
-    public void setObservationComponentReferenceRangeAgeHighCode
-        (String observationComponentReferenceRangeAgeHighCode) 
+    public void setObsComponentReferenceRangeAgeHighCode
+        (String obsComponentReferenceRangeAgeHighCode) 
         {
-      this.observationComponentReferenceRangeAgeHighCode = observationComponentReferenceRangeAgeHighCode;
+      this.obsComponentReferenceRangeAgeHighCode = obsComponentReferenceRangeAgeHighCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeHighComparatorCode()
+    getObsComponentReferenceRangeAgeHighCompartrCode()
     {
-        return this.observationComponentReferenceRangeAgeHighComparatorCode;
+        return this.obsComponentReferenceRangeAgeHighCompartrCode;
     }
     
-    public void setObservationComponentReferenceRangeAgeHighComparatorCode
-        (String observationComponentReferenceRangeAgeHighComparatorCode) 
+    public void setObsComponentReferenceRangeAgeHighCompartrCode
+        (String obsComponentReferenceRangeAgeHighCompartrCode) 
         {
-      this.observationComponentReferenceRangeAgeHighComparatorCode = observationComponentReferenceRangeAgeHighComparatorCode;
+      this.obsComponentReferenceRangeAgeHighCompartrCode = obsComponentReferenceRangeAgeHighCompartrCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeHighSystem()
+    getObsComponentReferenceRangeAgeHighSystem()
     {
-        return this.observationComponentReferenceRangeAgeHighSystem;
+        return this.obsComponentReferenceRangeAgeHighSystem;
     }
     
-    public void setObservationComponentReferenceRangeAgeHighSystem
-        (String observationComponentReferenceRangeAgeHighSystem) 
+    public void setObsComponentReferenceRangeAgeHighSystem
+        (String obsComponentReferenceRangeAgeHighSystem) 
         {
-      this.observationComponentReferenceRangeAgeHighSystem = observationComponentReferenceRangeAgeHighSystem;
+      this.obsComponentReferenceRangeAgeHighSystem = obsComponentReferenceRangeAgeHighSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeHighUnit()
+    getObsComponentReferenceRangeAgeHighUnit()
     {
-        return this.observationComponentReferenceRangeAgeHighUnit;
+        return this.obsComponentReferenceRangeAgeHighUnit;
     }
     
-    public void setObservationComponentReferenceRangeAgeHighUnit
-        (String observationComponentReferenceRangeAgeHighUnit) 
+    public void setObsComponentReferenceRangeAgeHighUnit
+        (String obsComponentReferenceRangeAgeHighUnit) 
         {
-      this.observationComponentReferenceRangeAgeHighUnit = observationComponentReferenceRangeAgeHighUnit;
+      this.obsComponentReferenceRangeAgeHighUnit = obsComponentReferenceRangeAgeHighUnit;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeHighValue()
+    getObsComponentReferenceRangeAgeHighValue()
     {
-        return this.observationComponentReferenceRangeAgeHighValue;
+        return this.obsComponentReferenceRangeAgeHighValue;
     }
     
-    public void setObservationComponentReferenceRangeAgeHighValue
-        (String observationComponentReferenceRangeAgeHighValue) 
+    public void setObsComponentReferenceRangeAgeHighValue
+        (String obsComponentReferenceRangeAgeHighValue) 
         {
-      this.observationComponentReferenceRangeAgeHighValue = observationComponentReferenceRangeAgeHighValue;
+      this.obsComponentReferenceRangeAgeHighValue = obsComponentReferenceRangeAgeHighValue;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeLowCode()
+    getObsComponentReferenceRangeAgeLowCode()
     {
-        return this.observationComponentReferenceRangeAgeLowCode;
+        return this.obsComponentReferenceRangeAgeLowCode;
     }
     
-    public void setObservationComponentReferenceRangeAgeLowCode
-        (String observationComponentReferenceRangeAgeLowCode) 
+    public void setObsComponentReferenceRangeAgeLowCode
+        (String obsComponentReferenceRangeAgeLowCode) 
         {
-      this.observationComponentReferenceRangeAgeLowCode = observationComponentReferenceRangeAgeLowCode;
+      this.obsComponentReferenceRangeAgeLowCode = obsComponentReferenceRangeAgeLowCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeLowComparatorCode()
+    getObsComponentReferenceRangeAgeLowCompartrCode()
     {
-        return this.observationComponentReferenceRangeAgeLowComparatorCode;
+        return this.obsComponentReferenceRangeAgeLowCompartrCode;
     }
     
-    public void setObservationComponentReferenceRangeAgeLowComparatorCode
-        (String observationComponentReferenceRangeAgeLowComparatorCode) 
+    public void setObsComponentReferenceRangeAgeLowCompartrCode
+        (String obsComponentReferenceRangeAgeLowCompartrCode) 
         {
-      this.observationComponentReferenceRangeAgeLowComparatorCode = observationComponentReferenceRangeAgeLowComparatorCode;
+      this.obsComponentReferenceRangeAgeLowCompartrCode = obsComponentReferenceRangeAgeLowCompartrCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeLowSystem()
+    getObsComponentReferenceRangeAgeLowSystem()
     {
-        return this.observationComponentReferenceRangeAgeLowSystem;
+        return this.obsComponentReferenceRangeAgeLowSystem;
     }
     
-    public void setObservationComponentReferenceRangeAgeLowSystem
-        (String observationComponentReferenceRangeAgeLowSystem) 
+    public void setObsComponentReferenceRangeAgeLowSystem
+        (String obsComponentReferenceRangeAgeLowSystem) 
         {
-      this.observationComponentReferenceRangeAgeLowSystem = observationComponentReferenceRangeAgeLowSystem;
+      this.obsComponentReferenceRangeAgeLowSystem = obsComponentReferenceRangeAgeLowSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeLowUnit()
+    getObsComponentReferenceRangeAgeLowUnit()
     {
-        return this.observationComponentReferenceRangeAgeLowUnit;
+        return this.obsComponentReferenceRangeAgeLowUnit;
     }
     
-    public void setObservationComponentReferenceRangeAgeLowUnit
-        (String observationComponentReferenceRangeAgeLowUnit) 
+    public void setObsComponentReferenceRangeAgeLowUnit
+        (String obsComponentReferenceRangeAgeLowUnit) 
         {
-      this.observationComponentReferenceRangeAgeLowUnit = observationComponentReferenceRangeAgeLowUnit;
+      this.obsComponentReferenceRangeAgeLowUnit = obsComponentReferenceRangeAgeLowUnit;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAgeLowValue()
+    getObsComponentReferenceRangeAgeLowValue()
     {
-        return this.observationComponentReferenceRangeAgeLowValue;
+        return this.obsComponentReferenceRangeAgeLowValue;
     }
     
-    public void setObservationComponentReferenceRangeAgeLowValue
-        (String observationComponentReferenceRangeAgeLowValue) 
+    public void setObsComponentReferenceRangeAgeLowValue
+        (String obsComponentReferenceRangeAgeLowValue) 
         {
-      this.observationComponentReferenceRangeAgeLowValue = observationComponentReferenceRangeAgeLowValue;
+      this.obsComponentReferenceRangeAgeLowValue = obsComponentReferenceRangeAgeLowValue;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToCodingCode()
+    getObsComponentReferenceRangeAppliesToCodingCode()
     {
-        return this.observationComponentReferenceRangeAppliesToCodingCode;
+        return this.obsComponentReferenceRangeAppliesToCodingCode;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToCodingCode
-        (String observationComponentReferenceRangeAppliesToCodingCode) 
+    public void setObsComponentReferenceRangeAppliesToCodingCode
+        (String obsComponentReferenceRangeAppliesToCodingCode) 
         {
-      this.observationComponentReferenceRangeAppliesToCodingCode = observationComponentReferenceRangeAppliesToCodingCode;
+      this.obsComponentReferenceRangeAppliesToCodingCode = obsComponentReferenceRangeAppliesToCodingCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToCodingDisplay()
+    getObsComponentReferenceRangeAppliesToCodingDisplay()
     {
-        return this.observationComponentReferenceRangeAppliesToCodingDisplay;
+        return this.obsComponentReferenceRangeAppliesToCodingDisplay;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToCodingDisplay
-        (String observationComponentReferenceRangeAppliesToCodingDisplay) 
+    public void setObsComponentReferenceRangeAppliesToCodingDisplay
+        (String obsComponentReferenceRangeAppliesToCodingDisplay) 
         {
-      this.observationComponentReferenceRangeAppliesToCodingDisplay = observationComponentReferenceRangeAppliesToCodingDisplay;
+      this.obsComponentReferenceRangeAppliesToCodingDisplay = obsComponentReferenceRangeAppliesToCodingDisplay;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToCodingSystem()
+    getObsComponentReferenceRangeAppliesToCodingSystem()
     {
-        return this.observationComponentReferenceRangeAppliesToCodingSystem;
+        return this.obsComponentReferenceRangeAppliesToCodingSystem;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToCodingSystem
-        (String observationComponentReferenceRangeAppliesToCodingSystem) 
+    public void setObsComponentReferenceRangeAppliesToCodingSystem
+        (String obsComponentReferenceRangeAppliesToCodingSystem) 
         {
-      this.observationComponentReferenceRangeAppliesToCodingSystem = observationComponentReferenceRangeAppliesToCodingSystem;
+      this.obsComponentReferenceRangeAppliesToCodingSystem = obsComponentReferenceRangeAppliesToCodingSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToCodingUs()
+    getObsComponentReferenceRangeAppliesToCodingUsrslt()
     {
-        return this.observationComponentReferenceRangeAppliesToCodingUs;
+        return this.obsComponentReferenceRangeAppliesToCodingUsrslt;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToCodingUs
-        (String observationComponentReferenceRangeAppliesToCodingUs) 
+    public void setObsComponentReferenceRangeAppliesToCodingUsrslt
+        (String obsComponentReferenceRangeAppliesToCodingUsrslt) 
         {
-      this.observationComponentReferenceRangeAppliesToCodingUs = observationComponentReferenceRangeAppliesToCodingUs;
+      this.obsComponentReferenceRangeAppliesToCodingUsrslt = obsComponentReferenceRangeAppliesToCodingUsrslt;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToCodingVersion()
+    getObsComponentReferenceRangeAppliesToCodingVersion()
     {
-        return this.observationComponentReferenceRangeAppliesToCodingVersion;
+        return this.obsComponentReferenceRangeAppliesToCodingVersion;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToCodingVersion
-        (String observationComponentReferenceRangeAppliesToCodingVersion) 
+    public void setObsComponentReferenceRangeAppliesToCodingVersion
+        (String obsComponentReferenceRangeAppliesToCodingVersion) 
         {
-      this.observationComponentReferenceRangeAppliesToCodingVersion = observationComponentReferenceRangeAppliesToCodingVersion;
+      this.obsComponentReferenceRangeAppliesToCodingVersion = obsComponentReferenceRangeAppliesToCodingVersion;
 }
     public 
     String 
-    getObservationComponentReferenceRangeAppliesToText()
+    getObsComponentReferenceRangeAppliesToText()
     {
-        return this.observationComponentReferenceRangeAppliesToText;
+        return this.obsComponentReferenceRangeAppliesToText;
     }
     
-    public void setObservationComponentReferenceRangeAppliesToText
-        (String observationComponentReferenceRangeAppliesToText) 
+    public void setObsComponentReferenceRangeAppliesToText
+        (String obsComponentReferenceRangeAppliesToText) 
         {
-      this.observationComponentReferenceRangeAppliesToText = observationComponentReferenceRangeAppliesToText;
+      this.obsComponentReferenceRangeAppliesToText = obsComponentReferenceRangeAppliesToText;
 }
     public 
     String 
-    getObservationComponentReferenceRangeHighCode()
+    getObsComponentReferenceRangeHighCode()
     {
-        return this.observationComponentReferenceRangeHighCode;
+        return this.obsComponentReferenceRangeHighCode;
     }
     
-    public void setObservationComponentReferenceRangeHighCode
-        (String observationComponentReferenceRangeHighCode) 
+    public void setObsComponentReferenceRangeHighCode
+        (String obsComponentReferenceRangeHighCode) 
         {
-      this.observationComponentReferenceRangeHighCode = observationComponentReferenceRangeHighCode;
+      this.obsComponentReferenceRangeHighCode = obsComponentReferenceRangeHighCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeHighComparatorCode()
+    getObsComponentReferenceRangeHighCompartrCode()
     {
-        return this.observationComponentReferenceRangeHighComparatorCode;
+        return this.obsComponentReferenceRangeHighCompartrCode;
     }
     
-    public void setObservationComponentReferenceRangeHighComparatorCode
-        (String observationComponentReferenceRangeHighComparatorCode) 
+    public void setObsComponentReferenceRangeHighCompartrCode
+        (String obsComponentReferenceRangeHighCompartrCode) 
         {
-      this.observationComponentReferenceRangeHighComparatorCode = observationComponentReferenceRangeHighComparatorCode;
+      this.obsComponentReferenceRangeHighCompartrCode = obsComponentReferenceRangeHighCompartrCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeHighSystem()
+    getObsComponentReferenceRangeHighSystem()
     {
-        return this.observationComponentReferenceRangeHighSystem;
+        return this.obsComponentReferenceRangeHighSystem;
     }
     
-    public void setObservationComponentReferenceRangeHighSystem
-        (String observationComponentReferenceRangeHighSystem) 
+    public void setObsComponentReferenceRangeHighSystem
+        (String obsComponentReferenceRangeHighSystem) 
         {
-      this.observationComponentReferenceRangeHighSystem = observationComponentReferenceRangeHighSystem;
+      this.obsComponentReferenceRangeHighSystem = obsComponentReferenceRangeHighSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeHighUnit()
+    getObsComponentReferenceRangeHighUnit()
     {
-        return this.observationComponentReferenceRangeHighUnit;
+        return this.obsComponentReferenceRangeHighUnit;
     }
     
-    public void setObservationComponentReferenceRangeHighUnit
-        (String observationComponentReferenceRangeHighUnit) 
+    public void setObsComponentReferenceRangeHighUnit
+        (String obsComponentReferenceRangeHighUnit) 
         {
-      this.observationComponentReferenceRangeHighUnit = observationComponentReferenceRangeHighUnit;
+      this.obsComponentReferenceRangeHighUnit = obsComponentReferenceRangeHighUnit;
 }
     public 
     String 
-    getObservationComponentReferenceRangeHighValue()
+    getObsComponentReferenceRangeHighValue()
     {
-        return this.observationComponentReferenceRangeHighValue;
+        return this.obsComponentReferenceRangeHighValue;
     }
     
-    public void setObservationComponentReferenceRangeHighValue
-        (String observationComponentReferenceRangeHighValue) 
+    public void setObsComponentReferenceRangeHighValue
+        (String obsComponentReferenceRangeHighValue) 
         {
-      this.observationComponentReferenceRangeHighValue = observationComponentReferenceRangeHighValue;
+      this.obsComponentReferenceRangeHighValue = obsComponentReferenceRangeHighValue;
 }
     public 
     String 
-    getObservationComponentReferenceRangeLowCode()
+    getObsComponentReferenceRangeLowCode()
     {
-        return this.observationComponentReferenceRangeLowCode;
+        return this.obsComponentReferenceRangeLowCode;
     }
     
-    public void setObservationComponentReferenceRangeLowCode
-        (String observationComponentReferenceRangeLowCode) 
+    public void setObsComponentReferenceRangeLowCode
+        (String obsComponentReferenceRangeLowCode) 
         {
-      this.observationComponentReferenceRangeLowCode = observationComponentReferenceRangeLowCode;
+      this.obsComponentReferenceRangeLowCode = obsComponentReferenceRangeLowCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeLowComparatorCode()
+    getObsComponentReferenceRangeLowCompartrCode()
     {
-        return this.observationComponentReferenceRangeLowComparatorCode;
+        return this.obsComponentReferenceRangeLowCompartrCode;
     }
     
-    public void setObservationComponentReferenceRangeLowComparatorCode
-        (String observationComponentReferenceRangeLowComparatorCode) 
+    public void setObsComponentReferenceRangeLowCompartrCode
+        (String obsComponentReferenceRangeLowCompartrCode) 
         {
-      this.observationComponentReferenceRangeLowComparatorCode = observationComponentReferenceRangeLowComparatorCode;
+      this.obsComponentReferenceRangeLowCompartrCode = obsComponentReferenceRangeLowCompartrCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeLowSystem()
+    getObsComponentReferenceRangeLowSystem()
     {
-        return this.observationComponentReferenceRangeLowSystem;
+        return this.obsComponentReferenceRangeLowSystem;
     }
     
-    public void setObservationComponentReferenceRangeLowSystem
-        (String observationComponentReferenceRangeLowSystem) 
+    public void setObsComponentReferenceRangeLowSystem
+        (String obsComponentReferenceRangeLowSystem) 
         {
-      this.observationComponentReferenceRangeLowSystem = observationComponentReferenceRangeLowSystem;
+      this.obsComponentReferenceRangeLowSystem = obsComponentReferenceRangeLowSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeLowUnit()
+    getObsComponentReferenceRangeLowUnit()
     {
-        return this.observationComponentReferenceRangeLowUnit;
+        return this.obsComponentReferenceRangeLowUnit;
     }
     
-    public void setObservationComponentReferenceRangeLowUnit
-        (String observationComponentReferenceRangeLowUnit) 
+    public void setObsComponentReferenceRangeLowUnit
+        (String obsComponentReferenceRangeLowUnit) 
         {
-      this.observationComponentReferenceRangeLowUnit = observationComponentReferenceRangeLowUnit;
+      this.obsComponentReferenceRangeLowUnit = obsComponentReferenceRangeLowUnit;
 }
     public 
     String 
-    getObservationComponentReferenceRangeLowValue()
+    getObsComponentReferenceRangeLowValue()
     {
-        return this.observationComponentReferenceRangeLowValue;
+        return this.obsComponentReferenceRangeLowValue;
     }
     
-    public void setObservationComponentReferenceRangeLowValue
-        (String observationComponentReferenceRangeLowValue) 
+    public void setObsComponentReferenceRangeLowValue
+        (String obsComponentReferenceRangeLowValue) 
         {
-      this.observationComponentReferenceRangeLowValue = observationComponentReferenceRangeLowValue;
+      this.obsComponentReferenceRangeLowValue = obsComponentReferenceRangeLowValue;
 }
     public 
     String 
-    getObservationComponentReferenceRangeText()
+    getObsComponentReferenceRangeText()
     {
-        return this.observationComponentReferenceRangeText;
+        return this.obsComponentReferenceRangeText;
     }
     
-    public void setObservationComponentReferenceRangeText
-        (String observationComponentReferenceRangeText) 
+    public void setObsComponentReferenceRangeText
+        (String obsComponentReferenceRangeText) 
         {
-      this.observationComponentReferenceRangeText = observationComponentReferenceRangeText;
+      this.obsComponentReferenceRangeText = obsComponentReferenceRangeText;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeCodingCode()
+    getObsComponentReferenceRangeTypeCodingCode()
     {
-        return this.observationComponentReferenceRangeTypeCodingCode;
+        return this.obsComponentReferenceRangeTypeCodingCode;
     }
     
-    public void setObservationComponentReferenceRangeTypeCodingCode
-        (String observationComponentReferenceRangeTypeCodingCode) 
+    public void setObsComponentReferenceRangeTypeCodingCode
+        (String obsComponentReferenceRangeTypeCodingCode) 
         {
-      this.observationComponentReferenceRangeTypeCodingCode = observationComponentReferenceRangeTypeCodingCode;
+      this.obsComponentReferenceRangeTypeCodingCode = obsComponentReferenceRangeTypeCodingCode;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeCodingDisplay()
+    getObsComponentReferenceRangeTypeCodingDisplay()
     {
-        return this.observationComponentReferenceRangeTypeCodingDisplay;
+        return this.obsComponentReferenceRangeTypeCodingDisplay;
     }
     
-    public void setObservationComponentReferenceRangeTypeCodingDisplay
-        (String observationComponentReferenceRangeTypeCodingDisplay) 
+    public void setObsComponentReferenceRangeTypeCodingDisplay
+        (String obsComponentReferenceRangeTypeCodingDisplay) 
         {
-      this.observationComponentReferenceRangeTypeCodingDisplay = observationComponentReferenceRangeTypeCodingDisplay;
+      this.obsComponentReferenceRangeTypeCodingDisplay = obsComponentReferenceRangeTypeCodingDisplay;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeCodingSystem()
+    getObsComponentReferenceRangeTypeCodingSystem()
     {
-        return this.observationComponentReferenceRangeTypeCodingSystem;
+        return this.obsComponentReferenceRangeTypeCodingSystem;
     }
     
-    public void setObservationComponentReferenceRangeTypeCodingSystem
-        (String observationComponentReferenceRangeTypeCodingSystem) 
+    public void setObsComponentReferenceRangeTypeCodingSystem
+        (String obsComponentReferenceRangeTypeCodingSystem) 
         {
-      this.observationComponentReferenceRangeTypeCodingSystem = observationComponentReferenceRangeTypeCodingSystem;
+      this.obsComponentReferenceRangeTypeCodingSystem = obsComponentReferenceRangeTypeCodingSystem;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeCodingUserSelected()
+    getObsComponentReferenceRangeTypeCodingUsrslt()
     {
-        return this.observationComponentReferenceRangeTypeCodingUserSelected;
+        return this.obsComponentReferenceRangeTypeCodingUsrslt;
     }
     
-    public void setObservationComponentReferenceRangeTypeCodingUserSelected
-        (String observationComponentReferenceRangeTypeCodingUserSelected) 
+    public void setObsComponentReferenceRangeTypeCodingUsrslt
+        (String obsComponentReferenceRangeTypeCodingUsrslt) 
         {
-      this.observationComponentReferenceRangeTypeCodingUserSelected = observationComponentReferenceRangeTypeCodingUserSelected;
+      this.obsComponentReferenceRangeTypeCodingUsrslt = obsComponentReferenceRangeTypeCodingUsrslt;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeCodingVersion()
+    getObsComponentReferenceRangeTypeCodingVersion()
     {
-        return this.observationComponentReferenceRangeTypeCodingVersion;
+        return this.obsComponentReferenceRangeTypeCodingVersion;
     }
     
-    public void setObservationComponentReferenceRangeTypeCodingVersion
-        (String observationComponentReferenceRangeTypeCodingVersion) 
+    public void setObsComponentReferenceRangeTypeCodingVersion
+        (String obsComponentReferenceRangeTypeCodingVersion) 
         {
-      this.observationComponentReferenceRangeTypeCodingVersion = observationComponentReferenceRangeTypeCodingVersion;
+      this.obsComponentReferenceRangeTypeCodingVersion = obsComponentReferenceRangeTypeCodingVersion;
 }
     public 
     String 
-    getObservationComponentReferenceRangeTypeText()
+    getObsComponentReferenceRangeTypeText()
     {
-        return this.observationComponentReferenceRangeTypeText;
+        return this.obsComponentReferenceRangeTypeText;
     }
     
-    public void setObservationComponentReferenceRangeTypeText
-        (String observationComponentReferenceRangeTypeText) 
+    public void setObsComponentReferenceRangeTypeText
+        (String obsComponentReferenceRangeTypeText) 
         {
-      this.observationComponentReferenceRangeTypeText = observationComponentReferenceRangeTypeText;
+      this.obsComponentReferenceRangeTypeText = obsComponentReferenceRangeTypeText;
 }
     public 
     String 
-    getObservationComponentValue()
+    getObservationComponentValueBoolean()
     {
-        return this.observationComponentValue;
+        return this.observationComponentValueBoolean;
     }
     
-    public void setObservationComponentValue
-        (String observationComponentValue) 
+    public void setObservationComponentValueBoolean
+        (String observationComponentValueBoolean) 
         {
-      this.observationComponentValue = observationComponentValue;
+      this.observationComponentValueBoolean = observationComponentValueBoolean;
 }
     public 
     String 
-    getObservationDataAbsentReasonCodingCode()
+    getObsComponentValueCodeableConceptCodingCode()
     {
-        return this.observationDataAbsentReasonCodingCode;
+        return this.obsComponentValueCodeableConceptCodingCode;
     }
     
-    public void setObservationDataAbsentReasonCodingCode
-        (String observationDataAbsentReasonCodingCode) 
+    public void setObsComponentValueCodeableConceptCodingCode
+        (String obsComponentValueCodeableConceptCodingCode) 
         {
-      this.observationDataAbsentReasonCodingCode = observationDataAbsentReasonCodingCode;
+      this.obsComponentValueCodeableConceptCodingCode = obsComponentValueCodeableConceptCodingCode;
 }
     public 
     String 
-    getObservationDataAbsentReasonCodingDisplay()
+    getObsComponentValueCodeableConceptCodingDisplay()
     {
-        return this.observationDataAbsentReasonCodingDisplay;
+        return this.obsComponentValueCodeableConceptCodingDisplay;
     }
     
-    public void setObservationDataAbsentReasonCodingDisplay
-        (String observationDataAbsentReasonCodingDisplay) 
+    public void setObsComponentValueCodeableConceptCodingDisplay
+        (String obsComponentValueCodeableConceptCodingDisplay) 
         {
-      this.observationDataAbsentReasonCodingDisplay = observationDataAbsentReasonCodingDisplay;
+      this.obsComponentValueCodeableConceptCodingDisplay = obsComponentValueCodeableConceptCodingDisplay;
 }
     public 
     String 
-    getObservationDataAbsentReasonCodingSystem()
+    getObsComponentValueCodeableConceptCodingSystem()
     {
-        return this.observationDataAbsentReasonCodingSystem;
+        return this.obsComponentValueCodeableConceptCodingSystem;
     }
     
-    public void setObservationDataAbsentReasonCodingSystem
-        (String observationDataAbsentReasonCodingSystem) 
+    public void setObsComponentValueCodeableConceptCodingSystem
+        (String obsComponentValueCodeableConceptCodingSystem) 
         {
-      this.observationDataAbsentReasonCodingSystem = observationDataAbsentReasonCodingSystem;
+      this.obsComponentValueCodeableConceptCodingSystem = obsComponentValueCodeableConceptCodingSystem;
 }
     public 
     String 
-    getObservationDataAbsentReasonCodingUserSelected()
+    getObsComponentValueCodeableConceptCodingUsrslt()
     {
-        return this.observationDataAbsentReasonCodingUserSelected;
+        return this.obsComponentValueCodeableConceptCodingUsrslt;
     }
     
-    public void setObservationDataAbsentReasonCodingUserSelected
-        (String observationDataAbsentReasonCodingUserSelected) 
+    public void setObsComponentValueCodeableConceptCodingUsrslt
+        (String obsComponentValueCodeableConceptCodingUsrslt) 
         {
-      this.observationDataAbsentReasonCodingUserSelected = observationDataAbsentReasonCodingUserSelected;
+      this.obsComponentValueCodeableConceptCodingUsrslt = obsComponentValueCodeableConceptCodingUsrslt;
 }
     public 
     String 
-    getObservationDataAbsentReasonCodingVersion()
+    getObsComponentValueCodeableConceptCodingVersion()
     {
-        return this.observationDataAbsentReasonCodingVersion;
+        return this.obsComponentValueCodeableConceptCodingVersion;
     }
     
-    public void setObservationDataAbsentReasonCodingVersion
-        (String observationDataAbsentReasonCodingVersion) 
+    public void setObsComponentValueCodeableConceptCodingVersion
+        (String obsComponentValueCodeableConceptCodingVersion) 
         {
-      this.observationDataAbsentReasonCodingVersion = observationDataAbsentReasonCodingVersion;
+      this.obsComponentValueCodeableConceptCodingVersion = obsComponentValueCodeableConceptCodingVersion;
 }
     public 
     String 
-    getObservationDataAbsentReasonText()
+    getObsComponentValueCodeableConceptText()
     {
-        return this.observationDataAbsentReasonText;
+        return this.obsComponentValueCodeableConceptText;
     }
     
-    public void setObservationDataAbsentReasonText
-        (String observationDataAbsentReasonText) 
+    public void setObsComponentValueCodeableConceptText
+        (String obsComponentValueCodeableConceptText) 
         {
-      this.observationDataAbsentReasonText = observationDataAbsentReasonText;
+      this.obsComponentValueCodeableConceptText = obsComponentValueCodeableConceptText;
 }
     public 
     String 
-    getObservationDerivedFrom()
+    getObservationComponentValueDateTime()
     {
-        return this.observationDerivedFrom;
+        return this.observationComponentValueDateTime;
     }
     
-    public void setObservationDerivedFrom
-        (String observationDerivedFrom) 
+    public void setObservationComponentValueDateTime
+        (String observationComponentValueDateTime) 
         {
-      this.observationDerivedFrom = observationDerivedFrom;
+      this.observationComponentValueDateTime = observationComponentValueDateTime;
 }
     public 
     String 
-    getObservationDevice()
+    getObservationComponentValueInteger()
     {
-        return this.observationDevice;
+        return this.observationComponentValueInteger;
     }
     
-    public void setObservationDevice
-        (String observationDevice) 
+    public void setObservationComponentValueInteger
+        (String observationComponentValueInteger) 
         {
-      this.observationDevice = observationDevice;
+      this.observationComponentValueInteger = observationComponentValueInteger;
 }
     public 
     String 
-    getObservationEffective()
+    getObsComponentValuePeriodEnd()
     {
-        return this.observationEffective;
+        return this.obsComponentValuePeriodEnd;
     }
     
-    public void setObservationEffective
-        (String observationEffective) 
+    public void setObsComponentValuePeriodEnd
+        (String obsComponentValuePeriodEnd) 
         {
-      this.observationEffective = observationEffective;
+      this.obsComponentValuePeriodEnd = obsComponentValuePeriodEnd;
 }
     public 
     String 
-    getObservationEncounter()
+    getObsComponentValuePeriodStart()
     {
-        return this.observationEncounter;
+        return this.obsComponentValuePeriodStart;
     }
     
-    public void setObservationEncounter
-        (String observationEncounter) 
+    public void setObsComponentValuePeriodStart
+        (String obsComponentValuePeriodStart) 
         {
-      this.observationEncounter = observationEncounter;
+      this.obsComponentValuePeriodStart = obsComponentValuePeriodStart;
 }
     public 
     String 
-    getObservationFocus()
+    getObsComponentValueQuantityCode()
     {
-        return this.observationFocus;
+        return this.obsComponentValueQuantityCode;
     }
     
-    public void setObservationFocus
-        (String observationFocus) 
+    public void setObsComponentValueQuantityCode
+        (String obsComponentValueQuantityCode) 
         {
-      this.observationFocus = observationFocus;
+      this.obsComponentValueQuantityCode = obsComponentValueQuantityCode;
 }
     public 
     String 
-    getObservationHasMember()
+    getObsComponentValueQuantityCompartrCode()
     {
-        return this.observationHasMember;
+        return this.obsComponentValueQuantityCompartrCode;
     }
     
-    public void setObservationHasMember
-        (String observationHasMember) 
+    public void setObsComponentValueQuantityCompartrCode
+        (String obsComponentValueQuantityCompartrCode) 
         {
-      this.observationHasMember = observationHasMember;
+      this.obsComponentValueQuantityCompartrCode = obsComponentValueQuantityCompartrCode;
 }
     public 
     String 
-    getObservationIdentifierAssigner()
+    getObsComponentValueQuantitySystem()
     {
-        return this.observationIdentifierAssigner;
+        return this.obsComponentValueQuantitySystem;
     }
     
-    public void setObservationIdentifierAssigner
-        (String observationIdentifierAssigner) 
+    public void setObsComponentValueQuantitySystem
+        (String obsComponentValueQuantitySystem) 
         {
-      this.observationIdentifierAssigner = observationIdentifierAssigner;
+      this.obsComponentValueQuantitySystem = obsComponentValueQuantitySystem;
 }
     public 
     String 
-    getObservationIdentifierPeriodEnd()
+    getObsComponentValueQuantityUnit()
     {
-        return this.observationIdentifierPeriodEnd;
+        return this.obsComponentValueQuantityUnit;
     }
     
-    public void setObservationIdentifierPeriodEnd
-        (String observationIdentifierPeriodEnd) 
+    public void setObsComponentValueQuantityUnit
+        (String obsComponentValueQuantityUnit) 
         {
-      this.observationIdentifierPeriodEnd = observationIdentifierPeriodEnd;
+      this.obsComponentValueQuantityUnit = obsComponentValueQuantityUnit;
 }
     public 
     String 
-    getObservationIdentifierPeriodStart()
+    getObsComponentValueQuantityValue()
     {
-        return this.observationIdentifierPeriodStart;
+        return this.obsComponentValueQuantityValue;
     }
     
-    public void setObservationIdentifierPeriodStart
-        (String observationIdentifierPeriodStart) 
+    public void setObsComponentValueQuantityValue
+        (String obsComponentValueQuantityValue) 
         {
-      this.observationIdentifierPeriodStart = observationIdentifierPeriodStart;
+      this.obsComponentValueQuantityValue = obsComponentValueQuantityValue;
 }
     public 
     String 
-    getObservationIdentifierSystem()
+    getObsComponentValueRangeHighCode()
     {
-        return this.observationIdentifierSystem;
+        return this.obsComponentValueRangeHighCode;
     }
     
-    public void setObservationIdentifierSystem
-        (String observationIdentifierSystem) 
+    public void setObsComponentValueRangeHighCode
+        (String obsComponentValueRangeHighCode) 
         {
-      this.observationIdentifierSystem = observationIdentifierSystem;
+      this.obsComponentValueRangeHighCode = obsComponentValueRangeHighCode;
 }
     public 
     String 
-    getObservationIdentifierTypeCodingCode()
+    getObsComponentValueRangeHighCompartrCode()
     {
-        return this.observationIdentifierTypeCodingCode;
+        return this.obsComponentValueRangeHighCompartrCode;
     }
     
-    public void setObservationIdentifierTypeCodingCode
-        (String observationIdentifierTypeCodingCode) 
+    public void setObsComponentValueRangeHighCompartrCode
+        (String obsComponentValueRangeHighCompartrCode) 
         {
-      this.observationIdentifierTypeCodingCode = observationIdentifierTypeCodingCode;
+      this.obsComponentValueRangeHighCompartrCode = obsComponentValueRangeHighCompartrCode;
 }
     public 
     String 
-    getObservationIdentifierTypeCodingDisplay()
+    getObsComponentValueRangeHighSystem()
     {
-        return this.observationIdentifierTypeCodingDisplay;
+        return this.obsComponentValueRangeHighSystem;
     }
     
-    public void setObservationIdentifierTypeCodingDisplay
-        (String observationIdentifierTypeCodingDisplay) 
+    public void setObsComponentValueRangeHighSystem
+        (String obsComponentValueRangeHighSystem) 
         {
-      this.observationIdentifierTypeCodingDisplay = observationIdentifierTypeCodingDisplay;
+      this.obsComponentValueRangeHighSystem = obsComponentValueRangeHighSystem;
 }
     public 
     String 
-    getObservationIdentifierTypeCodingSystem()
+    getObsComponentValueRangeHighUnit()
     {
-        return this.observationIdentifierTypeCodingSystem;
+        return this.obsComponentValueRangeHighUnit;
     }
     
-    public void setObservationIdentifierTypeCodingSystem
-        (String observationIdentifierTypeCodingSystem) 
+    public void setObsComponentValueRangeHighUnit
+        (String obsComponentValueRangeHighUnit) 
         {
-      this.observationIdentifierTypeCodingSystem = observationIdentifierTypeCodingSystem;
+      this.obsComponentValueRangeHighUnit = obsComponentValueRangeHighUnit;
 }
     public 
     String 
-    getObservationIdentifierTypeCodingUserSelected()
+    getObsComponentValueRangeHighValue()
     {
-        return this.observationIdentifierTypeCodingUserSelected;
+        return this.obsComponentValueRangeHighValue;
     }
     
-    public void setObservationIdentifierTypeCodingUserSelected
-        (String observationIdentifierTypeCodingUserSelected) 
+    public void setObsComponentValueRangeHighValue
+        (String obsComponentValueRangeHighValue) 
         {
-      this.observationIdentifierTypeCodingUserSelected = observationIdentifierTypeCodingUserSelected;
+      this.obsComponentValueRangeHighValue = obsComponentValueRangeHighValue;
 }
     public 
     String 
-    getObservationIdentifierTypeCodingVersion()
+    getObsComponentValueRangeLowCode()
     {
-        return this.observationIdentifierTypeCodingVersion;
+        return this.obsComponentValueRangeLowCode;
     }
     
-    public void setObservationIdentifierTypeCodingVersion
-        (String observationIdentifierTypeCodingVersion) 
+    public void setObsComponentValueRangeLowCode
+        (String obsComponentValueRangeLowCode) 
         {
-      this.observationIdentifierTypeCodingVersion = observationIdentifierTypeCodingVersion;
+      this.obsComponentValueRangeLowCode = obsComponentValueRangeLowCode;
 }
     public 
     String 
-    getObservationIdentifierTypeText()
+    getObsComponentValueRangeLowCompartrCode()
     {
-        return this.observationIdentifierTypeText;
+        return this.obsComponentValueRangeLowCompartrCode;
     }
     
-    public void setObservationIdentifierTypeText
-        (String observationIdentifierTypeText) 
+    public void setObsComponentValueRangeLowCompartrCode
+        (String obsComponentValueRangeLowCompartrCode) 
         {
-      this.observationIdentifierTypeText = observationIdentifierTypeText;
+      this.obsComponentValueRangeLowCompartrCode = obsComponentValueRangeLowCompartrCode;
 }
     public 
     String 
-    getObservationIdentifierUseCode()
+    getObsComponentValueRangeLowSystem()
     {
-        return this.observationIdentifierUseCode;
+        return this.obsComponentValueRangeLowSystem;
     }
     
-    public void setObservationIdentifierUseCode
-        (String observationIdentifierUseCode) 
+    public void setObsComponentValueRangeLowSystem
+        (String obsComponentValueRangeLowSystem) 
         {
-      this.observationIdentifierUseCode = observationIdentifierUseCode;
+      this.obsComponentValueRangeLowSystem = obsComponentValueRangeLowSystem;
 }
     public 
     String 
-    getObservationInterpretationCodingCode()
+    getObsComponentValueRangeLowUnit()
     {
-        return this.observationInterpretationCodingCode;
+        return this.obsComponentValueRangeLowUnit;
     }
     
-    public void setObservationInterpretationCodingCode
-        (String observationInterpretationCodingCode) 
+    public void setObsComponentValueRangeLowUnit
+        (String obsComponentValueRangeLowUnit) 
         {
-      this.observationInterpretationCodingCode = observationInterpretationCodingCode;
+      this.obsComponentValueRangeLowUnit = obsComponentValueRangeLowUnit;
 }
     public 
     String 
-    getObservationInterpretationCodingDisplay()
+    getObsComponentValueRangeLowValue()
     {
-        return this.observationInterpretationCodingDisplay;
+        return this.obsComponentValueRangeLowValue;
     }
     
-    public void setObservationInterpretationCodingDisplay
-        (String observationInterpretationCodingDisplay) 
+    public void setObsComponentValueRangeLowValue
+        (String obsComponentValueRangeLowValue) 
         {
-      this.observationInterpretationCodingDisplay = observationInterpretationCodingDisplay;
+      this.obsComponentValueRangeLowValue = obsComponentValueRangeLowValue;
 }
     public 
     String 
-    getObservationInterpretationCodingSystem()
+    getObsComponentValueRatioDenomCode()
     {
-        return this.observationInterpretationCodingSystem;
+        return this.obsComponentValueRatioDenomCode;
     }
     
-    public void setObservationInterpretationCodingSystem
-        (String observationInterpretationCodingSystem) 
+    public void setObsComponentValueRatioDenomCode
+        (String obsComponentValueRatioDenomCode) 
         {
-      this.observationInterpretationCodingSystem = observationInterpretationCodingSystem;
+      this.obsComponentValueRatioDenomCode = obsComponentValueRatioDenomCode;
 }
     public 
     String 
-    getObservationInterpretationCodingUserSelected()
+    getObsComponentValueRatioDenomCompartrCode()
     {
-        return this.observationInterpretationCodingUserSelected;
+        return this.obsComponentValueRatioDenomCompartrCode;
     }
     
-    public void setObservationInterpretationCodingUserSelected
-        (String observationInterpretationCodingUserSelected) 
+    public void setObsComponentValueRatioDenomCompartrCode
+        (String obsComponentValueRatioDenomCompartrCode) 
         {
-      this.observationInterpretationCodingUserSelected = observationInterpretationCodingUserSelected;
+      this.obsComponentValueRatioDenomCompartrCode = obsComponentValueRatioDenomCompartrCode;
 }
     public 
     String 
-    getObservationInterpretationCodingVersion()
+    getObsComponentValueRatioDenomSystem()
     {
-        return this.observationInterpretationCodingVersion;
+        return this.obsComponentValueRatioDenomSystem;
     }
     
-    public void setObservationInterpretationCodingVersion
-        (String observationInterpretationCodingVersion) 
+    public void setObsComponentValueRatioDenomSystem
+        (String obsComponentValueRatioDenomSystem) 
         {
-      this.observationInterpretationCodingVersion = observationInterpretationCodingVersion;
+      this.obsComponentValueRatioDenomSystem = obsComponentValueRatioDenomSystem;
 }
     public 
     String 
-    getObservationInterpretationText()
+    getObsComponentValueRatioDenomUnit()
     {
-        return this.observationInterpretationText;
+        return this.obsComponentValueRatioDenomUnit;
     }
     
-    public void setObservationInterpretationText
-        (String observationInterpretationText) 
+    public void setObsComponentValueRatioDenomUnit
+        (String obsComponentValueRatioDenomUnit) 
         {
-      this.observationInterpretationText = observationInterpretationText;
+      this.obsComponentValueRatioDenomUnit = obsComponentValueRatioDenomUnit;
 }
     public 
     String 
-    getObservationIssued()
+    getObsComponentValueRatioDenomValue()
     {
-        return this.observationIssued;
+        return this.obsComponentValueRatioDenomValue;
     }
     
-    public void setObservationIssued
-        (String observationIssued) 
+    public void setObsComponentValueRatioDenomValue
+        (String obsComponentValueRatioDenomValue) 
         {
-      this.observationIssued = observationIssued;
+      this.obsComponentValueRatioDenomValue = obsComponentValueRatioDenomValue;
 }
     public 
     String 
-    getObservationMethodCodingCode()
+    getObsComponentValueRatioNumeratorCode()
     {
-        return this.observationMethodCodingCode;
+        return this.obsComponentValueRatioNumeratorCode;
     }
     
-    public void setObservationMethodCodingCode
-        (String observationMethodCodingCode) 
+    public void setObsComponentValueRatioNumeratorCode
+        (String obsComponentValueRatioNumeratorCode) 
         {
-      this.observationMethodCodingCode = observationMethodCodingCode;
+      this.obsComponentValueRatioNumeratorCode = obsComponentValueRatioNumeratorCode;
 }
     public 
     String 
-    getObservationMethodCodingDisplay()
+    getObsComponentValueRatioNumeratorCompartrCode()
     {
-        return this.observationMethodCodingDisplay;
+        return this.obsComponentValueRatioNumeratorCompartrCode;
     }
     
-    public void setObservationMethodCodingDisplay
-        (String observationMethodCodingDisplay) 
+    public void setObsComponentValueRatioNumeratorCompartrCode
+        (String obsComponentValueRatioNumeratorCompartrCode) 
         {
-      this.observationMethodCodingDisplay = observationMethodCodingDisplay;
+      this.obsComponentValueRatioNumeratorCompartrCode = obsComponentValueRatioNumeratorCompartrCode;
 }
     public 
     String 
-    getObservationMethodCodingSystem()
+    getObsComponentValueRatioNumeratorSystem()
     {
-        return this.observationMethodCodingSystem;
+        return this.obsComponentValueRatioNumeratorSystem;
     }
     
-    public void setObservationMethodCodingSystem
-        (String observationMethodCodingSystem) 
+    public void setObsComponentValueRatioNumeratorSystem
+        (String obsComponentValueRatioNumeratorSystem) 
         {
-      this.observationMethodCodingSystem = observationMethodCodingSystem;
+      this.obsComponentValueRatioNumeratorSystem = obsComponentValueRatioNumeratorSystem;
 }
     public 
     String 
-    getObservationMethodCodingUserSelected()
+    getObsComponentValueRatioNumeratorUnit()
     {
-        return this.observationMethodCodingUserSelected;
+        return this.obsComponentValueRatioNumeratorUnit;
     }
     
-    public void setObservationMethodCodingUserSelected
-        (String observationMethodCodingUserSelected) 
+    public void setObsComponentValueRatioNumeratorUnit
+        (String obsComponentValueRatioNumeratorUnit) 
         {
-      this.observationMethodCodingUserSelected = observationMethodCodingUserSelected;
+      this.obsComponentValueRatioNumeratorUnit = obsComponentValueRatioNumeratorUnit;
 }
     public 
     String 
-    getObservationMethodCodingVersion()
+    getObsComponentValueRatioNumeratorValue()
     {
-        return this.observationMethodCodingVersion;
+        return this.obsComponentValueRatioNumeratorValue;
     }
     
-    public void setObservationMethodCodingVersion
-        (String observationMethodCodingVersion) 
+    public void setObsComponentValueRatioNumeratorValue
+        (String obsComponentValueRatioNumeratorValue) 
         {
-      this.observationMethodCodingVersion = observationMethodCodingVersion;
+      this.obsComponentValueRatioNumeratorValue = obsComponentValueRatioNumeratorValue;
 }
     public 
     String 
-    getObservationMethodText()
+    getObsComponentValueSampledDataData()
     {
-        return this.observationMethodText;
+        return this.obsComponentValueSampledDataData;
     }
     
-    public void setObservationMethodText
-        (String observationMethodText) 
+    public void setObsComponentValueSampledDataData
+        (String obsComponentValueSampledDataData) 
         {
-      this.observationMethodText = observationMethodText;
+      this.obsComponentValueSampledDataData = obsComponentValueSampledDataData;
 }
     public 
     String 
-    getObservationNoteAuthor()
+    getObsComponentValueSampledDataDimensions()
     {
-        return this.observationNoteAuthor;
+        return this.obsComponentValueSampledDataDimensions;
     }
     
-    public void setObservationNoteAuthor
-        (String observationNoteAuthor) 
+    public void setObsComponentValueSampledDataDimensions
+        (String obsComponentValueSampledDataDimensions) 
         {
-      this.observationNoteAuthor = observationNoteAuthor;
+      this.obsComponentValueSampledDataDimensions = obsComponentValueSampledDataDimensions;
 }
     public 
     String 
-    getObservationNoteText()
+    getObsComponentValueSampledDataFactor()
     {
-        return this.observationNoteText;
+        return this.obsComponentValueSampledDataFactor;
     }
     
-    public void setObservationNoteText
-        (String observationNoteText) 
+    public void setObsComponentValueSampledDataFactor
+        (String obsComponentValueSampledDataFactor) 
         {
-      this.observationNoteText = observationNoteText;
+      this.obsComponentValueSampledDataFactor = obsComponentValueSampledDataFactor;
 }
     public 
     String 
-    getObservationNoteTime()
+    getObsComponentValueSampledDataLowerLimit()
     {
-        return this.observationNoteTime;
+        return this.obsComponentValueSampledDataLowerLimit;
     }
     
-    public void setObservationNoteTime
-        (String observationNoteTime) 
+    public void setObsComponentValueSampledDataLowerLimit
+        (String obsComponentValueSampledDataLowerLimit) 
         {
-      this.observationNoteTime = observationNoteTime;
+      this.obsComponentValueSampledDataLowerLimit = obsComponentValueSampledDataLowerLimit;
 }
     public 
     String 
-    getObservationPartOf()
+    getObsComponentValueSampledDataOriginCode()
     {
-        return this.observationPartOf;
+        return this.obsComponentValueSampledDataOriginCode;
     }
     
-    public void setObservationPartOf
-        (String observationPartOf) 
+    public void setObsComponentValueSampledDataOriginCode
+        (String obsComponentValueSampledDataOriginCode) 
         {
-      this.observationPartOf = observationPartOf;
+      this.obsComponentValueSampledDataOriginCode = obsComponentValueSampledDataOriginCode;
 }
     public 
     String 
-    getObservationPerformer()
+    getObsComponentValueSampledDataOriginCompartrCode()
     {
-        return this.observationPerformer;
+        return this.obsComponentValueSampledDataOriginCompartrCode;
     }
     
-    public void setObservationPerformer
-        (String observationPerformer) 
+    public void setObsComponentValueSampledDataOriginCompartrCode
+        (String obsComponentValueSampledDataOriginCompartrCode) 
         {
-      this.observationPerformer = observationPerformer;
+      this.obsComponentValueSampledDataOriginCompartrCode = obsComponentValueSampledDataOriginCompartrCode;
 }
     public 
     String 
-    getObservationReferenceRangeAgeHighCode()
+    getObsComponentValueSampledDataOriginSystem()
     {
-        return this.observationReferenceRangeAgeHighCode;
+        return this.obsComponentValueSampledDataOriginSystem;
     }
     
-    public void setObservationReferenceRangeAgeHighCode
-        (String observationReferenceRangeAgeHighCode) 
+    public void setObsComponentValueSampledDataOriginSystem
+        (String obsComponentValueSampledDataOriginSystem) 
         {
-      this.observationReferenceRangeAgeHighCode = observationReferenceRangeAgeHighCode;
+      this.obsComponentValueSampledDataOriginSystem = obsComponentValueSampledDataOriginSystem;
 }
     public 
     String 
-    getObservationReferenceRangeAgeHighComparatorCode()
+    getObsComponentValueSampledDataOriginUnit()
     {
-        return this.observationReferenceRangeAgeHighComparatorCode;
+        return this.obsComponentValueSampledDataOriginUnit;
     }
     
-    public void setObservationReferenceRangeAgeHighComparatorCode
-        (String observationReferenceRangeAgeHighComparatorCode) 
+    public void setObsComponentValueSampledDataOriginUnit
+        (String obsComponentValueSampledDataOriginUnit) 
         {
-      this.observationReferenceRangeAgeHighComparatorCode = observationReferenceRangeAgeHighComparatorCode;
+      this.obsComponentValueSampledDataOriginUnit = obsComponentValueSampledDataOriginUnit;
 }
     public 
     String 
-    getObservationReferenceRangeAgeHighSystem()
+    getObsComponentValueSampledDataOriginValue()
     {
-        return this.observationReferenceRangeAgeHighSystem;
+        return this.obsComponentValueSampledDataOriginValue;
     }
     
-    public void setObservationReferenceRangeAgeHighSystem
-        (String observationReferenceRangeAgeHighSystem) 
+    public void setObsComponentValueSampledDataOriginValue
+        (String obsComponentValueSampledDataOriginValue) 
         {
-      this.observationReferenceRangeAgeHighSystem = observationReferenceRangeAgeHighSystem;
+      this.obsComponentValueSampledDataOriginValue = obsComponentValueSampledDataOriginValue;
 }
     public 
     String 
-    getObservationReferenceRangeAgeHighUnit()
+    getObsComponentValueSampledDataPeriod()
     {
-        return this.observationReferenceRangeAgeHighUnit;
+        return this.obsComponentValueSampledDataPeriod;
     }
     
-    public void setObservationReferenceRangeAgeHighUnit
-        (String observationReferenceRangeAgeHighUnit) 
+    public void setObsComponentValueSampledDataPeriod
+        (String obsComponentValueSampledDataPeriod) 
         {
-      this.observationReferenceRangeAgeHighUnit = observationReferenceRangeAgeHighUnit;
+      this.obsComponentValueSampledDataPeriod = obsComponentValueSampledDataPeriod;
 }
     public 
     String 
-    getObservationReferenceRangeAgeHighValue()
+    getObsComponentValueSampledDataUpperLimit()
     {
-        return this.observationReferenceRangeAgeHighValue;
+        return this.obsComponentValueSampledDataUpperLimit;
     }
     
-    public void setObservationReferenceRangeAgeHighValue
-        (String observationReferenceRangeAgeHighValue) 
+    public void setObsComponentValueSampledDataUpperLimit
+        (String obsComponentValueSampledDataUpperLimit) 
         {
-      this.observationReferenceRangeAgeHighValue = observationReferenceRangeAgeHighValue;
+      this.obsComponentValueSampledDataUpperLimit = obsComponentValueSampledDataUpperLimit;
 }
     public 
     String 
-    getObservationReferenceRangeAgeLowCode()
+    getObservationComponentValueString()
     {
-        return this.observationReferenceRangeAgeLowCode;
+        return this.observationComponentValueString;
     }
     
-    public void setObservationReferenceRangeAgeLowCode
-        (String observationReferenceRangeAgeLowCode) 
+    public void setObservationComponentValueString
+        (String observationComponentValueString) 
         {
-      this.observationReferenceRangeAgeLowCode = observationReferenceRangeAgeLowCode;
+      this.observationComponentValueString = observationComponentValueString;
 }
     public 
     String 
-    getObservationReferenceRangeAgeLowComparatorCode()
+    getObservationComponentValueTime()
     {
-        return this.observationReferenceRangeAgeLowComparatorCode;
+        return this.observationComponentValueTime;
     }
     
-    public void setObservationReferenceRangeAgeLowComparatorCode
-        (String observationReferenceRangeAgeLowComparatorCode) 
+    public void setObservationComponentValueTime
+        (String observationComponentValueTime) 
         {
-      this.observationReferenceRangeAgeLowComparatorCode = observationReferenceRangeAgeLowComparatorCode;
+      this.observationComponentValueTime = observationComponentValueTime;
 }
     public 
     String 
-    getObservationReferenceRangeAgeLowSystem()
+    getObsDataAbsentReasonCodingCode()
     {
-        return this.observationReferenceRangeAgeLowSystem;
+        return this.obsDataAbsentReasonCodingCode;
     }
     
-    public void setObservationReferenceRangeAgeLowSystem
-        (String observationReferenceRangeAgeLowSystem) 
+    public void setObsDataAbsentReasonCodingCode
+        (String obsDataAbsentReasonCodingCode) 
         {
-      this.observationReferenceRangeAgeLowSystem = observationReferenceRangeAgeLowSystem;
+      this.obsDataAbsentReasonCodingCode = obsDataAbsentReasonCodingCode;
 }
     public 
     String 
-    getObservationReferenceRangeAgeLowUnit()
+    getObsDataAbsentReasonCodingDisplay()
     {
-        return this.observationReferenceRangeAgeLowUnit;
+        return this.obsDataAbsentReasonCodingDisplay;
     }
     
-    public void setObservationReferenceRangeAgeLowUnit
-        (String observationReferenceRangeAgeLowUnit) 
+    public void setObsDataAbsentReasonCodingDisplay
+        (String obsDataAbsentReasonCodingDisplay) 
         {
-      this.observationReferenceRangeAgeLowUnit = observationReferenceRangeAgeLowUnit;
+      this.obsDataAbsentReasonCodingDisplay = obsDataAbsentReasonCodingDisplay;
 }
     public 
     String 
-    getObservationReferenceRangeAgeLowValue()
+    getObsDataAbsentReasonCodingSystem()
     {
-        return this.observationReferenceRangeAgeLowValue;
+        return this.obsDataAbsentReasonCodingSystem;
     }
     
-    public void setObservationReferenceRangeAgeLowValue
-        (String observationReferenceRangeAgeLowValue) 
+    public void setObsDataAbsentReasonCodingSystem
+        (String obsDataAbsentReasonCodingSystem) 
         {
-      this.observationReferenceRangeAgeLowValue = observationReferenceRangeAgeLowValue;
+      this.obsDataAbsentReasonCodingSystem = obsDataAbsentReasonCodingSystem;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToCodingCode()
+    getObsDataAbsentReasonCodingUsrslt()
     {
-        return this.observationReferenceRangeAppliesToCodingCode;
+        return this.obsDataAbsentReasonCodingUsrslt;
     }
     
-    public void setObservationReferenceRangeAppliesToCodingCode
-        (String observationReferenceRangeAppliesToCodingCode) 
+    public void setObsDataAbsentReasonCodingUsrslt
+        (String obsDataAbsentReasonCodingUsrslt) 
         {
-      this.observationReferenceRangeAppliesToCodingCode = observationReferenceRangeAppliesToCodingCode;
+      this.obsDataAbsentReasonCodingUsrslt = obsDataAbsentReasonCodingUsrslt;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToCodingDisplay()
+    getObsDataAbsentReasonCodingVersion()
     {
-        return this.observationReferenceRangeAppliesToCodingDisplay;
+        return this.obsDataAbsentReasonCodingVersion;
     }
     
-    public void setObservationReferenceRangeAppliesToCodingDisplay
-        (String observationReferenceRangeAppliesToCodingDisplay) 
+    public void setObsDataAbsentReasonCodingVersion
+        (String obsDataAbsentReasonCodingVersion) 
         {
-      this.observationReferenceRangeAppliesToCodingDisplay = observationReferenceRangeAppliesToCodingDisplay;
+      this.obsDataAbsentReasonCodingVersion = obsDataAbsentReasonCodingVersion;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToCodingSystem()
+    getObsDataAbsentReasonText()
     {
-        return this.observationReferenceRangeAppliesToCodingSystem;
+        return this.obsDataAbsentReasonText;
     }
     
-    public void setObservationReferenceRangeAppliesToCodingSystem
-        (String observationReferenceRangeAppliesToCodingSystem) 
+    public void setObsDataAbsentReasonText
+        (String obsDataAbsentReasonText) 
         {
-      this.observationReferenceRangeAppliesToCodingSystem = observationReferenceRangeAppliesToCodingSystem;
+      this.obsDataAbsentReasonText = obsDataAbsentReasonText;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToCodingUserSelected()
+    getObsDerivedFrom()
     {
-        return this.observationReferenceRangeAppliesToCodingUserSelected;
+        return this.obsDerivedFrom;
     }
     
-    public void setObservationReferenceRangeAppliesToCodingUserSelected
-        (String observationReferenceRangeAppliesToCodingUserSelected) 
+    public void setObsDerivedFrom
+        (String obsDerivedFrom) 
         {
-      this.observationReferenceRangeAppliesToCodingUserSelected = observationReferenceRangeAppliesToCodingUserSelected;
+      this.obsDerivedFrom = obsDerivedFrom;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToCodingVersion()
+    getObsDevice()
     {
-        return this.observationReferenceRangeAppliesToCodingVersion;
+        return this.obsDevice;
     }
     
-    public void setObservationReferenceRangeAppliesToCodingVersion
-        (String observationReferenceRangeAppliesToCodingVersion) 
+    public void setObsDevice
+        (String obsDevice) 
         {
-      this.observationReferenceRangeAppliesToCodingVersion = observationReferenceRangeAppliesToCodingVersion;
+      this.obsDevice = obsDevice;
 }
     public 
     String 
-    getObservationReferenceRangeAppliesToText()
+    getObservationEffectiveDateTime()
     {
-        return this.observationReferenceRangeAppliesToText;
+        return this.observationEffectiveDateTime;
     }
     
-    public void setObservationReferenceRangeAppliesToText
-        (String observationReferenceRangeAppliesToText) 
+    public void setObservationEffectiveDateTime
+        (String observationEffectiveDateTime) 
         {
-      this.observationReferenceRangeAppliesToText = observationReferenceRangeAppliesToText;
+      this.observationEffectiveDateTime = observationEffectiveDateTime;
 }
     public 
     String 
-    getObservationReferenceRangeHighCode()
+    getObservationEffectiveInstant()
     {
-        return this.observationReferenceRangeHighCode;
+        return this.observationEffectiveInstant;
     }
     
-    public void setObservationReferenceRangeHighCode
-        (String observationReferenceRangeHighCode) 
+    public void setObservationEffectiveInstant
+        (String observationEffectiveInstant) 
         {
-      this.observationReferenceRangeHighCode = observationReferenceRangeHighCode;
+      this.observationEffectiveInstant = observationEffectiveInstant;
 }
     public 
     String 
-    getObservationReferenceRangeHighComparatorCode()
+    getObsEffectivePeriodEnd()
     {
-        return this.observationReferenceRangeHighComparatorCode;
+        return this.obsEffectivePeriodEnd;
     }
     
-    public void setObservationReferenceRangeHighComparatorCode
-        (String observationReferenceRangeHighComparatorCode) 
+    public void setObsEffectivePeriodEnd
+        (String obsEffectivePeriodEnd) 
         {
-      this.observationReferenceRangeHighComparatorCode = observationReferenceRangeHighComparatorCode;
+      this.obsEffectivePeriodEnd = obsEffectivePeriodEnd;
 }
     public 
     String 
-    getObservationReferenceRangeHighSystem()
+    getObsEffectivePeriodStart()
     {
-        return this.observationReferenceRangeHighSystem;
+        return this.obsEffectivePeriodStart;
     }
     
-    public void setObservationReferenceRangeHighSystem
-        (String observationReferenceRangeHighSystem) 
+    public void setObsEffectivePeriodStart
+        (String obsEffectivePeriodStart) 
         {
-      this.observationReferenceRangeHighSystem = observationReferenceRangeHighSystem;
+      this.obsEffectivePeriodStart = obsEffectivePeriodStart;
 }
     public 
     String 
-    getObservationReferenceRangeHighUnit()
+    getObsEffectiveTimingCodeCodingCode()
     {
-        return this.observationReferenceRangeHighUnit;
+        return this.obsEffectiveTimingCodeCodingCode;
     }
     
-    public void setObservationReferenceRangeHighUnit
-        (String observationReferenceRangeHighUnit) 
+    public void setObsEffectiveTimingCodeCodingCode
+        (String obsEffectiveTimingCodeCodingCode) 
         {
-      this.observationReferenceRangeHighUnit = observationReferenceRangeHighUnit;
+      this.obsEffectiveTimingCodeCodingCode = obsEffectiveTimingCodeCodingCode;
 }
     public 
     String 
-    getObservationReferenceRangeHighValue()
+    getObsEffectiveTimingCodeCodingDisplay()
     {
-        return this.observationReferenceRangeHighValue;
+        return this.obsEffectiveTimingCodeCodingDisplay;
     }
     
-    public void setObservationReferenceRangeHighValue
-        (String observationReferenceRangeHighValue) 
+    public void setObsEffectiveTimingCodeCodingDisplay
+        (String obsEffectiveTimingCodeCodingDisplay) 
         {
-      this.observationReferenceRangeHighValue = observationReferenceRangeHighValue;
+      this.obsEffectiveTimingCodeCodingDisplay = obsEffectiveTimingCodeCodingDisplay;
 }
     public 
     String 
-    getObservationReferenceRangeLowCode()
+    getObsEffectiveTimingCodeCodingSystem()
     {
-        return this.observationReferenceRangeLowCode;
+        return this.obsEffectiveTimingCodeCodingSystem;
     }
     
-    public void setObservationReferenceRangeLowCode
-        (String observationReferenceRangeLowCode) 
+    public void setObsEffectiveTimingCodeCodingSystem
+        (String obsEffectiveTimingCodeCodingSystem) 
         {
-      this.observationReferenceRangeLowCode = observationReferenceRangeLowCode;
+      this.obsEffectiveTimingCodeCodingSystem = obsEffectiveTimingCodeCodingSystem;
 }
     public 
     String 
-    getObservationReferenceRangeLowComparatorCode()
+    getObsEffectiveTimingCodeCodingUsrslt()
     {
-        return this.observationReferenceRangeLowComparatorCode;
+        return this.obsEffectiveTimingCodeCodingUsrslt;
     }
     
-    public void setObservationReferenceRangeLowComparatorCode
-        (String observationReferenceRangeLowComparatorCode) 
+    public void setObsEffectiveTimingCodeCodingUsrslt
+        (String obsEffectiveTimingCodeCodingUsrslt) 
         {
-      this.observationReferenceRangeLowComparatorCode = observationReferenceRangeLowComparatorCode;
+      this.obsEffectiveTimingCodeCodingUsrslt = obsEffectiveTimingCodeCodingUsrslt;
 }
     public 
     String 
-    getObservationReferenceRangeLowSystem()
+    getObsEffectiveTimingCodeCodingVersion()
     {
-        return this.observationReferenceRangeLowSystem;
+        return this.obsEffectiveTimingCodeCodingVersion;
     }
     
-    public void setObservationReferenceRangeLowSystem
-        (String observationReferenceRangeLowSystem) 
+    public void setObsEffectiveTimingCodeCodingVersion
+        (String obsEffectiveTimingCodeCodingVersion) 
         {
-      this.observationReferenceRangeLowSystem = observationReferenceRangeLowSystem;
+      this.obsEffectiveTimingCodeCodingVersion = obsEffectiveTimingCodeCodingVersion;
 }
     public 
     String 
-    getObservationReferenceRangeLowUnit()
+    getObsEffectiveTimingCodeText()
     {
-        return this.observationReferenceRangeLowUnit;
+        return this.obsEffectiveTimingCodeText;
     }
     
-    public void setObservationReferenceRangeLowUnit
-        (String observationReferenceRangeLowUnit) 
+    public void setObsEffectiveTimingCodeText
+        (String obsEffectiveTimingCodeText) 
         {
-      this.observationReferenceRangeLowUnit = observationReferenceRangeLowUnit;
+      this.obsEffectiveTimingCodeText = obsEffectiveTimingCodeText;
 }
     public 
     String 
-    getObservationReferenceRangeLowValue()
+    getObsEffectiveTimingEvent()
     {
-        return this.observationReferenceRangeLowValue;
+        return this.obsEffectiveTimingEvent;
     }
     
-    public void setObservationReferenceRangeLowValue
-        (String observationReferenceRangeLowValue) 
+    public void setObsEffectiveTimingEvent
+        (String obsEffectiveTimingEvent) 
         {
-      this.observationReferenceRangeLowValue = observationReferenceRangeLowValue;
+      this.obsEffectiveTimingEvent = obsEffectiveTimingEvent;
 }
     public 
     String 
-    getObservationReferenceRangeText()
+    getObsEffectiveTimingRepeatBoundsDurationCode()
     {
-        return this.observationReferenceRangeText;
+        return this.obsEffectiveTimingRepeatBoundsDurationCode;
     }
     
-    public void setObservationReferenceRangeText
-        (String observationReferenceRangeText) 
+    public void setObsEffectiveTimingRepeatBoundsDurationCode
+        (String obsEffectiveTimingRepeatBoundsDurationCode) 
         {
-      this.observationReferenceRangeText = observationReferenceRangeText;
+      this.obsEffectiveTimingRepeatBoundsDurationCode = obsEffectiveTimingRepeatBoundsDurationCode;
 }
     public 
     String 
-    getObservationReferenceRangeTypeCodingCode()
+    getObsEffectiveTimingRepeatBoundsDurationCompartrCode()
     {
-        return this.observationReferenceRangeTypeCodingCode;
+        return this.obsEffectiveTimingRepeatBoundsDurationCompartrCode;
     }
     
-    public void setObservationReferenceRangeTypeCodingCode
-        (String observationReferenceRangeTypeCodingCode) 
+    public void setObsEffectiveTimingRepeatBoundsDurationCompartrCode
+        (String obsEffectiveTimingRepeatBoundsDurationCompartrCode) 
         {
-      this.observationReferenceRangeTypeCodingCode = observationReferenceRangeTypeCodingCode;
+      this.obsEffectiveTimingRepeatBoundsDurationCompartrCode = obsEffectiveTimingRepeatBoundsDurationCompartrCode;
 }
     public 
     String 
-    getObservationReferenceRangeTypeCodingDisplay()
+    getObsEffectiveTimingRepeatBoundsDurationSystem()
     {
-        return this.observationReferenceRangeTypeCodingDisplay;
+        return this.obsEffectiveTimingRepeatBoundsDurationSystem;
     }
     
-    public void setObservationReferenceRangeTypeCodingDisplay
-        (String observationReferenceRangeTypeCodingDisplay) 
+    public void setObsEffectiveTimingRepeatBoundsDurationSystem
+        (String obsEffectiveTimingRepeatBoundsDurationSystem) 
         {
-      this.observationReferenceRangeTypeCodingDisplay = observationReferenceRangeTypeCodingDisplay;
+      this.obsEffectiveTimingRepeatBoundsDurationSystem = obsEffectiveTimingRepeatBoundsDurationSystem;
 }
     public 
     String 
-    getObservationReferenceRangeTypeCodingSystem()
+    getObsEffectiveTimingRepeatBoundsDurationUnit()
     {
-        return this.observationReferenceRangeTypeCodingSystem;
+        return this.obsEffectiveTimingRepeatBoundsDurationUnit;
     }
     
-    public void setObservationReferenceRangeTypeCodingSystem
-        (String observationReferenceRangeTypeCodingSystem) 
+    public void setObsEffectiveTimingRepeatBoundsDurationUnit
+        (String obsEffectiveTimingRepeatBoundsDurationUnit) 
         {
-      this.observationReferenceRangeTypeCodingSystem = observationReferenceRangeTypeCodingSystem;
+      this.obsEffectiveTimingRepeatBoundsDurationUnit = obsEffectiveTimingRepeatBoundsDurationUnit;
 }
     public 
     String 
-    getObservationReferenceRangeTypeCodingUserSelected()
+    getObsEffectiveTimingRepeatBoundsDurationValue()
     {
-        return this.observationReferenceRangeTypeCodingUserSelected;
+        return this.obsEffectiveTimingRepeatBoundsDurationValue;
     }
     
-    public void setObservationReferenceRangeTypeCodingUserSelected
-        (String observationReferenceRangeTypeCodingUserSelected) 
+    public void setObsEffectiveTimingRepeatBoundsDurationValue
+        (String obsEffectiveTimingRepeatBoundsDurationValue) 
         {
-      this.observationReferenceRangeTypeCodingUserSelected = observationReferenceRangeTypeCodingUserSelected;
+      this.obsEffectiveTimingRepeatBoundsDurationValue = obsEffectiveTimingRepeatBoundsDurationValue;
 }
     public 
     String 
-    getObservationReferenceRangeTypeCodingVersion()
+    getObsEffectiveTimingRepeatBoundsPeriodEnd()
     {
-        return this.observationReferenceRangeTypeCodingVersion;
+        return this.obsEffectiveTimingRepeatBoundsPeriodEnd;
     }
     
-    public void setObservationReferenceRangeTypeCodingVersion
-        (String observationReferenceRangeTypeCodingVersion) 
+    public void setObsEffectiveTimingRepeatBoundsPeriodEnd
+        (String obsEffectiveTimingRepeatBoundsPeriodEnd) 
         {
-      this.observationReferenceRangeTypeCodingVersion = observationReferenceRangeTypeCodingVersion;
+      this.obsEffectiveTimingRepeatBoundsPeriodEnd = obsEffectiveTimingRepeatBoundsPeriodEnd;
 }
     public 
     String 
-    getObservationReferenceRangeTypeText()
+    getObsEffectiveTimingRepeatBoundsPeriodStart()
     {
-        return this.observationReferenceRangeTypeText;
+        return this.obsEffectiveTimingRepeatBoundsPeriodStart;
     }
     
-    public void setObservationReferenceRangeTypeText
-        (String observationReferenceRangeTypeText) 
+    public void setObsEffectiveTimingRepeatBoundsPeriodStart
+        (String obsEffectiveTimingRepeatBoundsPeriodStart) 
         {
-      this.observationReferenceRangeTypeText = observationReferenceRangeTypeText;
+      this.obsEffectiveTimingRepeatBoundsPeriodStart = obsEffectiveTimingRepeatBoundsPeriodStart;
 }
     public 
     String 
-    getObservationSpecimen()
+    getObsEffectiveTimingRepeatBoundsRangeHighCode()
     {
-        return this.observationSpecimen;
+        return this.obsEffectiveTimingRepeatBoundsRangeHighCode;
     }
     
-    public void setObservationSpecimen
-        (String observationSpecimen) 
+    public void setObsEffectiveTimingRepeatBoundsRangeHighCode
+        (String obsEffectiveTimingRepeatBoundsRangeHighCode) 
         {
-      this.observationSpecimen = observationSpecimen;
+      this.obsEffectiveTimingRepeatBoundsRangeHighCode = obsEffectiveTimingRepeatBoundsRangeHighCode;
 }
     public 
     String 
-    getObservationStatusCode()
+    getObsEffectiveTimingRepeatBoundsRangeHighCompartrCode()
     {
-        return this.observationStatusCode;
+        return this.obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
     }
     
-    public void setObservationStatusCode
-        (String observationStatusCode) 
+    public void setObsEffectiveTimingRepeatBoundsRangeHighCompartrCode
+        (String obsEffectiveTimingRepeatBoundsRangeHighCompartrCode) 
         {
-      this.observationStatusCode = observationStatusCode;
+      this.obsEffectiveTimingRepeatBoundsRangeHighCompartrCode = obsEffectiveTimingRepeatBoundsRangeHighCompartrCode;
 }
     public 
     String 
-    getObservationSubject()
+    getObsEffectiveTimingRepeatBoundsRangeHighSystem()
     {
-        return this.observationSubject;
+        return this.obsEffectiveTimingRepeatBoundsRangeHighSystem;
     }
     
-    public void setObservationSubject
-        (String observationSubject) 
+    public void setObsEffectiveTimingRepeatBoundsRangeHighSystem
+        (String obsEffectiveTimingRepeatBoundsRangeHighSystem) 
         {
-      this.observationSubject = observationSubject;
+      this.obsEffectiveTimingRepeatBoundsRangeHighSystem = obsEffectiveTimingRepeatBoundsRangeHighSystem;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeHighUnit()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeHighUnit;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeHighUnit
+        (String obsEffectiveTimingRepeatBoundsRangeHighUnit) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeHighUnit = obsEffectiveTimingRepeatBoundsRangeHighUnit;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeHighValue()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeHighValue;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeHighValue
+        (String obsEffectiveTimingRepeatBoundsRangeHighValue) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeHighValue = obsEffectiveTimingRepeatBoundsRangeHighValue;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeLowCode()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeLowCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeLowCode
+        (String obsEffectiveTimingRepeatBoundsRangeLowCode) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeLowCode = obsEffectiveTimingRepeatBoundsRangeLowCode;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeLowCompartrCode()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeLowCompartrCode
+        (String obsEffectiveTimingRepeatBoundsRangeLowCompartrCode) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeLowCompartrCode = obsEffectiveTimingRepeatBoundsRangeLowCompartrCode;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeLowSystem()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeLowSystem;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeLowSystem
+        (String obsEffectiveTimingRepeatBoundsRangeLowSystem) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeLowSystem = obsEffectiveTimingRepeatBoundsRangeLowSystem;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeLowUnit()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeLowUnit;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeLowUnit
+        (String obsEffectiveTimingRepeatBoundsRangeLowUnit) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeLowUnit = obsEffectiveTimingRepeatBoundsRangeLowUnit;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatBoundsRangeLowValue()
+    {
+        return this.obsEffectiveTimingRepeatBoundsRangeLowValue;
+    }
+    
+    public void setObsEffectiveTimingRepeatBoundsRangeLowValue
+        (String obsEffectiveTimingRepeatBoundsRangeLowValue) 
+        {
+      this.obsEffectiveTimingRepeatBoundsRangeLowValue = obsEffectiveTimingRepeatBoundsRangeLowValue;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatCount()
+    {
+        return this.obsEffectiveTimingRepeatCount;
+    }
+    
+    public void setObsEffectiveTimingRepeatCount
+        (String obsEffectiveTimingRepeatCount) 
+        {
+      this.obsEffectiveTimingRepeatCount = obsEffectiveTimingRepeatCount;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatCountMax()
+    {
+        return this.obsEffectiveTimingRepeatCountMax;
+    }
+    
+    public void setObsEffectiveTimingRepeatCountMax
+        (String obsEffectiveTimingRepeatCountMax) 
+        {
+      this.obsEffectiveTimingRepeatCountMax = obsEffectiveTimingRepeatCountMax;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatDayOfWeekCode()
+    {
+        return this.obsEffectiveTimingRepeatDayOfWeekCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatDayOfWeekCode
+        (String obsEffectiveTimingRepeatDayOfWeekCode) 
+        {
+      this.obsEffectiveTimingRepeatDayOfWeekCode = obsEffectiveTimingRepeatDayOfWeekCode;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatDuration()
+    {
+        return this.obsEffectiveTimingRepeatDuration;
+    }
+    
+    public void setObsEffectiveTimingRepeatDuration
+        (String obsEffectiveTimingRepeatDuration) 
+        {
+      this.obsEffectiveTimingRepeatDuration = obsEffectiveTimingRepeatDuration;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatDurationMax()
+    {
+        return this.obsEffectiveTimingRepeatDurationMax;
+    }
+    
+    public void setObsEffectiveTimingRepeatDurationMax
+        (String obsEffectiveTimingRepeatDurationMax) 
+        {
+      this.obsEffectiveTimingRepeatDurationMax = obsEffectiveTimingRepeatDurationMax;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatDurationUnitCode()
+    {
+        return this.obsEffectiveTimingRepeatDurationUnitCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatDurationUnitCode
+        (String obsEffectiveTimingRepeatDurationUnitCode) 
+        {
+      this.obsEffectiveTimingRepeatDurationUnitCode = obsEffectiveTimingRepeatDurationUnitCode;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatFrequency()
+    {
+        return this.obsEffectiveTimingRepeatFrequency;
+    }
+    
+    public void setObsEffectiveTimingRepeatFrequency
+        (String obsEffectiveTimingRepeatFrequency) 
+        {
+      this.obsEffectiveTimingRepeatFrequency = obsEffectiveTimingRepeatFrequency;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatFrequencyMax()
+    {
+        return this.obsEffectiveTimingRepeatFrequencyMax;
+    }
+    
+    public void setObsEffectiveTimingRepeatFrequencyMax
+        (String obsEffectiveTimingRepeatFrequencyMax) 
+        {
+      this.obsEffectiveTimingRepeatFrequencyMax = obsEffectiveTimingRepeatFrequencyMax;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatOff()
+    {
+        return this.obsEffectiveTimingRepeatOff;
+    }
+    
+    public void setObsEffectiveTimingRepeatOff
+        (String obsEffectiveTimingRepeatOff) 
+        {
+      this.obsEffectiveTimingRepeatOff = obsEffectiveTimingRepeatOff;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatPeriod()
+    {
+        return this.obsEffectiveTimingRepeatPeriod;
+    }
+    
+    public void setObsEffectiveTimingRepeatPeriod
+        (String obsEffectiveTimingRepeatPeriod) 
+        {
+      this.obsEffectiveTimingRepeatPeriod = obsEffectiveTimingRepeatPeriod;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatPeriodMax()
+    {
+        return this.obsEffectiveTimingRepeatPeriodMax;
+    }
+    
+    public void setObsEffectiveTimingRepeatPeriodMax
+        (String obsEffectiveTimingRepeatPeriodMax) 
+        {
+      this.obsEffectiveTimingRepeatPeriodMax = obsEffectiveTimingRepeatPeriodMax;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatPeriodUnitCode()
+    {
+        return this.obsEffectiveTimingRepeatPeriodUnitCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatPeriodUnitCode
+        (String obsEffectiveTimingRepeatPeriodUnitCode) 
+        {
+      this.obsEffectiveTimingRepeatPeriodUnitCode = obsEffectiveTimingRepeatPeriodUnitCode;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatTimeOfDay()
+    {
+        return this.obsEffectiveTimingRepeatTimeOfDay;
+    }
+    
+    public void setObsEffectiveTimingRepeatTimeOfDay
+        (String obsEffectiveTimingRepeatTimeOfDay) 
+        {
+      this.obsEffectiveTimingRepeatTimeOfDay = obsEffectiveTimingRepeatTimeOfDay;
+}
+    public 
+    String 
+    getObsEffectiveTimingRepeatWhenCode()
+    {
+        return this.obsEffectiveTimingRepeatWhenCode;
+    }
+    
+    public void setObsEffectiveTimingRepeatWhenCode
+        (String obsEffectiveTimingRepeatWhenCode) 
+        {
+      this.obsEffectiveTimingRepeatWhenCode = obsEffectiveTimingRepeatWhenCode;
+}
+    public 
+    String 
+    getObsEnc()
+    {
+        return this.obsEnc;
+    }
+    
+    public void setObsEnc
+        (String obsEnc) 
+        {
+      this.obsEnc = obsEnc;
+}
+    public 
+    String 
+    getObsFocus()
+    {
+        return this.obsFocus;
+    }
+    
+    public void setObsFocus
+        (String obsFocus) 
+        {
+      this.obsFocus = obsFocus;
+}
+    public 
+    String 
+    getObsHasMember()
+    {
+        return this.obsHasMember;
+    }
+    
+    public void setObsHasMember
+        (String obsHasMember) 
+        {
+      this.obsHasMember = obsHasMember;
+}
+    public 
+    String 
+    getObsIdAssigner()
+    {
+        return this.obsIdAssigner;
+    }
+    
+    public void setObsIdAssigner
+        (String obsIdAssigner) 
+        {
+      this.obsIdAssigner = obsIdAssigner;
+}
+    public 
+    String 
+    getObsIdPeriodEnd()
+    {
+        return this.obsIdPeriodEnd;
+    }
+    
+    public void setObsIdPeriodEnd
+        (String obsIdPeriodEnd) 
+        {
+      this.obsIdPeriodEnd = obsIdPeriodEnd;
+}
+    public 
+    String 
+    getObsIdPeriodStart()
+    {
+        return this.obsIdPeriodStart;
+    }
+    
+    public void setObsIdPeriodStart
+        (String obsIdPeriodStart) 
+        {
+      this.obsIdPeriodStart = obsIdPeriodStart;
+}
+    public 
+    String 
+    getObsIdSystem()
+    {
+        return this.obsIdSystem;
+    }
+    
+    public void setObsIdSystem
+        (String obsIdSystem) 
+        {
+      this.obsIdSystem = obsIdSystem;
+}
+    public 
+    String 
+    getObsIdTypeCodingCode()
+    {
+        return this.obsIdTypeCodingCode;
+    }
+    
+    public void setObsIdTypeCodingCode
+        (String obsIdTypeCodingCode) 
+        {
+      this.obsIdTypeCodingCode = obsIdTypeCodingCode;
+}
+    public 
+    String 
+    getObsIdTypeCodingDisplay()
+    {
+        return this.obsIdTypeCodingDisplay;
+    }
+    
+    public void setObsIdTypeCodingDisplay
+        (String obsIdTypeCodingDisplay) 
+        {
+      this.obsIdTypeCodingDisplay = obsIdTypeCodingDisplay;
+}
+    public 
+    String 
+    getObsIdTypeCodingSystem()
+    {
+        return this.obsIdTypeCodingSystem;
+    }
+    
+    public void setObsIdTypeCodingSystem
+        (String obsIdTypeCodingSystem) 
+        {
+      this.obsIdTypeCodingSystem = obsIdTypeCodingSystem;
+}
+    public 
+    String 
+    getObsIdTypeCodingUsrslt()
+    {
+        return this.obsIdTypeCodingUsrslt;
+    }
+    
+    public void setObsIdTypeCodingUsrslt
+        (String obsIdTypeCodingUsrslt) 
+        {
+      this.obsIdTypeCodingUsrslt = obsIdTypeCodingUsrslt;
+}
+    public 
+    String 
+    getObsIdTypeCodingVersion()
+    {
+        return this.obsIdTypeCodingVersion;
+    }
+    
+    public void setObsIdTypeCodingVersion
+        (String obsIdTypeCodingVersion) 
+        {
+      this.obsIdTypeCodingVersion = obsIdTypeCodingVersion;
+}
+    public 
+    String 
+    getObsIdTypeText()
+    {
+        return this.obsIdTypeText;
+    }
+    
+    public void setObsIdTypeText
+        (String obsIdTypeText) 
+        {
+      this.obsIdTypeText = obsIdTypeText;
+}
+    public 
+    String 
+    getObsIdUseCode()
+    {
+        return this.obsIdUseCode;
+    }
+    
+    public void setObsIdUseCode
+        (String obsIdUseCode) 
+        {
+      this.obsIdUseCode = obsIdUseCode;
+}
+    public 
+    String 
+    getObsIdValue()
+    {
+        return this.obsIdValue;
+    }
+    
+    public void setObsIdValue
+        (String obsIdValue) 
+        {
+      this.obsIdValue = obsIdValue;
+}
+    public 
+    String 
+    getObsInterpretationCodingCode()
+    {
+        return this.obsInterpretationCodingCode;
+    }
+    
+    public void setObsInterpretationCodingCode
+        (String obsInterpretationCodingCode) 
+        {
+      this.obsInterpretationCodingCode = obsInterpretationCodingCode;
+}
+    public 
+    String 
+    getObsInterpretationCodingDisplay()
+    {
+        return this.obsInterpretationCodingDisplay;
+    }
+    
+    public void setObsInterpretationCodingDisplay
+        (String obsInterpretationCodingDisplay) 
+        {
+      this.obsInterpretationCodingDisplay = obsInterpretationCodingDisplay;
+}
+    public 
+    String 
+    getObsInterpretationCodingSystem()
+    {
+        return this.obsInterpretationCodingSystem;
+    }
+    
+    public void setObsInterpretationCodingSystem
+        (String obsInterpretationCodingSystem) 
+        {
+      this.obsInterpretationCodingSystem = obsInterpretationCodingSystem;
+}
+    public 
+    String 
+    getObsInterpretationCodingUsrslt()
+    {
+        return this.obsInterpretationCodingUsrslt;
+    }
+    
+    public void setObsInterpretationCodingUsrslt
+        (String obsInterpretationCodingUsrslt) 
+        {
+      this.obsInterpretationCodingUsrslt = obsInterpretationCodingUsrslt;
+}
+    public 
+    String 
+    getObsInterpretationCodingVersion()
+    {
+        return this.obsInterpretationCodingVersion;
+    }
+    
+    public void setObsInterpretationCodingVersion
+        (String obsInterpretationCodingVersion) 
+        {
+      this.obsInterpretationCodingVersion = obsInterpretationCodingVersion;
+}
+    public 
+    String 
+    getObsInterpretationText()
+    {
+        return this.obsInterpretationText;
+    }
+    
+    public void setObsInterpretationText
+        (String obsInterpretationText) 
+        {
+      this.obsInterpretationText = obsInterpretationText;
+}
+    public 
+    String 
+    getObsIssued()
+    {
+        return this.obsIssued;
+    }
+    
+    public void setObsIssued
+        (String obsIssued) 
+        {
+      this.obsIssued = obsIssued;
+}
+    public 
+    String 
+    getObsMethodCodingCode()
+    {
+        return this.obsMethodCodingCode;
+    }
+    
+    public void setObsMethodCodingCode
+        (String obsMethodCodingCode) 
+        {
+      this.obsMethodCodingCode = obsMethodCodingCode;
+}
+    public 
+    String 
+    getObsMethodCodingDisplay()
+    {
+        return this.obsMethodCodingDisplay;
+    }
+    
+    public void setObsMethodCodingDisplay
+        (String obsMethodCodingDisplay) 
+        {
+      this.obsMethodCodingDisplay = obsMethodCodingDisplay;
+}
+    public 
+    String 
+    getObsMethodCodingSystem()
+    {
+        return this.obsMethodCodingSystem;
+    }
+    
+    public void setObsMethodCodingSystem
+        (String obsMethodCodingSystem) 
+        {
+      this.obsMethodCodingSystem = obsMethodCodingSystem;
+}
+    public 
+    String 
+    getObsMethodCodingUsrslt()
+    {
+        return this.obsMethodCodingUsrslt;
+    }
+    
+    public void setObsMethodCodingUsrslt
+        (String obsMethodCodingUsrslt) 
+        {
+      this.obsMethodCodingUsrslt = obsMethodCodingUsrslt;
+}
+    public 
+    String 
+    getObsMethodCodingVersion()
+    {
+        return this.obsMethodCodingVersion;
+    }
+    
+    public void setObsMethodCodingVersion
+        (String obsMethodCodingVersion) 
+        {
+      this.obsMethodCodingVersion = obsMethodCodingVersion;
+}
+    public 
+    String 
+    getObsMethodText()
+    {
+        return this.obsMethodText;
+    }
+    
+    public void setObsMethodText
+        (String obsMethodText) 
+        {
+      this.obsMethodText = obsMethodText;
+}
+    public 
+    String 
+    getObservationNoteAuthorReference()
+    {
+        return this.observationNoteAuthorReference;
+    }
+    
+    public void setObservationNoteAuthorReference
+        (String observationNoteAuthorReference) 
+        {
+      this.observationNoteAuthorReference = observationNoteAuthorReference;
+}
+    public 
+    String 
+    getObservationNoteAuthorString()
+    {
+        return this.observationNoteAuthorString;
+    }
+    
+    public void setObservationNoteAuthorString
+        (String observationNoteAuthorString) 
+        {
+      this.observationNoteAuthorString = observationNoteAuthorString;
+}
+    public 
+    String 
+    getObsNoteText()
+    {
+        return this.obsNoteText;
+    }
+    
+    public void setObsNoteText
+        (String obsNoteText) 
+        {
+      this.obsNoteText = obsNoteText;
+}
+    public 
+    String 
+    getObsNoteTime()
+    {
+        return this.obsNoteTime;
+    }
+    
+    public void setObsNoteTime
+        (String obsNoteTime) 
+        {
+      this.obsNoteTime = obsNoteTime;
+}
+    public 
+    String 
+    getObsPartOf()
+    {
+        return this.obsPartOf;
+    }
+    
+    public void setObsPartOf
+        (String obsPartOf) 
+        {
+      this.obsPartOf = obsPartOf;
+}
+    public 
+    String 
+    getObsPerformer()
+    {
+        return this.obsPerformer;
+    }
+    
+    public void setObsPerformer
+        (String obsPerformer) 
+        {
+      this.obsPerformer = obsPerformer;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeHighCode()
+    {
+        return this.obsReferenceRangeAgeHighCode;
+    }
+    
+    public void setObsReferenceRangeAgeHighCode
+        (String obsReferenceRangeAgeHighCode) 
+        {
+      this.obsReferenceRangeAgeHighCode = obsReferenceRangeAgeHighCode;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeHighCompartrCode()
+    {
+        return this.obsReferenceRangeAgeHighCompartrCode;
+    }
+    
+    public void setObsReferenceRangeAgeHighCompartrCode
+        (String obsReferenceRangeAgeHighCompartrCode) 
+        {
+      this.obsReferenceRangeAgeHighCompartrCode = obsReferenceRangeAgeHighCompartrCode;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeHighSystem()
+    {
+        return this.obsReferenceRangeAgeHighSystem;
+    }
+    
+    public void setObsReferenceRangeAgeHighSystem
+        (String obsReferenceRangeAgeHighSystem) 
+        {
+      this.obsReferenceRangeAgeHighSystem = obsReferenceRangeAgeHighSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeHighUnit()
+    {
+        return this.obsReferenceRangeAgeHighUnit;
+    }
+    
+    public void setObsReferenceRangeAgeHighUnit
+        (String obsReferenceRangeAgeHighUnit) 
+        {
+      this.obsReferenceRangeAgeHighUnit = obsReferenceRangeAgeHighUnit;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeHighValue()
+    {
+        return this.obsReferenceRangeAgeHighValue;
+    }
+    
+    public void setObsReferenceRangeAgeHighValue
+        (String obsReferenceRangeAgeHighValue) 
+        {
+      this.obsReferenceRangeAgeHighValue = obsReferenceRangeAgeHighValue;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeLowCode()
+    {
+        return this.obsReferenceRangeAgeLowCode;
+    }
+    
+    public void setObsReferenceRangeAgeLowCode
+        (String obsReferenceRangeAgeLowCode) 
+        {
+      this.obsReferenceRangeAgeLowCode = obsReferenceRangeAgeLowCode;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeLowCompartrCode()
+    {
+        return this.obsReferenceRangeAgeLowCompartrCode;
+    }
+    
+    public void setObsReferenceRangeAgeLowCompartrCode
+        (String obsReferenceRangeAgeLowCompartrCode) 
+        {
+      this.obsReferenceRangeAgeLowCompartrCode = obsReferenceRangeAgeLowCompartrCode;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeLowSystem()
+    {
+        return this.obsReferenceRangeAgeLowSystem;
+    }
+    
+    public void setObsReferenceRangeAgeLowSystem
+        (String obsReferenceRangeAgeLowSystem) 
+        {
+      this.obsReferenceRangeAgeLowSystem = obsReferenceRangeAgeLowSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeLowUnit()
+    {
+        return this.obsReferenceRangeAgeLowUnit;
+    }
+    
+    public void setObsReferenceRangeAgeLowUnit
+        (String obsReferenceRangeAgeLowUnit) 
+        {
+      this.obsReferenceRangeAgeLowUnit = obsReferenceRangeAgeLowUnit;
+}
+    public 
+    String 
+    getObsReferenceRangeAgeLowValue()
+    {
+        return this.obsReferenceRangeAgeLowValue;
+    }
+    
+    public void setObsReferenceRangeAgeLowValue
+        (String obsReferenceRangeAgeLowValue) 
+        {
+      this.obsReferenceRangeAgeLowValue = obsReferenceRangeAgeLowValue;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToCodingCode()
+    {
+        return this.obsReferenceRangeAppliesToCodingCode;
+    }
+    
+    public void setObsReferenceRangeAppliesToCodingCode
+        (String obsReferenceRangeAppliesToCodingCode) 
+        {
+      this.obsReferenceRangeAppliesToCodingCode = obsReferenceRangeAppliesToCodingCode;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToCodingDisplay()
+    {
+        return this.obsReferenceRangeAppliesToCodingDisplay;
+    }
+    
+    public void setObsReferenceRangeAppliesToCodingDisplay
+        (String obsReferenceRangeAppliesToCodingDisplay) 
+        {
+      this.obsReferenceRangeAppliesToCodingDisplay = obsReferenceRangeAppliesToCodingDisplay;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToCodingSystem()
+    {
+        return this.obsReferenceRangeAppliesToCodingSystem;
+    }
+    
+    public void setObsReferenceRangeAppliesToCodingSystem
+        (String obsReferenceRangeAppliesToCodingSystem) 
+        {
+      this.obsReferenceRangeAppliesToCodingSystem = obsReferenceRangeAppliesToCodingSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToCodingUsrslt()
+    {
+        return this.obsReferenceRangeAppliesToCodingUsrslt;
+    }
+    
+    public void setObsReferenceRangeAppliesToCodingUsrslt
+        (String obsReferenceRangeAppliesToCodingUsrslt) 
+        {
+      this.obsReferenceRangeAppliesToCodingUsrslt = obsReferenceRangeAppliesToCodingUsrslt;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToCodingVersion()
+    {
+        return this.obsReferenceRangeAppliesToCodingVersion;
+    }
+    
+    public void setObsReferenceRangeAppliesToCodingVersion
+        (String obsReferenceRangeAppliesToCodingVersion) 
+        {
+      this.obsReferenceRangeAppliesToCodingVersion = obsReferenceRangeAppliesToCodingVersion;
+}
+    public 
+    String 
+    getObsReferenceRangeAppliesToText()
+    {
+        return this.obsReferenceRangeAppliesToText;
+    }
+    
+    public void setObsReferenceRangeAppliesToText
+        (String obsReferenceRangeAppliesToText) 
+        {
+      this.obsReferenceRangeAppliesToText = obsReferenceRangeAppliesToText;
+}
+    public 
+    String 
+    getObsReferenceRangeHighCode()
+    {
+        return this.obsReferenceRangeHighCode;
+    }
+    
+    public void setObsReferenceRangeHighCode
+        (String obsReferenceRangeHighCode) 
+        {
+      this.obsReferenceRangeHighCode = obsReferenceRangeHighCode;
+}
+    public 
+    String 
+    getObsReferenceRangeHighCompartrCode()
+    {
+        return this.obsReferenceRangeHighCompartrCode;
+    }
+    
+    public void setObsReferenceRangeHighCompartrCode
+        (String obsReferenceRangeHighCompartrCode) 
+        {
+      this.obsReferenceRangeHighCompartrCode = obsReferenceRangeHighCompartrCode;
+}
+    public 
+    String 
+    getObsReferenceRangeHighSystem()
+    {
+        return this.obsReferenceRangeHighSystem;
+    }
+    
+    public void setObsReferenceRangeHighSystem
+        (String obsReferenceRangeHighSystem) 
+        {
+      this.obsReferenceRangeHighSystem = obsReferenceRangeHighSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeHighUnit()
+    {
+        return this.obsReferenceRangeHighUnit;
+    }
+    
+    public void setObsReferenceRangeHighUnit
+        (String obsReferenceRangeHighUnit) 
+        {
+      this.obsReferenceRangeHighUnit = obsReferenceRangeHighUnit;
+}
+    public 
+    String 
+    getObsReferenceRangeHighValue()
+    {
+        return this.obsReferenceRangeHighValue;
+    }
+    
+    public void setObsReferenceRangeHighValue
+        (String obsReferenceRangeHighValue) 
+        {
+      this.obsReferenceRangeHighValue = obsReferenceRangeHighValue;
+}
+    public 
+    String 
+    getObsReferenceRangeLowCode()
+    {
+        return this.obsReferenceRangeLowCode;
+    }
+    
+    public void setObsReferenceRangeLowCode
+        (String obsReferenceRangeLowCode) 
+        {
+      this.obsReferenceRangeLowCode = obsReferenceRangeLowCode;
+}
+    public 
+    String 
+    getObsReferenceRangeLowCompartrCode()
+    {
+        return this.obsReferenceRangeLowCompartrCode;
+    }
+    
+    public void setObsReferenceRangeLowCompartrCode
+        (String obsReferenceRangeLowCompartrCode) 
+        {
+      this.obsReferenceRangeLowCompartrCode = obsReferenceRangeLowCompartrCode;
+}
+    public 
+    String 
+    getObsReferenceRangeLowSystem()
+    {
+        return this.obsReferenceRangeLowSystem;
+    }
+    
+    public void setObsReferenceRangeLowSystem
+        (String obsReferenceRangeLowSystem) 
+        {
+      this.obsReferenceRangeLowSystem = obsReferenceRangeLowSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeLowUnit()
+    {
+        return this.obsReferenceRangeLowUnit;
+    }
+    
+    public void setObsReferenceRangeLowUnit
+        (String obsReferenceRangeLowUnit) 
+        {
+      this.obsReferenceRangeLowUnit = obsReferenceRangeLowUnit;
+}
+    public 
+    String 
+    getObsReferenceRangeLowValue()
+    {
+        return this.obsReferenceRangeLowValue;
+    }
+    
+    public void setObsReferenceRangeLowValue
+        (String obsReferenceRangeLowValue) 
+        {
+      this.obsReferenceRangeLowValue = obsReferenceRangeLowValue;
+}
+    public 
+    String 
+    getObsReferenceRangeText()
+    {
+        return this.obsReferenceRangeText;
+    }
+    
+    public void setObsReferenceRangeText
+        (String obsReferenceRangeText) 
+        {
+      this.obsReferenceRangeText = obsReferenceRangeText;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeCodingCode()
+    {
+        return this.obsReferenceRangeTypeCodingCode;
+    }
+    
+    public void setObsReferenceRangeTypeCodingCode
+        (String obsReferenceRangeTypeCodingCode) 
+        {
+      this.obsReferenceRangeTypeCodingCode = obsReferenceRangeTypeCodingCode;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeCodingDisplay()
+    {
+        return this.obsReferenceRangeTypeCodingDisplay;
+    }
+    
+    public void setObsReferenceRangeTypeCodingDisplay
+        (String obsReferenceRangeTypeCodingDisplay) 
+        {
+      this.obsReferenceRangeTypeCodingDisplay = obsReferenceRangeTypeCodingDisplay;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeCodingSystem()
+    {
+        return this.obsReferenceRangeTypeCodingSystem;
+    }
+    
+    public void setObsReferenceRangeTypeCodingSystem
+        (String obsReferenceRangeTypeCodingSystem) 
+        {
+      this.obsReferenceRangeTypeCodingSystem = obsReferenceRangeTypeCodingSystem;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeCodingUsrslt()
+    {
+        return this.obsReferenceRangeTypeCodingUsrslt;
+    }
+    
+    public void setObsReferenceRangeTypeCodingUsrslt
+        (String obsReferenceRangeTypeCodingUsrslt) 
+        {
+      this.obsReferenceRangeTypeCodingUsrslt = obsReferenceRangeTypeCodingUsrslt;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeCodingVersion()
+    {
+        return this.obsReferenceRangeTypeCodingVersion;
+    }
+    
+    public void setObsReferenceRangeTypeCodingVersion
+        (String obsReferenceRangeTypeCodingVersion) 
+        {
+      this.obsReferenceRangeTypeCodingVersion = obsReferenceRangeTypeCodingVersion;
+}
+    public 
+    String 
+    getObsReferenceRangeTypeText()
+    {
+        return this.obsReferenceRangeTypeText;
+    }
+    
+    public void setObsReferenceRangeTypeText
+        (String obsReferenceRangeTypeText) 
+        {
+      this.obsReferenceRangeTypeText = obsReferenceRangeTypeText;
+}
+    public 
+    String 
+    getObsSpecimen()
+    {
+        return this.obsSpecimen;
+    }
+    
+    public void setObsSpecimen
+        (String obsSpecimen) 
+        {
+      this.obsSpecimen = obsSpecimen;
+}
+    public 
+    String 
+    getObsStatusCode()
+    {
+        return this.obsStatusCode;
+    }
+    
+    public void setObsStatusCode
+        (String obsStatusCode) 
+        {
+      this.obsStatusCode = obsStatusCode;
+}
+    public 
+    String 
+    getObsSubject()
+    {
+        return this.obsSubject;
+    }
+    
+    public void setObsSubject
+        (String obsSubject) 
+        {
+      this.obsSubject = obsSubject;
+}
+    public 
+    String 
+    getObservationValueBoolean()
+    {
+        return this.observationValueBoolean;
+    }
+    
+    public void setObservationValueBoolean
+        (String observationValueBoolean) 
+        {
+      this.observationValueBoolean = observationValueBoolean;
+}
+    public 
+    String 
+    getObsValueCodeableConceptCodingCode()
+    {
+        return this.obsValueCodeableConceptCodingCode;
+    }
+    
+    public void setObsValueCodeableConceptCodingCode
+        (String obsValueCodeableConceptCodingCode) 
+        {
+      this.obsValueCodeableConceptCodingCode = obsValueCodeableConceptCodingCode;
+}
+    public 
+    String 
+    getObsValueCodeableConceptCodingDisplay()
+    {
+        return this.obsValueCodeableConceptCodingDisplay;
+    }
+    
+    public void setObsValueCodeableConceptCodingDisplay
+        (String obsValueCodeableConceptCodingDisplay) 
+        {
+      this.obsValueCodeableConceptCodingDisplay = obsValueCodeableConceptCodingDisplay;
+}
+    public 
+    String 
+    getObsValueCodeableConceptCodingSystem()
+    {
+        return this.obsValueCodeableConceptCodingSystem;
+    }
+    
+    public void setObsValueCodeableConceptCodingSystem
+        (String obsValueCodeableConceptCodingSystem) 
+        {
+      this.obsValueCodeableConceptCodingSystem = obsValueCodeableConceptCodingSystem;
+}
+    public 
+    String 
+    getObsValueCodeableConceptCodingUsrslt()
+    {
+        return this.obsValueCodeableConceptCodingUsrslt;
+    }
+    
+    public void setObsValueCodeableConceptCodingUsrslt
+        (String obsValueCodeableConceptCodingUsrslt) 
+        {
+      this.obsValueCodeableConceptCodingUsrslt = obsValueCodeableConceptCodingUsrslt;
+}
+    public 
+    String 
+    getObsValueCodeableConceptCodingVersion()
+    {
+        return this.obsValueCodeableConceptCodingVersion;
+    }
+    
+    public void setObsValueCodeableConceptCodingVersion
+        (String obsValueCodeableConceptCodingVersion) 
+        {
+      this.obsValueCodeableConceptCodingVersion = obsValueCodeableConceptCodingVersion;
+}
+    public 
+    String 
+    getObsValueCodeableConceptText()
+    {
+        return this.obsValueCodeableConceptText;
+    }
+    
+    public void setObsValueCodeableConceptText
+        (String obsValueCodeableConceptText) 
+        {
+      this.obsValueCodeableConceptText = obsValueCodeableConceptText;
+}
+    public 
+    String 
+    getObservationValueDateTime()
+    {
+        return this.observationValueDateTime;
+    }
+    
+    public void setObservationValueDateTime
+        (String observationValueDateTime) 
+        {
+      this.observationValueDateTime = observationValueDateTime;
+}
+    public 
+    String 
+    getObservationValueInteger()
+    {
+        return this.observationValueInteger;
+    }
+    
+    public void setObservationValueInteger
+        (String observationValueInteger) 
+        {
+      this.observationValueInteger = observationValueInteger;
+}
+    public 
+    String 
+    getObsValuePeriodEnd()
+    {
+        return this.obsValuePeriodEnd;
+    }
+    
+    public void setObsValuePeriodEnd
+        (String obsValuePeriodEnd) 
+        {
+      this.obsValuePeriodEnd = obsValuePeriodEnd;
+}
+    public 
+    String 
+    getObsValuePeriodStart()
+    {
+        return this.obsValuePeriodStart;
+    }
+    
+    public void setObsValuePeriodStart
+        (String obsValuePeriodStart) 
+        {
+      this.obsValuePeriodStart = obsValuePeriodStart;
+}
+    public 
+    String 
+    getObsValueQuantityCode()
+    {
+        return this.obsValueQuantityCode;
+    }
+    
+    public void setObsValueQuantityCode
+        (String obsValueQuantityCode) 
+        {
+      this.obsValueQuantityCode = obsValueQuantityCode;
+}
+    public 
+    String 
+    getObsValueQuantityCompartrCode()
+    {
+        return this.obsValueQuantityCompartrCode;
+    }
+    
+    public void setObsValueQuantityCompartrCode
+        (String obsValueQuantityCompartrCode) 
+        {
+      this.obsValueQuantityCompartrCode = obsValueQuantityCompartrCode;
+}
+    public 
+    String 
+    getObsValueQuantitySystem()
+    {
+        return this.obsValueQuantitySystem;
+    }
+    
+    public void setObsValueQuantitySystem
+        (String obsValueQuantitySystem) 
+        {
+      this.obsValueQuantitySystem = obsValueQuantitySystem;
+}
+    public 
+    String 
+    getObsValueQuantityUnit()
+    {
+        return this.obsValueQuantityUnit;
+    }
+    
+    public void setObsValueQuantityUnit
+        (String obsValueQuantityUnit) 
+        {
+      this.obsValueQuantityUnit = obsValueQuantityUnit;
+}
+    public 
+    String 
+    getObsValueQuantityValue()
+    {
+        return this.obsValueQuantityValue;
+    }
+    
+    public void setObsValueQuantityValue
+        (String obsValueQuantityValue) 
+        {
+      this.obsValueQuantityValue = obsValueQuantityValue;
+}
+    public 
+    String 
+    getObsValueRangeHighCode()
+    {
+        return this.obsValueRangeHighCode;
+    }
+    
+    public void setObsValueRangeHighCode
+        (String obsValueRangeHighCode) 
+        {
+      this.obsValueRangeHighCode = obsValueRangeHighCode;
+}
+    public 
+    String 
+    getObsValueRangeHighCompartrCode()
+    {
+        return this.obsValueRangeHighCompartrCode;
+    }
+    
+    public void setObsValueRangeHighCompartrCode
+        (String obsValueRangeHighCompartrCode) 
+        {
+      this.obsValueRangeHighCompartrCode = obsValueRangeHighCompartrCode;
+}
+    public 
+    String 
+    getObsValueRangeHighSystem()
+    {
+        return this.obsValueRangeHighSystem;
+    }
+    
+    public void setObsValueRangeHighSystem
+        (String obsValueRangeHighSystem) 
+        {
+      this.obsValueRangeHighSystem = obsValueRangeHighSystem;
+}
+    public 
+    String 
+    getObsValueRangeHighUnit()
+    {
+        return this.obsValueRangeHighUnit;
+    }
+    
+    public void setObsValueRangeHighUnit
+        (String obsValueRangeHighUnit) 
+        {
+      this.obsValueRangeHighUnit = obsValueRangeHighUnit;
+}
+    public 
+    String 
+    getObsValueRangeHighValue()
+    {
+        return this.obsValueRangeHighValue;
+    }
+    
+    public void setObsValueRangeHighValue
+        (String obsValueRangeHighValue) 
+        {
+      this.obsValueRangeHighValue = obsValueRangeHighValue;
+}
+    public 
+    String 
+    getObsValueRangeLowCode()
+    {
+        return this.obsValueRangeLowCode;
+    }
+    
+    public void setObsValueRangeLowCode
+        (String obsValueRangeLowCode) 
+        {
+      this.obsValueRangeLowCode = obsValueRangeLowCode;
+}
+    public 
+    String 
+    getObsValueRangeLowCompartrCode()
+    {
+        return this.obsValueRangeLowCompartrCode;
+    }
+    
+    public void setObsValueRangeLowCompartrCode
+        (String obsValueRangeLowCompartrCode) 
+        {
+      this.obsValueRangeLowCompartrCode = obsValueRangeLowCompartrCode;
+}
+    public 
+    String 
+    getObsValueRangeLowSystem()
+    {
+        return this.obsValueRangeLowSystem;
+    }
+    
+    public void setObsValueRangeLowSystem
+        (String obsValueRangeLowSystem) 
+        {
+      this.obsValueRangeLowSystem = obsValueRangeLowSystem;
+}
+    public 
+    String 
+    getObsValueRangeLowUnit()
+    {
+        return this.obsValueRangeLowUnit;
+    }
+    
+    public void setObsValueRangeLowUnit
+        (String obsValueRangeLowUnit) 
+        {
+      this.obsValueRangeLowUnit = obsValueRangeLowUnit;
+}
+    public 
+    String 
+    getObsValueRangeLowValue()
+    {
+        return this.obsValueRangeLowValue;
+    }
+    
+    public void setObsValueRangeLowValue
+        (String obsValueRangeLowValue) 
+        {
+      this.obsValueRangeLowValue = obsValueRangeLowValue;
+}
+    public 
+    String 
+    getObsValueRatioDenomCode()
+    {
+        return this.obsValueRatioDenomCode;
+    }
+    
+    public void setObsValueRatioDenomCode
+        (String obsValueRatioDenomCode) 
+        {
+      this.obsValueRatioDenomCode = obsValueRatioDenomCode;
+}
+    public 
+    String 
+    getObsValueRatioDenomCompartrCode()
+    {
+        return this.obsValueRatioDenomCompartrCode;
+    }
+    
+    public void setObsValueRatioDenomCompartrCode
+        (String obsValueRatioDenomCompartrCode) 
+        {
+      this.obsValueRatioDenomCompartrCode = obsValueRatioDenomCompartrCode;
+}
+    public 
+    String 
+    getObsValueRatioDenomSystem()
+    {
+        return this.obsValueRatioDenomSystem;
+    }
+    
+    public void setObsValueRatioDenomSystem
+        (String obsValueRatioDenomSystem) 
+        {
+      this.obsValueRatioDenomSystem = obsValueRatioDenomSystem;
+}
+    public 
+    String 
+    getObsValueRatioDenomUnit()
+    {
+        return this.obsValueRatioDenomUnit;
+    }
+    
+    public void setObsValueRatioDenomUnit
+        (String obsValueRatioDenomUnit) 
+        {
+      this.obsValueRatioDenomUnit = obsValueRatioDenomUnit;
+}
+    public 
+    String 
+    getObsValueRatioDenomValue()
+    {
+        return this.obsValueRatioDenomValue;
+    }
+    
+    public void setObsValueRatioDenomValue
+        (String obsValueRatioDenomValue) 
+        {
+      this.obsValueRatioDenomValue = obsValueRatioDenomValue;
+}
+    public 
+    String 
+    getObsValueRatioNumeratorCode()
+    {
+        return this.obsValueRatioNumeratorCode;
+    }
+    
+    public void setObsValueRatioNumeratorCode
+        (String obsValueRatioNumeratorCode) 
+        {
+      this.obsValueRatioNumeratorCode = obsValueRatioNumeratorCode;
+}
+    public 
+    String 
+    getObsValueRatioNumeratorCompartrCode()
+    {
+        return this.obsValueRatioNumeratorCompartrCode;
+    }
+    
+    public void setObsValueRatioNumeratorCompartrCode
+        (String obsValueRatioNumeratorCompartrCode) 
+        {
+      this.obsValueRatioNumeratorCompartrCode = obsValueRatioNumeratorCompartrCode;
+}
+    public 
+    String 
+    getObsValueRatioNumeratorSystem()
+    {
+        return this.obsValueRatioNumeratorSystem;
+    }
+    
+    public void setObsValueRatioNumeratorSystem
+        (String obsValueRatioNumeratorSystem) 
+        {
+      this.obsValueRatioNumeratorSystem = obsValueRatioNumeratorSystem;
+}
+    public 
+    String 
+    getObsValueRatioNumeratorUnit()
+    {
+        return this.obsValueRatioNumeratorUnit;
+    }
+    
+    public void setObsValueRatioNumeratorUnit
+        (String obsValueRatioNumeratorUnit) 
+        {
+      this.obsValueRatioNumeratorUnit = obsValueRatioNumeratorUnit;
+}
+    public 
+    String 
+    getObsValueRatioNumeratorValue()
+    {
+        return this.obsValueRatioNumeratorValue;
+    }
+    
+    public void setObsValueRatioNumeratorValue
+        (String obsValueRatioNumeratorValue) 
+        {
+      this.obsValueRatioNumeratorValue = obsValueRatioNumeratorValue;
+}
+    public 
+    String 
+    getObsValueSampledDataData()
+    {
+        return this.obsValueSampledDataData;
+    }
+    
+    public void setObsValueSampledDataData
+        (String obsValueSampledDataData) 
+        {
+      this.obsValueSampledDataData = obsValueSampledDataData;
+}
+    public 
+    String 
+    getObsValueSampledDataDimensions()
+    {
+        return this.obsValueSampledDataDimensions;
+    }
+    
+    public void setObsValueSampledDataDimensions
+        (String obsValueSampledDataDimensions) 
+        {
+      this.obsValueSampledDataDimensions = obsValueSampledDataDimensions;
+}
+    public 
+    String 
+    getObsValueSampledDataFactor()
+    {
+        return this.obsValueSampledDataFactor;
+    }
+    
+    public void setObsValueSampledDataFactor
+        (String obsValueSampledDataFactor) 
+        {
+      this.obsValueSampledDataFactor = obsValueSampledDataFactor;
+}
+    public 
+    String 
+    getObsValueSampledDataLowerLimit()
+    {
+        return this.obsValueSampledDataLowerLimit;
+    }
+    
+    public void setObsValueSampledDataLowerLimit
+        (String obsValueSampledDataLowerLimit) 
+        {
+      this.obsValueSampledDataLowerLimit = obsValueSampledDataLowerLimit;
+}
+    public 
+    String 
+    getObsValueSampledDataOriginCode()
+    {
+        return this.obsValueSampledDataOriginCode;
+    }
+    
+    public void setObsValueSampledDataOriginCode
+        (String obsValueSampledDataOriginCode) 
+        {
+      this.obsValueSampledDataOriginCode = obsValueSampledDataOriginCode;
+}
+    public 
+    String 
+    getObsValueSampledDataOriginCompartrCode()
+    {
+        return this.obsValueSampledDataOriginCompartrCode;
+    }
+    
+    public void setObsValueSampledDataOriginCompartrCode
+        (String obsValueSampledDataOriginCompartrCode) 
+        {
+      this.obsValueSampledDataOriginCompartrCode = obsValueSampledDataOriginCompartrCode;
+}
+    public 
+    String 
+    getObsValueSampledDataOriginSystem()
+    {
+        return this.obsValueSampledDataOriginSystem;
+    }
+    
+    public void setObsValueSampledDataOriginSystem
+        (String obsValueSampledDataOriginSystem) 
+        {
+      this.obsValueSampledDataOriginSystem = obsValueSampledDataOriginSystem;
+}
+    public 
+    String 
+    getObsValueSampledDataOriginUnit()
+    {
+        return this.obsValueSampledDataOriginUnit;
+    }
+    
+    public void setObsValueSampledDataOriginUnit
+        (String obsValueSampledDataOriginUnit) 
+        {
+      this.obsValueSampledDataOriginUnit = obsValueSampledDataOriginUnit;
+}
+    public 
+    String 
+    getObsValueSampledDataOriginValue()
+    {
+        return this.obsValueSampledDataOriginValue;
+    }
+    
+    public void setObsValueSampledDataOriginValue
+        (String obsValueSampledDataOriginValue) 
+        {
+      this.obsValueSampledDataOriginValue = obsValueSampledDataOriginValue;
+}
+    public 
+    String 
+    getObsValueSampledDataPeriod()
+    {
+        return this.obsValueSampledDataPeriod;
+    }
+    
+    public void setObsValueSampledDataPeriod
+        (String obsValueSampledDataPeriod) 
+        {
+      this.obsValueSampledDataPeriod = obsValueSampledDataPeriod;
+}
+    public 
+    String 
+    getObsValueSampledDataUpperLimit()
+    {
+        return this.obsValueSampledDataUpperLimit;
+    }
+    
+    public void setObsValueSampledDataUpperLimit
+        (String obsValueSampledDataUpperLimit) 
+        {
+      this.obsValueSampledDataUpperLimit = obsValueSampledDataUpperLimit;
+}
+    public 
+    String 
+    getObservationValueString()
+    {
+        return this.observationValueString;
+    }
+    
+    public void setObservationValueString
+        (String observationValueString) 
+        {
+      this.observationValueString = observationValueString;
+}
+    public 
+    String 
+    getObservationValueTime()
+    {
+        return this.observationValueTime;
+    }
+    
+    public void setObservationValueTime
+        (String observationValueTime) 
+        {
+      this.observationValueTime = observationValueTime;
 }
 
 

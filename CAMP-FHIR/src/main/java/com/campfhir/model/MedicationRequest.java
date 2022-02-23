@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 17, 2022, 12:11:05 PM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,2550 +10,3581 @@ package main.java.com.campfhir.model;
 public class MedicationRequest  implements java.io.Serializable {
 
 
-     private String medicationrequestIdentifierValue;
-     private String medicationrequestAuthoredOn;
-     private String medicationrequestBasedOn;
-     private String medicationrequestCategoryCodingCode;
-     private String medicationrequestCategoryCodingDisplay;
-     private String medicationrequestCategoryCodingSystem;
-     private String medicationrequestCategoryCodingUserSelected;
-     private String medicationrequestCategoryCodingVersion;
-     private String medicationrequestCategoryText;
-     private String medicationrequestCourseOfTherapyTypeCodingCode;
-     private String medicationrequestCourseOfTherapyTypeCodingDisplay;
-     private String medicationrequestCourseOfTherapyTypeCodingSystem;
-     private String medicationrequestCourseOfTherapyTypeCodingUserSelected;
-     private String medicationrequestCourseOfTherapyTypeCodingVersion;
-     private String medicationrequestCourseOfTherapyTypeText;
-     private String medicationrequestDetectedIssue;
-     private String medicationrequestDispenseRequestDispenseInterval;
-     private String medicationrequestDispenseRequestExpectedSupplyDuration;
-     private String medicationrequestDispenseRequestInitialFillDuration;
-     private String medicationrequestDispenseRequestInitialFillQuantityCode;
-     private String mrDispenseRequestInitialFillQuantityComparatorCode;
-     private String medicationrequestDispenseRequestInitialFillQuantitySystem;
-     private String medicationrequestDispenseRequestInitialFillQuantityUnit;
-     private String medicationrequestDispenseRequestInitialFillQuantityValue;
-     private String medicationrequestDispenseRequestNumberOfRepeatsAllowed;
-     private String medicationrequestDispenseRequestPerformer;
-     private String medicationrequestDispenseRequestQuantityCode;
-     private String medicationrequestDispenseRequestQuantityComparatorCode;
-     private String medicationrequestDispenseRequestQuantitySystem;
-     private String medicationrequestDispenseRequestQuantityUnit;
-     private String medicationrequestDispenseRequestQuantityValue;
-     private String medicationrequestDispenseRequestValidityPeriodEnd;
-     private String medicationrequestDispenseRequestValidityPeriodStart;
-     private String medicationrequestDoNotPerform;
-     private String mrDrAdditionalInstructionCodingCode;
-     private String mrDrAdditionalInstructionCodingDisplay;
-     private String mrDrAdditionalInstructionCodingSystem;
-     private String mrDrAdditionalInstructionCodingUs;
-     private String mrDrAdditionalInstructionCodingVersion;
-     private String medicationrequestDosageInstructionAdditionalInstructionText;
-     private String medicationrequestDosageInstructionAsNeeded;
-     private String medicationrequestDosageInstructionDoseAndRateDose;
-     private String medicationrequestDosageInstructionDoseAndRateRate;
-     private String mrDrDoseAndRateTypeCodingCode;
-     private String mrDrDoseAndRateTypeCodingDisplay;
-     private String mrDrDoseAndRateTypeCodingSystem;
-     private String mrDrDoseAndRateTypeCodingUs;
-     private String mrDrDoseAndRateTypeCodingVersion;
-     private String medicationrequestDosageInstructionDoseAndRateTypeText;
-     private String mrDrMaxDosePerAdministrationCode;
-     private String mrDrMaxDosePerAdministrationComparatorCode;
-     private String mrDrMaxDosePerAdministrationSystem;
-     private String mrDrMaxDosePerAdministrationUnit;
-     private String mrDrMaxDosePerAdministrationValue;
-     private String medicationrequestDosageInstructionMaxDosePerLifetimeCode;
-     private String mrDrMaxDosePerLifetimeComparatorCode;
-     private String medicationrequestDosageInstructionMaxDosePerLifetimeSystem;
-     private String medicationrequestDosageInstructionMaxDosePerLifetimeUnit;
-     private String medicationrequestDosageInstructionMaxDosePerLifetimeValue;
-     private String mrDrMaxDosePerPeriodDenominatorCode;
-     private String mrDrMaxDosePerPeriodDenominatorComparatorCode;
-     private String mrDrMaxDosePerPeriodDenominatorSystem;
-     private String mrDrMaxDosePerPeriodDenominatorUnit;
-     private String mrDrMaxDosePerPeriodDenominatorValue;
-     private String mrDrMaxDosePerPeriodNumeratorCode;
-     private String mrDrMaxDosePerPeriodNumeratorComparatorCode;
-     private String mrDrMaxDosePerPeriodNumeratorSystem;
-     private String mrDrMaxDosePerPeriodNumeratorUnit;
-     private String mrDrMaxDosePerPeriodNumeratorValue;
-     private String medicationrequestDosageInstructionMethodCodingCode;
-     private String medicationrequestDosageInstructionMethodCodingDisplay;
-     private String medicationrequestDosageInstructionMethodCodingSystem;
-     private String medicationrequestDosageInstructionMethodCodingUserSelected;
-     private String medicationrequestDosageInstructionMethodCodingVersion;
-     private String medicationrequestDosageInstructionMethodText;
-     private String medicationrequestDosageInstructionPatientInstruction;
-     private String medicationrequestDosageInstructionRouteCodingCode;
-     private String medicationrequestDosageInstructionRouteCodingDisplay;
-     private String medicationrequestDosageInstructionRouteCodingSystem;
-     private String medicationrequestDosageInstructionRouteCodingUserSelected;
-     private String medicationrequestDosageInstructionRouteCodingVersion;
-     private String medicationrequestDosageInstructionRouteText;
-     private String medicationrequestDosageInstructionSequence;
-     private String medicationrequestDosageInstructionSiteCodingCode;
-     private String medicationrequestDosageInstructionSiteCodingDisplay;
-     private String medicationrequestDosageInstructionSiteCodingSystem;
-     private String medicationrequestDosageInstructionSiteCodingUserSelected;
-     private String medicationrequestDosageInstructionSiteCodingVersion;
-     private String medicationrequestDosageInstructionSiteText;
-     private String medicationrequestDosageInstructionText;
-     private String medicationrequestDosageInstructionTimingCodeCodingCode;
-     private String medicationrequestDosageInstructionTimingCodeCodingDisplay;
-     private String medicationrequestDosageInstructionTimingCodeCodingSystem;
-     private String mrDrTimingCodeCodingUs;
-     private String medicationrequestDosageInstructionTimingCodeCodingVersion;
-     private String medicationrequestDosageInstructionTimingCodeText;
-     private String medicationrequestDosageInstructionTimingEvent;
-     private String medicationrequestDosageInstructionTimingRepeatBounds;
-     private String medicationrequestDosageInstructionTimingRepeatCount;
-     private String medicationrequestDosageInstructionTimingRepeatCountMax;
-     private String mrDrTimingRepeatDayOfWeekCode;
-     private String medicationrequestDosageInstructionTimingRepeatDuration;
-     private String medicationrequestDosageInstructionTimingRepeatDurationMax;
-     private String mrDrTimingRepeatDurationUnitCode;
-     private String medicationrequestDosageInstructionTimingRepeatFrequency;
-     private String medicationrequestDosageInstructionTimingRepeatFrequencyMax;
-     private String medicationrequestDosageInstructionTimingRepeatOff;
-     private String medicationrequestDosageInstructionTimingRepeatPeriod;
-     private String medicationrequestDosageInstructionTimingRepeatPeriodMax;
-     private String mrDrTimingRepeatPeriodUnitCode;
-     private String medicationrequestDosageInstructionTimingRepeatTimeOfDay;
-     private String medicationrequestDosageInstructionTimingRepeatWhenCode;
-     private String medicationrequestDosageInstructionTimingRepeatGetOff;
-     private String medicationrequestDosageInstructionTimingRepeatHasOff;
-     private String medicationrequestEncounter;
-     private String medicationrequestEventHistory;
-     private String medicationrequestGroupIdentifierAssigner;
-     private String medicationrequestGroupIdentifierPeriodEnd;
-     private String medicationrequestGroupIdentifierPeriodStart;
-     private String medicationrequestGroupIdentifierSystem;
-     private String medicationrequestGroupIdentifierTypeCodingCode;
-     private String medicationrequestGroupIdentifierTypeCodingDisplay;
-     private String medicationrequestGroupIdentifierTypeCodingSystem;
-     private String medicationrequestGroupIdentifierTypeCodingUserSelected;
-     private String medicationrequestGroupIdentifierTypeCodingVersion;
-     private String medicationrequestGroupIdentifierTypeText;
-     private String medicationrequestGroupIdentifierUseCode;
-     private String medicationrequestGroupIdentifierValue;
-     private String medicationrequestIdentifierAssigner;
-     private String medicationrequestIdentifierPeriodEnd;
-     private String medicationrequestIdentifierPeriodStart;
-     private String medicationrequestIdentifierSystem;
-     private String medicationrequestIdentifierTypeCodingCode;
-     private String medicationrequestIdentifierTypeCodingDisplay;
-     private String medicationrequestIdentifierTypeCodingSystem;
-     private String medicationrequestIdentifierTypeCodingUserSelected;
-     private String medicationrequestIdentifierTypeCodingVersion;
-     private String medicationrequestIdentifierTypeText;
-     private String medicationrequestIdentifierUseCode;
-     private String medicationrequestInstantiatesCanonical;
-     private String medicationrequestInstantiatesUri;
-     private String medicationrequestInsurance;
-     private String medicationrequestIntentCode;
-     private String medicationrequestMedication;
-     private String medicationrequestNoteAuthor;
-     private String medicationrequestNoteText;
-     private String medicationrequestNoteTime;
-     private String medicationrequestPerformer;
-     private String medicationrequestPerformerTypeCodingCode;
-     private String medicationrequestPerformerTypeCodingDisplay;
-     private String medicationrequestPerformerTypeCodingSystem;
-     private String medicationrequestPerformerTypeCodingUserSelected;
-     private String medicationrequestPerformerTypeCodingVersion;
-     private String medicationrequestPerformerTypeText;
-     private String medicationrequestPriorPrescription;
-     private String medicationrequestPriorityCode;
-     private String medicationrequestReasonCodeCodingCode;
-     private String medicationrequestReasonCodeCodingDisplay;
-     private String medicationrequestReasonCodeCodingSystem;
-     private String medicationrequestReasonCodeCodingUserSelected;
-     private String medicationrequestReasonCodeCodingVersion;
-     private String medicationrequestReasonCodeText;
-     private String medicationrequestReasonReference;
-     private String medicationrequestRecorder;
-     private String medicationrequestReported;
-     private String medicationrequestRequester;
-     private String medicationrequestStatusCode;
-     private String medicationrequestStatusReasonCodingCode;
-     private String medicationrequestStatusReasonCodingDisplay;
-     private String medicationrequestStatusReasonCodingSystem;
-     private String medicationrequestStatusReasonCodingUserSelected;
-     private String medicationrequestStatusReasonCodingVersion;
-     private String medicationrequestStatusReasonText;
-     private String medicationrequestSubject;
-     private String medicationrequestSubstitutionAllowed;
-     private String medicationrequestSubstitutionReasonCodingCode;
-     private String medicationrequestSubstitutionReasonCodingDisplay;
-     private String medicationrequestSubstitutionReasonCodingSystem;
-     private String medicationrequestSubstitutionReasonCodingUserSelected;
-     private String medicationrequestSubstitutionReasonCodingVersion;
-     private String medicationrequestSubstitutionReasonText;
+     private String id;
+     private String medreqAuthoredOn;
+     private String medreqBasedOn;
+     private String medreqCategoryCodingCode;
+     private String medreqCategoryCodingDisplay;
+     private String medreqCategoryCodingSystem;
+     private String medreqCategoryCodingUsrslt;
+     private String medreqCategoryCodingVersion;
+     private String medreqCategoryText;
+     private String medreqCourseOfTherapyTypeCodingCode;
+     private String medreqCourseOfTherapyTypeCodingDisplay;
+     private String medreqCourseOfTherapyTypeCodingSystem;
+     private String medreqCourseOfTherapyTypeCodingUsrslt;
+     private String medreqCourseOfTherapyTypeCodingVersion;
+     private String medreqCourseOfTherapyTypeText;
+     private String medreqDetectedIssue;
+     private String medreqDispenseRequestDispenseInterval;
+     private String medreqDispenseRequestExpectedSupplyDuration;
+     private String medreqDispenseRequestInitialFillDuration;
+     private String medreqDispenseRequestInitialFillQuantityCode;
+     private String medreqDispenseRequestInitialFillQuantityCompartrCode;
+     private String medreqDispenseRequestInitialFillQuantitySystem;
+     private String medreqDispenseRequestInitialFillQuantityUnit;
+     private String medreqDispenseRequestInitialFillQuantityValue;
+     private String medreqDispenseRequestNumberOfRepeatsAllowed;
+     private String medreqDispenseRequestPerformer;
+     private String medreqDispenseRequestQuantityCode;
+     private String medreqDispenseRequestQuantityCompartrCode;
+     private String medreqDispenseRequestQuantitySystem;
+     private String medreqDispenseRequestQuantityUnit;
+     private String medreqDispenseRequestQuantityValue;
+     private String medreqDispenseRequestValidityPeriodEnd;
+     private String medreqDispenseRequestValidityPeriodStart;
+     private String medreqDoNotPerform;
+     private String medreqDoseinsAdditionalInstructionCodingCode;
+     private String medreqDoseinsAdditionalInstructionCodingDisplay;
+     private String medreqDoseinsAdditionalInstructionCodingSystem;
+     private String medreqDoseinsAdditionalInstructionCodingUsrslt;
+     private String medreqDoseinsAdditionalInstructionCodingVersion;
+     private String medreqDoseinsAdditionalInstructionText;
+     private String medicationrequestDosageInstructionAsNeededBoolean;
+     private String medreqDoseinsAsNeededCodeableConceptCodingCode;
+     private String medreqDoseinsAsNeededCodeableConceptCodingDisplay;
+     private String medreqDoseinsAsNeededCodeableConceptCodingSystem;
+     private String medreqDoseinsAsNeededCodeableConceptCodingUsrslt;
+     private String medreqDoseinsAsNeededCodeableConceptCodingVersion;
+     private String medreqDoseinsAsNeededCodeableConceptText;
+     private String medreqDoseinsDoseAndRateDoseQuantityCode;
+     private String medreqDoseinsDoseAndRateDoseQuantityCompartrCode;
+     private String medreqDoseinsDoseAndRateDoseQuantitySystem;
+     private String medreqDoseinsDoseAndRateDoseQuantityUnit;
+     private String medreqDoseinsDoseAndRateDoseQuantityValue;
+     private String medreqDoseinsDoseAndRateDoseRangeHighCode;
+     private String medreqDoseinsDoseAndRateDoseRangeHighCompartrCode;
+     private String medreqDoseinsDoseAndRateDoseRangeHighSystem;
+     private String medreqDoseinsDoseAndRateDoseRangeHighUnit;
+     private String medreqDoseinsDoseAndRateDoseRangeHighValue;
+     private String medreqDoseinsDoseAndRateDoseRangeLowCode;
+     private String medreqDoseinsDoseAndRateDoseRangeLowCompartrCode;
+     private String medreqDoseinsDoseAndRateDoseRangeLowSystem;
+     private String medreqDoseinsDoseAndRateDoseRangeLowUnit;
+     private String medreqDoseinsDoseAndRateDoseRangeLowValue;
+     private String medreqDoseinsDoseAndRateRateQuantityCode;
+     private String medreqDoseinsDoseAndRateRateQuantityCompartrCode;
+     private String medreqDoseinsDoseAndRateRateQuantitySystem;
+     private String medreqDoseinsDoseAndRateRateQuantityUnit;
+     private String medreqDoseinsDoseAndRateRateQuantityValue;
+     private String medreqDoseinsDoseAndRateRateRangeHighCode;
+     private String medreqDoseinsDoseAndRateRateRangeHighCompartrCode;
+     private String medreqDoseinsDoseAndRateRateRangeHighSystem;
+     private String medreqDoseinsDoseAndRateRateRangeHighUnit;
+     private String medreqDoseinsDoseAndRateRateRangeHighValue;
+     private String medreqDoseinsDoseAndRateRateRangeLowCode;
+     private String medreqDoseinsDoseAndRateRateRangeLowCompartrCode;
+     private String medreqDoseinsDoseAndRateRateRangeLowSystem;
+     private String medreqDoseinsDoseAndRateRateRangeLowUnit;
+     private String medreqDoseinsDoseAndRateRateRangeLowValue;
+     private String medreqDoseinsDoseAndRateRateRatioDenomCode;
+     private String medreqDoseinsDoseAndRateRateRatioDenomCompartrCode;
+     private String medreqDoseinsDoseAndRateRateRatioDenomSystem;
+     private String medreqDoseinsDoseAndRateRateRatioDenomUnit;
+     private String medreqDoseinsDoseAndRateRateRatioDenomValue;
+     private String medreqDoseinsDoseAndRateRateRatioNumeratorCode;
+     private String medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode;
+     private String medreqDoseinsDoseAndRateRateRatioNumeratorSystem;
+     private String medreqDoseinsDoseAndRateRateRatioNumeratorUnit;
+     private String medreqDoseinsDoseAndRateRateRatioNumeratorValue;
+     private String medreqDoseinsDoseAndRateTypeCodingCode;
+     private String medreqDoseinsDoseAndRateTypeCodingDisplay;
+     private String medreqDoseinsDoseAndRateTypeCodingSystem;
+     private String medreqDoseinsDoseAndRateTypeCodingUsrslt;
+     private String medreqDoseinsDoseAndRateTypeCodingVersion;
+     private String medreqDoseinsDoseAndRateTypeText;
+     private String medreqDoseinsMaxDosePerAdministrationCode;
+     private String medreqDoseinsMaxDosePerAdministrationCompartrCode;
+     private String medreqDoseinsMaxDosePerAdministrationSystem;
+     private String medreqDoseinsMaxDosePerAdministrationUnit;
+     private String medreqDoseinsMaxDosePerAdministrationValue;
+     private String medreqDoseinsMaxDosePerLifetimeCode;
+     private String medreqDoseinsMaxDosePerLifetimeCompartrCode;
+     private String medreqDoseinsMaxDosePerLifetimeSystem;
+     private String medreqDoseinsMaxDosePerLifetimeUnit;
+     private String medreqDoseinsMaxDosePerLifetimeValue;
+     private String medreqDoseinsMaxDosePerPeriodDenomCode;
+     private String medreqDoseinsMaxDosePerPeriodDenomCompartrCode;
+     private String medreqDoseinsMaxDosePerPeriodDenomSystem;
+     private String medreqDoseinsMaxDosePerPeriodDenomUnit;
+     private String medreqDoseinsMaxDosePerPeriodDenomValue;
+     private String medreqDoseinsMaxDosePerPeriodNumeratorCode;
+     private String medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode;
+     private String medreqDoseinsMaxDosePerPeriodNumeratorSystem;
+     private String medreqDoseinsMaxDosePerPeriodNumeratorUnit;
+     private String medreqDoseinsMaxDosePerPeriodNumeratorValue;
+     private String medreqDoseinsMethodCodingCode;
+     private String medreqDoseinsMethodCodingDisplay;
+     private String medreqDoseinsMethodCodingSystem;
+     private String medreqDoseinsMethodCodingUsrslt;
+     private String medreqDoseinsMethodCodingVersion;
+     private String medreqDoseinsMethodText;
+     private String medreqDoseinsPatientInstruction;
+     private String medreqDoseinsRouteCodingCode;
+     private String medreqDoseinsRouteCodingDisplay;
+     private String medreqDoseinsRouteCodingSystem;
+     private String medreqDoseinsRouteCodingUsrslt;
+     private String medreqDoseinsRouteCodingVersion;
+     private String medreqDoseinsRouteText;
+     private String medreqDoseinsSequence;
+     private String medreqDoseinsSiteCodingCode;
+     private String medreqDoseinsSiteCodingDisplay;
+     private String medreqDoseinsSiteCodingSystem;
+     private String medreqDoseinsSiteCodingUsrslt;
+     private String medreqDoseinsSiteCodingVersion;
+     private String medreqDoseinsSiteText;
+     private String medreqDoseinsText;
+     private String medreqDoseinsTimingCodeCodingCode;
+     private String medreqDoseinsTimingCodeCodingDisplay;
+     private String medreqDoseinsTimingCodeCodingSystem;
+     private String medreqDoseinsTimingCodeCodingUsrslt;
+     private String medreqDoseinsTimingCodeCodingVersion;
+     private String medreqDoseinsTimingCodeText;
+     private String medreqDoseinsTimingEvent;
+     private String medreqDoseinsTimingRepeatBoundsDurationCode;
+     private String medreqDoseinsTimingRepeatBoundsDurationCompartrCode;
+     private String medreqDoseinsTimingRepeatBoundsDurationSystem;
+     private String medreqDoseinsTimingRepeatBoundsDurationUnit;
+     private String medreqDoseinsTimingRepeatBoundsDurationValue;
+     private String medreqDoseinsTimingRepeatBoundsPeriodEnd;
+     private String medreqDoseinsTimingRepeatBoundsPeriodStart;
+     private String medreqDoseinsTimingRepeatBoundsRangeHighCode;
+     private String medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode;
+     private String medreqDoseinsTimingRepeatBoundsRangeHighSystem;
+     private String medreqDoseinsTimingRepeatBoundsRangeHighUnit;
+     private String medreqDoseinsTimingRepeatBoundsRangeHighValue;
+     private String medreqDoseinsTimingRepeatBoundsRangeLowCode;
+     private String medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode;
+     private String medreqDoseinsTimingRepeatBoundsRangeLowSystem;
+     private String medreqDoseinsTimingRepeatBoundsRangeLowUnit;
+     private String medreqDoseinsTimingRepeatBoundsRangeLowValue;
+     private String medreqDoseinsTimingRepeatCount;
+     private String medreqDoseinsTimingRepeatCountMax;
+     private String medreqDoseinsTimingRepeatDayOfWeekCode;
+     private String medreqDoseinsTimingRepeatDuration;
+     private String medreqDoseinsTimingRepeatDurationMax;
+     private String medreqDoseinsTimingRepeatDurationUnitCode;
+     private String medreqDoseinsTimingRepeatFrequency;
+     private String medreqDoseinsTimingRepeatFrequencyMax;
+     private String medreqDoseinsTimingRepeatOff;
+     private String medreqDoseinsTimingRepeatPeriod;
+     private String medreqDoseinsTimingRepeatPeriodMax;
+     private String medreqDoseinsTimingRepeatPeriodUnitCode;
+     private String medreqDoseinsTimingRepeatTimeOfDay;
+     private String medreqDoseinsTimingRepeatWhenCode;
+     private String medreqEnc;
+     private String medreqEventHistory;
+     private String medreqGroupIdAssigner;
+     private String medreqGroupIdPeriodEnd;
+     private String medreqGroupIdPeriodStart;
+     private String medreqGroupIdSystem;
+     private String medreqGroupIdTypeCodingCode;
+     private String medreqGroupIdTypeCodingDisplay;
+     private String medreqGroupIdTypeCodingSystem;
+     private String medreqGroupIdTypeCodingUsrslt;
+     private String medreqGroupIdTypeCodingVersion;
+     private String medreqGroupIdTypeText;
+     private String medreqGroupIdUseCode;
+     private String medreqGroupIdValue;
+     private String medreqIdAssigner;
+     private String medreqIdPeriodEnd;
+     private String medreqIdPeriodStart;
+     private String medreqIdSystem;
+     private String medreqIdTypeCodingCode;
+     private String medreqIdTypeCodingDisplay;
+     private String medreqIdTypeCodingSystem;
+     private String medreqIdTypeCodingUsrslt;
+     private String medreqIdTypeCodingVersion;
+     private String medreqIdTypeText;
+     private String medreqIdUseCode;
+     private String medreqIdValue;
+     private String medreqInstantiatesCanonical;
+     private String medreqInstantiatesUri;
+     private String medreqInsurance;
+     private String medreqIntentCode;
+     private String medreqMedicationCodeableConceptCodingCode;
+     private String medreqMedicationCodeableConceptCodingDisplay;
+     private String medreqMedicationCodeableConceptCodingSystem;
+     private String medreqMedicationCodeableConceptCodingUsrslt;
+     private String medreqMedicationCodeableConceptCodingVersion;
+     private String medreqMedicationCodeableConceptText;
+     private String medicationrequestMedicationReference;
+     private String medicationrequestNoteAuthorReference;
+     private String medicationrequestNoteAuthorString;
+     private String medreqNoteText;
+     private String medreqNoteTime;
+     private String medreqPerformer;
+     private String medreqPerformerTypeCodingCode;
+     private String medreqPerformerTypeCodingDisplay;
+     private String medreqPerformerTypeCodingSystem;
+     private String medreqPerformerTypeCodingUsrslt;
+     private String medreqPerformerTypeCodingVersion;
+     private String medreqPerformerTypeText;
+     private String medreqPriorPrescription;
+     private String medreqPriorityCode;
+     private String medreqReasonCodeCodingCode;
+     private String medreqReasonCodeCodingDisplay;
+     private String medreqReasonCodeCodingSystem;
+     private String medreqReasonCodeCodingUsrslt;
+     private String medreqReasonCodeCodingVersion;
+     private String medreqReasonCodeText;
+     private String medreqReasonReference;
+     private String medreqRecorder;
+     private String medicationrequestReportedBoolean;
+     private String medicationrequestReportedReference;
+     private String medreqRequester;
+     private String medreqStatusCode;
+     private String medreqStatusReasonCodingCode;
+     private String medreqStatusReasonCodingDisplay;
+     private String medreqStatusReasonCodingSystem;
+     private String medreqStatusReasonCodingUsrslt;
+     private String medreqStatusReasonCodingVersion;
+     private String medreqStatusReasonText;
+     private String medreqSubject;
+     private String medicationrequestSubstitutionAllowedBoolean;
+     private String medreqSubstitutionAllowedCodeableConceptCodingCode;
+     private String medreqSubstitutionAllowedCodeableConceptCodingDisplay;
+     private String medreqSubstitutionAllowedCodeableConceptCodingSystem;
+     private String medreqSubstitutionAllowedCodeableConceptCodingUsrslt;
+     private String medreqSubstitutionAllowedCodeableConceptCodingVersion;
+     private String medreqSubstitutionAllowedCodeableConceptText;
+     private String medreqSubstitutionReasonCodingCode;
+     private String medreqSubstitutionReasonCodingDisplay;
+     private String medreqSubstitutionReasonCodingSystem;
+     private String medreqSubstitutionReasonCodingUsrslt;
+     private String medreqSubstitutionReasonCodingVersion;
+     private String medreqSubstitutionReasonText;
+     private String medreqSupportingInformation;
 
     public MedicationRequest() {
     }
 
-	
-    public MedicationRequest(String medicationrequestIdentifierValue) {
-        this.medicationrequestIdentifierValue = medicationrequestIdentifierValue;
-    }
-    public MedicationRequest(String medicationrequestIdentifierValue, String medicationrequestAuthoredOn, String medicationrequestBasedOn, String medicationrequestCategoryCodingCode, String medicationrequestCategoryCodingDisplay, String medicationrequestCategoryCodingSystem, String medicationrequestCategoryCodingUserSelected, String medicationrequestCategoryCodingVersion, String medicationrequestCategoryText, String medicationrequestCourseOfTherapyTypeCodingCode, String medicationrequestCourseOfTherapyTypeCodingDisplay, String medicationrequestCourseOfTherapyTypeCodingSystem, String medicationrequestCourseOfTherapyTypeCodingUserSelected, String medicationrequestCourseOfTherapyTypeCodingVersion, String medicationrequestCourseOfTherapyTypeText, String medicationrequestDetectedIssue, String medicationrequestDispenseRequestDispenseInterval, String medicationrequestDispenseRequestExpectedSupplyDuration, String medicationrequestDispenseRequestInitialFillDuration, String medicationrequestDispenseRequestInitialFillQuantityCode, String mrDispenseRequestInitialFillQuantityComparatorCode, String medicationrequestDispenseRequestInitialFillQuantitySystem, String medicationrequestDispenseRequestInitialFillQuantityUnit, String medicationrequestDispenseRequestInitialFillQuantityValue, String medicationrequestDispenseRequestNumberOfRepeatsAllowed, String medicationrequestDispenseRequestPerformer, String medicationrequestDispenseRequestQuantityCode, String medicationrequestDispenseRequestQuantityComparatorCode, String medicationrequestDispenseRequestQuantitySystem, String medicationrequestDispenseRequestQuantityUnit, String medicationrequestDispenseRequestQuantityValue, String medicationrequestDispenseRequestValidityPeriodEnd, String medicationrequestDispenseRequestValidityPeriodStart, String medicationrequestDoNotPerform, String mrDrAdditionalInstructionCodingCode, String mrDrAdditionalInstructionCodingDisplay, String mrDrAdditionalInstructionCodingSystem, String mrDrAdditionalInstructionCodingUs, String mrDrAdditionalInstructionCodingVersion, String medicationrequestDosageInstructionAdditionalInstructionText, String medicationrequestDosageInstructionAsNeeded, String medicationrequestDosageInstructionDoseAndRateDose, String medicationrequestDosageInstructionDoseAndRateRate, String mrDrDoseAndRateTypeCodingCode, String mrDrDoseAndRateTypeCodingDisplay, String mrDrDoseAndRateTypeCodingSystem, String mrDrDoseAndRateTypeCodingUs, String mrDrDoseAndRateTypeCodingVersion, String medicationrequestDosageInstructionDoseAndRateTypeText, String mrDrMaxDosePerAdministrationCode, String mrDrMaxDosePerAdministrationComparatorCode, String mrDrMaxDosePerAdministrationSystem, String mrDrMaxDosePerAdministrationUnit, String mrDrMaxDosePerAdministrationValue, String medicationrequestDosageInstructionMaxDosePerLifetimeCode, String mrDrMaxDosePerLifetimeComparatorCode, String medicationrequestDosageInstructionMaxDosePerLifetimeSystem, String medicationrequestDosageInstructionMaxDosePerLifetimeUnit, String medicationrequestDosageInstructionMaxDosePerLifetimeValue, String mrDrMaxDosePerPeriodDenominatorCode, String mrDrMaxDosePerPeriodDenominatorComparatorCode, String mrDrMaxDosePerPeriodDenominatorSystem, String mrDrMaxDosePerPeriodDenominatorUnit, String mrDrMaxDosePerPeriodDenominatorValue, String mrDrMaxDosePerPeriodNumeratorCode, String mrDrMaxDosePerPeriodNumeratorComparatorCode, String mrDrMaxDosePerPeriodNumeratorSystem, String mrDrMaxDosePerPeriodNumeratorUnit, String mrDrMaxDosePerPeriodNumeratorValue, String medicationrequestDosageInstructionMethodCodingCode, String medicationrequestDosageInstructionMethodCodingDisplay, String medicationrequestDosageInstructionMethodCodingSystem, String medicationrequestDosageInstructionMethodCodingUserSelected, String medicationrequestDosageInstructionMethodCodingVersion, String medicationrequestDosageInstructionMethodText, String medicationrequestDosageInstructionPatientInstruction, String medicationrequestDosageInstructionRouteCodingCode, String medicationrequestDosageInstructionRouteCodingDisplay, String medicationrequestDosageInstructionRouteCodingSystem, String medicationrequestDosageInstructionRouteCodingUserSelected, String medicationrequestDosageInstructionRouteCodingVersion, String medicationrequestDosageInstructionRouteText, String medicationrequestDosageInstructionSequence, String medicationrequestDosageInstructionSiteCodingCode, String medicationrequestDosageInstructionSiteCodingDisplay, String medicationrequestDosageInstructionSiteCodingSystem, String medicationrequestDosageInstructionSiteCodingUserSelected, String medicationrequestDosageInstructionSiteCodingVersion, String medicationrequestDosageInstructionSiteText, String medicationrequestDosageInstructionText, String medicationrequestDosageInstructionTimingCodeCodingCode, String medicationrequestDosageInstructionTimingCodeCodingDisplay, String medicationrequestDosageInstructionTimingCodeCodingSystem, String mrDrTimingCodeCodingUs, String medicationrequestDosageInstructionTimingCodeCodingVersion, String medicationrequestDosageInstructionTimingCodeText, String medicationrequestDosageInstructionTimingEvent, String medicationrequestDosageInstructionTimingRepeatBounds, String medicationrequestDosageInstructionTimingRepeatCount, String medicationrequestDosageInstructionTimingRepeatCountMax, String mrDrTimingRepeatDayOfWeekCode, String medicationrequestDosageInstructionTimingRepeatDuration, String medicationrequestDosageInstructionTimingRepeatDurationMax, String mrDrTimingRepeatDurationUnitCode, String medicationrequestDosageInstructionTimingRepeatFrequency, String medicationrequestDosageInstructionTimingRepeatFrequencyMax, String medicationrequestDosageInstructionTimingRepeatOff, String medicationrequestDosageInstructionTimingRepeatPeriod, String medicationrequestDosageInstructionTimingRepeatPeriodMax, String mrDrTimingRepeatPeriodUnitCode, String medicationrequestDosageInstructionTimingRepeatTimeOfDay, String medicationrequestDosageInstructionTimingRepeatWhenCode, String medicationrequestDosageInstructionTimingRepeatGetOff, String medicationrequestDosageInstructionTimingRepeatHasOff, String medicationrequestEncounter, String medicationrequestEventHistory, String medicationrequestGroupIdentifierAssigner, String medicationrequestGroupIdentifierPeriodEnd, String medicationrequestGroupIdentifierPeriodStart, String medicationrequestGroupIdentifierSystem, String medicationrequestGroupIdentifierTypeCodingCode, String medicationrequestGroupIdentifierTypeCodingDisplay, String medicationrequestGroupIdentifierTypeCodingSystem, String medicationrequestGroupIdentifierTypeCodingUserSelected, String medicationrequestGroupIdentifierTypeCodingVersion, String medicationrequestGroupIdentifierTypeText, String medicationrequestGroupIdentifierUseCode, String medicationrequestGroupIdentifierValue, String medicationrequestIdentifierAssigner, String medicationrequestIdentifierPeriodEnd, String medicationrequestIdentifierPeriodStart, String medicationrequestIdentifierSystem, String medicationrequestIdentifierTypeCodingCode, String medicationrequestIdentifierTypeCodingDisplay, String medicationrequestIdentifierTypeCodingSystem, String medicationrequestIdentifierTypeCodingUserSelected, String medicationrequestIdentifierTypeCodingVersion, String medicationrequestIdentifierTypeText, String medicationrequestIdentifierUseCode, String medicationrequestInstantiatesCanonical, String medicationrequestInstantiatesUri, String medicationrequestInsurance, String medicationrequestIntentCode, String medicationrequestMedication, String medicationrequestNoteAuthor, String medicationrequestNoteText, String medicationrequestNoteTime, String medicationrequestPerformer, String medicationrequestPerformerTypeCodingCode, String medicationrequestPerformerTypeCodingDisplay, String medicationrequestPerformerTypeCodingSystem, String medicationrequestPerformerTypeCodingUserSelected, String medicationrequestPerformerTypeCodingVersion, String medicationrequestPerformerTypeText, String medicationrequestPriorPrescription, String medicationrequestPriorityCode, String medicationrequestReasonCodeCodingCode, String medicationrequestReasonCodeCodingDisplay, String medicationrequestReasonCodeCodingSystem, String medicationrequestReasonCodeCodingUserSelected, String medicationrequestReasonCodeCodingVersion, String medicationrequestReasonCodeText, String medicationrequestReasonReference, String medicationrequestRecorder, String medicationrequestReported, String medicationrequestRequester, String medicationrequestStatusCode, String medicationrequestStatusReasonCodingCode, String medicationrequestStatusReasonCodingDisplay, String medicationrequestStatusReasonCodingSystem, String medicationrequestStatusReasonCodingUserSelected, String medicationrequestStatusReasonCodingVersion, String medicationrequestStatusReasonText, String medicationrequestSubject, String medicationrequestSubstitutionAllowed, String medicationrequestSubstitutionReasonCodingCode, String medicationrequestSubstitutionReasonCodingDisplay, String medicationrequestSubstitutionReasonCodingSystem, String medicationrequestSubstitutionReasonCodingUserSelected, String medicationrequestSubstitutionReasonCodingVersion, String medicationrequestSubstitutionReasonText) {
-       this.medicationrequestIdentifierValue = medicationrequestIdentifierValue;
-       this.medicationrequestAuthoredOn = medicationrequestAuthoredOn;
-       this.medicationrequestBasedOn = medicationrequestBasedOn;
-       this.medicationrequestCategoryCodingCode = medicationrequestCategoryCodingCode;
-       this.medicationrequestCategoryCodingDisplay = medicationrequestCategoryCodingDisplay;
-       this.medicationrequestCategoryCodingSystem = medicationrequestCategoryCodingSystem;
-       this.medicationrequestCategoryCodingUserSelected = medicationrequestCategoryCodingUserSelected;
-       this.medicationrequestCategoryCodingVersion = medicationrequestCategoryCodingVersion;
-       this.medicationrequestCategoryText = medicationrequestCategoryText;
-       this.medicationrequestCourseOfTherapyTypeCodingCode = medicationrequestCourseOfTherapyTypeCodingCode;
-       this.medicationrequestCourseOfTherapyTypeCodingDisplay = medicationrequestCourseOfTherapyTypeCodingDisplay;
-       this.medicationrequestCourseOfTherapyTypeCodingSystem = medicationrequestCourseOfTherapyTypeCodingSystem;
-       this.medicationrequestCourseOfTherapyTypeCodingUserSelected = medicationrequestCourseOfTherapyTypeCodingUserSelected;
-       this.medicationrequestCourseOfTherapyTypeCodingVersion = medicationrequestCourseOfTherapyTypeCodingVersion;
-       this.medicationrequestCourseOfTherapyTypeText = medicationrequestCourseOfTherapyTypeText;
-       this.medicationrequestDetectedIssue = medicationrequestDetectedIssue;
-       this.medicationrequestDispenseRequestDispenseInterval = medicationrequestDispenseRequestDispenseInterval;
-       this.medicationrequestDispenseRequestExpectedSupplyDuration = medicationrequestDispenseRequestExpectedSupplyDuration;
-       this.medicationrequestDispenseRequestInitialFillDuration = medicationrequestDispenseRequestInitialFillDuration;
-       this.medicationrequestDispenseRequestInitialFillQuantityCode = medicationrequestDispenseRequestInitialFillQuantityCode;
-       this.mrDispenseRequestInitialFillQuantityComparatorCode = mrDispenseRequestInitialFillQuantityComparatorCode;
-       this.medicationrequestDispenseRequestInitialFillQuantitySystem = medicationrequestDispenseRequestInitialFillQuantitySystem;
-       this.medicationrequestDispenseRequestInitialFillQuantityUnit = medicationrequestDispenseRequestInitialFillQuantityUnit;
-       this.medicationrequestDispenseRequestInitialFillQuantityValue = medicationrequestDispenseRequestInitialFillQuantityValue;
-       this.medicationrequestDispenseRequestNumberOfRepeatsAllowed = medicationrequestDispenseRequestNumberOfRepeatsAllowed;
-       this.medicationrequestDispenseRequestPerformer = medicationrequestDispenseRequestPerformer;
-       this.medicationrequestDispenseRequestQuantityCode = medicationrequestDispenseRequestQuantityCode;
-       this.medicationrequestDispenseRequestQuantityComparatorCode = medicationrequestDispenseRequestQuantityComparatorCode;
-       this.medicationrequestDispenseRequestQuantitySystem = medicationrequestDispenseRequestQuantitySystem;
-       this.medicationrequestDispenseRequestQuantityUnit = medicationrequestDispenseRequestQuantityUnit;
-       this.medicationrequestDispenseRequestQuantityValue = medicationrequestDispenseRequestQuantityValue;
-       this.medicationrequestDispenseRequestValidityPeriodEnd = medicationrequestDispenseRequestValidityPeriodEnd;
-       this.medicationrequestDispenseRequestValidityPeriodStart = medicationrequestDispenseRequestValidityPeriodStart;
-       this.medicationrequestDoNotPerform = medicationrequestDoNotPerform;
-       this.mrDrAdditionalInstructionCodingCode = mrDrAdditionalInstructionCodingCode;
-       this.mrDrAdditionalInstructionCodingDisplay = mrDrAdditionalInstructionCodingDisplay;
-       this.mrDrAdditionalInstructionCodingSystem = mrDrAdditionalInstructionCodingSystem;
-       this.mrDrAdditionalInstructionCodingUs = mrDrAdditionalInstructionCodingUs;
-       this.mrDrAdditionalInstructionCodingVersion = mrDrAdditionalInstructionCodingVersion;
-       this.medicationrequestDosageInstructionAdditionalInstructionText = medicationrequestDosageInstructionAdditionalInstructionText;
-       this.medicationrequestDosageInstructionAsNeeded = medicationrequestDosageInstructionAsNeeded;
-       this.medicationrequestDosageInstructionDoseAndRateDose = medicationrequestDosageInstructionDoseAndRateDose;
-       this.medicationrequestDosageInstructionDoseAndRateRate = medicationrequestDosageInstructionDoseAndRateRate;
-       this.mrDrDoseAndRateTypeCodingCode = mrDrDoseAndRateTypeCodingCode;
-       this.mrDrDoseAndRateTypeCodingDisplay = mrDrDoseAndRateTypeCodingDisplay;
-       this.mrDrDoseAndRateTypeCodingSystem = mrDrDoseAndRateTypeCodingSystem;
-       this.mrDrDoseAndRateTypeCodingUs = mrDrDoseAndRateTypeCodingUs;
-       this.mrDrDoseAndRateTypeCodingVersion = mrDrDoseAndRateTypeCodingVersion;
-       this.medicationrequestDosageInstructionDoseAndRateTypeText = medicationrequestDosageInstructionDoseAndRateTypeText;
-       this.mrDrMaxDosePerAdministrationCode = mrDrMaxDosePerAdministrationCode;
-       this.mrDrMaxDosePerAdministrationComparatorCode = mrDrMaxDosePerAdministrationComparatorCode;
-       this.mrDrMaxDosePerAdministrationSystem = mrDrMaxDosePerAdministrationSystem;
-       this.mrDrMaxDosePerAdministrationUnit = mrDrMaxDosePerAdministrationUnit;
-       this.mrDrMaxDosePerAdministrationValue = mrDrMaxDosePerAdministrationValue;
-       this.medicationrequestDosageInstructionMaxDosePerLifetimeCode = medicationrequestDosageInstructionMaxDosePerLifetimeCode;
-       this.mrDrMaxDosePerLifetimeComparatorCode = mrDrMaxDosePerLifetimeComparatorCode;
-       this.medicationrequestDosageInstructionMaxDosePerLifetimeSystem = medicationrequestDosageInstructionMaxDosePerLifetimeSystem;
-       this.medicationrequestDosageInstructionMaxDosePerLifetimeUnit = medicationrequestDosageInstructionMaxDosePerLifetimeUnit;
-       this.medicationrequestDosageInstructionMaxDosePerLifetimeValue = medicationrequestDosageInstructionMaxDosePerLifetimeValue;
-       this.mrDrMaxDosePerPeriodDenominatorCode = mrDrMaxDosePerPeriodDenominatorCode;
-       this.mrDrMaxDosePerPeriodDenominatorComparatorCode = mrDrMaxDosePerPeriodDenominatorComparatorCode;
-       this.mrDrMaxDosePerPeriodDenominatorSystem = mrDrMaxDosePerPeriodDenominatorSystem;
-       this.mrDrMaxDosePerPeriodDenominatorUnit = mrDrMaxDosePerPeriodDenominatorUnit;
-       this.mrDrMaxDosePerPeriodDenominatorValue = mrDrMaxDosePerPeriodDenominatorValue;
-       this.mrDrMaxDosePerPeriodNumeratorCode = mrDrMaxDosePerPeriodNumeratorCode;
-       this.mrDrMaxDosePerPeriodNumeratorComparatorCode = mrDrMaxDosePerPeriodNumeratorComparatorCode;
-       this.mrDrMaxDosePerPeriodNumeratorSystem = mrDrMaxDosePerPeriodNumeratorSystem;
-       this.mrDrMaxDosePerPeriodNumeratorUnit = mrDrMaxDosePerPeriodNumeratorUnit;
-       this.mrDrMaxDosePerPeriodNumeratorValue = mrDrMaxDosePerPeriodNumeratorValue;
-       this.medicationrequestDosageInstructionMethodCodingCode = medicationrequestDosageInstructionMethodCodingCode;
-       this.medicationrequestDosageInstructionMethodCodingDisplay = medicationrequestDosageInstructionMethodCodingDisplay;
-       this.medicationrequestDosageInstructionMethodCodingSystem = medicationrequestDosageInstructionMethodCodingSystem;
-       this.medicationrequestDosageInstructionMethodCodingUserSelected = medicationrequestDosageInstructionMethodCodingUserSelected;
-       this.medicationrequestDosageInstructionMethodCodingVersion = medicationrequestDosageInstructionMethodCodingVersion;
-       this.medicationrequestDosageInstructionMethodText = medicationrequestDosageInstructionMethodText;
-       this.medicationrequestDosageInstructionPatientInstruction = medicationrequestDosageInstructionPatientInstruction;
-       this.medicationrequestDosageInstructionRouteCodingCode = medicationrequestDosageInstructionRouteCodingCode;
-       this.medicationrequestDosageInstructionRouteCodingDisplay = medicationrequestDosageInstructionRouteCodingDisplay;
-       this.medicationrequestDosageInstructionRouteCodingSystem = medicationrequestDosageInstructionRouteCodingSystem;
-       this.medicationrequestDosageInstructionRouteCodingUserSelected = medicationrequestDosageInstructionRouteCodingUserSelected;
-       this.medicationrequestDosageInstructionRouteCodingVersion = medicationrequestDosageInstructionRouteCodingVersion;
-       this.medicationrequestDosageInstructionRouteText = medicationrequestDosageInstructionRouteText;
-       this.medicationrequestDosageInstructionSequence = medicationrequestDosageInstructionSequence;
-       this.medicationrequestDosageInstructionSiteCodingCode = medicationrequestDosageInstructionSiteCodingCode;
-       this.medicationrequestDosageInstructionSiteCodingDisplay = medicationrequestDosageInstructionSiteCodingDisplay;
-       this.medicationrequestDosageInstructionSiteCodingSystem = medicationrequestDosageInstructionSiteCodingSystem;
-       this.medicationrequestDosageInstructionSiteCodingUserSelected = medicationrequestDosageInstructionSiteCodingUserSelected;
-       this.medicationrequestDosageInstructionSiteCodingVersion = medicationrequestDosageInstructionSiteCodingVersion;
-       this.medicationrequestDosageInstructionSiteText = medicationrequestDosageInstructionSiteText;
-       this.medicationrequestDosageInstructionText = medicationrequestDosageInstructionText;
-       this.medicationrequestDosageInstructionTimingCodeCodingCode = medicationrequestDosageInstructionTimingCodeCodingCode;
-       this.medicationrequestDosageInstructionTimingCodeCodingDisplay = medicationrequestDosageInstructionTimingCodeCodingDisplay;
-       this.medicationrequestDosageInstructionTimingCodeCodingSystem = medicationrequestDosageInstructionTimingCodeCodingSystem;
-       this.mrDrTimingCodeCodingUs = mrDrTimingCodeCodingUs;
-       this.medicationrequestDosageInstructionTimingCodeCodingVersion = medicationrequestDosageInstructionTimingCodeCodingVersion;
-       this.medicationrequestDosageInstructionTimingCodeText = medicationrequestDosageInstructionTimingCodeText;
-       this.medicationrequestDosageInstructionTimingEvent = medicationrequestDosageInstructionTimingEvent;
-       this.medicationrequestDosageInstructionTimingRepeatBounds = medicationrequestDosageInstructionTimingRepeatBounds;
-       this.medicationrequestDosageInstructionTimingRepeatCount = medicationrequestDosageInstructionTimingRepeatCount;
-       this.medicationrequestDosageInstructionTimingRepeatCountMax = medicationrequestDosageInstructionTimingRepeatCountMax;
-       this.mrDrTimingRepeatDayOfWeekCode = mrDrTimingRepeatDayOfWeekCode;
-       this.medicationrequestDosageInstructionTimingRepeatDuration = medicationrequestDosageInstructionTimingRepeatDuration;
-       this.medicationrequestDosageInstructionTimingRepeatDurationMax = medicationrequestDosageInstructionTimingRepeatDurationMax;
-       this.mrDrTimingRepeatDurationUnitCode = mrDrTimingRepeatDurationUnitCode;
-       this.medicationrequestDosageInstructionTimingRepeatFrequency = medicationrequestDosageInstructionTimingRepeatFrequency;
-       this.medicationrequestDosageInstructionTimingRepeatFrequencyMax = medicationrequestDosageInstructionTimingRepeatFrequencyMax;
-       this.medicationrequestDosageInstructionTimingRepeatOff = medicationrequestDosageInstructionTimingRepeatOff;
-       this.medicationrequestDosageInstructionTimingRepeatPeriod = medicationrequestDosageInstructionTimingRepeatPeriod;
-       this.medicationrequestDosageInstructionTimingRepeatPeriodMax = medicationrequestDosageInstructionTimingRepeatPeriodMax;
-       this.mrDrTimingRepeatPeriodUnitCode = mrDrTimingRepeatPeriodUnitCode;
-       this.medicationrequestDosageInstructionTimingRepeatTimeOfDay = medicationrequestDosageInstructionTimingRepeatTimeOfDay;
-       this.medicationrequestDosageInstructionTimingRepeatWhenCode = medicationrequestDosageInstructionTimingRepeatWhenCode;
-       this.medicationrequestDosageInstructionTimingRepeatGetOff = medicationrequestDosageInstructionTimingRepeatGetOff;
-       this.medicationrequestDosageInstructionTimingRepeatHasOff = medicationrequestDosageInstructionTimingRepeatHasOff;
-       this.medicationrequestEncounter = medicationrequestEncounter;
-       this.medicationrequestEventHistory = medicationrequestEventHistory;
-       this.medicationrequestGroupIdentifierAssigner = medicationrequestGroupIdentifierAssigner;
-       this.medicationrequestGroupIdentifierPeriodEnd = medicationrequestGroupIdentifierPeriodEnd;
-       this.medicationrequestGroupIdentifierPeriodStart = medicationrequestGroupIdentifierPeriodStart;
-       this.medicationrequestGroupIdentifierSystem = medicationrequestGroupIdentifierSystem;
-       this.medicationrequestGroupIdentifierTypeCodingCode = medicationrequestGroupIdentifierTypeCodingCode;
-       this.medicationrequestGroupIdentifierTypeCodingDisplay = medicationrequestGroupIdentifierTypeCodingDisplay;
-       this.medicationrequestGroupIdentifierTypeCodingSystem = medicationrequestGroupIdentifierTypeCodingSystem;
-       this.medicationrequestGroupIdentifierTypeCodingUserSelected = medicationrequestGroupIdentifierTypeCodingUserSelected;
-       this.medicationrequestGroupIdentifierTypeCodingVersion = medicationrequestGroupIdentifierTypeCodingVersion;
-       this.medicationrequestGroupIdentifierTypeText = medicationrequestGroupIdentifierTypeText;
-       this.medicationrequestGroupIdentifierUseCode = medicationrequestGroupIdentifierUseCode;
-       this.medicationrequestGroupIdentifierValue = medicationrequestGroupIdentifierValue;
-       this.medicationrequestIdentifierAssigner = medicationrequestIdentifierAssigner;
-       this.medicationrequestIdentifierPeriodEnd = medicationrequestIdentifierPeriodEnd;
-       this.medicationrequestIdentifierPeriodStart = medicationrequestIdentifierPeriodStart;
-       this.medicationrequestIdentifierSystem = medicationrequestIdentifierSystem;
-       this.medicationrequestIdentifierTypeCodingCode = medicationrequestIdentifierTypeCodingCode;
-       this.medicationrequestIdentifierTypeCodingDisplay = medicationrequestIdentifierTypeCodingDisplay;
-       this.medicationrequestIdentifierTypeCodingSystem = medicationrequestIdentifierTypeCodingSystem;
-       this.medicationrequestIdentifierTypeCodingUserSelected = medicationrequestIdentifierTypeCodingUserSelected;
-       this.medicationrequestIdentifierTypeCodingVersion = medicationrequestIdentifierTypeCodingVersion;
-       this.medicationrequestIdentifierTypeText = medicationrequestIdentifierTypeText;
-       this.medicationrequestIdentifierUseCode = medicationrequestIdentifierUseCode;
-       this.medicationrequestInstantiatesCanonical = medicationrequestInstantiatesCanonical;
-       this.medicationrequestInstantiatesUri = medicationrequestInstantiatesUri;
-       this.medicationrequestInsurance = medicationrequestInsurance;
-       this.medicationrequestIntentCode = medicationrequestIntentCode;
-       this.medicationrequestMedication = medicationrequestMedication;
-       this.medicationrequestNoteAuthor = medicationrequestNoteAuthor;
-       this.medicationrequestNoteText = medicationrequestNoteText;
-       this.medicationrequestNoteTime = medicationrequestNoteTime;
-       this.medicationrequestPerformer = medicationrequestPerformer;
-       this.medicationrequestPerformerTypeCodingCode = medicationrequestPerformerTypeCodingCode;
-       this.medicationrequestPerformerTypeCodingDisplay = medicationrequestPerformerTypeCodingDisplay;
-       this.medicationrequestPerformerTypeCodingSystem = medicationrequestPerformerTypeCodingSystem;
-       this.medicationrequestPerformerTypeCodingUserSelected = medicationrequestPerformerTypeCodingUserSelected;
-       this.medicationrequestPerformerTypeCodingVersion = medicationrequestPerformerTypeCodingVersion;
-       this.medicationrequestPerformerTypeText = medicationrequestPerformerTypeText;
-       this.medicationrequestPriorPrescription = medicationrequestPriorPrescription;
-       this.medicationrequestPriorityCode = medicationrequestPriorityCode;
-       this.medicationrequestReasonCodeCodingCode = medicationrequestReasonCodeCodingCode;
-       this.medicationrequestReasonCodeCodingDisplay = medicationrequestReasonCodeCodingDisplay;
-       this.medicationrequestReasonCodeCodingSystem = medicationrequestReasonCodeCodingSystem;
-       this.medicationrequestReasonCodeCodingUserSelected = medicationrequestReasonCodeCodingUserSelected;
-       this.medicationrequestReasonCodeCodingVersion = medicationrequestReasonCodeCodingVersion;
-       this.medicationrequestReasonCodeText = medicationrequestReasonCodeText;
-       this.medicationrequestReasonReference = medicationrequestReasonReference;
-       this.medicationrequestRecorder = medicationrequestRecorder;
-       this.medicationrequestReported = medicationrequestReported;
-       this.medicationrequestRequester = medicationrequestRequester;
-       this.medicationrequestStatusCode = medicationrequestStatusCode;
-       this.medicationrequestStatusReasonCodingCode = medicationrequestStatusReasonCodingCode;
-       this.medicationrequestStatusReasonCodingDisplay = medicationrequestStatusReasonCodingDisplay;
-       this.medicationrequestStatusReasonCodingSystem = medicationrequestStatusReasonCodingSystem;
-       this.medicationrequestStatusReasonCodingUserSelected = medicationrequestStatusReasonCodingUserSelected;
-       this.medicationrequestStatusReasonCodingVersion = medicationrequestStatusReasonCodingVersion;
-       this.medicationrequestStatusReasonText = medicationrequestStatusReasonText;
-       this.medicationrequestSubject = medicationrequestSubject;
-       this.medicationrequestSubstitutionAllowed = medicationrequestSubstitutionAllowed;
-       this.medicationrequestSubstitutionReasonCodingCode = medicationrequestSubstitutionReasonCodingCode;
-       this.medicationrequestSubstitutionReasonCodingDisplay = medicationrequestSubstitutionReasonCodingDisplay;
-       this.medicationrequestSubstitutionReasonCodingSystem = medicationrequestSubstitutionReasonCodingSystem;
-       this.medicationrequestSubstitutionReasonCodingUserSelected = medicationrequestSubstitutionReasonCodingUserSelected;
-       this.medicationrequestSubstitutionReasonCodingVersion = medicationrequestSubstitutionReasonCodingVersion;
-       this.medicationrequestSubstitutionReasonText = medicationrequestSubstitutionReasonText;
+    public MedicationRequest(String medreqAuthoredOn, String medreqBasedOn, String medreqCategoryCodingCode, String medreqCategoryCodingDisplay, String medreqCategoryCodingSystem, String medreqCategoryCodingUsrslt, String medreqCategoryCodingVersion, String medreqCategoryText, String medreqCourseOfTherapyTypeCodingCode, String medreqCourseOfTherapyTypeCodingDisplay, String medreqCourseOfTherapyTypeCodingSystem, String medreqCourseOfTherapyTypeCodingUsrslt, String medreqCourseOfTherapyTypeCodingVersion, String medreqCourseOfTherapyTypeText, String medreqDetectedIssue, String medreqDispenseRequestDispenseInterval, String medreqDispenseRequestExpectedSupplyDuration, String medreqDispenseRequestInitialFillDuration, String medreqDispenseRequestInitialFillQuantityCode, String medreqDispenseRequestInitialFillQuantityCompartrCode, String medreqDispenseRequestInitialFillQuantitySystem, String medreqDispenseRequestInitialFillQuantityUnit, String medreqDispenseRequestInitialFillQuantityValue, String medreqDispenseRequestNumberOfRepeatsAllowed, String medreqDispenseRequestPerformer, String medreqDispenseRequestQuantityCode, String medreqDispenseRequestQuantityCompartrCode, String medreqDispenseRequestQuantitySystem, String medreqDispenseRequestQuantityUnit, String medreqDispenseRequestQuantityValue, String medreqDispenseRequestValidityPeriodEnd, String medreqDispenseRequestValidityPeriodStart, String medreqDoNotPerform, String medreqDoseinsAdditionalInstructionCodingCode, String medreqDoseinsAdditionalInstructionCodingDisplay, String medreqDoseinsAdditionalInstructionCodingSystem, String medreqDoseinsAdditionalInstructionCodingUsrslt, String medreqDoseinsAdditionalInstructionCodingVersion, String medreqDoseinsAdditionalInstructionText, String medicationrequestDosageInstructionAsNeededBoolean, String medreqDoseinsAsNeededCodeableConceptCodingCode, String medreqDoseinsAsNeededCodeableConceptCodingDisplay, String medreqDoseinsAsNeededCodeableConceptCodingSystem, String medreqDoseinsAsNeededCodeableConceptCodingUsrslt, String medreqDoseinsAsNeededCodeableConceptCodingVersion, String medreqDoseinsAsNeededCodeableConceptText, String medreqDoseinsDoseAndRateDoseQuantityCode, String medreqDoseinsDoseAndRateDoseQuantityCompartrCode, String medreqDoseinsDoseAndRateDoseQuantitySystem, String medreqDoseinsDoseAndRateDoseQuantityUnit, String medreqDoseinsDoseAndRateDoseQuantityValue, String medreqDoseinsDoseAndRateDoseRangeHighCode, String medreqDoseinsDoseAndRateDoseRangeHighCompartrCode, String medreqDoseinsDoseAndRateDoseRangeHighSystem, String medreqDoseinsDoseAndRateDoseRangeHighUnit, String medreqDoseinsDoseAndRateDoseRangeHighValue, String medreqDoseinsDoseAndRateDoseRangeLowCode, String medreqDoseinsDoseAndRateDoseRangeLowCompartrCode, String medreqDoseinsDoseAndRateDoseRangeLowSystem, String medreqDoseinsDoseAndRateDoseRangeLowUnit, String medreqDoseinsDoseAndRateDoseRangeLowValue, String medreqDoseinsDoseAndRateRateQuantityCode, String medreqDoseinsDoseAndRateRateQuantityCompartrCode, String medreqDoseinsDoseAndRateRateQuantitySystem, String medreqDoseinsDoseAndRateRateQuantityUnit, String medreqDoseinsDoseAndRateRateQuantityValue, String medreqDoseinsDoseAndRateRateRangeHighCode, String medreqDoseinsDoseAndRateRateRangeHighCompartrCode, String medreqDoseinsDoseAndRateRateRangeHighSystem, String medreqDoseinsDoseAndRateRateRangeHighUnit, String medreqDoseinsDoseAndRateRateRangeHighValue, String medreqDoseinsDoseAndRateRateRangeLowCode, String medreqDoseinsDoseAndRateRateRangeLowCompartrCode, String medreqDoseinsDoseAndRateRateRangeLowSystem, String medreqDoseinsDoseAndRateRateRangeLowUnit, String medreqDoseinsDoseAndRateRateRangeLowValue, String medreqDoseinsDoseAndRateRateRatioDenomCode, String medreqDoseinsDoseAndRateRateRatioDenomCompartrCode, String medreqDoseinsDoseAndRateRateRatioDenomSystem, String medreqDoseinsDoseAndRateRateRatioDenomUnit, String medreqDoseinsDoseAndRateRateRatioDenomValue, String medreqDoseinsDoseAndRateRateRatioNumeratorCode, String medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode, String medreqDoseinsDoseAndRateRateRatioNumeratorSystem, String medreqDoseinsDoseAndRateRateRatioNumeratorUnit, String medreqDoseinsDoseAndRateRateRatioNumeratorValue, String medreqDoseinsDoseAndRateTypeCodingCode, String medreqDoseinsDoseAndRateTypeCodingDisplay, String medreqDoseinsDoseAndRateTypeCodingSystem, String medreqDoseinsDoseAndRateTypeCodingUsrslt, String medreqDoseinsDoseAndRateTypeCodingVersion, String medreqDoseinsDoseAndRateTypeText, String medreqDoseinsMaxDosePerAdministrationCode, String medreqDoseinsMaxDosePerAdministrationCompartrCode, String medreqDoseinsMaxDosePerAdministrationSystem, String medreqDoseinsMaxDosePerAdministrationUnit, String medreqDoseinsMaxDosePerAdministrationValue, String medreqDoseinsMaxDosePerLifetimeCode, String medreqDoseinsMaxDosePerLifetimeCompartrCode, String medreqDoseinsMaxDosePerLifetimeSystem, String medreqDoseinsMaxDosePerLifetimeUnit, String medreqDoseinsMaxDosePerLifetimeValue, String medreqDoseinsMaxDosePerPeriodDenomCode, String medreqDoseinsMaxDosePerPeriodDenomCompartrCode, String medreqDoseinsMaxDosePerPeriodDenomSystem, String medreqDoseinsMaxDosePerPeriodDenomUnit, String medreqDoseinsMaxDosePerPeriodDenomValue, String medreqDoseinsMaxDosePerPeriodNumeratorCode, String medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode, String medreqDoseinsMaxDosePerPeriodNumeratorSystem, String medreqDoseinsMaxDosePerPeriodNumeratorUnit, String medreqDoseinsMaxDosePerPeriodNumeratorValue, String medreqDoseinsMethodCodingCode, String medreqDoseinsMethodCodingDisplay, String medreqDoseinsMethodCodingSystem, String medreqDoseinsMethodCodingUsrslt, String medreqDoseinsMethodCodingVersion, String medreqDoseinsMethodText, String medreqDoseinsPatientInstruction, String medreqDoseinsRouteCodingCode, String medreqDoseinsRouteCodingDisplay, String medreqDoseinsRouteCodingSystem, String medreqDoseinsRouteCodingUsrslt, String medreqDoseinsRouteCodingVersion, String medreqDoseinsRouteText, String medreqDoseinsSequence, String medreqDoseinsSiteCodingCode, String medreqDoseinsSiteCodingDisplay, String medreqDoseinsSiteCodingSystem, String medreqDoseinsSiteCodingUsrslt, String medreqDoseinsSiteCodingVersion, String medreqDoseinsSiteText, String medreqDoseinsText, String medreqDoseinsTimingCodeCodingCode, String medreqDoseinsTimingCodeCodingDisplay, String medreqDoseinsTimingCodeCodingSystem, String medreqDoseinsTimingCodeCodingUsrslt, String medreqDoseinsTimingCodeCodingVersion, String medreqDoseinsTimingCodeText, String medreqDoseinsTimingEvent, String medreqDoseinsTimingRepeatBoundsDurationCode, String medreqDoseinsTimingRepeatBoundsDurationCompartrCode, String medreqDoseinsTimingRepeatBoundsDurationSystem, String medreqDoseinsTimingRepeatBoundsDurationUnit, String medreqDoseinsTimingRepeatBoundsDurationValue, String medreqDoseinsTimingRepeatBoundsPeriodEnd, String medreqDoseinsTimingRepeatBoundsPeriodStart, String medreqDoseinsTimingRepeatBoundsRangeHighCode, String medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode, String medreqDoseinsTimingRepeatBoundsRangeHighSystem, String medreqDoseinsTimingRepeatBoundsRangeHighUnit, String medreqDoseinsTimingRepeatBoundsRangeHighValue, String medreqDoseinsTimingRepeatBoundsRangeLowCode, String medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode, String medreqDoseinsTimingRepeatBoundsRangeLowSystem, String medreqDoseinsTimingRepeatBoundsRangeLowUnit, String medreqDoseinsTimingRepeatBoundsRangeLowValue, String medreqDoseinsTimingRepeatCount, String medreqDoseinsTimingRepeatCountMax, String medreqDoseinsTimingRepeatDayOfWeekCode, String medreqDoseinsTimingRepeatDuration, String medreqDoseinsTimingRepeatDurationMax, String medreqDoseinsTimingRepeatDurationUnitCode, String medreqDoseinsTimingRepeatFrequency, String medreqDoseinsTimingRepeatFrequencyMax, String medreqDoseinsTimingRepeatOff, String medreqDoseinsTimingRepeatPeriod, String medreqDoseinsTimingRepeatPeriodMax, String medreqDoseinsTimingRepeatPeriodUnitCode, String medreqDoseinsTimingRepeatTimeOfDay, String medreqDoseinsTimingRepeatWhenCode, String medreqEnc, String medreqEventHistory, String medreqGroupIdAssigner, String medreqGroupIdPeriodEnd, String medreqGroupIdPeriodStart, String medreqGroupIdSystem, String medreqGroupIdTypeCodingCode, String medreqGroupIdTypeCodingDisplay, String medreqGroupIdTypeCodingSystem, String medreqGroupIdTypeCodingUsrslt, String medreqGroupIdTypeCodingVersion, String medreqGroupIdTypeText, String medreqGroupIdUseCode, String medreqGroupIdValue, String medreqIdAssigner, String medreqIdPeriodEnd, String medreqIdPeriodStart, String medreqIdSystem, String medreqIdTypeCodingCode, String medreqIdTypeCodingDisplay, String medreqIdTypeCodingSystem, String medreqIdTypeCodingUsrslt, String medreqIdTypeCodingVersion, String medreqIdTypeText, String medreqIdUseCode, String medreqIdValue, String medreqInstantiatesCanonical, String medreqInstantiatesUri, String medreqInsurance, String medreqIntentCode, String medreqMedicationCodeableConceptCodingCode, String medreqMedicationCodeableConceptCodingDisplay, String medreqMedicationCodeableConceptCodingSystem, String medreqMedicationCodeableConceptCodingUsrslt, String medreqMedicationCodeableConceptCodingVersion, String medreqMedicationCodeableConceptText, String medicationrequestMedicationReference, String medicationrequestNoteAuthorReference, String medicationrequestNoteAuthorString, String medreqNoteText, String medreqNoteTime, String medreqPerformer, String medreqPerformerTypeCodingCode, String medreqPerformerTypeCodingDisplay, String medreqPerformerTypeCodingSystem, String medreqPerformerTypeCodingUsrslt, String medreqPerformerTypeCodingVersion, String medreqPerformerTypeText, String medreqPriorPrescription, String medreqPriorityCode, String medreqReasonCodeCodingCode, String medreqReasonCodeCodingDisplay, String medreqReasonCodeCodingSystem, String medreqReasonCodeCodingUsrslt, String medreqReasonCodeCodingVersion, String medreqReasonCodeText, String medreqReasonReference, String medreqRecorder, String medicationrequestReportedBoolean, String medicationrequestReportedReference, String medreqRequester, String medreqStatusCode, String medreqStatusReasonCodingCode, String medreqStatusReasonCodingDisplay, String medreqStatusReasonCodingSystem, String medreqStatusReasonCodingUsrslt, String medreqStatusReasonCodingVersion, String medreqStatusReasonText, String medreqSubject, String medicationrequestSubstitutionAllowedBoolean, String medreqSubstitutionAllowedCodeableConceptCodingCode, String medreqSubstitutionAllowedCodeableConceptCodingDisplay, String medreqSubstitutionAllowedCodeableConceptCodingSystem, String medreqSubstitutionAllowedCodeableConceptCodingUsrslt, String medreqSubstitutionAllowedCodeableConceptCodingVersion, String medreqSubstitutionAllowedCodeableConceptText, String medreqSubstitutionReasonCodingCode, String medreqSubstitutionReasonCodingDisplay, String medreqSubstitutionReasonCodingSystem, String medreqSubstitutionReasonCodingUsrslt, String medreqSubstitutionReasonCodingVersion, String medreqSubstitutionReasonText, String medreqSupportingInformation) {
+       this.medreqAuthoredOn = medreqAuthoredOn;
+       this.medreqBasedOn = medreqBasedOn;
+       this.medreqCategoryCodingCode = medreqCategoryCodingCode;
+       this.medreqCategoryCodingDisplay = medreqCategoryCodingDisplay;
+       this.medreqCategoryCodingSystem = medreqCategoryCodingSystem;
+       this.medreqCategoryCodingUsrslt = medreqCategoryCodingUsrslt;
+       this.medreqCategoryCodingVersion = medreqCategoryCodingVersion;
+       this.medreqCategoryText = medreqCategoryText;
+       this.medreqCourseOfTherapyTypeCodingCode = medreqCourseOfTherapyTypeCodingCode;
+       this.medreqCourseOfTherapyTypeCodingDisplay = medreqCourseOfTherapyTypeCodingDisplay;
+       this.medreqCourseOfTherapyTypeCodingSystem = medreqCourseOfTherapyTypeCodingSystem;
+       this.medreqCourseOfTherapyTypeCodingUsrslt = medreqCourseOfTherapyTypeCodingUsrslt;
+       this.medreqCourseOfTherapyTypeCodingVersion = medreqCourseOfTherapyTypeCodingVersion;
+       this.medreqCourseOfTherapyTypeText = medreqCourseOfTherapyTypeText;
+       this.medreqDetectedIssue = medreqDetectedIssue;
+       this.medreqDispenseRequestDispenseInterval = medreqDispenseRequestDispenseInterval;
+       this.medreqDispenseRequestExpectedSupplyDuration = medreqDispenseRequestExpectedSupplyDuration;
+       this.medreqDispenseRequestInitialFillDuration = medreqDispenseRequestInitialFillDuration;
+       this.medreqDispenseRequestInitialFillQuantityCode = medreqDispenseRequestInitialFillQuantityCode;
+       this.medreqDispenseRequestInitialFillQuantityCompartrCode = medreqDispenseRequestInitialFillQuantityCompartrCode;
+       this.medreqDispenseRequestInitialFillQuantitySystem = medreqDispenseRequestInitialFillQuantitySystem;
+       this.medreqDispenseRequestInitialFillQuantityUnit = medreqDispenseRequestInitialFillQuantityUnit;
+       this.medreqDispenseRequestInitialFillQuantityValue = medreqDispenseRequestInitialFillQuantityValue;
+       this.medreqDispenseRequestNumberOfRepeatsAllowed = medreqDispenseRequestNumberOfRepeatsAllowed;
+       this.medreqDispenseRequestPerformer = medreqDispenseRequestPerformer;
+       this.medreqDispenseRequestQuantityCode = medreqDispenseRequestQuantityCode;
+       this.medreqDispenseRequestQuantityCompartrCode = medreqDispenseRequestQuantityCompartrCode;
+       this.medreqDispenseRequestQuantitySystem = medreqDispenseRequestQuantitySystem;
+       this.medreqDispenseRequestQuantityUnit = medreqDispenseRequestQuantityUnit;
+       this.medreqDispenseRequestQuantityValue = medreqDispenseRequestQuantityValue;
+       this.medreqDispenseRequestValidityPeriodEnd = medreqDispenseRequestValidityPeriodEnd;
+       this.medreqDispenseRequestValidityPeriodStart = medreqDispenseRequestValidityPeriodStart;
+       this.medreqDoNotPerform = medreqDoNotPerform;
+       this.medreqDoseinsAdditionalInstructionCodingCode = medreqDoseinsAdditionalInstructionCodingCode;
+       this.medreqDoseinsAdditionalInstructionCodingDisplay = medreqDoseinsAdditionalInstructionCodingDisplay;
+       this.medreqDoseinsAdditionalInstructionCodingSystem = medreqDoseinsAdditionalInstructionCodingSystem;
+       this.medreqDoseinsAdditionalInstructionCodingUsrslt = medreqDoseinsAdditionalInstructionCodingUsrslt;
+       this.medreqDoseinsAdditionalInstructionCodingVersion = medreqDoseinsAdditionalInstructionCodingVersion;
+       this.medreqDoseinsAdditionalInstructionText = medreqDoseinsAdditionalInstructionText;
+       this.medicationrequestDosageInstructionAsNeededBoolean = medicationrequestDosageInstructionAsNeededBoolean;
+       this.medreqDoseinsAsNeededCodeableConceptCodingCode = medreqDoseinsAsNeededCodeableConceptCodingCode;
+       this.medreqDoseinsAsNeededCodeableConceptCodingDisplay = medreqDoseinsAsNeededCodeableConceptCodingDisplay;
+       this.medreqDoseinsAsNeededCodeableConceptCodingSystem = medreqDoseinsAsNeededCodeableConceptCodingSystem;
+       this.medreqDoseinsAsNeededCodeableConceptCodingUsrslt = medreqDoseinsAsNeededCodeableConceptCodingUsrslt;
+       this.medreqDoseinsAsNeededCodeableConceptCodingVersion = medreqDoseinsAsNeededCodeableConceptCodingVersion;
+       this.medreqDoseinsAsNeededCodeableConceptText = medreqDoseinsAsNeededCodeableConceptText;
+       this.medreqDoseinsDoseAndRateDoseQuantityCode = medreqDoseinsDoseAndRateDoseQuantityCode;
+       this.medreqDoseinsDoseAndRateDoseQuantityCompartrCode = medreqDoseinsDoseAndRateDoseQuantityCompartrCode;
+       this.medreqDoseinsDoseAndRateDoseQuantitySystem = medreqDoseinsDoseAndRateDoseQuantitySystem;
+       this.medreqDoseinsDoseAndRateDoseQuantityUnit = medreqDoseinsDoseAndRateDoseQuantityUnit;
+       this.medreqDoseinsDoseAndRateDoseQuantityValue = medreqDoseinsDoseAndRateDoseQuantityValue;
+       this.medreqDoseinsDoseAndRateDoseRangeHighCode = medreqDoseinsDoseAndRateDoseRangeHighCode;
+       this.medreqDoseinsDoseAndRateDoseRangeHighCompartrCode = medreqDoseinsDoseAndRateDoseRangeHighCompartrCode;
+       this.medreqDoseinsDoseAndRateDoseRangeHighSystem = medreqDoseinsDoseAndRateDoseRangeHighSystem;
+       this.medreqDoseinsDoseAndRateDoseRangeHighUnit = medreqDoseinsDoseAndRateDoseRangeHighUnit;
+       this.medreqDoseinsDoseAndRateDoseRangeHighValue = medreqDoseinsDoseAndRateDoseRangeHighValue;
+       this.medreqDoseinsDoseAndRateDoseRangeLowCode = medreqDoseinsDoseAndRateDoseRangeLowCode;
+       this.medreqDoseinsDoseAndRateDoseRangeLowCompartrCode = medreqDoseinsDoseAndRateDoseRangeLowCompartrCode;
+       this.medreqDoseinsDoseAndRateDoseRangeLowSystem = medreqDoseinsDoseAndRateDoseRangeLowSystem;
+       this.medreqDoseinsDoseAndRateDoseRangeLowUnit = medreqDoseinsDoseAndRateDoseRangeLowUnit;
+       this.medreqDoseinsDoseAndRateDoseRangeLowValue = medreqDoseinsDoseAndRateDoseRangeLowValue;
+       this.medreqDoseinsDoseAndRateRateQuantityCode = medreqDoseinsDoseAndRateRateQuantityCode;
+       this.medreqDoseinsDoseAndRateRateQuantityCompartrCode = medreqDoseinsDoseAndRateRateQuantityCompartrCode;
+       this.medreqDoseinsDoseAndRateRateQuantitySystem = medreqDoseinsDoseAndRateRateQuantitySystem;
+       this.medreqDoseinsDoseAndRateRateQuantityUnit = medreqDoseinsDoseAndRateRateQuantityUnit;
+       this.medreqDoseinsDoseAndRateRateQuantityValue = medreqDoseinsDoseAndRateRateQuantityValue;
+       this.medreqDoseinsDoseAndRateRateRangeHighCode = medreqDoseinsDoseAndRateRateRangeHighCode;
+       this.medreqDoseinsDoseAndRateRateRangeHighCompartrCode = medreqDoseinsDoseAndRateRateRangeHighCompartrCode;
+       this.medreqDoseinsDoseAndRateRateRangeHighSystem = medreqDoseinsDoseAndRateRateRangeHighSystem;
+       this.medreqDoseinsDoseAndRateRateRangeHighUnit = medreqDoseinsDoseAndRateRateRangeHighUnit;
+       this.medreqDoseinsDoseAndRateRateRangeHighValue = medreqDoseinsDoseAndRateRateRangeHighValue;
+       this.medreqDoseinsDoseAndRateRateRangeLowCode = medreqDoseinsDoseAndRateRateRangeLowCode;
+       this.medreqDoseinsDoseAndRateRateRangeLowCompartrCode = medreqDoseinsDoseAndRateRateRangeLowCompartrCode;
+       this.medreqDoseinsDoseAndRateRateRangeLowSystem = medreqDoseinsDoseAndRateRateRangeLowSystem;
+       this.medreqDoseinsDoseAndRateRateRangeLowUnit = medreqDoseinsDoseAndRateRateRangeLowUnit;
+       this.medreqDoseinsDoseAndRateRateRangeLowValue = medreqDoseinsDoseAndRateRateRangeLowValue;
+       this.medreqDoseinsDoseAndRateRateRatioDenomCode = medreqDoseinsDoseAndRateRateRatioDenomCode;
+       this.medreqDoseinsDoseAndRateRateRatioDenomCompartrCode = medreqDoseinsDoseAndRateRateRatioDenomCompartrCode;
+       this.medreqDoseinsDoseAndRateRateRatioDenomSystem = medreqDoseinsDoseAndRateRateRatioDenomSystem;
+       this.medreqDoseinsDoseAndRateRateRatioDenomUnit = medreqDoseinsDoseAndRateRateRatioDenomUnit;
+       this.medreqDoseinsDoseAndRateRateRatioDenomValue = medreqDoseinsDoseAndRateRateRatioDenomValue;
+       this.medreqDoseinsDoseAndRateRateRatioNumeratorCode = medreqDoseinsDoseAndRateRateRatioNumeratorCode;
+       this.medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode = medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode;
+       this.medreqDoseinsDoseAndRateRateRatioNumeratorSystem = medreqDoseinsDoseAndRateRateRatioNumeratorSystem;
+       this.medreqDoseinsDoseAndRateRateRatioNumeratorUnit = medreqDoseinsDoseAndRateRateRatioNumeratorUnit;
+       this.medreqDoseinsDoseAndRateRateRatioNumeratorValue = medreqDoseinsDoseAndRateRateRatioNumeratorValue;
+       this.medreqDoseinsDoseAndRateTypeCodingCode = medreqDoseinsDoseAndRateTypeCodingCode;
+       this.medreqDoseinsDoseAndRateTypeCodingDisplay = medreqDoseinsDoseAndRateTypeCodingDisplay;
+       this.medreqDoseinsDoseAndRateTypeCodingSystem = medreqDoseinsDoseAndRateTypeCodingSystem;
+       this.medreqDoseinsDoseAndRateTypeCodingUsrslt = medreqDoseinsDoseAndRateTypeCodingUsrslt;
+       this.medreqDoseinsDoseAndRateTypeCodingVersion = medreqDoseinsDoseAndRateTypeCodingVersion;
+       this.medreqDoseinsDoseAndRateTypeText = medreqDoseinsDoseAndRateTypeText;
+       this.medreqDoseinsMaxDosePerAdministrationCode = medreqDoseinsMaxDosePerAdministrationCode;
+       this.medreqDoseinsMaxDosePerAdministrationCompartrCode = medreqDoseinsMaxDosePerAdministrationCompartrCode;
+       this.medreqDoseinsMaxDosePerAdministrationSystem = medreqDoseinsMaxDosePerAdministrationSystem;
+       this.medreqDoseinsMaxDosePerAdministrationUnit = medreqDoseinsMaxDosePerAdministrationUnit;
+       this.medreqDoseinsMaxDosePerAdministrationValue = medreqDoseinsMaxDosePerAdministrationValue;
+       this.medreqDoseinsMaxDosePerLifetimeCode = medreqDoseinsMaxDosePerLifetimeCode;
+       this.medreqDoseinsMaxDosePerLifetimeCompartrCode = medreqDoseinsMaxDosePerLifetimeCompartrCode;
+       this.medreqDoseinsMaxDosePerLifetimeSystem = medreqDoseinsMaxDosePerLifetimeSystem;
+       this.medreqDoseinsMaxDosePerLifetimeUnit = medreqDoseinsMaxDosePerLifetimeUnit;
+       this.medreqDoseinsMaxDosePerLifetimeValue = medreqDoseinsMaxDosePerLifetimeValue;
+       this.medreqDoseinsMaxDosePerPeriodDenomCode = medreqDoseinsMaxDosePerPeriodDenomCode;
+       this.medreqDoseinsMaxDosePerPeriodDenomCompartrCode = medreqDoseinsMaxDosePerPeriodDenomCompartrCode;
+       this.medreqDoseinsMaxDosePerPeriodDenomSystem = medreqDoseinsMaxDosePerPeriodDenomSystem;
+       this.medreqDoseinsMaxDosePerPeriodDenomUnit = medreqDoseinsMaxDosePerPeriodDenomUnit;
+       this.medreqDoseinsMaxDosePerPeriodDenomValue = medreqDoseinsMaxDosePerPeriodDenomValue;
+       this.medreqDoseinsMaxDosePerPeriodNumeratorCode = medreqDoseinsMaxDosePerPeriodNumeratorCode;
+       this.medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode = medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode;
+       this.medreqDoseinsMaxDosePerPeriodNumeratorSystem = medreqDoseinsMaxDosePerPeriodNumeratorSystem;
+       this.medreqDoseinsMaxDosePerPeriodNumeratorUnit = medreqDoseinsMaxDosePerPeriodNumeratorUnit;
+       this.medreqDoseinsMaxDosePerPeriodNumeratorValue = medreqDoseinsMaxDosePerPeriodNumeratorValue;
+       this.medreqDoseinsMethodCodingCode = medreqDoseinsMethodCodingCode;
+       this.medreqDoseinsMethodCodingDisplay = medreqDoseinsMethodCodingDisplay;
+       this.medreqDoseinsMethodCodingSystem = medreqDoseinsMethodCodingSystem;
+       this.medreqDoseinsMethodCodingUsrslt = medreqDoseinsMethodCodingUsrslt;
+       this.medreqDoseinsMethodCodingVersion = medreqDoseinsMethodCodingVersion;
+       this.medreqDoseinsMethodText = medreqDoseinsMethodText;
+       this.medreqDoseinsPatientInstruction = medreqDoseinsPatientInstruction;
+       this.medreqDoseinsRouteCodingCode = medreqDoseinsRouteCodingCode;
+       this.medreqDoseinsRouteCodingDisplay = medreqDoseinsRouteCodingDisplay;
+       this.medreqDoseinsRouteCodingSystem = medreqDoseinsRouteCodingSystem;
+       this.medreqDoseinsRouteCodingUsrslt = medreqDoseinsRouteCodingUsrslt;
+       this.medreqDoseinsRouteCodingVersion = medreqDoseinsRouteCodingVersion;
+       this.medreqDoseinsRouteText = medreqDoseinsRouteText;
+       this.medreqDoseinsSequence = medreqDoseinsSequence;
+       this.medreqDoseinsSiteCodingCode = medreqDoseinsSiteCodingCode;
+       this.medreqDoseinsSiteCodingDisplay = medreqDoseinsSiteCodingDisplay;
+       this.medreqDoseinsSiteCodingSystem = medreqDoseinsSiteCodingSystem;
+       this.medreqDoseinsSiteCodingUsrslt = medreqDoseinsSiteCodingUsrslt;
+       this.medreqDoseinsSiteCodingVersion = medreqDoseinsSiteCodingVersion;
+       this.medreqDoseinsSiteText = medreqDoseinsSiteText;
+       this.medreqDoseinsText = medreqDoseinsText;
+       this.medreqDoseinsTimingCodeCodingCode = medreqDoseinsTimingCodeCodingCode;
+       this.medreqDoseinsTimingCodeCodingDisplay = medreqDoseinsTimingCodeCodingDisplay;
+       this.medreqDoseinsTimingCodeCodingSystem = medreqDoseinsTimingCodeCodingSystem;
+       this.medreqDoseinsTimingCodeCodingUsrslt = medreqDoseinsTimingCodeCodingUsrslt;
+       this.medreqDoseinsTimingCodeCodingVersion = medreqDoseinsTimingCodeCodingVersion;
+       this.medreqDoseinsTimingCodeText = medreqDoseinsTimingCodeText;
+       this.medreqDoseinsTimingEvent = medreqDoseinsTimingEvent;
+       this.medreqDoseinsTimingRepeatBoundsDurationCode = medreqDoseinsTimingRepeatBoundsDurationCode;
+       this.medreqDoseinsTimingRepeatBoundsDurationCompartrCode = medreqDoseinsTimingRepeatBoundsDurationCompartrCode;
+       this.medreqDoseinsTimingRepeatBoundsDurationSystem = medreqDoseinsTimingRepeatBoundsDurationSystem;
+       this.medreqDoseinsTimingRepeatBoundsDurationUnit = medreqDoseinsTimingRepeatBoundsDurationUnit;
+       this.medreqDoseinsTimingRepeatBoundsDurationValue = medreqDoseinsTimingRepeatBoundsDurationValue;
+       this.medreqDoseinsTimingRepeatBoundsPeriodEnd = medreqDoseinsTimingRepeatBoundsPeriodEnd;
+       this.medreqDoseinsTimingRepeatBoundsPeriodStart = medreqDoseinsTimingRepeatBoundsPeriodStart;
+       this.medreqDoseinsTimingRepeatBoundsRangeHighCode = medreqDoseinsTimingRepeatBoundsRangeHighCode;
+       this.medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode = medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode;
+       this.medreqDoseinsTimingRepeatBoundsRangeHighSystem = medreqDoseinsTimingRepeatBoundsRangeHighSystem;
+       this.medreqDoseinsTimingRepeatBoundsRangeHighUnit = medreqDoseinsTimingRepeatBoundsRangeHighUnit;
+       this.medreqDoseinsTimingRepeatBoundsRangeHighValue = medreqDoseinsTimingRepeatBoundsRangeHighValue;
+       this.medreqDoseinsTimingRepeatBoundsRangeLowCode = medreqDoseinsTimingRepeatBoundsRangeLowCode;
+       this.medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode = medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode;
+       this.medreqDoseinsTimingRepeatBoundsRangeLowSystem = medreqDoseinsTimingRepeatBoundsRangeLowSystem;
+       this.medreqDoseinsTimingRepeatBoundsRangeLowUnit = medreqDoseinsTimingRepeatBoundsRangeLowUnit;
+       this.medreqDoseinsTimingRepeatBoundsRangeLowValue = medreqDoseinsTimingRepeatBoundsRangeLowValue;
+       this.medreqDoseinsTimingRepeatCount = medreqDoseinsTimingRepeatCount;
+       this.medreqDoseinsTimingRepeatCountMax = medreqDoseinsTimingRepeatCountMax;
+       this.medreqDoseinsTimingRepeatDayOfWeekCode = medreqDoseinsTimingRepeatDayOfWeekCode;
+       this.medreqDoseinsTimingRepeatDuration = medreqDoseinsTimingRepeatDuration;
+       this.medreqDoseinsTimingRepeatDurationMax = medreqDoseinsTimingRepeatDurationMax;
+       this.medreqDoseinsTimingRepeatDurationUnitCode = medreqDoseinsTimingRepeatDurationUnitCode;
+       this.medreqDoseinsTimingRepeatFrequency = medreqDoseinsTimingRepeatFrequency;
+       this.medreqDoseinsTimingRepeatFrequencyMax = medreqDoseinsTimingRepeatFrequencyMax;
+       this.medreqDoseinsTimingRepeatOff = medreqDoseinsTimingRepeatOff;
+       this.medreqDoseinsTimingRepeatPeriod = medreqDoseinsTimingRepeatPeriod;
+       this.medreqDoseinsTimingRepeatPeriodMax = medreqDoseinsTimingRepeatPeriodMax;
+       this.medreqDoseinsTimingRepeatPeriodUnitCode = medreqDoseinsTimingRepeatPeriodUnitCode;
+       this.medreqDoseinsTimingRepeatTimeOfDay = medreqDoseinsTimingRepeatTimeOfDay;
+       this.medreqDoseinsTimingRepeatWhenCode = medreqDoseinsTimingRepeatWhenCode;
+       this.medreqEnc = medreqEnc;
+       this.medreqEventHistory = medreqEventHistory;
+       this.medreqGroupIdAssigner = medreqGroupIdAssigner;
+       this.medreqGroupIdPeriodEnd = medreqGroupIdPeriodEnd;
+       this.medreqGroupIdPeriodStart = medreqGroupIdPeriodStart;
+       this.medreqGroupIdSystem = medreqGroupIdSystem;
+       this.medreqGroupIdTypeCodingCode = medreqGroupIdTypeCodingCode;
+       this.medreqGroupIdTypeCodingDisplay = medreqGroupIdTypeCodingDisplay;
+       this.medreqGroupIdTypeCodingSystem = medreqGroupIdTypeCodingSystem;
+       this.medreqGroupIdTypeCodingUsrslt = medreqGroupIdTypeCodingUsrslt;
+       this.medreqGroupIdTypeCodingVersion = medreqGroupIdTypeCodingVersion;
+       this.medreqGroupIdTypeText = medreqGroupIdTypeText;
+       this.medreqGroupIdUseCode = medreqGroupIdUseCode;
+       this.medreqGroupIdValue = medreqGroupIdValue;
+       this.medreqIdAssigner = medreqIdAssigner;
+       this.medreqIdPeriodEnd = medreqIdPeriodEnd;
+       this.medreqIdPeriodStart = medreqIdPeriodStart;
+       this.medreqIdSystem = medreqIdSystem;
+       this.medreqIdTypeCodingCode = medreqIdTypeCodingCode;
+       this.medreqIdTypeCodingDisplay = medreqIdTypeCodingDisplay;
+       this.medreqIdTypeCodingSystem = medreqIdTypeCodingSystem;
+       this.medreqIdTypeCodingUsrslt = medreqIdTypeCodingUsrslt;
+       this.medreqIdTypeCodingVersion = medreqIdTypeCodingVersion;
+       this.medreqIdTypeText = medreqIdTypeText;
+       this.medreqIdUseCode = medreqIdUseCode;
+       this.medreqIdValue = medreqIdValue;
+       this.medreqInstantiatesCanonical = medreqInstantiatesCanonical;
+       this.medreqInstantiatesUri = medreqInstantiatesUri;
+       this.medreqInsurance = medreqInsurance;
+       this.medreqIntentCode = medreqIntentCode;
+       this.medreqMedicationCodeableConceptCodingCode = medreqMedicationCodeableConceptCodingCode;
+       this.medreqMedicationCodeableConceptCodingDisplay = medreqMedicationCodeableConceptCodingDisplay;
+       this.medreqMedicationCodeableConceptCodingSystem = medreqMedicationCodeableConceptCodingSystem;
+       this.medreqMedicationCodeableConceptCodingUsrslt = medreqMedicationCodeableConceptCodingUsrslt;
+       this.medreqMedicationCodeableConceptCodingVersion = medreqMedicationCodeableConceptCodingVersion;
+       this.medreqMedicationCodeableConceptText = medreqMedicationCodeableConceptText;
+       this.medicationrequestMedicationReference = medicationrequestMedicationReference;
+       this.medicationrequestNoteAuthorReference = medicationrequestNoteAuthorReference;
+       this.medicationrequestNoteAuthorString = medicationrequestNoteAuthorString;
+       this.medreqNoteText = medreqNoteText;
+       this.medreqNoteTime = medreqNoteTime;
+       this.medreqPerformer = medreqPerformer;
+       this.medreqPerformerTypeCodingCode = medreqPerformerTypeCodingCode;
+       this.medreqPerformerTypeCodingDisplay = medreqPerformerTypeCodingDisplay;
+       this.medreqPerformerTypeCodingSystem = medreqPerformerTypeCodingSystem;
+       this.medreqPerformerTypeCodingUsrslt = medreqPerformerTypeCodingUsrslt;
+       this.medreqPerformerTypeCodingVersion = medreqPerformerTypeCodingVersion;
+       this.medreqPerformerTypeText = medreqPerformerTypeText;
+       this.medreqPriorPrescription = medreqPriorPrescription;
+       this.medreqPriorityCode = medreqPriorityCode;
+       this.medreqReasonCodeCodingCode = medreqReasonCodeCodingCode;
+       this.medreqReasonCodeCodingDisplay = medreqReasonCodeCodingDisplay;
+       this.medreqReasonCodeCodingSystem = medreqReasonCodeCodingSystem;
+       this.medreqReasonCodeCodingUsrslt = medreqReasonCodeCodingUsrslt;
+       this.medreqReasonCodeCodingVersion = medreqReasonCodeCodingVersion;
+       this.medreqReasonCodeText = medreqReasonCodeText;
+       this.medreqReasonReference = medreqReasonReference;
+       this.medreqRecorder = medreqRecorder;
+       this.medicationrequestReportedBoolean = medicationrequestReportedBoolean;
+       this.medicationrequestReportedReference = medicationrequestReportedReference;
+       this.medreqRequester = medreqRequester;
+       this.medreqStatusCode = medreqStatusCode;
+       this.medreqStatusReasonCodingCode = medreqStatusReasonCodingCode;
+       this.medreqStatusReasonCodingDisplay = medreqStatusReasonCodingDisplay;
+       this.medreqStatusReasonCodingSystem = medreqStatusReasonCodingSystem;
+       this.medreqStatusReasonCodingUsrslt = medreqStatusReasonCodingUsrslt;
+       this.medreqStatusReasonCodingVersion = medreqStatusReasonCodingVersion;
+       this.medreqStatusReasonText = medreqStatusReasonText;
+       this.medreqSubject = medreqSubject;
+       this.medicationrequestSubstitutionAllowedBoolean = medicationrequestSubstitutionAllowedBoolean;
+       this.medreqSubstitutionAllowedCodeableConceptCodingCode = medreqSubstitutionAllowedCodeableConceptCodingCode;
+       this.medreqSubstitutionAllowedCodeableConceptCodingDisplay = medreqSubstitutionAllowedCodeableConceptCodingDisplay;
+       this.medreqSubstitutionAllowedCodeableConceptCodingSystem = medreqSubstitutionAllowedCodeableConceptCodingSystem;
+       this.medreqSubstitutionAllowedCodeableConceptCodingUsrslt = medreqSubstitutionAllowedCodeableConceptCodingUsrslt;
+       this.medreqSubstitutionAllowedCodeableConceptCodingVersion = medreqSubstitutionAllowedCodeableConceptCodingVersion;
+       this.medreqSubstitutionAllowedCodeableConceptText = medreqSubstitutionAllowedCodeableConceptText;
+       this.medreqSubstitutionReasonCodingCode = medreqSubstitutionReasonCodingCode;
+       this.medreqSubstitutionReasonCodingDisplay = medreqSubstitutionReasonCodingDisplay;
+       this.medreqSubstitutionReasonCodingSystem = medreqSubstitutionReasonCodingSystem;
+       this.medreqSubstitutionReasonCodingUsrslt = medreqSubstitutionReasonCodingUsrslt;
+       this.medreqSubstitutionReasonCodingVersion = medreqSubstitutionReasonCodingVersion;
+       this.medreqSubstitutionReasonText = medreqSubstitutionReasonText;
+       this.medreqSupportingInformation = medreqSupportingInformation;
     }
    
     public 
     String 
-    getMedicationrequestIdentifierValue()
+    getId()
     {
-        return this.medicationrequestIdentifierValue;
+        return this.id;
     }
     
-    public void setMedicationrequestIdentifierValue
-        (String medicationrequestIdentifierValue) 
+    public void setId
+        (String id) 
         {
-      this.medicationrequestIdentifierValue = medicationrequestIdentifierValue;
+      this.id = id;
 }
     public 
     String 
-    getMedicationrequestAuthoredOn()
+    getMedreqAuthoredOn()
     {
-        return this.medicationrequestAuthoredOn;
+        return this.medreqAuthoredOn;
     }
     
-    public void setMedicationrequestAuthoredOn
-        (String medicationrequestAuthoredOn) 
+    public void setMedreqAuthoredOn
+        (String medreqAuthoredOn) 
         {
-      this.medicationrequestAuthoredOn = medicationrequestAuthoredOn;
+      this.medreqAuthoredOn = medreqAuthoredOn;
 }
     public 
     String 
-    getMedicationrequestBasedOn()
+    getMedreqBasedOn()
     {
-        return this.medicationrequestBasedOn;
+        return this.medreqBasedOn;
     }
     
-    public void setMedicationrequestBasedOn
-        (String medicationrequestBasedOn) 
+    public void setMedreqBasedOn
+        (String medreqBasedOn) 
         {
-      this.medicationrequestBasedOn = medicationrequestBasedOn;
+      this.medreqBasedOn = medreqBasedOn;
 }
     public 
     String 
-    getMedicationrequestCategoryCodingCode()
+    getMedreqCategoryCodingCode()
     {
-        return this.medicationrequestCategoryCodingCode;
+        return this.medreqCategoryCodingCode;
     }
     
-    public void setMedicationrequestCategoryCodingCode
-        (String medicationrequestCategoryCodingCode) 
+    public void setMedreqCategoryCodingCode
+        (String medreqCategoryCodingCode) 
         {
-      this.medicationrequestCategoryCodingCode = medicationrequestCategoryCodingCode;
+      this.medreqCategoryCodingCode = medreqCategoryCodingCode;
 }
     public 
     String 
-    getMedicationrequestCategoryCodingDisplay()
+    getMedreqCategoryCodingDisplay()
     {
-        return this.medicationrequestCategoryCodingDisplay;
+        return this.medreqCategoryCodingDisplay;
     }
     
-    public void setMedicationrequestCategoryCodingDisplay
-        (String medicationrequestCategoryCodingDisplay) 
+    public void setMedreqCategoryCodingDisplay
+        (String medreqCategoryCodingDisplay) 
         {
-      this.medicationrequestCategoryCodingDisplay = medicationrequestCategoryCodingDisplay;
+      this.medreqCategoryCodingDisplay = medreqCategoryCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestCategoryCodingSystem()
+    getMedreqCategoryCodingSystem()
     {
-        return this.medicationrequestCategoryCodingSystem;
+        return this.medreqCategoryCodingSystem;
     }
     
-    public void setMedicationrequestCategoryCodingSystem
-        (String medicationrequestCategoryCodingSystem) 
+    public void setMedreqCategoryCodingSystem
+        (String medreqCategoryCodingSystem) 
         {
-      this.medicationrequestCategoryCodingSystem = medicationrequestCategoryCodingSystem;
+      this.medreqCategoryCodingSystem = medreqCategoryCodingSystem;
 }
     public 
     String 
-    getMedicationrequestCategoryCodingUserSelected()
+    getMedreqCategoryCodingUsrslt()
     {
-        return this.medicationrequestCategoryCodingUserSelected;
+        return this.medreqCategoryCodingUsrslt;
     }
     
-    public void setMedicationrequestCategoryCodingUserSelected
-        (String medicationrequestCategoryCodingUserSelected) 
+    public void setMedreqCategoryCodingUsrslt
+        (String medreqCategoryCodingUsrslt) 
         {
-      this.medicationrequestCategoryCodingUserSelected = medicationrequestCategoryCodingUserSelected;
+      this.medreqCategoryCodingUsrslt = medreqCategoryCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestCategoryCodingVersion()
+    getMedreqCategoryCodingVersion()
     {
-        return this.medicationrequestCategoryCodingVersion;
+        return this.medreqCategoryCodingVersion;
     }
     
-    public void setMedicationrequestCategoryCodingVersion
-        (String medicationrequestCategoryCodingVersion) 
+    public void setMedreqCategoryCodingVersion
+        (String medreqCategoryCodingVersion) 
         {
-      this.medicationrequestCategoryCodingVersion = medicationrequestCategoryCodingVersion;
+      this.medreqCategoryCodingVersion = medreqCategoryCodingVersion;
 }
     public 
     String 
-    getMedicationrequestCategoryText()
+    getMedreqCategoryText()
     {
-        return this.medicationrequestCategoryText;
+        return this.medreqCategoryText;
     }
     
-    public void setMedicationrequestCategoryText
-        (String medicationrequestCategoryText) 
+    public void setMedreqCategoryText
+        (String medreqCategoryText) 
         {
-      this.medicationrequestCategoryText = medicationrequestCategoryText;
+      this.medreqCategoryText = medreqCategoryText;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeCodingCode()
+    getMedreqCourseOfTherapyTypeCodingCode()
     {
-        return this.medicationrequestCourseOfTherapyTypeCodingCode;
+        return this.medreqCourseOfTherapyTypeCodingCode;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeCodingCode
-        (String medicationrequestCourseOfTherapyTypeCodingCode) 
+    public void setMedreqCourseOfTherapyTypeCodingCode
+        (String medreqCourseOfTherapyTypeCodingCode) 
         {
-      this.medicationrequestCourseOfTherapyTypeCodingCode = medicationrequestCourseOfTherapyTypeCodingCode;
+      this.medreqCourseOfTherapyTypeCodingCode = medreqCourseOfTherapyTypeCodingCode;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeCodingDisplay()
+    getMedreqCourseOfTherapyTypeCodingDisplay()
     {
-        return this.medicationrequestCourseOfTherapyTypeCodingDisplay;
+        return this.medreqCourseOfTherapyTypeCodingDisplay;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeCodingDisplay
-        (String medicationrequestCourseOfTherapyTypeCodingDisplay) 
+    public void setMedreqCourseOfTherapyTypeCodingDisplay
+        (String medreqCourseOfTherapyTypeCodingDisplay) 
         {
-      this.medicationrequestCourseOfTherapyTypeCodingDisplay = medicationrequestCourseOfTherapyTypeCodingDisplay;
+      this.medreqCourseOfTherapyTypeCodingDisplay = medreqCourseOfTherapyTypeCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeCodingSystem()
+    getMedreqCourseOfTherapyTypeCodingSystem()
     {
-        return this.medicationrequestCourseOfTherapyTypeCodingSystem;
+        return this.medreqCourseOfTherapyTypeCodingSystem;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeCodingSystem
-        (String medicationrequestCourseOfTherapyTypeCodingSystem) 
+    public void setMedreqCourseOfTherapyTypeCodingSystem
+        (String medreqCourseOfTherapyTypeCodingSystem) 
         {
-      this.medicationrequestCourseOfTherapyTypeCodingSystem = medicationrequestCourseOfTherapyTypeCodingSystem;
+      this.medreqCourseOfTherapyTypeCodingSystem = medreqCourseOfTherapyTypeCodingSystem;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeCodingUserSelected()
+    getMedreqCourseOfTherapyTypeCodingUsrslt()
     {
-        return this.medicationrequestCourseOfTherapyTypeCodingUserSelected;
+        return this.medreqCourseOfTherapyTypeCodingUsrslt;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeCodingUserSelected
-        (String medicationrequestCourseOfTherapyTypeCodingUserSelected) 
+    public void setMedreqCourseOfTherapyTypeCodingUsrslt
+        (String medreqCourseOfTherapyTypeCodingUsrslt) 
         {
-      this.medicationrequestCourseOfTherapyTypeCodingUserSelected = medicationrequestCourseOfTherapyTypeCodingUserSelected;
+      this.medreqCourseOfTherapyTypeCodingUsrslt = medreqCourseOfTherapyTypeCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeCodingVersion()
+    getMedreqCourseOfTherapyTypeCodingVersion()
     {
-        return this.medicationrequestCourseOfTherapyTypeCodingVersion;
+        return this.medreqCourseOfTherapyTypeCodingVersion;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeCodingVersion
-        (String medicationrequestCourseOfTherapyTypeCodingVersion) 
+    public void setMedreqCourseOfTherapyTypeCodingVersion
+        (String medreqCourseOfTherapyTypeCodingVersion) 
         {
-      this.medicationrequestCourseOfTherapyTypeCodingVersion = medicationrequestCourseOfTherapyTypeCodingVersion;
+      this.medreqCourseOfTherapyTypeCodingVersion = medreqCourseOfTherapyTypeCodingVersion;
 }
     public 
     String 
-    getMedicationrequestCourseOfTherapyTypeText()
+    getMedreqCourseOfTherapyTypeText()
     {
-        return this.medicationrequestCourseOfTherapyTypeText;
+        return this.medreqCourseOfTherapyTypeText;
     }
     
-    public void setMedicationrequestCourseOfTherapyTypeText
-        (String medicationrequestCourseOfTherapyTypeText) 
+    public void setMedreqCourseOfTherapyTypeText
+        (String medreqCourseOfTherapyTypeText) 
         {
-      this.medicationrequestCourseOfTherapyTypeText = medicationrequestCourseOfTherapyTypeText;
+      this.medreqCourseOfTherapyTypeText = medreqCourseOfTherapyTypeText;
 }
     public 
     String 
-    getMedicationrequestDetectedIssue()
+    getMedreqDetectedIssue()
     {
-        return this.medicationrequestDetectedIssue;
+        return this.medreqDetectedIssue;
     }
     
-    public void setMedicationrequestDetectedIssue
-        (String medicationrequestDetectedIssue) 
+    public void setMedreqDetectedIssue
+        (String medreqDetectedIssue) 
         {
-      this.medicationrequestDetectedIssue = medicationrequestDetectedIssue;
+      this.medreqDetectedIssue = medreqDetectedIssue;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestDispenseInterval()
+    getMedreqDispenseRequestDispenseInterval()
     {
-        return this.medicationrequestDispenseRequestDispenseInterval;
+        return this.medreqDispenseRequestDispenseInterval;
     }
     
-    public void setMedicationrequestDispenseRequestDispenseInterval
-        (String medicationrequestDispenseRequestDispenseInterval) 
+    public void setMedreqDispenseRequestDispenseInterval
+        (String medreqDispenseRequestDispenseInterval) 
         {
-      this.medicationrequestDispenseRequestDispenseInterval = medicationrequestDispenseRequestDispenseInterval;
+      this.medreqDispenseRequestDispenseInterval = medreqDispenseRequestDispenseInterval;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestExpectedSupplyDuration()
+    getMedreqDispenseRequestExpectedSupplyDuration()
     {
-        return this.medicationrequestDispenseRequestExpectedSupplyDuration;
+        return this.medreqDispenseRequestExpectedSupplyDuration;
     }
     
-    public void setMedicationrequestDispenseRequestExpectedSupplyDuration
-        (String medicationrequestDispenseRequestExpectedSupplyDuration) 
+    public void setMedreqDispenseRequestExpectedSupplyDuration
+        (String medreqDispenseRequestExpectedSupplyDuration) 
         {
-      this.medicationrequestDispenseRequestExpectedSupplyDuration = medicationrequestDispenseRequestExpectedSupplyDuration;
+      this.medreqDispenseRequestExpectedSupplyDuration = medreqDispenseRequestExpectedSupplyDuration;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestInitialFillDuration()
+    getMedreqDispenseRequestInitialFillDuration()
     {
-        return this.medicationrequestDispenseRequestInitialFillDuration;
+        return this.medreqDispenseRequestInitialFillDuration;
     }
     
-    public void setMedicationrequestDispenseRequestInitialFillDuration
-        (String medicationrequestDispenseRequestInitialFillDuration) 
+    public void setMedreqDispenseRequestInitialFillDuration
+        (String medreqDispenseRequestInitialFillDuration) 
         {
-      this.medicationrequestDispenseRequestInitialFillDuration = medicationrequestDispenseRequestInitialFillDuration;
+      this.medreqDispenseRequestInitialFillDuration = medreqDispenseRequestInitialFillDuration;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestInitialFillQuantityCode()
+    getMedreqDispenseRequestInitialFillQuantityCode()
     {
-        return this.medicationrequestDispenseRequestInitialFillQuantityCode;
+        return this.medreqDispenseRequestInitialFillQuantityCode;
     }
     
-    public void setMedicationrequestDispenseRequestInitialFillQuantityCode
-        (String medicationrequestDispenseRequestInitialFillQuantityCode) 
+    public void setMedreqDispenseRequestInitialFillQuantityCode
+        (String medreqDispenseRequestInitialFillQuantityCode) 
         {
-      this.medicationrequestDispenseRequestInitialFillQuantityCode = medicationrequestDispenseRequestInitialFillQuantityCode;
+      this.medreqDispenseRequestInitialFillQuantityCode = medreqDispenseRequestInitialFillQuantityCode;
 }
     public 
     String 
-    getMrDispenseRequestInitialFillQuantityComparatorCode()
+    getMedreqDispenseRequestInitialFillQuantityCompartrCode()
     {
-        return this.mrDispenseRequestInitialFillQuantityComparatorCode;
+        return this.medreqDispenseRequestInitialFillQuantityCompartrCode;
     }
     
-    public void setMrDispenseRequestInitialFillQuantityComparatorCode
-        (String mrDispenseRequestInitialFillQuantityComparatorCode) 
+    public void setMedreqDispenseRequestInitialFillQuantityCompartrCode
+        (String medreqDispenseRequestInitialFillQuantityCompartrCode) 
         {
-      this.mrDispenseRequestInitialFillQuantityComparatorCode = mrDispenseRequestInitialFillQuantityComparatorCode;
+      this.medreqDispenseRequestInitialFillQuantityCompartrCode = medreqDispenseRequestInitialFillQuantityCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestInitialFillQuantitySystem()
+    getMedreqDispenseRequestInitialFillQuantitySystem()
     {
-        return this.medicationrequestDispenseRequestInitialFillQuantitySystem;
+        return this.medreqDispenseRequestInitialFillQuantitySystem;
     }
     
-    public void setMedicationrequestDispenseRequestInitialFillQuantitySystem
-        (String medicationrequestDispenseRequestInitialFillQuantitySystem) 
+    public void setMedreqDispenseRequestInitialFillQuantitySystem
+        (String medreqDispenseRequestInitialFillQuantitySystem) 
         {
-      this.medicationrequestDispenseRequestInitialFillQuantitySystem = medicationrequestDispenseRequestInitialFillQuantitySystem;
+      this.medreqDispenseRequestInitialFillQuantitySystem = medreqDispenseRequestInitialFillQuantitySystem;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestInitialFillQuantityUnit()
+    getMedreqDispenseRequestInitialFillQuantityUnit()
     {
-        return this.medicationrequestDispenseRequestInitialFillQuantityUnit;
+        return this.medreqDispenseRequestInitialFillQuantityUnit;
     }
     
-    public void setMedicationrequestDispenseRequestInitialFillQuantityUnit
-        (String medicationrequestDispenseRequestInitialFillQuantityUnit) 
+    public void setMedreqDispenseRequestInitialFillQuantityUnit
+        (String medreqDispenseRequestInitialFillQuantityUnit) 
         {
-      this.medicationrequestDispenseRequestInitialFillQuantityUnit = medicationrequestDispenseRequestInitialFillQuantityUnit;
+      this.medreqDispenseRequestInitialFillQuantityUnit = medreqDispenseRequestInitialFillQuantityUnit;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestInitialFillQuantityValue()
+    getMedreqDispenseRequestInitialFillQuantityValue()
     {
-        return this.medicationrequestDispenseRequestInitialFillQuantityValue;
+        return this.medreqDispenseRequestInitialFillQuantityValue;
     }
     
-    public void setMedicationrequestDispenseRequestInitialFillQuantityValue
-        (String medicationrequestDispenseRequestInitialFillQuantityValue) 
+    public void setMedreqDispenseRequestInitialFillQuantityValue
+        (String medreqDispenseRequestInitialFillQuantityValue) 
         {
-      this.medicationrequestDispenseRequestInitialFillQuantityValue = medicationrequestDispenseRequestInitialFillQuantityValue;
+      this.medreqDispenseRequestInitialFillQuantityValue = medreqDispenseRequestInitialFillQuantityValue;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestNumberOfRepeatsAllowed()
+    getMedreqDispenseRequestNumberOfRepeatsAllowed()
     {
-        return this.medicationrequestDispenseRequestNumberOfRepeatsAllowed;
+        return this.medreqDispenseRequestNumberOfRepeatsAllowed;
     }
     
-    public void setMedicationrequestDispenseRequestNumberOfRepeatsAllowed
-        (String medicationrequestDispenseRequestNumberOfRepeatsAllowed) 
+    public void setMedreqDispenseRequestNumberOfRepeatsAllowed
+        (String medreqDispenseRequestNumberOfRepeatsAllowed) 
         {
-      this.medicationrequestDispenseRequestNumberOfRepeatsAllowed = medicationrequestDispenseRequestNumberOfRepeatsAllowed;
+      this.medreqDispenseRequestNumberOfRepeatsAllowed = medreqDispenseRequestNumberOfRepeatsAllowed;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestPerformer()
+    getMedreqDispenseRequestPerformer()
     {
-        return this.medicationrequestDispenseRequestPerformer;
+        return this.medreqDispenseRequestPerformer;
     }
     
-    public void setMedicationrequestDispenseRequestPerformer
-        (String medicationrequestDispenseRequestPerformer) 
+    public void setMedreqDispenseRequestPerformer
+        (String medreqDispenseRequestPerformer) 
         {
-      this.medicationrequestDispenseRequestPerformer = medicationrequestDispenseRequestPerformer;
+      this.medreqDispenseRequestPerformer = medreqDispenseRequestPerformer;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestQuantityCode()
+    getMedreqDispenseRequestQuantityCode()
     {
-        return this.medicationrequestDispenseRequestQuantityCode;
+        return this.medreqDispenseRequestQuantityCode;
     }
     
-    public void setMedicationrequestDispenseRequestQuantityCode
-        (String medicationrequestDispenseRequestQuantityCode) 
+    public void setMedreqDispenseRequestQuantityCode
+        (String medreqDispenseRequestQuantityCode) 
         {
-      this.medicationrequestDispenseRequestQuantityCode = medicationrequestDispenseRequestQuantityCode;
+      this.medreqDispenseRequestQuantityCode = medreqDispenseRequestQuantityCode;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestQuantityComparatorCode()
+    getMedreqDispenseRequestQuantityCompartrCode()
     {
-        return this.medicationrequestDispenseRequestQuantityComparatorCode;
+        return this.medreqDispenseRequestQuantityCompartrCode;
     }
     
-    public void setMedicationrequestDispenseRequestQuantityComparatorCode
-        (String medicationrequestDispenseRequestQuantityComparatorCode) 
+    public void setMedreqDispenseRequestQuantityCompartrCode
+        (String medreqDispenseRequestQuantityCompartrCode) 
         {
-      this.medicationrequestDispenseRequestQuantityComparatorCode = medicationrequestDispenseRequestQuantityComparatorCode;
+      this.medreqDispenseRequestQuantityCompartrCode = medreqDispenseRequestQuantityCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestQuantitySystem()
+    getMedreqDispenseRequestQuantitySystem()
     {
-        return this.medicationrequestDispenseRequestQuantitySystem;
+        return this.medreqDispenseRequestQuantitySystem;
     }
     
-    public void setMedicationrequestDispenseRequestQuantitySystem
-        (String medicationrequestDispenseRequestQuantitySystem) 
+    public void setMedreqDispenseRequestQuantitySystem
+        (String medreqDispenseRequestQuantitySystem) 
         {
-      this.medicationrequestDispenseRequestQuantitySystem = medicationrequestDispenseRequestQuantitySystem;
+      this.medreqDispenseRequestQuantitySystem = medreqDispenseRequestQuantitySystem;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestQuantityUnit()
+    getMedreqDispenseRequestQuantityUnit()
     {
-        return this.medicationrequestDispenseRequestQuantityUnit;
+        return this.medreqDispenseRequestQuantityUnit;
     }
     
-    public void setMedicationrequestDispenseRequestQuantityUnit
-        (String medicationrequestDispenseRequestQuantityUnit) 
+    public void setMedreqDispenseRequestQuantityUnit
+        (String medreqDispenseRequestQuantityUnit) 
         {
-      this.medicationrequestDispenseRequestQuantityUnit = medicationrequestDispenseRequestQuantityUnit;
+      this.medreqDispenseRequestQuantityUnit = medreqDispenseRequestQuantityUnit;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestQuantityValue()
+    getMedreqDispenseRequestQuantityValue()
     {
-        return this.medicationrequestDispenseRequestQuantityValue;
+        return this.medreqDispenseRequestQuantityValue;
     }
     
-    public void setMedicationrequestDispenseRequestQuantityValue
-        (String medicationrequestDispenseRequestQuantityValue) 
+    public void setMedreqDispenseRequestQuantityValue
+        (String medreqDispenseRequestQuantityValue) 
         {
-      this.medicationrequestDispenseRequestQuantityValue = medicationrequestDispenseRequestQuantityValue;
+      this.medreqDispenseRequestQuantityValue = medreqDispenseRequestQuantityValue;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestValidityPeriodEnd()
+    getMedreqDispenseRequestValidityPeriodEnd()
     {
-        return this.medicationrequestDispenseRequestValidityPeriodEnd;
+        return this.medreqDispenseRequestValidityPeriodEnd;
     }
     
-    public void setMedicationrequestDispenseRequestValidityPeriodEnd
-        (String medicationrequestDispenseRequestValidityPeriodEnd) 
+    public void setMedreqDispenseRequestValidityPeriodEnd
+        (String medreqDispenseRequestValidityPeriodEnd) 
         {
-      this.medicationrequestDispenseRequestValidityPeriodEnd = medicationrequestDispenseRequestValidityPeriodEnd;
+      this.medreqDispenseRequestValidityPeriodEnd = medreqDispenseRequestValidityPeriodEnd;
 }
     public 
     String 
-    getMedicationrequestDispenseRequestValidityPeriodStart()
+    getMedreqDispenseRequestValidityPeriodStart()
     {
-        return this.medicationrequestDispenseRequestValidityPeriodStart;
+        return this.medreqDispenseRequestValidityPeriodStart;
     }
     
-    public void setMedicationrequestDispenseRequestValidityPeriodStart
-        (String medicationrequestDispenseRequestValidityPeriodStart) 
+    public void setMedreqDispenseRequestValidityPeriodStart
+        (String medreqDispenseRequestValidityPeriodStart) 
         {
-      this.medicationrequestDispenseRequestValidityPeriodStart = medicationrequestDispenseRequestValidityPeriodStart;
+      this.medreqDispenseRequestValidityPeriodStart = medreqDispenseRequestValidityPeriodStart;
 }
     public 
     String 
-    getMedicationrequestDoNotPerform()
+    getMedreqDoNotPerform()
     {
-        return this.medicationrequestDoNotPerform;
+        return this.medreqDoNotPerform;
     }
     
-    public void setMedicationrequestDoNotPerform
-        (String medicationrequestDoNotPerform) 
+    public void setMedreqDoNotPerform
+        (String medreqDoNotPerform) 
         {
-      this.medicationrequestDoNotPerform = medicationrequestDoNotPerform;
+      this.medreqDoNotPerform = medreqDoNotPerform;
 }
     public 
     String 
-    getMrDrAdditionalInstructionCodingCode()
+    getMedreqDoseinsAdditionalInstructionCodingCode()
     {
-        return this.mrDrAdditionalInstructionCodingCode;
+        return this.medreqDoseinsAdditionalInstructionCodingCode;
     }
     
-    public void setMrDrAdditionalInstructionCodingCode
-        (String mrDrAdditionalInstructionCodingCode) 
+    public void setMedreqDoseinsAdditionalInstructionCodingCode
+        (String medreqDoseinsAdditionalInstructionCodingCode) 
         {
-      this.mrDrAdditionalInstructionCodingCode = mrDrAdditionalInstructionCodingCode;
+      this.medreqDoseinsAdditionalInstructionCodingCode = medreqDoseinsAdditionalInstructionCodingCode;
 }
     public 
     String 
-    getMrDrAdditionalInstructionCodingDisplay()
+    getMedreqDoseinsAdditionalInstructionCodingDisplay()
     {
-        return this.mrDrAdditionalInstructionCodingDisplay;
+        return this.medreqDoseinsAdditionalInstructionCodingDisplay;
     }
     
-    public void setMrDrAdditionalInstructionCodingDisplay
-        (String mrDrAdditionalInstructionCodingDisplay) 
+    public void setMedreqDoseinsAdditionalInstructionCodingDisplay
+        (String medreqDoseinsAdditionalInstructionCodingDisplay) 
         {
-      this.mrDrAdditionalInstructionCodingDisplay = mrDrAdditionalInstructionCodingDisplay;
+      this.medreqDoseinsAdditionalInstructionCodingDisplay = medreqDoseinsAdditionalInstructionCodingDisplay;
 }
     public 
     String 
-    getMrDrAdditionalInstructionCodingSystem()
+    getMedreqDoseinsAdditionalInstructionCodingSystem()
     {
-        return this.mrDrAdditionalInstructionCodingSystem;
+        return this.medreqDoseinsAdditionalInstructionCodingSystem;
     }
     
-    public void setMrDrAdditionalInstructionCodingSystem
-        (String mrDrAdditionalInstructionCodingSystem) 
+    public void setMedreqDoseinsAdditionalInstructionCodingSystem
+        (String medreqDoseinsAdditionalInstructionCodingSystem) 
         {
-      this.mrDrAdditionalInstructionCodingSystem = mrDrAdditionalInstructionCodingSystem;
+      this.medreqDoseinsAdditionalInstructionCodingSystem = medreqDoseinsAdditionalInstructionCodingSystem;
 }
     public 
     String 
-    getMrDrAdditionalInstructionCodingUs()
+    getMedreqDoseinsAdditionalInstructionCodingUsrslt()
     {
-        return this.mrDrAdditionalInstructionCodingUs;
+        return this.medreqDoseinsAdditionalInstructionCodingUsrslt;
     }
     
-    public void setMrDrAdditionalInstructionCodingUs
-        (String mrDrAdditionalInstructionCodingUs) 
+    public void setMedreqDoseinsAdditionalInstructionCodingUsrslt
+        (String medreqDoseinsAdditionalInstructionCodingUsrslt) 
         {
-      this.mrDrAdditionalInstructionCodingUs = mrDrAdditionalInstructionCodingUs;
+      this.medreqDoseinsAdditionalInstructionCodingUsrslt = medreqDoseinsAdditionalInstructionCodingUsrslt;
 }
     public 
     String 
-    getMrDrAdditionalInstructionCodingVersion()
+    getMedreqDoseinsAdditionalInstructionCodingVersion()
     {
-        return this.mrDrAdditionalInstructionCodingVersion;
+        return this.medreqDoseinsAdditionalInstructionCodingVersion;
     }
     
-    public void setMrDrAdditionalInstructionCodingVersion
-        (String mrDrAdditionalInstructionCodingVersion) 
+    public void setMedreqDoseinsAdditionalInstructionCodingVersion
+        (String medreqDoseinsAdditionalInstructionCodingVersion) 
         {
-      this.mrDrAdditionalInstructionCodingVersion = mrDrAdditionalInstructionCodingVersion;
+      this.medreqDoseinsAdditionalInstructionCodingVersion = medreqDoseinsAdditionalInstructionCodingVersion;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionAdditionalInstructionText()
+    getMedreqDoseinsAdditionalInstructionText()
     {
-        return this.medicationrequestDosageInstructionAdditionalInstructionText;
+        return this.medreqDoseinsAdditionalInstructionText;
     }
     
-    public void setMedicationrequestDosageInstructionAdditionalInstructionText
-        (String medicationrequestDosageInstructionAdditionalInstructionText) 
+    public void setMedreqDoseinsAdditionalInstructionText
+        (String medreqDoseinsAdditionalInstructionText) 
         {
-      this.medicationrequestDosageInstructionAdditionalInstructionText = medicationrequestDosageInstructionAdditionalInstructionText;
+      this.medreqDoseinsAdditionalInstructionText = medreqDoseinsAdditionalInstructionText;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionAsNeeded()
+    getMedicationrequestDosageInstructionAsNeededBoolean()
     {
-        return this.medicationrequestDosageInstructionAsNeeded;
+        return this.medicationrequestDosageInstructionAsNeededBoolean;
     }
     
-    public void setMedicationrequestDosageInstructionAsNeeded
-        (String medicationrequestDosageInstructionAsNeeded) 
+    public void setMedicationrequestDosageInstructionAsNeededBoolean
+        (String medicationrequestDosageInstructionAsNeededBoolean) 
         {
-      this.medicationrequestDosageInstructionAsNeeded = medicationrequestDosageInstructionAsNeeded;
+      this.medicationrequestDosageInstructionAsNeededBoolean = medicationrequestDosageInstructionAsNeededBoolean;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionDoseAndRateDose()
+    getMedreqDoseinsAsNeededCodeableConceptCodingCode()
     {
-        return this.medicationrequestDosageInstructionDoseAndRateDose;
+        return this.medreqDoseinsAsNeededCodeableConceptCodingCode;
     }
     
-    public void setMedicationrequestDosageInstructionDoseAndRateDose
-        (String medicationrequestDosageInstructionDoseAndRateDose) 
+    public void setMedreqDoseinsAsNeededCodeableConceptCodingCode
+        (String medreqDoseinsAsNeededCodeableConceptCodingCode) 
         {
-      this.medicationrequestDosageInstructionDoseAndRateDose = medicationrequestDosageInstructionDoseAndRateDose;
+      this.medreqDoseinsAsNeededCodeableConceptCodingCode = medreqDoseinsAsNeededCodeableConceptCodingCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionDoseAndRateRate()
+    getMedreqDoseinsAsNeededCodeableConceptCodingDisplay()
     {
-        return this.medicationrequestDosageInstructionDoseAndRateRate;
+        return this.medreqDoseinsAsNeededCodeableConceptCodingDisplay;
     }
     
-    public void setMedicationrequestDosageInstructionDoseAndRateRate
-        (String medicationrequestDosageInstructionDoseAndRateRate) 
+    public void setMedreqDoseinsAsNeededCodeableConceptCodingDisplay
+        (String medreqDoseinsAsNeededCodeableConceptCodingDisplay) 
         {
-      this.medicationrequestDosageInstructionDoseAndRateRate = medicationrequestDosageInstructionDoseAndRateRate;
+      this.medreqDoseinsAsNeededCodeableConceptCodingDisplay = medreqDoseinsAsNeededCodeableConceptCodingDisplay;
 }
     public 
     String 
-    getMrDrDoseAndRateTypeCodingCode()
+    getMedreqDoseinsAsNeededCodeableConceptCodingSystem()
     {
-        return this.mrDrDoseAndRateTypeCodingCode;
+        return this.medreqDoseinsAsNeededCodeableConceptCodingSystem;
     }
     
-    public void setMrDrDoseAndRateTypeCodingCode
-        (String mrDrDoseAndRateTypeCodingCode) 
+    public void setMedreqDoseinsAsNeededCodeableConceptCodingSystem
+        (String medreqDoseinsAsNeededCodeableConceptCodingSystem) 
         {
-      this.mrDrDoseAndRateTypeCodingCode = mrDrDoseAndRateTypeCodingCode;
+      this.medreqDoseinsAsNeededCodeableConceptCodingSystem = medreqDoseinsAsNeededCodeableConceptCodingSystem;
 }
     public 
     String 
-    getMrDrDoseAndRateTypeCodingDisplay()
+    getMedreqDoseinsAsNeededCodeableConceptCodingUsrslt()
     {
-        return this.mrDrDoseAndRateTypeCodingDisplay;
+        return this.medreqDoseinsAsNeededCodeableConceptCodingUsrslt;
     }
     
-    public void setMrDrDoseAndRateTypeCodingDisplay
-        (String mrDrDoseAndRateTypeCodingDisplay) 
+    public void setMedreqDoseinsAsNeededCodeableConceptCodingUsrslt
+        (String medreqDoseinsAsNeededCodeableConceptCodingUsrslt) 
         {
-      this.mrDrDoseAndRateTypeCodingDisplay = mrDrDoseAndRateTypeCodingDisplay;
+      this.medreqDoseinsAsNeededCodeableConceptCodingUsrslt = medreqDoseinsAsNeededCodeableConceptCodingUsrslt;
 }
     public 
     String 
-    getMrDrDoseAndRateTypeCodingSystem()
+    getMedreqDoseinsAsNeededCodeableConceptCodingVersion()
     {
-        return this.mrDrDoseAndRateTypeCodingSystem;
+        return this.medreqDoseinsAsNeededCodeableConceptCodingVersion;
     }
     
-    public void setMrDrDoseAndRateTypeCodingSystem
-        (String mrDrDoseAndRateTypeCodingSystem) 
+    public void setMedreqDoseinsAsNeededCodeableConceptCodingVersion
+        (String medreqDoseinsAsNeededCodeableConceptCodingVersion) 
         {
-      this.mrDrDoseAndRateTypeCodingSystem = mrDrDoseAndRateTypeCodingSystem;
+      this.medreqDoseinsAsNeededCodeableConceptCodingVersion = medreqDoseinsAsNeededCodeableConceptCodingVersion;
 }
     public 
     String 
-    getMrDrDoseAndRateTypeCodingUs()
+    getMedreqDoseinsAsNeededCodeableConceptText()
     {
-        return this.mrDrDoseAndRateTypeCodingUs;
+        return this.medreqDoseinsAsNeededCodeableConceptText;
     }
     
-    public void setMrDrDoseAndRateTypeCodingUs
-        (String mrDrDoseAndRateTypeCodingUs) 
+    public void setMedreqDoseinsAsNeededCodeableConceptText
+        (String medreqDoseinsAsNeededCodeableConceptText) 
         {
-      this.mrDrDoseAndRateTypeCodingUs = mrDrDoseAndRateTypeCodingUs;
+      this.medreqDoseinsAsNeededCodeableConceptText = medreqDoseinsAsNeededCodeableConceptText;
 }
     public 
     String 
-    getMrDrDoseAndRateTypeCodingVersion()
+    getMedreqDoseinsDoseAndRateDoseQuantityCode()
     {
-        return this.mrDrDoseAndRateTypeCodingVersion;
+        return this.medreqDoseinsDoseAndRateDoseQuantityCode;
     }
     
-    public void setMrDrDoseAndRateTypeCodingVersion
-        (String mrDrDoseAndRateTypeCodingVersion) 
+    public void setMedreqDoseinsDoseAndRateDoseQuantityCode
+        (String medreqDoseinsDoseAndRateDoseQuantityCode) 
         {
-      this.mrDrDoseAndRateTypeCodingVersion = mrDrDoseAndRateTypeCodingVersion;
+      this.medreqDoseinsDoseAndRateDoseQuantityCode = medreqDoseinsDoseAndRateDoseQuantityCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionDoseAndRateTypeText()
+    getMedreqDoseinsDoseAndRateDoseQuantityCompartrCode()
     {
-        return this.medicationrequestDosageInstructionDoseAndRateTypeText;
+        return this.medreqDoseinsDoseAndRateDoseQuantityCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionDoseAndRateTypeText
-        (String medicationrequestDosageInstructionDoseAndRateTypeText) 
+    public void setMedreqDoseinsDoseAndRateDoseQuantityCompartrCode
+        (String medreqDoseinsDoseAndRateDoseQuantityCompartrCode) 
         {
-      this.medicationrequestDosageInstructionDoseAndRateTypeText = medicationrequestDosageInstructionDoseAndRateTypeText;
+      this.medreqDoseinsDoseAndRateDoseQuantityCompartrCode = medreqDoseinsDoseAndRateDoseQuantityCompartrCode;
 }
     public 
     String 
-    getMrDrMaxDosePerAdministrationCode()
+    getMedreqDoseinsDoseAndRateDoseQuantitySystem()
     {
-        return this.mrDrMaxDosePerAdministrationCode;
+        return this.medreqDoseinsDoseAndRateDoseQuantitySystem;
     }
     
-    public void setMrDrMaxDosePerAdministrationCode
-        (String mrDrMaxDosePerAdministrationCode) 
+    public void setMedreqDoseinsDoseAndRateDoseQuantitySystem
+        (String medreqDoseinsDoseAndRateDoseQuantitySystem) 
         {
-      this.mrDrMaxDosePerAdministrationCode = mrDrMaxDosePerAdministrationCode;
+      this.medreqDoseinsDoseAndRateDoseQuantitySystem = medreqDoseinsDoseAndRateDoseQuantitySystem;
 }
     public 
     String 
-    getMrDrMaxDosePerAdministrationComparatorCode()
+    getMedreqDoseinsDoseAndRateDoseQuantityUnit()
     {
-        return this.mrDrMaxDosePerAdministrationComparatorCode;
+        return this.medreqDoseinsDoseAndRateDoseQuantityUnit;
     }
     
-    public void setMrDrMaxDosePerAdministrationComparatorCode
-        (String mrDrMaxDosePerAdministrationComparatorCode) 
+    public void setMedreqDoseinsDoseAndRateDoseQuantityUnit
+        (String medreqDoseinsDoseAndRateDoseQuantityUnit) 
         {
-      this.mrDrMaxDosePerAdministrationComparatorCode = mrDrMaxDosePerAdministrationComparatorCode;
+      this.medreqDoseinsDoseAndRateDoseQuantityUnit = medreqDoseinsDoseAndRateDoseQuantityUnit;
 }
     public 
     String 
-    getMrDrMaxDosePerAdministrationSystem()
+    getMedreqDoseinsDoseAndRateDoseQuantityValue()
     {
-        return this.mrDrMaxDosePerAdministrationSystem;
+        return this.medreqDoseinsDoseAndRateDoseQuantityValue;
     }
     
-    public void setMrDrMaxDosePerAdministrationSystem
-        (String mrDrMaxDosePerAdministrationSystem) 
+    public void setMedreqDoseinsDoseAndRateDoseQuantityValue
+        (String medreqDoseinsDoseAndRateDoseQuantityValue) 
         {
-      this.mrDrMaxDosePerAdministrationSystem = mrDrMaxDosePerAdministrationSystem;
+      this.medreqDoseinsDoseAndRateDoseQuantityValue = medreqDoseinsDoseAndRateDoseQuantityValue;
 }
     public 
     String 
-    getMrDrMaxDosePerAdministrationUnit()
+    getMedreqDoseinsDoseAndRateDoseRangeHighCode()
     {
-        return this.mrDrMaxDosePerAdministrationUnit;
+        return this.medreqDoseinsDoseAndRateDoseRangeHighCode;
     }
     
-    public void setMrDrMaxDosePerAdministrationUnit
-        (String mrDrMaxDosePerAdministrationUnit) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeHighCode
+        (String medreqDoseinsDoseAndRateDoseRangeHighCode) 
         {
-      this.mrDrMaxDosePerAdministrationUnit = mrDrMaxDosePerAdministrationUnit;
+      this.medreqDoseinsDoseAndRateDoseRangeHighCode = medreqDoseinsDoseAndRateDoseRangeHighCode;
 }
     public 
     String 
-    getMrDrMaxDosePerAdministrationValue()
+    getMedreqDoseinsDoseAndRateDoseRangeHighCompartrCode()
     {
-        return this.mrDrMaxDosePerAdministrationValue;
+        return this.medreqDoseinsDoseAndRateDoseRangeHighCompartrCode;
     }
     
-    public void setMrDrMaxDosePerAdministrationValue
-        (String mrDrMaxDosePerAdministrationValue) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeHighCompartrCode
+        (String medreqDoseinsDoseAndRateDoseRangeHighCompartrCode) 
         {
-      this.mrDrMaxDosePerAdministrationValue = mrDrMaxDosePerAdministrationValue;
+      this.medreqDoseinsDoseAndRateDoseRangeHighCompartrCode = medreqDoseinsDoseAndRateDoseRangeHighCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMaxDosePerLifetimeCode()
+    getMedreqDoseinsDoseAndRateDoseRangeHighSystem()
     {
-        return this.medicationrequestDosageInstructionMaxDosePerLifetimeCode;
+        return this.medreqDoseinsDoseAndRateDoseRangeHighSystem;
     }
     
-    public void setMedicationrequestDosageInstructionMaxDosePerLifetimeCode
-        (String medicationrequestDosageInstructionMaxDosePerLifetimeCode) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeHighSystem
+        (String medreqDoseinsDoseAndRateDoseRangeHighSystem) 
         {
-      this.medicationrequestDosageInstructionMaxDosePerLifetimeCode = medicationrequestDosageInstructionMaxDosePerLifetimeCode;
+      this.medreqDoseinsDoseAndRateDoseRangeHighSystem = medreqDoseinsDoseAndRateDoseRangeHighSystem;
 }
     public 
     String 
-    getMrDrMaxDosePerLifetimeComparatorCode()
+    getMedreqDoseinsDoseAndRateDoseRangeHighUnit()
     {
-        return this.mrDrMaxDosePerLifetimeComparatorCode;
+        return this.medreqDoseinsDoseAndRateDoseRangeHighUnit;
     }
     
-    public void setMrDrMaxDosePerLifetimeComparatorCode
-        (String mrDrMaxDosePerLifetimeComparatorCode) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeHighUnit
+        (String medreqDoseinsDoseAndRateDoseRangeHighUnit) 
         {
-      this.mrDrMaxDosePerLifetimeComparatorCode = mrDrMaxDosePerLifetimeComparatorCode;
+      this.medreqDoseinsDoseAndRateDoseRangeHighUnit = medreqDoseinsDoseAndRateDoseRangeHighUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMaxDosePerLifetimeSystem()
+    getMedreqDoseinsDoseAndRateDoseRangeHighValue()
     {
-        return this.medicationrequestDosageInstructionMaxDosePerLifetimeSystem;
+        return this.medreqDoseinsDoseAndRateDoseRangeHighValue;
     }
     
-    public void setMedicationrequestDosageInstructionMaxDosePerLifetimeSystem
-        (String medicationrequestDosageInstructionMaxDosePerLifetimeSystem) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeHighValue
+        (String medreqDoseinsDoseAndRateDoseRangeHighValue) 
         {
-      this.medicationrequestDosageInstructionMaxDosePerLifetimeSystem = medicationrequestDosageInstructionMaxDosePerLifetimeSystem;
+      this.medreqDoseinsDoseAndRateDoseRangeHighValue = medreqDoseinsDoseAndRateDoseRangeHighValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMaxDosePerLifetimeUnit()
+    getMedreqDoseinsDoseAndRateDoseRangeLowCode()
     {
-        return this.medicationrequestDosageInstructionMaxDosePerLifetimeUnit;
+        return this.medreqDoseinsDoseAndRateDoseRangeLowCode;
     }
     
-    public void setMedicationrequestDosageInstructionMaxDosePerLifetimeUnit
-        (String medicationrequestDosageInstructionMaxDosePerLifetimeUnit) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeLowCode
+        (String medreqDoseinsDoseAndRateDoseRangeLowCode) 
         {
-      this.medicationrequestDosageInstructionMaxDosePerLifetimeUnit = medicationrequestDosageInstructionMaxDosePerLifetimeUnit;
+      this.medreqDoseinsDoseAndRateDoseRangeLowCode = medreqDoseinsDoseAndRateDoseRangeLowCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMaxDosePerLifetimeValue()
+    getMedreqDoseinsDoseAndRateDoseRangeLowCompartrCode()
     {
-        return this.medicationrequestDosageInstructionMaxDosePerLifetimeValue;
+        return this.medreqDoseinsDoseAndRateDoseRangeLowCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionMaxDosePerLifetimeValue
-        (String medicationrequestDosageInstructionMaxDosePerLifetimeValue) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeLowCompartrCode
+        (String medreqDoseinsDoseAndRateDoseRangeLowCompartrCode) 
         {
-      this.medicationrequestDosageInstructionMaxDosePerLifetimeValue = medicationrequestDosageInstructionMaxDosePerLifetimeValue;
+      this.medreqDoseinsDoseAndRateDoseRangeLowCompartrCode = medreqDoseinsDoseAndRateDoseRangeLowCompartrCode;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodDenominatorCode()
+    getMedreqDoseinsDoseAndRateDoseRangeLowSystem()
     {
-        return this.mrDrMaxDosePerPeriodDenominatorCode;
+        return this.medreqDoseinsDoseAndRateDoseRangeLowSystem;
     }
     
-    public void setMrDrMaxDosePerPeriodDenominatorCode
-        (String mrDrMaxDosePerPeriodDenominatorCode) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeLowSystem
+        (String medreqDoseinsDoseAndRateDoseRangeLowSystem) 
         {
-      this.mrDrMaxDosePerPeriodDenominatorCode = mrDrMaxDosePerPeriodDenominatorCode;
+      this.medreqDoseinsDoseAndRateDoseRangeLowSystem = medreqDoseinsDoseAndRateDoseRangeLowSystem;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodDenominatorComparatorCode()
+    getMedreqDoseinsDoseAndRateDoseRangeLowUnit()
     {
-        return this.mrDrMaxDosePerPeriodDenominatorComparatorCode;
+        return this.medreqDoseinsDoseAndRateDoseRangeLowUnit;
     }
     
-    public void setMrDrMaxDosePerPeriodDenominatorComparatorCode
-        (String mrDrMaxDosePerPeriodDenominatorComparatorCode) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeLowUnit
+        (String medreqDoseinsDoseAndRateDoseRangeLowUnit) 
         {
-      this.mrDrMaxDosePerPeriodDenominatorComparatorCode = mrDrMaxDosePerPeriodDenominatorComparatorCode;
+      this.medreqDoseinsDoseAndRateDoseRangeLowUnit = medreqDoseinsDoseAndRateDoseRangeLowUnit;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodDenominatorSystem()
+    getMedreqDoseinsDoseAndRateDoseRangeLowValue()
     {
-        return this.mrDrMaxDosePerPeriodDenominatorSystem;
+        return this.medreqDoseinsDoseAndRateDoseRangeLowValue;
     }
     
-    public void setMrDrMaxDosePerPeriodDenominatorSystem
-        (String mrDrMaxDosePerPeriodDenominatorSystem) 
+    public void setMedreqDoseinsDoseAndRateDoseRangeLowValue
+        (String medreqDoseinsDoseAndRateDoseRangeLowValue) 
         {
-      this.mrDrMaxDosePerPeriodDenominatorSystem = mrDrMaxDosePerPeriodDenominatorSystem;
+      this.medreqDoseinsDoseAndRateDoseRangeLowValue = medreqDoseinsDoseAndRateDoseRangeLowValue;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodDenominatorUnit()
+    getMedreqDoseinsDoseAndRateRateQuantityCode()
     {
-        return this.mrDrMaxDosePerPeriodDenominatorUnit;
+        return this.medreqDoseinsDoseAndRateRateQuantityCode;
     }
     
-    public void setMrDrMaxDosePerPeriodDenominatorUnit
-        (String mrDrMaxDosePerPeriodDenominatorUnit) 
+    public void setMedreqDoseinsDoseAndRateRateQuantityCode
+        (String medreqDoseinsDoseAndRateRateQuantityCode) 
         {
-      this.mrDrMaxDosePerPeriodDenominatorUnit = mrDrMaxDosePerPeriodDenominatorUnit;
+      this.medreqDoseinsDoseAndRateRateQuantityCode = medreqDoseinsDoseAndRateRateQuantityCode;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodDenominatorValue()
+    getMedreqDoseinsDoseAndRateRateQuantityCompartrCode()
     {
-        return this.mrDrMaxDosePerPeriodDenominatorValue;
+        return this.medreqDoseinsDoseAndRateRateQuantityCompartrCode;
     }
     
-    public void setMrDrMaxDosePerPeriodDenominatorValue
-        (String mrDrMaxDosePerPeriodDenominatorValue) 
+    public void setMedreqDoseinsDoseAndRateRateQuantityCompartrCode
+        (String medreqDoseinsDoseAndRateRateQuantityCompartrCode) 
         {
-      this.mrDrMaxDosePerPeriodDenominatorValue = mrDrMaxDosePerPeriodDenominatorValue;
+      this.medreqDoseinsDoseAndRateRateQuantityCompartrCode = medreqDoseinsDoseAndRateRateQuantityCompartrCode;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodNumeratorCode()
+    getMedreqDoseinsDoseAndRateRateQuantitySystem()
     {
-        return this.mrDrMaxDosePerPeriodNumeratorCode;
+        return this.medreqDoseinsDoseAndRateRateQuantitySystem;
     }
     
-    public void setMrDrMaxDosePerPeriodNumeratorCode
-        (String mrDrMaxDosePerPeriodNumeratorCode) 
+    public void setMedreqDoseinsDoseAndRateRateQuantitySystem
+        (String medreqDoseinsDoseAndRateRateQuantitySystem) 
         {
-      this.mrDrMaxDosePerPeriodNumeratorCode = mrDrMaxDosePerPeriodNumeratorCode;
+      this.medreqDoseinsDoseAndRateRateQuantitySystem = medreqDoseinsDoseAndRateRateQuantitySystem;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodNumeratorComparatorCode()
+    getMedreqDoseinsDoseAndRateRateQuantityUnit()
     {
-        return this.mrDrMaxDosePerPeriodNumeratorComparatorCode;
+        return this.medreqDoseinsDoseAndRateRateQuantityUnit;
     }
     
-    public void setMrDrMaxDosePerPeriodNumeratorComparatorCode
-        (String mrDrMaxDosePerPeriodNumeratorComparatorCode) 
+    public void setMedreqDoseinsDoseAndRateRateQuantityUnit
+        (String medreqDoseinsDoseAndRateRateQuantityUnit) 
         {
-      this.mrDrMaxDosePerPeriodNumeratorComparatorCode = mrDrMaxDosePerPeriodNumeratorComparatorCode;
+      this.medreqDoseinsDoseAndRateRateQuantityUnit = medreqDoseinsDoseAndRateRateQuantityUnit;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodNumeratorSystem()
+    getMedreqDoseinsDoseAndRateRateQuantityValue()
     {
-        return this.mrDrMaxDosePerPeriodNumeratorSystem;
+        return this.medreqDoseinsDoseAndRateRateQuantityValue;
     }
     
-    public void setMrDrMaxDosePerPeriodNumeratorSystem
-        (String mrDrMaxDosePerPeriodNumeratorSystem) 
+    public void setMedreqDoseinsDoseAndRateRateQuantityValue
+        (String medreqDoseinsDoseAndRateRateQuantityValue) 
         {
-      this.mrDrMaxDosePerPeriodNumeratorSystem = mrDrMaxDosePerPeriodNumeratorSystem;
+      this.medreqDoseinsDoseAndRateRateQuantityValue = medreqDoseinsDoseAndRateRateQuantityValue;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodNumeratorUnit()
+    getMedreqDoseinsDoseAndRateRateRangeHighCode()
     {
-        return this.mrDrMaxDosePerPeriodNumeratorUnit;
+        return this.medreqDoseinsDoseAndRateRateRangeHighCode;
     }
     
-    public void setMrDrMaxDosePerPeriodNumeratorUnit
-        (String mrDrMaxDosePerPeriodNumeratorUnit) 
+    public void setMedreqDoseinsDoseAndRateRateRangeHighCode
+        (String medreqDoseinsDoseAndRateRateRangeHighCode) 
         {
-      this.mrDrMaxDosePerPeriodNumeratorUnit = mrDrMaxDosePerPeriodNumeratorUnit;
+      this.medreqDoseinsDoseAndRateRateRangeHighCode = medreqDoseinsDoseAndRateRateRangeHighCode;
 }
     public 
     String 
-    getMrDrMaxDosePerPeriodNumeratorValue()
+    getMedreqDoseinsDoseAndRateRateRangeHighCompartrCode()
     {
-        return this.mrDrMaxDosePerPeriodNumeratorValue;
+        return this.medreqDoseinsDoseAndRateRateRangeHighCompartrCode;
     }
     
-    public void setMrDrMaxDosePerPeriodNumeratorValue
-        (String mrDrMaxDosePerPeriodNumeratorValue) 
+    public void setMedreqDoseinsDoseAndRateRateRangeHighCompartrCode
+        (String medreqDoseinsDoseAndRateRateRangeHighCompartrCode) 
         {
-      this.mrDrMaxDosePerPeriodNumeratorValue = mrDrMaxDosePerPeriodNumeratorValue;
+      this.medreqDoseinsDoseAndRateRateRangeHighCompartrCode = medreqDoseinsDoseAndRateRateRangeHighCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodCodingCode()
+    getMedreqDoseinsDoseAndRateRateRangeHighSystem()
     {
-        return this.medicationrequestDosageInstructionMethodCodingCode;
+        return this.medreqDoseinsDoseAndRateRateRangeHighSystem;
     }
     
-    public void setMedicationrequestDosageInstructionMethodCodingCode
-        (String medicationrequestDosageInstructionMethodCodingCode) 
+    public void setMedreqDoseinsDoseAndRateRateRangeHighSystem
+        (String medreqDoseinsDoseAndRateRateRangeHighSystem) 
         {
-      this.medicationrequestDosageInstructionMethodCodingCode = medicationrequestDosageInstructionMethodCodingCode;
+      this.medreqDoseinsDoseAndRateRateRangeHighSystem = medreqDoseinsDoseAndRateRateRangeHighSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodCodingDisplay()
+    getMedreqDoseinsDoseAndRateRateRangeHighUnit()
     {
-        return this.medicationrequestDosageInstructionMethodCodingDisplay;
+        return this.medreqDoseinsDoseAndRateRateRangeHighUnit;
     }
     
-    public void setMedicationrequestDosageInstructionMethodCodingDisplay
-        (String medicationrequestDosageInstructionMethodCodingDisplay) 
+    public void setMedreqDoseinsDoseAndRateRateRangeHighUnit
+        (String medreqDoseinsDoseAndRateRateRangeHighUnit) 
         {
-      this.medicationrequestDosageInstructionMethodCodingDisplay = medicationrequestDosageInstructionMethodCodingDisplay;
+      this.medreqDoseinsDoseAndRateRateRangeHighUnit = medreqDoseinsDoseAndRateRateRangeHighUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodCodingSystem()
+    getMedreqDoseinsDoseAndRateRateRangeHighValue()
     {
-        return this.medicationrequestDosageInstructionMethodCodingSystem;
+        return this.medreqDoseinsDoseAndRateRateRangeHighValue;
     }
     
-    public void setMedicationrequestDosageInstructionMethodCodingSystem
-        (String medicationrequestDosageInstructionMethodCodingSystem) 
+    public void setMedreqDoseinsDoseAndRateRateRangeHighValue
+        (String medreqDoseinsDoseAndRateRateRangeHighValue) 
         {
-      this.medicationrequestDosageInstructionMethodCodingSystem = medicationrequestDosageInstructionMethodCodingSystem;
+      this.medreqDoseinsDoseAndRateRateRangeHighValue = medreqDoseinsDoseAndRateRateRangeHighValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodCodingUserSelected()
+    getMedreqDoseinsDoseAndRateRateRangeLowCode()
     {
-        return this.medicationrequestDosageInstructionMethodCodingUserSelected;
+        return this.medreqDoseinsDoseAndRateRateRangeLowCode;
     }
     
-    public void setMedicationrequestDosageInstructionMethodCodingUserSelected
-        (String medicationrequestDosageInstructionMethodCodingUserSelected) 
+    public void setMedreqDoseinsDoseAndRateRateRangeLowCode
+        (String medreqDoseinsDoseAndRateRateRangeLowCode) 
         {
-      this.medicationrequestDosageInstructionMethodCodingUserSelected = medicationrequestDosageInstructionMethodCodingUserSelected;
+      this.medreqDoseinsDoseAndRateRateRangeLowCode = medreqDoseinsDoseAndRateRateRangeLowCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodCodingVersion()
+    getMedreqDoseinsDoseAndRateRateRangeLowCompartrCode()
     {
-        return this.medicationrequestDosageInstructionMethodCodingVersion;
+        return this.medreqDoseinsDoseAndRateRateRangeLowCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionMethodCodingVersion
-        (String medicationrequestDosageInstructionMethodCodingVersion) 
+    public void setMedreqDoseinsDoseAndRateRateRangeLowCompartrCode
+        (String medreqDoseinsDoseAndRateRateRangeLowCompartrCode) 
         {
-      this.medicationrequestDosageInstructionMethodCodingVersion = medicationrequestDosageInstructionMethodCodingVersion;
+      this.medreqDoseinsDoseAndRateRateRangeLowCompartrCode = medreqDoseinsDoseAndRateRateRangeLowCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionMethodText()
+    getMedreqDoseinsDoseAndRateRateRangeLowSystem()
     {
-        return this.medicationrequestDosageInstructionMethodText;
+        return this.medreqDoseinsDoseAndRateRateRangeLowSystem;
     }
     
-    public void setMedicationrequestDosageInstructionMethodText
-        (String medicationrequestDosageInstructionMethodText) 
+    public void setMedreqDoseinsDoseAndRateRateRangeLowSystem
+        (String medreqDoseinsDoseAndRateRateRangeLowSystem) 
         {
-      this.medicationrequestDosageInstructionMethodText = medicationrequestDosageInstructionMethodText;
+      this.medreqDoseinsDoseAndRateRateRangeLowSystem = medreqDoseinsDoseAndRateRateRangeLowSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionPatientInstruction()
+    getMedreqDoseinsDoseAndRateRateRangeLowUnit()
     {
-        return this.medicationrequestDosageInstructionPatientInstruction;
+        return this.medreqDoseinsDoseAndRateRateRangeLowUnit;
     }
     
-    public void setMedicationrequestDosageInstructionPatientInstruction
-        (String medicationrequestDosageInstructionPatientInstruction) 
+    public void setMedreqDoseinsDoseAndRateRateRangeLowUnit
+        (String medreqDoseinsDoseAndRateRateRangeLowUnit) 
         {
-      this.medicationrequestDosageInstructionPatientInstruction = medicationrequestDosageInstructionPatientInstruction;
+      this.medreqDoseinsDoseAndRateRateRangeLowUnit = medreqDoseinsDoseAndRateRateRangeLowUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteCodingCode()
+    getMedreqDoseinsDoseAndRateRateRangeLowValue()
     {
-        return this.medicationrequestDosageInstructionRouteCodingCode;
+        return this.medreqDoseinsDoseAndRateRateRangeLowValue;
     }
     
-    public void setMedicationrequestDosageInstructionRouteCodingCode
-        (String medicationrequestDosageInstructionRouteCodingCode) 
+    public void setMedreqDoseinsDoseAndRateRateRangeLowValue
+        (String medreqDoseinsDoseAndRateRateRangeLowValue) 
         {
-      this.medicationrequestDosageInstructionRouteCodingCode = medicationrequestDosageInstructionRouteCodingCode;
+      this.medreqDoseinsDoseAndRateRateRangeLowValue = medreqDoseinsDoseAndRateRateRangeLowValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteCodingDisplay()
+    getMedreqDoseinsDoseAndRateRateRatioDenomCode()
     {
-        return this.medicationrequestDosageInstructionRouteCodingDisplay;
+        return this.medreqDoseinsDoseAndRateRateRatioDenomCode;
     }
     
-    public void setMedicationrequestDosageInstructionRouteCodingDisplay
-        (String medicationrequestDosageInstructionRouteCodingDisplay) 
+    public void setMedreqDoseinsDoseAndRateRateRatioDenomCode
+        (String medreqDoseinsDoseAndRateRateRatioDenomCode) 
         {
-      this.medicationrequestDosageInstructionRouteCodingDisplay = medicationrequestDosageInstructionRouteCodingDisplay;
+      this.medreqDoseinsDoseAndRateRateRatioDenomCode = medreqDoseinsDoseAndRateRateRatioDenomCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteCodingSystem()
+    getMedreqDoseinsDoseAndRateRateRatioDenomCompartrCode()
     {
-        return this.medicationrequestDosageInstructionRouteCodingSystem;
+        return this.medreqDoseinsDoseAndRateRateRatioDenomCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionRouteCodingSystem
-        (String medicationrequestDosageInstructionRouteCodingSystem) 
+    public void setMedreqDoseinsDoseAndRateRateRatioDenomCompartrCode
+        (String medreqDoseinsDoseAndRateRateRatioDenomCompartrCode) 
         {
-      this.medicationrequestDosageInstructionRouteCodingSystem = medicationrequestDosageInstructionRouteCodingSystem;
+      this.medreqDoseinsDoseAndRateRateRatioDenomCompartrCode = medreqDoseinsDoseAndRateRateRatioDenomCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteCodingUserSelected()
+    getMedreqDoseinsDoseAndRateRateRatioDenomSystem()
     {
-        return this.medicationrequestDosageInstructionRouteCodingUserSelected;
+        return this.medreqDoseinsDoseAndRateRateRatioDenomSystem;
     }
     
-    public void setMedicationrequestDosageInstructionRouteCodingUserSelected
-        (String medicationrequestDosageInstructionRouteCodingUserSelected) 
+    public void setMedreqDoseinsDoseAndRateRateRatioDenomSystem
+        (String medreqDoseinsDoseAndRateRateRatioDenomSystem) 
         {
-      this.medicationrequestDosageInstructionRouteCodingUserSelected = medicationrequestDosageInstructionRouteCodingUserSelected;
+      this.medreqDoseinsDoseAndRateRateRatioDenomSystem = medreqDoseinsDoseAndRateRateRatioDenomSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteCodingVersion()
+    getMedreqDoseinsDoseAndRateRateRatioDenomUnit()
     {
-        return this.medicationrequestDosageInstructionRouteCodingVersion;
+        return this.medreqDoseinsDoseAndRateRateRatioDenomUnit;
     }
     
-    public void setMedicationrequestDosageInstructionRouteCodingVersion
-        (String medicationrequestDosageInstructionRouteCodingVersion) 
+    public void setMedreqDoseinsDoseAndRateRateRatioDenomUnit
+        (String medreqDoseinsDoseAndRateRateRatioDenomUnit) 
         {
-      this.medicationrequestDosageInstructionRouteCodingVersion = medicationrequestDosageInstructionRouteCodingVersion;
+      this.medreqDoseinsDoseAndRateRateRatioDenomUnit = medreqDoseinsDoseAndRateRateRatioDenomUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionRouteText()
+    getMedreqDoseinsDoseAndRateRateRatioDenomValue()
     {
-        return this.medicationrequestDosageInstructionRouteText;
+        return this.medreqDoseinsDoseAndRateRateRatioDenomValue;
     }
     
-    public void setMedicationrequestDosageInstructionRouteText
-        (String medicationrequestDosageInstructionRouteText) 
+    public void setMedreqDoseinsDoseAndRateRateRatioDenomValue
+        (String medreqDoseinsDoseAndRateRateRatioDenomValue) 
         {
-      this.medicationrequestDosageInstructionRouteText = medicationrequestDosageInstructionRouteText;
+      this.medreqDoseinsDoseAndRateRateRatioDenomValue = medreqDoseinsDoseAndRateRateRatioDenomValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSequence()
+    getMedreqDoseinsDoseAndRateRateRatioNumeratorCode()
     {
-        return this.medicationrequestDosageInstructionSequence;
+        return this.medreqDoseinsDoseAndRateRateRatioNumeratorCode;
     }
     
-    public void setMedicationrequestDosageInstructionSequence
-        (String medicationrequestDosageInstructionSequence) 
+    public void setMedreqDoseinsDoseAndRateRateRatioNumeratorCode
+        (String medreqDoseinsDoseAndRateRateRatioNumeratorCode) 
         {
-      this.medicationrequestDosageInstructionSequence = medicationrequestDosageInstructionSequence;
+      this.medreqDoseinsDoseAndRateRateRatioNumeratorCode = medreqDoseinsDoseAndRateRateRatioNumeratorCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteCodingCode()
+    getMedreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode()
     {
-        return this.medicationrequestDosageInstructionSiteCodingCode;
+        return this.medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionSiteCodingCode
-        (String medicationrequestDosageInstructionSiteCodingCode) 
+    public void setMedreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode
+        (String medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode) 
         {
-      this.medicationrequestDosageInstructionSiteCodingCode = medicationrequestDosageInstructionSiteCodingCode;
+      this.medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode = medreqDoseinsDoseAndRateRateRatioNumeratorCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteCodingDisplay()
+    getMedreqDoseinsDoseAndRateRateRatioNumeratorSystem()
     {
-        return this.medicationrequestDosageInstructionSiteCodingDisplay;
+        return this.medreqDoseinsDoseAndRateRateRatioNumeratorSystem;
     }
     
-    public void setMedicationrequestDosageInstructionSiteCodingDisplay
-        (String medicationrequestDosageInstructionSiteCodingDisplay) 
+    public void setMedreqDoseinsDoseAndRateRateRatioNumeratorSystem
+        (String medreqDoseinsDoseAndRateRateRatioNumeratorSystem) 
         {
-      this.medicationrequestDosageInstructionSiteCodingDisplay = medicationrequestDosageInstructionSiteCodingDisplay;
+      this.medreqDoseinsDoseAndRateRateRatioNumeratorSystem = medreqDoseinsDoseAndRateRateRatioNumeratorSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteCodingSystem()
+    getMedreqDoseinsDoseAndRateRateRatioNumeratorUnit()
     {
-        return this.medicationrequestDosageInstructionSiteCodingSystem;
+        return this.medreqDoseinsDoseAndRateRateRatioNumeratorUnit;
     }
     
-    public void setMedicationrequestDosageInstructionSiteCodingSystem
-        (String medicationrequestDosageInstructionSiteCodingSystem) 
+    public void setMedreqDoseinsDoseAndRateRateRatioNumeratorUnit
+        (String medreqDoseinsDoseAndRateRateRatioNumeratorUnit) 
         {
-      this.medicationrequestDosageInstructionSiteCodingSystem = medicationrequestDosageInstructionSiteCodingSystem;
+      this.medreqDoseinsDoseAndRateRateRatioNumeratorUnit = medreqDoseinsDoseAndRateRateRatioNumeratorUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteCodingUserSelected()
+    getMedreqDoseinsDoseAndRateRateRatioNumeratorValue()
     {
-        return this.medicationrequestDosageInstructionSiteCodingUserSelected;
+        return this.medreqDoseinsDoseAndRateRateRatioNumeratorValue;
     }
     
-    public void setMedicationrequestDosageInstructionSiteCodingUserSelected
-        (String medicationrequestDosageInstructionSiteCodingUserSelected) 
+    public void setMedreqDoseinsDoseAndRateRateRatioNumeratorValue
+        (String medreqDoseinsDoseAndRateRateRatioNumeratorValue) 
         {
-      this.medicationrequestDosageInstructionSiteCodingUserSelected = medicationrequestDosageInstructionSiteCodingUserSelected;
+      this.medreqDoseinsDoseAndRateRateRatioNumeratorValue = medreqDoseinsDoseAndRateRateRatioNumeratorValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteCodingVersion()
+    getMedreqDoseinsDoseAndRateTypeCodingCode()
     {
-        return this.medicationrequestDosageInstructionSiteCodingVersion;
+        return this.medreqDoseinsDoseAndRateTypeCodingCode;
     }
     
-    public void setMedicationrequestDosageInstructionSiteCodingVersion
-        (String medicationrequestDosageInstructionSiteCodingVersion) 
+    public void setMedreqDoseinsDoseAndRateTypeCodingCode
+        (String medreqDoseinsDoseAndRateTypeCodingCode) 
         {
-      this.medicationrequestDosageInstructionSiteCodingVersion = medicationrequestDosageInstructionSiteCodingVersion;
+      this.medreqDoseinsDoseAndRateTypeCodingCode = medreqDoseinsDoseAndRateTypeCodingCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionSiteText()
+    getMedreqDoseinsDoseAndRateTypeCodingDisplay()
     {
-        return this.medicationrequestDosageInstructionSiteText;
+        return this.medreqDoseinsDoseAndRateTypeCodingDisplay;
     }
     
-    public void setMedicationrequestDosageInstructionSiteText
-        (String medicationrequestDosageInstructionSiteText) 
+    public void setMedreqDoseinsDoseAndRateTypeCodingDisplay
+        (String medreqDoseinsDoseAndRateTypeCodingDisplay) 
         {
-      this.medicationrequestDosageInstructionSiteText = medicationrequestDosageInstructionSiteText;
+      this.medreqDoseinsDoseAndRateTypeCodingDisplay = medreqDoseinsDoseAndRateTypeCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionText()
+    getMedreqDoseinsDoseAndRateTypeCodingSystem()
     {
-        return this.medicationrequestDosageInstructionText;
+        return this.medreqDoseinsDoseAndRateTypeCodingSystem;
     }
     
-    public void setMedicationrequestDosageInstructionText
-        (String medicationrequestDosageInstructionText) 
+    public void setMedreqDoseinsDoseAndRateTypeCodingSystem
+        (String medreqDoseinsDoseAndRateTypeCodingSystem) 
         {
-      this.medicationrequestDosageInstructionText = medicationrequestDosageInstructionText;
+      this.medreqDoseinsDoseAndRateTypeCodingSystem = medreqDoseinsDoseAndRateTypeCodingSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingCodeCodingCode()
+    getMedreqDoseinsDoseAndRateTypeCodingUsrslt()
     {
-        return this.medicationrequestDosageInstructionTimingCodeCodingCode;
+        return this.medreqDoseinsDoseAndRateTypeCodingUsrslt;
     }
     
-    public void setMedicationrequestDosageInstructionTimingCodeCodingCode
-        (String medicationrequestDosageInstructionTimingCodeCodingCode) 
+    public void setMedreqDoseinsDoseAndRateTypeCodingUsrslt
+        (String medreqDoseinsDoseAndRateTypeCodingUsrslt) 
         {
-      this.medicationrequestDosageInstructionTimingCodeCodingCode = medicationrequestDosageInstructionTimingCodeCodingCode;
+      this.medreqDoseinsDoseAndRateTypeCodingUsrslt = medreqDoseinsDoseAndRateTypeCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingCodeCodingDisplay()
+    getMedreqDoseinsDoseAndRateTypeCodingVersion()
     {
-        return this.medicationrequestDosageInstructionTimingCodeCodingDisplay;
+        return this.medreqDoseinsDoseAndRateTypeCodingVersion;
     }
     
-    public void setMedicationrequestDosageInstructionTimingCodeCodingDisplay
-        (String medicationrequestDosageInstructionTimingCodeCodingDisplay) 
+    public void setMedreqDoseinsDoseAndRateTypeCodingVersion
+        (String medreqDoseinsDoseAndRateTypeCodingVersion) 
         {
-      this.medicationrequestDosageInstructionTimingCodeCodingDisplay = medicationrequestDosageInstructionTimingCodeCodingDisplay;
+      this.medreqDoseinsDoseAndRateTypeCodingVersion = medreqDoseinsDoseAndRateTypeCodingVersion;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingCodeCodingSystem()
+    getMedreqDoseinsDoseAndRateTypeText()
     {
-        return this.medicationrequestDosageInstructionTimingCodeCodingSystem;
+        return this.medreqDoseinsDoseAndRateTypeText;
     }
     
-    public void setMedicationrequestDosageInstructionTimingCodeCodingSystem
-        (String medicationrequestDosageInstructionTimingCodeCodingSystem) 
+    public void setMedreqDoseinsDoseAndRateTypeText
+        (String medreqDoseinsDoseAndRateTypeText) 
         {
-      this.medicationrequestDosageInstructionTimingCodeCodingSystem = medicationrequestDosageInstructionTimingCodeCodingSystem;
+      this.medreqDoseinsDoseAndRateTypeText = medreqDoseinsDoseAndRateTypeText;
 }
     public 
     String 
-    getMrDrTimingCodeCodingUs()
+    getMedreqDoseinsMaxDosePerAdministrationCode()
     {
-        return this.mrDrTimingCodeCodingUs;
+        return this.medreqDoseinsMaxDosePerAdministrationCode;
     }
     
-    public void setMrDrTimingCodeCodingUs
-        (String mrDrTimingCodeCodingUs) 
+    public void setMedreqDoseinsMaxDosePerAdministrationCode
+        (String medreqDoseinsMaxDosePerAdministrationCode) 
         {
-      this.mrDrTimingCodeCodingUs = mrDrTimingCodeCodingUs;
+      this.medreqDoseinsMaxDosePerAdministrationCode = medreqDoseinsMaxDosePerAdministrationCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingCodeCodingVersion()
+    getMedreqDoseinsMaxDosePerAdministrationCompartrCode()
     {
-        return this.medicationrequestDosageInstructionTimingCodeCodingVersion;
+        return this.medreqDoseinsMaxDosePerAdministrationCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingCodeCodingVersion
-        (String medicationrequestDosageInstructionTimingCodeCodingVersion) 
+    public void setMedreqDoseinsMaxDosePerAdministrationCompartrCode
+        (String medreqDoseinsMaxDosePerAdministrationCompartrCode) 
         {
-      this.medicationrequestDosageInstructionTimingCodeCodingVersion = medicationrequestDosageInstructionTimingCodeCodingVersion;
+      this.medreqDoseinsMaxDosePerAdministrationCompartrCode = medreqDoseinsMaxDosePerAdministrationCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingCodeText()
+    getMedreqDoseinsMaxDosePerAdministrationSystem()
     {
-        return this.medicationrequestDosageInstructionTimingCodeText;
+        return this.medreqDoseinsMaxDosePerAdministrationSystem;
     }
     
-    public void setMedicationrequestDosageInstructionTimingCodeText
-        (String medicationrequestDosageInstructionTimingCodeText) 
+    public void setMedreqDoseinsMaxDosePerAdministrationSystem
+        (String medreqDoseinsMaxDosePerAdministrationSystem) 
         {
-      this.medicationrequestDosageInstructionTimingCodeText = medicationrequestDosageInstructionTimingCodeText;
+      this.medreqDoseinsMaxDosePerAdministrationSystem = medreqDoseinsMaxDosePerAdministrationSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingEvent()
+    getMedreqDoseinsMaxDosePerAdministrationUnit()
     {
-        return this.medicationrequestDosageInstructionTimingEvent;
+        return this.medreqDoseinsMaxDosePerAdministrationUnit;
     }
     
-    public void setMedicationrequestDosageInstructionTimingEvent
-        (String medicationrequestDosageInstructionTimingEvent) 
+    public void setMedreqDoseinsMaxDosePerAdministrationUnit
+        (String medreqDoseinsMaxDosePerAdministrationUnit) 
         {
-      this.medicationrequestDosageInstructionTimingEvent = medicationrequestDosageInstructionTimingEvent;
+      this.medreqDoseinsMaxDosePerAdministrationUnit = medreqDoseinsMaxDosePerAdministrationUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatBounds()
+    getMedreqDoseinsMaxDosePerAdministrationValue()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatBounds;
+        return this.medreqDoseinsMaxDosePerAdministrationValue;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatBounds
-        (String medicationrequestDosageInstructionTimingRepeatBounds) 
+    public void setMedreqDoseinsMaxDosePerAdministrationValue
+        (String medreqDoseinsMaxDosePerAdministrationValue) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatBounds = medicationrequestDosageInstructionTimingRepeatBounds;
+      this.medreqDoseinsMaxDosePerAdministrationValue = medreqDoseinsMaxDosePerAdministrationValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatCount()
+    getMedreqDoseinsMaxDosePerLifetimeCode()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatCount;
+        return this.medreqDoseinsMaxDosePerLifetimeCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatCount
-        (String medicationrequestDosageInstructionTimingRepeatCount) 
+    public void setMedreqDoseinsMaxDosePerLifetimeCode
+        (String medreqDoseinsMaxDosePerLifetimeCode) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatCount = medicationrequestDosageInstructionTimingRepeatCount;
+      this.medreqDoseinsMaxDosePerLifetimeCode = medreqDoseinsMaxDosePerLifetimeCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatCountMax()
+    getMedreqDoseinsMaxDosePerLifetimeCompartrCode()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatCountMax;
+        return this.medreqDoseinsMaxDosePerLifetimeCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatCountMax
-        (String medicationrequestDosageInstructionTimingRepeatCountMax) 
+    public void setMedreqDoseinsMaxDosePerLifetimeCompartrCode
+        (String medreqDoseinsMaxDosePerLifetimeCompartrCode) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatCountMax = medicationrequestDosageInstructionTimingRepeatCountMax;
+      this.medreqDoseinsMaxDosePerLifetimeCompartrCode = medreqDoseinsMaxDosePerLifetimeCompartrCode;
 }
     public 
     String 
-    getMrDrTimingRepeatDayOfWeekCode()
+    getMedreqDoseinsMaxDosePerLifetimeSystem()
     {
-        return this.mrDrTimingRepeatDayOfWeekCode;
+        return this.medreqDoseinsMaxDosePerLifetimeSystem;
     }
     
-    public void setMrDrTimingRepeatDayOfWeekCode
-        (String mrDrTimingRepeatDayOfWeekCode) 
+    public void setMedreqDoseinsMaxDosePerLifetimeSystem
+        (String medreqDoseinsMaxDosePerLifetimeSystem) 
         {
-      this.mrDrTimingRepeatDayOfWeekCode = mrDrTimingRepeatDayOfWeekCode;
+      this.medreqDoseinsMaxDosePerLifetimeSystem = medreqDoseinsMaxDosePerLifetimeSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatDuration()
+    getMedreqDoseinsMaxDosePerLifetimeUnit()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatDuration;
+        return this.medreqDoseinsMaxDosePerLifetimeUnit;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatDuration
-        (String medicationrequestDosageInstructionTimingRepeatDuration) 
+    public void setMedreqDoseinsMaxDosePerLifetimeUnit
+        (String medreqDoseinsMaxDosePerLifetimeUnit) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatDuration = medicationrequestDosageInstructionTimingRepeatDuration;
+      this.medreqDoseinsMaxDosePerLifetimeUnit = medreqDoseinsMaxDosePerLifetimeUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatDurationMax()
+    getMedreqDoseinsMaxDosePerLifetimeValue()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatDurationMax;
+        return this.medreqDoseinsMaxDosePerLifetimeValue;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatDurationMax
-        (String medicationrequestDosageInstructionTimingRepeatDurationMax) 
+    public void setMedreqDoseinsMaxDosePerLifetimeValue
+        (String medreqDoseinsMaxDosePerLifetimeValue) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatDurationMax = medicationrequestDosageInstructionTimingRepeatDurationMax;
+      this.medreqDoseinsMaxDosePerLifetimeValue = medreqDoseinsMaxDosePerLifetimeValue;
 }
     public 
     String 
-    getMrDrTimingRepeatDurationUnitCode()
+    getMedreqDoseinsMaxDosePerPeriodDenomCode()
     {
-        return this.mrDrTimingRepeatDurationUnitCode;
+        return this.medreqDoseinsMaxDosePerPeriodDenomCode;
     }
     
-    public void setMrDrTimingRepeatDurationUnitCode
-        (String mrDrTimingRepeatDurationUnitCode) 
+    public void setMedreqDoseinsMaxDosePerPeriodDenomCode
+        (String medreqDoseinsMaxDosePerPeriodDenomCode) 
         {
-      this.mrDrTimingRepeatDurationUnitCode = mrDrTimingRepeatDurationUnitCode;
+      this.medreqDoseinsMaxDosePerPeriodDenomCode = medreqDoseinsMaxDosePerPeriodDenomCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatFrequency()
+    getMedreqDoseinsMaxDosePerPeriodDenomCompartrCode()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatFrequency;
+        return this.medreqDoseinsMaxDosePerPeriodDenomCompartrCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatFrequency
-        (String medicationrequestDosageInstructionTimingRepeatFrequency) 
+    public void setMedreqDoseinsMaxDosePerPeriodDenomCompartrCode
+        (String medreqDoseinsMaxDosePerPeriodDenomCompartrCode) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatFrequency = medicationrequestDosageInstructionTimingRepeatFrequency;
+      this.medreqDoseinsMaxDosePerPeriodDenomCompartrCode = medreqDoseinsMaxDosePerPeriodDenomCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatFrequencyMax()
+    getMedreqDoseinsMaxDosePerPeriodDenomSystem()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatFrequencyMax;
+        return this.medreqDoseinsMaxDosePerPeriodDenomSystem;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatFrequencyMax
-        (String medicationrequestDosageInstructionTimingRepeatFrequencyMax) 
+    public void setMedreqDoseinsMaxDosePerPeriodDenomSystem
+        (String medreqDoseinsMaxDosePerPeriodDenomSystem) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatFrequencyMax = medicationrequestDosageInstructionTimingRepeatFrequencyMax;
+      this.medreqDoseinsMaxDosePerPeriodDenomSystem = medreqDoseinsMaxDosePerPeriodDenomSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatOff()
+    getMedreqDoseinsMaxDosePerPeriodDenomUnit()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatOff;
+        return this.medreqDoseinsMaxDosePerPeriodDenomUnit;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatOff
-        (String medicationrequestDosageInstructionTimingRepeatOff) 
+    public void setMedreqDoseinsMaxDosePerPeriodDenomUnit
+        (String medreqDoseinsMaxDosePerPeriodDenomUnit) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatOff = medicationrequestDosageInstructionTimingRepeatOff;
+      this.medreqDoseinsMaxDosePerPeriodDenomUnit = medreqDoseinsMaxDosePerPeriodDenomUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatPeriod()
+    getMedreqDoseinsMaxDosePerPeriodDenomValue()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatPeriod;
+        return this.medreqDoseinsMaxDosePerPeriodDenomValue;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatPeriod
-        (String medicationrequestDosageInstructionTimingRepeatPeriod) 
+    public void setMedreqDoseinsMaxDosePerPeriodDenomValue
+        (String medreqDoseinsMaxDosePerPeriodDenomValue) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatPeriod = medicationrequestDosageInstructionTimingRepeatPeriod;
+      this.medreqDoseinsMaxDosePerPeriodDenomValue = medreqDoseinsMaxDosePerPeriodDenomValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatPeriodMax()
+    getMedreqDoseinsMaxDosePerPeriodNumeratorCode()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatPeriodMax;
+        return this.medreqDoseinsMaxDosePerPeriodNumeratorCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatPeriodMax
-        (String medicationrequestDosageInstructionTimingRepeatPeriodMax) 
+    public void setMedreqDoseinsMaxDosePerPeriodNumeratorCode
+        (String medreqDoseinsMaxDosePerPeriodNumeratorCode) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatPeriodMax = medicationrequestDosageInstructionTimingRepeatPeriodMax;
+      this.medreqDoseinsMaxDosePerPeriodNumeratorCode = medreqDoseinsMaxDosePerPeriodNumeratorCode;
 }
     public 
     String 
-    getMrDrTimingRepeatPeriodUnitCode()
+    getMedreqDoseinsMaxDosePerPeriodNumeratorCompartrCode()
     {
-        return this.mrDrTimingRepeatPeriodUnitCode;
+        return this.medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode;
     }
     
-    public void setMrDrTimingRepeatPeriodUnitCode
-        (String mrDrTimingRepeatPeriodUnitCode) 
+    public void setMedreqDoseinsMaxDosePerPeriodNumeratorCompartrCode
+        (String medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode) 
         {
-      this.mrDrTimingRepeatPeriodUnitCode = mrDrTimingRepeatPeriodUnitCode;
+      this.medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode = medreqDoseinsMaxDosePerPeriodNumeratorCompartrCode;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatTimeOfDay()
+    getMedreqDoseinsMaxDosePerPeriodNumeratorSystem()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatTimeOfDay;
+        return this.medreqDoseinsMaxDosePerPeriodNumeratorSystem;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatTimeOfDay
-        (String medicationrequestDosageInstructionTimingRepeatTimeOfDay) 
+    public void setMedreqDoseinsMaxDosePerPeriodNumeratorSystem
+        (String medreqDoseinsMaxDosePerPeriodNumeratorSystem) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatTimeOfDay = medicationrequestDosageInstructionTimingRepeatTimeOfDay;
+      this.medreqDoseinsMaxDosePerPeriodNumeratorSystem = medreqDoseinsMaxDosePerPeriodNumeratorSystem;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatWhenCode()
+    getMedreqDoseinsMaxDosePerPeriodNumeratorUnit()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatWhenCode;
+        return this.medreqDoseinsMaxDosePerPeriodNumeratorUnit;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatWhenCode
-        (String medicationrequestDosageInstructionTimingRepeatWhenCode) 
+    public void setMedreqDoseinsMaxDosePerPeriodNumeratorUnit
+        (String medreqDoseinsMaxDosePerPeriodNumeratorUnit) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatWhenCode = medicationrequestDosageInstructionTimingRepeatWhenCode;
+      this.medreqDoseinsMaxDosePerPeriodNumeratorUnit = medreqDoseinsMaxDosePerPeriodNumeratorUnit;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatGetOff()
+    getMedreqDoseinsMaxDosePerPeriodNumeratorValue()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatGetOff;
+        return this.medreqDoseinsMaxDosePerPeriodNumeratorValue;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatGetOff
-        (String medicationrequestDosageInstructionTimingRepeatGetOff) 
+    public void setMedreqDoseinsMaxDosePerPeriodNumeratorValue
+        (String medreqDoseinsMaxDosePerPeriodNumeratorValue) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatGetOff = medicationrequestDosageInstructionTimingRepeatGetOff;
+      this.medreqDoseinsMaxDosePerPeriodNumeratorValue = medreqDoseinsMaxDosePerPeriodNumeratorValue;
 }
     public 
     String 
-    getMedicationrequestDosageInstructionTimingRepeatHasOff()
+    getMedreqDoseinsMethodCodingCode()
     {
-        return this.medicationrequestDosageInstructionTimingRepeatHasOff;
+        return this.medreqDoseinsMethodCodingCode;
     }
     
-    public void setMedicationrequestDosageInstructionTimingRepeatHasOff
-        (String medicationrequestDosageInstructionTimingRepeatHasOff) 
+    public void setMedreqDoseinsMethodCodingCode
+        (String medreqDoseinsMethodCodingCode) 
         {
-      this.medicationrequestDosageInstructionTimingRepeatHasOff = medicationrequestDosageInstructionTimingRepeatHasOff;
+      this.medreqDoseinsMethodCodingCode = medreqDoseinsMethodCodingCode;
 }
     public 
     String 
-    getMedicationrequestEncounter()
+    getMedreqDoseinsMethodCodingDisplay()
     {
-        return this.medicationrequestEncounter;
+        return this.medreqDoseinsMethodCodingDisplay;
     }
     
-    public void setMedicationrequestEncounter
-        (String medicationrequestEncounter) 
+    public void setMedreqDoseinsMethodCodingDisplay
+        (String medreqDoseinsMethodCodingDisplay) 
         {
-      this.medicationrequestEncounter = medicationrequestEncounter;
+      this.medreqDoseinsMethodCodingDisplay = medreqDoseinsMethodCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestEventHistory()
+    getMedreqDoseinsMethodCodingSystem()
     {
-        return this.medicationrequestEventHistory;
+        return this.medreqDoseinsMethodCodingSystem;
     }
     
-    public void setMedicationrequestEventHistory
-        (String medicationrequestEventHistory) 
+    public void setMedreqDoseinsMethodCodingSystem
+        (String medreqDoseinsMethodCodingSystem) 
         {
-      this.medicationrequestEventHistory = medicationrequestEventHistory;
+      this.medreqDoseinsMethodCodingSystem = medreqDoseinsMethodCodingSystem;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierAssigner()
+    getMedreqDoseinsMethodCodingUsrslt()
     {
-        return this.medicationrequestGroupIdentifierAssigner;
+        return this.medreqDoseinsMethodCodingUsrslt;
     }
     
-    public void setMedicationrequestGroupIdentifierAssigner
-        (String medicationrequestGroupIdentifierAssigner) 
+    public void setMedreqDoseinsMethodCodingUsrslt
+        (String medreqDoseinsMethodCodingUsrslt) 
         {
-      this.medicationrequestGroupIdentifierAssigner = medicationrequestGroupIdentifierAssigner;
+      this.medreqDoseinsMethodCodingUsrslt = medreqDoseinsMethodCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierPeriodEnd()
+    getMedreqDoseinsMethodCodingVersion()
     {
-        return this.medicationrequestGroupIdentifierPeriodEnd;
+        return this.medreqDoseinsMethodCodingVersion;
     }
     
-    public void setMedicationrequestGroupIdentifierPeriodEnd
-        (String medicationrequestGroupIdentifierPeriodEnd) 
+    public void setMedreqDoseinsMethodCodingVersion
+        (String medreqDoseinsMethodCodingVersion) 
         {
-      this.medicationrequestGroupIdentifierPeriodEnd = medicationrequestGroupIdentifierPeriodEnd;
+      this.medreqDoseinsMethodCodingVersion = medreqDoseinsMethodCodingVersion;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierPeriodStart()
+    getMedreqDoseinsMethodText()
     {
-        return this.medicationrequestGroupIdentifierPeriodStart;
+        return this.medreqDoseinsMethodText;
     }
     
-    public void setMedicationrequestGroupIdentifierPeriodStart
-        (String medicationrequestGroupIdentifierPeriodStart) 
+    public void setMedreqDoseinsMethodText
+        (String medreqDoseinsMethodText) 
         {
-      this.medicationrequestGroupIdentifierPeriodStart = medicationrequestGroupIdentifierPeriodStart;
+      this.medreqDoseinsMethodText = medreqDoseinsMethodText;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierSystem()
+    getMedreqDoseinsPatientInstruction()
     {
-        return this.medicationrequestGroupIdentifierSystem;
+        return this.medreqDoseinsPatientInstruction;
     }
     
-    public void setMedicationrequestGroupIdentifierSystem
-        (String medicationrequestGroupIdentifierSystem) 
+    public void setMedreqDoseinsPatientInstruction
+        (String medreqDoseinsPatientInstruction) 
         {
-      this.medicationrequestGroupIdentifierSystem = medicationrequestGroupIdentifierSystem;
+      this.medreqDoseinsPatientInstruction = medreqDoseinsPatientInstruction;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeCodingCode()
+    getMedreqDoseinsRouteCodingCode()
     {
-        return this.medicationrequestGroupIdentifierTypeCodingCode;
+        return this.medreqDoseinsRouteCodingCode;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeCodingCode
-        (String medicationrequestGroupIdentifierTypeCodingCode) 
+    public void setMedreqDoseinsRouteCodingCode
+        (String medreqDoseinsRouteCodingCode) 
         {
-      this.medicationrequestGroupIdentifierTypeCodingCode = medicationrequestGroupIdentifierTypeCodingCode;
+      this.medreqDoseinsRouteCodingCode = medreqDoseinsRouteCodingCode;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeCodingDisplay()
+    getMedreqDoseinsRouteCodingDisplay()
     {
-        return this.medicationrequestGroupIdentifierTypeCodingDisplay;
+        return this.medreqDoseinsRouteCodingDisplay;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeCodingDisplay
-        (String medicationrequestGroupIdentifierTypeCodingDisplay) 
+    public void setMedreqDoseinsRouteCodingDisplay
+        (String medreqDoseinsRouteCodingDisplay) 
         {
-      this.medicationrequestGroupIdentifierTypeCodingDisplay = medicationrequestGroupIdentifierTypeCodingDisplay;
+      this.medreqDoseinsRouteCodingDisplay = medreqDoseinsRouteCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeCodingSystem()
+    getMedreqDoseinsRouteCodingSystem()
     {
-        return this.medicationrequestGroupIdentifierTypeCodingSystem;
+        return this.medreqDoseinsRouteCodingSystem;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeCodingSystem
-        (String medicationrequestGroupIdentifierTypeCodingSystem) 
+    public void setMedreqDoseinsRouteCodingSystem
+        (String medreqDoseinsRouteCodingSystem) 
         {
-      this.medicationrequestGroupIdentifierTypeCodingSystem = medicationrequestGroupIdentifierTypeCodingSystem;
+      this.medreqDoseinsRouteCodingSystem = medreqDoseinsRouteCodingSystem;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeCodingUserSelected()
+    getMedreqDoseinsRouteCodingUsrslt()
     {
-        return this.medicationrequestGroupIdentifierTypeCodingUserSelected;
+        return this.medreqDoseinsRouteCodingUsrslt;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeCodingUserSelected
-        (String medicationrequestGroupIdentifierTypeCodingUserSelected) 
+    public void setMedreqDoseinsRouteCodingUsrslt
+        (String medreqDoseinsRouteCodingUsrslt) 
         {
-      this.medicationrequestGroupIdentifierTypeCodingUserSelected = medicationrequestGroupIdentifierTypeCodingUserSelected;
+      this.medreqDoseinsRouteCodingUsrslt = medreqDoseinsRouteCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeCodingVersion()
+    getMedreqDoseinsRouteCodingVersion()
     {
-        return this.medicationrequestGroupIdentifierTypeCodingVersion;
+        return this.medreqDoseinsRouteCodingVersion;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeCodingVersion
-        (String medicationrequestGroupIdentifierTypeCodingVersion) 
+    public void setMedreqDoseinsRouteCodingVersion
+        (String medreqDoseinsRouteCodingVersion) 
         {
-      this.medicationrequestGroupIdentifierTypeCodingVersion = medicationrequestGroupIdentifierTypeCodingVersion;
+      this.medreqDoseinsRouteCodingVersion = medreqDoseinsRouteCodingVersion;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierTypeText()
+    getMedreqDoseinsRouteText()
     {
-        return this.medicationrequestGroupIdentifierTypeText;
+        return this.medreqDoseinsRouteText;
     }
     
-    public void setMedicationrequestGroupIdentifierTypeText
-        (String medicationrequestGroupIdentifierTypeText) 
+    public void setMedreqDoseinsRouteText
+        (String medreqDoseinsRouteText) 
         {
-      this.medicationrequestGroupIdentifierTypeText = medicationrequestGroupIdentifierTypeText;
+      this.medreqDoseinsRouteText = medreqDoseinsRouteText;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierUseCode()
+    getMedreqDoseinsSequence()
     {
-        return this.medicationrequestGroupIdentifierUseCode;
+        return this.medreqDoseinsSequence;
     }
     
-    public void setMedicationrequestGroupIdentifierUseCode
-        (String medicationrequestGroupIdentifierUseCode) 
+    public void setMedreqDoseinsSequence
+        (String medreqDoseinsSequence) 
         {
-      this.medicationrequestGroupIdentifierUseCode = medicationrequestGroupIdentifierUseCode;
+      this.medreqDoseinsSequence = medreqDoseinsSequence;
 }
     public 
     String 
-    getMedicationrequestGroupIdentifierValue()
+    getMedreqDoseinsSiteCodingCode()
     {
-        return this.medicationrequestGroupIdentifierValue;
+        return this.medreqDoseinsSiteCodingCode;
     }
     
-    public void setMedicationrequestGroupIdentifierValue
-        (String medicationrequestGroupIdentifierValue) 
+    public void setMedreqDoseinsSiteCodingCode
+        (String medreqDoseinsSiteCodingCode) 
         {
-      this.medicationrequestGroupIdentifierValue = medicationrequestGroupIdentifierValue;
+      this.medreqDoseinsSiteCodingCode = medreqDoseinsSiteCodingCode;
 }
     public 
     String 
-    getMedicationrequestIdentifierAssigner()
+    getMedreqDoseinsSiteCodingDisplay()
     {
-        return this.medicationrequestIdentifierAssigner;
+        return this.medreqDoseinsSiteCodingDisplay;
     }
     
-    public void setMedicationrequestIdentifierAssigner
-        (String medicationrequestIdentifierAssigner) 
+    public void setMedreqDoseinsSiteCodingDisplay
+        (String medreqDoseinsSiteCodingDisplay) 
         {
-      this.medicationrequestIdentifierAssigner = medicationrequestIdentifierAssigner;
+      this.medreqDoseinsSiteCodingDisplay = medreqDoseinsSiteCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestIdentifierPeriodEnd()
+    getMedreqDoseinsSiteCodingSystem()
     {
-        return this.medicationrequestIdentifierPeriodEnd;
+        return this.medreqDoseinsSiteCodingSystem;
     }
     
-    public void setMedicationrequestIdentifierPeriodEnd
-        (String medicationrequestIdentifierPeriodEnd) 
+    public void setMedreqDoseinsSiteCodingSystem
+        (String medreqDoseinsSiteCodingSystem) 
         {
-      this.medicationrequestIdentifierPeriodEnd = medicationrequestIdentifierPeriodEnd;
+      this.medreqDoseinsSiteCodingSystem = medreqDoseinsSiteCodingSystem;
 }
     public 
     String 
-    getMedicationrequestIdentifierPeriodStart()
+    getMedreqDoseinsSiteCodingUsrslt()
     {
-        return this.medicationrequestIdentifierPeriodStart;
+        return this.medreqDoseinsSiteCodingUsrslt;
     }
     
-    public void setMedicationrequestIdentifierPeriodStart
-        (String medicationrequestIdentifierPeriodStart) 
+    public void setMedreqDoseinsSiteCodingUsrslt
+        (String medreqDoseinsSiteCodingUsrslt) 
         {
-      this.medicationrequestIdentifierPeriodStart = medicationrequestIdentifierPeriodStart;
+      this.medreqDoseinsSiteCodingUsrslt = medreqDoseinsSiteCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestIdentifierSystem()
+    getMedreqDoseinsSiteCodingVersion()
     {
-        return this.medicationrequestIdentifierSystem;
+        return this.medreqDoseinsSiteCodingVersion;
     }
     
-    public void setMedicationrequestIdentifierSystem
-        (String medicationrequestIdentifierSystem) 
+    public void setMedreqDoseinsSiteCodingVersion
+        (String medreqDoseinsSiteCodingVersion) 
         {
-      this.medicationrequestIdentifierSystem = medicationrequestIdentifierSystem;
+      this.medreqDoseinsSiteCodingVersion = medreqDoseinsSiteCodingVersion;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeCodingCode()
+    getMedreqDoseinsSiteText()
     {
-        return this.medicationrequestIdentifierTypeCodingCode;
+        return this.medreqDoseinsSiteText;
     }
     
-    public void setMedicationrequestIdentifierTypeCodingCode
-        (String medicationrequestIdentifierTypeCodingCode) 
+    public void setMedreqDoseinsSiteText
+        (String medreqDoseinsSiteText) 
         {
-      this.medicationrequestIdentifierTypeCodingCode = medicationrequestIdentifierTypeCodingCode;
+      this.medreqDoseinsSiteText = medreqDoseinsSiteText;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeCodingDisplay()
+    getMedreqDoseinsText()
     {
-        return this.medicationrequestIdentifierTypeCodingDisplay;
+        return this.medreqDoseinsText;
     }
     
-    public void setMedicationrequestIdentifierTypeCodingDisplay
-        (String medicationrequestIdentifierTypeCodingDisplay) 
+    public void setMedreqDoseinsText
+        (String medreqDoseinsText) 
         {
-      this.medicationrequestIdentifierTypeCodingDisplay = medicationrequestIdentifierTypeCodingDisplay;
+      this.medreqDoseinsText = medreqDoseinsText;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeCodingSystem()
+    getMedreqDoseinsTimingCodeCodingCode()
     {
-        return this.medicationrequestIdentifierTypeCodingSystem;
+        return this.medreqDoseinsTimingCodeCodingCode;
     }
     
-    public void setMedicationrequestIdentifierTypeCodingSystem
-        (String medicationrequestIdentifierTypeCodingSystem) 
+    public void setMedreqDoseinsTimingCodeCodingCode
+        (String medreqDoseinsTimingCodeCodingCode) 
         {
-      this.medicationrequestIdentifierTypeCodingSystem = medicationrequestIdentifierTypeCodingSystem;
+      this.medreqDoseinsTimingCodeCodingCode = medreqDoseinsTimingCodeCodingCode;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeCodingUserSelected()
+    getMedreqDoseinsTimingCodeCodingDisplay()
     {
-        return this.medicationrequestIdentifierTypeCodingUserSelected;
+        return this.medreqDoseinsTimingCodeCodingDisplay;
     }
     
-    public void setMedicationrequestIdentifierTypeCodingUserSelected
-        (String medicationrequestIdentifierTypeCodingUserSelected) 
+    public void setMedreqDoseinsTimingCodeCodingDisplay
+        (String medreqDoseinsTimingCodeCodingDisplay) 
         {
-      this.medicationrequestIdentifierTypeCodingUserSelected = medicationrequestIdentifierTypeCodingUserSelected;
+      this.medreqDoseinsTimingCodeCodingDisplay = medreqDoseinsTimingCodeCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeCodingVersion()
+    getMedreqDoseinsTimingCodeCodingSystem()
     {
-        return this.medicationrequestIdentifierTypeCodingVersion;
+        return this.medreqDoseinsTimingCodeCodingSystem;
     }
     
-    public void setMedicationrequestIdentifierTypeCodingVersion
-        (String medicationrequestIdentifierTypeCodingVersion) 
+    public void setMedreqDoseinsTimingCodeCodingSystem
+        (String medreqDoseinsTimingCodeCodingSystem) 
         {
-      this.medicationrequestIdentifierTypeCodingVersion = medicationrequestIdentifierTypeCodingVersion;
+      this.medreqDoseinsTimingCodeCodingSystem = medreqDoseinsTimingCodeCodingSystem;
 }
     public 
     String 
-    getMedicationrequestIdentifierTypeText()
+    getMedreqDoseinsTimingCodeCodingUsrslt()
     {
-        return this.medicationrequestIdentifierTypeText;
+        return this.medreqDoseinsTimingCodeCodingUsrslt;
     }
     
-    public void setMedicationrequestIdentifierTypeText
-        (String medicationrequestIdentifierTypeText) 
+    public void setMedreqDoseinsTimingCodeCodingUsrslt
+        (String medreqDoseinsTimingCodeCodingUsrslt) 
         {
-      this.medicationrequestIdentifierTypeText = medicationrequestIdentifierTypeText;
+      this.medreqDoseinsTimingCodeCodingUsrslt = medreqDoseinsTimingCodeCodingUsrslt;
 }
     public 
     String 
-    getMedicationrequestIdentifierUseCode()
+    getMedreqDoseinsTimingCodeCodingVersion()
     {
-        return this.medicationrequestIdentifierUseCode;
+        return this.medreqDoseinsTimingCodeCodingVersion;
     }
     
-    public void setMedicationrequestIdentifierUseCode
-        (String medicationrequestIdentifierUseCode) 
+    public void setMedreqDoseinsTimingCodeCodingVersion
+        (String medreqDoseinsTimingCodeCodingVersion) 
         {
-      this.medicationrequestIdentifierUseCode = medicationrequestIdentifierUseCode;
+      this.medreqDoseinsTimingCodeCodingVersion = medreqDoseinsTimingCodeCodingVersion;
 }
     public 
     String 
-    getMedicationrequestInstantiatesCanonical()
+    getMedreqDoseinsTimingCodeText()
     {
-        return this.medicationrequestInstantiatesCanonical;
+        return this.medreqDoseinsTimingCodeText;
     }
     
-    public void setMedicationrequestInstantiatesCanonical
-        (String medicationrequestInstantiatesCanonical) 
+    public void setMedreqDoseinsTimingCodeText
+        (String medreqDoseinsTimingCodeText) 
         {
-      this.medicationrequestInstantiatesCanonical = medicationrequestInstantiatesCanonical;
+      this.medreqDoseinsTimingCodeText = medreqDoseinsTimingCodeText;
 }
     public 
     String 
-    getMedicationrequestInstantiatesUri()
+    getMedreqDoseinsTimingEvent()
     {
-        return this.medicationrequestInstantiatesUri;
+        return this.medreqDoseinsTimingEvent;
     }
     
-    public void setMedicationrequestInstantiatesUri
-        (String medicationrequestInstantiatesUri) 
+    public void setMedreqDoseinsTimingEvent
+        (String medreqDoseinsTimingEvent) 
         {
-      this.medicationrequestInstantiatesUri = medicationrequestInstantiatesUri;
+      this.medreqDoseinsTimingEvent = medreqDoseinsTimingEvent;
 }
     public 
     String 
-    getMedicationrequestInsurance()
+    getMedreqDoseinsTimingRepeatBoundsDurationCode()
     {
-        return this.medicationrequestInsurance;
+        return this.medreqDoseinsTimingRepeatBoundsDurationCode;
     }
     
-    public void setMedicationrequestInsurance
-        (String medicationrequestInsurance) 
+    public void setMedreqDoseinsTimingRepeatBoundsDurationCode
+        (String medreqDoseinsTimingRepeatBoundsDurationCode) 
         {
-      this.medicationrequestInsurance = medicationrequestInsurance;
+      this.medreqDoseinsTimingRepeatBoundsDurationCode = medreqDoseinsTimingRepeatBoundsDurationCode;
 }
     public 
     String 
-    getMedicationrequestIntentCode()
+    getMedreqDoseinsTimingRepeatBoundsDurationCompartrCode()
     {
-        return this.medicationrequestIntentCode;
+        return this.medreqDoseinsTimingRepeatBoundsDurationCompartrCode;
     }
     
-    public void setMedicationrequestIntentCode
-        (String medicationrequestIntentCode) 
+    public void setMedreqDoseinsTimingRepeatBoundsDurationCompartrCode
+        (String medreqDoseinsTimingRepeatBoundsDurationCompartrCode) 
         {
-      this.medicationrequestIntentCode = medicationrequestIntentCode;
+      this.medreqDoseinsTimingRepeatBoundsDurationCompartrCode = medreqDoseinsTimingRepeatBoundsDurationCompartrCode;
 }
     public 
     String 
-    getMedicationrequestMedication()
+    getMedreqDoseinsTimingRepeatBoundsDurationSystem()
     {
-        return this.medicationrequestMedication;
+        return this.medreqDoseinsTimingRepeatBoundsDurationSystem;
     }
     
-    public void setMedicationrequestMedication
-        (String medicationrequestMedication) 
+    public void setMedreqDoseinsTimingRepeatBoundsDurationSystem
+        (String medreqDoseinsTimingRepeatBoundsDurationSystem) 
         {
-      this.medicationrequestMedication = medicationrequestMedication;
+      this.medreqDoseinsTimingRepeatBoundsDurationSystem = medreqDoseinsTimingRepeatBoundsDurationSystem;
 }
     public 
     String 
-    getMedicationrequestNoteAuthor()
+    getMedreqDoseinsTimingRepeatBoundsDurationUnit()
     {
-        return this.medicationrequestNoteAuthor;
+        return this.medreqDoseinsTimingRepeatBoundsDurationUnit;
     }
     
-    public void setMedicationrequestNoteAuthor
-        (String medicationrequestNoteAuthor) 
+    public void setMedreqDoseinsTimingRepeatBoundsDurationUnit
+        (String medreqDoseinsTimingRepeatBoundsDurationUnit) 
         {
-      this.medicationrequestNoteAuthor = medicationrequestNoteAuthor;
+      this.medreqDoseinsTimingRepeatBoundsDurationUnit = medreqDoseinsTimingRepeatBoundsDurationUnit;
 }
     public 
     String 
-    getMedicationrequestNoteText()
+    getMedreqDoseinsTimingRepeatBoundsDurationValue()
     {
-        return this.medicationrequestNoteText;
+        return this.medreqDoseinsTimingRepeatBoundsDurationValue;
     }
     
-    public void setMedicationrequestNoteText
-        (String medicationrequestNoteText) 
+    public void setMedreqDoseinsTimingRepeatBoundsDurationValue
+        (String medreqDoseinsTimingRepeatBoundsDurationValue) 
         {
-      this.medicationrequestNoteText = medicationrequestNoteText;
+      this.medreqDoseinsTimingRepeatBoundsDurationValue = medreqDoseinsTimingRepeatBoundsDurationValue;
 }
     public 
     String 
-    getMedicationrequestNoteTime()
+    getMedreqDoseinsTimingRepeatBoundsPeriodEnd()
     {
-        return this.medicationrequestNoteTime;
+        return this.medreqDoseinsTimingRepeatBoundsPeriodEnd;
     }
     
-    public void setMedicationrequestNoteTime
-        (String medicationrequestNoteTime) 
+    public void setMedreqDoseinsTimingRepeatBoundsPeriodEnd
+        (String medreqDoseinsTimingRepeatBoundsPeriodEnd) 
         {
-      this.medicationrequestNoteTime = medicationrequestNoteTime;
+      this.medreqDoseinsTimingRepeatBoundsPeriodEnd = medreqDoseinsTimingRepeatBoundsPeriodEnd;
 }
     public 
     String 
-    getMedicationrequestPerformer()
+    getMedreqDoseinsTimingRepeatBoundsPeriodStart()
     {
-        return this.medicationrequestPerformer;
+        return this.medreqDoseinsTimingRepeatBoundsPeriodStart;
     }
     
-    public void setMedicationrequestPerformer
-        (String medicationrequestPerformer) 
+    public void setMedreqDoseinsTimingRepeatBoundsPeriodStart
+        (String medreqDoseinsTimingRepeatBoundsPeriodStart) 
         {
-      this.medicationrequestPerformer = medicationrequestPerformer;
+      this.medreqDoseinsTimingRepeatBoundsPeriodStart = medreqDoseinsTimingRepeatBoundsPeriodStart;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeCodingCode()
+    getMedreqDoseinsTimingRepeatBoundsRangeHighCode()
     {
-        return this.medicationrequestPerformerTypeCodingCode;
+        return this.medreqDoseinsTimingRepeatBoundsRangeHighCode;
     }
     
-    public void setMedicationrequestPerformerTypeCodingCode
-        (String medicationrequestPerformerTypeCodingCode) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeHighCode
+        (String medreqDoseinsTimingRepeatBoundsRangeHighCode) 
         {
-      this.medicationrequestPerformerTypeCodingCode = medicationrequestPerformerTypeCodingCode;
+      this.medreqDoseinsTimingRepeatBoundsRangeHighCode = medreqDoseinsTimingRepeatBoundsRangeHighCode;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeCodingDisplay()
+    getMedreqDoseinsTimingRepeatBoundsRangeHighCompartrCode()
     {
-        return this.medicationrequestPerformerTypeCodingDisplay;
+        return this.medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode;
     }
     
-    public void setMedicationrequestPerformerTypeCodingDisplay
-        (String medicationrequestPerformerTypeCodingDisplay) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeHighCompartrCode
+        (String medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode) 
         {
-      this.medicationrequestPerformerTypeCodingDisplay = medicationrequestPerformerTypeCodingDisplay;
+      this.medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode = medreqDoseinsTimingRepeatBoundsRangeHighCompartrCode;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeCodingSystem()
+    getMedreqDoseinsTimingRepeatBoundsRangeHighSystem()
     {
-        return this.medicationrequestPerformerTypeCodingSystem;
+        return this.medreqDoseinsTimingRepeatBoundsRangeHighSystem;
     }
     
-    public void setMedicationrequestPerformerTypeCodingSystem
-        (String medicationrequestPerformerTypeCodingSystem) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeHighSystem
+        (String medreqDoseinsTimingRepeatBoundsRangeHighSystem) 
         {
-      this.medicationrequestPerformerTypeCodingSystem = medicationrequestPerformerTypeCodingSystem;
+      this.medreqDoseinsTimingRepeatBoundsRangeHighSystem = medreqDoseinsTimingRepeatBoundsRangeHighSystem;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeCodingUserSelected()
+    getMedreqDoseinsTimingRepeatBoundsRangeHighUnit()
     {
-        return this.medicationrequestPerformerTypeCodingUserSelected;
+        return this.medreqDoseinsTimingRepeatBoundsRangeHighUnit;
     }
     
-    public void setMedicationrequestPerformerTypeCodingUserSelected
-        (String medicationrequestPerformerTypeCodingUserSelected) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeHighUnit
+        (String medreqDoseinsTimingRepeatBoundsRangeHighUnit) 
         {
-      this.medicationrequestPerformerTypeCodingUserSelected = medicationrequestPerformerTypeCodingUserSelected;
+      this.medreqDoseinsTimingRepeatBoundsRangeHighUnit = medreqDoseinsTimingRepeatBoundsRangeHighUnit;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeCodingVersion()
+    getMedreqDoseinsTimingRepeatBoundsRangeHighValue()
     {
-        return this.medicationrequestPerformerTypeCodingVersion;
+        return this.medreqDoseinsTimingRepeatBoundsRangeHighValue;
     }
     
-    public void setMedicationrequestPerformerTypeCodingVersion
-        (String medicationrequestPerformerTypeCodingVersion) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeHighValue
+        (String medreqDoseinsTimingRepeatBoundsRangeHighValue) 
         {
-      this.medicationrequestPerformerTypeCodingVersion = medicationrequestPerformerTypeCodingVersion;
+      this.medreqDoseinsTimingRepeatBoundsRangeHighValue = medreqDoseinsTimingRepeatBoundsRangeHighValue;
 }
     public 
     String 
-    getMedicationrequestPerformerTypeText()
+    getMedreqDoseinsTimingRepeatBoundsRangeLowCode()
     {
-        return this.medicationrequestPerformerTypeText;
+        return this.medreqDoseinsTimingRepeatBoundsRangeLowCode;
     }
     
-    public void setMedicationrequestPerformerTypeText
-        (String medicationrequestPerformerTypeText) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeLowCode
+        (String medreqDoseinsTimingRepeatBoundsRangeLowCode) 
         {
-      this.medicationrequestPerformerTypeText = medicationrequestPerformerTypeText;
+      this.medreqDoseinsTimingRepeatBoundsRangeLowCode = medreqDoseinsTimingRepeatBoundsRangeLowCode;
 }
     public 
     String 
-    getMedicationrequestPriorPrescription()
+    getMedreqDoseinsTimingRepeatBoundsRangeLowCompartrCode()
     {
-        return this.medicationrequestPriorPrescription;
+        return this.medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode;
     }
     
-    public void setMedicationrequestPriorPrescription
-        (String medicationrequestPriorPrescription) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeLowCompartrCode
+        (String medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode) 
         {
-      this.medicationrequestPriorPrescription = medicationrequestPriorPrescription;
+      this.medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode = medreqDoseinsTimingRepeatBoundsRangeLowCompartrCode;
 }
     public 
     String 
-    getMedicationrequestPriorityCode()
+    getMedreqDoseinsTimingRepeatBoundsRangeLowSystem()
     {
-        return this.medicationrequestPriorityCode;
+        return this.medreqDoseinsTimingRepeatBoundsRangeLowSystem;
     }
     
-    public void setMedicationrequestPriorityCode
-        (String medicationrequestPriorityCode) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeLowSystem
+        (String medreqDoseinsTimingRepeatBoundsRangeLowSystem) 
         {
-      this.medicationrequestPriorityCode = medicationrequestPriorityCode;
+      this.medreqDoseinsTimingRepeatBoundsRangeLowSystem = medreqDoseinsTimingRepeatBoundsRangeLowSystem;
 }
     public 
     String 
-    getMedicationrequestReasonCodeCodingCode()
+    getMedreqDoseinsTimingRepeatBoundsRangeLowUnit()
     {
-        return this.medicationrequestReasonCodeCodingCode;
+        return this.medreqDoseinsTimingRepeatBoundsRangeLowUnit;
     }
     
-    public void setMedicationrequestReasonCodeCodingCode
-        (String medicationrequestReasonCodeCodingCode) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeLowUnit
+        (String medreqDoseinsTimingRepeatBoundsRangeLowUnit) 
         {
-      this.medicationrequestReasonCodeCodingCode = medicationrequestReasonCodeCodingCode;
+      this.medreqDoseinsTimingRepeatBoundsRangeLowUnit = medreqDoseinsTimingRepeatBoundsRangeLowUnit;
 }
     public 
     String 
-    getMedicationrequestReasonCodeCodingDisplay()
+    getMedreqDoseinsTimingRepeatBoundsRangeLowValue()
     {
-        return this.medicationrequestReasonCodeCodingDisplay;
+        return this.medreqDoseinsTimingRepeatBoundsRangeLowValue;
     }
     
-    public void setMedicationrequestReasonCodeCodingDisplay
-        (String medicationrequestReasonCodeCodingDisplay) 
+    public void setMedreqDoseinsTimingRepeatBoundsRangeLowValue
+        (String medreqDoseinsTimingRepeatBoundsRangeLowValue) 
         {
-      this.medicationrequestReasonCodeCodingDisplay = medicationrequestReasonCodeCodingDisplay;
+      this.medreqDoseinsTimingRepeatBoundsRangeLowValue = medreqDoseinsTimingRepeatBoundsRangeLowValue;
 }
     public 
     String 
-    getMedicationrequestReasonCodeCodingSystem()
+    getMedreqDoseinsTimingRepeatCount()
     {
-        return this.medicationrequestReasonCodeCodingSystem;
+        return this.medreqDoseinsTimingRepeatCount;
     }
     
-    public void setMedicationrequestReasonCodeCodingSystem
-        (String medicationrequestReasonCodeCodingSystem) 
+    public void setMedreqDoseinsTimingRepeatCount
+        (String medreqDoseinsTimingRepeatCount) 
         {
-      this.medicationrequestReasonCodeCodingSystem = medicationrequestReasonCodeCodingSystem;
+      this.medreqDoseinsTimingRepeatCount = medreqDoseinsTimingRepeatCount;
 }
     public 
     String 
-    getMedicationrequestReasonCodeCodingUserSelected()
+    getMedreqDoseinsTimingRepeatCountMax()
     {
-        return this.medicationrequestReasonCodeCodingUserSelected;
+        return this.medreqDoseinsTimingRepeatCountMax;
     }
     
-    public void setMedicationrequestReasonCodeCodingUserSelected
-        (String medicationrequestReasonCodeCodingUserSelected) 
+    public void setMedreqDoseinsTimingRepeatCountMax
+        (String medreqDoseinsTimingRepeatCountMax) 
         {
-      this.medicationrequestReasonCodeCodingUserSelected = medicationrequestReasonCodeCodingUserSelected;
+      this.medreqDoseinsTimingRepeatCountMax = medreqDoseinsTimingRepeatCountMax;
 }
     public 
     String 
-    getMedicationrequestReasonCodeCodingVersion()
+    getMedreqDoseinsTimingRepeatDayOfWeekCode()
     {
-        return this.medicationrequestReasonCodeCodingVersion;
+        return this.medreqDoseinsTimingRepeatDayOfWeekCode;
     }
     
-    public void setMedicationrequestReasonCodeCodingVersion
-        (String medicationrequestReasonCodeCodingVersion) 
+    public void setMedreqDoseinsTimingRepeatDayOfWeekCode
+        (String medreqDoseinsTimingRepeatDayOfWeekCode) 
         {
-      this.medicationrequestReasonCodeCodingVersion = medicationrequestReasonCodeCodingVersion;
+      this.medreqDoseinsTimingRepeatDayOfWeekCode = medreqDoseinsTimingRepeatDayOfWeekCode;
 }
     public 
     String 
-    getMedicationrequestReasonCodeText()
+    getMedreqDoseinsTimingRepeatDuration()
     {
-        return this.medicationrequestReasonCodeText;
+        return this.medreqDoseinsTimingRepeatDuration;
     }
     
-    public void setMedicationrequestReasonCodeText
-        (String medicationrequestReasonCodeText) 
+    public void setMedreqDoseinsTimingRepeatDuration
+        (String medreqDoseinsTimingRepeatDuration) 
         {
-      this.medicationrequestReasonCodeText = medicationrequestReasonCodeText;
+      this.medreqDoseinsTimingRepeatDuration = medreqDoseinsTimingRepeatDuration;
 }
     public 
     String 
-    getMedicationrequestReasonReference()
+    getMedreqDoseinsTimingRepeatDurationMax()
     {
-        return this.medicationrequestReasonReference;
+        return this.medreqDoseinsTimingRepeatDurationMax;
     }
     
-    public void setMedicationrequestReasonReference
-        (String medicationrequestReasonReference) 
+    public void setMedreqDoseinsTimingRepeatDurationMax
+        (String medreqDoseinsTimingRepeatDurationMax) 
         {
-      this.medicationrequestReasonReference = medicationrequestReasonReference;
+      this.medreqDoseinsTimingRepeatDurationMax = medreqDoseinsTimingRepeatDurationMax;
 }
     public 
     String 
-    getMedicationrequestRecorder()
+    getMedreqDoseinsTimingRepeatDurationUnitCode()
     {
-        return this.medicationrequestRecorder;
+        return this.medreqDoseinsTimingRepeatDurationUnitCode;
     }
     
-    public void setMedicationrequestRecorder
-        (String medicationrequestRecorder) 
+    public void setMedreqDoseinsTimingRepeatDurationUnitCode
+        (String medreqDoseinsTimingRepeatDurationUnitCode) 
         {
-      this.medicationrequestRecorder = medicationrequestRecorder;
+      this.medreqDoseinsTimingRepeatDurationUnitCode = medreqDoseinsTimingRepeatDurationUnitCode;
 }
     public 
     String 
-    getMedicationrequestReported()
+    getMedreqDoseinsTimingRepeatFrequency()
     {
-        return this.medicationrequestReported;
+        return this.medreqDoseinsTimingRepeatFrequency;
     }
     
-    public void setMedicationrequestReported
-        (String medicationrequestReported) 
+    public void setMedreqDoseinsTimingRepeatFrequency
+        (String medreqDoseinsTimingRepeatFrequency) 
         {
-      this.medicationrequestReported = medicationrequestReported;
+      this.medreqDoseinsTimingRepeatFrequency = medreqDoseinsTimingRepeatFrequency;
 }
     public 
     String 
-    getMedicationrequestRequester()
+    getMedreqDoseinsTimingRepeatFrequencyMax()
     {
-        return this.medicationrequestRequester;
+        return this.medreqDoseinsTimingRepeatFrequencyMax;
     }
     
-    public void setMedicationrequestRequester
-        (String medicationrequestRequester) 
+    public void setMedreqDoseinsTimingRepeatFrequencyMax
+        (String medreqDoseinsTimingRepeatFrequencyMax) 
         {
-      this.medicationrequestRequester = medicationrequestRequester;
+      this.medreqDoseinsTimingRepeatFrequencyMax = medreqDoseinsTimingRepeatFrequencyMax;
 }
     public 
     String 
-    getMedicationrequestStatusCode()
+    getMedreqDoseinsTimingRepeatOff()
     {
-        return this.medicationrequestStatusCode;
+        return this.medreqDoseinsTimingRepeatOff;
     }
     
-    public void setMedicationrequestStatusCode
-        (String medicationrequestStatusCode) 
+    public void setMedreqDoseinsTimingRepeatOff
+        (String medreqDoseinsTimingRepeatOff) 
         {
-      this.medicationrequestStatusCode = medicationrequestStatusCode;
+      this.medreqDoseinsTimingRepeatOff = medreqDoseinsTimingRepeatOff;
 }
     public 
     String 
-    getMedicationrequestStatusReasonCodingCode()
+    getMedreqDoseinsTimingRepeatPeriod()
     {
-        return this.medicationrequestStatusReasonCodingCode;
+        return this.medreqDoseinsTimingRepeatPeriod;
     }
     
-    public void setMedicationrequestStatusReasonCodingCode
-        (String medicationrequestStatusReasonCodingCode) 
+    public void setMedreqDoseinsTimingRepeatPeriod
+        (String medreqDoseinsTimingRepeatPeriod) 
         {
-      this.medicationrequestStatusReasonCodingCode = medicationrequestStatusReasonCodingCode;
+      this.medreqDoseinsTimingRepeatPeriod = medreqDoseinsTimingRepeatPeriod;
 }
     public 
     String 
-    getMedicationrequestStatusReasonCodingDisplay()
+    getMedreqDoseinsTimingRepeatPeriodMax()
     {
-        return this.medicationrequestStatusReasonCodingDisplay;
+        return this.medreqDoseinsTimingRepeatPeriodMax;
     }
     
-    public void setMedicationrequestStatusReasonCodingDisplay
-        (String medicationrequestStatusReasonCodingDisplay) 
+    public void setMedreqDoseinsTimingRepeatPeriodMax
+        (String medreqDoseinsTimingRepeatPeriodMax) 
         {
-      this.medicationrequestStatusReasonCodingDisplay = medicationrequestStatusReasonCodingDisplay;
+      this.medreqDoseinsTimingRepeatPeriodMax = medreqDoseinsTimingRepeatPeriodMax;
 }
     public 
     String 
-    getMedicationrequestStatusReasonCodingSystem()
+    getMedreqDoseinsTimingRepeatPeriodUnitCode()
     {
-        return this.medicationrequestStatusReasonCodingSystem;
+        return this.medreqDoseinsTimingRepeatPeriodUnitCode;
     }
     
-    public void setMedicationrequestStatusReasonCodingSystem
-        (String medicationrequestStatusReasonCodingSystem) 
+    public void setMedreqDoseinsTimingRepeatPeriodUnitCode
+        (String medreqDoseinsTimingRepeatPeriodUnitCode) 
         {
-      this.medicationrequestStatusReasonCodingSystem = medicationrequestStatusReasonCodingSystem;
+      this.medreqDoseinsTimingRepeatPeriodUnitCode = medreqDoseinsTimingRepeatPeriodUnitCode;
 }
     public 
     String 
-    getMedicationrequestStatusReasonCodingUserSelected()
+    getMedreqDoseinsTimingRepeatTimeOfDay()
     {
-        return this.medicationrequestStatusReasonCodingUserSelected;
+        return this.medreqDoseinsTimingRepeatTimeOfDay;
     }
     
-    public void setMedicationrequestStatusReasonCodingUserSelected
-        (String medicationrequestStatusReasonCodingUserSelected) 
+    public void setMedreqDoseinsTimingRepeatTimeOfDay
+        (String medreqDoseinsTimingRepeatTimeOfDay) 
         {
-      this.medicationrequestStatusReasonCodingUserSelected = medicationrequestStatusReasonCodingUserSelected;
+      this.medreqDoseinsTimingRepeatTimeOfDay = medreqDoseinsTimingRepeatTimeOfDay;
 }
     public 
     String 
-    getMedicationrequestStatusReasonCodingVersion()
+    getMedreqDoseinsTimingRepeatWhenCode()
     {
-        return this.medicationrequestStatusReasonCodingVersion;
+        return this.medreqDoseinsTimingRepeatWhenCode;
     }
     
-    public void setMedicationrequestStatusReasonCodingVersion
-        (String medicationrequestStatusReasonCodingVersion) 
+    public void setMedreqDoseinsTimingRepeatWhenCode
+        (String medreqDoseinsTimingRepeatWhenCode) 
         {
-      this.medicationrequestStatusReasonCodingVersion = medicationrequestStatusReasonCodingVersion;
+      this.medreqDoseinsTimingRepeatWhenCode = medreqDoseinsTimingRepeatWhenCode;
 }
     public 
     String 
-    getMedicationrequestStatusReasonText()
+    getMedreqEnc()
     {
-        return this.medicationrequestStatusReasonText;
+        return this.medreqEnc;
     }
     
-    public void setMedicationrequestStatusReasonText
-        (String medicationrequestStatusReasonText) 
+    public void setMedreqEnc
+        (String medreqEnc) 
         {
-      this.medicationrequestStatusReasonText = medicationrequestStatusReasonText;
+      this.medreqEnc = medreqEnc;
 }
     public 
     String 
-    getMedicationrequestSubject()
+    getMedreqEventHistory()
     {
-        return this.medicationrequestSubject;
+        return this.medreqEventHistory;
     }
     
-    public void setMedicationrequestSubject
-        (String medicationrequestSubject) 
+    public void setMedreqEventHistory
+        (String medreqEventHistory) 
         {
-      this.medicationrequestSubject = medicationrequestSubject;
+      this.medreqEventHistory = medreqEventHistory;
 }
     public 
     String 
-    getMedicationrequestSubstitutionAllowed()
+    getMedreqGroupIdAssigner()
     {
-        return this.medicationrequestSubstitutionAllowed;
+        return this.medreqGroupIdAssigner;
     }
     
-    public void setMedicationrequestSubstitutionAllowed
-        (String medicationrequestSubstitutionAllowed) 
+    public void setMedreqGroupIdAssigner
+        (String medreqGroupIdAssigner) 
         {
-      this.medicationrequestSubstitutionAllowed = medicationrequestSubstitutionAllowed;
+      this.medreqGroupIdAssigner = medreqGroupIdAssigner;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonCodingCode()
+    getMedreqGroupIdPeriodEnd()
     {
-        return this.medicationrequestSubstitutionReasonCodingCode;
+        return this.medreqGroupIdPeriodEnd;
     }
     
-    public void setMedicationrequestSubstitutionReasonCodingCode
-        (String medicationrequestSubstitutionReasonCodingCode) 
+    public void setMedreqGroupIdPeriodEnd
+        (String medreqGroupIdPeriodEnd) 
         {
-      this.medicationrequestSubstitutionReasonCodingCode = medicationrequestSubstitutionReasonCodingCode;
+      this.medreqGroupIdPeriodEnd = medreqGroupIdPeriodEnd;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonCodingDisplay()
+    getMedreqGroupIdPeriodStart()
     {
-        return this.medicationrequestSubstitutionReasonCodingDisplay;
+        return this.medreqGroupIdPeriodStart;
     }
     
-    public void setMedicationrequestSubstitutionReasonCodingDisplay
-        (String medicationrequestSubstitutionReasonCodingDisplay) 
+    public void setMedreqGroupIdPeriodStart
+        (String medreqGroupIdPeriodStart) 
         {
-      this.medicationrequestSubstitutionReasonCodingDisplay = medicationrequestSubstitutionReasonCodingDisplay;
+      this.medreqGroupIdPeriodStart = medreqGroupIdPeriodStart;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonCodingSystem()
+    getMedreqGroupIdSystem()
     {
-        return this.medicationrequestSubstitutionReasonCodingSystem;
+        return this.medreqGroupIdSystem;
     }
     
-    public void setMedicationrequestSubstitutionReasonCodingSystem
-        (String medicationrequestSubstitutionReasonCodingSystem) 
+    public void setMedreqGroupIdSystem
+        (String medreqGroupIdSystem) 
         {
-      this.medicationrequestSubstitutionReasonCodingSystem = medicationrequestSubstitutionReasonCodingSystem;
+      this.medreqGroupIdSystem = medreqGroupIdSystem;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonCodingUserSelected()
+    getMedreqGroupIdTypeCodingCode()
     {
-        return this.medicationrequestSubstitutionReasonCodingUserSelected;
+        return this.medreqGroupIdTypeCodingCode;
     }
     
-    public void setMedicationrequestSubstitutionReasonCodingUserSelected
-        (String medicationrequestSubstitutionReasonCodingUserSelected) 
+    public void setMedreqGroupIdTypeCodingCode
+        (String medreqGroupIdTypeCodingCode) 
         {
-      this.medicationrequestSubstitutionReasonCodingUserSelected = medicationrequestSubstitutionReasonCodingUserSelected;
+      this.medreqGroupIdTypeCodingCode = medreqGroupIdTypeCodingCode;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonCodingVersion()
+    getMedreqGroupIdTypeCodingDisplay()
     {
-        return this.medicationrequestSubstitutionReasonCodingVersion;
+        return this.medreqGroupIdTypeCodingDisplay;
     }
     
-    public void setMedicationrequestSubstitutionReasonCodingVersion
-        (String medicationrequestSubstitutionReasonCodingVersion) 
+    public void setMedreqGroupIdTypeCodingDisplay
+        (String medreqGroupIdTypeCodingDisplay) 
         {
-      this.medicationrequestSubstitutionReasonCodingVersion = medicationrequestSubstitutionReasonCodingVersion;
+      this.medreqGroupIdTypeCodingDisplay = medreqGroupIdTypeCodingDisplay;
 }
     public 
     String 
-    getMedicationrequestSubstitutionReasonText()
+    getMedreqGroupIdTypeCodingSystem()
     {
-        return this.medicationrequestSubstitutionReasonText;
+        return this.medreqGroupIdTypeCodingSystem;
     }
     
-    public void setMedicationrequestSubstitutionReasonText
-        (String medicationrequestSubstitutionReasonText) 
+    public void setMedreqGroupIdTypeCodingSystem
+        (String medreqGroupIdTypeCodingSystem) 
         {
-      this.medicationrequestSubstitutionReasonText = medicationrequestSubstitutionReasonText;
+      this.medreqGroupIdTypeCodingSystem = medreqGroupIdTypeCodingSystem;
+}
+    public 
+    String 
+    getMedreqGroupIdTypeCodingUsrslt()
+    {
+        return this.medreqGroupIdTypeCodingUsrslt;
+    }
+    
+    public void setMedreqGroupIdTypeCodingUsrslt
+        (String medreqGroupIdTypeCodingUsrslt) 
+        {
+      this.medreqGroupIdTypeCodingUsrslt = medreqGroupIdTypeCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqGroupIdTypeCodingVersion()
+    {
+        return this.medreqGroupIdTypeCodingVersion;
+    }
+    
+    public void setMedreqGroupIdTypeCodingVersion
+        (String medreqGroupIdTypeCodingVersion) 
+        {
+      this.medreqGroupIdTypeCodingVersion = medreqGroupIdTypeCodingVersion;
+}
+    public 
+    String 
+    getMedreqGroupIdTypeText()
+    {
+        return this.medreqGroupIdTypeText;
+    }
+    
+    public void setMedreqGroupIdTypeText
+        (String medreqGroupIdTypeText) 
+        {
+      this.medreqGroupIdTypeText = medreqGroupIdTypeText;
+}
+    public 
+    String 
+    getMedreqGroupIdUseCode()
+    {
+        return this.medreqGroupIdUseCode;
+    }
+    
+    public void setMedreqGroupIdUseCode
+        (String medreqGroupIdUseCode) 
+        {
+      this.medreqGroupIdUseCode = medreqGroupIdUseCode;
+}
+    public 
+    String 
+    getMedreqGroupIdValue()
+    {
+        return this.medreqGroupIdValue;
+    }
+    
+    public void setMedreqGroupIdValue
+        (String medreqGroupIdValue) 
+        {
+      this.medreqGroupIdValue = medreqGroupIdValue;
+}
+    public 
+    String 
+    getMedreqIdAssigner()
+    {
+        return this.medreqIdAssigner;
+    }
+    
+    public void setMedreqIdAssigner
+        (String medreqIdAssigner) 
+        {
+      this.medreqIdAssigner = medreqIdAssigner;
+}
+    public 
+    String 
+    getMedreqIdPeriodEnd()
+    {
+        return this.medreqIdPeriodEnd;
+    }
+    
+    public void setMedreqIdPeriodEnd
+        (String medreqIdPeriodEnd) 
+        {
+      this.medreqIdPeriodEnd = medreqIdPeriodEnd;
+}
+    public 
+    String 
+    getMedreqIdPeriodStart()
+    {
+        return this.medreqIdPeriodStart;
+    }
+    
+    public void setMedreqIdPeriodStart
+        (String medreqIdPeriodStart) 
+        {
+      this.medreqIdPeriodStart = medreqIdPeriodStart;
+}
+    public 
+    String 
+    getMedreqIdSystem()
+    {
+        return this.medreqIdSystem;
+    }
+    
+    public void setMedreqIdSystem
+        (String medreqIdSystem) 
+        {
+      this.medreqIdSystem = medreqIdSystem;
+}
+    public 
+    String 
+    getMedreqIdTypeCodingCode()
+    {
+        return this.medreqIdTypeCodingCode;
+    }
+    
+    public void setMedreqIdTypeCodingCode
+        (String medreqIdTypeCodingCode) 
+        {
+      this.medreqIdTypeCodingCode = medreqIdTypeCodingCode;
+}
+    public 
+    String 
+    getMedreqIdTypeCodingDisplay()
+    {
+        return this.medreqIdTypeCodingDisplay;
+    }
+    
+    public void setMedreqIdTypeCodingDisplay
+        (String medreqIdTypeCodingDisplay) 
+        {
+      this.medreqIdTypeCodingDisplay = medreqIdTypeCodingDisplay;
+}
+    public 
+    String 
+    getMedreqIdTypeCodingSystem()
+    {
+        return this.medreqIdTypeCodingSystem;
+    }
+    
+    public void setMedreqIdTypeCodingSystem
+        (String medreqIdTypeCodingSystem) 
+        {
+      this.medreqIdTypeCodingSystem = medreqIdTypeCodingSystem;
+}
+    public 
+    String 
+    getMedreqIdTypeCodingUsrslt()
+    {
+        return this.medreqIdTypeCodingUsrslt;
+    }
+    
+    public void setMedreqIdTypeCodingUsrslt
+        (String medreqIdTypeCodingUsrslt) 
+        {
+      this.medreqIdTypeCodingUsrslt = medreqIdTypeCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqIdTypeCodingVersion()
+    {
+        return this.medreqIdTypeCodingVersion;
+    }
+    
+    public void setMedreqIdTypeCodingVersion
+        (String medreqIdTypeCodingVersion) 
+        {
+      this.medreqIdTypeCodingVersion = medreqIdTypeCodingVersion;
+}
+    public 
+    String 
+    getMedreqIdTypeText()
+    {
+        return this.medreqIdTypeText;
+    }
+    
+    public void setMedreqIdTypeText
+        (String medreqIdTypeText) 
+        {
+      this.medreqIdTypeText = medreqIdTypeText;
+}
+    public 
+    String 
+    getMedreqIdUseCode()
+    {
+        return this.medreqIdUseCode;
+    }
+    
+    public void setMedreqIdUseCode
+        (String medreqIdUseCode) 
+        {
+      this.medreqIdUseCode = medreqIdUseCode;
+}
+    public 
+    String 
+    getMedreqIdValue()
+    {
+        return this.medreqIdValue;
+    }
+    
+    public void setMedreqIdValue
+        (String medreqIdValue) 
+        {
+      this.medreqIdValue = medreqIdValue;
+}
+    public 
+    String 
+    getMedreqInstantiatesCanonical()
+    {
+        return this.medreqInstantiatesCanonical;
+    }
+    
+    public void setMedreqInstantiatesCanonical
+        (String medreqInstantiatesCanonical) 
+        {
+      this.medreqInstantiatesCanonical = medreqInstantiatesCanonical;
+}
+    public 
+    String 
+    getMedreqInstantiatesUri()
+    {
+        return this.medreqInstantiatesUri;
+    }
+    
+    public void setMedreqInstantiatesUri
+        (String medreqInstantiatesUri) 
+        {
+      this.medreqInstantiatesUri = medreqInstantiatesUri;
+}
+    public 
+    String 
+    getMedreqInsurance()
+    {
+        return this.medreqInsurance;
+    }
+    
+    public void setMedreqInsurance
+        (String medreqInsurance) 
+        {
+      this.medreqInsurance = medreqInsurance;
+}
+    public 
+    String 
+    getMedreqIntentCode()
+    {
+        return this.medreqIntentCode;
+    }
+    
+    public void setMedreqIntentCode
+        (String medreqIntentCode) 
+        {
+      this.medreqIntentCode = medreqIntentCode;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptCodingCode()
+    {
+        return this.medreqMedicationCodeableConceptCodingCode;
+    }
+    
+    public void setMedreqMedicationCodeableConceptCodingCode
+        (String medreqMedicationCodeableConceptCodingCode) 
+        {
+      this.medreqMedicationCodeableConceptCodingCode = medreqMedicationCodeableConceptCodingCode;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptCodingDisplay()
+    {
+        return this.medreqMedicationCodeableConceptCodingDisplay;
+    }
+    
+    public void setMedreqMedicationCodeableConceptCodingDisplay
+        (String medreqMedicationCodeableConceptCodingDisplay) 
+        {
+      this.medreqMedicationCodeableConceptCodingDisplay = medreqMedicationCodeableConceptCodingDisplay;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptCodingSystem()
+    {
+        return this.medreqMedicationCodeableConceptCodingSystem;
+    }
+    
+    public void setMedreqMedicationCodeableConceptCodingSystem
+        (String medreqMedicationCodeableConceptCodingSystem) 
+        {
+      this.medreqMedicationCodeableConceptCodingSystem = medreqMedicationCodeableConceptCodingSystem;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptCodingUsrslt()
+    {
+        return this.medreqMedicationCodeableConceptCodingUsrslt;
+    }
+    
+    public void setMedreqMedicationCodeableConceptCodingUsrslt
+        (String medreqMedicationCodeableConceptCodingUsrslt) 
+        {
+      this.medreqMedicationCodeableConceptCodingUsrslt = medreqMedicationCodeableConceptCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptCodingVersion()
+    {
+        return this.medreqMedicationCodeableConceptCodingVersion;
+    }
+    
+    public void setMedreqMedicationCodeableConceptCodingVersion
+        (String medreqMedicationCodeableConceptCodingVersion) 
+        {
+      this.medreqMedicationCodeableConceptCodingVersion = medreqMedicationCodeableConceptCodingVersion;
+}
+    public 
+    String 
+    getMedreqMedicationCodeableConceptText()
+    {
+        return this.medreqMedicationCodeableConceptText;
+    }
+    
+    public void setMedreqMedicationCodeableConceptText
+        (String medreqMedicationCodeableConceptText) 
+        {
+      this.medreqMedicationCodeableConceptText = medreqMedicationCodeableConceptText;
+}
+    public 
+    String 
+    getMedicationrequestMedicationReference()
+    {
+        return this.medicationrequestMedicationReference;
+    }
+    
+    public void setMedicationrequestMedicationReference
+        (String medicationrequestMedicationReference) 
+        {
+      this.medicationrequestMedicationReference = medicationrequestMedicationReference;
+}
+    public 
+    String 
+    getMedicationrequestNoteAuthorReference()
+    {
+        return this.medicationrequestNoteAuthorReference;
+    }
+    
+    public void setMedicationrequestNoteAuthorReference
+        (String medicationrequestNoteAuthorReference) 
+        {
+      this.medicationrequestNoteAuthorReference = medicationrequestNoteAuthorReference;
+}
+    public 
+    String 
+    getMedicationrequestNoteAuthorString()
+    {
+        return this.medicationrequestNoteAuthorString;
+    }
+    
+    public void setMedicationrequestNoteAuthorString
+        (String medicationrequestNoteAuthorString) 
+        {
+      this.medicationrequestNoteAuthorString = medicationrequestNoteAuthorString;
+}
+    public 
+    String 
+    getMedreqNoteText()
+    {
+        return this.medreqNoteText;
+    }
+    
+    public void setMedreqNoteText
+        (String medreqNoteText) 
+        {
+      this.medreqNoteText = medreqNoteText;
+}
+    public 
+    String 
+    getMedreqNoteTime()
+    {
+        return this.medreqNoteTime;
+    }
+    
+    public void setMedreqNoteTime
+        (String medreqNoteTime) 
+        {
+      this.medreqNoteTime = medreqNoteTime;
+}
+    public 
+    String 
+    getMedreqPerformer()
+    {
+        return this.medreqPerformer;
+    }
+    
+    public void setMedreqPerformer
+        (String medreqPerformer) 
+        {
+      this.medreqPerformer = medreqPerformer;
+}
+    public 
+    String 
+    getMedreqPerformerTypeCodingCode()
+    {
+        return this.medreqPerformerTypeCodingCode;
+    }
+    
+    public void setMedreqPerformerTypeCodingCode
+        (String medreqPerformerTypeCodingCode) 
+        {
+      this.medreqPerformerTypeCodingCode = medreqPerformerTypeCodingCode;
+}
+    public 
+    String 
+    getMedreqPerformerTypeCodingDisplay()
+    {
+        return this.medreqPerformerTypeCodingDisplay;
+    }
+    
+    public void setMedreqPerformerTypeCodingDisplay
+        (String medreqPerformerTypeCodingDisplay) 
+        {
+      this.medreqPerformerTypeCodingDisplay = medreqPerformerTypeCodingDisplay;
+}
+    public 
+    String 
+    getMedreqPerformerTypeCodingSystem()
+    {
+        return this.medreqPerformerTypeCodingSystem;
+    }
+    
+    public void setMedreqPerformerTypeCodingSystem
+        (String medreqPerformerTypeCodingSystem) 
+        {
+      this.medreqPerformerTypeCodingSystem = medreqPerformerTypeCodingSystem;
+}
+    public 
+    String 
+    getMedreqPerformerTypeCodingUsrslt()
+    {
+        return this.medreqPerformerTypeCodingUsrslt;
+    }
+    
+    public void setMedreqPerformerTypeCodingUsrslt
+        (String medreqPerformerTypeCodingUsrslt) 
+        {
+      this.medreqPerformerTypeCodingUsrslt = medreqPerformerTypeCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqPerformerTypeCodingVersion()
+    {
+        return this.medreqPerformerTypeCodingVersion;
+    }
+    
+    public void setMedreqPerformerTypeCodingVersion
+        (String medreqPerformerTypeCodingVersion) 
+        {
+      this.medreqPerformerTypeCodingVersion = medreqPerformerTypeCodingVersion;
+}
+    public 
+    String 
+    getMedreqPerformerTypeText()
+    {
+        return this.medreqPerformerTypeText;
+    }
+    
+    public void setMedreqPerformerTypeText
+        (String medreqPerformerTypeText) 
+        {
+      this.medreqPerformerTypeText = medreqPerformerTypeText;
+}
+    public 
+    String 
+    getMedreqPriorPrescription()
+    {
+        return this.medreqPriorPrescription;
+    }
+    
+    public void setMedreqPriorPrescription
+        (String medreqPriorPrescription) 
+        {
+      this.medreqPriorPrescription = medreqPriorPrescription;
+}
+    public 
+    String 
+    getMedreqPriorityCode()
+    {
+        return this.medreqPriorityCode;
+    }
+    
+    public void setMedreqPriorityCode
+        (String medreqPriorityCode) 
+        {
+      this.medreqPriorityCode = medreqPriorityCode;
+}
+    public 
+    String 
+    getMedreqReasonCodeCodingCode()
+    {
+        return this.medreqReasonCodeCodingCode;
+    }
+    
+    public void setMedreqReasonCodeCodingCode
+        (String medreqReasonCodeCodingCode) 
+        {
+      this.medreqReasonCodeCodingCode = medreqReasonCodeCodingCode;
+}
+    public 
+    String 
+    getMedreqReasonCodeCodingDisplay()
+    {
+        return this.medreqReasonCodeCodingDisplay;
+    }
+    
+    public void setMedreqReasonCodeCodingDisplay
+        (String medreqReasonCodeCodingDisplay) 
+        {
+      this.medreqReasonCodeCodingDisplay = medreqReasonCodeCodingDisplay;
+}
+    public 
+    String 
+    getMedreqReasonCodeCodingSystem()
+    {
+        return this.medreqReasonCodeCodingSystem;
+    }
+    
+    public void setMedreqReasonCodeCodingSystem
+        (String medreqReasonCodeCodingSystem) 
+        {
+      this.medreqReasonCodeCodingSystem = medreqReasonCodeCodingSystem;
+}
+    public 
+    String 
+    getMedreqReasonCodeCodingUsrslt()
+    {
+        return this.medreqReasonCodeCodingUsrslt;
+    }
+    
+    public void setMedreqReasonCodeCodingUsrslt
+        (String medreqReasonCodeCodingUsrslt) 
+        {
+      this.medreqReasonCodeCodingUsrslt = medreqReasonCodeCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqReasonCodeCodingVersion()
+    {
+        return this.medreqReasonCodeCodingVersion;
+    }
+    
+    public void setMedreqReasonCodeCodingVersion
+        (String medreqReasonCodeCodingVersion) 
+        {
+      this.medreqReasonCodeCodingVersion = medreqReasonCodeCodingVersion;
+}
+    public 
+    String 
+    getMedreqReasonCodeText()
+    {
+        return this.medreqReasonCodeText;
+    }
+    
+    public void setMedreqReasonCodeText
+        (String medreqReasonCodeText) 
+        {
+      this.medreqReasonCodeText = medreqReasonCodeText;
+}
+    public 
+    String 
+    getMedreqReasonReference()
+    {
+        return this.medreqReasonReference;
+    }
+    
+    public void setMedreqReasonReference
+        (String medreqReasonReference) 
+        {
+      this.medreqReasonReference = medreqReasonReference;
+}
+    public 
+    String 
+    getMedreqRecorder()
+    {
+        return this.medreqRecorder;
+    }
+    
+    public void setMedreqRecorder
+        (String medreqRecorder) 
+        {
+      this.medreqRecorder = medreqRecorder;
+}
+    public 
+    String 
+    getMedicationrequestReportedBoolean()
+    {
+        return this.medicationrequestReportedBoolean;
+    }
+    
+    public void setMedicationrequestReportedBoolean
+        (String medicationrequestReportedBoolean) 
+        {
+      this.medicationrequestReportedBoolean = medicationrequestReportedBoolean;
+}
+    public 
+    String 
+    getMedicationrequestReportedReference()
+    {
+        return this.medicationrequestReportedReference;
+    }
+    
+    public void setMedicationrequestReportedReference
+        (String medicationrequestReportedReference) 
+        {
+      this.medicationrequestReportedReference = medicationrequestReportedReference;
+}
+    public 
+    String 
+    getMedreqRequester()
+    {
+        return this.medreqRequester;
+    }
+    
+    public void setMedreqRequester
+        (String medreqRequester) 
+        {
+      this.medreqRequester = medreqRequester;
+}
+    public 
+    String 
+    getMedreqStatusCode()
+    {
+        return this.medreqStatusCode;
+    }
+    
+    public void setMedreqStatusCode
+        (String medreqStatusCode) 
+        {
+      this.medreqStatusCode = medreqStatusCode;
+}
+    public 
+    String 
+    getMedreqStatusReasonCodingCode()
+    {
+        return this.medreqStatusReasonCodingCode;
+    }
+    
+    public void setMedreqStatusReasonCodingCode
+        (String medreqStatusReasonCodingCode) 
+        {
+      this.medreqStatusReasonCodingCode = medreqStatusReasonCodingCode;
+}
+    public 
+    String 
+    getMedreqStatusReasonCodingDisplay()
+    {
+        return this.medreqStatusReasonCodingDisplay;
+    }
+    
+    public void setMedreqStatusReasonCodingDisplay
+        (String medreqStatusReasonCodingDisplay) 
+        {
+      this.medreqStatusReasonCodingDisplay = medreqStatusReasonCodingDisplay;
+}
+    public 
+    String 
+    getMedreqStatusReasonCodingSystem()
+    {
+        return this.medreqStatusReasonCodingSystem;
+    }
+    
+    public void setMedreqStatusReasonCodingSystem
+        (String medreqStatusReasonCodingSystem) 
+        {
+      this.medreqStatusReasonCodingSystem = medreqStatusReasonCodingSystem;
+}
+    public 
+    String 
+    getMedreqStatusReasonCodingUsrslt()
+    {
+        return this.medreqStatusReasonCodingUsrslt;
+    }
+    
+    public void setMedreqStatusReasonCodingUsrslt
+        (String medreqStatusReasonCodingUsrslt) 
+        {
+      this.medreqStatusReasonCodingUsrslt = medreqStatusReasonCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqStatusReasonCodingVersion()
+    {
+        return this.medreqStatusReasonCodingVersion;
+    }
+    
+    public void setMedreqStatusReasonCodingVersion
+        (String medreqStatusReasonCodingVersion) 
+        {
+      this.medreqStatusReasonCodingVersion = medreqStatusReasonCodingVersion;
+}
+    public 
+    String 
+    getMedreqStatusReasonText()
+    {
+        return this.medreqStatusReasonText;
+    }
+    
+    public void setMedreqStatusReasonText
+        (String medreqStatusReasonText) 
+        {
+      this.medreqStatusReasonText = medreqStatusReasonText;
+}
+    public 
+    String 
+    getMedreqSubject()
+    {
+        return this.medreqSubject;
+    }
+    
+    public void setMedreqSubject
+        (String medreqSubject) 
+        {
+      this.medreqSubject = medreqSubject;
+}
+    public 
+    String 
+    getMedicationrequestSubstitutionAllowedBoolean()
+    {
+        return this.medicationrequestSubstitutionAllowedBoolean;
+    }
+    
+    public void setMedicationrequestSubstitutionAllowedBoolean
+        (String medicationrequestSubstitutionAllowedBoolean) 
+        {
+      this.medicationrequestSubstitutionAllowedBoolean = medicationrequestSubstitutionAllowedBoolean;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptCodingCode()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptCodingCode;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptCodingCode
+        (String medreqSubstitutionAllowedCodeableConceptCodingCode) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptCodingCode = medreqSubstitutionAllowedCodeableConceptCodingCode;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptCodingDisplay()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptCodingDisplay;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptCodingDisplay
+        (String medreqSubstitutionAllowedCodeableConceptCodingDisplay) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptCodingDisplay = medreqSubstitutionAllowedCodeableConceptCodingDisplay;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptCodingSystem()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptCodingSystem;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptCodingSystem
+        (String medreqSubstitutionAllowedCodeableConceptCodingSystem) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptCodingSystem = medreqSubstitutionAllowedCodeableConceptCodingSystem;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptCodingUsrslt()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptCodingUsrslt;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptCodingUsrslt
+        (String medreqSubstitutionAllowedCodeableConceptCodingUsrslt) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptCodingUsrslt = medreqSubstitutionAllowedCodeableConceptCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptCodingVersion()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptCodingVersion;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptCodingVersion
+        (String medreqSubstitutionAllowedCodeableConceptCodingVersion) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptCodingVersion = medreqSubstitutionAllowedCodeableConceptCodingVersion;
+}
+    public 
+    String 
+    getMedreqSubstitutionAllowedCodeableConceptText()
+    {
+        return this.medreqSubstitutionAllowedCodeableConceptText;
+    }
+    
+    public void setMedreqSubstitutionAllowedCodeableConceptText
+        (String medreqSubstitutionAllowedCodeableConceptText) 
+        {
+      this.medreqSubstitutionAllowedCodeableConceptText = medreqSubstitutionAllowedCodeableConceptText;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonCodingCode()
+    {
+        return this.medreqSubstitutionReasonCodingCode;
+    }
+    
+    public void setMedreqSubstitutionReasonCodingCode
+        (String medreqSubstitutionReasonCodingCode) 
+        {
+      this.medreqSubstitutionReasonCodingCode = medreqSubstitutionReasonCodingCode;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonCodingDisplay()
+    {
+        return this.medreqSubstitutionReasonCodingDisplay;
+    }
+    
+    public void setMedreqSubstitutionReasonCodingDisplay
+        (String medreqSubstitutionReasonCodingDisplay) 
+        {
+      this.medreqSubstitutionReasonCodingDisplay = medreqSubstitutionReasonCodingDisplay;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonCodingSystem()
+    {
+        return this.medreqSubstitutionReasonCodingSystem;
+    }
+    
+    public void setMedreqSubstitutionReasonCodingSystem
+        (String medreqSubstitutionReasonCodingSystem) 
+        {
+      this.medreqSubstitutionReasonCodingSystem = medreqSubstitutionReasonCodingSystem;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonCodingUsrslt()
+    {
+        return this.medreqSubstitutionReasonCodingUsrslt;
+    }
+    
+    public void setMedreqSubstitutionReasonCodingUsrslt
+        (String medreqSubstitutionReasonCodingUsrslt) 
+        {
+      this.medreqSubstitutionReasonCodingUsrslt = medreqSubstitutionReasonCodingUsrslt;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonCodingVersion()
+    {
+        return this.medreqSubstitutionReasonCodingVersion;
+    }
+    
+    public void setMedreqSubstitutionReasonCodingVersion
+        (String medreqSubstitutionReasonCodingVersion) 
+        {
+      this.medreqSubstitutionReasonCodingVersion = medreqSubstitutionReasonCodingVersion;
+}
+    public 
+    String 
+    getMedreqSubstitutionReasonText()
+    {
+        return this.medreqSubstitutionReasonText;
+    }
+    
+    public void setMedreqSubstitutionReasonText
+        (String medreqSubstitutionReasonText) 
+        {
+      this.medreqSubstitutionReasonText = medreqSubstitutionReasonText;
+}
+    public 
+    String 
+    getMedreqSupportingInformation()
+    {
+        return this.medreqSupportingInformation;
+    }
+    
+    public void setMedreqSupportingInformation
+        (String medreqSupportingInformation) 
+        {
+      this.medreqSupportingInformation = medreqSupportingInformation;
 }
 
 
