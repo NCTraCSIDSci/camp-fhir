@@ -1,6 +1,6 @@
 // // default package
 package main.java.com.campfhir.model;
-// Generated Feb 17, 2022, 11:24:16 AM by Hibernate Tools 5.6.1.Final
+// Generated Feb 22, 2022, 7:13:58 PM by Hibernate Tools 5.6.1.Final
 
 
 
@@ -10,182 +10,239 @@ package main.java.com.campfhir.model;
 public class Condition  implements java.io.Serializable {
 
 
-     private String conditionIdentifierValue;
+     private String id;
      private String conditionAbatement;
+     private String conditionAbatementDateTime;
+     private String conditionAbatementPeriodEnd;
+     private String conditionAbatementPeriodStart;
+     private String conditionAbatementRangeHighCode;
+     private String conditionAbatementRangeHighCompartrCode;
+     private String conditionAbatementRangeHighSystem;
+     private String conditionAbatementRangeHighUnit;
+     private String conditionAbatementRangeHighValue;
+     private String conditionAbatementRangeLowCode;
+     private String conditionAbatementRangeLowCompartrCode;
+     private String conditionAbatementRangeLowSystem;
+     private String conditionAbatementRangeLowUnit;
+     private String conditionAbatementRangeLowValue;
+     private String conditionAbatementString;
      private String conditionAsserter;
      private String conditionBodySiteCodingCode;
      private String conditionBodySiteCodingDisplay;
      private String conditionBodySiteCodingSystem;
-     private String conditionBodySiteCodingUserSelected;
+     private String conditionBodySiteCodingUsrslt;
      private String conditionBodySiteCodingVersion;
      private String conditionBodySiteText;
      private String conditionCategoryCodingCode;
      private String conditionCategoryCodingDisplay;
      private String conditionCategoryCodingSystem;
-     private String conditionCategoryCodingUserSelected;
+     private String conditionCategoryCodingUsrslt;
      private String conditionCategoryCodingVersion;
      private String conditionCategoryText;
      private String conditionClinicalStatusCodingCode;
      private String conditionClinicalStatusCodingDisplay;
      private String conditionClinicalStatusCodingSystem;
-     private String conditionClinicalStatusCodingUserSelected;
+     private String conditionClinicalStatusCodingUsrslt;
      private String conditionClinicalStatusCodingVersion;
      private String conditionClinicalStatusText;
      private String conditionCodeCodingCode;
      private String conditionCodeCodingDisplay;
      private String conditionCodeCodingSystem;
-     private String conditionCodeCodingUserSelected;
+     private String conditionCodeCodingUsrslt;
      private String conditionCodeCodingVersion;
      private String conditionCodeText;
-     private String conditionEncounter;
+     private String conditionEnc;
      private String conditionEvidenceCodeCodingCode;
      private String conditionEvidenceCodeCodingDisplay;
      private String conditionEvidenceCodeCodingSystem;
-     private String conditionEvidenceCodeCodingUserSelected;
+     private String conditionEvidenceCodeCodingUsrslt;
      private String conditionEvidenceCodeCodingVersion;
      private String conditionEvidenceCodeText;
      private String conditionEvidenceDetail;
-     private String conditionIdentifierAssigner;
-     private String conditionIdentifierPeriodEnd;
-     private String conditionIdentifierPeriodStart;
-     private String conditionIdentifierSystem;
-     private String conditionIdentifierTypeCodingCode;
-     private String conditionIdentifierTypeCodingDisplay;
-     private String conditionIdentifierTypeCodingSystem;
-     private String conditionIdentifierTypeCodingUserSelected;
-     private String conditionIdentifierTypeCodingVersion;
-     private String conditionIdentifierTypeText;
-     private String conditionIdentifierUseCode;
-     private String conditionNoteAuthor;
+     private String conditionIdAssigner;
+     private String conditionIdPeriodEnd;
+     private String conditionIdPeriodStart;
+     private String conditionIdSystem;
+     private String conditionIdTypeCodingCode;
+     private String conditionIdTypeCodingDisplay;
+     private String conditionIdTypeCodingSystem;
+     private String conditionIdTypeCodingUsrslt;
+     private String conditionIdTypeCodingVersion;
+     private String conditionIdTypeText;
+     private String conditionIdUseCode;
+     private String conditionIdValue;
+     private String conditionNoteAuthorReference;
+     private String conditionNoteAuthorString;
      private String conditionNoteText;
      private String conditionNoteTime;
      private String conditionOn;
+     private String conditionOnDateTime;
+     private String conditionOnPeriodEnd;
+     private String conditionOnPeriodStart;
+     private String conditionOnRangeHighCode;
+     private String conditionOnRangeHighCompartrCode;
+     private String conditionOnRangeHighSystem;
+     private String conditionOnRangeHighUnit;
+     private String conditionOnRangeHighValue;
+     private String conditionOnRangeLowCode;
+     private String conditionOnRangeLowCompartrCode;
+     private String conditionOnRangeLowSystem;
+     private String conditionOnRangeLowUnit;
+     private String conditionOnRangeLowValue;
+     private String conditionOnString;
      private String conditionRecordedDate;
      private String conditionRecorder;
      private String conditionSeverityCodingCode;
      private String conditionSeverityCodingDisplay;
      private String conditionSeverityCodingSystem;
-     private String conditionSeverityCodingUserSelected;
+     private String conditionSeverityCodingUsrslt;
      private String conditionSeverityCodingVersion;
      private String conditionSeverityText;
      private String conditionStageAssessment;
      private String conditionStageSummaryCodingCode;
      private String conditionStageSummaryCodingDisplay;
      private String conditionStageSummaryCodingSystem;
-     private String conditionStageSummaryCodingUserSelected;
+     private String conditionStageSummaryCodingUsrslt;
      private String conditionStageSummaryCodingVersion;
      private String conditionStageSummaryText;
      private String conditionStageTypeCodingCode;
      private String conditionStageTypeCodingDisplay;
      private String conditionStageTypeCodingSystem;
-     private String conditionStageTypeCodingUserSelected;
+     private String conditionStageTypeCodingUsrslt;
      private String conditionStageTypeCodingVersion;
      private String conditionStageTypeText;
      private String conditionSubject;
      private String conditionVerificationStatusCodingCode;
      private String conditionVerificationStatusCodingDisplay;
      private String conditionVerificationStatusCodingSystem;
-     private String conditionVerificationStatusCodingUserSelected;
+     private String conditionVerificationStatusCodingUsrslt;
      private String conditionVerificationStatusCodingVersion;
+     private String conditionVerificationStatusText;
 
     public Condition() {
     }
 
-	
-    public Condition(String conditionIdentifierValue) {
-        this.conditionIdentifierValue = conditionIdentifierValue;
-    }
-    public Condition(String conditionIdentifierValue, String conditionAbatement, String conditionAsserter, String conditionBodySiteCodingCode, String conditionBodySiteCodingDisplay, String conditionBodySiteCodingSystem, String conditionBodySiteCodingUserSelected, String conditionBodySiteCodingVersion, String conditionBodySiteText, String conditionCategoryCodingCode, String conditionCategoryCodingDisplay, String conditionCategoryCodingSystem, String conditionCategoryCodingUserSelected, String conditionCategoryCodingVersion, String conditionCategoryText, String conditionClinicalStatusCodingCode, String conditionClinicalStatusCodingDisplay, String conditionClinicalStatusCodingSystem, String conditionClinicalStatusCodingUserSelected, String conditionClinicalStatusCodingVersion, String conditionClinicalStatusText, String conditionCodeCodingCode, String conditionCodeCodingDisplay, String conditionCodeCodingSystem, String conditionCodeCodingUserSelected, String conditionCodeCodingVersion, String conditionCodeText, String conditionEncounter, String conditionEvidenceCodeCodingCode, String conditionEvidenceCodeCodingDisplay, String conditionEvidenceCodeCodingSystem, String conditionEvidenceCodeCodingUserSelected, String conditionEvidenceCodeCodingVersion, String conditionEvidenceCodeText, String conditionEvidenceDetail, String conditionIdentifierAssigner, String conditionIdentifierPeriodEnd, String conditionIdentifierPeriodStart, String conditionIdentifierSystem, String conditionIdentifierTypeCodingCode, String conditionIdentifierTypeCodingDisplay, String conditionIdentifierTypeCodingSystem, String conditionIdentifierTypeCodingUserSelected, String conditionIdentifierTypeCodingVersion, String conditionIdentifierTypeText, String conditionIdentifierUseCode, String conditionNoteAuthor, String conditionNoteText, String conditionNoteTime, String conditionOn, String conditionRecordedDate, String conditionRecorder, String conditionSeverityCodingCode, String conditionSeverityCodingDisplay, String conditionSeverityCodingSystem, String conditionSeverityCodingUserSelected, String conditionSeverityCodingVersion, String conditionSeverityText, String conditionStageAssessment, String conditionStageSummaryCodingCode, String conditionStageSummaryCodingDisplay, String conditionStageSummaryCodingSystem, String conditionStageSummaryCodingUserSelected, String conditionStageSummaryCodingVersion, String conditionStageSummaryText, String conditionStageTypeCodingCode, String conditionStageTypeCodingDisplay, String conditionStageTypeCodingSystem, String conditionStageTypeCodingUserSelected, String conditionStageTypeCodingVersion, String conditionStageTypeText, String conditionSubject, String conditionVerificationStatusCodingCode, String conditionVerificationStatusCodingDisplay, String conditionVerificationStatusCodingSystem, String conditionVerificationStatusCodingUserSelected, String conditionVerificationStatusCodingVersion) {
-       this.conditionIdentifierValue = conditionIdentifierValue;
+    public Condition(String conditionAbatement, String conditionAbatementDateTime, String conditionAbatementPeriodEnd, String conditionAbatementPeriodStart, String conditionAbatementRangeHighCode, String conditionAbatementRangeHighCompartrCode, String conditionAbatementRangeHighSystem, String conditionAbatementRangeHighUnit, String conditionAbatementRangeHighValue, String conditionAbatementRangeLowCode, String conditionAbatementRangeLowCompartrCode, String conditionAbatementRangeLowSystem, String conditionAbatementRangeLowUnit, String conditionAbatementRangeLowValue, String conditionAbatementString, String conditionAsserter, String conditionBodySiteCodingCode, String conditionBodySiteCodingDisplay, String conditionBodySiteCodingSystem, String conditionBodySiteCodingUsrslt, String conditionBodySiteCodingVersion, String conditionBodySiteText, String conditionCategoryCodingCode, String conditionCategoryCodingDisplay, String conditionCategoryCodingSystem, String conditionCategoryCodingUsrslt, String conditionCategoryCodingVersion, String conditionCategoryText, String conditionClinicalStatusCodingCode, String conditionClinicalStatusCodingDisplay, String conditionClinicalStatusCodingSystem, String conditionClinicalStatusCodingUsrslt, String conditionClinicalStatusCodingVersion, String conditionClinicalStatusText, String conditionCodeCodingCode, String conditionCodeCodingDisplay, String conditionCodeCodingSystem, String conditionCodeCodingUsrslt, String conditionCodeCodingVersion, String conditionCodeText, String conditionEnc, String conditionEvidenceCodeCodingCode, String conditionEvidenceCodeCodingDisplay, String conditionEvidenceCodeCodingSystem, String conditionEvidenceCodeCodingUsrslt, String conditionEvidenceCodeCodingVersion, String conditionEvidenceCodeText, String conditionEvidenceDetail, String conditionIdAssigner, String conditionIdPeriodEnd, String conditionIdPeriodStart, String conditionIdSystem, String conditionIdTypeCodingCode, String conditionIdTypeCodingDisplay, String conditionIdTypeCodingSystem, String conditionIdTypeCodingUsrslt, String conditionIdTypeCodingVersion, String conditionIdTypeText, String conditionIdUseCode, String conditionIdValue, String conditionNoteAuthorReference, String conditionNoteAuthorString, String conditionNoteText, String conditionNoteTime, String conditionOn, String conditionOnDateTime, String conditionOnPeriodEnd, String conditionOnPeriodStart, String conditionOnRangeHighCode, String conditionOnRangeHighCompartrCode, String conditionOnRangeHighSystem, String conditionOnRangeHighUnit, String conditionOnRangeHighValue, String conditionOnRangeLowCode, String conditionOnRangeLowCompartrCode, String conditionOnRangeLowSystem, String conditionOnRangeLowUnit, String conditionOnRangeLowValue, String conditionOnString, String conditionRecordedDate, String conditionRecorder, String conditionSeverityCodingCode, String conditionSeverityCodingDisplay, String conditionSeverityCodingSystem, String conditionSeverityCodingUsrslt, String conditionSeverityCodingVersion, String conditionSeverityText, String conditionStageAssessment, String conditionStageSummaryCodingCode, String conditionStageSummaryCodingDisplay, String conditionStageSummaryCodingSystem, String conditionStageSummaryCodingUsrslt, String conditionStageSummaryCodingVersion, String conditionStageSummaryText, String conditionStageTypeCodingCode, String conditionStageTypeCodingDisplay, String conditionStageTypeCodingSystem, String conditionStageTypeCodingUsrslt, String conditionStageTypeCodingVersion, String conditionStageTypeText, String conditionSubject, String conditionVerificationStatusCodingCode, String conditionVerificationStatusCodingDisplay, String conditionVerificationStatusCodingSystem, String conditionVerificationStatusCodingUsrslt, String conditionVerificationStatusCodingVersion, String conditionVerificationStatusText) {
        this.conditionAbatement = conditionAbatement;
+       this.conditionAbatementDateTime = conditionAbatementDateTime;
+       this.conditionAbatementPeriodEnd = conditionAbatementPeriodEnd;
+       this.conditionAbatementPeriodStart = conditionAbatementPeriodStart;
+       this.conditionAbatementRangeHighCode = conditionAbatementRangeHighCode;
+       this.conditionAbatementRangeHighCompartrCode = conditionAbatementRangeHighCompartrCode;
+       this.conditionAbatementRangeHighSystem = conditionAbatementRangeHighSystem;
+       this.conditionAbatementRangeHighUnit = conditionAbatementRangeHighUnit;
+       this.conditionAbatementRangeHighValue = conditionAbatementRangeHighValue;
+       this.conditionAbatementRangeLowCode = conditionAbatementRangeLowCode;
+       this.conditionAbatementRangeLowCompartrCode = conditionAbatementRangeLowCompartrCode;
+       this.conditionAbatementRangeLowSystem = conditionAbatementRangeLowSystem;
+       this.conditionAbatementRangeLowUnit = conditionAbatementRangeLowUnit;
+       this.conditionAbatementRangeLowValue = conditionAbatementRangeLowValue;
+       this.conditionAbatementString = conditionAbatementString;
        this.conditionAsserter = conditionAsserter;
        this.conditionBodySiteCodingCode = conditionBodySiteCodingCode;
        this.conditionBodySiteCodingDisplay = conditionBodySiteCodingDisplay;
        this.conditionBodySiteCodingSystem = conditionBodySiteCodingSystem;
-       this.conditionBodySiteCodingUserSelected = conditionBodySiteCodingUserSelected;
+       this.conditionBodySiteCodingUsrslt = conditionBodySiteCodingUsrslt;
        this.conditionBodySiteCodingVersion = conditionBodySiteCodingVersion;
        this.conditionBodySiteText = conditionBodySiteText;
        this.conditionCategoryCodingCode = conditionCategoryCodingCode;
        this.conditionCategoryCodingDisplay = conditionCategoryCodingDisplay;
        this.conditionCategoryCodingSystem = conditionCategoryCodingSystem;
-       this.conditionCategoryCodingUserSelected = conditionCategoryCodingUserSelected;
+       this.conditionCategoryCodingUsrslt = conditionCategoryCodingUsrslt;
        this.conditionCategoryCodingVersion = conditionCategoryCodingVersion;
        this.conditionCategoryText = conditionCategoryText;
        this.conditionClinicalStatusCodingCode = conditionClinicalStatusCodingCode;
        this.conditionClinicalStatusCodingDisplay = conditionClinicalStatusCodingDisplay;
        this.conditionClinicalStatusCodingSystem = conditionClinicalStatusCodingSystem;
-       this.conditionClinicalStatusCodingUserSelected = conditionClinicalStatusCodingUserSelected;
+       this.conditionClinicalStatusCodingUsrslt = conditionClinicalStatusCodingUsrslt;
        this.conditionClinicalStatusCodingVersion = conditionClinicalStatusCodingVersion;
        this.conditionClinicalStatusText = conditionClinicalStatusText;
        this.conditionCodeCodingCode = conditionCodeCodingCode;
        this.conditionCodeCodingDisplay = conditionCodeCodingDisplay;
        this.conditionCodeCodingSystem = conditionCodeCodingSystem;
-       this.conditionCodeCodingUserSelected = conditionCodeCodingUserSelected;
+       this.conditionCodeCodingUsrslt = conditionCodeCodingUsrslt;
        this.conditionCodeCodingVersion = conditionCodeCodingVersion;
        this.conditionCodeText = conditionCodeText;
-       this.conditionEncounter = conditionEncounter;
+       this.conditionEnc = conditionEnc;
        this.conditionEvidenceCodeCodingCode = conditionEvidenceCodeCodingCode;
        this.conditionEvidenceCodeCodingDisplay = conditionEvidenceCodeCodingDisplay;
        this.conditionEvidenceCodeCodingSystem = conditionEvidenceCodeCodingSystem;
-       this.conditionEvidenceCodeCodingUserSelected = conditionEvidenceCodeCodingUserSelected;
+       this.conditionEvidenceCodeCodingUsrslt = conditionEvidenceCodeCodingUsrslt;
        this.conditionEvidenceCodeCodingVersion = conditionEvidenceCodeCodingVersion;
        this.conditionEvidenceCodeText = conditionEvidenceCodeText;
        this.conditionEvidenceDetail = conditionEvidenceDetail;
-       this.conditionIdentifierAssigner = conditionIdentifierAssigner;
-       this.conditionIdentifierPeriodEnd = conditionIdentifierPeriodEnd;
-       this.conditionIdentifierPeriodStart = conditionIdentifierPeriodStart;
-       this.conditionIdentifierSystem = conditionIdentifierSystem;
-       this.conditionIdentifierTypeCodingCode = conditionIdentifierTypeCodingCode;
-       this.conditionIdentifierTypeCodingDisplay = conditionIdentifierTypeCodingDisplay;
-       this.conditionIdentifierTypeCodingSystem = conditionIdentifierTypeCodingSystem;
-       this.conditionIdentifierTypeCodingUserSelected = conditionIdentifierTypeCodingUserSelected;
-       this.conditionIdentifierTypeCodingVersion = conditionIdentifierTypeCodingVersion;
-       this.conditionIdentifierTypeText = conditionIdentifierTypeText;
-       this.conditionIdentifierUseCode = conditionIdentifierUseCode;
-       this.conditionNoteAuthor = conditionNoteAuthor;
+       this.conditionIdAssigner = conditionIdAssigner;
+       this.conditionIdPeriodEnd = conditionIdPeriodEnd;
+       this.conditionIdPeriodStart = conditionIdPeriodStart;
+       this.conditionIdSystem = conditionIdSystem;
+       this.conditionIdTypeCodingCode = conditionIdTypeCodingCode;
+       this.conditionIdTypeCodingDisplay = conditionIdTypeCodingDisplay;
+       this.conditionIdTypeCodingSystem = conditionIdTypeCodingSystem;
+       this.conditionIdTypeCodingUsrslt = conditionIdTypeCodingUsrslt;
+       this.conditionIdTypeCodingVersion = conditionIdTypeCodingVersion;
+       this.conditionIdTypeText = conditionIdTypeText;
+       this.conditionIdUseCode = conditionIdUseCode;
+       this.conditionIdValue = conditionIdValue;
+       this.conditionNoteAuthorReference = conditionNoteAuthorReference;
+       this.conditionNoteAuthorString = conditionNoteAuthorString;
        this.conditionNoteText = conditionNoteText;
        this.conditionNoteTime = conditionNoteTime;
        this.conditionOn = conditionOn;
+       this.conditionOnDateTime = conditionOnDateTime;
+       this.conditionOnPeriodEnd = conditionOnPeriodEnd;
+       this.conditionOnPeriodStart = conditionOnPeriodStart;
+       this.conditionOnRangeHighCode = conditionOnRangeHighCode;
+       this.conditionOnRangeHighCompartrCode = conditionOnRangeHighCompartrCode;
+       this.conditionOnRangeHighSystem = conditionOnRangeHighSystem;
+       this.conditionOnRangeHighUnit = conditionOnRangeHighUnit;
+       this.conditionOnRangeHighValue = conditionOnRangeHighValue;
+       this.conditionOnRangeLowCode = conditionOnRangeLowCode;
+       this.conditionOnRangeLowCompartrCode = conditionOnRangeLowCompartrCode;
+       this.conditionOnRangeLowSystem = conditionOnRangeLowSystem;
+       this.conditionOnRangeLowUnit = conditionOnRangeLowUnit;
+       this.conditionOnRangeLowValue = conditionOnRangeLowValue;
+       this.conditionOnString = conditionOnString;
        this.conditionRecordedDate = conditionRecordedDate;
        this.conditionRecorder = conditionRecorder;
        this.conditionSeverityCodingCode = conditionSeverityCodingCode;
        this.conditionSeverityCodingDisplay = conditionSeverityCodingDisplay;
        this.conditionSeverityCodingSystem = conditionSeverityCodingSystem;
-       this.conditionSeverityCodingUserSelected = conditionSeverityCodingUserSelected;
+       this.conditionSeverityCodingUsrslt = conditionSeverityCodingUsrslt;
        this.conditionSeverityCodingVersion = conditionSeverityCodingVersion;
        this.conditionSeverityText = conditionSeverityText;
        this.conditionStageAssessment = conditionStageAssessment;
        this.conditionStageSummaryCodingCode = conditionStageSummaryCodingCode;
        this.conditionStageSummaryCodingDisplay = conditionStageSummaryCodingDisplay;
        this.conditionStageSummaryCodingSystem = conditionStageSummaryCodingSystem;
-       this.conditionStageSummaryCodingUserSelected = conditionStageSummaryCodingUserSelected;
+       this.conditionStageSummaryCodingUsrslt = conditionStageSummaryCodingUsrslt;
        this.conditionStageSummaryCodingVersion = conditionStageSummaryCodingVersion;
        this.conditionStageSummaryText = conditionStageSummaryText;
        this.conditionStageTypeCodingCode = conditionStageTypeCodingCode;
        this.conditionStageTypeCodingDisplay = conditionStageTypeCodingDisplay;
        this.conditionStageTypeCodingSystem = conditionStageTypeCodingSystem;
-       this.conditionStageTypeCodingUserSelected = conditionStageTypeCodingUserSelected;
+       this.conditionStageTypeCodingUsrslt = conditionStageTypeCodingUsrslt;
        this.conditionStageTypeCodingVersion = conditionStageTypeCodingVersion;
        this.conditionStageTypeText = conditionStageTypeText;
        this.conditionSubject = conditionSubject;
        this.conditionVerificationStatusCodingCode = conditionVerificationStatusCodingCode;
        this.conditionVerificationStatusCodingDisplay = conditionVerificationStatusCodingDisplay;
        this.conditionVerificationStatusCodingSystem = conditionVerificationStatusCodingSystem;
-       this.conditionVerificationStatusCodingUserSelected = conditionVerificationStatusCodingUserSelected;
+       this.conditionVerificationStatusCodingUsrslt = conditionVerificationStatusCodingUsrslt;
        this.conditionVerificationStatusCodingVersion = conditionVerificationStatusCodingVersion;
+       this.conditionVerificationStatusText = conditionVerificationStatusText;
     }
    
     public 
     String 
-    getConditionIdentifierValue()
+    getId()
     {
-        return this.conditionIdentifierValue;
+        return this.id;
     }
     
-    public void setConditionIdentifierValue
-        (String conditionIdentifierValue) 
+    public void setId
+        (String id) 
         {
-      this.conditionIdentifierValue = conditionIdentifierValue;
+      this.id = id;
 }
     public 
     String 
@@ -198,6 +255,174 @@ public class Condition  implements java.io.Serializable {
         (String conditionAbatement) 
         {
       this.conditionAbatement = conditionAbatement;
+}
+    public 
+    String 
+    getConditionAbatementDateTime()
+    {
+        return this.conditionAbatementDateTime;
+    }
+    
+    public void setConditionAbatementDateTime
+        (String conditionAbatementDateTime) 
+        {
+      this.conditionAbatementDateTime = conditionAbatementDateTime;
+}
+    public 
+    String 
+    getConditionAbatementPeriodEnd()
+    {
+        return this.conditionAbatementPeriodEnd;
+    }
+    
+    public void setConditionAbatementPeriodEnd
+        (String conditionAbatementPeriodEnd) 
+        {
+      this.conditionAbatementPeriodEnd = conditionAbatementPeriodEnd;
+}
+    public 
+    String 
+    getConditionAbatementPeriodStart()
+    {
+        return this.conditionAbatementPeriodStart;
+    }
+    
+    public void setConditionAbatementPeriodStart
+        (String conditionAbatementPeriodStart) 
+        {
+      this.conditionAbatementPeriodStart = conditionAbatementPeriodStart;
+}
+    public 
+    String 
+    getConditionAbatementRangeHighCode()
+    {
+        return this.conditionAbatementRangeHighCode;
+    }
+    
+    public void setConditionAbatementRangeHighCode
+        (String conditionAbatementRangeHighCode) 
+        {
+      this.conditionAbatementRangeHighCode = conditionAbatementRangeHighCode;
+}
+    public 
+    String 
+    getConditionAbatementRangeHighCompartrCode()
+    {
+        return this.conditionAbatementRangeHighCompartrCode;
+    }
+    
+    public void setConditionAbatementRangeHighCompartrCode
+        (String conditionAbatementRangeHighCompartrCode) 
+        {
+      this.conditionAbatementRangeHighCompartrCode = conditionAbatementRangeHighCompartrCode;
+}
+    public 
+    String 
+    getConditionAbatementRangeHighSystem()
+    {
+        return this.conditionAbatementRangeHighSystem;
+    }
+    
+    public void setConditionAbatementRangeHighSystem
+        (String conditionAbatementRangeHighSystem) 
+        {
+      this.conditionAbatementRangeHighSystem = conditionAbatementRangeHighSystem;
+}
+    public 
+    String 
+    getConditionAbatementRangeHighUnit()
+    {
+        return this.conditionAbatementRangeHighUnit;
+    }
+    
+    public void setConditionAbatementRangeHighUnit
+        (String conditionAbatementRangeHighUnit) 
+        {
+      this.conditionAbatementRangeHighUnit = conditionAbatementRangeHighUnit;
+}
+    public 
+    String 
+    getConditionAbatementRangeHighValue()
+    {
+        return this.conditionAbatementRangeHighValue;
+    }
+    
+    public void setConditionAbatementRangeHighValue
+        (String conditionAbatementRangeHighValue) 
+        {
+      this.conditionAbatementRangeHighValue = conditionAbatementRangeHighValue;
+}
+    public 
+    String 
+    getConditionAbatementRangeLowCode()
+    {
+        return this.conditionAbatementRangeLowCode;
+    }
+    
+    public void setConditionAbatementRangeLowCode
+        (String conditionAbatementRangeLowCode) 
+        {
+      this.conditionAbatementRangeLowCode = conditionAbatementRangeLowCode;
+}
+    public 
+    String 
+    getConditionAbatementRangeLowCompartrCode()
+    {
+        return this.conditionAbatementRangeLowCompartrCode;
+    }
+    
+    public void setConditionAbatementRangeLowCompartrCode
+        (String conditionAbatementRangeLowCompartrCode) 
+        {
+      this.conditionAbatementRangeLowCompartrCode = conditionAbatementRangeLowCompartrCode;
+}
+    public 
+    String 
+    getConditionAbatementRangeLowSystem()
+    {
+        return this.conditionAbatementRangeLowSystem;
+    }
+    
+    public void setConditionAbatementRangeLowSystem
+        (String conditionAbatementRangeLowSystem) 
+        {
+      this.conditionAbatementRangeLowSystem = conditionAbatementRangeLowSystem;
+}
+    public 
+    String 
+    getConditionAbatementRangeLowUnit()
+    {
+        return this.conditionAbatementRangeLowUnit;
+    }
+    
+    public void setConditionAbatementRangeLowUnit
+        (String conditionAbatementRangeLowUnit) 
+        {
+      this.conditionAbatementRangeLowUnit = conditionAbatementRangeLowUnit;
+}
+    public 
+    String 
+    getConditionAbatementRangeLowValue()
+    {
+        return this.conditionAbatementRangeLowValue;
+    }
+    
+    public void setConditionAbatementRangeLowValue
+        (String conditionAbatementRangeLowValue) 
+        {
+      this.conditionAbatementRangeLowValue = conditionAbatementRangeLowValue;
+}
+    public 
+    String 
+    getConditionAbatementString()
+    {
+        return this.conditionAbatementString;
+    }
+    
+    public void setConditionAbatementString
+        (String conditionAbatementString) 
+        {
+      this.conditionAbatementString = conditionAbatementString;
 }
     public 
     String 
@@ -249,15 +474,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionBodySiteCodingUserSelected()
+    getConditionBodySiteCodingUsrslt()
     {
-        return this.conditionBodySiteCodingUserSelected;
+        return this.conditionBodySiteCodingUsrslt;
     }
     
-    public void setConditionBodySiteCodingUserSelected
-        (String conditionBodySiteCodingUserSelected) 
+    public void setConditionBodySiteCodingUsrslt
+        (String conditionBodySiteCodingUsrslt) 
         {
-      this.conditionBodySiteCodingUserSelected = conditionBodySiteCodingUserSelected;
+      this.conditionBodySiteCodingUsrslt = conditionBodySiteCodingUsrslt;
 }
     public 
     String 
@@ -321,15 +546,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionCategoryCodingUserSelected()
+    getConditionCategoryCodingUsrslt()
     {
-        return this.conditionCategoryCodingUserSelected;
+        return this.conditionCategoryCodingUsrslt;
     }
     
-    public void setConditionCategoryCodingUserSelected
-        (String conditionCategoryCodingUserSelected) 
+    public void setConditionCategoryCodingUsrslt
+        (String conditionCategoryCodingUsrslt) 
         {
-      this.conditionCategoryCodingUserSelected = conditionCategoryCodingUserSelected;
+      this.conditionCategoryCodingUsrslt = conditionCategoryCodingUsrslt;
 }
     public 
     String 
@@ -393,15 +618,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionClinicalStatusCodingUserSelected()
+    getConditionClinicalStatusCodingUsrslt()
     {
-        return this.conditionClinicalStatusCodingUserSelected;
+        return this.conditionClinicalStatusCodingUsrslt;
     }
     
-    public void setConditionClinicalStatusCodingUserSelected
-        (String conditionClinicalStatusCodingUserSelected) 
+    public void setConditionClinicalStatusCodingUsrslt
+        (String conditionClinicalStatusCodingUsrslt) 
         {
-      this.conditionClinicalStatusCodingUserSelected = conditionClinicalStatusCodingUserSelected;
+      this.conditionClinicalStatusCodingUsrslt = conditionClinicalStatusCodingUsrslt;
 }
     public 
     String 
@@ -465,15 +690,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionCodeCodingUserSelected()
+    getConditionCodeCodingUsrslt()
     {
-        return this.conditionCodeCodingUserSelected;
+        return this.conditionCodeCodingUsrslt;
     }
     
-    public void setConditionCodeCodingUserSelected
-        (String conditionCodeCodingUserSelected) 
+    public void setConditionCodeCodingUsrslt
+        (String conditionCodeCodingUsrslt) 
         {
-      this.conditionCodeCodingUserSelected = conditionCodeCodingUserSelected;
+      this.conditionCodeCodingUsrslt = conditionCodeCodingUsrslt;
 }
     public 
     String 
@@ -501,15 +726,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionEncounter()
+    getConditionEnc()
     {
-        return this.conditionEncounter;
+        return this.conditionEnc;
     }
     
-    public void setConditionEncounter
-        (String conditionEncounter) 
+    public void setConditionEnc
+        (String conditionEnc) 
         {
-      this.conditionEncounter = conditionEncounter;
+      this.conditionEnc = conditionEnc;
 }
     public 
     String 
@@ -549,15 +774,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionEvidenceCodeCodingUserSelected()
+    getConditionEvidenceCodeCodingUsrslt()
     {
-        return this.conditionEvidenceCodeCodingUserSelected;
+        return this.conditionEvidenceCodeCodingUsrslt;
     }
     
-    public void setConditionEvidenceCodeCodingUserSelected
-        (String conditionEvidenceCodeCodingUserSelected) 
+    public void setConditionEvidenceCodeCodingUsrslt
+        (String conditionEvidenceCodeCodingUsrslt) 
         {
-      this.conditionEvidenceCodeCodingUserSelected = conditionEvidenceCodeCodingUserSelected;
+      this.conditionEvidenceCodeCodingUsrslt = conditionEvidenceCodeCodingUsrslt;
 }
     public 
     String 
@@ -597,147 +822,171 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionIdentifierAssigner()
+    getConditionIdAssigner()
     {
-        return this.conditionIdentifierAssigner;
+        return this.conditionIdAssigner;
     }
     
-    public void setConditionIdentifierAssigner
-        (String conditionIdentifierAssigner) 
+    public void setConditionIdAssigner
+        (String conditionIdAssigner) 
         {
-      this.conditionIdentifierAssigner = conditionIdentifierAssigner;
+      this.conditionIdAssigner = conditionIdAssigner;
 }
     public 
     String 
-    getConditionIdentifierPeriodEnd()
+    getConditionIdPeriodEnd()
     {
-        return this.conditionIdentifierPeriodEnd;
+        return this.conditionIdPeriodEnd;
     }
     
-    public void setConditionIdentifierPeriodEnd
-        (String conditionIdentifierPeriodEnd) 
+    public void setConditionIdPeriodEnd
+        (String conditionIdPeriodEnd) 
         {
-      this.conditionIdentifierPeriodEnd = conditionIdentifierPeriodEnd;
+      this.conditionIdPeriodEnd = conditionIdPeriodEnd;
 }
     public 
     String 
-    getConditionIdentifierPeriodStart()
+    getConditionIdPeriodStart()
     {
-        return this.conditionIdentifierPeriodStart;
+        return this.conditionIdPeriodStart;
     }
     
-    public void setConditionIdentifierPeriodStart
-        (String conditionIdentifierPeriodStart) 
+    public void setConditionIdPeriodStart
+        (String conditionIdPeriodStart) 
         {
-      this.conditionIdentifierPeriodStart = conditionIdentifierPeriodStart;
+      this.conditionIdPeriodStart = conditionIdPeriodStart;
 }
     public 
     String 
-    getConditionIdentifierSystem()
+    getConditionIdSystem()
     {
-        return this.conditionIdentifierSystem;
+        return this.conditionIdSystem;
     }
     
-    public void setConditionIdentifierSystem
-        (String conditionIdentifierSystem) 
+    public void setConditionIdSystem
+        (String conditionIdSystem) 
         {
-      this.conditionIdentifierSystem = conditionIdentifierSystem;
+      this.conditionIdSystem = conditionIdSystem;
 }
     public 
     String 
-    getConditionIdentifierTypeCodingCode()
+    getConditionIdTypeCodingCode()
     {
-        return this.conditionIdentifierTypeCodingCode;
+        return this.conditionIdTypeCodingCode;
     }
     
-    public void setConditionIdentifierTypeCodingCode
-        (String conditionIdentifierTypeCodingCode) 
+    public void setConditionIdTypeCodingCode
+        (String conditionIdTypeCodingCode) 
         {
-      this.conditionIdentifierTypeCodingCode = conditionIdentifierTypeCodingCode;
+      this.conditionIdTypeCodingCode = conditionIdTypeCodingCode;
 }
     public 
     String 
-    getConditionIdentifierTypeCodingDisplay()
+    getConditionIdTypeCodingDisplay()
     {
-        return this.conditionIdentifierTypeCodingDisplay;
+        return this.conditionIdTypeCodingDisplay;
     }
     
-    public void setConditionIdentifierTypeCodingDisplay
-        (String conditionIdentifierTypeCodingDisplay) 
+    public void setConditionIdTypeCodingDisplay
+        (String conditionIdTypeCodingDisplay) 
         {
-      this.conditionIdentifierTypeCodingDisplay = conditionIdentifierTypeCodingDisplay;
+      this.conditionIdTypeCodingDisplay = conditionIdTypeCodingDisplay;
 }
     public 
     String 
-    getConditionIdentifierTypeCodingSystem()
+    getConditionIdTypeCodingSystem()
     {
-        return this.conditionIdentifierTypeCodingSystem;
+        return this.conditionIdTypeCodingSystem;
     }
     
-    public void setConditionIdentifierTypeCodingSystem
-        (String conditionIdentifierTypeCodingSystem) 
+    public void setConditionIdTypeCodingSystem
+        (String conditionIdTypeCodingSystem) 
         {
-      this.conditionIdentifierTypeCodingSystem = conditionIdentifierTypeCodingSystem;
+      this.conditionIdTypeCodingSystem = conditionIdTypeCodingSystem;
 }
     public 
     String 
-    getConditionIdentifierTypeCodingUserSelected()
+    getConditionIdTypeCodingUsrslt()
     {
-        return this.conditionIdentifierTypeCodingUserSelected;
+        return this.conditionIdTypeCodingUsrslt;
     }
     
-    public void setConditionIdentifierTypeCodingUserSelected
-        (String conditionIdentifierTypeCodingUserSelected) 
+    public void setConditionIdTypeCodingUsrslt
+        (String conditionIdTypeCodingUsrslt) 
         {
-      this.conditionIdentifierTypeCodingUserSelected = conditionIdentifierTypeCodingUserSelected;
+      this.conditionIdTypeCodingUsrslt = conditionIdTypeCodingUsrslt;
 }
     public 
     String 
-    getConditionIdentifierTypeCodingVersion()
+    getConditionIdTypeCodingVersion()
     {
-        return this.conditionIdentifierTypeCodingVersion;
+        return this.conditionIdTypeCodingVersion;
     }
     
-    public void setConditionIdentifierTypeCodingVersion
-        (String conditionIdentifierTypeCodingVersion) 
+    public void setConditionIdTypeCodingVersion
+        (String conditionIdTypeCodingVersion) 
         {
-      this.conditionIdentifierTypeCodingVersion = conditionIdentifierTypeCodingVersion;
+      this.conditionIdTypeCodingVersion = conditionIdTypeCodingVersion;
 }
     public 
     String 
-    getConditionIdentifierTypeText()
+    getConditionIdTypeText()
     {
-        return this.conditionIdentifierTypeText;
+        return this.conditionIdTypeText;
     }
     
-    public void setConditionIdentifierTypeText
-        (String conditionIdentifierTypeText) 
+    public void setConditionIdTypeText
+        (String conditionIdTypeText) 
         {
-      this.conditionIdentifierTypeText = conditionIdentifierTypeText;
+      this.conditionIdTypeText = conditionIdTypeText;
 }
     public 
     String 
-    getConditionIdentifierUseCode()
+    getConditionIdUseCode()
     {
-        return this.conditionIdentifierUseCode;
+        return this.conditionIdUseCode;
     }
     
-    public void setConditionIdentifierUseCode
-        (String conditionIdentifierUseCode) 
+    public void setConditionIdUseCode
+        (String conditionIdUseCode) 
         {
-      this.conditionIdentifierUseCode = conditionIdentifierUseCode;
+      this.conditionIdUseCode = conditionIdUseCode;
 }
     public 
     String 
-    getConditionNoteAuthor()
+    getConditionIdValue()
     {
-        return this.conditionNoteAuthor;
+        return this.conditionIdValue;
     }
     
-    public void setConditionNoteAuthor
-        (String conditionNoteAuthor) 
+    public void setConditionIdValue
+        (String conditionIdValue) 
         {
-      this.conditionNoteAuthor = conditionNoteAuthor;
+      this.conditionIdValue = conditionIdValue;
+}
+    public 
+    String 
+    getConditionNoteAuthorReference()
+    {
+        return this.conditionNoteAuthorReference;
+    }
+    
+    public void setConditionNoteAuthorReference
+        (String conditionNoteAuthorReference) 
+        {
+      this.conditionNoteAuthorReference = conditionNoteAuthorReference;
+}
+    public 
+    String 
+    getConditionNoteAuthorString()
+    {
+        return this.conditionNoteAuthorString;
+    }
+    
+    public void setConditionNoteAuthorString
+        (String conditionNoteAuthorString) 
+        {
+      this.conditionNoteAuthorString = conditionNoteAuthorString;
 }
     public 
     String 
@@ -774,6 +1023,174 @@ public class Condition  implements java.io.Serializable {
         (String conditionOn) 
         {
       this.conditionOn = conditionOn;
+}
+    public 
+    String 
+    getConditionOnDateTime()
+    {
+        return this.conditionOnDateTime;
+    }
+    
+    public void setConditionOnDateTime
+        (String conditionOnDateTime) 
+        {
+      this.conditionOnDateTime = conditionOnDateTime;
+}
+    public 
+    String 
+    getConditionOnPeriodEnd()
+    {
+        return this.conditionOnPeriodEnd;
+    }
+    
+    public void setConditionOnPeriodEnd
+        (String conditionOnPeriodEnd) 
+        {
+      this.conditionOnPeriodEnd = conditionOnPeriodEnd;
+}
+    public 
+    String 
+    getConditionOnPeriodStart()
+    {
+        return this.conditionOnPeriodStart;
+    }
+    
+    public void setConditionOnPeriodStart
+        (String conditionOnPeriodStart) 
+        {
+      this.conditionOnPeriodStart = conditionOnPeriodStart;
+}
+    public 
+    String 
+    getConditionOnRangeHighCode()
+    {
+        return this.conditionOnRangeHighCode;
+    }
+    
+    public void setConditionOnRangeHighCode
+        (String conditionOnRangeHighCode) 
+        {
+      this.conditionOnRangeHighCode = conditionOnRangeHighCode;
+}
+    public 
+    String 
+    getConditionOnRangeHighCompartrCode()
+    {
+        return this.conditionOnRangeHighCompartrCode;
+    }
+    
+    public void setConditionOnRangeHighCompartrCode
+        (String conditionOnRangeHighCompartrCode) 
+        {
+      this.conditionOnRangeHighCompartrCode = conditionOnRangeHighCompartrCode;
+}
+    public 
+    String 
+    getConditionOnRangeHighSystem()
+    {
+        return this.conditionOnRangeHighSystem;
+    }
+    
+    public void setConditionOnRangeHighSystem
+        (String conditionOnRangeHighSystem) 
+        {
+      this.conditionOnRangeHighSystem = conditionOnRangeHighSystem;
+}
+    public 
+    String 
+    getConditionOnRangeHighUnit()
+    {
+        return this.conditionOnRangeHighUnit;
+    }
+    
+    public void setConditionOnRangeHighUnit
+        (String conditionOnRangeHighUnit) 
+        {
+      this.conditionOnRangeHighUnit = conditionOnRangeHighUnit;
+}
+    public 
+    String 
+    getConditionOnRangeHighValue()
+    {
+        return this.conditionOnRangeHighValue;
+    }
+    
+    public void setConditionOnRangeHighValue
+        (String conditionOnRangeHighValue) 
+        {
+      this.conditionOnRangeHighValue = conditionOnRangeHighValue;
+}
+    public 
+    String 
+    getConditionOnRangeLowCode()
+    {
+        return this.conditionOnRangeLowCode;
+    }
+    
+    public void setConditionOnRangeLowCode
+        (String conditionOnRangeLowCode) 
+        {
+      this.conditionOnRangeLowCode = conditionOnRangeLowCode;
+}
+    public 
+    String 
+    getConditionOnRangeLowCompartrCode()
+    {
+        return this.conditionOnRangeLowCompartrCode;
+    }
+    
+    public void setConditionOnRangeLowCompartrCode
+        (String conditionOnRangeLowCompartrCode) 
+        {
+      this.conditionOnRangeLowCompartrCode = conditionOnRangeLowCompartrCode;
+}
+    public 
+    String 
+    getConditionOnRangeLowSystem()
+    {
+        return this.conditionOnRangeLowSystem;
+    }
+    
+    public void setConditionOnRangeLowSystem
+        (String conditionOnRangeLowSystem) 
+        {
+      this.conditionOnRangeLowSystem = conditionOnRangeLowSystem;
+}
+    public 
+    String 
+    getConditionOnRangeLowUnit()
+    {
+        return this.conditionOnRangeLowUnit;
+    }
+    
+    public void setConditionOnRangeLowUnit
+        (String conditionOnRangeLowUnit) 
+        {
+      this.conditionOnRangeLowUnit = conditionOnRangeLowUnit;
+}
+    public 
+    String 
+    getConditionOnRangeLowValue()
+    {
+        return this.conditionOnRangeLowValue;
+    }
+    
+    public void setConditionOnRangeLowValue
+        (String conditionOnRangeLowValue) 
+        {
+      this.conditionOnRangeLowValue = conditionOnRangeLowValue;
+}
+    public 
+    String 
+    getConditionOnString()
+    {
+        return this.conditionOnString;
+    }
+    
+    public void setConditionOnString
+        (String conditionOnString) 
+        {
+      this.conditionOnString = conditionOnString;
 }
     public 
     String 
@@ -837,15 +1254,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionSeverityCodingUserSelected()
+    getConditionSeverityCodingUsrslt()
     {
-        return this.conditionSeverityCodingUserSelected;
+        return this.conditionSeverityCodingUsrslt;
     }
     
-    public void setConditionSeverityCodingUserSelected
-        (String conditionSeverityCodingUserSelected) 
+    public void setConditionSeverityCodingUsrslt
+        (String conditionSeverityCodingUsrslt) 
         {
-      this.conditionSeverityCodingUserSelected = conditionSeverityCodingUserSelected;
+      this.conditionSeverityCodingUsrslt = conditionSeverityCodingUsrslt;
 }
     public 
     String 
@@ -921,15 +1338,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionStageSummaryCodingUserSelected()
+    getConditionStageSummaryCodingUsrslt()
     {
-        return this.conditionStageSummaryCodingUserSelected;
+        return this.conditionStageSummaryCodingUsrslt;
     }
     
-    public void setConditionStageSummaryCodingUserSelected
-        (String conditionStageSummaryCodingUserSelected) 
+    public void setConditionStageSummaryCodingUsrslt
+        (String conditionStageSummaryCodingUsrslt) 
         {
-      this.conditionStageSummaryCodingUserSelected = conditionStageSummaryCodingUserSelected;
+      this.conditionStageSummaryCodingUsrslt = conditionStageSummaryCodingUsrslt;
 }
     public 
     String 
@@ -993,15 +1410,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionStageTypeCodingUserSelected()
+    getConditionStageTypeCodingUsrslt()
     {
-        return this.conditionStageTypeCodingUserSelected;
+        return this.conditionStageTypeCodingUsrslt;
     }
     
-    public void setConditionStageTypeCodingUserSelected
-        (String conditionStageTypeCodingUserSelected) 
+    public void setConditionStageTypeCodingUsrslt
+        (String conditionStageTypeCodingUsrslt) 
         {
-      this.conditionStageTypeCodingUserSelected = conditionStageTypeCodingUserSelected;
+      this.conditionStageTypeCodingUsrslt = conditionStageTypeCodingUsrslt;
 }
     public 
     String 
@@ -1077,15 +1494,15 @@ public class Condition  implements java.io.Serializable {
 }
     public 
     String 
-    getConditionVerificationStatusCodingUserSelected()
+    getConditionVerificationStatusCodingUsrslt()
     {
-        return this.conditionVerificationStatusCodingUserSelected;
+        return this.conditionVerificationStatusCodingUsrslt;
     }
     
-    public void setConditionVerificationStatusCodingUserSelected
-        (String conditionVerificationStatusCodingUserSelected) 
+    public void setConditionVerificationStatusCodingUsrslt
+        (String conditionVerificationStatusCodingUsrslt) 
         {
-      this.conditionVerificationStatusCodingUserSelected = conditionVerificationStatusCodingUserSelected;
+      this.conditionVerificationStatusCodingUsrslt = conditionVerificationStatusCodingUsrslt;
 }
     public 
     String 
@@ -1098,6 +1515,18 @@ public class Condition  implements java.io.Serializable {
         (String conditionVerificationStatusCodingVersion) 
         {
       this.conditionVerificationStatusCodingVersion = conditionVerificationStatusCodingVersion;
+}
+    public 
+    String 
+    getConditionVerificationStatusText()
+    {
+        return this.conditionVerificationStatusText;
+    }
+    
+    public void setConditionVerificationStatusText
+        (String conditionVerificationStatusText) 
+        {
+      this.conditionVerificationStatusText = conditionVerificationStatusText;
 }
 
 
