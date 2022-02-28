@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import main.java.com.campfhir.model.Campfhir;
 import main.java.com.campfhir.service.ConditionService;
+import main.java.com.campfhir.service.DeviceService;
 import main.java.com.campfhir.service.DocumentReferenceService;
 import main.java.com.campfhir.service.EncounterService;
 import main.java.com.campfhir.service.MedicationRequestService;
@@ -49,13 +50,16 @@ public class CAMPFHIR
         Campfhir cf = mapper.readValue(new File(directory.getAbsolutePath()), Campfhir.class);
 
 		int p = Integer.parseInt(cf.getPartition());
-		//System.setProperty("CONFIG", cmd.getOptionValue("c"));
 		
 		System.out.println("Start");
 		
 		if(cf.getResource().equals("Condition"))
 		{
 		     new ConditionService().findAll(p, cf.getOutputfolder());			
+		}
+		if(cf.getResource().equals("Device"))
+		{
+		     new DeviceService().findAll(p, cf.getOutputfolder());			
 		}
 		
 		else if(cf.getResource().equals("DocumentReference"))
@@ -66,12 +70,7 @@ public class CAMPFHIR
 		else if(cf.getResource().equals("Encounter"))
 		{			
 		    new EncounterService().findAll(p, cf.getOutputfolder());			
-		}	
-		
-		else if(cf.getResource().equals("Observation_Labs"))
-		{
-			new ObservationService().findAllLab(p, cf.getOutputfolder());
-		}	
+		}		
 
 		else if(cf.getResource().equals("MedicationRequest"))
 		{
@@ -93,10 +92,6 @@ public class CAMPFHIR
 		    new ProcedureService().findAll(p, cf.getOutputfolder());
 		}	
 		
-		else if(cf.getResource().equals("Observation_VitalsSmoking"))
-		{
-		    new ObservationService().findAllVital(p, cf.getOutputfolder());
-		}
 		System.out.println("Finished");
 	}
 	
