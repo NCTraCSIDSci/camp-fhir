@@ -1,8 +1,10 @@
-package com.campfhir.service;
+package main.java.com.campfhir.service;
 
 import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,21 +14,16 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.hibernate.HibernateException;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
-import org.hl7.fhir.dstu3.model.Bundle;
-import org.hl7.fhir.dstu3.model.Bundle.BundleType;
 import org.hl7.fhir.exceptions.FHIRException;
+import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
+import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.xml.sax.SAXException;
 
-import com.campfhir.dao.ObservationDao;
-import com.campfhir.model.Encounter;
-import com.campfhir.model.Lab;
-import com.campfhir.model.MedicationRequest;
-import com.campfhir.model.Observation;
-import com.campfhir.model.Vital;
-import com.campfhir.service.conversion.EncounterConversion;
-import com.campfhir.service.conversion.LabConversion;
-import com.campfhir.service.conversion.MedicationRequestConversion;
-import com.campfhir.service.conversion.VitalConversion;
+import main.java.com.campfhir.dao.ObservationDao;
+import main.java.com.campfhir.model.Observation;
+import main.java.com.campfhir.model.Vital;
+import main.java.com.campfhir.service.conversion.ObservationConversion;
 
 import ca.uhn.fhir.context.FhirContext;
 
@@ -34,7 +31,7 @@ import ca.uhn.fhir.context.FhirContext;
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ObservationService 
 {
@@ -86,77 +83,37 @@ public class ObservationService
 	public void findAllLab(int partition, String path) throws ParserConfigurationException, SAXException, IOException, ParseException, HibernateException, FHIRException 
 	{
 		Session session = observationDao.openCurrentSession();
-		ScrollableResults labs = observationDao.findAllLab();
+		ScrollableResults observations = observationDao.findAllLab();
 			
-		int i = 0;
+		int i = 1;
 		System.out.println("start");
+		
 		Bundle bundle = new Bundle().setType(BundleType.COLLECTION);
-		while ( labs.next() ) 
+		BundleEntryComponent b = new BundleEntryComponent();
+		
+		while ( observations.next() ) 
 		{	
 			if ((i % partition) == 0)
 			{
-				System.out.println("Write");				
+				System.out.println(i);
+				session.clear();
+				
 				writeFile(path, i, bundle);
-			    session.flush();
-			    session.clear();
 				bundle = new Bundle().setType(BundleType.COLLECTION);
+				//b = new BundleEntryComponent();
 			}
 				
 			i++;
-				
-			bundle.addEntry()
-			   .setFullUrl("https://www.hl7.org/fhir/lab.html")
-			   .setResource(new LabConversion().Labs((Lab) labs.get(0)));
-				
-			System.out.println(i);
+			
+			b = new BundleEntryComponent();
+			
+			b.setFullUrl("https://www.hl7.org/fhir/lab.html")
+			   .setResource(new ObservationConversion().Observations((Observation) observations.get(0)));
+			
+			bundle.addEntry(b);
 		}
 		     
 		writeFile(path, i, bundle);
-		observationDao.closeCurrentSession();
-	}
-	
-	public List<Lab> findPatientAllLab() throws ParserConfigurationException, SAXException, IOException, ParseException, FHIRException 
-	{
-		ScrollableResults labs = observationDao.findAll();
-		List<Lab> e = new ArrayList<>();  
-
-		while ( labs.next() ) 
-		{		
-			e.add((Lab) labs.get(0));
-		}
-
-		return e;
-	}
-
-	public void findAllVital(int partition, String path) throws ParserConfigurationException, SAXException, IOException, HibernateException, ParseException, FHIRException 
-	{
-		Session session = observationDao.openCurrentSession();
-		 ScrollableResults vitals = observationDao.findAllVital();
-			
-	     int i = 0;
-	     System.out.println("start");
-	     Bundle bundle = new Bundle().setType(BundleType.COLLECTION);
-	     while ( vitals.next() ) 
-	     {	
-			if ((i % partition) == 0)
-			{
-				System.out.println("Write");				
-				writeFile("/opt/Observation_VitalsSmoking/", i, bundle);
-		    	session.flush();
-		    	session.clear();
-			    bundle = new Bundle().setType(BundleType.COLLECTION);
-			}
-			
-			i++;
-			
-			bundle.addEntry()
-			   .setFullUrl("https://www.hl7.org/fhir/vital.html")
-			   .setResource(new VitalConversion().Vitals((Vital) vitals.get(0)));
-			
-			System.out.println(i);
-	     }
-	     
-	     writeFile("/opt/Observation_VitalsSmoking/", i, bundle);
 		observationDao.closeCurrentSession();
 	}
 	
@@ -187,15 +144,14 @@ public class ObservationService
 	
 	public static void writeFile(String path, int domain, Bundle bundle)
 	{			
-		FhirContext ctx = FhirContext.forDstu3();
-		String file = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(bundle);
+		FhirContext ctx = FhirContext.forR4();
+		String file = ctx.newJsonParser().setPrettyPrint(false).encodeResourceToString(bundle);
 		
 	    
 		
 		try 
 		{
-			BufferedWriter writer;
-			writer = new BufferedWriter(new FileWriter(path+"/"+domain+".json"));
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path+"/"+domain+".json", true), StandardCharsets.UTF_8));
 		    writer.write(file);
 		    writer.close();
 		} 
