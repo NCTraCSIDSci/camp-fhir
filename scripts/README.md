@@ -1,22 +1,65 @@
-# CAMP FHIR - Mappings Configuration
-
-## What is CAMP FHIR?
-
-CAMP FHIR is a lightweight application inteded to transform clinical data stored in a relational database (RDBMS) to [HL7's Fast Healthcare Interoperability Resources](http://hl7.org/fhir/index.html). Once your clinical data are in FHIR, they can be used for a variety of downstream applications. 
-
-CAMP FHIR reads input data from custom views that we've built to align relational clinical data to the FHIR 3.0 specification. So long as you can put your data in these views, you can use CAMP FHIR to transform those data to FHIR. If your source data is in the PCORnet 4.1 Common Data Model, you're in luck: you should be able to use the view creation scripts in this repo with few or no changes. 
-
-CAMP FHIR was created and is maintained by the NC TraCS Institute, home of the NIH CTSA at University of North Carolina at Chapel Hill. CAMP FHIR is open source, but if you use it for a project, we kindly request that users of this service provide proper attribution for any products (e.g., manuscripts, podium presentations, software) derived from work related to CAMP FHIR. Attribution should include acknowledgement of the funder (National Institutes of Health, National Center for Advancing Translational Sciences, Biomedical Data Translator Program [awards OT3TR002020 and OT2TR002514] and Center for Translational Science Program [award UL1TR002489]), UNC Hospitals and Health Care System, and all team members who contributed to the work.
-
-## How do I use CAMP FHIR?
-There are three basic steps to transform clinical data using CAMP FHIR, along with a few prerequisities. (More detailed documentation is available in the docs directory--this is just an overview.)
-
-### Prerequisites:
-1. Your clinical data is stored in an RDBMS. (Our SQL scripts assume you're using Oracle, but you can translate our scripts to work with whatever RDBMS you're using.)
-2. You have the ability to create views in that database.
-3. You have cloned this repo to an environment with the ability to connect to/read from that database.
-
-### High-level steps:
-1. Run our mapping table creation script (or your own script, based off of ours) to map your local codes to FHIR codes. The mapping table creation script in this repo will already map codesets in the PCORnet 4.1 Common Data Model to FHIR codesets. If your source data model is different, you can fill in this table to suit your needs, so long as you keep the structure consistent with what's in the script.
-2. Run our view creation script (or your own script, based off of ours) to create views of your clinical data that CAMP FHIR expects as inputs. (The view creation scripts in this repo will work to transform source data in the PCORnet 4.1 Common Data Model. If your source data model is different, you can alter our scripts to suit your needs: it will work so long as the views you create have the same columns / column names as the ones in this repo.)
-3. Run the CAMP FHIR from the command line to transform the desired domain(s).
+# CAMPFHIR Field Mapping Documentation
+​
+This document serves as a guide the the field mapping logic for mapping PCORnet Common Data Model (CDM) version 6.0 to FHIR version 4.0.
+​
+Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of those, 7 are codeable concepts. The rest take the raw PCORnet value and map it to the corresponding CAMPFHIR column. This document explains the process taken to reach the conclusion that they are corresponding concepts. This
+​
+## PCORNET CDM
+​
+The current specifications for the PCORnet CDM are located [here](https://pcornet.org/data/).
+​
+## FHIR Resources
+​
+The list of resources available in the current release of FHIR are located [here](https://www.hl7.org/fhir/resourcelist.html).
+​
+## Mapping Logic from PCORnet CDM to FHIR Resources
+​
+| PCORnet Table Name | PCORNET Field Name | FHIR PATH | CAMPFHIR Column | Raw or Codeable | Logic |
+|--------------------|--------------------|-----------|-----------------|-----------------|-------|
+|Demographic         |PATID | Patient.identifier ||Raw | Patient ID serves as an identifer for the patient in the record. |
+|Demographic         |BIRTH_DATE | Patient.birthDate ||Raw | Birthdate of the patient is recognized in both. |
+|Demographic         |SEX | Patient.gender ||Codable |PCORnet accounts for Sex assigned at birth, current gender identity, and sexual orientation. FHIR only accounts for 'gender for record-keeping purposes'. CAMPFHIR pulls from DEMOGRAPHIC_SEX for simplicity purposes. |
+|Demographic         |HISPANIC |||Codable |This is part of a FHIR Ethnicity extension.|
+|Demographic         |RACE |||Codable | This is part of a FHIR Ethnicity extension. |
+|Demographic         |PAT_PREF_LANGUAGE_SPOKEN | Patient.communication.language ||Codable | Preferred language of the patient is recognized in both PCORnet CDM and FHIR. |
+|Encounter           |ENCOUNTERID | Encounter.idenftifier / Procedure.encounter.refrence ||Raw | Encounter is referenced throughout the FHIR specifications.|
+|Encounter           |PATID | Encounter.subject.reference ||Raw | Within an encounter resource, the identifier of the patient is recorded. |
+|Encounter           |ADMIT_DATE | Encounter.participant.period.start||Codable | FHIR stores the 'period of time during the encounter that the participant participated'.  |
+|Encounter           |DISCHARGE_DATE | Encounter.participant.period.end ||Codable | See above.|
+|Encounter           |ENC_TYPE | Encounter.class ||Codeable |PCORnet has types of encounters (ambulatory, emergency department, etc.). FHIR treats these as a 'Class' of encounter. The vocabulary is similar. |
+|Encounter           |FACILITYID | Encounter.serviceprovider.reference||Raw |Reference to the facility where the encounter took place. |
+|Encounter           |DISCHARGE_STATUS | Encounter.hospitalization.dischargedisposition ||Codable |Type of location where the patient was discharged.|
+|Diagnosis           |DIAGNOSISID      | Condition.identifier.value||Raw |ID of the condition. |
+|Diagnosis           |PATID | Condidtion.subject||Raw |Reference to the patient who has the condition. |
+|Diagnosis           |ENCOUNTERID | Condition.encounter||Raw |Encounter where the diagnosis of condition happened.|
+|Diagnosis           |PROVIDERID | Condition.asserter ||Raw |Reference to the person who asserted the condition.|
+|Diagnosis           |DX | Condition.code ||Raw |The medical code of the diagnosis/condition.|
+|Diagnosis           |DX_TYPE |Condition.code ||Codable |The coding system that accompanies the medical code. |
+|Diagnosis           |RAW_DX | Condition.note ||Raw |PCORnet stores textual descriptions of diagnosis in the raw field. FHIR has space for a 'note' for additional information.|
+|Procedures          |PROCEDURESID |Procedure.identifier||Raw |The identifier of the proceudre that took place.|
+|Procedures          |PATID |Procedure.subject ||Raw |Reference to the person who recieved the procedure. |
+|Procedures          |ENCOUNTERID |Procedure.encounter ||Raw |Reference to the encounter in which the procedure took place. |
+|Procedures          |ENC_TYPE |Procedure.category ||Raw |PCORnet has types of encounters (ambulatory, emergency department, etc.). FHIR treats these as a 'Class' of encounter. The vocabulary is similar. |
+|Procedures          |ADMIT_DATE |Procedure.performeddatetime ||Raw |Date of the encounter in which the procedure took place. |
+|Procedures          |PROVIDERID|Procedure.performer.actor ||Raw |Reference to the provider who performed the procedure.|
+|Procedures          |PX |Procedure.code ||Raw |The medical code corresponding to the procedure.|
+|Procedures          |PX_TYPE|Procedure.code|Codable|The coding systems that accompanies the medical code. |
+|Condition          |CONDITIONID |Condition.identifier ||Raw |ID of the condition record. |
+|Condition          |PATID |Condition.subject ||Raw |Reference to the patient who has the condition.|
+|Condition          |ENCOUNTERID |Condition.encounter ||Raw |Reference to the encounter where the condition was recorded. |
+|Condition          |REPORT_DATE |Condition.recordedDate ||Raw |Date that the condition was recorded. |
+|Condition          |RESOLVE_DATE |Condition.abatementDateTime ||Raw |Date that the condition was resolved. |
+|Condition          |ONSET_DATE |Condition.onsetDateTime ||Raw |Date that the condition started for the patient. |
+|Condition          |CONDITION_STATUS |Condition.clinicalStatus ||Codable |Current status of the condition.|
+|Condition          |CONDITION |Condition.code ||Raw |The medical code corresponding to the condition.|
+|Condition          |CONDITION_TYPE |Condition.code ||Codable |the coding system that accompanies the condition.|
+|Condition          |RAW_CONDITION |Condition.note ||Raw |PCORnet uses this to store the textual description of the condition.|
+|Death              |DEATH_DATE |Patient.deceasedDateTime ||Raw |Recorded date of patient death.|
+|Med_Admin          |MEDADMIN_CODE |Medication.code ||Raw |PCORnet uses SNOMED to record codes associated with medications.|
+​
+​
+​
+​
+​
+## Notes
+- FHIR defines a condition as: 'A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern'. Therefore, diagnosis values from PCORnet map to encounters.
