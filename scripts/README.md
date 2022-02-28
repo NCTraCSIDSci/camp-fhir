@@ -6,7 +6,7 @@ Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of tho
 ​
 ## PCORNET CDM
 ​
-The current specifications for the PCORnet CDM are located [here](https://pcornet.org/data/).
+The current specifications for the PCORnet CDM are located [here](https://pcornet.org/data/).<a href="https://pcornet.org/data/" target="_blank">PCORNet Data</a>
 ​
 ## FHIR Resources
 ​
