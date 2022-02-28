@@ -1,6 +1,7 @@
 package main.java.com.campfhir.dao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -9,13 +10,14 @@ import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Procedure;
-
+import main.java.com.campfhir.model.Device;
+import main.java.com.campfhir.model.Device;
 import main.java.utils.HibernateBaseDB;
 
 /**
@@ -24,14 +26,14 @@ import main.java.utils.HibernateBaseDB;
 * @version 1.0
 * @since   2019-02-08 
 */
-public class ProcedureDao implements ProcedureDaoInterface<Procedure, String> 
+public class DeviceDefinitionDao implements DeviceDefinitionDaoInterface<Device, String> 
 {
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
-	public ProcedureDao() {}
+	public DeviceDefinitionDao() {}
 
 	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
@@ -88,23 +90,24 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Procedure entity) 
+	public void persist(Device entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Procedure entity) 
+	public void update(Device entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Procedure findById(String id) 
+	public Device findById(String id) 
 	{
-		Procedure procedure = (Procedure) getCurrentSession().get(Procedure.class, id);
-		return procedure; 
+		Device DeviceDefinition = (Device) getCurrentSession().get(Device.class, id);
+		return DeviceDefinition; 
 	}
+	
 
-	public void delete(Procedure entity) 
+	public void delete(Device entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -112,19 +115,24 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults procedures = getCurrentSession().createQuery("FROM Procedure")
+		return getCurrentSession().createQuery("FROM Device")
 				.setReadOnly(true)
+
 		        .setCacheable(true)
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return procedures;
+		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
 
 	public void deleteAll() 
 	{
-//		List<Procedure> entityList = findAll();
-//		for (Procedure entity : entityList) {
+//		List<DeviceDefinition> entityList = findAll();
+//		for (DeviceDefinition entity : entityList) {
 //			delete(entity);
 //		}
+	}
+
+	@Override
+	public List<Device> findByPatientId(String id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

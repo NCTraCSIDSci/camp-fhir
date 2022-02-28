@@ -1,13 +1,11 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.hibernate.Query;
+
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -17,16 +15,15 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Encounter;
-import com.campfhir.model.Patient;
+import main.java.com.campfhir.model.Patient;
 
-import utils.HibernateBaseDB;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class PatientDao implements PatientDaoInterface<Patient, String> 
 {
@@ -115,14 +112,27 @@ public class PatientDao implements PatientDaoInterface<Patient, String>
 		getCurrentSession().delete(entity);
 	}
 
-	@SuppressWarnings("unchecked")
+	public ScrollableResults findAll(int start, int max) 
+	{
+		ScrollableResults patients = getCurrentSession().createQuery("FROM Patient order by ID ASC")
+				.setFirstResult(start)
+				.setMaxResults(max)
+				.setReadOnly(true)
+		        .setCacheable(true)
+		    .scroll(ScrollMode.FORWARD_ONLY);
+		
+
+
+		return patients;
+	}
+	
 	public ScrollableResults findAll() 
 	{
 		ScrollableResults patients = getCurrentSession().createQuery("FROM Patient")
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-
+		
 		return patients;
 	}
 

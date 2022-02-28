@@ -14,24 +14,23 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import main.java.com.campfhir.model.Procedure;
-
+import main.java.com.campfhir.model.DocumentReference;
 import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2021-02-22 
 */
-public class ProcedureDao implements ProcedureDaoInterface<Procedure, String> 
+public class DocumentReferenceDao implements DocumentReferenceDaoInterface<DocumentReference, String> 
 {
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
-	public ProcedureDao() {}
+	public DocumentReferenceDao() {}
 
 	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
 	{
@@ -88,23 +87,33 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Procedure entity) 
+	public void persist(DocumentReference entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Procedure entity) 
+	public void update(DocumentReference entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Procedure findById(String id) 
+	public DocumentReference findById(String id) 
 	{
-		Procedure procedure = (Procedure) getCurrentSession().get(Procedure.class, id);
-		return procedure; 
+		DocumentReference documentReference = (DocumentReference) getCurrentSession().get(DocumentReference.class, id);
+		return documentReference; 
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DocumentReference> findByPatientId(String id)
+	{
+//		Query query = getCurrentSession().createQuery("FROM DocumentReference");
+//		
+//		List<DocumentReference> documentReference = (List<DocumentReference>) query.list();
+//		
+		return null;//documentReference;
 	}
 
-	public void delete(Procedure entity) 
+	public void delete(DocumentReference entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -112,18 +121,16 @@ public class ProcedureDao implements ProcedureDaoInterface<Procedure, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults procedures = getCurrentSession().createQuery("FROM Procedure")
+		return getCurrentSession().createQuery("FROM DocumentReference")
 				.setReadOnly(true)
 		        .setCacheable(true)
-			    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return procedures;
+		    .scroll(ScrollMode.FORWARD_ONLY);
 	}
 
 	public void deleteAll() 
 	{
-//		List<Procedure> entityList = findAll();
-//		for (Procedure entity : entityList) {
+//		List<DocumentReference> entityList = findAll();
+//		for (DocumentReference entity : entityList) {
 //			delete(entity);
 //		}
 	}
