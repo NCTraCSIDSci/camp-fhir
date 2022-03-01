@@ -1,18 +1,39 @@
-# CAMPFHIR Field Mapping Documentation
+# CAMPFHIR Mapping Documentation
 ​
-This document serves as a guide the the field mapping logic for mapping PCORnet Common Data Model (CDM) version 6.0 to FHIR version 4.0.
+This document serves as a guide the the mapping logic for mapping PCORnet Common Data Model (CDM) version 6.0 to FHIR version 4.0 (R4).
 ​
-Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of those, 7 are codeable concepts. The rest take the raw PCORnet value and map it to the corresponding CAMPFHIR column. This document explains the process taken to reach the conclusion that they are corresponding concepts. This
-​
-## PCORNET CDM
-​
-The current specifications for the PCORnet CDM are located [here](https://pcornet.org/data/).<a href="https://pcornet.org/data/" target="_blank">PCORNet Data</a>
+Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of those, 7 are codeable concepts. The rest take the raw PCORnet value and map it to the corresponding CAMPFHIR column. This document explains the process taken to reach the conclusion that they are corresponding concepts.
 ​
 ## FHIR Resources
 ​
 The list of resources available in the current release of FHIR are located [here](https://www.hl7.org/fhir/resourcelist.html).
+CAMPFHIR Currently support the following FHIR Resources
+|FHIR Resource|Version|
+|-|
+|CONDITION|R4|
+|DEVICE|R4|
+|DEVICEDEFINITION|R4|
+|DEVICEMETRIC|R4|
+|DOCUMENTREFERENCE|R4|
+|ENCOUNTER|R4|
+|MEDICATION|R4|
+|MEDREQ|R4|
+|OBSERVATION|R4|
+|PATIENT|R4|
+|PRACTITIONER|R4|
+|PROCEDURE|R4|
+
 ​
-## Mapping Logic from PCORnet CDM to FHIR Resources
+## Common Data Models
+A common data model contains a uniform set of metadata, allowing data and its meaning to be shared across applications. In addition to the uniform metadata, a common data model includes a set of standardized, extensible data schemas that include items such as entities, attributes, semantic metadata, and relationships.
+
+How CAMPFHIR interacts with a common data model is though a transformation of that model to a relational FHIR schema.
+​
+### PCORNET CDM
+​
+The current specifications for the PCORnet CDM are located [here](https://pcornet.org/wp-content/uploads/2022/01/PCORnet-Common-Data-Model-v60-2020_10_221.pdf) [PDF].
+​
+#### Mapping Logic from PCORnet CDM to FHIR Resources
 ​
 | PCORnet Table Name | PCORNET Field Name | FHIR PATH | CAMPFHIR Column | Raw or Codeable | Logic |
 |--------------------|--------------------|-----------|-----------------|-----------------|-------|
@@ -57,51 +78,6 @@ The list of resources available in the current release of FHIR are located [here
 |Death              |DEATH_DATE |Patient.deceasedDateTime ||Raw |Recorded date of patient death.|
 |Med_Admin          |MEDADMIN_CODE |Medication.code ||Raw |PCORnet uses SNOMED to record codes associated with medications.|
 ​
-​
-​
-​
-​
 ## Notes
 - FHIR defines a condition as: 'A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern'. Therefore, diagnosis values from PCORnet map to encounters.
 
-
-
-FHIR_RESOURCE|FHIR_PATH|FHIR_NODE|LINE|FHIR_OUT_COLUMN|FHIR_SYSTEM
-Encounter|Encounter.hospitalization.dischargeDisposition|dischargeDisposition|1|ENC_HOSP_DISDISP_CODING_CODE|http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
-Observation|Observation.interpretation|interpretation|1|OBS_INTERPRETATION|https://www.hl7.org/fhir/valueset-observation-interpretation.html
-Patient|Patient.gender|gender|5|PTN_GENDER|https://www.hl7.org/fhir/valueset-administrative-gender
-Patient|Patient.birthDate|birthDate|6|PTN_BIRTHDATE|
-Patient|Patient.Contact.organization|organization|18|PTN_CONTACT_ORG|
-Patient|Patient.Communication.preferred|preferred|21|PTN_COMM_PREFERRED|
-Patient|Patient.ethnicity|ethnicity|0|PNT_ETHNICITY|http://hl7.org/fhir/v3/Ethnicity
-Patient|Patient.active|active|2|PTN_ACTIVE|
-Patient|Patient.deceased|deceased|7|PTN_DECEASED|
-Patient|Patient.maritalStatus|maritalStatus|9|PTN_MARITAL_STATUS|
-Patient|Patient.managingOrganization|managingOrganization|24|PTN_MGR_ORG|
-Patient|Patient.Contact.period|period|19|PTN_CONTACT_PERIOD|
-Patient|Patient.race|race|0|PNT_RACE|http://hl7.org/fhir/v3/Race
-Observation|Observation.code|code|1|OBS_CODE_CODING_CODE|http://snomed.info/sct
-Condition|Condition.clinicalStatus|clinicalStatus|1|CON_CLINICALSTAT|https://www.hl7.org/fhir/valueset-condition-clinical.html
-Medication|||1|MED_SUBSTITU_ALLOWED|https://www.hl7.org/fhir/medicationrequest.html
-Patient|Patient.identifier|identifier|1|PTN_IDENTIFIER|
-Patient|Patient.address|address|8|PTN_ADDR_USE|
-Patient|Patient.photo|photo|11|PTN_PHOTO|
-Patient|Patient.Contact.telecom|telecom|15|PTN_CONTACT_TELCOM|
-Patient|Patient.Contact.address|address|16|PTN_CONTACT_ADDR|
-Patient|Patient.Link.other|other|25|PTN_LINK_OTHER|
-Observation|Observation.value.quantity.comparator|comparator|1|OBS_VALUEQUANTITY_COMPARATOR|
-Patient|Patient.name|name|3|PTN_NAME|
-Patient|Patient.generalPractitioner|generalPractitioner|23|PTN_GEN_PRACT|
-Patient|Patient.Contact.relationship|relationship|13|PTN_CONTACT_REL|
-Patient|Patient.Contact.name|name|14|PTN_CONTACT_NAME|
-Patient|Patient.Communication.language|language|20|PTN_COMM_LANGUAGE|
-Encounter|Encounter.class|class|1|ENC_CLASS_CODE|http://hl7.org/fhir/ValueSet/v3-ActEncounterCode
-Medication|||1|MED_DOSINSTX_ASNDBOOL|https://www.hl7.org/fhir/dosage.html
-Patient|Patient.contact|contact|12|PTN_CONTACT|
-Patient|Patient.communication|communication|19|PTN_COMMUNICATION|
-Patient|Patient.Contact.gender|gender|17|PTN_CONTACT_GENDER|https://www.hl7.org/fhir/valueset-administrative-gender
-Practitioner|Practitioner.gender|gender|1|PRACT_GENDER|https://www.hl7.org/fhir/valueset-administrative-gender.html
-Patient|Patient.telecom|telecom|4|PTN_TELECOM|
-Patient|Patient.Link.type|type|26|PTN_LINK_TYPE|
-Encounter|Encounter.hospitalization.admitSource|admitSource|1|ENC_HOSP_ADMSRC_CODING_CODE|https://www.hl7.org/fhir/valueset-encounter-admit-source.html
-Medication|||1|MED_DOSINSTX_TEXT|
