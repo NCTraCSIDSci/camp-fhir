@@ -4,6 +4,26 @@ This document serves as a guide the the mapping logic for mapping PCORnet Common
 ​
 Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of those, 7 are codeable concepts. The rest take the raw PCORnet value and map it to the corresponding CAMPFHIR column. This document explains the process taken to reach the conclusion that they are corresponding concepts.
 ​
+## Naming Conventions
+Files in this directory are as follows: CAMPFHIR_Mapping_[mapping set]_[CDM]_[RDBMS]. Example is CAMPFHIR_Mapping_FieldSet_Pcornet_Oracle
+
+## Types of Mapping
+In order for CAMPFHIR to work as designed (as well as any interoperable system) mappings, also referred to as translations or conversions, must occur at the syntactic and semantic levels. In CAMPFHIR nomenclature, we reference this as fieldset (syntactic) mapping and valueset (semantic) mapping.
+
+### FieldSet Mapping
+FieldSet mapping is the translation of a given common data model field,i.e. birth date in PCORNet CDM is BIRTH_DATE, and the equivilent field (or node) in HL7 FHIR is birthDate. In FieldSet mapping, CAMPFHIR has to know that BIRTH_DATE=birthDate, and while it may appear obvious to a human, those 2 fields are syntactically different.
+
+CAMPFHIR handles FieldSet mapping using *your* relational database management system (RDBMS) by offering database VIEWS that users run inside their RDBMS, likely the same database that hosts a users common data model.
+
+The file: CAMPFHIR_Mapping_FieldSet_Pcornet_Oracle.sql contains the schema and FieldSet mappings for PCORnet Common Data Model version 6.0 on an Oracle RDBMS
+
+### ValueSet Mapping
+ValueSet mapping is the translation of a given common data model value ,i.e. an Ambulatory Visit encounter type (field ENC_TYPE) in PCORNet CDM is 'AV', and the equivilent value (or code) in HL7 FHIR is 'AMB'. In ValueSet mapping, CAMPFHIR has to know that AV=AMB. These mappings may be less obvious and require subject matter experts or other domain knowledge to recognize that these two values are semantically the same or similiar.
+
+CAMPFHIR handles ValueSet mapping using *your* relational database management system (RDBMS) by offering database TABLES that users run inside their RDBMS, likely the same database that hosts a users common data model.
+
+The file: CAMPFHIR_Mapping_ValueSet_Pcornet_Oracle.sql contains the schema and ValueSet mappings for PCORnet Common Data Model version 6.0 on an Oracle RDBMS
+
 ## FHIR Resources
 ​
 The list of resources available in the current release of FHIR are located [here](https://www.hl7.org/fhir/resourcelist.html).
