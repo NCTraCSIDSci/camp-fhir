@@ -9,7 +9,7 @@ Currently, CAMPFHIR supports value set mapping for 44 PCORnet CDM fields. Of tho
 The list of resources available in the current release of FHIR are located [here](https://www.hl7.org/fhir/resourcelist.html).
 CAMPFHIR Currently support the following FHIR Resources
 |FHIR Resource|Version|
-|-|
+|-|-|
 |CONDITION|R4|
 |DEVICE|R4|
 |DEVICEDEFINITION|R4|
