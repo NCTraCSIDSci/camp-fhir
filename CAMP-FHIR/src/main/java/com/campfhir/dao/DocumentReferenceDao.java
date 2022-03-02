@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.hibernate.Query;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -16,24 +15,23 @@ import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.model.Campfhir;
-import main.java.com.campfhir.model.Encounter;
-
+import main.java.com.campfhir.model.DocumentReference;
 import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-02-08 
+* @since   2021-02-22 
 */
-public class EncounterDao implements EncounterDaoInterface<Encounter, String> 
+public class DocumentReferenceDao implements DocumentReferenceDaoInterface<DocumentReference, String> 
 {
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
-	public EncounterDao() {}
+	public DocumentReferenceDao() {}
 
 	public Session openCurrentSession(Campfhir cf) throws ParserConfigurationException, SAXException, IOException 
 	{
@@ -49,7 +47,7 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-*/	
+	*/
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -90,32 +88,33 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Encounter entity) 
+	public void persist(DocumentReference entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Encounter entity) 
+	public void update(DocumentReference entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Encounter findById(String id) 
+	public DocumentReference findById(String id) 
 	{
-		Encounter encounter = (Encounter) getCurrentSession().get(Encounter.class, id);
-		return encounter; 
+		DocumentReference documentReference = (DocumentReference) getCurrentSession().get(DocumentReference.class, id);
+		return documentReference; 
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DocumentReference> findByPatientId(String id)
+	{
+//		Query query = getCurrentSession().createQuery("FROM DocumentReference");
+//		
+//		List<DocumentReference> documentReference = (List<DocumentReference>) query.list();
+//		
+		return null;//documentReference;
 	}
 
-	public List<Encounter> findByPatientId(String id) 
-	{
-		Query query = getCurrentSession().createQuery("FROM Encounter where ENC_SUBJECT_REFERENCE = 'Patient/"+id+"'");
-		
-		List<Encounter> encounters = (List<Encounter>) query.list();
-		
-		return encounters; 
-	}
-
-	public void delete(Encounter entity) 
+	public void delete(DocumentReference entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -123,18 +122,16 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults encounters = getCurrentSession().createQuery("FROM Encounter")
+		return getCurrentSession().createQuery("FROM DocumentReference")
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return encounters;
 	}
 
 	public void deleteAll() 
 	{
-//		List<Encounter> entityList = findAll();
-//		for (Encounter entity : entityList) {
+//		List<DocumentReference> entityList = findAll();
+//		for (DocumentReference entity : entityList) {
 //			delete(entity);
 //		}
 	}

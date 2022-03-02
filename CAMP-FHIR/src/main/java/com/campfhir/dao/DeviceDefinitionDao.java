@@ -1,23 +1,24 @@
 package main.java.com.campfhir.dao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.hibernate.Query;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
 import main.java.com.campfhir.model.Campfhir;
-import main.java.com.campfhir.model.Encounter;
-
+import main.java.com.campfhir.model.Device;
+import main.java.com.campfhir.model.Device;
 import main.java.utils.HibernateBaseDB;
 
 /**
@@ -26,14 +27,14 @@ import main.java.utils.HibernateBaseDB;
 * @version 1.0
 * @since   2019-02-08 
 */
-public class EncounterDao implements EncounterDaoInterface<Encounter, String> 
+public class DeviceDefinitionDao implements DeviceDefinitionDaoInterface<Device, String> 
 {
 	private Session currentSession;
 	private SessionFactory sessionFactory;
 	
 	private Transaction currentTransaction;
 
-	public EncounterDao() {}
+	public DeviceDefinitionDao() {}
 
 	public Session openCurrentSession(Campfhir cf) throws ParserConfigurationException, SAXException, IOException 
 	{
@@ -90,32 +91,24 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Encounter entity) 
+	public void persist(Device entity) 
 	{
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Encounter entity) 
+	public void update(Device entity) 
 	{
 		getCurrentSession().update(entity);
 	}
 
-	public Encounter findById(String id) 
+	public Device findById(String id) 
 	{
-		Encounter encounter = (Encounter) getCurrentSession().get(Encounter.class, id);
-		return encounter; 
+		Device DeviceDefinition = (Device) getCurrentSession().get(Device.class, id);
+		return DeviceDefinition; 
 	}
+	
 
-	public List<Encounter> findByPatientId(String id) 
-	{
-		Query query = getCurrentSession().createQuery("FROM Encounter where ENC_SUBJECT_REFERENCE = 'Patient/"+id+"'");
-		
-		List<Encounter> encounters = (List<Encounter>) query.list();
-		
-		return encounters; 
-	}
-
-	public void delete(Encounter entity) 
+	public void delete(Device entity) 
 	{
 		getCurrentSession().delete(entity);
 	}
@@ -123,19 +116,24 @@ public class EncounterDao implements EncounterDaoInterface<Encounter, String>
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults encounters = getCurrentSession().createQuery("FROM Encounter")
+		return getCurrentSession().createQuery("FROM Device")
 				.setReadOnly(true)
+
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
-		
-		return encounters;
 	}
 
 	public void deleteAll() 
 	{
-//		List<Encounter> entityList = findAll();
-//		for (Encounter entity : entityList) {
+//		List<DeviceDefinition> entityList = findAll();
+//		for (DeviceDefinition entity : entityList) {
 //			delete(entity);
 //		}
+	}
+
+	@Override
+	public List<Device> findByPatientId(String id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

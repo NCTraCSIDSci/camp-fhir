@@ -1,4 +1,4 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,15 +15,16 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Practitioner;
+import main.java.com.campfhir.model.Campfhir;
+import main.java.com.campfhir.model.Practitioner;
 
-import utils.HibernateBaseDB;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class PractitionerDao implements PractitionerDaoInterface<Practitioner, String> 
 {
@@ -34,13 +35,13 @@ public class PractitionerDao implements PractitionerDaoInterface<Practitioner, S
 
 	public PractitionerDao() {}
 
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	public Session openCurrentSession(Campfhir cf) throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
+/*
 	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
@@ -48,7 +49,7 @@ public class PractitionerDao implements PractitionerDaoInterface<Practitioner, S
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
+	*/
 	public void closeCurrentSession() 
 	{
 		currentSession.close();

@@ -1,10 +1,11 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.hibernate.Query;
 import org.hibernate.ScrollMode;
 import org.hibernate.ScrollableResults;
 import org.hibernate.Session;
@@ -14,15 +15,15 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.MedicationRequest;
-
-import utils.HibernateBaseDB;
+import main.java.com.campfhir.model.Campfhir;
+import main.java.com.campfhir.model.MedicationRequest;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class MedicationRequestDao implements MedicationRequestDaoInterface<MedicationRequest, String> 
 {
@@ -33,13 +34,13 @@ public class MedicationRequestDao implements MedicationRequestDaoInterface<Medic
 
 	public MedicationRequestDao() {}
 
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	public Session openCurrentSession(Campfhir cf) throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
+/*
 	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
@@ -47,7 +48,7 @@ public class MedicationRequestDao implements MedicationRequestDaoInterface<Medic
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
+*/	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
@@ -98,33 +99,36 @@ public class MedicationRequestDao implements MedicationRequestDaoInterface<Medic
 		getCurrentSession().update(entity);
 	}
 
-	public MedicationRequest findById(String id) 
-	{
-		MedicationRequest medication = (MedicationRequest) getCurrentSession().get(MedicationRequest.class, id);
-		return medication; 
-	}
-
-	public void delete(MedicationRequest entity) 
-	{
-		getCurrentSession().delete(entity);
-	}
-
 	@SuppressWarnings("unchecked")
 	public ScrollableResults findAll() 
 	{
-		ScrollableResults medication = getCurrentSession().createQuery("FROM MedicationRequest")
+		ScrollableResults encounters = getCurrentSession().createQuery("FROM MedicationRequest")
 				.setReadOnly(true)
 		        .setCacheable(true)
 		    .scroll(ScrollMode.FORWARD_ONLY);
 		
-		return medication;
+		return encounters;
 	}
 
 	public void deleteAll() 
 	{
-//		List<MedicationRequest> entityList = findAll();
-//		for (MedicationRequest entity : entityList) {
+//		List<Encounter> entityList = findAll();
+//		for (Encounter entity : entityList) {
 //			delete(entity);
 //		}
 	}
+
+	@Override
+	public MedicationRequest findById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(MedicationRequest entity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 }

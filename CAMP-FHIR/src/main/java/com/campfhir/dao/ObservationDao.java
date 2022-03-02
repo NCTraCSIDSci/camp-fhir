@@ -1,4 +1,4 @@
-package com.campfhir.dao;
+package main.java.com.campfhir.dao;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,17 +14,15 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.xml.sax.SAXException;
 
-import com.campfhir.model.Lab;
-import com.campfhir.model.Observation;
-import com.campfhir.model.Vital;
-
-import utils.HibernateBaseDB;
+import main.java.com.campfhir.model.Campfhir;
+import main.java.com.campfhir.model.Observation;
+import main.java.utils.HibernateBaseDB;
 
 /**
 *
 * @author  James Champion
 * @version 1.0
-* @since   2019-08-20 
+* @since   2019-02-08 
 */
 public class ObservationDao implements ObservationDaoInterface<Observation, String> 
 {
@@ -35,13 +33,13 @@ public class ObservationDao implements ObservationDaoInterface<Observation, Stri
 
 	public ObservationDao() {}
 
-	public Session openCurrentSession() throws ParserConfigurationException, SAXException, IOException 
+	public Session openCurrentSession(Campfhir cf) throws ParserConfigurationException, SAXException, IOException 
 	{
-		sessionFactory = HibernateBaseDB.getSessionFactory();
+		sessionFactory = HibernateBaseDB.getSessionFactory(cf);
 		currentSession = sessionFactory.openSession();
 		return currentSession;
 	}
-
+/*
 	public Session openCurrentSessionwithTransaction() throws ParserConfigurationException, SAXException, IOException 
 	{
 		sessionFactory = HibernateBaseDB.getSessionFactory();
@@ -49,7 +47,7 @@ public class ObservationDao implements ObservationDaoInterface<Observation, Stri
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
-	
+*/	
 	public void closeCurrentSession() 
 	{
 		currentSession.close();
