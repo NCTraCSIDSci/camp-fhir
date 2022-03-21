@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 22, 2022, 7:23:13 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Practitioner" optimistic-lock="none" table="practitioner">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="practActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Active"/>
+        </property>
+        <property name="practAddressCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_City"/>
+        </property>
+        <property name="practAddressCountry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Country"/>
+        </property>
+        <property name="practAddressDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_District"/>
+        </property>
+        <property name="practAddressLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Line"/>
+        </property>
+        <property name="practAddressPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Period_End"/>
+        </property>
+        <property name="practAddressPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Period_Start"/>
+        </property>
+        <property name="practAddressPostalCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_PostalCode"/>
+        </property>
+        <property name="practAddressState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_State"/>
+        </property>
+        <property name="practAddressText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Text"/>
+        </property>
+        <property name="practAddressTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Type_Code"/>
+        </property>
+        <property name="practAddressUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Address_Use_Code"/>
+        </property>
+        <property name="practBirthDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_BirthDate"/>
+        </property>
+        <property name="practCommnCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Coding_Code"/>
+        </property>
+        <property name="practCommnCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Coding_Display"/>
+        </property>
+        <property name="practCommnCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Coding_System"/>
+        </property>
+        <property name="practCommnCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Coding_Usrslt"/>
+        </property>
+        <property name="practCommnCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Coding_Version"/>
+        </property>
+        <property name="practCommnText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Commn_Text"/>
+        </property>
+        <property name="practGenderCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Gender_Code"/>
+        </property>
+        <property name="practIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Assigner"/>
+        </property>
+        <property name="practIdPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Period_End"/>
+        </property>
+        <property name="practIdPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Period_Start"/>
+        </property>
+        <property name="practIdSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_System"/>
+        </property>
+        <property name="practIdTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Code"/>
+        </property>
+        <property name="practIdTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Display"/>
+        </property>
+        <property name="practIdTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Coding_System"/>
+        </property>
+        <property name="practIdTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Usrslt"/>
+        </property>
+        <property name="practIdTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Coding_Version"/>
+        </property>
+        <property name="practIdTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Type_Text"/>
+        </property>
+        <property name="practIdUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Use_Code"/>
+        </property>
+        <property name="practIdValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Id_Value"/>
+        </property>
+        <property name="practNameFamily" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Family"/>
+        </property>
+        <property name="practNameGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Given"/>
+        </property>
+        <property name="practNamePeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Period_End"/>
+        </property>
+        <property name="practNamePeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Period_Start"/>
+        </property>
+        <property name="practNamePrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Prefix"/>
+        </property>
+        <property name="practNameSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Suffix"/>
+        </property>
+        <property name="practNameText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Text"/>
+        </property>
+        <property name="practNameUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Name_Use_Code"/>
+        </property>
+        <property name="practPhotoContentType" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_ContentType"/>
+        </property>
+        <property name="practPhotoCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Creation"/>
+        </property>
+        <property name="practPhotoData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Data"/>
+        </property>
+        <property name="practPhotoHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Hash"/>
+        </property>
+        <property name="practPhotoLang" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Lang"/>
+        </property>
+        <property name="practPhotoSize" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Size"/>
+        </property>
+        <property name="practPhotoTitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Title"/>
+        </property>
+        <property name="practPhotoUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Photo_Url"/>
+        </property>
+        <property name="practQualificationCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Code"/>
+        </property>
+        <property name="practQualificationCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Display"/>
+        </property>
+        <property name="practQualificationCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_System"/>
+        </property>
+        <property name="practQualificationCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Usrslt"/>
+        </property>
+        <property name="practQualificationCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Coding_Version"/>
+        </property>
+        <property name="practQualificationCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Code_Text"/>
+        </property>
+        <property name="practQualificationIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Assigner"/>
+        </property>
+        <property name="practQualificationIdPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Period_End"/>
+        </property>
+        <property name="practQualificationIdPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Period_Start"/>
+        </property>
+        <property name="practQualificationIdSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_System"/>
+        </property>
+        <property name="practQualificationIdTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Code"/>
+        </property>
+        <property name="practQualificationIdTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Display"/>
+        </property>
+        <property name="practQualificationIdTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_System"/>
+        </property>
+        <property name="practQualificationIdTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Usrslt"/>
+        </property>
+        <property name="practQualificationIdTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Coding_Version"/>
+        </property>
+        <property name="practQualificationIdTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Type_Text"/>
+        </property>
+        <property name="practQualificationIdUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Use_Code"/>
+        </property>
+        <property name="practQualificationIdValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Id_Value"/>
+        </property>
+        <property name="practQualificationIssuer" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Issuer"/>
+        </property>
+        <property name="practQualificationPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Period_End"/>
+        </property>
+        <property name="practQualificationPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Qualification_Period_Start"/>
+        </property>
+        <property name="practTelecomPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Period_End"/>
+        </property>
+        <property name="practTelecomPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Period_Start"/>
+        </property>
+        <property name="practTelecomRank" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Rank"/>
+        </property>
+        <property name="practTelecomSystemCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_System_Code"/>
+        </property>
+        <property name="practTelecomUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Use_Code"/>
+        </property>
+        <property name="practTelecomValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Pract_Telecom_Value"/>
+        </property>
+    </class>
+</hibernate-mapping>

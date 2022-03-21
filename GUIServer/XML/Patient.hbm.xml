@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 22, 2022, 7:23:13 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="campfhir" name="Patient" optimistic-lock="none" table="patient_new">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="patientActive" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Active"/>
+        </property>
+        <property name="patientAddressCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_City"/>
+        </property>
+        <property name="patientAddressCountry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Country"/>
+        </property>
+        <property name="patientAddressDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_District"/>
+        </property>
+        <property name="patientAddressLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Line"/>
+        </property>
+        <property name="patientAddressPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Period_End"/>
+        </property>
+        <property name="patientAddressPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Period_Start"/>
+        </property>
+        <property name="patientAddressPostalCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_PostalCode"/>
+        </property>
+        <property name="patientAddressState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_State"/>
+        </property>
+        <property name="patientAddressText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Text"/>
+        </property>
+        <property name="patientAddressTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Type_Code"/>
+        </property>
+        <property name="patientAddressUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Use_Code"/>
+        </property>
+        <property name="patientBirthDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_BirthDate"/>
+        </property>
+        <property name="patientCommnLangCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Coding_Code"/>
+        </property>
+        <property name="patientCommnLangCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Coding_Display"/>
+        </property>
+        <property name="patientCommnLangCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Coding_System"/>
+        </property>
+        <property name="patientCommnLangCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Coding_Usrslt"/>
+        </property>
+        <property name="patientCommnLangCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Coding_Version"/>
+        </property>
+        <property name="patientCommnLangText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Lang_Text"/>
+        </property>
+        <property name="patientCommnPreferred" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Commn_Preferred"/>
+        </property>
+        <property name="patientContactAddressCity" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_City"/>
+        </property>
+        <property name="patientContactAddressCountry" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Country"/>
+        </property>
+        <property name="patientContactAddressDistrict" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_District"/>
+        </property>
+        <property name="patientContactAddressLine" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Line"/>
+        </property>
+        <property name="patientContactAddressPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Period_End"/>
+        </property>
+        <property name="patientContactAddressPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Period_Start"/>
+        </property>
+        <property name="patientContactAddressPostalCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_PostalCode"/>
+        </property>
+        <property name="patientContactAddressState" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_State"/>
+        </property>
+        <property name="patientContactAddressText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Text"/>
+        </property>
+        <property name="patientContactAddressTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Type_Code"/>
+        </property>
+        <property name="patientContactAddressUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Address_Use_Code"/>
+        </property>
+        <property name="patientContactGenderCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Gender_Code"/>
+        </property>
+        <property name="patientContactNameFamily" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Family"/>
+        </property>
+        <property name="patientContactNameGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Given"/>
+        </property>
+        <property name="patientContactNamePeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Period_End"/>
+        </property>
+        <property name="patientContactNamePeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Period_Start"/>
+        </property>
+        <property name="patientContactNamePrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Prefix"/>
+        </property>
+        <property name="patientContactNameSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Suffix"/>
+        </property>
+        <property name="patientContactNameText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Text"/>
+        </property>
+        <property name="patientContactNameUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Name_Use_Code"/>
+        </property>
+        <property name="patientContactOrganization" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Organization"/>
+        </property>
+        <property name="patientContactPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Period_End"/>
+        </property>
+        <property name="patientContactPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Period_Start"/>
+        </property>
+        <property name="patientContactRelationshipCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Coding_Code"/>
+        </property>
+        <property name="patientContactRelationshipCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Coding_Display"/>
+        </property>
+        <property name="patientContactRelationshipCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Coding_System"/>
+        </property>
+        <property name="patientContactRelationshipCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Coding_Usrslt"/>
+        </property>
+        <property name="patientContactRelationshipCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Coding_Version"/>
+        </property>
+        <property name="patientContactRelationshipText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Relationship_Text"/>
+        </property>
+        <property name="patientContactTelecomPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_Period_End"/>
+        </property>
+        <property name="patientContactTelecomPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_Period_Start"/>
+        </property>
+        <property name="patientContactTelecomRank" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_Rank"/>
+        </property>
+        <property name="patientContactTelecomSystemCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_System_Code"/>
+        </property>
+        <property name="patientContactTelecomUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_Use_Code"/>
+        </property>
+        <property name="patientContactTelecomValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Contact_Telecom_Value"/>
+        </property>
+        <property name="patientDeceasedBoolean" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_DeceasedBoolean"/>
+        </property>
+        <property name="patientDeceasedDateTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_DeceasedDateTime"/>
+        </property>
+        <property name="patientGenderCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Gender_Code"/>
+        </property>
+        <property name="patientGeneralPract" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_GeneralPract"/>
+        </property>
+        <property name="patientIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Assigner"/>
+        </property>
+        <property name="patientIdPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Period_End"/>
+        </property>
+        <property name="patientIdPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Period_Start"/>
+        </property>
+        <property name="patientIdSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_System"/>
+        </property>
+        <property name="patientIdTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Coding_Code"/>
+        </property>
+        <property name="patientIdTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Coding_Display"/>
+        </property>
+        <property name="patientIdTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Coding_System"/>
+        </property>
+        <property name="patientIdTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Coding_Usrslt"/>
+        </property>
+        <property name="patientIdTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Coding_Version"/>
+        </property>
+        <property name="patientIdTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Type_Text"/>
+        </property>
+        <property name="patientIdUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Use_Code"/>
+        </property>
+        <property name="patientIdValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Id_Value"/>
+        </property>
+        <property name="patientLinkOther" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Link_Other"/>
+        </property>
+        <property name="patientLinkTypeCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Link_Type_Code"/>
+        </property>
+        <property name="patientManagingOrganization" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_ManagingOrganization"/>
+        </property>
+        <property name="patientMaritalStatusCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Coding_Code"/>
+        </property>
+        <property name="patientMaritalStatusCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Coding_Display"/>
+        </property>
+        <property name="patientMaritalStatusCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Coding_System"/>
+        </property>
+        <property name="patientMaritalStatusCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Coding_Usrslt"/>
+        </property>
+        <property name="patientMaritalStatusCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Coding_Version"/>
+        </property>
+        <property name="patientMaritalStatusText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MaritalStatus_Text"/>
+        </property>
+        <property name="patientMultipleBirthBoolean" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MultipleBirthBoolean"/>
+        </property>
+        <property name="patientMultipleBirthInteger" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_MultipleBirthInteger"/>
+        </property>
+        <property name="patientNameFamily" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Family"/>
+        </property>
+        <property name="patientNameGiven" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Given"/>
+        </property>
+        <property name="patientNamePeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Period_End"/>
+        </property>
+        <property name="patientNamePeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Period_Start"/>
+        </property>
+        <property name="patientNamePrefix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Prefix"/>
+        </property>
+        <property name="patientNameSuffix" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Suffix"/>
+        </property>
+        <property name="patientNameText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Text"/>
+        </property>
+        <property name="patientNameUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Name_Use_Code"/>
+        </property>
+        <property name="patientPhotoContentType" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_ContentType"/>
+        </property>
+        <property name="patientPhotoCreation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Creation"/>
+        </property>
+        <property name="patientPhotoData" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Data"/>
+        </property>
+        <property name="patientPhotoHash" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Hash"/>
+        </property>
+        <property name="patientPhotoLang" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Lang"/>
+        </property>
+        <property name="patientPhotoSize" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Size"/>
+        </property>
+        <property name="patientPhotoTitle" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Title"/>
+        </property>
+        <property name="patientPhotoUrl" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Photo_Url"/>
+        </property>
+        <property name="patientTelecomPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_Period_End"/>
+        </property>
+        <property name="patientTelecomPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_Period_Start"/>
+        </property>
+        <property name="patientTelecomRank" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_Rank"/>
+        </property>
+        <property name="patientTelecomSystemCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_System_Code"/>
+        </property>
+        <property name="patientTelecomUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_Use_Code"/>
+        </property>
+        <property name="patientTelecomValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Telecom_Value"/>
+        </property>
+    </class>
+</hibernate-mapping>

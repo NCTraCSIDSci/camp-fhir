@@ -1,515 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>CAMP FHIR</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="server.css">
-    <script>
-    function sub() {
-       document.getElementById("s").innerHTML = "Processing...";
-       //document.getElementById("s").disabled = true;
+
+<head>
+  <title>CAMP FHIR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    
+
+  <script>
+    function toggle() {
+
+      var x = document.getElementById("resourceconfiguration");
+
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+
     }
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      <form action="/" method="POST">
-        <div class="form-group">
-          <label for="sqldialects">Dialects of SQL</label>
-            <input list="sqldialects" name="sqldialects" class="form-control"  aria-describedby="sqldialects" placeholder="Select SQL Dialect" required>
-            <datalist id="sqldialects" placeholder="Select Dialect">
-                <option value="Oracle (any version)">Oracle (any version) </option>
-                <option value="Oracle9i">Oracle9i</option>
-                <option value="Oracle10g">Oracle10g</option>
-                <option value="MySQL">MySQL</option>
-                <option value="MySQL with InnoDB">MySQL with InnoDB</option>
-                <option value="MySQL with MyISAM">MySQL with MyISAM</option>
-                <option value="DB2">DB2</option>
-                <option value="DB2 AS/400">DB2 AS/400</option>
-                <option value="DB2 OS390">DB2 OS390</option>
-                <option value="Microsoft SQL Server">Microsoft SQL Server</option>
-                <option value="Sybase">Sybase</option>
-                <option value="PostgreSQL">PostgreSQL</option>
-                <option value="SAP DB">SAP DB</option>
-                <option value="Informix">Informix</option>
-                <option value="HypersonicSQL"> HypersonicSQL</option>
-                <option value="Ingres">Ingres</option>
-                <option value="Progress">Progress</option>
-                <option value="Mckoi SQL">Mckoi SQL</option>
-                <option value="Interbase">Interbase</option>
-                <option value="Pointbase">Pointbase</option>
-                <option value="Frontbase">Frontbase</option>
-                <option value="Fiirebir">Fiirebir</option>
-            </datalist>
-        </div>
-        <div class="form-group">
-          <label for="dburl">Database Connection URL</label>
-          <input type="text" class="form-control" id="dburl" aria-describedby="dburl" placeholder="Enter Database Url" name="dburl" required>
-        </div>
-        <div class="form-group">
-          <label for="dbusername">Database Username</label>
-          <input type="text" class="form-control" id="dbusername" aria-describedby="dbusername" placeholder="Enter Database Username" name="dbusername" required>
-        </div>
-        <div class="form-group">
-          <label for="db_passsword">Database Password</label>
-          <input type="password" class="form-control" id="dbpassword" aria-describedby="dbpassword" placeholder="Enter Database Password" name="dbpassword" required> 
-        </div>
-        <div class="form-group">
-          <label for="source">Source (Table/View)</label>
-          <input type="text" class="form-control" id="source" aria-describedby="source" placeholder="Enter Source" name="source" required>
-        </div>
-        <div class="form-group">
-            <label for="outputfolder">Output folder</label>
-            <input type="text" id="outputfolder" class="form-control" name="outputfolder" placeholder="Enter Output Folder Name" required/>
-        </div>
+    function myFunction(id) {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById(id);
+        filter = input.value.toUpperCase();
+        let tableId = id.replace("SearchInput", ""); 
+        table = document.getElementById(tableId + "Table");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      function clickSubmit() {
+        document.getElementById("xmlForm").submit();
+        document.getElementById("configform").submit();
+      
+      }
+  
 
 
-        <div class="form-group">
-            <label for="partition">Partition (number of records per file)</label>
-            <input type="text" class="form-control" id="partition" aria-describedby="partition" placeholder="Partition Number" name="partition" required>
-        </div>
+  </script>
+ 
+</head>
 
-        <div class="form-group">
-            <label for="db_resource">FHIR Resource (R4)</label>
-            <div class="resouce-content" >
-                <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">
-                    <table width="105%" style="border: 0.5px solid gray; border-collapse: collapse;">
-                     <tbody><tr class="frm-group" >
-                      <td  rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Foundation</div></td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+<body>
+
+
+  <div class="container">
+    <form id="configform" action="/" method="POST">
+      <div class="form-group">
+        <label for="sqldialects">Dialects of SQL</label>
+        <input list="sqldialects" name="sqldialects" class="form-control" aria-describedby="sqldialects"
+          placeholder="Select SQL Dialect">
+        <datalist id="sqldialects" placeholder="Select Dialect">
+          <option value="org.hibernate.dialect.Oracle12cDialect">Oracle (any version) </option>
+          <option value="Oracle9i">Oracle9i</option>
+          <option value="Oracle10g">Oracle10g</option>
+          <option value="MySQL">MySQL</option>
+          <option value="MySQL with InnoDB">MySQL with InnoDB</option>
+          <option value="MySQL with MyISAM">MySQL with MyISAM</option>
+          <option value="DB2">DB2</option>
+          <option value="DB2 AS/400">DB2 AS/400</option>
+          <option value="DB2 OS390">DB2 OS390</option>
+          <option value="Microsoft SQL Server">Microsoft SQL Server</option>
+          <option value="Sybase">Sybase</option>
+          <option value="PostgreSQL">PostgreSQL</option>
+          <option value="SAP DB">SAP DB</option>
+          <option value="Informix">Informix</option>
+          <option value="HypersonicSQL"> HypersonicSQL</option>
+          <option value="Ingres">Ingres</option>
+          <option value="Progress">Progress</option>
+          <option value="Mckoi SQL">Mckoi SQL</option>
+          <option value="Interbase">Interbase</option>
+          <option value="Pointbase">Pointbase</option>
+          <option value="Frontbase">Frontbase</option>
+          <option value="Fiirebir">Fiirebir</option>
+        </datalist>
+      </div>
+      <div class="form-group">
+        <label for="driverclass">Driver Class</label>
+        <input type="text" class="form-control" id="driverclass" aria-describedby="driverclass"
+          placeholder="Enter Driver Class" name="driverclass">
+      </div>
+      <div class="form-group">
+        <label for="dburl">Database Connection URL</label>
+        <input type="text" class="form-control" id="dburl" aria-describedby="dburl" placeholder="Enter Database Url"
+          name="dburl">
+      </div>
+      <div class="form-group">
+        <label for="dbusername">Database Username</label>
+        <input type="text" class="form-control" id="dbusername" aria-describedby="dbusername"
+          placeholder="Enter Database Username" name="dbusername">
+      </div>
+      <div class="form-group">
+        <label for="db_passsword">Database Password</label>
+        <input type="password" class="form-control" id="dbpassword" aria-describedby="dbpassword"
+          placeholder="Enter Database Password" name="dbpassword">
+      </div>
+      <div class="form-group">
+        <label for="outputfolder">Output folder</label>
+        <input type="text" id="outputfolder" class="form-control" name="outputfolder"
+          placeholder="Enter Output Folder Name" />
+      </div>
+      <div class="form-group">
+        <label for="partition">Partition (number of records per file)</label>
+        <input type="text" class="form-control" id="partition" aria-describedby="partition"
+          placeholder="Partition Number" name="partition">
+      </div>
+      
+      
+      <div class="form-group">
+        <label for="db_resource">FHIR Resource (R4)</label>
+        <div class="resouce-content">
+          <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom"
+            role="tabpanel" aria-hidden="false">
+            <table width="105%" style="border: 0.5px solid gray; border-collapse: collapse;">
+              <tbody>
+                <tr class="frm-group">
+                  <td rowspan="2" class="frm-group rotate" style="padding-left:8px">
+                    <div>Foundation</div>
+                  </td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Conformance</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Terminology</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Security</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Documents</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Other</td>
-                     </tr>
-                     <tr class="frm-contents" style="font-size: 12px;">
-                      <td class="frm-set" style="width:fit-content"><ul class="frm-set">
-                        <input type="radio" id="radio" value="CapabilityStatement" name="resource" disabled>
-                        <label for="radio"> Capability Statement</label> <br>
-                        <input  type="radio" id="radio" value="StructureDefinition" name="resource" disabled>
-                        <label for="radio"> StructureDefinition</label><br>
-                        <input  type="radio" id="radio" value="ImplementationGuide" name="resource" disabled>
-                        <label for="radio"> ImplementationGuide</label><br>
-                        <input  type="radio" id="radio" value="SearchParameter" name="resource" disabled>
-                        <label for="radio"> SearchParameter</label><br>
-                        <input  type="radio" id="radio" value="MessageDefinition" name="resource" disabled>
-                        <label for="radio"> MessageDefinition</label><br>
-                        <input  type="radio" id="radio" value="OperationDefinition" name="resource" disabled>
-                        <label for="radio"> OperationDefinition</label><br>
-                        <input  type="radio" id="radio" value="CompartmentDefinition" name="resource" disabled>
-                        <label for="radio"> CompartmentDefinition</label><br>
-                        <input  type="radio" id="radio" value="GraphDefinition" name="resource" disabled>
-                        <label for="radio"> GraphDefinition</label><br>
-                        <input  type="radio" id="radio" value="ExampleScenario" name="resource" disabled>
-                        <label for="radio"> ExampleScenario</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="CodeSystem" name="resource" disabled>
-                        <label for="radio">CodeSystem</label><br>
-                        <input  type="radio" id="radio" value="ValueSet" name="resource" disabled>
-                        <label for="radio">ValueSet</label><br>
-                        <input  type="radio" id="radio" value="ConceptMap" name="resource" disabled>
-                        <label for="radio">ConceptMap</label><br>
-                        <input  type="radio" id="radio" value="NamingSystem" name="resource" disabled>
-                        <label for="radio">NamingSystem</label> <br>
-                        <input  type="radio" id="radio" value="TerminologyCapabilities" name="resource" disabled>
-                        <label for="radio">Terminology Capabilities</label> <br> 
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Provenance" name="resource" disabled>
-                        <label for="radio">Provenance</label><br>
-                        <input  type="radio" id="radio" value="AuditEventvel" name="resource" disabled>
-                        <label for="radio">AuditEventvel</label><br>
-                        <input  type="radio" id="radio" value="Consent" name="resource" disabled>
-                        <label for="radio">Consent</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Composition" name="resource" disabled>
-                        <label for="radio">Composition</label><br>
-                        <input  type="radio" id="radio" value="DocumentManifest" name="resource" disabled>
-                        <label for="radio"> DocumentManifest</label><br>
-                        <input  type="radio" id="radio" value="DocumentReference" name="resource" disabled>
-                        <label for="radio">DocumentReference</label><br>
-                        <input  type="radio" id="radio" value="CatalogEntry" name="resource" disabled>
-                        <label for="radio">CatalogEntry</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Basic" name="resource" disabled>
-                        <label for="radio">Basic</label><br>
-                        <input  type="radio" id="radio" value="Binary" name="resource" disabled>
-                        <label for="radio">Binary</label><br>
-                        <input  type="radio" id="radio" value="Bundle" name="resource" disabled>
-                        <label for="radio">Bundle</label><br>
-                        <input  type="radio" id="radio" value="Linkage" name="resource" disabled>
-                        <label for="radio">Linkage</label><br>
-                        <input  type="radio" id="radio" value="MessageHeader" name="resource" disabled>
-                        <label for="radio">MessageHeader</label><br>
-                        <input  type="radio" id="radio" value="OperationOutcome" name="resource" disabled>
-                        <label for="radio">OperationOutcome</label><br>
-                        <input  type="radio" id="radio" value="Parameters" name="resource" disabled>
-                        <label for="radio">Parameters</label><br>
-                        <input  type="radio" id="radio" value="Subscription" name="resource" disabled>
-                        <label for="radio">Subscription</label><br>
-                      </ul></td>
-                     </tr>
-                     <tr class="frm-break"><td colspan="6"></td></tr>
-                     <tr class="frm-group">
-                      <td  rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Base</div></td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                </tr>
+                <tr class="frm-contents" style="font-size: 12px;">
+                  <td class="frm-set" style="width:fit-content">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="CapabilityStatement" name="resource" disabled>
+                      <label for="radio"> Capability Statement</label> <br>
+                      <input type="radio" id="radio" value="StructureDefinition" name="resource" disabled>
+                      <label for="radio"> StructureDefinition</label><br>
+                      <input type="radio" id="radio" value="ImplementationGuide" name="resource" disabled>
+                      <label for="radio"> ImplementationGuide</label><br>
+                      <input type="radio" id="radio" value="SearchParameter" name="resource" disabled>
+                      <label for="radio"> SearchParameter</label><br>
+                      <input type="radio" id="radio" value="MessageDefinition" name="resource" disabled>
+                      <label for="radio"> MessageDefinition</label><br>
+                      <input type="radio" id="radio" value="OperationDefinition" name="resource" disabled>
+                      <label for="radio"> OperationDefinition</label><br>
+                      <input type="radio" id="radio" value="CompartmentDefinition" name="resource" disabled>
+                      <label for="radio"> CompartmentDefinition</label><br>
+                      <input type="radio" id="radio" value="GraphDefinition" name="resource" disabled>
+                      <label for="radio"> GraphDefinition</label><br>
+                      <input type="radio" id="radio" value="ExampleScenario" name="resource" disabled>
+                      <label for="radio"> ExampleScenario</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="CodeSystem" name="resource" disabled>
+                      <label for="radio">CodeSystem</label><br>
+                      <input type="radio" id="radio" value="ValueSet" name="resource" disabled>
+                      <label for="radio">ValueSet</label><br>
+                      <input type="radio" id="radio" value="ConceptMap" name="resource" disabled>
+                      <label for="radio">ConceptMap</label><br>
+                      <input type="radio" id="radio" value="NamingSystem" name="resource" disabled>
+                      <label for="radio">NamingSystem</label> <br>
+                      <input type="radio" id="radio" value="TerminologyCapabilities" name="resource" disabled>
+                      <label for="radio">Terminology Capabilities</label> <br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Provenance" name="resource" disabled>
+                      <label for="radio">Provenance</label><br>
+                      <input type="radio" id="radio" value="AuditEventvel" name="resource" disabled>
+                      <label for="radio">AuditEventvel</label><br>
+                      <input type="radio" id="radio" value="Consent" name="resource" disabled>
+                      <label for="radio">Consent</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Composition" name="resource" disabled>
+                      <label for="radio">Composition</label><br>
+                      <input type="radio" id="radio" value="DocumentManifest" name="resource" disabled>
+                      <label for="radio"> DocumentManifest</label><br>
+                      <input type="radio" id="radio" value="DocumentReference" name="resource">
+                      <label for="radio">DocumentReference</label><br>
+                      <input type="radio" id="radio" value="CatalogEntry" name="resource" disabled>
+                      <label for="radio">CatalogEntry</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Basic" name="resource" disabled>
+                      <label for="radio">Basic</label><br>
+                      <input type="radio" id="radio" value="Binary" name="resource" disabled>
+                      <label for="radio">Binary</label><br>
+                      <input type="radio" id="radio" value="Bundle" name="resource" disabled>
+                      <label for="radio">Bundle</label><br>
+                      <input type="radio" id="radio" value="Linkage" name="resource" disabled>
+                      <label for="radio">Linkage</label><br>
+                      <input type="radio" id="radio" value="MessageHeader" name="resource" disabled>
+                      <label for="radio">MessageHeader</label><br>
+                      <input type="radio" id="radio" value="OperationOutcome" name="resource" disabled>
+                      <label for="radio">OperationOutcome</label><br>
+                      <input type="radio" id="radio" value="Parameters" name="resource" disabled>
+                      <label for="radio">Parameters</label><br>
+                      <input type="radio" id="radio" value="Subscription" name="resource" disabled>
+                      <label for="radio">Subscription</label><br>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="frm-break">
+                  <td colspan="6"></td>
+                </tr>
+                <tr class="frm-group">
+                  <td rowspan="2" class="frm-group rotate" style="padding-left:8px">
+                    <div>Base</div>
+                  </td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Individuals</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Entities #1</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Entities #2</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Workflow</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Management</td>
-                     </tr>
-                     <tr class="frm-contents">
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Patient" name="resource">
-                        <label for="radio">Patient</label><br>
-                        <input  type="radio" id="radio" value="PractitionerRole" name="resource" disabled>
-                        <label for="radio">PractitionerRole</label><br>
-                        <input  type="radio" id="radio" value="RelatedPerson" name="resource" disabled>
-                        <label for="radio">RelatedPerson</label><br>
-                        <input  type="radio" id="radio" value="Person" name="resource" disabled>
-                        <label for="radio">Person</label><br>
-                        <input  type="radio" id="radio" value="Group" name="resource" disabled>
-                        <label for="radio">Group</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Organization" name="resource" disabled>
-                        <label for="radio">Organization</label><br>
-                        <input  type="radio" id="radio" value="OrganizationAffiliation" name="resource" disabled>
-                        <label for="radio">OrganizationAffiliation</label><br>
-                        <input  type="radio" id="radio" value="HealthcareService" name="resource" disabled>
-                        <label for="radio">HealthcareService</label><br>
-                        <input  type="radio" id="radio" value="Endpoint" name="resource" disabled>
-                        <label for="radio">Endpoint</label><br>
-                        <input  type="radio" id="radio" value="Location" name="resource" disabled>
-                        <label for="radio">Location</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Substance" name="resource" disabled>
-                        <label for="radio">Substance</label><br>
-                        <input  type="radio" id="radio" value="BiologicallyDerivedProduct" name="resource" disabled>
-                        <label for="radio">BiologicallyDerivedProduct</label><br>
-                        <input  type="radio" id="radio" value="Device" name="resource" disabled>
-                        <label for="radio">Device</label><br>
-                        <input  type="radio" id="radio" value="DeviceMetric" name="resource" disabled>
-                        <label for="radio">DeviceMetric</label><br>
-                      </ul></td>
-                      <td  class="frm-set" style="font-size: 12px; width: fit-content;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Task" name="resource" disabled>
-                        <label for="radio">Task</label><br>
-                        <input  type="radio" id="radio" value="Appointment" name="resource" disabled>
-                        <label for="radio">Appointment</label><br>
-                        <input  type="radio" id="radio" value="AppointmentResponse" name="resource" disabled>
-                        <label for="radio">AppointmentResponse</label><br>
-                        <input  type="radio" id="radio" value="Schedule" name="resource" disabled>
-                        <label for="radio">Schedule</label><br>
-                        <input  type="radio" id="radio" value="Slot" name="resource" disabled>
-                        <label for="radio">Slot</label><br>
-                        <input  type="radio" id="radio" value="VerificationResult" name="resource" disabled>
-                        <label for="radio">VerificationResult</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Encounter" name="resource" disabled>
-                        <label for="radio">Encounter</label><br>
-                        <input  type="radio" id="radio" value="EpisodeOfCare" name="resource" disabled>
-                        <label for="radio">EpisodeOfCare</label><br>
-                        <input  type="radio" id="radio" value="Flag" name="resource" disabled>
-                        <label for="radio">Flag</label><br>
-                        <input  type="radio" id="radio" value="List" name="resource" disabled>
-                        <label for="radio">List</label><br>
-                        <input  type="radio" id="radio" value="Library" name="resource" disabled>
-                        <label for="radio">Library</label><br>
-                      </ul></td>
-                     </tr>
-                     <tr class="frm-break"><td colspan="6"></td></tr>
-                     <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Clinical</div></td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                </tr>
+                <tr class="frm-contents">
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Patient" name="resource" checked="checked">
+                      <label for="radio">Patient</label><br>
+                      <input type="radio" id="radio" value="Practitioner" name="resource">
+                      <label for="radio">Practitioner</label><br>
+                      <input type="radio" id="radio" value="PractitionerRole" name="resource" disabled>
+                      <label for="radio">PractitionerRole</label><br>
+                      <input type="radio" id="radio" value="RelatedPerson" name="resource" disabled>
+                      <label for="radio">RelatedPerson</label><br>
+                      <input type="radio" id="radio" value="Person" name="resource" disabled>
+                      <label for="radio">Person</label><br>
+                      <input type="radio" id="radio" value="Group" name="resource" disabled>
+                      <label for="radio">Group</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Organization" name="resource" disabled>
+                      <label for="radio">Organization</label><br>
+                      <input type="radio" id="radio" value="OrganizationAffiliation" name="resource" disabled>
+                      <label for="radio">OrganizationAffiliation</label><br>
+                      <input type="radio" id="radio" value="HealthcareService" name="resource" disabled>
+                      <label for="radio">HealthcareService</label><br>
+                      <input type="radio" id="radio" value="Endpoint" name="resource" disabled>
+                      <label for="radio">Endpoint</label><br>
+                      <input type="radio" id="radio" value="Location" name="resource" disabled>
+                      <label for="radio">Location</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Substance" name="resource" disabled>
+                      <label for="radio">Substance</label><br>
+                      <input type="radio" id="radio" value="BiologicallyDerivedProduct" name="resource" disabled>
+                      <label for="radio">BiologicallyDerivedProduct</label><br>
+                      <input type="radio" id="radio" value="Device" name="resource">
+                      <label for="radio">Device</label><br>
+                      <input type="radio" id="radio" value="DeviceMetric" name="resource" disabled>
+                      <label for="radio">DeviceMetric</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px; width: fit-content;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Task" name="resource" disabled>
+                      <label for="radio">Task</label><br>
+                      <input type="radio" id="radio" value="Appointment" name="resource" disabled>
+                      <label for="radio">Appointment</label><br>
+                      <input type="radio" id="radio" value="AppointmentResponse" name="resource" disabled>
+                      <label for="radio">AppointmentResponse</label><br>
+                      <input type="radio" id="radio" value="Schedule" name="resource" disabled>
+                      <label for="radio">Schedule</label><br>
+                      <input type="radio" id="radio" value="Slot" name="resource" disabled>
+                      <label for="radio">Slot</label><br>
+                      <input type="radio" id="radio" value="VerificationResult" name="resource" disabled>
+                      <label for="radio">VerificationResult</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Encounter" name="resource">
+                      <label for="radio">Encounter</label><br>
+                      <input type="radio" id="radio" value="EpisodeOfCare" name="resource" disabled>
+                      <label for="radio">EpisodeOfCare</label><br>
+                      <input type="radio" id="radio" value="Flag" name="resource" disabled>
+                      <label for="radio">Flag</label><br>
+                      <input type="radio" id="radio" value="List" name="resource" disabled>
+                      <label for="radio">List</label><br>
+                      <input type="radio" id="radio" value="Library" name="resource" disabled>
+                      <label for="radio">Library</label><br>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="frm-break">
+                  <td colspan="6"></td>
+                </tr>
+                <tr class="frm-group">
+                  <td rowspan="2" class="frm-group rotate" style="padding-left:8px">
+                    <div>Clinical</div>
+                  </td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Summary</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Diagnostics</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
-                      text-align: center;" >Medications</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                      text-align: center;">Medications</td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Care Provision</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Request &amp; Response</td>
-                     </tr>
-                     <tr class="frm-contents">
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="AdverseEvent" name="resource" disabled>
-                        <label for="radio">AdverseEvent</label><br>
-                        <input  type="radio" id="radio" value="Condition" name="resource" disabled>
-                        <label for="radio">Condition</label><br>
-                        <input  type="radio" id="radio" value="Procedure" name="resource" disabled>
-                        <label for="radio">Procedure</label><br>
-                        <input  type="radio" id="radio" value="FamilyMemberHistory" name="resource" disabled>
-                        <label for="radio">FamilyMemberHistory</label><br>
-                        <input  type="radio" id="radio" value="ClinicalImpression" name="resource" disabled>
-                        <label for="radio">ClinicalImpression</label><br>
-                        <input  type="radio" id="radio" value="DetectedIssue" name="resource" disabled>
-                        <label for="radio">DetectedIssue</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Observation" name="resource" disabled>
-                        <label for="radio">Observation</label><br>
-                        <input  type="radio" id="radio" value="Media" name="resource" disabled>
-                        <label for="radio">Media</label><br>
-                        <input  type="radio" id="radio" value="DiagnosticReport" name="resource" disabled>
-                        <label for="radio">DiagnosticReport</label><br>
-                        <input  type="radio" id="radio" value="Specimen" name="resource" disabled>
-                        <label for="radio">Specimen</label><br>
-                        <input  type="radio" id="radio" value="ImagingStudy" name="resource" disabled>
-                        <label for="radio">ImagingStudy</label><br>
-                        <input  type="radio" id="radio" value="QuestionnaireResponse" name="resource" disabled>
-                        <label for="radio">Questionnaire Response</label><br>
-                        <input  type="radio" id="radio" value="MolecularSequence" name="resource" disabled>
-                        <label for="radio">MolecularSequence</label><br>
-                      </ul></td>
-                      <td  class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="MedicationRequest" name="resource" disabled>
-                        <label for="radio">MedicationRequest</label><br>
-                        <input  type="radio" id="radio" value="MedicationAdministration" name="resource" disabled>
-                        <label for="radio">MedicationAdministration</label><br>
-                        <input  type="radio" id="radio" value="MedicationDispense" name="resource" disabled>
-                        <label for="radio">MedicationDispense</label><br>
-                        <input  type="radio" id="radio" value="MedicationStatement" name="resource" disabled>
-                        <label for="radio">MedicationStatement</label><br>
-                        <input  type="radio" id="radio" value="Medication" name="resource" disabled>
-                        <label for="radio">Medication</label><br>
-                        <input  type="radio" id="radio" value="Immunization" name="resource" disabled>
-                        <label for="radio">Immunization</label><br>
-                        <input  type="radio" id="radio" value="ImmunizationEvaluation" name="resource" disabled>
-                        <label for="radio">ImmunizationEvaluation</label><br>
-                        <input  type="radio" id="radio" value="ImmunizationRecommendation" name="resource" disabled>
-                        <label for="radio">ImmunizationRecommendation</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="CarePlan" name="resource" disabled>
-                        <label for="radio">CarePlan</label><br>
-                        <input  type="radio" id="radio" value="Goal" name="resource" disabled>
-                        <label for="radio">Goal</label><br>
-                        <input  type="radio" id="radio" value="ServiceRequest" name="resource" disabled>
-                        <label for="radio">ServiceRequest</label><br>
-                        <input  type="radio" id="radio" value="NutritionOrder" name="resource" disabled>
-                        <label for="radio">NutritionOrder</label><br>
-                        <input  type="radio" id="radio" value="VisionPrescription" name="resource" disabled>
-                        <label for="radio">VisionPrescription</label><br>
-                        <input  type="radio" id="radio" value="RiskAssessment" name="resource" disabled>
-                        <label for="radio">RiskAssessment</label><br>
-                        <input  type="radio" id="radio" value="RequestGroup" name="resource" disabled>
-                        <label for="radio">RequestGroup</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Communication" name="resource" disabled>
-                        <label for="radio">Communication</label><br>
-                        <input  type="radio" id="radio" value="CommunicationRequest" name="resource" disabled>
-                        <label for="radio">CommunicationRequest</label><br>
-                        <input  type="radio" id="radio" value="DeviceRequest" name="resource" disabled>
-                        <label for="radio">DeviceRequest</label><br>
-                        <input  type="radio" id="radio" value="DeviceUseStatement" name="resource" disabled>
-                        <label for="radio">DeviceUseStatement</label><br>
-                        <input  type="radio" id="radio" value="SupplyRequest" name="resource" disabled>
-                        <label for="radio">SupplyRequest</label><br>
-                        <input  type="radio" id="radio" value="SupplyDelivery" name="resource" disabled>
-                        <label for="radio">SupplyDelivery</label><br>
-                      </ul></td>
-                     </tr>
-                     <tr class="frm-break"><td colspan="6"></td></tr>
-                     <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Financial</div></td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                </tr>
+                <tr class="frm-contents">
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="AdverseEvent" name="resource" disabled>
+                      <label for="radio">AdverseEvent</label><br>
+                      <input type="radio" id="radio" value="Condition" name="resource">
+                      <label for="radio">Condition</label><br>
+                      <input type="radio" id="radio" value="Procedure" name="resource">
+                      <label for="radio">Procedure</label><br>
+                      <input type="radio" id="radio" value="FamilyMemberHistory" name="resource" disabled>
+                      <label for="radio">FamilyMemberHistory</label><br>
+                      <input type="radio" id="radio" value="ClinicalImpression" name="resource" disabled>
+                      <label for="radio">ClinicalImpression</label><br>
+                      <input type="radio" id="radio" value="DetectedIssue" name="resource" disabled>
+                      <label for="radio">DetectedIssue</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Observation" name="resource" disabled>
+                      <label for="radio">Observation</label><br>
+                      <input type="radio" id="radio" value="Media" name="resource" disabled>
+                      <label for="radio">Media</label><br>
+                      <input type="radio" id="radio" value="DiagnosticReport" name="resource" disabled>
+                      <label for="radio">DiagnosticReport</label><br>
+                      <input type="radio" id="radio" value="Specimen" name="resource" disabled>
+                      <label for="radio">Specimen</label><br>
+                      <input type="radio" id="radio" value="ImagingStudy" name="resource" disabled>
+                      <label for="radio">ImagingStudy</label><br>
+                      <input type="radio" id="radio" value="QuestionnaireResponse" name="resource" disabled>
+                      <label for="radio">Questionnaire Response</label><br>
+                      <input type="radio" id="radio" value="MolecularSequence" name="resource" disabled>
+                      <label for="radio">MolecularSequence</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="MedicationRequest" name="resource">
+                      <label for="radio">MedicationRequest</label><br>
+                      <input type="radio" id="radio" value="MedicationAdministration" name="resource" disabled>
+                      <label for="radio">MedicationAdministration</label><br>
+                      <input type="radio" id="radio" value="MedicationDispense" name="resource" disabled>
+                      <label for="radio">MedicationDispense</label><br>
+                      <input type="radio" id="radio" value="MedicationStatement" name="resource" disabled>
+                      <label for="radio">MedicationStatement</label><br>
+                      <input type="radio" id="radio" value="Medication" name="resource" disabled>
+                      <label for="radio">Medication</label><br>
+                      <input type="radio" id="radio" value="Immunization" name="resource" disabled>
+                      <label for="radio">Immunization</label><br>
+                      <input type="radio" id="radio" value="ImmunizationEvaluation" name="resource" disabled>
+                      <label for="radio">ImmunizationEvaluation</label><br>
+                      <input type="radio" id="radio" value="ImmunizationRecommendation" name="resource" disabled>
+                      <label for="radio">ImmunizationRecommendation</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="CarePlan" name="resource" disabled>
+                      <label for="radio">CarePlan</label><br>
+                      <input type="radio" id="radio" value="Goal" name="resource" disabled>
+                      <label for="radio">Goal</label><br>
+                      <input type="radio" id="radio" value="ServiceRequest" name="resource" disabled>
+                      <label for="radio">ServiceRequest</label><br>
+                      <input type="radio" id="radio" value="NutritionOrder" name="resource" disabled>
+                      <label for="radio">NutritionOrder</label><br>
+                      <input type="radio" id="radio" value="VisionPrescription" name="resource" disabled>
+                      <label for="radio">VisionPrescription</label><br>
+                      <input type="radio" id="radio" value="RiskAssessment" name="resource" disabled>
+                      <label for="radio">RiskAssessment</label><br>
+                      <input type="radio" id="radio" value="RequestGroup" name="resource" disabled>
+                      <label for="radio">RequestGroup</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Communication" name="resource" disabled>
+                      <label for="radio">Communication</label><br>
+                      <input type="radio" id="radio" value="CommunicationRequest" name="resource" disabled>
+                      <label for="radio">CommunicationRequest</label><br>
+                      <input type="radio" id="radio" value="DeviceRequest" name="resource" disabled>
+                      <label for="radio">DeviceRequest</label><br>
+                      <input type="radio" id="radio" value="DeviceUseStatement" name="resource" disabled>
+                      <label for="radio">DeviceUseStatement</label><br>
+                      <input type="radio" id="radio" value="SupplyRequest" name="resource" disabled>
+                      <label for="radio">SupplyRequest</label><br>
+                      <input type="radio" id="radio" value="SupplyDelivery" name="resource" disabled>
+                      <label for="radio">SupplyDelivery</label><br>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="frm-break">
+                  <td colspan="6"></td>
+                </tr>
+                <tr class="frm-group">
+                  <td rowspan="2" class="frm-group rotate" style="padding-left:8px">
+                    <div>Financial</div>
+                  </td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Support</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Billing</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Payment</td>
-                      <td  class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">General</td>
-                      <td  class="frm-null"></td>
-                     </tr>
-                     <tr class="frm-contents">
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Coverage" name="resource" disabled>
-                        <label for="radio">Coverage</label><br>
-                        <input  type="radio" id="radio" value="CoverageEligibilityResponse" name="resource" disabled>
-                        <label for="radio">Coverage Eligibility Response</label><br>
-                        <input  type="radio" id="radio" value="EnrollmentRequest" name="resource" disabled>
-                        <label for="radio">EnrollmentRequest</label><br>
-                        <input  type="radio" id="radio" value="EnrollmentResponse" name="resource" disabled>
-                        <label for="radio">EnrollmentResponse</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Claim<" name="resource" disabled>
-                        <label for="radio">Claim</label><br>
-                        <input  type="radio" id="radio" value="ClaimResponse" name="resource" disabled>
-                        <label for="radio">ClaimResponse</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="PaymentNotice" name="resource" disabled>
-                        <label for="radio">PaymentNotice</label><br>
-                        <input  type="radio" id="radio" value="PaymentReconciliation" name="resource" disabled>
-                        <label for="radio">PaymentReconciliation</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Account" name="resource" disabled>
-                        <label for="radio">Account</label><br>
-                        <input  type="radio" id="radio" value="ChargeItem" name="resource" disabled>
-                        <label for="radio">ChargeItem</label><br>
-                        <input  type="radio" id="radio" value="ChargeItemDefinition" name="resource" disabled>
-                        <label for="radio">ChargeItemDefinition</label><br>
-                        <input  type="radio" id="radio" value="Contract" name="resource" disabled>
-                        <label for="radio">Contract</label><br>
-                        <input  type="radio" id="radio" value="ExplanationOfBenefit" name="resource" disabled>
-                        <label for="radio">ExplanationOfBenefit</label><br>
-                        <input  type="radio" id="radio" value="InsurancePlan" name="resource" disabled>
-                        <label for="radio">InsurancePlan</label><br>
-                      </ul></td>
-                      <td   style="width: fit-content;" class="frm-null"></td>
-                     </tr>
-                     <tr class="frm-break"><td   style="width: fit-content;" colspan="6"></td></tr>
-                     <tr class="frm-group">
-                      <td rowspan="2" class="frm-group rotate" style="padding-left:8px"><div>Specialized</div></td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-null"></td>
+                </tr>
+                <tr class="frm-contents">
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Coverage" name="resource" disabled>
+                      <label for="radio">Coverage</label><br>
+                      <input type="radio" id="radio" value="CoverageEligibilityResponse" name="resource" disabled>
+                      <label for="radio">Coverage Eligibility Response</label><br>
+                      <input type="radio" id="radio" value="EnrollmentRequest" name="resource" disabled>
+                      <label for="radio">EnrollmentRequest</label><br>
+                      <input type="radio" id="radio" value="EnrollmentResponse" name="resource" disabled>
+                      <label for="radio">EnrollmentResponse</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Claim<" name="resource" disabled>
+                      <label for="radio">Claim</label><br>
+                      <input type="radio" id="radio" value="ClaimResponse" name="resource" disabled>
+                      <label for="radio">ClaimResponse</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="PaymentNotice" name="resource" disabled>
+                      <label for="radio">PaymentNotice</label><br>
+                      <input type="radio" id="radio" value="PaymentReconciliation" name="resource" disabled>
+                      <label for="radio">PaymentReconciliation</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Account" name="resource" disabled>
+                      <label for="radio">Account</label><br>
+                      <input type="radio" id="radio" value="ChargeItem" name="resource" disabled>
+                      <label for="radio">ChargeItem</label><br>
+                      <input type="radio" id="radio" value="ChargeItemDefinition" name="resource" disabled>
+                      <label for="radio">ChargeItemDefinition</label><br>
+                      <input type="radio" id="radio" value="Contract" name="resource" disabled>
+                      <label for="radio">Contract</label><br>
+                      <input type="radio" id="radio" value="ExplanationOfBenefit" name="resource" disabled>
+                      <label for="radio">ExplanationOfBenefit</label><br>
+                      <input type="radio" id="radio" value="InsurancePlan" name="resource" disabled>
+                      <label for="radio">InsurancePlan</label><br>
+                    </ul>
+                  </td>
+                  <td style="width: fit-content;" class="frm-null"></td>
+                </tr>
+                <tr class="frm-break">
+                  <td style="width: fit-content;" colspan="6"></td>
+                </tr>
+                <tr class="frm-group">
+                  <td rowspan="2" class="frm-group rotate" style="padding-left:8px">
+                    <div>Specialized</div>
+                  </td>
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Public Health &amp; Research</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Definitional Artifacts</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Evidence-Based Medicine</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Quality Reporting &amp; Testing</td>
-                      <td class="frm-category" style="border-left: 1px solid #eeeeee;
+                  <td class="frm-category" style="border-left: 1px solid #eeeeee;
                       font-weight: bold;
                       text-align: center;">Medication Definition</td>
-                     </tr>
-                     <tr class="frm-contents">
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="ResearchStudy" name="resource" disabled>
-                        <label for="radio">ResearchStudy</label><br>
-                        <input  type="radio" id="radio" value="ResearchSubject" name="resource" disabled>
-                        <label for="radio">ResearchSubject</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        
-                        <input  type="radio" id="radio" value="ActivityDefinition" name="resource" disabled>
-                        <label for="radio">ActivityDefinition</label><br>
-                        <input  type="radio" id="radio" value="DeviceDefinition" name="resource" disabled>
-                        <label for="radio">DeviceDefinition</label><br>
-                        <input  type="radio" id="radio" value="EventDefinition" name="resource" disabled>
-                        <label for="radio">EventDefinition</label><br>
-                        <input  type="radio" id="radio" value="ObservationDefinition" name="resource" disabled>
-                        <label for="radio">ObservationDefinition</label><br>
-                        <input  type="radio" id="radio" value="PlanDefinition" name="resource" disabled>
-                        <label for="radio">PlanDefinition</label><br>
-                        <input  type="radio" id="radio" value="Questionnaire" name="resource" disabled>
-                        <label for="radio">Questionnaire</label><br>
-                        <input  type="radio" id="radio" value="SpecimenDefinition" name="resource" disabled>
-                        <label for="radio">SpecimenDefinition</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="ResearchDefinition" name="resource" disabled>
-                        <label for="radio">ResearchDefinition</label><br>
-                        <input  type="radio" id="radio" value="ResearchElementDefinition" name="resource" disabled>
-                        <label for="radio">ResearchElementDefinition</label><br>
-                        <input  type="radio" id="radio" value="Evidence" name="resource" disabled>
-                        <label for="radio">Evidence</label><br>
-                        <input  type="radio" id="radio" value="EvidenceVariable" name="resource" disabled>
-                        <label for="radio">EvidenceVariable</label><br>
-                        <input  type="radio" id="radio" value="EffectEvidenceSynthesis" name="resource" disabled>
-                        <label for="radio">EffectEvidenceSynthesis</label><br>
-                        <input  type="radio" id="radio" value="RiskEvidenceSynthesis" name="resource" disabled>
-                        <label for="radio">RiskEvidenceSynthesis</label><br>
-                      </ul></td>
-                      <td class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="Measure" name="resource" disabled>
-                        <label for="radio">Measure</label><br>
-                        <input  type="radio" id="radio" value="MeasureReport" name="resource" disabled>
-                        <label for="radio">MeasureReport</label><br>
-                        <input  type="radio" id="radio" value="TestScript" name="resource" disabled>
-                        <label for="radio">TestScript</label><br>
-                        <input  type="radio" id="radio" value="TestReport" name="resource" disabled>
-                        <label for="radio">TestReport</label><br>
-                      </ul></td>
-                      <td  class="frm-set" style="font-size: 12px;"><ul class="frm-set">
-                        <input  type="radio" id="radio" value="MedicinalProducions" name="resource" disabled>
-                        <label for="radio">MedicinalProducions</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductAuthorization" name="resource" disabled>
-                        <label for="radio">MedicinalProductAuthorization</label><br>
-                        <input  type="radio" id="radio" value="capabilitystatement" name="resource" disabled>
-                        <label for="radio">MedicinalProductContraindication</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductIndication" name="resource" disabled>
-                        <label for="radio">MedicinalProductIndication</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductIngredient" name="resource" disabled>
-                        <label for="radio">MedicinalProductIngredient</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductInteraction" name="resource" disabled>
-                        <label for="radio">MedicinalProductInteraction</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductManufactured" name="resource" disabled>
-                        <label for="radio">MedicinalProductManufactured</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductPackaged" name="resource" disabled>
-                        <label for="radio">MedicinalProductPackaged</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductPharmaceutical" name="resource" disabled>
-                        <label for="radio">MedicinalProductPharmaceutical</label><br>
-                        <input  type="radio" id="radio" value="MedicinalProductUndesirableEffect" name="resource" disabled>
-                        <label for="radio">MedicinalProductUndesirableEffect</label><br>
-                        <input  type="radio" id="radio" value="SubstanceNucleicAcid" name="resource" disabled>
-                        <label for="radio">SubstanceNucleicAcid</label><br>
-                        <input  type="radio" id="radio" value="SubstancePolymer" name="resource" disabled>
-                        <label for="radio">SubstancePolymer</label><br>
-                        <input  type="radio" id="radio" value="SubstanceReferenceInformation" name="resource" disabled>
-                        <label for="radio">SubstanceReferenceInformation</label><br>
-                        <input  type="radio" id="radio" value="SubstanceSourceMaterial" name="resource" disabled>
-                        <label for="radio">SubstanceSourceMaterial</label><br>
-                        
-                      </ul></td>
-                     </tr>
-                     <tr class="frm-break"><td style="width: fit-content;" colspan="6"></td></tr>
-                    </tbody></table>
-                
-                    </div>
-            </div>
+                </tr>
+                <tr class="frm-contents">
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="ResearchStudy" name="resource" disabled>
+                      <label for="radio">ResearchStudy</label><br>
+                      <input type="radio" id="radio" value="ResearchSubject" name="resource" disabled>
+                      <label for="radio">ResearchSubject</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+
+                      <input type="radio" id="radio" value="ActivityDefinition" name="resource" disabled>
+                      <label for="radio">ActivityDefinition</label><br>
+                      <input type="radio" id="radio" value="DeviceDefinition" name="resource" disabled>
+                      <label for="radio">DeviceDefinition</label><br>
+                      <input type="radio" id="radio" value="EventDefinition" name="resource" disabled>
+                      <label for="radio">EventDefinition</label><br>
+                      <input type="radio" id="radio" value="ObservationDefinition" name="resource" disabled>
+                      <label for="radio">ObservationDefinition</label><br>
+                      <input type="radio" id="radio" value="PlanDefinition" name="resource" disabled>
+                      <label for="radio">PlanDefinition</label><br>
+                      <input type="radio" id="radio" value="Questionnaire" name="resource" disabled>
+                      <label for="radio">Questionnaire</label><br>
+                      <input type="radio" id="radio" value="SpecimenDefinition" name="resource" disabled>
+                      <label for="radio">SpecimenDefinition</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="ResearchDefinition" name="resource" disabled>
+                      <label for="radio">ResearchDefinition</label><br>
+                      <input type="radio" id="radio" value="ResearchElementDefinition" name="resource" disabled>
+                      <label for="radio">ResearchElementDefinition</label><br>
+                      <input type="radio" id="radio" value="Evidence" name="resource" disabled>
+                      <label for="radio">Evidence</label><br>
+                      <input type="radio" id="radio" value="EvidenceVariable" name="resource" disabled>
+                      <label for="radio">EvidenceVariable</label><br>
+                      <input type="radio" id="radio" value="EffectEvidenceSynthesis" name="resource" disabled>
+                      <label for="radio">EffectEvidenceSynthesis</label><br>
+                      <input type="radio" id="radio" value="RiskEvidenceSynthesis" name="resource" disabled>
+                      <label for="radio">RiskEvidenceSynthesis</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="Measure" name="resource" disabled>
+                      <label for="radio">Measure</label><br>
+                      <input type="radio" id="radio" value="MeasureReport" name="resource" disabled>
+                      <label for="radio">MeasureReport</label><br>
+                      <input type="radio" id="radio" value="TestScript" name="resource" disabled>
+                      <label for="radio">TestScript</label><br>
+                      <input type="radio" id="radio" value="TestReport" name="resource" disabled>
+                      <label for="radio">TestReport</label><br>
+                    </ul>
+                  </td>
+                  <td class="frm-set" style="font-size: 12px;">
+                    <ul class="frm-set">
+                      <input type="radio" id="radio" value="MedicinalProducions" name="resource" disabled>
+                      <label for="radio">MedicinalProducions</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductAuthorization" name="resource" disabled>
+                      <label for="radio">MedicinalProductAuthorization</label><br>
+                      <input type="radio" id="radio" value="capabilitystatement" name="resource" disabled>
+                      <label for="radio">MedicinalProductContraindication</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductIndication" name="resource" disabled>
+                      <label for="radio">MedicinalProductIndication</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductIngredient" name="resource" disabled>
+                      <label for="radio">MedicinalProductIngredient</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductInteraction" name="resource" disabled>
+                      <label for="radio">MedicinalProductInteraction</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductManufactured" name="resource" disabled>
+                      <label for="radio">MedicinalProductManufactured</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductPackaged" name="resource" disabled>
+                      <label for="radio">MedicinalProductPackaged</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductPharmaceutical" name="resource" disabled>
+                      <label for="radio">MedicinalProductPharmaceutical</label><br>
+                      <input type="radio" id="radio" value="MedicinalProductUndesirableEffect" name="resource" disabled>
+                      <label for="radio">MedicinalProductUndesirableEffect</label><br>
+                      <input type="radio" id="radio" value="SubstanceNucleicAcid" name="resource" disabled>
+                      <label for="radio">SubstanceNucleicAcid</label><br>
+                      <input type="radio" id="radio" value="SubstancePolymer" name="resource" disabled>
+                      <label for="radio">SubstancePolymer</label><br>
+                      <input type="radio" id="radio" value="SubstanceReferenceInformation" name="resource" disabled>
+                      <label for="radio">SubstanceReferenceInformation</label><br>
+                      <input type="radio" id="radio" value="SubstanceSourceMaterial" name="resource" disabled>
+                      <label for="radio">SubstanceSourceMaterial</label><br>
+
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="frm-break">
+                  <td style="width: fit-content;" colspan="6"></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
         </div>
+      </div>
 
 
 
-        <button type="submit" class="btn btn-primary" id="s" onclick="sub()">Submit</button>
-      </form>
+      <!-- <button type="submit" class="btn btn-primary" id="s" >Submit</button> -->
 
-  </body>
+    </form>
+    <form id="xmlForm" action="/saveXML" method="post">
+    
+      <div class="form-group">
+        <input type="checkbox" name="custommapping" onclick="toggle()" />&nbsp;<label
+          for="exampleFormControlTextarea1">Database Resource Mapping</label>
+        <div id="resourceconfiguration" style="display:none">
+    
+          <ul class="nav nav-tabs">
+            REPLACE WITH TABXML
+          </ul>
+    
+          <div class="tab-content">
+            REPLACE WITH DATABASEXML
+          </div>
+    
+    
+        </div>
+      </div>
+    </form>
+          <input type="button" id="submit" class="btn btn-primary" onclick="clickSubmit()" value="Submit"></button>
+
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
 </html>
