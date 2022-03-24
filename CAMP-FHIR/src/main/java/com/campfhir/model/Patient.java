@@ -115,11 +115,13 @@ public class Patient  implements java.io.Serializable {
      private String patientTelecomSystemCode;
      private String patientTelecomUseCode;
      private String patientTelecomValue;
+     private String patientRaceValue;
+     private String patientEthnicityValue;
 
     public Patient() {
     }
 
-    public Patient(String patientActive, String patientAddressCity, String patientAddressCountry, String patientAddressDistrict, String patientAddressLine, String patientAddressPeriodEnd, String patientAddressPeriodStart, String patientAddressPostalCode, String patientAddressState, String patientAddressText, String patientAddressTypeCode, String patientAddressUseCode, String patientBirthDate, String patientCommnLangCodingCode, String patientCommnLangCodingDisplay, String patientCommnLangCodingSystem, String patientCommnLangCodingUsrslt, String patientCommnLangCodingVersion, String patientCommnLangText, String patientCommnPreferred, String patientContactAddressCity, String patientContactAddressCountry, String patientContactAddressDistrict, String patientContactAddressLine, String patientContactAddressPeriodEnd, String patientContactAddressPeriodStart, String patientContactAddressPostalCode, String patientContactAddressState, String patientContactAddressText, String patientContactAddressTypeCode, String patientContactAddressUseCode, String patientContactGenderCode, String patientContactNameFamily, String patientContactNameGiven, String patientContactNamePeriodEnd, String patientContactNamePeriodStart, String patientContactNamePrefix, String patientContactNameSuffix, String patientContactNameText, String patientContactNameUseCode, String patientContactOrganization, String patientContactPeriodEnd, String patientContactPeriodStart, String patientContactRelationshipCodingCode, String patientContactRelationshipCodingDisplay, String patientContactRelationshipCodingSystem, String patientContactRelationshipCodingUsrslt, String patientContactRelationshipCodingVersion, String patientContactRelationshipText, String patientContactTelecomPeriodEnd, String patientContactTelecomPeriodStart, String patientContactTelecomRank, String patientContactTelecomSystemCode, String patientContactTelecomUseCode, String patientContactTelecomValue, String patientDeceasedBoolean, String patientDeceasedDateTime, String patientGenderCode, String patientGeneralPract, String patientIdAssigner, String patientIdPeriodEnd, String patientIdPeriodStart, String patientIdSystem, String patientIdTypeCodingCode, String patientIdTypeCodingDisplay, String patientIdTypeCodingSystem, String patientIdTypeCodingUsrslt, String patientIdTypeCodingVersion, String patientIdTypeText, String patientIdUseCode, String patientIdValue, String patientLinkOther, String patientLinkTypeCode, String patientManagingOrganization, String patientMaritalStatusCodingCode, String patientMaritalStatusCodingDisplay, String patientMaritalStatusCodingSystem, String patientMaritalStatusCodingUsrslt, String patientMaritalStatusCodingVersion, String patientMaritalStatusText, String patientMultipleBirthBoolean, String patientMultipleBirthInteger, String patientNameFamily, String patientNameGiven, String patientNamePeriodEnd, String patientNamePeriodStart, String patientNamePrefix, String patientNameSuffix, String patientNameText, String patientNameUseCode, String patientPhotoContentType, String patientPhotoCreation, String patientPhotoData, String patientPhotoHash, String patientPhotoLang, String patientPhotoSize, String patientPhotoTitle, String patientPhotoUrl, String patientTelecomPeriodEnd, String patientTelecomPeriodStart, String patientTelecomRank, String patientTelecomSystemCode, String patientTelecomUseCode, String patientTelecomValue) {
+    public Patient(String patientActive, String patientAddressCity, String patientAddressCountry, String patientAddressDistrict, String patientAddressLine, String patientAddressPeriodEnd, String patientAddressPeriodStart, String patientAddressPostalCode, String patientAddressState, String patientAddressText, String patientAddressTypeCode, String patientAddressUseCode, String patientBirthDate, String patientCommnLangCodingCode, String patientCommnLangCodingDisplay, String patientCommnLangCodingSystem, String patientCommnLangCodingUsrslt, String patientCommnLangCodingVersion, String patientCommnLangText, String patientCommnPreferred, String patientContactAddressCity, String patientContactAddressCountry, String patientContactAddressDistrict, String patientContactAddressLine, String patientContactAddressPeriodEnd, String patientContactAddressPeriodStart, String patientContactAddressPostalCode, String patientContactAddressState, String patientContactAddressText, String patientContactAddressTypeCode, String patientContactAddressUseCode, String patientContactGenderCode, String patientContactNameFamily, String patientContactNameGiven, String patientContactNamePeriodEnd, String patientContactNamePeriodStart, String patientContactNamePrefix, String patientContactNameSuffix, String patientContactNameText, String patientContactNameUseCode, String patientContactOrganization, String patientContactPeriodEnd, String patientContactPeriodStart, String patientContactRelationshipCodingCode, String patientContactRelationshipCodingDisplay, String patientContactRelationshipCodingSystem, String patientContactRelationshipCodingUsrslt, String patientContactRelationshipCodingVersion, String patientContactRelationshipText, String patientContactTelecomPeriodEnd, String patientContactTelecomPeriodStart, String patientContactTelecomRank, String patientContactTelecomSystemCode, String patientContactTelecomUseCode, String patientContactTelecomValue, String patientDeceasedBoolean, String patientDeceasedDateTime, String patientGenderCode, String patientGeneralPract, String patientIdAssigner, String patientIdPeriodEnd, String patientIdPeriodStart, String patientIdSystem, String patientIdTypeCodingCode, String patientIdTypeCodingDisplay, String patientIdTypeCodingSystem, String patientIdTypeCodingUsrslt, String patientIdTypeCodingVersion, String patientIdTypeText, String patientIdUseCode, String patientIdValue, String patientLinkOther, String patientLinkTypeCode, String patientManagingOrganization, String patientMaritalStatusCodingCode, String patientMaritalStatusCodingDisplay, String patientMaritalStatusCodingSystem, String patientMaritalStatusCodingUsrslt, String patientMaritalStatusCodingVersion, String patientMaritalStatusText, String patientMultipleBirthBoolean, String patientMultipleBirthInteger, String patientNameFamily, String patientNameGiven, String patientNamePeriodEnd, String patientNamePeriodStart, String patientNamePrefix, String patientNameSuffix, String patientNameText, String patientNameUseCode, String patientPhotoContentType, String patientPhotoCreation, String patientPhotoData, String patientPhotoHash, String patientPhotoLang, String patientPhotoSize, String patientPhotoTitle, String patientPhotoUrl, String patientTelecomPeriodEnd, String patientTelecomPeriodStart, String patientTelecomRank, String patientTelecomSystemCode, String patientTelecomUseCode, String patientTelecomValue, String patientRaceValue ,String patientEthnicityValue) {
        this.patientActive = patientActive;
        this.patientAddressCity = patientAddressCity;
        this.patientAddressCountry = patientAddressCountry;
@@ -224,6 +226,9 @@ public class Patient  implements java.io.Serializable {
        this.patientTelecomSystemCode = patientTelecomSystemCode;
        this.patientTelecomUseCode = patientTelecomUseCode;
        this.patientTelecomValue = patientTelecomValue;
+       this.patientRaceValue = patientRaceValue;
+       this.patientEthnicityValue = patientEthnicityValue;
+
     }
    
     public 
@@ -1487,6 +1492,32 @@ public class Patient  implements java.io.Serializable {
       this.patientTelecomValue = patientTelecomValue;
 }
 
+
+    public 
+    String 
+    getPatientRaceValue()
+    {
+        return this.patientRaceValue;
+    }
+    
+    public void setPatientRaceValue
+        (String patientRace) 
+        {
+      this.patientRaceValue = patientRaceValue;
+}
+    public 
+    String 
+    getPatientEthnicityValue()
+    {
+        return this.patientEthnicityValue;
+    }
+    
+    public void setPatientEthnicityValue
+        (String patientEthnicityValue) 
+        {
+      this.patientEthnicityValue = patientEthnicityValue;
+}
+  
 
 
 

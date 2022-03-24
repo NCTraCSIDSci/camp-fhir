@@ -1,5 +1,9 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
+
+import org.hl7.fhir.r4.model.Extension;
+import org.hl7.fhir.r4.model.StringType;
+
 import main.java.com.campfhir.model.Patient;
 public class PatientConversion 
 {
@@ -617,6 +621,21 @@ public class PatientConversion
 		if(p.getPatientTelecomValue() != null) {
 			patientaddtelecom.setValue(p.getPatientTelecomValue());
 		}
+		
+		/******************** PNT_RACE **************************************************************************************
+		 * PNT_RACE maps to Patient / extension / race / coding / code
+		 ********************************************************************************************************************/
+		Extension race = new Extension().setUrl("http://terminology.hl7.org/ValueSet/v3-Race").setValue(new StringType(p.getPatientRaceValue())); 
+		patient.addExtension(race);
+
+		/******************** PNT_ETHNICITY *********************************************************************************
+		 * PNT_ETHNICITY maps to Patient / extension / ethnicity / coding / code
+		 ********************************************************************************************************************/
+		Extension ethnicity = new Extension().setUrl("http://hl7.org/fhir/v3/Ethnicity").setValue(new StringType(p.getPatientEthnicityValue())); 
+		patient.addExtension(ethnicity);
+		
+		
+		
 		return patient;
 	}
 }

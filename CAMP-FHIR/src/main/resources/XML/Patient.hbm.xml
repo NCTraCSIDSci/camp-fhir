@@ -422,5 +422,13 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="Patient_Telecom_Value"/>
         </property>
+            <property name="patientRaceValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Race_Value"/>
+        </property>
+            <property name="patientEthnicityValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Ethnicity_Value"/>
+        </property>
     </class>
 </hibernate-mapping>
