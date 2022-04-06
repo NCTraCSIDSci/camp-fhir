@@ -13,6 +13,8 @@ Patient_Address_State TEXT,
 Patient_Address_Text TEXT,
 Patient_Address_Type_Code TEXT,
 Patient_Address_Use_Code TEXT,
+Patient_Address_Extension_Latitude_Value TEXT,
+Patient_Address_Extension_Longitude_Value TEXT,
 Patient_BirthDate TEXT,
 Patient_Commn_Lang_Coding_Code TEXT,
 Patient_Commn_Lang_Coding_Display TEXT,
@@ -105,6 +107,8 @@ Patient_Telecom_Rank TEXT,
 Patient_Telecom_System_Code TEXT,
 Patient_Telecom_Use_Code TEXT,
 Patient_Telecom_Value TEXT,
+Patient_Race_Value TEXT,
+Patient_Ethnicity_Value TEXT,
 PRIMARY KEY(id)) ENGINE=MyISAM
     ROW_FORMAT=COMPRESSED 
     KEY_BLOCK_SIZE=8;
