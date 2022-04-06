@@ -54,6 +54,14 @@
             <meta attribute="resource-type"/>
             <column length="65535" name="Patient_Address_Use_Code"/>
         </property>
+          <property name="patientAddressExtensionLongitudeValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Extension_Longitude_Value"/>
+        </property>
+        <property name="patientAddressExtensionLatitudeValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Patient_Address_Extension_Latitude_Value"/>
+        </property>
         <property name="patientBirthDate" type="string">
             <meta attribute="resource-type"/>
             <column length="65535" name="Patient_BirthDate"/>

@@ -1,6 +1,7 @@
 package main.java.com.campfhir.service.conversion;
 import java.text.ParseException;
 
+import org.hl7.fhir.r4.model.DecimalType;
 import org.hl7.fhir.r4.model.Extension;
 import org.hl7.fhir.r4.model.StringType;
 
@@ -81,6 +82,24 @@ public class PatientConversion
 			patientaddaddress.setUse(patientaddaddresssetuseEnumFactory.fromCode(p.getPatientAddressUseCode()));
 
 		}
+
+		if(p.getPatientAddressExtensionLatitudeValue()!=null && p.getPatientAddressExtensionLongitudeValue() != null)
+		{
+			Extension geolocation = patientaddaddress.addExtension();
+			
+			/******************** PNT_ADDRESS_EXT_LAT_VALUE ****************************************************************
+			 * PNT_ADDRESS_EXT_LAT_VALUE maps to Patient / address / extension / latitude / value
+			 ***************************************************************************************************************/
+		    geolocation.addExtension("Latitude", new DecimalType(p.getPatientAddressExtensionLatitudeValue()));
+		    
+			/******************** PNT_ADDRESS_EXT_LONG_VALUE ***************************************************************
+			 * PNT_ADDRESS_EXT_LONG_VALUE maps to Patient / address / extension / longitude / value
+			 ***************************************************************************************************************/
+		    geolocation.addExtension("Longitude", new DecimalType(p.getPatientAddressExtensionLongitudeValue()));
+		}
+
+		
+		
 		/******************** Patient_BirthDate ********************************************************************************/
 		if(p.getPatientBirthDate() != null) {
 			java.text.SimpleDateFormat PatientBirthDatesdf = new java.text.SimpleDateFormat("yyyy-M-dd");
