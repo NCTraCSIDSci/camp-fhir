@@ -1507,7 +1507,7 @@ public class Patient  implements java.io.Serializable {
     public void setPatientRaceValue
         (String patientRace) 
         {
-      this.patientRaceValue = patientRaceValue;
+      this.patientRaceValue = patientRace;
 }
     public 
     String 
