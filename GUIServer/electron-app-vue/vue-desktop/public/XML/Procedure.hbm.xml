@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 22, 2022, 7:23:13 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="main.java.com.campfhir.model">
+    <class catalog="campfhir" name="Procedure" optimistic-lock="none" table="procedure">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="procedureAsserter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Asserter"/>
+        </property>
+        <property name="procedureBasedOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BasedOn"/>
+        </property>
+        <property name="procedureBodySiteCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Coding_Code"/>
+        </property>
+        <property name="procedureBodySiteCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Coding_Display"/>
+        </property>
+        <property name="procedureBodySiteCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Coding_System"/>
+        </property>
+        <property name="procedureBodySiteCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Coding_Usrslt"/>
+        </property>
+        <property name="procedureBodySiteCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Coding_Version"/>
+        </property>
+        <property name="procedureBodySiteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_BodySite_Text"/>
+        </property>
+        <property name="procedureCategoryCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Coding_Code"/>
+        </property>
+        <property name="procedureCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Coding_Display"/>
+        </property>
+        <property name="procedureCategoryCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Coding_System"/>
+        </property>
+        <property name="procedureCategoryCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Coding_Usrslt"/>
+        </property>
+        <property name="procedureCategoryCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Coding_Version"/>
+        </property>
+        <property name="procedureCategoryText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Category_Text"/>
+        </property>
+        <property name="procedureCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Coding_Code"/>
+        </property>
+        <property name="procedureCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Coding_Display"/>
+        </property>
+        <property name="procedureCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Coding_System"/>
+        </property>
+        <property name="procedureCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Coding_Usrslt"/>
+        </property>
+        <property name="procedureCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Coding_Version"/>
+        </property>
+        <property name="procedureCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Code_Text"/>
+        </property>
+        <property name="procedureComplicationCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Coding_Code"/>
+        </property>
+        <property name="procedureComplicationCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Coding_Display"/>
+        </property>
+        <property name="procedureComplicationCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Coding_System"/>
+        </property>
+        <property name="procedureComplicationCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Coding_Usrslt"/>
+        </property>
+        <property name="procedureComplicationCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Coding_Version"/>
+        </property>
+        <property name="procedureComplicationText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Complication_Text"/>
+        </property>
+        <property name="procedureComplicationDetail" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ComplicationDetail"/>
+        </property>
+        <property name="procedureEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Enc"/>
+        </property>
+        <property name="procedureFocalDeviceActionCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Coding_Code"/>
+        </property>
+        <property name="procedureFocalDeviceActionCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Coding_Display"/>
+        </property>
+        <property name="procedureFocalDeviceActionCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Coding_System"/>
+        </property>
+        <property name="procedureFocalDeviceActionCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Coding_Usrslt"/>
+        </property>
+        <property name="procedureFocalDeviceActionCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Coding_Version"/>
+        </property>
+        <property name="procedureFocalDeviceActionText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Action_Text"/>
+        </property>
+        <property name="procedureFocalDeviceManipulated" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FocalDevice_Manipulated"/>
+        </property>
+        <property name="procedureFollowUpCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Coding_Code"/>
+        </property>
+        <property name="procedureFollowUpCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Coding_Display"/>
+        </property>
+        <property name="procedureFollowUpCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Coding_System"/>
+        </property>
+        <property name="procedureFollowUpCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Coding_Usrslt"/>
+        </property>
+        <property name="procedureFollowUpCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Coding_Version"/>
+        </property>
+        <property name="procedureFollowUpText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_FollowUp_Text"/>
+        </property>
+        <property name="procedureIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Assigner"/>
+        </property>
+        <property name="procedureIdPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Period_End"/>
+        </property>
+        <property name="procedureIdPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Period_Start"/>
+        </property>
+        <property name="procedureIdSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_System"/>
+        </property>
+        <property name="procedureIdTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Coding_Code"/>
+        </property>
+        <property name="procedureIdTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Coding_Display"/>
+        </property>
+        <property name="procedureIdTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Coding_System"/>
+        </property>
+        <property name="procedureIdTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Coding_Usrslt"/>
+        </property>
+        <property name="procedureIdTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Coding_Version"/>
+        </property>
+        <property name="procedureIdTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Type_Text"/>
+        </property>
+        <property name="procedureIdUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Use_Code"/>
+        </property>
+        <property name="procedureIdValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Id_Value"/>
+        </property>
+        <property name="procedureInstantiatesCanonical" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_InstantiatesCanonical"/>
+        </property>
+        <property name="procedureInstantiatesUri" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_InstantiatesUri"/>
+        </property>
+        <property name="procedureLocation" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Location"/>
+        </property>
+        <property name="procedureNoteAuthorReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Note_AuthorReference"/>
+        </property>
+        <property name="procedureNoteAuthorString" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Note_AuthorString"/>
+        </property>
+        <property name="procedureNoteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Note_Text"/>
+        </property>
+        <property name="procedureNoteTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Note_Time"/>
+        </property>
+        <property name="procedureOutcomeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Coding_Code"/>
+        </property>
+        <property name="procedureOutcomeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Coding_Display"/>
+        </property>
+        <property name="procedureOutcomeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Coding_System"/>
+        </property>
+        <property name="procedureOutcomeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Coding_Usrslt"/>
+        </property>
+        <property name="procedureOutcomeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Coding_Version"/>
+        </property>
+        <property name="procedureOutcomeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Outcome_Text"/>
+        </property>
+        <property name="procedurePartOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_PartOf"/>
+        </property>
+        <property name="procedurePerformed" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed"/>
+        </property>
+        <property name="procedurePerformedDateTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_PerformedDateTime"/>
+        </property>
+        <property name="procedurePerformedPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Period_End"/>
+        </property>
+        <property name="procedurePerformedPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Period_Start"/>
+        </property>
+        <property name="procedurePerformedRangeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_High_Code"/>
+        </property>
+        <property name="procedurePerformedRangeHighCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_High_Compartr_Code"/>
+        </property>
+        <property name="procedurePerformedRangeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_High_System"/>
+        </property>
+        <property name="procedurePerformedRangeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_High_Unit"/>
+        </property>
+        <property name="procedurePerformedRangeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_High_Value"/>
+        </property>
+        <property name="procedurePerformedRangeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_Low_Code"/>
+        </property>
+        <property name="procedurePerformedRangeLowCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_Low_Compartr_Code"/>
+        </property>
+        <property name="procedurePerformedRangeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_Low_System"/>
+        </property>
+        <property name="procedurePerformedRangeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_Low_Unit"/>
+        </property>
+        <property name="procedurePerformedRangeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performed_Range_Low_Value"/>
+        </property>
+        <property name="procedurePerformedString" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_PerformedString"/>
+        </property>
+        <property name="procedurePerformerActor" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Actor"/>
+        </property>
+        <property name="procedurePerformerFunctionCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Coding_Code"/>
+        </property>
+        <property name="procedurePerformerFunctionCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Coding_Display"/>
+        </property>
+        <property name="procedurePerformerFunctionCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Coding_System"/>
+        </property>
+        <property name="procedurePerformerFunctionCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Coding_Usrslt"/>
+        </property>
+        <property name="procedurePerformerFunctionCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Coding_Version"/>
+        </property>
+        <property name="procedurePerformerFunctionText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_Function_Text"/>
+        </property>
+        <property name="procedurePerformerOnBehalfOf" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Performer_OnBehalfOf"/>
+        </property>
+        <property name="procedureReasonCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Coding_Code"/>
+        </property>
+        <property name="procedureReasonCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Coding_Display"/>
+        </property>
+        <property name="procedureReasonCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Coding_System"/>
+        </property>
+        <property name="procedureReasonCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Coding_Usrslt"/>
+        </property>
+        <property name="procedureReasonCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Coding_Version"/>
+        </property>
+        <property name="procedureReasonCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonCode_Text"/>
+        </property>
+        <property name="procedureReasonReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_ReasonReference"/>
+        </property>
+        <property name="procedureRecorder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Recorder"/>
+        </property>
+        <property name="procedureReport" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Report"/>
+        </property>
+        <property name="procedureStatusCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Status_Code"/>
+        </property>
+        <property name="procedureStatusReasonCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Coding_Code"/>
+        </property>
+        <property name="procedureStatusReasonCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Coding_Display"/>
+        </property>
+        <property name="procedureStatusReasonCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Coding_System"/>
+        </property>
+        <property name="procedureStatusReasonCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Coding_Usrslt"/>
+        </property>
+        <property name="procedureStatusReasonCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Coding_Version"/>
+        </property>
+        <property name="procedureStatusReasonText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_StatusReason_Text"/>
+        </property>
+        <property name="procedureSubject" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_Subject"/>
+        </property>
+        <property name="procedureUsedCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Coding_Code"/>
+        </property>
+        <property name="procedureUsedCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Coding_Display"/>
+        </property>
+        <property name="procedureUsedCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Coding_System"/>
+        </property>
+        <property name="procedureUsedCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Coding_Usrslt"/>
+        </property>
+        <property name="procedureUsedCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Coding_Version"/>
+        </property>
+        <property name="procedureUsedCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedCode_Text"/>
+        </property>
+        <property name="procedureUsedReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Procedure_UsedReference"/>
+        </property>
+    </class>
+</hibernate-mapping>

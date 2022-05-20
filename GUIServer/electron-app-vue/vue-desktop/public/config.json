@@ -1,0 +1,12 @@
+{
+  "sqldialects": "",
+  "driverclass": "",
+  "dburl": "",
+  "dbusername": "",
+  "dbpassword": "",
+  "outputfolder": "",
+  "partition": "",
+  "resourceconfiguration": "",
+  "resource": "",
+  "custommapping": ""
+}

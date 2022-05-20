@@ -1,0 +1,12 @@
+{
+  "sqldialects": "org.hibernate.dialect.PostgreSQL9Dialect",
+  "driverclass": "org.postgresql.Driver",
+  "dburl": "jdbc:postgresql://campfhir-1.ch9f2og6bhya.us-west-2.rds.amazonaws.com/campfhir_pcornet_cdm",
+  "dbusername": "campfhir",
+  "dbpassword": "campfhir_postgres",
+  "outputfolder": "C:\\\\Users\\pikovach\\Downloads\\camp-fhir-master\\camp-fhir-master\\Patient",
+  "partition": "1000",
+  "resourceconfiguration": "",
+  "resource": "Patient",
+  "custommapping": "false"
+}

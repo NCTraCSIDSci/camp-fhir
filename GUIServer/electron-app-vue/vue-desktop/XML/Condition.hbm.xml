@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Feb 22, 2022, 7:23:13 PM by Hibernate Tools 5.6.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="main.java.com.campfhir.model">
+    <class catalog="campfhir" name="Condition" optimistic-lock="none" table="conditionnew">
+        <id name="id" type="string">
+            <column length="64" name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="conditionAbatement" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement"/>
+        </property>
+        <property name="conditionAbatementDateTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_AbatementDateTime"/>
+        </property>
+        <property name="conditionAbatementPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Period_End"/>
+        </property>
+        <property name="conditionAbatementPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Period_Start"/>
+        </property>
+        <property name="conditionAbatementRangeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_High_Code"/>
+        </property>
+        <property name="conditionAbatementRangeHighCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_High_Compartr_Code"/>
+        </property>
+        <property name="conditionAbatementRangeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_High_System"/>
+        </property>
+        <property name="conditionAbatementRangeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_High_Unit"/>
+        </property>
+        <property name="conditionAbatementRangeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_High_Value"/>
+        </property>
+        <property name="conditionAbatementRangeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_Low_Code"/>
+        </property>
+        <property name="conditionAbatementRangeLowCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_Low_Compartr_Code"/>
+        </property>
+        <property name="conditionAbatementRangeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_Low_System"/>
+        </property>
+        <property name="conditionAbatementRangeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_Low_Unit"/>
+        </property>
+        <property name="conditionAbatementRangeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Abatement_Range_Low_Value"/>
+        </property>
+        <property name="conditionAbatementString" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_AbatementString"/>
+        </property>
+        <property name="conditionAsserter" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Asserter"/>
+        </property>
+        <property name="conditionBodySiteCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Coding_Code"/>
+        </property>
+        <property name="conditionBodySiteCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Coding_Display"/>
+        </property>
+        <property name="conditionBodySiteCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Coding_System"/>
+        </property>
+        <property name="conditionBodySiteCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Coding_Usrslt"/>
+        </property>
+        <property name="conditionBodySiteCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Coding_Version"/>
+        </property>
+        <property name="conditionBodySiteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_BodySite_Text"/>
+        </property>
+        <property name="conditionCategoryCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Coding_Code"/>
+        </property>
+        <property name="conditionCategoryCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Coding_Display"/>
+        </property>
+        <property name="conditionCategoryCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Coding_System"/>
+        </property>
+        <property name="conditionCategoryCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Coding_Usrslt"/>
+        </property>
+        <property name="conditionCategoryCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Coding_Version"/>
+        </property>
+        <property name="conditionCategoryText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Category_Text"/>
+        </property>
+        <property name="conditionClinicalStatusCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Coding_Code"/>
+        </property>
+        <property name="conditionClinicalStatusCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Coding_Display"/>
+        </property>
+        <property name="conditionClinicalStatusCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Coding_System"/>
+        </property>
+        <property name="conditionClinicalStatusCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Coding_Usrslt"/>
+        </property>
+        <property name="conditionClinicalStatusCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Coding_Version"/>
+        </property>
+        <property name="conditionClinicalStatusText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_ClinicalStatus_Text"/>
+        </property>
+        <property name="conditionCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Coding_Code"/>
+        </property>
+        <property name="conditionCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Coding_Display"/>
+        </property>
+        <property name="conditionCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Coding_System"/>
+        </property>
+        <property name="conditionCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Coding_Usrslt"/>
+        </property>
+        <property name="conditionCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Coding_Version"/>
+        </property>
+        <property name="conditionCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Code_Text"/>
+        </property>
+        <property name="conditionEnc" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Enc"/>
+        </property>
+        <property name="conditionEvidenceCodeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Coding_Code"/>
+        </property>
+        <property name="conditionEvidenceCodeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Coding_Display"/>
+        </property>
+        <property name="conditionEvidenceCodeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Coding_System"/>
+        </property>
+        <property name="conditionEvidenceCodeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Coding_Usrslt"/>
+        </property>
+        <property name="conditionEvidenceCodeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Coding_Version"/>
+        </property>
+        <property name="conditionEvidenceCodeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Code_Text"/>
+        </property>
+        <property name="conditionEvidenceDetail" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Evidence_Detail"/>
+        </property>
+        <property name="conditionIdAssigner" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Assigner"/>
+        </property>
+        <property name="conditionIdPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Period_End"/>
+        </property>
+        <property name="conditionIdPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Period_Start"/>
+        </property>
+        <property name="conditionIdSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_System"/>
+        </property>
+        <property name="conditionIdTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Coding_Code"/>
+        </property>
+        <property name="conditionIdTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Coding_Display"/>
+        </property>
+        <property name="conditionIdTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Coding_System"/>
+        </property>
+        <property name="conditionIdTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Coding_Usrslt"/>
+        </property>
+        <property name="conditionIdTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Coding_Version"/>
+        </property>
+        <property name="conditionIdTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Type_Text"/>
+        </property>
+        <property name="conditionIdUseCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Use_Code"/>
+        </property>
+        <property name="conditionIdValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Id_Value"/>
+        </property>
+        <property name="conditionNoteAuthorReference" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Note_AuthorReference"/>
+        </property>
+        <property name="conditionNoteAuthorString" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Note_AuthorString"/>
+        </property>
+        <property name="conditionNoteText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Note_Text"/>
+        </property>
+        <property name="conditionNoteTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Note_Time"/>
+        </property>
+        <property name="conditionOn" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On"/>
+        </property>
+        <property name="conditionOnDateTime" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_OnDateTime"/>
+        </property>
+        <property name="conditionOnPeriodEnd" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Period_End"/>
+        </property>
+        <property name="conditionOnPeriodStart" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Period_Start"/>
+        </property>
+        <property name="conditionOnRangeHighCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_High_Code"/>
+        </property>
+        <property name="conditionOnRangeHighCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_High_Compartr_Code"/>
+        </property>
+        <property name="conditionOnRangeHighSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_High_System"/>
+        </property>
+        <property name="conditionOnRangeHighUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_High_Unit"/>
+        </property>
+        <property name="conditionOnRangeHighValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_High_Value"/>
+        </property>
+        <property name="conditionOnRangeLowCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_Low_Code"/>
+        </property>
+        <property name="conditionOnRangeLowCompartrCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_Low_Compartr_Code"/>
+        </property>
+        <property name="conditionOnRangeLowSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_Low_System"/>
+        </property>
+        <property name="conditionOnRangeLowUnit" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_Low_Unit"/>
+        </property>
+        <property name="conditionOnRangeLowValue" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_On_Range_Low_Value"/>
+        </property>
+        <property name="conditionOnString" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_OnString"/>
+        </property>
+        <property name="conditionRecordedDate" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_RecordedDate"/>
+        </property>
+        <property name="conditionRecorder" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Recorder"/>
+        </property>
+        <property name="conditionSeverityCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Coding_Code"/>
+        </property>
+        <property name="conditionSeverityCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Coding_Display"/>
+        </property>
+        <property name="conditionSeverityCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Coding_System"/>
+        </property>
+        <property name="conditionSeverityCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Coding_Usrslt"/>
+        </property>
+        <property name="conditionSeverityCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Coding_Version"/>
+        </property>
+        <property name="conditionSeverityText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Severity_Text"/>
+        </property>
+        <property name="conditionStageAssessment" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Assessment"/>
+        </property>
+        <property name="conditionStageSummaryCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Coding_Code"/>
+        </property>
+        <property name="conditionStageSummaryCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Coding_Display"/>
+        </property>
+        <property name="conditionStageSummaryCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Coding_System"/>
+        </property>
+        <property name="conditionStageSummaryCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Coding_Usrslt"/>
+        </property>
+        <property name="conditionStageSummaryCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Coding_Version"/>
+        </property>
+        <property name="conditionStageSummaryText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Summary_Text"/>
+        </property>
+        <property name="conditionStageTypeCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Coding_Code"/>
+        </property>
+        <property name="conditionStageTypeCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Coding_Display"/>
+        </property>
+        <property name="conditionStageTypeCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Coding_System"/>
+        </property>
+        <property name="conditionStageTypeCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Coding_Usrslt"/>
+        </property>
+        <property name="conditionStageTypeCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Coding_Version"/>
+        </property>
+        <property name="conditionStageTypeText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Stage_Type_Text"/>
+        </property>
+        <property name="conditionSubject" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_Subject"/>
+        </property>
+        <property name="conditionVerificationStatusCodingCode" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Coding_Code"/>
+        </property>
+        <property name="conditionVerificationStatusCodingDisplay" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Coding_Display"/>
+        </property>
+        <property name="conditionVerificationStatusCodingSystem" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Coding_System"/>
+        </property>
+        <property name="conditionVerificationStatusCodingUsrslt" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Coding_Usrslt"/>
+        </property>
+        <property name="conditionVerificationStatusCodingVersion" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Coding_Version"/>
+        </property>
+        <property name="conditionVerificationStatusText" type="string">
+            <meta attribute="resource-type"/>
+            <column length="65535" name="Condition_VerificationStatus_Text"/>
+        </property>
+    </class>
+</hibernate-mapping>
